@@ -1,11 +1,19 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage{float,graphicx}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
 
 \title{Anime, Manga, {\large\&} Movie}
 \author{Collector: Nguyen Quan Ba Hong}
@@ -24,14 +32,18 @@
     \item \textit{Chainsaw Man}\hfill[Chap. 97\texttt{/}97]
     \item \textit{Death Note: Desu n\^oto $\star$ Death Note} (2006--2007)\hfill[S1.E37]
     \item \textit{Dororo} (2019)\hfill[S1.E24]
+    \item \textit{Erufen r\^ito $\star$ Elfen Lied} (2004)\hfill[S1.E14]
     \item Fumetsu no Anata e $\star$ To Your Eternity (2021--)\hfill[S1.E8][Chap. 144\texttt{/}144--]
     \item Golden Boy: Sasurai no o-benky\^o yar\^o $\star$ Golden Boy (1995--1996)\hfill[S1.E6][Chap. 1/94]
+    \item GTO $\star$ GTO: Great Teacher Onizuka (1999--2000)\hfill[S1.E1/E43]
     \item \textit{Hagane no renkinjutsushi $\star$ Fullmetal Alchemist: Brotherhood} (2009--2012)\hfill[S1.E64]
     \item \textit{Haikyuu!!} (2014--2020)\hfill[S1.E26][S2.E26][S3.E11][S4.E25]
     \item Hige Wo Soru. Soshite Joshikosei Wo Hirou (2021--)\hfill[S1.E13][Chap. 29\texttt{/}29--]
     \item \textit{Hoshi o ou kodomo $\star$ Children Who Chase Lost Voices} (2011)
     \item Jujutsu Kaisen (2020--)\hfill[S1.E24][Chap. 152\texttt{/}152--]
-    \item Kaguya-sama wa kokurasetai $\sim$Tensai tachi no ren'ai zun\^o sen$\sim$ $\star$ Kaguya-sama: Love is War (2019--)\hfill[S1.E12][S2.E12][S3.E1]
+    \item Kaguya-sama wa kokurasetai $\sim$Tensai tachi no ren'ai zun\^o sen$\sim$
+    
+    $\star$ Kaguya-sama: Love is War (2019--)\hfill[S1.E12][S2.E12][S3.E1]
     \item \textit{Kattobi Itto}\hfill[Chap. 102\texttt{/}102]
     \item \textit{Kenp\^u Denki Berserk $\star$ Berserk} (1997--1998)\hfill[S1.E25][Chap. 364\texttt{/}364--]
     \item Kimetsu No Yaiba $\star$ Demon Slayer\hfill[S1.E26][Chap. 205\texttt{/}205]
@@ -42,6 +54,7 @@
     \item Koroshi Ai $\star$ Love of Kill (2022--)\hfill[S1.E3][Chap. 31/69--]
     \item \textit{Koto no ha no niwa $\star$ The Garden of Words} (2013)
     \item \textit{K\^okaku Kid\^otai $\star$ Ghost in the Shell} (1995)
+    \item Kureimoa $\star$ Claymore (2007)\hfill[S1.E1/E26]
     \item Link Click (2021--)\hfill[S1.E1/E11]
     \item Love, Death \& Robots (2019--)\hfill[S1.E18][S2.E8]
     \item \textit{Mob Psycho 100} (2016--2019)\hfill[S1.E12][S2.E13]
@@ -56,7 +69,7 @@
     Rascal Does Not Dream of Bunny Girl Senpai (2018--)\hfill[S1.E14]
     \item Rick and Morty (2013--)\hfill[S1.E11][S2.E10][S3.E10][S4.E10][S5.E10]
     \item Shingeki no kyojin $\star$ Attack on Titan (2013--2022)\hfill[S1.E25][S2.E12][S3.E22][S4.E16][Chap. 139\texttt{/}139]
-    \item Sono Bisque Doll wa Koi wo Suru $\star$ My Dressing-Up Darling\hfill[S1.E4][Chap. 70]
+    \item Sono Bisque Doll wa Koi wo Suru $\star$ My Dressing-Up Darling\hfill[S1.E5][Chap. 71]
     \item \textit{Stein;Gate} (2011--2015)\hfill[S1.E26]
     \item \textit{Steins;Gate: The Movie - Load Region of Déjà Vu} (2013)
     \item \textit{Stein;Gate 0} (2018)\hfill[S1.E24]
@@ -65,7 +78,7 @@
     \item Vinland Saga (2019--)\hfill[S1.E24]
     \item \textit{Violet Evergarden} (2014)\hfill[S1.E14]
     \item Vivy: Fluorite Eye's Song (2021--)\hfill[S1.E13]
-    \item Yakusoku no Neverland $\star$ The Promised Neverland\hfill[S1.E12]
+    \item Yakusoku no Neverland $\star$ The Promised Neverland\hfill[S1.E12][S2.E2/E11][Chap. 1/181.5]
 \end{enumerate}
 
 %------------------------------------------------------------------------------%
@@ -76,6 +89,26 @@
 	\item \textit{Game of Thrones} (2011--2019)\hfill[S1.E10][S2.E10][S3.E10][S4.E10][S5.E10][S6.E10][S7.E7][S8.E6]
 	\item \textit{Spider-Man: No Way Home} (2021)
 	\item The Witcher (2019--)\hfill[S1.E8][S2.E8]
+\end{enumerate}
+
+\section{Music}
+\begin{enumerate}
+	\item \textsc{Allie X.} Downtown. Paper Love.
+	\item \textsc{Ariana Grande.} 7 Rings.
+	\item \textsc{BlackPink.} Crazy Over You. Ddu-Du Ddu-Du. How You Like That. Kill this Love. Savage. You Never Know.
+	\item \textsc{Britney Spears.} Criminal.
+	\item \textsc{Dua Lipa $+$ BlackPink.} Kiss \& Make Up.
+	\item \textsc{Evanescence.} Bring Me To Life.
+	\item \textsc{GD $+$ Taeyang.} Good Boy.
+	\item \textsc{Halsey.} Without Me.
+	\item \textsc{Lana Del Rey.} Summertime Sadness.
+	\item \textsc{Lindsey Stirling.} Carol of The Bells.
+	\item \textsc{Linkin Park.} Numb.
+	\item \textsc{Mc Mong $+$ Mellow.} Sick Enough To Die.
+	\item \textsc{Nightwish.} While Your Lips Are Still Red.
+	\item \textsc{Ros\'e.} Gone. Let It Be. On The Ground. Only Look At Me. You \& I.
+	\item \textsc{Ruelle.} Madness.
+	\item \textsc{Tăng Duy Tân $+$ Phong Max.} Ngây Thơ.
 \end{enumerate}
 
 %------------------------------------------------------------------------------%
