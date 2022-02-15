@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{inputenc}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ques}{Question}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Journal}
+\author{Collector: Nguyen Quan Ba Hong}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Computer Science Journal}
+
+\section{Engineering Journal}
+
+\section{Mathematical Journal}
+\begin{enumerate}
+	\item \textsc{\href{https://www.degruyter.com/journal/key/ans/html}{Advanced Nonlinear Studies} (ANS).}
+	\begin{itemize}
+		\item IF: 1.446.
+		\item SJR (2020): Q1, 1.31.
+	\end{itemize}
+	\item \textsc{\href{https://onlinelibrary.wiley.com/journal/10970363}{International Journal for Numerical Methods in Fluids}.}
+	\begin{itemize}
+		\item IF: 2.107.
+		\item SJR (2020): Q1, 0.94.
+	\end{itemize}
+	\item \textsc{\href{https://www.journals.elsevier.com/journal-of-computational-physics}{Journal of Computational Physics}.}
+	\begin{itemize}
+		\item IF: 3.553.
+		\item SJR (2020): Q1, 1.88.
+	\end{itemize}
+	\item \textsc{\href{https://www.ams.org/publications/journals/journalsframework/mcom}{Mathematics of Computation} (MCOM).}
+	\begin{itemize}
+		\item Journal Citation Reports' IF: 2.417.
+		\item SJR (2020): Q1, 1.95.
+	\end{itemize}
+	\item \textsc{\href{https://www.siam.org/publications/journals/siam-journal-on-control-and-optimization-sicon}{SIAM Journal on Control \& Optimization} (SICON).}
+	\begin{itemize}
+		\item SJR (2020): Q1, 1.49.
+	\end{itemize}
+	\item \textsc{\href{https://www.tandfonline.com/journals/unhb20}{Numerical Heat Transfer, Part B: Fundamentals}.}
+	\begin{itemize}
+		\item IF (2020): 1.586.
+		\item 5 year IF (2020): 1.506.
+		\item SJR (2020): Q2, 0.547.
+	\end{itemize}
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+\end{document}
