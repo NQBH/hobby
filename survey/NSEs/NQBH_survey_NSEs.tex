@@ -32,7 +32,7 @@
 \def\labelitemii{$\circ$}
 
 \title{A Survey on Navier--Stokes Equations}
-\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
+\author{Collector: Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
 \date{\today}
 
 \begin{document}
@@ -41,7 +41,7 @@
 \begin{abstract}
 	A personal survey on Navier--Stokes equations (NSEs), especially its regularity and turbulence models.
 \end{abstract}
-\textbf{Keywords.} Navier--Stokes equations.
+\textbf{Keywords.} Navier--Stokes equations; turbulence models.
 
 \tableofcontents
 
@@ -51,6 +51,7 @@
 \begin{enumerate}
 	\item The 4 formulations appearing in the \textit{Clay Millennium Prize} formulation \cite{Fefferman2006} of NSEs.
 \end{enumerate}
+\textbf{Disclaimer.} This survey is used mainly for NQBH's personal purposes. Hence, several paragraphs are quoted without quotation marks. The main purpose here is to collect and to add personal remarks.
 
 \section{Incompressible NSEs}
 
@@ -96,26 +97,81 @@ Recall \cite[Def. 1.1]{Tao2013}:
 	\begin{align}
 		\nabla\cdot{\bf u} = 0,
 	\end{align}
-	on all of $[0,T]\times\mathbb{R}^3$\footnote{NQBH: NSEs on the whole domain, hence useless for shape and topology optimizations, but useful for applying harmonic and Fourier analysis.}, and also the initial condition
+	on all of $[0,T]\times\mathbb{R}^3$,\footnote{NQBH: NSEs on the whole domain, hence useless for shape and topology optimizations, but useful for applying harmonic and Fourier analysis.} and also the initial condition
 	\begin{align}
 		{\bf u}(0,{\bf x}) = {\bf u}_0({\bf x}),\ \forall{\bf x}\in\mathbb{R}^3.
 	\end{align}
-	We say that a smooth solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ has \emph{finite energy} if the associated data $({\bf u}_0,{\bf f},t)$ has finite energy, and in addition one has
+	We say that a smooth solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ has \emph{finite energy} if the associated data $({\bf u}_0,{\bf f},t)$ has finite energy, and in addition one has\footnote{Following \cite{Fefferman2006}, Terence Tao omitted the \textit{finite energy dissipation condition} $\nabla{\bf u}\in L_t^2L_{\bf x}^2([0,T]\times\mathbb{R}^3)$ often appearing in the literature, particular when discussing \textit{Leray--Hopf weak solutions}. However, it turns out that this condition is actually automatic from \eqref{Tao2013 Eqn. (6)} and smoothness; see \cite[Lem. 8.1]{Tao2013}. Similarly, from \cite[Corollary 11.1]{Tao2013}, the $L_t^2H_{\bf x}^2$ condition in \eqref{Tao2013 Eqn. (7)} is redundant.}
 	\begin{align}
+		\label{Tao2013 Eqn. (6)}
 		\|{\bf u}\|_{L_t^\infty L_{\bf x}^2([0,T]\times\mathbb{R}^3)} < \infty.
 	\end{align}
+	Similarly, we say that \emph{$({\bf u},p,{\bf u}_0,{\bf f},T)$ is $H^1$} if the associated data $({\bf u}_0,{\bf f},T)$ is $H^1$, and in addition one has
+	\begin{align}
+		\label{Tao2013 Eqn. (7)}
+		\|{\bf u}\|_{L_t^\infty H_{\bf x}^1([0,T]\times\mathbb{R}^3)} + \|{\bf u}\|_{L_t^2H_{\bf x}^2([0,T]\times\mathbb{R}^3)} < \infty.
+	\end{align}
+	We say instead that a smooth solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ is \emph{periodic} with period $L > 0$ if the associated data $({\bf u}_0,{\bf f},T) = ({\bf u}_0,{\bf f},T,L)$ is periodic with period $L$, and if ${\bf u}(t,{\bf x} + L{\bf k}) = {\bf u}(t,{\bf x})$ for all $t\in[0,T]$, ${\bf x}\in\mathbb{R}^3$, and ${\bf k}\in\mathbb{Z}^3$. (Following \cite{Fefferman2006}, however, we will not initially directly require any periodicity properties on the pressure.) As before, we will sometimes write a periodic solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ as $({\bf u},p,{\bf u}_0,{\bf f},T,L)$ to emphasize the periodicity.
 \end{definition}
+Terence Tao [but I will never] sometimes abuse notation and refer to a solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ simply as $({\bf u},p)$ or even ${\bf u}$. Similarly, we will sometimes abbreviate a set of data $({\bf u}_0,{\bf f},T)$ as $({\bf u}_0,{\bf f})$ or even ${\bf u}_0$ (in the homogeneous case ${\bf f} = {\bf 0}$).
+
+\begin{remark}
+	In \cite{Fefferman2006}, one considered\footnote{The viscosity parameter $\nu$ was not normalized in \cite{Fefferman2006} to 1, as Terence Tao did in \cite{Tao2013}, but one can easily reduce to the $\nu = 1$ case by a simple rescaling.
+	
+	NQBH: only true for the case $\nu = {\rm const} > 0$, rescaling fails when $\nu$ varies, e.g., depends on ${\bf x}$ and\texttt{/}or ${\bf u}$, $p$.} smooth finite energy solutions associated to Schwartz data, as well as periodic smooth solutions associated to periodic smooth data. In the latter case, one can of course normalize the period $L$ to equal 1 by a simple scaling argument. In \cite{Tao2013}, Terence Tao focused on the case when the data $({\bf u}_0,{\bf f},T)$ is large, although he did not study the asymptotic regime when $T\to\infty$.
+\end{remark}
+Recall 2 standard \textit{global regularity} conjectures for NSEs, using the formulation in \cite{Fefferman2006}:
+
+\begin{conjecture}[Global regularity for homogeneous Schwartz data]
+	Let $({\bf u}_0,0,T)$ be a homogeneous Schwartz set of data. Then there exists a smooth finite energy solution $({\bf u},p,{\bf u}_0,0,T)$ with the indicated data.
+\end{conjecture}
+
+\begin{conjecture}[Global regularity for homogeneous periodic data]
+	Let $({\bf u}_0,0,T)$ be a smooth homogeneous periodic set of data. Then there exists a smooth periodic solution $({\bf u},p,{\bf u}_0,0,T)$ with the indicated data.
+\end{conjecture}
+Extend these conjectures to the inhomogeneous case as follows:
+
+\begin{conjecture}[Global regularity for Schwartz data]
+	Let $({\bf u}_0,{\bf f},T)$ be a Schwartz set of data. Then there exists a smooth finite energy solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ with the indicated data.
+\end{conjecture}
+
+\begin{conjecture}[Global regularity for periodic data]
+	Let $({\bf u}_0,{\bf f},T)$ be a smooth periodic set of data. Then there exists a smooth periodic solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ with the indicated data.
+\end{conjecture}
+As described in \cite{Fefferman2006}, a positive answer to either Conjecture 1.3 or 1.4, or a negative answer to Conjecture 1.5 or 1.6, would qualify for the Clay Millennium Prize.
+
+However, Conjecture 1.6 is not quite the ``right'' extension of Conjecture 1.4 to the inhomogeneous setting, and needs correcting slightly. This is because there is a technical quirk in the inhomogeneous periodic problem as formulated in Conjecture 1.6, due to the fact that $p$ is not required to be periodic. This opens up a \textit{Galilean invariance} in the problem which allows one to homogenize away the role of the forcing term. More precisely (established in \cite[Sect. 6]{Tao2013}):
+
+\begin{proposition}[Elimination of forcing term]
+	Conjecture 1.6 $\Leftrightarrow$ Conjecture 1.4.
+\end{proposition}
+Terence Tao remarks that this is the only implication we know of that can deduce a global regularity result for the inhomogenous Navier--Stokes problem from a global regularity result for the homogeneous Navier--Stokes problem.
+
+\cite[Prop. 1.7]{Tao2013} exploits the technical loophole of nonperiodic pressure. The same loophole can also be used to easily demonstrate failure of uniqueness for the periodic Navier--Stokes problem (although this can also be done by the much simpler expedient of noting that one can adjust the pressure by an arbitrary constant without affecting the momentum equation). This suggests that in the nonhomogeneous case ${\bf f}\ne{\bf 0}$, one needs an additional normalization to ``fix'' the periodic Navier--Stokes problem to avoid such loopholes. This can be done in the standard way, as follows: see \cite[p. 28]{Tao2013}$\ldots$
+
+\subsection{OpenFOAM Solvers}
+
+\subsubsection{OpenFOAM Solver \texttt{simpleFoam}}
+The \texttt{simpleFoam} solver employs the SIMPLE algorithm to solve:
+\begin{equation}
+	\left\{\begin{split}
+		\nabla\cdot({\bf u}\otimes{\bf u}) - \nabla\cdot{\bf R} &= -\nabla p + {\bf S}_{\bf u},&&\mbox{ in }\Omega,\\
+		\nabla\cdot{\bf u} &= 0,&&\mbox{ in }\Omega,
+	\end{split}\right.
+\end{equation}
+where ${\bf R}$ is the stress tensor, and ${\bf S}_{\bf u}$ is the momentum source.
 
 \section{Compressible NSEs}
 
+\subsection{OpenFOAM Solvers}
+
 %------------------------------------------------------------------------------%
-
-
 
 \begin{thebibliography}{99}
 	\bibitem[TT's blog]{TT's blog} \href{https://terrytao.wordpress.com/tag/navier-stokes-equations/}{Terence Tao's blog\texttt{/}Navier--Stokes equations}.
 	\begin{itemize}
 		\item Terence Tao. \href{https://terrytao.wordpress.com/2011/08/04/localisation-and-compactness-properties-of-the-navier-stokes-global-regularity-problem}{\textit{Localisation and compactness properties of the Navier-Stokes global regularity problem}}. Aug 4, 2011.
+		\item Terence Tao. \href{https://terrytao.wordpress.com/2018/09/03/254a-notes-0-physical-derivation-of-the-incompressible-euler-and-navier-stokes-equations}{\textit{254A, Notes 0: Physical derivation of the incompressible Euler and Navier-Stokes equations}}. Sep 3, 2018.
 	\end{itemize}
 	
 	\bibitem[Wikipedia]{Wikipedia} \href{https://en.wikipedia.org}{Wikipedia.org}
