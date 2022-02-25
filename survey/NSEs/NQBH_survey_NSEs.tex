@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{inputenc}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage{float,graphicx,algpseudocode,algorithm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ques}{Question}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{A Survey on Navier--Stokes Equations}
+\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+	A personal survey on Navier--Stokes equations (NSEs), especially its regularity and turbulence models.
+\end{abstract}
+\textbf{Keywords.} Navier--Stokes equations.
+
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section*{Quick notes}
+\begin{enumerate}
+	\item The 4 formulations appearing in the \textit{Clay Millennium Prize} formulation \cite{Fefferman2006} of NSEs.
+\end{enumerate}
+
+\section{Incompressible NSEs}
+
+\subsection{Various concepts of solutions to NSEs}
+To describe various formulations for NSEs, we must first define properly the concept of a solution to NSEs, including, e.g., \textit{periodic solutions, finite energy solutions, $H^1$ solutions}, and \textit{smooth solutions}, etc.
+
+\subsubsection{Smooth solutions of NSEs}
+\begin{quotation}
+	``Note that even within the category of smooth solutions, there is some choice in what decay hypotheses to place on the initial data and solution; for instance, one can require that the initial velocity ${\bf u}_0$ be Schwartz class, or merely smooth with finite energy. Intermediate between these two will be data which is smooth and in $H^1$.'' -- \cite{Tao2013}
+\end{quotation}
+Recall \cite[Def. 1.1]{Tao2013}:
+\begin{definition}[Smooth solutions to NSEs]
+	A \emph{smooth set of data} for NSEs up to time $T$ is a triplet $({\bf u}_0,{\bf f},T)$, where $0 < T < \infty$ is a time, the initial velocity vector field ${\bf u}_0:\mathbb{R}^3\to\mathbb{R}^3$ and the forcing term ${\bf f}:[0,T]\times\mathbb{R}^3\to\mathbb{R}^3$ are assumed to be smooth on $\mathbb{R}^3$ and $[0,T]\times\mathbb{R}^3$, respectively, (thus, ${\bf u}_0$ is infinitely differentiable in space, and ${\bf f}$ is infinitely differentiable in spacetime), and ${\bf u}_0$ is furthermore required to be divergence-free:
+	\begin{align}
+		\label{divergence-free initial velocity}
+		\nabla\cdot{\bf u}_0 = 0,\mbox{ in }\mathbb{R}^3.
+	\end{align}
+	If ${\bf f} = {\bf 0}$, we say that the data is \emph{homogeneous}.
+	
+	The \emph{total energy} $E({\bf u}_0,{\bf f},T)$ of a smooth set of data $({\bf u}_0,{\bf f},T)$ is defined by the quantity
+	\begin{align}
+		\label{total energy}
+		\tag{iiNS\texttt{/}$E$}
+		E({\bf u}_0,{\bf f},T)\coloneqq\frac{1}{2}\left(\|{\bf u}_0\|_{L_{\bf x}^2(\mathbb{R}^3)} + \|{\bf f}\|_{L_t^1L_{\bf x}^2([0,T]\times\mathbb{R}^3)}\right)^2,
+	\end{align}
+	and $({\bf u}_0,{\bf f},T)$ is said to have \emph{finite energy} if $E({\bf u}_0,{\bf f},T) < \infty$. We define the \emph{$H^1$ norm} $\mathcal{H}^1({\bf u}_0,{\bf f},T)$ of the data to be the quantity
+	\begin{align}
+		\label{H^1 norm of data}
+		\tag{iiNS\texttt{/}$\mathcal{H}^1$}
+		\mathcal{H}^1({\bf u}_0,{\bf f},T)\coloneqq\|{\bf u}_0\|_{H_x^1(\mathbb{R}^3)} + \|{\bf f}\|_{L_t^\infty H_x^1(\mathbb{R}^3)} < \infty,
+	\end{align}
+	and say that \emph{$({\bf u}_0,{\bf f},T)$ is $H^1$} if $\mathcal{H}^1({\bf u}_0,{\bf f},T) < \infty$; note that the $H^1$ regularity is essentially 1 derivative higher than the energy regularity, which is at the level of $L^2$, and instead matches the regularity of the \emph{initial enstrophy} $\frac{1}{2}\int_{\mathbb{R}^3} \|\boldsymbol{\omega}_0(t,{\bf x})\|^2\,{\rm d}{\bf x}$, where $\omega_0\coloneqq\nabla\times{\bf u}_0$ is the \emph{initial vorticity}. We say that a smooth set of data $({\bf u}_0,{\bf f},T)$ is \emph{Schwartz} if, for all integers $\alpha,m,k\ge 0$, one has
+	\begin{align}
+		\sup_{{\bf x}\in\mathbb{R}^3} (1 + \|{\bf x}\|)^k\|\nabla_{\bf x}^\alpha{\bf u}_0({\bf x})\| < \infty\mbox{ and }\sup_{(t,{\bf x})\in[0,T]\times\mathbb{R}^3} (1 + \|{\bf x}\|)^k\|\nabla_{\bf x}^\alpha\partial_t^m{\bf f}({\bf x})\| < \infty.
+	\end{align}
+	Thus, e.g., the Schwartz property implies $H^1$, which in turn implies finite energy. We also say that $({\bf u}_0,{\bf f},T)$ is \emph{periodic} with some period $L > 0$ if one has ${\bf u}_0({\bf x} + L{\bf k}) = {\bf u}_0({\bf x})$ and ${\bf f}(t,{\bf x} + L{\bf k}) = {\bf f}(t,{\bf x})$ for all $t\in[0,T]$, ${\bf x}\in\mathbb{R}^3$, and ${\bf k}\in\mathbb{Z}^3$. Of course, periodicity is incompatible with the Schwartz, $H^1$, or finite energy properties, unless the data is zero. To emphasize the periodicity, we will sometimes write a periodic set of data $({\bf u}_0,{\bf f},T)$ as $({\bf u}_0,{\bf f},T,L)$.
+	
+	A \emph{smooth solution to the NSEs}, or a \emph{smooth solution}, is a quintuplet $({\bf u},p,{\bf u}_0,{\bf f},T)$, where $({\bf u}_0,{\bf f},T)$ is a smooth set of data, and the velocity vector field ${\bf u}:[0,T]\times\mathbb{R}^3\to\mathbb{R}^3$ and pressure field $p:[0,T]\times\mathbb{R}^3\to\mathbb{R}$ are smooth functions on $[0,T]\times\mathbb{R}^3$ that obey the NSE:\footnote{NQBH: Why no viscosity $\nu$? Any major differences in their mathematical analysis, especially the case $\nu = \nu(t,{\bf x},{\bf u},p)$ in turbulence models?}
+	\begin{align}
+		\partial_t{\bf u} + ({\bf u}\cdot\nabla){\bf u} = \Delta{\bf u} - \nabla p + {\bf f},
+	\end{align}
+	and the incompressibility property
+	\begin{align}
+		\nabla\cdot{\bf u} = 0,
+	\end{align}
+	on all of $[0,T]\times\mathbb{R}^3$\footnote{NQBH: NSEs on the whole domain, hence useless for shape and topology optimizations, but useful for applying harmonic and Fourier analysis.}, and also the initial condition
+	\begin{align}
+		{\bf u}(0,{\bf x}) = {\bf u}_0({\bf x}),\ \forall{\bf x}\in\mathbb{R}^3.
+	\end{align}
+	We say that a smooth solution $({\bf u},p,{\bf u}_0,{\bf f},T)$ has \emph{finite energy} if the associated data $({\bf u}_0,{\bf f},t)$ has finite energy, and in addition one has
+	\begin{align}
+		\|{\bf u}\|_{L_t^\infty L_{\bf x}^2([0,T]\times\mathbb{R}^3)} < \infty.
+	\end{align}
+\end{definition}
+
+\section{Compressible NSEs}
+
+%------------------------------------------------------------------------------%
+
+
+
+\begin{thebibliography}{99}
+	\bibitem[TT's blog]{TT's blog} \href{https://terrytao.wordpress.com/tag/navier-stokes-equations/}{Terence Tao's blog\texttt{/}Navier--Stokes equations}.
+	\begin{itemize}
+		\item Terence Tao. \href{https://terrytao.wordpress.com/2011/08/04/localisation-and-compactness-properties-of-the-navier-stokes-global-regularity-problem}{\textit{Localisation and compactness properties of the Navier-Stokes global regularity problem}}. Aug 4, 2011.
+	\end{itemize}
+	
+	\bibitem[Wikipedia]{Wikipedia} \href{https://en.wikipedia.org}{Wikipedia.org}
+	\begin{itemize}
+		\item \href{https://en.wikipedia.org/wiki/Viscosity}{Wikipedia\texttt{/}viscosity}.
+	\end{itemize}
+\end{thebibliography}
+\printbibliography[heading=bibintoc]
+	
+\end{document}
