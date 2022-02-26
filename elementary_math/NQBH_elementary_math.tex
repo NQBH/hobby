@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -43,11 +45,14 @@
 
 %------------------------------------------------------------------------------%
 
+\paragraph{Disclaimer.} I do not and will not apologize when writing this text in 2 languages randomly.
+
 \section*{General Rules for the Author}
 \begin{enumerate}
 	\item Always try to find and add physical interpretations and real world applications for the considered mathematical objects or terminologies.
 	\item Always consider general problems first and then their particular or special cases, and then (optional) generalizations.
 	\item Read terminologies in \href{https://www.wikipedia.org/}{Wikipedia} and check \href{https://math.stackexchange.com/}{Mathematics Stack Exchange} for interpretations and further information.
+	\item Add mathematical histories and mathematicians for motivations.
 	\item (Optional) Bridges\texttt{/}connections between elementary and advanced mathematics.
 	\item (Optional) Some codes (\textsc{Matlab}, C++, Python, etc.) will be nice for further practice and illustrations.
 \end{enumerate}
@@ -66,7 +71,24 @@
 
 \subsection{2D Geometry\texttt{/}Hình Học Phẳng}
 
+\subsubsection{Triangle\texttt{/}Tam Giác}
+\begin{problem}
+	Show that the perpendicular bisectors of a triangle are concurrent.
+\end{problem}
+
+\begin{proof}
+	See \cite[p. ix]{Tao2006}.
+\end{proof}
+
+\begin{problem}[\cite{Tao2006}, Prob. 1.1, p. 1]
+	A triangle has its lengths in an arithmetic progression, with difference $d$. The area of the triangle is $t$. Find the lengths and angles of the triangle.
+\end{problem}
+
+\subsubsection{Quadrilateral\texttt{/}Tứ Giác}
+
 \subsection{3D Geometry\texttt{/}Hình Học Không Gian}
+
+\section{Number Theory\texttt{/}Số Học}
 
 \section{Probability\texttt{/}Xác Suất}
 
@@ -76,6 +98,23 @@
 
 \subsection{Discrete Mathematics\texttt{/}Toán Rời Rạc}
 
+\subsection{Why Mathematics?}
+\begin{quotation}
+	``But I just like mathematics because it is fun. Mathematical problems, or puzzles, are important to real mathematics (like solving real-life problems), just as fables, stories, and anecdotes are important to the young in understanding real life.'' -- \cite[Preface, p. viii]{Tao2006}
+\end{quotation}
+The prefaces of, as the whole book, \cite{Tao2006} are also very pleasant to read.
+
+\cite{Polya2014}.
+
 %------------------------------------------------------------------------------%
-	
+
+\begin{thebibliography}{99}
+	\bibitem[TT's blog]{TT's blog} \href{https://terrytao.wordpress.com}{Terence Tao's blog}.
+	\begin{itemize}
+		\item Terence Tao. \href{https://terrytao.wordpress.com/books/solving-mathematical-problems-a-personal-perspective/}{Solving Mathematical Problems: A Personal Perspective}.
+	\end{itemize}
+\end{thebibliography}
+
+\printbibliography[heading=bibintoc]
+
 \end{document}
