@@ -57,6 +57,11 @@
 	\item (Optional) Some codes (\textsc{Matlab}, C++, Python, etc.) will be nice for further practice and illustrations.
 \end{enumerate}
 
+\section*{Conventions}
+\begin{itemize}
+	\item `iff' $\coloneqq$ `if and only if' $=$ `equivalent to', in notation: $\Leftrightarrow$.
+\end{itemize}
+
 \section{Combinatorics\texttt{/}Tổ Hợp}
 
 \section{Elementary Algebra\texttt{/}Đại Số Sơ Cấp}
@@ -72,23 +77,84 @@
 \subsection{2D Geometry\texttt{/}Hình Học Phẳng}
 
 \subsubsection{Triangle\texttt{/}Tam Giác}
+
+\paragraph{Basic.}
+\begin{enumerate}
+	\item \textit{Sum of angles in a triangle.} $\alpha + \beta + \gamma = 180^\circ$.
+	\item \textit{Sine rule.}
+	\item \textit{Cosine rule.}
+	\item \textit{Area formula.}
+	\item \textit{Heron's formula.}
+	\item \textit{Triangle inequality.}
+\end{enumerate}
+
 \begin{problem}
 	Show that the perpendicular bisectors of a triangle are concurrent.
 \end{problem}
 
-\begin{proof}
+\begin{proof}[Proof]
 	See \cite[p. ix]{Tao2006}.
 \end{proof}
 
 \begin{problem}[\cite{Tao2006}, Prob. 1.1, p. 1]
 	A triangle has its lengths in an arithmetic progression, with difference $d$. The area of the triangle is $t$. Find the lengths and angles of the triangle.
 \end{problem}
+\textit{Comments.} An `evaluate $\ldots$' problem. ``The equalities are likely to be more useful than the inequalities, since our objective and data come in the form of equalities.''
 
 \subsubsection{Quadrilateral\texttt{/}Tứ Giác}
 
 \subsection{3D Geometry\texttt{/}Hình Học Không Gian}
 
 \section{Number Theory\texttt{/}Số Học}
+
+\paragraph{Notations.} The \textit{set of nonnegative integers}\texttt{/}\textit{natural numbers with zero}\texttt{/}\textit{naturals with zero} is denoted by
+\begin{align*}
+	\mathbb{N}_0 = \mathbb{N}^0 = \mathbb{N}^\star\cup\{0\}\coloneqq\{0,1,2,\ldots\} = \{x\in\mathbb{Z};x\ge 0\} = \mathbb{Z}_0^+ = \mathbb{Z}_{\ge 0}.
+\end{align*}
+The \textit{set of positive integers}\texttt{/}\textit{natural numbers without zero}\texttt{/}\textit{naturals without zero} is denoted by
+\begin{align*}
+	\mathbb{N}^\star = \mathbb{N}^+ = \mathbb{N}_0\backslash\{0\} = \mathbb{N}_1 = \{1,2,\ldots\} = \{x\in\mathbb{Z};x > 0\} = \mathbb{Z}^+ = \mathbb{Z}_{> 0} = \mathbb{Z}_{\ge 1}.
+\end{align*}
+See, e.g., \href{https://en.wikipedia.org/wiki/Natural_number}{Wikipedia\texttt{/}natural number}. The existence of such a set is established in \textit{set theory}, see, e.g., \cite{Halmos1960, Halmos1974, Kaplansky1972, Kaplansky1977}.
+
+\begin{quotation}
+	``Number theory may not necessarily be divine, but it still has an aura of mystique about it. Unlike algebra, which has as its backbone the laws of manipulating equations, number theory seems to derive its results from a source unknown.'' -- \cite[Chap. 2, p. 9]{Tao2006}
+	
+	``Basic number theory is a pleasant backwater of mathematics. But the applications that stem from the basic concepts of integers and divisibility are amazingly diverse and powerful. The concept of divisibility leads naturally to that of \textit{primes}, which moves into the detailed nature of factorization and then to one of the jewels of mathematics in the last part of the previous century: the prime number theorem, which can predict the number of primes less than a given number to a good degree of accuracy. Meanwhile, the concept of integer operations lends itself to modular arithmetic, which can be generalized from a subset of the integers to the algebra of finite groups, rings, and fields, and leads to algebraic number theory, when the concept of `number' is expanded into irrational surds, elements of splitting 	fields, and complex numbers. Number theory is a fundamental cornerstone which supports a sizeable chunk of mathematics. And, of course, it is fun too.'' -- \cite[Chap. 2, p. 10]{Tao2006}
+\end{quotation}
+The following theorem is 1st conjectured by Fermat.
+
+\begin{theorem}[Lagrange's theorem]
+	Every positive integer is a sum of 4 perfect squares.
+\end{theorem}
+\textit{Comment.} ``Algebraically, we are talking about an extremely simple equation: but because we are restricted to the integers, the rules of algebra fail. The result is infuriatingly innocent-looking and experimentation shows that it does seem to work, but offers no explanation why. Indeed, Lagrange's theorem cannot be easily proved by the elementary means covered in this book: an excursion into \textit{Gaussian integers} or something similar is needed.'' -- \cite[Chap. 2, p. 9]{Tao2006}
+
+\subsection{Modular Arithmetic}
+The following statements can be proved by elementary number theory; all revolve around the basic idea of \textit{modular arithmetic}, which provides the power of algebra but limited to a finite number of integers.
+
+\begin{problem}
+	A natural number $n$ is always has the same last digit as its 5th power $n^5$.
+\end{problem}
+
+\begin{problem}
+	$n$ is a multiple of 9 iff the sum of its digits is a multiple of 9.
+\end{problem}
+
+\begin{theorem}[Wilson's theorem]
+	For $n\in\mathbb{N}^\star$, $(n - 1)! + 1$ is a multiple of $n$ iff $n$ is a prime number.
+\end{theorem}
+
+\begin{problem}
+	If $k$ is a positive odd number, then $\sum_{i=1}^n i^k = 1^k + 2^k + \cdots + n^k$ is divisible by $n + 1$.
+\end{problem}
+
+\begin{problem}
+	Prove that there are exactly 4 numbers that are $n$ digits long (allowing for padding by zeroes) and which are exactly the same last digits as their square. e.g., the 4 3-digit numbers with this property are $000$, $001$, $625$, and $876$.
+\end{problem}
+This problem can eventually lead to the notion of \textit{p-adics}, being sort of an infinite-dimensional form of modular arithmetic.
+
+\subsection{Principle of Mathematical Induction\texttt{/}Nguyên Lý Quy Nạp Toán Học}
+A typical technique of proof in number theory: prove by the \textit{principle of mathematical induction} (chứng minh bằng \textit{phương pháp}\texttt{/}\textit{nguyên lý quy nạp toán học}).
 
 \section{Probability\texttt{/}Xác Suất}
 
@@ -98,13 +164,60 @@
 
 \subsection{Discrete Mathematics\texttt{/}Toán Rời Rạc}
 
+\subsection{Strategies in Problem Solving}
+\begin{quotation}
+	``Like and unlike the proverb above, the solution to a problem begins (and continues, and ends) with simple, logical steps. But as long as one steps in a firm, clear direction, with long strides and sharp vision, one would need far, far less than the millions of steps needed to journey a thousand miles. And mathematics, being abstract, has no physical constraints; one can always restart from scratch, try new avenues of attack, or backtrack at an instant's notice. One does not always have these luxuries in other forms of problem-solving (e.g. trying to go home if you are lost).
+	
+	Of course, this does not necessarily make it easy; if it was easy, then this book would be substantially shorter. But it makes it possible.
+	
+	There are several general strategies and perspectives to solve a problem correctly; \cite{Polya2014} is a classic reference for many of these.'' -- \cite[Chap. 1, p. 1]{Tao2006}
+\end{quotation}
+Here the strategies in \cite[Chap. 1, pp. 1--7]{Tao2006} are recalled briefly, with or without quotation marks:
+\begin{enumerate}
+	\item \textbf{Understand the problem.} \textit{What kind of problem is it?} There are 3 main types of problems:
+	\begin{enumerate}
+		\item \textit{`Show that \ldots' or `Evaluate $\ldots$' questions}\texttt{/}\textit{problems}, in which a certain statement has to be proved true, or a certain expression has to be worked out. These problems start with given data and the objective is to deduce some statement or find the value of an expression. This type of problem is generally easier than the other 2 types because there is a clearly visible objective, one that can be deliberately approached.
+		\item \textit{`Find a $\ldots$' or `Find all $\ldots$' questions}\texttt{/}\textit{problems}, which requires one to find something (or everything) that satisfies certain requirements. These problems are more hit-and-miss; generally one has to guess 1 answer that nearly works, and then tweak it a bit to make it more correct; or alternatively one can alter the requirements that the object-to-find must satisfy, so that they are easier to satisfy.
+		
+		A typical strategy for ``find a\texttt{/}all' problems: List all, or as many as possible, available options\texttt{/}possibilities and then use pure eliminations.
+		\item \textit{`Is there a \ldots' questions}\texttt{/}\textit{problems}, which either require you to prove a statement or provide a counterexample (and thus is 1 of the previous 2 types of problems). These problems are typically the hardest, because one must 1st make a decision on whether an object exists or not, and provide a proof on one hand, or a counterexample on the other.
+	\end{enumerate}
+	\textit{Why is categorizing a problem, or recognizing the type of a problem, important?} Because: ``The type of problem is important because it determines the basic method of approach.''
+	\begin{align*}
+		\boxed{\mbox{Type of problem}\Rightarrow\mbox{Basic method of approach}.}
+	\end{align*}
+	``Of course, not all questions fall into these neat categories; but the general format of any question will still indicate the basic strategy to pursue when solving a problem.''
+	\item \textbf{Understand the data.} ``\textit{What is given in the problem?} Usually, a question talks about a number of objects satisfying some special requirements. To understand the data, one needs to see how the objects and requirements react to each other. This is important in focusing attention on the proper techniques and notation to handle the problem.''
+	\item \textbf{Understand the objective.} ``\textit{What do we want?} One may need to find an object, prove a statement, determine the existence of an object with special properties, or whatever. Like the flip side of this strategy, `understand the data', knowing the objective helps focus attention on the best weapons to use. Knowing the objective also helps in creating tactical goals which we know will bring us closer to solving the question.''
+	\item \textbf{Select good notation.} ``Now that we have our data and objective, we must represent it in an efficient way, so that the data and objective are both represented as simply as possible. This usually involves the thoughts of the past 2 strategies.''
+	\item \textbf{Write down what you know in the notation selected; draw a diagram.} ``Putting everything down on paper helps in 3 ways:
+	\begin{enumerate}
+		\item you have an easy reference later on;
+		\item the paper is a good thing to stare at when you are stuck;
+		\item the physical act of writing down of what you know can trigger new inspirations and connections.
+	\end{enumerate}
+	Be careful, though, of writing superfluous material, and do not overload your paper with minutiae; 1 compromise is to highlight those facts which you think will be most useful, and put more questionable, redundant, or crazy ideas in another part of your scratch paper.'' ``Many of these facts may prove to be useless or distracting. But we can use some judgments to separate the valuable facts from the unhelpful ones.''
+	\item \textbf{Modify the problem slightly.} ``There are many ways to vary a problem into one which may be easier to deal with:
+	\begin{enumerate}
+		\item Consider a special case of the problem, e.g., extreme or degenerate cases.
+		\item Solve a simplified version of the problem.
+		\item Formulate a conjecture which would imply the problem, and try to prove that first.
+		\item Derive some consequence of the problem, and try to prove that first.
+		\item Reformulate the problem (e.g., take the contrapositive, prove by contradiction, or try some substitution).
+		\item Examine solutions of similar problems.
+		\item Generalize the problem.
+	\end{enumerate}
+	This is useful when you cannot even get started on a problem, because solving for a simpler related problem sometimes reveals the way to go on the main problem. Similarly, considering extreme cases and solving the problem with additional assumptions can also shed light on the general solution. But be warned that special cases are, by their nature, special, and some elegant technique could conceivably apply to them and yet have absolutely no utility in solving the general case. This tends to happen when the special case is \textit{too} special. Start with modest assumptions 1st, because then you are sticking as closely as possible to the spirit of the problem.''
+	\item \textbf{Modify the problem significantly.} ``In this more aggressive type of strategy, we perform major modifications to a problem such as removing data, swapping the data with the objective, or negating the objective (e.g., trying to disprove a statement rather than prove it). Basically, we try to push the problem until it breaks, and then try to identify where the breakdown occurred; this identifies what the key components of the data are, as well as where the main difficulty will lie. These exercises can also help in getting an instinctive feel of what strategies are likely to work, and which ones are likely to fail.'' ``We could omit some objectives $\ldots$'' ``We can also omit some data $\ldots$''. ``(Sometimes one can \textit{partially} omit data $\ldots$ but this is getting complicated. Stick with the simple options 1st.)'' ``Reversal of the problem (swapping data with objective) leads to some interesting ideas though.'' ``Do not forget, though, that a question can be solved in more than 1 way, and no particular way can really be judged the absolute best.''
+	\item \textbf{Prove results about our question.} ``Data is there to be used, so one should pick up the data and play with it. Can it produce more meaningful data? Also, proving small results could be beneficial later on, when trying to prove the main result or to find the answer. However small the result, do not forget it -- it could have bearing later on. Besides, it gives you something to do if you are stuck.''
+	\item \textbf{Simplify, exploit data, \& reach tactical goals.} ``Now we have set up notation and have a few equations, we should seriously look at attaining our tactical goals that we have established. In simple problems, there are usually standard ways of doing this. (E.g., algebraic simplification is usually discussed thoroughly in high-school level textbooks.) Generally, this part is the longest and most difficult part of the problem: however, once can avoid getting lost if one remembers the relevant theorems, the data and how they can be used, and most importantly the objective. It is also a good idea to not apply any given technique or method blindly, but to think ahead and see where one could hope such a technique to take one; this can allow one to save enormous amounts of time by eliminating unprofitable directions of inquiry before sinking lots of effort into them, and conversely to give the most promising directions priority.''
+\end{enumerate}
+
 \subsection{Why Mathematics?}
 \begin{quotation}
 	``But I just like mathematics because it is fun. Mathematical problems, or puzzles, are important to real mathematics (like solving real-life problems), just as fables, stories, and anecdotes are important to the young in understanding real life.'' -- \cite[Preface, p. viii]{Tao2006}
 \end{quotation}
 The prefaces of, as the whole book, \cite{Tao2006} are also very pleasant to read.
-
-\cite{Polya2014}.
 
 %------------------------------------------------------------------------------%
 
