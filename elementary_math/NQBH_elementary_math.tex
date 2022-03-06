@@ -4,10 +4,8 @@
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\usepackage{float}
-\usepackage{graphicx}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
@@ -55,26 +53,231 @@
 	\item Add mathematical histories and mathematicians for motivations.
 	\item (Optional) Bridges\texttt{/}connections between elementary and advanced mathematics.
 	\item (Optional) Some codes (\textsc{Matlab}, C++, Python, etc.) will be nice for further practice and illustrations.
+	\item \texttt{Add Titu Andresscu's books.}
 \end{enumerate}
 
 \section*{Conventions}
 \begin{itemize}
-	\item `iff' $\coloneqq$ `if and only if' $=$ `equivalent to', in notation: $\Leftrightarrow$.
+	\item `e.g.' $\coloneqq$ `for example', or, `for instance'.
+	\item `i.e.' $\coloneqq$ `which means', `that means', or `in other words'.
+	\item `iff' $\coloneqq$ `if and only if' $=$ `equivalent to', in mathematical notation: $\Leftrightarrow$.
+	\item `lhs', or `LHS' $\coloneqq$ left-hand side
+	\item `rhs', or `RHS' $\coloneqq$ right-hand side.
+	\item `s.t.' $\coloneqq$ `such that'.
+	\item `w.l.o.g.' $\coloneqq$ `without loss of generality'.
 \end{itemize}
 
 \section{Combinatorics\texttt{/}Tổ Hợp}
 
 \section{Elementary Algebra\texttt{/}Đại Số Sơ Cấp}
+\begin{quotation}
+	``One cannot escape the feeling $\ldots$ that these mathematical formulae have an independent existence and an intelligence of their own $\ldots$ that they are wiser than we are, wiser even than their discoverers $\ldots$ that we get more out of them that was originally put into them.'' -- Heinrich Hertz, quoted by F.J. Dyson
+\end{quotation}
+``Algebra is what most people associate with mathematics. In a sense, this is justified. Mathematics is the study of abstract objects, numerical, logical, or geometrical, that follow a set of several carefully chosen axioms. And basic algebra is about the simplest meaningful thing that can satisfy the above definition of mathematics. There are only a dozen or so postulates, but that is enough to make the system beautifully symmetric.''
+
+``There is more than 1 algebra, though. \textit{Algebra} is the study of numbers with the operations of addition, subtraction, multiplication, and division. \textit{Matrix algebra}, for example, does much the same but with groups of numbers instead of using just one. Other algebras use all kinds of operations and all kinds of `numbers' but they, sometimes surprisingly, tend to have much of the same properties as normal algebra.''
+
+``Algebra is the basic foundation of a large part of applied mathematics. Problems of mechanics, economics, chemistry, electronics, optimization, and so on are answered by algebra and differential calculus, which is an advanced form of algebra. In fact, algebra is so important that most of its secrets have been discovered -- so it can be safely put into a high-school curriculum. However, a few gems can still be found here and there.'' -- \cite[Chap. 3, p. 35]{Tao2006}
+
+\subsection{Algebraic Identity\texttt{/}Đẳng Thức Đại Số}
+\begin{problem}
+	Prove that $\sum_{i=1}^n i^3 = \left(\sum_{i=1}^n i\right)^2$ for all $n\in\mathbb{N}^\star$.\footnote{I.e., the sum of the 1st few cubes will always be a square.}
+\end{problem}
+
+\subsection{Polynomials}
+``Many algebra questions concern polynomials of one or more variables, $\ldots$'' -- \cite[p. 41]{Tao2006}
+
+\begin{definition}[Polynomial]
+	A \emph{polynomial of 1 variable} is a function, say $f(x)$, of the form
+	\begin{align}
+		f(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \cdots + a_1x + a_0.
+	\end{align}
+	The $a_i$s are constants, and $a_n\ne 0$ is assumed. We call $n$ the \emph{degree} of $f$.
+\end{definition}
+Polynomials in many variables do not have as nice a form as the one-dimensional (1D) polynomials, but are quite useful nevertheless. Anyway, $f(x,y,z)$ is a \emph{polynomial in 3 variables} if it takes the form
+\begin{align}
+	f(x,y,z) = \sum_{k,l,m} a_{k,l,m}x^ky^lz^m,
+\end{align}
+where the $a_{k,l,m}$ are (real) constants, and the summation runs over all nonnegative $k$, $l$, and $m$ s.t. $k + l + m\le n$, and it is assumed that at least 1 of the nonzero $a_{k,l,m}$ satisfy $k + l + m = n$. We again call $n$ the \emph{degree} of $f$; polynomials of degree 2 are \textit{quadratic}, degree 3 are \emph{cubic}, and so forth. If the degree is 0, then the polynomial is said to be \emph{trivial} or \emph{constant}. If all nonzero $a_{k,l,m}$ satisfy $n = k + l + m$, then $f$ is said to be \emph{homogeneous}. Homogeneous polynomials have the property that
+\begin{align}
+	f(tx_1,\ldots,tx_m) = t^mf(x_1,\ldots,x_m),\ \forall x_1,\ldots,x_m,t.
+\end{align}
+A polynomial $f$ of $m$ variables is said to be \emph{factored} into 2 polynomials $p$ and $q$ if $f(x_1,\ldots,x_m) = p(x_1,\ldots,x_m)q(x_1,\ldots,x_m)$ for all $x_1,\ldots,x_m$; $p$ and $q$ are then said to be \emph{factors} of $f$. The degree of a polynomial is equal to the sum of the degrees of its factors. A polynomial is \emph{irreducible} if it cannot be factored into nontrivial factors.
+
+The \emph{roots} of a polynomial $f(x_1,\ldots,x_m)$ are the values of $(x_1,\ldots,x_m)$ which return a zero value, so that $f(x_1,\ldots,x_m) = 0$. Polynomials of 1 variable can have as many roots as their degree; in fact, if multiplicities and complex roots are counted, polynomials of 1 variable always have exactly as many roots as their degree.
+
+\begin{example}[Roots of quadratic polynomials]
+	The roots of a quadratic polynomial $f(x) = ax^2 + bx + c$ is given by the well-known \emph{quadratic formula}:
+	\begin{align}
+		x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}.
+	\end{align}
+\end{example}
+``\textit{Cubic} and \textit{quartic} polynomials also have formulae for their roots, but they are much messier and not very useful in practice. Once one gets to quintic and higher polynomials, there is no elementary formula at all! And polynomials of 2 or more variables are even worse; typically one has an infinite number of roots.
+
+The roots of a factor are a subset of the roots of the original polynomial; this can be a useful piece of information in deciding whether one polynomial divides another. In particular, $x - a$ divides $f(x)$ iff $f(a) = 0$, because $a$ is a root of $x - a$. In particular, for any polynomial $f(x)$ of 1 variable and any real number $t$, $x - t$ divides $f(x) - f(t)$.'' -- \cite[p. 42]{Tao2006}
+
+\begin{theorem}[Fundamental theorem of algebra]
+	
+\end{theorem}
+
+\begin{problem}[Australian Mathematics Competition 1987, p. 13]
+	Let $a,b,c\in\mathbb{R}$ s.t.
+	\begin{align}
+		\label{Tao2006 Eqn. (12)}
+		\frac{1}{a} + \frac{1}{b} + \frac{1}{c} = \frac{1}{a + b + c},
+	\end{align}
+	with all denominators nonzero. Prove that
+	\begin{align*}
+		\frac{1}{a^5} + \frac{1}{b^5} + \frac{1}{c^5} = \frac{1}{(a + b + c)^5}.
+	\end{align*}
+\end{problem}
+``At 1st this question looks simple. There is really only one piece of information given, so there should be a straightforward sequence of logical steps leading to the result we want. Well, an initial attempt to deduce the 2nd equation from the 1st may be to raise both sides of \eqref{Tao2006 Eqn. (12)} to the 5th power, which gets something similar to the desired result, but with a whole lot of messy terms on the LHS. There seems to be no other obvious manipulation. So much for the direct approach.''
+
+\begin{proof}[Hint] Combine the 3 reciprocals on the LHS of \eqref{Tao2006 Eqn. (12)} to get
+	\begin{align}
+		\label{Tao2006 Eqn. (14)}
+		ab^2 + a^2b + a^2c + ac^2 + b^2c + bc^2 + 3abc = abc,
+	\end{align}
+	where the latter is algebraically simple since it contains no reciprocals. By factorization, \eqref{Tao2006 Eqn. (14)} $\Leftrightarrow(a + b)(b + c)(c + a) = 0\Leftrightarrow(a = -b)\lor(b = -c)\lor(c = -a)$, which implies, in particular,
+	\begin{align}
+		\frac{1}{a^{2n+1}} + \frac{1}{b^{2n+1}} + \frac{1}{c^{2n+1}} = \frac{1}{(a + b + c)^{2n + 1}},\ \forall n\in\mathbb{N},
+	\end{align}
+	where $n = 2$ yields the desired result.
+\end{proof}
+``Substitutions do not seem appropriate: the equations \eqref{Tao2006 Eqn. (12)} or \eqref{Tao2006 Eqn. (14)} are simple enough as they are, and substitutions would not make them much simpler. So we will try to guess and prove an intermediate result. The best kind of intermediate result is a parametrization, as this can be substituted directly into the desired equation.'' ``The best way to deal with roots of polynomials is to factorize the polynomial (and vice versa). \textit{What are the factors?}'' [$\ldots$] ``$\ldots$ and the only workable form of a polynomial is a breakup into factors. But to find out what they are, we have to experiment. The polynomial is homogeneous, so its factors should be too. The polynomial is symmetric, so the factors should be symmetries of each other. The polynomial is cubic, so there should be a linear factor.'' -- \cite[p. 44]{Tao2006}
+
+\begin{problem}
+	Factorize $a^3 + b^3 + c^3 - 3abc$. \emph{($\Downarrow$)}
+\end{problem}
+
+\begin{proof}[Answer]
+	$a^3 + b^3 + c^3 - 3abc = (b + c - a)(c + a - b)(a + b - c)$ for all $a,b,c\in\mathbb{R}$.
+\end{proof}
+
+\begin{problem}
+	Find all $a,b,c,d\in\mathbb{Z}$ s.t. $a + b + c + d = $ and $a^3 + b^3 + c^3 + d^3 = 24$.
+\end{problem}
+
+\begin{proof}[Hint]
+	Substitute the 1st equation into the 2nd and then factorize.
+\end{proof}
+``The factorization of polynomials, or impossibility thereof, is a fascinating piece of mathematics. The following question is instructive because it uses just about every trick in the book to find a solution.'' -- \cite[p. 45]{Tao2006}
+
+A polynomial having degree at most $n$ has at most $n$ roots.
+\begin{problem}[$\star\star$]
+	Prove that any polynomial of the form $f(x) = \prod_{i=1}^n (x - a_i)^2 + 1$ where $a_1,\ldots,a_n\in\mathbb{Z}$,\footnote{NQBH: Typos in \cite[Problem. 3.4, p. 45.]{Tao2006}: there is no index $i = 0$ in both the problem and its proof (wew,  2nd edition after 15 years from the 1st one though).} cannot be factorized into 2 nontrivial polynomials, each with integer coefficients.
+\end{problem}
+
+\begin{proof}[Proof]
+	Suppose that $f(x)$ is factorizable into 2 nontrivial integer polynomials, $p(x)$ and $q(x)$: $f(x) = p(x)q(x)$ for all $x$. In particular, $p(a_i)q(a_i) = f(a_i) = 1$, hence $p(a_i) = q(a_i) = \pm1$ for all $i = 1,\ldots,n$. Note that $\deg p + \deg q = \deg f = 2n$, hence 1 of them has a degree of at most $n$, w.l.o.g., assume $\deg p\le n$. Since $f$ has no real roots and $f(x)\ge 1$ for all $x\in\mathbb{R}$, $p$ has no roots and never changes sign, w.l.o.g., assume $p(x) > 0$ for all $x\in\mathbb{R}$. Then $p(a_i) = q(a_i) = 1$ for all $i = 1,\ldots,n$, i.e., $p(x) - 1$ and $q(x) - 1$ have at least $n$ roots, hence $\deg p\ge n$, $\deg q\ge n$. Combine this with the assumption $\deg p\le n$ before to obtain $\deg p = \deg q = n$. Since all the roots of $p(x) - 1$ and $q(x) - 1$ are the $a_i$s,
+	\begin{align*}
+		p(x) - 1 = r\prod_{i=1}^n (x - a_i),\ q(x) - 1 = s\prod_{i=1}^n (x - a_i)
+	\end{align*}
+	for some $r,s\in\mathbb{Z}^\star$. Apply these formulas into $f(x) = p(x)q()$ to get
+	\begin{align}
+		\label{Tao2006/Prob. 3.4/1}
+		\prod_{i=1}^n (x - a_i)^2 + 1 = \left(1 + r\prod_{i=1}^n (x - a_i)\right)\left(1 + s\prod_{i=1}^n (x - a_i)\right).
+	\end{align}
+	Comparing the $x^n$ coefficients yields $rs = 1$, hence $r = s = \pm 1$. For $r = s = 1$, \eqref{Tao2006/Prob. 3.4/1} becomes
+	\begin{align}
+		\label{Tao2006/Prob. 3.4/2}
+		\prod_{i=1}^n (x - a_i)^2 + 1 = \left(1 + \prod_{i=1}^n (x - a_i)\right)\left(1 + \prod_{i=1}^n (x - a_i)\right),
+	\end{align}
+	which is equivalent to $2\prod_{i=1}^n (x - a_i) = 0$ for all $x\in\mathbb{R}$, which is absurd\texttt{/}ridiculous. The case $r = s = -1$ is similar. 
+\end{proof}
+
+\begin{problem}
+	Prove that the polynomial $f(x) = \prod_{i=1}^n (x - a_i) + 1$ cannot be factorized into 2 smaller integer polynomials, where the $a_i$s are integers.
+\end{problem}
+
+\begin{proof}[Hint]
+	If $f(x) = p(x)q(x)$, look at $p(x) - q(x)$.
+\end{proof}
+
+\begin{problem}
+	Let $f(x)$ be a polynomial with integer coefficients, and let $a,b\in\mathbb{Z}$. Show that $f(a) - f(b)$ can only equal 1 when $a$, $b$ are consecutive.
+\end{problem}
+
+\begin{proof}[Hint]
+	$(a - b)|(f(a) - f(b)) = 1$, hence $a - b = \pm 1$.
+\end{proof}
 
 \subsection{Equation \& System of Equations\texttt{/}Phương Trình \& Hệ Phương Trình}
 
 \subsection{Inequality\texttt{/}Bất Đẳng Thức}
 
 \section{Elementary Calculus \& Elementary Analysis\texttt{/}Giải Tích Sơ Cấp}
+``Analysis is also a heavily explored subject, and it is just as general as algebra: essentially, analysis is the study of functions and their properties. The more complicated the properties, the `higher' the analysis. The lowest form of analysis is studying functions satisfying simple algebraic properties$\ldots$'' -- \cite[Chap. 3, p. 36]{Tao2006}
 
-\section{Elementary Geometry\texttt{/}Hình Học Sơ Cấp}
+\subsection{Functional Analysis}
+\begin{problem}
+	Let $f:\mathbb{R}\to\mathbb{R}$ s.t.\footnote{``These problems are a good way to learn how to think mathematically, because there is only 1 or 2 pieces of data that can be used, so there should be a clear direction in which to go. It is sort of a `pocket mathematics'’, where instead of the 3 dozen axioms and countless thousands of theorems, one only has a handful of `axioms' (i.e. data) to use. And yet, it still has its surprises.'' -- \cite[Chap. 3, p. 36]{Tao2006}} $f$ is continuous, $f(0) = 1$, and
+	\begin{align*}
+		f(m + n + 1) = f(m) + f(n),\ \forall m,n\in\mathbb{R}.
+	\end{align*}
+	Show that $f(x) = 1 + x$ for all real numbers $x$.
+\end{problem}
+
+\begin{proof}[Hint]
+	1st prove for all integers, then for all rationals, and then for all reals.
+\end{proof}
+
+\begin{problem}[Greitzer 1978, p. 19]
+	Suppose $f:\mathbb{N}^\star\to\mathbb{N}^\star$ s.t. $f$ satisfies $f(n + 1) > f(f(n))$ for all positive integers $n$. Show that $f(n) = n$ for all positive integers $n$.
+\end{problem}
+``This equation looks insufficient to prove what we want. After all, h\textit{ow can an inequality prove an equality?}'' Functional equations are easier to handle because one can apply various substitutions and the like and gradually manipulate our original data into a manageable form.
+
+\begin{proof}[Hint]
+	1st make the inequality `stronger': $f(n + 1)\ge f(f(n)) + 1$, for all $n\in\mathbb{N}^\star$. Prove $f(m)\ge n$ for all $m\ge n$ by induction, and thus, in particular, when $m = n$, $f(n)\ge n$ for all $n\in\mathbb{N}^\star$. Hence, $f(n + 1)\ge f(f(n)) + 1\ge f(n) + 1 > f(n)$, i.e., $f$ is an increasing function: $f(m) > f(n)\Leftrightarrow m > n$. Then $f(n + 1) > f(f(n))$ implies $n + 1 > f(n)$. See \cite[pp. 36--38]{Tao2006} for a full proof.
+\end{proof}
+``Always try to use tactics that get you closer to the objective, unless all available direct approaches have been exhausted. Only then you should think about going sideways, or -- occasionally -- backwards.'' -- \cite[p. 37]{Tao2006}
+
+\begin{problem}[Australian Mathematics Competition 1984, p. 7]
+	\label{prob: Australian Mathematics Competition 1984, p. 7}
+	Suppose $f:\mathbb{N}^\star\to\mathbb{Z}$ with the following properties: (a) $f(2) = 2$; (b) $f(mn) = f(m)f(n)$ for all $m,n\in\mathbb{N}^\star$; (c) $f(m) > f(n)$ if $m > n$. Find $f(1983)$.
+\end{problem}
+``Now we have to find out a particular value of $f$. The best way is to try to evaluate all of $f$, not just $f(1983)$. (1983 is just the year of the question anyway.) This is, of course, assuming there is only 1 solution of $f$. But implicit in the question is the fact that there is only 1 possible value of $f(1983)$ (otherwise there would be more than 1 answer), and because of the ordinariness of 1983 we might reasonably conjecture that there is only 1 solution to $f$.'' -- \cite[p. 39]{Tao2006}
+
+\begin{proof}[Hint]
+	By induction, $f(2^n) = 2^n$ for all $n\in\mathbb{N}_0$ (including $f(1) = 1$ by substituting $m = 1$, $n = 2$ in (b)). Prove $f(n) = n$ for all $n\in\mathbb{N}^\star$ by strong induction (use the even-odd argument in the induction step). 
+\end{proof}
+``Because we seem to be relying on past results to attain the new ones, the general proof smells heavily on induction. And because we are not just using one previous result, but several previous results, we probably need \textit{strong} induction.'' -- \cite[p. 40]{Tao2006}
+
+\begin{problem}
+	Show that Problem \ref{prob: Australian Mathematics Competition 1984, p. 7} can still be solved if we replace (a) with the weaker condition (a') $f(n) = n$ for at least 1 integer $n\ge 2$.
+\end{problem}
+
+\begin{problem}
+	Show that Problem \ref{prob: Australian Mathematics Competition 1984, p. 7} can still be solved if we allow $f(n)$ to be a real number, rather than just an integer, i.e., $f:\mathbb{N}^\star\to\mathbb{R}$. For an additional challenge, solve Problem \ref{prob: Australian Mathematics Competition 1984, p. 7} with this assumption and with (a) replaced by (a').
+\end{problem}
+
+\begin{proof}[Hint]
+	1st prove $f(3) = 3$, by comparing $f(2^n)$ with $f(3^n)$ for various integers $m,n\in\mathbb{N}^\star$.
+\end{proof}
+
+\begin{problem}[1986 International Mathematical Olympiad, Q5]
+	Find all (if any) functions $f:[0,\infty)\to[0,\infty)$, s.t. (a) $f(xf(y))f(y) = f(x + y)$ for all $x,y\in[0,\infty)$; (b) $f(2) = 0$; (c) $f(x)\ne 0$ for every $0\le x < 2$.
+\end{problem}
+
+\begin{proof}[Hint]
+	(a) involves products of values of $f$, and (b) and (c) involve a function having a value of zero or nonzero. What can one say when a product equals 0?
+\end{proof}
+
+\section{Elementary\texttt{/}Euclidean Geometry\texttt{/}Hình Học Sơ Cấp}
+\begin{quotation}
+	``Archimedes will be remembered when Aeschylus is forgotten, because languages die and mathematical ideas do not.'' -- G. H. Hardy, `\textit{A Mathematical Apology}'
+\end{quotation}
+``Euclidean geometry was the 1st branch of mathematics to be treated in anything like the modern fashion (with postulates, definitions, theorems, and so forth); and even now geometry is conducted in a very logical, tightly knit fashion. There are several basic results which can be used to systematically attack and resolve questions about geometrical objects and ideas. This idea can be taken to extremes with coordinate geometry, which transforms points, lines, triangles, and circles into a quadratic mess of coordinates, crudely converting geometry into algebra. But the true beauty of geometry is in how a non-obvious looking fact can be shown to be undeniably true by the repeated application of obvious facts.'' -- \cite[Chap. 4, p. 49]{Tao2006}
 
 \subsection{2D Geometry\texttt{/}Hình Học Phẳng}
+\begin{theorem}[Thales' theorem]
+	The angle subtended by a diameter is a right angle.
+\end{theorem}
+``Geometry is full of things like this: results you can check by drawing a picture and measuring angles and lengths, but are not immediately obvious, like the theorem that the midpoints of the 4 sides of a quadrilateral always make up a parallelogram. These facts -- they have a certain something about them.'' -- \cite[Chap. 4, p. 50]{Tao2006}
+
+\begin{problem}[Australian Mathematics Competition 1987, p. 12]
+	$ABC$ is a triangle inscribed in a circle. The angle bisectors of $A,B,C$ meet the circle at $D,E,F$, respectively. Show that $AD\bot EF$.
+\end{problem}
 
 \subsubsection{Triangle\texttt{/}Tam Giác}
 
@@ -115,7 +318,7 @@ The \textit{set of positive integers}\texttt{/}\textit{natural numbers without z
 \begin{align*}
 	\mathbb{N}^\star = \mathbb{N}^+ = \mathbb{N}_0\backslash\{0\} = \mathbb{N}_1 = \{1,2,\ldots\} = \{x\in\mathbb{Z};x > 0\} = \mathbb{Z}^+ = \mathbb{Z}_{> 0} = \mathbb{Z}_{\ge 1}.
 \end{align*}
-See, e.g., \href{https://en.wikipedia.org/wiki/Natural_number}{Wikipedia\texttt{/}natural number}. The existence of such a set is established in \textit{set theory}, see, e.g., \cite{Halmos1960, Halmos1974, Kaplansky1972, Kaplansky1977}.
+See, e.g., \href{https://en.wikipedia.org/wiki/Natural_number}{Wikipedia\texttt{/}natural number}. The existence of such a set is established in \textit{set theory}, see, e.g., \cite{Halmos1960, Halmos1974, Kaplansky1972, Kaplansky1977}. Note that these notations are usually different in each text. E.g., in \cite[Chap. 2, p. 10]{Tao2006}: ``A \textit{natural number} is a positive integer (we will not consider 0 a natural number). The set of natural numbers will be denoted as ${\bf N}$.''
 
 \begin{quotation}
 	``Number theory may not necessarily be divine, but it still has an aura of mystique about it. Unlike algebra, which has as its backbone the laws of manipulating equations, number theory seems to derive its results from a source unknown.'' -- \cite[Chap. 2, p. 9]{Tao2006}
@@ -130,8 +333,19 @@ The following theorem is 1st conjectured by Fermat.
 \textit{Comment.} ``Algebraically, we are talking about an extremely simple equation: but because we are restricted to the integers, the rules of algebra fail. The result is infuriatingly innocent-looking and experimentation shows that it does seem to work, but offers no explanation why. Indeed, Lagrange's theorem cannot be easily proved by the elementary means covered in this book: an excursion into \textit{Gaussian integers} or something similar is needed.'' -- \cite[Chap. 2, p. 9]{Tao2006}
 
 \subsection{Modular Arithmetic}
-The following statements can be proved by elementary number theory; all revolve around the basic idea of \textit{modular arithmetic}, which provides the power of algebra but limited to a finite number of integers.
+\begin{definition}[Prime number]
+	A \emph{prime number} is a natural number with exactly 2 factors: itself and 1; we do not consider 1 to be prime. 2 natural numbers $m$ and $n$ are \emph{coprime} if their only common factor is 1.
+\end{definition}
 
+\begin{definition}[Modular arithmetic]
+	The notation `$x = y\ (\operatorname{mod} n)$', which we read as `$x$ equals to $y$ module $n$', means that $x$ and $y$ differ by a multiple of $n$. The notation `$(\operatorname{mod} n)$' signifies that we are working in a \emph{modular arithmetic} where the \emph{modulus $n$} has been identified with 0.
+\end{definition}
+Modular arithmetic also differs from standard arithmetic in that inequalities do not exist, and that all numbers are integers.
+
+\begin{example}
+	$7/2\ne 3.5\ (\operatorname{mod} 5)$, $7/2 = 12/2 = 6\ (\operatorname{mod} 5)$ because $7 = 12\ (\operatorname{mod} 5)$.\footnote{``It may seem strange to divide in this round-about way, but in fact one can find that there is no real contradiction, although some divisions are illegal, just as division-by-zero is illegal within the traditional field of real numbers. As a general rule, division is OK if the denominator is coprime with the modulus $n$.'' -- \cite[p. 10]{Tao2006}}
+\end{example}
+The following statements can be proved by elementary number theory; all revolve around the basic idea of \textit{modular arithmetic}, which provides the power of algebra but limited to a finite number of integers.
 \begin{problem}
 	A natural number $n$ is always has the same last digit as its 5th power $n^5$.
 \end{problem}
@@ -152,6 +366,15 @@ The following statements can be proved by elementary number theory; all revolve 
 	Prove that there are exactly 4 numbers that are $n$ digits long (allowing for padding by zeroes) and which are exactly the same last digits as their square. e.g., the 4 3-digit numbers with this property are $000$, $001$, $625$, and $876$.
 \end{problem}
 This problem can eventually lead to the notion of \textit{p-adics}, being sort of an infinite-dimensional form of modular arithmetic.
+
+\subsubsection{Digits}
+``One can learn something about a number (in particular, whether it is divisible by 9\footnote{also 3.}) by summing all its digits. In higher mathematics, it turns out that this operation is not particularly important (it has proven far more effective to study numbers directly, rather than
+via their digit expansion), but it is quite popular in recreational mathematics and has even been given mystical connotations by some! Certainly, digit summing appears fairly often in mathematics competition problems$\ldots$''
+
+\begin{problem}
+	Show that among any 18 consecutive 3-digit numbers there is at least one which is divisible by the sum of its digits.
+\end{problem}
+\texttt{Skip Chap. 2 in \cite{Tao2006}, come back later to Number Theory.}
 
 \subsection{Principle of Mathematical Induction\texttt{/}Nguyên Lý Quy Nạp Toán Học}
 A typical technique of proof in number theory: prove by the \textit{principle of mathematical induction} (chứng minh bằng \textit{phương pháp}\texttt{/}\textit{nguyên lý quy nạp toán học}).
@@ -222,9 +445,9 @@ The prefaces of, as the whole book, \cite{Tao2006} are also very pleasant to rea
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[TT's blog]{TT's blog} \href{https://terrytao.wordpress.com}{Terence Tao's blog}.
+	\bibitem[TerryTao]{TerryTao} \href{https://terrytao.wordpress.com}{Terence Tao's blog}.
 	\begin{itemize}
-		\item Terence Tao. \href{https://terrytao.wordpress.com/books/solving-mathematical-problems-a-personal-perspective/}{Solving Mathematical Problems: A Personal Perspective}.
+		\item Terence Tao. \href{https://terrytao.wordpress.com/books/solving-mathematical-problems-a-personal-perspective/}{\textit{Solving Mathematical Problems: A Personal Perspective}}.
 	\end{itemize}
 \end{thebibliography}
 
