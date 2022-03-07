@@ -1,11 +1,11 @@
-\documentclass{article}
+\documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,tcolorbox}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
@@ -24,22 +24,24 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small \textsc{Chap.} ~\thechapter}
 \rhead{\small \nouppercase{\leftmark}}
-\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{Some Topics in Elementary Mathematics}
+\title{Some Topics in Elementary Mathematics:\\Problems, Theory, \& Applications}
 \author{Nguyễn Quản Bá Hồng}
 \date{\today}
 
 \begin{document}
 \maketitle
-\begin{abstract}
-	Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong Khoa học nói chung và Toán Cao Cấp nói riêng.
-\end{abstract}
 \tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter*{Preface}
+Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong Khoa học nói chung và Toán Cao Cấp nói riêng.
 
 %------------------------------------------------------------------------------%
 
@@ -58,18 +60,52 @@
 
 \section*{Conventions}
 \begin{itemize}
-	\item `e.g.' $\coloneqq$ `for example', or, `for instance'.
+	\item `e.g.' $\coloneqq$ `for example', or `for instance'.
 	\item `i.e.' $\coloneqq$ `which means', `that means', or `in other words'.
 	\item `iff' $\coloneqq$ `if and only if' $=$ `equivalent to', in mathematical notation: $\Leftrightarrow$.
+	\item IMO $\coloneqq$ International Mathematical Olympiad.
 	\item `lhs', or `LHS' $\coloneqq$ left-hand side
 	\item `rhs', or `RHS' $\coloneqq$ right-hand side.
 	\item `s.t.' $\coloneqq$ `such that'.
+	\item VMO $\coloneqq$ Vietnamese Mathematical Olympiad.
 	\item `w.l.o.g.' $\coloneqq$ `without loss of generality'.
 \end{itemize}
 
-\section{Combinatorics\texttt{/}Tổ Hợp}
+%------------------------------------------------------------------------------%
 
-\section{Elementary Algebra\texttt{/}Đại Số Sơ Cấp}
+\chapter{Combinatorics\texttt{/}Tổ Hợp}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 19, p. 6]
+	Prove that for any $n\in\mathbb{N}^\star$, a $2^n\times 2^n$ checkerboard with a $1\times 1$ corner square removed can be tiled by pieces of the form described in \cite[Fig. 2, p. 6]{Gelca_Andreescu2017} (3-cell $L$-shape)
+\end{problem}
+
+\section{Combinatorial Geometry\texttt{/}Hình Học Tổ Hợp}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 4, p. 3]
+	Let $\mathcal{F} = \{E_1,\ldots,E_m\}$ be a family of subsets with $n - 2$ elements of a set $S$ with $n$ elements, $n\ge 3$. Show that if the union of any 3 subsets from $\mathcal{F}$ is not equal to $S$, then the union of all subsets from $\mathcal{F}$ is different from $S$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 10, p. 3]
+	Show that the interval $[0,1]$ cannot be partitioned into 2 disjoint sets $A$ and $B$ s.t. $B = A + a$ for some real number $a$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 4]
+	Finite many lines divide the plane into regions. Show that these regions can be colored by 2 colors in such a way that neighboring regions have different colors.
+\end{problem}
+
+\begin{proof}[Solution]
+	See, e.g., \cite[p. 4]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 25, p. 7]
+	It is given a finite set $A$ of lines in a plane. It is known that, for some $k\in\mathbb{N}^\star$, $k\ge 3$, for every subset $B$ of $A$ consisting of $k^2 + 1$ lines there are $k$ points in the plane s.t. each line in $B$ passes through at least 1 of them. Prove that there are $k$ points in the plane s.t. every line in $A$ passes through at least 1 of them.
+\end{problem}
+
+\section{Combinatorial Set Theory\texttt{/}Lý Thuyết Tập Hợp Tổ Hợp}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Elementary Algebra\texttt{/}Đại Số Sơ Cấp}
 \begin{quotation}
 	``One cannot escape the feeling $\ldots$ that these mathematical formulae have an independent existence and an intelligence of their own $\ldots$ that they are wiser than we are, wiser even than their discoverers $\ldots$ that we get more out of them that was originally put into them.'' -- Heinrich Hertz, quoted by F.J. Dyson
 \end{quotation}
@@ -79,38 +115,48 @@
 
 ``Algebra is the basic foundation of a large part of applied mathematics. Problems of mechanics, economics, chemistry, electronics, optimization, and so on are answered by algebra and differential calculus, which is an advanced form of algebra. In fact, algebra is so important that most of its secrets have been discovered -- so it can be safely put into a high-school curriculum. However, a few gems can still be found here and there.'' -- \cite[Chap. 3, p. 35]{Tao2006}
 
-\subsection{Algebraic Identity\texttt{/}Đẳng Thức Đại Số}
+\section{Algebraic Identity\texttt{/}Đẳng Thức Đại Số}
 \begin{problem}
 	Prove that $\sum_{i=1}^n i^3 = \left(\sum_{i=1}^n i\right)^2$ for all $n\in\mathbb{N}^\star$.\footnote{I.e., the sum of the 1st few cubes will always be a square.}
 \end{problem}
 
-\subsection{Polynomials}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 12, p. 6] Prove that
+	\begin{align*}
+		\sum_{i=n+1}^{2n} \frac{1}{i} = \sum_{i=1}^{2n} (-1)^{i+1}\frac{1}{i},\ \forall n\in\mathbb{N}^\star,
+	\end{align*}
+	or more explicitly,
+	\begin{align*}
+		\frac{1}{n + 1} + \frac{1}{n + 2} + \cdots + \frac{1}{2n} = 1 - \frac{1}{2} + \frac{1}{3} - \cdots + \frac{1}{2n - 1} - \frac{1}{2n}.
+	\end{align*}
+\end{problem}
+
+\section{Polynomials}
 ``Many algebra questions concern polynomials of one or more variables, $\ldots$'' -- \cite[p. 41]{Tao2006}
 
 \begin{definition}[Polynomial]
 	A \emph{polynomial of 1 variable} is a function, say $f(x)$, of the form
-	\begin{align}
+	\begin{align*}
 		f(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \cdots + a_1x + a_0.
-	\end{align}
+	\end{align*}
 	The $a_i$s are constants, and $a_n\ne 0$ is assumed. We call $n$ the \emph{degree} of $f$.
 \end{definition}
 Polynomials in many variables do not have as nice a form as the one-dimensional (1D) polynomials, but are quite useful nevertheless. Anyway, $f(x,y,z)$ is a \emph{polynomial in 3 variables} if it takes the form
-\begin{align}
+\begin{align*}
 	f(x,y,z) = \sum_{k,l,m} a_{k,l,m}x^ky^lz^m,
-\end{align}
+\end{align*}
 where the $a_{k,l,m}$ are (real) constants, and the summation runs over all nonnegative $k$, $l$, and $m$ s.t. $k + l + m\le n$, and it is assumed that at least 1 of the nonzero $a_{k,l,m}$ satisfy $k + l + m = n$. We again call $n$ the \emph{degree} of $f$; polynomials of degree 2 are \textit{quadratic}, degree 3 are \emph{cubic}, and so forth. If the degree is 0, then the polynomial is said to be \emph{trivial} or \emph{constant}. If all nonzero $a_{k,l,m}$ satisfy $n = k + l + m$, then $f$ is said to be \emph{homogeneous}. Homogeneous polynomials have the property that
-\begin{align}
+\begin{align*}
 	f(tx_1,\ldots,tx_m) = t^mf(x_1,\ldots,x_m),\ \forall x_1,\ldots,x_m,t.
-\end{align}
+\end{align*}
 A polynomial $f$ of $m$ variables is said to be \emph{factored} into 2 polynomials $p$ and $q$ if $f(x_1,\ldots,x_m) = p(x_1,\ldots,x_m)q(x_1,\ldots,x_m)$ for all $x_1,\ldots,x_m$; $p$ and $q$ are then said to be \emph{factors} of $f$. The degree of a polynomial is equal to the sum of the degrees of its factors. A polynomial is \emph{irreducible} if it cannot be factored into nontrivial factors.
 
 The \emph{roots} of a polynomial $f(x_1,\ldots,x_m)$ are the values of $(x_1,\ldots,x_m)$ which return a zero value, so that $f(x_1,\ldots,x_m) = 0$. Polynomials of 1 variable can have as many roots as their degree; in fact, if multiplicities and complex roots are counted, polynomials of 1 variable always have exactly as many roots as their degree.
 
 \begin{example}[Roots of quadratic polynomials]
 	The roots of a quadratic polynomial $f(x) = ax^2 + bx + c$ is given by the well-known \emph{quadratic formula}:
-	\begin{align}
+	\begin{align*}
 		x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}.
-	\end{align}
+	\end{align*}
 \end{example}
 ``\textit{Cubic} and \textit{quartic} polynomials also have formulae for their roots, but they are much messier and not very useful in practice. Once one gets to quintic and higher polynomials, there is no elementary formula at all! And polynomials of 2 or more variables are even worse; typically one has an infinite number of roots.
 
@@ -139,9 +185,9 @@ The roots of a factor are a subset of the roots of the original polynomial; this
 		ab^2 + a^2b + a^2c + ac^2 + b^2c + bc^2 + 3abc = abc,
 	\end{align}
 	where the latter is algebraically simple since it contains no reciprocals. By factorization, \eqref{Tao2006 Eqn. (14)} $\Leftrightarrow(a + b)(b + c)(c + a) = 0\Leftrightarrow(a = -b)\lor(b = -c)\lor(c = -a)$, which implies, in particular,
-	\begin{align}
+	\begin{align*}
 		\frac{1}{a^{2n+1}} + \frac{1}{b^{2n+1}} + \frac{1}{c^{2n+1}} = \frac{1}{(a + b + c)^{2n + 1}},\ \forall n\in\mathbb{N},
-	\end{align}
+	\end{align*}
 	where $n = 2$ yields the desired result.
 \end{proof}
 ``Substitutions do not seem appropriate: the equations \eqref{Tao2006 Eqn. (12)} or \eqref{Tao2006 Eqn. (14)} are simple enough as they are, and substitutions would not make them much simpler. So we will try to guess and prove an intermediate result. The best kind of intermediate result is a parametrization, as this can be substituted directly into the desired equation.'' ``The best way to deal with roots of polynomials is to factorize the polynomial (and vice versa). \textit{What are the factors?}'' [$\ldots$] ``$\ldots$ and the only workable form of a polynomial is a breakup into factors. But to find out what they are, we have to experiment. The polynomial is homogeneous, so its factors should be too. The polynomial is symmetric, so the factors should be symmetries of each other. The polynomial is cubic, so there should be a linear factor.'' -- \cite[p. 44]{Tao2006}
@@ -165,7 +211,7 @@ The roots of a factor are a subset of the roots of the original polynomial; this
 
 A polynomial having degree at most $n$ has at most $n$ roots.
 \begin{problem}[$\star\star$]
-	Prove that any polynomial of the form $f(x) = \prod_{i=1}^n (x - a_i)^2 + 1$ where $a_1,\ldots,a_n\in\mathbb{Z}$,\footnote{NQBH: Typos in \cite[Problem. 3.4, p. 45.]{Tao2006}: there is no index $i = 0$ in both the problem and its proof (wew,  2nd edition after 15 years from the 1st one though).} cannot be factorized into 2 nontrivial polynomials, each with integer coefficients.
+	Prove that any polynomial of the form $f(x) = \prod_{i=1}^n (x - a_i)^2 + 1$ where $a_1,\ldots,a_n\in\mathbb{Z}$,\footnote{NQBH: Typos in \cite[Problem. 3.4, p. 45.]{Tao2006}: there is no index $i = 0$ in both its statement and its proof (wew,  2nd edition after 15 years from the 1st one though).} cannot be factorized into 2 nontrivial polynomials, each with integer coefficients.
 \end{problem}
 
 \begin{proof}[Proof]
@@ -173,7 +219,7 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	\begin{align*}
 		p(x) - 1 = r\prod_{i=1}^n (x - a_i),\ q(x) - 1 = s\prod_{i=1}^n (x - a_i)
 	\end{align*}
-	for some $r,s\in\mathbb{Z}^\star$. Apply these formulas into $f(x) = p(x)q()$ to get
+	for some $r,s\in\mathbb{Z}^\star$. Apply these formulas into $f(x) = p(x)q(x)$ to get
 	\begin{align}
 		\label{Tao2006/Prob. 3.4/1}
 		\prod_{i=1}^n (x - a_i)^2 + 1 = \left(1 + r\prod_{i=1}^n (x - a_i)\right)\left(1 + s\prod_{i=1}^n (x - a_i)\right).
@@ -202,14 +248,82 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	$(a - b)|(f(a) - f(b)) = 1$, hence $a - b = \pm 1$.
 \end{proof}
 
-\subsection{Equation \& System of Equations\texttt{/}Phương Trình \& Hệ Phương Trình}
+\subsection{Rationals vs. Irrationals}
+\begin{definition}[Rational, irrational]
+	
+\end{definition}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 1, p. 3]
+	Prove that $\sqrt{2} + \sqrt{3} + \sqrt{5}$ is an irrational number.
+\end{problem}
 
-\subsection{Inequality\texttt{/}Bất Đẳng Thức}
+\section{Equation \& System of Equations\texttt{/}Phương Trình \& Hệ Phương Trình}
 
-\section{Elementary Calculus \& Elementary Analysis\texttt{/}Giải Tích Sơ Cấp}
+\section{Inequality\texttt{/}Bất Đẳng Thức}
+Here we consider 2 types of inequalities: inequalities for integers and those for reals. Of course, the former involves number theory, while the latter belongs to elementary analysis and calculus.
+
+\subsection{Inequalities in $\mathbb{Z}$}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 15, p. 6]
+	Prove that $3^n\ge n^3$  for all $n\in\mathbb{N}^\star$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 16, p. 6]
+	Prove that
+	\begin{align*}
+		\left(\frac{n}{3}\right)^n < n! < \left(\frac{n}{2}\right)^n,\ \forall n\in\mathbb{N}^\star,\,n\ge 6.
+	\end{align*}
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 17, p. 6]
+	Prove that
+	\begin{align*}
+		\sum_{i=1}^n \frac{1}{i^3} < \frac{3}{2},\ \forall n\in\mathbb{N}^\star.
+	\end{align*}
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 8]
+	Let $(x_n)_{n\ge 0}$ be a sequence of nonnegative integers s.t. for every index $k$, the number of the terms of the sequence that are $\le k$ is finite. We denote this number by $y_k$. Prove that for any 2 $m,n\in\mathbb{N}^\star$, the following inequality holds
+	\begin{align*}
+		\sum_{i=0}^n x_i + \sum_{i=0}^m y_i\ge(m + 1)(n + 1).
+	\end{align*}
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[pp. 8--9]{Gelca_Andreescu2017}.
+\end{proof}
+
+\subsection{Inequalities in $\mathbb{R}$}
+``Now we demonstrate a less frequently encountered form of induction that can be traced back to Cauchy's work, where it was used to prove the \textit{arithmetic mean-geometric mean inequality}.'' -- \cite[p. 9]{Gelca_Andreescu2017}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 9, D. Buşneag, I. Maftei, \textit{Themes for Mathematics Circles \& Contests} (Scrisul Românesc, Craiova, 1983)]
+	Let $(a_i)_{i=1}^n\subset\mathbb{R}$ s.t. $a_i > 1$ for $i = 1,\ldots,n$. Prove that
+	\begin{align*}
+		\sum_{i=1}^n \frac{1}{1 + a_i}\ge\frac{n}{1 + \sqrt[n]{\prod_{i=1}^n a_i}}.
+	\end{align*}
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[pp. 9--10]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 35. p. 8]
+	Show that if $(a_i)_{i=1}^n\subset[0,\infty)$, then
+	\begin{align*}
+		\prod_{i=1}^n (1 + a_i)\ge\left(1 + \sqrt[n]{\prod_{i=1}^n a_i}\right)^n.
+	\end{align*}
+\end{problem}
+
+\subsection{Inequalities in $\mathbb{C}$}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Elementary Calculus \& Elementary Analysis\texttt{/}Giải Tích Sơ Cấp}
 ``Analysis is also a heavily explored subject, and it is just as general as algebra: essentially, analysis is the study of functions and their properties. The more complicated the properties, the `higher' the analysis. The lowest form of analysis is studying functions satisfying simple algebraic properties$\ldots$'' -- \cite[Chap. 3, p. 36]{Tao2006}
 
-\subsection{Functional Analysis}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 22, p. 7]
+	Prove that any function defined on the entire real axis can be written as the sum of 2 functions whose graphs admit centers of symmetry.
+\end{problem}
+
+\section{Functional Equation}
 \begin{problem}
 	Let $f:\mathbb{R}\to\mathbb{R}$ s.t.\footnote{``These problems are a good way to learn how to think mathematically, because there is only 1 or 2 pieces of data that can be used, so there should be a clear direction in which to go. It is sort of a `pocket mathematics'’, where instead of the 3 dozen axioms and countless thousands of theorems, one only has a handful of `axioms' (i.e. data) to use. And yet, it still has its surprises.'' -- \cite[Chap. 3, p. 36]{Tao2006}} $f$ is continuous, $f(0) = 1$, and
 	\begin{align*}
@@ -263,13 +377,61 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	(a) involves products of values of $f$, and (b) and (c) involve a function having a value of zero or nonzero. What can one say when a product equals 0?
 \end{proof}
 
-\section{Elementary\texttt{/}Euclidean Geometry\texttt{/}Hình Học Sơ Cấp}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 7, p. 3]
+	Show that there does not exist a function $f:\mathbb{Z}\to\{1,2,3\}$ satisfying $f(x)\ne f(y)$ for all $x,y\in\mathbb{Z}$ s.t. $|x - y|\in\{2,3,5\}$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 8, p. 3]
+	Show that there does not exist a strictly increasing function $f:\mathbb{N}\to\mathbb{N}$ satisfying $f(2) = 3$ and $f(mn) = f(m)f(n)$ for all $m,n\in\mathbb{N}$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 9, p. 3]
+	Determine all functions $f:\mathbb{N}\to\mathbb{N}$ satisfying
+	\begin{align*}
+		xf(y) + yf(x) = (x + y)f(x^2 + y^2),\ \forall x,y\in\mathbb{N}^\star.
+	\end{align*}
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 7]
+	Let $f:\mathbb{N}\to\mathbb{N}$ be a strictly increasing function s.t. $f(2) = 2$ and $f(mn) = f(m)f(n)$ for every relatively prime pair of $m,n\in\mathbb{N}^\star$. Prove that $f(n) = n$ for every $n\in\mathbb{N}^\star$.
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 8]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{definition}[Multiplicative function]
+	A function $f:\mathbb{N}\to\mathbb{C}$ with the property that $f(1) = 1$ and $f(mn) = f(m)f(n)$ whenever $m$ and $n$ are coprime is called a \emph{multiplicative function}.
+\end{definition}
+
+\begin{example}
+	The \emph{Euler totient function} and the \emph{M\"obius function} are multiplicative functions.
+\end{example}
+
+\begin{theorem}[Paul Erd\"os']
+	Any increasing multiplicative function that is not constant is of the form $f(n) = n^\alpha$ for some $\alpha > 0$.
+\end{theorem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 34, pp. 10--11]
+	Let $f:\mathbb{R}\to\mathbb{R}$ be a function satisfying
+	\begin{align*}
+		f\left(\frac{x_1 + x_2}{2}\right) = \frac{f(x_1) + f(x_2)}{2},\ \forall x_1,x_2\in\mathbb{R}.
+	\end{align*}
+	Prove that
+	\begin{align*}
+		f\left(\frac{1}{n}\sum_{i=1}^n x_i\right) = \frac{1}{n}\sum_{i=1}^n f(x_i),\ \forall x_i\in\mathbb{R},\,i = 1,\ldots,n.
+	\end{align*}
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Elementary\texttt{/}Euclidean Geometry\texttt{/}Hình Học Sơ Cấp}
 \begin{quotation}
 	``Archimedes will be remembered when Aeschylus is forgotten, because languages die and mathematical ideas do not.'' -- G. H. Hardy, `\textit{A Mathematical Apology}'
 \end{quotation}
 ``Euclidean geometry was the 1st branch of mathematics to be treated in anything like the modern fashion (with postulates, definitions, theorems, and so forth); and even now geometry is conducted in a very logical, tightly knit fashion. There are several basic results which can be used to systematically attack and resolve questions about geometrical objects and ideas. This idea can be taken to extremes with coordinate geometry, which transforms points, lines, triangles, and circles into a quadratic mess of coordinates, crudely converting geometry into algebra. But the true beauty of geometry is in how a non-obvious looking fact can be shown to be undeniably true by the repeated application of obvious facts.'' -- \cite[Chap. 4, p. 49]{Tao2006}
 
-\subsection{2D Geometry\texttt{/}Hình Học Phẳng}
+\section{2D Geometry\texttt{/}Hình Học Phẳng}
 \begin{theorem}[Thales' theorem]
 	The angle subtended by a diameter is a right angle.
 \end{theorem}
@@ -279,7 +441,7 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	$ABC$ is a triangle inscribed in a circle. The angle bisectors of $A,B,C$ meet the circle at $D,E,F$, respectively. Show that $AD\bot EF$.
 \end{problem}
 
-\subsubsection{Triangle\texttt{/}Tam Giác}
+\subsection{Triangle\texttt{/}Tam Giác}
 
 \paragraph{Basic.}
 \begin{enumerate}
@@ -304,11 +466,43 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 \end{problem}
 \textit{Comments.} An `evaluate $\ldots$' problem. ``The equalities are likely to be more useful than the inequalities, since our objective and data come in the form of equalities.''
 
-\subsubsection{Quadrilateral\texttt{/}Tứ Giác}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 29, p. 9]
+	Show that an isosceles triangle with one angle of $120^\circ$ can be dissected into $n\ge 4$ triangles similar to it.
+\end{problem}
 
-\subsection{3D Geometry\texttt{/}Hình Học Không Gian}
+\subsection{Quadrilateral\texttt{/}Tứ Giác}
 
-\section{Number Theory\texttt{/}Số Học}
+\subsection{Polygon\texttt{/}Đa Giác}
+
+\begin{definition}[$n$-gon]
+	An \emph{$n$-gon} is a polygon with $n$ sides.
+\end{definition}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 30, p. 9]
+	Show that for all $n > 3$ there exists an $n$-gon whose sides are not all equal and s.t. the sum of the distances from any interior point to each of the sides is constant.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 31, p. 9]
+	The vertices of a convex polygon are colored by at least 3 colors s.t. no 2 consecutive vertices have the same color. Prove that one can dissect the polygon into triangles by diagonals that do not cross and whose endpoints have different colors.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 32, p. 9]
+	Prove that any polygon (convex or not) can be dissected into triangles by interior diagonals.
+\end{problem}
+
+\section{3D Geometry\texttt{/}Hình Học Không Gian}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 5, p. 3]
+	Every point of the 3D space is colored red, green, or blue. Prove that 1 of the colors attains all distances, meaning that any positive real number represents the distance between 2 points of this color.
+\end{problem}
+
+\begin{problem}	[\cite{Gelca_Andreescu2017}, Prob. 6, p. 3]
+	The union of 9 planar surfaces, each of area equal to 1, has a total area equal to 5. Prove that the overlap of some 2 of these surfaces has an area $\ge\frac{1}{9}$.
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Number Theory\texttt{/}Số Học}
 
 \paragraph{Notations.} The \textit{set of nonnegative integers}\texttt{/}\textit{natural numbers with zero}\texttt{/}\textit{naturals with zero} is denoted by
 \begin{align*}
@@ -332,10 +526,30 @@ The following theorem is 1st conjectured by Fermat.
 \end{theorem}
 \textit{Comment.} ``Algebraically, we are talking about an extremely simple equation: but because we are restricted to the integers, the rules of algebra fail. The result is infuriatingly innocent-looking and experimentation shows that it does seem to work, but offers no explanation why. Indeed, Lagrange's theorem cannot be easily proved by the elementary means covered in this book: an excursion into \textit{Gaussian integers} or something similar is needed.'' -- \cite[Chap. 2, p. 9]{Tao2006}
 
-\subsection{Modular Arithmetic}
+\section{Modular Arithmetic}
 \begin{definition}[Prime number]
 	A \emph{prime number} is a natural number with exactly 2 factors: itself and 1; we do not consider 1 to be prime. 2 natural numbers $m$ and $n$ are \emph{coprime} if their only common factor is 1.
 \end{definition}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 2, p. 3]
+	Show that no set of 9 consecutive integers can be partitioned into 2 sets with the product of the elements of the 1st set equal to the product of the elements of the 2nd set.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 3, p. 3]
+	Find the least positive integer $n$ s.t. any set of $n$ pairwise relatively prime integers $> 1$ and $< 2005$ contains at least 1 prime number.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 11, p. 3]
+	Let $n > 1$ be an arbitrary real number and let $k$ be the number of positive prime numbers $\le n$. Select $k + 1$ positive integers s.t. none of them divides the product of all the others. Prove that there exists a number among the chosen $k + 1$ that is bigger than $n$.
+\end{problem}
+
+\begin{theorem}[Fermat's little theorem]
+	Let $p$ be a prime number, and $n$ a positive integer. Then $n^p - n$ is divisible by $p$.
+\end{theorem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 4]{Gelca_Andreescu2017}.
+\end{proof}
 
 \begin{definition}[Modular arithmetic]
 	The notation `$x = y\ (\operatorname{mod} n)$', which we read as `$x$ equals to $y$ module $n$', means that $x$ and $y$ differ by a multiple of $n$. The notation `$(\operatorname{mod} n)$' signifies that we are working in a \emph{modular arithmetic} where the \emph{modulus $n$} has been identified with 0.
@@ -367,8 +581,16 @@ The following statements can be proved by elementary number theory; all revolve 
 \end{problem}
 This problem can eventually lead to the notion of \textit{p-adics}, being sort of an infinite-dimensional form of modular arithmetic.
 
-\subsubsection{Digits}
-``One can learn something about a number (in particular, whether it is divisible by 9\footnote{also 3.}) by summing all its digits. In higher mathematics, it turns out that this operation is not particularly important (it has proven far more effective to study numbers directly, rather than
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 18, p. 6]
+	Prove that for any $n\in\mathbb{N}^\star$, there exists an $n$-digit number
+	\begin{itemize}
+		\item[(a)] divisible by $2^n$ and containing only the digits 2 and 3;
+		\item[(b)] divisible by $5^n$ and containing only the digits 5, 6, 7, 8, 9.
+	\end{itemize}
+\end{problem}
+
+\subsection{Digits}
+``One can learn something about a number (in particular, whether it is divisible by\footnote{also 3.} 9) by summing all its digits. In higher mathematics, it turns out that this operation is not particularly important (it has proven far more effective to study numbers directly, rather than
 via their digit expansion), but it is quite popular in recreational mathematics and has even been given mystical connotations by some! Certainly, digit summing appears fairly often in mathematics competition problems$\ldots$''
 
 \begin{problem}
@@ -376,18 +598,116 @@ via their digit expansion), but it is quite popular in recreational mathematics 
 \end{problem}
 \texttt{Skip Chap. 2 in \cite{Tao2006}, come back later to Number Theory.}
 
-\subsection{Principle of Mathematical Induction\texttt{/}Nguyên Lý Quy Nạp Toán Học}
+\section{Problems}
 A typical technique of proof in number theory: prove by the \textit{principle of mathematical induction} (chứng minh bằng \textit{phương pháp}\texttt{/}\textit{nguyên lý quy nạp toán học}).
 
-\section{Probability\texttt{/}Xác Suất}
+\begin{problem}[5th W.L. Putnam Mathematical Competition, \cite{Gelca_Andreescu2017}, p. 5]
+	For $m\in\mathbb{N}^\star$, $n\in\mathbb{N}^\star$, $n\ge 2$, define $f_1(n)\coloneqq n$, $f_2(n)\coloneqq n^{f_1(n)}$, $\ldots$, $f_{i+1}(n)\coloneqq n^{f_i(n)}$, $\ldots$. Prove that
+	\begin{align*}
+		f_m(n) < n\underbrace{!!\cdots!}_{m\ {\rm times}} < f_{m+1}(n).
+	\end{align*}
+\end{problem}
 
-\section{Statistics\texttt{/}Thống Kê}
+\begin{proof}[Proof]
+	Its solution combines several proofs by induction, see, e.g., \cite[pp. 5--6]{Gelca_Andreescu2017}.
+\end{proof}
 
-\section{Miscellaneous}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 20, p. 7]
+	Given a sequence of integers $x_1,\ldots,x_n$ whose sum is 1, prove that exactly 1 of the cyclic shifts $x_1,x_2,\ldots,x_n$; $x_2,\ldots,x_n,x_1$; $\ldots$; $x_n,x_1,\ldots,x_{n-1}$ has all of its partial sums positive. (By a \emph{partial sum} we mean the sum of the 1st $k$ terms, $k\le n$.)
+\end{problem}
 
-\subsection{Discrete Mathematics\texttt{/}Toán Rời Rạc}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 21, p. 7]
+	Let $x_1,\ldots,x_n,y_1,\ldots,y_m$ be positive integers, $m,n > 1$. Assume that $\sum_{i=1}^n x_i = \sum_{i=1}^m y_i < mn$. Prove that in the equality $\sum_{i=1}^n x_i = \sum_{i=1}^m y_i$ one can suppress some (but not all) terms in such a way that the equality is still satisfied.
+\end{problem}
 
-\subsection{Strategies in Problem Solving}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 23, p. 7]
+	Prove that for any $n\in\mathbb{N}^\star$, $n\ge 2$ there is $m\in\mathbb{N}^\star$ that can be written simultaneously as a sum of $2,3,\ldots,n$ squares of nonzero integers.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 24, p. 7]
+	Let $n\in\mathbb{N}^\star$, $n\ge 2$, and let $a_1,\ldots,a_{2n+1}$ be positive real numbers s.t. $a_1 < \cdots < a_{2n+1}$. Prove that
+	\begin{align*}
+		\sum_{i=1}^{2n+1} (-1)^{i+1}\sqrt[n]{a_i} < \sqrt[n]{\sum_{i=1}^{2n+1} (-1)^{i+1}a_i}.
+	\end{align*}
+\end{problem}
+
+\begin{definition}[Fibonacci sequence]
+	The \emph{Fibonacci sequence} $(F_n)_{n\ge 0}$ is defined by $F_0\coloneqq 0$, $F_1\coloneqq 1$, and $F_{n+1}\coloneqq F_n + F_{n-1}$, for all $n\ge 1$.
+\end{definition}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 26, p. 9]
+	Show that every positive integer can be written as a sum of distinct terms of the Fibonacci sequence.
+\end{problem}
+
+\begin{theorem}[Some basic properties of Fibonacci sequence]
+	The following properties hold:
+	\begin{itemize}
+		\item $F_{2n+1} = F_{n+1}^2 + F_n^2$, for all $n\in\mathbb{N}$.\footnote{\cite[Prob. 27, p. 9]{Gelca_Andreescu2017}.}
+		\item $F_{3n} = F_{n+1}^3 + F_n^3 - F_{n-1}^3$, for all $n\in\mathbb{N}$.\footnote{\cite[Prob. 28, p. 9]{Gelca_Andreescu2017}.}
+	\end{itemize}
+\end{theorem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 33, p. 9]
+	Prove any any positive integer can be represented as $\pm1^2\pm2^2\pm\cdots\pm n^2$ for some $n\in\mathbb{N}^\star$ and some choice of the signs.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 11, IMO 1972, proposed by Russia]
+	Prove that every set of 10 2-digit integer numbers has 2 disjoint subsets with the same sum of elements.
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 11]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 11, IMO 1985, proposed by Mongolia]
+	Given a set $M$ of 1985 distinct positive integers, none of which has a prime divisor greater than 26, prove that $M$ contains at least 1 subset of 4 distinct elements whose product is the 4th power of an integer.
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[pp. 11--12]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 12, 67th W.L. Putnam Mathematical Competition, 2006]
+	Prove that for every set $X = \{x_1,\ldots,x_n\}$ of $n$ real numbers, there exists a nonempty subset $S$ of $X$ and an integer $m$ s.t.
+	\begin{align*}
+		\left|m + \sum_{s\in S} s\right|\le\frac{1}{n + 1}.
+	\end{align*}
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 12]{Gelca_Andreescu2017}.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Probability\texttt{/}Xác Suất}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Statistics\texttt{/}Thống Kê}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Trigonometry\texttt{/}Lượng Giác}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 13, p. 6]
+	Prove thta $|\sin nx|\le n|\sin x|$, for all $x\in\mathbb{R}$, $n\in\mathbb{N}^\star$.
+\end{problem}
+
+\begin{problem}
+	Prove that for any $x_1,\ldots,x_n\in\mathbb{R}$, $n\ge 1$,
+	\begin{align*}
+		\sum_{i=1}^n |\sin x_i| + \left|\cos\left(\sum_{i=1}^n x_i\right)\right|\ge 1.
+	\end{align*}
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Miscellaneous}
+
+\section{Discrete Mathematics\texttt{/}Toán Rời Rạc}
+
+\section{Strategies in Problem Solving}
 \begin{quotation}
 	``Like and unlike the proverb above, the solution to a problem begins (and continues, and ends) with simple, logical steps. But as long as one steps in a firm, clear direction, with long strides and sharp vision, one would need far, far less than the millions of steps needed to journey a thousand miles. And mathematics, being abstract, has no physical constraints; one can always restart from scratch, try new avenues of attack, or backtrack at an instant's notice. One does not always have these luxuries in other forms of problem-solving (e.g. trying to go home if you are lost).
 	
@@ -435,8 +755,98 @@ Here the strategies in \cite[Chap. 1, pp. 1--7]{Tao2006} are recalled briefly, w
 	\item \textbf{Prove results about our question.} ``Data is there to be used, so one should pick up the data and play with it. Can it produce more meaningful data? Also, proving small results could be beneficial later on, when trying to prove the main result or to find the answer. However small the result, do not forget it -- it could have bearing later on. Besides, it gives you something to do if you are stuck.''
 	\item \textbf{Simplify, exploit data, \& reach tactical goals.} ``Now we have set up notation and have a few equations, we should seriously look at attaining our tactical goals that we have established. In simple problems, there are usually standard ways of doing this. (E.g., algebraic simplification is usually discussed thoroughly in high-school level textbooks.) Generally, this part is the longest and most difficult part of the problem: however, once can avoid getting lost if one remembers the relevant theorems, the data and how they can be used, and most importantly the objective. It is also a good idea to not apply any given technique or method blindly, but to think ahead and see where one could hope such a technique to take one; this can allow one to save enormous amounts of time by eliminating unprofitable directions of inquiry before sinking lots of effort into them, and conversely to give the most promising directions priority.''
 \end{enumerate}
+``Don't get discouraged; put effort and imagination into each problem; and only if all else fails, look at the solution from the back of the book. But even if you are successful, you should read the solution, since many times it gives a new insight and, more important, opens the door toward more advanced mathematics.'' [$\ldots$] ``Every once in a while, for a problem that you have solved, write down the solution in detail, then compare it to the one given at the end of the book. It is very important that your solutions be correct, structured, convincing, and easy to follow.'' -- \cite[A Study Guide, p. xvii]{Gelca_Andreescu2017}
 
-\subsection{Why Mathematics?}
+``Listen and you will forget, learn and you will remember, do it yourself and you will understand.'' -- \cite[p. 6]{Gelca_Andreescu2017}
+
+\section{Mathematical Olympiads}
+
+\subsection{PUTNAM}
+``A problem book at the college level. A study guide for the Putnam competition. A bridge between high school problem solving and mathematical research. A friendly introduction to fundamental concepts and results. All these desires gave life to the pages that follow.
+
+The William Lowell Putnam Mathematical Competition is the most prestigious mathematics competition at the undergraduate level in the world. Historically, this annual event began in 1938, following a suggestion of William Lowell Putnam, who realized the merits of an intellectual intercollegiate competition. Nowadays, over 2500 students from more than 300 colleges and universities in the USA and Canada take part in it. The name Putnam has become synonymous with excellence in undergraduate mathematics.
+
+Using the Putnam competition as a symbol, we lay the foundations of higher mathematics from a unitary, problem-based perspective. As such, \textit{Putnam \& Beyond} is a journey through the world of college mathematics, providing a link between the stimulating problems of the high school years and the demanding problems of scientific investigation. It gives motivated students a chance to learn concepts and acquire strategies, hone their skills and test their knowledge, seek connections, and discover real world applications. Its ultimate goal is to build the appropriate background for graduate studies, whether in mathematics or applied sciences.
+
+Our point of view is that in mathematics it is \fbox{more important to understand \textit{why} than to know \textit{how}}. Because of this we insist on proofs and reasoning. After all, mathematics means, as the Romanian mathematician Grigore Moisil once said, ``correct reasoning''. The ways of mathematical thinking are universal in today's science.
+
+\textit{Putnam \& Beyond} targets primarily Putnam training sessions, problem-solving seminars, and math clubs at the college level, filling a gap in the undergraduate curriculum. But it does more than that. Written in the structured manner of a textbook, but with strong emphasis on problems and individual work, it covers what we think are the most important topics and techniques in undergraduate mathematics, brought together within the confines of a single book in order to strengthen one's belief in the \fbox{unitary nature of mathematics}.'' [$\ldots$] ``When organizing the material, we were inspired by Georgia O'Keeffe's words: ``Details are confusing. It is only by selection, by elimination, by emphasis that we get at the real meaning of things.'''' [$\ldots$]
+
+``As sources of problems and ideas we used the Putnam exam itself, the \textit{International Competition in Mathematics for University Students}, the \textit{International Mathematical Olympiad}, national contests from the USA, Romania, Russia, China, India, Bulgaria, mathematics journals such as the \textit{American Mathematical Monthly, Mathematics Magazine, Revista Matematică din Timişsoara (Timişsoara Mathematics Gazette), Gazeta Matematică (Mathematics Gazette, Bucharest), Kvant (Quantum), Középiskolai Matematikai Lapok (Mathematical Magazine for High Schools (Budapest)}), and a very rich collection of Romanian publications.''
+
+``Considerable care has been taken in selecting the most elegant solutions and writing them so as to stir imagination and stimulate research. We always ``judged mathematical proofs'', as Andrew Wiles once said, ``by their beauty''.'' -- \cite[Preface to the 1st Edition, p. ix]{Gelca_Andreescu2017}.
+
+\section{Method of Proof}
+This section is devoted to explain some \textit{methods of mathematical proof}, including \textit{argument by contradiction,  principle of mathematical induction, pigeonhole principle, use of an ordering on a set}, and \textit{principle of invariance}.
+
+``The basic nature of these methods and their universal use throughout mathematics makes this separate treatment necessary.'' [$\ldots$] ``And since these are fundamental methods in mathematics, you should try to understand them in depth, for ``it is better to understand many things than to know many
+things'' (Gustave Le Bon).'' -- \cite[Chap. 1, p. 1]{Gelca_Andreescu2017}
+
+\subsection{Argument by Contradiction}
+``The method of argument by contradiction proves a statement in the following way:
+\begin{tcolorbox}
+	\textit{1st, the statement is assumed to be false. Then, a sequence of logical deductions yields a conclusion that contradicts either the hypothesis (indirect method), or a fact known to be true (reductio ad absurdum). This contradiction implies that the original statement must be true.}
+\end{tcolorbox}
+This is a method that Euclid loved, and you can find it applied in some of the most beautiful proofs from his Elements. Euclid's most famous proof is that of the \textit{infinitude of prime numbers}.'' -- \cite[Sect. 1.1, p. 1]{Gelca_Andreescu2017}
+
+\begin{theorem}[Euclid's theorem]
+	There are infinitely many prime numbers.
+\end{theorem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[pp. 1--2]{Gelca_Andreescu2017}.
+\end{proof}
+ 
+\begin{problem}[Euler's]
+	Prove that there is no polynomial $P(x) = \sum_{i=0}^n a_ix^i$ with integer coefficients and of degree at least 1 with the property that $P(0),P(1),P(2),\ldots$ are all prime numbers.
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 2]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[I. Tomescu's book \textit{Problems in Combinatorics} (Wiley, 1985)]
+	Let $F = \{E_1,\ldots,E_s\}$ be a family of subsets with $r$ elements of some set $X$. Show that if the intersection of any $r + 1$ (not necessarily distinct) sets in $F$ is nonempty, then the intersection of all sets in $F$ is nonempty.
+\end{problem}
+
+\begin{proof}[Proof]
+	See \cite[p. 2]{Gelca_Andreescu2017}.
+\end{proof}
+
+\subsection{Mathematical Induction}
+``The principle of \textit{mathematical induction}, which lies at the very heart of Peano's axiomatic construction of the set of positive integers, is stated as follows.
+
+\begin{theorem}[Induction principle]
+	Given $P(n)$, a property depending on a positive integer $n$,
+	\begin{itemize}
+		\item[(i)] if $P(n_0)$ is true for some positive integer $n_0$, and
+		\item[(ii)] if for every $k\ge n_0$, $P(k)$ true implies $P(k + 1)$ true, then $P(n)$ is true for all $n\ge n_0$.
+	\end{itemize}
+\end{theorem}
+This means that when proving a statement by mathematical induction you should
+\begin{itemize}
+	\item[(i)] check the base case and
+	\item[(ii)] verify the inductive step by showing how to pass from an arbitrary integer to the next.'' -- \cite[Sect. 1.2, pp. 3--4]{Gelca_Andreescu2017}
+\end{itemize}
+``Even more powerful is strong induction.
+
+\begin{theorem}[Induction principle (strong form)]
+	Given $P(n)$ a property that depends on an integer $n$,
+	\begin{itemize}
+		\item[(i)] If $P(n_0),P(n_0 + 1),\ldots,P(n_0 + m)$ are true for some $n_0\in\mathbb{N}^\star$ and $m\in\mathbb{N}$, and
+		\item[(ii)] if for every $k > n_0 + m$, $P(j)$ true for all $n_0\le j < k$ implies $P(k)$ true, then $P(n)$ is true for all $n\ge n_0$.'' -- \cite[p. 7]{Gelca_Andreescu2017}
+	\end{itemize}
+\end{theorem}
+
+\subsection{Pigeonhole Principle}
+``The \textit{pigeonhole principle} (or \textit{Dirichlet's box principle}) is usually applied to problems in combinatorial set theory, combinatorial geometry, and number theory. In its intuitive form, it can be stated as follows.
+
+\begin{theorem}[Pigeonhole principle]
+	If $kn + 1$ objects ($k\ge 1$ not necessarily finite) are distributed among $n$ boxes, 1 of the boxes will contain at least $k + 1$ objects.
+\end{theorem}
+This is merely an observation, and it was Dirichlet who 1st used it to prove nontrivial mathematical results. The name comes from the intuitive image of several pigeons entering randomly in some holes. If there are more pigeons than holes, then we know for sure that 1 hole has more than one pigeon.'' -- \cite[Sect. 1.3, p. 11]{Gelca_Andreescu2017}
+
+\section{Why Mathematics? (Meta)}
 \begin{quotation}
 	``But I just like mathematics because it is fun. Mathematical problems, or puzzles, are important to real mathematics (like solving real-life problems), just as fables, stories, and anecdotes are important to the young in understanding real life.'' -- \cite[Preface, p. viii]{Tao2006}
 \end{quotation}
@@ -445,6 +855,10 @@ The prefaces of, as the whole book, \cite{Tao2006} are also very pleasant to rea
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
+	\bibitem[AoPS]{AoPS} \href{https://artofproblemsolving.com/}{Art of Problem Solving} (AoPS).
+	
+	\bibitem[MSE]{MSE} \href{https://math.stackexchange.com/}{StackExchange\texttt{/}Mathematics}.
+	
 	\bibitem[TerryTao]{TerryTao} \href{https://terrytao.wordpress.com}{Terence Tao's blog}.
 	\begin{itemize}
 		\item Terence Tao. \href{https://terrytao.wordpress.com/books/solving-mathematical-problems-a-personal-perspective/}{\textit{Solving Mathematical Problems: A Personal Perspective}}.
