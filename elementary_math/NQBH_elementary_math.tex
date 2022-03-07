@@ -106,16 +106,25 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 %------------------------------------------------------------------------------%
 
 \chapter{Elementary Algebra\texttt{/}Đại Số Sơ Cấp}
+
 \begin{quotation}
 	``One cannot escape the feeling $\ldots$ that these mathematical formulae have an independent existence and an intelligence of their own $\ldots$ that they are wiser than we are, wiser even than their discoverers $\ldots$ that we get more out of them that was originally put into them.'' -- Heinrich Hertz, quoted by F.J. Dyson
 \end{quotation}
-``Algebra is what most people associate with mathematics. In a sense, this is justified. Mathematics is the study of abstract objects, numerical, logical, or geometrical, that follow a set of several carefully chosen axioms. And basic algebra is about the simplest meaningful thing that can satisfy the above definition of mathematics. There are only a dozen or so postulates, but that is enough to make the system beautifully symmetric.''
+``Algebra is what most people associate with mathematics. In a sense, this is justified. Mathematics is the study of abstract objects, numerical, logical, or geometrical, that follow a set of several carefully chosen axioms. And basic algebra is about the simplest meaningful thing that can satisfy the above definition of mathematics. There are only a dozen or so postulates, but that is enough to make the system beautifully symmetric.'' [$\ldots$]
 
-``There is more than 1 algebra, though. \textit{Algebra} is the study of numbers with the operations of addition, subtraction, multiplication, and division. \textit{Matrix algebra}, for example, does much the same but with groups of numbers instead of using just one. Other algebras use all kinds of operations and all kinds of `numbers' but they, sometimes surprisingly, tend to have much of the same properties as normal algebra.''
+``There is more than 1 algebra, though. \textit{Algebra} is the study of numbers with the operations of addition, subtraction, multiplication, and division. \textit{Matrix algebra}, for example, does much the same but with groups of numbers instead of using just one. Other algebras use all kinds of operations and all kinds of `numbers' but they, sometimes surprisingly, tend to have much of the same properties as normal algebra.'' [$\ldots$]
 
 ``Algebra is the basic foundation of a large part of applied mathematics. Problems of mechanics, economics, chemistry, electronics, optimization, and so on are answered by algebra and differential calculus, which is an advanced form of algebra. In fact, algebra is so important that most of its secrets have been discovered -- so it can be safely put into a high-school curriculum. However, a few gems can still be found here and there.'' -- \cite[Chap. 3, p. 35]{Tao2006}
 
+``It is now time to split mathematics into branches. 1st, algebra. A section on algebraic identities hones computational skills. It is followed naturally by inequalities. In general, any inequality can be reduced to the question of finding the minimum of a function. But this is a highly nontrivial matter, and that makes the subject exciting. We discuss the fact that squares are nonnegative, the Cauchy--Schwarz inequality, the triangle inequality, the arithmetic mean-geometric mean inequality, and also Sturm's method for proving inequalities.
+
+Our treatment of algebra continues with polynomials. We focus on quadratic polynomials, the relations between zeros and coefficients, the properties of the derivative of a polynomial, problems about the location of the zeros in the complex plane or on the real axis, and methods for proving irreducibility of polynomials (e.g., \textit{Eisenstein criterion}). From all special polynomials we present the most important, the \textit{Chebyshev polynomials}.'' [$\ldots$] -- \cite[Chap. 2, p. 25]{Gelca_Andreescu2017}
+
+\paragraph{Note.} I really want to start with a section titled ``Identities \& Inequalities'', same as \cite[Sect. 2.1]{Gelca_Andreescu2017}, or ``Equations, Identities, \& Inequalities'' (or something like these), to emphasize their relationship, both supportive and opposite\texttt{/}contrary. However, the topic of inequalities will take several pages because it has been my favorite since I was in high school\footnote{I still like inequalities, and actually have to like it until now even I moved to advanced\texttt{/}professional mathematics instead of elementary mathematics as the old days. Of course, the topic of elementary inequality has to give its seat for more advanced forms of inequality, especially integral and functional inequalities in mathematical analysis.}. So I will separate this couple here and there is no apologize given -- obviously.
+
 \section{Algebraic Identity\texttt{/}Đẳng Thức Đại Số}
+``The scope of this section is to train algebraic skills. Our idea is to hide behind each problem an important algebraic identity.'' -- \cite[Subsect. 2.1.1, p. 25]{Gelca_Andreescu2017}
+
 \begin{problem}
 	Prove that $\sum_{i=1}^n i^3 = \left(\sum_{i=1}^n i\right)^2$ for all $n\in\mathbb{N}^\star$.\footnote{I.e., the sum of the 1st few cubes will always be a square.}
 \end{problem}
@@ -129,6 +138,66 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 		\frac{1}{n + 1} + \frac{1}{n + 2} + \cdots + \frac{1}{2n} = 1 - \frac{1}{2} + \frac{1}{3} - \cdots + \frac{1}{2n - 1} - \frac{1}{2n}.
 	\end{align*}
 \end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Titu Andreescu's]
+	Solve in $\mathbb{R}$ the system of equations
+	\begin{equation*}
+		\left\{\begin{split}
+			(3x + y)(x + 3y)\sqrt{xy} &= 14,\\
+			(x + y)(x^2 + 14xy + y^2) &= 36.
+		\end{split}\right.
+	\end{equation*}
+\end{problem}
+
+\begin{proof}[Hint]
+	Set $u\coloneqq\sqrt{x}$, $v\coloneqq\sqrt{y}$. Use the binomial expansion with exponent $= 6$ to obtain $u + v = 2$ and $u - v = \pm\sqrt{2}$. Solutions: $(x,y) = \left(\frac{3}{2}\pm\sqrt{2},\frac{3}{2}\mp\sqrt{2}\right)$. See \cite[p. 26]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Soviet Union college entrance exam]
+	given 2 segments of lengths $a$ and $b$, construct with a straightedge and a compass a segment of length $\sqrt[4]{a^4 + b^4}$.
+\end{problem}
+
+\begin{proof}[Solution]
+	See, e.g., \cite[p. 26]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{lemma}[Sophie Germain identity]
+	$a^4 + b^4 = (a^2 + \sqrt{2}ab + b^2)(a^2 - \sqrt{2}ab + b^2)$, for all $a,b\in\mathbb{R}$.
+\end{lemma}
+
+\begin{problem}
+	Factorize $a^3 + b^3 + c^3 - 3abc$. \emph{($\Downarrow$)}
+\end{problem}
+
+\begin{lemma}
+	For all $a,b,c\in\mathbb{R}$,
+	\begin{align*}
+		a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca) = \frac{1}{2}(a + b + c)\left[(a - b)^2 + (b - c)^2 + (c - a)^2\right].
+	\end{align*}
+\end{lemma}
+``This identity arises from computing the \textit{circulant determinant}:
+\begin{align*}
+	D = \begin{vmatrix}
+		a & b & c\\c & a & b\\ b & c &a
+	\end{vmatrix}
+\end{align*}
+in 2 ways: 1st by expanding with \textit{Sarrus' rule}, and 2nd by adding up all columns to the 1st, factoring $(a + b + c)$, and then expanding the remaining determinant.'' -- \cite[p. 27]{Gelca_Andreescu2017}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Titu Andreescu's]
+	Let $x,y,z$ be distinct real numbers. Prove that $\sqrt[3]{x - y} + \sqrt[3]{y - z} + \sqrt[3]{z - x}\ne 0$.
+\end{problem}
+
+\begin{proof}[Hint]
+	Set $a\coloneqq\sqrt[3]{y - z}$, $b\coloneqq\sqrt[3]{z - x}$, $c\coloneqq\sqrt[3]{x - y}$. If $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$: obtain absurdity here. See \cite[p. 27]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}
+	Find all $a,b,c,d\in\mathbb{Z}$ s.t. $a + b + c + d = $ and $a^3 + b^3 + c^3 + d^3 = 24$.
+\end{problem}
+
+\begin{proof}[Hint]
+	Substitute the 1st equation into the 2nd and then factorize.
+\end{proof}
 
 \section{Polynomials}
 ``Many algebra questions concern polynomials of one or more variables, $\ldots$'' -- \cite[p. 41]{Tao2006}
@@ -192,21 +261,6 @@ The roots of a factor are a subset of the roots of the original polynomial; this
 \end{proof}
 ``Substitutions do not seem appropriate: the equations \eqref{Tao2006 Eqn. (12)} or \eqref{Tao2006 Eqn. (14)} are simple enough as they are, and substitutions would not make them much simpler. So we will try to guess and prove an intermediate result. The best kind of intermediate result is a parametrization, as this can be substituted directly into the desired equation.'' ``The best way to deal with roots of polynomials is to factorize the polynomial (and vice versa). \textit{What are the factors?}'' [$\ldots$] ``$\ldots$ and the only workable form of a polynomial is a breakup into factors. But to find out what they are, we have to experiment. The polynomial is homogeneous, so its factors should be too. The polynomial is symmetric, so the factors should be symmetries of each other. The polynomial is cubic, so there should be a linear factor.'' -- \cite[p. 44]{Tao2006}
 
-\begin{problem}
-	Factorize $a^3 + b^3 + c^3 - 3abc$. \emph{($\Downarrow$)}
-\end{problem}
-
-\begin{proof}[Answer]
-	$a^3 + b^3 + c^3 - 3abc = (b + c - a)(c + a - b)(a + b - c)$ for all $a,b,c\in\mathbb{R}$.
-\end{proof}
-
-\begin{problem}
-	Find all $a,b,c,d\in\mathbb{Z}$ s.t. $a + b + c + d = $ and $a^3 + b^3 + c^3 + d^3 = 24$.
-\end{problem}
-
-\begin{proof}[Hint]
-	Substitute the 1st equation into the 2nd and then factorize.
-\end{proof}
 ``The factorization of polynomials, or impossibility thereof, is a fascinating piece of mathematics. The following question is instructive because it uses just about every trick in the book to find a solution.'' -- \cite[p. 45]{Tao2006}
 
 A polynomial having degree at most $n$ has at most $n$ roots.
