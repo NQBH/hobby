@@ -30,12 +30,14 @@
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{Some Topics in Elementary Mathematics:\\Problems, Theory, \& Applications}
+\title{Some Topics in Elementary Mathematics:\\Problems, Theory, Applications, \& Bridges to Advanced Mathematics}
 \author{Nguyễn Quản Bá Hồng}
 \date{\today}
 
 \begin{document}
 \maketitle
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
@@ -45,7 +47,7 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 
 %------------------------------------------------------------------------------%
 
-\paragraph{Disclaimer.} I do not and will not apologize when writing this text in 2 languages randomly.
+\paragraph*{Disclaimer.} I do not and will not apologize when having written this text in 2 languages [English, Vietnamese] randomly.
 
 \section*{General Rules for the Author}
 \begin{enumerate}
@@ -55,7 +57,6 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 	\item Add mathematical histories and mathematicians for motivations.
 	\item (Optional) Bridges\texttt{/}connections between elementary and advanced mathematics.
 	\item (Optional) Some codes (\textsc{Matlab}, C++, Python, etc.) will be nice for further practice and illustrations.
-	\item \texttt{Add Titu Andresscu's books.}
 \end{enumerate}
 
 \section*{Conventions}
@@ -103,6 +104,17 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 
 \section{Combinatorial Set Theory\texttt{/}Lý Thuyết Tập Hợp Tổ Hợp}
 
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 12, 67th W.L. Putnam Mathematical Competition, 2006]
+	Prove that for every set $X = \{x_1,\ldots,x_n\}$ of $n$ real numbers, there exists a nonempty subset $S$ of $X$ and an integer $m$ s.t.
+	\begin{align*}
+		\left|m + \sum_{s\in S} s\right|\le\frac{1}{n + 1}.
+	\end{align*}
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 12]{Gelca_Andreescu2017}.
+\end{proof}
+
 %------------------------------------------------------------------------------%
 
 \chapter{Elementary Algebra\texttt{/}Đại Số Sơ Cấp}
@@ -120,7 +132,7 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 
 Our treatment of algebra continues with polynomials. We focus on quadratic polynomials, the relations between zeros and coefficients, the properties of the derivative of a polynomial, problems about the location of the zeros in the complex plane or on the real axis, and methods for proving irreducibility of polynomials (e.g., \textit{Eisenstein criterion}). From all special polynomials we present the most important, the \textit{Chebyshev polynomials}.'' [$\ldots$] -- \cite[Chap. 2, p. 25]{Gelca_Andreescu2017}
 
-\paragraph{Note.} I really want to start with a section titled ``Identities \& Inequalities'', same as \cite[Sect. 2.1]{Gelca_Andreescu2017}, or ``Equations, Identities, \& Inequalities'' (or something like these), to emphasize their relationship, both supportive and opposite\texttt{/}contrary. However, the topic of inequalities will take several pages because it has been my favorite since I was in high school\footnote{I still like inequalities, and actually have to like it until now even I moved to advanced\texttt{/}professional mathematics instead of elementary mathematics as the old days. Of course, the topic of elementary inequality has to give its seat for more advanced forms of inequality, especially integral and functional inequalities in mathematical analysis.}. So I will separate this couple here and there is no apologize given -- obviously.
+\paragraph{Note.} I really want to start with a section titled ``Identities \& Inequalities'', same as \cite[Sect. 2.1]{Gelca_Andreescu2017}, or ``Equations, Identities, \& Inequalities'' (or something similar), to emphasize their relationship, both supportive and opposite\texttt{/}contrary. However, the topic of inequalities will take several pages because it has been my favorite since I was in high school\footnote{I still like inequalities, and actually have to like it until now even I moved to advanced\texttt{/}professional mathematics instead of elementary mathematics as the old days. Of course, the topic of elementary inequality has to give its seat for more advanced forms of inequality, especially integral and functional inequalities in mathematical analysis.}. So I will separate this couple here and there is no apologize given, obviously.
 
 \section{Algebraic Identity\texttt{/}Đẳng Thức Đại Số}
 ``The scope of this section is to train algebraic skills. Our idea is to hide behind each problem an important algebraic identity.'' -- \cite[Subsect. 2.1.1, p. 25]{Gelca_Andreescu2017}
@@ -138,20 +150,6 @@ Our treatment of algebra continues with polynomials. We focus on quadratic polyn
 		\frac{1}{n + 1} + \frac{1}{n + 2} + \cdots + \frac{1}{2n} = 1 - \frac{1}{2} + \frac{1}{3} - \cdots + \frac{1}{2n - 1} - \frac{1}{2n}.
 	\end{align*}
 \end{problem}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Titu Andreescu's]
-	Solve in $\mathbb{R}$ the system of equations
-	\begin{equation*}
-		\left\{\begin{split}
-			(3x + y)(x + 3y)\sqrt{xy} &= 14,\\
-			(x + y)(x^2 + 14xy + y^2) &= 36.
-		\end{split}\right.
-	\end{equation*}
-\end{problem}
-
-\begin{proof}[Hint]
-	Set $u\coloneqq\sqrt{x}$, $v\coloneqq\sqrt{y}$. Use the binomial expansion with exponent $= 6$ to obtain $u + v = 2$ and $u - v = \pm\sqrt{2}$. Solutions: $(x,y) = \left(\frac{3}{2}\pm\sqrt{2},\frac{3}{2}\mp\sqrt{2}\right)$. See \cite[p. 26]{Gelca_Andreescu2017}.
-\end{proof}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Soviet Union college entrance exam]
 	given 2 segments of lengths $a$ and $b$, construct with a straightedge and a compass a segment of length $\sqrt[4]{a^4 + b^4}$.
@@ -175,29 +173,77 @@ Our treatment of algebra continues with polynomials. We focus on quadratic polyn
 		a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca) = \frac{1}{2}(a + b + c)\left[(a - b)^2 + (b - c)^2 + (c - a)^2\right].
 	\end{align*}
 \end{lemma}
-``This identity arises from computing the \textit{circulant determinant}:
-\begin{align*}
-	D = \begin{vmatrix}
-		a & b & c\\c & a & b\\ b & c &a
-	\end{vmatrix}
-\end{align*}
-in 2 ways: 1st by expanding with \textit{Sarrus' rule}, and 2nd by adding up all columns to the 1st, factoring $(a + b + c)$, and then expanding the remaining determinant.'' -- \cite[p. 27]{Gelca_Andreescu2017}
+
+\begin{proof}[Proof]
+	``This identity arises from computing the \textit{circulant determinant}:
+	\begin{align*}
+		D = \begin{vmatrix}
+			a & b & c\\c & a & b\\ b & c &a
+		\end{vmatrix}
+	\end{align*}
+	in 2 ways: 1st by expanding with \textit{Sarrus' rule}, and 2nd by adding up all columns to the 1st, factoring $(a + b + c)$, and then expanding the remaining determinant.'' -- \cite[p. 27]{Gelca_Andreescu2017}
+\end{proof}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Titu Andreescu's]
 	Let $x,y,z$ be distinct real numbers. Prove that $\sqrt[3]{x - y} + \sqrt[3]{y - z} + \sqrt[3]{z - x}\ne 0$.
 \end{problem}
 
 \begin{proof}[Hint]
-	Set $a\coloneqq\sqrt[3]{y - z}$, $b\coloneqq\sqrt[3]{z - x}$, $c\coloneqq\sqrt[3]{x - y}$. If $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$: obtain absurdity here. See \cite[p. 27]{Gelca_Andreescu2017}.
+	Set $a\coloneqq\sqrt[3]{y - z}$, $b\coloneqq\sqrt[3]{z - x}$, $c\coloneqq\sqrt[3]{x - y}$. If $a + b + c = 0$, then $a^3 + b^3 + c^3 = 3abc$: obtain absurdity right here. See \cite[p. 27]{Gelca_Andreescu2017}.
 \end{proof}
 
 \begin{problem}
-	Find all $a,b,c,d\in\mathbb{Z}$ s.t. $a + b + c + d = $ and $a^3 + b^3 + c^3 + d^3 = 24$.
+	Find all $a,b,c,d\in\mathbb{Z}$ s.t. $a + b + c + d = 0$ and $a^3 + b^3 + c^3 + d^3 = 24$.
 \end{problem}
 
 \begin{proof}[Hint]
 	Substitute the 1st equation into the 2nd and then factorize.
 \end{proof}
+
+\section{Equation \& System of Equations\texttt{/}Phương Trình \& Hệ Phương Trình}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Titu Andreescu's]
+	Solve in $\mathbb{R}$ the system of equations
+	\begin{equation*}
+		\left\{\begin{split}
+			(3x + y)(x + 3y)\sqrt{xy} &= 14,\\
+			(x + y)(x^2 + 14xy + y^2) &= 36.
+		\end{split}\right.
+	\end{equation*}
+\end{problem}
+
+\begin{proof}[Hint]
+	Set $u\coloneqq\sqrt{x}$, $v\coloneqq\sqrt{y}$. Use the \textit{binomial expansion} with exponent $= 6$ to obtain $u + v = 2$ and $u - v = \pm\sqrt{2}$. Solutions: $(x,y) = \left(\frac{3}{2}\pm\sqrt{2},\frac{3}{2}\mp\sqrt{2}\right)$. See \cite[p. 26]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 96, p. 28]
+	Solve in $\mathbb{R}$ the equation $\sqrt[3]{x - 1} + \sqrt[3]{x} + \sqrt[3]{x + 1} = 0$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 103, p. 31]
+	Find all $n\in\mathbb{N}^\star$ for which the equation $nx^4 + 4x + 3 = 0$ has a real root.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 104, p. 31]
+	Find all triples $(x,y,z)$ of real numbers that are solutions to the system of equations
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{4x^2}{4x^2 + 1} &= y,\\
+			\frac{4y^2}{4y^2 + 1} &= z,\\
+			\frac{4z^2}{4z^2 + 1} &= x.
+		\end{split}\right.
+	\end{equation*}
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 108, p. 31]
+	Find all pairs $(x,y)\in\mathbb{R}^2$ solving the system
+	\begin{equation*}
+		\left\{\begin{split}
+			x^4 + 2x^3 - y &= -\frac{1}{4} + \sqrt{3},\\
+			y^4 + 2y^3 - x &= -\frac{1}{4} - \sqrt{3}.
+		\end{split}\right.
+	\end{equation*}
+\end{problem}
 
 \section{Polynomials}
 ``Many algebra questions concern polynomials of one or more variables, $\ldots$'' -- \cite[p. 41]{Tao2006}
@@ -302,6 +348,10 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	$(a - b)|(f(a) - f(b)) = 1$, hence $a - b = \pm 1$.
 \end{proof}
 
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 88, p. 27]
+	Prove that any polynomial with real coefficients that takes only nonnegative values can be written as the sum of the squares of 2 polynomials.
+\end{problem}
+
 \subsection{Rationals vs. Irrationals}
 \begin{definition}[Rational, irrational]
 	
@@ -310,14 +360,13 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	Prove that $\sqrt{2} + \sqrt{3} + \sqrt{5}$ is an irrational number.
 \end{problem}
 
-\section{Equation \& System of Equations\texttt{/}Phương Trình \& Hệ Phương Trình}
-
 \section{Inequality\texttt{/}Bất Đẳng Thức}
-Here we consider 2 types of inequalities: inequalities for integers and those for reals. Of course, the former involves number theory, while the latter belongs to elementary analysis and calculus.
+Here we consider various types of inequalities according to their arguments, i.e., inequalities for integers, inequalities for reals, and those for complex numbers. Of course, the former involves number theory, while the latter two belong to elementary analysis and calculus.
 
 \subsection{Inequalities in $\mathbb{Z}$}
+
 \begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 15, p. 6]
-	Prove that $3^n\ge n^3$  for all $n\in\mathbb{N}^\star$.
+	Prove that $3^n\ge n^3$ for all $n\in\mathbb{N}^\star$.
 \end{problem}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 16, p. 6]
@@ -335,7 +384,7 @@ Here we consider 2 types of inequalities: inequalities for integers and those fo
 \end{problem}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, p. 8]
-	Let $(x_n)_{n\ge 0}$ be a sequence of nonnegative integers s.t. for every index $k$, the number of the terms of the sequence that are $\le k$ is finite. We denote this number by $y_k$. Prove that for any 2 $m,n\in\mathbb{N}^\star$, the following inequality holds
+	Let $(x_n)_{n\ge 0}$ be a sequence of nonnegative integers s.t. for every index $k$, the number of the terms of the sequence that are $\le k$ is finite. We denote this number by $y_k$. Prove that for any $m,n\in\mathbb{N}^\star$, the following inequality holds
 	\begin{align*}
 		\sum_{i=0}^n x_i + \sum_{i=0}^m y_i\ge(m + 1)(n + 1).
 	\end{align*}
@@ -345,7 +394,93 @@ Here we consider 2 types of inequalities: inequalities for integers and those fo
 	See, e.g., \cite[pp. 8--9]{Gelca_Andreescu2017}.
 \end{proof}
 
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 95, p. 28]
+	Prove that
+	\begin{align}
+		\sum_{k=1}^{31} \frac{1}{(k - 1)^{4/5} - k^{4/5} + (k - 1)^{4/5}} < \frac{3}{2} + \sum_{k=1}^{31} (k - 1)^{1/5}.
+	\end{align}
+\end{problem}
+
 \subsection{Inequalities in $\mathbb{R}$}
+
+\subsubsection{Simplest Inequality $x^2\ge 0$}
+``The simplest inequality in algebra says that the square of any real number is nonnegative, and it is equal to zero iff the number is zero.'' -- \cite[Subsect. 2.1.2, p. 28]{Gelca_Andreescu2017}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 28, Titu Andreescu's]
+	Find the minimum of the function $f:(0,\infty)^3\to\mathbb{R}$, $f(x,y,z) = x^z + y^z - (xy)^{z/4}$.
+\end{problem}
+
+\begin{proof}[Solution]
+	Rewrite $f(x,y,z) = \left(x^{z/2} - y^{z/2}\right)^2 + 2\left[(xy)^{z/4} - \frac{1}{4}\right]^2 - \frac{1}{8}$, thus
+	\begin{align*}
+		\min_{(\mathbb{R}_+^\star)^3} f = -\frac{1}{8},\mbox{ and }\operatorname{argmin}_{(\mathbb{R}_+^\star)^3} f = \left\{\left(a,a,\log_a\frac{1}{16}\right);a\in(0,1)\cup(1,\infty)\right\}.
+	\end{align*}
+	See \cite[p. 29]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 29, 2001 USA team selection test, Titu Andreescu's]
+	Let $(a_n)_{n\ge 0}$ be a sequence of real numbers s.t. $a_{n+1}\ge a_n^2 + \frac{1}{5}$, for all $n\ge 0$. Prove that $\sqrt{a_{n+5}}\ge a_{n-5}^2$, for all $n\ge 5$.
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 29]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[64th W.L. Putnam Mathematics Competition]
+	Let $f$ be a continuous function on the unit square. Prove that
+	\begin{align*}
+		\int_0^1 \left(\int_0^1 f(x,y)\,{\rm d}x\right)^2\,{\rm d}y + \int_0^1 \left(\int_0^1 f(x,y)\,{\rm d}y\right)^2\,{\rm d}x\le\left(\int_0^1\int_0^1 f(x,y)\,{\rm d}x\,{\rm d}y\right)^2 + \int_0^1\int_0^1 f(x,y)^2\,{\rm d}x\,{\rm d}y.
+	\end{align*}
+\end{problem}
+
+\begin{proof}[Proof]
+	Prove for a Riemann sum, and then pass to the limit. See, e.g., \cite[pp. 30--31]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 101, p. 31]
+	Find $\min_{a,b\in\mathbb{R}}\max(a^2 + b,b^2 + a)$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 102, p. 31]
+	Prove that for all $x\in\mathbb{R}$, $2^x + 3^x - 4^x + 6^x - 9^x\le 1$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 105, p. 31]
+	Find the minimum of $\log_{x_1}\left(x_2 - \frac{1}{4}\right) + \log_{x_2}\left(x_3 - \frac{1}{4}\right) + \cdots + \log_{x_n}\left(x_1 - \frac{1}{4}\right)$, over all $x_1,\ldots,x_n\in\left(\frac{1}{4},1\right)$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 106, p. 31]
+	Let $a,b\in\mathbb{R}$ s.t. $9a^2 + 8ab + 7b^2\le 6$. Prove that $7a + 5b + 12ab\le 9$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 107, p. 31]
+	Let $(a_i)_{i=1}^n$ be real numbers s.t. $\sum_{i=1}^n a_i\ge n^2$ and $\sum_{i=1}^n a_i^2\le n^3 + 1$. Prove that $n - 1\le a_i\le n + 1$ for all $i = 1,\ldots,n$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 109, p. 32]
+	Let $n\in\mathbb{N}^\star$ be even. Prove that for any $x\in\mathbb{R}$ there are at least $2^{n/2}$ choices of the sign $\pm$ s.t. $\pm x^n\pm x^{n-1}\pm\cdots\pm x < \frac{1}{2}$.
+\end{problem}
+
+\subsection{Cauchy--Schwartz Inequality}
+I followed \cite[Subsect. 2.1.3, p. 32]{Gelca_Andreescu2017}.
+
+\begin{theorem}[Cauchy--Schwarz (or Cauchy--Bunyakovski--Schwarz) inequality]
+	\begin{align}
+		\boxed{\sum_{i=1}^n a_i^2\sum_{i=1}^n b_i^2\ge\left(\sum_{i=1}^n a_ib_i\right)^2,}
+	\end{align}
+	where the equality holds iff the $a_i$'s and the $b_i$'s are proportional.
+\end{theorem}
+The expression
+\begin{align*}
+	\sum_{i=1}^n a_i^2\sum_{i=1}^n b_i^2 - \left(\sum_{i=1}^n a_ib_i\right)^2
+\end{align*}
+is a quadratic function in the $a_i$'s and $b_i$'s. For it to have only nonnegative values, it should be a sum of squares\footnote{NQBH: there is the so-called Sum of Squares (SOS) method to prove 3-variable inequalities.}, which is true by the \textit{Lagrange identity}:
+\begin{align*}
+	\sum_{i=1}^n a_i^2\sum_{i=1}^n b_i^2 - \left(\sum_{i=1}^n a_ib_i\right)^2 = \sum_{i < j} (a_ib_j - a_jb_i)^2.
+\end{align*}
+This proof works only in the finite-dimensional case, while the Cauchy--Schwarz inequality is true in far more generality, e.g. for square integrable functions. Its correct framework is that of a real or complex vector space, which could be finite or infinite dimensional, endowed with an \textit{inner product} $\langle\cdot,\cdot\rangle$.
+	
+\subsection{Selected Problems in Inequalities}
 ``Now we demonstrate a less frequently encountered form of induction that can be traced back to Cauchy's work, where it was used to prove the \textit{arithmetic mean-geometric mean inequality}.'' -- \cite[p. 9]{Gelca_Andreescu2017}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, p. 9, D. Buşneag, I. Maftei, \textit{Themes for Mathematics Circles \& Contests} (Scrisul Românesc, Craiova, 1983)]
@@ -556,6 +691,14 @@ Here we consider 2 types of inequalities: inequalities for integers and those fo
 
 %------------------------------------------------------------------------------%
 
+\chapter{Linear Algebra}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 87, p. 27]
+	Let $A$ and $B$ be 2 $n\times n$ matrices that commute and s.t. for some positive integers $p$ and $q$, $A^p = \mathcal{I}_n$ and $B^q = \mathcal{O}_n$. Prove that $A + B$ is invertible, and find its inverse.
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
 \chapter{Number Theory\texttt{/}Số Học}
 
 \paragraph{Notations.} The \textit{set of nonnegative integers}\texttt{/}\textit{natural numbers with zero}\texttt{/}\textit{naturals with zero} is denoted by
@@ -652,7 +795,7 @@ via their digit expansion), but it is quite popular in recreational mathematics 
 \end{problem}
 \texttt{Skip Chap. 2 in \cite{Tao2006}, come back later to Number Theory.}
 
-\section{Problems}
+\section{Selected Problems in Number Theory}
 A typical technique of proof in number theory: prove by the \textit{principle of mathematical induction} (chứng minh bằng \textit{phương pháp}\texttt{/}\textit{nguyên lý quy nạp toán học}).
 
 \begin{problem}[5th W.L. Putnam Mathematical Competition, \cite{Gelca_Andreescu2017}, p. 5]
@@ -721,16 +864,53 @@ A typical technique of proof in number theory: prove by the \textit{principle of
 	See, e.g., \cite[pp. 11--12]{Gelca_Andreescu2017}.
 \end{proof}
 
-\begin{problem}[\cite{Gelca_Andreescu2017}, p. 12, 67th W.L. Putnam Mathematical Competition, 2006]
-	Prove that for every set $X = \{x_1,\ldots,x_n\}$ of $n$ real numbers, there exists a nonempty subset $S$ of $X$ and an integer $m$ s.t.
-	\begin{align*}
-		\left|m + \sum_{s\in S} s\right|\le\frac{1}{n + 1}.
-	\end{align*}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 86, p. 27]
+	Show that for no positive integer $n$ can both $n + 3$ and $n^2 + 3n + 3$ be perfect cubes.
 \end{problem}
 
-\begin{proof}[Proof]
-	See, e.g., \cite[p. 12]{Gelca_Andreescu2017}.
-\end{proof}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 89, p. 27]
+	Prove that for any $n\in\mathbb{N}$, the number $5^{5^{n+1}} + 5^{5^n} + 1$ is not prime.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 90, p. 27]
+	Show that for an odd integer $n\ge 5$,
+	\begin{align}
+		\binom{n}{0}5^{n-1} - \binom{n}{1}5^{n-2} + \binom{n}{2}5^{n-3} - \cdots + \binom{n}{n - 1}
+	\end{align}
+	is not a prime number.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 91, p. 27]
+	Factor $5^{1985} - 1$ into a product of 3 integers, each of which is $> 5^{100}$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 92, p. 28]
+	Prove that the number $\frac{5^{125} - 1}{5^{25} - 1}$ is not prime.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 93, p. 28]
+	Let $a$ and $b$ be coprime integers greater than 1. Prove that for $n\ge 0$, $a^{2n} + b^{2n}$ is divisible by $a + b$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 94, p. 28]
+	Prove that any integer can be written as the sum of five perfect cubes.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 97, p. 28]
+	Find all triples $(x,y,z)\in(\mathbb{N}^\star)^3$ s.t. $x^3 + y^3 + z^3 - 3xyz = p$, where $p$ is a prime number $> 3$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 98, p. 28]
+	Let $a,b,c$ be distinct positive integers s.t. $ab + bc + ca\ge 3k^2 - 1$, where $k\in\mathbb{N}^\star$. Prove that $a^3 + b^3 + c^3\ge 3(abc + 3k)$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 99, p. 28]
+	Show that the expression $(x^2 - yz)^3 + (y^2 - zx)^3 + (x^2 - yz)^3 - 3(x^2 - yz)(y^2 - zx)(z^2 - xy)$ is a perfect square.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 100, p. 28]
+	Find all triples $(m,n,p)$ of positive integers s.t. $m + n + p = 2002$ and the system of equations $\frac{x}{y} + \frac{y}{x} = m$, $\frac{y}{z} + \frac{z}{y} = n$, $\frac{z}{x} + \frac{x}{z} = p$ has at least 1 solution in nonzero real numbers $\mathbb{R}^\star$.
+\end{problem}	
 
 %------------------------------------------------------------------------------%
 
@@ -743,6 +923,8 @@ A typical technique of proof in number theory: prove by the \textit{principle of
 %------------------------------------------------------------------------------%
 
 \chapter{Trigonometry\texttt{/}Lượng Giác}
+
+\section{Trigonometrical Inequality}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 13, p. 6]
 	Prove thta $|\sin nx|\le n|\sin x|$, for all $x\in\mathbb{R}$, $n\in\mathbb{N}^\star$.
