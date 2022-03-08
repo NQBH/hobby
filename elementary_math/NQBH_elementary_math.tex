@@ -47,7 +47,11 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 
 %------------------------------------------------------------------------------%
 
-\paragraph*{Disclaimer.} I do not and will not apologize when having written this text in 2 languages [English, Vietnamese] randomly.
+\paragraph*{Disclaimer.}
+\begin{itemize}
+	\item I do not and will not apologize when having written this text in 2 languages [English, Vietnamese] randomly.
+	\item Instead of paraphrasing multiple resources to act like an expert, I will quote directly sentences and paragraphs in various references. The reasons are simple: I am lazy to paraphrase, and I love their original crafts.
+\end{itemize}
 
 \section*{General Rules for the Author}
 \begin{enumerate}
@@ -352,6 +356,10 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	Prove that any polynomial with real coefficients that takes only nonnegative values can be written as the sum of the squares of 2 polynomials.
 \end{problem}
 
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 122, p. 37]
+	Let $P(z)$ be a polynomial with real coefficients whose roots can be covered by a disk of radius $R$. Prove that for any $k\in\mathbb{R}$, the roots of the polynomial $nP(z) - kP'(z)$ can be covered by a disk of radius $R + |k|$, where $n\coloneqq\deg P$, and $P'(z)$ is the derivative.
+\end{problem}
+
 \subsection{Rationals vs. Irrationals}
 \begin{definition}[Rational, irrational]
 	
@@ -479,7 +487,162 @@ is a quadratic function in the $a_i$'s and $b_i$'s. For it to have only nonnegat
 	\sum_{i=1}^n a_i^2\sum_{i=1}^n b_i^2 - \left(\sum_{i=1}^n a_ib_i\right)^2 = \sum_{i < j} (a_ib_j - a_jb_i)^2.
 \end{align*}
 This proof works only in the finite-dimensional case, while the Cauchy--Schwarz inequality is true in far more generality, e.g. for square integrable functions. Its correct framework is that of a real or complex vector space, which could be finite or infinite dimensional, endowed with an \textit{inner product} $\langle\cdot,\cdot\rangle$.
-	
+
+\begin{definition}[Inner product, norm]
+	The quantity $\|{\bf x}\|\coloneqq\sqrt{\langle{\bf x},{\bf x}\rangle}$ is called the \emph{norm} of ${\bf x}$.
+\end{definition}
+
+\begin{example}[Inner product spaces]
+	\begin{itemize}
+		\item Euclidean spaces $\mathbb{R}^n$, $n\in\mathbb{N}^\star$, with the usual dot product,
+		\begin{align*}
+			\langle(a_1,\ldots,a_n),(b_1,\ldots,b_n)\rangle\coloneqq\sum_{i=1}^n a_ib_i,\ \forall a_i,b_i\in\mathbb{R},\,i = 1,\ldots,n.
+		\end{align*}
+		\item Multidimensional complex spaces $\mathbb{C}^n$, $n\in\mathbb{N}^\star$, with the inner product
+		\begin{align*}
+			\langle(z_1,\ldots,z_n),(w_1,\ldots,w_n)\rangle\coloneqq\sum_{i=1}^n z_i\overline{w_i},\ \forall z_i,w_i\in\mathbb{C},\,i = 1,\ldots,n.
+		\end{align*}
+		\item The space of square integrable functions on an interval $[a,b]$ with the inner product
+		\begin{align*}
+			\langle f,g\rangle\coloneqq\int_a^b f(t)\overline{g(t)}\,{\rm d}t,\ \forall f,g\in L^2([a,b]).
+		\end{align*}
+	\end{itemize}
+\end{example}
+
+\begin{theorem}[Cauchy--Schwarz inequality]
+	Let ${\bf x},{\bf y}$ be 2 vectors. Then $\|{\bf x}\|\|{\bf y}\|\ge|\langle{\bf x},{\bf y}\rangle|$, with equality iff the vectors ${\bf x}$ and ${\bf y}$ are parallel and point in the same direction.
+\end{theorem}
+
+\begin{proof}[Proof]
+	See any standard text in linear algebra, or, e.g., \cite[p. 33]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{example}
+	If $f,g\in C([a,b],\mathbb{C})$, or more generally $f,g\in L^2([a,b],\mathbb{C})$, then
+	\begin{align*}
+		\int_a^b |f(t)|^2\,{\rm d}t\int_a^b |g(t)|^2\,{\rm d}t\ge\left|\int_a^b f(t)\overline{g(t)}\,{\rm d}t\right|^2.
+	\end{align*}
+\end{example}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 33]
+	Find the maximum of the function $f(x,y,z) = 5x - 6y + 7z$ on the ellipsoid $2x^2 + 3y^2 + 4z^2 = 1$.
+\end{problem}
+
+\begin{proof}[Answer]
+	Answer: $\max_{\{2x^2 + 3y^2 + 4z^2 = 1\}} f(x,y,z) = \frac{\sqrt{147}}{2}$ attained at the points
+	\begin{align*}
+		\left\{(x,y,z)\in\mathbb{R}^3;2x^2 + 3y^2 + 4z^2 = 1,\,x,z > 0,\, y < 0,\ x:y:z = \frac{5}{\sqrt{2}}:-\frac{6}{\sqrt{3}}:\frac{7}{2}\right\}.
+	\end{align*}
+	See, e.g., \cite[p. 33]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[IMO 1993 Shortlist, Titu Andreescu's]
+	Prove that
+	\begin{align*}
+		\frac{a}{b + 2c + 3d} + \frac{b}{c + 2d + 3a} + \frac{c}{d + 2a + 3b} + \frac{d}{a + 2b + 3c}\ge\frac{2}{3},\ \forall a,b,c,d > 0.
+	\end{align*}
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 34]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 110, p. 34]
+	If $a,b,c > 0$, prove that $9a^2b^2c^2\le(a^b + b^2c + c^a)(ab^2 + bc^2 + ca^2)$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 111, p. 34]
+	If $\sum_{i=1}^n a_i = n$, prove that $\sum_{i=1}^n a_i^4\ge n$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 112, p. 34]
+	Let $(a_i)_{i=1}^n\subset\mathbb{R}$ be distinct. Find the maximum of $\sum_{i=1}^n a_ia_{\sigma(i)}$ over all permutations of the set $\{1,\ldots,n\}$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 113, p. 34]
+	Let $(a_i)_{i=1}^n\subset(0,\infty)$. Prove that for any $(x_i)_{i=1}^n\subset\mathbb{R}$, the quantity $\sum_{i=1}^n a_ix_i^2 - \frac{\left(\sum_{i=1}^n a_ix_i\right)^2}{\sum_{i=1}^n a_i}$ is nonnegative.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 114, p. 34]
+	Find all $n,k_1,\ldots,k_n\in\mathbb{N}^\star$ s.t. $\sum_{i=1}^n = 5n - 4$ and $\sum_{i=1}^n \frac{1}{k_i} = 1$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 115, p. 35]
+	Prove that the finite sequence $(a_i)_{i=0}^n\subset(0,\infty)$ is a geometric progression iff $\left(\sum_{i=0}^{n-1} a_ia_{i+1}\right)^2 = \sum_{i=0}^{n-1} a_i^2\sum_{i=1}^n a_i^2$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 116, p. 35]
+	Let $P(x)$ be a polynomial with positive real coefficients. Prove that $\sqrt{P(a)P(b)}\ge P(\sqrt{ab})$, for all $a,b\in(0,\infty)$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 117, p. 35]
+	Consider the real numbers $x_0 > x_1 > \cdots > x_n$. Prove that $x_0 + \frac{1}{x_0 - x_1} = \sum_{i=1}^{n-1} \frac{1}{x_i - x_{i+1}}\ge x_n + 2n$. When does equality hold?
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 119, p. 35]
+	Prove that
+	\begin{align*}
+		\frac{1}{a + b} + \frac{1}{b + c} + \frac{1}{c + a} + \frac{1}{2\sqrt[3]{abc}}\ge\frac{\left(a + b + c + \sqrt[3]{abc}\right)^2}{(a + b)(b + c)(c + a)},\ \forall a,b,c > 0.
+	\end{align*}
+\end{problem}
+
+\subsection{Triangle Inequality}
+``In its most general form, the \textit{triangle inequality} states that in a metric space $X$ the \textit{distance function} $\delta$ satisfies $\delta(x,y)\le\delta(x,z) + \delta(y,z)$, for any $x,y,z\in X$. An equivalent form is $|\delta(x,y) - \delta(y,z)|\le\delta(x,z)$.
+
+Here are some familiar examples of distance functions: the distance between 2 real or complex numbers as the absolute value of their difference, the distance between 2 vectors in $n$-dimensional Euclidean space as the length of their difference $\|{\bf v} - {\bf w}\|$, the distance between 2 matrices as the norm of their difference, the distance between 2 continuous functions on the same interval as the supremum of the absolute value of their difference. In all these cases the triangle inequality holds.'' -- \cite[Subsect. 2.1.4, p. 35]{Gelca_Andreescu2017}
+
+\begin{problem}[T.B. Soulami's book \textit{Les olympiades de math\'ematiques: Réflexes et strat\'egies} (Ellipses, 1999), \cite{Gelca_Andreescu2017}, p. 36]
+	For $a,b,c > 0$, prove the inequality $\sqrt{a^2 - ab + b^2} + \sqrt{b^2 - bc + c^2}\ge\sqrt{a^2 + ac + c^2}$.
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 36]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 36]
+	Let $P(x)$ be a polynomial whose coefficients lie in the interval $[1,2]$, and let $Q(x)$ and $R(x)$ be 2 nonconstant polynomials s.t. $P(x) = Q(x)R(x)$, with $Q(x)$ having the dominant coefficient equal to 1. Prove that $|Q(3)| > 1$.
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[pp. 36--37]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 123, p. 37]
+	Prove that $a,b,c > 0$ are the side lengths of a triangle iff $a^b + b^2 + c^2 < 2\sqrt{a^2b^2 + b^2c^2 + c^2a^2}$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 125, p. 37]
+	Let $(V_i)_{i=1}^m$ and $(W_i)_{i=1}^m$ be isometries of $\mathbb{R}^n$ ($m,n\in\mathbb{N}^\star$). Assume that for all ${\bf x}\in\mathbb{R}^n$ with $\|{\bf x}\|\le 1$, $\|V_i{\bf x} - W_i{\bf x}\|\le 1$, $i = 1,\ldots,m$. Prove that
+	\begin{align*}
+		\left\|\left(\prod_{i=1}^m V_i\right){\bf x} - \left(\prod_{i=1}^m W_i\right){\bf x}\right\|\le m,\ \forall{\bf x}\in\mathbb{R}^n,\,\|{\bf x}\|\le 1.
+	\end{align*}
+\end{problem}
+
+\subsection{Arithmetic Mean--Geometric Mean Inequality}
+``\textit{Jensen's inequality}, which will be discussed in the section about convex functions, states that if $f$ is a real-valued concave function, then'' -- \cite[Subsect. 2.1.5, p. 38]{Gelca_Andreescu2017}
+\begin{align*}
+	f\left(\sum_{i=1}^n \lambda_ix_i\right)\ge\sum_{i=1}^n \lambda_if(x_i),\ \forall(x_i)_{i=1}^n\subset\operatorname{Dom}(f),\,\forall(\lambda_i)_{i=1}^n\subset(0,\infty),\mbox{ s.t. }\sum_{i=1}^n \lambda_i = 1.
+\end{align*}
+i.e., this inequality holds for any $x_1,\ldots,x_n$ in the \textit{domain} of $f$, denoted by $\operatorname{Dom}(f)$, and for any positive \textit{weights} $\lambda_1,\ldots,\lambda_n$ with $\sum_{i=1}^n \lambda_i = 1$. Moreover, if the function $f$ is nowhere linear (i.e., if it is strictly concave) and the numbers $\lambda_i$'s are nonzero, then equality holds iff $x_1 = \cdots = x_n$.
+
+Apply this to the concave function $f(x) = \log x$, the positive numbers $(x_i)_{i=1}^n$, and the weights $\lambda_i = \frac{1}{n}$, $i = 1,\ldots,n$, to obtain
+\begin{align*}
+	\log\frac{1}{n}\sum_{i=1}^n x_i\ge\frac{1}{n}\sum_{i=1}^n \log x_i.
+\end{align*}
+Exponentiation yields the following inequality.
+
+\begin{theorem}[Arithmetic mean--geometric mean inequality (AM--GM)]
+	Let $(x_i)_{i=1}^n\in[0,\infty)$. Then
+	\begin{align*}
+		\frac{1}{n}\sum_{i=1}^n\ge\sqrt[n]{\prod_{i=1}^n x_i},\mbox{ or explicitly, }\frac{x_1 + \cdots + x_n}{n}\ge\sqrt[n]{x_1\cdots x_n},
+	\end{align*}
+	with equality iff all numbers are equal.
+\end{theorem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[pp. 38--39]{Gelca_Andreescu2017}.
+\end{proof}
+		
 \subsection{Selected Problems in Inequalities}
 ``Now we demonstrate a less frequently encountered form of induction that can be traced back to Cauchy's work, where it was used to prove the \textit{arithmetic mean-geometric mean inequality}.'' -- \cite[p. 9]{Gelca_Andreescu2017}
 
@@ -659,7 +822,30 @@ This proof works only in the finite-dimensional case, while the Cauchy--Schwarz 
 	Show that an isosceles triangle with one angle of $120^\circ$ can be dissected into $n\ge 4$ triangles similar to it.
 \end{problem}
 
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 120, p. 37]
+	Let $a,b,c$ be the side lengths of a triangle with the property that for any $n\in\mathbb{N}^\star$, the numbers $a^n,b^n,c^n$ can also be the side lengths of a triangle. Prove that the triangle is necessarily isosceles.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 121, p. 37]
+	Given the vectors $\vec{a},\vec{b},\vec{c}$ in the plane, show that $\|\vec{a}\| + \|\vec{b}\| + \|\vec{c}\| + \|\vec{a} + \vec{b} + \vec{c}\|\ge\|\vec{a} + \vec{b}\| + \|\vec{b} + \vec{c}\| + \|\vec{c} + \vec{a}\|$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 126, p. 38]
+	Given an equilateral triangle $ABC$ and a point $P$ that does not lie on the circumcircle of $ABC$, show  that one can construct a triangle with sides the segments $PA$, $PB$, and $PC$. If $P$ lies on the circumcircle, show that 1 of these segments is equal to the sum of the other 2.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 127, p. 38]
+	Let $M$ be a point in the plane of the triangle $ABC$ whose centroid is $G$. Prove that
+	\begin{align*}
+		MA^3\cdot BC + MB^3\cdot AC + MC^3\cdot AB\ge 3MG\cdot AB\cdot BC\cdot CA.
+	\end{align*}
+\end{problem}
+
 \subsection{Quadrilateral\texttt{/}Tứ Giác}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 124, p. 37]
+	Let $ABCD$ be a convex cyclic quadrilateral. Prove that $|AB - CD| + |AD - BC|\ge 2|AC - BD|$.
+\end{problem}
 
 \subsection{Polygon\texttt{/}Đa Giác}
 
@@ -930,10 +1116,17 @@ A typical technique of proof in number theory: prove by the \textit{principle of
 	Prove thta $|\sin nx|\le n|\sin x|$, for all $x\in\mathbb{R}$, $n\in\mathbb{N}^\star$.
 \end{problem}
 
-\begin{problem}
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 14, p. 6]
 	Prove that for any $x_1,\ldots,x_n\in\mathbb{R}$, $n\ge 1$,
 	\begin{align*}
 		\sum_{i=1}^n |\sin x_i| + \left|\cos\left(\sum_{i=1}^n x_i\right)\right|\ge 1.
+	\end{align*}
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 118, p. 35]
+	Prove that
+	\begin{align*}
+		\frac{\sin^3 a}{\sin b} + \frac{\cos^3 a}{\cos b}\ge\sec(a - b),\ \forall a,b\in\left(0,\frac{\pi}{2}\right).
 	\end{align*}
 \end{problem}
 
