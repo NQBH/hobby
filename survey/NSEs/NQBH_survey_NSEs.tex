@@ -4,9 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\usepackage{float,graphicx,algpseudocode,algorithm}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
@@ -46,14 +45,21 @@
 \tableofcontents
 
 %------------------------------------------------------------------------------%
-
+\vspace{5mm}
+\textbf{Disclaimer.} This survey is used mainly for NQBH's personal purposes. Hence, several paragraphs are quoted without quotation marks. The main purpose here is to collect and to add personal remarks.
 \section*{Quick notes}
 \begin{enumerate}
 	\item The 4 formulations appearing in the \textit{Clay Millennium Prize} formulation \cite{Fefferman2006} of NSEs.
+	\item ``The regularity theory for subcritical PDEs is often standard. That for critical PDEs is quite tricky but sometimes possible. The regularity theory for supercritical equations is usually very difficult, and known examples often require other properties such as a monotonicity formula.'' -- \cite[p. 7]{Tsai2018}
 \end{enumerate}
-\textbf{Disclaimer.} This survey is used mainly for NQBH's personal purposes. Hence, several paragraphs are quoted without quotation marks. The main purpose here is to collect and to add personal remarks.
+
 
 \section{Incompressible NSEs}
+\begin{quotation}
+	``The Navier--Stokes equations are among the very few equations of mathematical physics for which the nonlinearity arises not from the physical attributes of the system but rather from the mathematical (kinematical) aspects of the problem.'' -- \cite[p. 2]{Foias_Manley_Rosa_Temam2001}
+	
+	``The no-slip boundary condition (flow past a rigid boundary) is one of the few that correspond to a physically accessible boundary condition. Another physically accessible boundary condition is the open boundary (i.e., an open surface of a flowing fluid for part or all of the boundary)\footnote{In the language of PDEs, this corresponds to a Neumann-type boundary condition; the no-slip case corresponds to a Dirichlet-type boundary condition.}'' -- \cite[p. 45]{Foias_Manley_Rosa_Temam2001}
+\end{quotation}
 
 \subsection{Various concepts of solutions to NSEs}
 To describe various formulations for NSEs, we must first define properly the concept of a solution to NSEs, including, e.g., \textit{periodic solutions, finite energy solutions, $H^1$ solutions}, and \textit{smooth solutions}, etc.
@@ -165,20 +171,115 @@ where ${\bf R}$ is the stress tensor, and ${\bf S}_{\bf u}$ is the momentum sour
 
 \subsection{OpenFOAM Solvers}
 
+\section{\href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence.html}{OpenFOAM\texttt{/}Physical Modeling\texttt{/}Turbulence}}
+OpenFOAM includes support for the following types of turbulence modeling: \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras.html}{Reynolds Averaged Simulation (RAS)}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-des.html}{Detached Eddy Simulation (DES)}, and \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-les.html}{Large Eddy Simulation (LES)}.
+
+\paragraph{Usage.} Turbulence models are specified in the \verb|$FOAM_CASE/constant/turbulenceProperties| file, taking the form, e.g., when specifying the \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras.html}{RAS} \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-k-omega-sst.html}{kOmegaSST} model:
+\begin{verbatim}
+simulationType      RAS;
+
+RAS
+{
+    RASModel                kOmegaSST;
+
+    // On/off switch
+    turbulence              on
+
+    // Optionally write the model coefficients at run-time
+    printCoeffs             no;
+
+    // Optionally override default model coefficients
+    kOmegaSSTCoeffs
+    {
+        ...
+    }
+}
+\end{verbatim}
+Default coefficients are available for all models, based on their reference literature. Optionally users may override the default values by specifying a \verb|<model>Coeffs| sub-dictionary. Coefficient names can be found by observing the solver output when setting the \texttt{printCoeffs} to \texttt{yes}.
+
+\paragraph{Mesh requirements.} Effective use of turbulence models requires close attention to their respective meshing requirements, particularly in near-wall regions. \textsf{Fig. Near wall velocity profile.}
+\begin{itemize}
+	\item DNS data from \cite{Lee_Moser2015}.
+	\item RAS:
+	\begin{itemize}
+		\item high  Reynolds number: 1st cell height should be in the region of $30 < y^+ < 200$. Note that the upper limit is imposed by the location of the outer layer, which depends on the Reynolds number
+		\item low Reynolds number: mesh required to resolve the viscous sub-layer, typically using 10-20 layers
+	\end{itemize}
+	\item LES:
+	\begin{itemize}
+		\item mesh required to resolve the viscous sub-layer
+		\item requires high order schemes to adequately resolve the high-energy containing eddies
+		\item preferably isotropic mesh		
+	\end{itemize}
+\end{itemize}
+
+\paragraph{Numerical settings.} Turbulence generation is driven by the $\nabla{\bf u}$. Errors arising from the \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-schemes-gradient.html}{gradient calculation}, e.g., due to poor quality meshes, can lead to spurious turbulence predictions and solver instability. This effect can be partly compensated by the application of \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-schemes-gradient.html#sec-schemes-gradient-options-gradient-limiters}{limited schemes}.
+
+\subsection{\href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras.html}{Reynolds Averaged Simulation (RAS)}}
+
+\paragraph{Options.} OpenFOAM includes Reynolds Averaged Simulation turbulence closures based on linear and non-linear eddy viscosity models, and Reynolds stress transport models: \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-linear-eddy-viscosity-models.html}{Linear eddy viscosity models}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-non-linear-eddy-viscosity-models.html}{Nonlinear eddy viscosity models}, and \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-reynolds-stress-transport-models.html}{Reynolds stress transport models}.
+
+\paragraph{Usage.} RAS is selected by setting the \texttt{simulationType} entry 
+\begin{verbatim}
+	simulationType  RAS;
+	
+	RAS
+	{
+        \\ Model input parameters
+	}
+\end{verbatim}
+Suitable for:
+\begin{itemize}
+	\item 1D, 2D, and 3D cases
+	\item steady-state or transient
+\end{itemize}
+
+\paragraph{Initialization.} Care should be taken to provide an adequate initialization of turbulence fields. For open systems, the flow can evolve via the inlets. However, note that the initial field values should be approximate for the flow medium, where non-physical levels will result in non-physical turbulence viscosity predictions and case instability.
+
+\paragraph{Background.} Reynolds decomposition of the velocity into its mean and fluctuating contributions takes the form ${\bf u}(t,{\bf x}) = \overline{\bf u}(t,{\bf x}) + {\bf u}'(t,{\bf x})$ where the mean of the fluctuating component is defined as zero: $\overline{{\bf u}'} = 0$. Applied to NSEs, this leads to equations for the mean velocity and pressure:
+\begin{equation*}
+	\left\{\begin{split}
+		\partial_t\rho + \nabla\cdot(\rho\overline{\bf u}) &= 0,\\
+		\partial_t(\rho\overline{\bf u}) + \nabla\cdot(\rho\overline{\bf u}\otimes\overline{\bf u}) &= {\bf g} + \nabla\cdot\overline{\boldsymbol{\tau}} - \nabla\cdot(\rho{\bf R}),
+	\end{split}\right.
+\end{equation*}
+where the \textit{averaged stress tensor}, $\overline{\boldsymbol{\tau}}$, for Newtonian fluids is given by:
+\begin{align*}
+	\overline{\boldsymbol{\tau}}\coloneqq-\left(p + \frac{2}{3}\mu\nabla\cdot\overline{\bf u}\right){\bf I} + \mu\left(\nabla\overline{\bf u} + (\nabla\overline{\bf u})^\top\right).
+\end{align*}
+Using the relationship: $\nabla\cdot\overline{\bf u} = \operatorname{tr}(\nabla\overline{\bf u}) = \operatorname{tr}\left((\nabla\overline{\bf u})^\top\right)$ the stress tensor becomes:
+\begin{align*}
+	\overline{\boldsymbol{\tau}} = -p{\bf I} + \mu\left[\nabla\overline{\bf u} + (\nabla\overline{\bf u})^\top - \frac{2}{3}\operatorname{tr}\left((\nabla\overline{\bf u})^\top\right){\bf I}\right] = -p{\bf I} + \mu\left[\nabla\overline{\bf u} + \operatorname{dev2}\left((\nabla\overline{\bf u})^\top\right)\right],
+\end{align*}
+and the $\operatorname{dev2}$ operator is defined as:
+\begin{align*}
+	\operatorname{dev2}(\phi)\coloneqq\phi - \frac{2}{3}\operatorname{tr}(\phi){\bf I}.
+\end{align*}
+\texttt{continue to read RAS}
+
+\subsection{Detached Eddy Simulation (DES)}
+
+\subsection{Large Eddy Simulation (LES)}
+
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[TT's blog]{TT's blog} \href{https://terrytao.wordpress.com/tag/navier-stokes-equations/}{Terence Tao's blog\texttt{/}Navier--Stokes equations}.
+	\bibitem[TerryTao]{TerryTao} \href{https://terrytao.wordpress.com/tag/navier-stokes-equations/}{Terence Tao's blog\texttt{/}Navier--Stokes equations}.
 	\begin{itemize}
 		\item Terence Tao. \href{https://terrytao.wordpress.com/2011/08/04/localisation-and-compactness-properties-of-the-navier-stokes-global-regularity-problem}{\textit{Localisation and compactness properties of the Navier-Stokes global regularity problem}}. Aug 4, 2011.
+		
 		\item Terence Tao. \href{https://terrytao.wordpress.com/2018/09/03/254a-notes-0-physical-derivation-of-the-incompressible-euler-and-navier-stokes-equations}{\textit{254A, Notes 0: Physical derivation of the incompressible Euler and Navier-Stokes equations}}. Sep 3, 2018.
+		
+		\item Terence Tao. \href{https://terrytao.wordpress.com/2019/08/15/quantitative-bounds-for-critically-bounded-solutions-to-the-navier-stokes-equations/}{\textit{Quantitative bounds for critically bounded solutions to the Navier-Stokes equation}s}. Aug 15, 2019.
 	\end{itemize}
 	
 	\bibitem[Wikipedia]{Wikipedia} \href{https://en.wikipedia.org}{Wikipedia.org}
 	\begin{itemize}
+		\item \href{https://en.wikipedia.org/wiki/Enstrophy}{Wikipedia\texttt{/}enstrophy}.
 		\item \href{https://en.wikipedia.org/wiki/Viscosity}{Wikipedia\texttt{/}viscosity}.
 	\end{itemize}
 \end{thebibliography}
+
 \printbibliography[heading=bibintoc]
 	
 \end{document}
