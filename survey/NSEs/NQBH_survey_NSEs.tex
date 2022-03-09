@@ -41,7 +41,8 @@
 	A personal survey on Navier--Stokes equations (NSEs), especially its regularity and turbulence models.
 \end{abstract}
 \textbf{Keywords.} Navier--Stokes equations; turbulence models.
-
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
@@ -52,7 +53,6 @@
 	\item The 4 formulations appearing in the \textit{Clay Millennium Prize} formulation \cite{Fefferman2006} of NSEs.
 	\item ``The regularity theory for subcritical PDEs is often standard. That for critical PDEs is quite tricky but sometimes possible. The regularity theory for supercritical equations is usually very difficult, and known examples often require other properties such as a monotonicity formula.'' -- \cite[p. 7]{Tsai2018}
 \end{enumerate}
-
 
 \section{Incompressible NSEs}
 \begin{quotation}
@@ -255,7 +255,70 @@ and the $\operatorname{dev2}$ operator is defined as:
 \begin{align*}
 	\operatorname{dev2}(\phi)\coloneqq\phi - \frac{2}{3}\operatorname{tr}(\phi){\bf I}.
 \end{align*}
-\texttt{continue to read RAS}
+${\bf R}$ is the \textit{Reynolds stress tensor} ${\bf R} = \overline{{\bf u}'\otimes{\bf u}'}$. The Reynolds stress tensor is further divided into isotropic and deviatoric anisotropic contributions:
+\begin{align*}
+	{\bf R} = \overline{{\bf u}'\otimes{\bf u}'} = \underbrace{\frac{2}{3}k{\bf I}}_{\rm isotropic} + \underbrace{\overline{{\bf u}'\otimes{\bf u}'} - \frac{2}{3}k{\bf I}}_{\rm deviatoric},
+\end{align*}
+where $k$ is the \textit{turbulent kinetic energy}, defined by
+\begin{align*}
+	k\coloneqq\frac{1}{2}\overline{{\bf u}'\cdot{\bf u}'} = \frac{1}{2}\operatorname{tr}({\bf R}).
+\end{align*}
+Only the anisotropic contribution of the Reynolds stress tensor transports momentum, whereby the isotropic contribution can be added to the mean pressure, leading to the full form:
+\begin{align*}
+	\partial_t(\rho\overline{\bf u}) + \nabla\cdot(\rho\overline{\bf u}\otimes\overline{\bf u}) = {\bf g} - \nabla\overline{p}' + \nabla\cdot(\mu\nabla\overline{\bf u}) + \nabla\cdot\left[\mu\operatorname{dev2}\left((\nabla\overline{\bf u})^\top\right)\right] - \nabla\cdot(\rho{\bf R}_{\rm dev}),
+\end{align*}
+where
+\begin{align*}
+	{\bf R}_{\rm dev}\coloneqq\overline{{\bf u}'\otimes{\bf u}'} - \frac{2}{3}k{\bf I},\ \overline{p}' = \overline{p} + \frac{2}{3}\rho k.
+\end{align*}
+The RAS family of turbulence models provide methods to approximate the deviatoric anisotropic stress contribution due to ${\bf R}_{\rm dev}$.
+
+\subsubsection{\href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-linear-eddy-viscosity-models.html}{Linear Eddy Viscosity Models}}
+Linear eddy viscosity turbulence model selections include: \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-k-epsilon.html}{k-epsilon}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-k-epsilon-phit-f.html}{k-epsilon-phit-f}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-k-kl-omega.html}{k-kl-omega}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-k-omega-sst-lm.html}{Langtry-Menta k-omega Shear Stress Transport (SST)}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-k-omega-sst.html}{k-omega Shear Stress Transport (SST)}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-lien-leschziner.html}{Lien-Leschziner}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-q-zeta.html}{q-zeta}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-realizable-k-epsilon.html}{Realizable k-epsilon}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-rng-k-epsilon.html}{RNG k-epsilon}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-spalart-allmaras.html}{Spalart-Allmaras}, \href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-v2-f.html}{v2-f}
+
+\paragraph{Background.} Under the Boussinesq hypothesis \cite{Boussinesq1877}, the deviatoric anisotropic stress is considered proportional to the traceless mean rate of strain:
+\begin{align*}
+	-\rho{\bf R}_{\rm dev} = -\rho\overline{{\bf u}'\otimes{\bf u}'} + \frac{2}{3}\rho k{\bf I} = \mu_{\rm t}\left[2{\bf S} - \left(\frac{2}{3}\nabla\cdot{\bf u}\right){\bf I}\right],
+\end{align*}
+where ${\bf S}$ is the \textit{symmetric tensor}
+\begin{align*}
+	{\bf S}\coloneqq\frac{1}{2}\left(\nabla\overline{\bf u} + (\nabla\overline{\bf u})^\top\right)
+\end{align*}
+leading to:
+\begin{align*}
+	\rho{\bf R}_{\rm dev} = \mu_{\rm t}\left(\nabla\overline{\bf u} + (\nabla\overline{\bf u})^\top\right) + \mu_{\rm t}\left(\frac{2}{3}\nabla\cdot{\bf u}\right){\bf I},
+\end{align*}
+where $\mu_{\rm t}$ is the dynamic \emph{eddy viscosity}. The momentum equation therefore becomes:
+\begin{align*}
+	\partial_t(\rho\overline{\bf u}) + \nabla\cdot(\rho\overline{\bf u}\otimes\overline{\bf u}) = {\bf g} - \nabla\overline{p}' + \nabla\cdot(\mu_{\rm eff}\nabla\overline{\bf u}) + \nabla\cdot\left[\mu_{\rm eff}\operatorname{dev2}\left((\nabla\overline{\bf u})^\top\right)\right],
+\end{align*}
+where $\mu_{\rm eff}$ is the \textit{effective} dynamic eddy viscosity: $\mu_{\rm eff}\coloneqq\mu + \mu_{\rm t}$, i.e., the sum of the laminar and turbulent contributions.
+
+\paragraph{\href{https://www.openfoam.com/documentation/guides/latest/doc/guide-turbulence-ras-k-epsilon.html}{k-epsilon}.}
+
+\subparagraph{Properties.}
+\begin{itemize}
+	\item 2 transport-equation linear-eddy-viscosity turbulence closure model:
+	\begin{itemize}
+		\item Turbulent kinetic energy $k$,
+		\item Turbulent kinetic energy dissipation rate $\epsilon$.
+	\end{itemize}
+	\item Based on:
+	\begin{itemize}
+		\item Standard model: \cite{Launder_Spalding1974}.
+		\item Rapid Distortion Theory compression term: \cite{ElTahry1983}.
+	\end{itemize}
+	\item Extensively used with known performance,
+	\item Over-prediction of turbulent kinetic energy at stagnation points,
+	\item Requires near-wall treatment.
+\end{itemize}
+See also, e.g., \cite[Chap. 17]{Moukalled_Mangani_Darwish2016}.
+
+\subsubsection{Nonlinear Eddy Viscosity Models}
+
+\subsubsection{Reynolds Stress Transport Models}
+
+\subsubsection{Wall Modeling}
 
 \subsection{Detached Eddy Simulation (DES)}
 
