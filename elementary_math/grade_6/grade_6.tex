@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ques}{Question}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Elementary Mathematics\texttt{/}Grade 6}
+\author{Nguyễn Quản Bá Hồng}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Số \& Số Thập Phân}
+
+\subsection{Phân Số với Tử \& Mẫu là Số Nguyên}
+\begin{definition}[Phân số\texttt{/}Fractionals]
+	1 \emph{phân số} có tử và mẫu số là số nguyên là biểu thức có dạng $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne 0$. $a$: tử số (numerator), $b$: mẫu số (denominator).
+	
+	Phân số $\frac{a}{b}$, $a\in\mathbb{Z}$, $b\in\mathbb{Z}^\star$, được gọi là \emph{phân số tối giản} nếu $\operatorname{gcd}(a,b) = 1$, ở đây $\operatorname{gcd}$ ký hiệu \emph{ước chung lớn nhất} (greatest common divisor).\footnote{Hoặc ký hiệu Việt Nam là: $\operatorname{UCLN}(a,b)$.}
+\end{definition}
+
+\subsubsection{Khái niệm 2 phân số bằng nhau.} 2 phân số được gọi là \textit{bằng nhau} nếu chúng cùng biểu diễn một giá trị, i.e. (tức\texttt{/}nghĩa là),
+\begin{align}
+	\boxed{\frac{a}{b} = \frac{c}{d}\Leftrightarrow b\ne 0, d\ne 0,\ ad = bc.}
+\end{align}
+Vế sau có nghĩa là \textit{nhân chéo chia ngang}, hay được gọi là \textit{quy tắc bằng nhau của 2 phân số}.
+
+\textbf{Chú ý.} luôn nhớ điều kiện mẫu số 2 phân số phải khác 0.
+
+\begin{example}
+	Trong Sách Giáo Khoa Toán 6, Cánh Diều, của Đỗ Đức Thái chủ biên, có viết:
+	\begin{quotation}
+		``Xét 2 phân số $\frac{a}{b}$ và $\frac{c}{d}$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$\footnote{Phép nhân: $a\times b = a\cdot b = ab$.}. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$.''
+	\end{quotation}
+	Phản ví dụ: $a = 0$, $b = 0$ thì $ad = bc = 0$, nhưng $\frac{0}{0}\ne\frac{c}{d}$ và phân số $\frac{0}{0}$ không có nghĩa.
+\end{example}
+\textbf{Mẹo nhanh.} Xét dấu (sign) của tử số và mẫu số khi so sánh 2 phân số $\frac{a}{b}$ và $\frac{c}{d}$. Nếu trong 4 số $a,b,c,d$, có 1 hoặc 3 số âm, còn lại dương, thì 2 phân số không bằng nhau.
+
+\subsubsection{Tính Chất Cơ Bản của Phân Số}
+\begin{align}
+	\boxed{\frac{a}{b} = \frac{ac}{bc},\ \frac{a}{b} = \frac{a:c}{b:c},\ a,b,c\in\mathbb{Z},\ b\ne 0,\ c\ne 0.}
+\end{align}
+trong đó đẳng thức thứ 2 yêu cầu $c\in\operatorname{UC}(a,b)$ để phân số đều có tử và mẫu nguyên.
+
+\paragraph{Rút gọn về phân số tối giản.}
+Để rút gọn phân số với tử và mẫu là số nguyên về phân số tối giản:
+\begin{itemize}
+	\item Tìm $\operatorname{UCLN}$ của tử và mẫu sau khi đã bỏ dấu $-$ (nếu có).
+	\item Chia cả tử và mẫu cho $\operatorname{UCLN}$ vừa tìm được.
+\end{itemize}
+
+\paragraph{Quy đồng mẫu nhiều phân số.}
+\begin{ques}
+	Tại sao phải quy đồng mẫu nhiều phân số?
+\end{ques}
+
+\begin{proof}[Answer]
+	\begin{itemize}
+		\item Để tiện so sánh 2 phân số.
+		\item Để tiện cho việc giải phương trình.
+	\end{itemize}
+\end{proof}
+
+\begin{ques}
+	Cách để quy đồng mẫu nhiều phân số?
+\end{ques}
+Để quy đồng mẫu nhiều phân số:
+\begin{enumerate}
+	\item Viết các phân số đã cho về phân số có mẫu dương. Tìm $\operatorname{BCNN}$ của các mẫu dương đó để làm mẫu chung.
+	
+	\textbf{Note.} Nếu các mẫu số nguyên tố cùng nhau, thì $\operatorname{BCNN}$ của chúng chính là tích của chúng.
+	\item Tìm thừa số phụ của mỗi mẫu (bằng cách chia mẫu chung cho từng mẫu).
+	\item Nhân tử và mẫu của mỗi phân số ở Bước 1 với thừa số phụ tương ứng.
+\end{enumerate}
+
+\subsection{So Sánh Các Phân Số. Hỗn Số Dương}
+
+
+
+%------------------------------------------------------------------------------%
+
+\begin{thebibliography}{99}
+	\bibitem[]{}
+\end{thebibliography}
+
+\printbibliography[heading=bibintoc]
+
+	
+\end{document}
