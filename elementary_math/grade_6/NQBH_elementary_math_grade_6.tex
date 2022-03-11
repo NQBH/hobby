@@ -11,14 +11,14 @@
 \newtheorem{assumption}{Assumption}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Định Nghĩa}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{theorem}{Định lý}[section]
 \newtheorem{notation}{Notation}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Lưu ý}[section]
+\newtheorem{example}{Ví dụ}[section]
 \newtheorem{ques}{Question}[section]
-\newtheorem{problem}{Problem}[section]
+\newtheorem{problem}{Bài toán}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
@@ -42,6 +42,53 @@
 \tableofcontents
 
 %------------------------------------------------------------------------------%
+
+\section*{Notation\texttt{/}Ký Hiệu}
+\begin{itemize}
+	\item $x\in[a,b]$: $x\ge a$ và $x\le b$.
+\end{itemize}
+
+\section{Một Số Yếu Tố Thống kê \& Xác Suất}
+
+\subsection{Xác Suất Thực Nghiệm Trong 1 Số Trò Chơi \& Thí Nghiệm Đơn Giản}
+
+\subsubsection{Xác Suất Thực Nghiệm Trong Trò Chơi Tung Đồng Xu}
+\begin{definition}[Xác suất thực nghiệm]
+	\emph{Xác suất thực nghiệm xuất hiện mặt $N$} khi tung đồng xu nhiều lần bằng:
+	\begin{align*}
+		\frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in[0,1].
+	\end{align*}
+	\emph{Xác suất thực nghiệm xuất hiện mặt $S$} khi tung đồng xu nhiều lần bằng:
+	\begin{align*}
+		\frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in[0,1].
+	\end{align*}
+\end{definition}
+Từ định nghĩa, xác suất thực nghiệm xuất hiện mặt $N$ (hoặc mặt $S$) phản ảnh số lần xuất hiện mặt đó so với tổng số lần tiền hành thực nghiệm.
+
+\textbf{Nhận xét.}
+\begin{itemize}
+	\item Xác suất thực nghiệm xuất hiện mặt $N$ bằng 0 khi và chỉ khi không có mặt $N$ nào trong tất cả lần tung đồng xu.
+	\item Xác suất thực nghiệm xuất hiện mặt $N$ bằng 1 khi và chỉ khi không có mặt $S$ nào trong tất cả lần tung đồng xu.
+	\item Xác suất thực nghiệm xuất hiện mặt $s$ bằng 0 khi và chỉ khi không có mặt $S$ nào trong tất cả lần tung đồng xu.
+	\item Xác suất thực nghiệm xuất hiện mặt $S$ bằng 1 khi và chỉ khi không có mặt $N$ nào trong tất cả lần tung đồng xu.
+\end{itemize}
+
+\begin{problem}
+	Tung 2 đồng xu cân đối \& đồng chất $T$ lần ($T$ viết tắt của ``tổng số''), trong đó:
+	\begin{itemize}
+		\item 2 đồng xu sấp xuất hiện $SS$ lần.
+		\item 1 đồng xu sấp, 1 đồng xu ngửa xuất hiện $SN$ lần.
+		\item 2 đồng xu ngửa xuất hiện $NN$ lần.
+	\end{itemize}
+	Hiển nhiên: $T = SS + SN + NN$. Khi đó:
+	\begin{itemize}
+		\item Xác suất thực nghiệm để có 1 đồng xu sấp, 1 đồng xu ngửa $= \frac{SN}{T} = \frac{SN}{SS + SN + NN}\in[0,1]$.
+		\item Xác suất thực nghiệm để có 2 đồng xu đều ngửa $= \frac{NN}{T} = \frac{NN}{SS + SN + NN}\in[0,1]$.
+		\item Xác suất thực nghiệm để có 2 đồng xu đều sấp $= \frac{SS}{T} = \frac{SS}{SS + SN + NN}\in[0,1]$.
+		\item Xác suất thực nghiệm để có ít nhất 1 đồng xu sấp $= \frac{SS + SN}{T} = \frac{SS + SN}{SS + SN + NN}\in[0,1]$.
+		\item Xác suất thực nghiệm để có ít nhất 1 đồng xu ngửa $= \frac{SN + NN}{T} = \frac{SN + NN}{SS + SN + NN}\in[0,1]$.
+	\end{itemize}
+\end{problem}
 
 \section{Phân Số \& Số Thập Phân}
 
@@ -77,10 +124,10 @@ trong đó đẳng thức thứ 2 yêu cầu $c\in\operatorname{UC}(a,b)$ để 
 
 \paragraph{Rút gọn về phân số tối giản.}
 Để rút gọn phân số với tử và mẫu là số nguyên về phân số tối giản:
-\begin{itemize}
+\begin{enumerate}
 	\item Tìm $\operatorname{UCLN}$ của tử và mẫu sau khi đã bỏ dấu $-$ (nếu có).
 	\item Chia cả tử và mẫu cho $\operatorname{UCLN}$ vừa tìm được.
-\end{itemize}
+\end{enumerate}
 
 \paragraph{Quy đồng mẫu nhiều phân số.}
 \begin{ques}
@@ -108,15 +155,61 @@ trong đó đẳng thức thứ 2 yêu cầu $c\in\operatorname{UC}(a,b)$ để 
 
 \subsection{So Sánh Các Phân Số. Hỗn Số Dương}
 
+\section{Hình Học Phẳng}
+
+\subsection{Điểm. Đường Thẳng}
+\textbf{Quy ước.} Khi nói 2 điểm mà không nói gì thêm, ta hiểu đó là 2 điểm phân biệt.
+
+\noindent\textbf{Chú ý.} Mỗi hình là tập hợp các điểm. Hình có thể chỉ gồm 1 điểm.
+
+\begin{remark}[Phân biệt đường thẳng vs. đoạn thẳng]
+	Đường thẳng không bị giới hạn về 2 phía, trong khi đoạn thẳng bị giới hạn về 2 phía bởi 2 đầu mút của nó.
+\end{remark}
+
+\begin{definition}
+	Điểm $A$ \emph{thuộc\texttt{/}nằm trên} đường thẳng $d$ (hay đường thẳng $d$ \emph{đi qua} điểm $A$) \& được ký hiệu là $A\in d$. Điểm $B$ \emph{không thuộc\texttt{/}không nằm trên} đường thẳng $d$ (hay đường thẳng $d$ \emph{không đi qua} điểm $B$) \& được ký hiệu là $B\notin d$.
+\end{definition}
+
+\begin{remark}
+	Có vô số điểm thuộc 1 đoạn\texttt{/}đường thẳng.
+\end{remark}
+Thật vậy, đoạn thẳng $AB$ có vô số điểm bởi vì: lấy $M_1$ là trung điểm của $AB$, lấy $M_2$ là trung điểm của đoạn $AM_1$, lấy $M_3$ là trung điểm của đoạn $AM_2$, tương tự như vậy, thì có vô số lần lấy trung điểm, tương ứng vô hạn điểm.
+
+\begin{theorem}
+	Có 1 \& chỉ 1 đường thẳng đi qua 2 điểm $A$ \& $B$ (phân biệt).
+\end{theorem}
+Đường thẳng đi qua 2 điểm $A$, $B$ còn được gọi là \emph{đường thẳng $AB$}, hay \emph{đường thẳng $BA$}.
+
+\begin{definition}[3 điểm thẳng hàng, không thẳng hàng]
+	Khi 3 điểm cùng thuộc 1 đường thẳng, chúng được gọi là \emph{thẳng hàng}. Khi 3 điểm không cùng thuộc bất kỳ đường thẳng nào, chúng được gọi là \emph{không thẳng hàng}.
+\end{definition}
+
+\begin{theorem}
+	Trong 3 điểm thẳng hàng, có 1 \& chỉ 1 điểm nằm giữa 2 điểm còn lại.
+\end{theorem}
+
+\subsection{2 Đường Thẳng Cắt Nhau. 2 Đường Thẳng Song Song}
+\begin{definition}[2 đường thẳng cắt nhau]
+	2 đường thẳng chỉ có 1 điểm chung gọi là \emph{2 đường thẳng cắt nhau} \& điểm chung được gọi là \emph{giao điểm} của 2 đường đó.
+\end{definition}
+
+\begin{definition}[2 đường thẳng song song]
+	2 đường thẳng $a$ \& $b$ không có điểm chung nào được gọi là \emph{song song với nhau}. Viết $a//b$ hoặc $b//a$.
+\end{definition}
+\textbf{Chú ý.} 2 đường thẳng \emph{trùng nhau} thì không thuộc vào 2 định nghĩa trên. 
+
+
+
 
 
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[]{}
+	\bibitem[Toán 6]{Toan6} Đỗ Đức Thái, Lê Tuấn Anh, Đỗ Tiến Đạt, Nguyễn Sơn Hà, Nguyễn Thị Phương Loan, Phạm Sỹ Nam, Phạm Đức Quang. \textit{Toán 6, Tập 1, 2}. NXB ĐHSP.
+	
+	\bibitem[VHB]{VHB} Vũ Hữu Bình. \textit{Nâng Cao \& Phát Triển Toán 6, Tập 1, 2}. NXB GDVN.
 \end{thebibliography}
 
 \printbibliography[heading=bibintoc]
-
 	
 \end{document}
