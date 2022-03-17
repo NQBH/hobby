@@ -6,7 +6,21 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage{float,graphicx}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{conjecture}{Conjecture}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -28,6 +42,10 @@
 %------------------------------------------------------------------------------%
 
 \section{Anime \& Manga}
+
+\begin{question}
+	Should I include quotes from the animes and mangas listed below?
+\end{question}
 \begin{enumerate}
     \item \textsc{Akira} (1988)\hfill[Chap. 1\texttt{/}38]
     \item Arcane: League of Legends $\star$ Arcane (2021--)\hfill[S1.E1\texttt{/}E9]
@@ -67,6 +85,7 @@
     \item \textsc{Kimi no suiz\^o o tabetai $\star$ I Want to Eat Your Pancreas} (2018)
     \item \textsc{Kiseij\^u: Sei no kakuritsu $\star$ Parasyte: The Maxim} (2015--2015)\hfill[S1.E24]
     \item \textsc{Koe no katachi $\star$ A Silent Voice: The Movie} (2016)
+    \item Komi-san wa, Komyushou Desu $\star$ Komi Can't Communicate (2021--)\hfill[S1.E1\texttt{/}E12]
     \item Koroshi Ai $\star$ Love of Kill (2022--)\hfill[S1.E3][Chap. 31\texttt{/}69--]
     \item \textsc{Koto no ha no niwa $\star$ The Garden of Words} (2013)
     \item \textsc{K\^okaku Kid\^otai $\star$ Ghost in the Shell} (1995)
@@ -86,8 +105,8 @@
     
     Rascal Does Not Dream of Bunny Girl Senpai (2018--)\hfill[S1.E14]
     \item Rick and Morty (2013--)\hfill[S1.E11][S2.E10][S3.E10][S4.E10][S5.E10]
-    \item Shingeki no kyojin $\star$ Attack on Titan (2013--2022)\hfill[S1.E25][S2.E12][S3.E22][S4.E24][Chap. 139\texttt{/}139]
-    \item Sono Bisque Doll wa Koi wo Suru $\star$ My Dressing-Up Darling\hfill[S1.E9][Chap. 71]
+    \item Shingeki no kyojin $\star$ Attack on Titan (2013--2022)\hfill[S1.E25][S2.E12][S3.E22][S4.E26][Chap. 139\texttt{/}139]
+    \item Sono Bisque Doll wa Koi wo Suru $\star$ My Dressing-Up Darling\hfill[S1.E10][Chap. 71]
     \item \textsc{Stein;Gate} (2011--2015)\hfill[S1.E26]
     \item \textsc{Steins;Gate: The Movie - Load Region of Déjà Vu} (2013)
     \item \textsc{Stein;Gate 0} (2018)\hfill[S1.E24]
@@ -103,6 +122,10 @@
 %------------------------------------------------------------------------------%
 
 \section{Movie}
+
+\begin{question}
+	Should I include quotes from the movies listed below?
+\end{question}
 \begin{enumerate}
 	\item \textsc{A Beautiful Mind} (2001)
 	\item \textsc{Alita: Battle Angel} (2019)
@@ -986,6 +1009,7 @@
 	\item \textsc{Dell XPS 15 i7.} 15.6 inches.
 	\item \textsc{MSI Katana GF76 11UC i7.} 17.3 inches.
 \end{enumerate}
+I really want to have a Workstation, especially the latest \textsc{Dell Precision}.
 
 \subsection{Software}
 \begin{enumerate}
