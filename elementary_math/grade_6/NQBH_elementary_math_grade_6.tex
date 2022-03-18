@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
@@ -46,6 +46,10 @@
 \section*{Notation\texttt{/}Ký Hiệu}
 \begin{itemize}
 	\item $x\in[a,b]$: $x\ge a$ và $x\le b$.
+	\item e.g.: ``ví dụ'', ``chẳng hạn'', ``for example'', ``for instance''.
+	\item i.e.: ``tức là'', ``nghĩa là'', ``that means'', ``it means''.
+	\item w.l.o.g. abbr.\footnote{abbr. is the abbreviation of abbreviation itself, i.e., abbreviation (abbr., abbr.).} ``without loss of generality'', ``không mất tính tổng quát''.\footnote{Cụm này thường được dùng trong các chứng minh có \textit{chia trường hợp} (hay còn gọi là \textit{kỹ thuật chia để trị}), và điều quan trọng là các trường hợp được xét phải ``bình đẳng''\texttt{/}``đối xứng'' với nhau theo một nghĩa nào đó, thì mới được xử dụng kỹ thuật chia trường hợp, cũng như cụm từ này. Nếu sử dụng cụm từ ``w.l.o.g.'' cho các trường hợp không bình đẳng với nhau thì lời giải sẽ thiếu trường hợp \& sai logic ngay từ thời điểm cụm ``w.l.o.g.'' được viết ra.}
+	\item Cá nhân tôi dùng dấu chấm để ngăn cách phần nguyên \& phần thập phân của 1 số thực\texttt{/}phức (nói chung là không nguyên) thay vì dấu $,$ như trong \cite{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1, Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. Ký hiệu dấu $.$ được sử dụng rộng rãi 1 cách thống nhất trong nhiều ngành Khoa học.
 \end{itemize}
 
 \section*{Principles\texttt{/}Nguyên Tắc}
@@ -54,7 +58,9 @@ Về nguyên tắc cá nhân của tôi trong việc dạy \& học Toán Sơ C�
 \begin{question}
 	Học Toán để làm gì? Tại sao phải học Toán?
 \end{question}
-``\ldots được tiến thêm 1 bước trên con đường khám phá thế giới bí ẩn \& đẹp đẽ của Toán học, đặc biệt là được ``làm giàu'' về vốn văn hóa chung \& có cơ hội ``Mang cuộc sống vào bài học -- Đưa bài học vào cuộc sống''. [\ldots] sẽ ngày càng tiến bộ \& cảm thấy vui sướng khi nhận ra ý nghĩa: Học Toán rất có ích cho cuộc sống hằng ngày.'' -- \cite{Toan6}
+Đây thực sự là 1 câu hỏi khó, rất khó.
+
+``\ldots được tiến thêm 1 bước trên con đường khám phá thế giới bí ẩn \& đẹp đẽ của Toán học, đặc biệt là được ``làm giàu'' về vốn văn hóa chung \& có cơ hội ``Mang cuộc sống vào bài học -- Đưa bài học vào cuộc sống''. [\ldots] sẽ ngày càng tiến bộ \& cảm thấy vui sướng khi nhận ra ý nghĩa: Học Toán rất có ích cho cuộc sống hằng ngày.'' -- \cite[p. 1]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1} 
 
 \section{Số Tự Nhiên}
 \textbf{Nội dung.} Tập hợp; tập hợp các số tự nhiên; các phép tính trong tập hợp số tự nhiên; quan hệ chia hết, số nguyên tố; ước chung \& bội chung.
@@ -143,16 +149,15 @@ Trong 2 số tự nhiên $a,b\in\mathbb{N}$ khác nhau, có 1 số nhỏ hơn s�
 \end{align*}
 Hiểu 1 cách trực quan, biểu diễn 3 số $a,b,c\in\mathbb{N}$ trên tia số, khi đó $a < b$ có nghĩa là ``$a$ nằm bên trái $b$'', $b < c$ có nghĩa là ``$b$ nằm bên trái $c$''. Nhìn vào tia số, ta thấy $a$ nằm bên trái $c$, nghĩa là $a < c$.
 
-\texttt{Add partial ordering set.} See, e.g., \cite{Halmos1960, Halmos1974, Kaplansky1977, Kaplansky1977}.
+\texttt{Add partial ordering set.} See, e.g., \cite{Halmos1960, Halmos1974, Kaplansky1972, Kaplansky1977}.
 
 \begin{theorem}
 	Trong 2 số tự nhiên có số chữ số khác nhau: Số nào có nhiều chữ số hơn thì lớn hơn, số nào có ít chữ số hơn thì nhỏ hơn, i.e.:
 	\begin{equation}
 		\label{compare number of digits}
 		\left.\begin{split}
-			&a = \overline{a_ma_{m-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0},\ m,n\in\mathbb{N}^\star,\\
-			&a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 1,\ldots,m,\,j = 1,\ldots,n,\ a_m\ne 0,\,b_n\ne 0,\\
-			&m > n,
+			&a = \overline{a_ma_{m-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0},\ m,n\in\mathbb{N}^\star,\ m > n\\
+			&a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 1,\ldots,m,\,j = 1,\ldots,n,\ a_m\ne 0,\,b_n\ne 0,
 		\end{split}\right\}\Rightarrow a > b.		
 	\end{equation}
 \end{theorem}
@@ -163,7 +168,7 @@ Hiểu 1 cách trực quan, biểu diễn 3 số $a,b,c\in\mathbb{N}$ trên tia 
 		a - b &= \overline{a_ma_{m-1}\ldots a_1a_0} - \overline{b_nb_{n-1}\ldots b_1b_0} = \sum_{i=0}^m a_i10^i - \sum_{i=0}^n b_i10^i = \sum_{i=0}^n a_i10^i + \sum_{i = n + 1}^m a_i10^i - \sum_{i=0}^n b_i10^i\\
 		&= \sum_{i=0}^n (a_i - b_i)10^i + \sum_{i = n + 1}^m a_i10^i\ge \sum_{i=0}^n -9\cdot 10^i + 10^m = -9\sum_{i=0}^n 10^i + 10^m = -9\frac{10^{n+1} - 1}{10 - 1} + 10^m = 10^m -10^{n+1} + 1 > 0,
 	\end{align*}
-	trong đó giả thiết $m > n$, tức $m\ge n + 1$ (do $m,n\in\mathbb{N}$\footnote{Đây chính là giả thiết được thêm, hay kỹ thuật \textit{siết chặt bất đắng thức} khi làm việc với các bài toán trên tập số tự nhiên $\mathbb{N}$ hay rộng hơn xíu là tập số nguyên $\mathbb{Z}$, đặc biệt là các bài giải phương trình hàm trên tập số nguyên. Điều này không có được khi làm việc trên các tập số thực $\mathbb{R}$ hay tập số phức $\mathbb{C}$. Cf. \cite[Problem 3.1, p. 36--38]{Tao2006}.}) được sử dụng để tách tổng trong biểu diễn của $a$ thành 2 tổng con và dùng trong phép so sánh $10^m\ge 10^{n + 1}$, trong khi giả thiết thứ 2 $a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\}$, với mọi $i = 1,\ldots,m$, $j = 1,\ldots,n$ được dùng trong đánh giá hiển nhiên $a_i - b_i\ge -9$ vì trường hợp xấu nhất (the worst case) xảy ra khi $a_i = 0$ và $b_i = 9$, và đánh giá $a_i\ge 0$, với mọi $i = n + 1,\ldots,m - 1$ được dùng trong $a_i10^i\ge 0$, và đánh giá $a_m\ge 1$ được dùng trong $a^m10^m\ge 10^m$. 
+	trong đó giả thiết $m > n$, tức $m\ge n + 1$ (do $m,n\in\mathbb{N}$\footnote{Đây chính là giả thiết được thêm, hay kỹ thuật \textit{siết chặt bất đẳng thức} khi làm việc với các bài toán trên tập số tự nhiên $\mathbb{N}$ hay rộng hơn xíu là tập số nguyên $\mathbb{Z}$, đặc biệt là các bài giải phương trình hàm trên tập số nguyên. Điều này không có được khi làm việc trên các tập số thực $\mathbb{R}$ hay tập số phức $\mathbb{C}$. Cf. \cite[Problem 3.1, p. 36--38]{Tao2006}.}) được sử dụng để tách tổng trong biểu diễn của $a$ thành 2 tổng con và dùng trong phép so sánh $10^m\ge 10^{n + 1}$, trong khi giả thiết thứ 2 $a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\}$, với mọi $i = 1,\ldots,m$, $j = 1,\ldots,n$ được dùng trong đánh giá hiển nhiên $a_i - b_i\ge -9$ vì trường hợp xấu nhất (the worst case) xảy ra khi $a_i = 0$ và $b_i = 9$, và đánh giá $a_i\ge 0$, với mọi $i = n + 1,\ldots,m - 1$ được dùng trong $a_i10^i\ge 0$, và đánh giá $a_m\ge 1$ được dùng trong $a^m10^m\ge 10^m$. 
 \end{proof}
 
 \begin{remark}
@@ -222,7 +227,7 @@ Với số tự nhiên $a\in\mathbb{N}$ cho trước, viết $x\le a$ để ch�
 \end{remark}
 
 \subsubsection{Số La Mã}
-``Đế quốc La Mã là 1 đế quốc hùng mạnh tồn tại từ thế kỷ III trước Công nguyên đến thế kỷ V sau Công nguyên, bao gồm những vùng lãnh thổ rộng lớn ở Địa Trung Hải, Bắc PHi \& Tây Á.'' -- \cite[p. 14]{Toan6}
+``Đế quốc La Mã là 1 đế quốc hùng mạnh tồn tại từ thế kỷ III trước Công nguyên đến thế kỷ V sau Công nguyên, bao gồm những vùng lãnh thổ rộng lớn ở Địa Trung Hải, Bắc PHi \& Tây Á.'' -- \cite[p. 14]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
 \paragraph{Hệ thống các chữ số \& số đặc biệt.} Có 7 chữ số La Mã cơ bản là (ký hiệu \& giá trị tương ứng trong hệ thập phân): I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000. Có 6 số đặc biệt là (ký hiệu \& giá trị tương ứng trong hệ thập phân): IV = 4, IX = 9, XL = 40, XC = 90, CD = 400, CM = 900. I chỉ có thể đứng trước V hoặc X; X chỉ có thể đứng trước L hoặc C; C chỉ có thể đứng trước D hoặc M. Trong các chữ số La Mã, không có ký hiệu để chỉ số 0.
 
@@ -233,7 +238,7 @@ Với số tự nhiên $a\in\mathbb{N}$ cho trước, viết $x\le a$ để ch�
 	\item Mỗi chữ số V, L, D không viết liền nhau.
 \end{itemize}
 
-\paragraph{Cách tính giá trị tương ứng trong hệ thập phân của số La Mã.} ``Giá trị tương ứng trong hệ thập phân của số La Mã bằng tổng giá trị của các chữ số cơ bản \& các số đặc biệt tính theo thứ tự từ trái sang phải.'' -- \cite[p. 14]{Toan6}
+\paragraph{Cách tính giá trị tương ứng trong hệ thập phân của số La Mã.} ``Giá trị tương ứng trong hệ thập phân của số La Mã bằng tổng giá trị của các chữ số cơ bản \& các số đặc biệt tính theo thứ tự từ trái sang phải.'' -- \cite[p. 14]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
 \begin{remark}[Ứng dụng của số La Mã]
 	``Chữ số La Mã được sử dụng rộng rãi cho đến thế kỷ XIV thì không còn được sử dụng nhiều nữa vì hệ thống chữ số Ả Rập (được tạo thành bởi các chữ số từ 0 đến 9) tiện dụng hơn. Tuy nhiên, chúng vẫn còn được sử dụng trong việc đánh số trên mặt đồng hồ, thế kỷ, âm nhạc hay các sự kiện chính trị -- văn hóa -- thể thao lớn như Thế vận hội Olympic, \ldots'' \footnote{Nói tóm lại, sử dụng chữ số La Mã để thể hiện tính trang trọng \& đôi khi màu mè\texttt{/}fancy.}
@@ -278,7 +283,7 @@ Do tính chất kết hợp nên giá trị của biểu thức $a + b + c$ có 
 	\item Trong 1 tích, có thể thay dấu nhân $\times$ bằng dấu $\cdot$, i.e., $a\cdot b\coloneqq a\times b$.
 	
 	\begin{remark}[Chuẩn quốc tế về dấu nhân]
-		Trong SGK \cite{Toan6}, p. 18, các tác giả dùng dấu chấm $.$ thay dấu $\times$, nhưng điều này thực ra nguy hiểm, vì chuẩn quốc tế của dấu nhân là dấu $\cdot$ (dấu chấm nằm giữa, không phải nằm dưới chân), thay vì dấu $.$ dùng để ngăn cách phần nguyên \& phần thập phân của số thực, e.g., $\pi = 3.1416\ldots$ chứ không phải $\pi = 3\cdot 1416\ldots$. Vì vậy, cá nhân tôi sẽ dùng dấu $\cdot$ thay cho dấu $\times$ trong tài liệu này, chú ý ký hiệu này vẫn được sử dụng ở Toán Cao Cấp.
+		Trong SGK \cite[p. 18]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}, các tác giả dùng dấu chấm $.$ thay dấu $\times$, nhưng điều này thực ra nguy hiểm, vì chuẩn quốc tế của dấu nhân là dấu $\cdot$ (dấu chấm nằm giữa, không phải nằm dưới chân), thay vì dấu $.$ dùng để ngăn cách phần nguyên \& phần thập phân của số thực, e.g., $\pi = 3.1416\ldots$ chứ không phải $\pi = 3\cdot 1416\ldots$. Vì vậy, cá nhân tôi sẽ dùng dấu $\cdot$ thay cho dấu $\times$ trong tài liệu này, chú ý ký hiệu này vẫn được sử dụng ở Toán Cao Cấp.
 	\end{remark}
 	\item Trong 1 tích mà các thừa số đều bằng chữ hoặc chỉ có 1 thừa số bằng số, ta có thể không cần viết dấu nhân giữa các thừa số, i.e.,
 	\begin{align*}
@@ -297,7 +302,7 @@ sau đó sử dụng công thức \eqref{decimal representation expansion} để
 \begin{align*}
 	ab = \overline{a_ma_{m-1}\ldots a_1a_0}\cdot\overline{b_nb_{n-1}\ldots b_1b_0} = \left(\sum_{i=0}^m a_i10^i\right)\cdot\left(\sum_{j=0}^n b_j10^j\right) = \sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j = \sum_{i=0}^m\sum_{j=0}^n a_ib_j10^{i + j},
 \end{align*}
-trong đó $\sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j$ chính là cách thường được sử dụng để tính tích 2 số nguyên dương: tính tích riêng thứ nhất, tính tích riêng thứ 2 \& viết tích này lùi sang bên trái 1 cột so với tích riêng thứ nhất, tính tích riêng thứ 3 \& viết tích này lùi sang bên trái 2 cột so với tích riêng thứ nhất, etc (xem ví dụ ở \cite{Toan6}, p. 18).
+trong đó $\sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j$ chính là cách thường được sử dụng để tính tích 2 số nguyên dương: tính tích riêng thứ nhất, tính tích riêng thứ 2 \& viết tích này lùi sang bên trái 1 cột so với tích riêng thứ nhất, tính tích riêng thứ 3 \& viết tích này lùi sang bên trái 2 cột so với tích riêng thứ nhất, etc (xem ví dụ ở \cite[p. 18]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}).
 
 \paragraph{Tính chất của phép nhân.}
 \begin{theorem}[Các tính chất của phép nhân các số tự nhiên]
@@ -347,29 +352,70 @@ Do tính chất kết hợp nên giá trị của biểu thức $abc$ có thể 
 \section{Hình Học Trực Quan}
 
 \section{Một Số Yếu Tố Thống kê \& Xác Suất}
+\textbf{Nội dung.} Thu thập, tổ chức, biểu diễn, phân tích, \& xử lý dữ liệu; bảng số liệu, biểu đồ tranh, biểu đồ cột, biểu đồ cột kép; mô hình xác suất \& xác suất thực nghiệm trong 1 số trò chơi \& thí nghiệm đơn giản.
+
+\subsection{Thu Thập, Tổ Chức, Biểu Diễn, Phân Tích, \& Xử Lý Dữ Liệu}
+Những bước chính trong tiến trình thống kê: ``thu thập, phân loại, kiểm đếm, ghi chép số liệu; đọc \& mô tả các số liệu ở dạng dãy số liệu, bảng số liệu hoặc ở dạng biểu đồ (biểu đồ tranh, biểu đồ cột hoặc biểu đồ hình quạt tròn); nêu được nhận xét đơn giản từ biểu đồ.'' -- \cite[p. 3]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
+
+\subsubsection{Thu thập, tổ chức, phân tích, \& xử lý dữ liệu}
+``Sau khi thu thập, tổ chức, phân loại, biểu diễn dữ liệu bằng bảng hoặc biểu đồ, ta cần phân tích \& xử lý các dữ liệu đó để tìm ra những thông tin hữu ích \& rút ra kết luận.'' [$\ldots$] ``Ta có thể nhận biết được tính hợp lý của dữ liệu thống kê theo những tiêu chí đơn giản.'' [$\ldots$] ``Dựa theo đối tượng \& tiêu chí thống kê, ta có thể tổ chức \& phân loại dữ liệu.'' -- \cite[p. 4]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
+
+``Dựa vào thống kê, ta có thể nhận biết được tính hợp lý của kết luận đã nêu ra.'' -- \cite[p. 5]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
+
+\subsubsection{Biểu diễn dữ liệu}
+``Sau khi thu thập \& tổ chức dữ liệu, ta cần biểu diễn dữ liệu đó ở dạng thích hợp. Nhờ việc biểu diễn dữ liệu, ta có thể phân tích \& xử lý được các dữ liệu đó.'' -- \cite[p. 6]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
+\begin{enumerate}
+	\item \textbf{Bảng số liệu.} Các đối tượng thống kê lần lượt được biểu diễn ở dòng đầu tiên. Ứng với mỗi đối tượng thống kê có 1 số liệu thống kê theo tiêu chí, lần lượt được biểu diễn ở dòng thứ 2 (theo cột tương ứng).
+	\item \textbf{Biểu đồ tranh.} Các đối tượng thống kê lần lượt được biểu diễn ở cột đầu tiên. Ứng với mỗi đối tượng thống kê có 1 số liệu thống kê theo tiêu chí, lần lượt được biểu diễn ở dòng tương ứng.
+	\item \textbf{Biểu đồ cột.} Các đối tượng thống kê lần lượt được biểu diễn ở trục nằm ngang. Ứng với mỗi đối tượng thống kê có 1 số liệu thống kê theo tiêu chí, lần lượt được biểu diễn ở trục thẳng đứng.
+\end{enumerate}
+``Dựa vào thống kê, ta có thể bác bỏ kết luận đã nêu ra.'' -- \cite[p. 8]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+
+\subsection{Biểu Đồ Cột Kép}
+Mục đích của biểu đồ cột kép: biểu diễn được đồng thời từng loại đối tượng thống kê trên cùng 1 biểu đồ cột (ưu điểm so với biểu đồ cột đơn thông thường). Các đối tượng thống kê lần lượt được biểu diễn ở trục nằm ngang. Ứng với mỗi đối tượng thống kê có 1 số liệu thống kê theo tiêu chí, lần lượt được biểu diễn ở trục thẳng đứng.
+
+\subsection{Mô Hình Xác Suất Trong 1 Số Trò Chơi \& Thí Nghiệm Đơn Giản}
+
+\subsubsection{Mô hình xác suất trong trò chơi tung đồng xu}
+2 mặt của đồng xu: mặt sấp \texttt{/}S\footnote{Cần phân biệt ``mặt sấp'' (S) với ``SML'', i.e., ``sấp mặt lợn''.} hay mặt ngửa\texttt{/}N. Khi tung đồng xu 1 lần, có 2 kết quả có thể xảy ra đối với mặt xuất hiện của đồng xu, đó là: mặt N; mặt S. Có 2 điều cần chú ý trong mô hình xác suất của trò chơi tung đồng xu:
+\begin{itemize}
+	\item Tung đồng xu 1 lần;
+	\item Tập hợp các kết quả có thể xảy ra đối với mặt xuất hiện của đồng xu là $\{\rm S;N\}$. Ở đây, S ký hiệu cho kết quả xuất hiện mặt sấp \& N ký hiệu cho kết quả xuất hiện mặt ngửa.
+\end{itemize}
+
+\subsubsection{Mô hình xác suất trong trò chơi lấy vật từ trong hộp}
+\textbf{Dạng toán.} Cho 1 hộp có $n$ vật thể có kích thước \& khối lượng như nhau nhưng có $n$ màu khác nhau. Khi lấy ngẫu nhiên 1 vật thể trong hộp, có $n$ kết quả có thể xảy ra đối với màu của vật thể được lấy ra, đó là: màu thứ nhất, màu thứ 2, $\ldots$, màu thứ $n$.
+
+\begin{remark}
+	Giả thiết ``$n$ vật thể có kích thước \& khối lượng như nhau'' giúp cho các đối tượng bình đẳng\emph{\texttt{/}}công bằng (fairness) trong việc lấy ra ngẫu nhiên. Trường hợp ngược lại, chẳng hạn, 1 vật thể đầy gai nhọn trong khi các vật thể khác trơn nhẵn hoặc 1 vật thể quá nặng so các vật thể còn lại sẽ khó để lấy ra được bằng tay không, nên xác suất xảy ra đối với vật thể đó sẽ là 0 (unfairness). Trường hợp bình đẳng ứng với xác suất của các vật thể có phân phối đều (uniform distribution), trong khi trường hợp bất bình đẳng của các vật thể ứng với các phân phối có trọng số (non-uniform\emph{\texttt{/}}weighted distribution) sẽ được học ở Phổ thông hoặc Toán Cao Cấp.
+\end{remark}
+
+\subsubsection{Mô hình xác suất trong trò chơi gieo xúc xắc}
+\textbf{Dạng toán.} Mỗi xúc xắc có 6 mặt, số chấm ở mỗi mặt là 1 trong các số nguyên dương 1, 2, 3, 4, 5, 6. Gieo xúc xắc 1 lần. \textit{Tài}: $\{4,5,6\}$. \textit{Xỉu}: $\{1,2,3\}$.
 
 \subsection{Xác Suất Thực Nghiệm Trong 1 Số Trò Chơi \& Thí Nghiệm Đơn Giản}
 
-\subsubsection{Xác Suất Thực Nghiệm Trong Trò Chơi Tung Đồng Xu}
-\begin{definition}[Xác suất thực nghiệm]
+\subsubsection{Xác suất thực nghiệm trong trò chơi tung đồng xu\texttt{/}toss a coin}
+\begin{definition}[Xác suất thực nghiệm trong trò chơi tung đồng xu]
 	\emph{Xác suất thực nghiệm xuất hiện mặt $N$} khi tung đồng xu nhiều lần bằng:
 	\begin{align*}
-		\frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in[0,1].
+		\frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in\mathbb{Q}\cap[0,1].
 	\end{align*}
 	\emph{Xác suất thực nghiệm xuất hiện mặt $S$} khi tung đồng xu nhiều lần bằng:
 	\begin{align*}
-		\frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in[0,1].
+		\frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in\mathbb{Q}\cap[0,1].
 	\end{align*}
 \end{definition}
-Từ định nghĩa, xác suất thực nghiệm xuất hiện mặt $N$ (hoặc mặt $S$) phản ảnh số lần xuất hiện mặt đó so với tổng số lần tiền hành thực nghiệm.
+Từ định nghĩa: ``Xác suất thực nghiệm xuất hiện mặt $N$ (hoặc mặt $S$) phản ảnh số lần xuất hiện mặt đó so với tổng số lần tiến hành thực nghiệm.'' -- \cite[p. 18]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\textbf{Nhận xét.}
-\begin{itemize}
-	\item Xác suất thực nghiệm xuất hiện mặt $N$ bằng 0 khi và chỉ khi không có mặt $N$ nào trong tất cả lần tung đồng xu.
-	\item Xác suất thực nghiệm xuất hiện mặt $N$ bằng 1 khi và chỉ khi không có mặt $S$ nào trong tất cả lần tung đồng xu.
-	\item Xác suất thực nghiệm xuất hiện mặt $s$ bằng 0 khi và chỉ khi không có mặt $S$ nào trong tất cả lần tung đồng xu.
-	\item Xác suất thực nghiệm xuất hiện mặt $S$ bằng 1 khi và chỉ khi không có mặt $N$ nào trong tất cả lần tung đồng xu.
-\end{itemize}
+\begin{remark}
+	\begin{itemize}
+		\item Xác suất thực nghiệm xuất hiện mặt $N$ bằng 0 khi và chỉ khi không có mặt $N$ nào trong tất cả lần tung đồng xu.
+		\item Xác suất thực nghiệm xuất hiện mặt $N$ bằng 1 khi và chỉ khi không có mặt $S$ nào trong tất cả lần tung đồng xu.
+		\item Xác suất thực nghiệm xuất hiện mặt $s$ bằng 0 khi và chỉ khi không có mặt $S$ nào trong tất cả lần tung đồng xu.
+		\item Xác suất thực nghiệm xuất hiện mặt $S$ bằng 1 khi và chỉ khi không có mặt $N$ nào trong tất cả lần tung đồng xu.
+	\end{itemize}
+\end{remark}
 
 \begin{problem}
 	Tung 2 đồng xu cân đối \& đồng chất $T$ lần ($T$ viết tắt của ``tổng số''), trong đó:
@@ -380,18 +426,45 @@ Từ định nghĩa, xác suất thực nghiệm xuất hiện mặt $N$ (hoặc
 	\end{itemize}
 	Hiển nhiên: $T = SS + SN + NN$. Khi đó:
 	\begin{itemize}
-		\item Xác suất thực nghiệm để có 1 đồng xu sấp, 1 đồng xu ngửa $= \frac{SN}{T} = \frac{SN}{SS + SN + NN}\in[0,1]$.
-		\item Xác suất thực nghiệm để có 2 đồng xu đều ngửa $= \frac{NN}{T} = \frac{NN}{SS + SN + NN}\in[0,1]$.
-		\item Xác suất thực nghiệm để có 2 đồng xu đều sấp $= \frac{SS}{T} = \frac{SS}{SS + SN + NN}\in[0,1]$.
-		\item Xác suất thực nghiệm để có ít nhất 1 đồng xu sấp $= \frac{SS + SN}{T} = \frac{SS + SN}{SS + SN + NN}\in[0,1]$.
-		\item Xác suất thực nghiệm để có ít nhất 1 đồng xu ngửa $= \frac{SN + NN}{T} = \frac{SN + NN}{SS + SN + NN}\in[0,1]$.
+		\item Xác suất thực nghiệm để có 1 đồng xu sấp, 1 đồng xu ngửa $= \dfrac{SN}{T} = \dfrac{SN}{SS + SN + NN}\in\mathbb{Q}\cap[0,1]$.
+		\item Xác suất thực nghiệm để có 2 đồng xu đều ngửa $= \dfrac{NN}{T} = \dfrac{NN}{SS + SN + NN}\in\mathbb{Q}\cap[0,1]$.
+		\item Xác suất thực nghiệm để có 2 đồng xu đều sấp $= \dfrac{SS}{T} = \dfrac{SS}{SS + SN + NN}\in\mathbb{Q}\cap[0,1]$.
+		\item Xác suất thực nghiệm để có ít nhất 1 đồng xu sấp $= \dfrac{SS + SN}{T} = \dfrac{SS + SN}{SS + SN + NN}\in\mathbb{Q}\cap[0,1]$.
+		\item Xác suất thực nghiệm để có ít nhất 1 đồng xu ngửa $= \dfrac{SN + NN}{T} = \dfrac{SN + NN}{SS + SN + NN}\in\mathbb{Q}\cap[0,1]$.
 	\end{itemize}
 \end{problem}
 
+\subsubsection{Xác suất thực nghiệm trong trò chơi lấy vật từ trong hộp}
+
+\begin{definition}[Xác suất thực nghiệm trong trò chơi lấy vật từ trong hộp]
+	\emph{Xác suất thực nghiệm xuất hiện màu $A$} khi lấy bóng nhiều lần bằng:
+	\begin{align*}
+		\frac{\mbox{Số lần màu $A$ xuất hiện}}{\mbox{Tổng số lần lấy bóng}}\in\mathbb{Q}\cap[0,1].
+	\end{align*}
+\end{definition}
+
+\subsubsection{Xác suất thực nghiệm trong trò chơi gieo xúc xắc}
+
+\begin{definition}[Xác suất thực nghiệm trong trò chơi gieo xúc xắc]
+	\emph{Xác suất thực nghiệm xuất hiện mặt $k$ chấm} ($k\in\mathbb{N}$, $1\le k\le 6$) khi gieo xúc xắc nhiều lần bằng:
+	\begin{align*}
+		\frac{\mbox{Số lần xuất hiện mặt $k$ chấm}}{\mbox{Tổng số lần gieo xúc xắc}}\in\mathbb{Q}\cap[0,1].
+	\end{align*}
+\end{definition}
+
+\subsubsection{Xác suất khi số lần thực nghiệm rất lớn}
+``Người ta chứng minh được rằng khi số lần tung càng lớn thì xác suất thực nghiệm xuất hiện mặt N càng gần với 0.5. Số 0.5 được gọi là \textit{xác suất xuất hiện mặt N} (theo nghĩa thống kê).'' -- \cite[p. 21]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. Phương pháp tung kim để tính số $\pi$ của Bá tước Georges-Louis Leclerc de Buffon chính là tiền thân của phương pháp Monte--Carlo trong toán học.
+
+Lý thuyết nằm sau những ví dụ này là \textit{Luật Số Lớn}\texttt{/}\textit{Law of Large Numbers} -- 1 trong những định lý quan trọng nhất của \textit{Lý thuyết xác suất \& thống kê}, được chứng minh bởi nhà Toán học huyền thoại người Nga Kolmogorov.\footnote{NQBH: Kolmogorov còn có những cống hiến khác về nền tảng xác suất \& thống kê trong việc nghiên cứu \textit{turbulence}\texttt{/}\textit{sự nhiễu loạn}. Turbulence vẫn còn là 1 vấn đề mở cực khó của cả Toán học \& Vật lý. Đề tài PhD ở Đức của tôi là làm tối ưu hình dáng (shape optimization) \& tối ưu topo (topology optimization) cho turbulence models. Và đương nhiên 3 năm chẳng thể nào đủ cho 1 đề tài khủng như vậy.}
+
 \section{Phân Số \& Số Thập Phân}
+\textbf{Nội dung.} phân số với tử \& mẫu là số nguyên; các phép tính với phân số; số thập phân; các phép tinh với số thập phân; tỷ số, tỷ số phần trăm, làm tròn số.
 
 \subsection{Phân Số với Tử \& Mẫu là Số Nguyên}
-\begin{definition}[Phân số\texttt{/}Fractionals]
+
+\subsubsection{Khái niệm phân số}
+
+\begin{definition}[Phân số\texttt{/}Fractions]
 	1 \emph{phân số} có tử và mẫu số là số nguyên là biểu thức có dạng $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne 0$. $a$: tử số (numerator), $b$: mẫu số (denominator).
 	
 	Phân số $\frac{a}{b}$, $a\in\mathbb{Z}$, $b\in\mathbb{Z}^\star$, được gọi là \emph{phân số tối giản} nếu $\operatorname{gcd}(a,b) = 1$, ở đây $\operatorname{gcd}$ ký hiệu \emph{ước chung lớn nhất} (greatest common divisor).\footnote{Hoặc ký hiệu Việt Nam là: $\operatorname{UCLN}(a,b)$.}
@@ -432,7 +505,7 @@ trong đó đẳng thức thứ 2 yêu cầu $c\in\operatorname{UC}(a,b)$ để 
 	Tại sao phải quy đồng mẫu nhiều phân số?
 \end{question}
 
-\begin{proof}[Answer]
+\begin{proof}[Trả lời]
 	\begin{itemize}
 		\item Để tiện so sánh 2 phân số.
 		\item Để tiện cho việc giải phương trình.
@@ -494,19 +567,16 @@ Thật vậy, đoạn thẳng $AB$ có vô số điểm bởi vì: lấy $M_1$ l
 \begin{definition}[2 đường thẳng song song]
 	2 đường thẳng $a$ \& $b$ không có điểm chung nào được gọi là \emph{song song với nhau}. Viết $a//b$ hoặc $b//a$.
 \end{definition}
-\textbf{Chú ý.} 2 đường thẳng \emph{trùng nhau} thì không thuộc vào 2 định nghĩa trên. 
 
-
-
-
-
-%------------------------------------------------------------------------------%
+\begin{remark}
+	2 đường thẳng \emph{trùng nhau} thì không thuộc vào 2 định nghĩa trên.
+\end{remark}
 
 \begin{thebibliography}{99}
-	\bibitem[Toán 6]{Toan6} Đỗ Đức Thái (Tổng Chủ biên kiêm Chủ biên), Lê Tuấn Anh, Đỗ Tiến Đạt, Nguyễn Sơn Hà, Nguyễn Thị Phương Loan, Phạm Sỹ Nam, Phạm Đức Quang. \textit{Toán 6, Tập 1 \& 2} (Cánh Diều). NXB ĐHSP.
-	
-	\bibitem[VHB]{VHB} Vũ Hữu Bình. \textit{Nâng Cao \& Phát Triển Toán 6, Tập 1, 2}. NXB GDVN.
+	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_math/NQBH_elementary_math.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theory, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
 \end{thebibliography}
+
+%------------------------------------------------------------------------------%
 
 \printbibliography[heading=bibintoc]
 	
