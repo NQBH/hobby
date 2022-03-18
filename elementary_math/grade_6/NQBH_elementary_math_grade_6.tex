@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
@@ -17,7 +17,7 @@
 \newtheorem{notation}{Notation}[section]
 \newtheorem{remark}{Lưu ý}[section]
 \newtheorem{example}{Ví dụ}[section]
-\newtheorem{ques}{Question}[section]
+\newtheorem{question}{Câu hỏi}[section]
 \newtheorem{problem}{Bài toán}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
@@ -37,7 +37,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	
+	Tóm tắt kiến thức Toán lớp 6 \& một số chủ đề nâng cao.
 \end{abstract}
 \tableofcontents
 
@@ -47,6 +47,304 @@
 \begin{itemize}
 	\item $x\in[a,b]$: $x\ge a$ và $x\le b$.
 \end{itemize}
+
+\section*{Principles\texttt{/}Nguyên Tắc}
+Về nguyên tắc cá nhân của tôi trong việc dạy \& học Toán Sơ Cấp, xem \href{https://github.com/NQBH/hobby/tree/master/elementary_math/principle}{GitHub\texttt{/}NQBH\texttt{/}elementary math\texttt{/}principle}.
+
+\begin{question}
+	Học Toán để làm gì? Tại sao phải học Toán?
+\end{question}
+``\ldots được tiến thêm 1 bước trên con đường khám phá thế giới bí ẩn \& đẹp đẽ của Toán học, đặc biệt là được ``làm giàu'' về vốn văn hóa chung \& có cơ hội ``Mang cuộc sống vào bài học -- Đưa bài học vào cuộc sống''. [\ldots] sẽ ngày càng tiến bộ \& cảm thấy vui sướng khi nhận ra ý nghĩa: Học Toán rất có ích cho cuộc sống hằng ngày.'' -- \cite{Toan6}
+
+\section{Số Tự Nhiên}
+\textbf{Nội dung.} Tập hợp; tập hợp các số tự nhiên; các phép tính trong tập hợp số tự nhiên; quan hệ chia hết, số nguyên tố; ước chung \& bội chung.
+
+\subsection{Tập Hợp}
+
+\subsubsection{Ký hiệu \& cách viết tập hợp}
+Khái niệm tập hợp (set) thường gặp trong toán học \& trong đời sống. Người ta thường dùng các chữ cái in hoa để đặt tên cho 1 tập hợp. Các phần tử của 1 tập hợp được viết trong 2 dấu ngoặc nhọn $\{\ \}$, cách nhau bởi dấu ``;''. Mỗi phần tử được liệt kê 1 lần, thứ tự liệt kê tùy ý.
+
+\subsubsection{Phần tử thuộc tập hợp}
+\textit{$a$ là 1 phần tử} của tập hợp $A$, viết $a\in A$, đọc là \textit{$a$ thuộc $A$}. \textit{$b$ không là 1 phần tử của tập hợp $B$}, viết $b\notin B$, đọc là \textit{$b$ không thuộc $B$}.
+
+\subsubsection{Cách cho 1 tập hợp}
+Có 2 cách cho 1 tập hợp:
+\begin{itemize}
+	\item Liệt kê các phần tử của tập hợp;
+	\item Chỉ ra tính đặc trưng cho các phần tử của tập hợp.
+\end{itemize}
+
+\subsubsection{Biểu đồ Ven (Venn diagram)}
+Người ta còn minh họa tập hợp bằng 1 vòng kín, mỗi phần tử của tập hợp được biểu diễn bởi 1 chấm bên trong vòng kín, còn phần tử không thuộc tập hợp đó được biểu diễn bởi 1 chấm bên ngoài vòng kín. Cách minh họa tập hợp này gọi là \textit{biểu đồ Venn}, do nhà toán học người Anh John Venn (1834--1923) đưa ra.
+
+\subsection{Tập Hợp Các Số Tự Nhiên}
+
+\subsubsection{Tập hợp các số tự nhiên}
+
+\paragraph{Tập hợp $\mathbb{N}$ \& tập hợp $\mathbb{N}^\star$.}
+\begin{definition}
+	\emph{Tập hợp các số tự nhiên} được ký hiệu là $\mathbb{N}\coloneqq\{0;1;2;3;\ldots\}$. \emph{Tập hợp các số tự nhiên khác 0} được ký hiệu là $N^\star\coloneqq\{1;2;3;4;\ldots\}$.
+\end{definition}
+Hiển nhiên $N^\star\subset\mathbb{N}$, i.e., $x\in\mathbb{N}^\star\Rightarrow x\in\mathbb{N}$ nhưng $x\in\mathbb{N}\not\Rightarrow x\in\mathbb{N}^\star$ vì $0\in\mathbb{N}$ nhưng $0\notin\mathbb{N}^\star$ (cũng là phản ví dụ duy nhất trong trường hợp này). Chú ý: $\mathbb{N} = \mathbb{N}^\star\cup\{0\}$.
+
+\paragraph{Cách đọc \& viết số tự nhiên.} Khi viết các số tự nhiên có từ 4 chữ số trở lên, người ta thường viết tách riêng từng nhóm 3 chữ số kể từ phải sang trái cho dễ đọc (why).
+
+\subsubsection{Biểu diễn số tự nhiên}
+
+\paragraph{Biểu diễn số tự nhiên trên tia số.} Các số tự nhiên được biểu diễn trên tia số. Mỗi số tự nhiên ứng với 1 điểm trên tia số.
+
+\begin{question}
+	Tại sao cần\emph{\texttt{/}}phải biểu diễn số tự nhiên trên tia số?
+\end{question}
+
+\begin{proof}[Trả lời]
+	Làm việc trên hình vẽ để trực quan, tiện trong nhiều mục đích khác, e.g., so sánh 2 số tự nhiên, so sánh 2 tập hợp con của $\mathbb{N}$, etc.
+\end{proof}
+
+\paragraph{Cấu tạo thập phân của số tự nhiên.} Số tự nhiên được viết trong hệ thập phân bởi 1, 2, hay nhiều chữ số. Các chữ số được dùng là 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Khi 1 số gòm 2 chữ số trở lên thì chữ số đầu tiên (tính từ trái sang phải) khác 0, i.e.,
+\begin{align}
+	\label{decimal representation}
+	\overline{a_na_{n-1}\ldots a_1a_0}|_{10},\ \mbox{ với } n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 0,\ldots,n,\ a_n\ne 0.
+\end{align}
+Trong các viết 1 số tự nhiên có nhiều chữ số, mỗi chữ số ở những vị trí khác nhau có giá trị khác nhau.
+
+Chỉ số chân (subscript) 10 ở đây ám chỉ hệ thập phân. Do hệ thập phân được sử dụng đa số, nên chỉ số chân 10 này thường được lược bỏ \& được hiểu ngầm là đang sử dụng hệ thập phân.
+
+Chú ý, công thức \eqref{decimal representation} còn được viết cụ thể hơn dưới dạng tổng là:
+\begin{align}
+	\label{decimal representation expansion}
+	\overline{a_na_{n-1}\ldots a_1a_0}|_{10} = a_n10^n + a_{n-1}10^{n-1} + \cdots + a_110 + a_0 = \sum_{i=0}^n a_i10^i.
+\end{align}
+
+\begin{remark}[Mở rộng cho hệ cơ số nguyên bất kỳ]
+	Cơ số $b\in\mathbb{N}^\star$, $b\ge 2$ bất kỳ:
+	\begin{align}
+		\label{base b representation}
+		\overline{a_na_{n-1}\ldots a_1a_0}|_{b},\ \mbox{ với } n\in\mathbb{N},\ a_i\in\{0,1,\ldots,b - 1\},\,\forall i = 0,\ldots,n,\ a_n\ne 0.
+	\end{align}
+	Tương tự \eqref{decimal representation expansion}, biểu diễn \eqref{base b representation} còn được viết cụ thể hơn dưới dạng tổng là:
+	\begin{align}
+		\label{base b representation expansion}
+		\overline{a_na_{n-1}\ldots a_1a_0}|_{b} = a_nb^n + a_{n-1}b^{n-1} + \cdots + a_1b + a_0 = \sum_{i=0}^n a_ib^i.
+	\end{align}
+	E.g., hệ nhị phân ($b = 2$), và hệ thập lục phân ($b = 16$) được xử dụng chủ yếu trong Tin học, hay chính xác hơn là Khoa học Máy tính (Computer Science). Hệ nhị phân được dùng để thiết kế ngôn ngữ máy tính. \texttt{[insert more details]}
+\end{remark}
+
+\paragraph{Số La Mã.} Cách ghi số La Mã: I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, XXI, XXII, XXIII, XXIV, XXV, XXVI, XXVII, XXVIII, XXIX, XXX.
+
+\textit{Nguyên tắc.} Chữ số I, II, III khi nằm bên trái V, X có nghĩa là ``trừ ra'', và khi nằm bên phải V, X có nghĩa là ``cộng thêm''.
+
+\subsubsection{So sánh các số tự nhiên}
+Trong 2 số tự nhiên $a,b\in\mathbb{N}$ khác nhau, có 1 số nhỏ hơn số kia. Nếu số $a$ nhỏ hơn số $b$ thì viết $a < b$ hay $b > a$.
+
+\textit{Tính chất bắc cầu.} Nếu $a < b$ \& $b < c$ thì $a < c$, biểu thức logic:
+\begin{align*}
+	(a < b)\land(b < c)\Rightarrow(a < c).
+\end{align*}
+Hiểu 1 cách trực quan, biểu diễn 3 số $a,b,c\in\mathbb{N}$ trên tia số, khi đó $a < b$ có nghĩa là ``$a$ nằm bên trái $b$'', $b < c$ có nghĩa là ``$b$ nằm bên trái $c$''. Nhìn vào tia số, ta thấy $a$ nằm bên trái $c$, nghĩa là $a < c$.
+
+\texttt{Add partial ordering set.} See, e.g., \cite{Halmos1960, Halmos1974, Kaplansky1977, Kaplansky1977}.
+
+\begin{theorem}
+	Trong 2 số tự nhiên có số chữ số khác nhau: Số nào có nhiều chữ số hơn thì lớn hơn, số nào có ít chữ số hơn thì nhỏ hơn, i.e.:
+	\begin{equation}
+		\label{compare number of digits}
+		\left.\begin{split}
+			&a = \overline{a_ma_{m-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0},\ m,n\in\mathbb{N}^\star,\\
+			&a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 1,\ldots,m,\,j = 1,\ldots,n,\ a_m\ne 0,\,b_n\ne 0,\\
+			&m > n,
+		\end{split}\right\}\Rightarrow a > b.		
+	\end{equation}
+\end{theorem}
+
+\begin{proof}[Chứng minh]
+	Từ biểu diễn thập phân \eqref{compare number of digits}, xét $a - b$, nếu $a - b > 0$ thì $a > b$. Thật vậy, vì $m > n$,
+	\begin{align*}
+		a - b &= \overline{a_ma_{m-1}\ldots a_1a_0} - \overline{b_nb_{n-1}\ldots b_1b_0} = \sum_{i=0}^m a_i10^i - \sum_{i=0}^n b_i10^i = \sum_{i=0}^n a_i10^i + \sum_{i = n + 1}^m a_i10^i - \sum_{i=0}^n b_i10^i\\
+		&= \sum_{i=0}^n (a_i - b_i)10^i + \sum_{i = n + 1}^m a_i10^i\ge \sum_{i=0}^n -9\cdot 10^i + 10^m = -9\sum_{i=0}^n 10^i + 10^m = -9\frac{10^{n+1} - 1}{10 - 1} + 10^m = 10^m -10^{n+1} + 1 > 0,
+	\end{align*}
+	trong đó giả thiết $m > n$, tức $m\ge n + 1$ (do $m,n\in\mathbb{N}$\footnote{Đây chính là giả thiết được thêm, hay kỹ thuật \textit{siết chặt bất đắng thức} khi làm việc với các bài toán trên tập số tự nhiên $\mathbb{N}$ hay rộng hơn xíu là tập số nguyên $\mathbb{Z}$, đặc biệt là các bài giải phương trình hàm trên tập số nguyên. Điều này không có được khi làm việc trên các tập số thực $\mathbb{R}$ hay tập số phức $\mathbb{C}$. Cf. \cite[Problem 3.1, p. 36--38]{Tao2006}.}) được sử dụng để tách tổng trong biểu diễn của $a$ thành 2 tổng con và dùng trong phép so sánh $10^m\ge 10^{n + 1}$, trong khi giả thiết thứ 2 $a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\}$, với mọi $i = 1,\ldots,m$, $j = 1,\ldots,n$ được dùng trong đánh giá hiển nhiên $a_i - b_i\ge -9$ vì trường hợp xấu nhất (the worst case) xảy ra khi $a_i = 0$ và $b_i = 9$, và đánh giá $a_i\ge 0$, với mọi $i = n + 1,\ldots,m - 1$ được dùng trong $a_i10^i\ge 0$, và đánh giá $a_m\ge 1$ được dùng trong $a^m10^m\ge 10^m$. 
+\end{proof}
+
+\begin{remark}
+	Chú ý tổng $\sum_{i=0}^n 10^i$ được tính bằng công thức liên quan tới \textit{cấp số nhân} hay đơn giản hơn là hằng đẳng thức:
+	\begin{equation*}
+		\sum_{i=0}^n a^i = \left\{\begin{split}
+			&\frac{a^{n+1} - 1}{a - 1},\ &\forall a\in\mathbb{R}\backslash\{1\},\\
+			&n + 1,&\mbox{ if } a = 1.
+		\end{split}\right.
+	\end{equation*}
+\end{remark}
+
+\begin{tcolorbox}
+	Để so sánh 2 số tự nhiên có số chữ số bằng nhau, ta lần lượt so sánh từng cặp chữ số trên cùng 1 hàng (tính từ trái sang phải), cho đến khi xuất hiện cặp chữ số đầu tiên khác nhau. Ở cặp chữ số khác nhau đó, chữ số nào lớn hơn thì số tự nhiên chứa chữ số đó lớn hơn.
+\end{tcolorbox}
+Viết dưới dạng \textit{thụật toán} (algorithm) như sau:
+
+Giả sử $a,b\in\mathbb{N}$ là 2 số tự nhiên có số chữ số bằng nhau, i.e.,
+\begin{align*}
+	a = \overline{a_na_{n-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0},\ n\in\mathbb{N},\ a_i,b_i\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 1,\ldots,n,\ a_n\ne 0,\ b_n\ne 0.
+\end{align*}
+
+\begin{algorithm}
+	\caption{So sánh 2 số tự nhiên có cùng chữ số}\label{alg:compare naturals with same digits}
+	\begin{algorithmic}[1]
+		\For{$i = n$ to 0 (từ trái sang phải)} So sánh $a_i$ và $b_i$.
+		\begin{itemize}
+			\item Nếu $a_i > b_i$ thì dừng vòng lặp for và kết luận $a > b$.
+			\item Nếu $a_i < b_i$ thì dừng vòng lặp for và kết luận $a < b$.
+			\item Nếu $a_i = b_i$ thì xét:
+			\begin{itemize}
+				\item Nếu $i = 0$ (vòng lặp cuối của vòng lặp for) thì kết luận $a = b$ (vì mỗi cặp chữ số tương ứng của $a$ \& $b$ đều bằng nhau).
+				\item Nếu $i > 0$ thì gán $i\leftarrow i - 1$ và so sánh cặp chữ số tiếp theo ở ngay bên phải cặp chữ số vừa được so sánh.
+			\end{itemize}			 
+		\end{itemize}		
+		\EndFor
+	\end{algorithmic}
+\end{algorithm}
+Với số tự nhiên $a\in\mathbb{N}$ cho trước, viết $x\le a$ để chỉ $x < a$ hoặc $x = a$, viết $x\ge a$ để chỉ $x > a$ hoặc $x = a$, i.e.,
+\begin{align*}
+	(x\le a)\Leftrightarrow(x < a)\lor(x = a),\ (x\ge a)\Leftrightarrow(x > a)\lor(x = a),
+\end{align*}
+
+\begin{remark}
+	Ký hiệu ngoặc nhọn $\{$ (hay $\}$) dùng để biểu thị ``và'' (logical and) trong khi ký hiệu ngoặc vuông $[$ (hay $]$) dùng để biểu thị ``hoặc'' (logical or), i.e.,
+	\begin{equation*}
+		a\mbox{ và } b\Leftrightarrow a\mbox{ and } b\Leftrightarrow a\land b\Leftrightarrow\left\{\begin{split}
+			a\\b
+		\end{split}\right.,	
+	\end{equation*}
+	\begin{equation*}
+		a\mbox{ hoặc } b\Leftrightarrow a\mbox{ or } b\Leftrightarrow a\lor b\Leftrightarrow\left[\begin{split}
+			a\\b
+		\end{split}\right..
+	\end{equation*}
+\end{remark}
+
+\subsubsection{Số La Mã}
+``Đế quốc La Mã là 1 đế quốc hùng mạnh tồn tại từ thế kỷ III trước Công nguyên đến thế kỷ V sau Công nguyên, bao gồm những vùng lãnh thổ rộng lớn ở Địa Trung Hải, Bắc PHi \& Tây Á.'' -- \cite[p. 14]{Toan6}
+
+\paragraph{Hệ thống các chữ số \& số đặc biệt.} Có 7 chữ số La Mã cơ bản là (ký hiệu \& giá trị tương ứng trong hệ thập phân): I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000. Có 6 số đặc biệt là (ký hiệu \& giá trị tương ứng trong hệ thập phân): IV = 4, IX = 9, XL = 40, XC = 90, CD = 400, CM = 900. I chỉ có thể đứng trước V hoặc X; X chỉ có thể đứng trước L hoặc C; C chỉ có thể đứng trước D hoặc M. Trong các chữ số La Mã, không có ký hiệu để chỉ số 0.
+
+\paragraph{Cách ghi số La Mã.}
+\begin{itemize}
+	\item Trong 1 số La Mã tính từ trái sang phải, giá trị của các chữ số cơ bản \& các số đặc biệt giảm dần.
+	\item Mỗi chữ số I, X, C, M không viết liền nhau quá 3 lần.
+	\item Mỗi chữ số V, L, D không viết liền nhau.
+\end{itemize}
+
+\paragraph{Cách tính giá trị tương ứng trong hệ thập phân của số La Mã.} ``Giá trị tương ứng trong hệ thập phân của số La Mã bằng tổng giá trị của các chữ số cơ bản \& các số đặc biệt tính theo thứ tự từ trái sang phải.'' -- \cite[p. 14]{Toan6}
+
+\begin{remark}[Ứng dụng của số La Mã]
+	``Chữ số La Mã được sử dụng rộng rãi cho đến thế kỷ XIV thì không còn được sử dụng nhiều nữa vì hệ thống chữ số Ả Rập (được tạo thành bởi các chữ số từ 0 đến 9) tiện dụng hơn. Tuy nhiên, chúng vẫn còn được sử dụng trong việc đánh số trên mặt đồng hồ, thế kỷ, âm nhạc hay các sự kiện chính trị -- văn hóa -- thể thao lớn như Thế vận hội Olympic, \ldots'' \footnote{Nói tóm lại, sử dụng chữ số La Mã để thể hiện tính trang trọng \& đôi khi màu mè\texttt{/}fancy.}
+\end{remark}
+
+\subsection{Phép Cộng, Phép Trừ Các Số Tự Nhiên}
+
+\subsubsection{Phép cộng $+$}
+\fbox{$a + b = c$}, trong đó $a,b\in\mathbb{N}$ là các \textit{số hạng}, \& $c$ được gọi là \textit{tổng} của $a$ \& $b$.
+
+\begin{theorem}[Tính chất của phép cộng các số tự nhiên]
+	Phép cộng các số tự nhiên có các tính chất:
+	\begin{itemize}
+		\item (Giao hoán) Khi đổi chỗ các số hạng trong 1 tổng thì tổng không thay đổi, i.e.,
+		\begin{align*}
+			a + b = b + a,\ \forall a,b\in\mathbb{N}.
+		\end{align*}
+		\item (Kết hợp) Muốn cộng 1 tổng 2 số với số thứ 3, ta có thể cộng số thứ nhất với tổng của số thứ 2 \& số thứ 3, i.e.,
+		\begin{align*}
+			(a + b) + c = a +(b + c),\ \forall a,b,c\in\mathbb{N}.
+		\end{align*}
+		\item (Cộng với số 0) Bất kỳ số tự nhiên nào cộng với số 0 cũng bằng chính nó, i.e.,
+		\begin{align*}
+			a + 0 = 0 + a = a,\ \forall a\in\mathbb{N}.
+		\end{align*}
+	\end{itemize}
+\end{theorem}
+Do tính chất kết hợp nên giá trị của biểu thức $a + b + c$ có thể được tính theo 1 trong 2 cách sau: $a + b + c = (a + b) + c$ hoặc $a + b + c = a + (b + c)$.
+
+\subsubsection{Phép trừ $-$}
+\fbox{$a - b = c$} ($a\ge b$) trong đó $a$ là \textit{số bị trừ}, $b$ là \textit{số trừ}, $c$ là \textit{hiệu}.
+
+\noindent\textbf{Tính chất.} Nếu $a - b = c$ thì $a = b + c$. Nếu $a + b = c$ thì $a = c - b$ \& $b = c - a$.
+
+\subsection{Phép Nhân, Phép Chia Các Số Tự Nhiên}
+
+\subsubsection{Phép nhân $\times$\texttt{/}$\cdot$}
+\fbox{$a\times b = c$}, trong đó $a,b\in\mathbb{N}$ là các \textit{thừa số}, \& $c$ là \textit{tích}.
+
+\noindent\textbf{Quy ước.}
+\begin{itemize}
+	\item Trong 1 tích, có thể thay dấu nhân $\times$ bằng dấu $\cdot$, i.e., $a\cdot b\coloneqq a\times b$.
+	
+	\begin{remark}[Chuẩn quốc tế về dấu nhân]
+		Trong SGK \cite{Toan6}, p. 18, các tác giả dùng dấu chấm $.$ thay dấu $\times$, nhưng điều này thực ra nguy hiểm, vì chuẩn quốc tế của dấu nhân là dấu $\cdot$ (dấu chấm nằm giữa, không phải nằm dưới chân), thay vì dấu $.$ dùng để ngăn cách phần nguyên \& phần thập phân của số thực, e.g., $\pi = 3.1416\ldots$ chứ không phải $\pi = 3\cdot 1416\ldots$. Vì vậy, cá nhân tôi sẽ dùng dấu $\cdot$ thay cho dấu $\times$ trong tài liệu này, chú ý ký hiệu này vẫn được sử dụng ở Toán Cao Cấp.
+	\end{remark}
+	\item Trong 1 tích mà các thừa số đều bằng chữ hoặc chỉ có 1 thừa số bằng số, ta có thể không cần viết dấu nhân giữa các thừa số, i.e.,
+	\begin{align*}
+		a\times b = a\cdot b = ab.
+	\end{align*}
+\end{itemize}
+
+\paragraph{Nhân 2 số có nhiều chữ số.} Cho 2 số $a,b\in\mathbb{N}$. Nếu 1 trong chúng bằng 0 thì hiển nhiên tích $ab = 0$. Nếu cả 2 số $a,b$ đều khác 0, tức $a,b\in\mathbb{N}^\star$, thì để tính tích $ab$, trước tiên ta biểu diễn $a$ \& $b$ dưới dạng thập phân \eqref{decimal representation}:
+\begin{equation*}
+	\left\{\begin{split}		
+		&a = \overline{a_ma_{m-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0}, \mbox{ với } m,n\in\mathbb{N},\\
+		&a_i,b_j\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 0,\ldots,m,\, j = 1,\ldots,n,\ a_m\ne 0,\ b_n\ne 0,
+	\end{split}\right.
+\end{equation*}
+sau đó sử dụng công thức \eqref{decimal representation expansion} để tính tích $ab$ như sau:
+\begin{align*}
+	ab = \overline{a_ma_{m-1}\ldots a_1a_0}\cdot\overline{b_nb_{n-1}\ldots b_1b_0} = \left(\sum_{i=0}^m a_i10^i\right)\cdot\left(\sum_{j=0}^n b_j10^j\right) = \sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j = \sum_{i=0}^m\sum_{j=0}^n a_ib_j10^{i + j},
+\end{align*}
+trong đó $\sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j$ chính là cách thường được sử dụng để tính tích 2 số nguyên dương: tính tích riêng thứ nhất, tính tích riêng thứ 2 \& viết tích này lùi sang bên trái 1 cột so với tích riêng thứ nhất, tính tích riêng thứ 3 \& viết tích này lùi sang bên trái 2 cột so với tích riêng thứ nhất, etc (xem ví dụ ở \cite{Toan6}, p. 18).
+
+\paragraph{Tính chất của phép nhân.}
+\begin{theorem}[Các tính chất của phép nhân các số tự nhiên]
+	Phép nhân các số tự nhiên có các tính chất sau:
+	\begin{itemize}
+		\item Giao hoán: $ab = ba$.
+		\item Kết hợp: $(ab)c = a(bc)$.
+		\item Nhân với số 1: $a1 = 1a = a$.
+		\item Phân phối đối với phép cộng \& phép trừ: $a(b + c) = ab + ac$, $a(b - c) = ab - ac$.
+	\end{itemize}	
+\end{theorem}
+Do tính chất kết hợp nên giá trị của biểu thức $abc$ có thể được tính theo 1 trong 2 cách sau: $abc = (ab)c$ hoặc $abc = a(bc)$.
+
+\subsubsection{Phép Chia $:$}
+
+\paragraph{Phép chia hết.} Phép chia hết 1 số tự nhiên cho 1 số tự nhiên khác 0: \fbox{$a:b = q$} ($b\ne 0$), trong đó $a$ là \textit{số bị chia}, $b$ là \textit{số chia}, $q$ là \textit{thương}.
+
+\noindent\textbf{Tính chất.} Nếu $a:b = q$ thì $a = bq$. Nếu $a:b = q$ \& $q\ne 0$ thì $a:q = b$ (trường hợp $q = 0$ xảy ra khi \& chỉ khi $a = 0$, $b\ne 0$, i.e., $b\in\mathbb{N}^\star$, \& khi đó biểu thức $0:b = 0$ đúng, nhưng $0:0 = b\ne 0$ lại vô nghĩa!).
+
+\paragraph{Phép chia có dư.}
+\begin{theorem}
+	Cho 2 số tự nhiên $a\in\mathbb{N}$, $b\in\mathbb{N}^\star$. Khi đó luôn tìm được đúng 2 số tự nhiên $q$ \& $r$ sao cho $a = bq + r$, trong đó $0\le r < b$.
+\end{theorem}
+
+\begin{proof}[Chứng minh]
+	Xem \textit{thuật toán chia Euclid} (Euclide's division algorithm).
+\end{proof}
+
+\begin{remark}
+	Khi $r = 0$ ta có phép chia hết. Khi $r\ne 0$ ta có phép chia có dư. Ta nói: $a$ chia cho $b$ được thương là $q$ \& số dư là $r$. Ký hiệu: $a:b = q$ (dư $r$).
+\end{remark}
+
+\subsection{Phép Tính Lũy Thừa với Số Mũ Tự Nhiên}
+
+\begin{question}
+	Tại sao cần phép tính lũy thừa?
+\end{question}
+
+\begin{proof}[Trả lời]
+	Phép nhân dùng để tiện viết gọn phép cộng cùng 1 số hạng nhiều lần. Phép lấy lũy thừa dùng để viết gọn phép nhân cùng 1 số hạng nhiều lần.
+\end{proof}
+
+\subsubsection{Phép nâng lên lũy thừa}
+
+\section{Số Nguyên}
+
+\section{Hình Học Trực Quan}
 
 \section{Một Số Yếu Tố Thống kê \& Xác Suất}
 
@@ -130,9 +428,9 @@ trong đó đẳng thức thứ 2 yêu cầu $c\in\operatorname{UC}(a,b)$ để 
 \end{enumerate}
 
 \paragraph{Quy đồng mẫu nhiều phân số.}
-\begin{ques}
+\begin{question}
 	Tại sao phải quy đồng mẫu nhiều phân số?
-\end{ques}
+\end{question}
 
 \begin{proof}[Answer]
 	\begin{itemize}
@@ -141,9 +439,9 @@ trong đó đẳng thức thứ 2 yêu cầu $c\in\operatorname{UC}(a,b)$ để 
 	\end{itemize}
 \end{proof}
 
-\begin{ques}
+\begin{question}
 	Cách để quy đồng mẫu nhiều phân số?
-\end{ques}
+\end{question}
 Để quy đồng mẫu nhiều phân số:
 \begin{enumerate}
 	\item Viết các phân số đã cho về phân số có mẫu dương. Tìm $\operatorname{BCNN}$ của các mẫu dương đó để làm mẫu chung.
@@ -205,7 +503,7 @@ Thật vậy, đoạn thẳng $AB$ có vô số điểm bởi vì: lấy $M_1$ l
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[Toán 6]{Toan6} Đỗ Đức Thái, Lê Tuấn Anh, Đỗ Tiến Đạt, Nguyễn Sơn Hà, Nguyễn Thị Phương Loan, Phạm Sỹ Nam, Phạm Đức Quang. \textit{Toán 6, Tập 1, 2}. NXB ĐHSP.
+	\bibitem[Toán 6]{Toan6} Đỗ Đức Thái (Tổng Chủ biên kiêm Chủ biên), Lê Tuấn Anh, Đỗ Tiến Đạt, Nguyễn Sơn Hà, Nguyễn Thị Phương Loan, Phạm Sỹ Nam, Phạm Đức Quang. \textit{Toán 6, Tập 1 \& 2} (Cánh Diều). NXB ĐHSP.
 	
 	\bibitem[VHB]{VHB} Vũ Hữu Bình. \textit{Nâng Cao \& Phát Triển Toán 6, Tập 1, 2}. NXB GDVN.
 \end{thebibliography}
