@@ -617,14 +617,252 @@ Tham khảo \cite[p. 52]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}: Để tì
 
 \subsubsection{Bội chung \& bội chung nhỏ nhất}
 
-\begin{definition}[Bội chung \& bội chung nhỏ nhất]
+\begin{definition}[Bội chung \& bội chung nhỏ nhất của 2 số]
 	Số tự nhiên $n\in\mathbb{N}$ được gọi là \emph{bội chung} của 2 số $a$ \& $b$ nếu $n$ vừa là bội của $a$ vừa là bội của $b$. Số nhỏ nhất khác 0 trong các bội chung của $a$ \& $b$ được gọi là \emph{bội chung nhỏ nhất} của $a$ \& $b$.
 \end{definition}
 \noindent\textbf{Quy ước.} Viết tắt bội chung là BC \& bội chung nhỏ nhất là BCNN. Ta ký hiệu: Tập hợp các bội chung của $a$ \& $b$ là $\operatorname{BC}(a,b)$; bội chung nhỏ nhất của $a$ \& $b$ là $\operatorname{BCNN}(a,b)$.  
 
 Ký hiệu chuẩn quốc tế của bội chung nhỏ nhất của 2 số $a,b\in\mathbb{N}^\star$ là $\operatorname{lcm}(a,b)$, trong đó lcm là viết tắt của \textit{least common multiple}\texttt{/}\textit{lowest common multiple}.
 
+\begin{definition}[Bội chung \& bội chung nhỏ nhất của nhiều số]
+	Số tự nhiên $n$ được gọi là \emph{bội chung} của $N$ số $a_1,\ldots,a_N\in\mathbb{N}^\star$, $n\in\mathbb{N}^\star$, $N\ge 3$, nếu $n$ là bội của tất cả $N$ số $a_i$, $i = 1,\ldots,N$. Số nhỏ nhất khác 0 trong các bội chung của $N$ số $a_i$, $i = 1,\ldots,N$, được gọi là \emph{bội chung nhỏ nhất} của $N$ số $a_i$, $i = 1,\ldots,N$.
+\end{definition}
+\noindent\textbf{Ký hiệu.} Tập hợp các bội chung của $a_i$, $i = 1,\ldots,N$, là $\operatorname{BC}(a_1,\ldots,a_N)$; bội chung nhỏ nhất của $N$ số $a_i$, $i = 1,\ldots,N$, là $\operatorname{BCNN}(a_1,\ldots,a_N)$.
+
+\begin{theorem}
+	Bội chung của nhiều số là bội của bội chung nhỏ nhất của chúng.
+\end{theorem}
+``Để tìm bội chung của nhiều số, ta có thể lấy bội chung nhỏ nhất của chúng lần lượt nhân với $0,1,2,\ldots$'' -- \cite[p. 55]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\subsubsection{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố}
+
+\begin{tcolorbox}
+	\textbf{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố.}
+	\begin{enumerate}
+		\item Phân tích mỗi số ra thừa số nguyên tố.
+		\item Chọn ra các thừa số nguyên tố chung \& các thừa số nguyên tố riêng.
+		\item Với mỗi thừa số nguyên tố chung \& riêng, ta chọn lũy thừa với số mũ lớn nhất.
+		\item Lấy tích của các lũy thừa đã chọn, ta nhận được bội chung nhỏ nhất cần tìm.
+	\end{enumerate}
+\end{tcolorbox}
+
+\subsubsection{Ứng dụng bội chung nhỏ nhất vào cộng, trừ các phân số không cùng mẫu}
+
+\begin{tcolorbox}
+	Để tính tổng 2 phân số $\frac{a}{b} + \frac{c}{d}$, $a,c\in\mathbb{N}$, $b,d\in\mathbb{N}^\star$, ta có thể làm như sau:
+	\begin{enumerate}
+		\item Chọn mẫu chung là BCNN của các mẫu.
+		\item Tìm thừa số phụ của mỗi mẫu (bằng cách chia mẫu chung cho từng mẫu).
+		\item Sau khi nhân tử \& mẫu của mỗi phân số với thừa số phụ tương ứng, ta cộng 2 phân số có cùng mẫu.
+	\end{enumerate}
+\end{tcolorbox}
+Hiển nhiên:
+
+\begin{theorem}
+	Bội chung nhỏ nhất của 2 số nguyên tố cùng nhau bằng tích của 2 số đó.
+\end{theorem}
+
+\subsubsection{Lịch Can Chi}
+``1 số nước phương Đông, trong đó có Việt Nam, gọi tên năm âm lịch bằng cách ghép tên của 1 trong 10 can (theo thứ tự là \textit{Giáp, Ất, Bính, Đinh, Mậu, Kỷ, Canh, Tân, Nhâm, Quý}) với tên của 1 trong 12 chi (theo thứ tự là \textit{Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi}). Đầu tiên, \textit{Giáp} được ghép với \textit{Tý} thành năm \textit{Giáp Tý}. Cứ 10 năm, Giáp được lặp lại. Cứ 12 năm, Tý được lặp lại.'' -- \cite[p. 58]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
+
+Vì $\operatorname{BCNN}(10,12) = 60$, cứ sau 60 năm thì năm có tên tương ứng được lặp lại.
+
 \section{Số Nguyên}
+\textbf{Nội dung.} Tập hợp các số nguyên $\mathbb{Z}$; các phép tính trong tập hợp số nguyên; quan hệ chia hết.
+
+\subsection{Số Nguyên Âm}
+``\emph{Số nguyên âm} được nhận biết bằng dấu ``$-$'' ở trước số tự nhiên khác 0.'' -- \cite[p. 61]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\noindent\textbf{Ứng dụng của số nguyên âm.} ``Số nguyên âm được sử dụng trong nhiều tình huống thực tiễn cuộc sống:
+\begin{itemize}
+	\item Số nguyên âm được dùng để chỉ nhiệt độ dưới $0^\circ$.
+	\item Số nguyên âm được dùng để chỉ độ cao dưới mực nước biển.
+	\item Số nguyên âm được dùng để chỉ số tiền nợ, cũng như để chỉ số tiền lỗ trong kinh doanh.
+	\item Số nguyên âm được dùng để chỉ thời gian trước Công nguyên.'' -- \cite[p. 62]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+\end{itemize}
+
+\subsubsection{Độ sâu lớn nhất của các đại dương dưới mực nước biển}
+\begin{itemize}
+	\item ``Rãnh Mariana, thuộc Thái Bình Dương, sâu 10 925 m.
+	\item Rãnh Puerto Rico, thuộc Đại Tây Dương, sâu 8408 m.
+	\item Rãnh Java, thuộc Ấn Độ Dương, sâu 7290 m.
+	\item Molloy Hole, nơi sâu nhất của Bắc Băng Dương, sâu 5669 m.'' (so với mực nước biển) -- \cite[p. 63]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+\end{itemize}
+
+\subsubsection{Hà Lan -- Đất nước của những vùng đất thấp hơn mực nước biển}
+``Hà Lan được biết đến là đất nước với khoảng 26\% diện tích lãnh thổ thấp hơn mực nước biển. Bản thân tên gọi tiếng Anh của quốc gia này ``The Netherlands'' cũng có nghĩa là ``Những vùng đất thấp''. Để bảo vệ đất nước trước sự tấn công của nước biển, Hà Lan đã xây dựng hệ thống các công trình đê biển, kè biển, của cống \& cửa chắn lụt. Tổng cộng có 65 đê chắn sóng đúc bê tông khổng lồ cùng 62 cửa van bằng thép di động treo giữa các đê chắn với tổng chiều dài 6.8 km. Cửa van lớn nhất nằm ở phần sâu nhất của châu thổ, nặng tới 480 tấn, phải mất cả tiếng đồng hồ mới mở hay đóng được. Cùng với đường hầm qua eo biển Manche, kênh đào Panama, $\ldots$ hệ thống đê biển ở Hà Lan được các nhà kiến trúc trên thế giới bầu chọn là 1 trong số 10 công trình vĩ đại nhất trên hành tinh.'' -- \cite[p. 63]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\subsection{Tập Hợp Các Số Nguyên $\mathbb{Z}$}
+
+\subsubsection{Tập hợp $\mathbb{Z}$ các số nguyên}
+
+\begin{definition}[Số nguyên dương, tập hợp các số nguyên]
+	Số tự nhiên khác 0 còn được gọi là \emph{số nguyên dương}. Các số nguyên âm, số 0, \& các số nguyên dương tạo thành tập hợp các số nguyên. Tập hợp các số nguyên được ký hiệu là $\mathbb{Z}$.
+\end{definition}
+
+\begin{remark}
+	Số 0 không phải là số nguyên âm, cũng không phải số nguyên dương. Các số nguyên dương $1,2,3,\ldots$ đều mang dấu ``$+$'' nên còn được viết là $+1,+2,+3,\ldots$.
+\end{remark}
+
+\subsubsection{Biểu diễn số nguyên trên trục số}
+Tham khảo \cite[pp. 65--66]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Ta có thể biểu diễn số nguyên trên trục số. Có 2 loại trục số như sau:
+\begin{enumerate}
+	\item \textit{Trục số nằm ngang} có:
+	\begin{itemize}
+		\item Chiều dương hướng từ trái sang phải (được đánh dấu bằng mũi tên);
+		\item Điểm gốc của trục số là điểm 0 (biểu diễn số 0);
+		\item Đơn vị đo độ dài trên trục số là độ dài đoạn thẳng nối điểm 0 với điểm 1 (biểu diễn số 1 \& nằm bên phải điểm 0).
+	\end{itemize}
+	Trên trục số nằm ngang, điểm biểu diễn số nguyên âm nằm bên trái điểm 0, điểm biểu diễn số nguyên dương nằm bên phải điểm 0.
+	\item \textit{Trục số thẳng đứng} có:
+	\begin{itemize}
+		\item Chiều dương hướng từ dưới lên trên (được đánh dấu bằng mũi tên);
+		\item Điểm gốc của trục số là điểm 0 (biểu diễn số 0);
+		\item Đơn vị đo độ dài trên trục số là độ dài đoạn thẳng nối điểm 0 với điểm 1 (biểu diễn số 1 \& nằm phía trên điểm 0).
+	\end{itemize}
+	Trên trục số thẳng đứng, điểm biểu diễn số nguyên âm nằm phía dưới điểm 0, điểm biểu diễn số nguyên dương nằm phía trên điểm 0.
+\end{enumerate}
+\noindent\textbf{Quy ước.} Khi nói ``trục số'' mà không nói gì thêm, ta hiểu là nói về trục số nằm ngang.
+
+\subsubsection{Số đối của 1 số nguyên}
+
+\begin{definition}[Số đối của 1 số nguyên]
+	Trên trục số, 2 số nguyên (phân biệt) có điểm biểu diễn nằm về 2 phía của gốc 0 \& cách đều gốc 0 được gọi là \emph{2 số đối nhau}. Số đối của 0 là 0.
+\end{definition}
+
+\subsubsection{So sánh các số nguyên}
+
+\paragraph{So sánh 2 số nguyên.}
+\noindent\begin{tcolorbox}
+	Trên trục số nằm ngang, nếu điểm $a$ nằm bên trái điểm $b$ thì số nguyên $a$ nhỏ hơn số nguyên $b$. Trên trục số thẳng đứng, nếu điểm $a$ nằm phía dưới điểm $b$ thì số nguyên $a$ nhỏ hơn số nguyên $b$. Nếu $a$ nhỏ hơn $b$ thì ta viết là $a < b$ hoặc $b > a$.
+\end{tcolorbox}
+``Số nguyên dương luôn lớn hơn 0. Số nguyên âm luôn nhỏ hơn 0.'' ``Nếu $a < b$ \& $b < c$ thì $a < c$.'' (tính chất bắc cầu) -- \cite[p. 67]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\paragraph{Cách so sánh 2 số nguyên.}
+\begin{itemize}
+	\item \textit{So sánh 2 số nguyên khác dấu.} ``Số nguyên âm luôn nhỏ hơn số nguyên dương.'' -- \cite[p. 68]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+	\item \textit{So sánh 2 số nguyên cùng dấu.} ``Để so sánh 2 sô nguyên âm, ta làm như sau:
+	\begin{enumerate}
+		\item Bỏ dấu ``$-$'' trước cả 2 số âm.
+		\item Trong 2 số nguyên dương nhận được, số nào nhỏ hơn thì số nguyên âm ban đầu (tương ứng) sẽ lớn hơn.'' -- \cite[p. 69]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+	\end{enumerate}
+\end{itemize}
+
+\subsection{Phép Cộng Các Số Nguyên}
+
+\subsubsection{Phép cộng 2 số nguyên cùng dấu}
+
+\paragraph{Phép cộng 2 số nguyên dương.} ``Cộng 2 số nguyên dương chính là cộng 2 số tự nhiên khác 0.'' -- \cite[p. 70]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xem lại phần \textit{Phép Cộng, Trừ Các Số Tự Nhiên}.
+
+\paragraph{Phép cộng 2 số nguyên âm.} ``Để cộng 2 số nguyên âm, ta làm như sau:
+\begin{enumerate}
+	\item Bỏ dấu ``$-$'' trước mỗi số.
+	\item Tính tổng của 2 số nguyên dương nhận được ở Bước 1.
+	\item Thêm dấu ``$-$'' trước kết quả nhận được ở Bước 2, ta có tổng cần tìm.'' -- \cite[p. 71]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+\end{enumerate}
+Hiển nhiên: ``Tổng của 2 số nguyên dương là số nguyên dương. Tổng của 2 số nguyên âm là số nguyên âm.'' -- \cite[p. 71]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\subsubsection{Phép cộng 2 số nguyên khác dấu}
+``Để cộng 2 số nguyên khác dấu, ta làm như sau:
+\begin{enumerate}
+	\item Bỏ dấu ``$-$'' trước số nguyên âm, giữ nguyên số còn lại.
+	\item Trong 2 số nguyên dương nhận được ở Bước 1, ta lấy số lớn hơn trừ đi số nhỏ hơn.
+	\item Cho hiệu vừa nhận được dấu ban đầu của số lớn hơn ở Bước 2, ta có tổng cần tìm.
+\end{enumerate}
+\textbf{Chú ý.} 2 số nguyên đối nhau có tổng bằng 0, i.e., $a + (-a) = 0$, $\forall a\in\mathbb{Z}$.
+
+\subsubsection{Tính chất của phép cộng các số nguyên}
+
+\begin{theorem}[Tính chất của phép cộng các số nguyên]
+	Phép cộng các số nguyên có các tính chất sau:
+	\begin{itemize}
+		\item Giao hoán: $a + b = b + a$, $\forall a,b\in\mathbb{Z}$;
+		\item Kết hợp: $(a + b) + c = a + (b + c)$, $\forall a,b,c\in\mathbb{Z}$;
+		\item Cộng với số 0: $a + 0 = 0 + a = a$;
+		\item Cộng với số đối: $a + (-a) = (-a) + a = 0$.
+	\end{itemize}
+\end{theorem}
+
+\subsection{Phép Trừ Số Nguyên. Quy Tắc Dấu Ngoặc}
+
+\subsubsection{Phép trừ số nguyên}
+``Muốn trừ số nguyên $a$ cho số nguyên $b$, ta cộng $a$ với số đối của $b$: $a - b = a + (-b)$.'' ``Phép trừ trong $\mathbb{N}$ không phải bao giờ cũng thực hiện được\footnote{NQBH: Vì nếu hiệu của 2 số tự nhiên là số nguyên âm, thì hiệu đó không còn thuộc $\mathbb{N}$ nữa, i.e., $(a,b\in\mathbb{N},\ a < b)\Rightarrow a - b\notin\mathbb{N}$.}, còn phép trừ trong $\mathbb{Z}$ luôn thực hiện được.\footnote{I.e., $a,b\in\mathbb{Z}\Rightarrow a - b\in\mathbb{Z}$.}'' -- \cite[p. 76]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\subsubsection{Quy tắc dấu ngoặc}
+Khi bỏ dấu ngoặc có dấu ``$+$'' đằng trước thì giữ nguyên dấu của các số hạng trong ngoặc.
+\begin{align*}
+	a + (b + c) = a + b + c,\ a + (b - c) = a + b - c.\ \forall a,b,c\in\mathbb{Z}.
+\end{align*}
+Khi bỏ dấu ngoặc có dấu ``$-$'' đằng trước, ta phải đổi dấu của các số hạng trong ngoặc: dấu ``$+$'' thành dấu ``$-$'' \& dấu ``$-$'' thành dấu ``$+$''.
+\begin{align*}
+	a - (b + c) = a - b - c,\ a - (b - c) = a - b + c,\ \forall a,b,c\in\mathbb{Z}.
+\end{align*}
+
+\subsection{Phép Nhân Các Số Nguyên}
+
+\subsubsection{Phép nhân 2 số nguyên khác dấu}
+``Để nhân 2 số nguyên khác dấu, ta làm như sau:
+\begin{enumerate}
+	\item Bỏ dấu ``$-$'' trước số nguyên âm, giữ nguyên số còn lại.
+	\item Tính tích của 2 số nguyên dương nhận được ở Bước 1.
+	\item Thêm dấu ``$-$'' trước kết quả nhận được ở Bước 2, ta có tích cần tìm.
+\end{enumerate}
+Tích của 2 số nguyên khác dấu là số nguyên âm.'' -- \cite[p. 80]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\subsubsection{Phép nhân 2 số nguyên cùng dấu}
+
+\paragraph{Phép nhân 2 số nguyên dương.} ``Nhân 2 số nguyên dương chính là nhân 2 số tự nhiên khác 0.'' -- \cite[p. 81]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\paragraph{Phép nhân 2 số nguyên âm.} ``Để nhân 2 số nguyên âm, ta làm như sau:
+\begin{enumerate}
+	\item Bỏ dấu ``$-$'' trước mỗi số.
+	\item Tính tích của 2 số nguyên dương nhận được ở Bước 1, ta có tích cần tìm.
+\end{enumerate}
+Tích của 2 số nguyên cùng dấu là số nguyên dương.'' -- \cite[p. 81]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\subsubsection{Tính chất của phép nhân các số nguyên}
+``Giống như phép nhân các số tự nhiên, phép nhân các số nguyên cũng có các tính chất: giao hoán, kết hợp, nhân với số 1, phân phối của phép nhân đối với phép cộng, phép trừ.'' -- \cite[p. 82]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+Sự thừa hưởng tính chất này xuất phát từ sự kiện số nguyên chỉ thêm dấu $\pm$ vào số tự nhiên, nên các tính chất được mở rộng từ $\mathbb{N}$ ra\texttt{/}lên $\mathbb{Z}$ theo 1 cách tự nhiên \& dễ dàng.
+
+Hiển nhiên, $a0 = 0a = 0$. $(ab = 0)\Rightarrow((a = 0)\lor(b = 0))$.
+
+\subsection{Phép Chia Hết 2 Số Nguyên. Quan Hệ Chia Hết Trong Tập Hợp Số Nguyên}
+
+\subsubsection{Phép chia hết 2 số nguyên khác dấu}
+``Để chia 2 số nguyên khác dấu, ta làm như sau:
+\begin{enumerate}
+	\item Bỏ dấu ``$-$'' trước số nguyên âm, giữ nguyên số còn lại.
+	\item Tính thương của 2 số nguyên dương nhận được ở Bước 1.
+	\item Thêm dấu ``$-$'' trước kết quả nhận được ở Bước 2, ta có thương cần tìm.
+\end{enumerate}
+
+\subsubsection{Phép chia hết 2 số nguyên cùng dấu}
+
+\paragraph{Phép chia hết 2 số nguyên dương.} Xem lại phần \textit{Phép Nhân, Phép Chia Các Số Tự Nhiên}.
+
+\paragraph{Phép chia hết 2 số nguyên âm.} ``Để chia 2 số nguyên âm, ta làm như sau:
+\begin{enumerate}
+	\item Bỏ dấu ``$-$'' trước mỗi số.
+	\item Tính thương của 2 số nguyên dương nhận được ở Bước 1, ta có thương cần tìm.'' -- \cite[p. 85]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+\end{enumerate}
+
+\begin{remark}
+	\begin{itemize}
+		\item Cách nhận biết dấu của thương: $(+):(+)\to(+)$, $(-):(-)\to(+)$, $(+):(-)\to(-)$, $(-):(+)\to(-)$.
+		\item Thứ tự thực hiện các phép tính với số nguyên (trong biểu thức không chứa dấu ngoặc hoặc có chứa dấu ngoặc) cũng giống như thứ tự thực hiện các phép tính với các số tự nhiên.
+	\end{itemize}
+\end{remark}
+
+\subsubsection{Quan hệ chia hết}
+
+\begin{definition}[Quan hệ chia hết, bội, ước]
+	Cho $a,b\in\mathbb{Z}$, với $b\ne 0$. Nếu có số nguyên $q$ sao cho $a = bq$ thì ta nói: $a$ \emph{chia hết cho} $b$, $b$ \emph{chia hết} $a$, $a$ là \emph{bội} của $b$, $b$ là \emph{ước} của $a$.
+\end{definition}
+Hiển nhiên: ``Nếu $a$ là bội của $b$ thì $-a$ cũng là bội của $b$. Nếu $b$ là ước của $a$ thì $-b$ cũng là ước của $a$.'' -- \cite[p. 86]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+
+\section*{Hoạt Động Thực Hành \& Trải Nghiệm}
+
 
 \section{Hình Học Trực Quan}
 
