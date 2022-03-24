@@ -1,25 +1,25 @@
-\documentclass{article}
+\documentclass{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
-\usepackage[utf8]{vietnam}
+\usepackage[vietnamese,english]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{ques}{Question}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -31,25 +31,52 @@
 \def\labelitemii{$\circ$}
 
 \title{A Personal Journey to Writing}
-\author{Nguyễn Quản Bá Hồng}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng}
 \date{\today}
 
 \begin{document}
 \maketitle
-\begin{abstract}
-	My personal journey to ``The Garden of Words''\footnote{\href{https://www.imdb.com/title/tt2591814/}{IMDb\texttt{/}The Garden of Words (2013)}, original title: Koto no ha no niwa.} -- the world of writings.
-\end{abstract}
 \tableofcontents
 
-%------------------------------------------------------------------------------%
+%---------------------------------------------------------------------- --------%
 
-\section{Literary Writings}
+\chapter*{Foreword}
+My personal journey to ``The Garden of Words''\footnote{\href{https://www.imdb.com/title/tt2591814/}{IMDb\texttt{/}The Garden of Words (2013)}, original title: Koto no ha no niwa.} -- the world of writings. \textit{Why writing?} Because: Instead of provoking defense mechanism passively \& unconsciously, you should make your verbal enemies take a step back 1st: Words are weapons.
 
-\section{Scientific\texttt{/}Mathematical Writings}
+%---------------------------------------------------------------------- --------%
 
-\subsection{Luc Tartar's Writing Styles}
 
-\subsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/}{On Writing}}
+
+\section{Dictionary}
+To read \& write well, the 1st concern is, obviously, to choose the right dictionary.
+
+\begin{question}
+	Which dictionary should I use?
+\end{question}
+
+\begin{itemize}
+	\item \href{https://dictionary.cambridge.org/}{Cambridge Dictionary}: ``Make your words meaningful''
+	\item \href{https://www.merriam-webster.com/}{Merriam-Webster Dictionary}
+	\item \href{https://www.oxfordlearnersdictionaries.com/}{Oxford Learner's Dicitonaries}
+\end{itemize}
+
+\begin{question}
+	Should I buy Oxford Learner's Dictionary of Academic English?
+\end{question}
+\pounds 5.5\texttt{/}year though.
+
+\chapter{Literary Writings}
+
+\section{The Element of Style}
+See \href{https://en.wikipedia.org/wiki/The_Elements_of_Style}{Wikipedia\texttt{/}The Elements of Style}.
+
+``Strunk concentrated on the cultivation of good writing \& composition; the original 1918 edition exhorted writers to ``omit needless words'', use the \href{https://en.wikipedia.org/wiki/Active_voice}{active voice}, \& employ \href{https://en.wikipedia.org/wiki/Parallelism_(grammar)}{parallelism} appropriately.'' [$\ldots$] ``The 3rd edition of \textit{The Elements of Style} (1979) features 54 points: a list of common word-usage errors; 11 rules of punctuation \& grammar; 11 principles of writing; 11 matters of form; \&, in Chap. V, 21 reminders for better style. The final reminder, the 21st, ``Prefer the standard to the offbeat\footnote{\textbf{offbeat} [a] [usually before noun] \textit{(informal)} different from what most people expect, \textsc{synonym}: \textbf{unconventional}.}'', is thematically integral\footnote{\textbf{integral} [a] \textbf{1.} being an essential part of something; \textbf{2.} [usually before noun] included as part of something, rather than supplied separately; \textbf{3.} [usually before noun] having all the parts that are necessary for something to be complete.} to the subject of \textit{The Elements of Style}, yet does stand as a discrete\footnote{\textbf{discrete} [a] \textit{(formal or specialist)} independent of other things of the same type, \textsc{synonym}: \textbf{separate}.} essay about writing lucid\footnote{\textbf{lucid} [a] \textbf{1.} clearly expressed; easy to understand, \textsc{synonym}: clear; \textbf{2.} able to think clearly, especially when somebody cannot usually do this.} prose\footnote{\textbf{prose} [n] [uncountable] writing that is not poetry.}. To write well, White advises writers to have the proper mind-set, that they write to please themselves, \& that they aim for ``1 moment of felicity'', a phrase by \href{https://en.wikipedia.org/wiki/Robert_Louis_Stevenson}{Robert Louis Stevenson}.'' -- \href{https://en.wikipedia.org/wiki/The_Elements_of_Style#Content}{Wikipedia\texttt{/}The Element of Style\texttt{/}content}
+
+\chapter{Scientific\texttt{/}Mathematical Writings}
+
+\section{Luc Tartar's Writing Styles}
+
+\section{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/}{On Writing}}
 \begin{quotation}
 	``There are three rules for writing the novel. Unfortunately, no one knows what they are.'' -- W. Somerset Maugham
 \end{quotation}
@@ -87,7 +114,7 @@ Dual to the art of \textit{writing} a paper well, is the art of \textit{reading}
 \end{itemize}
 Some further advice on mathematical exposition: [$\ldots$]''
 
-\subsubsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/describe-the-results-accurately/}{On Writing\texttt{/}Describe the Results Accurately}}
+\subsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/describe-the-results-accurately/}{On Writing\texttt{/}Describe the Results Accurately}}
 \begin{quotation}
 	``10,000 fools proclaim themselves into obscurity, while 1 wise man forgets himself into immortality.'' -- Martin Luther King Jr.
 \end{quotation}
@@ -103,7 +130,7 @@ If for some reason you need to assert a non-trivial statement without proof or c
 
 \fbox{Titles of sections should be descriptive} (e.g., ``proof of the decomposition lemma'' or ``An orthogonality argument''), as opposed to uninformative (e.g., ``Step 2'' or ``Some technicalities'').
 
-\subsubsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/give-appropriate-amounts-of-detail/}{On Writing\texttt{/}Give Appropriate Amounts of Detail}}
+\subsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/give-appropriate-amounts-of-detail/}{On Writing\texttt{/}Give Appropriate Amounts of Detail}}
 \begin{quotation}
 	``In presenting a mathematical argument the great thing is to give the educated reader the chance to catch on at once to the momentary point and take details for granted: his successive mouthfuls should be such as can be swallowed at sight; in case of accidents, or in case he wishes for once to check in detail, he should have only a clearly circumscribed little problem to solve (e.g., to check an identity: 2 trivialities omitted can add up to an impasse). The unpracticed writer, even after the dawn of a conscience, gives him no such chance; before he can spot the point he has to tease his way through a maze of symbols of which not the tiniest suffix can be skipped.'' -- John Littlewood, \textit{``A Mathematician's Miscellany''}
 \end{quotation}
@@ -115,7 +142,7 @@ Conversely, some computations, definitions, or notational conventions which you 
 
 For a similar reason, if you are using a relatively obscure lemma from, say, 1 of your own papers, you should not assume that every reader of your current article is intimately familiar with your previous paper. In such cases it is worth stating the lemma in full, with a precise citation (as opposed to casually using phrases e.g., ``by a lemma in [my previous 100-page paper], we have $\ldots$''). When the lemma is particularly crucial, it is sometimes also worth spending a paragraph to sketch out a proof, or to otherwise remark on the significance of this lemma and its connections to other, more well known results.''
 
-\subsubsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/take-advantage-of-the-english-language/}{On Writing\texttt{/}Take Advantage of the English Language}}
+\subsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/take-advantage-of-the-english-language/}{On Writing\texttt{/}Take Advantage of the English Language}}
 \begin{quotation}
 	``Use soft words and hard arguments.'' -- Proverbial
 \end{quotation}
@@ -133,9 +160,7 @@ Finally, there is 1 situation in which it does make sense to use the terse langu
 
 Naturellement, la discussion ci-dessus s'applique également à d'autres langues, telles que la langue française.''\footnote{Of course, the above discussion also applies to other languages, such as the French language.}
 
-
-
-\subsubsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/use-good-notation/}{On Writing\texttt{/}Use Good Notation}}
+\subsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/use-good-notation/}{On Writing\texttt{/}Use Good Notation}}
 \begin{quotation}
 	``By relieving the brain of all unnecessary work, a good notation sets it free to concentrate on more advanced problems, and, in effect, increases the mental power of the race.'' -- Alfred North Whitehead, ``An Introduction to Mathematics''
 \end{quotation}
@@ -165,7 +190,7 @@ For any rigorous component of the paper, the notation should be precise and unam
 
 See also \href{https://mathoverflow.net/questions/366070/what-are-the-benefits-of-writing-vector-inner-products-as-langle-u-v-rangle/366118#366118}{Terence Tao's answer to MathOverflow question: What are the benefits of writing vector inner products as $\langle{\bf u},{\bf v}\rangle$ as opposed to ${\bf u}^\top{\bf v}$?}
 
-\subsubsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/write-in-your-own-voice/}{On Writing\texttt{/}Write in Your Own Voice}}
+\subsection{Terence Tao\texttt{/}\href{https://terrytao.wordpress.com/advice-on-writing-papers/write-in-your-own-voice/}{On Writing\texttt{/}Write in Your Own Voice}}
 
 \begin{quotation}
 	``While one should always study the method of a great artist, one should never imitate his manner. The manner of an artist is essentially individual, the method of an artist is absolutely universal. The first is personality, which no one should copy; the second is perfection, which all should aim at.'' -- Oscar Wilde, \textit{A Critic in Pall Mall}, p. 195
@@ -204,6 +229,9 @@ When writing a paper with 1 or more coauthors, there will inevitably be distinct
 
 Developing one's own style is, by definition, a very personal process; while external advice or role models can certainly be of some influence, they are of limited utility after a certain point. But finding an individual style which is comfortable and effective for both you and your readers is an important mark of one's \textit{mathematical maturity}, and is a goal that is definitely worth pursuing.''
 %------------------------------------------------------------------------------%
+
+\section*{Quick notes}
+``when possible and\texttt{/}or necessary'' -- \cite[p. 47]{Rebollo_Lewandowski2014}
 
 \begin{thebibliography}{99}
 	\bibitem[TerryTao]{TerryTao} \href{https://terrytao.wordpress.com}{Terence Tao's blog}.
