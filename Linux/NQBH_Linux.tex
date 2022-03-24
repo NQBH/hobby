@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Linux}
+\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Some notes on Unix\texttt{/}Linux.
+\end{abstract}
+\tableofcontents
+
+I have used the following Linux distributions: \textsc{Ubuntu, Kubuntu, SUSE, OpenSUSE}, where the 1st one is install in my personal notebooks\texttt{/}laptops, the 2nd one is install in my WIAS Dell XPS 15 (KDE provides a lot of good stuffs), while the other ones are install in computer servers at WIAS Berlin. Note that SUSE \& \textsc{OpenSUSE} are produced by Germans\footnote{In my own experiences, I believe that Germans \& Frenches prefer to build their own facilities to use those provided by the rest of the world.}.
+
+\begin{question}
+	Which resources I should use to learn deeply Linux in a fast but complete way?
+\end{question}
+William Shotts. \textit{The Linux Command Line: A Complete Introduction} (2e) seems a good start.
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
