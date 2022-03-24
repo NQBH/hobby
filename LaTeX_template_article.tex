@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{inputenc}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ques}{Question}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{}
+\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+
+\textbf{Keywords.}
+
+\textbf{MSC.}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Introduction}
+
+\section{Future Works}
+
+\section*{Acknowledgment}
+
+\appendix
+
+\section{Supplementary Material}
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
