@@ -1,5 +1,6 @@
 \documentclass{article}
-%\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -8,17 +9,18 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
 \newtheorem{definition}{Definition}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{remark}{Remark}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{question}{Question}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -42,10 +44,28 @@
 
 %------------------------------------------------------------------------------%
 
-\section{An Untrained \&\texttt{/}Thus (?) Failed Eidetiker}
+\section*{Foreword\texttt{/}Lời Dẫn}
+\begin{question}
+	Why this text? \& Why psychology?
+\end{question}
+Mình từ nhỏ, cũng như nhiều đứa trẻ khác, thích tìm tòi về Khoa học, đặc biệt là Toán học, rồi tiếp đến là Vật lý \& Hóa học. Mình học khá đều các môn này. Nhưng khi bắt đầu tham gia các cuộc thi các cấp, thì mình chỉ học mỗi môn Toán thay vì giỏi nhiều \& đều môn như cấp 2, \& nực cười thay khi thâm chí trong cái môn mình yêu thích nhất là Toán, mình chỉ tập trung cày bừa 1 vài chuyên đề yêu thích như Bất Đẳng Thức \& Số Học, không chú tâm nhiều đến các chủ đề khác. Kết quả thì hiển nhiên mà khó đạt được giải cao. Sau này lên Đại học, thì mình mới có cái laptop cá nhân đầu tiên vào cuối năm nhất. Mình thích tìm hiểu về Toán \& Máy tính. Tiếc là chỉ biết tập trung vào những thứ đó mà mình đã tự hạn hẹp kiến thức của bản thân \& thui chột nhiều khả năng khác mà mình có thể phát triển bằng việc tự học, \& đương nhiên: Tự học là vua của mọi loại kỹ năng.
+
+Hết Đại học, mình học Master ở Pháp. Sau khi tiếp xúc với nhiều thứ mới, nhiều người mới \& thú vị, thì mình bị trầm cảm nặng suốt 1 năm. Mình bắt đầu tỉnh ngộ: mình đã quá chú tâm vào việc cày Toán 1 cách máy móc \& kết quả là mình đã phát triển tâm lý \& nhận thức chậm hơn những người khác. Rồi mình nhận ra tầm quan trọng của những thứ khác để phát triển bản thân, đặc biệt là các kiến thức Tâm lý.
+
+Người nào giúp mình 1 lần, mình sẽ nhớ mãi, biết ơn, \& cố gắng trả ơn cho họ.
+
+[\ldots]
+
+Mỗi người sẽ kể 1 câu chuyện, tùy theo cách nhìn nhận, ghi nhớ của họ, \& thường là sẽ bị móm méo để có lợi cho chính bản thân họ, đôi khi để đổ lỗi, hạ thấp, thậm chí là triệt hạ người khác.
+
+Đời là 1 chuỗi vòng lặp vô tận nhưng không lối thoát thì chưa chắc. \texttt{insert Nguyễn Ngọc Tư quotes}
+
+Bạn cảm thấy  vui\texttt{/}sung sướng khi người khác thất bại? Thì bạn là 1 kẻ tồi (asshole).
+
+\section{An Untrained \&\texttt{/}Thus (?) Failed Eidetiker: The Way I Remember}
 
 \begin{remark}
-	At the beginning, I am not so sure that this concept should be mentioned here, in the subject of psychology. But when I recalled back some pieces of my memory, I realize how serious and devastated this ability has affected the development of my personality and psychology in some aspects.
+	At the beginning, I am not so sure that this concept should be mentioned here, in the subject of psychology. But when I recalled back some pieces of my memory, I realize how serious and devastated this ability has affected the development of my personality and psychology in various aspects.
 \end{remark}
 
 \begin{definition}[\href{https://en.wikipedia.org/wiki/Eidetic_memory}{Wikipedia\texttt{/}eidetic memory}]
@@ -154,11 +174,23 @@ There are a number of individuals whose extraordinary memory has been labeled ``
 \section{Psychology \& Music}
 Han Zimmer's masterpieces: $\ldots$
 
+\section{Introversity \&\texttt{/}vs. Extroversity}
+
 \section{Depression: The Unphysical Cancer}
 Well, it will take me a really really long long time to beat this shit.
 
-\section{Monomaniac: A Socially Loser or A Lonely Wolf?}
+\section{Monomaniac: A Social Loser or A Lonely Wolf?}
 Monomaniac - Kẻ độc hành.
+
+\section{Rich Dad, Poor Dad}
+I just realize: If I cannot teach my son to become a man, a real man, then I should not have him. Like father, like son. If I cannot help my son get out of the life circle\footnote{\textsc{vi}: vòng lặp lẩn quẩn của cuộc đời.} of poor \& stupidity, then why should I have one?
+
+\section{Undisputed Truth}
+Mike Tyson's  autobiography \cite{Tyson_Sloman2013}:
+\begin{quotation}
+	``This book is dedicated to all the outcasts -- Everyone who has ever been mesmerized, marginalized, tranquilized, beaten down, \& falsely accused. \& incapable of receiving love.'' -- \cite[Dedication]{Tyson_Sloman2013}
+\end{quotation}
+
 
 \section{Miscellaneous}
 Ask myself before doing anything literally:
@@ -176,9 +208,22 @@ Ask myself before doing anything literally:
 \end{question}
 This question lies in the borderline between the fields of psychology and philosophy. Should I move it to \cite{NQBH/philosophy}?
 
-\begin{proof}[Answer]
+\begin{proof}[NQBH's personal answer]
 	Concentration and contributions.
 \end{proof}
+
+\begin{quotation}
+	``He [G. H. Hardy] was, as I [C. P. Snow] later discovered, shy \& self-conscious\footnote{\textbf{self-conscious} [a] \textbf{1.} \textbf{self-conscious (about sth)} nervous\texttt{/}embarrassed about your appearance or what other people think of you; \textbf{2.} \textit{(often disapproving)} done in a way that shows you are aware of the effect that is being produced, \textit{opposite}: \textbf{unselfconscious}.} in all formal actions, \& had a dread of introductions. He just put his head down as it were in a butt of acknowledgment, \& without any preamble whatever began: $\ldots$'' [$\ldots$] ``I [C. P. Snow] half-guessed that he [G. H. Hardy] had a horror of persons, then prevalent in academic society, who devotedly studied the literature but had never played the game.'' [$\ldots$] ``He appeared to find the reply partially reassuring\footnote{\textbf{reassuring} [a] making you feel less worried or uncertain about something.}, \& went on to more tactical questions.'' [$\ldots$] ``As I had plenty of opportunities to realize in the future, Hardy had no faith in intuitions\footnote{\textbf{intuition} [n] \textbf{1.} [uncountable] the ability to know something by using your feelings rather than considering the facts; \textbf{2.} [countable] \textbf{intuition (that $\ldots$)} an idea or a strong feeling that something is true although you cannot explain why. \textsc{vi}: trực giác.} or impressions, his own or anyone else's. The only way to assess someone's knowledge, in Hardy's view, was to examine him. That went for mathematics, literature, philosophy, politics, anything you like. If the man had bluffed \& then wilted under the questions, that was his lookout. \fbox{1st things came 1st, in that brilliant \& concentrated mind.}'' [$\ldots$] ``Nothing else mattered. In the end he [G. H. Hardy] smiled with immense charm, with child-like openness, \& said that Fenner's (the university cricket ground) next season might be bearable after all, with the prospect of some reasonable conversation.'' -- \cite[Foreword, pp. 10--11]{Hardy1992}
+	
+	``I [C. P. Snow] don't know what the moral is. But it was a major piece of luck for me. This was intellectually the most valuable friendship of my life. His mind, as I have just mentioned, was brilliant \& concentrated: so much so that by his side anyone else's seemed a little muddy, a little pedestrian \& confused. He wasn't a great genius, as Einstein \& Rutherford were. He said, with his usual clarity\footnote{\textbf{clarity} [n] [uncountable] \textbf{1.} the quality of being expressed clearly; \textbf{2.} the ability to think about or understand something clearly; \textbf{3.} if a picture, substance or sound has clarity, you can see or hear it very clearly, or see through it easily.}, that if the word meant anything he was not a genius at all. At his best, he said, he was for a short time the 5th best pure mathematician in the world. Since this character was as beautiful \& candid\footnote{\textbf{candid} [a] \textbf{1.} saying what you think openly \& honestly; not hiding your thoughts; \textbf{2.} a \textbf{candid} photograph is one that is taken without the person in it knowing that they are being photographed.} as his mind, he always made the point that his friend \& collaborator Littlewood was an appreciably more powerful mathematician than he was, \& that his prot\'eg\'e\footnote{\textbf{prot\'eg\'e} [n] (feminine \textbf{prot\'eg\'ee}) \textit{(from French)} a young person who is helped in their career \& personal development by a more experienced person.} Ramanujan really had natural genius in the sense (though not to the extent, \& nothing like so effectively) that the greatest mathematicians had it.
+	
+	People sometimes thought he was under-rating himself, when he spoke of these friends. It is true that he was magnanimous\footnote{\textbf{magnanimous} [a] \textit{(formal)} kind, generous \& forgiving, especially towards an enemy or competitor.}, as far from envy as a man can be: but I think one mistakes his quality if one doesn't accept his judgment. I prefer to believe in his own statement in \textit{A Mathematician's Apology}, at the same time \fbox{so proud \& so humble}:
+	\begin{quotation}
+		`I still say to myself when I am depressed \& find myself forced to listen to pompous \& tiresome people, ``Well, I have done 1 thing you could never have done, \& that is to have collaborated with Littlewood \& Ramanujan on something like equal terms.'''
+	\end{quotation}
+	In any case, his precise ranking must be left to the historians of mathematics (though it will be an almost impossible job, since so much of his best work was done in collaboration). There is something else, thought, at which he was \fbox{clearly superior} to Einstein or Rutherford or any other great genius: \& that is at turning any work of the intellect\footnote{\textbf{intellect} [n] \textbf{1.} [uncountable, countable] the ability to think in a logical way \& understand things, especially at an advanced level; your mind; \textbf{2.} [countable] a very intelligent person.}, major or minor or sheer play, into a work of art. It was \fbox{that gift above all}, I think, which made him, almost without realizing it, purvey\footnote{\textbf{purvey} [v] \textit{(formal)} \textbf{purvey something} to supply food, services or information to people.} such intellectual delight\footnote{\textbf{delight} [n] \textbf{1.} [uncountable, singular] a feeling of great pleasure, \textsc{synonym}: \textbf{joy}; \textbf{2.} [countable] something that gives you great pleasure, \textsc{synonym}: \textbf{joy}.}. When \textit{A Mathematician's Apology} was 1st published, Graham Greene in a review wrote that along with Henry James's notebooks, this was the best account of what it was like to be a \fbox{\textit{creative artist}}\footnote{NQBH: a creative artist wannabe.}. Thinking about the effect Hardy had on all those round him, I believe that is the clue.'' -- \cite[Foreword, pp. 12--13]{Hardy1992}
+\end{quotation}
+
 
 %------------------------------------------------------------------------------%
 
@@ -190,5 +235,7 @@ This question lies in the borderline between the fields of psychology and philos
 		\item \href{https://en.wikipedia.org/wiki/Eidetic_memory}{Wikipedia\texttt{/}eidetic memory}
 	\end{itemize}
 \end{thebibliography}
+
+\printbibliography[heading=bibintoc]
 	
 \end{document}
