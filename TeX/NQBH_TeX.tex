@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{}
+\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
+\date{\today}
+
+\title{\TeX}
+\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Some notes on \TeX.
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Resources}
+
+\begin{enumerate}
+	\item \href{https://ctan.org/}{The Comprehensive \TeX\ Archive Network} (CTAN) is the central place for all kinds of material around \TeX. Most of the packages are free \& can be downloaded \& used immediately.
+	\item \href{https://www.overleaf.com/}{Overleaf} -- \LaTeX, Evolved: The easy to use, online, collaborative \LaTeX\ editor.
+	\item \href{https://tex.stackexchange.com/}{\TeX-\LaTeX\ StackExchange} is a question \& answer site for users of \TeX, \LaTeX, ConTeXt, \& related typesetting systems.
+\end{enumerate}
+
+
+\section{\texttt{babel} Package}
+\begin{quotation}
+	``This package manages culturally-determined typographical (\& other) rules for a wide range of languages. A document may select a single language to be supported, or it may select several, in which case the document may switch from 1 language to another in a variety of ways. \texttt{babel} uses \href{https://ctan.org/pkg/babel-contrib}{contributed configuration files} that provide the detail of what has to be done for each language. Included is also a set of ini files for about 250 languages. Many language styles work with pdf\LaTeX, as well as with Xe\LaTeX\ \& Lua\LaTeX, out of the box. A few even work with plain formats.'' -- \href{https://ctan.org/pkg/babel}{CTAN\texttt{/}\texttt{babel} -- Multilingual support for \LaTeX, Lua\LaTeX, Xe\LaTeX, \& Plain \TeX}
+\end{quotation}
+
+\section{\href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}International language support}}
+``\LaTeX\ supports many worldwide languages by means of some special packages.''
+
+\subsection{Introduction}
+``If you are a non-English speaker, \LaTeX\ can be configured to typeset in your language.'' [$\ldots$] ``The package that makes possible to display special characters is \texttt{babel}, this package also changes the language of the elements in the document. In the example instead of ``abstract'' \& ``Contents'' the Spanish words ``resumen'' \& ``\'Indice'' are used.''
+
+\subsection{Input encoding}
+``Modern computer systems allow you to input letters of national alphabets directly from the keyboard. In order to handle a variety of input encodings used for different groups of languages \&\texttt{/}or on different computer platforms \LaTeX\ employs the \texttt{inputenc} package to set up input encoding. To use this package, add the next line to the \textit{preamble} of your document:
+\begin{verbatim}
+	\usepackage[encoding]{inputenc}
+\end{verbatim}
+The recommended input encoding is \texttt{utf8}, which supports a lot of national alphabets letter (inside the brackets, instead of the word ``encoding'' you must put the name of the encoding you are using). If you want, you can also use other encodings connected with different groups of languages \&\texttt{/}or on different computer platforms.''
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{5cm}|p{35mm}|p{35mm}|l|}
+		\hline
+		\textbf{OS} & \textbf{Western European Latin encoding} & \textbf{Central European Latin encoding} & \textbf{Cyrillic encoding} \\
+		\hline
+		Windows & \texttt{cp1252} & \texttt{cp1250} & \texttt{cp1251} \\
+		\hline
+		GNU\texttt{/}Linux \& Unix-like (${}^\star$BSD, Mac OS X) & \texttt{latin1} & \texttt{latin2} & \texttt{koi8-ru} \\
+		\hline
+		Recommended for all systems & \texttt{utf8} & \texttt{utf8} & \texttt{utf8} \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{remark}
+	``If you can't input some letters of national alphabets directly from the keyboard, you can use \LaTeX\ alternative commands for accents \& special characters.''
+\end{remark}
+
+\subsection{Font encoding}
+``To proper \LaTeX\ document generation you must also choose a font which has to support specific characters for a given language by using \texttt{fontenc} package:
+\begin{verbatim}
+	\usepackage[encoding]{fontenc}
+\end{verbatim}
+The default \LaTeX\ font encoding is \texttt{OT1}, but it contains only 128 characters. The \texttt{T1} encoding contains letters \& punctuation characters for most of the European languages using Latin script. For languages using Cyrillic script you can use \texttt{T2A}, \texttt{T2B}, \texttt{T2C}, or \texttt{X2} font encodings.''
+
+\subsection{\texttt{babel}}
+``The \texttt{babel} package allows to use special characters \& also translates some elements within the document. This package also automatically activates the appropriate hyphenation rules for the language you choose. You can activate the babel package by adding the next command to the preamble:
+\begin{verbatim}
+	\usepackage[language]{babel}
+\end{verbatim}
+Change the \texttt{language} to the name of the language you need. You can see list of the languages available in the \href{http://texdoc.net/pkg/babel}{\texttt{babel} package documentation}, under Sect. 1.26 ``Languages supported by \texttt{babel} with ldf files''.'' 
+
+\subsection{Using $\ge 2$ language in a document}
+``\texttt{babel} command can be called with multiple languages'' e.g.,
+\begin{verbatim}
+	\documentclass{article}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english, russian]{babel}
+	\usepackage[T1, T2A]{fontenc}
+	...
+\end{verbatim}
+``Notice at the preamble that 2 encodings \& 2 languages are passed as parameters to the \texttt{fontenc} \& \texttt{babel} packages respectively. When using this syntax the last language in the option list will be active (i.e. Russian), and you can use the command \verb|\selectlanguage{english}| at any point to change the active language.''
+
+\subsection{Right-to-left writing}
+
+\subsubsection{Arabic language}
+``The \texttt{arabic} package provides the Right-to-Left scripts support for \LaTeX\ without the need of any external preprocessor. You can include the \texttt{arabtex} package for extended capabilities when working with documents in Arabic or Hebrew. If you need to insert latin text inside the arabic text use \verb|\textLR{Latin text}|.''
+\begin{verbatim}
+	\documentclass[11pt,a4paper]{report}
+	\usepackage{arabtex}
+	\usepackage[utf8]{inputenc}
+	\usepackage[LFE,LAE]{fontenc}
+	\usepackage[arabic]{babel}
+	...
+\end{verbatim}
+
+\subsection{Examples of Supported Languages}
+Arabic, Chinese, French, German, Greek, Italian, Japanese, Korean, Portuguese, Russian, Spanish (with links \& examples).
+
+\subsection{Reference guide}
+
+\subsubsection{Accents \& special characters}
+``If you can't input some letters of national alphabets directly from the keyboard, you can use \LaTeX\ commands for accents and special characters.'' See \href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}international language support}\texttt{/}reference guide for a list.
+
+\section{Vanilla \TeX Live}
+\textsc{Ubuntu} does not pre-install Vanilla \TeX Live, you need to install it manually \& additionally.
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
