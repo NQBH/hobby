@@ -48,6 +48,20 @@ I have used the following Linux distributions: \textsc{Ubuntu, Kubuntu, SUSE, Op
 \end{question}
 William Shotts. \textit{The Linux Command Line: A Complete Introduction} (2e) seems a good start.
 
+\begin{question}
+	Which e-book readers should I use on Linux?
+\end{question}
+
+\section{Calibre}
+Official website: \url{https://calibre-ebook.com/}. See also, e.g., \href{https://en.wikipedia.org/wiki/Calibre_(software)}{Wikipedia\texttt{/}Calibre (software)}. Enable Dark Mode in Calibre:
+\begin{verbatim}
+	$ sudo nano /etc/profile.d/calibre.sh
+	
+	export CALIBRE_USE_SYSTEM_THEME=1
+	$ sudo service gdm restart
+\end{verbatim}
+\& further customization. \texttt{[inserting]}
+
 %------------------------------------------------------------------------------%
 
 \printbibliography[heading=bibintoc]
