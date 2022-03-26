@@ -1,0 +1,96 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Mathematical Optimization}
+\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter*{Foreword}
+
+A collection of \& some personal notes on Mathematical Optimization, especially the 3 major topics: Optimal Control, Shape Optimization, \& Topology Optimization.
+
+\textbf{Keywords.} Optimal control; Shape optimization; Topology optimization.
+
+%------------------------------------------------------------------------------%
+
+\chapter{Optimal Control}
+
+\section{Introduction}
+``The mathematical optimization of process governed by PDEs has seen considerable progress in the past decade. Ever faster computational facilities \& newly developed numerical techniques have opened the door to important practical applications in fields e.g. fluid flow, microelectronics\footnote{\textbf{microelectronics} [n] [uncountable] the design, production \& use of very small electronic circuits.}, crystal\footnote{\textbf{crystal} [n] \textbf{1.} [countable] a small piece of a substance with many even sides, that is formed naturally when the substance becomes solid; in chemistry, a \textbf{crystal} is any solid that has its atoms, ions or molecules arranged in an ordered, symmetrical way; \textbf{2.} [uncountable] a clear mineral, e.g. quartz, used in making decorative objects.} growth, vascular\footnote{\textbf{vascular} [a] [usually before noun] (\textit{medical}) connected with or containing veins.} surgery\footnote{\textbf{surgery} [n] \textbf{1.} [uncountable, countable] medical treatment of injuries or diseases that involves cutting open a person's body, sewing up wounds, etc.; \textbf{2.} [countable] (\textit{British English}) a place where a doctor sees patients; \textbf{3.} [countable] (\textit{British English}) a time during which a doctor, an MP or another professional person is available to see people.}, \& cardiac\footnote{\textbf{cardiac} [a] [only before noun] (\textit{medical}) connected with the heart or heart disease; if somebody has a \textbf{cardiac arrest}, their heart suddenly stops temporarily or permanently.} medicine, to name just a few. As a consequence, the communities of numerical analysts \& optimizers have taken a growing interest in applying their methods to optimal control problems involving PDEs $\ldots$'' [$\ldots$] ``$\ldots$ the comprehensive text by J.-L. Lions \cite{Lions1971} covers much of the theory of linear equations \& convex cost functionals.'' -- \cite[Preface to the German edition, p. xiii]{Troltzsch2010}
+
+\cite{Troltzsch2010} focuses on basic concepts \& notions e.g.:
+\begin{itemize}
+	\item Existence theory for linear \& semilinear PDEs
+	\item Existence of optimal controls
+	\item Necessary optimality conditions \& adjoint equations
+	\item 2nd-order sufficient optimality conditions
+	\item Foundation of numerical methods
+\end{itemize}
+
+\begin{question}
+	What is optimal control?
+\end{question}
+``The mathematical theory of optimal control has in the past few decades rapidly developed into an important \& separate field of applied mathematics. 1 area of application of this theory lies in aviation\footnote{\textbf{aviation} [n] [uncountable] the activity of designing, building \& flying aircraft.} \& space technology: aspects of optimization come into play whenever the motion of an aircraft or a space vessel\footnote{\textbf{vessel} [n] \textbf{1.} a tube that carries blood through the body of a person or an animal, or liquid through the parts of a plant; \textbf{2.} (\textit{formal}) a large ship or boat; \textbf{3.} (\textit{formal}) a container used for holding liquids, e.g. a bowl or cup.} (which can be modeled by ODEs) has to follow a trajectory\footnote{\textbf{trajectory} [n] (plural \textbf{trajectories}) (\textit{specialist}) \textbf{1.} the curved part of something that has been fired, hit or thrown into the air; \textbf{2.} the way in which a person, an event or a process develops over a period of time, often leading to a particular result.} that is ``optimal'' in a sense to be specified.'' -- \cite[Sect. 1.1: \textit{What is optimal control?}, p. 1]{Troltzsch2010}
+
+All the essential features of an \textit{optimal control problem}:
+\begin{itemize}
+	\item a \textit{cost functional} to be minimized,
+	\item an IVP for an ODE in order to determine the \textit{state} $y$,
+	\item a \textit{control function} $u$, \&
+	\item various constraints that have to be obeyed.
+\end{itemize}
+``The control $u$ may be freely chosen within the given constraints, while the state is uniquely determined by the differential equation \& the initial conditions. We have to choose $u$ in such a way that the cost function is minimized. Such controls are called \textit{optimal}.'' [$\ldots$] ``The optimal control of ODEs is of interest not only for aviation \& space technology. In fact, it is also important in fields e.g. robotics\footnote{\textbf{robotics} [n] [uncountable] the science of designing \& operating robots.}, movement sequences in sports, \& the control of chemical processes \& power plants, to name just a few of the various applications. In many cases, however, the processes to be optimized can no longer be adequately modeled by ODEs; instead, PDEs have to be employed for their description. E.g., heat conduction\footnote{\textbf{conduction} [n] [uncountable] (\textit{physics}) the process by which heat or electricity passes along or through a material.}, diffusion\footnote{\textbf{diffusion} [n] [uncountable] \textbf{1.} the spreading of something more widely; \textbf{2.} the mixing of substances by the natural movement of their particles; \textbf{3.} the spreading of elements of culture from 1 region or group to another.}, electromagnetic\footnote{\textbf{electromagnetic} [a] (\textit{physics}) in which the electrical \& magnetic properties of something are related.} waves, fluid flows, freezing processes, \& many other physical phenomenon\footnote{\textbf{phenomenon} [n] (plural \textbf{phenomena} a fact or an event in nature or society, especially one that is not fully understood.)} can be modeled by PDEs.
+
+In these fields, there are numerous interesting problems in which a given cost functional has to be minimized subject to a differential equation \& certain constraints being satisfied. The difference from the above problem ``merely'' consists of the fact that a PDE has to be dealt with in place of an ordinary one.'' -- \cite[pp. 2--3]{Troltzsch2010}
+
+\cite{Troltzsch2010} discusses, ``through examples in the form of mathematically simplified case studies, the optimal control of heating processes, 2-phase problems, \& fluid flows''. \cite{Troltzsch2010} focuses ``on linear \& semilinear elliptic \& parabolic PDEs, since a satisfactory regularity theory is available for the solutions to such equations. This is not the case for hyperbolic equations. Also, the treatment of quasilinear PDEs is considerably more difficult, \& the theory of their optimal control is still an open field in many respects.'' [$\ldots$] ``$\ldots$ the Hilbert space setting suffices as a functional analytic framework in the case of linear-quadratic theory.'' -- \cite[p. 3]{Troltzsch2010}
+
+\section*{Quick notes}
+\textit{Primal-dual active set strategies}, whose the exposition now leads to the systems of linear equations to be solved.
+
+%------------------------------------------------------------------------------%
+
+\chapter{Shape Optimization}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Topology Optimization}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
