@@ -1,25 +1,26 @@
-\documentclass{article}
+\documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
-\usepackage[utf8]{vietnam}
+\usepackage[vietnamese,english]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -31,17 +32,33 @@
 \def\labelitemii{$\circ$}
 
 \title{A Personal Journey to Philosophy}
-\author{Nguyễn Quản Bá Hồng}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng}
 \date{\today}
 
 \begin{document}
 \maketitle
-\begin{abstract}
-	A \textit{personal} journey to philosophy. A collection of quotes from different resources, e.g., philosophical books, websites, forums, and Facebook philosophical pages, etc., and some \textit{personal} (again) thoughts about them.
-\end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
+
+\chapter*{Foreword}
+
+A \textit{personal} journey to philosophy -- the hardest subject I have ever face to \& fight against. A collection of quotes from different resources, e.g., philosophical books, websites, forums, and Facebook philosophical pages, etc., and some \textit{personal} (again) thoughts about them.
+
+%------------------------------------------------------------------------------%
+
+\chapter{Jordan B. Peterson. 12 Rules for Life: An Antidote to Chaos}
+
+\cite{Peterson2018}\footnote{\textbf{antidote} [n] \textbf{1.} \textbf{antidote (to something)} a substance that controls the effects of a poison or disease; \textbf{2.} \textbf{antidote (to something)} anything that takes away the effects of something unpleasant.} \footnote{\textbf{chaos} [n] [uncountable] a state of complete confusion \& lack of order; in physics, \textbf{chaos} is the property of a complex system whose behavior is so unpredictable that it appears random, especially because small changes in conditions can have very large effects; \textbf{chaos theory} is the branch of mathematics that deals with these complex systems.}
+\begin{quotation}
+	``The most influential public intellectual in the Western world right now.'' -- New York Times
+\end{quotation}
+
+``Rules? More rules? Really? Isn't life complicated enough, restricting enough, without abstract rules that don't take our unique, individual situations into account? \& given  that our brains are plastic, \& all develop differently based on our life experiences, why even expect that a few rules might be helpful to us all?'' -- \cite[Foreword]{Peterson2018}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Miscellaneous}
 
 \section{Young, Dumb, \& Broke}
 Watch \& listen \href{https://www.youtube.com/watch?v=IPfJnp1guPc}{Youtube\texttt{/}Khalid\texttt{/}Young Dumb \& Broke}.
@@ -55,7 +72,7 @@ Watch \& listen \href{https://www.youtube.com/watch?v=IPfJnp1guPc}{Youtube\textt
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[]{}
+	\bibitem[NQBH\texttt{/}psychology]{NQBH/psychology} \selectlanguage{vietnamese} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/psychology/NQBH_a_personal_journey_to_psychology.pdf}{\textit{A Personal Journey to Psychology: The Way I Perceive}}. March 2022--now.
 \end{thebibliography}
 
 \printbibliography[heading=bibintoc]
