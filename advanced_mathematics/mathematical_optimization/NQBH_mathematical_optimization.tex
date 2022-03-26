@@ -36,6 +36,8 @@
 
 \begin{document}
 \maketitle
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 \tableofcontents
 
 \chapter*{Foreword}
@@ -77,6 +79,92 @@ All the essential features of an \textit{optimal control problem}:
 In these fields, there are numerous interesting problems in which a given cost functional has to be minimized subject to a differential equation \& certain constraints being satisfied. The difference from the above problem ``merely'' consists of the fact that a PDE has to be dealt with in place of an ordinary one.'' -- \cite[pp. 2--3]{Troltzsch2010}
 
 \cite{Troltzsch2010} discusses, ``through examples in the form of mathematically simplified case studies, the optimal control of heating processes, 2-phase problems, \& fluid flows''. \cite{Troltzsch2010} focuses ``on linear \& semilinear elliptic \& parabolic PDEs, since a satisfactory regularity theory is available for the solutions to such equations. This is not the case for hyperbolic equations. Also, the treatment of quasilinear PDEs is considerably more difficult, \& the theory of their optimal control is still an open field in many respects.'' [$\ldots$] ``$\ldots$ the Hilbert space setting suffices as a functional analytic framework in the case of linear-quadratic theory.'' -- \cite[p. 3]{Troltzsch2010}
+
+\subsection{Examples of Convex Problems}
+
+\subsubsection{Optimal boundary heating}
+See \cite[Subsect. 1.2.1, pp. 3--5]{Troltzsch2010}.
+
+\begin{example}[Optimal boundary heating]
+	Consider a body heated or cooled which occupies the spatial domain $\Omega\subset\mathbb{R}^3$. Apply to its boundary $\Gamma$ a \emph{heat source} $u$ (the \emph{control}), which is constant in time but depends on the location ${\bf x}$ on the boundary, i.e., $u = u({\bf x})$. Aim: choose the control in such a way that the corresponding \emph{temperature distribution} $y = y({\bf x})$ in $\Omega$ (the \emph{state}) is the best possible approximation to a desired stationary temperature distribution $y_\Omega = y_\Omega({\bf x})$:
+	\begin{align*}
+		\min J(y,u)\coloneqq\frac{1}{2}\int_\Omega |y({\bf x}) - y_\Omega({\bf x})|^2\,{\rm d}{\bf x} + \frac{\lambda}{2}\int_\Gamma |u({\bf x})|^2\,{\rm d}s({\bf x}),
+	\end{align*}
+	subject to the \emph{state equation}:
+	\begin{equation*}
+		\left\{\begin{split}
+			-\Delta y &= 0,&&\mbox{ in }\Omega,\\
+			\partial_{\bf n}y &= \alpha(u - y),&&\mbox{ on }\Gamma,
+		\end{split}\right.
+	\end{equation*}
+	and the \emph{pointwise control constraints} $u_a({\bf x})\le u({\bf x})\le u_b({\bf x})$ on $\Gamma$. ``Such pointwise bounds for the control are quite natural, since the available capacities for heating or cooling are usually restricted. The constant $\lambda\ge 0$ can be viewed as a measure of the energy costs needed to implement the control $u$. From the mathematical viewpoint, this term also serves as a \emph{regularization parameter}; it has the effect that possible optimal controls show improved regularity properties.'' [$\ldots$] ``The function $\alpha$ represents the \emph{heat transmission coefficient} from $\Omega$ to the surrounding medium. The functional $J$ to be minimized is called the \emph{cost functional}. The factor $\frac{1}{2}$ appearing in it has no influence on the solution of the problem. It is introduced just for the sake of convenience: it will later cancel out a factor 2 arising from differentiation. We seek an optimal control $u = u({\bf x})$ together with the associated state $y = y({\bf x})$. The minus sign in front of the Laplacian $\Delta$ appears to be unmotivated at 1st glance. It is introduced because $\Delta$ is not a \emph{coercive operator}, while $-\Delta$ is.'' -- \cite[p. 4]{Troltzsch2010}
+\end{example}
+``Observe that in the above problem the cost functional is quadratic, the state is governed by a linear elliptic PDE, \& the control acts on the boundary of the domain.'': thus have a \textit{linear-quadratic elliptic boundary control problem}.
+
+\begin{remark}[Notations used in \cite{Troltzsch2010}]
+	Denote the element of surface area by $ds$ \& the outward unit normal to $\Gamma$ at ${\bf x}\in\Gamma$ by $\nu({\bf x})$\footnote{NQBH: I prefer to use ${\bf n}({\bf x})$, with ``n'' stands for ``normal'', naturally \& obviously.}.
+\end{remark}
+
+\begin{remark}
+	``The problem is strongly simplified. Indeed, in a realistic model Laplace's equation $\Delta y = 0$ has to be replaced by the stationary heat conduction equation $\nabla\cdot(a\nabla y) = 0$, where the coefficient $a$ can depend on ${\bf x}$ or even on $y$. If $a = a(y)$ or $a = a({\b f x},y)$, then the PDE is quasilinear. In addition, it will in many cases be more natural to describe the process by a time-dependent PDE.'' -- \cite[p. 4]{Troltzsch2010}
+\end{remark}
+
+\begin{example}[Optimal heat source]
+	Similarly, the control can act as a \emph{heat source in the domain} $\Omega$. Problems of this kind arise if the body $\Omega$ is heated by electromagnetic induction or by microwaves. Assuming at 1st that the boundary temperature vanishes, we obtain the following problem:
+	\begin{align*}
+		\min J(y,u)\coloneqq\frac{1}{2}\int_\Omega |y({\bf x}) - y_\Omega({\bf x})|^2\,{\rm d}{\bf x} + \frac{\lambda}{2}\int_\Omega |u({\bf x})|^2\,{\rm d}{\bf x},
+	\end{align*}
+	subject to
+	\begin{equation*}
+		\left\{\begin{split}
+			-\Delta y &= \beta u,&&\mbox{ in }\Omega,\\
+			y &= 0,&&\mbox{ on }\Gamma,
+		\end{split}\right.
+	\end{equation*}
+	and $u_a({\bf x})\le u({\bf x})\le u_b({\bf x})$ in $\Omega$. Here, the coefficient $\beta = \beta({\bf x})$ is prescribed. Observe that by the special choice $\beta = \chi_{\Omega_{\rm c}}$ (where $\chi_E$ denotes the characteristic function of a set $E$), it can be achieved that $u$ acts only in a subdomain $\Omega_{\rm c}\subset\Omega$. This problem is a \emph{linear-quadratic elliptic control problem with distributed control}. It can be more realistic to prescribe an exterior temperature $y_a$ rather than assume that the boundary temperature vanishes. Then a better model is given by the state equation
+	\begin{equation*}
+		\left\{\begin{split}
+			-\Delta y &= \beta u,&&\mbox{ in }\Omega,\\
+			\partial_{\bf n}y &= \alpha(y_a - y),&&\mbox{ on }\Gamma.
+		\end{split}\right.
+	\end{equation*}
+\end{example}
+
+\subsubsection{Optimal nonstationary boundary control}
+See \cite[pp. 5--6]{Troltzsch2010}. ``Let $\Omega\subset\mathbb{R}^3$ represent a potato that is to be roasted over a fire for some period of time $T > 0$.'' Denote its temperature by $y = y(t,{\bf x})$, with $(t,x)\in[0,T]\times\Omega$. ``Initially, the potato has temperature $y_0 = y_0({\bf x})$, \& we want to serve it at a pleasant palatable\footnote{\textbf{palatable} [a] \textbf{1.} (of food or drink) having a pleasant or acceptable taste; \textbf{2.} \textbf{palatable (to somebody)} pleasant or acceptable to somebody, \textsc{opposite}: \textbf{unpalatable}.} temperature $y_\Omega$ at the final time $T$.'' Write $Q\coloneqq(0,T)\times\Omega$, $\Sigma\coloneqq(0,T)\times\Gamma$. Then problem reads as follows:
+\begin{align*}
+	\min J(y,u)\coloneqq\frac{1}{2}\int_\Omega |y(T,{\bf x}) - y_\Omega({\bf x})|^2\,{\rm d}{\bf x} + \frac{\lambda}{2}\int_0^T\int_\Gamma |u(t,{\bf x})|^2\,{\rm d}\Gamma\,{\rm d}t,
+\end{align*}
+subject to
+\begin{equation*}
+	\left\{\begin{split}
+		y_t - \Delta y &= 0,&&\mbox{ in } Q,\\
+		\partial_{\bf n}y &= \alpha(u - y),&&\mbox{ on }\Sigma,\\
+		y(0,{\bf x}) &= y_0({\bf x}),&&\mbox{ in }\Omega,
+	\end{split}\right.
+\end{equation*}
+\& $u_a(t,{\bf x})\le u(t,{\bf x})\le u_b(t,{\bf x})$ on $\Sigma$. By continued turning of the spit\footnote{\textbf{spit} [n] \textit{in}\texttt{/}\textit{from mouth} \textbf{1.} [uncountable] the liquid produced in your mouth, \textsc{synonym}: \textbf{saliva}; \textbf{2.} [countable, usually singular] the act of spitting liquid or food out of your mouth; \textit{piece of land} \textbf{3.} [countable] a long, thin piece of land that sticks out into the sea, a lake, etc.; \textit{for cooking meat} \textbf{4.} [countable] a long, thin, straight piece of metal that you put through meat to hold \& turn it while you cook it over a fire.}, we produce $u(t,{\bf x})$. The heating process has to be described by the \textit{nonstationary heat equation}, which is a parabolic differential equation: thus have to deal with a \textit{linear-quadratic parabolic boundary control problem}.
+
+\subsubsection{Optimal vibrations}
+``Suppose that a group of pedestrians crosses a bridge, trying to excite\footnote{\textbf{excite} [v] \textbf{1.} to make somebody feel a particular emotion or react in a particular way, \textsc{synonym}: \textbf{arouse}; \textbf{2.} \textbf{excite somebody} to make somebody feel very pleased, interested or enthusiastic, especially about something that is going to happen; \textbf{3.} \textbf{excite somebody\texttt{/}something} to make somebody\texttt{/}something nervous, upset or active \& unable to relax; \textbf{4.} \textbf{excite something} to produce a state of increased energy or activity in a physical or biological system, \textsc{synonym}: \textbf{stimulate}; \textbf{5.} \textbf{excite something} (\textit{physics}) to bring something to a state of higher energy.} oscillations\footnote{\textbf{oscillation} [n] \textbf{1.} [countable, uncountable] \textbf{oscillation (of something)} a regular movement between 1 position \& another; \textbf{2.} [countable] \textbf{oscillation (between A \& B)} a repeated change between different states, ideas, etc.; \textbf{3.} [countable] (\textit{specialist} regular variation in size, strength or position around a central point or value, especially of an electrical current or electric field.)} in it. This can be modeled (strongly abstracted) as follows: let $\Omega\subset\mathbb{R}^2$ denote the domain of the bridge, $y = y(t,{\bf x})$ its \textit{transversal\footnote{\textbf{transversal} [n] a line that intersects a system of lines.} displacement\footnote{\textbf{displacement} [n] \textbf{1.} [uncountable] the act of displacing somebody\texttt{/}something; the process of being displaced; \textbf{2.} [uncountable, singular] \textbf{displacement (of something)} (\textit{physics}) the distance between the final \& initial ($=$ 1st) positions of an object which has moved.}}, $u = u(t,{\bf x})$ the \textit{force density} acting in the vertical direction, \& $y_{\rm d} = y_{\rm d}(t,{\bf x})$ a \textit{desired evolution of the transversal vibrations\footnote{\textbf{vibration} [n] [countable, uncountable] \textbf{1.} \textbf{vibration (of something)} a continuous shaking movement; \textbf{2.} \textbf{vibration (of something)} (\textit{physics}) oscillation in a substance about its equilibrium state.}}. We then obtain the optimal control problem:
+\begin{align*}
+	\min J(y,u)\coloneqq\frac{1}{2}\int_0^T\int_\Omega |y(t,{\bf x}) - y_{\rm d}(t,{\bf x})|^2\,{\rm d}{\bf x}\,{\rm d}t + \frac{\lambda}{2}\int_0^T\int_\Omega |u(t,{\bf x})|^2\,{\rm d}{\bf x}\,{\rm d}t,
+\end{align*}
+subject to
+\begin{equation*}
+	\left\{\begin{split}
+		y_{tt} - \Delta y &= u,&&\mbox{ in } Q,\\
+		y(0) &= y_0,&&\mbox{ in }\Omega,\\
+		y_t(0) &= y_1,&&\mbox{ in }\Omega,\\
+		y &= 0,&&\mbox{ on }\Sigma,
+	\end{split}\right.
+\end{equation*}
+and $u_a(t,{\bf x})\le u(t,{\bf x})\le u_b(t,{\bf x})$ in $Q$. This is a \textit{linear-quadratic hyperbolic control problem with distributed control}.'' [$\ldots$] ``Interesting control problems for oscillating elastic networks have been treated by Lagnese et al. \textbf{[LLS94]}. An elementary introduction to the controllability of oscillations can be found in \textbf{[Kra95]}.
+
+In the linear-quadratic case, the theory of hyperbolic problems has many similarities to the parabolic theory studied in \cite{Troltzsch2010}. However, the treatment of semilinear hyperbolic problems is much more difficult, since the smoothing properties of the associated solution operators are weaker. As a consequence, many of the techniques presented in \cite{Troltzsch2010} fail in the hyperbolic case.'' -- \cite[pp. 6--7]{Troltzsch2010}
+
+\subsection{Examples of Nonconvex Problems}
+
 
 \section*{Quick notes}
 \textit{Primal-dual active set strategies}, whose the exposition now leads to the systems of linear equations to be solved.
