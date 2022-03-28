@@ -1,25 +1,26 @@
 \documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
-\usepackage[utf8]{vietnam}
+\usepackage[vietnamese,english]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,tcolorbox}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,tcolorbox}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{lemma}{Lemma}[section]
+\newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
 \newtheorem{definition}{Definition}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{remark}{Remark}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{ques}{Question}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -30,11 +31,12 @@
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{Some Topics in Elementary Mathematics:\\Problems, Theory, Applications, \& Bridges to Advanced Mathematics}
-\author{Nguyễn Quản Bá Hồng}
+\title{Some Topics in Elementary Mathematics:\\Problems, Theories, Applications, \& Bridges to Advanced Mathematics}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng}
 \date{\today}
 
 \begin{document}
+\selectlanguage{english}
 \maketitle
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
@@ -42,8 +44,12 @@
 
 %------------------------------------------------------------------------------%
 
-\chapter*{Preface}
+\selectlanguage{vietnamese}
+\section*{Foreword}
 Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong Khoa học nói chung và Toán Cao Cấp nói riêng.
+
+\section*{Acknowledgment}
+Tài liệu này như là một lời tri ân của cá nhân tôi đến thầy cô Tổ Toán Trường Trung học Phổ Thông Chuyên Bến Tre, đặc biệt thầy Quí, thầy Liêm, thầy Huynh, cô An, cô Hạnh, etc.
 
 %------------------------------------------------------------------------------%
 
@@ -78,50 +84,11 @@ Một vài chủ đề trong Toán Sơ Cấp và ứng dụng (nếu có) trong 
 
 %------------------------------------------------------------------------------%
 
-\chapter{Combinatorics\texttt{/}Tổ Hợp}
+%\selectlanguage{english}
 
-\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 19, p. 6]
-	Prove that for any $n\in\mathbb{N}^\star$, a $2^n\times 2^n$ checkerboard with a $1\times 1$ corner square removed can be tiled by pieces of the form described in \cite[Fig. 2, p. 6]{Gelca_Andreescu2017} (3-cell $L$-shape)
-\end{problem}
+\part{Algebra}
 
-\section{Combinatorial Geometry\texttt{/}Hình Học Tổ Hợp}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 4, p. 3]
-	Let $\mathcal{F} = \{E_1,\ldots,E_m\}$ be a family of subsets with $n - 2$ elements of a set $S$ with $n$ elements, $n\ge 3$. Show that if the union of any 3 subsets from $\mathcal{F}$ is not equal to $S$, then the union of all subsets from $\mathcal{F}$ is different from $S$.
-\end{problem}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 10, p. 3]
-	Show that the interval $[0,1]$ cannot be partitioned into 2 disjoint sets $A$ and $B$ s.t. $B = A + a$ for some real number $a$.
-\end{problem}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, p. 4]
-	Finite many lines divide the plane into regions. Show that these regions can be colored by 2 colors in such a way that neighboring regions have different colors.
-\end{problem}
-
-\begin{proof}[Solution]
-	See, e.g., \cite[p. 4]{Gelca_Andreescu2017}.
-\end{proof}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 25, p. 7]
-	It is given a finite set $A$ of lines in a plane. It is known that, for some $k\in\mathbb{N}^\star$, $k\ge 3$, for every subset $B$ of $A$ consisting of $k^2 + 1$ lines there are $k$ points in the plane s.t. each line in $B$ passes through at least 1 of them. Prove that there are $k$ points in the plane s.t. every line in $A$ passes through at least 1 of them.
-\end{problem}
-
-\section{Combinatorial Set Theory\texttt{/}Lý Thuyết Tập Hợp Tổ Hợp}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, p. 12, 67th W.L. Putnam Mathematical Competition, 2006]
-	Prove that for every set $X = \{x_1,\ldots,x_n\}$ of $n$ real numbers, there exists a nonempty subset $S$ of $X$ and an integer $m$ s.t.
-	\begin{align*}
-		\left|m + \sum_{s\in S} s\right|\le\frac{1}{n + 1}.
-	\end{align*}
-\end{problem}
-
-\begin{proof}[Proof]
-	See, e.g., \cite[p. 12]{Gelca_Andreescu2017}.
-\end{proof}
-
-%------------------------------------------------------------------------------%
-
-\chapter{Elementary Algebra\texttt{/}Đại Số Sơ Cấp}
+\chapter{Elementary Algebra}
 
 \begin{quotation}
 	``One cannot escape the feeling $\ldots$ that these mathematical formulae have an independent existence and an intelligence of their own $\ldots$ that they are wiser than we are, wiser even than their discoverers $\ldots$ that we get more out of them that was originally put into them.'' -- Heinrich Hertz, quoted by F.J. Dyson
@@ -138,7 +105,7 @@ Our treatment of algebra continues with polynomials. We focus on quadratic polyn
 
 \paragraph{Note.} I really want to start with a section titled ``Identities \& Inequalities'', same as \cite[Sect. 2.1]{Gelca_Andreescu2017}, or ``Equations, Identities, \& Inequalities'' (or something similar), to emphasize their relationship, both supportive and opposite\texttt{/}contrary. However, the topic of inequalities will take several pages because it has been my favorite since I was in high school\footnote{I still like inequalities, and actually have to like it until now even I moved to advanced\texttt{/}professional mathematics instead of elementary mathematics as the old days. Of course, the topic of elementary inequality has to give its seat for more advanced forms of inequality, especially integral and functional inequalities in mathematical analysis.}. So I will separate this couple here and there is no apologize given, obviously.
 
-\section{Algebraic Identity\texttt{/}Đẳng Thức Đại Số}
+\section{Algebraic Identity}
 ``The scope of this section is to train algebraic skills. Our idea is to hide behind each problem an important algebraic identity.'' -- \cite[Subsect. 2.1.1, p. 25]{Gelca_Andreescu2017}
 
 \begin{problem}
@@ -204,7 +171,7 @@ Our treatment of algebra continues with polynomials. We focus on quadratic polyn
 	Substitute the 1st equation into the 2nd and then factorize.
 \end{proof}
 
-\section{Equation \& System of Equations\texttt{/}Phương Trình \& Hệ Phương Trình}
+\section{Equation \& System of Equations}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, p. 26, Titu Andreescu's]
 	Solve in $\mathbb{R}$ the system of equations
@@ -368,7 +335,7 @@ A polynomial having degree at most $n$ has at most $n$ roots.
 	Prove that $\sqrt{2} + \sqrt{3} + \sqrt{5}$ is an irrational number.
 \end{problem}
 
-\section{Inequality\texttt{/}Bất Đẳng Thức}
+\section{Inequality}
 Here we consider various types of inequalities according to their arguments, i.e., inequalities for integers, inequalities for reals, and those for complex numbers. Of course, the former involves number theory, while the latter two belong to elementary analysis and calculus.
 
 \subsection{Inequalities in $\mathbb{Z}$}
@@ -642,7 +609,7 @@ Exponentiation yields the following inequality.
 \begin{proof}[Proof]
 	See, e.g., \cite[pp. 38--39]{Gelca_Andreescu2017}.
 \end{proof}
-		
+
 \subsection{Selected Problems in Inequalities}
 ``Now we demonstrate a less frequently encountered form of induction that can be traced back to Cauchy's work, where it was used to prove the \textit{arithmetic mean-geometric mean inequality}.'' -- \cite[p. 9]{Gelca_Andreescu2017}
 
@@ -668,14 +635,22 @@ Exponentiation yields the following inequality.
 
 %------------------------------------------------------------------------------%
 
-\chapter{Elementary Calculus \& Elementary Analysis\texttt{/}Giải Tích Sơ Cấp}
+\part{Analysis}
+
+\chapter{Elementary Calculus \& Elementary Analysis}
 ``Analysis is also a heavily explored subject, and it is just as general as algebra: essentially, analysis is the study of functions and their properties. The more complicated the properties, the `higher' the analysis. The lowest form of analysis is studying functions satisfying simple algebraic properties$\ldots$'' -- \cite[Chap. 3, p. 36]{Tao2006}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 22, p. 7]
 	Prove that any function defined on the entire real axis can be written as the sum of 2 functions whose graphs admit centers of symmetry.
 \end{problem}
 
-\section{Functional Equation}
+%------------------------------------------------------------------------------%
+
+\chapter{Functional Equation}
+
+\section{Basic Terminologies}
+
+\section{Selected Problems in Functional Equation}
 \begin{problem}
 	Let $f:\mathbb{R}\to\mathbb{R}$ s.t.\footnote{``These problems are a good way to learn how to think mathematically, because there is only 1 or 2 pieces of data that can be used, so there should be a clear direction in which to go. It is sort of a `pocket mathematics'’, where instead of the 3 dozen axioms and countless thousands of theorems, one only has a handful of `axioms' (i.e. data) to use. And yet, it still has its surprises.'' -- \cite[Chap. 3, p. 36]{Tao2006}} $f$ is continuous, $f(0) = 1$, and
 	\begin{align*}
@@ -775,15 +750,75 @@ Exponentiation yields the following inequality.
 	\end{align*}
 \end{problem}
 
+\begin{problem}[\cite{Andreescu_Mortici_Tetiva2017}, Prob. 2, p. 2]
+	Determine all monotone functions $f:\mathbb{N}^\star\to\mathbb{R}$ s.t. $f(xy) = f(x) + f(y)$ for all $x,y\in\mathbb{N}^\star$.
+\end{problem}
+
+\begin{proof}[Solution]
+	See, e.g., \cite[pp. 2--3]{Andreescu_Mortici_Tetiva2017}.
+\end{proof}
+
 %------------------------------------------------------------------------------%
 
-\chapter{Elementary\texttt{/}Euclidean Geometry\texttt{/}Hình Học Sơ Cấp}
+\part{Calculus}
+
+%------------------------------------------------------------------------------%
+
+\part{Combinatorics}
+
+\chapter{Combinatorics}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 19, p. 6]
+	Prove that for any $n\in\mathbb{N}^\star$, a $2^n\times 2^n$ checkerboard with a $1\times 1$ corner square removed can be tiled by pieces of the form described in \cite[Fig. 2, p. 6]{Gelca_Andreescu2017} (3-cell $L$-shape)
+\end{problem}
+
+\section{Combinatorial Geometry}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 4, p. 3]
+	Let $\mathcal{F} = \{E_1,\ldots,E_m\}$ be a family of subsets with $n - 2$ elements of a set $S$ with $n$ elements, $n\ge 3$. Show that if the union of any 3 subsets from $\mathcal{F}$ is not equal to $S$, then the union of all subsets from $\mathcal{F}$ is different from $S$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 10, p. 3]
+	Show that the interval $[0,1]$ cannot be partitioned into 2 disjoint sets $A$ and $B$ s.t. $B = A + a$ for some real number $a$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 4]
+	Finite many lines divide the plane into regions. Show that these regions can be colored by 2 colors in such a way that neighboring regions have different colors.
+\end{problem}
+
+\begin{proof}[Solution]
+	See, e.g., \cite[p. 4]{Gelca_Andreescu2017}.
+\end{proof}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 25, p. 7]
+	It is given a finite set $A$ of lines in a plane. It is known that, for some $k\in\mathbb{N}^\star$, $k\ge 3$, for every subset $B$ of $A$ consisting of $k^2 + 1$ lines there are $k$ points in the plane s.t. each line in $B$ passes through at least 1 of them. Prove that there are $k$ points in the plane s.t. every line in $A$ passes through at least 1 of them.
+\end{problem}
+
+\section{Combinatorial Set Theory}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, p. 12, 67th W.L. Putnam Mathematical Competition, 2006]
+	Prove that for every set $X = \{x_1,\ldots,x_n\}$ of $n$ real numbers, there exists a nonempty subset $S$ of $X$ and an integer $m$ s.t.
+	\begin{align*}
+		\left|m + \sum_{s\in S} s\right|\le\frac{1}{n + 1}.
+	\end{align*}
+\end{problem}
+
+\begin{proof}[Proof]
+	See, e.g., \cite[p. 12]{Gelca_Andreescu2017}.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\part{Geometry}
+
+\chapter{Elementary\texttt{/}Euclidean Geometry}
+
 \begin{quotation}
 	``Archimedes will be remembered when Aeschylus is forgotten, because languages die and mathematical ideas do not.'' -- G. H. Hardy, `\textit{A Mathematical Apology}'
 \end{quotation}
 ``Euclidean geometry was the 1st branch of mathematics to be treated in anything like the modern fashion (with postulates, definitions, theorems, and so forth); and even now geometry is conducted in a very logical, tightly knit fashion. There are several basic results which can be used to systematically attack and resolve questions about geometrical objects and ideas. This idea can be taken to extremes with coordinate geometry, which transforms points, lines, triangles, and circles into a quadratic mess of coordinates, crudely converting geometry into algebra. But the true beauty of geometry is in how a non-obvious looking fact can be shown to be undeniably true by the repeated application of obvious facts.'' -- \cite[Chap. 4, p. 49]{Tao2006}
 
-\section{2D Geometry\texttt{/}Hình Học Phẳng}
+\section{2D Geometry}
 \begin{theorem}[Thales' theorem]
 	The angle subtended by a diameter is a right angle.
 \end{theorem}
@@ -793,7 +828,7 @@ Exponentiation yields the following inequality.
 	$ABC$ is a triangle inscribed in a circle. The angle bisectors of $A,B,C$ meet the circle at $D,E,F$, respectively. Show that $AD\bot EF$.
 \end{problem}
 
-\subsection{Triangle\texttt{/}Tam Giác}
+\subsection{Triangle}
 
 \paragraph{Basic.}
 \begin{enumerate}
@@ -841,13 +876,13 @@ Exponentiation yields the following inequality.
 	\end{align*}
 \end{problem}
 
-\subsection{Quadrilateral\texttt{/}Tứ Giác}
+\subsection{Quadrilateral}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 124, p. 37]
 	Let $ABCD$ be a convex cyclic quadrilateral. Prove that $|AB - CD| + |AD - BC|\ge 2|AC - BD|$.
 \end{problem}
 
-\subsection{Polygon\texttt{/}Đa Giác}
+\subsection{Polygon}
 
 \begin{definition}[$n$-gon]
 	An \emph{$n$-gon} is a polygon with $n$ sides.
@@ -865,7 +900,29 @@ Exponentiation yields the following inequality.
 	Prove that any polygon (convex or not) can be dissected into triangles by interior diagonals.
 \end{problem}
 
-\section{3D Geometry\texttt{/}Hình Học Không Gian}
+\begin{problem}[\cite{Andreescu_Mortici_Tetiva2017}, Prob. 1, p. 1]
+	The midpoints of the bases of a trapezoid, the point at which its lateral sides meet, \& the point of intersection of its diagonals are 4 collinear points.
+\end{problem}
+
+\begin{proof}[Proof]
+	Hint: Use Ceva's \& Thales' interception theorems. See, e.g., \cite[pp. 1--2]{Andreescu_Mortici_Tetiva2017}.
+\end{proof}
+
+\begin{theorem}[Ceva's theorem]
+	***
+\end{theorem}
+
+\begin{theorem}[Thales's interception theorem]
+	***
+\end{theorem}
+
+\begin{problem}[\cite{Andreescu_Mortici_Tetiva2017}, p. 2]
+	If the midpoints of 2 opposite sides of a quadrilateral \& the intersection point of its diagonals are 3 collinear points, then the quadrilateral is actually a trapezoid.
+\end{problem}
+``As we said, this is a well-known theorem in elementary Euclidean geometry, so why bother to mention it here? Well, this is because we find in it a very good example of a problem that needs a \textit{(mathematical) bridge}. Namely, you noticed that the problem statement is very easy to understand even for a person who only has a very humble background in geometry -- but that person wouldn't be able to \textit{solve} the problem. You could be familiar with basic notions as collinearity \& parallelism, you could know such things as properties of angles determined by 2 parallel lines \& a transversal, but any attempt to solve the problem with such tools will fail. One needs much more in order to achieve such a goal, namely, one needs a \textit{new theory} -- we are talking about the theory of similarity. In other words, if you want to solve this problem, you have to raise your knowledge to new facts that are not mentioned in its statement. You need to throw a \textit{bridge} from the narrow realm where you are stuck to a larger extent.''
+
+
+\section{3D Geometry}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 5, p. 3]
 	Every point of the 3D space is colored red, green, or blue. Prove that 1 of the colors attains all distances, meaning that any positive real number represents the distance between 2 points of this color.
@@ -877,6 +934,64 @@ Exponentiation yields the following inequality.
 
 %------------------------------------------------------------------------------%
 
+\part{Number Theory}
+
+%------------------------------------------------------------------------------%
+
+\part{Probability}
+
+%------------------------------------------------------------------------------%
+
+\part{Statistics}
+
+%------------------------------------------------------------------------------%
+
+\part{Trigonometry}
+
+\chapter{Trigonometry}
+
+\section{Trigonometrical Inequality}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 13, p. 6]
+	Prove thta $|\sin nx|\le n|\sin x|$, for all $x\in\mathbb{R}$, $n\in\mathbb{N}^\star$.
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 14, p. 6]
+	Prove that for any $x_1,\ldots,x_n\in\mathbb{R}$, $n\ge 1$,
+	\begin{align*}
+		\sum_{i=1}^n |\sin x_i| + \left|\cos\left(\sum_{i=1}^n x_i\right)\right|\ge 1.
+	\end{align*}
+\end{problem}
+
+\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 118, p. 35]
+	Prove that
+	\begin{align*}
+		\frac{\sin^3 a}{\sin b} + \frac{\cos^3 a}{\cos b}\ge\sec(a - b),\ \forall a,b\in\left(0,\frac{\pi}{2}\right).
+	\end{align*}
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+
+
+%------------------------------------------------------------------------------%
+
+
+
+%------------------------------------------------------------------------------%
+
+
+
+%------------------------------------------------------------------------------%
+
+
+
+%------------------------------------------------------------------------------%
+
+
+
+%------------------------------------------------------------------------------%
+
 \chapter{Linear Algebra}
 
 \begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 87, p. 27]
@@ -885,7 +1000,7 @@ Exponentiation yields the following inequality.
 
 %------------------------------------------------------------------------------%
 
-\chapter{Number Theory\texttt{/}Số Học}
+\chapter{Number Theory}
 
 \paragraph{Notations.} The \textit{set of nonnegative integers}\texttt{/}\textit{natural numbers with zero}\texttt{/}\textit{naturals with zero} is denoted by
 \begin{align*}
@@ -1100,41 +1215,26 @@ A typical technique of proof in number theory: prove by the \textit{principle of
 
 %------------------------------------------------------------------------------%
 
-\chapter{Probability\texttt{/}Xác Suất}
+\chapter{Probability}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Statistics\texttt{/}Thống Kê}
+\chapter{Statistics}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Trigonometry\texttt{/}Lượng Giác}
 
-\section{Trigonometrical Inequality}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 13, p. 6]
-	Prove thta $|\sin nx|\le n|\sin x|$, for all $x\in\mathbb{R}$, $n\in\mathbb{N}^\star$.
-\end{problem}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 14, p. 6]
-	Prove that for any $x_1,\ldots,x_n\in\mathbb{R}$, $n\ge 1$,
-	\begin{align*}
-		\sum_{i=1}^n |\sin x_i| + \left|\cos\left(\sum_{i=1}^n x_i\right)\right|\ge 1.
-	\end{align*}
-\end{problem}
-
-\begin{problem}[\cite{Gelca_Andreescu2017}, Prob. 118, p. 35]
-	Prove that
-	\begin{align*}
-		\frac{\sin^3 a}{\sin b} + \frac{\cos^3 a}{\cos b}\ge\sec(a - b),\ \forall a,b\in\left(0,\frac{\pi}{2}\right).
-	\end{align*}
-\end{problem}
 
 %------------------------------------------------------------------------------%
 
 \chapter{Miscellaneous}
 
-\section{Discrete Mathematics\texttt{/}Toán Rời Rạc}
+\section{Discrete Mathematics}
+
+\section{Mathematical Bridges}
+``Many breakthroughs\footnote{\textbf{breakthrough} [n] an important development or discovery that helps people to achieve or understand something.} in research \&, more generally, solutions to problems come as the result of someone making \textit{connections}. These connections are sometimes quite subtle\footnote{\textbf{subtle} [a] \textbf{1.} (\textit{often approving}) (especially of a change or difference) not very obvious; not easy to notice; \textbf{2.} (of a person or their behavior) behaving in a clever way \& using indirect methods in order to achieve something; \textbf{3.} showing a good understanding of things that are not obvious to other people.}, \& at 1st blush\footnote{\textbf{blush} [v] \textbf{1.} [intransitive] to become red in the face because you are embarrassed or ashamed, \textsc{synonym}: \textbf{go red}; \textbf{2.} [transitive] \textbf{blush to do something} to be ashamed or embarrassed about something; [n] \textbf{1.} [countable] the red color that spreads over your face when you are embarrassed or ashamed; \textbf{2.} (\textit{North American English}) [uncountable, countable] a colored cream or powder that some people put on their cheeks ($=$ on their faces below the eyes) to give them more color.}, they may not appear to be plausible\footnote{\textbf{plausible} [a] (of an excuse or explanation) reasonable \& likely to be true; \textsc{opposite}: \textbf{implausible}.} candidates\footnote{\textbf{candidate} [n] \textbf{1.} a person who is trying to be elected or is applying for a job; \textbf{2.} \textbf{candidate (for something)} a person or thing that is considered suitable for something or that is likely to be something or get something; in biochemistry, \textbf{candidate gene} is a gene that is suspected of being involved in the expression of a trait e.g. a disease; \textbf{3.} (\textit{British English}) a person taking an exam.} for part of the solution to a difficult problem. In this book, we  think of these connections as \textit{bridges}. A bridge enables the possibility of a solution to a problem that may have a very elementary statement but whose solution may involve more complicated realms\footnote{\textbf{realm} [n] \textbf{1.} an area of activity, interest or knowledge; \textbf{2.} (\textit{formal}) a country ruled by a king or queen, \textsc{synonym}: \textbf{kingdom}.} that may not be directly indicated by the problem statement. Bridges extend \& build on existing ideas \& provide new knowledge \& strategies for the solver.'' [$\ldots$]
+
+\cite[Chap. 1]{Andreescu_Mortici_Tetiva2017} ``explores the metaphor\footnote{\textbf{metaphor} [n] [countable, uncountable] \textbf{1.} \textbf{metaphor (for something)} something that represents another situations or idea; \textbf{2.} a word or phrase used to describe somebody\texttt{/}something else, in a way that is different from its normal use, in order to show that the 2 things have the same qualities \& to make the description more powerful; the use of such words \& phrases.} of bridges by presenting a myriad\footnote{\textbf{myriad} [a] (\textit{literary}) extremely large in number.} of problems that span a diverse\footnote{\textbf{diverse} [a] very different from each other; containing people or things of various kinds.} set of mathematical fields. In subsequent chapters, it is left to the \textit{reader} to decide what constitutes\footnote{\textbf{constitute} [v] \textbf{1.} \textit{linking verb} (not used in the progressive tenses) \textbf{$+$ noun} to be considered to be something; \textbf{2.} \textit{linking verb} (not used in the progressive tenses) \textbf{$+$ noun} to be the parts that together form something, \textsc{synonym}: \textbf{make something up}; \textbf{3.} [transitive, usually passive] \textbf{(be) $\ldots$ constituted} to form a group legally or officially, \textsc{synonym}: \textbf{establish, set something up}.} a bridge. Indeed, different people may well have different opinions of whether something is a (useful) bridge or not.'' [$\ldots$] ``Bridges can be found everywhere -- \& not just in mathematics.'' -- \cite[Preface, p. v]{Andreescu_Mortici_Tetiva2017}
 
 \section{Strategies in Problem Solving}
 \begin{quotation}
@@ -1283,16 +1383,24 @@ The prefaces of, as the whole book, \cite{Tao2006} are also very pleasant to rea
 
 %------------------------------------------------------------------------------%
 
+\selectlanguage{vietnamese}
 \begin{thebibliography}{99}
 	\bibitem[AoPS]{AoPS} \href{https://artofproblemsolving.com/}{Art of Problem Solving} (AoPS).
 	
 	\bibitem[MSE]{MSE} \href{https://math.stackexchange.com/}{StackExchange\texttt{/}Mathematics}.
+	
+	\bibitem[NQBH]{NQBH} \href{https://github.com/NQBH/hobby/tree/master/elementary_math}{Nguyễn Quản Bá Hồng's Elementary Mathematics}.
+	\begin{itemize}
+		\item Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_math/grade_6/NQBH_elementary_math_grade_6.pdf}{\textit{Elementary Mathematics}\texttt{/}\textit{Grade 6}}. Mar 2022--now.
+	\end{itemize}
 	
 	\bibitem[TerryTao]{TerryTao} \href{https://terrytao.wordpress.com}{Terence Tao's blog}.
 	\begin{itemize}
 		\item Terence Tao. \href{https://terrytao.wordpress.com/books/solving-mathematical-problems-a-personal-perspective/}{\textit{Solving Mathematical Problems: A Personal Perspective}}.
 	\end{itemize}
 \end{thebibliography}
+
+\selectlanguage{english}
 
 \printbibliography[heading=bibintoc]
 
