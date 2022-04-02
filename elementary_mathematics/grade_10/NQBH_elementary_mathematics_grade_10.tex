@@ -375,7 +375,7 @@ Trong bảng, ký hiệu $||$ chỉ giá trị lượng giác tương ứng khô
 	 	S = pr = \frac{(a + b + c)r}{2} = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{1}{2}ab\sin C = \frac{abc}{4R}.
 	 \end{align*}
 \end{theorem}
-trong đó 2 đẳng thức đầu tiên nghĩa là: Diện tích của 1 tam giác bằng tích nửa chu vi \& bán kính đường tròn nội tiếp của tam giác đó.
+Trong đó 2 đẳng thức đầu tiên nghĩa là: Diện tích của 1 tam giác bằng tích nửa chu vi \& bán kính đường tròn nội tiếp của tam giác đó.
 
 \begin{question}
 	``Ta đã biết tính $\cos A$ theo độ dài các cạnh của tam giác $ABC$. Liệu $\sin A$ \& diện tích $S$ có tính được theo độ dài các cạnh của tam giác $ABC$ hay không?
@@ -393,9 +393,54 @@ trong đó 2 đẳng thức đầu tiên nghĩa là: Diện tích của 1 tam gi
 \section{Vector}
 ``1 số đại lượng như lực, vận tốc cũng được đặc trưng bởi 2 yếu tố là độ lớn \& hướng.''
 
-\noindent\textbf{Nội dung.} ``\ldots xây dựng 1 đối tượng toán học, được gọi là \textit{vector}, mà ta có thể dùng nó để biểu diễn các đại lượng nói trên. Vector còn được sử dụng để xây dựng các khái niệm toán học, là công cụ để giải quyết nhiều bài toán \& góp phần vào việc hình thành \& phát triển năng lực tư duy tuyến tính\footnote{NQBH: ``năng lực tư duy tuyến tính'' là gì? ``Năng lực tư duy phi tuyến''?} cho người học.''
+\noindent\textbf{Nội dung.} ``\ldots xây dựng 1 đối tượng toán học, được gọi là \textit{vector}, mà ta có thể dùng nó để biểu diễn các đại lượng nói trên. Vector còn được sử dụng để xây dựng các khái niệm toán học, là công cụ để giải quyết nhiều bài toán \& góp phần vào việc hình thành \& phát triển năng lực tư duy tuyến tính\footnote{NQBH: ``Năng lực tư duy tuyến tính'' là gì? Có khái niệm ``Năng lực tư duy phi tuyến'' không? Nếu có thì sự khác biệt mấu chốt giữa chúng là gì? Có lẽ đây là những khái niệm cơ bản trong chuyên ngành Giáo dục (Education) mà tôi không biết. Sẽ bổ sung sau ở đây nếu tôi quan tâm.} cho người học.''
+
+\begin{remark}
+	Về phương diện nghiên cứu Toán Cao Cấp, tôi vẫn \& phải sử dụng vector rất rất nhiều, bởi vì các chuyên ngành chính của tôi là Phương Trình Vi Phân Đạo Hàm Riêng\emph{\texttt{/}}Partial Differential Equations (abbr., PDEs), \& Toán Lý\emph{\texttt{/}}Mathematical Physics, đặc biệt là Cơ Học Chất Lỏng (Tính Toán)\emph{\texttt{/}}(Computational) Fluid Dynamics (also, Hydrodynamics). Các đại lượng vật lý mà tôi phải sử dụng vector để mô tả là vận tốc (velocity) ${\bf u}$ của dòng chất lỏng (e.g., nước, khí), độ xoáy (vorticity) $\boldsymbol{\omega}$, etc.
+	
+	Hơn nữa, trong Toán Cao Cấp, thay vì sử dụng ký hiệu mũi tên $\vec{u}$ như các nhà Vật Lý (physicists), chuyên gia Cơ học, \& các kỹ sư (engineers) sử dụng, đa số các nhà Toán học (mathematicians) thường dùng ký hiệu in đậm ${\bf u}$t để ám chỉ vector.
+\end{remark}
 
 \subsection{Các Khái Niệm Mở Đầu}
+
+\begin{question}
+	``Nhiệt độ \& gió là 2 yếu tố luôn cùng được đề cập trong các bản tin dự báo thời tiết. Tuy nhiên, nhiêt độ là đại lượng chỉ có độ lớn, còn gió có cả hướng \& độ lớn. Với 1 đơn vị đo, ta có thể dùng số để biểu diễn nhiêt độ. Đối với các đại lượng gồm hướng \& độ lớn như vận tốc gió thì sao? Ta có thể dùng đối tượng toán học nào để biểu diễn chúng?''
+\end{question}
+
+\subsubsection{Khái niệm vector}
+
+\begin{definition}[Vector, độ dài của vector]
+	\emph{Vector} là 1 đoạn thẳng có hướng, i.e., trong 2 điểm mút của đoạn thẳng, đã chỉ rõ điểm đầu, điểm cuối. \emph{Độ dài của vector} là khoảng cách giữa điểm đầu \& điểm cuối của vector đó.
+\end{definition}
+
+\begin{remark}
+	Vector có điểm đầu $A$ \& điểm cuối $B$ được ký hiệu là $\vec{AB}$, đọc là \emph{vector $AB$}. Để vẽ 1 vector, ta vẽ đoạn thẳng nối điểm đầu \& điểm cuối của nó, rồi đánh dấu mũi tên ở điểm cuối. Vector còn được ký hiệu là $\vec{a},\vec{b},\vec{x},\vec{y},\ldots$. Độ dài của vector $\overrightarrow{AB},\vec{a}$ tương ứng được ký hiệu là $|\overrightarrow{AB}|$, $|\vec{a}|$.
+\end{remark}
+
+\subsubsection{2 Vector cùng phương, cùng hướng, bằng nhau}
+
+\begin{definition}[Giá của vector, 2 vector cùng phương]
+	Đường thẳng đi qua điểm đầu \& điểm cuối của 1 vector được gọi là \emph{giá} của vector đó. 2 vector được gọi là \emph{cùng phương} nếu chúng có giá song song hoặc trùng nhau.
+\end{definition}
+``Đối với 2 vector cùng phương thì chúng \textit{cùng hướng} hoặc \textit{ngược hướng}. Chỉ khi 2 vector cùng phương, ta mới nói tới chúng cùng hướng hay ngược hướng.'' -- \cite[p. 48]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+
+\begin{definition}
+	2 vector $\vec{a}$ \& $\vec{b}$ được gọi là \emph{bằng nhau}, ký hiệu $\vec{a} = \vec{b}$, nếu chúng có cùng độ dài \& cùng hướng.
+\end{definition}
+
+\begin{remark}
+	``Ta cũng xét các vector có điểm đầu \& điểm cuối trùng nhau (e.g., $\overrightarrow{AA},\overrightarrow{BB}$), được gọi là các \emph{vector-không}. Ta quy ước vector-không có độ dài bằng 0, cùng hướng (do đó cùng phương) với mọi vector. Các vector-không có cùng độ dài \& cùng hướng nên bằng nhau \& được ký hiệu chung là $\vec{0}$. Với mỗi điểm $O$ \& vector $\vec{a}$ cho trước, có duy nhất điểm $A$ sao cho $\overrightarrow{OA} = \vec{a}$.'' -- \cite[p. 48]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\end{remark}
+
+\begin{remark}
+	``3 điểm $A,B,C$ thẳng hàng khi \& chỉ khi $\overrightarrow{AB},\overrightarrow{BC}$ cùng phương.'' ``Ta có thể dùng ngôn ngữ vector để biểu thị 1 số quan hệ hình học.'' -- \cite[p. 49]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\end{remark}
+
+\begin{remark}
+	``Ta có thể dùng vector để biểu diễn các đại lượng như lực, vận tốc, gia tốc. Hướng của vector chỉ hướng của đại lượng, độ dài của vector thể hiện cho độ lớn của đại lượng \& được lấy tỷ lệ với độ lớn của đại lượng.'' -- \cite[p. 49]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\end{remark}
+
+\subsection{Tổng \& Hiệu của 2 Vector}
 
 %------------------------------------------------------------------------------%
 
