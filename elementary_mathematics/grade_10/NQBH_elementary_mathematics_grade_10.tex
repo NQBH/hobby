@@ -104,7 +104,7 @@ Về nguyên tắc cá nhân của tôi trong việc dạy \& học Toán Sơ C�
 \begin{remark}
 	``Mệnh đề đảo của 1 mệnh đề đúng không nhất thiết là đúng.'' -- \cite[p. 9]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1} I.e., $(P\Rightarrow Q)\not\Leftrightarrow(Q\Rightarrow P)$.
 \end{remark}
-Dùng biểu đồ Venn để illustrate.
+Dùng biểu đồ Venn để minh họa.
 
 \subsubsection{Mệnh đề tương đương}
 
@@ -272,7 +272,13 @@ Nếu $c\ne 0$, ta thường chọn $M_0$ chính là gốc tọa độ $(0,0)$. 
 \subsubsection{Giá trị lượng giác của 1 góc}
 ``Trong mặt phẳng tọa độ $Oxy$, nửa đường tròn tâm $O$, bán kính $R = 1$ nằm phía trên trục hoành được gọi là \textit{nửa đường tròn đơn vị}. Cho trước 1 góc $\alpha\in[0^\circ,180^\circ]$. Khi đó, có duy nhất điểm $M(x_0,y_0)$ trên nửa đường tròn đơn vị nói trên để $\widehat{xOM} = \alpha$.'' [$\ldots$] ``Mở rộng khái niệm tỷ số lượng giác của 1 góc nhọn cho 1 góc bất kỳ $\in[0^\circ,180^\circ]$, ta có định nghĩa sau: Với mỗi góc $\alpha\in[0^\circ,180^\circ]$, gọi $M(x_0,y_0)$ là điểm trên nửa đường tròn đơn vị sao cho $\widehat{xOM} = \alpha$. Khi đó:
 \begin{itemize}
-	\item \textit{sin} của góc $\alpha$ là tung độ $y_0$ của điểm $M$, được ký hiệu là $\sin\alpha$;
+	\item \textit{sin}\footnote{Ở đây, \textit{sin} là viết tắt của \textit{sine} trong Toán học, i.e.,
+		
+		 \textbf{sin} [abbr.] (\textit{mathematics}) (in writing) sine.
+		 
+		 Cần phân biệt $\sin$ này với từ \textit{sin} trong tiếng Anh:
+	
+	\textbf{sin} [n] \textbf{1.} [countable] a crime against God or against a religious or moral law; \textbf{2.} [uncountable] the act of breaking a religious or moral law.} của góc $\alpha$ là tung độ $y_0$ của điểm $M$, được ký hiệu là $\sin\alpha$;
 	\item \textit{côsin} của góc $\alpha$ là hoành độ $x_0$ của điểm $M$, được ký hiệu là $\cos\alpha$;
 	\item Khi $\alpha\ne 90^\circ$ (hay là $x_0\ne 0$), \textit{tang} của $\alpha$ là $\frac{y_0}{x_0}$, được ký hiệu là $\tan\alpha$;
 	\item Khi $\alpha\ne 0^\circ$ \& $\alpha\ne 180^\circ$ (hay là $y_0\ne 0$), \textit{côtang} của $\alpha$ là $\frac{x_0}{y_0}$, được ký hiệu là $\cot\alpha$.
@@ -281,16 +287,119 @@ Từ định nghĩa trên, ta có:
 \begin{align*}
 	\tan\alpha = \frac{\sin\alpha}{\cos\alpha},\ \cot\alpha = \frac{\cos\alpha}{\sin\alpha}\ (\alpha\ne 0^\circ,\,\alpha\ne 180^\circ),\ \tan\alpha = \frac{1}{\cot\alpha}\ (\alpha\notin\{0^\circ,90^\circ,180^\circ\}).
 \end{align*}
--- \cite[p. 34]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+Sau đây là bảng giá trị lượng giác (GTLG) của 1 số góc đặc biệt:
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		& $0^\circ$ & $30^\circ$ & $45^\circ$ & $60^\circ$ & $90^\circ$ & $120^\circ$ & $135^\circ$ & $150^\circ$ & $180^\circ$ \\
+		\hline
+		$\sin\alpha$ & 0 & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & 1 & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 \\
+		\hline
+		$\cos\alpha$ & 1 & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 & $-\frac{1}{2}$ & $-\frac{\sqrt{2}}{2}$ & $-\frac{\sqrt{3}}{2}$ & $-1$ \\
+		\hline
+		$\tan\alpha$ & 0 & $\frac{\sqrt{3}}{3}$ & 1 & $\sqrt{3}$ & $||$ & $-\sqrt{3}$ & $-1$ & $-\frac{\sqrt{3}}{3}$ & 0 \\
+		\hline
+		$\cot\alpha$ & $||$ & $\sqrt{3}$ & 1 & $\frac{\sqrt{3}}{3}$ & 0 & $-\frac{\sqrt{3}}{3}$ & $-1$ & $-\sqrt{3}$ & $||$ \\
+		\hline
+	\end{tabular}
+\end{table}
+Trong bảng, ký hiệu $||$ chỉ giá trị lượng giác tương ứng không xác định.'' -- \cite[p. 34]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+
+``Ta có thể sử dụng máy tính cầm tay để tính (đúng\texttt{/}gần đúng) các giá trị lượng giác của 1 góc \& tính góc khi biết giá trị lượng giác của góc đó. E.g., với 1 loại máy tính cầm tay, sau khi mở máy ta bấm phím \fbox{\texttt{Shift}} \fbox{\texttt{MODE}} (SETUP) rồi bấm phím \fbox{\texttt{3}} để chọn đơn vị đo góc là ``độ'' (\texttt{3: Deg}\footnote{\textbf{deg} [abbr.] degree.}). Sau đó tính giá trị lượng giác của góc hoặc tính góc khi biết giá trị lượng giác của góc đó. [$\ldots$]'' Xem ví dụ \& thao tác bấm phím ở \cite[p. 35]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}.
+
+\begin{remark}
+	``Khi tìm $x$ biết $\sin x$, máy tính chỉ đưa ra giá trị $x\le 90^\circ$. Muốn tìm $x$ khi biết $\cos x$, $\tan x$, ta cũng làm tương tự như trên, chỉ thay phím \fbox{\texttt{sin}} tương ứng bởi phím \fbox{\texttt{cos}}, \fbox{\texttt{tan}}.'' -- \cite[p. 35]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\end{remark}
+
+\subsubsection{Mối quan hệ giữa các giá trị lượng giác của 2 góc bù nhau}
+
+\begin{proposition}
+	Đối với 2 góc bù nhau, $\alpha\in[0^\circ,180^\circ]$ \& $180^\circ - \alpha$, ta có: $\sin(180^\circ - \alpha) = \sin\alpha$, $\cos(180^\circ - \alpha) = -\cos\alpha$, $\tan(180^\circ - \alpha) = -\tan\alpha$, $(\alpha\ne 90^\circ$), $\cot(180^\circ - \alpha) = -\cot\alpha$ ($\alpha\in(0^\circ,180^\circ)$).
+\end{proposition}
+``2 góc bù nhau có sin bằng nhau; có côsin, tang, côtang đối nhau. 2 góc phụ nhau có sin góc này bằng côsin góc kia, tang góc này bằng côtang góc kia.'' -- \cite[p. 36]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+
+\subsection{Hệ Thức Lượng trong Tam Giác}
+
+\subsubsection{Định Lý Côsin}
+
+\begin{question}
+	``Có hay không, 1 kiểu định lý Pythagore cho tam giác tùy ý?'' -- \cite[p. 38]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\end{question}
+``Đối với tam giác $ABC$, ta thường ký hiệu $A,B,C$ là các \textit{góc} của tam giác tại đỉnh tương ứng; $a,b,c$ tương ứng là độ dài của các cạnh đối diện với đỉnh $A,B,C$; $p$ (abbr., perimeter) là \textit{nửa chu vi}; $S$ là \textit{diện tích}; $R,r$ tương ứng là bán kính đường tròn ngoại tiếp, nội tiếp tam giác.'' -- \cite[p. 38]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+
+\begin{theorem}[Cosin theorem]
+	Với tam giác $ABC$:
+	\begin{align*}
+		a^2 = b^2 + c^2 - 2bc\cos A,\ b^2 = c^2 + a^2 - 2ca\cos B,\ c^2 = a^2 + b^2 - 2ab\cos C.
+	\end{align*}
+\end{theorem}
+Định lý Pythagore là 1 trường hợp đặc biệt của Định lý côsin. Thật vậy, w.l.o.g., giả sử $A = 90^\circ$, đẳng thức đầu tiên của định lý cosin trở thành $a^2 = b^2 + c^2 - 2bc\cos 90^\circ = b^2 + c^2$, i.e., định lý Pythagore.
+
+\begin{corollary}
+	Với tam giác $ABC$,
+	\begin{align*}
+		\cos A = \frac{b^2 + c^2 - a^2}{2bc},\ \cos B = \frac{c^2 + a^2 - b^2}{2ca},\ \cos C = \frac{a^2 + b^2 - c^2}{2ab}.
+	\end{align*}
+\end{corollary}
+
+\subsubsection{Định lý sin}
+
+\begin{theorem}[Sin theorem]
+	Với tam giác $ABC$:
+	\begin{align*}
+		\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R. 
+	\end{align*}
+\end{theorem}
+
+\subsubsection{Giải tam giác \& ứng dụng thực tế}
+
+\begin{definition}[Giải tam giác]
+	Việc tính độ dài các cạnh \& số đo các góc của 1 tam giác khi biết 1 số yếu tố của tam giác đó được gọi là \emph{giải tam giác}.
+\end{definition}
+
+\begin{remark}
+	``Áp dụng các Định lý côsin, sin \& sử dụng máy tính cầm tay, ta có thể tinh (gần đúng) các cạnh \& các góc của 1 tam giác trong các trường hợp sau: (i) Biết 2 cạnh \& góc xen giữa; (ii) Biết 3 cạnh; (iii) Biết 1 cạnh \& 2 góc kề.
+\end{remark}
+
+\subsubsection{Công thức tính diện tích tam giác}
+
+\begin{question}
+	``Ta đã biết tính diện tích 1 tam giác theo chiều cao \& độ dài cạnh đáy tương ứng. Liệu còn công thức nào khác để tính diện tích tam giác hay không?'' -- \cite[p. 41]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\end{question}
+
+\begin{theorem}[Công thức tính diện tích tam giác]
+	 Diện tích tam giác $ABC$:
+	 \begin{align*}
+	 	S = pr = \frac{(a + b + c)r}{2} = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{1}{2}ab\sin C = \frac{abc}{4R}.
+	 \end{align*}
+\end{theorem}
+trong đó 2 đẳng thức đầu tiên nghĩa là: Diện tích của 1 tam giác bằng tích nửa chu vi \& bán kính đường tròn nội tiếp của tam giác đó.
+
+\begin{question}
+	``Ta đã biết tính $\cos A$ theo độ dài các cạnh của tam giác $ABC$. Liệu $\sin A$ \& diện tích $S$ có tính được theo độ dài các cạnh của tam giác $ABC$ hay không?
+\end{question}
+
+\begin{theorem}[Heron formula]
+	Với tam giác $ABC$, $S = \sqrt{p(p - a)(p - b)(p - c)}$.
+\end{theorem}
+``Hướng S$\alpha^\circ$E là hướng tạo với hướng nam góc $\alpha^\circ$ \& tạo với hướng đông góc $90^\circ - \alpha^\circ$. Các hướng S$\alpha^\circ$W, N$\alpha^\circ$E, N$\alpha^\circ$W cũng được định nghĩa 1 cách tương tự. N (North): hướng bắc, S (South): hướng nam, W (West): hướng tây, E (East): hướng đông.'' -- \cite[p. 42]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+
+``Heron (Heron of Alexandria) là 1 nhà phát minh, nhà toán học Hy Lạp, sống vào khoảng thế kỷ I. Mặc dù cỗ máy với động cơ hơi nước đầu tiên trên thế giới ra đời ở thế kỷ XVIII -- 1 sự kiện quan trọng góp phần tạo nên cuộc cách mạng công nghiệp lần thứ nhất, nhưng chính Heron là người đầu tiên mô tả 1 mô hình đơn giản cho phép biến hơi nước thành chuyển động quay. Trong toán học, Heron mô tả cách tính diện tích của các đa giác đều từ 3--12 cạnh, diện tích 1 số mặt \& thể tích 1 số hình trong không gian.'' -- \cite[p. 43]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
 
 %------------------------------------------------------------------------------%
 
 \section{Vector}
+``1 số đại lượng như lực, vận tốc cũng được đặc trưng bởi 2 yếu tố là độ lớn \& hướng.''
+
+\noindent\textbf{Nội dung.} ``\ldots xây dựng 1 đối tượng toán học, được gọi là \textit{vector}, mà ta có thể dùng nó để biểu diễn các đại lượng nói trên. Vector còn được sử dụng để xây dựng các khái niệm toán học, là công cụ để giải quyết nhiều bài toán \& góp phần vào việc hình thành \& phát triển năng lực tư duy tuyến tính\footnote{NQBH: ``năng lực tư duy tuyến tính'' là gì? ``Năng lực tư duy phi tuyến''?} cho người học.''
+
+\subsection{Các Khái Niệm Mở Đầu}
 
 %------------------------------------------------------------------------------%
 
-\section{Các Số Đặc Trung của Mẫu Số Liệu Không Ghép Nhóm}
+\section{Các Số Đặc Trưng của Mẫu Số Liệu Không Ghép Nhóm}
 
 %------------------------------------------------------------------------------%
 
