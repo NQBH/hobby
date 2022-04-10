@@ -30,12 +30,8 @@
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{}
-\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
-\date{\today}
-
 \title{\TeX}
-\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\\textit{Email.} \texttt{nguyenquanbahong@gmail.com}.}}
+\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\e-mail: \texttt{nguyenquanbahong@gmail.com}.}}
 \date{\today}
 
 \begin{document}
@@ -55,13 +51,16 @@
 	\item \href{https://tex.stackexchange.com/}{\TeX-\LaTeX\ StackExchange} is a question \& answer site for users of \TeX, \LaTeX, ConTeXt, \& related typesetting systems.
 \end{enumerate}
 
+%------------------------------------------------------------------------------%
 
 \section{\texttt{babel} Package}
 \begin{quotation}
 	``This package manages culturally-determined typographical (\& other) rules for a wide range of languages. A document may select a single language to be supported, or it may select several, in which case the document may switch from 1 language to another in a variety of ways. \texttt{babel} uses \href{https://ctan.org/pkg/babel-contrib}{contributed configuration files} that provide the detail of what has to be done for each language. Included is also a set of ini files for about 250 languages. Many language styles work with pdf\LaTeX, as well as with Xe\LaTeX\ \& Lua\LaTeX, out of the box. A few even work with plain formats.'' -- \href{https://ctan.org/pkg/babel}{CTAN\texttt{/}\texttt{babel} -- Multilingual support for \LaTeX, Lua\LaTeX, Xe\LaTeX, \& Plain \TeX}
 \end{quotation}
 
-\section{\href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}International language support}}
+%------------------------------------------------------------------------------%
+
+\section{\href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}international language support}}
 ``\LaTeX\ supports many worldwide languages by means of some special packages.''
 
 \subsection{Introduction}
@@ -116,7 +115,7 @@ Change the \texttt{language} to the name of the language you need. You can see l
 	\usepackage[T1, T2A]{fontenc}
 	...
 \end{verbatim}
-``Notice at the preamble that 2 encodings \& 2 languages are passed as parameters to the \texttt{fontenc} \& \texttt{babel} packages respectively. When using this syntax the last language in the option list will be active (i.e. Russian), and you can use the command \verb|\selectlanguage{english}| at any point to change the active language.''
+``Notice at the preamble that 2 encodings \& 2 languages are passed as parameters to the \texttt{fontenc} \& \texttt{babel} packages respectively. When using this syntax the last language in the option list will be active (i.e. Russian), \& you can use the command \verb|\selectlanguage{english}| at any point to change the active language.''
 
 \subsection{Right-to-left writing}
 
@@ -137,7 +136,223 @@ Arabic, Chinese, French, German, Greek, Italian, Japanese, Korean, Portuguese, R
 \subsection{Reference guide}
 
 \subsubsection{Accents \& special characters}
-``If you can't input some letters of national alphabets directly from the keyboard, you can use \LaTeX\ commands for accents and special characters.'' See \href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}international language support}\texttt{/}reference guide for a list.
+``If you can't input some letters of national alphabets directly from the keyboard, you can use \LaTeX\ commands for accents \& special characters.'' See \href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}international language support}\texttt{/}reference guide for a list.
+
+\section{\href{https://www.overleaf.com/learn/latex/Multiple_columns}{Overleaf\texttt{/}multiple columns}}
+
+\subsection{Introduction}
+``2-column documents can be easily created by passing the parameter \verb|\twocolumn| to the document class statement. If you need more flexibility in the column layout, or to create a document with multiple columns, the package \texttt{multicol} provides a set of commands for that. This article explains how use the \texttt{multicol} package, starting with this basic example:
+\begin{verbatim}
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{multicol}
+\title{Multicols Demo}
+\author{Overleaf}
+\date{April 2021}
+
+\begin{document}
+	\maketitle
+	
+	\begin{multicols}{3}
+		[
+		\section{First Section}
+		All human things are subject to decay. And when fate summons, Monarchs must obey.
+		]
+		\blindtext\blindtext
+	\end{multicols}
+	
+\end{document}
+\end{verbatim}
+To import the package, the line
+\begin{verbatim}
+\usepackage{multicol}
+\end{verbatim}
+is added to the preamble. Once the package is imported, the environment \texttt{multicols} can be used. The environment takes 2 parameters:
+\begin{itemize}
+	\item Number of columns. This parameter must be passed inside braces, \& its value is 3 in the example.
+	\item ``Header text'', which is inserted in between square brackets. This is optional \& will be displayed on top of the multicolumn text. Any \LaTeX\ command can be used here, except for floating elements e.g. figures \& tables. In the example, the section title \& a small paragraph are set here.
+\end{itemize}
+The text enclosed inside the tags \verb|\begin{multicols}| \& \verb|\end{multicols}| is printed in multicolumn format.''
+
+\subsection{Column separation}
+``The column separation is determined by \verb|\columnsep|. See the example below:
+\begin{verbatim}
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\title{Second multicols Demo}
+\author{Overleaf}
+\date{April 2021}
+
+\begin{document}
+	\maketitle
+	
+	\begin{multicols}{2}
+		[
+		\section{First Section}
+		All human things are subject to decay. And when fate summons, Monarchs must obey.
+		]
+		\blindtext\blindtext
+	\end{multicols}
+	
+\end{document}
+\end{verbatim}
+Here, the command \verb|\setlength{\columnsep}{1cm}| sets the column separation to 1cm. See \href{https://www.overleaf.com/learn/latex/Lengths_in_LaTeX}{Lengths in \LaTeX} for a list of available units.''
+
+\subsection{Unbalanced columns}
+``In the default \texttt{multicols} environment the columns are balanced so each one contains the same amount of text. This default format can be changed by the stared environment \texttt{multicols*}:
+\begin{verbatim}
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+\title{Second multicols Demo}
+\author{Overleaf}
+\date{April 2021}
+\begin{document}
+	\maketitle
+	\begin{multicols*}{3}
+		[
+		\section{First Section}
+		All human things are subject to decay. And when fate summons, Monarchs must obey.
+		]
+		\blindtext\blindtext
+	\end{multicols*}
+	
+\end{document}
+\end{verbatim}
+If you open this example on Overleaf you'll see that the text is printed in a column till the end of the page is reached, then the in continues in the next column, \& so on.''
+
+\subsection{Inserting floating elements}
+``Floating elements (tables \& figures) can be inserted in a multicolumn document with \texttt{wrapfig} \& \texttt{wraptable}.
+\begin{verbatim}
+\begin{multicols}{2}
+	[
+	\section{First Section}
+	All human things are subject to decay. And when fate summons, Monarchs must obey.
+	]
+	
+	Hello, here is some text without a meaning.  This text should show what 
+	a printed text will look like at this place.
+	If you read this text, you will get no information.  Really?  Is there 
+	no information?  Is there.
+	
+	\vfill
+	
+	\begin{wrapfigure}{l}{0.7\linewidth}
+		\includegraphics[width=\linewidth]{overleaf-logo}
+		\caption{This is the Overleaf logo}
+	\end{wrapfigure}
+	
+	A blind text like this gives you information about the selected font, how 
+	the letters are written \& an impression of the look.  This text should
+	contain all...
+	
+	\begin{wraptable}{l}{0.7\linewidth}
+		\centering
+		\begin{tabular}{|c|c|}
+			\hline
+			Name & ISO \\
+			\hline
+			Afghanistan & AF \\
+			Aland Islands & AX \\
+			Albania    &AL  \\
+			Algeria   &DZ \\
+			American Samoa & AS \\
+			Andorra & AD   \\
+			Angola & AO \\
+			\hline
+		\end{tabular}
+		\caption{Table, floating element}
+		\label{table:ta}
+	\end{wraptable}
+	
+\end{multicols}
+
+\end{document}
+\end{verbatim}
+Floats in the \texttt{multicol} package are poorly supported in the current version. Elements inserted with the conventional \texttt{figure*} \& \texttt{table*} environments will show up only at the top or bottom of the next page after they are inserted, \& will break the layout. The example presented here is a workaround, but you may expect some rough edges. E.g., if the float width is set to \verb|\linewidth| it causes a weird text overlapping. This said, below is a brief description of the commands:
+\begin{itemize}
+	\item \verb|\usepackage{wrapfig}|. Put this line in the preamble to import the package \texttt{wrapfig}
+	\item The environment \texttt{wrapfigure} will insert a figure wrapped in the text. For more information \& further examples about this environment see \href{https://www.overleaf.com/learn/latex/Positioning_images_and_tables}{Positioning images \& tables}.
+	\item The environment \texttt{wraptable} is the equivalent to \texttt{wrapfigure} but for tables. See \href{https://www.overleaf.com/learn/latex/Positioning_images_and_tables}{Positioning images \& tables} for more information.''
+\end{itemize}
+
+\subsection{Inserting vertical rulers}
+``A vertical ruler can be inserted as column separator to may improve readability in some documents:
+\begin{verbatim}
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{color}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{blue}}
+
+\begin{document}
+	
+	\begin{multicols}{3}
+		[
+		\section{First Section}
+		All human things are subject to decay. And when fate summons, Monarchs must obey.
+		]
+		Hello, here is some text without a meaning.  This text should show what 
+		a printed text will look like at this place.
+		
+		If you read this text, you will get no information.  Really?  Is there 
+		no information?  Is there.
+		
+		\columnbreak
+		\blindtext
+		This will be in a new column, here is some text without a meaning.  This text 
+		should show what a printed text will look like at this place.
+		
+		If you read this text, you will get no information.  Really?  Is there 
+		no information?  Is there...
+	\end{multicols}
+	
+	\blindtext
+	
+\end{document}
+\end{verbatim}
+If you open this example on Overleaf you will see the column separator can be set to a specific color also. Below a description of each command:
+\begin{verbatim}
+\usepackage{color}
+\end{verbatim}
+This line is inserted in the preamble to enable the use of several colors within the document.
+\begin{verbatim}
+\setlength{\columnseprule}{1pt}
+\end{verbatim}
+This determines the width of the ruler to be used as column separator, it's set to 0 by default. In the example a column whose width is 1pt is printed.
+\begin{verbatim}
+\def\columnseprulecolor{\color{blue}}
+\end{verbatim}
+The color of the separator ruler is set to blue. See the article about using colors in \LaTeX\ for more information on color manipulation.
+\begin{verbatim}
+\columnbreak
+\end{verbatim}
+This command inserts a column breakpoint. In this case, the behaviour of the text is different from what you may expect. The column break is inserted, then the paragraphs before the breakpoint are evenly distributed to fill all available space. In the example, the 2nd paragraph is at the bottom of the column \& a blank space is inserted in between the 2nd \& the 1st paragraphs.''
+
+%------------------------------------------------------------------------------%
+
+\section{\href{https://www.overleaf.com/learn/latex/Typesetting_quotations}{Overleaf\texttt{/}typesetting quotations}}
+
+\subsection{Introduction}
+``When it comes to quotations \& quotation marks, each language has its own symbols \& rules. 
+
+\subsection{\texttt{dirtytalk} package}
+
+\subsection{\texttt{csquotes} package}
+
+\subsection{\texttt{epigraph} package}
+
+\subsection{\texttt{fancychapters} package (obsolete)}
+
+\subsection{\texttt{quotchap} package}
+
+\subsection{Reference guide}
+
+%------------------------------------------------------------------------------%
 
 \section{Vanilla \TeX Live}
 \textsc{Ubuntu} does not pre-install Vanilla \TeX Live, you need to install it manually \& additionally.
