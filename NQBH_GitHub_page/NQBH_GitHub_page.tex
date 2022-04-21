@@ -1,0 +1,840 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[english,vietnamese]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{NQBH's GitHub Page}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{english}
+\begin{abstract}
+	
+\end{abstract}
+
+\tableofcontents
+\selectlanguage{vietnamese}
+
+%------------------------------------------------------------------------------%
+
+\section{Build NQBH's GitHub Page}
+
+\begin{question}
+	What should I name my personal page\emph{\texttt{/}}website?
+\end{question}
+
+\begin{proof}[Answer]
+	For authenticity\footnote{\textbf{authenticity} [n] [uncountable] the quality of being genuine or true, or based on fact.} reason, I should use my real name instead of some nickname, which sounds cool now but will turn into bullshit later in the long run, also non-unique. My ear will reject any kind of nickname like that -- too childish. Use my real name then. 1st of all, the option \textsc{nguyenquanbahong}, although unique (Who the hell has the same name like me?), seems too long which even makes me feel lazy to type every time I want to enter my website. \textsc{NQBH} seems a good compromise between brevity \& uniqueness. I do not think there are a lot of people whose their names share this abbreviation with me. Thus, I choose NQBH for the main part of my website name.
+	
+	\textit{Then what about the extension?} The commons are \textsc{.com, .edu, .vn}, etc. \textit{Which one should I choose?} Using method of elimination, I should not choose \textsc{.edu} since I will post some ``uneducated'' contents, however, with some education purposes, which will not yield any contradiction at all. Posting some uneducated contents under a website with \textsc{.edu} extension seems to contaminate\footnote{\textbf{contaminate} [v] \textbf{1.} [usually passive] to make a substance or place dirty or no longer pure by adding a substance that is dangerous or carries disease; \textbf{2.} \textbf{contaminate something} to influence people's ideas or attitudes in a bad way.} the prestigious label ``edu'' in various senses. How about \textsc{.com, .vn} extensions? These seem too common \& cost some money monthly\texttt{/}yearly, of course. Hence, I should use some free website builders\texttt{/}hosting with non-annoying extension. \textsc{GitHub}'s personal page seems a good choice for me.
+\end{proof}
+Next, I follow the following instruction: Rob Williams's \href{https://jayrobwilliams.com/posts/2020/06/academic-website/}{Building an Academic Website}.
+
+\subsection{Getting Started}
+``2 of the most popular programs available for building static sites from Markdown files are \href{https://jekyllrb.com/}{Jekyll} \& \href{https://gohugo.io/}{Hugo}.'' [$\ldots$] ``There are plenty of differences under the hood, but the most important one for building an academic website is that Hugo integrates nicely with the \href{https://bookdown.org/yihui/blogdown/}{blogdown} R package, letting you write your website entirely in R.'' The \texttt{git fork} \& \texttt{git clone} steps are straightforward.
+
+\subsection{Previewing Website}
+``To preview your website locally, you'll need to install Jekyll on your computer. The easiest way to do this is with \href{https://bundler.io/}{Bundler}. Bundler is a package manager for Ruby, which is the programming language that Jekyll is written in. This means that we need a full Ruby development environment to get Jekyll working to run our website locally.''
+
+To install Bundler, run:
+\begin{verbatim}
+	hong@hong-Katana-GF76-11UC:~/1_NQBH/NQBH.github.io$ sudo gem install bundler
+	Fetching bundler-2.3.12.gem
+	Successfully installed bundler-2.3.12
+	Parsing documentation for bundler-2.3.12
+	Installing ri documentation for bundler-2.3.12
+	Done installing documentation for bundler after 0 seconds
+	1 gem installed
+\end{verbatim}
+
+\begin{verbatim}
+	hong@hong-Katana-GF76-11UC:~/1_NQBH/NQBH.github.io$ sudo bundle install
+	Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
+	installing your bundle as root will break this application for all non-root
+	users on this machine.
+	Fetching gem metadata from https://rubygems.org/..........
+	Resolving dependencies....
+	Using concurrent-ruby 1.1.10
+	Using minitest 5.15.0
+	Using faraday-httpclient 1.0.1
+	Using thread_safe 0.3.6
+	Using zeitwerk 2.5.4
+	Using faraday-net_http_persistent 1.2.0
+	Using faraday-patron 1.0.0
+	Using faraday-rack 1.0.0
+	Using faraday-retry 1.0.3
+	Using ruby2_keywords 0.0.5
+	Using forwardable-extended 2.6.0
+	Using coffee-script-source 1.11.1
+	Using rb-fsevent 0.11.1
+	Using faraday-em_http 1.0.0
+	Using liquid 4.0.3
+	Using mercenary 0.3.6
+	Using rouge 3.26.0
+	Using safe_yaml 1.0.5
+	Fetching racc 1.6.0
+	Using faraday-em_synchrony 1.0.0
+	Using public_suffix 4.0.7
+	Using rubyzip 2.3.2
+	Using jekyll-swiss 1.0.0
+	Using unicode-display_width 1.8.0
+	Fetching unf_ext 0.0.8.1
+	Fetching commonmarker 0.23.4
+	Using colorator 1.1.0
+	Using faraday-excon 1.1.0
+	Fetching http_parser.rb 0.8.0
+	Using gemoji 3.0.1
+	Fetching ffi 1.15.5
+	Using jekyll-paginate 1.1.0
+	Using bundler 2.3.12
+	Fetching eventmachine 1.2.7
+	Using multipart-post 2.1.1
+	Using execjs 2.8.1
+	Using i18n 0.9.5
+	Using coffee-script 2.4.1
+	Using tzinfo 1.2.9
+	Using jekyll-coffeescript 1.1.1
+	Using rexml 3.2.5
+	Using addressable 2.8.0
+	Using kramdown 2.3.2
+	Using faraday-multipart 1.0.3
+	Using kramdown-parser-gfm 1.1.0
+	Using faraday-net_http 1.0.1
+	Using activesupport 6.0.4.7
+	Using faraday 1.10.0
+	Using pathutil 0.16.2
+	Using terminal-table 1.8.0
+	Using sawyer 0.8.2
+	Using octokit 4.22.0
+	Using jekyll-gist 1.5.0
+	Installing racc 1.6.0 with native extensions
+	Installing commonmarker 0.23.4 with native extensions
+	Installing http_parser.rb 0.8.0 with native extensions
+	Installing eventmachine 1.2.7 with native extensions
+	Installing unf_ext 0.0.8.1 with native extensions
+	Installing ffi 1.15.5 with native extensions
+	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+	
+	current directory:
+	/var/lib/gems/2.7.0/gems/commonmarker-0.23.4/ext/commonmarker
+	/usr/bin/ruby2.7 -I /usr/lib/ruby/vendor_ruby -r
+	./siteconf20220421-57640-1cwfdoz.rb extconf.rb
+	mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+	
+	You might have to install separate package for the ruby development
+	environment, ruby-dev or ruby-devel for example.
+	
+	extconf failed, exit code 1
+	
+	Gem files will remain installed in /var/lib/gems/2.7.0/gems/commonmarker-0.23.4
+	for inspection.
+	Results logged to
+	/var/lib/gems/2.7.0/extensions/x86_64-linux/2.7.0/commonmarker-0.23.4/gem_make.out
+	
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:91:in `run'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:48:in `block in
+	build'
+	  /usr/lib/ruby/2.7.0/tempfile.rb:291:in `open'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:28:in `build'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:157:in `build_extension'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:191:in `block in
+	build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `each'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/installer.rb:821:in `build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:71:in
+	`build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:28:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/source/rubygems.rb:204:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:54:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:16:in
+	`install_from_spec'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:186:in
+	`do_install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:177:in
+	`block in worker_pool'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:62:in
+	`apply_func'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:57:in `block in
+	process_queue'
+	  /var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in `loop'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in
+	`process_queue'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:91:in `block (2
+	levels) in create_threads'
+	
+	An error occurred while installing commonmarker (0.23.4), and Bundler
+	cannot continue.
+	
+	In Gemfile:
+	  github-pages was resolved to 226, which depends on
+	    jekyll-commonmark-ghpages was resolved to 0.2.0, which depends on
+	      jekyll-commonmark was resolved to 1.4.0, which depends on
+	        commonmarker
+	
+	
+	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+	
+	    current directory: /var/lib/gems/2.7.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+	/usr/bin/ruby2.7 -I /usr/lib/ruby/vendor_ruby -r
+	./siteconf20220421-57640-ehba7a.rb extconf.rb
+	mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+	
+	You might have to install separate package for the ruby development
+	environment, ruby-dev or ruby-devel for example.
+	
+	extconf failed, exit code 1
+	
+	Gem files will remain installed in /var/lib/gems/2.7.0/gems/unf_ext-0.0.8.1 for
+	inspection.
+	Results logged to
+	/var/lib/gems/2.7.0/extensions/x86_64-linux/2.7.0/unf_ext-0.0.8.1/gem_make.out
+	
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:91:in `run'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:48:in `block in
+	build'
+	  /usr/lib/ruby/2.7.0/tempfile.rb:291:in `open'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:28:in `build'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:157:in `build_extension'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:191:in `block in
+	build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `each'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/installer.rb:821:in `build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:71:in
+	`build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:28:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/source/rubygems.rb:204:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:54:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:16:in
+	`install_from_spec'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:186:in
+	`do_install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:177:in
+	`block in worker_pool'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:62:in
+	`apply_func'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:57:in `block in
+	process_queue'
+	  /var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in `loop'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in
+	`process_queue'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:91:in `block (2
+	levels) in create_threads'
+	
+	An error occurred while installing unf_ext (0.0.8.1), and Bundler
+	cannot continue.
+	
+	In Gemfile:
+	  github-pages was resolved to 226, which depends on
+	    github-pages-health-check was resolved to 1.17.9, which depends on
+	      dnsruby was resolved to 1.61.9, which depends on
+	        simpleidn was resolved to 0.2.1, which depends on
+	          unf was resolved to 0.1.4, which depends on
+	            unf_ext
+	
+	
+	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+	
+	current directory:
+	/var/lib/gems/2.7.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+	/usr/bin/ruby2.7 -I /usr/lib/ruby/vendor_ruby -r
+	./siteconf20220421-57640-zl5ph2.rb extconf.rb
+	mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+	
+	You might have to install separate package for the ruby development
+	environment, ruby-dev or ruby-devel for example.
+	
+	extconf failed, exit code 1
+	
+	Gem files will remain installed in /var/lib/gems/2.7.0/gems/http_parser.rb-0.8.0
+	for inspection.
+	Results logged to
+	/var/lib/gems/2.7.0/extensions/x86_64-linux/2.7.0/http_parser.rb-0.8.0/gem_make.out
+	
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:91:in `run'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:48:in `block in
+	build'
+	  /usr/lib/ruby/2.7.0/tempfile.rb:291:in `open'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:28:in `build'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:157:in `build_extension'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:191:in `block in
+	build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `each'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/installer.rb:821:in `build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:71:in
+	`build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:28:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/source/rubygems.rb:204:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:54:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:16:in
+	`install_from_spec'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:186:in
+	`do_install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:177:in
+	`block in worker_pool'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:62:in
+	`apply_func'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:57:in `block in
+	process_queue'
+	  /var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in `loop'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in
+	`process_queue'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:91:in `block (2
+	levels) in create_threads'
+	
+	An error occurred while installing http_parser.rb (0.8.0), and Bundler
+	cannot continue.
+	
+	In Gemfile:
+	  github-pages was resolved to 226, which depends on
+	    jekyll-avatar was resolved to 0.7.0, which depends on
+	      jekyll was resolved to 3.9.2, which depends on
+	        em-websocket was resolved to 0.5.3, which depends on
+	          http_parser.rb
+	
+	
+	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+	
+	    current directory: /var/lib/gems/2.7.0/gems/racc-1.6.0/ext/racc/cparse
+	/usr/bin/ruby2.7 -I /usr/lib/ruby/vendor_ruby -r
+	./siteconf20220421-57640-rk4k26.rb extconf.rb
+	mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+	
+	You might have to install separate package for the ruby development
+	environment, ruby-dev or ruby-devel for example.
+	
+	extconf failed, exit code 1
+	
+	Gem files will remain installed in /var/lib/gems/2.7.0/gems/racc-1.6.0 for
+	inspection.
+	Results logged to
+	/var/lib/gems/2.7.0/extensions/x86_64-linux/2.7.0/racc-1.6.0/gem_make.out
+	
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:91:in `run'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:48:in `block in
+	build'
+	  /usr/lib/ruby/2.7.0/tempfile.rb:291:in `open'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/ext_conf_builder.rb:28:in `build'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:157:in `build_extension'
+	/usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:191:in `block in
+	build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `each'
+	  /usr/lib/ruby/vendor_ruby/rubygems/ext/builder.rb:188:in `build_extensions'
+	  /usr/lib/ruby/vendor_ruby/rubygems/installer.rb:821:in `build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:71:in
+	`build_extensions'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/rubygems_gem_installer.rb:28:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/source/rubygems.rb:204:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:54:in
+	`install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/gem_installer.rb:16:in
+	`install_from_spec'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:186:in
+	`do_install'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/installer/parallel_installer.rb:177:in
+	`block in worker_pool'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:62:in
+	`apply_func'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:57:in `block in
+	process_queue'
+	  /var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in `loop'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:54:in
+	`process_queue'
+	/var/lib/gems/2.7.0/gems/bundler-2.3.12/lib/bundler/worker.rb:91:in `block (2
+	levels) in create_threads'
+	
+	An error occurred while installing racc (1.6.0), and Bundler cannot
+	continue.
+	
+	In Gemfile:
+	  github-pages was resolved to 226, which depends on
+	    jekyll-mentions was resolved to 1.6.0, which depends on
+	      html-pipeline was resolved to 2.14.1, which depends on
+	        nokogiri was resolved to 1.13.4, which depends on
+	          racc
+\end{verbatim}
+To fix this error, I followed the answer of the question \href{https://stackoverflow.com/questions/70398847/an-error-occurred-while-installing-racc-1-6-0-and-bundler-cannot-continue}{Stack Overflow\texttt{/}An error occurred while installing racc (1.6.0), and Bundler cannot continue}:
+\begin{enumerate}
+	\item Update \texttt{ruby} to \href{https://www.ruby-lang.org/en/documentation/installation/}{the latest version 2.7.0p0} using:
+	\begin{verbatim}
+		sudo apt-get install ruby-full build-essential
+	\end{verbatim}
+	\item Rerun \texttt{bundle install} (no need \texttt{sudo}).
+\end{enumerate}
+Explicitly,
+\begin{verbatim}
+	hong@hong-Katana-GF76-11UC:~/1_NQBH/NQBH.github.io$ sudo apt-get install ruby-full build-essential
+	Reading package lists... Done
+	Building dependency tree... Done
+	Reading state information... Done
+	The following additional packages will be installed:
+	  ri ruby-dev ruby2.7-dev ruby2.7-doc
+	The following NEW packages will be installed:
+	  build-essential ri ruby-dev ruby-full ruby2.7-dev ruby2.7-doc
+	0 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+	Need to get 2.421 kB of archives.
+	After this operation, 24,5 MB of additional disk space will be used.
+	Do you want to continue? [Y/n] Y
+	Get:1 http://vn.archive.ubuntu.com/ubuntu impish/main amd64 build-essential amd64 12.9ubuntu2 [4.678 B]
+	Get:2 http://vn.archive.ubuntu.com/ubuntu impish-updates/main amd64 ruby2.7-doc all 2.7.4-1ubuntu3.1 [2.216 kB]
+	Get:3 http://vn.archive.ubuntu.com/ubuntu impish/universe amd64 ri all 1:2.7+2build1 [4.418 B]
+	Get:4 http://vn.archive.ubuntu.com/ubuntu impish-updates/main amd64 ruby2.7-dev amd64 2.7.4-1ubuntu3.1 [189 kB]
+	Get:5 http://vn.archive.ubuntu.com/ubuntu impish/main amd64 ruby-dev amd64 1:2.7+2build1 [4.524 B]
+	Get:6 http://vn.archive.ubuntu.com/ubuntu impish/universe amd64 ruby-full all 1:2.7+2build1 [2.586 B]
+	Fetched 2.421 kB in 1s (4.291 kB/s)   
+	Selecting previously unselected package build-essential.
+	(Reading database ... 285417 files and directories currently installed.)
+	Preparing to unpack .../0-build-essential_12.9ubuntu2_amd64.deb ...
+	Unpacking build-essential (12.9ubuntu2) ...
+	Selecting previously unselected package ruby2.7-doc.
+	Preparing to unpack .../1-ruby2.7-doc_2.7.4-1ubuntu3.1_all.deb ...
+	Unpacking ruby2.7-doc (2.7.4-1ubuntu3.1) ...
+	Selecting previously unselected package ri.
+	Preparing to unpack .../2-ri_1%3a2.7+2build1_all.deb ...
+	Unpacking ri (1:2.7+2build1) ...
+	Selecting previously unselected package ruby2.7-dev:amd64.
+	Preparing to unpack .../3-ruby2.7-dev_2.7.4-1ubuntu3.1_amd64.deb ...
+	Unpacking ruby2.7-dev:amd64 (2.7.4-1ubuntu3.1) ...
+	Selecting previously unselected package ruby-dev:amd64.
+	Preparing to unpack .../4-ruby-dev_1%3a2.7+2build1_amd64.deb ...
+	Unpacking ruby-dev:amd64 (1:2.7+2build1) ...
+	Selecting previously unselected package ruby-full.
+	Preparing to unpack .../5-ruby-full_1%3a2.7+2build1_all.deb ...
+	Unpacking ruby-full (1:2.7+2build1) ...
+	Setting up ruby2.7-doc (2.7.4-1ubuntu3.1) ...
+	Setting up ruby2.7-dev:amd64 (2.7.4-1ubuntu3.1) ...
+	Setting up build-essential (12.9ubuntu2) ...
+	Setting up ruby-dev:amd64 (1:2.7+2build1) ...
+	Setting up ri (1:2.7+2build1) ...
+	Setting up ruby-full (1:2.7+2build1) ...
+\end{verbatim}
+then rerun \texttt{bundle install}:
+\begin{verbatim}
+	hong@hong-Katana-GF76-11UC:~/1_NQBH/NQBH.github.io$ bundle install
+	Fetching gem metadata from https://rubygems.org/..........
+	Resolving dependencies....
+	Using concurrent-ruby 1.1.10
+	Using faraday-em_http 1.0.0
+	Using thread_safe 0.3.6
+	Using zeitwerk 2.5.4
+	Using public_suffix 4.0.7
+	Using bundler 2.3.12
+	Using faraday-excon 1.1.0
+	Using coffee-script-source 1.11.1
+	Using colorator 1.1.0
+	Using faraday-em_synchrony 1.0.0
+	Using minitest 5.15.0
+	Using execjs 2.8.1
+	Following files may not be writable, so sudo is needed:
+	  /usr/local/bin
+	  /var/lib/gems/2.7.0
+	  /var/lib/gems/2.7.0/build_info
+	  /var/lib/gems/2.7.0/cache
+	  /var/lib/gems/2.7.0/doc
+	  /var/lib/gems/2.7.0/extensions
+	  /var/lib/gems/2.7.0/gems
+	  /var/lib/gems/2.7.0/plugins
+	  /var/lib/gems/2.7.0/specifications
+	Using multipart-post 2.1.1
+	Using faraday-rack 1.0.0
+	Using faraday-retry 1.0.3
+	Using rb-fsevent 0.11.1
+	Using mercenary 0.3.6
+	Using rouge 3.26.0
+	Using forwardable-extended 2.6.0
+	Using gemoji 3.0.1
+	Using faraday-net_http_persistent 1.2.0
+	Using rubyzip 2.3.2
+	Using unicode-display_width 1.8.0
+	Using faraday-httpclient 1.0.1
+	Using rexml 3.2.5
+	Using safe_yaml 1.0.5
+	Fetching unf_ext 0.0.8.1
+	Fetching eventmachine 1.2.7
+	Fetching commonmarker 0.23.4
+	Using faraday-patron 1.0.0
+	Using jekyll-swiss 1.0.0
+	Using liquid 4.0.3
+	Using pathutil 0.16.2
+	Using i18n 0.9.5
+	Using tzinfo 1.2.9
+	Fetching ffi 1.15.5
+	Using activesupport 6.0.4.7
+	Using faraday-net_http 1.0.1
+	Using faraday-multipart 1.0.3
+	Using ruby2_keywords 0.0.5
+	Using jekyll-paginate 1.1.0
+	Using faraday 1.10.0
+	Fetching racc 1.6.0
+	Using terminal-table 1.8.0
+	Using addressable 2.8.0
+	Using kramdown 2.3.2
+	Using sawyer 0.8.2
+	Fetching http_parser.rb 0.8.0
+	Using octokit 4.22.0
+	Using coffee-script 2.4.1
+	Using kramdown-parser-gfm 1.1.0
+	Using jekyll-coffeescript 1.1.1
+	Using jekyll-gist 1.5.0
+	
+	
+	Your user account isn't allowed to install to the system RubyGems.
+	  You can cancel this installation and run:
+	
+	      bundle config set --local path 'vendor/bundle'
+	      bundle install
+	
+	  to install the gems into ./vendor/bundle/, or you can enter your password
+	  and install the bundled gems to RubyGems using sudo.
+	
+	  Password: 
+	Installing commonmarker 0.23.4 with native extensions
+	Installing racc 1.6.0 with native extensions
+	Installing http_parser.rb 0.8.0 with native extensions
+	Installing eventmachine 1.2.7 with native extensions
+	Installing unf_ext 0.0.8.1 with native extensions
+	Installing ffi 1.15.5 with native extensions
+	Fetching nokogiri 1.13.4 (x86_64-linux)
+	Fetching unf 0.1.4
+	Installing nokogiri 1.13.4 (x86_64-linux)
+	Fetching html-pipeline 2.14.1
+	Installing html-pipeline 2.14.1
+	Installing unf 0.1.4
+	Fetching simpleidn 0.2.1
+	Installing simpleidn 0.2.1
+	Fetching dnsruby 1.61.9
+	Installing dnsruby 1.61.9
+	Fetching jekyll-commonmark 1.4.0
+	Installing jekyll-commonmark 1.4.0
+	Fetching em-websocket 0.5.3
+	Installing em-websocket 0.5.3
+	Fetching ethon 0.15.0
+	Fetching rb-inotify 0.10.1
+	Installing rb-inotify 0.10.1
+	Installing ethon 0.15.0
+	Fetching sass-listen 4.0.0
+	Fetching listen 3.7.1
+	Fetching typhoeus 1.4.0
+	Installing listen 3.7.1
+	Installing sass-listen 4.0.0
+	Installing typhoeus 1.4.0
+	Fetching sass 3.7.4
+	Fetching jekyll-watch 2.2.1
+	Fetching github-pages-health-check 1.17.9
+	Installing jekyll-watch 2.2.1
+	Installing github-pages-health-check 1.17.9
+	Installing sass 3.7.4
+	Fetching jekyll-sass-converter 1.5.2
+	Installing jekyll-sass-converter 1.5.2
+	Fetching jekyll 3.9.2
+	Installing jekyll 3.9.2
+	Fetching jekyll-avatar 0.7.0
+	Fetching jekyll-mentions 1.6.0
+	Fetching jekyll-optional-front-matter 0.3.2
+	Fetching jekyll-readme-index 0.3.0
+	Fetching jemoji 0.12.0
+	Fetching jekyll-remote-theme 0.4.3
+	Fetching jekyll-seo-tag 2.8.0
+	Fetching jekyll-sitemap 1.4.0
+	Fetching jekyll-default-layout 0.1.4
+	Fetching jekyll-feed 0.15.1
+	Fetching jekyll-github-metadata 2.13.0
+	Fetching jekyll-include-cache 0.2.1
+	Fetching jekyll-titles-from-headings 0.5.3
+	Fetching jekyll-commonmark-ghpages 0.2.0
+	Fetching jekyll-relative-links 0.6.1
+	Fetching jekyll-redirect-from 0.16.0
+	Installing jekyll-optional-front-matter 0.3.2
+	Installing jekyll-readme-index 0.3.0
+	Installing jekyll-remote-theme 0.4.3
+	Installing jekyll-default-layout 0.1.4
+	Installing jemoji 0.12.0
+	Installing jekyll-relative-links 0.6.1
+	Installing jekyll-mentions 1.6.0
+	Installing jekyll-include-cache 0.2.1
+	Installing jekyll-redirect-from 0.16.0
+	Installing jekyll-commonmark-ghpages 0.2.0
+	Installing jekyll-titles-from-headings 0.5.3
+	Installing jekyll-avatar 0.7.0
+	Installing jekyll-feed 0.15.1
+	Installing jekyll-github-metadata 2.13.0
+	Installing jekyll-seo-tag 2.8.0
+	Installing jekyll-sitemap 1.4.0
+	Fetching hawkins 2.0.5
+	Fetching jekyll-theme-midnight 0.2.0
+	Fetching jekyll-theme-tactile 0.2.0
+	Fetching jekyll-theme-dinky 0.2.0
+	Fetching jekyll-theme-hacker 0.2.0
+	Fetching minima 2.5.1
+	Fetching jekyll-theme-leap-day 0.2.0
+	Fetching jekyll-theme-merlot 0.2.0
+	Fetching jekyll-theme-minimal 0.2.0
+	Fetching jekyll-theme-primer 0.6.0
+	Fetching jekyll-theme-slate 0.2.0
+	Fetching jekyll-theme-architect 0.2.0
+	Fetching jekyll-theme-cayman 0.2.0
+	Fetching jekyll-theme-modernist 0.2.0
+	Fetching jekyll-theme-time-machine 0.2.0
+	Installing jekyll-theme-hacker 0.2.0
+	Installing minima 2.5.1
+	Installing jekyll-theme-time-machine 0.2.0
+	Installing jekyll-theme-cayman 0.2.0
+	Installing jekyll-theme-modernist 0.2.0
+	Installing jekyll-theme-dinky 0.2.0
+	Installing jekyll-theme-primer 0.6.0
+	Installing jekyll-theme-tactile 0.2.0
+	Installing jekyll-theme-architect 0.2.0
+	Installing jekyll-theme-minimal 0.2.0
+	Installing hawkins 2.0.5
+	Installing jekyll-theme-slate 0.2.0
+	Installing jekyll-theme-merlot 0.2.0
+	Installing jekyll-theme-leap-day 0.2.0
+	Installing jekyll-theme-midnight 0.2.0
+	Fetching github-pages 226
+	Installing github-pages 226
+	Bundle complete! 4 Gemfile dependencies, 102 gems now installed.
+	Use `bundle info [gemname]` to see where a bundled gem is installed.
+	Post-install message from dnsruby:
+	Installing dnsruby...
+	  For issues and source code: https://github.com/alexdalitz/dnsruby
+	  For general discussion (please tell us how you use dnsruby): https://groups.google.com/forum/#!forum/dnsruby
+	Post-install message from sass:
+	
+	Ruby Sass has reached end-of-life and should no longer be used.
+	
+	* If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+	  primary implementation: https://sass-lang.com/install
+	
+	* If you use Sass as a plug-in for a Ruby web framework, we recommend using the
+	  sassc gem: https://github.com/sass/sassc-ruby#readme
+	
+	* For more details, please refer to the Sass blog:
+	  https://sass-lang.com/blog/posts/7828841
+	
+	Post-install message from html-pipeline:
+	-------------------------------------------------
+	Thank you for installing html-pipeline!
+	You must bundle Filter gem dependencies.
+	See html-pipeline README.md for more details.
+	https://github.com/jch/html-pipeline#dependencies
+	-------------------------------------------------
+\end{verbatim}
+``If you want to see what''s been installed, run \texttt{gem list} before and after \texttt{bundle install}.''
+\begin{verbatim}
+	hong@hong-Katana-GF76-11UC:~/1_NQBH/NQBH.github.io$ gem list
+	
+	*** LOCAL GEMS ***
+	
+	activesupport (6.0.4.7)
+	addressable (2.8.0)
+	benchmark (default: 0.1.0)
+	bigdecimal (default: 2.0.0)
+	bundler (2.3.12, default: 2.1.4)
+	cgi (default: 0.1.0)
+	coffee-script (2.4.1)
+	coffee-script-source (1.11.1)
+	colorator (1.1.0)
+	commonmarker (0.23.4)
+	concurrent-ruby (1.1.10)
+	csv (default: 3.1.2)
+	date (default: 3.0.0)
+	dbm (default: 1.1.0)
+	delegate (default: 0.1.0)
+	did_you_mean (default: 1.4.0)
+	dnsruby (1.61.9)
+	em-websocket (0.5.3)
+	etc (default: 1.1.0)
+	ethon (0.15.0)
+	eventmachine (1.2.7)
+	execjs (2.8.1)
+	faraday (1.10.0)
+	faraday-em_http (1.0.0)
+	faraday-em_synchrony (1.0.0)
+	faraday-excon (1.1.0)
+	faraday-httpclient (1.0.1)
+	faraday-multipart (1.0.3)
+	faraday-net_http (1.0.1)
+	faraday-net_http_persistent (1.2.0)
+	faraday-patron (1.0.0)
+	faraday-rack (1.0.0)
+	faraday-retry (1.0.3)
+	fcntl (default: 1.0.0)
+	ffi (1.15.5)
+	fiddle (default: 1.0.0)
+	fileutils (default: 1.4.1)
+	forwardable (default: 1.3.1)
+	forwardable-extended (2.6.0)
+	gdbm (default: 2.1.0)
+	gemoji (3.0.1)
+	getoptlong (default: 0.1.0)
+	github-pages (226)
+	github-pages-health-check (1.17.9)
+	hawkins (2.0.5)
+	html-pipeline (2.14.1)
+	http_parser.rb (0.8.0)
+	i18n (0.9.5)
+	io-console (default: 0.5.6)
+	ipaddr (default: 1.2.2)
+	irb (default: 1.2.6)
+	jekyll (3.9.2)
+	jekyll-avatar (0.7.0)
+	jekyll-coffeescript (1.1.1)
+	jekyll-commonmark (1.4.0)
+	jekyll-commonmark-ghpages (0.2.0)
+	jekyll-default-layout (0.1.4)
+	jekyll-feed (0.15.1)
+	jekyll-gist (1.5.0)
+	jekyll-github-metadata (2.13.0)
+	jekyll-include-cache (0.2.1)
+	jekyll-mentions (1.6.0)
+	jekyll-optional-front-matter (0.3.2)
+	jekyll-paginate (1.1.0)
+	jekyll-readme-index (0.3.0)
+	jekyll-redirect-from (0.16.0)
+	jekyll-relative-links (0.6.1)
+	jekyll-remote-theme (0.4.3)
+	jekyll-sass-converter (1.5.2)
+	jekyll-seo-tag (2.8.0)
+	jekyll-sitemap (1.4.0)
+	jekyll-swiss (1.0.0)
+	jekyll-theme-architect (0.2.0)
+	jekyll-theme-cayman (0.2.0)
+	jekyll-theme-dinky (0.2.0)
+	jekyll-theme-hacker (0.2.0)
+	jekyll-theme-leap-day (0.2.0)
+	jekyll-theme-merlot (0.2.0)
+	jekyll-theme-midnight (0.2.0)
+	jekyll-theme-minimal (0.2.0)
+	jekyll-theme-modernist (0.2.0)
+	jekyll-theme-primer (0.6.0)
+	jekyll-theme-slate (0.2.0)
+	jekyll-theme-tactile (0.2.0)
+	jekyll-theme-time-machine (0.2.0)
+	jekyll-titles-from-headings (0.5.3)
+	jekyll-watch (2.2.1)
+	jemoji (0.12.0)
+	json (default: 2.3.0)
+	kramdown (2.3.2)
+	kramdown-parser-gfm (1.1.0)
+	liquid (4.0.3)
+	listen (3.7.1)
+	logger (default: 1.4.2)
+	matrix (default: 0.2.0)
+	mercenary (0.3.6)
+	minima (2.5.1)
+	minitest (5.15.0, 5.13.0)
+	multipart-post (2.1.1)
+	mutex_m (default: 0.1.0)
+	net-pop (default: 0.1.0)
+	net-smtp (default: 0.1.0)
+	net-telnet (0.1.1)
+	nokogiri (1.13.4 x86_64-linux)
+	observer (default: 0.1.0)
+	octokit (4.22.0)
+	open3 (default: 0.1.0)
+	openssl (default: 2.1.2)
+	ostruct (default: 0.2.0)
+	pathutil (0.16.2)
+	power_assert (1.1.7)
+	prime (default: 0.1.1)
+	pstore (default: 0.1.0)
+	psych (default: 3.1.0)
+	public_suffix (4.0.7)
+	racc (1.6.0, default: 1.4.16)
+	rake (13.0.3)
+	rb-fsevent (0.11.1)
+	rb-inotify (0.10.1)
+	rdoc (default: 6.2.1.1)
+	readline (default: 0.0.2)
+	readline-ext (default: 0.1.0)
+	reline (default: 0.1.5)
+	rexml (3.2.5, default: 3.2.3.1)
+	rouge (3.26.0)
+	rss (default: 0.2.8)
+	ruby2_keywords (0.0.5)
+	rubygems-update (3.2.5)
+	rubyzip (2.3.2)
+	safe_yaml (1.0.5)
+	sass (3.7.4)
+	sass-listen (4.0.0)
+	sawyer (0.8.2)
+	sdbm (default: 1.0.0)
+	simpleidn (0.2.1)
+	singleton (default: 0.1.0)
+	stringio (default: 0.1.0)
+	strscan (default: 1.0.3)
+	terminal-table (1.8.0)
+	test-unit (3.3.9)
+	thread_safe (0.3.6)
+	timeout (default: 0.1.0)
+	tracer (default: 0.1.0)
+	typhoeus (1.4.0)
+	tzinfo (1.2.9)
+	unf (0.1.4)
+	unf_ext (0.0.8.1)
+	unicode-display_width (1.8.0)
+	uri (default: 0.10.0)
+	webrick (default: 1.6.1)
+	xmlrpc (0.3.0)
+	yaml (default: 0.1.0)
+	zeitwerk (2.5.4)
+	zlib (default: 1.1.0)
+\end{verbatim}
+
+\section{NQBH.github.io}
+
+%------------------------------------------------------------------------------%
+
+\selectlanguage{english}
+\begin{thebibliography}{99}
+	\bibitem[Williams2020]{Williams2020} Rob Williams. \href{https://jayrobwilliams.com/posts/2020/06/academic-website/}{\textit{Building an Academic Website}}. Jun 30, 2020.
+\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
