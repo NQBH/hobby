@@ -1,12 +1,11 @@
 \documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
-\usepackage[utf8]{vietnam}
+\usepackage[english,vietnamese]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\usepackage{float,graphicx}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
@@ -38,7 +37,9 @@
 
 \begin{document}
 \maketitle
+\selectlanguage{english}
 \tableofcontents
+\selectlanguage{vietnamese}
 
 %------------------------------------------------------------------------------%
 
@@ -166,12 +167,12 @@
     \item Ôsama Ranking $\star$ Ranking of Kings (2021--)\hfill[S1.E1\texttt{/}E19]
     \item \textsc{Papurika $\star$ Paprika} (2006)
     \item \textsc{Pâfekuto burû $\star$ Perfect Blue} (1997)
-    \item Sama Taimu Renda $\star$ Summer Time Rendering (2022--)\hfill[S1.E1\texttt{/}E4--][Chap. 1\texttt{/}139]
+    \item Sama Taimu Renda $\star$ Summer Time Rendering (2022--)\hfill[S1.E2\texttt{/}E4--][Chap. 139\texttt{/}139]
     \item \textsc{Seishun Buta Yaro wa Yumemiru Shoujo no Yume wo Minai $\star$ Rascal Does Not Dream of Bunny Girl Senpai The Movie} (2019)
     \item Seishun Buta Yaro wa Bunny Girl-senpai no Yume wo Minai $\star$
     
     Rascal Does Not Dream of Bunny Girl Senpai (2018--)\hfill[S1.E14]
-    \item Spy $\times$ Family (2022--)\hfill[S1.E2\texttt{/}E3][Chap. 1\texttt{/}62]
+    \item Spy $\times$ Family (2022--)\hfill[S1.E3\texttt{/}E4][Chap. 1\texttt{/}62]
     \item Rick and Morty (2013--)\hfill[S1.E11][S2.E10][S3.E10][S4.E10][S5.E10]
     \item Shingeki no kyojin $\star$ Attack on Titan (2013--2022)\hfill[S1.E25][S2.E12][S3.E22][S4.E27][Chap. 139\texttt{/}139]
     \item Sono Bisque Doll wa Koi wo Suru $\star$ My Dressing-Up Darling\hfill[S1.E12][Chap. 73\texttt{/}73--]
@@ -371,7 +372,7 @@
 	\item The Witcher (2019--)\hfill[S1.E8][S2.E8]
 	\item \textsc{Time Lapse} (2014)
 	\item \textsc{Titanic} (1997)
-	\item Tomorrow (2022)\hfill[S1.E3\texttt{/}E16]
+	\item Tomorrow (2022)\hfill[S1.E4\texttt{/}E16]
 	\item \textsc{Triangle} (2009)
 	\item True Detective (2014--2019)\hfill[S1.E8][S2.E8][S3.E1\texttt{/}E8]
 	\item \textsc{Warrior} (2011)
@@ -836,7 +837,7 @@
 	\item \textsc{Rachel Platten.} Fight Song.
 	\item \textsc{Rag'n'Bone Man.} Skin.
 	\item \textsc{Redfoo.} New Thang.
-	\item \textsc{Rhymastic.} Nến Và Hoa.
+	\item \textsc{Rhymastic.} Nến \& Hoa.
 	\item \textsc{Richard Marx.} I Will Be Right Here Waiting For You.
 	\item \textsc{Rixton.} Me \& My Broken Heart.
 	\item \textsc{Ros\'e.} Don't Look Back In Anger (Oasis). Gone. Let It Be. On The Ground. Only Look At Me. Viva La Vida (Coldplay cover). You \& I.
@@ -849,6 +850,7 @@
 		\item \textsc{Sam Tinnesz $+$ Super Duper.} Babel.
 		\item \textsc{Sam Tinnesz $+$ Yacht Money.} Play With Fire.
 	\end{itemize}
+	\item \textsc{Sasha Sloan.} Older.
 	\item \textsc{SAYGRACE $+$ G-Eazy.} You Don't Own Me.
 	\item \textsc{Sean Kingston.} Beautiful Girls.
 	\item \textsc{Sean Paul.}
@@ -1151,6 +1153,7 @@ I really want to have a Workstation, especially the latest \textsc{Dell Precisio
 
 %------------------------------------------------------------------------------%
 
+\selectlanguage{english}
 \printbibliography[heading=bibintoc]
 
 \end{document}
