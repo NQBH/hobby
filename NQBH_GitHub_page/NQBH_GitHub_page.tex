@@ -39,7 +39,7 @@
 \maketitle
 \selectlanguage{english}
 \begin{abstract}
-	
+	The construction of NQBH's website.
 \end{abstract}
 
 \tableofcontents
@@ -54,16 +54,49 @@
 \end{question}
 
 \begin{proof}[Answer]
-	For authenticity\footnote{\textbf{authenticity} [n] [uncountable] the quality of being genuine or true, or based on fact.} reason, I should use my real name instead of some nickname, which sounds cool now but will turn into bullshit later in the long run, also non-unique. My ear will reject any kind of nickname like that -- too childish. Use my real name then. 1st of all, the option \textsc{nguyenquanbahong}, although unique (Who the hell has the same name like me?), seems too long which even makes me feel lazy to type every time I want to enter my website. \textsc{NQBH} seems a good compromise between brevity \& uniqueness. I do not think there are a lot of people whose their names share this abbreviation with me. Thus, I choose NQBH for the main part of my website name.
+	For authenticity\footnote{\textbf{authenticity} [n] [uncountable] the quality of being genuine or true, or based on fact.} reason, I should use my real name instead of some nickname, which sounds cool now but will turn into bullshit later in the long run, also non-unique. My ear will reject any kind of nickname like that -- too childish. Use my real name then. 1st of all, the option \textsc{nguyenquanbahong}, although unique (Who the hell has the same name as me?), seems too long which even makes me feel lazy to type every time I want to enter my website. \textsc{NQBH} seems to be a good compromise between brevity \& uniqueness. I do not think there are a lot of people whose their names share this abbreviation with me. Thus, I choose NQBH for the main part of my website name.
 	
 	\textit{Then what about the extension?} The commons are \textsc{.com, .edu, .vn}, etc. \textit{Which one should I choose?} Using method of elimination, I should not choose \textsc{.edu} since I will post some ``uneducated'' contents, however, with some education purposes, which will not yield any contradiction at all. Posting some uneducated contents under a website with \textsc{.edu} extension seems to contaminate\footnote{\textbf{contaminate} [v] \textbf{1.} [usually passive] to make a substance or place dirty or no longer pure by adding a substance that is dangerous or carries disease; \textbf{2.} \textbf{contaminate something} to influence people's ideas or attitudes in a bad way.} the prestigious label ``edu'' in various senses. How about \textsc{.com, .vn} extensions? These seem too common \& cost some money monthly\texttt{/}yearly, of course. Hence, I should use some free website builders\texttt{/}hosting with non-annoying extension. \textsc{GitHub}'s personal page seems a good choice for me.
 \end{proof}
-Next, I follow the following instruction: Rob Williams's \href{https://jayrobwilliams.com/posts/2020/06/academic-website/}{Building an Academic Website}.
+Next, I follow the following instruction: \href{https://jayrobwilliams.com/posts/2020/06/academic-website/}{Rob Williams's Building an Academic Website}.
 
 \subsection{Getting Started}
-``2 of the most popular programs available for building static sites from Markdown files are \href{https://jekyllrb.com/}{Jekyll} \& \href{https://gohugo.io/}{Hugo}.'' [$\ldots$] ``There are plenty of differences under the hood, but the most important one for building an academic website is that Hugo integrates nicely with the \href{https://bookdown.org/yihui/blogdown/}{blogdown} R package, letting you write your website entirely in R.'' The \texttt{git fork} \& \texttt{git clone} steps are straightforward.
+``Most universities these days provide a free option, usually powered by \href{https://wordpress.org/}{WordPress} (both \href{https://sites.wustl.edu/}{WashU} \& \href{http://web.unc.edu/}{UNC} use WordPress for their respective offerings). While these sites are quick to set up \& come with the prestige of a \texttt{.edu} \textsc{url}, they have several drawbacks that have been extensively written on, e.g.,
+\begin{itemize}
+	\item University of California, Berkeley\texttt{/}Townsend Center for the Humanities\texttt{/}\href{https://townsendcenter.berkeley.edu/blog/personal-academic-webpages-how-tos-and-tips-better-site}{Rochelle Terman. \textit{Personal Academic Webpages: How-To's \& Tips for a Better Site}}.
+	\item \href{https://martinlea.com/four-reasons-why-faculty-profile-pages-are-no-substitute-for-personal-academic-website/}{Martin Lea. \textit{Personal Academic Websites Versus Faculty Web Pages}}.
+	\item \href{https://theacademicdesigner.com/2019/personal-academic-website-benefits/}{The Academic Designer\texttt{/}\textit{8 Benefits of a Personal Academic Website to Inspire You}}.
+\end{itemize}
+If you're a junior scholar, having your own personal webpage is even more important.
+\begin{itemize}
+	\item If (when) you move institutions, you'll lose your website.
+	\item Even if you can export the contents of a WordPress site, there's no guarantee it will seamlessly integrate with another university's implementation.
+	\item Even worse, you'll lose your search engine ranking since you'll be starting over from square one with a new \textsc{url}.
+\end{itemize}
+Even if you stay at the same institution for the rest of your career, you're at the mercy of IT \& your site may be taken down by a change to the hosting platform at some point in the future.''
+
+``There are plenty of guides out there on how to create a personal website using tools like WordPress, \href{https://www.wix.com/}{Wix}, or \href{https://www.sites.google.com/}{Google Sites}\footnote{NQBH: I used Google Sites already. It is too slow to edit \& publish. So I will not use Google Site anymore.}. The free versions of these tools often come with ads, or at the least a message telling you which tool was used to create the website.'' Rob Williams ``use a \href{https://www.staticgen.com/about}{static site generator} that produces HTML from easy to edit \href{https://en.wikipedia.org/wiki/Markdown}{Markdown} files. Because the resulting site is static (it's just a collection of files with no interactively where users can, e.g., fill out \& submit forms) it can be hosted for free with \href{https://pages.github.com/}{GitHub Pages}. \href{http://svmiller.com/}{Steven Miller} has a nice rundown on all of the \href{http://svmiller.com/blog/2015/08/create-your-website-in-jekyll/#advantages}{advantages} of this approach.''
+
+``This guide is intended for someone with a basic level of coding experience \& comfort with Markdown files.'' ``There are other guides to using static site generators to make academic websites, but they all assume a very high level of experience with the required tools \& the ability to conduct extensive troubleshooting on your own.''
+
+\begin{quotation}
+	``A brief aside on Git-speak: these periodic indended blocks will explain the terminology that git uses to help you understand what each Git command actually does.''
+\end{quotation}
+``2 of the most popular programs available for building static sites from Markdown files are \href{https://jekyllrb.com/}{Jekyll} \& \href{https://gohugo.io/}{Hugo}.'' ``There are plenty of differences under the hood, but the most important one for building an academic website is that Hugo integrates nicely with the \href{https://bookdown.org/yihui/blogdown/}{blogdown} R package, letting you write your website entirely in R.''
+
+\begin{quotation}
+	``Git-speak aside: the basic unit of GitHub is the repository. Repositories are just folders (directories, if you want to be pedantic), but Git keeps a record of the files in the folders. We'll start by making a repository on GitHub \& then later download that repository to our computer. In both cases, it's just a folder. The magic of \texttt{Git} is that we can link the 2 so that changes you make in your local repository (the one on your computer) will sync with the remote repository (the one on GitHub). When people (myself included) get lazy, they'll often shorten repository to `repo'.''
+\end{quotation}
+``\href{https://git-scm.com/}{Git} is a version control system designed to let teams of programmers collaborate on projects seamlessly. For us, it's just going to be the way that we upload files for our webpage to GitHub.''
+
+\begin{quotation}
+	``Git-speak aside: cloning a repository means creating a local repository (folder) on your computer that's connected to the remote repository (on GitHub). Cloning differs from downloading in that you are setting up a connection between the 2 folders so you can keep changes you make locally synced up with the remote repository (which is where GitHub will build your website from).''
+\end{quotation}
+The \texttt{git fork} \& \texttt{git clone} steps are straightforward.
 
 \subsection{Previewing Website}
+Once we upload our modified files to GitHub \& tell GitHub to turn them into a website, they're out there on the Internet for everyone to see. ``There's no need to broadcast all of those mistakes to the world, \& we can avoid this very easily by previewing our website locally. What this means is building the site from the various \texttt{.md} files, rendering it to \textsc{html}, \& then viewing it. We can do all of that on our computer without ever having to put it online.''
+
 ``To preview your website locally, you'll need to install Jekyll on your computer. The easiest way to do this is with \href{https://bundler.io/}{Bundler}. Bundler is a package manager for Ruby, which is the programming language that Jekyll is written in. This means that we need a full Ruby development environment to get Jekyll working to run our website locally.''
 
 To install Bundler, run:
@@ -76,7 +109,26 @@ To install Bundler, run:
 	Done installing documentation for bundler after 0 seconds
 	1 gem installed
 \end{verbatim}
+``Next, we need to install any packages (called `gems' in Ruby) that Jekyll depends on. This is where Bundler shines by taking care of this whole process for us; it reads the \texttt{Gemfile} included with the source code \& install all required gems:
+\begin{verbatim}
+	$ bundler install
+\end{verbatim}
+If you want to see what's been installed, run \texttt{gem list} before \& after \texttt{bundle install}. If everything worked correctly, you can now launch your website! What we're going to do is start a webserver on your computer, which will let you access your website locally without having to put it ot on the Internet. We do this with
+\begin{verbatim}
+	bundle exec jekyll serve
+\end{verbatim}
+The \texttt{bundle exec} command is just a prefix that lets Ruby access all of the gems specified in the \texttt{gemfile}. The \texttt{jekyll serve} command builds your website \& starts a webserver so that you can view it locally. To access your website, open a browser \& go to \texttt{127.0.0.1:4000} or \texttt{localhost:4000}.''
 
+``This is a special version of your site that's only accessible from your computer; no one else can see it! So this is the perfect place to play around, experiment, \& see how to make your site do what you want it to. This process is surprisingly easy. Make a change to a file, e.g., editing \verb|_pages/about.md| to introduce yourself, \& save the file. That's all you have to do; Jekyll will notice the change to the file \& automatically rebuild the site. All that's left to do is refresh your browser so you can see the changes!
+
+Once you've made a couple changes to see how it works, you might want to turn off the webserver \& make lots of changes, then check out your handiwork. Or maybe you're just done working on your website for now. Either way, it's time to shut down the webserver. To do so, you can just close the terminal window, but you'll get a warning like this
+\begin{verbatim}
+	Do you want to terminate running processes on this window?
+	Closing this window will terminate the running processes: jekyll serve --incremental, fsevent_watch
+\end{verbatim}
+To save yourself some time \& do this faster, simply press \textsc{Ctrl} $+$ \textsc{C}.''
+
+Explicitly on my laptop:
 \begin{verbatim}
 	hong@hong-Katana-GF76-11UC:~/1_NQBH/NQBH.github.io$ sudo bundle install
 	Don't run Bundler as root. Bundler can ask for sudo if it is needed, and
@@ -824,7 +876,41 @@ then rerun \texttt{bundle install}:
 	zlib (default: 1.1.0)
 \end{verbatim}
 
+\subsection{Getting Online}
+``$\ldots$ made some changes from the template, checked them out locally, \& you're ready to share your website with the world. This is a 2 step process. 1st we need to upload all of our modified files to the GitHub repo we forked from the template. Then we need to configure GitHub Pages to build \& deploy our website. Finally, if you want a custom domain name, we need to do some configuration outside of GitHub Pages to connect your domain name with your website.''
+
+\subsubsection{Uploading changes to GitHub}
+``To upload your changes to GitHub, we 1st have to make Git locally aware of them. We do this by committing the changes, then pushing them to the repo on GitHub.
+
+\begin{quotation}
+	``Git-speak aside: Git stores file histories as a series of changes or differences. A batch of changes (which can include changes in 1 or more files) is called a \emph{commit}. When you want to tell the remote repo (the one on GitHub) about changes you've made, you push a commit from the local repo to the remote one. Once you do this, GitHub looks at the differences \& modifies the files in the remote repo.''
+\end{quotation}
+Before we can commit the changes, we need to stage them. This just involved telling Git what changes we want to commit. To make our lives easier, let's check in on what changes we've made by \texttt{git status}. You should get results that look something similar to this:
+\begin{verbatim}
+	On branch master
+	Your branch is up to date with 'origin/master'.
+	
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+	
+		modified:   _config.yml
+	
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+	
+		Gemfile.lock
+	
+	no changes added to commit (use "git add" and/or "git commit -a")
+\end{verbatim}
+We can ignore the 1st part for now. The 2nd part (\texttt{Changes not staged for commit}) will list any files that Git knows about that have changed. The 3rd part (\texttt{Untracked files}) includes files we haven't told Git about, so as far as it's concerned they don't exist.'' ``If you want to verify the changes you made, you'll want to \textit{diff} the file. Do this with
+\begin{verbatim}
+	git diff _config.yml
+\end{verbatim}
+[$\ldots$] Note that your output may or may not be color-coded depending on what type of system you're on \& your Git settings. Each line that begins with a \texttt{+} indicates an insertion \& each line that starts with a \texttt{-} is a deletion.'' The \texttt{git commit} \& \texttt{git push} steps are straightforward. ``Your repo on GitHub is the ``remote'' that your local git needs access to.''
+
 \section{NQBH.github.io}
+Final result: \textsc{url}: \url{nqbh.github.io}.
 
 %------------------------------------------------------------------------------%
 
