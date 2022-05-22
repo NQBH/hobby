@@ -912,6 +912,172 @@ We can ignore the 1st part for now. The 2nd part (\texttt{Changes not staged for
 \section{NQBH.github.io}
 Final result: \textsc{url}: \url{nqbh.github.io}.
 
+\subsection{Hit Counter}
+See, e.g., \href{https://stackoverflow.com/questions/57747640/how-to-implement-a-basic-page-view-counter-for-a-github-pages-powered-site}{StackOverflow\texttt{/}How to implement a basic page view counter for a GitHub-Pages-powered site?}
+
+\subsubsection{\href{https://javascript.plainenglish.io/how-to-count-page-views-with-the-count-api-afc9369c1f8f}{JavaScript in Plain English\texttt{/}Mehdi Aoussiad. How to Count Page Views with The Count API}}
+
+\begin{flushright}
+	An easy way to count your page views with JavaScript.
+\end{flushright}
+``1 of the useful functionalities that you may need to have on your website is a counter that counts the views of your web pages. The easiest way to do that is through the CountAPI which gives you this amazing functionality.'' ``$\ldots$ learn how to count our page views using the CountAPI in JavaScript.''
+
+\paragraph{The CountAPI.} ``This API allows you to make numeric counters. It's a very useful API to track the number of hits a page received. It also allows you to know the number of users that, e.g., clicked on a button. So it also counts events. The \href{https://countapi.xyz/}{CountAPI} provides a hit endpoint each time it is called, the counter will increase by 1. Check it out in the link below: \url{https://api.countapi.xyz/hit/namespace/key}. You should know that each counter is identified inside a \textit{namespace} with a \textit{key}. The \textit{namespace} should be unique, so you need to replace it with your website domain.''
+
+\begin{example}
+	``$\ldots$ you want to count \& display your web page views, the CountAPI allows you to do that by using their NPM package, JSONP, XHR, or jQuery. In the example below, we will use JSONP. You can check the other ways on \url{https://countapi.xyz/}. The 1st thing we do is creating our \textsc{html}:	
+	\begin{verbatim}
+		<body>
+		
+		  <h1>This page got <span id="visits"></span> views.</h1>
+		
+		</body>
+	\end{verbatim}
+	In the head tag, you will have to add a script CDN for the CountAPI. It will be like the following:	
+	\begin{verbatim}
+		<head>
+		
+		<script async src="https://api.countapi.xyz/hit/mysite.com/visits?  callback=callbackName"></script>
+		
+		</head>
+	\end{verbatim}
+	You will have to replace the \verb|mysite.com| with your own domain. Also, replace the \verb|callbackName| with any callback name that we will create below in JavaScript.
+	
+	Now we will go to JavaScript in order to create a callback that will get the number of visits \& replace it inside the element that has an ID \verb|visits|.	
+	\begin{verbatim}
+		function callbackName(response) {
+		    document.getElementById('visits').innerText = response.value;
+		}
+	\end{verbatim}
+	We will not call this function because it's already called on the CDN above.'' ``As you can see, this is the easiest way to count the views that your web page received.''
+\end{example}
+``The CountAPI makes it easier to count page views \& display them on the page. This API also has some more functionalities $\ldots$''.
+
+\subsection{\href{https://countapi.xyz/}{CountAPI}}
+``This API allows you to create simple numeric counters. IaaS, Integer as a Service. It goes down to:
+\begin{itemize}
+	\item Create a counter \& restrict its operations
+	\item Reset the value of a counter
+	\item Increment\texttt{/}decrement a counter.
+\end{itemize}
+All counters are accessible if you know the key \& there are not private counters (yet?). \textit{Want to track the number of hits a page had?} Sure. \textit{Want to know the number of users that clicked on the button ``Feed Cow''?} There you go.''
+
+\paragraph{TL;DR.} ``Each counter is identified inside a \texttt{namespace} with a \texttt{key}. The namespace should be unique, so its recommend using your site's domain. In each namespace you can generate all the counters you may need.
+
+The \texttt{hit} endpoint provides increment by 1 counters directly. Each time its requested the counter will increase by 1: \url{https://api.countapi.xyz/hit/namespace/key} $\Rightarrow$ \verb|200 { "value": 1234 }|.
+
+\begin{example}
+	``$\ldots$ want to display the number of pageviews a site received.	
+	\begin{verbatim}
+		<div id="visits">...</div>
+	\end{verbatim}
+	Remeber to change \verb|mysite.com| with your site's domain.
+\end{example}
+
+\subparagraph{Using countapi-js.}
+\begin{verbatim}
+	import countapi from 'countapi-js';
+	
+	countapi.visits().then((result) => {
+	    console.log(result.value);
+	});
+\end{verbatim}
+
+\subparagraph{Using JSONP.}
+\begin{verbatim}
+	<script>
+	function cb(response) {
+	    document.getElementById('visits').innerText = response.value;
+	}
+	</script>
+	<script async src="https://api.countapi.xyz/hit/mysite.com/visits?callback=cb"></script>
+\end{verbatim}
+
+\subparagraph{Using XHR.}
+\begin{verbatim}
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", "https://api.countapi.xyz/hit/mysite.com/visits");
+	xhr.responseType = "json";
+	xhr.onload = function() {
+	    document.getElementById('visits').innerText = this.response.value;
+	}
+	xhr.send();
+\end{verbatim}
+
+\subparagraph{Using jQuery.}
+\begin{verbatim}
+	$.getJSON("https://api.countapi.xyz/hit/mysite.com/visits", function(response) {
+	    $("#visits").text(response.value);
+	});
+\end{verbatim}
+
+\subparagraph{Multiple pages.} ``If you want to have a counter for each individual page you can replace \texttt{visits} with a unique identifier for each page, i.e., \texttt{index, contact, item-1234}. Check \href{https://countapi.xyz/#format}{the right format} a key must have.
+
+Alternatively, you can use some reserved words that are replaced server-side.
+
+E.g., if a request is made from \texttt{https://mysite.com/example/page}:
+\begin{itemize}
+	\item \texttt{:HOST}: will be replaced with \texttt{mysite.com}
+	\item \texttt{:PATHNAME}: will be replaced with \texttt{examplepage}.
+\end{itemize}
+
+\begin{remark}
+	Reserved words are padded with dots if their length is $< 3$.
+\end{remark}
+So you could use something like:
+\begin{verbatim}
+	https://api.countapi.xyz/hit/mysite.com/:PATHNAME:
+\end{verbatim}
+Or even more generic (though not recommended):
+\begin{verbatim}
+	https://api.countapi.xyz/hit/:HOST:/:PATHNAME:
+\end{verbatim}
+
+\begin{remark}[Important]
+	If you want to know the actual key used you can check the \verb|X-Path| header.''
+\end{remark}
+
+\subparagraph{Counting events.} ``You can use the API to count any kind of stuff, lets say:
+\begin{verbatim}
+	<button onclick="clicked()">Press Me!</button>
+	<script>
+	function clicked() {
+	    var xhr = new XMLHttpRequest();
+	    xhr.open("GET", "https://api.countapi.xyz/hit/mysite.com/awesomeclick");
+	    xhr.responseType = "json";
+	    xhr.onload = function() {
+	        alert(`This button has been clicked ${this.response.value} times!`);
+	    }
+	    xhr.send();
+	}
+	</script>
+\end{verbatim}
+
+\paragraph{Libraries.} ``The official javascript promise based wrapper is available in \href{https://www.npmjs.com/package/countapi-js}{countapi-js} (v1.0.2).
+
+\paragraph{Roadmap.} ``If this API starts getting some traction, I have some ideas in mind:
+\begin{itemize}
+	\item Being able to open a \href{https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Receiving_events_from_the_server}{SSE stream} \& receive updates in real time avoiding polling
+	\item Enable batch creating\texttt{/}updating
+	\item Unique counting?
+	\item Float numbers?
+	\item Generate a secret key to update\texttt{/}reset keys
+\end{itemize}
+
+\paragraph{FAQ.}
+\begin{enumerate}
+	\item ``\textit{Is the API free?} Completely free.
+	\item \textit{Rate Limiting?} Key retrieving \& updating has \textbf{no} limits whatsoever. Key \textbf{creation} is limited to 20\texttt{/}IP\texttt{/}s.
+	\item \textit{Can I delete a key?} You can't, just let the key expire. If you created a key with a wrong configuration you can always create another key.
+	\item \textit{Will I blow up the CountAPI server?} CountAPI is using \href{https://redis.io/}{Redis} as database, a very fast key-value solution.''
+\end{enumerate}
+
+\paragraph{API.}
+
+\subparagraph{Namespaces.} ``Namespaces are meant to avoid name collisions. You may specify a namespace during the creation of a key. Its recommend use the domain of the application as namespace to avoid collision with other websites. If the namespace is not specified the key is assigned to the \texttt{default} namespace. If your key resides in the default namespace you don't need to specify it.''
+
+\subparagraph{Endpoint.} ``All requests support \href{https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS}{cross-origin resource sharing} (CORS) \& SSL. You can use \href{https://en.wikipedia.org/wiki/JSONP}{JSONP} sending the callback parameter. JSONP requests will never fail, they will include the \textsc{http} code in the response. Also a $1\times 1$ GIF image is supported sending \texttt{?img}. Base API path: \url{https://api.countapi.xyz/}. In the case of a server failure, the API will send: $\Rightarrow$ \verb|500 { "error": "Error description" }|. For more technical details, see \href{https://countapi.xyz/#api}{CountAPI\texttt{/}API}.
+
 %------------------------------------------------------------------------------%
 
 \selectlanguage{english}
