@@ -1,0 +1,326 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Software}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{english}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter{Markdown}
+
+\section{\href{https://learnxinyminutes.com/docs/markdown/}{Learn X in Y Minutes\texttt{/}Markdown}}
+``Get the code: \href{https://learnxinyminutes.com/docs/files/markdown.md}{markdown.md}. Markdown was created by \textsc{John Gruber} in 2004. It's meant to be an easy to read \& write syntax which converts easily to \textsc{html} (\& now many other formats as well). Markdown also varies in implementation from 1 parser to a next. This guide will attempt to clarify when features are universal or when they are specific to a certain parser.''
+
+\subsection{HTML Elements}
+``Markdown is a superset of \textsc{html}, so any \textsc{html} file is valid Markdown.
+\begin{verbatim}
+	<!--This means we can use HTML elements in Markdown, such as the comment element, & they won't be
+	affected by a markdown parser. However, if you create an HTML element in your markdown file, you cannot
+	use markdown syntax within that element's contents.-->''
+\end{verbatim}
+
+\subsection{Headings}
+``You can create \textsc{html} elements \texttt{<h1>} through \texttt{<h6>} easily by pretending the text you want to be in that element by a number of hashes (\verb|#|).
+\begin{verbatim}
+	# This is an <h1>
+	## This is an <h2>
+	### This is an <h3>
+	#### This is an <h4>
+	##### This is an <h5>
+	###### This is an <h6>
+\end{verbatim}
+Markdown also provides us with 2 alternative ways of indicating h1 \& h2.
+\begin{verbatim}
+	This is an h1
+	=============
+	
+	This is an h2
+	-------------''
+\end{verbatim}
+
+\subsection{Simple Text Styles}
+``Text can be easily styled as italic or bold using markdown.
+\begin{verbatim}
+	*This text is in italics.*
+	_And so is this text._
+	
+	**This text is in bold.**
+	__And so is this text.__
+	
+	***This text is in both.***
+	**_As is this!_**
+	*__And this!__*
+\end{verbatim}
+In GitHub Flavored Markdown, which is used to render markdown files on GitHub, we also have strikethrough:
+\begin{verbatim}
+	~~This text is rendered with strikethrough.~~''
+\end{verbatim}
+
+\subsection{Paragraphs}
+``Paragraphs are a one or multiple adjacent lines of text separated by one or multiple blank lines.
+\begin{verbatim}
+	This is a paragraph. I'm typing in a paragraph isn't this fun?
+	
+	Now I'm in paragraph 2.
+	I'm still in paragraph 2 too!
+	
+	
+	I'm in paragraph three!
+\end{verbatim}
+Should you ever want to insert an HTML \verb|<br />| tag, you can end a paragraph with 2 or more spaces \& then begin a new paragraph.
+\begin{verbatim}
+	I end with two spaces (highlight me to see them).
+	
+	There's a <br /> above me!
+\end{verbatim}
+Block quotes are easy \& done with the \texttt{>} character.
+\begin{verbatim}
+	> This is a block quote. You can either
+	> manually wrap your lines \& put a `>` before every line or you can let your lines get really long & wrap on
+	> their own.
+	> It doesn't make a difference so long as they start with a `>`.
+	
+	> You can also use more than one level
+	>> of indentation?
+	> How neat is that?''
+\end{verbatim}
+
+\subsection{Lists}
+``Unordered lists can be made using asterisks, pluses, or hyphens.
+\begin{verbatim}
+	* Item
+	* Item
+	* Another item
+	
+	or
+	
+	+ Item
+	+ Item
+	+ One more item
+	
+	or
+	
+	- Item
+	- Item
+	- One last item
+\end{verbatim}
+Ordered lists are done with a number followed by a period.
+\begin{verbatim}
+	1. Item 1
+	2. Item 2
+	3. Item 3
+\end{verbatim}
+You don't even have to label the items correctly \& Markdown will still render the numbers in order, but this may not be a good idea.
+\begin{verbatim}
+	1. Item 1
+	1. Item 2
+	1. Item 3
+\end{verbatim}
+(This renders the same as the above example)
+
+You can also use sublists
+\begin{verbatim}
+	1. Item one
+	2. Item two
+	3. Item three
+	    * Sub-item
+	    * Sub-item
+	4. Item four
+\end{verbatim}
+There are even task lists. This creates HTML checkboxes.
+\begin{verbatim}
+	Boxes below without the 'x' are unchecked HTML checkboxes.
+	- [ ] 1st task to complete.
+	- [ ] 2nd task that needs done
+	This checkbox below will be a checked HTML checkbox.
+	- [x] This task has been completed''
+\end{verbatim}
+
+\subsection{Code Blocks}
+``You can indicate a code block (which uses the \verb|<code>| element) by indenting a line with 4 spaces or a tab.
+\begin{verbatim}
+	    This is code
+	    So is this
+\end{verbatim}
+You can also re-tab (or add an additional 4 spaces) for indentation inside your code
+\begin{verbatim}
+	    my_array.each do |item|
+	        puts item
+	    end
+\end{verbatim}
+Inline code can be created using the backtick character \verb|`|
+\begin{verbatim}
+	John didn't even know what the `go_to()` function did!
+\end{verbatim}
+In GitHub Flavored Markdown, you can use a special syntax for code
+\begin{verbatim}
+	```ruby
+	def foobar
+	    puts "Hello world!"
+	end
+	```
+\end{verbatim}
+The above text doesn't require indenting, plus GitHub will use syntax highlighting of the language you specify after the \verb|```|.''
+
+\subsection{Horizontal Rule}
+``Horizontal rules (\verb|<hr/>|) are easily added with 3 or more asterisks or hyphens, with or without spaces.
+\begin{verbatim}
+	***
+	---
+	- - -
+	****************''
+\end{verbatim}
+
+\subsection{Links}
+``1 of the best things about markdown is how easy it is to make links. Put the text to display in hard brackets \texttt{[]} followed by the \textsc{url} in parentheses \texttt{()}
+\begin{verbatim}
+	[Click me!](http://test.com/)
+\end{verbatim}
+You can also add a link title using quotes inside the parentheses.
+\begin{verbatim}
+	[Click me!](http://test.com/ "Link to Test.com")
+\end{verbatim}
+Relative paths work too.
+\begin{verbatim}
+	[Go to music](/music/).
+\end{verbatim}
+Markdown also supports reference style links.
+\begin{verbatim}
+	[Click this link][link1] for more info about it!
+	[Also check out this link][foobar] if you want to.
+	
+	[link1]: http://test.com/ "Cool!"
+	[foobar]: http://foobar.biz/ "Alright!"
+\end{verbatim}
+The title can also be in single quotes or in parentheses, or omitted entirely. The references can be anywhere in your document \& the reference IDs can be anything so long as they are unique.
+
+There is also ``implicit naming'' which lets you use the link text as the id.
+\begin{verbatim}
+	[This][] is a link.
+	
+	[this]: http://thisisalink.com/
+\end{verbatim}
+But it's not that commonly used.''
+
+\subsubsection{Table of contents}
+``Some Markdown flavors even make use of the combination of lists, links \& headings in order to create table of contents. In this case, heading titles in lowercase are prepended with hash (\verb|#|) \& are used as link ids. Should the heading have multiple words, they will be connected with a hyphen (\texttt{-}), that also replaces some special characters. (Some other special characters are omitted though.)
+\begin{verbatim}
+	- [Heading](#heading)
+	- [Another heading](#another-heading)
+	- [Chapter](#chapter)
+	  - [Subchapter <h3 />](#subchapter-h3-)
+\end{verbatim}
+Nonetheless, this is a feature that might not be working in all Markdown implementations the same way.''
+
+\subsection{Images}
+``Images are done the same way as links but with an exclamation point in front!
+\begin{verbatim}
+	![This is the alt-attribute for my image](http://imgur.com/myimage.jpg "An optional title")
+\end{verbatim}
+And reference style works as expected.
+\begin{verbatim}
+	![This is the alt-attribute.][myimage]
+	
+	[myimage]: relative/urls/cool/image.jpg "if you need a title, it's here"''
+\end{verbatim}
+
+\subsection{Miscellany}
+
+\subsubsection{Auto-links}
+\begin{verbatim}
+	<http://testwebsite.com/> is equivalent to
+	[http://testwebsite.com/](http://testwebsite.com/)
+\end{verbatim}
+
+\subsubsection{Auto-links for emails}
+\begin{verbatim}
+	<foo@bar.com>
+\end{verbatim}
+
+\subsubsection{Escaping characters}
+\begin{verbatim}
+	I want to type *this text surrounded by asterisks* but I don't want it to be
+	in italics, so I do this: \*this text surrounded by asterisks\*.
+\end{verbatim}
+
+\subsubsection{Keyboard keys}
+``In GitHub Flavored Markdown, you can use a <kbd> tag to represent keyboard keys.
+\begin{verbatim}
+	Your computer crashed? Try sending a
+	<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd>''
+\end{verbatim}
+
+\subsubsection{Tables}
+``Tables are only available in GitHub Flavored Markdown \& are slightly cumbersome, but if you really want it:
+\begin{verbatim}
+	| Col1         | Col2     | Col3          |
+	| :----------- | :------: | ------------: |
+	| Left-aligned | Centered | Right-aligned |
+	| blah         | blah     | blah          |
+\end{verbatim}
+or, for the same results
+\begin{verbatim}
+	Col 1 | Col2 | Col3
+	:-- | :-: | --:
+	Ugh this is so ugly | make it | stop
+\end{verbatim}
+
+\subsection{Markdownlint}
+``In order to simplify work with Markdown \& to unify its coding style, Markdownlint has been created. This tool is available also as a plugin for some IDEs \& can be used as an utility to ensure validity \& readability of Markdown.''
+
+\subsection{Further Reading}
+``For more info, check out \href{http://daringfireball.net/projects/markdown/syntax}{John Gruber's official post of syntax} \& \href{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}{Adam Pritchard's great cheatsheet}. If you want to learn more on some major Markdown flavors' features, see:
+\begin{itemize}
+	\item \href{https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax}{GitHub flavored Markdown}
+	\item \href{https://docs.gitlab.com/ee/user/markdown.html}{GitLab flavored Markdown}
+\end{itemize}
+Originally contributed by \textsc{Dan Turkel}, \& updated by \href{https://github.com/adambard/learnxinyminutes-docs/blame/master/markdown.html.markdown}{13 contributor(s)}.'' 
+
+%------------------------------------------------------------------------------%
+
+\selectlanguage{english}
+\begin{thebibliography}{99}
+	\bibitem[]{}
+\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
