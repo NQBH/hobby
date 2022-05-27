@@ -1,26 +1,26 @@
-\documentclass{article}
+\documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
-\usepackage[utf8]{vietnam}
+\usepackage[vietnamese,english]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -32,48 +32,61 @@
 \def\labelitemii{$\circ$}
 
 \title{A Personal Journey to Psychology: The Way I Perceive}
-\author{Nguyễn Quản Bá Hồng}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
 \date{\today}
 
 \begin{document}
 \maketitle
-\begin{abstract}
-	A \textit{personal} journey to psychology. A collection of quotes from different resources, e.g., psychological books, websites, forums, and Facebook psychological pages, etc., and some \textit{personal} (again) thoughts about them.
-\end{abstract}
+A \textit{personal} journey to psychology. A collection of quotes from different resources, e.g., psychological books, websites, forums, \& Facebook psychological pages, etc., \& some \textit{personal} (again) thoughts about them.
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
-\section*{Foreword\texttt{/}Lời Dẫn}
-\begin{question}
-	Why this text? \& Why psychology?
-\end{question}
-Mình từ nhỏ, cũng như nhiều đứa trẻ khác, thích tìm tòi về Khoa học, đặc biệt là Toán học, rồi tiếp đến là Vật lý \& Hóa học. Mình học khá đều các môn này. Nhưng khi bắt đầu tham gia các cuộc thi các cấp, thì mình chỉ học mỗi môn Toán thay vì giỏi nhiều \& đều môn như cấp 2, \& nực cười thay khi thâm chí trong cái môn mình yêu thích nhất là Toán, mình chỉ tập trung cày bừa 1 vài chuyên đề yêu thích như Bất Đẳng Thức \& Số Học, không chú tâm nhiều đến các chủ đề khác. Kết quả thì hiển nhiên mà khó đạt được giải cao. Sau này lên Đại học, thì mình mới có cái laptop cá nhân đầu tiên vào cuối năm nhất. Mình thích tìm hiểu về Toán \& Máy tính. Tiếc là chỉ biết tập trung vào những thứ đó mà mình đã tự hạn hẹp kiến thức của bản thân \& thui chột nhiều khả năng khác mà mình có thể phát triển bằng việc tự học, \& đương nhiên: Tự học là vua của mọi loại kỹ năng.
+\chapter{Basic Terminologies}
 
-Hết Đại học, mình học Master ở Pháp. Sau khi tiếp xúc với nhiều thứ mới, nhiều người mới \& thú vị, thì mình bị trầm cảm nặng suốt 1 năm. Mình bắt đầu tỉnh ngộ: mình đã quá chú tâm vào việc cày Toán 1 cách máy móc \& kết quả là mình đã phát triển tâm lý \& nhận thức chậm hơn những người khác. Rồi mình nhận ra tầm quan trọng của những thứ khác để phát triển bản thân, đặc biệt là các kiến thức Tâm lý.
+\selectlanguage{vietnamese}
 
-Người nào giúp mình 1 lần, mình sẽ nhớ mãi, biết ơn, \& cố gắng trả ơn cho họ.
+%------------------------------------------------------------------------------%
 
-[\ldots]
+\selectlanguage{english}
+\chapter{Giver vs. Taker}
+\selectlanguage{vietnamese}
 
-Mỗi người sẽ kể 1 câu chuyện, tùy theo cách nhìn nhận, ghi nhớ của họ, \& thường là sẽ bị móm méo để có lợi cho chính bản thân họ, đôi khi để đổ lỗi, hạ thấp, thậm chí là triệt hạ người khác.
+\section{\href{https://nesslabs.com/taker-giver-matcher}{Ness Labs\texttt{/}Are you a taker, a giver, or a matcher?}}
+``Some people only help when it benefits\footnote{\textbf{benefit} [n] \textbf{1.} [countable, uncountable] a helpful \& useful effect that something has; an advantage that something provides; \textbf{2.} [uncountable, countable] (\textit{British English}) money provided by the government to people who need financial help because they are unemployed, sick, etc.; \textbf{give somebody the benefit of the doubt} [idiom] to accept that somebody has told the truth or has not done something wrong because you cannot prove that they have not told the truth\texttt{/}have done something wrong; [v] \textbf{1.} [intransitive] to be in a better position because of something; \textbf{2.} [transitive] \textbf{benefit somebody\texttt{/}something} to be useful or provide an advantage to somebody\texttt{/}something.} themselves, other foster\footnote{\textbf{foster} [v] \textbf{1.} \textbf{foster something} to encourage something to develop, \textsc{synonym}: \textbf{promote}; \textbf{2.} \textbf{foster somebody} (\textit{especially British English}) to take another person's child into your home for a period of time, without becoming the child's legal parent; [a] [only before noun] used with some nouns in connection with the fostering of a child.} transactional\footnote{\textbf{transactional} [a] \textbf{1.} relating to the process of buying or selling; \textbf{2.} relating to communication between people.} relationships, while yet others are generous\footnote{\textbf{generous} [a] (\textit{approving}) \textbf{1.} giving or willing to give time, money, etc. freely; given freely; \textbf{2.} more than is necessary; large; \textbf{3.} kind in the way you treat people; willing to see what is good about somebody\texttt{/}something.} with their time \& energy\footnote{\textbf{energy} [n] \textbf{1.} [uncountable, countable] the ability of matter or radiation to perform work because of its mass, movement, electrical charge, etc.; \textbf{2.} [uncountable] a source of power that can be used by somebody\texttt{/}something, e.g. to provide light \& heat, or to work machines; \textbf{3.} [uncountable] the effort needed to do work or other physical or mental activities; \textbf{4.} (\textbf{energies}) [plural] the physical \& mental effort that you use to do something.}, without asking for anything in return\footnote{\textbf{return} [v] \textbf{1.} [intransitive] \textbf{return (to $\ldots$) (from $\ldots$)} to come or go back from 1 place to another; \textbf{2.} [transitive] to bring, give, put or send something\texttt{/}somebody back to a particular person or place; \textbf{3.} [intransitive] to come back again, \textsc{synonym}: \textbf{reappear}; \textbf{4.} [intransitive] \textbf{return (to something)} to start discussing a subject you were discussing earlier, or doing an activity you were doing earlier; \textbf{5.} [intransitive, transitive] to go back, or to make something go back, to a previous state; \textbf{6.} [transitive] \textbf{return something} to do something or give something to somebody because they have done or given the same to you 1st; \textbf{7.} [transitive] \textbf{return something} to give or produce something such as a response, a result, a particular amount of money, etc.; \textbf{8.} [transitive, often passive] \textbf{return somebody (to something) $|$ return somebody (as something)} (\textit{British English}) to elect somebody to a political position; \textbf{9.} [transitive] \textbf{return a verdict} to give a decision about something in court; [n] \textbf{1.} [singular] the action of arriving in or coming back to a place that you were in before; \textbf{2.} [singular, uncountable] the action of giving, putting or sending something\texttt{/}somebody back; \textbf{3.} [singular] \textbf{return (of something)} the situation when a feeling or state that has not been experienced for some time starts again, \textsc{synonym}: \textbf{reappearance}; \textbf{4.} [singular] \textbf{return to something} the action of going back to an activity that you used to do, or to a situation that you used to be in; \textbf{5.} [uncountable, countable, usually plural] \textbf{return (on something)} the amount of profit that you get from something, \textsc{synonym}: \textbf{earnings, yield}; \textbf{6.} [countable] an official report or statement that gives particular information to the government or another body; \textbf{in return (for something)} [idiom] as an exchagne or a reward for something; as a response to something.}. Whether in their personal or professional\footnote{\textbf{professional} [a] \textbf{1.} [only before noun] connected with a job that needs special training or skill, especially one that needs a high level of education; \textbf{2.} (of people) having a job that needs special training \& a high level of education; \textbf{3.} showing that somebody is well trained \& extremely skilled, \textsc{synonym}: \textbf{competent}; \textbf{4.} suitable or appropriate for somebody working in a particular profession; \textbf{5.} doing something as a paid job rather than just for pleasure; [n] a person who does a job that needs special training \& a high level of education.} relationships, takers\footnote{\textbf{taker} [n] \textbf{1.} [usually plural] a person who is willing to accept something that is being offered; \textbf{2.} (often in compounds) a person who takes something.}, givers\footnote{\textbf{giver} [n] a person or an organization that gives something, especially money.}, \& matchers achieve different outcomes\footnote{\textbf{outcome} [n] the result or effect of an action or event.}. Surprisingly\footnote{\textbf{surprisingly} [adv] in a way that causes surprise.}, givers display\footnote{\textbf{display} [v] \textbf{1.} [transitive] to put something in a place where people can see it easily; to show something to people, \textsc{synonym}: \textbf{exhibit}; \textbf{2.} [transitive] \textbf{display something} to show signs of something, especially a quality, characteristic or feeling; \textbf{3.} [transitive] \textbf{display something} (of a computer, notice, table, etc.) to show information; \textbf{4.} [intransitive] (of male birds \& animals) to show a special pattern of behavior that is intended to attract a female bird or animal; [n] \textbf{1.} [countable] an arrangement of things in a public place to give information or entertain people or advertise something for sale. Things that are \textbf{on display} are put in a place where people can look at them.; \textbf{2.} [countable, uncountable] \textbf{display of something} behavior that shows a particular quality, feeling or ability; \textbf{3.} [uncountable] \textbf{display of something} the act of placing something in a public place for people to see; \textbf{4.} [countable] \textbf{display (of something)} an act of performing a skill or of showing something happening, in order to entertain; \textbf{5.} [countable, uncountable] \textbf{display (of something)} a special pattern of behavior that a male bird or animal shows in order to attract a female bird or animal.} the most radically\footnote{\textbf{radically} [adv] completely; to a very great extent.} distinctive\footnote{\textbf{distinctive} [a] having a quality or characteristic that makes something different \& easily noticed, \textsc{synonym}: \textbf{characteristic}.} results. \textit{Are you a taker, a giver, or a matcher?} \textit{\& how can you shift\footnote{\textbf{shift} [n] \textbf{1.} [countable] a change in position or direction; \textbf{2.} [countable] a period of time worked by a group of workers who start work as another group finishes; \textbf{3.} [uncountable] the system on a keyboard that allows capital letters or a different set of characters to be typed; the key that operates this system; [v] \textbf{1.} [transitive] \textbf{shift something (away from\texttt{/}from A) (to\texttt{/}towards B)} to change the attention, direction or focus of something; \textbf{2.} [intransitive] (of the emphasis or direction of something) to change from 1 state or position to another; \textbf{3.} [intransitive, transitive] to move from 1 position or place to another; to move something in this way; \textbf{shift your ground} [idiom] (\textit{usually disapproving}) to change your opinion about a subject, especially during a discussion.} your reciprocity\footnote{\textbf{reciprocity} [n] [uncountable] a situation in which 2 people, countries, etc. provide the same help or advantages to each other.} style\footnote{\textbf{style} [n] \textbf{1.} [countable, uncountable] the particular way in which something is done; \textbf{2.} [countable, uncountable] the features of a book, painting, building, etc. that make it typical of a particular author, artist, historical period, etc.; \textbf{3.} [countable] a particular design of something, e.g. clothes; \textbf{4.} [uncountable] the quality of being elegant or fashionable \& made to a high standard; \textbf{5.} [uncountable] the correct use of language; \textbf{6.} (in adjectives) having the type of style mentioned; \textbf{7.} [countable] (\textit{biology}) the long thin part of a flower that carries the stigma.} to have a positive impact\footnote{\textbf{impact} [n] [countable, usually singular, uncountable] \textbf{1.} the powerful effect that something has on somebody\texttt{/}something; \textbf{2.} the act of 1 object hitting another; the force with which this happens; [v] [transitive, intransitive] to have an effect on something.} on your work, your relationships, \& the world in general\footnote{\textbf{general} [a] \textbf{1.} affecting or including all or most people, places or things; \textbf{2.} [usually before noun] normal; usual; true in most cases; \textbf{3.} including the most important aspects of something; not exact or detailed, \textsc{synonym}: \textbf{broad}, \textsc{opposite}: \textbf{specific}; \textbf{4.} \textbf{the general direction\texttt{/}area} used to describe the approximate, but not exact, direction or area mentioned; \textbf{5.} not limited to a particular subject, use or activity; \textbf{6.} not limited to 1 part or aspect of a person or thing; \textbf{7.} [only before noun] highest in rank. In some titles, \textbf{General} comes after the noun.; \textbf{as a general rule} [idiom] usually; \textbf{of general interest} [idiom] of interest to most people; [n] (abbr., \textbf{Gen.}) an officer of very high rank in the army or the US air force; the commander of an army; \textbf{in general} [idiom] \textbf{1.} usually; mainly; \textbf{2.} as a whole.}?}
 
-Đời là 1 chuỗi vòng lặp vô tận nhưng không lối thoát thì chưa chắc. \texttt{insert Nguyễn Ngọc Tư quotes}
+\subsection{Takers, Givers, Matchers}
+In his book \href{https://amzn.to/32suu4A}{Give \& Take}, psychologist\footnote{\textbf{psychologist} [n] a scientist who studies psychology.} \& Wharton's top-rated\footnote{\textbf{top-rated} [a] [only before noun] most popular with the public.} professor \textsc{Adam Grant} divides\footnote{\textbf{divide} [v] \textbf{1.} [transitive, usually passive, intransitive] to separate into parts or groups; to make something separate into parts or groups; \textbf{2.} [transitive] \textbf{divide something (up) between\texttt{/}among somebody} to give a share of something to each of a number of different people or organizations, \textsc{synonym}: \textbf{share}; \textbf{3.} [transitive] to be the real or imaginary line or barrier that separates 2 areas, things or people, \textsc{synonym}: \textbf{separate}; \textbf{4.} [transitive] \textbf{divide something (between A \& B)} to use different parts of your time or energy for different activities; \textbf{5.} [transitive] to cause 2 or more people to disagree, \textsc{synonym}: \textbf{split}; \textbf{6.} [transitive] \textbf{divide something by something} to calculate something by finding out how many times 1 number or amount is contained in another; \textbf{divide \& rule} [idiom] to keep control over people by making them disagree with \& fight each other, therefore not giving them the chance to join together \& oppose you; [n] [usually singular] \textbf{1.} a difference between 2 groups of people that separates them from each other; a difference between 2 sets of ideas or areas of activity; \textbf{2.} \textbf{divide (between A \& B)} (\textit{especially North American English}) a line of high land that separates 2 valleys or systems of rivers, \textsc{synonym}: \textbf{watershed}; \textbf{bridge the gap\texttt{/}divide (between A \& B)} [idiom] to reduce or get rid of the differences that exist between 2 things or groups of people.} people into 3 groups: takers, givers, \& matchers. He explains: ``Whereas takers strive\footnote{\textbf{strive} [v] [intransitive] to try very hard to achieve something.} to get as much as possible from others \& matchers aim\footnote{\textbf{aim} [n] the purpose of doing something; what somebody is trying to achieve; \textbf{take aim at somebody\texttt{/}something} [idiom] to direct your criticism at somebody\texttt{/}something; [v] \textbf{1.} [transitive] \textbf{be aimed at (doing) something} to have the intention of achieving something; \textbf{2.} [intransitive, transitive] to try or plan to achieve something; \textbf{3.} [transitive, usually passive] \textbf{aim something at somebody} to say or do something that is intended to influence or affect a particular person or group.} to trade\footnote{\textbf{trade} [n] \textbf{1.} [uncountable] the activity of buying \& selling or of exchanging goods or services between people or countries. \textbf{Fair trade} is trade between companies in developed countries \& producers in developing countries in which fair prices are paid to the producers.; \textbf{2.} [countable] a particular type of business; \textbf{3.} (\textbf{the trade}) [singular $+$ singular or plural verb] the people or companies that are connected with a particular area of business; \textbf{4.} [countable, uncountable] a job, especially one that involves working with your hands \& that requires special training \& skills; \textbf{5.} [uncountable, singular] the amount of goods or services that are sold, \textsc{synonym}: \textbf{business}; [v] \textbf{1.} [intransitive, transitive] to buy \& sell goods \& services. In economics, \textbf{trade} is usually refer to 1 country or economy exchanging goods or services with another.; \textbf{2.} [intransitive] to exist \& operate as a business or company; \textbf{3.} [intransitive, transitive] to be bought \& sold, or to buy \& sell something, on a stock exchange or other financial institution; \textbf{4.} [transitive] to exchange something that you have for something else.} evenly\footnote{\textbf{evenly} [adv] \textbf{1.} in a smooth or regular way; \textbf{2.} with equal amounts for each person or in each place.}, givers are the rare\footnote{\textbf{rare} [a] (\textbf{rarer, rarest}) \textbf{1.} not done, seen, happening, etc. very often; \textbf{2.} existing only in small numbers \& therefore valuable or interesting.} breed\footnote{\textbf{breed} [v] \textbf{1.} [intransitive] (of animals) to have sex \& produce young; \textbf{2.} [transitive] to keep animals or plants in order to produce young ones in a controlled way; \textbf{3.} [transitive] \textbf{breed something} to be the cause of something; [n] \textbf{1.} a type of animal with a particular appearance that makes it different from others of the same species \& that is the result of having been developed in a controlled way; \textbf{2.} [usually singular] a type of person.} of people who contribute\footnote{\textbf{contribute} [v] \textbf{1.} [intransitive] \textbf{contribute (to something)} to be 1 of the causes of something; \textbf{2.} [intransitive, transitive] to help to improve or achieve something, especially by adding new ideas; \textbf{3.} [transitive, intransitive] to give something, especially money or goods, to help somebody\texttt{/}something; \textbf{4.} [transitive, intransitive] to write something for a newspaper, magazine, website, or a radio or television programme; to speak during a meeting or conversation, especially to give your opinion.} to others without expecting anything in return.''
+\begin{itemize}
+	\item \textbf{Takers.} Takers are self-focused\footnote{\textbf{focused} [a] (also \textbf{focussed}) with your attention directed to what you want to do; with very clear aims.} \& only help others strategically\footnote{\textbf{strategically} [adv] \textbf{1.} in a way that is connected with achieving a particular purpose or gaining an advantage; \textbf{2.} in a way that is connected with gaining an advantage in a war or other military situation.}, when the benefits to themselves outweigh\footnote{\textbf{outweigh} [v] \textbf{outweigh something} to be greater or more important than something.} the personal costs. In the words of Adam Grant: ``Takers have a distinctive\footnote{\textbf{distinctive} [a] having a quality or characteristic that makes something different \& easily noticed, \textsc{synonym}: \textbf{characteristic}.} signature\footnote{\textbf{signature} [n] \textbf{1.} [countable] your name as you usually write it, e.g. at the end of a letter; \textbf{2.} [uncountable] the act of signing something; \textbf{3.} [countable] a particular quality that makes something different from other similar things \& makes it easy to recognize.}: they like to get more than they give. They tilt\footnote{\textbf{tilt} [v] \textbf{1.} [intransitive, transitive] to move into a position with 1 side or end higher than the other; to make something move in this way, \textsc{synonym}: \textbf{tip}; \textbf{2.} [transitive, intransitive] to influence a situation so that 1 particular opinion, person, etc. is preferred or more likely to succeed than another; to change in this way; [n] [singular, uncountable] a position in which 1 end or side of something is higher than the other.} reciprocity\footnote{\textbf{reciprocity} [n] [uncountable] a situation in which 2 people, countries, etc. provide the same help or advantages to each other.} in their own favor, putting their own interests ahead of other's needs.''
+	\item \textbf{Givers.}
+\end{itemize}
+'' -- \href{https://nesslabs.com/author/annelaure}{Anne-Laure Le Cunff}
 
-Bạn cảm thấy  vui\texttt{/}sung sướng khi người khác thất bại? Thì bạn là 1 kẻ tồi (asshole).
+
+%------------------------------------------------------------------------------%
+
+\selectlanguage{english}
+\chapter{Miscellaneous}
+\selectlanguage{vietnamese}
+
+\begin{itemize}
+	\item \textbf{psychiatrist} [n] a doctor who studies \& treats mental illnesses.
+	\item \textbf{psychoanalyst} [n] (also \textbf{analyst}) a person who treats patients using psychoanalysis.
+\end{itemize}
 
 \section{An Untrained \&\texttt{/}Thus (?) Failed Eidetiker: The Way I Remember}
 
 \begin{remark}
-	At the beginning, I am not so sure that this concept should be mentioned here, in the subject of psychology. But when I recalled back some pieces of my memory, I realize how serious and devastated this ability has affected the development of my personality and psychology in various aspects.
+	At the beginning, I am not so sure that this concept should be mentioned here, in the subject of psychology. But when I recalled back some pieces of my memory, I realize how serious \& devastated\footnote{\textsc{vi}: Hồi ức của 1 kẻ có trí nhớ điện tử. Cần phân biệt với bộ phim \href{https://www.imdb.com/title/tt0353969/}{IMDb\texttt{/}Memories of Murder} (2003), original title: Salinui chueok, i.e., Hồi ức kẻ sát nhân.} this ability has affected the development of my personality \& psychology in various aspects.
 \end{remark}
 
 \begin{definition}[\href{https://en.wikipedia.org/wiki/Eidetic_memory}{Wikipedia\texttt{/}eidetic memory}]
-	``\emph{Eidetic memory} (more commonly called \emph{photographic memory} or \emph{total recall}) is the ability to recall an image from \href{https://en.wikipedia.org/wiki/Memory}{memory} with high precision for a brief period after seeing it only once, and without using a \href{https://en.wikipedia.org/wiki/Mnemonic_device}{mnemonic device}.''
+	``\emph{Eidetic memory} (more commonly called \emph{photographic memory} or \emph{total recall}) is the ability to recall an image from \href{https://en.wikipedia.org/wiki/Memory}{memory} with high precision for a brief period after seeing it only once, \& without using a \href{https://en.wikipedia.org/wiki/Mnemonic_device}{mnemonic device}.''
 \end{definition}
 
 \begin{remark}[\href{https://en.wikipedia.org/wiki/Eidetic_memory}{Wikipedia\texttt{/}eidetic memory}]
-	``Although the terms \emph{eidetic memory} and \emph{photographic memory} are popularly used interchangeably, they are also distinguished, with \emph{eidetic memory} referring to the ability to see an object for a few minutes after it is no longer present and \emph{photographic memory} referring to the ability to recall pages of text or numbers, or similar, in great detail. When the concepts are distinguished, eidetic memory is reported to occur in a small number of children and generally not found in adults, while true photographic memory has never been demonstrated to exist.'' \footnote{The word eidetic comes from the Greek word \textit{eidos} meaning ``visible form''.}
+	``Although the terms \emph{eidetic memory} \& \emph{photographic memory} are popularly used interchangeably, they are also distinguished, with \emph{eidetic memory} referring to the ability to see an object for a few minutes after it is no longer present \& \emph{photographic memory} referring to the ability to recall pages of text or numbers, or similar, in great detail. When the concepts are distinguished, eidetic memory is reported to occur in a small number of children \& generally not found in adults, while true photographic memory has never been demonstrated to exist.'' \footnote{The word eidetic comes from the Greek word \textit{eidos} meaning ``visible form''.}
 \end{remark}
 
 \begin{question}
@@ -83,30 +96,30 @@ Bạn cảm thấy  vui\texttt{/}sung sướng khi người khác thất bại? 
 \subsection{Eidetic vs. Photographic}
 From \href{https://en.wikipedia.org/wiki/Eidetic_memory#Eidetic_vs._photographic}{Wikipedia\texttt{/}eidetic memory\texttt{/}eidetic vs. photographic}:
 
-``The terms \textit{eidetic memory} and \textit{photographic memory} are commonly used interchangeably, but they are also distinguished. Scholar Annette Kujawski Taylor stated,
+``The terms \textit{eidetic memory} \& \textit{photographic memory} are commonly used interchangeably, but they are also distinguished. Scholar Annette Kujawski Taylor stated,
 \begin{quotation}
-	``In eidetic memory, a person has an almost faithful mental image snapshot or photograph of an event in their memory. However, eidetic memory is not limited to visual aspects of memory and includes auditory memories as well as various sensory aspects across a range of stimuli associated with a visual image.''
+	``In eidetic memory, a person has an almost faithful mental image snapshot or photograph of an event in their memory. However, eidetic memory is not limited to visual aspects of memory \& includes auditory memories as well as various sensory aspects across a range of stimuli associated with a visual image.''
 \end{quotation}
 Author Andrew Hudmon commented:
 \begin{quotation}
-	``Examples of people with a photographic-like memory are rare. Eidetic imagery is the ability to remember an image in so much detail, clarity, and accuracy that it is as though the image were still being perceived. It is not perfect, as it is subject to distortions and additions (like episodic memory) and vocalization interferes with the memory.''
+	``Examples of people with a photographic-like memory are rare. Eidetic imagery is the ability to remember an image in so much detail, clarity, \& accuracy that it is as though the image were still being perceived. It is not perfect, as it is subject to distortions \& additions (like episodic memory) \& vocalization interferes with the memory.''
 \end{quotation}
-``Eidetikers'', as those who possess this ability are called, report a vivid \href{https://en.wikipedia.org/wiki/Afterimage}{after image} that lingers in the visual field with their eyes appearing to scan across the image as it is described. Contrary to ordinary mental imagery, eidetic images are externally projected, experienced as ``out there'' rather than in the mind. Vividness and stability of the image begin to fade within minutes after the removal of the visual stimulus.
+``Eidetikers'', as those who possess this ability are called, report a vivid \href{https://en.wikipedia.org/wiki/Afterimage}{after image} that lingers in the visual field with their eyes appearing to scan across the image as it is described. Contrary to ordinary mental imagery, eidetic images are externally projected, experienced as ``out there'' rather than in the mind. Vividness \& stability of the image begin to fade within minutes after the removal of the visual stimulus.
 
 \href{https://en.wikipedia.org/wiki/Scott_Lilienfeld}{Lilienfeld} et al. stated,
 \begin{quotation}
 	``People with eidetic memory can supposedly hold a visual image in their mind with such clarity that they can describe it perfectly or almost perfectly $\ldots$, just as we can describe the details of a painting immediately in front of us with \fbox{near perfect accuracy}.''
 \end{quotation}
-By contrast, photographic memory may be defined as the ability to recall pages of text, numbers, or similar, in great detail, without the visualization that comes with eidetic memory. It may be described as the ability to briefly look at a page of information and then recite it perfectly from memory. This type of ability--absolute recall of all events in a lifetime--has never been proven to exist.''\footnote{This appeared in the movie \href{https://www.imdb.com/title/tt0119217/}{Good Will Hunting} (1997) mentioned in the quotes section.}
+By contrast, photographic memory may be defined as the ability to recall pages of text, numbers, or similar, in great detail, without the visualization that comes with eidetic memory. It may be described as the ability to briefly look at a page of information \& then recite it perfectly from memory. This type of ability--absolute recall of all events in a lifetime--has never been proven to exist.''\footnote{This appeared in the movie \href{https://www.imdb.com/title/tt0119217/}{Good Will Hunting} (1997) mentioned in the quotes section.}
 
 \subsection{Prevalence}
 From \href{https://en.wikipedia.org/wiki/Eidetic_memory#Prevalence}{Wikipedia\texttt{/}eidetic memory\texttt{/}prevalence}:
 
 ``\fbox{Eidetic memory is typically found only in young children, as it is virtually nonexistent in adults.} Hudmon stated, \textit{``Children possess far more capacity for eidetic imagery than adults, suggesting that a developmental change (e.g., acquiring language skills) may disrupt the potential for eidetic imagery.''}''
 
-``It has been hypothesized that language acquisition and verbal skills allow older children to think more abstractly and thus rely less on \href{https://en.wikipedia.org/wiki/Visual_memory}{visual memory} systems. Extensive research has failed to demonstrate consistent correlations between the presence of eidetic imagery and any cognitive, intellectual, neurological, or emotional measure.''
+``It has been hypothesized that language acquisition \& verbal skills allow older children to think more abstractly \& thus rely less on \href{https://en.wikipedia.org/wiki/Visual_memory}{visual memory} systems. Extensive research has failed to demonstrate consistent correlations between the presence of eidetic imagery \& any cognitive, intellectual, neurological, or emotional measure.''
 
-``A few adults have had phenomenal memories (not necessarily of images), but their abilities are also unconnected with their intelligence levels and tend to be highly specialized. In extreme cases, like those of \href{https://en.wikipedia.org/wiki/Solomon_Shereshevsky}{Solomon Shereshevsky} and \href{https://en.wikipedia.org/wiki/Kim_Peek}{Kim Peek}, memory skills can reportedly hinder social skills. Shereshevsky was \fbox{a trained \href{https://en.wikipedia.org/wiki/Mnemonist}{mnemonist}, not an eidetic memorizer}, and there are no studies that confirm whether Kim Peek had true eidetic memory.''
+``A few adults have had phenomenal memories (not necessarily of images), but their abilities are also unconnected with their intelligence levels \& tend to be highly specialized. In extreme cases, like those of \href{https://en.wikipedia.org/wiki/Solomon_Shereshevsky}{Solomon Shereshevsky} \& \href{https://en.wikipedia.org/wiki/Kim_Peek}{Kim Peek}, memory skills can reportedly hinder social skills. Shereshevsky was \fbox{a trained \href{https://en.wikipedia.org/wiki/Mnemonist}{mnemonist}, not an eidetic memorizer}, \& there are no studies that confirm whether Kim Peek had true eidetic memory.''
 
 \subsection{Skepticism}
 From \href{https://en.wikipedia.org/wiki/Eidetic_memory#Skepticism}{Wikipedia\texttt{/}eidetic memory\texttt{/}skepticism}: [$\ldots$]
@@ -115,33 +128,33 @@ From \href{https://en.wikipedia.org/wiki/Eidetic_memory#Skepticism}{Wikipedia\te
 \begin{quotation}
 	``Some psychologists believe that eidetic memory reflects an unusually long persistence of the iconic image in some lucky people''. [$\ldots$] ``More recent evidence raises questions about whether any memories are truly photographic (Rothen, Meier \& Ward, 2012). Eidetikers' memories are clearly remarkable, but they are rarely perfect. Their memories often contain minor errors, including information that was not present in the original visual stimulus. So even eidetic memory often appears to be reconstructive''.
 \end{quotation}
-\href{https://en.wikipedia.org/wiki/Skeptical_movement}{Scientific skeptic} author \href{https://en.wikipedia.org/wiki/Brian_Dunning_(author)}{Brian Dunning} reviewed the literature on the subject of both eidetic and photographic memory in 2016 and concluded that there is ``a lack of compelling evidence that eidetic memory exists at all among healthy adults, and no evidence that photographic memory exists. But there's a common theme running through many of these research papers, and that's that the difference between ordinary memory and \href{https://en.wikipedia.org/wiki/Exceptional_memory}{exceptional memory} appears to be one of degree.''''
+\href{https://en.wikipedia.org/wiki/Skeptical_movement}{Scientific skeptic} author \href{https://en.wikipedia.org/wiki/Brian_Dunning_(author)}{Brian Dunning} reviewed the literature on the subject of both eidetic \& photographic memory in 2016 \& concluded that there is ``a lack of compelling evidence that eidetic memory exists at all among healthy adults, \& no evidence that photographic memory exists. But there's a common theme running through many of these research papers, \& that's that the difference between ordinary memory \& \href{https://en.wikipedia.org/wiki/Exceptional_memory}{exceptional memory} appears to be one of degree.''''
 
 \subsection{Trained Mnemonists}
 From \href{https://en.wikipedia.org/wiki/Eidetic_memory#Trained_mnemonists}{Wikipedia\texttt{/}eidetic memory\texttt{/}trained mnemonists}:
 
-``To constitute photographic or eidetic memory, the visual recall must persist without the use of mnemonics, expert talent, or other cognitive strategies. Various cases have been reported that rely on such skills and are erroneously attributed to photographic memory.''
+``To constitute photographic or eidetic memory, the visual recall must persist without the use of mnemonics, expert talent, or other cognitive strategies. Various cases have been reported that rely on such skills \& are erroneously attributed to photographic memory.''
 
 \begin{example}
 	``An example of extraordinary memory abilities being ascribed to eidetic memory comes from the popular interpretations of \href{https://en.wikipedia.org/wiki/Adriaan_de_Groot}{Adriaan de Groot}'s classic experiments into the ability of \href{https://en.wikipedia.org/wiki/Chess}{chess} \href{https://en.wikipedia.org/wiki/Grandmaster_(chess)}{grandmaster} to memorize complex positions of chess pieces on a chessboard. Initially, Initially, it was found that these experts could recall surprising amounts of information, far more than nonexperts, suggesting eidetic skills. However, when the experts were presented with arrangements of chess pieces that could never occur in a game, their recall was no better than that of the nonexperts, suggesting that they had \fbox{developed an ability to organize certain types of information, rather than possessing innate eidetic ability}.
 \end{example}
-Individuals identified as having a condition known as \href{https://en.wikipedia.org/wiki/Hyperthymesia}{hyperthymesia} are able to remember very  intricate details of their own personal lives, but the ability seems not to extend to other, non-autobiographical information. They may have vivid recollections such as who they were with, what they were wearing, and how they were feeling on a specific date many years in the past. Patients under study, e.g., \href{https://en.wikipedia.org/wiki/Jill_Price}{Jill Price}, show brain scans that resemble those with \href{https://en.wikipedia.org/wiki/Obsessive-compulsive_disorder}{obsessive-compulsive disorder}. In fact, Price's unusual autobiographical memory has been attributed as a byproduct of compulsively making journal and diary entries. Hyperthymestic patients may additionally have depression\footnote{NQBH: a connection between eidetic memory and depression.} stemming from the inability to forget unpleasant memories and experiences from the past.\footnote{Exactly my case.} It is a misconception that hyperthymesia suggests any eidetic ability.\footnote{It seems to me that I possess both of these curses, although the latter is less obvious when I grow up: My memory is less sharp and more messy (somehow the capacity of my memory seems to expand).}
+Individuals identified as having a condition known as \href{https://en.wikipedia.org/wiki/Hyperthymesia}{hyperthymesia} are able to remember very  intricate details of their own personal lives, but the ability seems not to extend to other, non-autobiographical information. They may have vivid recollections such as who they were with, what they were wearing, \& how they were feeling on a specific date many years in the past. Patients under study, e.g., \href{https://en.wikipedia.org/wiki/Jill_Price}{Jill Price}, show brain scans that resemble those with \href{https://en.wikipedia.org/wiki/Obsessive-compulsive_disorder}{obsessive-compulsive disorder}. In fact, Price's unusual autobiographical memory has been attributed as a byproduct of compulsively making journal \& diary entries. Hyperthymestic patients may additionally have depression\footnote{NQBH: a connection between eidetic memory \& depression.} stemming from the inability to forget unpleasant memories \& experiences from the past.\footnote{Exactly my case.} It is a misconception that hyperthymesia suggests any eidetic ability.\footnote{It seems to me that I possess both of these curses, although the latter is less obvious when I grow up: My memory is less sharp \& more messy (somehow the capacity of my memory seems to expand).}
 
-Each year at the \href{https://en.wikipedia.org/wiki/World_Memory_Championships}{World Memory Championships}, the world's best memorizers compete for prizes. None of the world's best competitive memorizers has a photographic memory, and no one with claimed eidetic or photographic memory has ever won the championship.''
+Each year at the \href{https://en.wikipedia.org/wiki/World_Memory_Championships}{World Memory Championships}, the world's best memorizers compete for prizes. None of the world's best competitive memorizers has a photographic memory, \& no one with claimed eidetic or photographic memory has ever won the championship.''
 
 \subsection{Notable Claims}
 From \href{https://en.wikipedia.org/wiki/Eidetic_memory#Notable_claims}{Wikipedia\texttt{/}eidetic memory\texttt{/}notable claims}:
 
 ``Main article: \href{https://en.wikipedia.org/wiki/List_of_people_claimed_to_possess_an_eidetic_memory}{List of people claimed to possess an eidetic memory}.
 
-There are a number of individuals whose extraordinary memory has been labeled ``eidetic'', but it is not established conclusively whether they use \href{https://en.wikipedia.org/wiki/Mnemonic}{mnemonics} and other, non-eidetic memory-enhancement.
+There are a number of individuals whose extraordinary memory has been labeled ``eidetic'', but it is not established conclusively whether they use \href{https://en.wikipedia.org/wiki/Mnemonic}{mnemonics} \& other, non-eidetic memory-enhancement.
 
 \begin{example}
-	`Nadia', who began \fbox{drawing realistically} at the age of 3, is \fbox{autistic} and has been closely studied. During her childhood she produced highly precocious, repetitive drawings from memory, remarkable for being in perspective (which children tend not to achieve until at least adolescence) at the age of 3, which showed different perspectives on an image she was looking at. E.g., when at the age of three she was obsessed with horses after seeing a horse in a story book she generated numbers of images of what a horse should look like in any posture. She could draw other animals, objects, and parts of human bodies accurately, but represented human faces as jumbled forms.'' \footnote{Cf. my untrained drawing ability compared to a trained adult when I was a boy.}
+	`Nadia', who began \fbox{drawing realistically} at the age of 3, is \fbox{autistic} \& has been closely studied. During her childhood she produced highly precocious, repetitive drawings from memory, remarkable for being in perspective (which children tend not to achieve until at least adolescence) at the age of 3, which showed different perspectives on an image she was looking at. E.g., when at the age of three she was obsessed with horses after seeing a horse in a story book she generated numbers of images of what a horse should look like in any posture. She could draw other animals, objects, \& parts of human bodies accurately, but represented human faces as jumbled forms.'' \footnote{Cf. my untrained drawing ability compared to a trained adult when I was a boy.}
 \end{example}
 
 \begin{example}
-	Others have not been thoroughly tested, though savant \href{https://en.wikipedia.org/wiki/Stephen_Wiltshire}{Stephen Wiltshire} can look at a subject once and then produce, often before an audience, an accurate and detailed drawing of it, and has drawn entire cities from memory, based on single, brief helicopter rides; his 6-meter drawing of 305 square miles of New York City is based on a single 20-minute helicopter ride.
+	Others have not been thoroughly tested, though savant \href{https://en.wikipedia.org/wiki/Stephen_Wiltshire}{Stephen Wiltshire} can look at a subject once \& then produce, often before an audience, an accurate \& detailed drawing of it, \& has drawn entire cities from memory, based on single, brief helicopter rides; his 6-meter drawing of 305 square miles of New York City is based on a single 20-minute helicopter ride.
 \end{example}
 
 \begin{example}
@@ -149,7 +162,7 @@ There are a number of individuals whose extraordinary memory has been labeled ``
 \end{example}
 
 \begin{question}
-	Connection\emph{\texttt{/}}Correlation between eidetic memory and gifted drawing ability?
+	Connection\emph{\texttt{/}}Correlation between eidetic memory \& gifted drawing ability?
 \end{question}
 
 \subsection{Quotes on Eidetic Memory}
@@ -183,7 +196,7 @@ Well, it will take me a really really long long time to beat this shit.
 Monomaniac - Kẻ độc hành.
 
 \section{Rich Dad, Poor Dad}
-I just realize: If I cannot teach my son to become a man, a real man, then I should not have him. Like father, like son. If I cannot help my son get out of the life circle\footnote{\textsc{vi}: vòng lặp lẩn quẩn của cuộc đời.} of poor \& stupidity, then why should I have one?
+I just realize: If I cannot teach my son to become a man, a real man, then I should not have him. ``Like father, like son''. If I cannot help my son get out of the life circle\footnote{\textsc{vi}: vòng lặp lẩn quẩn của cuộc đời.} of poor \& stupidity, then why should I have one?
 
 \section{Undisputed Truth}
 Mike Tyson's  autobiography \cite{Tyson_Sloman2013}:
@@ -206,10 +219,10 @@ Ask myself before doing anything literally:
 \begin{question}
 	What is the best status or feeling in life?
 \end{question}
-This question lies in the borderline between the fields of psychology and philosophy. Should I move it to \cite{NQBH/philosophy}?
+This question lies in the borderline between the fields of psychology \& philosophy. Should I move it to \cite{NQBH/philosophy}?
 
 \begin{proof}[NQBH's personal answer]
-	Concentration and contributions.
+	Concentration \& contributions.
 \end{proof}
 
 \begin{quotation}
@@ -227,7 +240,9 @@ This question lies in the borderline between the fields of psychology and philos
 
 %------------------------------------------------------------------------------%
 
+\selectlanguage{english}
 \begin{thebibliography}{99}
+	\selectlanguage{vietnamese}
 	\bibitem[NQBH\texttt{/}philosophy]{NQBH/philosophy} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/philosophy/NQBH_a_personal_journey_to_philosophy.pdf}{\textit{A Personal Journey to Philosophy}}. Mar 2022--now.
 	
 	\bibitem[Wikipedia]{Wikipedia} \href{https://en.wikipedia.org/wiki/Main_Page}{Wikipedia.org}.
