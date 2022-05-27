@@ -360,6 +360,120 @@ Now he's begun to combine his interests in topology \& dynamical systems even mo
 
 ``I'm not sure he sees the boundaries between different areas of mathematics the same as other people see it,'' said Munthe--Kaas.'' -- Jordana Cepelewicz, Senior Writer
 
+\section{\href{https://www.quantamagazine.org/computing-expert-says-programmers-need-more-math-20220517/}{Quanta Magazine\texttt{/}How to Write Software with Mathematical Perfection}}
+``\textsc{Leslie Lamport} revolutionized how computers talk to each other. Now he's working on how engineers talk to their machines.''
+
+\textsf{Fig. Modern computers can effectively coordinate with each other because of the work of the computer scientist \textsc{Leslie Lamport}. He's since turned his attention to making programming itself more efficient.} -- Talia Herman for Quanta Magazine
+
+``\href{http://www.lamport.org/}{Leslie Lamport} may not be a household name, but he's behind a few of them for computer scientists: the typesetting program \LaTeX\ \& the work that made cloud infrastructure at Google \& Amazon possible. He's also brought more attention to a handful of problems, giving them distinctive names like the \textit{bakery algorithm} \& the \textit{Byzantine Generals Problem}. This is no accident. The 81-year-old computer scientist is unusually\footnote{\textbf{unusually} [adv] \textbf{1.} used before adjectives to emphasize that a particular quality is greater than normal; \textbf{2.} used to say that a particular situation is not normal or expected.} thoughtful about how people use \& think about software.
+
+In 2013, he won the A.M. Turing Award, considered the Nobel Prize of computing, for his work on distributed systems, where multiple components on different networks coordinate to achieve a common objective. Internet searches, cloud computing \& artificial intelligence all involve orchestrating legions of powerful computing machines to work together. Of course, this kind of coordination opens you up to more problems.
+
+``A distributed system is one in which the failure of a computer you didn't even know existed can render your own computer unusable,'' Lamport once said.
+
+Among the biggest sources of problems are ``concurrent systems,'' where multiple computing operations happen during overlapping slices of time, leading to ambiguity: Which computer's clock is the right one? In a seminal 1978 paper [\href{https://dl.acm.org/doi/10.1145/359545.359563}{Time, clocks, \& the ordering of events in a distributed system}], Lamport introduced the notion of ``causality'' to solve this issue, using an insight from special relativity. 2 observers may disagree on the order of events, but if 1 event causes another, that eliminates the ambiguity. \& sending or receiving a message can establish causality among multiple processes. Logical clocks -- now also called \textit{Lamport clocks} -- provided a standard way to reason about concurrent systems.
+
+With this tool in hand, computer scientists next wondered how they could systematically make these connected computers even bigger, without adding bugs. Lamport came up with an elegant solution: Paxos, a ``consensus algorithm'' that allows multiple computers to execute complex tasks. Without Paxos \& its family of algorithms, modern computing could not exist.
+
+\textsf{\href{https://youtu.be/rkZzg7Vowao}{Video. \textsc{Leslie Lamport} talks about the importance of programming instead of coding, how he developed distributed systems \& his favorite algorithm}.} -- Photo by Talia Herman for Quanta Magazine; video by Emily Buder \& Marcos Rocha for Quanta Magazine
+
+In the early 1980s, as he developed the field, Lamport also created \LaTeX, a document preparation system that provides sophisticated ways to typeset complex formulas \& format scientific documents. \LaTeX\ has become the standard for formatting papers not only in math \& computer science but also in most scientific domains.
+
+Lamport's work since the 1990s has focused on ``formal verification,'' the use of mathematical proofs to verity the correctness of software \& hardware systems. Notably, he created a ``specification language'' called \href{https://lamport.azurewebsites.net/tla/tla.html}{TLA+} (for Temporal Logical of Actions). A software specification is like a blueprint or a recipe for a program; it describes how software should behave on a high level. It's not always necessary, since coding a simple program is akin to just boiling an egg. But a more complicated task with higher stakes -- the coding equivalent of a 9-course banquet -- requires more precision. You need to prepare each component of each dish, combine them in a precise ways, then serve them to every guest in the correct order. This requires exact recipes \& instructions, written in unambiguous \& succinct language, but descriptions written in English prose could leave room for misinterpretation. TLA+ employs the precise language of mathematics to prevent bugs \& avoid design flaws.
+
+Using your recipe, or specification, as an input, a program called a \textit{model checker} will check whether the recipe makes sense \& works as intended, producing a dish the way the chef wants it. Lamport laments how programmers often cobble together a system before writing a proper specification, whereas chefs would never cater a banquet without 1st knowing that their recipes will work.
+
+\textit{Quanta} spoke with Lamport about his work on distributed systems, what's wrong with computer science education, \& how using TLA+ can help programmers build better systems. The interview has been condensed \& edited for clarity.
+
+\begin{question}
+	Let's start with Paxos, since it's such an influential algorithm. What made you start working on it in the 1st place?
+\end{question}
+People were building a system with some code, \& I had the hunch\footnote{\textbf{hunch} [v] [intransitive, transitive] to bend the top part of your body forward \& raise your shoulders \& back; [n] a feeling that something is true even though you do not have any evidence to prove it.} that what their code was trying to accomplish was impossible. So I decided to try to prove it, \& instead came up with an algorithm that the people should have been using for their system.
+
+\begin{question}
+	What was wrong with their original algorithm?
+\end{question} 
+Well, they didn't have an algorithm, just a bunch of code. Very few programmers think in terms of algorithms. When trying to write a concurrent system, if you just code it without having algorithms, there's no way that your program is not going to be full of bugs.
+
+\textsf{Fig. Lamport visits the Computer History Museum in Mountain view, Calif.} -- Talia Herman for Quanta Magazine
+
+\begin{question}
+	The paper [\href{https://dl.acm.org/doi/10.1145/279227.279229}{Leslie Lamport. The part-time parliament}] that introduced Paxos wasn't very widely read at 1st. Why was that?
+\end{question}
+What made it impossible for people to read the paper was that I like explaining things with stories, \& I made up names for characters in sort of pseudo--Greek letters. E.g., in the paper there was a cheese inspector named $\Gamma\omega\nu\delta\alpha$. Having grown up as a mathematician, where Greek letters were used all over the place, I was just unaware that nonmathematicians get completely freaked out by those letters. Apparently, the readers couldn't deal with it, \& it caused that paper not to be read as it should have been.
+
+So that didn't work as well at 1st. Although in the long run it did, because people call this family of consensus algorithms Paxos instead of ``viewstamped replication\footnote{\textbf{replication} [n] [uncountable, countable] \textbf{1.} the act or process of producing the same thing again; \textbf{2.} the process by which genetic material, a cell or a virus makes a copy of  itself.},'' which was another name for the same algorithm from [the computer scientist] \href{https://www.quantamagazine.org/barbara-liskov-is-the-architect-of-modern-algorithms-20191120/}{Barbara Liskov}.
+
+\begin{question}
+	After working on distributed systems for so many years, what got you into TLA+?
+\end{question}
+In the 1970s, when people were reasoning about programs, they were proving properties of the program itself stated in terms of programming languages. Then people realized that they should really be stating what the program is supposed to accomplish 1st -- the program's behaviors.
+
+In the early 1980s, I realized that 1 practical method of writing these higher-level specifications for concurrent systems was writing them as abstract algorithms. With TLA+, I was able to express them mathematically in a completely rigorous fashion. \& everything clicked. What that involves is basically not trying to write algorithms in a programming language: If you really want to do things right, you need to write your algorithm in the terms of mathematics.
+
+\textsf{Fig. ``The importance of thinking \& writing before you code needs to be taught in undergraduate computer science courses \& it's not,'' Lamport said.} -- Talia Herman for Quanta Magazine
+
+\begin{question}
+	You've said, ``If you're thinking without writing, you only think you're thinking.'' Is that where model checking comes in?
+\end{question}
+Model checking is a method for exhaustively testing all executions of a small model of the system. It just shows the correctness of the model, not of the algorithm. While model checking tests for correctness, coding just produces code. It doesn't test anything. Before there was model checking, the only way to be sure that your algorithm worked was to write a proof.
+
+In practice, model checking checks all executions of a small instance of the algorithm. \& if you're lucky, you can check large enough instances that it gives you enough confidence in the algorithm. But the proof can prove its correctness for a system of any size \& for any use of the algorithm.
+
+\begin{question}
+	It sounds like model checking is related to another method of program verification: \href{https://www.quantamagazine.org/building-the-mathematical-library-of-the-future-20201001/}{interactive theorem proving} using tools such as Coq. How are they different?
+\end{question}
+Coq was designed to do real mathematics \ to be able to capture the reasoning that mathematicians do. It's what Georges Gonthier used to prove the \href{https://www.quantamagazine.org/decades-old-graph-problem-yields-to-amateur-mathematician-20180417/}{4-color theorem}, e.g. A machine-checked proof of a mathematical statement shows that the statement is almost certainly true.
+
+TLA+ is designed not for mathematicians but for engineers who want to prove the properties of their systems. In the 1990s, after having spent about 15 years writing proofs of concurrent algorithms, I learned what you needed to do in order to prove the correctness of a concurrent algorithm. TLA was the logic that allowed it to be all completely normal. \& TLA+ is the complete language based on that.
+
+\textsf{Fig. Lamport won the A.M. Turing Award in 2013 for his work on computer coordination, a field known as \textit{distributed systems}. His Paxos algorithm is now an industry standard.} -- Talia Herman for Quanta Magazine
+
+\begin{question}
+	Specification languages like TLA+ aren't used very widely in industry, right? Why do you think that is?
+\end{question}
+Well, \href{https://www.youtube.com/channel/UCajiu4Cj_GHOX0if3Up-eRA}{I'm doing what I can}. But basically, programmers \& many (if not most) computer scientists are terrified by math. So that's a tough sell.
+
+2ndly, every project has to be done in a rush. There's an old saying, ``There's never time to do it right. There's always time to do it over.'' Because TLA+ involves upfront effort, you're adding a new step in the development process, \& that's also a hard sell.
+
+\begin{question}
+	Is it always worth that upfront effort?
+\end{question}
+True, most of the code written by programmers across the world doesn't require very precise statements about what it's supposed to do. But there are things that are important \& need to be correct.
+
+When people build a chip, they want that chip to work right. When people build a cloud infrastructure, they don't want bugs that will lose people's data. For the kind of application where precision is important, you need to be very rigorous. \& you need something like TLA+, especially if there's concurrency involved, which there usually is in these systems.
+
+\textsf{Fig. The specification language TLA+, developed by Lamport over the past few decades, allows engineers to describe a program's goals in a precise, mathematical way.} -- Talia Herman for Quanta Magazine
+
+\begin{question}
+	Are programmers biased in terms of spending more time writing code than they do thinking about it?
+\end{question}
+Yes, the important of thinking \& writing before you code needs to be taught in undergraduate computer science courses \& it's not. \& the reason is that there's no communication between the people who teach programming \& the people who teach program verification.
+
+From what I've seen, the fault lies on both sides of that divide. The people who teach programming don't know the verification that they need to know. The people who are teaching verification don't understand how it should be applied \& used in practice.
+
+Until that divide is bridged, TLA+ is not going to find a large number of users. I hope I could at least get the people who teach concurrent programming to understand that they need it. Then maybe there's some hope.
+
+\begin{question}
+	I get the sense that you aren't too happy with computer science education these days. Is it because it doesn't put enough emphasis on mathematics?
+\end{question}
+On mathematical thinking, yeah.
+
+\begin{question}
+	How would you structure an undergraduate curriculum, then?
+\end{question}
+I'm not an educator, so I don't know how to teach it to them. But I know what people should have learned. They shouldn't be afraid of math. It's just simple math that they've probably taken a course in, but they don't know how to use it. They don't know what good it is. They learn enough to pass the exam \& then they forget about it.
+
+\begin{question}
+	Mathematicians often say they see beauty in math. You started out in that field, so do you see beauty in algorithms?
+\end{question}
+I don't think in terms of aesthetics\footnote{\textbf{aesthetic} [a] (\textit{North American English also} \textbf{esthetic}) \textbf{1.} concerned with beauty \& art \& the understanding of beautiful things; \textbf{2.} beautiful to look at; [n] \textbf{1.} [countable] \textbf{aesthetic (of something)} a set of principles that express the aesthetic qualities \& ideas of a particular artist or a particular group of artists, writers, etc.; \textbf{2.} (\textbf{aesthetics}) [uncountable] the branch of philosophy that studies the principles of beauty, especially in art.}. I probably have the kinds of feelings that other people do, but I just use different words to express them. Being beautiful is not something I would say about an algorithm. But \fbox{simplicity} is something that I value highly.
+
+\begin{question}
+	1 last thing, about another side project of yours with a sizable impact: \LaTeX. I'd like to finally clear something up with the creator. Is it pronounced LAH-tekh or LAY-tekh?
+\end{question}
+Any way you want. I don't advise spending very much time thinking about it.'' -- Sheon Han, Contributing Writer
+
 %------------------------------------------------------------------------------%
 
 \selectlanguage{english}
