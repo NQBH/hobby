@@ -1,10 +1,11 @@
 \documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[chapter]
@@ -31,7 +32,7 @@
 \def\labelitemii{$\circ$}
 
 \title{Some Topics in Numerical Analysis}
-\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
 \date{\today}
 
 \begin{document}
@@ -42,9 +43,97 @@
 
 %------------------------------------------------------------------------------%
 
-\chapter*{Foreword}
+\chapter*{Preface}
 
 A collection of \& some personal notes on Numerical Analysis.
+
+%------------------------------------------------------------------------------%
+
+\chapter{Wikipedia's}
+
+\section{\href{https://en.wikipedia.org/wiki/Numerical_analysis}{Wikipedia\texttt{/}Numerical Analysis}}
+\textsf{Fig. Babylonian clay tablet \href{https://en.wikipedia.org/wiki/YBC_7289}{YBC 7289} (c. 1800--1600 BC) with annotations. The approximation of the \href{https://en.wikipedia.org/wiki/Square_root_of_2}{square root of 2} is 4 \href{https://en.wikipedia.org/wiki/Sexagesimal}{sexagesimal} figures, which is about 6 \href{https://en.wikipedia.org/wiki/Decimal}{decimal} figures. $1 + \frac{24}{60} + \frac{51}{60^2} + \frac{10}{60^3} = 1.41421296...$.}
+
+``\textit{Numerical analysis} is the study of \href{https://en.wikipedia.org/wiki/Algorithm}{algorithms} that use numerical \href{https://en.wikipedia.org/wiki/Approximation}{approximation} (as opposed to \href{https://en.wikipedia.org/wiki/Symbolic_computation}{symbolic manipulations}) for the problems of \href{https://en.wikipedia.org/wiki/Mathematical_analysis}{mathematical analysis} (as distinguished from \href{https://en.wikipedia.org/wiki/Discrete_mathematics}{discrete mathematics}). Numerical analysis finds application in all fields of engineering \& the physical sciences, \& in the 21st century also the life \& social sciences, medicine, business \& even the arts. Current growth in computing power has enabled the use of more complex numerical analysis, providing detailed \& realistic mathematical models in science \& engineering. Examples of numerical analysis include: \href{https://en.wikipedia.org/wiki/Ordinary_differential_equation}{ODEs} as found in \href{https://en.wikipedia.org/wiki/Celestial_mechanics}{celestial mechanics} (predicting the motions of planets, stars \& galaxies), \href{https://en.wikipedia.org/wiki/Numerical_linear_algebra}{numerical linear algebra} in data analysis, \& \href{https://en.wikipedia.org/wiki/Stochastic_differential_equation}{stochastic differential equations} \& \href{https://en.wikipedia.org/wiki/Markov_chain}{Markov chains} for simulating living cells in medicine \& biology.
+
+Before modern computers, \href{https://en.wikipedia.org/wiki/Numerical_method}{numerical methods} often relied on hand \href{https://en.wikipedia.org/wiki/Interpolation}{interpolation} formulas, using data from large printed tables. Since the mid 20th century, computers calculate the required functions instead, but many of the same formulas continue to be used in software algorithms.
+
+The numerical point of view goes back to the earliest mathematical writings. A tablet from the \href{https://en.wikipedia.org/wiki/Yale_Babylonian_Collection}{Yale Babylonian Collection} (\href{https://en.wikipedia.org/wiki/YBC_7289}{YBC 7289}), gives a \href{https://en.wikipedia.org/wiki/Sexagesimal}{sexagesimal} numerical approximation of the \href{https://en.wikipedia.org/wiki/Square_root_of_2}{square root of 2}, the length of the \href{https://en.wikipedia.org/wiki/Diagonal}{diagonal} in a \href{https://en.wikipedia.org/wiki/Unit_square}{unit square}.
+
+Numerical analysis continues this long tradition: rather than giving exact symbolic answers translated into digits \& applicable only to real-world measurements, approximate solutions within specified error bounds are used.'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis}{Wikipedia\texttt{/}numerical analysis}
+
+\subsection{General Introduction}
+``The overall goal of the field of numerical analysis is the design \& analysis of techniques to give approximate but accurate solutions to hard problems, the variety of which is suggested by the following:
+\begin{itemize}
+	\item Advanced numerical methods are essential in making \href{https://en.wikipedia.org/wiki/Numerical_weather_prediction}{numerical weather prediction} feasible.
+	\item Computing the trajectory of a spacecraft requires the accurate numerical solution of a system of ODEs.
+	\item Car companies can improve the crash safety of their vehicles by using computer simulations of car crashes. Such simulations essentially consist of solving \href{https://en.wikipedia.org/wiki/Partial_differential_equation}{PDEs} numerically.
+	\item \href{https://en.wikipedia.org/wiki/Hedge_fund}{Hedge funds} (private investment funds) use tools from all fields of numerical analysis to attempt to calculate the value of \href{https://en.wikipedia.org/wiki/Stock}{stocks} \& \href{https://en.wikipedia.org/wiki/Derivative_(finance)}{derivatives} more precisely than other market participants.
+	\item Airlines use sophisticated optimization algorithms to decide ticket prices, airplane \& crew assignments \& fuel needs. Historically, such algorithms were developed within the overlapping field of \href{https://en.wikipedia.org/wiki/Operations_research}{operations research}.
+	\item Insurance companies use numerical programs for \href{https://en.wikipedia.org/wiki/Actuary}{actuarial} analysis.
+\end{itemize}
+The rest of this section outlines several important themes of numerical analysis.'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis#General_introduction}{Wikipedia\texttt{/}numerical analysis\texttt{/}general introduction}
+
+\subsubsection{History}
+``The field of numerical analysis predates the invention of modern computers by many centuries. \href{https://en.wikipedia.org/wiki/Linear_interpolation}{Linear interpolation} was already in use more than 2000 years ago. Many great mathematicians of the past were preoccupied by numerical analysis, as is obvious from the names of important algorithms like \href{https://en.wikipedia.org/wiki/Newton%27s_method}{Newton's method}, \href{https://en.wikipedia.org/wiki/Lagrange_polynomial}{Lagrange interpolation polynomial}, \href{https://en.wikipedia.org/wiki/Gaussian_elimination}{Gaussian elimination}, or \href{https://en.wikipedia.org/wiki/Euler%27s_method}{Euler's method}.
+
+To facilitate computations by hand, large books were produced with formulas \& tables of data such as interpolation points \& function coefficients. Using these tables, often calculated out to 16 decimal places or more for some functions, one could look up values to plug into the formulas given \& achieve very good numerical estimates of some functions. The canonical work in the field is the \href{https://en.wikipedia.org/wiki/NIST}{NIST} publication edited by \href{https://en.wikipedia.org/wiki/Abramowitz_and_Stegun}{Abramowitz \& Stegun}, a 1000-plus page book of a very large number of commonly used formulas \& functions \& their values at many points. The function values are no longer very useful when a computer is available, but the large listing of formulas can still be very handy.
+
+The \href{https://en.wikipedia.org/wiki/Mechanical_calculator}{mechanical calculator} was also developed as a tool for hand computation. These calculators evolved into electronic computers in the 1940s, \& it was then found that these computers were also useful for administrative purposes. But the invention of the computer also influenced the field of numerical analysis, since now longer \& more complicated calculations could be done.'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis#History}{Wikipedia\texttt{/}numerical analysis\texttt{/}general introduction\texttt{/}history}
+
+\subsubsection{Direct \& iterative methods}
+Given equation $f(x) = g(x)$. For the iterative method, apply the \href{https://en.wikipedia.org/wiki/Bisection_method}{bisection method} to $F(x)\coloneqq f(x) - g(x)$.
+
+\paragraph{Discretization \& numerical integration.} An example of \textit{numerical integration} using a \href{https://en.wikipedia.org/wiki/Riemann_sum}{Riemann sum}, because displacement is the \href{https://en.wikipedia.org/wiki/Integral}{integral} of velocity. Example of ill-conditioned \& well-conditioned problems.
+
+``Direct methods compute the solution to a problem in a finite number of steps. These methods would give the precise answer if they were performed in \href{https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic}{infinite precision arithmetic}. Examples include \href{https://en.wikipedia.org/wiki/Gaussian_elimination}{Gaussian elimination}, the \href{https://en.wikipedia.org/wiki/QR_decomposition}{QR factorization} method for solving \href{https://en.wikipedia.org/wiki/System_of_linear_equations}{systems of linear equations}, \& the \href{https://en.wikipedia.org/wiki/Simplex_method}{simplex method} of \href{https://en.wikipedia.org/wiki/Linear_programming}{linear programming}. In practice, \href{https://en.wikipedia.org/wiki/Floating_point}{finite precision} is used \& the result is an approximation of the true solution (assuming \href{https://en.wikipedia.org/wiki/Numerically_stable}{stability}).
+
+In contrast to direct methods, \href{https://en.wikipedia.org/wiki/Iterative_method}{iterative methods} are not expected to terminate in a finite number of steps. Starting from an initial guess, iterative methods form successive approximations that \href{https://en.wikipedia.org/wiki/Limit_of_a_sequence}{converge} to the exact solution only in the limit. A convergence test, often involving the \href{https://en.wikipedia.org/wiki/Residual_(numerical_analysis)}{residual}, is specified in order to decide when a sufficiently accurate solution has (hopefully) been found. Even using infinite precision arithmetic these methods would not reach the solution within a finite number of steps (in general). Examples include Newton's method, the \href{https://en.wikipedia.org/wiki/Bisection_method}{bisection method}, \& \href{https://en.wikipedia.org/wiki/Jacobi_iteration}{Jacobi iteration}. In computational matrix algebra, iterative methods are generally needed for large problems.
+
+Iterative methods are more common than direct methods in numerical analysis. Some methods are direct in principle but are usually used as though they were not, e.g., \href{https://en.wikipedia.org/wiki/GMRES}{GMRES} \& the \href{https://en.wikipedia.org/wiki/Conjugate_gradient_method}{conjugate gradient method}. For these methods the number of steps needed to obtain the exact solution is so large that an approximation is accepted in the same manner as for an iterative method.'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis#Direct_and_iterative_methods}{Wikipedia\texttt{/}numerical analysis\texttt{/}general introduction\texttt{/}direct \& iterative methods}
+
+\subsubsection{Discretization}
+``Furthermore, continuous problems must sometimes be replaced by a discrete problem whose solution is known to approximate that of the continuous problem; this process is called `\href{https://en.wikipedia.org/wiki/Discretization}{discretization}'. E.g., the solution of a \href{https://en.wikipedia.org/wiki/Differential_equation}{differential equation} is a \href{https://en.wikipedia.org/wiki/Function_(mathematics)}{function}. This function must be represented by a finite amount of data, e.g. by its value at a finite number of points at its domain, even though this domain is a \href{https://en.wikipedia.org/wiki/Continuum_(set_theory)}{continuum}.'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis#Discretization}{Wikipedia\texttt{/}numerical analysis\texttt{/}general introduction\texttt{/}discretization}
+
+\subsection{Generation \& propagation of errors}
+``The study of errors forms an important part of numerical analysis. There are several ways in which error can be introduced in the solution of the problem.'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis#Generation_and_propagation_of_errors}{Wikipedia\texttt{/}numerical analysis\texttt{/}generation \& propagation of errors}
+
+\subsubsection{Round-off}
+``\href{https://en.wikipedia.org/wiki/Round-off_error}{Round-off errors} arise because it is impossible to represent all \href{https://en.wikipedia.org/wiki/Real_number}{real numbers} exactly on a machine with finite memory (which is what all practical \href{https://en.wikipedia.org/wiki/Digital_computer}{digital computers} are).'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis#Round-off}{Wikipedia\texttt{/}numerical analysis\texttt{/}generation \& propagation of errors\texttt{/}round-off}
+
+\subsubsection{Truncation \& discretization error}
+``\href{https://en.wikipedia.org/wiki/Truncation_error}{Truncation errors} are committed when an iterative method is terminated or a mathematical procedure is approximated \& the approximate solution differs from the exact solution. Similarly, discretization includes a \href{https://en.wikipedia.org/wiki/Discretization_error}{discretization error} because the solution of the discrete problem does not coincide with the solution of the continuous problem.'' [$\ldots$]
+
+``Once an error is generated, it propagates through the calculation. E.g., the operation $+$ on a computer is inexact. A calculation of the type $a + b + c + d + e$ is even more inexact.
+
+A truncation error is created when a mathematical procedure is approximated. To integrate a function exactly, an infinite sum of regions must be found, but numerically only a finite sum of regions can be found, \& hence the approximation of the exact solution. Similarly, to differentiate a function, the differential element approaches zero, but numerically only a nonzero value of the differential element can be chosen.'' -- \href{https://en.wikipedia.org/wiki/Numerical_analysis#Truncation_and_discretization_error}{Wikipedia\texttt{/}numerical analysis\texttt{/}generation \& propagation of errors\texttt{/}truncation \& discretization error}
+
+\subsubsection{Numerical stability \& well-posed problems}
+
+\subsection{Areas of Study}
+
+\subsubsection{Computing values of functions}
+
+\subsubsection{Interpolation, extrapolation, \& regression}
+
+\subsubsection{Solving equations \& systems of equations}
+
+\subsubsection{Solving eigenvalue or singular value problems}
+
+\subsubsection{Optimization}
+
+\subsubsection{Evaluating integrals}
+
+\subsubsection{Differential equations}
+
+\subsection{Software}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Numerical Analysts}
+
+\section{Alfio Quarteroni}
+``\textit{Alfio Quarteroni} (May 30, 1952) is an Italian mathematician.'' -- \href{https://en.wikipedia.org/wiki/Alfio_Quarteroni}{Wikipedia\texttt{/}Alfio Quarteroni}
 
 %------------------------------------------------------------------------------%
 
