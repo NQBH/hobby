@@ -1,10 +1,11 @@
 \documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[chapter]
@@ -31,7 +32,7 @@
 \def\labelitemii{$\circ$}
 
 \title{Some Topics in Mathematical Optimization}
-\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
 \date{\today}
 
 \begin{document}
@@ -45,6 +46,55 @@
 A collection of \& some personal notes on Mathematical Optimization, especially the 3 major topics: Optimal Control, Shape Optimization, \& Topology Optimization.
 
 \textbf{Keywords.} Optimal control; Shape optimization; Topology optimization.
+
+%------------------------------------------------------------------------------%
+
+\chapter{Wikipedia's}
+
+\section{\href{https://en.wikipedia.org/wiki/Shape_optimization}{Wikipedia\texttt{/}Shape Optimization}}
+``\textit{Shape optimization} is part of the field of \href{https://en.wikipedia.org/wiki/Optimal_control}{optimal control} theory. The typical problem is to find the \href{https://en.wikipedia.org/wiki/Shape}{shape} which is optimal in that it minimizes a certain cost \href{https://en.wikipedia.org/wiki/Functional_(mathematics)}{functional} while satisfying given \href{https://en.wikipedia.org/wiki/Constraint_(mathematics)}{constraints}. In many cases, the functional being solved depends on the solution of a given \href{https://en.wikipedia.org/wiki/Partial_differential_equation}{PDE} defined on the variable domain.
+
+\href{https://en.wikipedia.org/wiki/Topology_optimization}{Topology optimization} is, in addition, concerned with the number of connected components\texttt{/}boundaries belonging to the domain. Such methods are needed since typically shape optimization methods work in a subset of allowable shapes which have fixed topological properties, such as having a fixed number of holes in them. Topological optimization techniques can then help work around the limitations of pure shape optimization.'' -- \href{https://en.wikipedia.org/wiki/Shape_optimization}{Wikipedia\texttt{/}shape optimization}
+
+\subsection{Definition}
+``Mathematically, shape optimization can be posed as the problem of finding a \href{https://en.wikipedia.org/wiki/Bounded_set}{bounded set} $\Omega$, \href{https://en.wikipedia.org/wiki/Maxima_and_minima}{minimizing} a \href{https://en.wikipedia.org/wiki/Functional_(mathematics)}{functional} $\mathcal{F}(\Omega)$, possibly subject to a \href{https://en.wikipedia.org/wiki/Constraint_(mathematics)}{constraint} of the form $\mathcal{G}(\Omega) = 0$. Usually we are interested in sets $\Omega$ which are \href{https://en.wikipedia.org/wiki/Lipschitz_continuity}{Lipschitz} or $C^1$ \href{https://en.wikipedia.org/wiki/Boundary_(topology)}{boundary} \& consist of finite many \href{https://en.wikipedia.org/wiki/Connected_component_(analysis)}{components}, which is a way of saying that we would like to find a rather pleasing shape as a solution, \fbox{not some jumble of rough bits \& pieces}. Sometimes additional constraints need to be imposed to that end to ensure well-posedness of the problem \& uniqueness of the solution.
+
+Shape optimization is an \href{https://en.wikipedia.org/wiki/Infinite-dimensional_optimization}{infinite-dimensional optimization} problem. Furthermore, the space of allowable shapes over which the optimization is performed does not admit a \href{https://en.wikipedia.org/wiki/Vector_space}{vector space} structure, making application of traditional optimization methods more difficult.'' -- \href{https://en.wikipedia.org/wiki/Shape_optimization#Definition}{Wikipedia\texttt{/}shape optimization\texttt{/}definition}
+
+\subsection{Examples}
+\begin{itemize}
+	\item ``among all 3D shapes of given volume, find the one which has minimal surface area. Here: $\mathcal{F}(\Omega) = \operatorname{Area}(\partial\Omega)$, with $\mathcal{G}(\Omega) = \operatorname{Volume}(\Omega) = {\rm const}$. The answer, given by the \href{https://en.wikipedia.org/wiki/Isoperimetric_inequality}{isoperimetric inequality}, is a \href{https://en.wikipedia.org/wiki/Ball_(mathematics)}{ball}.
+	\item Find the shape of an airplane wing which minimizes \href{https://en.wikipedia.org/wiki/Drag_(physics)}{drag}. Here the constraints could be the wing strength, or the wing dimensions.
+	\item Find the shape of various mechanical structures, which can resist a given \href{https://en.wikipedia.org/wiki/Stress_(physics)}{stress} while having a minimal mass\texttt{/}volume.
+	\item Given a known 3D object with a fixed radiation source inside, deduce the shape \& size of the source based on measurements done on part of the boundary of the object. A formulation of this \href{https://en.wikipedia.org/wiki/Inverse_problem}{inverse problem} using \href{https://en.wikipedia.org/wiki/Least-squares}{least squares} fit leads to a shape optimization problem.'' -- \href{https://en.wikipedia.org/wiki/Shape_optimization#Examples}{Wikipedia\texttt{/}shape optimization\texttt{/}examples}
+\end{itemize}
+
+\subsection{Techniques}
+``Shape optimization problems are usually solved \href{https://en.wikipedia.org/wiki/Numerical_analysis}{numerically}, by using \href{https://en.wikipedia.org/wiki/Iterative_method}{iterative methods}. I.e., one starts with an initial guess for a shape, \& then gradually evolves it, until it morphs into the optimal shape.'' -- \href{https://en.wikipedia.org/wiki/Shape_optimization#Techniques}{Wikipedia\texttt{/}shape optimization\texttt{/}techniques}
+
+\subsubsection{Keeping track of the shape}
+\textsf{Fig. Example: Shape optimization as applied to building geometry. Example provided courtesy of \url{Formsolver.com}.}
+
+``To solve a shape optimization problem, one needs to find a way to represent a shape in the \href{https://en.wikipedia.org/wiki/Computer_memory}{computer memory}, \& follow its evolution. Several approaches are usually used.
+
+1 approach is to follow the boundary of the shape. For that, one can sample the shape boundary in a relatively dense \& uniform manner, i.e., to consider enough points to get a sufficiently accurate outline of the shape. Then, one can evolve the shape by gradually moving the boundary points. This is called the \textit{Lagrangian approach}.
+
+Another approach is to consider a \href{https://en.wikipedia.org/wiki/Function_(mathematics)}{function} defined on a rectangular box around the shape, which is positive inside of the shape, zero on the boundary of the shape, \& negative outside of the shape. One can then evolve this function instead of the shape itself. One can consider a rectangular grid on the box \& sample the function at the grid points. As the shape evolves, the grid points do not change; only the function values at the grid points change. This approach, of using a fixed grid, is called the \textit{Eulerian approach}. The idea of using a function to represent the shape is at the basis of the \href{https://en.wikipedia.org/wiki/Level-set_method}{level set method}.
+
+\textsf{Fig. Example: Optimization shape families resulting from differing goal parameters. Example provided courtesy of \url{Formsolver.com}}
+
+A 3rd approach is to \fbox{think of the shape evolution as of a flow problem}. I.e., one can imagine that the shape is made of a plastic material gradually deforming s.t. any point inside or on the boundary of the shape can be always traced back to a point of the original shape in a 1-1 fashion. Mathematically, if $\Omega_0$ is the initial shape, \& $\Omega_t$ is the shape at time $t$, one considers the \href{https://en.wikipedia.org/wiki/Diffeomorphism}{diffeomorphisms} $f_t:\Omega_0\to\Omega_t$, for $t\le t\le t_0$. The idea is again that shapes are difficult entities to be dealt with directly, so manipulate them by means of a function.'' -- \href{https://en.wikipedia.org/wiki/Shape_optimization#Keeping_track_of_the_shape}{Wikipedia\texttt{/}shape optimization\texttt{/}techniques\texttt{/}keeping track of the shape}
+
+\subsubsection{Iterative methods using shape gradients}
+``Consider a smooth velocity field $V$ \& the family of transformations $T_s$ of the initial domain $\Omega_0$ under the velocity field $V$: $x(0) = x_0\in\Omega_0$, $x'(s) = V(x(s))$, $T_s(x_0) = x(s)$, $s\ge 0$, \& denote $\Omega_0\mapsto T_s(\Omega_0) = \Omega_s$.
+
+'' -- \href{https://en.wikipedia.org/wiki/Shape_optimization#Iterative_methods_using_shape_gradients}{Wikipedia\texttt{/}shape optimization\texttt{/}techniques\texttt{/}iterative methods using shape gradients}
+
+\subsubsection{Geometry parametrization}
+
+%------------------------------------------------------------------------------%
+
+\chapter{\href{formsolver.com}{Formsolver.com}}
 
 %------------------------------------------------------------------------------%
 
@@ -164,7 +214,32 @@ and $u_a(t,{\bf x})\le u(t,{\bf x})\le u_b(t,{\bf x})$ in $Q$. This is a \textit
 In the linear-quadratic case, the theory of hyperbolic problems has many similarities to the parabolic theory studied in \cite{Troltzsch2010}. However, the treatment of semilinear hyperbolic problems is much more difficult, since the smoothing properties of the associated solution operators are weaker. As a consequence, many of the techniques presented in \cite{Troltzsch2010} fail in the hyperbolic case.'' -- \cite[pp. 6--7]{Troltzsch2010}
 
 \subsection{Examples of Nonconvex Problems}
+``However, linear models do not suffice for many real-world phenomena. Instead, one often needs quasilinear or, much simpler, semilinear equations. Recall that a 2nd-order equation is called \textit{semilinear} if the main parts (i.e., the expressions involving highest-order derivatives) of the differential operators considered in the domain \& on the boundary are linear w.r.t. the desired solution. For such equations, the theory of optimal control is well developed.
 
+\fbox{Optimal control problems with semilinear state equations are, as a rule, nonconvex, even if the cost functional is convex.} ``Associated optimal control problems can be obtained by prescribing a cost functional \& suitable constraints.'' -- \cite[p. 7]{Troltzsch2010}
+
+\subsubsection{Problems involving semilinear elliptic equations}
+
+\begin{example}[Heating with radiation boundary condition]
+	If the heat radiation of the heated body is taken into account, then we obtain a problem with a nonlinear Stefan--Boltzmann boundary condition. If this case, the control $u$ is given by the temperature of the surrounding medium:
+	\begin{equation*}
+		\left\{\begin{split}
+			-\Delta y &= 0,&&\mbox{ in }\Omega,\\
+			\partial_{\bf n}y &= \alpha(u^4 - y^4),&&\mbox{ on }\Gamma.
+		\end{split}\right.
+	\end{equation*}
+	The nonlinearity $y^4$ occurs in the boundary condition, while the heat conduction equation itself is linear.
+\end{example}
+
+\begin{example}[Simplified superconductivity]
+	
+\end{example}
+
+\begin{example}[Control of stationary flows]
+	
+\end{example}
+
+\subsubsection{Problems involving semilinear parabolic equations}
 
 \section*{Quick notes}
 \textit{Primal-dual active set strategies}, whose the exposition now leads to the systems of linear equations to be solved.
