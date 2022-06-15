@@ -1,0 +1,850 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemewiaspr}[2019/06/11 WIAS v6 WIAS Beamer Theme]
+
+\newlength{\wi@sbeamer@leftmargin}
+\setlength{\wi@sbeamer@leftmargin}{\beamer@leftmargin}
+\newif\ifwi@stotalframes\wi@stotalframestrue
+\newif\ifwi@swiasprblocks\wi@swiasprblockstrue
+\DeclareOptionBeamer{totalframes}{\wi@stotalframestrue}
+\DeclareOptionBeamer{nototalframes}{\wi@stotalframesfalse}
+\DeclareOptionBeamer{wiasprblocks}{\wi@swiasprblockstrue}
+\DeclareOptionBeamer{nowiasprblocks}{\wi@swiasprblocksfalse}
+\DeclareOptionBeamer{nomathpazo}{\PassOptionsToPackage{nomathpazo}{wiascd}}
+\DeclareOptionBeamer{mathpazo}{\PassOptionsToPackage{mathpazo}{wiascd}}
+\DeclareOptionBeamer{nomathptmx}{\PassOptionsToPackage{nomathptmx}{wiascd}}
+\DeclareOptionBeamer{mathptmx}{\PassOptionsToPackage{mathptmx}{wiascd}}
+\DeclareOptionBeamer{nolmodern}{\PassOptionsToPackage{nolmodern}{wiascd}}
+\DeclareOptionBeamer{lmodern}{\PassOptionsToPackage{lmodern}{wiascd}}
+\DeclareOptionBeamer{nofonts}{\PassOptionsToPackage{nofonts}{wiascd}}
+\ProcessOptionsBeamer
+
+\PassOptionsToPackage{lmodern}{wiascd}
+\RequirePackage{wiascd}
+\RequirePackage{eurosym}
+
+\mode<presentation>
+
+%\RequirePackage{lmodern}
+%\RequirePackage{helvet}
+\RequirePackage{ifthen}
+\RequirePackage{soul}
+\RequirePackage{array}
+%\RequirePackage[utf8]{inputenc}
+
+\useinnertheme{default}
+\useoutertheme{default}
+\usetheme{default}
+\usefonttheme{professionalfonts}
+\setbeamercolor*{titlelike}{fg=black}
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamercolor{section in toc}{fg=black}
+\setbeamerfont{section in toc}{size=\large}
+\setbeamerfont{subsection in toc}{size=\large}
+\addtobeamertemplate{subsection in toc}{\setlength\parindent{10.2mm}}{\vskip-\parskip}
+\setbeamercolor{bibliography entry title}{fg=black}
+\setbeamercolor{bibliography entry location}{fg=black}
+\setbeamercolor{bibliography entry note}{fg=black}
+\setbeamercolor{bibliography entry author}{fg=black}
+\setbeamercolor{bibliography item}{fg=black}
+\setbeamertemplate{bibliography item}[text]
+
+
+\ifwi@swiasprblocks\else
+\setbeamerfont{block title example}{size=\normalsize}
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamercolor{block title}{fg=white, bg=wiasdarkblue}
+\setbeamercolor{block title alerted}{use=alerted text, fg=white, bg=red}
+\setbeamercolor{block title example}{use=example text, fg=white, bg=wiaslightblue}
+\setbeamercolor{block body}{parent=normal text, use=block title, bg=wiasblue!15}
+\setbeamercolor{block body alerted}{parent=normal text, use=block title alerted, bg=block title alerted.bg!10!bg}
+\setbeamercolor{block body example}{parent=normal text, use=block title example, bg=block title example.bg!15!bg}
+\fi
+
+\setlength\fboxsep{0pt}
+\newlength\wi@seinheit
+\newlength\wi@sfboxrule
+\newlength\wi@slgtmp
+\newlength\wi@slogobreite
+\newif\ifwi@stitelfolie
+\newif\ifwi@sprojektfolie
+\wi@sprojektfoliefalse
+\wi@seinheit=7.9375mm
+\wi@sfboxrule=0.40mm
+\newcounter{sp@lt}
+
+% Masse fuer das Platzieren der Kaesten
+\newlength\wi@sboxwidth
+\newlength\wi@sdefekt
+\newlength\wi@srowheight
+\newlength\wi@scolumnwidth
+\setlength\wi@scolumnwidth{\paperwidth}
+\newif\if@firstinseries
+\newif\if@ersterTitelkasten
+\newif\if@wiashorizontal
+\@wiashorizontalfalse
+
+
+\def\beamer@sectionintoc#1#2#3#4#5{% Nummer / Text / Seitennummer
+	\usebeamerfont{section in toc}
+	#1.~\hyperlink{Navigation#3}{#2} \\
+}
+
+% Beamer bietet folgende "elegante" Methode, um vertikalen Abstand vor Aufzaehlungen loszuwerden:
+%\defbeamertemplate*{itemize/enumerate body begin}{}{\vskip -35pt \vrule width 0mm height 0mm depth 0mm}
+\addtobeamertemplate{itemize/enumerate body begin}{}{\vspace{\bigskipamount}}
+\addtobeamertemplate{itemize/enumerate body end}{}{\vspace{\medskipamount}}
+\addtobeamertemplate{itemize/enumerate subbody begin}{}{\vspace{\smallskipamount}}
+%\addtobeamertemplate{itemize/enumerate subbody end}{}{\vspace{\smallskipamount}}
+\addtobeamertemplate{itemize/enumerate subsubbody begin}{}{\vspace{\smallskipamount}}
+%\addtobeamertemplate{itemize/enumerate subsubbody end}{}{\vspace{\smallskipamount}}
+\setbeamercolor{itemize item}{fg=wiasGrundfarbeAllg}
+\setbeamertemplate{itemize item}{%
+	\makebox[\labelwidth][l]{\hskip 0mm\vrule width 0.5\wi@seinheit height 0.5\wi@seinheit}}
+
+\setbeamertemplate{headline}{%
+}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{background canvas}{%
+	% \fontsize{10}{0}\selectfont
+	\WIASCD@smash{\colorbox{wi@sHintergrund}{%
+	        \vrule width 0mm height 0.0\wi@seinheit depth 22.0\wi@seinheit
+		\vrule width \paperwidth height 0mm depth 0mm
+	}}%
+}
+\setbeamertemplate{frametitle}{%
+	\wi@sPrintFrameTitle
+}
+\setbeamertemplate{footline}{%
+	\WIASCD@smash{\colorbox{white}{\vrule width \paperwidth height 0pt depth 0pt \vrule width 0pt height 0pt depth 2\wi@seinheit}}%
+	\vrule width 0mm height 0\wi@seinheit depth 2\wi@seinheit%
+	\rlap{\vrule width \paperwidth height 0mm depth 1\wi@sfboxrule}%
+	\raisebox{-1.15\wi@seinheit}[0pt][0pt]{\hbox to \paperwidth{\hskip\wi@seinheit \small
+				\ifwi@stitelfolie \wi@sinstitut \hfil \insertdate\hskip\wi@seinheit
+				\else
+					\rlap{\insertframenumber\ifwi@stotalframes/\inserttotalframenumber\fi}
+					\hskip3\wi@seinheit
+					\insertshorttitle \hfil \fi}}%
+	\vskip 0pt
+	\ifwi@stitelfolie\else
+	\ifthenelse{\equal{\wi@spublikationen}{}}{}{%
+		\raisebox{6.00\wi@seinheit}[0pt][0pt]{%
+			\hbox{\vrule width \paperwidth height 1pt depth 0pt}%
+		}
+		\vskip 0pt
+		\raisebox{ 3.99\wi@seinheit}[0pt][0pt]{%
+		\hbox to 1.0\paperwidth{%
+				\normalbaselines
+			\parbox{0.5\paperwidth}{\hangindent=6\wi@seinheit\small\hskip \wi@seinheit
+				\makebox[5\wi@seinheit][l]{Recent preprints:}%
+			\wi@spublikationen
+			}%
+			\hskip -0.5\wi@sfboxrule
+			\vrule width \wi@sfboxrule height 2.0\wi@seinheit depth 2.0\wi@seinheit
+			\hskip -0.5\wi@sfboxrule
+			\parbox{0.5\paperwidth}{\hangindent=6\wi@seinheit\small\hskip \wi@seinheit
+				\makebox[5\wi@seinheit][l]{Researchers:}%
+				\wi@sforscher
+			}%
+		}}
+		\gdef\wi@spublikationen{}
+		\gdef\wi@sforscher{}
+	}
+	\raisebox{ 0.30\wi@seinheit}[0pt][0pt]{\hbox to 1.0\paperwidth{\hfil
+		\wiaslogo[width=10mm]%
+		\hskip 3.70\wi@seinheit
+	}}
+	\raisebox{ 0.20\wi@seinheit}[0pt][0pt]{\hbox to 1.0\paperwidth{\hfil
+		\wgllogo[width=15mm,member]%
+		\hskip 0.80\wi@seinheit
+	}}%
+	\fi
+}
+
+
+% Spaltentyp für wiasTabelle:
+\newcolumntype{P}[1]{>{\wiastablestyle\rightskip=0pt plus 40pt}p{#1}}
+
+\ifdim\beamer@paperwidth=16cm
+  \ifdim\beamer@paperheight=10cm
+    \beamer@paperwidth 304.8mm%
+    \newcommand*{\wi@sBoxWidth}{22.4}%
+  \else\ifdim\beamer@paperheight=9cm
+    \beamer@paperwidth 338.67mm%
+    \newcommand*{\wi@sBoxWidth}{26.66}%
+  \fi\fi
+\else
+  \beamer@paperwidth 254mm%
+  \newcommand*{\wi@sBoxWidth}{16}%
+\fi
+\beamer@paperheight 190.5mm%
+\geometry{paperwidth=\beamer@paperwidth,paperheight=\beamer@paperheight}
+\def\k@stenschrift{\normalsize}
+\def\insertframetitle{} % vermeidet eine Fehlermeldung
+\gdef\wi@sinstitut{}
+\gdef\wi@sfgliste{}
+\gdef\wi@spublikationen{}
+\gdef\wi@sforscher{}
+
+%%% WIAS %%%
+% package `helvet' is loaded by `wiascd' with a font scale factor of .85
+% for better matching the math fonts
+% so the font sizes are scaled up and adjusted to match the proportions
+% between adjacent sizes
+% the lead is left untouched
+%%% WIAS %%%
+\renewcommand\tiny{\small}% zu klein
+\renewcommand\footnotesize{\small}% zu klein
+\renewcommand\small{\@setfontsize\small{14.1pt}{14pt}}            % 12
+\renewcommand\normalsize{\@setfontsize\normalsize{21.2pt}{23pt}}  % 18
+\renewcommand\large{\@setfontsize\large{29.4pt}{30.9pt}}          % 25
+\renewcommand\Large{\@setfontsize\Large{52.9pt}{54pt}}            % 45
+\normalbaselines
+
+
+
+\definecolor{wiasGrundfarbeAllg}{RGB}{0,75,154}
+\definecolor{wiasGrundfarbe1}{RGB}{199,51,51}
+\definecolor{wiasGrundfarbe2}{RGB}{97,152,59}
+\definecolor{wiasGrundfarbe3}{RGB}{204,81,148}
+\definecolor{wiasGrundfarbe4}{RGB}{229,204,0}
+\definecolor{wiasGrundfarbe5}{RGB}{129,112,169}
+\definecolor{wiasGrundfarbe6}{RGB}{110,180,169}
+\definecolor{wiasGrundfarbe7}{RGB}{94,107,56}
+\definecolor{wiasGrundfarbe8}{RGB}{208,102,43}
+\definecolor{wiasSchwachfarbeAllg}{RGB}{174,205,238}
+\definecolor{wiasSchwachfarbe1}{RGB}{232,173,173}
+\definecolor{wiasSchwachfarbe2}{RGB}{192,214,177}
+\definecolor{wiasSchwachfarbe3}{RGB}{235,185,212}
+\definecolor{wiasSchwachfarbe4}{RGB}{245,234,153}
+\definecolor{wiasSchwachfarbe5}{RGB}{209,198,222}
+\definecolor{wiasSchwachfarbe6}{RGB}{197,225,221}
+\definecolor{wiasSchwachfarbe7}{RGB}{190,196,170}
+\definecolor{wiasSchwachfarbe8}{RGB}{236,194,170}
+\definecolor{wiasGrundfarbeFFP}{RGB}{60,60,60}
+\definecolor{wiasSchwachfarbeFFP}{RGB}{179,179,179}
+\colorlet{wi@sHintergrund}{white}
+\colorlet{wi@sKastenhintergrund}{white}
+\colorlet{wiasblue}{wiasGrundfarbeAllg}
+\definecolor{wiasdarkblue} {cmyk}{1, 0.6, 0, 0.4}
+\definecolor{wiaslightblue}{cmyk}{1, 0.1, 0, 0.0}
+
+
+\def\wiasInstitut#1{%
+        \gdef\wi@sinstitut{#1}%
+}
+\def\wiasZusammenarbeit#1{%
+	\gdef\wi@sfgliste{#1}%
+	\ignorespaces
+}
+\def\wiasPublikationen#1#2{% Publikationen, beteiligte Forscher (credits)
+	\gdef\wi@spublikationen{#1}%
+	\gdef\wi@sforscher{#2}%
+}
+
+\def\wiasGruppe{%  mit Stern: Projekt-Folien und Titelfolien mit WIAS-Schwachfarbe
+        \@ifnextchar*{\wi@sprojektfolietrue\wi@sGruppe}{\wi@sprojektfoliefalse\wi@sGruppe*}%
+}
+\def\wi@sGruppe*#1#2{% #1: Gruppe(n); #2: Leiter
+        \ifthenelse{\equal{#1}{1}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe1}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe1}
+	}{
+	\ifthenelse{\equal{#1}{2}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe2}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe2}
+	}{
+	\ifthenelse{\equal{#1}{3}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe3}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe3}
+	}{
+	\ifthenelse{\equal{#1}{4}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe4}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe4}
+	}{
+	\ifthenelse{\equal{#1}{5}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe5}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe5}
+	}{
+	\ifthenelse{\equal{#1}{6}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe6}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe6}
+	}{
+	\ifthenelse{\equal{#1}{7}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe7}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe7}
+	}{
+	\ifthenelse{\equal{#1}{8}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbe8}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbe8}
+	}{
+	\ifthenelse{\equal{#1}{FFP}}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbeFFP}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbeFFP}
+	}{
+		\colorlet{wiasGrundfarbe}{wiasGrundfarbeAllg}
+		\colorlet{wiasSchwachfarbe}{wiasSchwachfarbeAllg}
+		\ClassWarning{wiaspr}{wiasGruppe: illegal or empty research group: #1}
+	}}}}}}}}}
+	\gdef\wi@sgruppe{#1}
+	\gdef\wi@sleiter{#2}
+}
+
+
+\def\wiasTitelkasten{% [Zaehler Breite], Nenner Breite, Inhalt (Titelzeile)
+	\@ifnextchar[{\wi@sTitelkasten}{\wi@sTitelkasten[1]}%
+}
+\def\wi@sTitelkasten[#1]#2#3{% [Zaehler Breite], Nenner Breite, Folientitel
+	\berechneBr@ite{#1}{#2}%
+	\addtolength\wi@sboxwidth{-\wi@sfboxrule}%
+	\fontsize{7}{0}\selectfont% speziell kleine Schrift
+	\leavevmode
+	\vspace*{-0pt}%
+	\if@ersterTitelkasten\else
+		\vrule width \wi@sfboxrule height 1.4\wi@seinheit depth 0.6\wi@seinheit%
+	\fi
+%	\raisebox{1.50\wi@seinheit}[0pt][0pt]{% Linie, die beim ersten Titel oberhalb der Folie liegt
+%		\rlap{\vrule width \wi@sboxwidth height 0mm depth \wi@sfboxrule}%
+%	}%
+	\hbox to 1.0\wi@sboxwidth{%
+		\global\@ersterTitelkastenfalse
+		\hskip\wi@seinheit {\large #3}\vrule width 0mm height 1.4\wi@seinheit depth 0.6\wi@seinheit%
+		\hfil
+		\raisebox{0.00\wi@seinheit}{%
+			\@for\arg:=\wi@sfgliste\do{%
+				\small\wiasrg\arg\kern.5\wi@seinheit
+%				\hbox to 2.5\wi@seinheit{\hfil
+%					\expandafter\colorbox{wiasGrundfarbe\arg}{%
+%						\vrule width 0mm height 0.35\wi@seinheit depth 0.15\wi@seinheit
+%						\vrule width 0.5\wi@seinheit height 0mm depth 0mm}%
+%					\vrule width 0mm height 0mm depth 0.6\wi@seinheit
+%					\kern0.5\wi@seinheit
+%					\textbf{\ifthenelse{\equal{\arg}{FFP}}{FFP}{FG~\arg}}%
+%				}%
+			}%
+		}%
+		\hskip 1.0\wi@seinheit
+	}%
+	% \vrule width 5mm height 0mm depth 2mm
+	\gdef\wi@sfgliste{}%
+	\ignorespaces
+}
+
+\fontsize{10}{0}\selectfont
+
+\newenvironment{wiasfolie}[1][]{
+	\leftmarginzero
+	\setbeamertemplate{frametitle}{}%
+	\wi@stitelfoliefalse
+	\global\@firstinseriestrue
+	\global\@ersterTitelkastentrue
+	\global\@wiashorizontalfalse
+	\setlength\wi@scolumnwidth{\paperwidth}
+	\begin{frame}[t]
+		\frametitle{#1}
+		\normalsize
+		\hsize=\paperwidth
+		% \leftskip=1.0\wi@seinheit\vskip 0.8\wi@seinheit
+	}{%
+	\end{frame}
+	\leftmarginrestore
+}
+\newenvironment{wiasfolie*}[1][]{%
+%	\def\k@stenschrift{\large}%
+	\global\colorlet{wi@sHintergrund}{\ifwi@sprojektfolie wiasSchwachfarbeAllg\else wiasSchwachfarbe\fi}%
+	\begin{wiasfolie}[#1]\large}{%
+	\end{wiasfolie}
+}
+\newenvironment{wiasslide*}[1][]{%
+%	\def\k@stenschrift{\large}%
+	\global\colorlet{wi@sHintergrund}{\ifwi@sprojektfolie wiasSchwachfarbeAllg\else wiasSchwachfarbe\fi}%
+	\begin{wiasfolie}[#1]\large}{%
+	\end{wiasfolie}
+}
+\def\wi@sZentriertesLogo#1#2{% Dateiname, Breite
+	\vbox to 4\wi@seinheit{\vfil
+		\hbox to 4\wi@seinheit{%
+		\hfil
+		\includegraphics[width=#2]{#1}%
+		\hfil
+		}%
+		\vfil
+	}%
+}
+\def\wi@sZentriertesLogo@CD#1#2{% Dateiname, Breite
+	\vbox to 4\wi@seinheit{\vfil
+		\hbox to 4\wi@seinheit{%
+		\hfil
+		\expandafter\csname #1\endcsname[width=#2]%
+		\hfil
+		}%
+		\vfil
+	}%
+}
+\newcommand*\wiasTitelfolie[1][]{% zusaetzliche Logos, kommasepariert
+	\leftmarginzero
+	\wi@stitelfolietrue
+	\begin{frame}
+		\ifbeamer@centered\vspace*{-5.25\wi@seinheit}\fi
+		\fontsize{10}{0}\selectfont
+		\WIASCD@smash{\colorbox{\ifwi@sprojektfolie wiasSchwachfarbeAllg\else wiasSchwachfarbe\fi}{%
+	        	\vrule width 0mm height 0.0\wi@seinheit depth 22.10\wi@seinheit
+			\vrule width \paperwidth height 0mm depth 0mm
+		}}%
+		\hbox to \paperwidth{\vrule width 0mm height 7\wi@seinheit depth 7\wi@seinheit
+			\hfil
+			\parbox[c][12\wi@seinheit][c]{0.8\paperwidth}{\centering\Large \inserttitle}
+			\hfil
+		}
+		\vskip -1pt
+		\rlap{\vrule width \paperwidth height 0.5\wi@sfboxrule depth 0.5\wi@sfboxrule}%
+		\vskip -1pt
+		\WIASCD@smash{\hbox{%
+			\hskip 8\wi@seinheit
+			\parbox[t][8.00\wi@seinheit][c]{\wi@sBoxWidth\wi@seinheit}{\centering\normalsize 
+				\ifwi@sprojektfolie
+				\insertauthor
+				\else % Gruppenfolie
+				Research Group \wi@sgruppe \\ ~ \\ Head: \\ \wi@sleiter
+				\fi
+			}%
+			\colorbox{wiasGrundfarbe}{%
+				\ifwi@sprojektfolie
+					\parbox[t][8\wi@seinheit][c]{8\wi@seinheit}{\centering\Large \wi@sleiter}%
+				\else
+					\parbox[t][8\wi@seinheit][c]{8\wi@seinheit}{\centering\Large \wi@sgruppe}%
+				\fi
+			}%
+		}}
+		\WIASCD@smash{\hbox{%  senkrechte Linien
+			\hskip 8\wi@seinheit
+			\hskip -0.50\wi@sfboxrule
+			\vrule width \wi@sfboxrule height 0mm depth 8\wi@seinheit
+			\hskip -0.50\wi@sfboxrule
+			\hskip \wi@sBoxWidth\wi@seinheit
+			\hskip -0.50\wi@sfboxrule
+			\vrule width \wi@sfboxrule height 0mm depth 8\wi@seinheit
+		}}
+		\vskip -1pt
+		\wi@slogobreite=8\wi@seinheit
+		% weitere Logos in Schleife positionieren, dann nur halbe Breite fuer die anderen:
+		\ifthenelse{\equal{#1}{}}{%
+			\WIASCD@smash{\raisebox{-4.00\wi@seinheit}[0pt][0pt]{\hbox to 8\wi@seinheit{\hfil%
+				\wi@sZentriertesLogo@CD{wiaslogo}{18mm}\hfil
+			}}}%
+			\WIASCD@smash{\raisebox{-8.00\wi@seinheit}[0pt][0pt]{\hbox to 8\wi@seinheit{\hfil%
+				\wi@sZentriertesLogo@CD{wgllogo}{24mm}\hfil
+			}}}
+		}{%
+			\newcount\wi@slogos
+			\wi@slogos 0\relax
+			\WIASCD@smash{\raisebox{-4.00\wi@seinheit}[0pt][0pt]{\hbox to 8\wi@seinheit{\hfil%
+				\wi@sZentriertesLogo@CD{wiaslogo}{18mm}%
+				\wi@sZentriertesLogo@CD{wgllogo}{24mm}\hfil
+			}}}%
+			\WIASCD@smash{\raisebox{-8.00\wi@seinheit}[0pt][0pt]{\hbox to 8\wi@seinheit{\hfil%
+				\@for\logo:=#1\do{%
+					\global\wi@slogobreite=4\wi@seinheit
+					\wi@sZentriertesLogo{\logo}{18mm}%
+					\global\advance\wi@slogos 1\relax
+				}\hfil
+			}}}
+			\WIASCD@smash{\hskip 4\wi@seinheit \hskip -0.5\wi@sfboxrule%
+				\vrule width 1.0\wi@sfboxrule height 0mm depth
+					\ifnum\wi@slogos>1 8.0\else 4.0\fi\wi@seinheit}%
+			\ifnum\wi@slogos>2
+				\ClassError{wiaspr}{Only two extra logos are supported for title slides.
+					You specified \the\wi@slogos
+				}%
+			\fi
+		}
+		\vskip -1pt
+		\WIASCD@smash{\raisebox{-4.00\wi@seinheit}[0pt][0pt]{%
+			\vrule width 8.0\wi@seinheit height 0.5\wi@sfboxrule depth 0.5\wi@sfboxrule}}%
+		\vskip -1pt
+	\end{frame}
+	\leftmarginrestore
+}
+\newcommand\wiasUnterstreichung[1]{%
+	% Korrektur von soul+beamer von herbert, stackexchange(41683):
+	\let\set@color\beamerorig@set@color
+	\let\reset@color\beamerorig@reset@color
+	\setulcolor{wiasGrundfarbeAllg}%
+	\setul{2pt}{1.5pt}%
+	\ul{#1}%
+}
+\newcommand\wiasFarblich[1]{%
+	{\color{wiasGrundfarbeAllg} #1}
+}
+
+
+\long\def\wi@sKasten[#1]#2#3#4{% Zähler Breite, Nenner Breite, Hoehe [Einheiten], Inhalt
+	\fontsize{10pt}{0pt}\selectfont
+	\berechneBr@ite{#1}{#2}%
+	\if@wiashorizontal
+		\setlength\wi@slgtmp{#3\wi@seinheit}%
+		\if@firstinseries\else
+			\vrule width \wi@sfboxrule height 0.00\wi@slgtmp depth 1.0\wi@slgtmp
+		\fi
+		\addtolength\wi@sboxwidth{-\wi@sfboxrule}%
+		\makebox[\wi@sboxwidth][l]{\wi@sKastenInhalt{\wi@sboxwidth}{#3\wi@seinheit}{#4}}%
+	\else
+		\if@firstinseries\else
+			\vskip -\wi@sfboxrule
+			\rlap{\vrule width 1.0\wi@sboxwidth height \wi@sfboxrule depth 0mm\hskip 0pt}%
+			\vskip 0pt
+		\fi
+		\addtolength\wi@sboxwidth{-\wi@sfboxrule}%
+		\hbox to \wi@sboxwidth{\wi@sKastenInhalt{\wi@sboxwidth}{#3\wi@seinheit}{#4}}%
+		\vskip -\wi@sfboxrule
+	\fi
+	\global\@firstinseriesfalse
+	\global\@ersterTitelkastentrue% fuer den Fall, dass eine zweite Titelzeile kommt
+	\ignorespaces
+}
+\long\def\wi@sKastenInhalt#1#2#3{% Breite, Hoehe (Abmessung), Inhalt
+	\normalbaselines
+%	\def\beamer@firstlineitemizeunskip{% Aufzählungszeichen nicht einruecken
+%		\parskip=0.88\baselineskip
+%	}%
+	\setlength\fboxsep{0pt}%
+	\vrule width 0mm height 0mm depth #2
+	\vspace{1.0\wi@sfboxrule}%
+	\rlap{\hskip 0pt\colorbox{wi@sKastenhintergrund}{%
+		\vrule width 0pt height 0mm depth #2
+		\vrule width #1 height 0mm depth 0mm
+	}}%
+	\setlength\wi@sboxwidth{#1}%
+	\addtolength\wi@sboxwidth{-2\wi@seinheit}%
+	\hskip 1\wi@seinheit
+	\begin{minipage}[t][#2][t]{1.00\wi@sboxwidth}%
+		\k@stenschrift\raggedright
+		\parskip=\wi@seinheit
+		% nicht \vspace fuer Abstand verwenden; beamer-itemize macht dann Unsinn
+		\vrule width 0pt height 0.00mm depth 1.0\wi@seinheit \vskip 0pt
+			#3% \vrule width 0pt height 0pt depth 0pt
+	\end{minipage}%
+	\hskip 1\wi@seinheit%
+	\ignorespaces
+}
+
+\newcommand\wiasSchlagzeilen[4][1]{% [Zaehler Breite], Nenner Breite, Hoehe, Inhalt
+	\wiasKasten[#1]{#2}{#3}{\Large\centering #4}%
+}
+
+\newenvironment{wiaszeile}[1]{% Hoehe [WIAS-Einheiten]
+	\if@wiashorizontal
+		\PackageError{beamerwiaspr.sty}{A wiaszeile/wiasrow environment must be top-level or contained in wiasspalte/wiascolumn}%
+	\fi
+	\setlength\wi@srowheight{#1\wi@seinheit}%
+	\@wiashorizontaltrue
+	%\if@firstinseries\else
+		\vskip -1.0\wi@sfboxrule
+		\rlap{\vrule width 1.00\wi@scolumnwidth height \wi@sfboxrule depth 0mm}%
+		\vskip 0.0\wi@sfboxrule
+	%\fi
+	\global\@firstinseriesfalse
+	% \vskip -0.9pt
+	\hbox \bgroup \global\@firstinseriestrue
+	\ignorespacesafterend
+	\ignorespaces
+}{%
+	\egroup 
+	\vskip -1pt
+	\ignorespacesafterend
+}
+\newenvironment{wiasspalte}[2][1]{% Zaehler Breite, Nenner Breite
+\fontsize{30}{0}\selectfont%
+	\berechneBr@ite{#1}{#2}%
+	\setlength\wi@scolumnwidth{\wi@sboxwidth}%
+	\@wiashorizontalfalse
+	\if@firstinseries\else
+		\hskip -1.00\wi@sfboxrule
+	 	\vrule width \wi@sfboxrule height 0.0\wi@srowheight depth 1.0\wi@srowheight
+	\fi
+	\global\@firstinseriesfalse
+	\hbox to 1.000\wi@sboxwidth\bgroup
+		\vtop\bgroup\global\@firstinseriestrue%
+	\ignorespaces
+	}{%
+	\egroup\hfil\egroup
+	\ignorespacesafterend
+	\ignorespaces
+}
+\def\berechneBr@ite#1#2{%
+	\setlength\wi@sboxwidth{\paperwidth}%
+	\addtolength\wi@sboxwidth{\wi@sfboxrule}% Platz fuer senkrechte Linie am Schluss, die nicht da ist
+	\divide\wi@sboxwidth#2%
+	\multiply\wi@sboxwidth#1
+	\setlength\wi@sdefekt{\wi@sboxwidth}%
+	\divide\wi@sdefekt#1
+	\multiply\wi@sdefekt#2
+	\addtolength\wi@sdefekt{-\paperwidth}%
+	\addtolength\wi@sdefekt{-\wi@sfboxrule}%
+	\multiply\wi@sdefekt#1
+	\divide\wi@sdefekt#2
+	\addtolength\wi@sboxwidth{-\wi@sdefekt}%
+}
+
+\long\def\wiasKasten{% [Zaehler Breite], Nenner Breite, Hoehe (WIAS-Einheiten), Inhalt
+	% kein *: Farbe von Seite erben
+	\@ifnextchar*{%
+		\colorlet{wi@sKastenhintergrund}{wiasSchwachfarbe}\wi@sK@sten}{%
+		\colorlet{wi@sKastenhintergrund}{wi@sHintergrund}\wi@sK@sten*}%
+}
+\long\def\wi@sK@sten*{%
+       \@ifnextchar[{\wi@sKasten}{\wi@sKasten[1]}%
+}
+\def\wiasBild{% [Zaehler Breite], Nenner Breite, Hoehe (WIAS-Einheiten), Rand, Bilddatei
+       \@ifnextchar[{\wi@sBild}{\wi@sBild[1]}%
+}
+\def\wi@sBild[#1]#2#3#4#5{% [Zaehler Breite], Nenner Breite, Hoehe (WIAS-Einheiten), Rand, Bilddatei
+	\berechneBr@ite{#1}{#2}%
+	\setlength\wi@slgtmp{\wi@sboxwidth}%
+	\addtolength\wi@slgtmp{-#4}%
+	\if@wiashorizontal
+		\if@firstinseries\else
+			\vrule width \wi@sfboxrule height 0mm depth #3\wi@seinheit
+		\fi
+		\addtolength\wi@sboxwidth{-\wi@sfboxrule}%
+		\raisebox{-1.0\height}{\hbox to \wi@sboxwidth{\vbox to #3\wi@seinheit{\vfil
+			{\makebox[\wi@sboxwidth][c]{\includegraphics[width=\wi@slgtmp]{#5}}}%
+			\vfil}\hss}}%
+	\else
+		\if@firstinseries\else
+			\vskip -\wi@sfboxrule
+			\vrule width \wi@sboxwidth height \wi@sfboxrule depth 0mm\hskip 0pt
+			\vskip 0pt
+		\fi
+		\addtolength\wi@sboxwidth{-\wi@sfboxrule}%
+		\hbox to \wi@sboxwidth{\vbox to #3\wi@seinheit{\vfil
+			\makebox[\wi@sboxwidth][c]{\includegraphics[width=\wi@slgtmp]{#5}}%
+		\vfil}}%
+		\vskip -\wi@sfboxrule
+	\fi
+	\global\@firstinseriesfalse
+	\global\@ersterTitelkastentrue% fuer den Fall, dass eine zweite Titelzeile kommt
+	\ignorespaces
+}
+
+\def\wiasBildfolie#1{% Bilddatei
+	\wi@stitelfolietrue% fuer die Fusszeile
+	\setbeamertemplate{background}{\includegraphics[width=\paperwidth]{#1}}%
+	\begin{frame}
+	\end{frame}
+	\setbeamertemplate{background}{}%
+}
+
+\newenvironment{wiastabular}[3][5.0]{%  [vertikaler Spreizfaktor], Spaltenbreiten (mit Kommas), Titelfelder (mit &-Zeichen)
+	\ifdefined\rowcolors \else
+		\ClassError{wiaspr}{Please specify [xcolor=table] in your documentclass declaration.} \fi
+	\setlength\arrayrulewidth{\wi@sfboxrule}
+	% Tabellenspezifikation aus Spaltenbreiten (#2) aufbauen:
+	\def\wi@sspaltenbreiten{}
+	\@for\sp@:=#2\do{%
+		\wi@slgtmp=\sp@\wi@seinheit
+		\addtolength\wi@slgtmp{-2\wi@seinheit}%
+		\ifthenelse{\equal{\wi@sspaltenbreiten}{}}{}{\addtolength\wi@slgtmp{-\arrayrulewidth}}%
+		\edef\wi@sspaltenbreiten{\wi@sspaltenbreiten |P{\the\wi@slgtmp}}%
+	}
+	\renewcommand{\arraystretch}{#1}% spreizt Tabellenzeilen
+	\extrarowheight=-1.34mm% gleicht den Unterschied (!) zwischen oberem und unterem Rand aus
+	\fontsize{5}{15}\selectfont% bestimmt den oberen/unteren Rand der Tabellenzeilen
+	\setlength\tabcolsep{\wi@seinheit}
+	\rowcolors[\arrayrulecolor{black!100}\hline]{3}{gray!25}{white!100}
+	\gdef\wiastablestyle{\normalsize}
+	% Tabellenspezifikation expandieren und fuehrendes | entfernen:
+	\edef\@temp{\noexpand\begin{tabular}{\expandafter\@gobble\wi@sspaltenbreiten}}%
+	\@temp
+	#3
+	\gdef\wiastablestyle{\small} \\
+}{%
+	\end{tabular}
+}
+
+\newenvironment{wiasauszeichnung}{% Absatz, Einrueckung, Kursivdruck
+	\par
+	\itshape
+	\leftskip=2\wi@seinheit
+	\rightskip=4\wi@seinheit plus 6\wi@seinheit
+}{%
+	\par
+}
+
+\def\einph@to#1=#2;;;{% Bild=Name
+	\vbox{\vskip 2\wi@seinheit
+	      \hbox to 6\wi@seinheit{\hfil\includegraphics[height=5\wi@seinheit]{#1}\hfil} \vskip 0.5\wi@seinheit
+	      \hbox to 6\wi@seinheit{\hfil \small #2\hfil }}%
+}
+
+\def\wiasFotogalerie#1{% Liste von Bild=Name, ...
+	% horizontale Linie unter Kasten zeichnen:
+	\vskip -0.5\wi@sfboxrule
+	\vrule width 1.00\paperwidth height \wi@sfboxrule
+	\vskip 0.0mm
+	\hskip 1pt
+	\centering
+	%
+	\@for\person:=#1\do{%
+		\expandafter\einph@to\person;;;
+	}%
+}
+\def\pers@nGruppenfoto#1=#2;;;{% Position=Name
+	\WIASCD@smash{\hskip #1\wi@seinheit\small \makebox[0mm]{#2}} \vskip 0pt
+}
+
+\def\wiasGruppenfoto#1#2#3#4{% erste, zweite, dritte Namenszeile, Bilddatei
+	\vskip -0.5\wi@sfboxrule
+	\vrule width 1.00\paperwidth height \wi@sfboxrule
+	\vskip 0mm
+	\vskip 0.7\wi@seinheit
+	\@for\person:=#1\do{\expandafter\pers@nGruppenfoto\person;;;}%
+	\vskip 1.0\wi@seinheit
+	\@for\person:=#2\do{\expandafter\pers@nGruppenfoto\person;;;}%
+	\vskip 1.0\wi@seinheit
+	\@for\person:=#3\do{\expandafter\pers@nGruppenfoto\person;;;}%
+	\vskip 0.3\wi@seinheit
+	\vrule width 1.00\paperwidth height \wi@sfboxrule
+	\vskip -1pt
+	\includegraphics[width=\paperwidth]{#4}
+}
+
+
+
+% English macro names:
+\def\wiasBox{\wiasKasten}
+\def\wiasColored{\wiasFarblich}
+\def\wiasCooperation{\wiasZusammenarbeit}
+\def\wiasGroup{\wiasGruppe}
+\def\wiasGroupPicture{\wiasGruppenfoto}
+\def\wiasImageSlide{\wiasBildfolie}
+\def\wiasPicture{\wiasBild}
+\def\wiasPublications{\wiasPublikationen}
+\def\wiasSplashText{\wiasSchlagzeilen}
+\def\wiasTitleBox{\wiasTitelkasten}
+\def\wiasTitleSlide{\wiasTitelfolie}
+\def\wiasUnderline{\wiasUnterstreichung}
+\let\wiascolumn\wiasspalte
+\let\endwiascolumn\endwiasspalte
+\let\wiashighlight\wiasauszeichnung
+\let\endwiashighlight\endwiasauszeichnung
+\let\wiasrow\wiaszeile
+\let\endwiasrow\endwiaszeile
+\let\wiasslide\wiasfolie
+\let\endwiasslide\endwiasfolie
+
+
+\define@key{beamerframe}{t}[true]{% top: Leerraum von beamer entfernen
+	\beamer@frametopskip=-1.0pt\relax%
+	\beamer@framebottomskip=0pt plus 1fill minus 1fill\relax%
+	\beamer@frametopskipautobreak=\beamer@frametopskip\relax%
+	\beamer@framebottomskipautobreak=\beamer@framebottomskip\relax%
+}
+
+\defbeamertemplate{itemize item}{wiassquare}{\hbox{\raisebox{.15ex}{\vrule width .667ex height .667ex}}}
+\defbeamertemplate{itemize subitem}{wiassquare}{\small\hbox{\raisebox{.15ex}{\vrule width .667ex height .667ex}}}
+\defbeamertemplate{itemize subsubitem}{wiassquare}{\small\hbox{\raisebox{.10ex}{\vrule width .5ex height .5ex}}}
+\setbeamertemplate{itemize items}[wiassquare]
+
+% need to misuse this command to set \itemsep for itemize/enumerate
+% environments, as \beamer@cramped, for instance, gets reset at start of
+% a frame and there are no hooks for the \item command
+\def\beamer@firstlineitemizeunskip{%
+	\setlength{\parskip}{.25\baselineskip}%
+}
+
+\newcommand*{\wi@sPrintFrameTitle}{%
+	\begingroup
+		\global\wi@stitelfoliefalse
+		\global\@firstinseriestrue
+		\global\@ersterTitelkastentrue
+		\global\@wiashorizontalfalse
+		\setlength\wi@scolumnwidth{\paperwidth}%
+		\ifx\insertframetitle\@empty\else
+			\hskip -\beamer@leftmargin
+			\parbox{\linewidth}{%
+				\wiasTitleBox{1}{\insertframetitle}%
+				\vskip -1.0\wi@sfboxrule
+				\rlap{\vrule width 1.00\wi@scolumnwidth height \wi@sfboxrule depth 0mm}%
+				\vskip 0.0\wi@sfboxrule
+			}%
+		\fi
+	\endgroup
+}
+
+% Values are from beamer.cls (\RequirePackage[...]{geometry})
+% and beamerbasecompatibility.sty (includeheadfoot).
+% Space for head and foot is calculated \AtBeginDocument and
+% stored in \headheight/\footheight. Heads are not used in this
+% way so set them to zero.
+\newcommand{\leftmarginzero}{%
+	\newgeometry{%
+		hmargin=1cm,%
+		vmargin=0cm,%
+		head=0.0cm, %0.5cm,% might be changed later
+		headsep=0pt,%
+		foot=\footheight %0.5cm% might be changed later
+		,includeheadfoot
+		,left=0cm
+	}%
+}
+\newcommand{\leftmarginrestore}{%
+	\newgeometry{%
+		hmargin=1cm,%
+		vmargin=0cm,%
+		head=0.0cm, %0.5cm,% might be changed later
+		headsep=0pt,%
+		foot=\footheight %0.5cm% might be changed later
+		,includeheadfoot
+		,left=1cm
+	}%
+}
+
+\providecommand*{\beamer@initfirstlineunskip}{}
+
+\AtBeginDocument{\leftmarginzero\leftmarginrestore}
+
+\mode
+<all>
+
+\endinput
+
+% Changes made to beamerwiaspr.sty by WIAS
+%
+% - removed loading of `inputenc' - that should be done in document file
+% - removed loading of `helvet' - this will be done by `wiascd'
+% - removed loading of `lmodern' - this will be done by `wiascd' if needed
+% - passed option `professionalfont' to `beamer' for not touching font
+%   definitions - this will be done by `wiascd'
+% - load package `wiascd' for fonts, WIAS colors and logo commands
+% - changed font sizes - `wiascd' scales down Helvetica by .85 so fonts
+%   have to scaled up to get required sizes
+% - made itemize bullets smaller and put them into a \raisebox
+% - removed negative vertical skip on "itemize/enumerate body begin"
+% - changed research group symbols to use \wiasrg
+% - added \wi@sZentriertesLogo@CD to use wiascd logo commands
+% - use \insertframenumber instead of \thepage for footer
+% - only print totalframenumber if wanted
+% - added commands \leftmarginzero and \leftmarginrestore to set a slide's
+%   left margin to zero and restore to the default;
+%   call it once via \AtBeginDocument due to side effects on \newgeometry;
+%   use it in wiasslide (wiasfolie) environment and in
+%   \wiasTitleSlide (\wiasTitelfolie) command
+% - when setting paperwidth and paperheight, respect aspect ratio of
+%   4:3 (default), 16:9, or 16:10 depending on paperwidth/paperheight values
+%   given to beamer (paperwidth=16cm, paperheight=9cm or 10cm, respectivly)
+% - use '\insertshorttitle' for footlines
+% - set both `\tiny' and `\footnotesize' to `\small'
+% - provide macro `\beamer@initfirstlineunskip' to avoid error message
+%   with some beamer versions
+% - added options `wiasprblocks' (default) and `nowiasprblocks'
+%   to switch block (alert, proof, etc.) formatting (M. Liero)
+% - added color definitions for wiasdarkblue and wiaslightblue
+% - added some negative vertical space at the beginning of title page
+%   when global option 't' not set (C. Loebhard)
+% - print out #2 instead of #1 of \wiasGroup* in right lower box of
+%   project title slides (C. Loebhard)
+% - changed vertical space surrounding itemize/enumerate environments as
+%   well as parskip inside those (\beamer@firstlineitemizeunskip)
+% - use \WIASCD@smash instead of \smash for layout elements
+%   (due to LaTeX 2018-12 changes)
