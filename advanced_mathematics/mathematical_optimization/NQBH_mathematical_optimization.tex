@@ -286,7 +286,120 @@ In numbers of applications, we shall consider a state variable associated to a s
 ``Contrary to the last topic, very few references exist for the sensitivity analysis w.r.t. the perturbation of the evolution of the moving geometry. Early studies have been conducted in [90, 151, 158, 141, 120, 43, 142, 2] for specific hyperbolic \& parabolic linear problems. An important step was performed in [154, 155] where Zol\'esio established the derivative of integrals over a moving domain w.r.t. its associated Eulerian velocity. These results were applied in order to study variational principles for an elastic solid under large displacements \& the incompressible Euler equation. This work was generalized in [58, 59].'' -- \cite[Chap. 1, Sect. 1.1, pp. 3--4]{Moubachir_Zolesio2006}
 
 \subsection{Fluid-Structure Interaction Problems}
+``A general fluid--solid model consists of an elastic solid either surrounded by a fluid (aircrafts, automobiles, bridge decks, $\ldots$) or surrounding a fluid flow (pipelines, arteries, reservoir tanks, $\ldots$). Here the motion of the interface between the fluid \& the solid is part of the unknown of the coupled system. It is a free boundary problem that can be solved by imposing continuity properties through the moving interface (e.g., the kinematic continuity of the velocities \& the kinetic continuity of the normal stresses). This model has been intensively studied in the last 2 decades on the level of its mathematical solvability [87, 54, 82, 39, 80, 131, 15, 9, 138, 41], its numerical approximation [89, 55, 119, 118, 122, 95, 67], its stability [73, 38, 64, 65] \& more recently on its controllability [66, 109]. In this lecture note, we will restrict ourselves to viscous Newtonian incompressible fluid flows described by the NSEs in space dimension 2 or 3. The case of a compressible Newtonian fluid can be incorporated in the present framework with the price of a heavier mathematical analysis (solvability, non-differentiability around shocks $\ldots$).''
 
+\textbf{Goal.} ``To solve inverse or control problems based on the previous general fluid-solid model. As an example, we think to decrease the drag of a car inside the atmospheric air flow by producing specific vibrations on its body using smart materials such as piezoelectrical layers. In this example, the control variable can be chosen as the electrical energy input evolution inside the piezoelectrical device \& the objective is to decrease the drag which is a function of the coupled fluid-structure state (the air \& the body of the car) \& this state depends on the control variable. In order to build a control law for the electrical input, we need to characterize the relationship between the drag function \& the control variable on the level of its computation \& its variations.
+
+As an other example, we can think of the problem of aeroelastic stability of structures. Both authors have been dealing with such a problem in the context of the stability analysis against wind loads of bridge decks. In [108], it has been suggested that such a problem can be set as the inverse problem consisting in recovering the smallest upstream wind speed that leads to the worst bridge deck vibrations. In this example, the decision variable can be chosen as the upstream wind speed \& the objective is to increase a functional based on the vibration amplitude history of the bridge deck during a given characteristic time period which is a function of the coupled fluid-structure state (the wind flow \& the bridge deck) which is also a function of the decision variable. Again, in order to recover the wind speed history, we need to characterize the relationship between the objective functional \& the decision variable on the level of its computation \& its variations.
+
+In order to characterize the sensitivity of the objective functional w.r.t. the control variable, it is obvious that we need to characterize the sensitivity of the coupled fluid-structure state w.r.t. the control variable. Here we recall that the coupled fluid-structure state is the solution of a system of PDEs that are coupled through continuity relations defined on the moving interface (the fluid-structure interface). The key point towards this sensitivity analysis is to investigate the sensitivity of the fluid state, which is an Eulerian quantity, w.r.t. the motion of the solid, which is a Lagrangian quantity. This task falls inside the moving shape analysis framework described earlier. Indeed the fluid state is the solution of system of nonlinear PDEs defined in a moving domain. The boundary of this moving domain is the solid wall. Then using the tools developed in [59], it has been possible to perform in [58] the moving shape sensitivity analysis in the case of a Newtonian incompressible fluid inside a moving domain driven by the non-cylindrical NSEs.
+
+All the previous results use a parametrization of the moving domain based on the Lagrangian flow o a given velocity field. Hence, the design variable is the Eulerian velocity of the moving domain, allowing topology changes while using the associated level set formulation. In [13, 14], the author used a non-cylindrical identity perturbation technique. It consists in perturbating the space-time identity operator by a family of diffeomorphism. Then, this family is chosen as the design parameter. It is a Lagrangian description of the moving geometry, which a priori does not allow topology changes but which leads to simpler sensitivity analysis results which are are still comparable with the one obtained by the non-cylindrical \textit{speed method}. In [57], the authors came back to the dynamical shape control of the Navier-Stokes \& recovered the results obtained in [58] using the Min-Max principle allowing to avoid the state differentiation step w.r.t. the velocity of the domain.
+
+Now, we come back to the original problem consisting in the sensitivity analysis of the coupled fluid-structure state w.r.t. the control variable. Using the chain rule, the derivative of the coupled state w.r.t. the control variable involves the partial derivative of the fluid state w.r.t. the motion of the fluid-structure interface already characterized in [58, 57]. Hence, again using a Lagrangian penalization technique, already used \& justified in [45, 46], it has been possible to perform in [109] the sensitivity analysis of a simple fluid-structure interaction problem involving a rigid solid within an incompressible flow of a Newtonian fluid w.r.t. the upstream velocity field. As already mentioned, this simple model is particularly suited for bridge deck aeroelastic stability analysis [121].'' -- \cite[Chap. 1, Sect. 1.2, pp. 4--6]{Moubachir_Zolesio2006}
+\begin{itemize}
+	\item ``\cite[Chap. 2]{Moubachir_Zolesio2006} furnishes a simple illustration to some of the moving shape analysis results reported in the core of the lecture note. We deal with a simple inverse problem arising in phase change problems consisting in recovering the moving interface at the isothermal interface between a solid \& liquid phase from measurements of the temperature on a insultated fixed part of the solid boundary. We use a least-square approach \& we show how to compute the gradient of the least-square functional w.r.t. the velocity of the moving interface. It involves an adjoint state problem together with an adjoint transverse state, which is the novelty of the moving shape analysis compared to the classical one.
+	\item In \cite[Chap. 3]{Moubachir_Zolesio2006}, we consider the weak Eulerian evolution of domains through the convection, generated by a non-smooth vector field ${\bf V}$, of measurable sets. The introduction of transverse variations enables the derivation of functionals associated to evolution tubes. We also introduce Eulerian variational formulations for the minimal curve problem. These formulations involve a geometrical adjoint state $\lambda$ which is backward in time \& is obtained thanks to the use of the so-called \textit{transverse field} ${\bf Z}$.
+	\item In \cite[Chap. 4]{Moubachir_Zolesio2006}, we recall the concept of shape differential equation developed in [145, 147]. Here, we present a simplified version \& some applications in 2D which enable us to reach the time asymptotic result. Furthermore, we introduce the associated level set formulation whose speed vector version was already contained in [149].
+	\item In \cite[Chap. 5]{Moubachir_Zolesio2006}, we deal with a challenging problem in fluid mechanics which consists in the control of a Newtonian fluid flow thanks to the velocity evolution law of a moving wall. Here, the optimal control problem has to be understood as the open loop version, i.e., it consists in minimizing a given objective functional w.r.t. the velocity of the moving wall. This study is performed within the non-cylindrical Eulerian moving shape analysis described in Chaps. 2--3. We focus on the use of a Lagrangian penalization formulation in order to avoid the fluid state differentiation step.
+	\item In \cite[Chap. 6]{Moubachir_Zolesio2006}, we introduce the Lagrangian moving shape analysis framework. It differs from the Eulerian one form the fact that the design variable is the diffeomorphism that parametrizes the moving geometry. The sensitivity analysis is simpler since it does not involve the transverse velocity field. We apply these tools in order to deal with the control of a Newtonian fluid flow thanks to the displacement evolution law of a moving wall.
+	\item \cite[Chap. 7]{Moubachir_Zolesio2006} moves to inverse problems related to fluid-structure interaction systems. Here, we consider a 2D elastic solid with rigid displacements inside the incompressible flow of a viscous Newtonian fluid. We try to recover informations about the inflow velocity field from the partial measurements of the coupled fluid-structure state. We use a least-square approach together with a Lagrangian penalization technique. We derive the structure of the gradient w.r.t. the inflow velocity field of a given cost function. Using the Min-Max principle, the cost function gradient reduces to the derivative of the Lagrangian w.r.t. the inflow velocity at the saddle point. This saddle point is solution of 1st order optimality conditions. We use non-cylindrical Eulerian derivatives to compute the partial derivative of the Lagrangian functional w.r.t. the solid state variables, involved in the optimality system.
+	\item In \cite[Chap. 8]{Moubachir_Zolesio2006} we extend the results of Chap. 7, to the case of an elastic solid under large displacements inside an incompressible fluid flow. The main difference with the previous case is the use of a non-cylindrical Lagrangian shape analysis for establishing the KKT system. It forms the adjoint counterpart of the sensitivity analysis conducted in [66].'' -- \cite[Chap. 1, Sect. 1.3, pp. 6--7]{Moubachir_Zolesio2006}
+\end{itemize}
+``$\ldots$ we shall describe the different steps encountered while designing a complex fluid-structure interaction system. Indeed, let us consider a mechanical system that consists of a solid \& a fluid interacting with each other. We would like to increase the performances of this system. These performances have to be quantitatively translated inside a cost function that we have to optimize w.r.t. some parameters that we will call the control variables. In the sequel, we will describe different control situations:
+\begin{enumerate}
+	\item \textit{Control of a fluid flow around a fixed body}: it consists in trying to modify the fluid flow pattern around a fixed body using a boundary control which can act e.g. by blowing or suctioning the fluid at some part of the solid boundary. The control law will be designed in order to match some efficiency goals using the minimization of a cost functional.
+	\item \textit{Shape design of a fixed solid inside a fluid flow}: in this case, the control is the shape of the body. We would like to find the best shape satisfying some geometrical constraints that will optimize some cost functionals. This problem is somewhat classical in the aeronautical field, but it requires some subtle mathematical tools that we will quickly recall.
+	\item \textit{Dynamical shape design of a solid inside a fluid flow}: the novelty compared to the last item is that the shape is moving \& we are looking for the best evolution of this shape that both satisfies some geometrical constraints \& optimizes some cost functionals. This is a rather natural technique in order to control a fluid flow pattern, but still its design requires some new mathematical tools that will be sketched in this introduction \& more detailed in the core of this lecture note.
+	\item \textit{Control of an elastic solid inside a fluid flow}: this is the most complex \& most realistic situation where both the fluid \& the solid have their own dynamics which are coupled through the fluid-solid interface. Then, we would like to control or optimize the behavior of this coupled system thanks to boundary conditions. The mathematical analysis of this situation uses the whole framework introduced previously. This is a challenging problem, both on the mathematical point of view \& on the technological side. The goal of this book is to partially answer to some issues related to this problem.'' -- \cite[Chap. 1, Sect. 1.4, pp. 7--8]{Moubachir_Zolesio2006}
+\end{enumerate}
+\paragraph{The objective functional.} ``A common topic in the optimization \& control field of PDE systems is the choice of appropriate cost functionals, i.e., meeting both our objectives \& the mathematical requirements that guarantee the convergence to at least 1 optimum parameter. This functional can depend both on the state variables $({\bf u},p)$ \& on the control parameter ${\bf g}$.'' [$\ldots$] ``More generally, we can consider any cost functionals that are twice-differentiable w.r.t. their arguments.''-- \cite[Chap. 1, Subsect. 1.4.1, pp. 9--10]{Moubachir_Zolesio2006}
+
+\paragraph{The control problem.} ``Our goal is now furnish the 1st-order optimality conditions associated to the optimization problem. These conditions are very useful since they are the basis in order to build both a rigorous mathematical analysis \& gradient-based optimization algorithms.
+
+There exists 2 main methods in order to derive these conditions: the 1st one is based on the differentiability of the state variables w.r.t. the control parameter \& the 2nd one relies on the existence of Lagrangian multipliers.'' -- \cite[Chap. 1, Subsect. 1.4.1, p. 10]{Moubachir_Zolesio2006}
+
+\paragraph{Sensitivity.} ``Let us consider a \textit{control point} ${\bf g}\in\mathcal{U}$, then the cost functional $j({\bf g})$ is Fr\'echet differentiable w.r.t. ${\bf g}$ \cite{Abergel_Temam1990}, [71] \& its directional derivative is given by \textbf{(1.9)}
+\begin{align*}
+	\langle j'({\bf g}),{\bf h}\rangle = \langle\partial_{({\bf u},p)}J[({\bf u},p)({\bf g})],({\bf u}',p')({\bf g};{\bf h})\rangle,\mbox{ where }({\bf u}',p')({\bf g};{\bf h})\coloneqq\frac{d}{d{\bf g}}({\bf u},p)({\bf g})\cdot{\bf h}
+\end{align*}
+stands for the directional derivative of $({\bf u},p)({\bf g})$ w.r.t. ${\bf g}$.'' [$\ldots$]
+
+``Then the 1st-order optimality condition writes \textbf{(1.11)} $\langle j'({\bf g},{\bf h})\rangle = 0$, $\forall{\bf h}\in\mathcal{U}$. I.e., the set of optimal controls is contained in the set of critical points for the cost function $j({\bf g})$. However, we would like to obtain an expression of this condition avoiding the direction ${\bf h}\in\mathcal{U}$. To this end, we introduce the \textit{adjoint variable} $({\bf v},\pi)$ solution of the \textit{adjoint linearized Navier--Stokes system} \textbf{(1.12)}. Consequently, we are able to identify the gradient of the cost function as the trace on $\Gamma^c$ of the \textit{adjoint normal stress tensor}, i.e., \textbf{(1.13)}
+\begin{align*}
+	\nabla j({\bf g}) = {}^\star\gamma_{(0,\tau)\times\Gamma^c}[\sigma({\bf v},\pi)\cdot{\bf n}].
+\end{align*}
+This formal proof provides the basic steps needed in order to build a gradient-based optimization method associated to the control problem $\min_{{\bf g}\in\mathcal{U}} j({\bf g})$.
+
+An alternative approach consists in avoiding the derivation of the fluid state $({\bf u},p)$ w.r.t. the control ${\bf g}$ thanks to the introduction of a Lagrangian functional that includes not only the cost functional but also the state equation, \textbf{(1.14)}
+\begin{align*}
+	\mathcal{L}(\boldsymbol{\psi},r,\boldsymbol{\phi},q;{\bf g}) = J(\boldsymbol{\psi},r) + \langle e(\boldsymbol{\psi},r;{\bf g}),(\boldsymbol{\phi},q)\rangle,
+\end{align*}
+where $\langle e({\bf u},p;g),(\boldsymbol{\phi},q)\rangle$ stands for the weak form of the state equation NSEs (1.8), e.g.,
+\begin{align*}
+	\langle e(\boldsymbol{\psi},r;{\bf g}),(\boldsymbol{\phi},q)\rangle =&\, \int_{(0,\tau)\times\Omega^f} [-\boldsymbol{\psi}\cdot\partial_t\boldsymbol{\phi} + ({\rm D}\boldsymbol{\psi}\cdot\boldsymbol{\psi})\cdot\boldsymbol{\phi} - \nu\boldsymbol{\psi}\cdot\Delta\boldsymbol{\phi} + \boldsymbol{\psi}\cdot\nabla q - r\nabla\cdot\boldsymbol{\phi}] + \int_{(0,\tau)\times\Gamma^c} {\bf g}\cdot(\sigma(\boldsymbol{\phi},q)\cdot{\bf n})\,{\rm d}\Gamma\,{\rm d}t\\
+	&+ \int_{(0,\tau)\times\partial D} {\bf u}_\infty\cdot(\sigma(\boldsymbol{\phi},q)\cdot{\bf n}) + \int_{\Omega^f} \boldsymbol{\psi}(\tau)\cdot\boldsymbol{\phi}(\tau) - \int_{\Omega^f} {\bf u}_0\cdot\boldsymbol{\phi}(0).
+\end{align*}
+Hence the control problem $\min_{{\bf g}\in\mathcal{U}} j({\bf g})$ is equivalent to the $\min$-$\max$ problem, \textbf{(1.15)}
+\begin{align*}
+	\min_{{\bf g}\in\mathcal{U}}\min_{(\boldsymbol{\psi},r)}\max_{(\boldsymbol{\phi},q)} \mathcal{L}(\boldsymbol{\psi},r,\boldsymbol{\phi},q;{\bf g}).
+\end{align*}
+For every control ${\bf g}\in\mathcal{U}$, it can be proven that the $\min$-$\max$ problem,
+\begin{align*}
+	\min_{(\boldsymbol{\psi},r)}\max_{(\boldsymbol{\phi},q)} \mathcal{L}(\boldsymbol{\psi},r,\boldsymbol{\phi},q;{\bf g})
+\end{align*}
+admits a unique saddle-point $({\bf u},p;{\bf v},\pi)$ which are solutions of the systems (1.8)--(1.12). Finally the 1st-order optimality for the problem (1.15) writes \textbf{(1.16)}
+\begin{align*}
+	\partial_{\bf g}\mathcal{L}({\bf u},p,{\bf v},\pi;{\bf g}) = 0
+\end{align*}
+which turns out to be equivalent to (1.13). Then, we can think to solve the optimality condition (1.11), using a continuous iterative method. Indeed let us introduce a scalar parameter $s\ge 0$, \& a \textit{control variable} ${\bf g}(s)$ that is differentiable w.r.t. $s$. Hence using the differentiability of $J({\bf g})$, we get
+\begin{align*}
+	J({\bf g}(r)) - J({\bf g}(0)) = \int_0^r \langle\nabla J({\bf g}(s)),{\bf g}'(s)\rangle_{\mathcal{U}^\star,\mathcal{U}}\,{\rm d}s.
+\end{align*}
+Let us choose the control s.t. \textbf{(1.17)}
+\begin{align*}
+	{\bf g}'(s) + \mathbb{A}^{-1}(s)\nabla J({\bf g}(s)) = 0,\ s\in(0,r),
+\end{align*}
+where $\mathbb{A}$ stands for an appropriate duality operator, then the functional writes
+\begin{align*}
+	J({\bf g}(r)) - J({\bf g}(0)) = -\int_0^r |\nabla J({\bf g}(s))|^2\,{\rm d}s.
+\end{align*}
+I.e., the control law (1.17) leads to a functional's decrease \& is referred to as a continuous gradient based optimization method. Using a discretization of the parameter $s$ leads to a standard gradient-based method such as the conjugate-gradient or the quasi-Newton method depending on the choice of $\mathbb{A}(s)$.'' -- \cite[Chap. 1, Subsect. 1.4.1, pp. 11--12]{Moubachir_Zolesio2006}
+
+``We again consider the situation where a fixed solid is surrounded by a fluid flow. The shape control consists in finding the optimal shape of the solid that reduces some objective functional (e.g., the drag) under some perimeter, volume or curvature constraints. This optimization is an open-loop control since the shape of the obstacle is time-independent.''
+
+\paragraph{The speed method.} ``Here the space of shapes is no more a linear space \& the associated differential calculus becomes more tricky. Our goal is to build \textit{gradient-based methods} in order to find the optimal shape, i.e., we would like to solve the following problem, \textbf{(1.18)} $\min_{\Omega\in\mathcal{A}} J(\Omega)$. In order to carry out the sensitivity analysis of functionals depending on the shape of the solid $\Omega$, we introduce a family of pertubated domains $\Omega_s\subset D$ parametrized by a scholar parameter $0\le s\le\varepsilon$. These domains are the images of the original domain $\Omega$ through a given family of smooth maps\footnote{Typically we have the following Lipschitz regularity assumptions:
+\begin{align*}
+	{\bf T}(\cdot,{\bf x})&\in\mathcal{C}^1([0,\varepsilon];\mathbb{R}^3),\ \forall{\bf x}\in D,\ \|{\bf T}(\cdot,{\bf x}) - {\bf T}(\cdot,{\bf y})\|_{\mathcal{C}^0([0,\varepsilon];\mathbb{R}^3)}\le C\|{\bf x} - {\bf y}\|_{\mathbb{R}^3},\\
+	{\bf T}^{-1}(\cdot,{\bf x})&\in\mathcal{C}^0([0,\varepsilon];\mathbb{R}^3),\ \forall{\bf x}\in D,\ \|{\bf T}^{-1}(\cdot,{\bf x}) - {\bf T}^{-1}(\cdot,{\bf y})\|_{\mathcal{C}^0([0,\varepsilon];\mathbb{R}^3)}\le C\|{\bf x} - {\bf y}\|_{\mathbb{R}^3},
+\end{align*}
+where $C > 0$.} ${\bf T}_s:\overline{D}\to\overline{D}$, i.e. $\Omega_s = {\bf T}_s(\Omega)$, $\Gamma_s = {\bf T}_s(\Gamma)$.
+
+2 major classes of such mappings are given by:
+\begin{itemize}
+	\item the \textit{identity perturbation method} ([116, 125]), ${\bf T}_s = {\rm I} + s\boldsymbol{\theta}$, where $\boldsymbol{\theta}:\overline{D}\to\overline{D}$.
+	\item the \textit{speed method} [145] \cite{Pironneau1984}, where the transformation is the flow associated to a given velocity field ${\bf V}(s,{\bf x})$,
+	\begin{equation*}
+		\left\{\begin{split}
+			\partial_s{\bf T}_s({\bf x}) &= {\bf V}(s,{\bf T}_s({\bf x})),&&(s,{\bf x})\in(0,\varepsilon)\times D,\\
+			{\bf T}_{s=0}({\bf x}) &= {\bf x},&&{\bf x}\in D.
+		\end{split}\right.
+	\end{equation*}
+	In order for $\overline{D}$ to be globally invariant under ${\bf T}_s({\bf V})$ we need to impose the following \textit{viability conditions}, ${\bf V}(s,{\bf x})\cdot{\bf n}({\bf x}) = 0$, ${\bf x}\in\partial D$.
+\end{itemize}
+Let us consider the family of functionals $J(\Omega_s)$ that depends on the shapes $\Omega_s$, e.g., the work to overcome the drag exerted by the fluid on the solid boundary, \textbf{(1.19)}
+\begin{align*}
+	J_{\rm drag}(\Omega) = \int_{(0,\tau)\times\Gamma} ({\bf u} - {\bf u}_\infty)\cdot\sigma({\bf u},p)\cdot{\bf n}\,{\rm d}\Gamma\,{\rm d}t.
+\end{align*}
+This functional depends on $\Omega$ not only because it is an integral over the boundary $\Gamma$, but also because it involves the solution $({\bf u},p)$ of the Navier--Stokes system, \textbf{(1.20)}, that depends on $\Omega$.
+
+To perform our sensitivity analysis, we choose to work in the framework of the \textit{speed method}\footnote{which leads, at least for the 1st order terms, to the same results as the identity perturbation framework [51].} We define the Eulerian derivative of the shape functional $J(\Omega)$ at point $\Omega$ in the direction of the vector field ${\bf V}\in\mathcal{V}$ as the limit,
+\begin{align*}
+	dJ(\Omega;{\bf V}) = \lim_{s\downarrow 0} \frac{J(\Omega_s({\bf V})) - J(\Omega)}{s},
+\end{align*}
+where $\mathcal{V}$ is a linear space\footnote{e.g., $\mathcal{V}\coloneqq\{{\bf V}\in\mathcal{C}^0(0,\varepsilon;\mathcal{C}^1(D;\mathbb{R}^3)),\ \nabla\cdot{\bf V} = 0\mbox{ in } D,\ \langle{\bf V},{\bf n}\rangle = 0\mbox{ on }\partial D\}$.} If this limit exists \& is finite $\forall{\bf V}\in\mathcal{V}$ \& the mapping $\mathcal{V}\to\mathbb{R}$, ${\bf V}\mapsto dJ(\Omega;{\bf V})$ is linear \& continuous, then the functional $J(\Omega)$ is said to be \textit{shape differentiable}.
+
+'' -- \cite[Chap. 1, Subsect. 1.4.2, pp. 13--]{Moubachir_Zolesio2006}
 
 %------------------------------------------------------------------------------%
 
