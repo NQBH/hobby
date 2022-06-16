@@ -313,6 +313,9 @@ Now, we come back to the original problem consisting in the sensitivity analysis
 	\item \textit{Dynamical shape design of a solid inside a fluid flow}: the novelty compared to the last item is that the shape is moving \& we are looking for the best evolution of this shape that both satisfies some geometrical constraints \& optimizes some cost functionals. This is a rather natural technique in order to control a fluid flow pattern, but still its design requires some new mathematical tools that will be sketched in this introduction \& more detailed in the core of this lecture note.
 	\item \textit{Control of an elastic solid inside a fluid flow}: this is the most complex \& most realistic situation where both the fluid \& the solid have their own dynamics which are coupled through the fluid-solid interface. Then, we would like to control or optimize the behavior of this coupled system thanks to boundary conditions. The mathematical analysis of this situation uses the whole framework introduced previously. This is a challenging problem, both on the mathematical point of view \& on the technological side. The goal of this book is to partially answer to some issues related to this problem.'' -- \cite[Chap. 1, Sect. 1.4, pp. 7--8]{Moubachir_Zolesio2006}
 \end{enumerate}
+
+\subsubsection{Control of a fluid flow around a fixed body}
+
 \paragraph{The objective functional.} ``A common topic in the optimization \& control field of PDE systems is the choice of appropriate cost functionals, i.e., meeting both our objectives \& the mathematical requirements that guarantee the convergence to at least 1 optimum parameter. This functional can depend both on the state variables $({\bf u},p)$ \& on the control parameter ${\bf g}$.'' [$\ldots$] ``More generally, we can consider any cost functionals that are twice-differentiable w.r.t. their arguments.''-- \cite[Chap. 1, Subsect. 1.4.1, pp. 9--10]{Moubachir_Zolesio2006}
 
 \paragraph{The control problem.} ``Our goal is now furnish the 1st-order optimality conditions associated to the optimization problem. These conditions are very useful since they are the basis in order to build both a rigorous mathematical analysis \& gradient-based optimization algorithms.
@@ -366,6 +369,7 @@ where $\mathbb{A}$ stands for an appropriate duality operator, then the function
 \end{align*}
 I.e., the control law (1.17) leads to a functional's decrease \& is referred to as a continuous gradient based optimization method. Using a discretization of the parameter $s$ leads to a standard gradient-based method such as the conjugate-gradient or the quasi-Newton method depending on the choice of $\mathbb{A}(s)$.'' -- \cite[Chap. 1, Subsect. 1.4.1, pp. 11--12]{Moubachir_Zolesio2006}
 
+\subsubsection{Shape design of a fixed solid inside a fluid flow}
 ``We again consider the situation where a fixed solid is surrounded by a fluid flow. The shape control consists in finding the optimal shape of the solid that reduces some objective functional (e.g., the drag) under some perimeter, volume or curvature constraints. This optimization is an open-loop control since the shape of the obstacle is time-independent.''
 
 \paragraph{The speed method.} ``Here the space of shapes is no more a linear space \& the associated differential calculus becomes more tricky. Our goal is to build \textit{gradient-based methods} in order to find the optimal shape, i.e., we would like to solve the following problem, \textbf{(1.18)} $\min_{\Omega\in\mathcal{A}} J(\Omega)$. In order to carry out the sensitivity analysis of functionals depending on the shape of the solid $\Omega$, we introduce a family of pertubated domains $\Omega_s\subset D$ parametrized by a scholar parameter $0\le s\le\varepsilon$. These domains are the images of the original domain $\Omega$ through a given family of smooth maps\footnote{Typically we have the following Lipschitz regularity assumptions:
@@ -399,7 +403,169 @@ To perform our sensitivity analysis, we choose to work in the framework of the \
 \end{align*}
 where $\mathcal{V}$ is a linear space\footnote{e.g., $\mathcal{V}\coloneqq\{{\bf V}\in\mathcal{C}^0(0,\varepsilon;\mathcal{C}^1(D;\mathbb{R}^3)),\ \nabla\cdot{\bf V} = 0\mbox{ in } D,\ \langle{\bf V},{\bf n}\rangle = 0\mbox{ on }\partial D\}$.} If this limit exists \& is finite $\forall{\bf V}\in\mathcal{V}$ \& the mapping $\mathcal{V}\to\mathbb{R}$, ${\bf V}\mapsto dJ(\Omega;{\bf V})$ is linear \& continuous, then the functional $J(\Omega)$ is said to be \textit{shape differentiable}.
 
-'' -- \cite[Chap. 1, Subsect. 1.4.2, pp. 13--]{Moubachir_Zolesio2006}
+Actually if $J(\Omega)$ is shape differentiable, then its Eulerian derivative only depends on ${\bf V}(0)$ \& there exists a distribution ${\bf G}(\Omega)\in\mathcal{D}(D;\mathbb{R}^3)'$ that we call the \textit{shape gradient} s.t.
+\begin{align*}
+	dJ(\Omega;{\bf V}) = \langle{\bf G}(\Omega),V(0)\rangle,\ \forall{\bf V}\in\mathcal{V}.
+\end{align*}
+In the sequel, we shall use the notation $\nabla J(\Omega)\coloneqq{\bf G}(\Omega)$. In the case of smooth domain, the gradient is only supported on the boundary $\Gamma$ \& depends linearly on the normal vector field ${\bf n}$. This result, called the \textit{structure theorem}\footnote{Refer to \cite[Theorem 3.5]{Delfour_Zolesio2001} for the case of non-smooth domains.}, is recalled as follows,
+
+\begin{theorem}[Shape derivative structure theorem]
+	Let $J(\cdot)$ be a differentiable shape functional at every shape $\Omega$ of class $\mathcal{C}^{k+1}$ for $k\ge 0$ with shape gradient ${\bf G}(\Omega)\in\mathcal{D}(D;\mathbb{R}^3)'$. In this case, the shape gradient has the following representation,
+	\begin{align*}
+		{\bf G}(\Omega) = {}^\star\gamma_\Gamma(g{\bf n}),
+	\end{align*}
+	where $g(\Gamma)\in\mathcal{D}^{-k}(\Gamma)$ stands for a scalar distribution \& ${}^\star\gamma_\Gamma$ stands for the adjoint trace operator\footnote{i.e.,
+	\begin{align*}
+		\langle{}^\star\gamma_\Gamma(g{\bf n}),{\bf V}\rangle_{\mathcal{D}(D;\mathbb{R}^3)',\mathcal{D}(D;\mathbb{R}^3)} = \langle g,{\bf V}\cdot{\bf n}\rangle_{\mathcal{D}'(\Gamma),\mathcal{D}(\Gamma)}.
+	\end{align*}}.
+\end{theorem}
+This result is easier to understand when $g(\Gamma)$ is integrable over $\Gamma$, that is to say, $g\in L^1(\Gamma)$. Indeed in this case, it means that the directional shape derivative can always be written as follows,
+\begin{align*}
+	dJ(\Omega;{\bf V}) = \int_\Gamma g{\bf V}\cdot{\bf n}\,{\rm d}\Gamma.
+\end{align*}
+
+\paragraph{Basic shape derivative calculus.} The notion of Eulerian derivative for shape functionals can be extended to functions defined on Banach or Hilbert spaces built on smooth domains $\Omega$. Hence, a function $y\in H(\Omega)$ admits a \textit{material derivative} at $\Omega$ in the direction ${\bf V}\in\mathcal{V}$ if the following limit
+\begin{align*}
+	\dot{y}(\Omega;{\bf v})\coloneqq\lim_{s\to 0} \frac{1}{s}[y(\Omega_s({\bf V}))\circ{\bf T}_s({\bf V}) - y(\Omega)]
+\end{align*}
+admits a limit in the Hilbert space\footnote{e.g., $W^{m,p}(\Omega)$  or $L^2(0,\tau;W^{m,p}(\Omega))$.} $H(\Omega)$.
+
+Endowed with the following definition, it is possible to derive the Eulerian shape derivative of the following functionals,
+\begin{align*}
+	J(\Omega) = \int_\Omega y(\Omega)\,{\rm d}\Omega.
+\end{align*}
+If $y(\Omega)$ is weakly shape differentiable in $L^1(\Omega)$, then the functional $J(\Omega)$ is shape differentiable \& its directional derivative writes,
+\begin{align*}
+	dJ(\Omega;{\bf V}) = \int_\Omega [\dot{y}(\Omega;{\bf V}) + y(\Omega)\nabla\cdot{\bf V}(0)]\,{\rm d}\Omega.
+\end{align*}
+In order to apply the structure theorem, it is useful to define the notion of shape derivative for functions. Hence, if $y\in H(\Omega)$ admits a material derivative $\dot{y}(\Omega;{\bf V})\in H(\Omega)$ \& $\nabla y\cdot{\bf V}(0)\in H(\Omega)$ for all ${\bf V}\in\mathcal{V}$, we define the \textit{shape derivative} as
+\begin{align*}
+	y'(\Omega;{\bf V}) = \dot{y}(\Omega;{\bf V}) - \nabla y(\Omega)\cdot{\bf V}(0).
+\end{align*}
+In this case, the Eulerian shape derivative of $J(\Omega)$ takes the following form,
+\begin{align*}
+	dJ(\Omega;{\bf V}) = \int_\Omega [y'(\Omega;{\bf V}) + \nabla\cdot(y(\Omega){\bf V}(0))]\,{\rm d}\Omega.
+\end{align*}
+If $\Omega$ is class $\mathcal{C}^k$ with $k\ge 1$, then using the Stokes formula, we get
+\begin{align*}
+	dJ(\Omega;{\bf V}) = \int_\Omega y'(\Omega;{\bf V}) + \int_\Gamma y(\Omega){\bf V}\cdot{\bf n}\,{\rm d}\Gamma.
+\end{align*}
+
+\begin{remark}
+	In the case where $y(\Omega) = Y|_\Omega$, where $Y\in H(D)$ with $\Omega\subset D$, its shape derivative is zero since $\dot{y}(\Omega;{\bf V}) = \nabla Y\cdot{\bf V}$. Hence,
+	\begin{align*}
+		dJ(\Omega;{\bf V}) = \int_\Gamma y(\Omega){\bf V}\cdot{\bf n}\,{\rm d}\Gamma.
+	\end{align*}
+	This is a simple illustration of the structure theorem.
+\end{remark}
+In the case of functionals involving integration over the boundary $\Gamma$, we need to introduce the notion of \textit{material derivative} on $\Gamma$.
+
+Let $z\in W(\Gamma)$ where $W(\Gamma)$ is an Hilbert space of functions (e.g., $W^{m,p}(\Gamma)$) defined over $\Gamma$. It is said that it admits a material derivative in the direction ${\bf V}\in\mathcal{V}$, if the following limit,
+\begin{align*}
+	\dot{z}(\Gamma;{\bf V})\coloneqq\lim_{s\to 0} \frac{1}{s}[z(\Gamma_s({\bf V}))\circ{\bf T}_s({\bf V}) - z(\Gamma)]
+\end{align*}
+admits a limit in the Hilbert space $W(\Gamma)$.
+
+As a consequence of this definition, it is possible to derive the Eulerian shape derivative of the following functional,
+\begin{align*}
+	J(\Gamma) = \int_\Gamma z(\Gamma)\,{\rm d}\Gamma.
+\end{align*}
+If $z(\Gamma)$ is weakly shape differentiable in $L^1(\Omega)$, then the functional $J(\Gamma)$ is shape differentiable \& its directional derivative writes
+\begin{align*}
+	dJ(\Gamma;{\bf V}) = \int_\Gamma [\dot{z}(\Gamma;{\bf V}) + z(\Gamma)\operatorname{div}_\Gamma{\bf V}(0)]\,{\rm d}\Gamma,
+\end{align*}
+where
+\begin{align*}
+	\operatorname{div}_\Gamma{\bf V}\coloneqq\gamma_\Gamma[\nabla\cdot{\bf V} - ({\rm D}{\bf V}\cdot{\bf n})\cdot{\bf n}]
+\end{align*}
+stands for the \textit{tangential divergence}.
+
+As in the previous case, it is also possible to introduce the notion of shape derivative for $z(\Gamma)$. Let $\Omega$ be of class $\mathcal{C}^k$ with $k\ge 2$. If $z\in W(\gamma)$ admits a material derivative $\dot{z}(\Gamma;{\bf V})\in W(\Gamma)$ \& $\nabla_\Gamma y\cdot{\bf V}(0)\in W(\Gamma)$ for all ${\bf V}\in\mathcal{V}$, we define the \textit{shape derivative} as
+\begin{align*}
+	z'(\Gamma;{\bf V}) = \dot{z}(\Gamma;{\bf V}) - \nabla_\Gamma z(\Gamma)\cdot{\bf V}(0)\mbox{ where }\nabla_\Gamma z = \nabla Z|_\Gamma - (\nabla Z\cdot{\bf n}){\bf n}
+\end{align*}
+stands for the \textit{tangential gradient} \& $Z$ is any smooth extension of $z$ inside $\Omega$.
+
+Using the above definition, it is possible to transform the expression of the differential as follows,
+\begin{align*}
+	dJ(\Gamma;{\bf V}) = \int_\Gamma [z'(\Gamma;{\bf V}) + Hz(\Gamma){\bf V}(0)\cdot{\bf n}]\,{\rm d}\Gamma,
+\end{align*}
+where $H$ stands fro the \textit{mean curvature} of $\Gamma$.
+
+\begin{remark}
+	In the case where $z(\Gamma) = y(\Omega)|_\Gamma$, the Eulerian derivative takes the following form,
+	\begin{align*}
+		dJ(\Gamma;{\bf V}) = \int_\Gamma [y'(\Omega;{\bf V}) + (\nabla y(\Omega)\cdot{\bf n} + Hz(\Gamma){\bf V}(0)\cdot{\bf n})]\,{\rm d}\Gamma.
+	\end{align*}
+\end{remark}
+
+\paragraph{Application to shape design.} Thanks to the framework introduced previously, it is possible to build a complete sensitivity analysis of shape functionals. Coming back to our optimal shape problem, we can state the following: the shape gradient for the tracking functional
+\begin{align*}
+	J(\Omega) = \int_{(0,\tau)\times\Omega} ({\bf u} - {\bf u}_d)^2\,{\rm d}{\bf x}\,{\rm d}t
+\end{align*}
+is given by \textbf{(1.21)}
+\begin{align*}
+	\nabla J(\Omega) = {}^\star\gamma_\Gamma[\sigma({\bf v},\pi)\cdot{\bf n}]
+\end{align*}
+where $({\bf u},p)$ is a solution of system (1.20) associated to the shape $\Omega$ \& $({\bf v},\pi)$ is solution of the adjoint system \textbf{(1.22).}
+
+\paragraph{The associated shape differential equation.} Now as in the previous section, we can choose to solve the 1st-order optimality equation (1.21) using a continuous gradient-based method. I.e., we write
+\begin{align*}
+	J(\Omega_r({\bf V})) - J(\Omega_0) = \int_0^r \langle\nabla J(\Omega_s({\bf V})),{\bf V}(s)\rangle\,{\rm d}s.
+\end{align*}
+Then solving the equation \textbf{(1.23)}
+\begin{align*}
+	\nabla J({\bf V}(s)) + \mathbb{A}^{-1}(s)\cdot{\bf V}(s) = 0,\ s\in(0,+\infty)
+\end{align*}
+leads to a decrease of the functional $J(\Omega_s({\bf V}))$. The equation (1.23) is referred to as the \textit{shape differential equation} \& some of its properties are studied in \cite[Chap. 4]{Moubachir_Zolesio2006}. Notably, we study its solvability in the case of smooth shape functionals. We also prove some results concerning the asymptotic behavior of the solution of this equation, which hold essentially when the shape gradient has some continuity properties for an \textit{ad-hoc} shape topology\footnote{The Hausdorff-complementary topology.}.
+
+\paragraph{The level-set framework.} In Chap. 4, we also relate the shape differential equation to the Hamilton--Jacobi equation involved in the level-set setting. The level-set setting consists in parametrizing the perturbed domain $\Omega_s$ as the positiveness set of a scalar function $\Phi:(0,\varepsilon)\times\overline{D}\to\mathbb{R}$,
+\begin{align*}
+	\Omega_s = \Omega_s(\Phi)\coloneqq\{{\bf x}\in D,\ \Phi(s,{\bf x}) > 0\},
+\end{align*}
+\& its boundary is the zero-level set,
+\begin{align*}
+	\Gamma_s = \Gamma_s(\Phi)\coloneqq\{{\bf x}\in D,\ \Phi(s,{\bf x}) = 0\}.
+\end{align*}
+This parametrization \& the one introduced in the \textit{speed method} can be linked thanks to the following identity,
+\begin{align*}
+	{\bf V}(s) = -\partial_s\Phi(s)\frac{\nabla\Phi(s)}{\|\nabla\Phi(s)\|^2}.
+\end{align*}
+Both frameworks are equivalent if $\Phi(s)$ belongs to set of functions without steps, i.e., $\|\nabla\Phi(s)\|$ is different from zero a.e. in $D$. We show how to build without step functions \& we study the shape differential equation in this setting.'' -- \cite[Chap. 1, Subsect. 1.4.2, pp. 13--19]{Moubachir_Zolesio2006}
+
+\subsubsection{Dynamical shape design of a solid inside a fluid flow}
+``$\ldots$ we consider that the shape of the solid is moving.'' \textbf{Goals.} to control this motion in order to optimize some objective functionals; to build gradient-based methods in order to find the optimal shape dynamic, i.e., we would like to solve the following problem, \textbf{(1.24)} $\min_{Q\in\mathcal{E}} J(Q)$ where $Q\in\mathcal{E}$ is a smooth evolution set, which means
+\begin{align*}
+	Q\coloneqq\bigcup_{t\in(0,\tau)} \{t\}\times\Omega_t,
+\end{align*}
+where $\Omega_t$ is a smooth domain of $\mathbb{R}^3$ with boundary $\Gamma_t$. The set,
+\begin{align*}
+	\Sigma\coloneqq\bigcup_{t\in(0,\tau)} \{t\}\times\Gamma_t
+\end{align*}
+stands for the \textit{non-cylindrical lateral boundary}. We call the set $Q$ a \textit{tube}.
+
+\paragraph{The $\mathbb{R}^{d+1}$-approach.} ``The optimal control of moving domain is a problem which is relevant of classical (nonlinear) control theory as well as of classical shape theory. In fact on the pure theoretical level, the dynamical shape control theory can be viewed as an application of the shape optimization theory for space-time manifolds.'' \textsf{Fig. Non-cylindrical space-time domain.} ``Indeed the dynamical shape control consists in finding the optimal evolution of a spatial domain $\Omega_t$ in $\mathbb{R}^d$. Let us consider the mapping $\mathcal{S}:t\in\mathbb{R}\to\Omega_t\in\mathcal{P}(\mathbb{R}^d)$ where $\mathcal{P}(\mathbb{R}^d)$ stands for the set of parts inside $\mathbb{R}^d$. Usually we would like to minimize some cost functional,
+\begin{align*}
+	j(\mathcal{S}) = \int_0^\tau J(t,\mathcal{S}(t))\,{\rm d}t.
+\end{align*}
+Obviously, it is equivalent to the problem of finding the optimal tube
+\begin{align*}
+	Q = \bigcup_{0 < t < \tau} \{t\}\times\Omega_t\in\mathbb{R}^{d+1}.
+\end{align*}
+In fact the tube $Q$ is the graph in $\mathbb{R}\times\mathcal{P}(\mathbb{R}^d)\subset\mathbb{R}^{d+1}$ of the shape mapping $\mathcal{S}$. As for usual mappings defined from $\mathbb{R}$ in some space $E$, the graph $G\subset\mathbb{R}\times E$ \& of course any subset $G$ is not a graph. Now under simple conditions on that set $G$, it becomes a graph. In the same way, any subset $Q\in\mathbb{R}\times\mathcal{P}(\mathbb{R}^d)$ will not be a tube. Intuitively we would say that we require some \textit{causality} in the evolution of the set $\Omega_t$.
+
+When the boundary of the set $\Omega_t$ is smooth enough\footnote{say there exists a tangent space.}, the idea is to avoid the normal field $\nu$ to the lateral boundary $\Sigma$ of the tube to be strictly vertical. To handle non-smooth situations, we adopt an Eulerian viewpoint that associates to each tube $Q$ the non-empty closed convex set of speed vector fields ${\bf V}$ which transport (in a weak sense) the characteristic function of the moving domain. When we consider the tube $Q$ as a subset of $\mathbb{R}^{d+1}$, the control problems becomes a usual shape optimization problem (as far as no real time consideration enters). The sensitivity analysis is then classically performed by considering \textit{horizontal} vector fields $\widetilde{\bf Z}(s,t,{\bf x}) = (0,{\bf Z}(s,t,{\bf x}))\in\mathbb{R}^{d+1}$ where $s$ is the \textit{perturbation parameter} of the tube.
+
+Then the $(d + 1)$-dimensional shape optimization analysis fully applies \& the so-called \textit{Shape Differential Equation} furnishes descent direction, i.e., it furnishes the existence of a vector field ${\bf Z}^\star$ s.t., for some $\alpha > 0$,
+\begin{align*}
+	J(Q_s)\le J(Q) - \alpha\int_0^s \|{\bf Z}^\star(\sigma)\|^2\,{\rm d}\sigma,\ \forall s > 0.
+\end{align*}
+We show that the existence of that field ${\bf Z}^\star$ induces the existence of a usual vector field ${\bf V}(t,{\bf x})\in\mathbb{R}^d$ which builds that tube, i.e., $\Omega_t = {\bf T}({\bf V})(\Omega_0)$.
+
+\paragraph{The $\mathbb{R}^d$-approach.} 
+
+'' -- \cite[Chap. 1, Subsect. 1.4.3, pp. 19--]{Moubachir_Zolesio2006}
+
 
 %------------------------------------------------------------------------------%
 
