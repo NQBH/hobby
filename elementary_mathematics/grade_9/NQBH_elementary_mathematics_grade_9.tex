@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
-\usepackage[english,vietnamese]{babel}
+\usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
@@ -32,24 +32,172 @@
 \def\labelitemii{$\circ$}
 
 \title{Some Topics in Elementary Mathematics\texttt{/}Grade 9}
-\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
 \date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-	Tóm tắt kiến thức Toán lớp 9 theo chương trình giáo dục của Việt Nam \textit{\&} một số chủ đề nâng cao. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_/NQBH_elementary_mathematics_grade_9.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/NQBH_elementary_mathematics_grade_9.pdf}.}.
+	Tóm tắt kiến thức Toán lớp 9 theo chương trình giáo dục của Việt Nam \textit{\&} một số chủ đề nâng cao. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/NQBH_elementary_mathematics_grade_9.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/NQBH_elementary_mathematics_grade_9.pdf}.}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
 
-%------------------------------------------------------------------------------%
+\section{Căn Bậc 2, Căn Bậc 3}
+
+\subsection{Căn Bậc 2}
+Phép toán ngược của phép bình phương là phép toán lấy căn bậc 2.
+
+\subsubsection{Căn bậc 2 số học}
+Căn bậc 2 của 1 số $a\ge 0$ là số $x\in\mathbb{R}$ sao cho $x^2 = a$. Số dương $a > 0$ có đúng 2 căn bậc 2 là 2 số đối nhau: số dương ký hiệu là $\sqrt{a}$ \& số âm ký hiệu là $-\sqrt{a}$, viết chung là $\pm\sqrt{a}$. Số 0 có đúng 1 căn bậc 2 là chính số 0, viết $\sqrt{0} = 0$.
+
+\begin{definition}[Căn bậc 2 số học]
+	Với số dương $a$, số $\sqrt{a}$ được gọi là \emph{căn bậc 2 số học} của $a$. Số 0 cũng được gọi là \emph{căn bậc 2 số học của 0}.
+\end{definition}
+``Với $a\ge 0$, ta có: Nếu $x = \sqrt{a}$ thì $x\ge 0$ \& $x^2 = a$. Nếu $x\ge 0$ \& $x^2 = a$ thì $x = \sqrt{a}$.'' -- \cite[p. 4]{SGK_Toan_9_tap_1}
+\begin{equation*}
+	x = \sqrt{a}\Leftrightarrow\left\{\begin{split}
+		x&\ge 0,\\
+		x^2 &= a.
+	\end{split}\right.
+\end{equation*}
+``Phép toán tìm căn bậc 2 số học của số không âm gọi là \textit{phép khai phương} (gọi tắt là \textit{khai phương}). Để khai phương 1 số, người ta có thể dùng máy tính bỏ túy hoặc dùng bảng số. Khi biết căn bậc 2 số học của 1 số, ta dễ dàng xác định được các căn bậc 2 của nó.'' -- \cite[p. 5]{SGK_Toan_9_tap_1}
+
+\subsubsection{So sánh các căn bậc 2 số học}
+\begin{theorem}[So sánh các căn bậc 2 số học]
+	Với 2 số $a,b\ge 0$, $a < b\Leftrightarrow\sqrt{a} < \sqrt{b}$.
+\end{theorem}
+``Từ thời xa xưa, người ta đã thấy giữa Hình học \& Đại số có mối liên quan mật thiết. Khái niệm căn bậc 2 cũng có phần xuất phát từ Hình học. Khi biết độ dài cạnh hình vuông, ta tính được diện tích hình đó bằng cách bình phương (hoặc nâng lên lũy thừa bậc 2) độ dài cạnh. Ngược lại, nếu biết diện tích hình vuông, ta tìm được độ dài cạnh của nó nhờ khai phương số đo diện tích. Người ta coi phép lấy căn bậc 2 số học là phép toán ngược của phép bình phương \& coi việc tìm căn 1 số là tìm ``cái gốc, cái nguồn''. Điều này hiện còn thấy trong ngôn ngữ 1 số nước. E.g., ở tiếng Anh, từ \textit{square}\footnote{\textbf{square} [n] \textbf{1.} a shape with 4 straight sides of equal length \& 4 angles of $90^\circ$; a piece of something that has this shape; \textbf{2.} an open area in a town, usually with 4 sides, surrounded by buildings; \textbf{3.} \textbf{square of something} the number obtained when you multiply a number by itself; [a] \textbf{1.} having the shape or approximate shape of a square; \textbf{2.} having angles of $90^\circ$ exactly or approximately; \textbf{3.} \textbf{square kilometer\texttt{/}mile\texttt{/}meter, etc.} used to refer to a unit of measurement equal to the area of a square whose side is of the unit mentioned; \textbf{4.} (abbr., \textbf{sq}) \textbf{3 meters\texttt{/}6 feet\texttt{/}25 miles, etc. square} used to give the size of a square object or space, by giving the length of each of its sides; [v] \textbf{1.} [transitive, usually passive] \textbf{square something} to multiply a number by itself; \textbf{2.} [transitive, intransitive] to make 2 ideas, facts or situations agree or combine well with each other; to agree or be consistent with another idea, fact or situation, \textsc{synonym}: \textbf{reconcile}; \textbf{3.} [transitive] \textbf{square something (off)} to make something have straight edges \& corners.} có nghĩa là \textit{hình vuông} \& cũng có nghĩa là \textit{bình phương}, từ \textit{root}\footnote{\textbf{root} [n] \textbf{1.} [countable] the part of a plant that grows under the ground \& absorbs water \& minerals that it sends to the rest of the plant; \textbf{2.} [countable, usually singular] \textbf{root of something} the main cause of something, such as a problem or difficult situation; \textbf{3.} [countable, usually plural] the basis of something; \textbf{4.} (\textbf{roots}) [plural] the feelings or connections that you have with a place because you have lived there or your family came from there; \textbf{5.} [countable] (\textit{linguistics}) the part of a word that has the main meaning \& that its other forms are based on; a word that other words are formed from; \textbf{6.} [countable] \textbf{root (of something)} (\textit{mathematics}) a quantity which, when multiplied by itself a particular number of times, produces another quantity; \textbf{root \& branch} [idiom] thorough \& complete; \textbf{take root} [idiom] \textbf{1.} (of a plant) to develop roots; \textbf{2.} (of an idea) to become widely accepted; [v] [intransitive] (of a plant) to grow roots; \textbf{root something\texttt{/}somebody out} [phrasal verb] to find a person or thing that is causing a problem \& remove or get rid of them.} có nghĩa là rễ, là nguồn gốc, còn từ \textit{square root}\footnote{\textbf{square root} [n] \textbf{square root (of something)} (\textit{mathematics}) a number which, when multiplied by itself, produces a particular number.} là \textit{căn bậc 2}.'' -- \cite[p. 7]{SGK_Toan_9_tap_1}
+
+\subsection{Căn Thức Bậc 2 \& Hằng Đẳng Thức $\sqrt{A^2} = |A|$}
+
+\subsubsection{Căn thức bậc 2}
+\begin{definition}[Căn thức bậc 2]
+	Với $A$ là 1 biểu thức đại số, người ta gọi $\sqrt{A}$ là \emph{căn thức bậc 2} của $A$, còn $A$ được gọi là \emph{biểu thức lấy căn} hay \emph{biểu thức dưới dấu căn}. $\sqrt{A}$ xác định (hay có nghĩa) khi $A$ lấy giá trị không âm.
+\end{definition}
+
+\subsubsection{Hằng đẳng thức $\sqrt{A^2} = |A|$}
+\begin{theorem}
+	Với mọi $a\in\mathbb{R}$, ta có $\sqrt{a^2} = |a|$.
+\end{theorem}
+
+\begin{proof}
+	Theo định nghĩa giá trị tuyệt đối thì $|a|\ge 0$. Nếu $a\ge 0$ thì $|a| = a$, nên $(|a|)^2 = a^2$. Nếu $a < 0$ thì $|a| = -a$, nên $(|a|)^2 = (-a)^2 = a^2$. Do đó, $(|a|)^2 = a^2$, $\forall a\in\mathbb{R}$. Vậy $|a|$ chính là căn bậc 2 số học của $a^2$, i.e., $\sqrt{a^2} = |a|$.
+\end{proof}
+``1 cách tổng quát, với $A$ là 1 biểu thức ta có $\sqrt{A^2} = |A|$, i.e., $\sqrt{A^2} = A$ nếu $A\ge 0$ (i.e., $A$ lấy giá trị không âm); $\sqrt{A^2} = -A$ nếu $A < 0$ (i.e., $A$ lấy giá trị âm).'' -- \cite[p. 10]{SGK_Toan_9_tap_1}
+
+\subsection{Liên Hệ Giữa Phép Nhân \& Phép Khai Phương}
+\begin{theorem}
+	\label{theorem:sqrt & product}
+	Với mọi $a,b\ge 0$, $\sqrt{ab} = \sqrt{a}\sqrt{b}$.
+\end{theorem}
+
+\begin{proof}
+	Vì $a\ge 0$, $b\ge 0$ nên $\sqrt{a}\sqrt{b}$ xác định \& không âm. Ta có $(\sqrt{a}\sqrt{b})^2 = (\sqrt{a})^2(\sqrt{b})^2 = ab$. Vậy $\sqrt{a}\sqrt{b}$ là căn bậc 2 số học của $ab$, i.e., $\sqrt{ab} = \sqrt{a}\sqrt{b}$.
+\end{proof}
+
+\begin{remark}
+	Định lý trên có thể mở rộng cho tích của nhiều số không âm, i.e.,
+	\begin{align*}
+		\sqrt{a_1\cdots a_n} = \sqrt{a_1}\cdots\sqrt{a_n},\ \forall a_1,\ldots,a_n\ge 0,
+	\end{align*}
+	or more briefly,
+	\begin{align*}
+		\sqrt{\prod_{i=1}^n a_i} = \prod_{i=1}^n \sqrt{a_i},\ \forall a_1,\ldots,a_n\ge 0.
+	\end{align*}
+	Chứng minh dễ dàng bằng phương pháp quy nạp toán học với base case là Định lý \ref{theorem:sqrt & product} cho trường hợp $n = 2$.
+\end{remark}
+
+\begin{proposition}[Quy tắc khai phương 1 tích]
+	Muốn khai phương 1 tích của các số không âm, ta có thể khai phương từng thừa số rồi nhân các kết quả với nhau.
+\end{proposition}
+
+\begin{proposition}[Quy tắc nhân các căn bậc 2]
+	Muốn nhân các căn bậc 2 của các số không âm, ta có thể nhân các số dưới dấu căn với nhau rồi khai phương kết quả đó.
+\end{proposition}
+
+\begin{remark}
+	``1 cách tổng quát, với 2 biểu thức $A$ \& $B$ không âm, ta có $\sqrt{AB} = \sqrt{A}\sqrt{B}$. Đặc biệt, với biểu thức $A$ không âm ta có $(\sqrt{A})^2 = \sqrt{A^2} = A$.'' -- \cite[p. 14]{SGK_Toan_9_tap_1}
+\end{remark}
+
+\subsection{Liên Hệ Giữa Phép Chia \& Phép Khai Phương}
+\begin{theorem}
+	Với số $a\ge 0$ \& số $b > 0$, ta có
+	\begin{align*}
+		\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}.
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	Vì $a\ge 0$ \& $b > 0$ nên $\frac{\sqrt{a}}{\sqrt{b}}$ xác định \& không âm. Ta có $\left(\frac{\sqrt{a}}{\sqrt{b}}\right)^2 = \frac{(\sqrt{a})^2}{(\sqrt{b})^2} = \frac{a}{b}$. Vậy $\frac{\sqrt{a}}{\sqrt{b}}$ là căn bậc 2 số học của $\frac{a}{b}$, i.e., $\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}$.
+\end{proof}
+
+\begin{proposition}[Quy tắc khai phương 1 thương]
+	Muốn khai phương 1 thương $\frac{a}{b}$, trong đó $a\ge 0$ \& $b > 0$, ta có thể lần lượt khai phương số $a$ \& số $b$, rồi lấy kết quả thứ nhất chia cho kết quả thứ 2.
+\end{proposition}
+
+\begin{proposition}[Quy tắc chia 2 căn bậc 2]
+	Muốn chia căn bậc 2 của số $a\ge 0$ cho căn bậc 2 của số $b > 0$, ta có thể chia số $a$ cho số $b$ rồi khai phương kết quả đó.
+\end{proposition}
+
+\begin{remark}
+	``1 cách tổng quát, với biểu thức $A\ge 0$ \& biểu thức $B > 0$, ta có $\sqrt{\frac{A}{B}} = \frac{\sqrt{A}}{\sqrt{B}}$.'' -- \cite[p. 18]{SGK_Toan_9_tap_1}
+\end{remark}
+
+\subsection{Bảng Căn Bậc 2}
+``\textit{1 công cụ tiện lợi để khai phương khi không có máy tính}. Để tìm căn bậc 2 của 1 số dương, người ta có thể sử dụng bảng tính sẵn các căn bậc 2. Trong cuốn ``Bảng số với 4 chữ số thập phân'' của V.M. Bradisor, bảng căn bậc 2 là bảng IV dùng để khai căn bậc 2 của bất cứ số dương nào có nhiều nhất 4 chữ số.'' -- \cite[p. 20]{SGK_Toan_9_tap_1}
+
+\subsection{Biến Đổi Đơn Giản Biểu Thức Chứa Căn Thức Bậc 2}
+
+\subsection{Rút Gọn Biểu Thức Chứa Căn Thức Bậc 2}
+
+\subsection{Căn Bậc 3}
+
+\section{Hàm Số Bậc Nhất}
+
+\subsection{Nhắc Lại \& Bổ Sung Các Khái Niệm Về Hàm Số}
+
+\subsection{Hàm Số Bậc Nhất}
+
+\subsection{Đồ Thị Của Hàm Số $y = ax + b$ ($a\ne 0$)}
+
+\subsection{Đường Thẳng Song Song \& Đường Thẳng Cắt Nhau}
+
+\subsection{Hệ Số Góc Của Đường Thẳng $y = ax + b$ ($a\ne 0$)}
+
+\section{Hệ Thức Lượng Trong Tam Giác Vuông}
+
+\subsection{1 Số Hệ Thức Về Cạnh \& Đường Cao Trong Tam Giác Vuông}
+
+\subsection{Tỷ Số Lượng Giác Của Góc Nhọn}
+
+\subsection{Bảng Lượng Giác}
+
+\subsection{1 Số Hệ Thức Về Cạnh \& Góc Trong Tam Giác Vuông}
+
+\subsection{Ứng Dụng Thực Tế Các Tỷ Số Lượng Giác Của Góc Nhọn. Thực Hành Ngoài Trời}
+
+\section{Đường Tròn}
+
+\subsection{Sự Xác Định Đường Tròn. Tính Chất Đối Xứng Của Đường Tròn}
+
+\subsection{Đường Kính \& Dây Của Đường Tròn}
+
+\subsection{Liên Hệ Giữa Dây \& Khoảng Cách từ Tâm đến Dây}
+
+\subsection{Vị Trí Tương Đối của Đường Thẳng \& Đường Tròn}
+
+\subsection{Dấu Hiệu Nhận Biết Tiếp Tuyến của Đường Tròn}
+
+\subsection{Tính Chất của 2 Tiếp Tuyến Cắt Nhau}
+
+\subsection{Vị Trí Tương Đối của 2 Đường Tròn}
 
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_math/NQBH_elementary_math.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \textit{\&} Bridges to Advanced Mathematics}}. Mar 2022--now.
+	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/NQBH_elementary_mathematics.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \textit{\&} Bridges to Advanced Mathematics}}. Mar 2022--now.
 \end{thebibliography}
 
 %------------------------------------------------------------------------------%
