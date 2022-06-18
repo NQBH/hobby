@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[english,vietnamese]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Elementary Mathematics\texttt{/}Grade 9}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Tóm tắt kiến thức Toán lớp 9 theo chương trình giáo dục của Việt Nam \textit{\&} một số chủ đề nâng cao. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_/NQBH_elementary_mathematics_grade_9.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/NQBH_elementary_mathematics_grade_9.pdf}.}.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+
+\begin{thebibliography}{99}
+	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_math/NQBH_elementary_math.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \textit{\&} Bridges to Advanced Mathematics}}. Mar 2022--now.
+\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
