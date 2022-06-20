@@ -1,0 +1,71 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Advanced Mathematics}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter{Terence Tao's}
+
+\section{\cite{Tao2007}. What Is Good Mathematics?}
+
+\textbf{Abstract.} ``Some personal thoughts \& opinions on what ``good quality mathematics'' is \& whether one should try to define this term rigorously. As a case study, the story of Szemer\'edi's theorem is presented.''
+
+\subsection{The Many Aspects of Mathematical Quality}
+``We all agree that mathematicians should strive\footnote{\textbf{strive} [v] [intransitive] to try very hard to achieve something.} to produce good mathematics. \textit{But how does one define ``good mathematics'', \& should one even dare to try at all?} Let us 1st consider the former question. Almost immediately one realizes that there are many different types of mathematics which could be designated\footnote{\textbf{designate} [v] [often passive] \textbf{1.} to say officially that somebody\texttt{/}something has a particular character, name or purpose; to describe somebody\texttt{/}something in a particular way; \textbf{2.} to choose or name somebody\texttt{/}something for a particular job or position; \textbf{3.} (of a symbol) to identify or show something.} ``good''. E.g., ``good mathematics'' could refer (in no particular\footnote{\textbf{particular} [a] [only before noun] \textbf{1.} used to emphasize that you are referring to 1 individual person, thing or type of thing \& not others, \textsc{synonym}: \textbf{specific}; \textbf{2.} greater than usual; special; \textbf{in particular} [idiom] \textbf{1.} especially or particularly; \textbf{2.} special, \textsc{synonym}: \textbf{specific}; \textbf{of particular note} [idiom] especially interesting; [n] \textbf{1.} [countable, usually plural] a fact or detail, especially one that is officially written down; \textbf{2.} (\textbf{particulars}) [plural] written information \& details about a property, business, job, etc.} order) to
+\begin{enumerate}
+	\item Good mathematical \textit{problem solving} (e.g. a major breakthrough on an important mathematical problem);
+	\item Good mathematical \textit{technique} (e.g. a masterful use of existing methods or the development of new tools);
+\end{enumerate}  
+
+
+%------------------------------------------------------------------------------%
+
+\selectlanguage{english}
+\begin{thebibliography}{99}
+	\bibitem[]{}
+\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
