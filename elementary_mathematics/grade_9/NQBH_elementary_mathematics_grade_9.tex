@@ -148,11 +148,128 @@ Căn bậc 2 của 1 số $a\ge 0$ là số $x\in\mathbb{R}$ sao cho $x^2 = a$. 
 \subsection{Bảng Căn Bậc 2}
 ``\textit{1 công cụ tiện lợi để khai phương khi không có máy tính}. Để tìm căn bậc 2 của 1 số dương, người ta có thể sử dụng bảng tính sẵn các căn bậc 2. Trong cuốn ``Bảng số với 4 chữ số thập phân'' của V.M. Bradisor, bảng căn bậc 2 là bảng IV dùng để khai căn bậc 2 của bất cứ số dương nào có nhiều nhất 4 chữ số.'' -- \cite[p. 20]{SGK_Toan_9_tap_1}
 
+\subsubsection{Giới thiệu bảng}
+``Bảng căn bậc 2 được chia thành các hàng \& các cột. Ta quy ước gọi tên của các hàng (cột) theo số được ghi ở cột đầu tiên (hàng đầu tiên) của mỗi trang. Căn bậc 2 của các số được viết bởi không qua 3 chữ số từ 1.00 đến 99.9 được ghi sẵn trong bảng ở các cột từ cột \textbf{0}--cột \textbf{9}. Tiếp đó là 9 cột hiệu chính được dùng để hiệu chính chữ số cuối của căn bậc 2 của các số được viết bởi 4 chữ số từ 1.000--99.99.'' -- \cite[pp. 20--21]{SGK_Toan_9_tap_1}
+
+\subsubsection{Cách dùng bảng}
+
+\begin{itemize}
+	\item \textbf{Tìm căn bậc 2 của số $\in(1,100)$.} ``Bảng tính sẵn căn bậc 2 của tác giả V.M. Bradisor chỉ cho phép ta tìm trực tiếp căn bậc 2 của số $\in(1,100)$. Tuy nhiên, dựa vào tính chất của căn bậc 2, ta vẫn dùng bảng này để tìm được căn bậc 2 của số không âm $> 100$ hoặc $< 1$.'' -- \cite[p. 21]{SGK_Toan_9_tap_1}
+	\item \textbf{Tìm căn bậc 2 của số $\in(100,+\infty)$.} Tách thành tích với $10^{2n}$ với $n\in\mathbb{N}^\star$ thích hợp.
+	\item \textbf{Tìm căn bậc 2 của số $\in[0,1)$.} Tách thành thương với $10^{2n}$ với $n\in\mathbb{N}^\star$ thích hợp.
+\end{itemize}
+
+\begin{remark}
+	``Để thực hành nhanh, khi tìm căn bậc 2 của số không âm $\in(100,+\infty)\cup[0,1)$, ta dùng hướng dẫn của bảng: ``Khi dời dấu phẩy trong số $N$ đi $2,4,6,\ldots$ chữ số thì phải dời dấy phẩy theo cùng chiều trong số $\sqrt{N}$ đi $1,2,3,\ldots$ chữ số.''  -- \cite[p. 22]{SGK_Toan_9_tap_1}
+\end{remark}
+``Thời xa xưa, con người làm tính bằng cách đếm ngón tay, ngón chân rồi đến đốt ngón tay, đốt ngón chân; khi gặp các số lớn hơn, người ta dùng hòn sỏi, hạt cây. Sau đó, họ làm ra các bàn tính gảy (có thể bắt đầu do ghép xâu các hạt cây lại). Dùng bàn tính gảy, người ta có thể tính toán được với cả các số thập phân. Hiện nay, bàn tính gảy vẫn còn được sử dụng ngay cả ở các nước rất sẵn máy tính bỏ túi.
+
+Sự phát triển của khoa học, kỹ thuật \& nhu cầu thương mại đã đòi hỏi phải đặt ra các bảng tính sẵn. Các nhà thiên văn học, toán học Copenich (Ba Lan), Kepler (Đức), Nepe (Anh) là những người đầu tiên xây dựng kỹ thuật tính toán \& đã lập ra nhiều bảng tính sẵn. Bảng số với 4 chữ số thập phân là 1 dạng bảng tính sẵn như thế.
+
+Ngày nay, những chiếc máy tính bỏ túi gọn nhẹ không chỉ thay thế các bảng tính sẵn để tính 1 cách nhanh chóng mà còn có độ chính xác cao hơn. Tuy nhiên, cũng như các bàn tính gảy, các bảng tính sẵn vẫn có những ưu thế riêng nên người ta vẫn tiếp tục dùng chúng. Mạnh hơn những chiếc máy tính bỏ túi \& cũng dễ dàng mang theo bên người là những chiếc máy tính xách tay.'' -- \cite[pp. 23--24]{SGK_Toan_9_tap_1}
+
 \subsection{Biến Đổi Đơn Giản Biểu Thức Chứa Căn Thức Bậc 2}
 
+\subsubsection{Đưa thừa số ra ngoài dấu căn}
+Đẳng thức $\sqrt{a^2b} = a\sqrt{b}$, $\forall a\ge,\,b\ge 0$ cho phép thực hiện phép \textit{đưa thừa số ra ngoài dấu căn}. Đôi khi, ta phải biến đổi biểu thức dưới dấu căn về dạng thích hợp rồi mới thực hiện được phép đưa thừa số ra ngoài dấu căn (tìm \& tách ra các bình phương 1 cách thích hợp). Có thể sử dụng phép đưa thừa số ra ngoài dấu căn để rút gọn biểu thức chứa căn thức bậc 2.
+
+Các biểu thức dạng $m\sqrt{n}$ với $m\in M\subset\mathbb{N}^\star$ và $n\in\mathbb{N}^\star$ được gọi là \textit{đồng dạng} với nhau.
+
+\begin{proposition}
+	Với 2 biểu thuwc $A,B$ mà $B\ge 0$, ta có $\sqrt{A^2B} = |A|\sqrt{B}$, i.e.: Nếu $A\ge 0$ \& $B\ge 0$ thì $\sqrt{A^2B} = A\sqrt{B}$. Nếu $A < 0$ \& $B\ge 0$ thì $\sqrt{A^2B} = -A\sqrt{B}$.
+\end{proposition}
+
+\subsubsection{Đưa thừa số vào trong dấu căn}
+``Phép đưa thừa số ra ngoài dấu căn có phép biến đổi ngược với nó là phép \textit{đưa thừa số vào trong dấu căn}.
+
+\begin{proposition}
+	Với $A\ge 0$ \& $B\ge 0$ ta có $A\sqrt{B} = \sqrt{A^2B}$. Với $A < 0$ \& $B\ge 0$ ta có $A\sqrt{B} = -\sqrt{A^2B}$.
+\end{proposition}
+Có thể sử dụng phép đưa thừa số vào trong (hoặc ra ngoài) dấu căn để so sánh các căn bậc 2.'' -- \cite[p. 26]{SGK_Toan_9_tap_1}
+
+\subsubsection{Khử mẫu của biểu thức lấy căn}
+``Khi biến đổi biểu thức chứa căn thức bậc 2, người ta có thể sử dụng phép khử mẫu của biểu thức lấy căn.''
+
+\begin{proposition}
+	Với các biểu thức $A,B$ mà $AB\ge 0$ \& $B\ne 0$, ta có $\sqrt{\frac{A}{B}} = \frac{\sqrt{AB}}{|B|}$.
+\end{proposition}
+
+\subsubsection{Trục căn thức ở mẫu}
+``Trục căn thức ở mẫu cũng là 1 phép biến đổi đơn giản thường gặp.'' -- \cite[p. 28]{SGK_Toan_9_tap_1}. Ta gọi biểu thức $\sqrt{a}\pm\sqrt{b}$ là \textit{2 biểu thức liên hợp với nhau}.
+
+\begin{proposition}
+	\begin{itemize}
+		\item[(a)] Với các biểu thức $A,B$ mà $B > 0$, ta có $\frac{A}{\sqrt{B}} = \frac{A\sqrt{B}}{B}$.
+		\item[(b)] Với các biểu thức $A,B,C$ mà $A\ge 0$ \& $A\ne B^2$, ta có
+		\begin{align*}
+			\frac{C}{\sqrt{A}\pm B} = \frac{C(\sqrt{A}\mp B)}{A - B^2}.
+		\end{align*}
+		\item[(c)] Với các biểu thức $A,B,C$ mà $A\ge 0$, $B\ge 0$, \& $A\ne B$, ta có
+		\begin{align*}
+			\frac{C}{\sqrt{A}\pm\sqrt{B}} = \frac{C(\sqrt{A}\mp\sqrt{B})}{A - B}.
+		\end{align*}
+	\end{itemize}
+\end{proposition}
+
 \subsection{Rút Gọn Biểu Thức Chứa Căn Thức Bậc 2}
+``Để rút gọn biểu thức có chứa căn thức bậc 2, ta cần biết vận dụng thích hợp các phép tính \& các phép biến đổi đã biết.'' [$\ldots$] ``Rút gọn biểu thức được áp dụng trong nhiều bài toán về biểu thức có chứa căn thức bậc 2.'' -- \cite[p. 31]{SGK_Toan_9_tap_1}
+
+\begin{problem}[\cite{SGK_Toan_9_tap_1}, p. 31]
+	Chứng minh đẳng thức
+	\begin{align*}
+		\frac{a\sqrt{a} + b\sqrt{b}}{\sqrt{a} + \sqrt{b}} - \sqrt{ab} = \left(\sqrt{a} - \sqrt{b}\right)^2,\ \forall a > 0,\,b > 0.
+	\end{align*}
+\end{problem}
+
+\texttt{insert MATLAB symbolic}
 
 \subsection{Căn Bậc 3}
+
+\subsubsection{Khái niệm căn bậc 3}
+\begin{definition}[Căn bậc 3]
+	\emph{Căn bậc 3} của 1 số $a$ là số $x$ sao cho $x^3 = a$.
+\end{definition}
+``Ta công nhận kết quả sau: \textit{Mỗi số $a\in\mathbb{R}$ đều có duy nhất 1 căn bậc 3.} Căn bậc 3 của số $a$ được ký hiệu là $\sqrt[3]{a}$. Số 3 gọi là chỉ số của căn. Phép tìm căn bậc 3 của 1 số gọi là phép khai căn bậc 3. Từ định nghĩa căn bậc 3, ta có $\left(\sqrt[3]{a}\right)^3 = \sqrt[3]{a^3} = a$. Căn bậc 3 của số dương là số dương. Căn bậc 3 của số âm là số âm. Căn bậc 3 của số 0 là chính số 0.'' -- \cite[p. 35]{SGK_Toan_9_tap_1}
+
+\subsubsection{Tính chất}
+``Tương tự tính chất của căn bậc 2, ta có các tính chất sau của căn bậc 3:
+
+\begin{proposition}
+	\begin{itemize}
+		\item[(a)] $a < b\Leftrightarrow\sqrt[3]{a} < \sqrt[3]{b}$, $\forall a,b\in\mathbb{R}$.
+		\item[(b)] $\sqrt[3]{ab} = \sqrt[3]{a}\sqrt[3]{b}$, $\forall a,b\in\mathbb{R}$.
+		\item[(c)] $\sqrt[3]{\dfrac{a}{b}} = \dfrac{\sqrt[3]{a}}{\sqrt[3]{b}}$, $\forall a,b\in\mathbb{R}$, $b\ne 0$.
+	\end{itemize}
+\end{proposition}
+Dựa vào các tính chất trên, ta có thể so sánh, tính toán, biến đổi các biểu thức chứa căn bậc 3.'' -- \cite[p. 35]{SGK_Toan_9_tap_1}
+
+\subsubsection{Tìm căn bậc 3 nhờ bảng số \& máy tính bỏ túi}
+
+\paragraph{Tìm căn bậc 3 nhờ bảng số.} ``Trong \textit{Bảng số với 4 chữ số thập phân} của V.M. Bradisor không có bảng tính sẵn căn bậc 3, nhưng ta có thể dùng bảng lập phương (bảng V) để tìm căn bậc 3 của 1 số cho trước.
+
+\subparagraph{Giới thiệu bảng lập phương.} ``Bảng lập phương được chia thành các hàng \& các cột. Ta cũng quy ước gọi tên của các hàng (cột) theo số được ghi ở cột đầu tiên (hàng đầu tiên) của mỗi trang.
+
+Dùng bảng lập phương ta có thể tìm được lập phương của số từ 1.000 đến 10.00. Với những số được viết bởi không quá 3 chữ số, lập phương của nó được tìm trực tiếp từ bảng. Với những số được viết bởi 4 chữ số, ta phải dùng thêm các số ở cột hiệu chính.'' [$\ldots$]
+
+\begin{remark}
+	Bảng lập phương có nêu hướng dẫn ``Khi dời dấu phẩy trong số $N$ đi 1 chữ số thì phải dời dấu phẩy trong số $N^3$ đi 3 chữ số'' nên khi tìm căn bậc 3, ta thực hành như sau: Khi dời dấu phẩy trong số $N$ đi $3,6,9,\ldots$ chữ số, ta dời dấu phẩy theo cùng chiều ở số $\sqrt[3]{N}$ đi $1,2,3,\ldots$ chữ số.'' -- \cite[pp. 36--38]{SGK_Toan_9_tap_1}
+\end{remark}
+
+\paragraph{Tìm căn bậc 3 bằng máy tính bỏ túi.} ``Có thể dùng máy tính bỏ túi có nút bấm \fbox{$\sqrt[3]{\ }$} để tìm căn bậc 3.'' -- \cite[p. 38]{SGK_Toan_9_tap_1}
+
+\textsc{Các công thức biến đổi căn thức.}
+\begin{enumerate}
+	\item $\sqrt{A^2} = |A|$.
+	\item $\sqrt{AB} = \sqrt{A}\sqrt{B}$, $\forall A\ge 0,\,B\ge 0$.
+	\item $\sqrt{\frac{A}{B}} = \frac{\sqrt{A}}{\sqrt{B}}$, $\forall A\ge 0,\,B > 0$.
+	\item $\sqrt{A^2B} = |A|\sqrt{B}$, $\forall B\ge 0$.
+	\item \begin{equation*}
+		A\sqrt{B} = \left\{\begin{split}
+			&\sqrt{A^2B},&&A\ge 0,\,B\ge 0,\\
+			-&\sqrt{A^2B},&&A < 0,\,B\ge 0.
+		\end{split}\right.
+	\end{equation*}
+\end{enumerate}
 
 \section{Hàm Số Bậc Nhất}
 
