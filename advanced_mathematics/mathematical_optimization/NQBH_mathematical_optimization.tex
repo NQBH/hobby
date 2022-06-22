@@ -615,7 +615,51 @@ The transverse map $\mathcal{T}_\rho^t$ associated to 2 vector fields $({\bf V},
 \begin{remark}
 	The transverse map allows us to perform sensitivity analysis on functions defined on the unperturbed domain $\Omega_t({\bf V})$.
 \end{remark}
-The following result states that the transverse map $\mathcal{T}_\rho^t$ can be considered as a dynamical flow w.r.t. the perturbation variable $\rho$. $\ldots$'' -- \cite[Chap. 1, Subsect. 1.4.3, pp. 19--23]{Moubachir_Zolesio2006} \texttt{[skipped p. 23--31]}
+The following result states that the transverse map $\mathcal{T}_\rho^t$ can be considered as a dynamical flow w.r.t. the perturbation variable $\rho$. $\ldots$'' -- \cite[Chap. 1, Subsect. 1.4.3, pp. 19--23]{Moubachir_Zolesio2006} \texttt{[skipped pp. 23--31]}
+
+\section{Inverse Stefan Problem}
+``$\ldots$ we consider the identification of a moving boundary that represents the isothermal interface between a solid phase \& a liquid phase, from measurements on a fixed part of the solid boundary. This problem is referred in the literature as the \textit{inverse Stefan problem} [61, 144]. We make use of the \textit{transverse derivative concepts} introduced in [154, 155].'' -- \cite[Chap. 2, p. 33]{Moubachir_Zolesio2006}
+
+\subsection{The inverse problem setting}
+``For a given evolution of the \textit{melting interface}, we consider the solution of the heat equation (2.3) \& we consider its trace on the fixed boundary $\Sigma^s$.'' \textsf{Fig. 2.2. Non-cylindrical space-time domain.} ``On the mathematical viewpoint, we introduce the \textit{observation space} $\mathcal{O}\coloneqq L^2((0,\tau);L^2(\Gamma^s))$ \& the \textit{observation operator} \textbf{(2.5)} $\mathfrak{O}:\mathcal{U}_{\rm ad}\to\mathcal{O}$, ${\bf V}\mapsto\mathfrak{O}({\bf V})\coloneqq\gamma_{\Gamma^s}(y({\bf V}))$ where $y({\bf V})$ stands for the solution of (2.3) \& $\gamma_{\Gamma^s}$ is the zero order trace operator on $\Sigma^s$.
+
+The inverse Stefan problem consists in recovering the evolution of the melting front $\Gamma^f(t)$ from the knowledge of the temperature on the fixed solid boundary $\Gamma^s$. I.e., for a given temperature $y_{\rm d}\in L^2((0,\tau);L^2(\Gamma^s))$, we look for ${\bf V}\in\mathcal{U}_{\rm ad}$ s.t. \textbf{(2.6)} $\mathfrak{O}({\bf V}) = y_{\rm d}$, in $\mathcal{O}$. It is a nonlinear ill-posed inverse problem that can be solved using a least-square minimization problem regularized thanks to a Tikhonov zero order term. Hence we look for the solution ${\bf V}$ of the following optimization problem \textbf{(2.7)}
+\begin{align*}
+	\min_{{\bf V}\in\mathcal{U}_{\rm ad}} \frac{1}{2}\|\mathfrak{O}({\bf V}) - y_{\rm d}\|_{\mathcal{O}}^2 + \frac{\alpha}{2}\|{\bf V}\|_{\mathcal{U}_{\rm ad}}^2,
+\end{align*}
+with $\alpha > 0$.'' -- \cite[Chap. 2, Sect. 2.2, p. 35]{Moubachir_Zolesio2006}
+
+\subsection{The Eulerian derivative \& the transverse field}
+``A possible choice in order to solve the above minimization problem is to use a gradient based method such as the \textit{conjugate gradient method}. Hence, we need to evaluate the gradient w.r.t. ${\bf V}$ of the functional \textbf{(2.13)} $j({\bf V})\coloneqq\frac{1}{2}\|\mathfrak{O}({\bf V}) - y_{\rm d}\|_{\mathcal{O}}^2$ where, for the sake of simpleness, we have dropped the regularizing term $\frac{\alpha}{2}\|{\bf V}\|_{\mathcal{U}_{\rm ad}}^2$. Let us choose a perturbation direction ${\bf W}\in\mathcal{U}_{\rm ad}$. We would like to compute the \textit{directional derivative} of $j$, \textbf{(2.14)}
+\begin{align*}
+	[{\rm D}_{\bf V}[j]({\bf V})]\cdot{\bf W}\coloneqq\lim_{\rho\to 0} \frac{1}{\rho}(j({\bf V} + \rho{\bf W}) - j({\bf V})).
+\end{align*}
+Then the goal is to evaluate the directional derivative of the element $y({\bf V})$ which is a solution of the moving heat equation (2.3). In order to do so, we write the associated variational formulation satisfied $y({\bf V})$, \textbf{(2.15)}
+\begin{align*}
+	\int_0^\tau\int_{\Omega_t({\bf V})} [\partial_ty({\bf V})\phi({\bf V}) + \nabla y({\bf V})\cdot\nabla\phi({\bf V})]\,{\rm d}{\bf x}\,{\rm d}t = 0,\ \forall\phi({\bf V})\in L^2((0,\tau);H_{0,\Gamma_t({\bf V})}^1(\Omega_t({\bf V}))),
+\end{align*}
+where we have set w.l.o.g., $(f,y_{\rm d},y_0) = (0,0,0)$ together with $\Omega_t({\bf V})\coloneqq\Omega^s(t)$ \& $\Gamma_t({\bf V})\coloneqq\Gamma^f(t)$. Looking at (2.15), it is clear that we need to establish how to differentiate the generic term $J({\bf V}) = \int_0^\tau\int_{\Omega_t({\bf V})} f({\bf V})\,{\rm d}{\bf x}\,{\rm d}t$ w.r.t. ${\bf V}$. To this end, we introduce the \textit{perturbated moving domain} $\Omega_t({\bf V} + \rho{\bf W})\coloneqq T_t({\bf V} + \rho{\bf W})(\Omega_0)$. This family generates a \textit{perturbed tube}
+\begin{align*}
+	Q({\bf V} + \rho{\bf W})\coloneqq\bigcup_{0\le t\le\tau} (\{t\}\times\Omega_t({\bf V} + \rho{\bf W}))
+\end{align*}
+as described in \textsf{Fig. 2.3. Perturbed tube.} Since the function $f({\bf V})$ is defined on the \textit{non-cylindrical reference tube} $Q({\bf V})$, it is natural to introduce the transformation between $Q({\bf V})$ \& $Q({\bf V} + \rho{\bf W})$. A canonical choice is furnished by
+\begin{align*}
+	\mathcal{T}^t(\rho;{\bf x}):\Omega_t({\bf V})&\to\Omega_t({\bf V} + \rho{\bf W})\\
+	{\bf x}&\mapsto\mathcal{T}^t(\rho;{\bf x})\coloneqq[{\bf T}_t({\bf V} + \rho{\bf W})\circ{\bf T}_t({\bf V})^{-1}]({\bf x}).
+\end{align*}
+Hence, the perturbated functional can be written as follows,
+\begin{align*}
+	J({\bf V} + \rho{\bf W}) = \int_0^\tau\int_{\Omega_t({\bf V} + \rho{\bf W})} f({\bf V} + \rho{\bf W})\,{\rm d}{\bf x}\,{\rm d}t = \int_0^\tau\int_{\mathcal{T}_\rho^t(\Omega_t({\bf V}))} f({\bf V} + \rho{\bf W})\,{\rm d}{\bf x}\,{\rm d}t = \int_0^\tau\int_{\Omega_t({\bf V})} (\det{\rm D}\mathcal{T}_\rho^t)f({\bf V} + \rho{\bf W})\circ\mathcal{T}_\rho^t\,{\rm d}{\bf x}\,{\rm d}t,
+\end{align*}
+where we have performed a transport into the \textit{moving reference domain} $\Omega_t({\bf V})$. Now we shall need to differentiate the terms inside the integral w.r.t. $\rho$ at point $\rho = 0$. The easiest way to do so is to connect this problem to the classical shape derivative calculus handled inside the speed method framework [147, 135]. I.e., we need to identify a transverse velocity field that may generate the transverse map $\mathcal{T}^t(\rho;{\bf x})$ as the solution of a dynamical system w.r.t. the parameter $\rho\in[0,\rho_0]$. Actually, it can be proven that ${\bf T}({\bf V} + \rho{\bf W})$ is continuously differentiable\footnote{in $\mathcal{Z}_{\rm ad}\coloneqq\mathcal{C}^0([0,\tau];(\mathcal{C}^{k-1}(\overline{D}))^d)$.} w.r.t. $\rho$ \& that the transverse map $\mathcal{T}_\rho^t$ can be considered as the flow w.r.t. $\rho$ of the transverse vector field
+\begin{align*}
+	\mathcal{Z}(\rho;(t,{\bf x}))\coloneqq[\partial_\rho\mathcal{T}^t(\rho)]\circ\mathcal{T}^t(\rho)^{-1}({\bf x}) = [\partial_\rho{\bf T}({\bf V} + \rho{\bf W})]\circ{\bf T}({\bf V} + \rho{\bf W})^{-1}({\bf x}).
+\end{align*}
+p. 39
+
+\textsf{Fig. 2.4. Transverse map.}
+
+'' -- \cite[Chap. 2, Sect. 2.3, pp. 37--]{Moubachir_Zolesio2006}
 
 
 %------------------------------------------------------------------------------%
