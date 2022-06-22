@@ -562,9 +562,60 @@ Then the $(d + 1)$-dimensional shape optimization analysis fully applies \& the 
 \end{align*}
 We show that the existence of that field ${\bf Z}^\star$ induces the existence of a usual vector field ${\bf V}(t,{\bf x})\in\mathbb{R}^d$ which builds that tube, i.e., $\Omega_t = {\bf T}({\bf V})(\Omega_0)$.
 
-\paragraph{The $\mathbb{R}^d$-approach.} 
+\paragraph{The $\mathbb{R}^d$-approach.} In order to carry out the sensitivity analysis of functionals depending on the tube $Q$, we assume that the domains are the images of the domain $\Omega_0\coloneqq\Omega_{t = 0}$ through a given family of smooth maps ${\bf T}_t:\overline{D}\to\overline{D}$, i.e., $\Omega_t = {\bf T}_t(\Omega_0)$, $\Gamma_t = {\bf T}_t(\Gamma_0)$. 2 major class of such mappings are given by:
+\begin{itemize}
+	\item the \textit{Lagrangian parametrization} ${\bf T}_t = \boldsymbol{\theta}(t,\cdot)$ where $\boldsymbol{\theta}:(0,\tau)\times\overline{D}\to\overline{D}$. In this case, the minimization problem (1.24) can be transformed as \textbf{(1.25)} $\min_{\boldsymbol{\theta}\in\Theta} J(Q(\boldsymbol{\theta}))$.
+	\item the \textit{Eulerian parametrization}, where the transformation is the flow associated to a given velocity field ${\bf V}(t,{\bf x})$,
+	\begin{equation*}
+		\left\{\begin{split}
+			\partial_t{\bf T}_t({\bf x}) &= {\bf V}(t,{\bf T}_t({\bf x})),&&(t,{\bf x})\in(0,\tau)\times D,\\
+			{\bf T}_{t=0}({\bf x}) &= {\bf x},&&{\bf x}\in D.
+		\end{split}\right.
+	\end{equation*}
+	In this case, the minimization problem (1.24) can be transformed as \textbf{(1.26)} $\min_{{\bf V}\in\mathcal{V}} J(Q({\bf V}))$.
+\end{itemize}
 
-'' -- \cite[Chap. 1, Subsect. 1.4.3, pp. 19--]{Moubachir_Zolesio2006}
+\paragraph{Existence of tubes.} In the smooth case, the existence of tubes follows the Cauchy--Lipschitz theory on differential equations [147], \cite{Delfour_Zolesio2001}. In the non-smooth case, the Lipschitz regularity of the velocities ${\bf V}$ can be weakened using the equations satisfied by the characteristic functions $\xi(t,{\bf x})$ associated to the domain $\Omega_t({\bf V})$, \textbf{(1.27)}
+\begin{equation*}
+	\left\{\begin{split}
+		\partial_t\xi + \nabla\xi\cdot{\bf V} &= 0,&&(0,\tau)\times D,\\
+		\xi_{t=0} &= \chi_\Omega,&& D.
+	\end{split}\right.
+\end{equation*}
+We shall consider velocity fields s.t. ${\bf V}\in L^1(0,\tau;L^2(D;\mathbb{R}^d))$ \& the divergence positive part $(\nabla\cdot{\bf V})^+\in L^1(0,\tau;L^\infty(D))$. In this case, using a Galerkin approximation \& some energy estimates, we are able to derive an existence result of solutions with initial data given in $H^{-1/2}(D)$. For the time being, no uniqueness result has been obtained for this smoothness level.
+
+Actually, when the field ${\bf V}$ \& its divergence are simply $L^1$ functions, the notion of weak solutions associated to the convection problems (1.27) does not make sense. In this case, the correct modeling tool for shape evolution is to introduce the product space of elements $(\xi = \xi^2,{\bf V})$ equipped with a parabolic BV like topology for which the constraint (1.27) defines a closed subset $\mathcal{T}_\Omega$ which contains the weak closure of smooth elements
+\begin{align*}
+	\mathcal{T}_\Omega\coloneqq\{(\chi_\Omega\circ{\bf T}_t^{-1}({\bf V}),{\bf V});{\bf V}\in\mathcal{U}_{\rm ad}\}.
+\end{align*}
+This approach consists in handling characteristic functions $\xi = \xi^2$ which belongs to $L^1(0,\tau;\operatorname{BV}(D))$ together with vector fields ${\bf V}\in L^2(0,\tau;L^2(D,\mathbb{R}^d))$ solution of problem (1.27). For a given element $(\xi,{\bf V})\in\mathcal{T}_\Omega$, we consider the set of fields ${\bf W}$ s.t. $(\xi,{\bf W})\in\mathcal{T}_\Omega$, we consider the set of fields ${\bf W}$ s.t. $(\xi,{\bf W})\in\mathcal{T}_\Omega$. It forms a closed convex set, noted $\mathcal{V}_\xi$. Hence, we can define the unique minimal norm energy element ${\bf V}_\xi$ in the convex set $\mathcal{V}_\xi$. For a given tube $\xi$, the element ${\bf V}_\xi$ is the unique (with minimal norm) vector field associated to $\xi$ via the convection equation (1.27).
+
+We choose to adopt a different point of view inspired by the optimization problems framework. Indeed, our final goal is to apply the weak set evolution setting to the control problem arising in various fields such as free boundary problems or image processing. The usual situation can be described as follows. Let us consider a given smooth enough functional $J(\xi,{\bf V})$. We would like to solve the following optimization problem \textbf{(1.28)} $\inf_{(\xi,{\bf V})\in\mathcal{T}_\Omega} J(\xi,{\bf V})$. The space $\mathcal{U}_{\rm ad}$ is a space of smooth velocities.
+
+In most situations, such a problem does not admit solutions \& we need to add some regularization terms to ensure its solvability. Consequently, we shall introduce different penalization terms which furnish compactness properties of the minimizing sequences inside an ad-hoc weak topology involving bounded variation constraints. Then, the new problem writes \textbf{(1.29)}
+\begin{align*}
+	\inf_{(\xi,{\bf V})\in\mathcal{T}_\Omega} J(\xi,{\bf V}) + F(\xi,{\bf V}).
+\end{align*}
+The \textit{penalization term} $F(\xi,{\bf V})$ can be chosen using several approaches:
+\begin{itemize}
+	\item We can 1st consider the time-space perimeter of the lateral boundary $\Sigma$ of the tube, developed in [155]. This approach easily draws part of the variational properties associated to the bounded variation functions space framework. In particular, it uses the compactness properties of tube family with bounded perimeters in $\mathbb{R}^{d+1}$. Nevertheless, this method leads to heavy variational analysis developments.
+	\item We can rather consider the time integral of the spatial perimeter of the moving domain which builds the tube, as introduced in [157]. We shall extend these results to the case of vector fields living in $L^2((0,\tau)\times D;\mathbb{R}^d)$. In this case, only existence results for solutions of the convection equation can be handled \& the uniqueness property is lost.
+\end{itemize}
+
+\paragraph{Tube derivative.} In this paragraph, we are interested in differentiability properties of integrals defined over moving domains,
+\begin{align*}
+	J(Q({\bf V})) = \int_{Q({\bf V})} f({\bf V})\,{\rm d}{\bf x}\,{\rm d}t.
+\end{align*}
+The transverse map $\mathcal{T}_\rho^t$ associated to 2 vector fields $({\bf V},{\bf W})\in\mathcal{U}$ is defined as follows,
+\begin{align*}
+	\mathcal{T}_\rho^t:\overline{\Omega_t}&\to\overline{\Omega_t^\rho}\coloneqq\overline{\Omega_t({\bf V} + \rho{\bf W})}\\
+	{\bf x}&\mapsto T_t({\bf V} + \rho{\bf W})\circ T_t({\bf V})^{-1}.
+\end{align*}
+
+\begin{remark}
+	The transverse map allows us to perform sensitivity analysis on functions defined on the unperturbed domain $\Omega_t({\bf V})$.
+\end{remark}
+The following result states that the transverse map $\mathcal{T}_\rho^t$ can be considered as a dynamical flow w.r.t. the perturbation variable $\rho$. $\ldots$'' -- \cite[Chap. 1, Subsect. 1.4.3, pp. 19--23]{Moubachir_Zolesio2006} \texttt{[skipped p. 23--31]}
 
 
 %------------------------------------------------------------------------------%
