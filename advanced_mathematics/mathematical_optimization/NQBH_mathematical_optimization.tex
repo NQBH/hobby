@@ -661,6 +661,83 @@ p. 39
 
 '' -- \cite[Chap. 2, Sect. 2.3, pp. 37--]{Moubachir_Zolesio2006}
 
+\section{Dynamical Shape Control of NSEs}
+\cite[Chap. 5]{Moubachir_Zolesio2006} ``deals with the analysis of an \textit{inverse dynamical shape problem} involving a fluid inside a moving domain. This type of inverse problem happens frequently in the design \& the control of many industrial devices such as aircraft wings, cable-stayed bridges, automobile shapes, satellite reservoir tanks \& more generally of systems involving fluid-solid interactions.
+
+The control variable is the shape of the moving domain, \& the objective is to minimize a given cost functional that may be chosen by the designer.
+
+On the theoretical level, early works concerning optimal control problems for general parabolic equations written in non-cylindrical domains have been considered in [43,29,30,142,2]. In [140,151,152], the stabilization of structures using the variation of the domain has been addressed. The basic principle is to define a map sending the non-cylindrical domain into a cylindrical one. This process leads to the mathematical analysis of non-autonomous PDE's systems.
+
+Recently, a new methodology to obtain \textit{Eulerian derivatives} for non-cylindrical functionals has been introduced in [157, 156, 58]. This methodology was applied in [59] to perform dynamical shape control of the non-cylindrical NSEs where the evolution of the domain is the control variable. Hence the classical optimal shape optimization theory has been extended to deal with non-cylindrical domains.''
+
+\textbf{Aim.} ``review several results on the dynamical shape control of the Navier--Stokes system \& suggest an alternative treatment using the Min-Max principle [45, 46]. Despite its lack of rigorous mathematical justification in the case where the Lagrangian functional is not convex, we shall show how this principle allows, at least formally, to bypass the tedious computation of the state differentiability w.r.t. the shape of the moving domain.'' -- \cite[Chap. 5, p. 109]{Moubachir_Zolesio2006}
+
+\subsection{Problem Statement}
+``Let us consider a moving domain $\Omega_t\in\mathbb{R}^d$. We introduce a diffeomorphic map sending a fixed reference domain $\Omega_0$ into the physical configuration $\Omega_t$ at time $t\ge 0$. W.l.o.g., we choose the reference configuration to be the physical configuration at initial time $\Omega_{t=0}$. Hence we define a map $T_t\in\mathcal{C}^1(\overline{\Omega_0})$ s.t. $\overline{\Omega_t} = T_t(\overline{\Omega_0})$, $\overline{\Gamma_t} = T_t(\overline{\Gamma_0})$. We set $\Sigma\coloneqq\bigcup_{0 < t < T} (\{t\}\times\Gamma_t)$, $Q\coloneqq\bigcup_{0 < t < T} (\{t\}\times\Omega_t)$. The map $T_t$ can be actually defined as the flow of a particular vector field, as described in the following lemma:
+
+\begin{theorem}[ref. 147]
+	$\overline{\Omega_t} = T_t(V)(\overline{\Omega_0})$, $\overline{\Gamma_t} = T_t(V)(\overline{\Gamma_0})$ where $T_t(V)$ is the solution of the following dynamical system:
+	\begin{align*}
+		T_t(V):\Omega_0&\to\Omega\\
+		x_0&\mapsto x(t,x_0)\coloneqq T_t(V)(x_0)
+	\end{align*}
+	with \textbf{(5.1)}
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{{\rm d}x}{{\rm d}\tau} &= V(\tau,x(\tau)),&&\tau\in[0,T],\\
+			x(\tau = 0) &= x_0,&&\mbox{in }\Omega_0.
+		\end{split}\right.
+	\end{equation*}
+\end{theorem}
+The fluid filling $\Omega_t$ is assumed to be a viscous incompressible Newtonian fluid. Its evolution is described by its velocity ${\bf u}$ \& its pressure $p$. The couple $({\bf u},p)$ satisfies the classical NSEs written in non-conservative form \textbf{(5.2)}
+\begin{equation*}
+	\left\{\begin{split}
+		\partial_t{\bf u} + {\rm D}{\bf u}\cdot{\bf u} - \nu\Delta{\bf u} + \nabla p &= 0,&&Q(V),\\
+		\nabla\cdot{\bf u} &= 0,&&Q(V),\\
+		{\bf u} &= V,&&\Sigma(V),\\
+		{\bf u}(t = 0) &= {\bf u}_0,&&\Omega_0,
+	\end{split}\right.
+\end{equation*}
+where $\nu$ stands for the kinematic viscosity. The quantity $\sigma({\bf u},p) = -p{\rm I} + \nu({\rm D}{\bf u} + {}^\star{\rm D}{\bf u})$ stands for the \textit{fluid stress tensor} inside $\Omega_t$, with $({\rm D}{\bf u})_{i,j} = \partial_ju_i$. We are interested in solving the following minimization problem: \textbf{(5.3)} $\min_{V\in\mathcal{U}} j(V)$ where $j(V) = J_V({\bf u}(V),p(V))$ with $({\bf u}(V),p(V))$ is a weak solution of problem (5.2) \& $J_V({\bf u},p)$ is a real functional of the following form: \textbf{(5.4)}
+\begin{align*}
+	J_V({\bf u},p) = \frac{\alpha}{2}\|\mathcal{B}{\bf u}\|_{Q(V)}^2 + \frac{\gamma}{2}\|\mathcal{K}V\|_{\Sigma(V)}^2,
+\end{align*}
+where $\mathcal{B}\in\mathcal{L}(\mathcal{H},\mathcal{H}^\star)$ is a general linear differential operator satisfying the following identity, \textbf{(5.5)}
+\begin{align*}
+	\langle\mathcal{B}{\bf u},{\bf v}\rangle + \langle{\bf u},\mathcal{B}^\star{\bf v}\rangle = \langle\mathcal{B}_\Sigma{\bf u},{\bf v}\rangle_{L^2(\Sigma)},
+\end{align*}
+where $\mathcal{H} = \{{\bf v}\in L^2(0,T;(H_0^1({\rm div},\Omega_t(V)))^d)\}$ \& $\mathcal{K}\in\mathcal{L}(\mathcal{U},L^2(\Sigma(V)))$ is a general linear differential operator satisfying the following identity, \textbf{(5.6)}
+\begin{align*}
+	\langle\mathcal{K}{\bf u},{\bf v}\rangle_{L^2(\Sigma)} + \langle{\bf u},\mathcal{K}^\star{\bf v}\rangle_{L^2(\Sigma)} = \langle\mathcal{K}_\Sigma{\bf u},{\bf v}\rangle_{L^2(\Sigma)}.
+\end{align*}
+The main difficulty in dealing with such a minimization problem is related to the fact that integrals over the domain $\Omega_t(V)$ depend on the control variable $V$. This point will be solved by using the Arbitrary Lagrange--Euler (ALE) map $T_t(V)$ introduced previously. The purpose of this chapter is to prove using several methods the following result,
+
+\begin{theorem}[Main result]
+	For $V\in\mathcal{U}$ \& $\Omega_0$ of class $\mathcal{C}^2$, the functional $j(V)$ possesses a gradient $\nabla j(V)$ which is supported on the moving boundary $\Gamma_t(V)$ \& can be represented by the following expression, \textbf{(5.7)}
+	\begin{align*}
+		\nabla j(V) = -\lambda{\bf n} - \sigma(\varphi,\pi)\cdot{\bf n} + \alpha\mathcal{B}_\Sigma\mathcal{B}{\bf u} + \gamma[-\mathcal{K}^\star\mathcal{K}V + \mathcal{K}_\Sigma\mathcal{K}V],
+	\end{align*}
+	where $(\varphi,\pi)$ stands for the adjoint fluid state solution of the following system, \textbf{(5.8)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\varphi - {\rm D}\varphi\cdot{\bf u} + {}^\star{\rm D}{\bf u}\cdot\varphi - \nu\Delta\varphi + \nabla\pi &= -\alpha\mathcal{B}^\star\mathcal{B}{\bf u},&&Q(V),\\
+			\nabla\cdot\varphi &= 0,&&Q(V),\\
+			\varphi &= 0,&&\Sigma(V),\\
+			\varphi(T) &= 0,&&\Omega_T,
+		\end{split}\right.
+	\end{equation*}
+	\& $\lambda$ is the adjoint transverse boundary field, solution of the tangential dynamical system, \textbf{(5.9)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\lambda - \nabla_\Gamma\lambda\cdot V - (\nabla\cdot V)\lambda &= f,&&(0,T),\\
+			\lambda(T) &= 0,&&\Gamma_T(V),
+		\end{split}\right.
+	\end{equation*}
+	with \textbf{(5.10)}
+	\begin{align*}
+		f = [-(\sigma(\varphi,\pi)\cdot{\bf n}) + \alpha\mathcal{B}_\Sigma\mathcal{B}{\bf u}]\cdot({\rm D}V\cdot{\bf n} - {\rm D}{\bf u}\cdot{\bf n}) + \frac{1}{2}\left[\alpha|\mathcal{B}{\bf u}|^2 + \gamma H|\mathcal{K}V|^2\right].
+	\end{align*}
+\end{theorem}
 
 %------------------------------------------------------------------------------%
 
