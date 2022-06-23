@@ -101,6 +101,82 @@ If the shape optimization problem has constrains, i.e., the functional $\mathcal
 
 %------------------------------------------------------------------------------%
 
+\section{\href{https://en.wikipedia.org/wiki/Topology_optimization}{Wikipedia\texttt{/}Topology Optimization}}
+``\textit{Topology optimization (TO)} is a mathematical method that optimizes material layout within a given design space, for a given set of \href{https://en.wikipedia.org/wiki/Structural_load}{loads}, \href{https://en.wikipedia.org/wiki/Boundary_conditions}{boundary conditions} \& \href{https://en.wikipedia.org/wiki/Constraint_(mathematics)}{constraints} with the goal of maximizing the performance of the system. Topology optimization is different from \href{https://en.wikipedia.org/wiki/Shape_optimization}{shape optimization} \& sizing optimization in the sense that the design can attain any shape within the design space, instead of dealing with predefined configurations.
+
+The conventional topology optimization formulation uses a \href{https://en.wikipedia.org/wiki/Finite_element_method}{FEM} to evaluate the design performance. The design is optimized using either gradient-based \href{https://en.wikipedia.org/wiki/Mathematical_programming}{mathematical programming} techniques such as the optimality criteria algorithm \& the \textit{method of moving asymptotes} or non gradient-based algorithms such as \href{https://en.wikipedia.org/wiki/Genetic_algorithms}{genetic algorithms}.
+
+Topology optimization has a wide range of applications in aerospace, mechanical, bio-chemical \& civil engineering. Currently, engineers mostly use topology optimization at the concept level of a \href{https://en.wikipedia.org/wiki/Engineering_design_process}{design process}. Due to the free forms that naturally occur, the result is often difficult to manufacture. For that reason the result emerging from topology optimization is often fine-tuned for manufacturability. Adding constraints to the formulation in order to \href{https://en.wikipedia.org/wiki/Design_for_manufacturability}{increase the manufacturability} is an active field of research. In some cases results from topology optimization can be directly manufactured using \href{https://en.wikipedia.org/wiki/Additive_manufacturing}{additive manufacturing}; topology optimization is thus a key part of \href{https://en.wikipedia.org/wiki/Design_for_additive_manufacturing}{design for additive manufacturing}.'' -- \href{https://en.wikipedia.org/wiki/Topology_optimization}{Wikipedia\texttt{/}topology optimization}
+
+\subsection{Problem statement}
+``A topology optimization problem can be written in the general form of an \href{https://en.wikipedia.org/wiki/Optimization_problem}{optimization problem} as
+\begin{align*}
+	\min_\rho F\mbox{ where } F = F({\bf u}(\rho),\rho) = \int_\Omega f({\bf u}(\rho),\rho)\,{\rm d}V\mbox{ subject to } G_0(\rho) = \int_\Omega \rho\,{\rm d}V - V_0\le 0,\ G_j({\bf u}(\rho),\rho)\le 0,\ j = 1,\ldots,m.
+\end{align*}
+The problem statement includes the following:
+\begin{itemize}
+	\item An \href{https://en.wikipedia.org/wiki/Objective_function}{objective function} $F({\bf u}(\rho),\rho)$. This function represents the quantity that is being minimized for best performance. The most common objective function is compliance, where minimizing compliance leads to maximizing the stiffness of a structure.
+	\item The \textit{material distribution} as a problem variable. This is described by the density of the material at each location $\rho({\bf x})$. Material is either \textit{present}, indicated by a 1, or \textit{absent}, indicated by a 0. ${\bf u} = {\bf u}(\rho)$ is a state field that satisfies a linear or nonlinear state equation depending on $\rho$.
+	\item The \textit{design space} $(\Omega)$. This indicates the allowable volume within which the design can exist. Assembly \& packaging requirements, human \& tool accessibility are some of the factors that need to be considered in identifying this space. With the definition of the design space, regions or components in the model that cannot be modified during the course of the optimization are considered as non-design regions.
+	\item $m$ \href{https://en.wikipedia.org/wiki/Constraint_(mathematics)}{contraints} $G_j({\bf u}(\rho),\rho)\le 0$ a characteristic that the solution must satisfy. Examples are the maximum amount of material to be distributed (volume constraint) or maximum stress values.
+\end{itemize}
+Evaluating ${\bf u}(\rho)$ often includes solving a differential equation. This is most commonly done using the FEM since these equations do not have a known analytical solution.'' -- \href{https://en.wikipedia.org/wiki/Topology_optimization#Problem_statement}{Wikipedia\texttt{/}topology optimization\texttt{/}problem statement}
+
+\subsection{Implementation methodologies}
+``There are various implementation methodologies that have been used to solve topology optimization problems.''
+
+\subsubsection{Discrete}
+``Solving topology optimization problems in a discrete sense is done by discretizing the design domain into finite elements. The material densities inside these elements are then treated as the problem variables. In this case material density of 1 indicates the presence of material, while 0 indicates an absence of material. Owning to the attainable topological complexity of the design being dependent on the number of elements, a large number is preferred. Large numbers of finite elements increases the attainable topological complexity, but come at a cost. 1stly, solving the FEM systems becomes more expensive. 2ndly, algorithms that can handle a large number (several thousands of elements is not uncommon) of discrete variables with multiple constraints are unavailable. Moreover, they are impractically sensitive to parameter variations. In literature problems with up to 30000 variables have been reported.'' -- \href{https://en.wikipedia.org/wiki/Topology_optimization#Discrete}{Wikipedia\texttt{/}topology optimization\texttt{/}implementation methodologies\texttt{/}discrete}
+
+\subsubsection{Solving the problem with continuous variables}
+``The earlier stated complexities with solving topology optimization problems using binary variables has caused the community to search for other options. One is the modeling of the densities with continuous variables. The material densities can now also attain values between 0 \& 1. Gradient based algorithms that handle large amounts of continuous variables \& multiple constraints are available. But the material properties have to be modeled in a continuous setting. This is done through interpolation. 1 of the most implemented interpolation methodologies is the \textit{Solid Isotropic Material with Penalization} method (SIMP). This interpolation is essentially a power law $E = E_0 + \rho^p(E_1 - E_0)$. It interpolates the Young's modulus of the material to the scalar selection field. The value of the penalization parameter $p$ is generally taken between $[1,3]$. This has been shown to confirm the micro-structure of the materials. In the SIMP method a lower bound on the Young's modulus is added, $E_0$, to make sure the derivatives of the objective function are nonzero when the density becomes 0. The higher the penalization factor, the more SIMP penalizes the algorithm in the use of non-binary densities. Unfortunately, the penalization parameter also introduces non-convexities.'' -- \href{https://en.wikipedia.org/wiki/Topology_optimization#Solving_the_problem_with_continuous_variables}{Wikipedia\texttt{/}topology optimization\texttt{/}implementation methodologies\texttt{/}solving the problem with continuous variables}
+
+\subsubsection{Shape derivatives}
+``Topology optimization can be achieved by using shape derivatives.'' 
+
+\subsubsection{Topological derivatives}
+
+\subsubsection{Level set}
+
+\subsubsection{Phase field}
+
+\subsubsection{Evolutionary structural optimization}
+
+\subsubsection{Commercial software}
+``There are several commercial topology optimization software on the market. Most of them use topology optimization as a hint how the optimal design should look like, \& manual geometry re-construction is required. There are a few solutions which produce optimal designs ready for Additive Manufacturing.'' -- -- \href{https://en.wikipedia.org/wiki/Topology_optimization#Commercial_software}{Wikipedia\texttt{/}topology optimization\texttt{/}implementation methodologies\texttt{/}commercial software}
+
+\subsection{Examples}
+
+\subsubsection{Structural compliance}
+\textsf{Fig. Checker Board Patterns are shown in this result.} \textsf{Fig. Topology optimization result when filtering is used.} \textsf{Fig. Topology optimization of a compliance problem.}
+
+``A stiff structure is one that has the least possible displacement when given certain set of boundary conditions. A global measure of the displacements is the \href{https://en.wikipedia.org/wiki/Strain_energy}{strain energy} (also called \href{https://en.wikipedia.org/wiki/Stiffness#Compliance}{compliance}) of the structure under the prescribed boundary conditions. The lower the strain energy the higher the stiffness of the structure. So, the objective function of the problem is to minimize the strain energy.
+
+On a broad level, one can visualize that the more the material, the less the deflection\footnote{\textbf{deflection} [n] [uncountable, countable, usually singular] \textbf{deflection (of something)} a sudden change in the direction that something is moving in, usually after it has hit something; the act of causing something to change direction.} as there will be more material to resit the loads. So, the optimization requires an opposing constraint, the volume constraint. This is in reality a cost factor, as we would not want to spend a lot of money on the material. To obtain the total material utilized, an integration of the selection field over the volume can be done.
+
+Finally the elasticity governing differential equations are plugged in so as to get the final problem statement.
+\begin{align*}
+	\min_\rho \int_\Omega \frac{1}{2}\boldsymbol{\sigma}:\boldsymbol{\varepsilon}\,{\rm d}\Omega\mbox{ subject to }\rho\in[0,1],\ \int_\Omega \rho\,{\rm d}\Omega\le V^\star,\ \nabla\cdot\boldsymbol{\sigma} + {\bf F} = {\bf 0},\ \boldsymbol{\sigma} = {\bf C}:\boldsymbol{\varepsilon}.
+\end{align*}
+But, a straightforward implementation in the finite element framework of such a problem is still infeasible\footnote{\textbf{unfeasible} [a] not possible to do or achieve, \textsc{opposite}: \textbf{feasible}.} owning to issues such as:
+\begin{itemize}
+	\item \textbf{Mesh dependency} i.e., the design obtained on 1 mesh is not the one that will be obtained on another mesh. The features of the design become more intricate\footnote{\textbf{intricate} [a] having a lot of different parts \& small details that fit together.} as the mesh gets refined.
+	\item \textbf{Numerical instabilities.} The selection of region in the form of a chess board. 
+\end{itemize}
+Some techniques such as \href{https://en.wikipedia.org/wiki/Kernel_(image_processing)}{filtering} based on image processing are currently being used to alleviate\footnote{\textbf{alleviate} [v] \textbf{alleviate something} to make suffering or a problem less severe.} some of these issues. Although it seemed like this was purely a heuristic approach for a long time, theoretical connections to nonlocal elasticity have been made to support the physical sense of these methods.'' -- \href{https://en.wikipedia.org/wiki/Topology_optimization#Structural_compliance}{Wikipedia\texttt{/}topology optimization\texttt{/}examples\texttt{/}structural compliance}
+
+\subsubsection{Multiphysics problems}
+
+\paragraph{Fluid-structure-interaction.}
+
+\paragraph{Thermoelectric energy conversion.}
+
+\subsubsection{3F3D Form Follows Force 3D Printing}
+
+\subsubsection{Design-dependent loads}
+
+%------------------------------------------------------------------------------%
+
 \chapter{\href{formsolver.com}{Formsolver.com}}
 
 %------------------------------------------------------------------------------%
@@ -738,6 +814,7 @@ The main difficulty in dealing with such a minimization problem is related to th
 		f = [-(\sigma(\varphi,\pi)\cdot{\bf n}) + \alpha\mathcal{B}_\Sigma\mathcal{B}{\bf u}]\cdot({\rm D}V\cdot{\bf n} - {\rm D}{\bf u}\cdot{\bf n}) + \frac{1}{2}\left[\alpha|\mathcal{B}{\bf u}|^2 + \gamma H|\mathcal{K}V|^2\right].
 	\end{align*}
 \end{theorem}
+p. 112
 
 %------------------------------------------------------------------------------%
 
