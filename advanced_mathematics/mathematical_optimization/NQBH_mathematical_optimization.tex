@@ -820,7 +820,260 @@ The main difficulty in dealing with such a minimization problem is related to th
 		f = [-(\sigma(\varphi,\pi)\cdot{\bf n}) + \alpha\mathcal{B}_\Sigma\mathcal{B}{\bf u}]\cdot({\rm D}V\cdot{\bf n} - {\rm D}{\bf u}\cdot{\bf n}) + \frac{1}{2}\left[\alpha|\mathcal{B}{\bf u}|^2 + \gamma H|\mathcal{K}V|^2\right].
 	\end{align*}
 \end{theorem}
-p. 112
+
+\begin{example}
+	We set $(\mathcal{B},\mathcal{B}^\star,\mathcal{B}_\Sigma) = ({\rm I},-{\rm I},0)$, $(\mathcal{K},\mathcal{K}^\star,\mathcal{K}_\Sigma) = ({\rm I},-{\rm I},0)$. I.e., we consider the cost functional, \textbf{(5.11)}
+	\begin{align*}
+		J_V({\bf u},p) = \frac{\alpha}{2}\|{\bf u}\|_{L^2(Q(V))}^2 + \frac{\gamma}{2}\|V\|_{L^2(\Sigma(V))}^2.
+	\end{align*}
+	Then its gradient is given by \textbf{(5.12)}
+	\begin{align*}
+		\nabla j(V) = -\lambda{\bf n} - \sigma(\boldsymbol{\varphi},\pi)\cdot{\bf n} + \gamma V,
+	\end{align*}
+	where $(\boldsymbol{\varphi},\pi)$ stands for the adjoint fluid state solution of the following system \textbf{(5.13)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\boldsymbol{\varphi} - {\rm D}\boldsymbol{\varphi}\cdot{\bf u} + {}^\star{\rm D}{\bf u}\cdot\boldsymbol{\varphi} - \nu\Delta\boldsymbol{\varphi} + \nabla\pi &= \alpha{\bf u},&&Q(V),\\
+			\nabla\cdot\boldsymbol{\varphi} &= 0,&&Q(V),\\
+			\boldsymbol{\varphi} &= {\bf 0},&&\Sigma(V),\\
+			\boldsymbol{\varphi}(T) &= {\bf 0},&&\Omega_T,
+		\end{split}\right.
+	\end{equation*}
+	\& $\lambda$ is the adjoint transverse boundary field, solution of the tangential dynamical system, \textbf{(5.14)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\lambda - \nabla_\Gamma\lambda\cdot V - (\nabla\cdot V)\lambda &= f,&&(0,T),\\
+			\lambda(T) &= 0,&&\Gamma_T(V),
+		\end{split}\right.
+	\end{equation*}
+	with \textbf{(5.15)}
+	\begin{align*}
+		f = -\nu({\rm D}\boldsymbol{\varphi}\cdot{\bf n})\cdot({\rm D}V\cdot{\bf n} - {\rm D}{\bf u}\cdot{\bf n}) + \frac{1}{2}(\alpha + \gamma H)|V|^2.
+	\end{align*}
+\end{example}
+
+\begin{example}
+	We set $(\mathcal{B},\mathcal{B}^\star,\mathcal{B}_\Sigma) = (\operatorname{curl},\operatorname{curl},\land{\bf n})$, $(\mathcal{K},\mathcal{K}^\star,\mathcal{K}_\Sigma) = ({\rm I},-{\rm I},0)$, \textbf{(5.16)}
+	\begin{align*}
+		J_V({\bf u},p) = \frac{\alpha}{2}\|\operatorname{curl}{\bf u}\|_{L^2(Q(V))}^2 + \frac{\gamma}{2}\|V\|_{L^2(\Sigma(V))}^2.
+	\end{align*}
+	Then its gradient is given by \textbf{(5.17)}
+	\begin{align*}
+		\nabla j(V) = -\lambda{\bf n} - \sigma(\boldsymbol{\varphi},\pi)\cdot{\bf n} + \alpha(\operatorname{curl}{\bf u})\land{\bf n} + \gamma V,
+	\end{align*}
+	where $(\boldsymbol{\varphi},\pi)$ stands for the adjoint fluid state solution of the following system, \textbf{(5.18)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\boldsymbol{\varphi} - {\rm D}\boldsymbol{\varphi}\cdot{\bf u} + {}^\star{\rm D}{\bf u}\cdot\boldsymbol{\varphi} - \nu\Delta\boldsymbol{\varphi} + \nabla\pi &= -\alpha\Delta{\bf u},&&Q(V),\\
+			\nabla\cdot\boldsymbol{\varphi} &= 0,&&Q(V),\\
+			\boldsymbol{\varphi} &= {\bf 0},&&\Sigma(V),\\
+			\boldsymbol{\varphi}(T) &= {\bf 0},&&\Omega_T,
+		\end{split}\right.
+	\end{equation*}
+	\& $\lambda$ is the adjoint transverse boundary field, solution of the tangential dynamical system, \textbf{(5.19)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\lambda - \nabla_\Gamma\lambda\cdot V - (\nabla\cdot V)\lambda &= f,&&(0,T),\\
+			\lambda(T) &= 0,&&\Gamma_T(V),
+		\end{split}\right.
+	\end{equation*}
+	with
+	\begin{align*}
+		f = [-\nu{\rm D}\boldsymbol{\varphi}\cdot{\bf n} + \alpha(\operatorname{curl}{\bf u})\land{\bf n}]\cdot({\rm D}V\cdot{\bf n} - {\rm D}{\bf u}\cdot{\bf n}) + \frac{1}{2}\left[\alpha|\operatorname{curl}{\bf u}|^2 + \gamma H|V|^2\right].
+	\end{align*}
+\end{example}
+In the next section, we introduce several concepts closely related to shape optimization tools for moving domain problems. We also recall \textit{elements of tangential calculus} that will be used through this chapter. Then we treat successively the following points,
+\begin{enumerate}
+	\item In Sect. 5.5, we choose to prove the differentiability of the fluid state $({\bf u},p)$ w.r.t. the design variable $V$. The directional shape derivative $({\bf u}',p')(V)\cdot W$ is then used to compute the directional derivative $j'(V)\cdot W$ of the cost functional $j(V)$. Using the adjoint state $(\boldsymbol{\varphi},\pi)(V)$ associated to $({\bf u}',p')(V)$ \& the adjoint field $\Lambda$ associated to the \textit{transverse field} $Z_t$ introduced in sect. 5.3, we are able to furnish an expression of the gradient $\nabla j(V)$ which is a distribution supported by the moving boundary $\Gamma_t(V)$.
+	\item In Sect. 5.6, we choose to bypass the computation of the state shape derivative $({\bf u}',p')(V)\cdot W$, by using a Min-Max formulation of problem (5.3) \& a transport technique. The state \& multiplier spaces are chosen in order to be independent on the scalar perturbation parameter used in the computation of the derivative of the Lagrangian functional w.r.t. $V$. This method directly furnishes the fluid state \& transverse field adjoint systems \& the resulting gradient $\nabla j(V)$.
+	\item In Sect. 5.7, we again use a Min-Max strategy coupled with a state \& multiplier functional space embedding. I.e., the state \& multiplier variables live in the hold-all domain $D$. Hence the derivative of the Lagrangian functional w.r.t. $V$ only involves terms coming from the flux variation through the moving boundary $\Gamma_t(V)$. This again leads to the direct computation of the fluid state \& transverse field adjoints \& consequently to the gradient $\nabla j(V)$.'' -- \cite[Chap. 5, Sect. 5.2, pp. 110--114]{Moubachir_Zolesio2006}
+\end{enumerate}
+
+\subsection{Elements of Non-cylindrical Shape Calculus}
+``This section introduces several concepts that will be intensively used through this chapter. It concerns the differential calculus of integrals defined on moving domains or boundaries w.r.t.  their support.'' -- \cite[Chap. 5, Sect. 5.3, p. 114]{Moubachir_Zolesio2006}
+
+\subsubsection{Non-cylindrical speed method}
+``In this paragraph, we are interested in differentiability properties of integrals defined over moving domains,
+\begin{align*}
+	J_1(\Omega_t) = \int_{\Omega_t} f(\Omega_t)\,{\rm d}\Omega,\ J_2(\Gamma_t) = \int_{\Gamma_t} g(\Gamma_t)\,{\rm d}\Gamma.
+\end{align*}
+The behavior of $J_1$ \& $J_2$ while perturbing their moving support highly depends on the regularity in space \& time of the domains. In this work, we choose to work with domains $\Omega_t$ that are images of a fixed domain $\Omega_0$ through an ALE map $T_t(V)$ as introduced in the 1st section. Hence, the design parameter is no more the support $\Omega_t$ but rather the velocity field $V\in\mathcal{U}\coloneqq\mathcal{C}([0,T];(W^{k,\infty}(D))^d)$ that builds the support. This technique has the advantage to transform shape calculus into classical differential calculus on vector spaces [157, 59]. For another choice based on the \textit{non-cylindrical identity perturbation}, the reader is referred to the \cite[Chap. 6]{Moubachir_Zolesio2006}.''
+
+\paragraph{Transverse applications.}
+\begin{definition}[Transverse map]
+	The \emph{transverse map} $\mathcal{T}_\rho^t$ associated to 2 vector fields $(V,W)\in\mathcal{U}$ is defined as follows,
+	\begin{align*}
+		\mathcal{T}_\rho^t:\overline{\Omega_t}&\to\overline{\Omega_t^\rho}\coloneqq\overline{\Omega_t(V + \rho W)}\\
+		{\bf x}&\mapsto T_t(V + \rho W)\circ T_t(V)^{-1}.
+	\end{align*}
+\end{definition}
+
+\begin{remark}
+	The transverse map allows us to perform sensitivity analysis on functions defined on the unperturbed domain $\Omega_t(V)$.
+\end{remark}
+The following result states that the transverse map $\mathcal{T}_\rho^t$ can be considered as a dynamical flow w.r.t. the perturbation variable $\rho$,
+
+\begin{theorem}[ref. 156]
+	The Transverse map $\mathcal{T}_\rho^t$ is the flow of a transverse field $\mathcal{Z}_\rho^t$ defined as follows \textbf{(5.20)}
+	\begin{align*}
+		\mathcal{Z}_\rho^t\coloneqq\mathcal{Z}^t(\rho,\cdot) = \left(\frac{\partial\mathcal{T}_\rho^t}{\partial\rho}\right)\circ(\mathcal{T}_\rho^t)^{-1},
+	\end{align*}
+	i.e., is the solution of the following dynamical system:
+	\begin{align*}
+		T_t^\rho(\mathcal{Z}_\rho^t):\overline{\Omega_t}&\to\overline{\Omega_t^\rho}\\
+		{\bf x}&\mapsto{\bf x}(\rho,{\bf x})\coloneqq T_t^\rho(\mathcal{Z}_\rho^t)({\bf x})
+	\end{align*}
+	with \textbf{(5.21)}
+	\begin{equation*}
+		\left\{\begin{split}
+			\frac{{\rm d}{\bf x}(\rho)}{{\rm d}\rho} &= \mathcal{Z}^t(\rho,{\bf x}(\rho)),&&\rho\ge 0,\\
+			{\bf x}(\rho = 0) &= {\bf x},&&\mbox{in }\Omega_t(V).
+		\end{split}\right.
+	\end{equation*}
+\end{theorem}
+Since, we will mainly consider derivatives of perturbed functions at point $\rho = 0$, we set $Z_t\coloneqq\mathcal{Z}_{\rho = 0}^t$. A fundamental result lies in the fact that $Z_t$ can be obtained as the solution of a linear time dynamical system depending on the vector fields $(V,W)\in\mathcal{U}$,
+
+\begin{theorem}
+	The vector field $Z_t$ is the unique solution of the following Cauchy problem, \textbf{(5.22)}
+	\begin{equation*}
+		\left\{\begin{split}
+			\partial_tZ_t + [Z_t,V] &= W,&&(0,T)\times D,\\
+			Z_{t=0} &= 0,&&D,
+		\end{split}\right.
+	\end{equation*}
+	where $[Z_t,V]\coloneqq DZ_t\cdot V- DV\cdot Z_t$ stands for the Lie bracket of the pair $(Z_t,V)$.
+\end{theorem}
+
+\paragraph{Shape derivative of non-cylindrical functionals.} The main theorem of this section uses the notion of a non-cylindrical material derivative that we recall here,
+
+\begin{definition}
+	The derivative w.r.t. $\rho$ at point $\rho = 0$ of the following composed function,
+	\begin{align*}
+		f^\rho:[0,\rho_0]&\to H(\Omega_t(V))\\
+		\rho&\mapsto f(V + \rho W)\circ\mathcal{T}_\rho^t
+	\end{align*}
+	$\dot{f}(V;W)$ is called the \emph{non-cylindrical material derivative} of $f(V)$ at point $V\in U$ in the direction $W\in\mathcal{U}$. We shall use the notation,
+	\begin{align*}
+		\dot{f}(V)\cdot W = \dot{f}(V;W)\coloneqq\left.\frac{d}{d\rho}f^\rho\right|_{\rho = 0}.
+	\end{align*}
+\end{definition}
+With the above definition, we can state the differentiability properties of non-cylindrical integrals w.r.t. their moving support,
+
+\begin{theorem}[ref. 59]
+	For a bounded measurable domain $\Omega_0$ with boundary $\Gamma_0$, let us assume that for any direction $W\in U$ the following hypothesis holds,
+	\begin{itemize}
+		\item[(i)] $f(V)$ admits a non-cylindrical material derivative $\dot{f}(V)\cdot W$ then $J_1(\cdot)$ is G\^ateaux differentiable at point $V\in\mathcal{U}$ \& its derivative is given by the following expression, \textbf{(5.23)}
+		\begin{align*}
+			J_1'(V)\cdot W = \int_{\Omega_t(V)} [\dot{f}(V)\cdot W + f(V)\nabla\cdot Z_t]\,{\rm d}\Omega.
+		\end{align*}
+		Furthermore, if
+		\item[(ii)] $f(V)$ admits a non-cylindrical shape derivative given by the following expression, \textbf{(5.24)}
+		\begin{align*}
+			f'(V)\cdot W = \dot{f}(V)\cdot W - \nabla f(V)\cdot Z_t,
+		\end{align*}
+	\end{itemize}
+	then \textbf{(5.25)}
+	\begin{align*}
+		J_1'(V)\cdot W = \int_{\Omega_t(V)} [f'(V)\cdot W + \nabla\cdot(f(V)Z_t)]\,{\rm d}\Omega.
+	\end{align*}
+	Furthermore, if $\Omega_0$ is an open domain with a Lipschitzian boundary $\Gamma_0$, then \textbf{(5.26)}
+	\begin{align*}
+		J_1'(V)\cdot W = \int_{\Omega_t(V)} f'(V)\cdot W\,{\rm d}\Omega + \int_{\Gamma_t(V)} f(V)\langle Z_t,{\bf n}\rangle\,{\rm d}\Gamma.
+	\end{align*}
+\end{theorem}
+
+\begin{remark}
+	The last identity will be of great interest while trying to prove a gradient structure result for general non-cylindrical functionals.
+\end{remark}
+It is also possible to establish a similar result for integrals over moving boundaries. For that purpose, we need to define the non-cylindrical tangential material derivative,
+
+\begin{definition}
+	The derivative w.r.t. $\rho$ at point $\rho = 0$ of the following composed function,
+	\begin{align*}
+		g^\rho:[0,\rho_0]&\to H(\Gamma_t(V))\\
+		\rho&\mapsto g(V + \rho W)\circ\mathcal{T}_\rho^t
+	\end{align*}
+	is called the \emph{non-cylindrical material derivative} of the function $g(V)\in H(\Gamma_t(V))$ in the direction $W\in\mathcal{U}$. We shall use the notation
+	\begin{align*}
+		\dot{g}(V)\cdot W = \dot{g}(V;W)\coloneqq\left.\frac{d}{d\rho}g^\rho\right|_{\rho = 0}.
+	\end{align*}
+\end{definition}
+This concept is involved in the differentiability property of boundary integrals,
+
+\begin{theorem}
+	For a bounded measurable domain $\Omega_0$ with boundary $\Gamma_0$, let us assume that for any direction $W\in U$ the following hypothesis holds,
+	\begin{itemize}
+		\item[(i)] $g(V)$ admits a non-cylindrical material derivative $\dot{g}(V)\cdot W$ then $J_2(\cdot)$ is G\^ateaux differentiable at point $V\in\mathcal{U}$ \& its derivative is given by the following expression, \textbf{(5.27)}
+		\begin{align*}
+			J_2'(V)\cdot W = \int_{\Gamma_t(V)} [\dot{g}(V)\cdot W + g(V)\operatorname{div}_\Gamma Z_t]\,{\rm d}\Gamma.
+		\end{align*}
+		Furthermore, if
+		\item[(ii)] $g(V)$ admits a non-cylindrical shape derivative given by the following expression, \textbf{(5.28)}
+		\begin{align*}
+			g'(V)\cdot W = \dot{g}(V)\cdot W - \nabla_\Gamma g(V)\cdot Z_t,
+		\end{align*}
+		then \textbf{(5.29)}
+		\begin{align*}
+			J_2'(V)\cdot W = \int_{\Gamma_t(V)} [\tilde{g}'(V)\cdot W + Hg(V)\langle Z_t,{\bf n}\rangle]\,{\rm d}\Gamma,
+		\end{align*}
+		where $H$ stands for the additive curvature. Furthermore, if $g(V) = \tilde{g}(V)|_{\Gamma_t(V)}$ with $\tilde{g}\in H(\Omega_t(V))$, then \textbf{(5.30)}
+		\begin{align*}
+			J_2'(V)\cdot W = \int_{\Gamma_t(V)} [g'(V)\cdot W + (\nabla\tilde{g}(V)\cdot{\bf n} + Hg(V))\langle Z_t,{\bf n}\rangle]\,{\rm d}\Gamma.
+		\end{align*}
+	\end{itemize}
+\end{theorem}
+
+\paragraph{Adjoint transverse field.} It is possible to define the solution of the adjoint transverse system,
+
+\begin{theorem}
+	For $F\in L^2(0,T;(H^1(D))^d)$, there exists a unique field $\Lambda\in\mathcal{C}^0([0,T];(L^2(D))^d)$ solution of the backward dynamical system, \textbf{(5.31)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\Lambda - {\rm D}\Lambda\cdot V - {}^\star{\rm D}V\cdot\Lambda - (\nabla\cdot V)\Lambda &= F,&&(0,T),\\
+			\Lambda(T) &= 0,
+		\end{split}\right.
+	\end{equation*}
+\end{theorem}
+
+\begin{remark}
+	The field $\Lambda$ is the dual variable associated to the transverse field $Z_t$ \& is the solution of the adjoint problem associated to the transverse dynamical system.
+\end{remark}
+In this chapter, we shall deal with a specific RHS $F$ of the form $F(t) = {}^\star\gamma_{\Gamma^t(V)}(f(t){\bf n})$. In this case, the adjoint field $\Lambda$ is supported on the moving boundary $\Gamma_t(V)$ \& has the following structure,
+
+\begin{theorem}[ref. 59]
+	For $F(t) = {}^\star\gamma_{\Gamma^t(V)}(f(t){\bf n})$, with $f\in L^2(0,T;L^2(\Gamma_t(V)))$, the unique solution $\Lambda$ of the problem is given by the following identity, \textbf{(5.32)}
+	\begin{align*}
+		\Lambda = (\lambda\circ p)\nabla_{\chi_{\Omega_t}(V)}\in\mathcal{C}^0([0,T];(H^1(\Gamma_t))^d),
+	\end{align*}
+	where $\lambda\in\mathcal{C}^0([0,T];H^1(\Gamma_t))$ is the unique solution of the following boundary dynamical system, \textbf{(5.33)}
+	\begin{equation*}
+		\left\{\begin{split}
+			-\partial_t\lambda - \nabla_\Gamma\lambda\cdot V - (\nabla\cdot V)\lambda &= f,&&(0,T)\\
+			\lambda(T) &= 0,&&\Gamma_t(V),
+		\end{split}\right.
+	\end{equation*}
+	$p$ is the canonical projection on $\Gamma_t(V)$ \& $\chi_(\Omega_t)(V)$ is the characteristic function of $\Omega_t(V)$ inside $D$.
+\end{theorem}
+
+\paragraph{Gradient of non-cylindrical functionals.} In the next sections, we will often deal with boundary integrals of the following forms,
+\begin{align*}
+	K = \int_0^T\int_{\Gamma_t(V)} E\langle Z_t,{\bf n}\rangle
+\end{align*}
+with $E\in L^2(0,T;\Gamma_t(V))$ \& $Z_t$ is the solution of the transverse equation (5.22). The following result allows us to eliminate the auxiliary variable $Z_t$ inside the functional $K$,
+
+\begin{theorem}[ref. 59]
+	For any $E\in L^2(0,T;\Gamma_t(V))$ \& $(V,W)\in\mathcal{U}$, the following identity holds, \textbf{(5.34)}
+	\begin{align*}
+		\int_0^T\int_{\Gamma_t(V)} E\langle Z_t,{\bf n}\rangle = -\int_0^T\int_{\Gamma_t(V)} \lambda\langle W,{\bf n}\rangle,
+	\end{align*}
+	where $\lambda\in\mathcal{C}^0([0,T];H^1(\Gamma_t))$ is the unique solution of problem (5.33) with $f = E$.
+\end{theorem}
+'' -- \cite[Chap. 5, Subsect. 5.3.1, pp. 114--118]{Moubachir_Zolesio2006}
+
+\subsection{Elements of tangential calculus}
+``In this section, we review basic \textit{elements of differential calculus} on a $\mathcal{C}^k$-submanifold with $k\ge 2$ of codimension 1 in $\mathbb{R}^d$. The following approach avoids the use of local bases \& coordinates by using the intrinsic tangential derivative.'' -- \cite[Chap. 5, Sect. 5.4, pp. 119]{Moubachir_Zolesio2006}
+
+\subsubsection{Oriented distance function}
 
 %------------------------------------------------------------------------------%
 
