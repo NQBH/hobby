@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[english,vietnamese]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Preface to\\\underline{\textbf{Series}}\\A Personal Journey to Realms of Knowledge\\The Wonderland or The Promised Neverland?}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{english}
+\begin{abstract}
+	This text is the preface of my series: \textit{A Personal Journey to Realms of Knowledge: The Wonderland or The Promised Neverland?}
+\end{abstract}
+
+\tableofcontents
+\selectlanguage{vietnamese}
+
+%------------------------------------------------------------------------------%
+
+\section{A Warm \& Cold Christmas}
+\textit{Nên bắt đầu từ đâu nhỉ?} Có vẻ nên chọn Giáng sinh năm 2020 -- 1 trong những cột mốc quan trọng trong cuộc đời của mình. Khi ấy đang là đợt lock down toàn Châu Âu lần 2.
+
+\section{A High School Mathematics Problem for MathKalendar}
+
+
+
+%------------------------------------------------------------------------------%
+
+\selectlanguage{english}
+\begin{thebibliography}{99}
+	\bibitem[]{}
+\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]	
+	
+\end{document}
