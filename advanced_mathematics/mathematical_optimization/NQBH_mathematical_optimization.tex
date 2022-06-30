@@ -187,7 +187,67 @@ Some techniques such as \href{https://en.wikipedia.org/wiki/Kernel_(image_proces
 
 %------------------------------------------------------------------------------%
 
-\chapter{Optimal Control}
+\part{Optimal Control}
+
+\chapter{\cite{Lions1971}. Optimal Control of Systems Governed by PDEs}
+
+\section*{Introduction}
+\textbf{1.} The development of a theory of optimal control (deterministic\footnote{\textbf{deterministic} [a] (\textit{philosophy}) connected with the belief that people are not free to choose what they are like or how they behave, because these things are decided by their environment \& other things over which they have no control.}) requires the following initial data:
+\begin{itemize}
+	\item[(i)] a \textit{control} $u$ belonging to some set $\mathcal{U}_{\rm ad}$ (the set of `admissible\footnote{\textbf{admissible} [a] that can be allowed or accepted according to a set of rules, especially in a court of law, \textsc{opposite}: \textbf{inadmissible}.} controls') which is at our disposition\footnote{\textbf{disposition} [n] \textbf{1.} [countable, uncountable] the natural qualities of a person's character; \textbf{2.} [countable] a tendency to behave in a particular way, or to have a particular opinion; \textbf{3.} [countable, uncountable] \textbf{disposition (of something)} (\textit{specialist}) the way something is placed or arranged; the fact of something being placed somewhere; \textbf{4.} [countable, uncountable] (\textit{law}) a formal act of giving property or money to somebody.},
+	\item[(ii)] for a given control $u$, the state $y(u)$ of the system which is to be controlled is given by the solution of an equation \textbf{(*)} $\Lambda y(u) =$ given function of $u$, where $\Lambda$ is an operator\footnote{\textbf{operator} [n] \textbf{1.} (often in compounds) a person or company that runs a particular business; \textbf{2.} (often in compounds) a person who operates equipment or a machine; \textbf{3.} (\textit{mathematics}) a symbol or function which represents an operation in mathematics, e.g., $\times,+$.} (assumed known) which specifies\footnote{\textbf{specify} [v] to identify somebody\texttt{/}something clearly \& definitely; to state a fact or something that is required clearly \& exactly.} the system to be controlled ($\Lambda$ is the `model\footnote{\textbf{model} [n] \textbf{1.} a simple description, especially a mathematical one, of a group of complex systems or processes, used for understanding or explaining how something works; \textbf{2.} a way of doing something that others can copy or refer to; \textbf{3.} an object that is a copy of something, usually smaller than the original object; \textbf{4.} \textbf{model of something} a perfect example of something; \textbf{5.} a particular design or type of product; \textbf{6.} (in fashion \& art) somebody who sits, stands or moves around in order to  display clothes or so that somebody else can draw, paint or photograph them; [v] \textbf{1.} to create or use a description (especially a mathematical one), a computer program, a diagram or a copy of something, in order to explain or calculate something; \textbf{2.} \textbf{model something} to show somebody how to do something, especially how to behave well, \textsc{synonym}: \textbf{simulate}; \textbf{model something on\texttt{/}after something} [phrasal verb] [usually passive] to make something so that it is like something else; to base something on something else.}' of the system\footnote{\textbf{system} [n] \textbf{1.} [countable] an organized way of doing something; an organized set of ideas or theories; \textbf{2.} [countable] a group of things that work together in a particular way or for a particular purpose; \textbf{3.} [countable] a human or animal body, or a part of it, when it is being thought of as the organs \& processes that make it function; \textbf{4.} (\textbf{the system}) [singular] (\textit{rather informal, usually disapproving}) the rules or people that control a country or an organization, especially when they seem to be unfair because you cannot change them.}),
+	\item[(iii)] the observation\footnote{\textbf{observation} [n] \textbf{1.} [uncountable, countable] the act of watching somebody\texttt{/}something carefully for a period of time, especially to learn something; \textbf{2.} [uncountable] the ability to notice things, especially important details; \textbf{3.} [countable] \textbf{observation (about\texttt{/}on something)} a comment, especially based on something you have seen, heard or read, \textsc{synonym}: \textbf{remark}.} $z(u)$ which is a function of $y(u)$ (assumed to be known exactly; we consider only deterministic problems in this book),
+	\item[(iv)] the ``cost function'' $J(u)$ (``economic\footnote{\textbf{economic} [a] \textbf{1.} [only before noun] connected with the trade, industry \& development of wealth of a country, an area or a society; \textbf{2.} producing enough profit to continue; not costing much money, \textsc{synonym}: \textbf{profitable}.} function'') which is defined in terms of a numerical function $z\to\Phi(z)\ge 0$ on the ``space of observations'' by \textbf{(**)} $J(u) = \Phi(z(u))$. It is required to find (problem of the Calculus of Variations\footnote{\textbf{variation} [n] \textbf{1.} [countable, uncountable] a change or difference, especially in the amount or level of something, usually within particular limits; \textbf{2.} [uncountable] (\textit{biology}) the fact of a living thing occurring in more than 1 different color or form; \textbf{3.} [countable] \textbf{variation (on something)} a thing that is different from other things in the same general group.}) $\inf J(u)$, $u\in\mathcal{U}_{\rm ad}$.
+\end{itemize}
+The objectives of the theory are
+\begin{itemize}
+	\item[(i)] to obtain necessary (or possibly necessary \& sufficient\footnote{\textbf{sufficient} [a] enough for a particular purpose; as much as you need. In logic, a \textbf{sufficient condition} of a statement is a condition that, if true, makes the statement true. It is often combined with a \textbf{necessary condition}, which must be true in order for the statement to be true, \textsc{opposite}: \textbf{insufficient}.}) conditions for $u$ to be an extremum (or minimum),
+	\item[(ii)] to study the structure \& properties of the equations expressing these conditions (where the `model' $\Lambda$ naturally intervenes\footnote{\textbf{intervene} [v] \textbf{1.} [intransitive] to become involved in a situation in order to improve it or stop it from getting worse; \textbf{2.} [intransitive] to happen in the time between events; \textbf{3.} [intransitive] to exist or be found in the space between things; \textbf{4.} [intransitive] to happen in a way that delays something or prevents it from happening.}),
+	\item[(iii)] to obtain constructive\footnote{\textbf{constructive} [a] having a useful \& helpful effect rather than being negative or with no purpose.} algorithms\footnote{\textbf{algorithm}  [n] a process or set of rules to be followed when solving a particular problem, especially by a computer.} amenable\footnote{\textbf{amenable} [a] \textbf{amenable to (doing) something} that you can treat in a particular way.} to numerical computations for the approximation of a (the) control $u\in\mathcal{U}_{\rm ad}$ which determines the $\inf$ (such a control is termed an ``optimal\footnote{\textbf{optimal} [a] [usually before noun] (also \textbf{optimum}) the best possible; producing the best possible results, \textsc{synonym}: \textbf{ideal}.} control'').
+\end{itemize}
+\textbf{2.} Clearly the development of such a theory depends on the model $\Lambda$ in a fundamental manner\footnote{\textbf{manner} [n] \textbf{1.} [singular] the way that something is done or happens; \textbf{2.} [singular] the way that somebody behaves towards other people; \textbf{3.} (\textbf{manners}) [plural] behavior that is considered to be polite in a particular society or culture; \textbf{4.} (\textbf{manners (of somebody\texttt{/}something)}) [plural] the habits \& customs of a particular group of people; \textbf{all manner of somebody\texttt{/}something} [idiom] many different types of people or things;\textbf{in the manner of somebody\texttt{/}something} [idiom] in a style that is typical of somebody\texttt{/}something.}. The theory described in the works of Pontryagin--Boltyanskii--Gamkrelidze--Mischenko [1] \& Hestenes [1] is concerned with the study of points (i) \& (ii) of \textbf{1} in the case where $\Lambda$ is a family of ordinary differential (or with delay\footnote{\textbf{delay} [n] \textbf{1.} [countable] a period or time by which something is slow or late; the period of time between 2 things happening; \textbf{2.} [uncountable] a situation in which something does not happen when it should; [v] \textbf{1.} [transitive] to not do something until a later time; \textbf{2.} [transitive, usually passive] if an event is delayed, it happens at a later time than is normal or expected.} or integro-differential) operators.
+
+In a variety\footnote{\textbf{variety} [n] (plural \textbf{varieties}) \textbf{1.} [singular] \textbf{variety (of something)} a number or range of different things of the same general type; \textbf{2.} [uncountable] the quality of not being the same in all parts or not doing the same thing all the time, \textsc{synonym}: \textbf{diversity}; \textbf{3.} [countable] a type of a thing, e.g. a plant or language, that is different from others in the same general group. In biology, a \textbf{variety} is a category below a \textbf{species} \& \textbf{subspecies}, used especially to describe plants.} of applications, due to the complexity of the system to be controlled, it is often advantageous to discard the above-mentioned mathematical model in favor of a model described by a family of partial differential operators (e.g., cf. Butkovskii [1], Wang [1] \& the bibliography of these works). It is this situation that we propose to investigate in this book.
+
+\section{Minimization of Functions \& Unilateral BVPs}
+
+\subsection{Minimization of Coercive Forms}
+
+\subsection{A Direct Solution of Certain Variational Inequalities}
+
+\subsection{Examples}
+
+\subsection{A Comparison Theorem}
+
+\subsection{Non Coercive Forms}
+
+\section{Control of Systems Governed by Elliptic PDEs}
+
+\subsection{Control of Elliptic Variational Problems}
+
+\subsection{1st Applications}
+
+\subsection{A Family of Examples with $N = 0$ \& $\mathcal{U}_{\rm ad}$ Arbitrary}
+
+\subsection{Observation on the Boundary}
+
+\subsection{Control \& Observation on the Boundary. Case of the Dirichlet Problem}
+
+\subsection{Constraints on the State}
+
+\subsection{Existence Results for Optimal Controls}
+
+\subsection{1st Order Necessary Conditions}
+
+\section{Control of Systems Governed by Parabolic PDEs}
+
+\section{Control of Systems Governed by Hyperbolic Equations or by Equations which are well Posed in the Petrowsky Sense}
+
+\section{Regularization, Approximation \& Penalization}
+
+%------------------------------------------------------------------------------%
+
+\chapter{\cite{Troltzsch2010}. Optimal Control for PDEs}
 
 \section{Introduction}
 ``The mathematical optimization of process governed by PDEs has seen considerable progress in the past decade. Ever faster computational facilities \& newly developed numerical techniques have opened the door to important practical applications in fields e.g. fluid flow, microelectronics\footnote{\textbf{microelectronics} [n] [uncountable] the design, production \& use of very small electronic circuits.}, crystal\footnote{\textbf{crystal} [n] \textbf{1.} [countable] a small piece of a substance with many even sides, that is formed naturally when the substance becomes solid; in chemistry, a \textbf{crystal} is any solid that has its atoms, ions or molecules arranged in an ordered, symmetrical way; \textbf{2.} [uncountable] a clear mineral, e.g. quartz, used in making decorative objects.} growth, vascular\footnote{\textbf{vascular} [a] [usually before noun] (\textit{medical}) connected with or containing veins.} surgery\footnote{\textbf{surgery} [n] \textbf{1.} [uncountable, countable] medical treatment of injuries or diseases that involves cutting open a person's body, sewing up wounds, etc.; \textbf{2.} [countable] (\textit{British English}) a place where a doctor sees patients; \textbf{3.} [countable] (\textit{British English}) a time during which a doctor, an MP or another professional person is available to see people.}, \& cardiac\footnote{\textbf{cardiac} [a] [only before noun] (\textit{medical}) connected with the heart or heart disease; if somebody has a \textbf{cardiac arrest}, their heart suddenly stops temporarily or permanently.} medicine, to name just a few. As a consequence, the communities of numerical analysts \& optimizers have taken a growing interest in applying their methods to optimal control problems involving PDEs $\ldots$'' [$\ldots$] ``$\ldots$ the comprehensive text by J.-L. Lions \cite{Lions1971} covers much of the theory of linear equations \& convex cost functionals.'' -- \cite[Preface to the German edition, p. xiii]{Troltzsch2010}
