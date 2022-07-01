@@ -257,6 +257,86 @@ The \textit{state} of the system is denoted by $y(v)$; in the \textit{elliptic} 
 
 \subsection{Minimization of Coercive Forms}
 
+\subsubsection{Notation}
+``Let $\mathcal{U}$ be a real Hilbert space. The elements of $\mathcal{U}$ will be denoted by $u,v,w,\ldots$. In the applications we have in mind in the following chapters. $\mathcal{U}$ will be the space of controls.
+
+In this chapter $\|\cdot\|$ will denote the norm on $\mathcal{U}$; in general, if there is possible ambiguity, the norm in the space $X$ will be denoted by $\|u\|_X$. For the moment, we shall assume that the following data is given:
+\begin{itemize}
+	\item[(i)] a continuous bilinear form on $\mathcal{U}$, which is symmetric, $u,v\to\pi(u,v)$, $\pi(u,v) = \pi(v,u)$, $\forall u,v\in\mathcal{U}$,
+	\item[(ii)] a continuous linear form on $\mathcal{U}$, $v\to L(v)$,
+	\item[(iii)] a closed, convex set $\mathcal{U}_{\rm ad}$ in $\mathcal{U}$.
+\end{itemize}
+In the applications considered in the sequel $\mathcal{U}_{\rm ad}$ will be the set of admissible controls. The quadratic functional \textbf{(1.1)} $J(v) = \pi(v,v) - 2L(v)$ is required to be minimized over the set $\mathcal{U}_{\rm ad}$.'' -- \cite[p. 6]{Lions1971}
+
+\subsubsection{The Case when $\pi$ is Coercive}
+``$\pi$ is said to be \textit{coercive} on $\mathcal{U}$ if \textbf{(1.2)}
+\begin{align*}
+	\pi(v,v)\ge c\|v\|^2,\ \forall v\in\mathcal{U},\,c > 0.
+\end{align*}
+We then have
+
+\begin{theorem}
+	Let $\pi(u,v)$ be a continuous symmetric bilinear form on $\mathcal{U}$ satisfies (1.2). Then there exists a unique element $u\in\mathcal{U}_{\rm ad}$ s.t. $J(u) = \inf_{v\in\mathcal{U}_{\rm ad}} J(v)$.
+\end{theorem}
+
+\begin{proof}
+	See \cite[pp. 7--]{Lions1971}
+\end{proof}
+
+\begin{example}
+	Let us consider $\pi(u,v) = (u,v) =$ scalar product in $\mathcal{U}$, $L(v) = (g,v)_\mathcal{U}$, where $g$ is a given element in $\mathcal{U}$. Then, $J(v) = \|g - v\|_\mathcal{U}^2 - \|g\|_\mathcal{U}^2$ \& the unique element $u\in\mathcal{U}_{\rm ad}$ s.t. $J(u) = \inf_{v\in\mathcal{U}_{\rm ad}} J(v)$ is characterized by $\|g - u\|_\mathcal{U}\le\|g - v\|_\mathcal{U}$, $\forall v\in\mathcal{U}_{\rm ad}$; $u$ is thus the projection of $g$ on $\mathcal{U}_{\rm ad}$.
+\end{example}
+\paragraph{Analysis of the Proof of \cite[Theorem 1.1]{Lions1971}.} An analysis of the way the assumptions of Theorem 1.1 come into play in the proof of the theorem suggests the following remarks:
+
+\begin{remark}
+	Theorem 1.1 is true if we assume that the bilinear form $\pi(u,v)$ is defined on $\mathcal{U}_{\rm ad}\times\mathcal{U}_{\rm ad}$ \& satisfies (1.2), $\forall v\in\mathcal{U}_{\rm ad}$.
+\end{remark}
+The fact that the function $v\to J(v)$ is a quadratic form does not enter in any essential way in  the proof of Theorem 1.1.
+
+\begin{remark}
+	Let $v\to J(v)$ be a convex function from $\mathcal{U}_{\rm ad}\to\mathbb{R}$, s.t. \textbf{(1.10)--(1.11)}
+	\begin{align*}
+		J(v)&\to+\infty\mbox{ as }\|v\|\to+\infty,\ v\in\mathcal{U}_{\rm ad},\\
+		v&\to J(v)\mbox{ is strongly l.s.c.}
+	\end{align*}
+	Then there exists $u\in\mathcal{U}_{\rm ad}$ s.t. \textbf{(1.12)} $J(u) = \inf_v J(v)$.
+\end{remark}
+This remarks also applies to functions $v\to J(v)$ defined on $\mathcal{U}_{\rm ad}\subset\mathcal{U}$, where $\mathcal{U}$ is, e.g., a reflexive Banach space.
+
+With hypotheses (1.10), (1.11) only, we do not necessarily have uniqueness; clearly we have uniqueness if we assume that the function $v\to J(v)$ is strictly convex.
+
+\begin{remark}
+	Assumption (1.10) is necessary to prove that every minimizing sequence is bounded (cf. 1.5). If $\mathcal{U}_{\rm ad}$ is also bounded then we may dispense\footnote{\textbf{dispense} [v] \textbf{1.} to provide something, usually something that is intended to help people; \textbf{2.} \textbf{dispense something} to prepare medicine \& give it to people; \textbf{3.} \textbf{dispense something} (of a machine) to provide money, food, drink, etc.; \textbf{dispense with somebody\texttt{/}something} [phrasal verb] to not use or stop using somebody\texttt{/}something; to get rid of somebody\texttt{/}something.} with Assumption (1.10).'' -- \cite[pp. 6--8]{Lions1971}
+\end{remark}
+
+\subsubsection{Characterization of the Minimizing Element. Variational Inequalities}
+\begin{theorem}
+	Let the assumptions of Theorem 1.1 remain valid. The minimizing element $u$ of $\mathcal{U}_{\rm ad}$ is characterized by \textbf{(1.13)} $\pi(u,v - u)\ge L(v - u)$, $\forall v\in\mathcal{U}_{\rm ad}$.
+\end{theorem}
+
+\begin{proof}
+	See \cite[p. 9]{Lions1971}.
+\end{proof}
+``Inequalities of the type given by (1.13) are termed ``\textit{variational inequalities}''.
+
+\begin{remark}
+	Let $\mathcal{U}$ be a Hilbert space over $\mathbb{C}$ (instead of $\mathbb{R}$) \& let $\pi(u,v)$ be a sesquilinear hermitian form, i.e., $\pi(u,v) = \overline{\pi(v,u)}$, $\forall u,v\in\mathcal{U}$. Assuming that (1.2) is satisfied, Theorem 1.1 remains valid without any change. Replacing (1.13) by \textbf{(1.18)}
+	\begin{align*}
+		\operatorname{Re}\pi(u,v - uu)\ge\operatorname{Re}L(v - u),\ \forall v\in\mathcal{U}_{\rm ad},
+	\end{align*}
+	Theorem 1.2 remains valid.
+\end{remark}
+
+\begin{remark}[The Case $\mathcal{U}_{\rm ad} = \mathcal{U}$\footnote{In control problems this corresponds to the \fbox{case where there are no constraints}.}]
+	If $\mathcal{U}_{\rm ad} = \mathcal{U}$, in (1.13) we may take $v = u\pm\varphi$, where $\varphi$ is any element of $\mathcal{U}$ \& (1.13) becomes equivalent to \textbf{(1.19)}
+	\begin{align*}
+		\pi(u,\varphi) = L(\varphi),\ \forall\varphi\in\mathcal{U}.
+	\end{align*}
+	This is the \emph{Euler equation} of the problem.
+\end{remark}
+
+'' -- \cite[pp. 9--]{Lions1971}
+
 \subsection{A Direct Solution of Certain Variational Inequalities}
 
 \subsection{Examples}
