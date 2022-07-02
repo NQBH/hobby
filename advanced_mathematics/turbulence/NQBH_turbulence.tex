@@ -1,0 +1,156 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Turbulence}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter{\href{https://www.youtube.com/channel/UCcqQi9LT0ETkRoUu8eYaEkg}{Fluid Mechanics 101}}
+
+\section{\href{https://www.youtube.com/watch?v=fOB91zQ7HJU}{[CFD] The $k$-$\epsilon$ Turbulence Model}}
+\begin{flushright}
+	 Aidan Wimshurst, \textit{CFD Fundamentals}, Jun 2019.
+\end{flushright}
+
+\subsection{Overview}
+What is the standard $k$-$\epsilon$ model? How has the model evolved over time \& what variant am I using? What are the \textit{damping functions} \& why are they needed? What are the \textit{high-Re} \& \textit{low-Re} formulations of the $k$-$\epsilon$ model?
+
+\subsection{The Eddy Viscosity Hypothesis}
+The Reynolds Stress in the RANS equation needs to be modeled to close the equations:
+\begin{align*}
+	\partial_t(\rho{\bf u}) + \nabla\cdot(\rho{\bf u}{\bf u}) = -\nabla p + \nabla\cdot\left[\mu(\nabla{\bf u} + (\nabla{\bf u})^\top)\right] + \rho{\bf g} - \nabla\left(\frac{2}{3}\mu(\nabla\cdot{\bf u})\right) - \underbrace{\nabla\cdot(\overline{\rho{\bf u}'{\bf u}'})}_{\rm Reynolds-stress}.
+\end{align*}
+The most common approach is the Boussinesq hypothesis
+\begin{align*}
+	\underbrace{-\overline{\rho{\bf u}'{\bf u}'}}_{\mbox{\footnotesize Reynolds stress}} = \mu_t\underbrace{(\nabla{\bf u} + (\nabla{\bf u})^\top)}_{\mbox{\footnotesize Mean Velocity Gradients}} - \frac{2}{3}\rho k{\bf I} - \frac{2}{3}(\nabla\cdot{\bf u}){\bf I}.
+\end{align*}
+So $\mu_t$ needs to be calculated to close the equations.
+
+\subsection{Mixing Length Models}
+Older models used a \textit{mixing length} $l_m$ approach to calculate the \textit{eddy viscosity} $\mu_t$: $\mu_t = \rho k^{1/2}l_m$  or $\mu_t = \rho l_m^2|\partial_yU|$. The \textit{Prandtl mixing length hypothesis} supposes that $l_m = \kappa y$, $\kappa = 0.41$. The wall blocks the maximum size of the eddies.
+
+\subsection{Van Driest Mixing Model}
+The \textit{viscosity in the viscous sub-layer} dampens the eddies \& reduces their size. The \textit{Van Driest model} accounts for this damping: $l_m = \kappa y\left[1 - \exp(-y^+/A^+)\right]$, $A^+ = 26.0$.
+
+\subsection{The Scale of Turbulence}
+The mixing length is specified \textit{algebraically}, $\mu_t = \rho k^{1/2}l_m$. We would like to solve a \textit{transport equation} instead. Instead of $l_m$, solve for $\epsilon$: $\mu_t = C_\mu\frac{\rho k^2}{\epsilon}$. \textbf{Note.} We can calculate the mixing length from the turbulence dissipation rate. $l_m = \frac{C_\mu k^{3/2}}{\epsilon}$.
+
+\subsection{Transport Equation for $k$}
+The transport equation for $k$ is the \textit{same} in RNG, realizable \& standard $k$-$\epsilon$ models
+\begin{align*}
+	\underbrace{\partial_t(\rho k)}_{\rm Time} + \underbrace{\nabla\cdot(\rho{\bf u}k)}_{\rm Convection} = \underbrace{\nabla\cdot\left[\left(\mu + \frac{\mu_t}{\sigma_k}\right)\nabla k\right]}_{\rm Diffusion} + \underbrace{P_k + P_b - \rho\epsilon + S_k}_{\rm Sources + Sinks}.
+\end{align*}
+$P_k$ is the production due to mean velocity shear. $P_b$ is the production due to buoyancy. $S_k$ is a user-defined source.
+
+\subsection{Transport Equation for $\epsilon$}
+\begin{align*}
+	\underbrace{\partial_t(\rho\epsilon)}_{\rm Time} + \underbrace{\nabla\cdot(\rho{\bf u}\epsilon)}_{\rm Convection} = \underbrace{\nabla\cdot\left[\left(\mu + \frac{\mu_t}{\sigma_\epsilon}\right)\nabla\epsilon\right]}_{\rm Diffusion} + \underbrace{C_1\frac{\epsilon}{k}(P_k + C_3P_b) - C_2\rho\frac{\epsilon^2}{k} + S_\epsilon}_{\rm Source + Sinks}.
+\end{align*}
+The model coefficients $C_1,C_2$, \& $C_3$ vary between models. Once the transport equations for $k$ \& $\epsilon$ have been solved, we can compute $\mu_t$ by $\mu_t = C_\mu\frac{\rho k^2}{\epsilon}$.
+
+\subsection{Model Coefficients}
+The model coefficients for the standard $k$-$\epsilon$ model have evolved through time.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\textbf{Model} & $\sigma_k$ & $\sigma_\epsilon$ & $C_1$ & $C_2$ & $C_\mu$ \\
+		\hline
+		Jones \& Launder (1972) & 1.0 & 1.3 & \textbf{1.55} & \textbf{2.0} & 0.09 \\
+		\hline
+		Launder \& Spalding (1974) & 1.0 & 1.3 & \textbf{1.44} & \textbf{1.92} & 0.09 \\
+		\hline
+		Launder \& Sharma (1974) & 1.0 & 1.3 & \textbf{1.44} & \textbf{1.92} & 0.09 \\
+		\hline
+	\end{tabular}
+\end{table}
+The Launder \& Sharma (1974) coefficients are the most up-to-date. They are used Fluent, OpenFOAM, CFX \& Star.
+
+\subsection{Damping Functions}
+In the mixing length model, the mixing length was damped close to the wall (to account for viscosity) $l_m = \kappa y\left[1 - \exp(-y^+/A^+)\right]$, $A^+ = 26.0$. In the $k$-$\epsilon$ model, the \textit{model coefficients} $C_1,C_2$, \& $C_\mu$ are damped. The damping functions are termed $f_1,f_2$, \& $f_\mu$. Hence, the equations can be applied in the viscous sub-layer ($y^+ < 5$). This is called a \textit{low-Re formulation}.
+\begin{align*}
+	f_1 = 1,\ f_2 = 1 - 0.3\exp(-{\rm Re}_T^2),\ f_\mu = \exp\left(-\frac{3.4}{\left(1 + \frac{{\rm Re}_T}{50}\right)^2}\right).
+\end{align*}
+${\rm Re}_T$ is the \textit{turbulent Reynolds number} ${\rm Re}_T = \frac{\rho k^2}{\mu\epsilon}$. ${\rm Re}_T$ is the Reynolds number that characterizes the strength of the near wall turbulence relative to viscosity
+\begin{align*}
+	{\rm Re}_T = \frac{\mbox{Turbulent Forces}}{\mbox{Viscous Forces}} = \frac{\rho k^{1/2}l_m}{\mu}\mbox{ i.e. }\sim\frac{\rho UL}{\mu}.
+\end{align*}
+Substitute for the mixing length ${\rm Re}_T = \dfrac{\rho k^{1/2}}{\mu}\dfrac{k^{3/2}}{\epsilon} = \dfrac{\rho k^2}{\mu\epsilon}$. When ${\rm Re}_T$ is small, viscous effects dominate. ${\rm Re}_T$ is small when we are in the viscous sub-layer (a \textit{low-Re formulation}).
+
+\subsection{The Damping Function $f_\mu$}
+In a \textit{low-Re formulation} the turbulent\texttt{/}eddy viscosity is computed from $k$ \& $\epsilon$: $\mu_t = f_\mu C_\mu\frac{\rho k^2}{\epsilon}$. Launder \& Sharma (1974) propose: $f_\mu = \exp\left(-\frac{3.4}{\left(1 + \frac{{\rm Re}_T}{50}\right)^2}\right)$. Physically, the damping function is reducing the turbulent viscosity $\mu_t$ in \textit{every cell} in the mesh (not just wall adjacent cell). Hence, the laminar viscosity will dominate the diffusion term in the momentum equations: $\cdots + \nabla\cdot\left[(\mu + \mu_t)(\nabla{\bf u} + (\nabla{\bf u})^\top)\right] + \cdots$. The damping function is applied to every cell in the mesh. Far from the wall, $f_\mu = 1$ \& we return to the \textit{high-Re} formulation.
+
+\subsection{The Damping Function $f_1$}
+The damping function $f_1$ is applied to the \textit{production} of $\epsilon$:
+\begin{align*}
+	\partial_t(\rho\epsilon) + \nabla\cdot(\rho{\bf u}\epsilon) = \nabla\cdot\left[\left(\mu + \frac{\mu_t}{\sigma_\epsilon}\right)\nabla\epsilon\right] + C_1\frac{\epsilon}{k}(f_1P_k + C_3P_b) - C_2\rho\frac{\epsilon^2}{k} + S_\epsilon.
+\end{align*}
+Launder \& Jones (1972) find no noticeable improvement in implementing a damping function for $f_1$. $f_1 = 1$.
+
+\subsection{The Damping Function $f_2$}
+The damping function $f_2$ is applied to the \textit{dissipation} of $\epsilon$
+\begin{align*}
+	\partial_t(\rho\epsilon) + \nabla\cdot(\rho{\bf u}\epsilon) = \nabla\cdot\left[\left(\mu + \frac{\mu_t}{\sigma_\epsilon}\right)\nabla\epsilon\right] + C_1\frac{\epsilon}{k}(P_k + C_3P_b) - f_2C_2\rho\frac{\epsilon^2}{k} + S_\epsilon.
+\end{align*}
+Physically, $f_2$ reduces the dissipation of $\epsilon$ near the wall. Hence we got \textit{more dissipation} of $k$ near the wall. This is the expected action of viscosity. $f_2 = 1 - 0.3\exp(-{\rm Re}_T^2)$.
+
+\subsection{Summary}
+In a low-Re formulation, damping functions are applied to the model coefficients $C_\mu,C_1$, \& $C_2$. Hence, we can resolve the mesh down to the viscous sub-layer ($y^+ < 5$). Nowadays, the $k$-$\omega$ SST model is preferred for these applications. Hence, the $k$-$\epsilon$ model is usually preferred for \textit{high-Re} application ($y^+ > 30$), where separation, reattachment are not present.
+
+Refs.
+\begin{itemize}
+	\item W. P. Jones, B. E. Launder. The prediction of laminarization with a 2-equation model of turbulence. \textit{Int. Journal of Heat \& Mass Transfer}, 1972.
+	\item B. E. Launder, D. B. Spalding. The numerical computation of turbulent flows. \textit{Comp. Methods in App. Mech \& Engineering}, 1974.
+	\item B. E. Launder, B. I. Sharma. Application of the energy dissipation model of turbulence to the calculation of flow near a spinning disc. \textit{Letters in Heat \& Mass Transfer}, 1974.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\selectlanguage{english}
+\begin{thebibliography}{99}
+	\bibitem[]{}
+\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
