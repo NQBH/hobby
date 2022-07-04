@@ -335,6 +335,108 @@ With hypotheses (1.10), (1.11) only, we do not necessarily have uniqueness; clea
 	This is the \emph{Euler equation} of the problem.
 \end{remark}
 
+\begin{remark}[The Case $\mathcal{U}_{\rm ad} = \mbox{Cone}$]
+	Let us suppose \textbf{(1.20)} $\mathcal{U}_{\rm ad} =$ closed convex cone with vertex at the origin. Then (1.13) is equivalent to \textbf{(1.21)}
+	\begin{equation*}
+		\left\{\begin{split}
+			\pi(u,v)&\ge L(v),\ \forall v\in\mathcal{U}_{\rm ad},\\
+			\pi(u,u) &= L(u).
+		\end{split}\right.
+	\end{equation*}
+	In fact, in (1.13) we may replace $v$ by $v + u$ which gives the 1st inequality in (1.21): putting $r = 0$ in (1.13), we obtain $\pi(u,v)\le L(u)$ \& hence the inequality $\pi(u,v)\le L(u)$. Conversely, it is obvious that (1.21) implies (1.13).
+\end{remark}
+
+\begin{remark}[The case of a functional $v\to J(v)$ which is not necessarily quadratic]
+	Suppose that the function (or functional) $v\to J(v)$ is differentiable\footnote{Cf. J. Dieudonn\'e [1], Chap. 8, Sect. 1.} The proof of Theorem 1.2 is also applicable to
+	
+	\begin{theorem}
+		Assume that the function $v\to J(v)$ is strictly convex, differentiable \& satisfies (1.10) (the last hypothesis may be omitted if $\mathcal{U}_{\rm ad}$ is bounded). Then the unique element $u$ in $\mathcal{U}_{\rm ad}$ satisfying $J(u) = \inf_{v\in\mathcal{U}_{\rm ad}} J(v)$ is characterized by \textbf{(1.22)} $J'(u)\cdot(v - u)\ge 0$, $\forall v\in\mathcal{U}_{\rm ad}$.
+	\end{theorem}
+\end{remark}
+
+\subsubsection{Alternative Form of Variational Inequalities}
+The following results are very useful in a technical sense:
+
+\begin{theorem}
+	Let all the hypotheses of Theorem 1.3 be satisfied. Then the characterization (1.22) is equivalent to: \textbf{(1.23)} $J'(v)\cdot(v - u)\ge 0$, $\forall u\in\mathcal{U}_{\rm ad}$.
+\end{theorem}
+
+\begin{proof}
+	See \cite[p. 11]{Lions1971}.
+\end{proof}
+1st assume that the following result, which is important in its own right, is true:
+
+\begin{theorem}
+	Assume that the function $v\to J(v):\mathcal{U}\to\mathbb{R}$ is convex \& differentiable. Then the derivative $v\to J'(v):\mathcal{U}\to\mathcal{U}'$ is monotone, i.e., \textbf{(1.24)} $(J'(v) - J'(w))\cdot(v - w)\ge 0$, $\forall v,w\in\mathcal{U}$.
+\end{theorem}
+
+\begin{proof}
+	See \cite[p. 11]{Lions1971}.
+\end{proof}
+
+\begin{remark}
+	Summarizing: under the hypotheses of Theorem 1.3, we have \emph{3 equivalent formulations} of the problem:
+	\begin{itemize}
+		\item[(i)] the definition of the problem (when the minimum obtains): $J(u) = \inf_{v\in\mathcal{U}_{\rm ad}} J(v)$, $u\in\mathcal{U}_{\rm ad}$,
+		\item[(ii)] $J'(u)\cdot(v - u)\ge 0$, $\forall v\in\mathcal{U}_{\rm ad}$, $u\in\mathcal{U}_{\rm ad}$,
+		\item[(iii)] $J'(v)\cdot(v - u)\ge 0$, $\forall u\in\mathcal{U}_{\rm ad}$, $v\in\mathcal{U}_{\rm ad}$.
+	\end{itemize}
+\end{remark}
+
+\subsubsection{Function $f$ being the Sum of a Differentiable \& Non-Differentiable Function}
+If we assume that the function $v\to J(v)$ is coercive, lower semi-continuous in the weak topology \& strictly convex, then there exists a $u\in\mathcal{U}_{\rm ad}$ s.t. $J(u)\le J(v)$, $\forall u\in\mathcal{U}_{\rm ad}$. In this case it is clear that we cannot apply criteria (ii) \& (iii) of Remark 1.8. However, these criteria are still applicable to the differentiable part of $J$. More precisely, we have the following result:
+
+\begin{theorem}
+	Consider the function \textbf{(1.26)} $J(v) = J_1(v) + J_2(v)$ where we assume that the functions $J_i(v)$, $i = 1,2$, are continuous, convex, \& lower semi-continuous in the weak topology. Further let $J(v)\to+\infty$ as $\|v\|\to+\infty$, $v\in\mathcal{U}_{\rm ad}$. We assume that the function $v\to J_1(v)$ is differentiable, but $J_2$ is not necessarily differentiable. Finally assume that $J$ is strictly convex. Then the unique element $u\in\mathcal{U}_{\rm ad}$ s.t. $J(u) = \inf_{v\in\mathcal{U}_{\rm ad}} J(v)$ is characterized by \textbf{(1.27)}
+	\begin{align*}
+		J_1'(u)\cdot(v - u) + J_2(v) - J_2(u)\ge 0,\ \forall u\in\mathcal{U}_{\rm ad}.
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	See \cite[pp. 12--13]{Lions1971}.
+\end{proof}
+
+\begin{remark}
+	Putting $J_2 = 0$, it is clear that Theorem 1.6 contains Theorems 1.3 \& 1.4.
+\end{remark}
+
+\begin{remark}
+	Suppose that $J$ is of the form \textbf{(1.28)} $J(v) = J_0(v) + J_1(v) + J_2(v)$, where the $J_i$'s satisfy the same hypotheses as in Theorem 1.6 \& the functions $J_0$ \& $J_1$ are differentiable. Then the unique element $u$ s.t. $J(u) = \inf_{v\in\mathcal{U}_{\rm ad}} J(v)$ is characterized by 1 of the following equivalent conditions: \textbf{(1.29)--(1.30)}
+	\begin{align*}
+		J_0'(u)\cdot(v - u) + J_1'(u)\cdot(v - u) + J_2(v) - J_2(u)&\ge 0,\ \forall v\in\mathcal{U}_{\rm ad},\\
+		J_0'(u)\cdot(v - u) + J_1'(v)\cdot(v - u) + J_2(v) - J_2(u)&\ge 0,\ \forall v\in\mathcal{U}_{\rm ad}.
+	\end{align*}
+\end{remark}
+
+\begin{remark}
+	In case we only have existence of the minimizing element $u$ of $\mathcal{U}_{\rm ad}$ but not necessarily uniqueness, any 1 of the variational inequalities we have obtained characterizes the set of elements in $\mathcal{U}_{\rm ad}$ determining the minimum.
+\end{remark}
+In applications to control problems an element $u\in\mathcal{U}_{\rm ad}$ which determines the minimum is termed ``optimal control''.
+
+\begin{remark}
+	All the preceding results, without any change in their proofs are true when $\mathcal{U}$ is a reflexive Banach space.
+\end{remark}
+
+\subsubsection{The Convexity Hypothesis on $\mathcal{U}_{\rm ad}$}
+So far we have assumed that $\mathcal{U}_{\rm ad}$ is \textit{convex}. The following development shows how we may obtain a (simple) necessary condition for extremality in case $\mathcal{U}_{\rm ad}$ is assumed to be only \textit{closed} in $\mathcal{U}$.
+
+\begin{definition}
+	Let $\mathcal{U}_{\rm ad}$ be closed \& let $u\in\mathcal{U}_{\rm ad}$. Define, \textbf{(1.31)}
+	\begin{align*}
+		\mathcal{C}(\mathcal{U}_{\rm ad};u)\coloneqq\left\{w|w\in\mathcal{U};\mbox{ there exists } u_n\in\mathcal{U}_{\rm ad}\mbox{ and }\lambda_n > 0,\mbox{ s.t. } u_n\to u\mbox{ and }\lambda_n(u_n - u)\to w\mbox{ in }\mathcal{U}\right\}.
+	\end{align*}
+\end{definition}
+It may be easily verified that \textbf{(1.32)}
+\begin{align*}
+	\mathcal{C}(\mathcal{U}_{\rm ad};u)\mbox{ is a closed cone with its vertex at }\{0\}.
+\end{align*}
+We then have
+
+\begin{theorem}
+	Let $v\to J(v)$ be a function which is differentiable \& let $u$ be an element (assumed to exist) of $\mathcal{U}_{\rm ad}$ s.t. $J(u)\le J(v)$, $\forall v\in\mathcal{U}_{\rm ad}$. Then \textbf{(1.33)} $J'(v)\cdot w\ge 0$, $\forall w\in\mathcal{C}(\mathcal{U}_{\rm ad};u)$.
+\end{theorem}
+
 '' -- \cite[pp. 9--]{Lions1971}
 
 \subsection{A Direct Solution of Certain Variational Inequalities}
@@ -368,6 +470,14 @@ With hypotheses (1.10), (1.11) only, we do not necessarily have uniqueness; clea
 \section{Control of Systems Governed by Hyperbolic Equations or by Equations which are well Posed in the Petrowsky Sense}
 
 \section{Regularization, Approximation \& Penalization}
+
+\subsection{Regularization}
+
+\subsubsection{Parabolic Regularization}
+
+\subsubsection{Approximation in Terms of Systems of Cauchy--Kowaleska Type}
+
+\subsubsection{Penalization}
 
 %------------------------------------------------------------------------------%
 
