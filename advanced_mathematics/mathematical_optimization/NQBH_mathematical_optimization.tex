@@ -701,6 +701,71 @@ Evidently, every linear operator is convex. In the following, we write the stric
 \end{theorem}
 The proof of the above theorem can be found in, e.g., Luenberger [Lue69]. In the literature, the condition (6.4) is usually referred to as the \textit{Slater condition}. It can only be satisfied if the cone $K$ has nonempty interior. This excludes, e.g., the case $K = \{0\}$, which corresponds to the equality constraint $G(u) = 0$. In this case, the above theorem fails to apply, but other existence results concerning Lagrange multipliers are available. The lack of interior points is a much more serious problem in the following situation.
 
+\begin{example}
+	Consider the natural nonnegative cone in $Z = L^2(0,1)$, $K = \{z(\cdot)\in L^2(0,1);z(x)\ge 0\mbox{ for a.e. }x\in(0,1)\}$. Quite unexpectedly, we have $\operatorname{int}K = \emptyset$. How can this be possible? One is tempted to believe that, e.g., $z(x)\equiv 1$ is an interior point of $K$. Unfortunately, this is not true. In fact, the sequence $\{v_n\}_{n=1}^\infty\subset L^2(\Omega)$ with
+	\begin{equation*}
+		v_n(x) = \left\{\begin{split}
+			&1&&\mbox{in }\left[0,1 - \frac{1}{n}\right),\\
+			-&1&&\mbox{in }\left[1 - \frac{1}{n},1\right],
+		\end{split}\right.
+	\end{equation*}
+	while obviously converging to $z$ w.r.t. the $L^2$ norm, is not contained in $K$. Consequently, $z\notin\operatorname{int} K$. This undesired behavior is simply a consequence of the fact that the $L^2$ norm, \& likewise any other $L^p$ norm with $1\le p < \infty$, measures an integral \& not the maximal absolute value of a function. This fact constitutes a major obstacle in the treatment of optimization problems in function spaces.
+\end{example}
+
+\begin{theorem}
+	Suppose that the mappings $f$ \& $G$ in Theorem 6.1 are G\^ateaux differentiable at $\overline{u}$. Then we have the variational inequality $D_uL(\overline{u},z^\star)(u - \overline{u})\ge 0$, $\forall u\in C$.
+\end{theorem}
+Here \& in the following, $D_u$ again denotes the partial G\^ateaux or Fr\'echet derivative w.r.t. $u$. The assertion is an immediate consequence of the saddle point condition (6.3), which implies that $\overline{u}$ solves the problem without the constraint $G(u)\le_K 0$, namely $L(\overline{u},z^\star) = \min_{u\in C} L(u,z^\star)$. The associated variational inequality reads, in explicit form,
+\begin{align*}
+	f'(\overline{u})(u - \overline{u}) + \langle z^\star,G'(\overline{u})(u - \overline{u})\rangle_{Z^\star,Z},\ \forall u\in C,
+\end{align*}
+or, equivalently,
+\begin{align*}
+	\langle f'(\overline{u}) + G'(u)^\star z^\star,u - \overline{u}\rangle_{U^\star,U}\ge 0,\ \forall u\in C.
+\end{align*}
+In the unconstrained case where $C = U$, we get the equation $f'(\overline{u}) + G'(\overline{u})^\star z^\star = 0\in U^\star$.
+
+\textbf{Examples.} We illustrate the application \& limitations of the above theorems by means of simple examples that do not involve PDEs.
+
+\paragraph{1-sided box constraints in $L^2(0,1)$.} Let $u_d\in L^2(0,1)$ be given. We consider the minimization problem \textbf{(6.6)}
+\begin{align*}
+	\min f(u)\coloneqq\frac{1}{2}\int_0^1 |u(x) - u_d(x)|^2\,{\rm d}x\mbox{ subject to } u(x)\le 0\mbox{ for a.e. } x\in(0,1).
+\end{align*}
+The above problem is a special case of problem (6.1), with the specifications $U = Z = L^2(0,1)$ \& $G = I$ (the identity mapping). The associated convex cone $K$ is the set of almost-everywhere nonnegative elements of $L^2(0,1)$, \& we have $C = U$. The problem has a unique minimizer $\overline{u}$, namely, $\overline{u}(x) = \min\{u_d(x),0\}$. We investigate whether there exists an associated Lagrange multiplier. The corresponding Lagrangian function reads
+\begin{align*}
+	L(u,\mu) = f(u) + (\mu,G(u))_{L^2(0,1)} = \int_0^1 \left(\frac{1}{2}(u(x) - u_d(x))^2 + \mu(x)u(x)\right)\,{\rm d}x.
+\end{align*}
+Here, by the Riesz representation theorem, the functional $z^\star\in Z^\star$ has been identified with some function $\mu\in L^2(0,1)$. We search for a Lagrange multiplier $\mu\in L^2(0,1)$. Since $\operatorname{int}K = \emptyset$, Theorem 6.1 does not apply. Instead, the Lagrange multiplier is constructed using a pointwise approach. To this end, recall that, owning to Lemma 2.21 on p. 63, we have the variational inequality
+\begin{align*}
+	\int_0^1 (\overline{u}(x) - u_d(x))(u(x) - \overline{u}(x))\,{\rm d}x\ge 0,\ \forall u(\cdot)\le 0.
+\end{align*}
+This can only be true if the implications
+\begin{align*}
+	\overline{u}(x) < 0&\Rightarrow\overline{u}(x) - u_d(x) = 0,\\
+	\overline{u}(x) = 0&\Rightarrow\overline{u}(x) - u_d(x)\le 0,
+\end{align*}
+are valid a.e. But then $\overline{u}(x) - u_d(x)$ must be nonpositive a.e. Since we have used arguments of this kind repeatedly in Chap. 2, we do not explain this in detail here. We now define $\mu(x)\coloneqq-f'(\overline{u})(x) = -(\overline{u}(x) - u_d(x))$. Then, owing to the above implications, we have $\mu\ge 0$ as well as $\mu(x)\overline{u}(x) = 0$ for a.e. $x\in(0,1)$, which is the \textit{pointwise form of the complementary slackness condition} (6.5). Finally, it follows from the definition of $\mu$ that $\mu = -f'(\overline{u})$, i.e., $f'(\overline{u}) + \mu = 0$, which, in turn, is equivalent to the equation $D_uL(\overline{u},\mu) = 0$. Hence, the function $\mu$ defined above is a Lagrange multiplier.
+
+\paragraph{2-sided box constraints in $L^2(0,1)$.} We now consider the above minimization problem with the same functional $f$ as in (6.6), but this time with constraints from both above \& below: \textbf{(6.7)}
+\begin{align*}
+	\min f(u)\mbox{ subject to } -1\le u(x)\le 1\mbox{ for a.e. } x\in(0,1).
+\end{align*}
+Again, we put $C = U = L^2(0,1)$, \& we cast the constraints in the form $u(x) - 1\le 0$, $-u(x) - 1\le 0$. We then have to choose $Z = L^2(0,1)\times L^2(0,1)$ \& $K = L^2(0,1)+\times L^2(0,1)_+$, where $L^2(0,1)_+$ denotes the set of a.e. nonnegative elements of $L^2(0,1)$. The convex operator $G:L^2(0,1)\to L^2(0,1)\times L^2(0,1)$ is defined by $G(u)\coloneqq(u(\cdot) - 1,-u(\cdot) - 1)^\top$.
+
+Although the function $\widetilde{u}(x)\equiv 0$ obeys both inequalities strictly, we again have $\operatorname{int}K = \emptyset$ \& thus cannot employ Theorem 6.1. However, the construction used in Sect. 1.4.7 works. The Lagrangian is now given by
+\begin{align*}
+	L(u,\mu) = L(u,\mu_a,\mu_b) = \frac{1}{2}\|u - u_d\|_{L^2(0,1)}^2 + (-u - 1,\mu_a)_{L^2(0,1)} + (u - 1,\mu_b)_{L^2(0,1)}.
+\end{align*}
+We make the pointwise definitions \textbf{(6.8)} $\mu_a(x) = (f'(x))_+ = (\overline{u}(x) - u_d(x))_+$, $\mu_b(x) = (f'(x))_- = (\overline{u}(x) - u_d(x))_-$, where, as usual, $z_+ = \frac{z + |z|}{2}$ \& $z_- = \frac{|z| - z}{2}$. Obviously, $\mu_a$ \& $\mu_b$ are nonnegative. The reader will be asked in Exercise 6.2 to check that the arguments from Sect. 1.4.7 carry over almost unchanged to give $D_uL(\overline{u},\mu) = f'(\overline{u}) + \mu_b - \mu_a = 0$ \& the slackness conditions $(-\overline{u} - 1,\mu_a)_{L^2(0,1)} = (\overline{u} - 1,\mu_b)_{L^2(0,1)} = 0$. Consequently, $\mu_a$ \& $\mu_b$ are Lagrange multipliers for $\overline{u}$.
+
+If we assume $u_d\in L^\infty(0,1)$, then both multipliers belong to $L^\infty(0,1)$. This nice byproduct of the pointwise construction follows from the fact that $\overline{u} - u_d\in L^\infty(0,1)$.
+
+\begin{remark}
+	The problem with 2-sided constraints could also be considered in the space $L^\infty(0,1)$, since in this case every admissible control $u$ is automatically bounded \& measurable. Moreover, the cone $K$ of nonnegative functions in $L^\infty(0,1)$ has interior points, \& $\widetilde{u}(x)\equiv 0$ satisfies the Slater condition. Theorem 6.1 then yields the existence of Lagrange multipliers $\mu_a,\mu_b\in L^(0,1)^\star$. However, we do not gain much benefit from this result, since $L^\infty(0,1)^\star$ is a space of continuous linear functionals that need not even measures.
+\end{remark}
+
+\subsubsection{Differentiable problems}
+
 \subsection{Control Problems with State Constraints}
 
 \section{Supplementary Results on PDEs}
