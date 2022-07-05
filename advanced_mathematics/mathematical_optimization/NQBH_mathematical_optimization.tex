@@ -183,10 +183,6 @@ Some techniques such as \href{https://en.wikipedia.org/wiki/Kernel_(image_proces
 
 %------------------------------------------------------------------------------%
 
-\chapter{\href{formsolver.com}{Formsolver.com}}
-
-%------------------------------------------------------------------------------%
-
 \part{Optimal Control}
 
 \chapter{\cite{Lions1971}. Optimal Control of Systems Governed by PDEs}
@@ -424,7 +420,7 @@ So far we have assumed that $\mathcal{U}_{\rm ad}$ is \textit{convex}. The follo
 \begin{definition}
 	Let $\mathcal{U}_{\rm ad}$ be closed \& let $u\in\mathcal{U}_{\rm ad}$. Define, \textbf{(1.31)}
 	\begin{align*}
-		\mathcal{C}(\mathcal{U}_{\rm ad};u)\coloneqq\left\{w|w\in\mathcal{U};\mbox{ there exists } u_n\in\mathcal{U}_{\rm ad}\mbox{ and }\lambda_n > 0,\mbox{ s.t. } u_n\to u\mbox{ and }\lambda_n(u_n - u)\to w\mbox{ in }\mathcal{U}\right\}.
+		\mathcal{C}(\mathcal{U}_{\rm ad};u)\coloneqq\left\{w|w\in\mathcal{U};\mbox{ there exists } u_n\in\mathcal{U}_{\rm ad}\mbox{ \& }\lambda_n > 0,\mbox{ s.t. } u_n\to u\mbox{ \& }\lambda_n(u_n - u)\to w\mbox{ in }\mathcal{U}\right\}.
 	\end{align*}
 \end{definition}
 It may be easily verified that \textbf{(1.32)}
@@ -483,10 +479,12 @@ We then have
 
 \chapter{\cite{Troltzsch2010}. Optimal Control for PDEs}
 
-\section{Introduction}
-``The mathematical optimization of process governed by PDEs has seen considerable progress in the past decade. Ever faster computational facilities \& newly developed numerical techniques have opened the door to important practical applications in fields e.g. fluid flow, microelectronics\footnote{\textbf{microelectronics} [n] [uncountable] the design, production \& use of very small electronic circuits.}, crystal\footnote{\textbf{crystal} [n] \textbf{1.} [countable] a small piece of a substance with many even sides, that is formed naturally when the substance becomes solid; in chemistry, a \textbf{crystal} is any solid that has its atoms, ions or molecules arranged in an ordered, symmetrical way; \textbf{2.} [uncountable] a clear mineral, e.g. quartz, used in making decorative objects.} growth, vascular\footnote{\textbf{vascular} [a] [usually before noun] (\textit{medical}) connected with or containing veins.} surgery\footnote{\textbf{surgery} [n] \textbf{1.} [uncountable, countable] medical treatment of injuries or diseases that involves cutting open a person's body, sewing up wounds, etc.; \textbf{2.} [countable] (\textit{British English}) a place where a doctor sees patients; \textbf{3.} [countable] (\textit{British English}) a time during which a doctor, an MP or another professional person is available to see people.}, \& cardiac\footnote{\textbf{cardiac} [a] [only before noun] (\textit{medical}) connected with the heart or heart disease; if somebody has a \textbf{cardiac arrest}, their heart suddenly stops temporarily or permanently.} medicine, to name just a few. As a consequence, the communities of numerical analysts \& optimizers have taken a growing interest in applying their methods to optimal control problems involving PDEs $\ldots$'' [$\ldots$] ``$\ldots$ the comprehensive text by J.-L. Lions \cite{Lions1971} covers much of the theory of linear equations \& convex cost functionals.'' -- \cite[Preface to the German edition, p. xiii]{Troltzsch2010}
+\section*{Preface}
+``The sections dealing with gradient methods were shortened in order to make space for \textit{primal-dual active set strategies}; the exposition of the latter now leads to the systems of linear equations to be solved.'' -- \cite[Preface to the English edition, p. xi]{Troltzsch2010}
 
-\cite{Troltzsch2010} focuses on basic concepts \& notions e.g.:
+``The mathematical optimization of process governed by PDEs has seen considerable progress in the past decade. Ever faster computational facilities \& newly developed numerical techniques have opened the door to important practical applications in fields e.g. fluid flow, microelectronics\footnote{\textbf{microelectronics} [n] [uncountable] the design, production \& use of very small electronic circuits.}, crystal\footnote{\textbf{crystal} [n] \textbf{1.} [countable] a small piece of a substance with many even sides, that is formed naturally when the substance becomes solid; in chemistry, a \textbf{crystal} is any solid that has its atoms, ions or molecules arranged in an ordered, symmetrical way; \textbf{2.} [uncountable] a clear mineral, e.g. quartz, used in making decorative objects.} growth, vascular\footnote{\textbf{vascular} [a] [usually before noun] (\textit{medical}) connected with or containing veins.} surgery\footnote{\textbf{surgery} [n] \textbf{1.} [uncountable, countable] medical treatment of injuries or diseases that involves cutting open a person's body, sewing up wounds, etc.; \textbf{2.} [countable] (\textit{British English}) a place where a doctor sees patients; \textbf{3.} [countable] (\textit{British English}) a time during which a doctor, an MP or another professional person is available to see people.}, \& cardiac\footnote{\textbf{cardiac} [a] [only before noun] (\textit{medical}) connected with the heart or heart disease; if somebody has a \textbf{cardiac arrest}, their heart suddenly stops temporarily or permanently.} medicine, to name just a few. As a consequence, the communities of numerical analysts \& optimizers have taken a growing interest in applying their methods to optimal control problems involving PDEs; at the same time, the demand from students for this expertise has increased, \& there is a growing need for textbooks that provide an introduction to the fundamental concepts of the corresponding mathematical theory.'' [$\ldots$] ``$\ldots$ the comprehensive text by J.-L. Lions \cite{Lions1971} covers much of the theory of linear equations \& convex cost functionals.''
+
+\cite{Troltzsch2010} focuses ``on basic concepts \& notions e.g.:
 \begin{itemize}
 	\item Existence theory for linear \& semilinear PDEs
 	\item Existence of optimal controls
@@ -494,10 +492,17 @@ We then have
 	\item 2nd-order sufficient optimality conditions
 	\item Foundation of numerical methods
 \end{itemize}
+In this connection, we will always impose constraints on the control functions, \& sometimes also on the state of the system under study. In order to keep the exposition to a reasonable length, we will not address further important subjects such as \textit{controllability, Riccati equations, discretization, error estimates}, \& \textit{Hamilton--Jacobi--Bellman theory}.
 
-\begin{question}
-	What is optimal control?
-\end{question}
+The 1st part of the textbook deals with convex problems involving quadratic cost functionals \& linear elliptic or parabolic equations. While these results are rather standard \& have been treated comprehensively in \cite{Lions1971}, they are well suited to facilitating the transition to problems involving semilinear equations. In order to make the theory more accessible to readers having only minor knowledge of these fields, some basic notions from functional analysis \& the theory of linear elliptic \& parabolic PDEs will also be provided.
+
+The focus of the exposition is on nonconvex problems involving semilinear equations. Their treatment requires new techniques from analysis, optimization, \& numerical analysis, which to a large extent can presently be found only in original papers. In particular, fundamental results due to E. Casas \& J.-P. Raymond concerning the boundedness \& continuity of solutions to semilinear equations will be needed.
+
+This textbook is mainly devoted to the analysis of the problems, although numerical techniques will also be addressed. Numerical methods could easily fill another book. Our exposition is confined to brief introductions to the basis ideas, in order to give the reader an impression of how the theory can be realized numerically. Much attention will be paid to revealing hidden mathematical difficulties that, as experiences shows, are likely to be overlooked.'' -- \cite[Preface to the German edition, pp. xiii--xiv]{Troltzsch2010}
+
+\section{Introduction \& Examples}
+
+\subsection{What is Optimal Control?}
 ``The mathematical theory of optimal control has in the past few decades rapidly developed into an important \& separate field of applied mathematics. 1 area of application of this theory lies in aviation\footnote{\textbf{aviation} [n] [uncountable] the activity of designing, building \& flying aircraft.} \& space technology: aspects of optimization come into play whenever the motion of an aircraft or a space vessel\footnote{\textbf{vessel} [n] \textbf{1.} a tube that carries blood through the body of a person or an animal, or liquid through the parts of a plant; \textbf{2.} (\textit{formal}) a large ship or boat; \textbf{3.} (\textit{formal}) a container used for holding liquids, e.g. a bowl or cup.} (which can be modeled by ODEs) has to follow a trajectory\footnote{\textbf{trajectory} [n] (plural \textbf{trajectories}) (\textit{specialist}) \textbf{1.} the curved part of something that has been fired, hit or thrown into the air; \textbf{2.} the way in which a person, an event or a process develops over a period of time, often leading to a particular result.} that is ``optimal'' in a sense to be specified.'' -- \cite[Sect. 1.1: \textit{What is optimal control?}, p. 1]{Troltzsch2010}
 
 All the essential features of an \textit{optimal control problem}:
@@ -624,8 +629,81 @@ In the linear-quadratic case, the theory of hyperbolic problems has many similar
 
 \subsubsection{Problems involving semilinear parabolic equations}
 
-\section*{Quick notes}
-\textit{Primal-dual active set strategies}, whose the exposition now leads to the systems of linear equations to be solved.
+\subsection{Basic Concepts for the Finite-Dimensional Case}
+
+\section{Linear-Quadratic Elliptic Control Problems}
+
+\section{Linear-Quadratic Parabolic Control Problems}
+
+\section{Optimal Control of Semilinear Elliptic Equations}
+
+\section{Optimal Control of Semilinear Parabolic Equations}
+
+\section{Optimization Problems in Banach Spaces}
+
+\subsection{The Karush--Kuhn--Tucker Conditions}
+
+\subsubsection{Convex problems}
+
+\paragraph{The Lagrange multiplier rule.} ``The formal Lagrange method, which was employed repeatedly in the previous chapters, has a rigorous mathematical foundation. In this section, we introduce the basics of this theory needed for understanding problems with state constraints. The corresponding proofs \& further results can be found in texts dealing with optimization in general spaces. The theory of convex problems is described in Balakrishnan [Bal65], Barbu \& Precupanu [BP78], \& Ekeland \& Temam [ET74]; nonconvex differentiable problems are treated in, e.g., Ioﬀe \& Tihomirov [IT79], Jahn [Jah94], Luenberger [Lue69], \& Tr\"oltzsch [Tr\"o84b].
+
+There are numerous books dealing with the theory \& numerical treatment of nonlinear differentiable finite-dimensional optimization problems. In this connection, we refer the interested reader to Alt [Alt02], Gill et al. [GMW81], Grossmann \& Terno [GT97b], Kelley [Kel99], Luenberger [Lue84], Nocedal \& Wright [NW99], Polak [Pol97], \& Wright [Wri93], to name just a few.
+
+In the following, we generally assume that $U$ \& $Z$ are real Banach spaces, $G:U\to Z$ is in general a nonlinear mapping, \& $C\subset U$ is a nonempty \& convex set.
+
+\begin{definition}[Convex cone]
+	A convex set $K\subset Z$ is said to be a \emph{convex cone} if $\lambda z\in K$ whenever $z\in K$ \& $\lambda > 0$.
+\end{definition}
+Any convex cone induces a partial ordering $\ge_K$ in the space $Z$:
+
+\begin{definition}
+	Let $K\subset Z$ be a convex cone. We write $z\ge_K 0$ iff $z\in K$. Analogously, we write $z\le_K 0$ iff $-z\in K$.
+\end{definition}
+The elements in $K$ are said to be \textit{nonnegative}. Note, however, that nonnegativity in the sense of this definition does not imply the usual nonnegativity in the set of real numbers, as the following example shows.
+
+\begin{example}
+	Let $Z = \mathbb{R}^3$, \& let $K = \{z\in\mathbb{R}^3;z_1 = 0,\ z_2\le 0,\ z_3\ge 0\}$. Then $K$ is evidently a convex cone, but $z\ge_K 0$ implies nonnegatively only for $z_3$.
+\end{example}
+The next definition enables us to introduce a notion of ``nonnegativity'' also in dual spaces. This notion will be needed for defining Lagrange multipliers, because they are elements of dual spaces.
+
+\begin{definition}[Dual cone]
+	Let $K\subset Z$ be a convex cone. Then the set $K^+ = \{z^\star\in Z^\star;\langle z^\star,z\rangle_{Z^\star,Z}\ge 0,\ \forall z\in K\}$ is called the \emph{dual cone} of $K$.
+\end{definition}
+
+\begin{example}
+	\begin{itemize}
+		\item[(i)] Let $Z = L^2(\Omega)$ with a bounded domain $\Omega\subset\mathbb{R}^N$, \& let $K = \{z\in L^2(\Omega);z({\bf x})\ge 0\mbox{ for a.e. }{\bf x}\in\Omega\}$. Here, we have $Z = Z^\star$ by the Riesz representation theorem \& $K^+ = K$ according to Exercise 6.1.
+		\item[(ii)] Let $Z$ be a Banach space \& let $K = \{0\}$. Then $z\ge_K 0$ iff $z = 0$, \& thus $K^+ = Z^\star$; in fact, for any $z^\star\in Z^\star$ we have $\langle z^\star,0\rangle_{Z^\star,Z} = 0\ge 0$.
+		\item[(iii)] If $K = Z$, then all elements of $Z$ are nonnegative. Hence, $K^+ = \{0\}$ with the zero functional $0\in Z^\star$.
+	\end{itemize}
+\end{example}
+Below we consider the following optimization problem in a Banach space: \textbf{(6.1)}
+\begin{align*}
+	\min f(u),\ G(u)\le_K 0,\ u\in C.
+\end{align*}
+The constraints in (6.1) are viewed differently: as a ``complicated'' inequality $G(u)\le_K 0$, which is to be eliminated by means of a Lagrange multiplier, \& a ``simple'' constraint $u\in C$, which is accounted fr explicitly. This motivates the following definition.
+
+\begin{definition}[Lagrange function]
+	The function $L:U\times Z^\star\to\mathbb{R}$, \textbf{(6.2)} $L(u,z^\star) = f(u) + \langle z^\star,G(u)\rangle_{Z^\star,Z}$, is called the \emph{Lagrange function}. Any $(\overline{u},z^\star)\in U\times K^+$ satisfying the chain of inequalities \textbf{(6.3)} $L(\overline{u},v^\star)\le L(\overline{u},z^\star)\le L(u,z^\star)$, $\forall u\in C$, $\forall v^\star\in K^+$ is called a \emph{saddle point} of $L$. If this is the case, $z^\star$ is said to be a \emph{Lagrange multiplier} associated with $\overline{u}$.
+\end{definition}
+In the previous chapters, when dealing with the optimal control of PDEs we denoted the Lagrangian by $\mathcal{L}$. To facilitate the distinction, we use the letter $L$ here. The existence of saddle points is most easily shown for \textit{convex} optimization problems.
+
+\begin{definition}
+	Let $U$ be a Banach space, \& let the convex cone $K\subset Z$ induce the partial ordering $\ge_K$ in the Banach space $Z$. An operator $G:U\to Z$ is said to be \emph{convex} (w.r.t. $\le_K$) if
+	\begin{align*}
+		G(\lambda u + (1 - \lambda)v)\le_K\lambda G(u) + (1 - \lambda)G(u),\ \forall u,v\in U,\ \forall\lambda\in(0,1).
+	\end{align*}
+\end{definition}
+Evidently, every linear operator is convex. In the following, we write the strict inequality $z <_K 0$ iff $-z$ is an \textit{interior point} of $K$, i.e., $z <_K 0\Leftrightarrow-z\in\operatorname{int}K$.
+
+\begin{theorem}
+	Suppose that a convex functional $f:U\to\mathbb{R}$, a convex operator $G:U\to Z$, \& a solution $\overline{u}$ to the problem (6.1) are given. Moreover, let there exist some $\widetilde{u}\in C$ s.t. $G(\widetilde{u}) <_K 0$, i.e., \textbf{(6.4)} $-G(\widetilde{u})\in\operatorname{int} K$. Then there is some $z^\star\in K^+$ s.t. $(\overline{u},z^\star)$ is a saddle point of the Lagrangian $L$. In addition, we have the complementary slackness condition \textbf{(6.5)} $\langle z^\star,G(\overline{u})\rangle_{Z^\star,Z} = 0$.
+\end{theorem}
+The proof of the above theorem can be found in, e.g., Luenberger [Lue69]. In the literature, the condition (6.4) is usually referred to as the \textit{Slater condition}. It can only be satisfied if the cone $K$ has nonempty interior. This excludes, e.g., the case $K = \{0\}$, which corresponds to the equality constraint $G(u) = 0$. In this case, the above theorem fails to apply, but other existence results concerning Lagrange multipliers are available. The lack of interior points is a much more serious problem in the following situation.
+
+\subsection{Control Problems with State Constraints}
+
+\section{Supplementary Results on PDEs}
 
 %------------------------------------------------------------------------------%
 
