@@ -761,10 +761,113 @@ We make the pointwise definitions \textbf{(6.8)} $\mu_a(x) = (f'(x))_+ = (\overl
 If we assume $u_d\in L^\infty(0,1)$, then both multipliers belong to $L^\infty(0,1)$. This nice byproduct of the pointwise construction follows from the fact that $\overline{u} - u_d\in L^\infty(0,1)$.
 
 \begin{remark}
-	The problem with 2-sided constraints could also be considered in the space $L^\infty(0,1)$, since in this case every admissible control $u$ is automatically bounded \& measurable. Moreover, the cone $K$ of nonnegative functions in $L^\infty(0,1)$ has interior points, \& $\widetilde{u}(x)\equiv 0$ satisfies the Slater condition. Theorem 6.1 then yields the existence of Lagrange multipliers $\mu_a,\mu_b\in L^(0,1)^\star$. However, we do not gain much benefit from this result, since $L^\infty(0,1)^\star$ is a space of continuous linear functionals that need not even measures.
+	The problem with 2-sided constraints could also be considered in the space $L^\infty(0,1)$, since in this case every admissible control $u$ is automatically bounded \& measurable. Moreover, the cone $K$ of nonnegative functions in $L^\infty(0,1)$ has interior points, \& $\widetilde{u}(x)\equiv 0$ satisfies the Slater condition. Theorem 6.1 then yields the existence of Lagrange multipliers $\mu_a,\mu_b\in L^\infty(0,1)^\star$. However, we do not gain much benefit from this result, since $L^\infty(0,1)^\star$ is a space of continuous linear functionals that need not even measures.
 \end{remark}
 
 \subsubsection{Differentiable problems}
+
+\paragraph{Lagrange multiplier rules \& constraint qualifications.} We now investigate the problem (6.1) without assuming $f$ \& $G$ to be convex. We consider $\min f(u)$, $G(u)\le_K 0$, $u\in C$, where $C$ is still convex. Instead of convexity, we postulate the Fr\'echet differentiability of $f$ \& $G$. We use the same Lagrangian function $L = L(u,z^\star)$ as in Sect. 6.1.1, but, in view of the nonconvexity, we can no longer expect a saddle point property to be valid. Therefore, Lagrange multipliers are defined in a slightly different way.
+
+\begin{definition}[Local solution]
+	Let $\overline{u}\in U$ be admissible. We call $\overline{u}$ a \emph{local solution} of the minimization problem (6.1) if there is some $\varepsilon > 0$ s.t. $f(\overline{u})\le f(u)$, $\forall u\in C$ with $G(u)\le_K 0$ \& $\|u - \overline{u}\|_U\le\varepsilon$.
+\end{definition}
+
+\begin{definition}[Lagrange multiplier]
+	Let $\overline{u}$ be a local solution to the problem (6.1). Then any $z^\star\in K^+$ satisfying the conditions \textbf{(6.9)--(6.10)}
+	\begin{align*}
+		D_uL(\overline{u},z^\star)(u - \overline{u})&\ge 0,\ \forall u\in C,\\
+		\langle z^\star,G(\overline{u})\rangle_{Z^\star,Z} &= 0
+	\end{align*}
+	is called a \emph{Lagrange multiplier} associated with $\overline{u}$.
+\end{definition}
+In order that the existence of such a Lagrange multiplier be guaranteed, a so-called \textit{constraint qualification} must be postulated. Since such a condition involves the locally optimal control itself, it usually cannot be verified without knowledge of this function. There are various constraint qualifications. A rather general one, which suffices for our purposes, is the \textit{Zowe--Kurcyusz condition} (see Zowe \& Kurcyusz [ZK79]).
+
+\begin{definition}
+	Suppose that $\overline{u}\in C$ with $G(\overline{u})\le_K 0$ is given. We call the sets
+	\begin{align*}
+		C(\overline{u})\coloneqq\{\alpha(u - \overline{u});\alpha\ge 0,\ u\in C\},\ K(\overline{z})\coloneqq\{\beta(z - \overline{z});\beta\ge 0,\ z\in K\}
+	\end{align*}
+	the \emph{conical hulls} to $C$ \& $K$ at $\overline{u}$ \& $\overline{z}$, respectively. The condition \textbf{(6.11)}
+	\begin{align*}
+		G'(\overline{u})C(\overline{u}) + K(-G(\overline{u})) = Z
+	\end{align*}
+	is called the \emph{Zowe--Kurcyusz constraint qualification}.
+\end{definition}
+The above relation is obviously equivalent to saying that for any $z\in Z$ the equation \textbf{(6.12)} $\alpha G'(\overline{u})(u - \overline{u}) + \beta(v + G(\overline{u})) = z$ is solvable with suitable $u\in C$, $v\ge_K 0$, $\alpha\ge 0$, \& $\beta\ge 0$. Recall that $v\ge_K 0$ iff $v\in K$.
+
+\begin{theorem}
+	Let $\overline{u}$ be a local solution to problem (6.1), \& let $f$ \& $G$ be continuously Fr\'echet differentiable in an open neighborhood of $\overline{u}$. If the constraint qualification (6.11) holds, then there exists a Lagrange multiplier $z^\star\in Z^\star$ associated with $\overline{u}$. Moreover, the set of Lagrange multipliers associated with $\overline{u}$ is bounded.
+\end{theorem}
+The proof of this multiplier rule is due to Zowe \& Kurcyusz [ZK79]. From (6.9) it follows that \textbf{(6.13)}
+\begin{align*}
+	\langle f'(\overline{u}) + G'(\overline{u})^\star z^\star,u - \overline{u}\rangle_{U^\star,U}\ge 0,\ \forall u\in C.
+\end{align*}
+
+\begin{remark}
+	Sometimes it is difficult or even meaningless to establish $G'(\overline{u})^\star$ in explicit form. Then (6.13) is replaced by the equivalent inequality
+	\begin{align*}
+		f'(\overline{u})(u - \overline{u}) + \langle z^\star,G'(\overline{u})(u - \overline{u})\rangle_{Z^\star,Z}\ge 0,\ \forall u\in C.
+	\end{align*}
+\end{remark}
+
+\begin{example}
+	Of particular interest is the minimization problem with both equality \& set constraints: \textbf{(6.14)} $\min f(u)$, $G(u)$, $u\in C$, where $f,G$, \& $C$ are defined as before. In this special case, the constraint qualification (6.11) reads \textbf{(6.15)} $G'(\overline{u})C(\overline{u}) = Z$. If it is satisfied, then a Lagrange multiplier $z^\star\in Z^\star$ exists s.t. the variational inequality (6.13) is valid. The complementary slackness condition (6.10) is meaningless for equality constraints.
+	
+	In Sect. 6.1.3, we will apply this result to the special case of $G(u) = Ay - Bv = 0$, where $A:Y\to Y^\star$ is a continuously invertible operator representing an elliptic differential operator, $y$ denotes the state, \& $v\in V_{\rm ad}\subset V$ is the control.
+	
+	In this case, we have $Z\coloneqq Y^\star$, $U\coloneqq Y\times V$, \& $C\coloneqq Y\times V_{\rm ad}$. The constraint qualification is always satisfied, since the equation $G'(\overline{u})(u - \overline{u}) = A(y - \overline{y}) + B(v - \overline{v}) = z$ is solvable for any $z\in Z = Y^\star$ with $v = \overline{v}$ \& $y = A^{-1}z + \overline{y}$. The element $u - \overline{u} = (y - \overline{y},\overline{v} - \overline{v})$ belongs to the cone $C(\overline{u})$.
+\end{example}
+
+\paragraph{Discussion of the Zowe--Kurcyusz constraint qualification.} In the following, we illustrate the application of condition (6.11) for various types of constraints, 1st in the general situation, \& then for pointwise constraints in function spaces.
+
+\paragraph{Pure equality constraints $G(u) = 0$.} With $C = U$ \& $K = \{0\}$, (6.11) becomes \textbf{(6.16)} $G'(\overline{u})U = Z$. In other words, the operator $G'(\overline{u})$ must be surjective. This surjectivity requirement comes from the classical Lagrange multiplier rule for equality constraints. The relation (6.13) attains the form \textbf{(6.17)} $f'(\overline{u}) + G'(\overline{u})^\star z^\star = 0$.
+
+\paragraph{Inequality constraints.} Let the constraints be given as in (6.1). If the minimizer $\overline{u}$ satisfies $G(\overline{u}) <_K 0$, i.e., if $-G(\overline{u})\in\operatorname{int}K$, then the constraint qualification (6.11) is fulfilled (Exercise 6.3). Since the constraint is not active, this case is not interesting.
+
+The following \textit{linearized Slater condition} is sufficient for the Zowe--Kurcyusz constraint qualification (6.11) to hold: \textbf{(6.18)}
+\begin{align*}
+	\boxed{\exists\widetilde{u}\in C:\ G(\overline{u}) + G'(\overline{u})(\widetilde{u} - \overline{u}) <_K 0.}
+\end{align*}
+This is easily seen: the Zowe--Kurcyusz condition postulates for any $z\in Z$ the existence of constants $\alpha\ge 0$, $\beta\ge 0$ \& elements $k\in K$, $u\in C$ s.t. the equation $\alpha G'(\overline{u})(u - \overline{u}) + \beta(k + G(\overline{u})) = z$ is valid. To show this, put $\alpha = \beta$, $u = \widetilde{u}$, \& $\overline{z} = G(\overline{u}) + G'(\overline{u})(\widetilde{u} - \overline{u})$. Then the above equation reduces to $\alpha(\overline{z} + k) = z$ \&, since $K$ is a cone, to $\alpha\overline{z} + q = z$, with $q\in K$. Now we choose $\alpha$ so large that $z - \alpha\overline{z}\ge_K 0$. This is possible, because by (6.18) $\overline{z}$ lies in the interior of $-K$. With this, we satisfy the above condition with the choice $q = z - \alpha\overline{z}\ge_K 0$.
+
+If both $K$ \& $C$ have interior points, then (6.18) is equivalent to the following condition (cf. Penot [Pen82]): \textbf{(6.19)} $\exists h\in\operatorname{int}C(\overline{u})$: $G(\overline{u}) + G'(\overline{u})h <_K 0$.
+
+\paragraph{Equality \& inequality constraints.} Suppose the the constraints have the form $G_1(u) = 0$, $G_2(u)\le_K 0$, $u\in C$. Then the following condition is sufficient for (6.11) to hold (cf. [HPUU09], Lemma 1.14): $G_1'(\overline{u})$ is surjective, \& \textbf{(6.20)} $\exists h\in C(\overline{u})$: $G_1'(\overline{u})h = 0$, $G_2(\overline{u}) + G_2'(\overline{u})h <_K 0$.
+
+As the following examples will show, the applicability of the Zowe--Kurcyusz constraint qualification to inequality constraints in function spaces is essentially restricted to cones of nonnegative functions with nonempty interior.
+
+\paragraph{1-sided box constraints for $u$.} We begin our analysis with a problem involving 1-sided constraints: \textbf{(6.21)}
+\begin{align*}
+	\min f(u)\coloneqq\int_\Omega \psi(x,u(x))\,{\rm d}x,\ u(x)\le u_b(x)\mbox{ for a.e. } x\in\Omega.
+\end{align*}
+Here, $u_b\in L^\infty(\Omega)$ is given, \& the function $\psi$ is sufficiently smooth \& satisfies a suitable growth condition in order to guarantee that the given integral functional $f$ be continuous differentiable in $U = L^2(\Omega)$. The above minimization problem is of the form $\min f(u)$, $G(u) <_K 0$, with $G(u)(x)\coloneqq u(x) - u_b(x)$. As an affine continuous operator, $G$ is differentiable from $U$ into $Z = U$. The cone $K$ is given by the set of a.e. nonnegative elements of $L^2(\Omega)$.
+
+In this case, the Zowe--Kurcyusz constraint qualification (6.11) is satisfied: in view of $C = L^2(\Omega)$, we have $C(\overline{u}) = L^2(\Omega)$. \& since $G'(\overline{u})$ is the identity mapping, for any $z\in L^2(\Omega)$ there is some $u\in L^2(\Omega) = C(\overline{u})$ s.t. $G'(\overline{u})u = z$: one simply chooses $u = z$.
+
+Consequently, Theorem 6.3 may be applied in $L^2(\Omega)$, where, in view of the Riesz representation theorem, every $z^\star\in L^2(\Omega)^\star$ can be identified with some $\mu\in L^2(\Omega)$. Hence, for any local solution $\overline{u}$ there exists some a.e. nonnegative multiplier $\mu\in L^2(\Omega)$ s.t. $f'(\overline{u}) + G'(\overline{u})^\star\mu = 0$. We may identify $f'(\overline{u})$ with the function $\psi_u(\cdot,\overline{u}(\cdot))\in L^2(\Omega)$, \& $G'(\overline{u})^\star$ is the identity operator in $L^2(\Omega)$. We therefore find that $\psi_u(x,\overline{u}(x)) + \mu(x) = 0$, $\mu(x)\ge 0$, for a.e. $x\in\Omega$.
+
+In this example, the Zowe--Kurcyusz condition was applicable even though the cone of nonnegative functions in $L^2(\Omega)$ had empty interior. This is in a certain sense an exceptional case. Alternatively, we could have constructed the multiplier directly as in (6.8) by setting $\mu(x) = (\psi_u(x,\overline{u}(x)))_-$.
+
+\paragraph{2-sided box constraints for $u$.} We consider the same problem as above, but this time with the 2-sided control constraints $u_a(x)\le u(x)\le u_b(x)$ for a.e. $x\in\Omega$, with bounded \& measurable functions $u_a\le u_b$. We fit these constraints into the abstract framework of (6.1) by choosing the operator $G$ to be of the form $G(u) = (u_a - u,u - u_b)^\top$.
+
+Evidently, $G$ is a continuously differentiable mapping from $L^2(\Omega)$ into $L^2(\Omega)\times L^2(\Omega)$. However, the Zowe--Kurcyusz constraint qualification cannot be directly satisfied in the form (6.11), as can be shown with a little effort. Again, we have the problem that the cone of nonnegative functions in $L^2(\Omega)$ has empty interior. It would also not be helpful to work in $L^\infty(\Omega)$ instead, since then we would at best obtain measures as multipliers for the control constraints. As in (6.8), a possible way out is to define Lagrange multipliers by $\mu_a(x)\coloneqq\psi_u(x,\overline{u}(x))_+$, $\mu_b(x)\coloneqq\psi_u(x,\overline{u}(x))_-$, with which the Karush--Kuhn--Tucker conditions are fulfilled.
+
+\paragraph{2nd-order optimality conditions.} The scope of the Karush--Kuhn--Tucker theory in Banach spaces also encompasses 2nd-order necessary \& sufficient optimality conditions. For illustration, we only discuss the problem (6.14): $\min f(u)$, $G(u) = 0$, $u\in C$, additionally assuming that $f$ \& $G$ are twice continuously Fr\'echet differentiable. Suppose that $\overline{u}$ satisfies, together with $z^\star\in Z^\star$, the 1st-order necessary condition \textbf{(6.22)}
+\begin{align*}
+	f'(\overline{u})(u - \overline{u}) + \langle z^\star,G'(\overline{u})(u - \overline{u})\rangle_{Z^\star,Z}\ge 0,\ \forall u\in C.
+\end{align*}
+Moreover, let there exist some $\delta > 0$ s.t. \textbf{(6.23)}
+\begin{align*}
+	L''(\overline{u},z^\star)[u,u]\coloneqq f''(\overline{u})[u,u] + \langle z^\star,G''(\overline{u})[u,u]\rangle_{Z^\star,Z}\ge\delta\|u\|_U^2
+\end{align*}
+for all $u\in C(\overline{u})$ s.t. \textbf{(6.24)} $G'(\overline{u})u = 0$.
+
+\begin{lemma}
+	If $\overline{u}$ is admissible for problem (6.14) \& the conditions (6.22)--(6.24) are fulfilled, then $\overline{u}$ is locally optimal for (6.14).
+\end{lemma}
+These 2nd-order sufficient optimality conditions follow from general results due to Maurer \& Zowe [MZ79, Mau81]. The lemma applies only to problems in which the 2-norm discrepancy\footnote{\textbf{discrepancy} [n] (plural \textbf{discrepancies}) a difference between 2 or more things that should be the same.} does not play a role. Since we have not provided any further information concerning the structure of the set $C$, we are not in a position to define \& make use of strongly active constraints. The conditions above are thus too restrictive. In the case of inequality constraints of the form $G(u)\le_K 0$, 1st-order sufficient optimality conditions can also be employed; see [MZ79]. For PDEs with state constraints, refer to [CDlRT08]. In the case of pointwise constraints in function spaces, usually strongly active sets in the sense of Dontchev et al. [DHPY95] are used for this purpose.
+
+\subsubsection{A semilinear elliptic problem}
 
 \subsection{Control Problems with State Constraints}
 
