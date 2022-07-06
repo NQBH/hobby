@@ -1,0 +1,116 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Graph Theory}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter{Wikipedia's}
+
+\section{\href{https://en.wikipedia.org/wiki/Graph_theory}{Wikipedia\texttt{/}Graph Theory}}
+\textsf{Fig. A \href{https://en.wikipedia.org/wiki/Graph_drawing}{drawing} of a graph.}
+
+``In mathematics, \textit{graph theory} is the study of \href{https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)}{graphs}, which are mathematical structures used to model pairwise relations between objects. A graph in this context is made up of \href{https://en.wikipedia.org/wiki/Vertex_(graph_theory)}{vertices} (also called \textit{nodes} or \textit{points}) which are connected by \href{https://en.wikipedia.org/wiki/Glossary_of_graph_theory_terms#edge}{edges} (also called \textit{links} or \textit{lines}). A distinction is made between \textit{undirected graphs}, where edges link 2 vertices symmetrically, \& \textit{directed graphs}, where edges link 2 vertices asymmetrically. Graphs are 1 of the principal objects of study in \href{https://en.wikipedia.org/wiki/Discrete_mathematics}{discrete mathematics}.
+
+\subsection{Definitions}
+
+\subsubsection{Graph}
+
+\subsubsection{Directed graph}
+
+\subsection{Applications}
+
+\subsubsection{Computer science}
+
+\subsubsection{Linguistics}
+
+\subsubsection{Physics \& chemistry}
+
+\subsubsection{Social sciences}
+
+\subsubsection{Biology}
+
+\subsubsection{Mathematics}
+
+\subsubsection{Other topics}
+
+\subsection{History}
+
+\subsection{Representation}
+
+\subsubsection{Visual: Graph drawing}
+
+\subsubsection{Tabular: Graph data structures}
+
+\subsection{Problems}
+
+\subsubsection{Enumeration}
+
+\subsubsection{Subgraphs, induced subgraphs, \& minors}
+
+\subsubsection{Graph coloring}
+
+\subsubsection{Subsumption \& unification}
+
+\subsubsection{Route problems}
+
+\subsubsection{Network flow}
+
+\subsubsection{Visibility problems}
+
+\subsubsection{Covering problems}
+
+\subsubsection{Decomposition problems}
+
+\subsubsection{Graph classes}
+
+%------------------------------------------------------------------------------%
+
+%\selectlanguage{english}
+%\begin{thebibliography}{99}
+%	\bibitem[]{}
+%\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
