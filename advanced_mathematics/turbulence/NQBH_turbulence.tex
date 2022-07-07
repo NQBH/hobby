@@ -154,9 +154,103 @@ Refs.
 
 \texttt{icoFoam.} `Transient solver for incompressible, laminar flow of Newtonian fluids': incompressible, transient, laminar, Newtonian fluids, single phase, isothermal, PISO-loop.
 
-
-
 \section{\href{https://www.youtube.com/playlist?list=PLcOe4WUSsMkGPdwCpZfKcpn7w-EkgAMB8}{YouTube\texttt{/}J\'ozsef Nagy\texttt{/}CFD Intermediate}}
+
+%------------------------------------------------------------------------------%
+
+\chapter{\cite{Pope2000}. Turbulent Flows}
+
+``This is a graduate text on turbulent flows, an important topic in fluid dynamics. It is up to date, comprehensive, designed for teaching, \& based on a course taught by the author at Cornell University for a number of years.
+
+The book consists of 2 parts followed by a number of appendices. Part I provides a general introduction to turbulent flows, how they behave, how they can be described quantitatively, \& the fundamental physics processes involved. The topics covered include: NSEs; the statistical representation of turbulent fields; mean-flow equations; the behavior of simple free shear \& wall-bounded flows; the energy cascade; turbulence spectra; \& the Kolmogorov hypotheses. Part II is concerned with various approaches for modeling or simulating turbulent flows. The approaches described are: direct numerical simulation (DNS); turbulent-viscosity models (e.g., $k$-$\epsilon$ model); Reynolds-stress models; probability-density-function (PDF) methods; \& large-eddy simulation (LES). There are numerous appendices in which the necessary mathematical techniques are presented.
+
+This book is primarily intended as a graduate-level text in turbulent flows for engineering students, but it may also be valuable to students in applied mathematics, physics, oceanography, \& atmospheric sciences, as well as researchers, \& practicing engineers.
+
+\section*{Preface}
+``This book is primarily intended as a graduate text on turbulent flows for engineering students, but it may also be valuable to students in atmospheric sciences, applied mathematics, \& physics, as well as to researchers \& practicing engineers.
+
+The principal questions addressed are the following.
+\begin{itemize}
+	\item[(i)] How do turbulent flows behave?
+	\item[(ii)] How can they be described quantitatively?
+	\item[(iii)] What are the fundamental physical processes involved?
+	\item[(iv)] How can equations be constructed to simulate or model the behavior of turbulent flows?
+\end{itemize}
+In 1972 Tennekes \& Lumley produced a textbook that admirably addresses the 1st 3 of these equations. In the intervening\footnote{\textbf{intervening} [a] [only before noun] \textbf{1.} happening between 2 periods or events; \textbf{2.} between 2 areas, objects or substances.} years, due in part to advances in computing, great strides\footnote{\textbf{stride} [v] [intransitive] (not used in the perfect tenses) \textbf{$+$ adv.\texttt{/}prep.} to walk with long steps in a particular direction; [n] \textbf{1.} 1 long step; the distance covered by a step, \textsc{synonym}: \textbf{pace}; \textbf{2.} your way of walking or running; \textbf{3.} an improvement in the way something is developing; \textbf{4.} \textbf{strides} [plural] (\textit{Australian English, informal}) trousers.} have been made toward providing answers to the 4th question. Approaches such as Reynolds-stress modeling, probability-density-function (PDF) methods, \& large-eddy simulation (LES) have been developed that, to an extent, provide quantitative models for turbulent flows. Accordingly, here (in Part II) an emphasis is placed on understanding how model equations can be constructed to describe turbulent flows; \& this objective provides focus to the 1st 3 questions mentioned above (which are addressed in Part I). However, in contrast to the book by \cite{Wilcox2006}, this text is not intended to be a practical guide to turbulence modeling. Rather, it explains the concepts \& develops the mathematical tools that underlie a broad range of approaches.
+
+There is a vast literature on turbulence \& turbulent flows, with many worthwhile questions addressed by many different approaches.'' $\ldots$ ``The present selection of topics \& approaches has evolved over the 20 years I have been teaching graduate courses on turbulence at MIT \& Cornell. The emphasis on turbulent flows -- rather than on the theory of homogeneous turbulence -- is appropriate to applications in engineering, atmospheric sciences, \& elsewhere. The emphasis on quantitative theories \& models is consistent with the scientific objective -- of developing a tractable, quantitatively accurate theory of the phenomenon -- \& is ideal for providing a solid understanding of computational approaches to turbulent flows, e.g., turbulence models \& LES.
+
+With the exception of LES \& direct numerical simulation (DNS), the theories \& models presented stem from the \textit{statistical} approach, pioneered by Osborne Reynolds, G. I. Taylor, Prandtl, von K\'arm\'an, \& Kolmogorov. A sizable fraction of the academic research work in the last 25 years has emphasized a more \textit{deterministic} viewpoint: e.g. experiments on coherent structures, \& models based on low-dimensional dynamical systems (e.g., Holmes, Lumley, \& Berkooz (1996)). At this stage, this alternative approach has not led to a generally applicable quantitative model, neither -- for better or for worse -- has it had a major impact of the statistical approaches. Consequently, the deterministic viewpoint is neither emphasized nor systematically presented.
+
+The book consists of 2 parts followed by a number of appendices. Part I provides a general introduction to turbulent flows, including NSEs, the statistical representation of turbulent fields, mean-flow equations, the behavior of simple free-shear \& wall-bounded flows, the energy cascade, turbulence spectra, \& the Kolmogorov hypotheses. In the 1st 5 chapters, the focus is 1st on the mean velocity fields, \& how they are affected by the Reynolds stresses. The concept of `turbulent viscosity' is introduced with a thorough discussion of its deficiencies. The focus then shifts to the turbulence itself, in particular to the production \& dissipation of turbulent kinetic energy. This sets the stage for a description (in Chap. 6) of the energy cascade \& the Kolmogorov hypotheses. The spectral description of homogeneous turbulence in terms of Fourier modes in wavenumber space is developed in some detail. This provides an alternative perspective on the energy cascade; \& it is also used in subsequent chapters in the descriptions of DNS, LES, \& rapid distortion theory (RDT).
+
+Simple wall-bounded flows are described in Chap. 7, starting with the mean velocity fields \& proceeding to the Reynolds stresses. The exact transport equations for the Reynolds stresses are introduced, \& their balances in  turbulent boundary layers are examined.
+
+The simulation \& modeling approaches described in Part II are: DNS, turbulent viscosity models (e.g., the $k$-$\epsilon$ model), Reynolds-stress models, PDF methods, \& LES. It is natural to consider DNS 1st (in Chap. 9) since it is conceptually the most straightforward approach. However, its restriction to simple, low-Reynolds-number flows motivates the consideration of other approaches. The most widely used turbulence models are the turbulent-viscosity models described in Chap. 10. Reynolds-stress models (Chap. 11) provide a more satisfactory connection to the physics of turbulence. The Reynolds-stress balance equations can be obtained from the NSEs, \& the various contributions to this balance have been measured in experiments \& simulations. Rapid-distortion theory is introduced to shed light on the effects that mean velocity gradients have on the Reynolds stresses. In developing \& presenting modeled Reynolds-stress equations, the emphasis is on the fundamental concepts \& principles, rather than on the detailed forms of particular models.
+
+Chap. 12 deals with PDF methods. The primary object of study in the (1-point, 1-time, Eulerian) joint probability density function (PDF) of velocity. The 1st moments of this PDF are the mean velocities; the 2nd moments are the Reynolds stresses. For several reasons it is both natural \& advantageous to proceed from the Reynolds stress to the PDF level of description: in the PDF equation, convection (by both mean \& fluctuating velocity) appears in closed form, \& hence does not have to be modeled; the effect of rapid distortions on turbulence can (in a limited sense) be treated exactly; \& PDF methods are becoming widely used for turbulent reactive flows (e.g., turbulent combustion) because they are able to treat reaction exactly -- without modeling assumptions.
+
+Essential ingredients in PDF methods are stochastic Lagrangian models, such as the Langevin model for the velocity following a fluid particle. These models are also described in the context of turbulent dispersion (where they originated with G. I. Taylor's 1921 classic paper).
+
+The final chapter describes LES, in which the large-scale turbulent motions are directly represented, while the effects of the smaller, subgrid-scale motions are modeled. Many of the concepts \& techniques developed in Chaps. 9--12 find application in the modeling of the subgrid-scale processes.'' [$\ldots$] ``A list of known corrections is given at \url{http://pope.mae.cornell.edu/TurbulentFlows.html}.'' -- \cite[Preface, pp. xvii--]{Pope2000}
+
+\begin{center}\huge
+	Part I: Fundamentals.
+\end{center}
+
+\section{Introduction}
+
+\section{The equations of fluid motion}
+
+\section{The statistical description of turbulent flows}
+
+\section{Mean-flow equations}
+
+\section{Free shear flows}
+
+\section{The scales of turbulent motion}
+
+\section{Wall flows}
+
+\begin{center}\huge
+	Part II: Modeling \& Simulation
+\end{center}
+
+\section{An introduction to modeling \& simulation}
+
+\section{Direct numerical simulation}
+
+\section{Turbulent-viscosity models}
+
+\section{Reynolds-stress \& related models}
+
+\section{PDF methods}
+
+\section{Large-eddy simulation}
+
+\begin{center}\huge
+	Appendices
+\end{center}
+
+\section{Appendix A: Cartesian tensors}
+
+\section{Appendix B: Properties of 2nd-order tensors}
+
+\section{Appendix C: Dirac delta functions}
+
+\section{Appendix D: Fourier transforms}
+
+\section{Appendix E: Special representation of stationary random processes}
+
+\section{Appendix F: The discrete Fourier transform}
+
+\section{Appendix G: Power-law spectra}
+
+\section{Appendix H: Derivation of Eulerian PDF equations}
+
+\section{Appendix I: Characteristic functions}
+
+\section{Appendix J: Diffusion processes}
 
 %------------------------------------------------------------------------------%
 
