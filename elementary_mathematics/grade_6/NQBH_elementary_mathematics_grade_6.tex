@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -12,15 +12,18 @@
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{notation}{Notation}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{question}{Question}[section]
 \newtheorem{remark}{Remark}[section]
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -37,9 +40,6 @@
 
 \begin{document}
 \maketitle
-\begin{abstract}
-	Tóm tắt kiến thức Toán lớp 6 theo chương trình giáo dục của Việt Nam \textit{\&} một số chủ đề nâng cao. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}.
-\end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
@@ -47,10 +47,20 @@
 
 %------------------------------------------------------------------------------%
 
+\section*{Lời Giới Thiệu $|$ Preface}
+\addcontentsline{toc}{section}{\protect\numberline{}Lời Giới Thiệu\texttt{/}Preface}
+Tóm tắt kiến thức Toán lớp 6 theo chương trình giáo dục của Việt Nam \textit{\&} một số chủ đề nâng cao. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}.
+
+%------------------------------------------------------------------------------%
+
 \section*{Nguyên Tắc\texttt{/}Principles}
 \addcontentsline{toc}{section}{\protect\numberline{}Nguyên Tắc\texttt{/}Principles}
 Xem \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/principle/NQBH_elementary_mathematics_principle.pdf}{GitHub\texttt{/}NQBH\texttt{/}elementary mathematics\texttt{/}principle}.
 
+\begin{question}
+	Tại sao phải học?
+\end{question}
+\& cụ thể hơn,
 \begin{question}
 	Học Toán để làm gì? Tại sao phải học Toán?
 \end{question}
@@ -60,42 +70,72 @@ Xem \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/princ
 
 %------------------------------------------------------------------------------%
 
-\section{Số Tự Nhiên}
+\chapter{Số Tự Nhiên}
+
 \textbf{Nội dung.} Tập hợp; tập hợp các số tự nhiên; các phép tính trong tập hợp số tự nhiên; quan hệ chia hết, số nguyên tố; ước chung \textit{\&} bội chung.
 
-\subsection{Tập Hợp}
+\section{Tập Hợp}
 
-\subsubsection{Ký hiệu \textit{\&} cách viết tập hợp}
-Khái niệm tập hợp (set) thường gặp trong toán học \textit{\&} trong đời sống. Người ta thường dùng các chữ cái in hoa để đặt tên cho 1 tập hợp. Các phần tử của 1 tập hợp được viết trong 2 dấu ngoặc nhọn $\{\ \}$, cách nhau bởi dấu ``;''. Mỗi phần tử được liệt kê 1 lần, thứ tự liệt kê tùy ý.
+\begin{dinhnghia}[Tập hợp]
+	``Trong toán học, 1 \textit{tập hợp} là 1 bộ các \href{https://vi.wikipedia.org/wiki/Ph%E1%BA%A7n_t%E1%BB%AD_(to%C3%A1n_h%E1%BB%8Dc)}{phần tử}. Các phần tử tạo nên 1 tập hợp có thể là bất kỳ loại \href{https://vi.wikipedia.org/wiki/%C4%90%E1%BB%91i_t%C6%B0%E1%BB%A3ng_to%C3%A1n_h%E1%BB%8Dc}{đối tượng toán học} nào: số, ký hiệu, điểm trong không gian, đường thẳng, các hình dạng hình học khác, các biến hoặc thậm chí các tập hợp khác. Tập hợp không có phần tử nào là \href{https://vi.wikipedia.org/wiki/T%E1%BA%ADp_h%E1%BB%A3p_r%E1%BB%97ng}{tập hợp rỗng}; 1 tập hợp với 1 phần tử duy nhất là 1 \href{https://vi.wikipedia.org/wiki/%C4%90%C6%A1n_%C4%91i%E1%BB%83m_(to%C3%A1n_h%E1%BB%8Dc)}{đơn điểm}. 1 tập hợp có thể có 1 số phần tử hữu hạn hoặc là 1 \href{https://vi.wikipedia.org/wiki/T%E1%BA%ADp_h%E1%BB%A3p_v%C3%B4_h%E1%BA%A1n}{tập hợp vô hạn}. 2 tập hợp bằng nhau khi \& chỉ khi chúng có chính xác các phần tử giống nhau.'' -- \href{https://vi.wikipedia.org/wiki/T%E1%BA%ADp_h%E1%BB%A3p_(to%C3%A1n_h%E1%BB%8Dc)}{Wikipedia\emph{\texttt{/}}tập hợp (toán học)}
+\end{dinhnghia}
+Có thể xem thêm \href{https://vi.wikipedia.org/wiki/T%E1%BA%ADp_h%E1%BB%A3p_(to%C3%A1n_h%E1%BB%8Dc)}{Wikipedia\texttt{/}tập hợp (toán học)} \& \href{https://en.wikipedia.org/wiki/Set_(mathematics)}{Wikipedia\texttt{/}set (mathematics)}.
 
-\subsubsection{Phần tử thuộc tập hợp}
+\subsection{Ký hiệu \textit{\&} cách viết tập hợp}
+Khái niệm tập hợp (set) thường gặp trong toán học \textit{\&} trong đời sống. Người ta thường dùng các chữ cái in hoa để đặt tên cho 1 tập hợp. Các phần tử của 1 tập hợp được viết trong 2 dấu ngoặc nhọn $\{\ \}$, cách nhau bởi dấu chấm phẩy ``;'' hoặc dấu phẩy ``,''. Mỗi phần tử được liệt kê 1 lần, thứ tự liệt kê tùy ý.
+
+\subsection{Phần tử thuộc tập hợp}
 \textit{$a$ là 1 phần tử} của tập hợp $A$, viết $a\in A$, đọc là \textit{$a$ thuộc $A$}. \textit{$b$ không là 1 phần tử của tập hợp $B$}, viết $b\notin B$, đọc là \textit{$b$ không thuộc $B$}.
 
-\subsubsection{Cách cho 1 tập hợp}
+\subsection{Cách cho 1 tập hợp}
 Có 2 cách cho 1 tập hợp:
-\begin{itemize}
-	\item Liệt kê các phần tử của tập hợp;
-	\item Chỉ ra tính đặc trưng cho các phần tử của tập hợp.
-\end{itemize}
+\begin{enumerate}
+	\item Liệt kê các phần tử của tập hợp;. Cách này thích hợp cho các tập hợp có kích thước nhỏ để có thể liệt kê được.
+	\item Chỉ ra tính đặc trưng cho các phần tử của tập hợp. Cách này thích hợp cho các tập hợp có kích thước lớn khi mà việc liệt kê hết các phần tử của tập hợp đó gặp khó khăn hoặc không thể. 
+\end{enumerate}
+Nên sử dụng cách nào tiện hơn trong 2 cách trên để cho 1 tập hợp.
 
-\subsubsection{Biểu đồ Ven (Venn diagram)}
+\subsection{Biểu đồ Ven (Venn diagram)}
 Người ta còn minh họa tập hợp bằng 1 vòng kín, mỗi phần tử của tập hợp được biểu diễn bởi 1 chấm bên trong vòng kín, còn phần tử không thuộc tập hợp đó được biểu diễn bởi 1 chấm bên ngoài vòng kín. Cách minh họa tập hợp này gọi là \textit{biểu đồ Venn}, do nhà toán học người Anh John Venn (1834--1923) đưa ra.
 
-\subsection{Tập Hợp Các Số Tự Nhiên}
+\begin{baitoan}
+	Với $a,b$ là 2 số tự nhiên cho trước, viết mỗi tập hợp sau bằng cách liệt kê các phần tử của tập hợp đó:
+	\begin{align*}
+		A_1 &= \{x|x\mbox{ là số tự nhiên},\ a < x < b\},\ &&A_2 = \{x|x\mbox{ là số tự nhiên},\ a\le x < b\},\\
+		A_3 &= \{x|x\mbox{ là số tự nhiên},\ a < x\le b\},\ &&A_4 = \{x|x\mbox{ là số tự nhiên},\ a\le x\le b\},\\
+		B_1 &= \{x|x\mbox{ là số tự nhiên chẵn},\ a < x < b\},\ &&B_2 = \{x|x\mbox{ là số tự nhiên chẵn},\ a\le x < b\},\\
+		B_3 &= \{x|x\mbox{ là số tự nhiên chẵn},\ a < x\le b\},\ &&B_4 = \{x|x\mbox{ là số tự nhiên chẵn},\ a\le x\le b\},\\
+		C_1 &= \{x|x\mbox{ là số tự nhiên lẻ},\ a < x < b\},\ &&C_2 = \{x|x\mbox{ là số tự nhiên lẻ},\ a\le x < b\},\\ C_3 &= \{x|x\mbox{ là số tự nhiên lẻ},\ a < x\le b\},\ &&C_4 = \{x|x\mbox{ là số tự nhiên lẻ},\ a\le x\le b\}.
+	\end{align*}
+\end{baitoan}
+\textit{Hint.} So sánh $a,b$. Nếu $a > b$ thì các tập hợp trên đều là tập hợp rỗng $\emptyset$. Nếu $a\le b$, xét tiếp tính chẵn lẻ của $a,b$ cho các tập $B_i$, $i = 1,2,3,4$, \& $C_j$, $j = 1,2,3,4$.
 
-\subsubsection{Tập hợp các số tự nhiên}
+\begin{baitoan}
+	Viết các tập hợp sau bằng cách liệt kê các phần tử của tập hợp đó:
+	\begin{align*}
+		A_1 &= \{x|x\mbox{ là số tự nhiên},\ ax + b = c\},\ && A_2 = \{x|x\mbox{ là số tự nhiên},\ ax - b = c\},\\
+		A_3 &= \{x|x\mbox{ là số tự nhiên},\ a - bx = c\},\ && A_4 = \left\{x|x\mbox{ là số tự nhiên},\ \frac{x}{a} + b = c\right\},\\
+		A_5 &= \left\{x|x\mbox{ là số tự nhiên},\ \frac{a}{x} + b = c\right\},\ && A_6 = \left\{x|x\mbox{ là số tự nhiên},\ \frac{ax + b}{c} = d\right\},\\
+		A_7 &= \left\{x|x\mbox{ là số tự nhiên},\ \frac{a}{bx + c} = d\right\},\ && A = \{x|x\mbox{ là số tự nhiên},\ f(x) = 0\}.
+	\end{align*}
+\end{baitoan}
+Tổng quát của dạng toán này là viết tập hợp $A = \{x|x\mbox{ là số tự nhiên},\ x \mbox{ thỏa mãn phương nào đại số }f(x) = 0\mbox{ nào đó}\}$. Nếu phương trình đại số đó vô nghiệm trên tập hợp các số tự nhiên thì $A = \emptyset$. Nếu phương trình đại số đó có các nghiệm $x_1,\ldots,x_n$ là các số tự nhiên, với $n$ là số tự nhiên khác 0, thì $A = \{x_1,\ldots,x_n\}$. Điểm cốt lõi ở đây là giải phương trình đại số đó trên tập các số tự nhiên.
 
-\paragraph{Tập hợp $\mathbb{N}$ \textit{\&} tập hợp $\mathbb{N}^\star$.}
-\begin{definition}
+\section{Tập Hợp Các Số Tự Nhiên}
+
+\subsection{Tập hợp các số tự nhiên}
+
+\subsubsection{Tập hợp $\mathbb{N}$ \textit{\&} tập hợp $\mathbb{N}^\star$.}
+\begin{dinhnghia}
 	\emph{Tập hợp các số tự nhiên} được ký hiệu là $\mathbb{N}\coloneqq\{0;1;2;3;\ldots\}$. \emph{Tập hợp các số tự nhiên khác 0} được ký hiệu là $N^\star\coloneqq\{1;2;3;4;\ldots\}$.
-\end{definition}
+\end{dinhnghia}
 Hiển nhiên $N^\star\subset\mathbb{N}$, i.e., $x\in\mathbb{N}^\star\Rightarrow x\in\mathbb{N}$ nhưng $x\in\mathbb{N}\not\Rightarrow x\in\mathbb{N}^\star$ vì $0\in\mathbb{N}$ nhưng $0\notin\mathbb{N}^\star$ (cũng là phản ví dụ duy nhất trong trường hợp này). Chú ý: $\mathbb{N} = \mathbb{N}^\star\cup\{0\}$.
 
-\paragraph{Cách đọc \textit{\&} viết số tự nhiên.} Khi viết các số tự nhiên có từ 4 chữ số trở lên, người ta thường viết tách riêng từng nhóm 3 chữ số kể từ phải sang trái cho dễ đọc (why).
+\subsubsection{Cách đọc \textit{\&} viết số tự nhiên.} Khi viết các số tự nhiên có từ 4 chữ số trở lên, người ta thường viết tách riêng từng nhóm 3 chữ số kể từ phải sang trái cho dễ đọc.
 
-\subsubsection{Biểu diễn số tự nhiên}
+\subsection{Biểu diễn số tự nhiên}
 
-\paragraph{Biểu diễn số tự nhiên trên tia số.} Các số tự nhiên được biểu diễn trên tia số. Mỗi số tự nhiên ứng với 1 điểm trên tia số.
+\subsubsection{Biểu diễn số tự nhiên trên tia số.} Các số tự nhiên được biểu diễn trên tia số. Mỗi số tự nhiên ứng với 1 điểm trên tia số.
 
 \begin{question}
 	Tại sao cần\emph{\texttt{/}}phải biểu diễn số tự nhiên trên tia số?
@@ -105,7 +145,7 @@ Hiển nhiên $N^\star\subset\mathbb{N}$, i.e., $x\in\mathbb{N}^\star\Rightarrow
 	Làm việc trên hình vẽ để trực quan, tiện trong nhiều mục đích khác, e.g., so sánh 2 số tự nhiên, so sánh 2 tập hợp con của $\mathbb{N}$, etc.
 \end{proof}
 
-\paragraph{Cấu tạo thập phân của số tự nhiên.} Số tự nhiên được viết trong hệ thập phân bởi 1, 2, hay nhiều chữ số. Các chữ số được dùng là 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Khi 1 số gồm 2 chữ số trở lên thì chữ số đầu tiên (tính từ trái sang phải) khác 0, i.e.,
+\subsubsection{Cấu tạo thập phân của số tự nhiên.} Số tự nhiên được viết trong hệ thập phân bởi 1, 2, hay nhiều chữ số. Các chữ số được dùng là 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Khi 1 số gồm 2 chữ số trở lên thì chữ số đầu tiên (tính từ trái sang phải) khác 0, i.e.,
 \begin{align}
 	\label{pre-decimal representation}
 	\overline{a_na_{n-1}\ldots a_1a_0}|_{10},\ n\in\mathbb{N}^\star,\ a_i\in\{0,1,2,3,4,5,6,7,8,9\},\,\forall i = 0,\ldots,n,\ a_n\ne 0.
@@ -139,11 +179,11 @@ Chú ý, công thức \eqref{decimal representation} còn được viết cụ t
 	E.g., hệ nhị phân ($b = 2$), \textit{\&} hệ thập lục phân ($b = 16$) được xử dụng chủ yếu trong Tin học, hay chính xác hơn là Khoa học Máy tính (Computer Science). Hệ nhị phân được dùng để thiết kế ngôn ngữ máy tính. \texttt{[insert more details]}
 \end{remark}
 
-\paragraph{Số La Mã.} Cách ghi số La Mã: I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, XXI, XXII, XXIII, XXIV, XXV, XXVI, XXVII, XXVIII, XXIX, XXX.
+\subsubsection{Số La Mã.} Cách ghi số La Mã: I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, XXI, XXII, XXIII, XXIV, XXV, XXVI, XXVII, XXVIII, XXIX, XXX.
 
 \textit{Nguyên tắc.} Chữ số I, II, III khi nằm bên trái V, X có nghĩa là ``trừ ra'', \textit{\&} khi nằm bên phải V, X có nghĩa là ``cộng thêm''.
 
-\subsubsection{So sánh các số tự nhiên}
+\subsection{So sánh các số tự nhiên}
 Trong 2 số tự nhiên $a,b\in\mathbb{N}$ khác nhau, có 1 số nhỏ hơn số kia. Nếu số $a$ nhỏ hơn số $b$ thì viết $a < b$ hay $b > a$.
 
 \textit{Tính chất bắc cầu.} Nếu $a < b$ \textit{\&} $b < c$ thì $a < c$, biểu thức logic:
@@ -229,19 +269,19 @@ Với số tự nhiên $a\in\mathbb{N}$ cho trước, viết $x\le a$ để ch�
 	\end{equation*}
 \end{remark}
 
-\subsubsection{Số La Mã}
+\subsection{Số La Mã}
 ``Đế quốc La Mã là 1 đế quốc hùng mạnh tồn tại từ thế kỷ III trước Công nguyên đến thế kỷ V sau Công nguyên, bao gồm những vùng lãnh thổ rộng lớn ở Địa Trung Hải, Bắc PHi \textit{\&} Tây Á.'' -- \cite[p. 14]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\paragraph{Hệ thống các chữ số \textit{\&} số đặc biệt.} Có 7 chữ số La Mã cơ bản là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000. Có 6 số đặc biệt là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): IV = 4, IX = 9, XL = 40, XC = 90, CD = 400, CM = 900. I chỉ có thể đứng trước V hoặc X; X chỉ có thể đứng trước L hoặc C; C chỉ có thể đứng trước D hoặc M. Trong các chữ số La Mã, không có ký hiệu để chỉ số 0.
+\subsubsection{Hệ thống các chữ số \textit{\&} số đặc biệt.} Có 7 chữ số La Mã cơ bản là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000. Có 6 số đặc biệt là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): IV = 4, IX = 9, XL = 40, XC = 90, CD = 400, CM = 900. I chỉ có thể đứng trước V hoặc X; X chỉ có thể đứng trước L hoặc C; C chỉ có thể đứng trước D hoặc M. Trong các chữ số La Mã, không có ký hiệu để chỉ số 0.
 
-\paragraph{Cách ghi số La Mã.}
+\subsubsection{Cách ghi số La Mã.}
 \begin{itemize}
 	\item Trong 1 số La Mã tính từ trái sang phải, giá trị của các chữ số cơ bản \textit{\&} các số đặc biệt giảm dần.
 	\item Mỗi chữ số I, X, C, M không viết liền nhau quá 3 lần.
 	\item Mỗi chữ số V, L, D không viết liền nhau.
 \end{itemize}
 
-\paragraph{Cách tính giá trị tương ứng trong hệ thập phân của số La Mã.} ``Giá trị tương ứng trong hệ thập phân của số La Mã bằng tổng giá trị của các chữ số cơ bản \textit{\&} các số đặc biệt tính theo thứ tự từ trái sang phải.'' -- \cite[p. 14]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+\subsubsection{Cách tính giá trị tương ứng trong hệ thập phân của số La Mã.} ``Giá trị tương ứng trong hệ thập phân của số La Mã bằng tổng giá trị của các chữ số cơ bản \textit{\&} các số đặc biệt tính theo thứ tự từ trái sang phải.'' -- \cite[p. 14]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
 \begin{remark}[Ứng dụng của số La Mã]
 	``Chữ số La Mã được sử dụng rộng rãi cho đến thế kỷ XIV thì không còn được sử dụng nhiều nữa vì hệ thống chữ số Ả Rập (được tạo thành bởi các chữ số từ 0 đến 9) tiện dụng hơn. Tuy nhiên, chúng vẫn còn được sử dụng trong việc đánh số trên mặt đồng hồ, thế kỷ, âm nhạc hay các sự kiện chính trị -- văn hóa -- thể thao lớn như Thế vận hội Olympic, \ldots'' \footnote{Nói tóm lại, sử dụng chữ số La Mã để thể hiện tính trang trọng \textit{\&} đôi khi màu mè\texttt{/}fancy.}
@@ -255,9 +295,9 @@ Với số tự nhiên $a\in\mathbb{N}$ cho trước, viết $x\le a$ để ch�
 	Xem \cite[p. 106]{Binh_Toan_6_tap_1}.
 \end{proof}
 
-\subsection{Phép Cộng, Phép Trừ Các Số Tự Nhiên}
+\section{Phép Cộng, Phép Trừ Các Số Tự Nhiên}
 
-\subsubsection{Phép cộng $+$}
+\subsection{Phép cộng $+$}
 \fbox{$a + b = c$}, trong đó $a,b\in\mathbb{N}$ là các \textit{số hạng}, \textit{\&} $c$ được gọi là \textit{tổng} của $a$ \textit{\&} $b$.
 
 \begin{theorem}[Tính chất của phép cộng các số tự nhiên]
@@ -279,14 +319,14 @@ Với số tự nhiên $a\in\mathbb{N}$ cho trước, viết $x\le a$ để ch�
 \end{theorem}
 Do tính chất kết hợp nên giá trị của biểu thức $a + b + c$ có thể được tính theo 1 trong 2 cách sau: $a + b + c = (a + b) + c$ hoặc $a + b + c = a + (b + c)$.
 
-\subsubsection{Phép trừ $-$}
+\subsection{Phép trừ $-$}
 \fbox{$a - b = c$} ($a\ge b$) trong đó $a$ là \textit{số bị trừ}, $b$ là \textit{số trừ}, $c$ là \textit{hiệu}.
 
 \noindent\textbf{Tính chất.} Nếu $a - b = c$ thì $a = b + c$. Nếu $a + b = c$ thì $a = c - b$ \textit{\&} $b = c - a$.
 
-\subsection{Phép Nhân, Phép Chia Các Số Tự Nhiên}
+\section{Phép Nhân, Phép Chia Các Số Tự Nhiên}
 
-\subsubsection{Phép nhân $\times$\texttt{/}$\cdot$}
+\subsection{Phép nhân $\times$\texttt{/}$\cdot$}
 \fbox{$a\times b = c$}, trong đó $a,b\in\mathbb{N}$ là các \textit{thừa số}, \textit{\&} $c$ là \textit{tích}.
 
 \noindent\textbf{Quy ước.}
@@ -302,7 +342,7 @@ Do tính chất kết hợp nên giá trị của biểu thức $a + b + c$ có 
 	\end{align*}
 \end{itemize}
 
-\paragraph{Nhân 2 số có nhiều chữ số.} Cho 2 số $a,b\in\mathbb{N}$. Nếu 1 trong chúng bằng 0 thì hiển nhiên tích $ab = 0$. Nếu cả 2 số $a,b$ đều khác 0, tức $a,b\in\mathbb{N}^\star$, thì để tính tích $ab$, trước tiên ta biểu diễn $a$ \textit{\&} $b$ dưới dạng thập phân \eqref{decimal representation}:
+\subsubsection{Nhân 2 số có nhiều chữ số.} Cho 2 số $a,b\in\mathbb{N}$. Nếu 1 trong chúng bằng 0 thì hiển nhiên tích $ab = 0$. Nếu cả 2 số $a,b$ đều khác 0, tức $a,b\in\mathbb{N}^\star$, thì để tính tích $ab$, trước tiên ta biểu diễn $a$ \textit{\&} $b$ dưới dạng thập phân \eqref{decimal representation}:
 \begin{equation*}
 	\left\{\begin{split}		
 		&a = \overline{a_ma_{m-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0}, \mbox{ với } m,n\in\mathbb{N},\\
@@ -315,7 +355,7 @@ sau đó sử dụng công thức \eqref{decimal representation expansion} để
 \end{align*}
 trong đó $\sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j$ chính là cách thường được sử dụng để tính tích 2 số nguyên dương: tính tích riêng thứ nhất, tính tích riêng thứ 2 \textit{\&} viết tích này lùi sang bên trái 1 cột so với tích riêng thứ nhất, tính tích riêng thứ 3 \textit{\&} viết tích này lùi sang bên trái 2 cột so với tích riêng thứ nhất, etc (xem ví dụ ở \cite[p. 18]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}).
 
-\paragraph{Tính chất của phép nhân.}
+\subsubsection{Tính chất của phép nhân.}
 \begin{theorem}[Các tính chất của phép nhân các số tự nhiên]
 	Phép nhân các số tự nhiên có các tính chất sau: $\forall a,b,c\in\mathbb{N}$,
 	\begin{itemize}
@@ -327,13 +367,13 @@ trong đó $\sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j$ chính là c�
 \end{theorem}
 Do tính chất kết hợp nên giá trị của biểu thức $abc$ có thể được tính theo 1 trong 2 cách sau: $abc = (ab)c$ hoặc $abc = a(bc)$.
 
-\subsubsection{Phép Chia $:$}
+\subsection{Phép Chia $:$}
 
-\paragraph{Phép chia hết.} Phép chia hết 1 số tự nhiên cho 1 số tự nhiên khác 0: \fbox{$a:b = q$} ($b\ne 0$), trong đó $a$ là \textit{số bị chia}, $b$ là \textit{số chia}, $q$ là \textit{thương}.
+\subsubsection{Phép chia hết.} Phép chia hết 1 số tự nhiên cho 1 số tự nhiên khác 0: \fbox{$a:b = q$} ($b\ne 0$), trong đó $a$ là \textit{số bị chia}, $b$ là \textit{số chia}, $q$ là \textit{thương}.
 
 \noindent\textbf{Tính chất.} Nếu $a:b = q$ thì $a = bq$. Nếu $a:b = q$ \textit{\&} $q\ne 0$ thì $a:q = b$ (trường hợp $q = 0$ xảy ra khi \textit{\&} chỉ khi $a = 0$, $b\ne 0$, i.e., $b\in\mathbb{N}^\star$, \textit{\&} khi đó biểu thức $0:b = 0$ đúng, nhưng $0:0 = b\ne 0$ lại vô nghĩa!).
 
-\paragraph{Phép chia có dư.}
+\subsubsection{Phép chia có dư.}
 \begin{theorem}
 	Cho 2 số tự nhiên $a\in\mathbb{N}$, $b\in\mathbb{N}^\star$. Khi đó luôn tìm được đúng 2 số tự nhiên $q$ \textit{\&} $r$ sao cho $a = bq + r$, trong đó $0\le r < b$.
 \end{theorem}
@@ -346,7 +386,7 @@ Do tính chất kết hợp nên giá trị của biểu thức $abc$ có thể 
 	Khi $r = 0$ ta có phép chia hết. Khi $r\ne 0$ ta có phép chia có dư. Ta nói: $a$ chia cho $b$ được thương là $q$ \textit{\&} số dư là $r$. Ký hiệu: $a:b = q$ (dư $r$).
 \end{remark}
 
-\subsection{Phép Tính Lũy Thừa với Số Mũ Tự Nhiên}
+\section{Phép Tính Lũy Thừa với Số Mũ Tự Nhiên}
 
 \begin{question}
 	Tại sao cần phép tính lũy thừa?
@@ -356,11 +396,11 @@ Do tính chất kết hợp nên giá trị của biểu thức $abc$ có thể 
 	Phép nhân dùng để tiện viết gọn phép cộng\texttt{/} của cùng 1 số hạng nhiều lần. Tương tự, phép lấy lũy thừa dùng để viết gọn phép nhân\texttt{/}tích của cùng 1 số hạng nhiều lần. Lưu ý, 1 trong những mục đích chính của Toán học là dùng công thức để biểu thị càng cô đọng\texttt{/}ngắn gọn ý toán\texttt{/}lập luận logic càng tốt.
 \end{proof}
 
-\subsubsection{Phép nâng lên lũy thừa}
+\subsection{Phép nâng lên lũy thừa}
 
-\begin{definition}[Lũy thừa\texttt{/}Exponentiation]
+\begin{dinhnghia}[Lũy thừa\texttt{/}Exponentiation]
 	\emph{Lũy thừa bậc $n$} của $a$, ký hiệu $a^n$, là tích của $n$ thừa số $a$: $a^n = a\cdot a\cdots a$ ($n$ thừa số $a$) với $n\in\mathbb{N}^\star$. Số $a$ được gọi là \emph{cơ số}, $n$ được gọi là \emph{số mũ}.
-\end{definition}
+\end{dinhnghia}
 Quy ước $a^1 = a$ với mọi $a\in\mathbb{N}$. Phép nhân nhiều thừa số bằng nhau gọi là \textit{phép nâng lũy thừa}.
 
 \begin{question}
@@ -376,7 +416,7 @@ Quy ước $a^1 = a$ với mọi $a\in\mathbb{N}$. Phép nhân nhiều thừa s�
 \end{remark}
 Lưu ý: $10^n = 10\ldots 0$ với $n$ chữ số 0, với mọi $n\in\mathbb{N}^\star$.
 
-\subsubsection{Nhân 2 lũy thừa cùng cơ số}
+\subsection{Nhân 2 lũy thừa cùng cơ số}
 \textbf{Quy tắc.} Khi nhân 2 lũy thừa cùng cơ số, ta giữ nguyên cơ số \textit{\&} cộng các số mũ:
 \begin{align}
 	\label{product of exponentiation}
@@ -384,7 +424,7 @@ Lưu ý: $10^n = 10\ldots 0$ với $n$ chữ số 0, với mọi $n\in\mathbb{N}
 \end{align}
 Chú ý: \fbox{$a^0 = 1$,  $\forall a\in\mathbb{N}^\star$}. \textit{Why?} Bởi vì khi cho $m = n = 0$ trong công thức \eqref{product of exponentiation}, thu được: $a^0a^0 = a^0$ hay $a^0(a^0 - 1) = 0$ nên $a^0 = 0$ hoặc $a^0 = 1$. Giả sử\footnote{Ở đây xảy ra 2 trường hợp, \textit{\&} 1 trong số chúng chính là kết quả ta cần chứng minh, vì vậy, bằng phương pháp phản chứng, ta sẽ giả sử các trường hợp còn lại là đúng (nhưng thực tế là sai) rồi tiếp tục suy luận để dẫn tới ``1 điều vô lý''. Từ đó ta kết luận được trường hợp duy nhất xảy ra. ``Điều vô lý'' thường xuất hiện trong \textit{phương pháp chứng minh bằng phản chứng}\texttt{/}\textit{proof by method of contradiction} thường là ``$0 = a$'' với $a\ne 0$. NQBH: sẽ bổ sung các điều vô lý khác ở đây.} $a^0 = 0$, thay $m = 0$, $a = 1$, $n = 1$ vào \eqref{product of exponentiation} thu được $1^01^1 = 1^{0+1}$, hay $0\cdot 1 = 1$, vô lý. Vậy chỉ có thể xảy ra $a^0 = 1$ với mọi $a\in\mathbb{N}$.
 
-\subsubsection{Chia 2 lũy thừa cùng cơ số}
+\subsection{Chia 2 lũy thừa cùng cơ số}
 \textbf{Quy tắc.} Khi chia 2 lũy thừa cùng cơ số (khác $0$) (why?\footnote{Nếu cơ số bằng 0 \textit{\&} số mũ của số chia khác 0, thì số chia sẽ bằng 0, \textit{\&} phép chia cho 0 (division by zero) vô nghĩa.}), ta giữ nguyên cơ số \textit{\&} trừ các số mũ:
 \begin{align}
 	\label{quotient of exponentiation}
@@ -394,10 +434,10 @@ Chú ý: \fbox{$a^0 = 1$,  $\forall a\in\mathbb{N}^\star$}. \textit{Why?} Bởi 
 
 Chú ý, từ công thức \eqref{quotient of exponentiation}, cho $m = n$, thu được $a^m:a^m = a^{m - m}$, $\forall a\in\mathbb{N}^\star$, hay tương đương, $1 = a^0$, $\forall a\in\mathbb{N}^\star$. Vậy ta cũng thu được công thức này từ định nghĩa của phép chia, \textit{\&} trực tiếp\texttt{/}ngắn gọn hơn, thay vì suy ra từ phép nhân 2 lũy thừa cùng cơ số.
 
-\subsection{Thứ Tự Thực Hiện Các Phép Tính}
+\section{Thứ Tự Thực Hiện Các Phép Tính}
 ``Khi tính giá trị của 1 biểu thức, ta không được làm tùy tiện mà phải tính theo đúng quy ước thứ tự thực hiện các phép tính.'' -- \cite[p. 26]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Thứ tự thực hiện các phép tính trong biểu thức không chứa dấu ngoặc}
+\subsection{Thứ tự thực hiện các phép tính trong biểu thức không chứa dấu ngoặc}
 \begin{tcolorbox}
 	\begin{itemize}
 		\item Khi biểu thức chỉ có các phép tính cộng \textit{\&} trừ (hoặc chỉ có các phép tính nhân \textit{\&} chia), ta thực hiện phép tính theo thứ tự từ trái sang phải.
@@ -406,7 +446,7 @@ Chú ý, từ công thức \eqref{quotient of exponentiation}, cho $m = n$, thu 
 	\end{itemize}
 \end{tcolorbox}
 
-\subsubsection{Thứ tự thực hiện các phép tính trong biểu thức chứa dấu ngoặc}
+\subsection{Thứ tự thực hiện các phép tính trong biểu thức chứa dấu ngoặc}
 \begin{tcolorbox}
 	\begin{itemize}
 		\item Khi biểu thức có chứa dấu ngoặc, ta thực hiện các phép tính trong dấu ngoặc trước.
@@ -414,25 +454,25 @@ Chú ý, từ công thức \eqref{quotient of exponentiation}, cho $m = n$, thu 
 	\end{itemize}	
 \end{tcolorbox}
 
-\subsection{Quan Hệ Chia Hết. Tính Chất Chia Hết}
+\section{Quan Hệ Chia Hết. Tính Chất Chia Hết}
 
-\subsubsection{Quan hệ chia hết}
+\subsection{Quan hệ chia hết}
 
-\paragraph{Khái niệm về chia hết.}
-\begin{definition}[Chia hết]
+\subsubsection{Khái niệm về chia hết.}
+\begin{dinhnghia}[Chia hết]
 	Cho $a,b\in\mathbb{N}$, $b\ne 0$. Nếu có số tự nhiên $q$ sao cho $a = bq$ thì ta nói \emph{$a$ chia hết cho $b$}. Khi $a$ chia hết cho $b$, ta nói $a$ là \emph{bội} của $b$ \textit{\&} $b$ là \emph{ước} của $a$.
-\end{definition}
+\end{dinhnghia}
 Nếu số dư trong phép chia $a$ cho $b$ bằng 0 thì $a$ chia hết cho $b$, ký hiệu $a\ \vdots\ b$. Nếu số dư trong phép chia $a$ cho $b$ khác 0 thì $a$ không chia hết cho $b$, ký hiệu $a\not\vdots\ b$.
 
 Với $a\in\mathbb{N}^\star$, $a$ là ước của $a$, $a$ là bội của $a$, 0 là bội của $a$, $1$ là ước của $a$.
 
-\paragraph{Cách tìm bội \textit{\&} ước của 1 số.} Để tìm các bội của $n\in\mathbb{N}^\star$, ta có thể lần lượt nhân $n$ với $0,1,2,3,\ldots$. Khi đó, các kết quả nhận được đều là bội của $n$. Ngắn gọn, tập hợp tất cả các bội của $n\in\mathbb{N}^\star$ là $\{kn;k\in\mathbb{N}\}$.
+\subsubsection{Cách tìm bội \textit{\&} ước của 1 số.} Để tìm các bội của $n\in\mathbb{N}^\star$, ta có thể lần lượt nhân $n$ với $0,1,2,3,\ldots$. Khi đó, các kết quả nhận được đều là bội của $n$. Ngắn gọn, tập hợp tất cả các bội của $n\in\mathbb{N}^\star$ là $\{kn;k\in\mathbb{N}\}$.
 
 Để tìm các ước của $n\in\mathbb{N}$, $n > 1$ (tức $n\ge 2$) ta có thể lần lượt chia $n$ cho các số tự nhiên từ 1 đến $n$. Khi đó, các phép chia hết cho ta số chia là ước của $n$. Ngắn gọn, tập hợp tất cả các ước của $n\in\mathbb{N}$, $n\ge 2$ là $\{a\in\mathbb{N}^\star;a\le n,\ n\ \vdots\ a\}$.
 
-\subsubsection{Tính chất chia hết}
+\subsection{Tính chất chia hết}
 
-\paragraph{Tính chất chia hết của 1 tổng.}
+\subsubsection{Tính chất chia hết của 1 tổng.}
 \begin{theorem}
 	Nếu tất cả các số hạng của tổng đều chia hết cho cùng 1 số thì tổng chia hết cho số đó.
 \end{theorem}
@@ -442,7 +482,7 @@ I.e., $(a\ \vdots\ m)\land(b\ \vdots\ m)\Rightarrow(a + b)\ \vdots\ m$. Khi đó
 	Cho $a,b,m\in\mathbb{N}$, $m\ne 0$. Nếu $a\ \vdots\ m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\ \vdots\ m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Khi đó $a + b = ma_1 + mb_1 = m(a_1 + b_1)$, \textit{\&} hiển nhiên $a_1 + b_1\in\mathbb{N}$, nên $(a + b)\ \vdots\ m$.
 \end{proof}
 
-\paragraph{Tính chất chia hết của 1 hiệu.}
+\subsubsection{Tính chất chia hết của 1 hiệu.}
 \begin{theorem}
 	Nếu số bị trừ \textit{\&} số trừ đều chia hết cho cùng 1 số thì hiệu của chúng chia hết cho số đó.
 \end{theorem}
@@ -452,15 +492,15 @@ I.e., với $a,b,m\in\mathbb{N}$, $a\ge b$, nếu $a\ \vdots\ m$ \textit{\&} $b\
 	Cho $a,b,m\in\mathbb{N}$, $a\ge b$, $m\ne 0$. Nếu $a\ \vdots\ m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\ \vdots\ m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Giả thiết $a\ge b$ cho ta $a_1\ge b_1$. Khi đó $a - b = ma_1 - mb_1 = m(a_1 - b_1)$, \textit{\&} hiển nhiên $a_1 - b_1\in\mathbb{N}$, nên $(a - b)\ \vdots\ m$.
 \end{proof}
 
-\paragraph{Tính chất chia hết của 1 tích.}
+\subsubsection{Tính chất chia hết của 1 tích.}
 \begin{theorem}
 	Nếu 1 thừa số của tích chia hết cho 1 số thì tích chia hết cho số đó.
 \end{theorem}
 Nếu $a\ \vdots\ m$  thì $(ab)\ \vdots\ m$ với mọi $b\in\mathbb{N}$.
 
-\subsection{Dấu hiệu chia hết cho 2, cho 5}
+\section{Dấu hiệu chia hết cho 2, cho 5}
 
-\subsubsection{Dấu hiệu chia hết cho 2}
+\subsection{Dấu hiệu chia hết cho 2}
 Các số chẵn thì chia hết cho 2 còn các số lẻ thì không chia hết cho 2, i.e.,
 
 \begin{theorem}[Dấu hiệu chia hết cho 2]
@@ -468,7 +508,7 @@ Các số chẵn thì chia hết cho 2 còn các số lẻ thì không chia hế
 \end{theorem}
 I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ a_0\in\{0,2,4,6,8\})\Leftrightarrow a\ \vdots\ 2$.
 
-\subsubsection{Dấu hiệu chia hết cho 5}
+\subsection{Dấu hiệu chia hết cho 5}
 \begin{theorem}[Dấu hiệu chia hết cho 5]
 	Các số có chữ số tận cùng là 0 hoặc 5 thì chia hết chia 5 \textit{\&} chỉ những số đó mới chia hết cho 5.
 \end{theorem}
@@ -478,14 +518,14 @@ I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,
 	Các số có chữ số tận cùng là 0 thì chia hết cho cả 2 \textit{\&} 5 \textit{\&} chỉ những số đó mới chia hết cho cả 2 \textit{\&} 5.
 \end{corollary}
 
-\subsubsection{Giải thích dấu hiệu chia hết cho 2, cho 5}
+\subsection{Giải thích dấu hiệu chia hết cho 2, cho 5}
 Tham khảo \cite[p. 37]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xét số tự nhiên $A$ có chữ số tận cùng là $a$. Khi đó $A$ có thể viết được dưới dạng: $A = 10B + a$, trong đó $B\in\mathbb{N}$ (trường hợp $B = 0$ thì $A = a$ \textit{\&} là số có 1 chữ số). Do đó, $A - 10 B = a$.
 \begin{itemize}
 	\item Nếu $a\in\{0;2;4;6;8\}$ thì $a\ \vdots\ 2$. Do $10B\ \vdots\ 2$ \textit{\&} $a\ \vdots\ 2 2$ nên tổng $(10B + a)\ \vdots\ 2$. Vậy $A\ \vdots\ 2$. Ngược lại, nếu $A\ \vdots\ 2$ thì hiệu $(A - 10B)\ \vdots\ 2$, tức là $a\ \vdots\ 2$ nên $a\in\{0;2;4;6;8\}$.
 	\item Nếu $a\in\{0;5\}$ thì $a\ \vdots\ 5$. Do $10B\ \vdots\ 5$ \textit{\&} $a\ \vdots\ 5$ nên tổng $(10B + a)\ \vdots\ 5$. Vậy $A\ \vdots\ 5$. Ngược lại, nếu $A\ \vdots\ 5$ thì hiệu $(A - 10B)\ \vdots\ 5$, tức là $a\ \vdots\ 5$ nên $a\in\{0;5\}$.
 \end{itemize}
 
-\subsubsection{Dấu hiệu chia hết cho 4}
+\subsection{Dấu hiệu chia hết cho 4}
 Tham khảo \cite[p. 37]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xét số tự nhiên $A$ có 3 chữ số trở lên\footnote{Giả thiết này sẽ làm thiếu những số có 1 hoặc 2 chữ số \textit{\&} chia hết cho 4.}. Gọi $C$ là số tại bởi 2 chữ số tận cùng của $A$. Khi đó $A$ có thể được viết dưới dạng: $A = 100B + C$, trong đó $B\in\mathbb{N}$ (trường hợp $B = 0$ thì $A = C$ \textit{\&} là số có 2 chữ số). Do đó, $A - 100B = C$. Nếu $C\ \vdots\ 4$ thì tổng $(100B + C)\ \vdots\ 4$, tức là $A\ \vdots\ 4$. Ngược lại, nếu $A\ \vdots\ 4$ thì hiệu $(A - 100B)\ \vdots\ 4$, tức là $C\ \vdots\ 4$. Vậy:
 
 \begin{theorem}
@@ -493,9 +533,9 @@ Tham khảo \cite[p. 37]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xét số
 \end{theorem}
 I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ \overline{a_1a_0}\ \vdots\ 4)\Leftrightarrow a\ \vdots\ 4$. Chú ý công thức này bao gồm cả những số có 1 hoặc 2 chữ số \textit{\&} chia hết 4.
 
-\subsection{Dấu Hiệu Chia Hết Cho 3, Cho 9}
+\section{Dấu Hiệu Chia Hết Cho 3, Cho 9}
 
-\subsubsection{Dấu hiệu chia hết cho 3}
+\subsection{Dấu hiệu chia hết cho 3}
 
 \begin{theorem}[Dấu hiệu chia hết cho 3]
 	Các số có tổng các chữ số chia hết cho 3 thì chia hết cho 3 \textit{\&} chỉ những số đó mới chia hết cho 3.
@@ -509,7 +549,7 @@ I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,
 	Vì vậy, $a\ \vdots\ 3$ khi \textit{\&} chỉ khi tổng các chữ số của $a$, i.e., $\sum_{i=0}^n a_i$, chia hết cho 3.
 \end{proof}
 
-\subsubsection{Dấu hiệu chia hết cho 9}
+\subsection{Dấu hiệu chia hết cho 9}
 Hoàn toàn tương tự dấu hiệu chia hết cho 3:
 
 \begin{theorem}[Dấu hiệu chia hết cho 9]
@@ -524,7 +564,7 @@ Hoàn toàn tương tự dấu hiệu chia hết cho 3:
 	Vì vậy, $a\ \vdots\ 9$ khi \textit{\&} chỉ khi tổng các chữ số của $a$, i.e., $\sum_{i=0}^n a_i$, chia hết cho 9.
 \end{proof}
 
-\subsubsection{Giải thích dấu hiệu chia hết cho 3, cho 9}
+\subsection{Giải thích dấu hiệu chia hết cho 3, cho 9}
 Tham khảo \cite[p. 40]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xét số tự nhiên $\overline{abc}$, $a\ne 0$ có 3 chữ số, ta viết được $\overline{abc} = 100a + 10b + c = (99a + 9b) + (a + b + c) = 9(11a + b) + (a + b + c)$. Tổng quát, ta có mọi số tự nhiên $A$ đều viết được dưới dạng tổng các chữ số của nó cộng với 1 số chia hết cho 9, i.e., $A = 9M + S$, trong đó $S$ là tổng các chữ số của số $A$.
 \begin{itemize}
 	\item Nếu $A\in\mathbb{N}$ có tổng các chữ số chia hết cho 3 thì $S$ chia hết cho 3. Do $9M\ \vdots\ 3$ \textit{\&} $S\ \vdots\ 3$ nên tổng $(9M + S)\ \vdots\ 3$. Vậy $A\ \vdots\ 3$. Ngược lại, nếu $A\ \vdots\ 3$ thì hiệu $(A - 9M)\ \vdots\ 3$, i.e., $S\ \vdots\ 3$. Vậy tổng các chữ số của $A$ chia hết cho 3.
@@ -532,60 +572,60 @@ Tham khảo \cite[p. 40]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xét số
 \end{itemize}
 ``Áp dụng dấu hiệu chia hết cho 9, ta có thể kiểm tra (sơ bộ) kết quả phép nhân 2 số có nhiều chữ số là sai.'' -- \cite[p. 40]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Số Nguyên Tố. Hợp Số}
+\section{Số Nguyên Tố. Hợp Số}
 
-\begin{definition}[Số nguyên tố, hợp số]
+\begin{dinhnghia}[Số nguyên tố, hợp số]
 	\emph{Số nguyên tố} là số tự nhiên lớn hơn 1, chỉ có 2 ước là 1 \textit{\&} chính nó. \emph{Hợp số} là số tự nhiên lớn hơn 1, có nhiều hơn 2 ước.
-\end{definition}
+\end{dinhnghia}
 Số 0 (có vô hạn ước) \textit{\&} số 1 (có duy nhất 1 ước là chính nó) không là số nguyên tố \textit{\&} cũng không là hợp số. Để chứng tỏ $a\in\mathbb{N}$, $a\ge 2$ là hợp số, ta chỉ cần tìm 1 ước của $a$ khác 1 \textit{\&} khác $a$ (khi đó, $a$ có ít nhất 3 ước, theo định nghĩa, suy ra $a$ là hợp số).
 
 \begin{remark}
 	Số nguyên tố (prime) là 1 chủ đề cực khó, với nhiều bài toán mở, giả thuyết chưa được chứng minh đúng hay sai, trong Lý thuyết Số học\emph{\texttt{/}}Number Theory.
 \end{remark}
 
-\begin{definition}
+\begin{dinhnghia}
 	Nếu số nguyên tố $p$ là ước của số tự nhiên $a$ thì $p$ được gọi là \emph{ước nguyên tố} của $a$.
-\end{definition}
+\end{dinhnghia}
 
-\subsubsection{Sàng Eratosthenes}
+\subsection{Sàng Eratosthenes}
 ``Số nguyên tố nhỏ nhất là số 2 \textit{\&} đó là số nguyên tố chẵn duy nhất.'' Bằng sàng Eratosthenes, ta có thể lọc ra tất cả các số nguyên tố nhỏ hơn 1 số tự nhiên $n$ cho trước. ``Eratosthenes là nhà toán học, địa lý học, thiên văn học người Hy Lạp. Ông là người đã nghĩ ra hệ thống kinh độ, vĩ độ \textit{\&} cũng là người đầu tiên tính được kích thước của Trái Đất.'' -- \cite[p. 43]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Phân Tích 1 Số Ra Thừa Số Nguyên Tố}
+\section{Phân Tích 1 Số Ra Thừa Số Nguyên Tố}
 
-\subsubsection{Cách tìm 1 ước nguyên tố của 1 số}
+\subsection{Cách tìm 1 ước nguyên tố của 1 số}
 \begin{tcolorbox}
 	Để tìm 1 ước nguyên tố của số $a\in\mathbb{N}$, $a\ge 2$, ta có thể làm như sau: Lần lượt thực hiện phép chia $a$ cho các số nguyên tố theo thứ tự tăng dần $2,3,5,7,11,13,\ldots$. Khi đó, phép chia hết đầu tiên cho ta số chia là 1 ước nguyên tố của $a$.
 \end{tcolorbox}
 
-\subsubsection{Phân tích 1 số ra thừa số nguyên tố}
+\subsection{Phân tích 1 số ra thừa số nguyên tố}
 
-\begin{definition}[Phân tích 1 số ra thừa số nguyên tố\texttt{/}Factorization into prime factors]
+\begin{dinhnghia}[Phân tích 1 số ra thừa số nguyên tố\texttt{/}Factorization into prime factors]
 	\emph{Phân tích 1 số tự nhiên lớn hơn 1 ra thừa số nguyên tố} là viết số đó dưới dạng 1 tích các thừa số nguyên tố.
-\end{definition}
+\end{dinhnghia}
 ``Ta nên chia mỗi số cho ước nguyên tố nhỏ nhất của nó. Cứ tiếp tục chia như thế cho đến khi được thương là 1.'' -- \cite[p. 45]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
 ``Thông thường, khi phân tích 1 số tự nhiên ra thừa số nguyên tố, các ước nguyên tố được viết theo thứ tự tăng dần. Ngoài cách làm như trên, ta cũng có thể phân tích 1 số ra thừa số nguyên tố bằng cách viết số đó thành tích của 2 thừa số 1 cách linh hoạt.'' ``Dù phân tích 1 số ra thừa số nguyên tố bằng cách nào thì cuối cùng ta cũng được cùng 1 kết quả.''\footnote{Điều này có nghĩa là dạng phân tích ra thừa số nguyên tố của 1 số tự nhiên là duy nhất, \textit{\&} điều này ứng với Định lý Phân tích số tự nhiên ra thừa số nguyên tố của Lý thuyết Số học. \texttt{[insert later]} Xem, e.g., sách Số Học của GS. Hà Huy Khoái.} -- \cite[p. 46]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Ước Chung \textit{\&} Ước Chung Lớn Nhất}
+\section{Ước Chung \textit{\&} Ước Chung Lớn Nhất}
 
-\subsubsection{Ước chung \textit{\&} ước chung lớn nhất}
+\subsection{Ước chung \textit{\&} ước chung lớn nhất}
 
-\begin{definition}[Ước chung \textit{\&} ước chung lớn nhất]
+\begin{dinhnghia}[Ước chung \textit{\&} ước chung lớn nhất]
 	Số tự nhiên $n$ được gọi là \emph{ước chung} của 2 số tự nhiên $a$ \textit{\&} $b$ nếu $n$ vừa là ước của $a$ vừa là ước của $b$. Số lớn nhất trong các ước chung của $a$ \textit{\&} $b$ được gọi là \emph{ước chung lớn nhất} của $a$ \textit{\&} $b$.
-\end{definition}
+\end{dinhnghia}
 \noindent\textbf{Quy ước.} Viết tắt ước chung là ƯC \textit{\&} ước chung lớn nhất là ƯCLN. Ta ký hiệu: Tập hợp các ước chung của $a$ \textit{\&} $b$ là $\mbox{ƯC}(a,b)$; ước chung lớn nhất của $a$ \textit{\&} $b$ là $\mbox{ƯCLN}(a,b)$.
 
 Ký hiệu chuẩn quốc tế của ước chung lớn nhất của 2 số $a,b\in\mathbb{N}$ là $\gcd(a,b)$, viết tắt của \textit{greatest common divisor}.
 
-\begin{definition}
+\begin{dinhnghia}
 	Số tự nhiên $n\in\mathbb{N}^\star$ được gọi là \emph{ước chung} của $n$ số $a_1,\ldots,a_n$ nếu $n$ là ước của tất cả $n$ số đó.
-\end{definition}
+\end{dinhnghia}
 
 \begin{theorem}
 	Ước chung của 2 số là ước của ước chung lớn nhất của chúng.
 \end{theorem}
 
-\subsubsection{Tìm ước chung lớn nhất bằng cách phân tích các số ra thừa số nguyên tố}
+\subsection{Tìm ước chung lớn nhất bằng cách phân tích các số ra thừa số nguyên tố}
 \begin{tcolorbox}
 	\textbf{Tìm ước chung lớn nhất bằng cách phân  tích các số ra thừa số nguyên tố.}
 	\begin{enumerate}
@@ -597,17 +637,17 @@ Ký hiệu chuẩn quốc tế của ước chung lớn nhất của 2 số $a,b
 \end{tcolorbox}
 Nếu 2 số đã cho không có thừa số nguyên tố chung thì ƯCLN của chúng bằng 1. Nếu $a\ \vdots\ b$ thì $\mbox{ƯCLN}(a,b) = b$.
 
-\subsubsection{2 số nguyên tố cùng nhau}
+\subsection{2 số nguyên tố cùng nhau}
 
-\begin{definition}[2 số nguyên tố cùng nhau]
+\begin{dinhnghia}[2 số nguyên tố cùng nhau]
 	\emph{2 số nguyên tố cùng nhau} là 2 số có ước chung lớn nhất bằng 1.
-\end{definition}
+\end{dinhnghia}
 
-\begin{definition}[Phân số tối giản]
+\begin{dinhnghia}[Phân số tối giản]
 	\emph{Phân số tối giản} là phân số có tử \textit{\&} mẫu là 2 số nguyên tố cùng nhau.
-\end{definition}
+\end{dinhnghia}
 
-\subsubsection{Tìm ước chung lớn nhất bằng thuật toán Euclid}
+\subsection{Tìm ước chung lớn nhất bằng thuật toán Euclid}
 Tham khảo \cite[p. 52]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}: Để tìm ước chung lớn nhất bằng \textit{thuật toán Euclid}, ta làm như sau:
 \begin{enumerate}
 	\item Chia số lớn cho số nhỏ.
@@ -619,20 +659,20 @@ Tham khảo \cite[p. 52]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}: Để tì
 	Người ta thường dùng thuật toán Euclid đề tìm $\mbox{ƯCLN}$ của cặp số lớn.
 \end{remark}
 
-\subsection{Bội Chung \textit{\&} Bội Chung Nhỏ Nhất}
+\section{Bội Chung \textit{\&} Bội Chung Nhỏ Nhất}
 
-\subsubsection{Bội chung \textit{\&} bội chung nhỏ nhất}
+\subsection{Bội chung \textit{\&} bội chung nhỏ nhất}
 
-\begin{definition}[Bội chung \textit{\&} bội chung nhỏ nhất của 2 số]
+\begin{dinhnghia}[Bội chung \textit{\&} bội chung nhỏ nhất của 2 số]
 	Số tự nhiên $n\in\mathbb{N}$ được gọi là \emph{bội chung} của 2 số $a$ \textit{\&} $b$ nếu $n$ vừa là bội của $a$ vừa là bội của $b$. Số nhỏ nhất khác 0 trong các bội chung của $a$ \textit{\&} $b$ được gọi là \emph{bội chung nhỏ nhất} của $a$ \textit{\&} $b$.
-\end{definition}
+\end{dinhnghia}
 \noindent\textbf{Quy ước.} Viết tắt bội chung là BC \textit{\&} bội chung nhỏ nhất là BCNN. Ta ký hiệu: Tập hợp các bội chung của $a$ \textit{\&} $b$ là $\operatorname{BC}(a,b)$; bội chung nhỏ nhất của $a$ \textit{\&} $b$ là $\operatorname{BCNN}(a,b)$.  
 
 Ký hiệu chuẩn quốc tế của bội chung nhỏ nhất của 2 số $a,b\in\mathbb{N}^\star$ là $\operatorname{lcm}(a,b)$, trong đó lcm là viết tắt của \textit{least common multiple}\texttt{/}\textit{lowest common multiple}.
 
-\begin{definition}[Bội chung \textit{\&} bội chung nhỏ nhất của nhiều số]
+\begin{dinhnghia}[Bội chung \textit{\&} bội chung nhỏ nhất của nhiều số]
 	Số tự nhiên $n$ được gọi là \emph{bội chung} của $N$ số $a_1,\ldots,a_N\in\mathbb{N}^\star$, $n\in\mathbb{N}^\star$, $N\ge 3$, nếu $n$ là bội của tất cả $N$ số $a_i$, $i = 1,\ldots,N$. Số nhỏ nhất khác 0 trong các bội chung của $N$ số $a_i$, $i = 1,\ldots,N$, được gọi là \emph{bội chung nhỏ nhất} của $N$ số $a_i$, $i = 1,\ldots,N$.
-\end{definition}
+\end{dinhnghia}
 \noindent\textbf{Ký hiệu.} Tập hợp các bội chung của $a_i$, $i = 1,\ldots,N$, là $\operatorname{BC}(a_1,\ldots,a_N)$; bội chung nhỏ nhất của $N$ số $a_i$, $i = 1,\ldots,N$, là $\operatorname{BCNN}(a_1,\ldots,a_N)$.
 
 \begin{theorem}
@@ -640,7 +680,7 @@ Ký hiệu chuẩn quốc tế của bội chung nhỏ nhất của 2 số $a,b\
 \end{theorem}
 ``Để tìm bội chung của nhiều số, ta có thể lấy bội chung nhỏ nhất của chúng lần lượt nhân với $0,1,2,\ldots$'' -- \cite[p. 55]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố}
+\subsection{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố}
 
 \begin{tcolorbox}
 	\textbf{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố.}
@@ -652,7 +692,7 @@ Ký hiệu chuẩn quốc tế của bội chung nhỏ nhất của 2 số $a,b\
 	\end{enumerate}
 \end{tcolorbox}
 
-\subsubsection{Ứng dụng bội chung nhỏ nhất vào cộng, trừ các phân số không cùng mẫu}
+\subsection{Ứng dụng bội chung nhỏ nhất vào cộng, trừ các phân số không cùng mẫu}
 
 \begin{tcolorbox}
 	Để tính tổng 2 phân số $\frac{a}{b} + \frac{c}{d}$, $a,c\in\mathbb{N}$, $b,d\in\mathbb{N}^\star$, ta có thể làm như sau:
@@ -668,17 +708,17 @@ Hiển nhiên:
 	Bội chung nhỏ nhất của 2 số nguyên tố cùng nhau bằng tích của 2 số đó.
 \end{theorem}
 
-\subsubsection{Lịch Can Chi}
+\subsection{Lịch Can Chi}
 ``1 số nước phương Đông, trong đó có Việt Nam, gọi tên năm âm lịch bằng cách ghép tên của 1 trong 10 can (theo thứ tự là \textit{Giáp, Ất, Bính, Đinh, Mậu, Kỷ, Canh, Tân, Nhâm, Quý}) với tên của 1 trong 12 chi (theo thứ tự là \textit{Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi}). Đầu tiên, \textit{Giáp} được ghép với \textit{Tý} thành năm \textit{Giáp Tý}. Cứ 10 năm, Giáp được lặp lại. Cứ 12 năm, Tý được lặp lại.'' -- \cite[p. 58]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
 
 Vì $\operatorname{BCNN}(10,12) = 60$, cứ sau 60 năm thì năm có tên tương ứng được lặp lại.
 
 %------------------------------------------------------------------------------%
 
-\section{Số Nguyên}
+\chapter{Số Nguyên}
 \textbf{Nội dung.} Tập hợp các số nguyên $\mathbb{Z}$; các phép tính trong tập hợp số nguyên; quan hệ chia hết.
 
-\subsection{Số Nguyên Âm}
+\section{Số Nguyên Âm}
 ``\emph{Số nguyên âm} được nhận biết bằng dấu ``$-$'' ở trước số tự nhiên khác 0.'' -- \cite[p. 61]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
 \noindent\textbf{Ứng dụng của số nguyên âm.} ``Số nguyên âm được sử dụng trong nhiều tình huống thực tiễn cuộc sống:
@@ -689,7 +729,7 @@ Vì $\operatorname{BCNN}(10,12) = 60$, cứ sau 60 năm thì năm có tên tươ
 	\item Số nguyên âm được dùng để chỉ thời gian trước Công nguyên.'' -- \cite[p. 62]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 \end{itemize}
 
-\subsubsection{Độ sâu lớn nhất của các đại dương dưới mực nước biển}
+\subsection{Độ sâu lớn nhất của các đại dương dưới mực nước biển}
 \begin{itemize}
 	\item ``Rãnh Mariana, thuộc Thái Bình Dương, sâu 10 925 m.
 	\item Rãnh Puerto Rico, thuộc Đại Tây Dương, sâu 8408 m.
@@ -697,22 +737,22 @@ Vì $\operatorname{BCNN}(10,12) = 60$, cứ sau 60 năm thì năm có tên tươ
 	\item Molloy Hole, nơi sâu nhất của Bắc Băng Dương, sâu 5669 m.'' (so với mực nước biển) -- \cite[p. 63]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 \end{itemize}
 
-\subsubsection{Hà Lan -- Đất nước của những vùng đất thấp hơn mực nước biển}
+\subsection{Hà Lan -- Đất nước của những vùng đất thấp hơn mực nước biển}
 ``Hà Lan được biết đến là đất nước với khoảng 26\% diện tích lãnh thổ thấp hơn mực nước biển. Bản thân tên gọi tiếng Anh của quốc gia này ``The Netherlands'' cũng có nghĩa là ``Những vùng đất thấp''. Để bảo vệ đất nước trước sự tấn công của nước biển, Hà Lan đã xây dựng hệ thống các công trình đê biển, kè biển, của cống \textit{\&} cửa chắn lụt. Tổng cộng có 65 đê chắn sóng đúc bê tông khổng lồ cùng 62 cửa van bằng thép di động treo giữa các đê chắn với tổng chiều dài 6.8 km. Cửa van lớn nhất nằm ở phần sâu nhất của châu thổ, nặng tới 480 tấn, phải mất cả tiếng đồng hồ mới mở hay đóng được. Cùng với đường hầm qua eo biển Manche, kênh đào Panama, $\ldots$ hệ thống đê biển ở Hà Lan được các nhà kiến trúc trên thế giới bầu chọn là 1 trong số 10 công trình vĩ đại nhất trên hành tinh.'' -- \cite[p. 63]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Tập Hợp Các Số Nguyên $\mathbb{Z}$}
+\section{Tập Hợp Các Số Nguyên $\mathbb{Z}$}
 
-\subsubsection{Tập hợp $\mathbb{Z}$ các số nguyên}
+\subsection{Tập hợp $\mathbb{Z}$ các số nguyên}
 
-\begin{definition}[Số nguyên dương, tập hợp các số nguyên]
+\begin{dinhnghia}[Số nguyên dương, tập hợp các số nguyên]
 	Số tự nhiên khác 0 còn được gọi là \emph{số nguyên dương}. Các số nguyên âm, số 0, \textit{\&} các số nguyên dương tạo thành tập hợp các số nguyên. Tập hợp các số nguyên được ký hiệu là $\mathbb{Z}$.
-\end{definition}
+\end{dinhnghia}
 
 \begin{remark}
 	Số 0 không phải là số nguyên âm, cũng không phải số nguyên dương. Các số nguyên dương $1,2,3,\ldots$ đều mang dấu ``$+$'' nên còn được viết là $+1,+2,+3,\ldots$.
 \end{remark}
 
-\subsubsection{Biểu diễn số nguyên trên trục số}
+\subsection{Biểu diễn số nguyên trên trục số}
 Tham khảo \cite[pp. 65--66]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Ta có thể biểu diễn số nguyên trên trục số. Có 2 loại trục số như sau:
 \begin{enumerate}
 	\item \textit{Trục số nằm ngang} có:
@@ -732,21 +772,21 @@ Tham khảo \cite[pp. 65--66]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Ta c
 \end{enumerate}
 \noindent\textbf{Quy ước.} Khi nói ``trục số'' mà không nói gì thêm, ta hiểu là nói về trục số nằm ngang.
 
-\subsubsection{Số đối của 1 số nguyên}
+\subsection{Số đối của 1 số nguyên}
 
-\begin{definition}[Số đối của 1 số nguyên]
+\begin{dinhnghia}[Số đối của 1 số nguyên]
 	Trên trục số, 2 số nguyên (phân biệt) có điểm biểu diễn nằm về 2 phía của gốc 0 \textit{\&} cách đều gốc 0 được gọi là \emph{2 số đối nhau}. Số đối của 0 là 0.
-\end{definition}
+\end{dinhnghia}
 
-\subsubsection{So sánh các số nguyên}
+\subsection{So sánh các số nguyên}
 
-\paragraph{So sánh 2 số nguyên.}
+\subsubsection{So sánh 2 số nguyên.}
 \noindent\begin{tcolorbox}
 	Trên trục số nằm ngang, nếu điểm $a$ nằm bên trái điểm $b$ thì số nguyên $a$ nhỏ hơn số nguyên $b$. Trên trục số thẳng đứng, nếu điểm $a$ nằm phía dưới điểm $b$ thì số nguyên $a$ nhỏ hơn số nguyên $b$. Nếu $a$ nhỏ hơn $b$ thì ta viết là $a < b$ hoặc $b > a$.
 \end{tcolorbox}
 ``Số nguyên dương luôn lớn hơn 0. Số nguyên âm luôn nhỏ hơn 0.'' ``Nếu $a < b$ \textit{\&} $b < c$ thì $a < c$.'' (tính chất bắc cầu) -- \cite[p. 67]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\paragraph{Cách so sánh 2 số nguyên.}
+\subsubsection{Cách so sánh 2 số nguyên.}
 \begin{itemize}
 	\item \textit{So sánh 2 số nguyên khác dấu.} ``Số nguyên âm luôn nhỏ hơn số nguyên dương.'' -- \cite[p. 68]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 	\item \textit{So sánh 2 số nguyên cùng dấu.} ``Để so sánh 2 sô nguyên âm, ta làm như sau:
@@ -756,13 +796,13 @@ Tham khảo \cite[pp. 65--66]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Ta c
 	\end{enumerate}
 \end{itemize}
 
-\subsection{Phép Cộng Các Số Nguyên}
+\section{Phép Cộng Các Số Nguyên}
 
-\subsubsection{Phép cộng 2 số nguyên cùng dấu}
+\subsection{Phép cộng 2 số nguyên cùng dấu}
 
-\paragraph{Phép cộng 2 số nguyên dương.} ``Cộng 2 số nguyên dương chính là cộng 2 số tự nhiên khác 0.'' -- \cite[p. 70]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xem lại phần \textit{Phép Cộng, Trừ Các Số Tự Nhiên}.
+\subsubsection{Phép cộng 2 số nguyên dương.} ``Cộng 2 số nguyên dương chính là cộng 2 số tự nhiên khác 0.'' -- \cite[p. 70]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Xem lại phần \textit{Phép Cộng, Trừ Các Số Tự Nhiên}.
 
-\paragraph{Phép cộng 2 số nguyên âm.} ``Để cộng 2 số nguyên âm, ta làm như sau:
+\subsubsection{Phép cộng 2 số nguyên âm.} ``Để cộng 2 số nguyên âm, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước mỗi số.
 	\item Tính tổng của 2 số nguyên dương nhận được ở Bước 1.
@@ -770,7 +810,7 @@ Tham khảo \cite[pp. 65--66]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}. Ta c
 \end{enumerate}
 Hiển nhiên: ``Tổng của 2 số nguyên dương là số nguyên dương. Tổng của 2 số nguyên âm là số nguyên âm.'' -- \cite[p. 71]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Phép cộng 2 số nguyên khác dấu}
+\subsection{Phép cộng 2 số nguyên khác dấu}
 ``Để cộng 2 số nguyên khác dấu, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước số nguyên âm, giữ nguyên số còn lại.
@@ -779,7 +819,7 @@ Hiển nhiên: ``Tổng của 2 số nguyên dương là số nguyên dương. T
 \end{enumerate}
 \textbf{Chú ý.} 2 số nguyên đối nhau có tổng bằng 0, i.e., $a + (-a) = 0$, $\forall a\in\mathbb{Z}$.
 
-\subsubsection{Tính chất của phép cộng các số nguyên}
+\subsection{Tính chất của phép cộng các số nguyên}
 
 \begin{theorem}[Tính chất của phép cộng các số nguyên]
 	Phép cộng các số nguyên có các tính chất sau:
@@ -791,12 +831,12 @@ Hiển nhiên: ``Tổng của 2 số nguyên dương là số nguyên dương. T
 	\end{itemize}
 \end{theorem}
 
-\subsection{Phép Trừ Số Nguyên. Quy Tắc Dấu Ngoặc}
+\section{Phép Trừ Số Nguyên. Quy Tắc Dấu Ngoặc}
 
-\subsubsection{Phép trừ số nguyên}
+\subsection{Phép trừ số nguyên}
 ``Muốn trừ số nguyên $a$ cho số nguyên $b$, ta cộng $a$ với số đối của $b$: $a - b = a + (-b)$.'' ``Phép trừ trong $\mathbb{N}$ không phải bao giờ cũng thực hiện được\footnote{NQBH: Vì nếu hiệu của 2 số tự nhiên là số nguyên âm, thì hiệu đó không còn thuộc $\mathbb{N}$ nữa, i.e., $(a,b\in\mathbb{N},\ a < b)\Rightarrow a - b\notin\mathbb{N}$.}, còn phép trừ trong $\mathbb{Z}$ luôn thực hiện được.\footnote{I.e., $a,b\in\mathbb{Z}\Rightarrow a - b\in\mathbb{Z}$.}'' -- \cite[p. 76]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Quy tắc dấu ngoặc}
+\subsection{Quy tắc dấu ngoặc}
 Khi bỏ dấu ngoặc có dấu ``$+$'' đằng trước thì giữ nguyên dấu của các số hạng trong ngoặc.
 \begin{align*}
 	a + (b + c) = a + b + c,\ a + (b - c) = a + b - c.\ \forall a,b,c\in\mathbb{Z}.
@@ -806,9 +846,9 @@ Khi bỏ dấu ngoặc có dấu ``$-$'' đằng trước, ta phải đổi dấ
 	a - (b + c) = a - b - c,\ a - (b - c) = a - b + c,\ \forall a,b,c\in\mathbb{Z}.
 \end{align*}
 
-\subsection{Phép Nhân Các Số Nguyên}
+\section{Phép Nhân Các Số Nguyên}
 
-\subsubsection{Phép nhân 2 số nguyên khác dấu}
+\subsection{Phép nhân 2 số nguyên khác dấu}
 ``Để nhân 2 số nguyên khác dấu, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước số nguyên âm, giữ nguyên số còn lại.
@@ -817,27 +857,27 @@ Khi bỏ dấu ngoặc có dấu ``$-$'' đằng trước, ta phải đổi dấ
 \end{enumerate}
 Tích của 2 số nguyên khác dấu là số nguyên âm.'' -- \cite[p. 80]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Phép nhân 2 số nguyên cùng dấu}
+\subsection{Phép nhân 2 số nguyên cùng dấu}
 
-\paragraph{Phép nhân 2 số nguyên dương.} ``Nhân 2 số nguyên dương chính là nhân 2 số tự nhiên khác 0.'' -- \cite[p. 81]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+\subsubsection{Phép nhân 2 số nguyên dương.} ``Nhân 2 số nguyên dương chính là nhân 2 số tự nhiên khác 0.'' -- \cite[p. 81]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\paragraph{Phép nhân 2 số nguyên âm.} ``Để nhân 2 số nguyên âm, ta làm như sau:
+\subsubsection{Phép nhân 2 số nguyên âm.} ``Để nhân 2 số nguyên âm, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước mỗi số.
 	\item Tính tích của 2 số nguyên dương nhận được ở Bước 1, ta có tích cần tìm.
 \end{enumerate}
 Tích của 2 số nguyên cùng dấu là số nguyên dương.'' -- \cite[p. 81]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Tính chất của phép nhân các số nguyên}
+\subsection{Tính chất của phép nhân các số nguyên}
 ``Giống như phép nhân các số tự nhiên, phép nhân các số nguyên cũng có các tính chất: giao hoán, kết hợp, nhân với số 1, phân phối của phép nhân đối với phép cộng, phép trừ.'' -- \cite[p. 82]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
 Sự thừa hưởng tính chất này xuất phát từ sự kiện số nguyên chỉ thêm dấu $\pm$ vào số tự nhiên, nên các tính chất được mở rộng từ $\mathbb{N}$ ra\texttt{/}lên $\mathbb{Z}$ theo 1 cách tự nhiên \textit{\&} dễ dàng.
 
 Hiển nhiên, $a0 = 0a = 0$. $(ab = 0)\Rightarrow((a = 0)\lor(b = 0))$.
 
-\subsection{Phép Chia Hết 2 Số Nguyên. Quan Hệ Chia Hết Trong Tập Hợp Số Nguyên}
+\section{Phép Chia Hết 2 Số Nguyên. Quan Hệ Chia Hết Trong Tập Hợp Số Nguyên}
 
-\subsubsection{Phép chia hết 2 số nguyên khác dấu}
+\subsection{Phép chia hết 2 số nguyên khác dấu}
 ``Để chia 2 số nguyên khác dấu, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước số nguyên âm, giữ nguyên số còn lại.
@@ -845,11 +885,11 @@ Hiển nhiên, $a0 = 0a = 0$. $(ab = 0)\Rightarrow((a = 0)\lor(b = 0))$.
 	\item Thêm dấu ``$-$'' trước kết quả nhận được ở Bước 2, ta có thương cần tìm.
 \end{enumerate}
 
-\subsubsection{Phép chia hết 2 số nguyên cùng dấu}
+\subsection{Phép chia hết 2 số nguyên cùng dấu}
 
-\paragraph{Phép chia hết 2 số nguyên dương.} Xem lại phần \textit{Phép Nhân, Phép Chia Các Số Tự Nhiên}.
+\subsubsection{Phép chia hết 2 số nguyên dương.} Xem lại phần \textit{Phép Nhân, Phép Chia Các Số Tự Nhiên}.
 
-\paragraph{Phép chia hết 2 số nguyên âm.} ``Để chia 2 số nguyên âm, ta làm như sau:
+\subsubsection{Phép chia hết 2 số nguyên âm.} ``Để chia 2 số nguyên âm, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước mỗi số.
 	\item Tính thương của 2 số nguyên dương nhận được ở Bước 1, ta có thương cần tìm.'' -- \cite[p. 85]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
@@ -862,25 +902,25 @@ Hiển nhiên, $a0 = 0a = 0$. $(ab = 0)\Rightarrow((a = 0)\lor(b = 0))$.
 	\end{itemize}
 \end{remark}
 
-\subsubsection{Quan hệ chia hết}
+\subsection{Quan hệ chia hết}
 
-\begin{definition}[Quan hệ chia hết, bội, ước]
+\begin{dinhnghia}[Quan hệ chia hết, bội, ước]
 	Cho $a,b\in\mathbb{Z}$, với $b\ne 0$. Nếu có số nguyên $q$ sao cho $a = bq$ thì ta nói: $a$ \emph{chia hết cho} $b$, $b$ \emph{chia hết} $a$, $a$ là \emph{bội} của $b$, $b$ là \emph{ước} của $a$.
-\end{definition}
+\end{dinhnghia}
 Hiển nhiên: ``Nếu $a$ là bội của $b$ thì $-a$ cũng là bội của $b$. Nếu $b$ là ước của $a$ thì $-b$ cũng là ước của $a$.'' -- \cite[p. 86]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Đầu Tư Kinh Doanh}
+\section{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Đầu Tư Kinh Doanh}
 Tham khảo \cite[pp. 89--92]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
 
-\subsubsection{Một Số Kiến Thức về Tài Chính, Kinh Doanh}
+\subsection{Một Số Kiến Thức về Tài Chính, Kinh Doanh}
 
-\paragraph{Tài chính.}
-\begin{definition}[Tài chính]
+\subsubsection{Tài chính.}
+\begin{dinhnghia}[Tài chính]
 	\emph{Tài chính} là tổng số tiền có được của 1 cá nhân, 1 tổ chức, 1 doanh nghiệp, hoặc 1 quốc gia. Tài chính của 1 cá nhân được gọi là \emph{tài chính cá nhân}.
-\end{definition}
+\end{dinhnghia}
 
-\paragraph{Kinh doanh.}
-\begin{definition}[Kinh doanh]
+\subsubsection{Kinh doanh.}
+\begin{dinhnghia}[Kinh doanh]
 	\emph{Kinh doanh} bao gồm những hoạt động mua \textit{\&} bán. Các yếu tố cơ bản trong kinh doanh là:
 	\begin{itemize}
 		\item \emph{Vốn:} số tiền ban đầu bỏ ra;
@@ -891,9 +931,9 @@ Tham khảo \cite[pp. 89--92]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
 		\item \emph{Lãi:} nếu lợi nhuận của kinh doanh là dương;
 		\item \emph{Lỗ:} nếu lợi nhuận của kinh doanh là âm.
 	\end{itemize}
-\end{definition}
+\end{dinhnghia}
 
-\paragraph{Các cách để tăng lợi nhuận.}
+\subsubsection{Các cách để tăng lợi nhuận.}
 \begin{itemize}
 	\item \textit{Tăng doanh thu}. Có 2 cách để tăng doanh thu:
 	\begin{itemize}
@@ -904,13 +944,13 @@ Tham khảo \cite[pp. 89--92]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
 	\item \textit{Giảm chi phí vận hành \textit{\&} vốn}.
 \end{itemize}
 
-\subsubsection{Kiến Thức Toán Học}
+\subsection{Kiến Thức Toán Học}
 
 \begin{tcolorbox}
 	\textbf{Công thức tính lợi nhuận.} Lợi nhuận $= A - (B + C)$. Trong đó $A$ là \textit{doanh thu}, $B$ là \textit{vốn}, $C$ là \textit{chi phí vận hành}.
 \end{tcolorbox}
 
-\subsubsection{Kỹ Năng Tìm Kiếm Thông Tin \textit{\&} Trình Bày Sản Phẩm}
+\subsection{Kỹ Năng Tìm Kiếm Thông Tin \textit{\&} Trình Bày Sản Phẩm}
 
 \begin{itemize}
 	\item Tìm hiểu thêm 1 số thông tin về tài chính, kinh doanh qua cha mẹ, người thân trong gia đình \textit{\&} qua các phương tiện thông tin truyền thông.
@@ -919,24 +959,24 @@ Tham khảo \cite[pp. 89--92]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
 
 %------------------------------------------------------------------------------%
 
-\section{Hình Học Trực Quan}
+\chapter{Hình Học Trực Quan}
 \textbf{Nội dung.} Tam giác đều, hình vuông, lục giác đều; hình chữ nhật, hình thoi, hình bình hành, hình thang cân; hình có trục đối xứng, hình có tâm đối xứng, đối xứng trong thực tiễn.
 
-\subsection{Tam Giác Đều. Hình Vuông. Lục Giác Đều}
+\section{Tam Giác Đều. Hình Vuông. Lục Giác Đều}
 
-\subsubsection{Tam giác đều}
+\subsection{Tam giác đều}
 
-\paragraph{Nhận biết tam giác đều.}
-\begin{definition}[Tam giác đều]
+\subsubsection{Nhận biết tam giác đều.}
+\begin{dinhnghia}[Tam giác đều]
 	\emph{Tam giác đều} là tam giác có 3 cạnh bằng nhau.
-\end{definition}
+\end{dinhnghia}
 Tam giác đều $ABC$ có 3 cạnh bằng nhau $AB = BC = CA$ \textit{\&} 3 góc ở 3 đỉnh $A,B,C$ bằng nhau.
 
 \begin{remark}
 	Trong hình học nói chung, tam giác nói riêng, các cạnh bằng nhau (hay các góc bằng nhau) thường được chỉ rõ bằng cùng 1 ký hiệu.
 \end{remark}
 
-\paragraph{Vẽ tam giác đều.} ``Vẽ tam giác đều bằng thước \textit{\&} compa khi biết độ dài cạnh bằng $a$ cm:
+\subsubsection{Vẽ tam giác đều.} ``Vẽ tam giác đều bằng thước \textit{\&} compa khi biết độ dài cạnh bằng $a$ cm:
 \begin{itemize}
 	\item Dùng thước vẽ đoạn thẳng $AB = a$ cm.
 	\item Lấy $A$ làm tâm, dùng compa vẽ 1 phần đường tròn có bán kính $AB$.
@@ -944,11 +984,11 @@ Tam giác đều $ABC$ có 3 cạnh bằng nhau $AB = BC = CA$ \textit{\&} 3 gó
 	\item Dùng thước vẽ các đoạn thẳng $AC$ \textit{\&} $BC$.'' -- \cite[p. 94]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 \end{itemize}
 
-\subsubsection{Hình vuông}
+\subsection{Hình vuông}
 
-\paragraph{Nhận biết hình vuông.} Hình vuông $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ là góc vuông.
+\subsubsection{Nhận biết hình vuông.} Hình vuông $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ là góc vuông.
 
-\paragraph{Vẽ hình vuông.} ``Vẽ bằng eke hình vuông $ABCD$, biết độ dài cạnh bằng $a$ cm:
+\subsubsection{Vẽ hình vuông.} ``Vẽ bằng eke hình vuông $ABCD$, biết độ dài cạnh bằng $a$ cm:
 \begin{enumerate}
 	\item Vẽ theo 1 cạnh góc vuông của eke đoạn thẳng $AB$ có độ dài bằng 7 cm.
 	\item Đặt đỉnh góc vuông của eke trùng với điểm $A$ \textit{\&} 1 cạnh eke nằm trên $AB$, vẽ theo cạnh kia của eke đoạn thẳng $AD$ có độ dài bằng $a$ cm.
@@ -956,18 +996,18 @@ Tam giác đều $ABC$ có 3 cạnh bằng nhau $AB = BC = CA$ \textit{\&} 3 gó
 	\item Vẽ đoạn thẳng $CD$.'' -- \cite[p. 95]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 \end{enumerate}
 
-\paragraph{Chu vi \textit{\&} diện tích của hình vuông.} Chu vi của hình vuông có độ dài cạnh bằng $a$ là $C = 4a$. Diện tích của hình vuông có độ dài cạnh bằng $a$ là $S = aa = a^2$.
+\subsubsection{Chu vi \textit{\&} diện tích của hình vuông.} Chu vi của hình vuông có độ dài cạnh bằng $a$ là $C = 4a$. Diện tích của hình vuông có độ dài cạnh bằng $a$ là $S = aa = a^2$.
 
-\subsubsection{Lục giác đều}
+\subsection{Lục giác đều}
 Ghép 6 miếng phẳng hình tam giác đều có cạnh bằng nhau để tạo thành hình lục giác thì hình lục giác đó được gọi là \emph{hình lục giác đều}. Với hình lục giác đều $ABCDEF$ với tâm $O$: Các gam giác $OAB,OBC,OCD,ODE,OEF,OFA$ là tam giác đều nên các cạnh $AB,BC,CD,DE,EF,FA$ có độ dài bằng nhau. Các đường chéo chính $AD,BE,CF$ cắt nhau tại điểm $O$. Các đường chéo chính $AD,BE,CG$ có độ dài gấp đôi độ dài cạnh tam giác đều nên chúng bằng nhau. Mỗi góc ở đỉnh $A,B,C,D,E,F$ của lục giác đều $ABCDEF$ đều gấp đôi góc của 1 tam giác đều nên chúng bằng nhau. Viết dưới dạng ký hiệu: Lục giác đều $ABCDEF$ có: 6 cạnh bằng nhau: $AB = BC = CD = DE = EF = FA$; 3 đường chéo chính cắt nhau tại điểm $O$; 3 đường chéo chính bằng nhau: $AD = BE = CF$; 6 góc ở các đỉnh $A,B,C,D,E,F$ bằng nhau.
 
-\subsection{Hình Chữ Nhật. Hình Thoi}
+\section{Hình Chữ Nhật. Hình Thoi}
 
-\subsubsection{Hình chữ nhật}
+\subsection{Hình chữ nhật}
 
-\paragraph{Nhận biết hình chữ nhật.} Hình chữ nhật $ABCD$ có: 2 cạnh đối nhau bằng nhau: $AB = CD$, $AD = BC$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ đều là góc vuông.
+\subsubsection{Nhận biết hình chữ nhật.} Hình chữ nhật $ABCD$ có: 2 cạnh đối nhau bằng nhau: $AB = CD$, $AD = BC$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ đều là góc vuông.
 
-\paragraph{Vẽ hình chữ nhật.} Vẽ hình chữ nhật bằng eke khi biết độ dài 2 cạnh là $a$ cm \textit{\&} $b$ cm:
+\subsubsection{Vẽ hình chữ nhật.} Vẽ hình chữ nhật bằng eke khi biết độ dài 2 cạnh là $a$ cm \textit{\&} $b$ cm:
 \begin{enumerate}
 	\item Vẽ theo 1 cạnh góc vuông của eke đoạn thẳng $AB$ có độ dài bằng $a$ cm.
 	\item Đặt đỉnh góc vuông của eke trùng với điểm $A$ \textit{\&} 1 cạnh eke nằm trên $AB$, vẽ theo cạnh kia của eke đoạn thẳng $AD$ có độ dài bằng $b$ cm.
@@ -975,13 +1015,13 @@ Ghép 6 miếng phẳng hình tam giác đều có cạnh bằng nhau để tạ
 	\item Vẽ đoạn thẳng $CD$.
 \end{enumerate}
 
-\paragraph{Chu vi \textit{\&} diện tích của hình chữ nhật.} Chu vi của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $C = 2(a + b)$. Diện tích của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $S = ab$.
+\subsubsection{Chu vi \textit{\&} diện tích của hình chữ nhật.} Chu vi của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $C = 2(a + b)$. Diện tích của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $S = ab$.
 
-\subsubsection{Hình thoi}
+\subsection{Hình thoi}
 
-\paragraph{Nhận biết hình thoi.} Hình thoi $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$, $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo $AC$ \textit{\&} $BD$ vuông góc với nhau.
+\subsubsection{Nhận biết hình thoi.} Hình thoi $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$, $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo $AC$ \textit{\&} $BD$ vuông góc với nhau.
 
-\paragraph{Vẽ hình thoi.} ``Vẽ hình thoi bằng thước \textit{\&} compa khi biết độ dài 1 cạnh bằng $a$ cm \textit{\&} độ dài 1 đường chéo bằng $b$ cm:
+\subsubsection{Vẽ hình thoi.} ``Vẽ hình thoi bằng thước \textit{\&} compa khi biết độ dài 1 cạnh bằng $a$ cm \textit{\&} độ dài 1 đường chéo bằng $b$ cm:
 \begin{enumerate}
 	\item Dùng thước vẽ đoạn thẳng $AC = b$ cm.
 	\item Dùng compa vẽ 1 phần đường tròn tâm $A$ bán kính $a$ cm.
@@ -989,74 +1029,74 @@ Ghép 6 miếng phẳng hình tam giác đều có cạnh bằng nhau để tạ
 	\item Dùng thước vẽ các đoạn thẳng $AB,BC,CD,DA$.'' -- \cite[p. 100]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 \end{enumerate}
 
-\paragraph{Chu vi \textit{\&} diện tích của hình thoi.} Với hình thoi có độ dài cạnh là $a$ \textit{\&} độ dài 2 đường chéo là $m$ \textit{\&} $n$, ta có: Chu vi của hình thoi là $C = 4a$; diện tích của hình thoi là $S = \frac{1}{2}mn$.
+\subsubsection{Chu vi \textit{\&} diện tích của hình thoi.} Với hình thoi có độ dài cạnh là $a$ \textit{\&} độ dài 2 đường chéo là $m$ \textit{\&} $n$, ta có: Chu vi của hình thoi là $C = 4a$; diện tích của hình thoi là $S = \frac{1}{2}mn$.
 
-\subsection{Hình Bình Hành}
+\section{Hình Bình Hành}
 
-\subsubsection{Nhận biết hình bình hành}
+\subsection{Nhận biết hình bình hành}
 ``Hình bình hành $ABCD$ có: 2 cạnh đối $AB$ \textit{\&} $CD$, $BC$ \textit{\&} $AD$ song song với nhau; 2 cạnh đối bằng nhau: $AB = CD$, $BC = AD$; 2 góc ở các đỉnh $A$ \textit{\&} $C$ bằng nhau, 2 góc ở các đỉnh $B$ \textit{\&} $D$ bằng nhau.'' -- \cite[p. 102]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Vẽ hình bình hành}
+\subsection{Vẽ hình bình hành}
 ``Ta có thể vẽ hình bình hành $ABCD$ bằng thước \textit{\&} compa như sau:
 \begin{enumerate}
 	\item Lấy $B$ làm tâm, dùng compa vẽ 1 phần đường tròn có bán kính $AD$. Lấy $D$ làm tâm, dùng compa vẽ 1 phần đường tròn có bánh kính $AB$. Gọi $C$ là giao điểm của 2 phần đường tròn này.
 	\item Dùng thước vẽ các đoạn thẳng $BC$ \textit{\&} $CD$.'' -- \cite[p. 103]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 \end{enumerate}
 
-\subsubsection{Chu vi \textit{\&} diện tích của hình bình hành}
+\subsection{Chu vi \textit{\&} diện tích của hình bình hành}
 ``Với hình bình hành có độ dài 2 cạnh là $a$ \textit{\&} $b$, độ dài đường cao ứng với cạnh $a$ là $h$, ta có: Chu vi của hình bình hành là $C = 2(a + b)$; diện tích của hình bình hành là $S = ah$.'' -- \cite[p. 103]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Hình Thang Cân}
+\section{Hình Thang Cân}
 
-\subsubsection{Nhận biết hình thang cân}
+\subsection{Nhận biết hình thang cân}
 ``Hình thang cân $ABCD$ có: 2 cạnh dáy $AB$ \textit{\&} $CD$ song song với nhau; 2 cạnh bên bằng nhau: $AD = BC$; 2 đường chéo bằng nhau: $AC = BD$; 2 góc kề với cạnh đáy $CD$ bằng nhau, tức là 2 góc $BCD$ \textit{\&} $CDA$ bằng nhau; 2 góc kề với cạnh đáy $AB$ bằng nhau, tức là 2 góc $DAB$ \textit{\&} $ABC$ bằng nhau.'' -- \cite[p. 105]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Chu vi \textit{\&} diện tích của hình thang cân}
+\subsection{Chu vi \textit{\&} diện tích của hình thang cân}
 ``Chu vi của hình thang bằng tổng độ dài các cạnh của hình thang đó.\footnote{Tổng quát hơn, chu vi của 1 hình đa giác\texttt{/}polygonal bằng tổng độ dài các cạnh của đa giác đó.} Diện tích của hình thang bằng tổng độ dài 2 đáy nhân với chiều cao rồi chia đôi.'' -- \cite[p. 106]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Hình Có Trục Đối Xứng}
+\section{Hình Có Trục Đối Xứng}
 
-\subsubsection{Hình có trục đối xứng}
+\subsection{Hình có trục đối xứng}
 Cho 1 hình \textit{\&} 1 đường thẳng $d$, nếu gấp hình đã cho theo đường thẳng $d$ thu được 2 nửa trùng khít vào nhau thì hình như vậy là \textit{hình có trục đối xứng} \textit{\&} đường thẳng $d$ được gọi là \textit{trục đối xứng của hình}. Hình có trục đối xứng còn được gọi là \textit{hình đối xứng trục}.
 
-\subsubsection{Trục đối xứng của 1 số hình}
+\subsection{Trục đối xứng của 1 số hình}
 Đoạn thẳng $AB$ là hình có trục đối xứng \textit{\&} trục đối xứng là đường thẳng $d$ đi qua trung điểm $O$ của $AB$ \textit{\&} vuông góc với $AB$. Đường tròn là hình có nhiều trục đối xứng (vô hạn không đếm được) \textit{\&} mỗi trục đối xứng là 1 đường thẳng đi qua tâm của nó. Hình thang cân có 1 trục đối xứng. Hình lục giác đều có 6 trục đối xứng.
 
 ``Trong tự nhiên, ta thường gặp các hình có trục đối xứng, e.g.: bông tuyết\texttt{/}bông hoa tuyêts, con bọ cánh cứng\texttt{/}cánh cam, con bướm, $\ldots$. Trong nghệ thuật, đồ họa, $\ldots$ người ta cũng thường sử dụng bố cục có dạng đối xứng trục. Trong kiến trúc, xây dựng thì tính đối xứng luôn được coi trọng, chẳng hạn ở các công trình sau: Tháp Rùa (Hà Nội), Khuê Văn Các (Hà Nội), tháp Eiffel (Paris).'' -- \cite[p. 110]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Hình Có Tâm Đối Xứng}
+\section{Hình Có Tâm Đối Xứng}
 
-\subsubsection{Hình có tâm đối xứng}
+\subsection{Hình có tâm đối xứng}
 ``Đường tròn tâm $O$ là hình có tâm đối xứng \textit{\&} tâm đối xứng chính là tâm $O$ của đường tròn.'' ``Hình có tâm đối xứng còn được gọi là hình đối xứng tâm.'' -- \cite[p. 111]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Tâm đối xứng của 1 số hình}
+\subsection{Tâm đối xứng của 1 số hình}
 Đoạn thẳng $AB$ là hình có tâm đối xứng \textit{\&} tâm đối xứng là trung điểm $M$ của đoạn thẳng đó. Đường tròn là hình có tâm đối xứng \textit{\&} tâm đối xứng là tâm của nó. Hình thoi có tâm đối xứng là tâm của nó. Hình lục giác đều có tâm đối xứng là tâm của nó.
 
 ``Trong tự nhiên, ta thường gặp các hình có tâm đối xứng, e.g.: bông tuyết\texttt{/}bông hoa tuyết, cây bạc hà, $\ldots$. Trong nghệ thuật, trang trí, hay nhiếp ảnh, $\ldots$ người ta cũng thường sử dụng bố cục có dạng đối xứng tâm. Trong kiến trúc, xây dựng thì đối xứng tâm luôn được coi trọng, e.g., ở các công trình sau: cầu vượt, mái nhà thờ, $\ldots$'' -- \cite[p. 113]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
 \texttt{Advance: insert Topology Optimization, Shape Optimization.}
 
-\subsection{Đối Xứng trong Thực Tiễn}
+\section{Đối Xứng trong Thực Tiễn}
 
-\subsubsection{Tính đối xứng trong thế giới tự nhiên}
+\subsection{Tính đối xứng trong thế giới tự nhiên}
 ``Tính đối xứng là sự giống nhau của 1 hình qua đường trục hoặc qua tâm, tạo nên sự cân bằng. Trong tự nhiên, tính đối xứng được thể hiện rất đa dạng, phong phú, e.g.: Mặt Trăng, cầu vồng, con công, con bướm, chiếc lá. Tính đối xứng của 1 đối tượng là 1 trong những dấu hiệu quan trọng nhất giúp chúng ta nhanh chóng định hình đối tượng đó khi nhìn vào nó. Ngoài ra, với con người, đối xứng tạo ra sự cân bằng (cân xứng), hài hòa, trật tự, quen thuộc \textit{\&} nhờ đó tạo ra thẩm mỹ (vẻ đẹp).'' -- \cite[p. 114]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Tính đối xứng trong nghệ thuật, kiến trúc, \textit{\&} công nghệ}
+\subsection{Tính đối xứng trong nghệ thuật, kiến trúc, \textit{\&} công nghệ}
 ``1 trong các nguyên tắc quan trọng với nghệ thuật hay kiến trúc là \textit{nguyên tắc cân bằng}. Hầu hết thiết kế về kiến trúc, đồ họa, hay 1 tác phẩm nghệ thuật nào đều phải thực hiện tốt yếu tố cân bằng. Vì thế, bố cục đối xứng thường được sử dụng trong các tác phẩm nghệ thuật hay kiến trúc, e.g.: Nhà hát lớn tại Hà Nội, cổng chính phía nam của Hoàng thành Huế, Dinh Độc Lập, cầu Nhật Tân, chợ Bến Thành. Trong thiết kế, công nghệ, chúng ta cũng dễ dàng nhận ra các bố cục có tính đối xứng. Các công trình hay máy móc muốn tồn tại, ổn định, bền vững \textit{\&} có được vẻ đẹp, bắt mắt thì phải chú trọng đến tính cân xứng. E.g.: thiết kế hoa văn trong xây dựng, thiết kế hoa văn trong trang trí (dệt vải), thiết kế nhà, thiết kế máy bay, thiết kế oto, $\ldots$'' \cite[pp. 114--115]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Đối xứng trong toán học}
+\subsection{Đối xứng trong toán học}
 ``Nhiều đối tượng trong toán học có tính đối xứng\texttt{/}symmetry, góp phần tạo nên vẻ đẹp của toán học. 1 số biểu thức \textit{\&} công thức toán học cũng có tính đối xứng. E.g.: $a + b = b + a$ hay $ab = ba$, mỗi số nguyên: $\ldots,-3,-2,-1,0,1,2,3,\ldots$ đều có số đối của nó, hay tam giác Pascal, $\ldots$. Đối xứng còn là công cụ chủ yếu để kết nối giữa toán học với khoa học \textit{\&} nghệ thuật.'' -- \cite[p. 115]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsection{Thực Hành Phần Mềm GeoGebra}
+\section{Thực Hành Phần Mềm GeoGebra}
 
-\subsubsection{Giới thiệu phần mềm Geogebra}
+\subsection{Giới thiệu phần mềm Geogebra}
 ``Hiện nay, trên thế giới có nhiều phần mềm toán học, trong đó phần mềm GeoGebra là phần mềm miễn phí, dễ sử dụng, thân thiện với người dùng \textit{\&} có các phiên bản cho khoảng 80 ngôn ngữ khác nhau. Sau khi đã cài đặt phần mềm, việc chuyển đổi ngôn ngữ (e.g., từ tiếng Anh sang tiếng Việt) hết sức đơn giản\footnote{NQBH: Nên sử dụng trực tiếp tiếng Anh để tăng vốn ngôn ngữ \textit{\&} khả năng xoay sở để giúp thích nghi nhanh với các phần mềm khác không có hỗ trợ tiếng Việt, \textit{\&} đương nhiên các phần mềm này chiếm đa số.}. Phần mềm GeoGebra có phạm vi sử dụng rất rộng (Hình học phẳng, Hình học không gian, Đại số, Giải tích, Xác suất, Thống kê, Bảng tính điện tử), sử dung được trên nhiều hệ điều hành khác nhau, có thể chạy trực tuyến (online) hoặc cài đặt vào máy tính, máy tính bảng, điện thoại thông minh \textit{\&} hỗ trợ rất tốt cho việc dạy học môn Toán cũng như giáo dục STEM. Vì thế, GeoGebra được hàng triệu người trên thế giới sử dụng.
 
 Để sử dụng phần mềm GeoGebra, chúng ta có thể sử dụng online tại địa chỉ \url{https://www.geogebra.org/} hoặc tải từ địa chỉ \url{https://www.geogebra.org/download} \textit{\&} cài đặt vào máy tính hoặc máy tính bảng hoặc điện thoại thông minh.'' -- \cite[p. 119]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Thực hành phần mềm GeoGebra trong tính toán số học}
+\subsection{Thực hành phần mềm GeoGebra trong tính toán số học}
 
-\paragraph{Sử dụng trực tiếp lệnh trong CAS.}
+\subsubsection{Sử dụng trực tiếp lệnh trong CAS.}
 \begin{enumerate}
 	\item \textit{Tìm ước của số nguyên dương.} Cho $a\in\mathbb{N}^\star$. Để tìm ước của $a$, nhập lệnh: \texttt{DanhSachUocSo(a)} rồi bấm \texttt{Enter}.
 	\item \textit{Tìm ước chung lớn nhất của 2 số nguyên dương.} Cho $a,b\in\mathbb{N}^\star$. Để tìm ước chung lớn nhất của $a$ \textit{\&} $b$, nhập lệnh: \texttt{USCLN(a,b)} rồi bấm \texttt{Enter}.
@@ -1064,25 +1104,25 @@ Cho 1 hình \textit{\&} 1 đường thẳng $d$, nếu gấp hình đã cho theo
 	\item \textit{Tìm số dư của phép chia.} Cho $a,b\in\mathbb{N}^\star$. Để tìm số dư của phép chia $a$ cho $b$, nhập lệnh: \texttt{SoDu(a,b)} rồi bấm \texttt{Enter}.
 \end{enumerate}
 
-\paragraph{Tạo công cụ để tìm ƯCLN, BCNN của các số nguyên dương.} Cho $a,b,c\in\mathbb{N}^\star$. Để tạo công cụ tìm $\mbox{ƯCLN}(a,b,c)$ \textit{\&} $\operatorname{BCNN}(a,b,c)$, xem \cite[pp. 120--121]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
+\subsubsection{Tạo công cụ để tìm ƯCLN, BCNN của các số nguyên dương.} Cho $a,b,c\in\mathbb{N}^\star$. Để tạo công cụ tìm $\mbox{ƯCLN}(a,b,c)$ \textit{\&} $\operatorname{BCNN}(a,b,c)$, xem \cite[pp. 120--121]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
 
-\subsubsection{Sử dụng phần mềm GeoGebra để vẽ hình tam giác đều, hình vuông, hình lục giác đều}
+\subsection{Sử dụng phần mềm GeoGebra để vẽ hình tam giác đều, hình vuông, hình lục giác đều}
 Xem \cite[pp. 122--124]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.
 
 %------------------------------------------------------------------------------%
 
-\section{Một Số Yếu Tố Thống kê \textit{\&} Xác Suất}
+\chapter{Một Số Yếu Tố Thống kê \textit{\&} Xác Suất}
 \textbf{Nội dung.} Thu thập, tổ chức, biểu diễn, phân tích, \textit{\&} xử lý dữ liệu; bảng số liệu, biểu đồ tranh, biểu đồ cột, biểu đồ cột kép; mô hình xác suất \textit{\&} xác suất thực nghiệm trong 1 số trò chơi \textit{\&} thí nghiệm đơn giản.
 
-\subsection{Thu Thập, Tổ Chức, Biểu Diễn, Phân Tích, \textit{\&} Xử Lý Dữ Liệu}
+\section{Thu Thập, Tổ Chức, Biểu Diễn, Phân Tích, \textit{\&} Xử Lý Dữ Liệu}
 Những bước chính trong tiến trình thống kê: ``thu thập, phân loại, kiểm đếm, ghi chép số liệu; đọc \textit{\&} mô tả các số liệu ở dạng dãy số liệu, bảng số liệu hoặc ở dạng biểu đồ (biểu đồ tranh, biểu đồ cột hoặc biểu đồ hình quạt tròn); nêu được nhận xét đơn giản từ biểu đồ.'' -- \cite[p. 3]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
 
-\subsubsection{Thu thập, tổ chức, phân tích, \textit{\&} xử lý dữ liệu}
+\subsection{Thu thập, tổ chức, phân tích, \textit{\&} xử lý dữ liệu}
 ``Sau khi thu thập, tổ chức, phân loại, biểu diễn dữ liệu bằng bảng hoặc biểu đồ, ta cần phân tích \textit{\&} xử lý các dữ liệu đó để tìm ra những thông tin hữu ích \textit{\&} rút ra kết luận.'' [$\ldots$] ``Ta có thể nhận biết được tính hợp lý của dữ liệu thống kê theo những tiêu chí đơn giản.'' [$\ldots$] ``Dựa theo đối tượng \textit{\&} tiêu chí thống kê, ta có thể tổ chức \textit{\&} phân loại dữ liệu.'' -- \cite[p. 4]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
 
 ``Dựa vào thống kê, ta có thể nhận biết được tính hợp lý của kết luận đã nêu ra.'' -- \cite[p. 5]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
 
-\subsubsection{Biểu diễn dữ liệu}
+\subsection{Biểu diễn dữ liệu}
 ``Sau khi thu thập \textit{\&} tổ chức dữ liệu, ta cần biểu diễn dữ liệu đó ở dạng thích hợp. Nhờ việc biểu diễn dữ liệu, ta có thể phân tích \textit{\&} xử lý được các dữ liệu đó.'' -- \cite[p. 6]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
 \begin{enumerate}
 	\item \textbf{Bảng số liệu.} Các đối tượng thống kê lần lượt được biểu diễn ở dòng đầu tiên. Ứng với mỗi đối tượng thống kê có 1 số liệu thống kê theo tiêu chí, lần lượt được biểu diễn ở dòng thứ 2 (theo cột tương ứng).
@@ -1091,32 +1131,32 @@ Những bước chính trong tiến trình thống kê: ``thu thập, phân lo�
 \end{enumerate}
 ``Dựa vào thống kê, ta có thể bác bỏ kết luận đã nêu ra.'' -- \cite[p. 8]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Biểu Đồ Cột Kép}
+\section{Biểu Đồ Cột Kép}
 Mục đích của biểu đồ cột kép: biểu diễn được đồng thời từng loại đối tượng thống kê trên cùng 1 biểu đồ cột (ưu điểm so với biểu đồ cột đơn thông thường). Các đối tượng thống kê lần lượt được biểu diễn ở trục nằm ngang. Ứng với mỗi đối tượng thống kê có 1 số liệu thống kê theo tiêu chí, lần lượt được biểu diễn ở trục thẳng đứng.
 
-\subsection{Mô Hình Xác Suất Trong 1 Số Trò Chơi \textit{\&} Thí Nghiệm Đơn Giản}
+\section{Mô Hình Xác Suất Trong 1 Số Trò Chơi \textit{\&} Thí Nghiệm Đơn Giản}
 
-\subsubsection{Mô hình xác suất trong trò chơi tung đồng xu}
+\subsection{Mô hình xác suất trong trò chơi tung đồng xu}
 2 mặt của đồng xu: mặt sấp \texttt{/}S\footnote{Cần phân biệt ``mặt sấp'' (S) với ``SML''.} hay mặt ngửa\texttt{/}N. Khi tung đồng xu 1 lần, có 2 kết quả có thể xảy ra đối với mặt xuất hiện của đồng xu, đó là: mặt N; mặt S. Có 2 điều cần chú ý trong mô hình xác suất của trò chơi tung đồng xu:
 \begin{itemize}
 	\item Tung đồng xu 1 lần;
 	\item Tập hợp các kết quả có thể xảy ra đối với mặt xuất hiện của đồng xu là $\{\rm S;N\}$. Ở đây, S ký hiệu cho kết quả xuất hiện mặt sấp \textit{\&} N ký hiệu cho kết quả xuất hiện mặt ngửa.
 \end{itemize}
 
-\subsubsection{Mô hình xác suất trong trò chơi lấy vật từ trong hộp}
+\subsection{Mô hình xác suất trong trò chơi lấy vật từ trong hộp}
 \textbf{Dạng toán.} Cho 1 hộp có $n$ vật thể có kích thước \textit{\&} khối lượng như nhau nhưng có $n$ màu khác nhau. Khi lấy ngẫu nhiên 1 vật thể trong hộp, có $n$ kết quả có thể xảy ra đối với màu của vật thể được lấy ra, đó là: màu thứ nhất, màu thứ 2, $\ldots$, màu thứ $n$.
 
 \begin{remark}
 	Giả thiết ``$n$ vật thể có kích thước \textit{\&} khối lượng như nhau'' giúp cho các đối tượng bình đẳng\emph{\texttt{/}}công bằng (fairness) trong việc lấy ra ngẫu nhiên. Trường hợp ngược lại, chẳng hạn, 1 vật thể đầy gai nhọn trong khi các vật thể khác trơn nhẵn hoặc 1 vật thể quá nặng so các vật thể còn lại sẽ khó để lấy ra được bằng tay không, nên xác suất xảy ra đối với vật thể đó sẽ là 0 (unfairness). Trường hợp bình đẳng ứng với xác suất của các vật thể có phân phối đều (uniform distribution), trong khi trường hợp bất bình đẳng của các vật thể ứng với các phân phối có trọng số (non-uniform\emph{\texttt{/}}weighted distribution) sẽ được học ở Phổ thông hoặc Toán Cao Cấp.
 \end{remark}
 
-\subsubsection{Mô hình xác suất trong trò chơi gieo xúc xắc}
+\subsection{Mô hình xác suất trong trò chơi gieo xúc xắc}
 \textbf{Dạng toán.} Mỗi xúc xắc có 6 mặt, số chấm ở mỗi mặt là 1 trong các số nguyên dương 1, 2, 3, 4, 5, 6. Gieo xúc xắc 1 lần. \textit{Tài}: $\{4,5,6\}$. \textit{Xỉu}: $\{1,2,3\}$.
 
-\subsection{Xác Suất Thực Nghiệm Trong 1 Số Trò Chơi \textit{\&} Thí Nghiệm Đơn Giản}
+\section{Xác Suất Thực Nghiệm Trong 1 Số Trò Chơi \textit{\&} Thí Nghiệm Đơn Giản}
 
-\subsubsection{Xác suất thực nghiệm trong trò chơi tung đồng xu\texttt{/}toss a coin}
-\begin{definition}[Xác suất thực nghiệm trong trò chơi tung đồng xu]
+\subsection{Xác suất thực nghiệm trong trò chơi tung đồng xu\texttt{/}toss a coin}
+\begin{dinhnghia}[Xác suất thực nghiệm trong trò chơi tung đồng xu]
 	\emph{Xác suất thực nghiệm xuất hiện mặt $N$} khi tung đồng xu nhiều lần bằng:
 	\begin{align*}
 		\frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $N$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in\mathbb{Q}\cap[0,1].
@@ -1125,7 +1165,7 @@ Mục đích của biểu đồ cột kép: biểu diễn được đồng thờ
 	\begin{align*}
 		\frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Tổng số lần tung đồng xu}} = \frac{\mbox{Số lần mặt $S$ xuất hiện}}{\mbox{Số lần mặt $N$ xuất hiện} + \mbox{Số lần mặt $S$ xuất hiện}}\in\mathbb{Q}\cap[0,1].
 	\end{align*}
-\end{definition}
+\end{dinhnghia}
 Từ định nghĩa: ``Xác suất thực nghiệm xuất hiện mặt $N$ (hoặc mặt $S$) phản ảnh số lần xuất hiện mặt đó so với tổng số lần tiến hành thực nghiệm.'' -- \cite[p. 18]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 \begin{remark}
@@ -1154,49 +1194,49 @@ Từ định nghĩa: ``Xác suất thực nghiệm xuất hiện mặt $N$ (ho�
 	\end{itemize}
 \end{problem}
 
-\subsubsection{Xác suất thực nghiệm trong trò chơi lấy vật từ trong hộp}
+\subsection{Xác suất thực nghiệm trong trò chơi lấy vật từ trong hộp}
 
-\begin{definition}[Xác suất thực nghiệm trong trò chơi lấy vật từ trong hộp]
+\begin{dinhnghia}[Xác suất thực nghiệm trong trò chơi lấy vật từ trong hộp]
 	\emph{Xác suất thực nghiệm xuất hiện màu $A$} khi lấy bóng nhiều lần bằng:
 	\begin{align*}
 		\frac{\mbox{Số lần màu $A$ xuất hiện}}{\mbox{Tổng số lần lấy bóng}}\in\mathbb{Q}\cap[0,1].
 	\end{align*}
-\end{definition}
+\end{dinhnghia}
 
-\subsubsection{Xác suất thực nghiệm trong trò chơi gieo xúc xắc}
+\subsection{Xác suất thực nghiệm trong trò chơi gieo xúc xắc}
 
-\begin{definition}[Xác suất thực nghiệm trong trò chơi gieo xúc xắc]
+\begin{dinhnghia}[Xác suất thực nghiệm trong trò chơi gieo xúc xắc]
 	\emph{Xác suất thực nghiệm xuất hiện mặt $k$ chấm} ($k\in\mathbb{N}$, $1\le k\le 6$) khi gieo xúc xắc nhiều lần bằng:
 	\begin{align*}
 		\frac{\mbox{Số lần xuất hiện mặt $k$ chấm}}{\mbox{Tổng số lần gieo xúc xắc}}\in\mathbb{Q}\cap[0,1].
 	\end{align*}
-\end{definition}
+\end{dinhnghia}
 
-\subsubsection{Xác suất khi số lần thực nghiệm rất lớn}
+\subsection{Xác suất khi số lần thực nghiệm rất lớn}
 ``Người ta chứng minh được rằng khi số lần tung càng lớn thì xác suất thực nghiệm xuất hiện mặt N càng gần với 0.5. Số 0.5 được gọi là \textit{xác suất xuất hiện mặt N} (theo nghĩa thống kê).'' -- \cite[p. 21]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. Phương pháp tung kim để tính số $\pi$ của Bá tước Georges-Louis Leclerc de Buffon chính là tiền thân của phương pháp Monte--Carlo trong toán học.
 
 Lý thuyết nằm sau những ví dụ này là \textit{Luật Số Lớn}\texttt{/}\textit{Law of Large Numbers} -- 1 trong những định lý quan trọng nhất của \textit{Lý thuyết xác suất \textit{\&} thống kê}, được chứng minh bởi nhà Toán học huyền thoại người Nga Kolmogorov.\footnote{NQBH: Kolmogorov còn có những cống hiến khác về nền tảng xác suất \textit{\&} thống kê trong việc nghiên cứu \textit{turbulence}\texttt{/}\textit{sự nhiễu loạn}. Turbulence vẫn còn là 1 vấn đề mở cực khó của cả Toán học \textit{\&} Vật lý. Đề tài PhD ở Đức của tôi là làm tối ưu hình dáng (shape optimization) \textit{\&} tối ưu topo (topology optimization) cho turbulence models. Và đương nhiên 3 năm chẳng thể nào đủ cho 1 đề tài khủng như vậy.}
 
-\section{Phân Số \textit{\&} Số Thập Phân}
+\chapter{Phân Số \textit{\&} Số Thập Phân}
 \textbf{Nội dung.} phân số với tử \textit{\&} mẫu là số nguyên; các phép tính với phân số; số thập phân; các phép tinh với số thập phân; tỷ số, tỷ số phần trăm, làm tròn số.
 
-\subsection{Phân Số với Tử \textit{\&} Mẫu là Số Nguyên}
+\section{Phân Số với Tử \textit{\&} Mẫu là Số Nguyên}
 
-\subsubsection{Khái niệm phân số}
+\subsection{Khái niệm phân số}
 
-\begin{definition}[Phân số\texttt{/}Fraction]
+\begin{dinhnghia}[Phân số\texttt{/}Fraction]
 	Kết quả của phép chia $a\in\mathbb{Z}$ cho $b\in\mathbb{Z}^\star$ có thể viết dưới dạng $\frac{a}{b}$, \textit{\&} được gọi là \emph{phân số}.
-\end{definition}
+\end{dinhnghia}
 ``Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} (\textit{numerator}) (còn gọi tắt là \textit{tử}), $b$ là \textit{mẫu số} (\textit{denominator}) (còn gọi tắt là \textit{mẫu})'' -- \cite[p.  25]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. ``Mọi $a\in\mathbb{Z}$ có thể viết ở dạng phân số là $\frac{a}{1}$.'' -- \cite[p.  26]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Phân số bằng nhau}
+\subsection{Phân số bằng nhau}
 
-\paragraph{Khái niệm 2 phân số bằng nhau.}
-\begin{definition}[2 phân số bằng nhau]
+\subsubsection{Khái niệm 2 phân số bằng nhau.}
+\begin{dinhnghia}[2 phân số bằng nhau]
 	2 phân số được gọi là \emph{bằng nhau} nếu chúng cùng biểu diễn một giá trị.
-\end{definition}
+\end{dinhnghia}
 
-\paragraph{Quy tắc bằng nhau của 2 phân số.} Với mọi $a,b,c,d\in\mathbb{Z}$, $b\ne 0$, $d\ne 0$,
+\subsubsection{Quy tắc bằng nhau của 2 phân số.} Với mọi $a,b,c,d\in\mathbb{Z}$, $b\ne 0$, $d\ne 0$,
 \begin{align*}
 	\boxed{\frac{a}{b} = \frac{c}{d}\Leftrightarrow b\ne 0, d\ne 0,\ ad = bc.}
 \end{align*}
@@ -1216,9 +1256,9 @@ Với $a,b\in\mathbb{Z}$, $b\ne 0$, luôn có: $\frac{a}{-b} = \frac{-a}{b} = -\
 \end{example}
 \textbf{Mẹo nhanh.} Xét dấu (sign) của tử số \textit{\&} mẫu số khi so sánh 2 phân số $\frac{a}{b}$ \textit{\&} $\frac{c}{d}$. Nếu trong 4 số $a,b,c,d$, có 1 hoặc 3 số âm, còn lại dương, thì 2 phân số không bằng nhau.
 
-\subsubsection{Tính chất cơ bản của phân số}
+\subsection{Tính chất cơ bản của phân số}
 
-\paragraph{Tính chất cơ bản.} Nếu ta nhân cả tử \textit{\&} mẫu của 1 phân số với cùng 1 số nguyên khác 0 thì ta được 1 phân số bằng phân số đã cho, i.e.,
+\subsubsection{Tính chất cơ bản.} Nếu ta nhân cả tử \textit{\&} mẫu của 1 phân số với cùng 1 số nguyên khác 0 thì ta được 1 phân số bằng phân số đã cho, i.e.,
 \begin{align*}
 	\frac{a}{b} = \frac{am}{bm},\ \forall a\in\mathbb{Z},\ b,m\in\mathbb{Z}^\star.
 \end{align*}
@@ -1230,10 +1270,10 @@ trong đó giả thiết $n\in\mbox{ƯC}(a,b)$ để phân số $\dfrac{a:n}{b:n
 
 ``Mỗi phân số đều đưa được về 1 phân số bằng nó \textit{\&} có mẫu là số dương.'' -- \cite[p. 28]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{Rút gọn về phân số tối giản.}
-\begin{definition}
+\subsubsection{Rút gọn về phân số tối giản.}
+\begin{dinhnghia}
 	\emph{Phân số tối giản} là phân số mà tử \textit{\&} mẫu chỉ có ước chung là 1 \textit{\&} $-1$.
-\end{definition}
+\end{dinhnghia}
 I.e., phân số $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne 0$, được gọi là \emph{phân số tối giản} nếu $\mbox{ƯCLN}(a,b) = 1$.
 
 Dựa vào tính chất cơ bản của phân số, để rút gọn phân số với tử \textit{\&} mẫu là số nguyên về phân số tối giản:
@@ -1242,7 +1282,7 @@ Dựa vào tính chất cơ bản của phân số, để rút gọn phân số 
 	\item Chia cả tử \textit{\&} mẫu cho $\mbox{ƯCLN}$ vừa tìm được, ta có phân số  tối giản cần tìm.
 \end{enumerate}
 
-\paragraph{Quy đồng mẫu nhiều phân số.}
+\subsubsection{Quy đồng mẫu nhiều phân số.}
 \begin{question}
 	Tại sao cần\emph{\texttt{/}}phải quy đồng mẫu nhiều phân số?
 \end{question}
@@ -1264,69 +1304,69 @@ Dựa vào tính chất cơ bản của phân số, để rút gọn phân số 
 	\item Nhân tử \textit{\&} mẫu của mỗi phân số ở Bước 1 với thừa số phụ tương ứng.'' -- \cite[p. 29]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 \end{enumerate}
 
-\subsection{So Sánh Các Phân Số. Hỗn Số Dương}
+\section{So Sánh Các Phân Số. Hỗn Số Dương}
 
-\subsubsection{So sánh các phân số}
+\subsection{So sánh các phân số}
 
-\paragraph{So sánh 2 phân số.} Trong 2 số nguyên khác nhau luôn có 1 số nhỏ hơn số kia. Cũng như số nguyên, trong 2 phân số khác nhau luôn có 1 phân số nhỏ hơn phân số kia. Nếu phân số $\frac{a}{b}$ nhỏ hơn phân số $\frac{c}{d}$ thì ta viết $\frac{a}{b} < \frac{c}{d}$ hay $\frac{c}{d} > \frac{a}{b}$. Phân số lớn hơn 0 được gọi là \emph{phân số dương}. Phân nhỏ nhỏ hơn 0 được gọi là \emph{phân số âm}. Tính chất bắc cầu: nếu $\frac{a}{b} < \frac{c}{d}$ \textit{\&} $\frac{c}{d} < \frac{e}{f}$ thì $\frac{a}{b} < \frac{e}{f}$.
+\subsubsection{So sánh 2 phân số.} Trong 2 số nguyên khác nhau luôn có 1 số nhỏ hơn số kia. Cũng như số nguyên, trong 2 phân số khác nhau luôn có 1 phân số nhỏ hơn phân số kia. Nếu phân số $\frac{a}{b}$ nhỏ hơn phân số $\frac{c}{d}$ thì ta viết $\frac{a}{b} < \frac{c}{d}$ hay $\frac{c}{d} > \frac{a}{b}$. Phân số lớn hơn 0 được gọi là \emph{phân số dương}. Phân nhỏ nhỏ hơn 0 được gọi là \emph{phân số âm}. Tính chất bắc cầu: nếu $\frac{a}{b} < \frac{c}{d}$ \textit{\&} $\frac{c}{d} < \frac{e}{f}$ thì $\frac{a}{b} < \frac{e}{f}$.
 
-\paragraph{Cách so sánh 2 phân số.} ``Để so sánh 2 phân số không cùng mẫu, ta quy đồng mẫu 2 phân số đó (về cùng 1 mẫu dương) rồi so sánh các tử với nhau: Phân số nào có tử lớn hơn thì phân số đó lớn hơn.'' -- \cite[p. 31]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
+\subsubsection{Cách so sánh 2 phân số.} ``Để so sánh 2 phân số không cùng mẫu, ta quy đồng mẫu 2 phân số đó (về cùng 1 mẫu dương) rồi so sánh các tử với nhau: Phân số nào có tử lớn hơn thì phân số đó lớn hơn.'' -- \cite[p. 31]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}
 
-\subsubsection{Hỗn số dương}
+\subsection{Hỗn số dương}
 ``Viết 1 phân số lớn hơn 1 thành tổng của 1 số nguyên dương \textit{\&} 1 phân số nhỏ hơn 1 (với tử \textit{\&} mẫu dương) rồi viết chúng liền nhau thì được 1 \emph{hỗn số dương}.'' -- \cite[p. 32]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. Lưu ý điều này cũng đồng nghĩa với việc phân tích 1 phân số $\frac{a}{b} > 1$, $a,b\in\mathbb{N}^\star$, ra phần nguyên, ký hiệu là $\lfloor\frac{a}{b}\rfloor$ \textit{\&} phần lẻ, ký hiệu là $\left\{\frac{a}{b}\right\}$, i.e., $\frac{a}{b} = \lfloor\frac{a}{b}\rfloor + \left\{\frac{a}{b}\right\}$. Dễ thấy phần nguyên là thương của phép chia tử $a$ cho mẫu $b$, còn phần lẻ là phân số với tử là phần dư của phép chia $a$ cho $b$, \textit{\&} mẫu số vẫn là $b$. Cụ thể dưới dạng ký hiệu: $a = bq + r$, với $q\in\mathbb{N}^\star$ là thương, $r\in\{0,\ldots,b - 1\}$ là số dư, thì phân số $\frac{a}{b}$ được viết dưới dạng hỗn số là:
 \begin{align*}
 	\frac{a}{b} = \frac{bq + r}{b} = q + \frac{r}{b} = q\frac{r}{b}.
 \end{align*}
 
-\subsection{Phép Cộng, Phép Trừ Phân Số}
+\section{Phép Cộng, Phép Trừ Phân Số}
 
-\subsubsection{Phép cộng phân số}
+\subsection{Phép cộng phân số}
 
-\paragraph{Quy tắc cộng 2 phân số.} ``Muốn cộng 2 phân số có cùng mẫu, ta cộng các tử \textit{\&} giữ nguyên mẫu:
+\subsubsection{Quy tắc cộng 2 phân số.} ``Muốn cộng 2 phân số có cùng mẫu, ta cộng các tử \textit{\&} giữ nguyên mẫu:
 \begin{align*}
 	\frac{a}{m} + \frac{b}{m} = \frac{a + b}{m},\ \forall a,b,m\in\mathbb{Z},\ m\ne 0.
 \end{align*}
 Muốn cộng 2 phân số không cùng mẫu, ta quy đồng mẫu những phân số đó rồi cộng các tử \textit{\&} giữ nguyên mẫu chung.'' -- \cite[pp. 34--35]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{Tính chất của phép cộng phân số.} ``Giống như phép cộng số tự nhiên, phép cộng phân số cũng có các tính chất: giao hoán, kết hợp, cộng với số 0.'' -- \cite[pp. 35]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{Tính chất của phép cộng phân số.} ``Giống như phép cộng số tự nhiên, phép cộng phân số cũng có các tính chất: giao hoán, kết hợp, cộng với số 0.'' -- \cite[pp. 35]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Phép trừ phân số}
+\subsection{Phép trừ phân số}
 
-\paragraph{Số đối của 1 phân số.} ``Giống như số nguyên, mỗi phân số đều có số đối sao cho tổng của 2 số đó bằng 0.'' -- \cite[pp. 36]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{Số đối của 1 phân số.} ``Giống như số nguyên, mỗi phân số đều có số đối sao cho tổng của 2 số đó bằng 0.'' -- \cite[pp. 36]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\begin{definition}
+\begin{dinhnghia}
 	\emph{Số đối} của phân số $\frac{a}{b}$ ký hiệu là $-\frac{a}{b}$. Ta có: $\frac{a}{b} + \left(-\frac{a}{b}\right) = 0$.
-\end{definition}
+\end{dinhnghia}
 Hiển nhiên: $-\frac{a}{b} = \frac{a}{-b} = \frac{-a}{b}$ với $a,b\in\mathbb{Z}$, $b\ne 0$. Số đối của $-\frac{a}{b}$ là $\frac{a}{b}$, i.e., $-\left(-\frac{a}{b}\right) = \frac{a}{b}$.
 
-\paragraph{Quy tắc trừ 2 phân số.} ``Muốn trừ 2 phân số có cùng mẫu, ta trừ tử của số bị trừ cho tử của số trừ \textit{\&} giữ nguyên mẫu:
+\subsubsection{Quy tắc trừ 2 phân số.} ``Muốn trừ 2 phân số có cùng mẫu, ta trừ tử của số bị trừ cho tử của số trừ \textit{\&} giữ nguyên mẫu:
 \begin{align*}
 	\frac{a}{m} - \frac{b}{m} = \frac{a - b}{m},\ \forall a,b,m\in\mathbb{Z},\ m\ne 0.
 \end{align*}
 Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân số đó rồi trừ tử của số bị trừ cho tử của số trừ \textit{\&} giữ nguyên mẫu chung.'' ``Muốn trừ 2 phân số, ta cộng số bị trừ với số đối của số trừ: $\frac{a}{b} - \frac{c}{d} = \frac{a}{b} + \left(-\frac{c}{d}\right)$.'' -- \cite[pp. 36--37]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
 
-\subsubsection{Quy tắc dấu ngoặc}
+\subsection{Quy tắc dấu ngoặc}
 ``Quy tắc dấu ngoặc đối với phân số giống như quy tắc dấu ngoặc đối với số nguyên.'' -- \cite[p. 37]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2} I.e.,
 \begin{align*}
 	\frac{a}{b} + \frac{c}{d} + \frac{e}{f} = \left(\frac{a}{b} + \frac{c}{d}\right) + \frac{e}{f} = \frac{a}{b} + \left(\frac{c}{d} + \frac{e}{f}\right),\ \forall a,b,c,d,e,f\in\mathbb{Z},\ b\ne 0,\ d\ne 0,\ f\ne 0.
 \end{align*}
 
-\subsubsection{Biểu diễn phân số trên trục số nằm ngang}
+\subsection{Biểu diễn phân số trên trục số nằm ngang}
 ``Tương tự như đối với các số nguyên, ta có thể biểu diễn mọi phân số trên trục số.'' ``Trên trục số, phân số \textit{\&} số đối của phân số đó có điểm biểu diễn nằm về 2 phía của gốc 0 \textit{\&} cách đều gốc 0.'' ``Trên trục số nằm ngang, nếu điểm biểu diễn phân số $\frac{a}{b}$ nằm bên trái điểm biểu diễn phân số $\frac{c}{d}$ (hay điểm biểu diễn phân số $\frac{c}{d}$ nằm bên phải điểm biểu diễn phân số $\frac{a}{b}$) thì ta có phân số $\frac{a}{b}$ nhỏ hơn phân số $\frac{c}{d}$ (hay phân số $\frac{c}{d}$ lớn hơn phân số $\frac{a}{b}$).'' \textit{Tính chất bắc cầu}: ``nếu $\frac{a}{b} < \frac{c}{d}$ \textit{\&} $\frac{c}{d} < \frac{e}{g}$ thì $\frac{a}{b} < \frac{e}{g}$.'' -- \cite[p. 39]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Phép Nhân, Phép Chia Phân Số}
+\section{Phép Nhân, Phép Chia Phân Số}
 
-\subsubsection{Phép nhân phân số}
+\subsection{Phép nhân phân số}
 
-\paragraph{Quy tắc nhân 2 phân số.} ``Muốn nhân 2 phân số, ta nhân các tử với nhau \textit{\&} nhân các mẫu với nhau: $\frac{a}{b}\cdot\frac{c}{d} = \frac{ac}{bd}$ với $b\ne 0$, $d\ne 0$.'' -- \cite[p. 40]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. ``Muốn nhân 1 số nguyên với 1 phân số (hoặc nhân 1 phân số với 1 số nguyên), ta nhân số nguyên tới tử của phân số \textit{\&} giữ nguyên mẫu của phân số đó: $m\cdot\frac{a}{b} = \frac{ma}{b}$, $\frac{a}{b}\cdot n = \frac{an}{b}$ với $b\ne 0$.'' -- \cite[p. 41]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{Quy tắc nhân 2 phân số.} ``Muốn nhân 2 phân số, ta nhân các tử với nhau \textit{\&} nhân các mẫu với nhau: $\frac{a}{b}\cdot\frac{c}{d} = \frac{ac}{bd}$ với $b\ne 0$, $d\ne 0$.'' -- \cite[p. 40]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. ``Muốn nhân 1 số nguyên với 1 phân số (hoặc nhân 1 phân số với 1 số nguyên), ta nhân số nguyên tới tử của phân số \textit{\&} giữ nguyên mẫu của phân số đó: $m\cdot\frac{a}{b} = \frac{ma}{b}$, $\frac{a}{b}\cdot n = \frac{an}{b}$ với $b\ne 0$.'' -- \cite[p. 41]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{Tính chất của phép nhân phân số.} ``Giống như phép nhân số tự nhiên, phép nhân phân số cũng có các tính chất: giao hoán, kết hợp, nhân với 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 41]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{Tính chất của phép nhân phân số.} ``Giống như phép nhân số tự nhiên, phép nhân phân số cũng có các tính chất: giao hoán, kết hợp, nhân với 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 41]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Phép chia phân số}
+\subsection{Phép chia phân số}
  
-\begin{definition}[Phân số nghịch đảo]
+\begin{dinhnghia}[Phân số nghịch đảo]
 	Phân số $\frac{b}{a}$ gọi là \emph{phân số nghịch đảo} của phân số $\frac{a}{b}$ với $a,b\in\mathbb{Z}^\star$.
-\end{definition}
+\end{dinhnghia}
 ``Tích của 1 phân số với phân số nghịch đảo của nó thì bằng 1.'' -- \cite[p. 42]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. I.e., $\frac{a}{b}\cdot\frac{b}{a} = \frac{ab}{ba} = 1$, $\forall a,b\in\mathbb{Z}^\star$.
 
 ``Muốn chia 1 phân số cho 1 phân số khác 0, ta nhân số bị chia với phân số nghịch đảo của số chia: $\frac{a}{b}:\frac{c}{d} = \frac{a}{b}\cdot\frac{d}{c} = \frac{ad}{bc}$ với $a,b,c,d\in\mathbb{Z}$, $b\ne 0,c\ne 0,d\ne 0$.'' -- \cite[p. 42]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}.
@@ -1336,23 +1376,23 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 \end{remark}
 ``Thứ tự thực hiện các phép tính với phân số (trong biểu thức không chứa dấu ngoặc hoặc có chứa dấu ngoặc) cũng giống như thứ tự thực hiện các phép tính với số nguyên.'' -- \cite[p. 42]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Số Thập Phân}
+\section{Số Thập Phân}
 
-\subsubsection{Số thập phân}
+\subsection{Số thập phân}
 
-\begin{definition}[Phân số thập phân, số thập phân]
+\begin{dinhnghia}[Phân số thập phân, số thập phân]
 	\emph{Phân số thập phân} là phân số mà mẫu là lũy thừa của 10 \textit{\&} tử là số nguyên, i.e., $\frac{a}{10^n}$, $a\in\mathbb{Z}$, $n\in\mathbb{N}$\footnote{Nếu $n = 0$ thì $10^n = 10^0 = 1$ nên $\frac{a}{10^n} = a$.}. Phân số thập phân có thể viết được dưới dạng số thập phân. Số thập phân gồm 2 phần: \emph{Phần số nguyên} được viết bên trái dấu phẩy, \emph{phần thập phân} được viết bên phải dấu phẩy.
-\end{definition}
+\end{dinhnghia}
 
 \begin{remark}
 	Tập hợp các số thập phân $\left\{\frac{a}{10^n};a\in\mathbb{Z},\ n\in\mathbb{N}\right\}$ sẽ chứa tập số tự nhiên $\mathbb{N}$ ($n = 0$, $a\in\mathbb{N}$), chứa tập số nguyên $\mathbb{Z}$ ($n = 0$, $a\in\mathbb{Z}$), nhưng tập hợp các số thập phân này là tập con của tập hợp các phân số $\left\{\frac{a}{b};a,b\in\mathbb{Z},\ b\ne 0\right\} = \mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$.
 \end{remark}
 
-\subsubsection{So sánh các số thập phân}
+\subsection{So sánh các số thập phân}
 
-\paragraph{So sánh 2 số thập phân.} ``Cũng như số nguyên, trong 2 số thập phân khác nhau luôn có 1 số nhỏ hơn số kia. Nếu số thập phân $a$ nhỏ hơn số thập phân $b$ thì ta viết $a < b$ hay $b > a$. Số thập phân lớn hơn 0 được gọi là \emph{số thập phân dương}. Số thập phân nhỏ hơn 0 được gọi là \emph{số thập phân âm}. Tính chất bắc cầu: nếu $a < b$ \textit{\&} $b < c$ thì $a < c$.'' \cite[p. 45]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{So sánh 2 số thập phân.} ``Cũng như số nguyên, trong 2 số thập phân khác nhau luôn có 1 số nhỏ hơn số kia. Nếu số thập phân $a$ nhỏ hơn số thập phân $b$ thì ta viết $a < b$ hay $b > a$. Số thập phân lớn hơn 0 được gọi là \emph{số thập phân dương}. Số thập phân nhỏ hơn 0 được gọi là \emph{số thập phân âm}. Tính chất bắc cầu: nếu $a < b$ \textit{\&} $b < c$ thì $a < c$.'' \cite[p. 45]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{Cách so sánh 2 số thập phân}
+\subsubsection{Cách so sánh 2 số thập phân}
 \begin{itemize}
 	\item \textit{So sánh 2 số thập phân khác dấu.} ``Cũng tương tự như trong tập số nguyên, ta có: Số thập phân âm luôn nhỏ hơn số thập phân dương.'' Bởi vì: số thập phân âm $< 0 <$ số thập phân dương.
 	\item \textit{So sánh 2 số thập phân dương.} ``Để so sánh 2 số thập phân dương, ta làm như sau:
@@ -1363,17 +1403,17 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 	\item \textit{So sánh 2 số thập phân âm.} ``Cách so sánh 2 số thập phân âm được thực hiện như cách so sánh 2 số nguyên âm.'' 
 \end{itemize}
 
-\subsection{Phép Cộng, Phép Trừ Số Thập Phân}
+\section{Phép Cộng, Phép Trừ Số Thập Phân}
 
-\subsubsection{Số đối của số thập phân}
+\subsection{Số đối của số thập phân}
 ``Giống như số nguyên, mỗi số thập phân đều có số đối, sao cho tổng của 2 số đó bằng 0.'' -- \cite[p. 48]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\begin{definition}
+\begin{dinhnghia}
 	\emph{Số đối} của số thập phân $a$ ký hiệu là $-a$. Ta có: $a + (-a) = 0$.
-\end{definition}
+\end{dinhnghia}
 ``Số đối của số thập phân $-a$ là $a$, i.e., $-(-a) = a$.
 
-\subsubsection{Phép cộng, phép trừ số thập phân}
+\subsection{Phép cộng, phép trừ số thập phân}
 Để cộng, trừ 2 số thập phân dương, ta làm như sau:
 \begin{enumerate}
 	\item Viết số này ở dưới số kia sao cho các chữ số ở cùng hàng đặt thẳng cột với nhau, dấu thập phân đặt thẳng cột với nhau, i.e., cộng phần thập phân với phần thập phân trước, sau đó cộng phần số nguyên với phần số nguyên sau.
@@ -1381,22 +1421,22 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 	\item Viết dấu thập phân ở kết quả thẳng cột với các dấu thập phân đã viết ở trên.
 \end{enumerate}
 
-\paragraph{Cộng 2 số thập phân.} ``Quy tắc cộng 2 số thập phân (cùng dấu hoặc khác dấu) được thực hiện giống quy tắc cộng 2 số nguyên.'' ``Giống như phép cộng số nguyên, phép cộng số thập phân cũng có các tính chất: giao hoán, kết hợp, cộng với số 0, cộng với số đối.'' -- \cite[p. 49]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{Cộng 2 số thập phân.} ``Quy tắc cộng 2 số thập phân (cùng dấu hoặc khác dấu) được thực hiện giống quy tắc cộng 2 số nguyên.'' ``Giống như phép cộng số nguyên, phép cộng số thập phân cũng có các tính chất: giao hoán, kết hợp, cộng với số 0, cộng với số đối.'' -- \cite[p. 49]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 \begin{remark}
 	Với dạng toán ``Tính 1 cách hợp lý'', nên tự hiểu ngầm là nên\emph{\texttt{/}} phải sử dụng các tính chất như giao hoán \textit{\&} tính kết hợp: nhóm lại các số có phần thập phân mà khi công hoặc trừ chúng lại ta sẽ được lũy thừa của 10, để dễ tính toán.
 \end{remark}
 
-\paragraph{Trừ 2 số thập phân.} ``Cũng như phép trừ số nguyên, để trừ 2 số thập phân ta cộng số bị trừ với số đối của số trừ.'' -- \cite[p. 50]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{Trừ 2 số thập phân.} ``Cũng như phép trừ số nguyên, để trừ 2 số thập phân ta cộng số bị trừ với số đối của số trừ.'' -- \cite[p. 50]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Quy tắc dấu ngoặc}
+\subsection{Quy tắc dấu ngoặc}
 ``Quy tắc dấu ngoặc đối với số thập phân giống như quy tắc dấu ngoặc đối với số nguyên.'' -- \cite[p. 50]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Phép Nhân, Phép Chia Số Thập Phân}
+\section{Phép Nhân, Phép Chia Số Thập Phân}
 
-\subsubsection{Phép nhân số thập phân}
+\subsection{Phép nhân số thập phân}
 
-\paragraph{Nhân 2 số thập phân.} ``Để nhân 2 số thập phân dương, ta làm như sau:
+\subsubsection{Nhân 2 số thập phân.} ``Để nhân 2 số thập phân dương, ta làm như sau:
 \begin{enumerate}
 	\item Viết thừa số này ở dưới thừa số kia như đối với phép nhân các số tự nhiên.
 	\item Thực hiện phép nhân như nhân các số tự nhiên.
@@ -1404,9 +1444,9 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 \end{enumerate}
 ``Quy tắc nhân 2 số thập phân (cùng dấu hoặc khác dấu) được thực hiện giống như quy tắc nhân 2 số nguyên.'' -- \cite[p. 52]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{Tính chất của phép nhân số thập phân.} ``Giống như phép nhân số nguyên, phép nhân số thập phân cũng có các tính chất: giao hoán, kết hợp, nhân với số 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 53]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{Tính chất của phép nhân số thập phân.} ``Giống như phép nhân số nguyên, phép nhân số thập phân cũng có các tính chất: giao hoán, kết hợp, nhân với số 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 53]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Phép chia số thập phân}
+\subsection{Phép chia số thập phân}
 \textbf{Mẹo.} Cho $a,b$ là 2 số thập phân. Thì $\frac{a}{b} = \frac{a10^n}{b10^n}$, $\forall n\in\mathbb{N}$. Chọn $n\in\mathbb{N}$ sao cho mẫu $b$ mất dấu thập phân.
 
 ``Để chia 2 số thập phân dương, ta làm như sau:
@@ -1417,48 +1457,48 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 \end{enumerate}
 ``Quy tắc chia 2 số thập phân (cùng dấu hoặc khác dấu) được thực hiện giống như quy tắc chia 2 số nguyên.'' -- \cite[p. 55]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Ước Lượng \textit{\&} Làm Tròn Số}
+\section{Ước Lượng \textit{\&} Làm Tròn Số}
 
-\subsubsection{Làm tròn số nguyên}
+\subsection{Làm tròn số nguyên}
 ``Ký hiệu ``$\approx$'' (approximation) đọc là: ``gần bằng'' hoặc ``xấp xỉ''. Để làm tròn 1 số nguyên (có nhiều chữ số) đến 1 hàng nào đó. Ta làm như sau:
 \begin{enumerate}
 	\item Nếu chữ số đứng ngay bên phải hàng làm tròn nhỏ hơn 5 thì ta thay lần lượt các chữ số đứng bên phải hàng làm tròn bởi chữ số 0.
 	\item Nếu chữ số đứng ngay bên phải hàng làm tròn $\ge 5$ thì ta thay lần lượt các chữ số đứng bên phải hàng làm tròn bởi chữ số 0 rồi cộng thêm 1 vào chữ số của hàng làm tròn.'' -- \cite[p. 58]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 \end{enumerate}
 
-\subsubsection{Làm tròn số thập phân}
+\subsection{Làm tròn số thập phân}
 ``Tương tự như làm tròn số nguyên, ta có thể làm tròn 1 số thập phân đến 1 hàng nào đó.'' -- \cite[p. 58]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2} ``Để làm tròn 1 số thập phân đến 1 hàng nào đó, ta thực hiện giống như cách làm tròn 1 số nguyên đến 1 hàng nào đó, sau đó bỏ đi những chữ số 0 ở tận cùng bên phải phần thập phân.'' -- \cite[p. 59]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 \begin{remark}
 	Các chữ số 0 ở phần số nguyên có nghĩa \textit{\&} không được phép bỏ, trong khi các chữ số 0 ở tận cùng bên phải phần thập phân là vô nghĩa \&\emph{\texttt{/}} có thể bỏ để viết gọn số thập phân đó gọn hơn.
 \end{remark}
 
-\subsubsection{Đôi nét về lịch sử số thập phân}
+\subsection{Đôi nét về lịch sử số thập phân}
 ``Phân số thập phân xuất hiện khá sớm ở Trung Quốc \textit{\&} Ả Rập. Vào thế kỷ XVI, ở châu Âu, người ta bắt đầu sử dụng số thập phân như 1 công cụ tính toán phân số. E.g., trong cuốn sách ``Phần mười'' vào năm 1585 của Simon Stevin (1548--1620), ông đã chỉ ra rằng cách viết phân số theo hệ thập phân cho phép các phép tính với phân số được thực hiện với thuật toán đơn giản hơn rất nhiều \textit{\&} tương tự với quy tắc tính toán trên số tự nhiên. Cách dùng phân số thập phân của các nhà toán học sau này như Johanne Kepler \textit{\&} John Napier (1550--1617) đã mở đường cho sự thừa nhận chung về số thập phân. Tuy nhiên, cách dùng 1 ký hiệu ngăn cách phần số nguyên \textit{\&} phần thập phân thì lại phức tạp hơn nhiều. Rất nhiều các ký hiệu khác nhau được sử dụng để ngăn cách phần số nguyên \textit{\&} phần thập phân của 1 số thập phân. Vào năm 1792, cuốn sách số học đầu tiên in tại Mỹ đã sử dụng dấu ``,'', cho mục đích này, nhưng những quyển sách sau đó có xu hướng thích cách sử dụng dấu chấm ``.'' hơn. Ngày nay, hầu như các nước nói tiếng Anh đều dùng dấu chấm ``.'' nhưng phần lớn các quốc gia khác ở châu Âu lại thích dùng dấu phẩy ``,'' hơn. Các tổ chức \textit{\&} các nhà xuất bản quốc tế thường chấp nhận cả dấu chấm \textit{\&} dấu phẩy. Hệ thống máy tính hiện đại cho phép người sử dụng được lựa chọn sự ngăn cách phần số nguyên \textit{\&} phần thập phân của 1 số thập phân bởi dấu ``,'' hay dấu ``.''. (Nguồn: W. P. Berlinghoff and F. Q. Gouvea, \textit{Math Through the Ages: A Gentle History for Teachers \textit{\&} Others}, Dover Publications 2019)'' -- \cite[p. 60]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Tỷ số. Tỷ Số Phần Trăm}
+\section{Tỷ số. Tỷ Số Phần Trăm}
 ``Số Pi được người Babylon cổ đại phát hiện gần 4000 năm trước \textit{\&} được biểu diễn bằng chữ cái Hy Lạp $\pi$ từ giữa thế kỷ XVIII. Số $\pi$ thể hiện mối liên hệ đặc biệt giữa độ dài của 1 đường tròn với độ dài đường kính của đường tròn đó.'' -- \cite[p. 61]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Tỷ số}
+\subsection{Tỷ số}
 
-\paragraph{Tỷ số của 2 số.}
-\begin{definition}
+\subsubsection{Tỷ số của 2 số.}
+\begin{dinhnghia}
 	 \emph{Tỷ số} của $a$ \textit{\&} $b$, $b\ne 0$, là thương trong phép chia số $a$ cho số $b$, ký hiệu là $a:b$ hoặc $\frac{a}{b}$.
-\end{definition}
+\end{dinhnghia}
 ``Nếu tỷ số của $a$ \textit{\&} $b$ được viết ở dạng $\frac{a}{b}$ thì ta cũng gọi $a$ là \textit{tử số} \textit{\&} $b$ là \textit{mẫu số}.'' -- \cite[p. 61]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}. ``Tỷ số của số $a$ \textit{\&} số $b$ phải được viết theo đúng thứ tự là $\frac{a}{b}$ hoặc $a:b$.
 
-\paragraph{Tỷ số của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo).}
-\begin{definition}[Tỷ số của 2 đại lượng cùng loại \textit{\&} cùng đơn vị đo]
+\subsubsection{Tỷ số của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo).}
+\begin{dinhnghia}[Tỷ số của 2 đại lượng cùng loại \textit{\&} cùng đơn vị đo]
 	\emph{Tỷ số của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo)} là tỷ số giữa 2 số đo của 2 đại lượng đó.
-\end{definition}
+\end{dinhnghia}
 ``Tỷ số của 2 đại lượng thể hiện độ lớn của đại lượng này so với đại lượng kia.'' -- \cite[p. 62]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2} ``Trong không khí, ánh sáng chuyển động với vận tốc khoảng $300 000$ km\texttt{/}s, còn âm thanh lan truyền với vận tốc khoảng $343,2$ m\texttt{/}s.'' -- \cite[p. 63]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Tỷ số phần trăm}
+\subsection{Tỷ số phần trăm}
 
-\paragraph{Tỷ số phần trăm của 2 số.}
-\begin{definition}
+\subsubsection{Tỷ số phần trăm của 2 số.}
+\begin{dinhnghia}
 	\emph{Tỷ số phần trăm} của $a$ \textit{\&} $b$ là $\frac{a}{b}\cdot 100\%$.
-\end{definition}
+\end{dinhnghia}
 ``Để tính tỷ số phần trăm của $a$ \textit{\&} $b$, ta làm như sau:
 \begin{enumerate}
 	\item Viết tỷ số $\frac{a}{b}$.
@@ -1471,58 +1511,58 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 \end{itemize}
 ``Khi tỷ số $\frac{a\cdot 100}{b}$ không là số nguyên thì ta thường viết tỷ số đó ở dạng số thập phân có hữu hạn chữ số sau dấu thập phân (hoặc xấp xỉ bằng số thập phân có hữu hạn chữ số sau dấu thập phân). Cách viết về số thập phân như vậy thuận tiện hơn trong thực tiễn.'' ``Khi tính tỷ số phần trăm của $a$ \textit{\&} $b$ mà phải làm tròn số thập phân thì ta làm theo cách thứ 2 đã nêu ở trên: Nhân $a$ với 100 rồi chia cho $b$ \textit{\&} làm tròn số thập phân nhận được.'' -- \cite[p. 64]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{Tỷ số phần trăm của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo).}
-\begin{definition}[Tỷ số phần trăm của 2 đại lượng cùng loại \textit{\&} cùng đơn vị đo]
+\subsubsection{Tỷ số phần trăm của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo).}
+\begin{dinhnghia}[Tỷ số phần trăm của 2 đại lượng cùng loại \textit{\&} cùng đơn vị đo]
 	 \emph{Tỷ số phần trăm của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo)} là tỷ số phần trăm của 2 số đo của 2 đại lượng đó.
-\end{definition}
+\end{dinhnghia}
 ``Tỷ số phần trăm của đại lượng thứ nhất có số đo (đại lượng) $a$ \textit{\&} đại lượng thứ 2 có số đo (đại lượng) $b$ là $\frac{a\cdot100}{b}\%$.
 
-\subsubsection{Lịch sử ký hiệu phần trăm}
+\subsection{Lịch sử ký hiệu phần trăm}
 ``Trong tieengs Latin (là gốc của nhiều tiếng châu Âu), từ \textit{phần trăm} viết là \textit{per cento}. Những người viết tốc ký hay phải dùng từ này, nhưng vì nó dài nên người ta viết tắt cho nhanh. Đầu tiên người ta bỏ ``per'' đi, chỉ còn ``cento''. Rồi người ta viết tắt ``cento'' thành ``cto''. Rồi khi viết ngoáy thì chữ ``t'' ở giữa biến thành 1 cái gạch chéo, còn chữ ``c'' được viết xoáy thành tròn rồi nối vào gạch chéo của chữ ``t'' ở phía trên. Sau 1 quá trình biến đổi do viết tắt như vậy, \textit{per cento} dần chuyển thành ký hiệu \% mà chúng ta biết đến ngày nay! (Trích từ truyện ``\textit{Thuyền trưởng đơn vị}'' của Vladimir Levshin, Tủ sách Sputnik, số 020)'' -- \cite[p. 66]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{2 Bài Toán về Phân Số}
+\section{2 Bài Toán về Phân Số}
 
-\subsubsection{Tìm giá trị phân số của 1 số cho trước}
+\subsection{Tìm giá trị phân số của 1 số cho trước}
 ``Muốn tìm giá trị $\frac{m}{n}$ của số $a$ cho trước, ta tính $a\cdot\frac{m}{n}$ ($m\in\mathbb{N}$, $n\in\mathbb{N}^\star$). \emph{Giá trị $m\%$ của số $a$} là giá trị phân số $\frac{m}{100}$ của số $a$. Muốn tìm giá trị $m\%$ của số $a$ cho trước, ta tính $a\cdot\frac{m}{100}$ ($m\in\mathbb{N}^\star$).'' -- \cite[p. 68]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Tìm 1 số biết giá trị 1 phân số của số đó}
+\subsection{Tìm 1 số biết giá trị 1 phân số của số đó}
 ``Muốn tìm 1 số biết $\frac{m}{n}$ của nó bằng $a$, ta tính $a:\frac{m}{n}$ ($m,n\in\mathbb{N}^\star$). Muốn tìm 1 số biết $m\%$ của nó bằng $a$, ta tính $a:\frac{m}{100}$ ($m\in\mathbb{N}^\star$).'' -- \cite[p. 68]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Chỉ Số Khối Cơ Thể (BMI)}
+\section{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Chỉ Số Khối Cơ Thể (BMI)}
 
-\subsubsection{Giới thiệu về chỉ số khối cơ thể}
+\subsection{Giới thiệu về chỉ số khối cơ thể}
 ``\textit{Chỉ số khối cơ thể} thường được biết đến với tên viết tắt BMI theo tên tiếng Anh \textit{Body Mass Index}, là 1 tỷ số cho phép đánh giá thể trạng của 1 người là gầy, bình thường hay béo. Chỉ số này do nhà khoa học Adolphe Quetelet, người Bỉ, đưa ra năm 1832. Chỉ số khối cơ thể của 1 người được tính theo công thức sau: ${\rm BMI} = \frac{m}{h^2}$, trong đó $m$ là \textit{khối lượng cơ thể} tính theo kg, $h$ là \textit{chiều cao} tính theo m. Chỉ số này thường được làm tròn đến hàng phần mười.'' -- \cite[p. 73]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 Xem \cite[Hình 1, p. 73]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}: bảng đánh giá thể trạng ở trẻ em theo BMI \textit{\&} \cite[p. 74]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}: bảng đánh giá thể trạng ở người lớn theo BMI đối với châu Á -- Thái Bình Dương.
 
-\subsubsection{Ý nghĩa của BMI trong thực tiễn}
+\subsection{Ý nghĩa của BMI trong thực tiễn}
 ``Thông qua chỉ số BMI, ta có thể biết chính xác 1 người đang mắc bệnh béo phì, thừa cân hay suy dinh dưỡng. Từ đó, có các biện pháp tập thể dục, thể thao, thay đổi chế độ dinh dưỡng để có được cơ thể khỏe mạnh.'' -- \cite[p. 74]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 %------------------------------------------------------------------------------%
 
-\section{Hình Học Phẳng}
+\chapter{Hình Học Phẳng}
 
-\subsection{Điểm. Đường Thẳng}
+\section{Điểm. Đường Thẳng}
 
-\subsubsection{Điểm}
+\subsection{Điểm}
 \textbf{Quy ước.} Khi nói 2 điểm mà không nói gì thêm, ta hiểu đó là \textit{2 điểm phân biệt}.
 
 \begin{remark}
 	Mỗi hình là tập hợp các điểm. Hình có thể chỉ gồm 1 điểm.
 \end{remark}
 
-\subsubsection{Đường thẳng}
+\subsection{Đường thẳng}
 
 \begin{remark}[Phân biệt đường thẳng vs. đoạn thẳng]
 	Đường thẳng không bị giới hạn về 2 phía, trong khi đoạn thẳng bị giới hạn về 2 phía bởi 2 đầu mút của nó.
 \end{remark}
 ``Ta dùng vạch thẳng để biểu diễn 1 đường thảng \textit{\&} sử dụng những chữ cái in thường $a,b,c,\ldots$ để đặt tên cho đường thẳng.'' -- \cite[p. 76]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Điểm thuộc đường thẳng. Điểm không thuộc đường thẳng}
+\subsection{Điểm thuộc đường thẳng. Điểm không thuộc đường thẳng}
 
-\begin{definition}[Điểm thuộc đường thẳng, điểm không thuộc đường thẳng]
+\begin{dinhnghia}[Điểm thuộc đường thẳng, điểm không thuộc đường thẳng]
 	Điểm $A$ \emph{thuộc} đường thwangr $d$ \textit{\&} được ký hiệu là: $A\in d$. Điểm $B$ \emph{không thuộc} đường thẳng $d$ \textit{\&} được ký hiệu là: $B\notin d$.
-\end{definition}
+\end{dinhnghia}
 ``Điểm $A$ \textit{thuộc} đường thẳng $d$ còn được gọi là điểm $A$ \textit{nằm trên} đường  thẳng $d$ hay đường thẳng $d$ \textit{đi qua} điểm $A$. Điểm $B$ \textit{không thuộc} đường thẳng $d$ còn được gọi là điểm $B$ \textit{không nằm trên} đường thẳng $d$ hay đường thẳng $d$ \textit{không đi qua} điểm $B$.'' -- \cite[p. 76]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 \begin{remark}
@@ -1530,118 +1570,118 @@ Xem \cite[Hình 1, p. 73]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}: bảng �
 \end{remark}
 Thật vậy, đoạn thẳng $AB$ có vô số điểm bởi vì: lấy $M_1$ là trung điểm của $AB$, lấy $M_2$ là trung điểm của đoạn $AM_1$, lấy $M_3$ là trung điểm của đoạn $AM_2$, etc., tương tự như vậy, thì có vô số lần lấy trung điểm, tương ứng vô hạn điểm.
 
-\subsubsection{Đường thẳng đi qua 2 điểm}
+\subsection{Đường thẳng đi qua 2 điểm}
 
 \begin{theorem}
 	Có 1 \textit{\&} chỉ 1 đường thẳng đi qua 2 điểm $A$ \textit{\&} $B$ (phân biệt).
 \end{theorem}
 ``Đường thẳng đi qua 2 điểm $A$, $B$ còn được gọi là \textit{đường thẳng $AB$}, hay \textit{đường thẳng $BA$}.'' -- \cite[p. 77]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{3 Điểm thẳng hàng}
+\subsection{3 Điểm thẳng hàng}
 
-\begin{definition}[3 điểm thẳng hàng, không thẳng hàng]
+\begin{dinhnghia}[3 điểm thẳng hàng, không thẳng hàng]
 	Khi 3 điểm cùng thuộc 1 đường thẳng, chúng được gọi là \emph{thẳng hàng}. Khi 3 điểm không cùng thuộc bất kỳ đường thẳng nào, chúng được gọi là \emph{không thẳng hàng}.
-\end{definition}
+\end{dinhnghia}
 
 \begin{theorem}
 	Trong 3 điểm thẳng hàng, có 1 \textit{\&} chỉ 1 điểm nằm giữa 2 điểm còn lại.
 \end{theorem}
 
-\subsection{2 Đường Thẳng Cắt Nhau. 2 Đường Thẳng Song Song}
+\section{2 Đường Thẳng Cắt Nhau. 2 Đường Thẳng Song Song}
 
-\subsubsection{2 Đường thẳng cắt nhau}
+\subsection{2 Đường thẳng cắt nhau}
 
-\begin{definition}[2 đường thẳng cắt nhau]
+\begin{dinhnghia}[2 đường thẳng cắt nhau]
 	2 đường thẳng chỉ có 1 điểm chung gọi là \emph{2 đường thẳng cắt nhau} \textit{\&} điểm chung được gọi là \emph{giao điểm} của 2 đường đó.
-\end{definition}
+\end{dinhnghia}
 
-\subsubsection{2 Đường thẳng song song}
+\subsection{2 Đường thẳng song song}
 
-\begin{definition}[2 đường thẳng song song]
+\begin{dinhnghia}[2 đường thẳng song song]
 	2 đường thẳng $a$ \textit{\&} $b$ không có điểm chung nào được gọi là \emph{song song với nhau}. Viết $a//b$ hoặc $b//a$.
-\end{definition}
+\end{dinhnghia}
 
 \begin{remark}
 	2 đường thẳng song song thì không có điểm chung. 2 đường thẳng \emph{trùng nhau} thì không thuộc vào 2 định nghĩa trên.
 \end{remark}
 
-\subsection{Đoạn Thẳng}
+\section{Đoạn Thẳng}
 
-\subsubsection{2 Đoạn thẳng bằng nhau}
+\subsection{2 Đoạn thẳng bằng nhau}
 
-\paragraph{Khái niệm đoạn thẳng.}
-\begin{definition}[Đoạn thẳng]
+\subsubsection{Khái niệm đoạn thẳng.}
+\begin{dinhnghia}[Đoạn thẳng]
 	\emph{Đoạn thẳng $AB$} là hình gồm điểm $A$, điểm $B$, \textit{\&} tất cả các điểm nằm giữa $A$ \textit{\&} $B$.
-\end{definition}
+\end{dinhnghia}
 ``Đoạn thẳng $AB$ cũng gọi là đoạn thẳng $BA$.'' -- \cite[p. 84]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{2 Đoạn thẳng bằng nhau.} ``Khi đoạn thẳng $AB$ bằng đoạn thẳng $CD$ thì ta ký hiệu $AB = CD$.'' -- \cite[p. 85]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{2 Đoạn thẳng bằng nhau.} ``Khi đoạn thẳng $AB$ bằng đoạn thẳng $CD$ thì ta ký hiệu $AB = CD$.'' -- \cite[p. 85]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 \begin{question}
 	Khái niệm ``2 đường thẳng bằng nhau'' có nghĩa hay không?
 \end{question}
 
-\subsubsection{Độ dài đoạn thẳng}
+\subsection{Độ dài đoạn thẳng}
 
-\paragraph{Đo đoạn thẳng.}
+\subsubsection{Đo đoạn thẳng.}
 \begin{theorem}
 	Mỗi đoạn thẳng có độ dài là 1 số dương. 2 đoạn thẳng bằng nhau thì có độ dài bằng nhau.
 \end{theorem}
 ``Độ dài của đoạn thẳng $AB$ cũng được gọi là \textit{khoảng cách} giữa 2 điểm $A$ \textit{\&} $B$.'' -- \cite[p. 85]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\paragraph{So sánh 2 đoạn thẳng.} ``Ta có thể so sánh 2 đoạn thẳng bằng cách so sánh độ dài của chúng: Nếu độ dài đoạn thẳng $AB$ bằng độ dài đoạn thẳng $CD$ thì ta có $AB = CD$. Nếu độ dài đoạn thẳng $AB$ lớn hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ lớn hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB > CD$. Nếu độ dài đoạn thẳng $AB$ nhỏ hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ nhỏ hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB < CD$.'' -- \cite[p. 86]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{So sánh 2 đoạn thẳng.} ``Ta có thể so sánh 2 đoạn thẳng bằng cách so sánh độ dài của chúng: Nếu độ dài đoạn thẳng $AB$ bằng độ dài đoạn thẳng $CD$ thì ta có $AB = CD$. Nếu độ dài đoạn thẳng $AB$ lớn hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ lớn hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB > CD$. Nếu độ dài đoạn thẳng $AB$ nhỏ hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ nhỏ hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB < CD$.'' -- \cite[p. 86]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Trung điểm của đoạn thẳng}
+\subsection{Trung điểm của đoạn thẳng}
 
-\begin{definition}[Trung điểm của đoạn thẳng]
+\begin{dinhnghia}[Trung điểm của đoạn thẳng]
 	\emph{Trung điểm $M$} của đoạn thẳng $AB$ là điểm nằm giữa 2 điểm $A,B$ sao cho $MA = MB$.
-\end{definition}
+\end{dinhnghia}
 ``Trung điểm của đoạn thẳng còn được gọi là \textit{điểm chính giữa} của đoạn thẳng đó.'' Cf. điểm chính giữa vs. điểm giữa. ``Nếu $M$ là trung điểm của đoạn thẳng $AB$ thì độ dài mỗi đoạn thẳng $MA$, $MB$ đều bằng 1 nửa độ dài đoạn thẳng $AB$, i.e., $MA = MB = \frac{1}{2}AB$.
 
-\subsubsection{Khi nào thì $AM + MB = AB$?}
+\subsection{Khi nào thì $AM + MB = AB$?}
 ``Với 3 điểm phân biệt $A,B,M$, ta có 3 đoạn thẳng $MA,MB,AB$ \textit{\&} $MA + MB\ge AB$.
 \begin{itemize}
 	\item Nếu $M$ nằm giữa 2 điểm $A$ \textit{\&} $B$ (i.e., $M\in AB$) thì $MA + MB = AB$. Ngược lại, nếu $MA + MB = AB$ thì điểm $M$ nằm giữa 2 điểm $A$ \textit{\&} $B$.
 	\item Nếu $M$ không nằm giữa 2 điểm $A$ \textit{\&} $B$ (i.e., $M\notin AB$) thì $MA + MB > AB$. Ngược lại, nếu $MA + MB > AB$ thì điểm $M$ không nằm giữa 2 điểm $A$ \textit{\&} $B$.
 \end{itemize}
 
+\section{Tia}
+
 \subsection{Tia}
 
-\subsubsection{Tia}
-
-\begin{definition}[Tia]
+\begin{dinhnghia}[Tia]
 	Hình gồm điểm $O$ \textit{\&} 1 phần đường thẳng bị chia ra bởi điểm $O$ được gọi là 1 \textit{tia gốc $O$}.
-\end{definition}
+\end{dinhnghia}
 ``Tia $Ox$ thường được biểu diễn bằng 1 vạch thẳng có ghi rõ điểm gốc $O$. Tia $Ox$ không bị giới hạn về phía $x$.'' -- \cite[p. 89]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{2 Tia đối nhau}
+\subsection{2 Tia đối nhau}
 
-\begin{definition}[2 tia đối nhau]
+\begin{dinhnghia}[2 tia đối nhau]
 	2 tia chung gốc $Ox$ \textit{\&} $Oy$ tạo thành đường thẳng $xy$ được gọi là \emph{2 tia đối nhau}.
-\end{definition}
+\end{dinhnghia}
 
-\subsubsection{2 Tia trùng nhau}
+\subsection{2 Tia trùng nhau}
 
-\begin{definition}
+\begin{dinhnghia}
 	Lấy điểm $A$ khác $O$ thuộc tia $Ox$. Tia $Ox$ \textit{\&} tia $OA$ là \emph{2 tia trùng nhau}.
-\end{definition}
+\end{dinhnghia}
 ``2 tia trùng nhau thì phải có chung điểm gốc.'' -- \cite[p. 91]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2} ``Tia số được dùng sử dụng để biểu diễn các số tự nhiên''. ``Trong thực tiễn có nhiều hình ảnh liên quan đến tia, e.g., chùm tia laze gợi nên hình ảnh những tia chung gốc.'' -- \cite[p. 93]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsection{Góc}
+\section{Góc}
 
-\subsubsection{Khái niệm góc}
+\subsection{Khái niệm góc}
 
-\begin{definition}[Góc]
+\begin{dinhnghia}[Góc]
 	\emph{Góc} là hình gồm 2 tia chung gốc.
-\end{definition}
+\end{dinhnghia}
 Góc $xOy$  (hoặc góc $yOx$) được ký hiệu là $\widehat{xOy}$ (hoặc $\widehat{yOx}$). 2 tia $Ox$ \textit{\&} $Oy$ được gọi là \textit{2 cạnh} của góc. Gốc chung $O$ của 2 tia được gọi là \textit{đỉnh của góc}.'' -- \cite[p. 94]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Điểm nằm trong góc}
+\subsection{Điểm nằm trong góc}
 Khái niệm điểm nằm trong góc $xOy$ hay điểm trong của góc $xOy$.
 
-\subsubsection{Số đo của góc}
+\subsection{Số đo của góc}
 
-\paragraph{Đo góc.} ``Thước đo góc có dạng nửa hình tròn \textit{\&} được chia đều thành 180 phần bằng nhau, mỗi phần ứng với $1^\circ$. Dùng thước đo góc để xác định số đo góc $xOy$:
+\subsubsection{Đo góc.} ``Thước đo góc có dạng nửa hình tròn \textit{\&} được chia đều thành 180 phần bằng nhau, mỗi phần ứng với $1^\circ$. Dùng thước đo góc để xác định số đo góc $xOy$:
 \begin{enumerate}
 	\item Đặt thước đo góc sao cho tâm của thước trùng với đỉnh của góc. Vạch 0 của thước nằm trên cạnh $Ox$.
 	\item Xác định xem cạnh $Oy$ đi qua vạch chia độ nào thì đó chính là số đo của góc.'' -- \cite[p. 96]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
@@ -1656,17 +1696,17 @@ Khái niệm điểm nằm trong góc $xOy$ hay điểm trong của góc $xOy$.
 	``Trong 1 hình có nhiều góc, người ta thường vẽ thêm 1 hay nhiều vòng cung nhỏ nối 2 cạnh của góc đó để dễ thấy góc mà ta đang xét tới. Khi cần phân biệt các góc có chung 1 đỉnh, e.g., chung đỉnh $O$, ta dùng ký hiệu $\widehat{O}_1,\widehat{O}_2$.'' -- \cite[p. 98]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 \end{remark}
 
-\paragraph{So sánh 2 góc.} ``Ta có thể so sánh 2 góc dựa vào số đo của chúng: Nếu số đo của góc $xOy$ bằng số đo của góc $uPv$ thì góc $xOy$ bằng góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} = \widehat{uPv}$. Nếu số đo của góc $xOy$ lớn hơn số đo của góc $uPv$ thì góc $xOy$ lớn hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} > \widehat{uPv}$. Nếu số đo của góc $xOy$ nhỏ hơn số đo của góc $uPv$ thì góc $xOy$ nhỏ hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} < \widehat{uPv}$.'' -- \cite[p. 98]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
+\subsubsection{So sánh 2 góc.} ``Ta có thể so sánh 2 góc dựa vào số đo của chúng: Nếu số đo của góc $xOy$ bằng số đo của góc $uPv$ thì góc $xOy$ bằng góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} = \widehat{uPv}$. Nếu số đo của góc $xOy$ lớn hơn số đo của góc $uPv$ thì góc $xOy$ lớn hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} > \widehat{uPv}$. Nếu số đo của góc $xOy$ nhỏ hơn số đo của góc $uPv$ thì góc $xOy$ nhỏ hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} < \widehat{uPv}$.'' -- \cite[p. 98]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
-\subsubsection{Góc vuông, góc nhọn, góc tù, góc bẹt}
+\subsection{Góc vuông, góc nhọn, góc tù, góc bẹt}
 
-\begin{definition}[Góc vuông, góc nhọn, góc tù, góc bẹt]
+\begin{dinhnghia}[Góc vuông, góc nhọn, góc tù, góc bẹt]
 	\emph{Góc nhọn} là góc có số đo $\in(0^\circ,90^\circ)$. \emph{Góc vuông} là góc có số đo bằng $90^\circ$. \emph{Góc tù} là góc có số đo $\in(90^\circ,180^\circ)$. \emph{Góc bẹt} là góc có số đo bằng $180^\circ$.
-\end{definition}
+\end{dinhnghia}
 
-\subsection{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Sắp Xếp Thành Các Vị Trí Thẳng Hàng}
+\section{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Sắp Xếp Thành Các Vị Trí Thẳng Hàng}
 
-\subsubsection{1 Số kiến thức toán học về 3 điểm thẳng hàng}
+\subsection{1 Số kiến thức toán học về 3 điểm thẳng hàng}
 ``Khi 3 điểm \textit{cùng thuộc} 1 đường thẳng ta nói chúng \textit{thẳng hàng}. Trong 3 điểm thẳng hàng, có 1 \textit{\&} chỉ 1 điểm nằm giữa 2 điểm còn lại.'' -- \cite[p. 104]{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_2}
 
 ``Những hiểu biết về việc sắp xếp thành các vị trí thẳng hàng góp phần giải thích 1 số hiện tượng trong khoa học.
