@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[english,vietnamese]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Elementary Mathematics\texttt{/}Student}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{english}
+\begin{abstract}
+	
+\end{abstract}
+
+\tableofcontents
+\selectlanguage{vietnamese}
+
+%------------------------------------------------------------------------------%
+
+\section{Grade 6}
+Jul 25, 27, 2022.
+\begin{enumerate}
+	\item Nguyễn Thị Kim Anh
+	\item Trần Gia Bảo
+	\item Lê Duyên Minh Châu
+	\item Nguyễn Tâm Đắc
+	\item Nguyễn Hữu Hiếu
+	\item Ngô Nguyễn Phương Nghi
+	\item Nguyễn Như Ngọc
+	\item Trần Ngọc Nhi
+	\item Võ Lâm Quỳnh Như
+	\item Đào Minh Hồng Phát
+	\item Phan Tấn Quân
+	\item Nguyễn Thị Bảo Thi
+	\item Đào Ngọc Quế Trân
+	\item Lê Phương Trinh
+\end{enumerate}
+
+\section{Grade 7}
+
+\section{Grade 8}
+
+\section{Grade 9}
+
+\section{Grade 10}
+
+\section{Grade 11}
+
+\section{Grade 12}
+
+%------------------------------------------------------------------------------%
+
+%\selectlanguage{english}
+%\begin{thebibliography}{99}
+%	\bibitem[]{}
+%\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
