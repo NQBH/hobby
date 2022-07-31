@@ -23,6 +23,7 @@
 \newtheorem{problem}{Problem}[section]
 \newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
 \newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{remark}{Remark}[section]
@@ -89,9 +90,64 @@ Ký hiệu $\mathbb{Q}$ được lấy từ chữ cái đầu \textit{Q} của t
 \subsection{Minh họa trên trục số}
 ``Giả sử 2 điểm $x,y$ lần lượt biểu diễn 2 số hữu tỷ $x,y$ trên trục số nằm ngang. Khi so sánh 2 số hữu tỷ, ta viết chúng ở dạng phân số có cùng mẫu số dương rồi so sánh 2 tử số, tức là so sánh 2 số nguyên. Vì vậy, cũng như số nguyên, nếu $x < y$ hay $y > x$ thì điểm $x$ nằm bên trái điểm $y$. Tương tự, nếu $x < y$ hay $y > x$ thì điểm $x$ nằm phía dưới điểm $y$ trên trục số thẳng đứng.'' -- \cite[pp. 9--10]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Cộng, Trừ, Nhân, Chia Số Hữu Tỷ}
+\section{Cộng, Trừ, Nhân, Chia Số Hữu Tỷ -- Addition, Subtraction, Multiplication, Division on Rationals}
+
+\subsection{Cộng, trừ 2 số hữu tỷ. Quy tắc chuyển vế}
+
+\subsubsection{Quy tắc cộng, trừ 2 số hữu tỷ}
+``Vì mọi số hữu tỷ đều viết được dưới dạng phân số nên ta có thể cộng, trừ 2 số hữu tỷ bằng cách viết chúng dưới dạng phân số rồi áp dụng quy tắc cộng, trừ phân số. Tuy nhiên, khi 2 số hữu tỷ cùng viết ở dạng số thập phân (với hữu hạn chữ số khác $0$ ở phần thập phân) thì ta có thể cộng, trừ 2 số đó theo quy tắc cộng, trừ số thập phân.'' -- \cite[p. 12]{SGK_Toan_7_Canh_Dieu_tap_1}
+
+\subsubsection{Tính chất của phép cộng các số hữu tỷ}
+``Giống như phép cộng các số nguyên, phép cộng các số hữu tỷ cũng có các tính chất: giao hoán, kết hợp, cộng với $0$, cộng với số đối. Ta có thể chuyển phép trừ cho 1 số hữu tỷ thành phép cộng với số đối của số hữu tỷ đó. Vì thế, trong 1 biểu thức số chỉ gồm các phép cộng \& phép trừ, ta có thể thay đổi tùy ý vị trí các số hạng kèm theo dấu của chúng.'' -- \cite[p. 13]{SGK_Toan_7_Canh_Dieu_tap_1}
+
+\subsubsection{Quy tắc chuyển vế}
+Ta có quy tắc ``chuyển vế'' đối với số hữu tỷ như sau:
+
+\begin{menhde}
+	Khi chuyển 1 số hạng từ vế này sang vế kia của 1 đẳng thức, ta phải đối dấu số hạng đó:
+	\begin{align*}
+		x + y = z\Rightarrow x = z - y,\ x - y = z\Rightarrow x = z + y,\ \forall x,y,z\in\mathbb{Q}.
+	\end{align*}
+\end{menhde}
+
+\subsection{Nhân, chia 2 số hữu tỷ}
+
+\subsubsection{Quy tắc nhân, chia 2 số hữu tỷ}
+``Vì mọi số hữu tỷ đều viết được dưới dạng phân số nên ta có thể nhân, chia 2 số hữu tỷ bằng cách viết chúng dưới dạng phân số rồi áp dụng quy tắc nhân, chia phân số. Tuy nhiên, khi 2 số hữu tỷ cùng viết ở dạng số thập phân (với hữu hạn chữ số khác $0$ ở phần thập phân) thì ta có thể nhân, chia 2 số đó theo quy tắc nhân, chia số thập phân.'' -- \cite[p. 14]{SGK_Toan_7_Canh_Dieu_tap_1}
+
+\subsubsection{Tính chất của phép nhân các số hữu tỷ}
+Ký hiệu $\mathbb{Q}^\star\coloneqq\mathbb{Q}\backslash\{0\}$ là tập các số hữu tỷ khác $0$. ``Giống như phép nhân các số nguyên, phép nhân các số hữu tỷ cũng có các tính chất: giao hoán, kết hợp, nhân với số $1$, phân phối của phép nhân đối với phép cộng \& phép trừ.'' ``Mỗi số hữu tỷ $a$ khác $0$ (i.e., $a\in\mathbb{Q}^\star$) đều có số nghịch đảo sao cho tích của số đó với $a$ bằng $1$.'' ``\textit{Số nghịch đảo} của số hữu tỷ $a$ khác $0$ (i.e., $a\in\mathbb{Q}^\star$) ký hiệu là $\frac{1}{a}$, ta có $a\cdot\frac{1}{a} = 1$, $\forall a\in\mathbb{Q}^\star$. Số nghịch đảo của số hữu tỷ $\frac{1}{a}$ là $a$. Nếu $a,b\in\mathbb{Q}$ \& $b\ne 0$ thì $a:b = a\cdot\frac{1}{b}$.'' -- \cite[p. 15]{SGK_Toan_7_Canh_Dieu_tap_1}
 
 \section{Phép Tính Lũy Thừa với Số Mũ Tự Nhiên của 1 Số Hữu Tỷ}
+
+\subsection{Phép tính lũy thừa với số mũ tự nhiên}
+Tương tự như đối với số tự nhiên, với số hữu tỷ ta cũng có:
+
+\begin{dinhnghia}[Lũy thừa của số hữu tỷ]
+	\emph{Lũy thừa bậc $n$} của 1 số hữu tỷ $x\in\mathbb{Q}$, ký hiệu $x^n$, là tích của $n$ thừa số $x$: $x^n = \underbrace{x\cdot x\cdots x}_{n\mbox{ \footnotesize thừa số } x}$ với $n\in\mathbb{N}^\star$. Số $x$ được gọi là \emph{cơ số}, $n$ được gọi là \emph{số mũ}. Quy ước: $x^1 = x$, $\forall x\in\mathbb{Q}$. 
+\end{dinhnghia}
+``$x^n$ đọc là ``$x$ mũ $n$'' hoặc ``$x$ lũy thừa $n$'' hoặc ``lũy thừa bậc $n$ của $x$''; $x^2$ còn được đọc là ``$x$ bình phương'' hay ``bình phương của $x$''; $x^3$ còn được đọc là ``$x$ lập phương'' hay ``lập phương của $x$''.'' -- \cite[p. 17]{SGK_Toan_7_Canh_Dieu_tap_1}. ``Để viết lũy thừa bậc $n$ của phân số $\frac{a}{b}$, ta phải viết $\frac{a}{b}$ trong dấu ngoặc $(\ )$, i.e., $\left(\frac{a}{b}\right)^n$.'' -- \cite[p. 18]{SGK_Toan_7_Canh_Dieu_tap_1}
+
+\subsection{Tích \& thương của 2 lũy thừa cùng cơ số}
+Cũng như lũy thừa với cơ số là số tự nhiên, đối với cơ số là số hữu tỷ, ta có các quy tắc sau:
+
+\begin{dinhly}
+	Khi nhân 2 lũy thừa cùng cơ số, ta giữ nguyên cơ số \& cộng các số mũ: $x^m\cdot x^n = x^{m + n}$, $\forall x\in\mathbb{Q},\,\forall m,n\in\mathbb{N}$. Khi chia 2 lũy thừa cùng cơ số (khác $0$), ta giữ nguyên cơ số \& lấy số mũ của lũy thừa bị chia trừ đi số mũ của lũy thừa chia: $x^m:x^n = \frac{x^m}{x^n} = x^{m - n}$, $\forall x\in\mathbb{Q}^\star,\,\forall m,n\in\mathbb{N},\,m\ge n$. Quy ước: $x^0 = 1$, $\forall x\in\mathbb{Q}^\star$.
+\end{dinhly}
+
+\subsection{Lũy thừa của 1 lũy thừa}
+Đối với lũy thừa mà cơ số là số hữu tỷ, ta có:
+
+\begin{dinhly}
+	Khi tính lũy thừa của 1 lũy thừa, ta giữ nguyên cơ số \& nhân 2 số mũ: $(x^m)^n = x^{mn}$, $\forall x\in\mathbb{Q},\,\forall m,n\in\mathbb{N}$.
+\end{dinhly}
+
+\subsection{Lũy thừa của 1 tích, 1 thương}
+
+\subsubsection{Lũy thừa của 1 tích}
+
+\subsubsection{Lũy thừa của 1 thương}
+
 
 \section{Thứ Tự Thực Hiện Các Phép Tính. Quy Tắc Dấu Ngoặc}
 
