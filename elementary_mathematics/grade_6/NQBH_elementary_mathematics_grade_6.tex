@@ -2422,8 +2422,337 @@ Thay các dấu $*$ \& các chữ bởi các chữ số thích hợp:
 
 \subsubsection{Dãy cộng}
 
-p. 44 (45/177)
+\begin{dinhnghia}[Dãy cộng]
+	\emph{Dãy cộng} là dãy có dạng $\{a + n b\}_{n=0}^\infty = a, a + b, a + 2b, a + 3b,\ldots$, với $a,b\in\mathbb{N}$, $b\ne 0$.
+\end{dinhnghia}
+Trong các dãy số cộng, mỗi số hạng, kể từ số hạng thứ 2, đều lớn hơn số hạng đứng trước nó cùng 1 số đơn vị là $b$.
+
+\begin{vidu}
+	\begin{enumerate*}
+		\item[(a)] $a = 0$, $b = 1$, dãy $\{a + n b\}_{n=0}^\infty = \{n\}_{n=0}^\infty = \mathbb{N} = 0,1,2,3,\ldots$ là dãy các số tự nhiên.
+		\item[(b)] $a = 1$, $b = 2$, dãy $\{a + n b\}_{n=0}^\infty = \{1 + 2n\}_{n=0}^\infty = 1,3,5,7,\ldots$ là dãy các số tự nhiên lẻ.
+		\item[(c)] $a = 0$, $b = 2$, $\{a + n b\}_{n=0}^\infty = \{2n\}_{n=0}^\infty = 0,2,4,6,\ldots$ là dãy các số tự nhiên chẵn.
+		\item[(d)] Với $b\in\mathbb{N}^\star$, $b\ge 2$, $a\in\mathbb{N}$, $a < b$, dãy $\{a + n b\}_{n=0}^\infty$ là dãy các số tự nhiên chia cho $b$ dư $a$.
+	\end{enumerate*}
+\end{vidu}
+Tổng quát, nếu 1 dãy cộng có số hạng đầu là $a_1$ \& hiệu giữa 2 số hạng liên tiếp là $d$ thì số hạng thứ $n$ của dãy cộng đó (ký hiệu là $a_n$) bằng: $a_n = a_1 + (n - 1)d$, $\forall n\in\mathbb{N}^\star$.
+
+``Tổng quát, nếu 1 dãy cộng có $n$ số hạng, số hạng đầu là $a_1$, số hạng cuối là $a_n$ thì tổng của $n$ số hạng đó được tính như sau: $S = \frac{1}{2}n(a_1 + a_n)$\footnote{Quy tắc dân gian: dĩ đầu, cộng vĩ, chiết bán, nhân chi (lấy số đầu cộng với số cuối, chia đôi, nhân với số số hạng).}. Trường hợp đặc biệt, tổng của $n$ số tự nhiên liên tiếp bắt đầu từ 1 bằng: $\sum_{i=1}^n i = \frac{1}{2}n(n + 1)$.'' -- \cite[p. 45]{Binh_Toan_6_tap_1} (Cho $a_1 = 1$, $a_n = n$ trong công thức $S = \frac{1}{2}n(a_1 + a_n)$.)
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 39, p. 45]
+	Bạn Lâm đánh số trang 1 cuốn sách dày $284$ trang bằng dãy số chẵn $2,4,6,8,\ldots$.
+	\begin{enumerate*}
+		\item[(a)] Biết mỗi chữ số viết mất $1$ giây. Hỏi bạn Lâm cần bao nhiêu phút để đánh số trang cuốn sách?
+		\item[(b)] Chữ số thứ $300$ mà bạn Lâm viết là chữ số nào?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 40^\star$, p. 46]
+	Tìm $n\in\mathbb{N}$ lớn nhất để tích các số tự nhiên từ $1$ đến $1000$ chia hết cho $5^n$.
+\end{baitoan}
+
+\begin{luuy}
+	``Số thừa số $a$ khi phân tích $n! = \prod_{i=1}^n i = 1\cdot 2\cdot 3\cdots n$ ra thừa số nguyên tố là: $\sum_{i=1}^k \lfloor\frac{n}{a^i}\rfloor = \lfloor\frac{n}{a}\rfloor + \lfloor\frac{n}{a^2}\rfloor + \cdots + \lfloor\frac{n}{a^k}\rfloor$ với $k$ là số mũ lớn nhất sao cho $a^k\le n$. Ký hiệu $\lfloor\frac{n}{m}\rfloor$ là số tự nhiên lớn nhất không vượt quá $\frac{n}{m}$ (nếu $n\ \vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương đúng, nếu $n\not\vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương hụt, ta gọi $\lfloor\frac{n}{m}\rfloor$ là \emph{phần nguyên} của $\frac{n}{m}$).'' -- \cite[p. 46]{Binh_Toan_6_tap_1}
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 41, p. 46]
+	Có bao nhiêu số tự nhiên chia hết cho $13$ trong dãy $111,1111,\ldots,\underbrace{1\ldots 1}_{1993's}$.
+\end{baitoan}
+
+\subsubsection{Các dãy khác}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 42, p. 47]
+	Tìm số hạng thứ $100$ của các dãy được viết theo quy luật:
+	\begin{enumerate*}
+		\item[(a)] $3,8,15,24,35,\ldots$;
+		\item[(b)] $3,24,63,120,195,\ldots$;
+		\item[(c)] $1,3,6,10,15,\ldots$;
+		\item[(d)] $2,5,10,17,26,\ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{219.}, p. 48]
+	Tìm chữ số thứ $1000$ khi viết liên tiếp liền nhau các số hạng của dãy số lẻ $1,3,5,7,\ldots$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{220.}, p. 48]
+	\begin{enumerate*}
+		\item[(a)] Tính tổng các số lẻ có 2 chữ số.
+		\item[(b)] Tính tổng các số chẵn có 2 chữ số.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{221.}, p. 48]
+	Có số hạng nào của dãy sau tận cùng bằng $2$ hay không? $1; 1 + 2; 1 + 2 + 3; 1 + 2 + 3 + 4;\ldots$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{222.}, p. 48]
+	\begin{enumerate*}
+		\item[(a)] Viết liên tiếp các số hạng của dãy số tự nhiên từ $1$ đến $100$ tạo thành 1 số $A$. Tính tổng các chữ số của $A$.
+		\item[(b)] Cũng hỏi như trên nếu viết từ $1$ đến $1000000$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{223.}, p. 48]
+	Khi phân tích ra thừa số nguyên tố, số $1000!$ chứa thừa số nguyên tố $7$ với số mũ bằng bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{224.}, p. 48]
+	Tích $A = 500!$ tận cùng bằng bao nhiêu chữ số $0$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{225.}, p. 48]
+	\begin{enumerate*}
+		\item[(a)] Tích $B = 38\cdot 39\cdot 40\cdots 74$ có bao nhiêu thừa số $2$ khi phân tích ra thừa số nguyên tố?
+		\item[(b)] Tích $C = 31\cdot 32\cdot 33\cdots 90$ có bao nhiêu thừa số $3$ khi phân tích ra thừa số nguyên tố?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{226.}, p. 48]
+	Có bao nhiêu số tự nhiên đồng thời là các số hạng của cả 2 dãy sau: $3,7,11,15,\ldots,407$ \& $2,9,16,23,\ldots,709$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{227.}, p. 48]
+	Trong dãy số $1,2,3,\ldots,1990$, có thể chọn được nhiều nhất bao nhiêu số để tổng 2 số bất kỳ được chọn chia hết cho $38$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{228.}, p. 48]
+	Chia dãy số tự nhiên kể từ $1$ thành từng nhóm (các số cùng nhóm được đặt trong dấu ngoặc) $(1),(2,3),(4,5,6),(7,8,9,10),(11,12,13,14,15),\ldots$
+	\begin{enumerate*}
+		\item[(a)] Tìm số hạng đầu tiên của nhóm thứ $100$.
+		\item[(b)] Tính tổng các số thuộc nhóm thứ $100$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{229.}, p. 48]
+	Cho $S_1 = 1 + 2, S_2 = 3 + 4 + 5, S_3 = 6 + 7 + 8 + 9, S_4 = 10 + 11 + 12 + 13 + 14,\ldots$. Tính $S_{100}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{230.}, p. 49]
+	Tính số hạng thứ $50$ của các dãy sau:
+	\begin{enumerate*}
+		\item[(a)] $1\cdot 6,2\cdot 7,3\cdot 8,\ldots$;
+		\item[(b)] $1\cdot 4,4\cdot 7,7\cdot 10,\ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{231.}, p. 49]
+	Cho $A = 1 + 3 + 3^2 + 3^3 + \cdots + 3^{20} = \sum_{i=0}^{20} 3^i$, $B = 3^{21}:2$. Tính $B - A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{232.}, p. 49]
+	Cho $A = 1 + 4 + 4^2 + 4^3 + \cdots + 4^{99}$, $B = 4^{100}$. Chứng minh rằng $A < \frac{B}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{233.}, p. 49]
+	Tính giá trị của biểu thức:
 	
+	\begin{enumerate*}
+		\item[(a)] $A = 9 + 99 + 999 + \cdots + \underbrace{9\ldots 9}_{50's}$;
+		\item[(b)] $B = 9 + 99 + 999 + \cdots + \underbrace{9\ldots 9}_{200's}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\subsection{Đếm số}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 43, p. 49]
+	Có bao nhiêu số $\overline{abcd}$ mà $\overline{ab} < \overline{cd}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 44, p. 49]
+	Có bao nhiêu số tự nhiên chia hết cho $4$ gồm 4 chữ số, chữ số tận cùng bằng $2$?
+\end{baitoan}
+
+\begin{luuy}
+	``Nếu việc chọn đối tượng $A$ có thể thực hiện bởi $m$ cách \& với mỗi cách chọn của $A$ có thể chọn đối tượng $B$ bởi $n$ cách thì việc chọn $A$ \& $B$ theo thứ tự đó có thể thực hiện bởi $mn$ cách chọn.'' -- \cite[p. 50]{Binh_Toan_6_tap_1} \emph{Quy tắc nhân trong phép đếm} \& khái niệm \emph{tổ hợp, chỉnh hợp} sẽ được học ở môn Tổ hợp, trong chương trình Toán 10.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 45, p. 50]
+	Có bao nhiêu số tự nhiên có $4$ chữ số $\overline{abcd}$, trong đó $b - a = 1$, $d - c = 1$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 46, p. 50]
+	Có bao nhiêu số tự nhiên có 3 chữ số trong đó có đúng 1 chữ số $5$?
+\end{baitoan}
+``Trong nhiều trường hợp, để đếm các số có tính chất nào đó, ta lại đếm trước hết các số không có tính chất ấy.'' -- \cite[p. 51]{Binh_Toan_6_tap_1}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 47, p. 50]
+	Có bao nhiêu số chứa ít nhất 1 chữ số $1$ trong các số tự nhiên:
+	\begin{enumerate*}
+		\item[(a)] có 3 chữ số;
+		\item[(b)] từ $1$ đến $999$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 48, p. 51]
+	Viết $999$ số tự nhiên liên tiếp kể từ $1$. Hỏi:
+	\begin{enumerate*}
+		\item[(a)] Chữ số $2$ có mặt bao nhiêu lần?
+		\item[(b)] Chữ số $0$ có mặt bao nhiêu lần?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{234.}, p. 52]
+	Bạn Tâm đánh số trang của 1 cuốn vở có $110$ trang bằng cách viết dãy số tự nhiên $1,2,\ldots,110$. Bạn Tâm phải viết tất cả bao nhiêu chữ số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{235.}, p. 52]
+	1 cô nhân viên đánh máy liên tục dãy số chẵn bắt đầu từ $2$: $2,4,6,8,10,12,\ldots$. Cô phải đánh tất cả $2000$ chữ số. Tìm chữ số cuối cùng mà cô đã đánh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{236.}, p. 52]
+	Bạn Mai viết dãy số lẻ $1,3,5,\ldots,245$.
+	\begin{enumerate*}
+		\item[(a)] Bạn Mai phải viết tất cả bao nhiêu chữ số?
+		\item[(b)] Nếu mỗi chữ số viết mất 1 giây thì viết đến số $245$ mất bao nhiêu giây? Sau $5$ phút, bạn Mai viết đến chữ số nào?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{237.}, p. 52]
+	Bạn Hùng viết dãy số lẻ $1,3,5,7,\ldots$ để đánh số trang 1 cuốn sách. Tính xem chữ số $200$ mà bạn Hùng viết là chữ số nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{238.}, p. 52]
+	Để đánh số trang của 1 cuốn sách, người ta viết dãy số tự nhiên bắt đầu từ $1$ \& phải dùng tất cả $1998$ chữ số.
+	\begin{enumerate*}
+		\item[(a)] Hỏi cuốn sách có bao nhiêu trang?
+		\item[(b)] Chữ số thứ $1010$ là chữ số nào?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{239.}, p. 52]
+	Có bao nhiêu số tự nhiên chia hết cho $3$, có 4 chữ số \& tận cùng bằng $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{240.}, pp. 52--53]
+	Tuấn muốn đến nhà bạn, nhưng không nhớ số nhà, chỉ biết rằng số nhà của bạn là số chia hết cho $3$ \& có 2 chữ số. Biết số nhà cuối của dãy phố đó là $135$. Hỏi Tuấn phải gõ cửa nhiều nhất bao nhiêu số nhà? (các số nhà không đánh số $a,b,\ldots$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{241.}, p. 53]
+	Tìm số lượng các số tự nhiên có 4 chữ số mà:
+	\begin{enumerate*}
+		\item[(a)] Số tạo bởi 2 chữ số đầu (theo thứ tự ấy) cộng với số tạo bởi 2 chữ số cuối (theo thứ tự ấy) nhỏ hơn $100$.
+		\item[(b)] Số tạo bởi 2 chữ số đầu (theo thứ tự ấy) lớn hơn số tạo bởi 2 chữ số cuối (theo thứ tự ấy)?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{242.}, p. 53]
+	Trong các số tự nhiên từ $1$ đến $252$, xóa các số chia hết cho $2$ nhưng không chia hết cho $5$, rồi xóa các số chia hết cho $5$ nhưng không chia hết cho $2$. Còn lại bao nhiêu số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{243.}, p. 53]
+	Có bao nhiêu số tự nhiên có 3 chữ số mà:
+	\begin{enumerate*}
+		\item[(a)] Các chữ số đều chẵn?
+		\item[(b)] Chữ số hàng chục là chữ số lẻ?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{244.}, p. 53]
+	Có bao nhiêu số tự nhiên có 4 chữ số mà:
+	\begin{enumerate*}
+		\item[(a)] Mỗi chữ số đều chẵn?
+		\item[(b)] Tổng các chữ số là số chẵn?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{245.}, p. 53]
+	Có bao nhiêu biển số xe máy khác nhau, mỗi số xe lập bởi 2 chữ cái đứng đầu \& 3 chữ số đứng sau? (bảng chữ cái có $25$ chữ, không có biển số $000$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{246.}, p. 53]
+	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số:
+	\begin{enumerate*}
+		\item[(a)] Chứa đúng 1 chữ số $4$?
+		\item[(b)] Chứa đúng 2 chữ số $4$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{247.}, p. 53]
+	Có bao nhiêu số tự nhiên chia hết cho $5$, có 4 chữ số, có đúng 1 chữ số $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{248.}, p. 53]
+	Có bao nhiêu số tự nhiên có 3 chữ số, biết rằng cộng nó với số gồm 3 chữ số ấy viết theo thứ tự ngược lại thì được 1 số chia hết cho $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{249.}, p. 53]
+	Có bao nhiêu số chẵn có 3 chữ số, các chữ số khác nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{250.}, p. 53]
+	Có bao nhiêu số tự nhiên có 3 chữ số trong đó có ít nhất 2 chữ số như nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{251.}, p. 53]
+	Trong các số tự nhiên có 4 chữ số, có bao nhiêu số trong đó có đúng 3 chữ số như nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{252.}, p. 53]
+	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số:
+	\begin{enumerate*}
+		\item[(a)] Chia hết cho $5$, có chứa chữ số $5$?
+		\item[(b)] Chia hết cho $4$, có chứa chữ số $4$?
+		\item[(c)] Chia hết cho $3$, không chứa chữ số $3$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{253.}, p. 54]
+	Viết liên tiếp các số tự nhiên từ $1$ đến $999$ ta được 1 số tự nhiên $A$.
+	\begin{enumerate*}
+		\item[(a)] Số $A$ có bao nhiêu chữ số?
+		\item[(b)] Tính tổng các chữ số của số $A$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 254^\star.$, p. 54]
+	Viết dãy số tự nhiên từ $1$ đến $999$.
+	\begin{enumerate*}
+		\item[(a)] Chữ số $1$ được viết bao nhiêu lần?
+		\item[(b)] Chữ số $0$ được viết bao nhiêu lần?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{255.}, p. 54]
+	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số chứa ít nhất 1 chữ số $4$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 256^\star.$, p. 54]
+	Trong các số tự nhiên từ $1$ đến $10000$:
+	\begin{enumerate*}
+		\item[(a)] Có bao nhiêu số chứa chữ số $0$?
+		\item[(b)] Số chứa chữ số $1$ hay số không chứa chữ số $1$ có nhiều hơn?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{257.}, p. 54]
+	Viết dãy số chẵn $100,102,\ldots,390$. Hỏi chữ số $2$ được viết bao nhiêu lần?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{258.}, p. 54]
+	Từ các chữ số $1,2,3,4,5,6,7$, lập tất cả các số tự nhiên có 7 chữ số trong đó mỗi chữ số trên đều có mặt. Chứng minh rằng tổng tất cả các số đó chia hết cho $9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{259.}, p. 54]
+	Cho 3 chữ số $a,b,c$ khác nhau \& khác $0$. Gọi $A$ là tập hợp các số tự nhiên có 3 chữ số lập bởi cả 3 chữ số trên.
+	\begin{enumerate*}
+		\item[(a)] Tập hợp $A$ có bao nhiêu phần tử?
+		\item[(b)] Tính tổng các phần tử của tập hợp $A$, biết rằng $a + b + c = 17$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{260.}, p. 54]
+	Từ các chữ số $1,2,3,4$, lập tất cả các số tự nhiên mà mỗi chữ số trên đều có mặt đúng 1 lần. Tìm tổng các số ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{261.}, p. 54]
+	Tìm tổng các số tự nhiên có 3 chữ số lập bởi các chữ số $2,3,0,7$ trong đó:
+	\begin{enumerate*}
+		\item[(a)] Các chữ số có thể giống nhau;
+		\item[(b)] Các chữ số đều khác nhau.
+	\end{enumerate*}
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Đầu Tư Kinh Doanh}
