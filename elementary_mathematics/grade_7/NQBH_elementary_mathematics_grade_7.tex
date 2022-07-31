@@ -54,7 +54,40 @@
 
 \chapter{Số Hữu Tỷ -- Rational Number\texttt{/}Rational}
 
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Tập hợp các số hữu tỷ $\mathbb{Q}$; các phép tính trong tập hợp các số hữu tỷ; thứ tự thực hiện các phép tính; quy tắc chuyển vế \& quy tắc dấu ngoặc; biểu diễn thập phân của số hữu tỷ}.
+\end{quotation}
+
 \section{Tập Hợp $\mathbb{Q}$ Các Số Hữu Tỷ -- Set $\mathbb{Q}$ of Rationals}
+Ký hiệu $\mathbb{Q}$ được lấy từ chữ cái đầu \textit{Q} của từ \textit{quotient}\footnote{\textbf{quotient} [n] \textbf{1.} (in compounds) a degree or amount of a particular quality or characteristic; \textbf{2.} (\textit{mathematics}) a number which is the result when 1 number is divided by another.}, i.e., thương số.
+
+\subsection{Số hữu tỷ}
+
+\begin{dinhnghia}[Số hữu tỷ]
+	\emph{Số hữu tỷ} là số viết được dưới dạng phân số $\frac{a}{b}$ với $a,b\in\mathbb{Z}$, $b\ne 0$. \emph{Tập hợp các số hữu tỷ} được ký hiệu là $\mathbb{Q}$, i.e., $\mathbb{Q}\coloneqq\left\{\frac{a}{b}|a,b\in\mathbb{Z},\ b\ne 0\right\}$.
+\end{dinhnghia}
+``Mỗi số nguyên là 1 số hữu tỷ.'' i.e., $n\in\mathbb{Z}\Rightarrow n\in\mathbb{Q}$ bởi vì $\mathbb{Z}\subset\mathbb{Q}$\footnote{Rộng hơn, $\mathbb{N}^\star\subset\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$ với $\mathbb{R}$ là \textit{tập hợp các số thực} sẽ đề cập ở Chương 2 chương trình Toán 7 (\& cả tài liệu này), \& $\mathbb{C}$ là \textit{tập hợp các số phức}, sẽ được học ở chương trình Toán 12, phần Đại số.}. Nhưng 1 số hữu tỷ bất kỳ chưa chắc là 1 số nguyên, i.e., $a\in\mathbb{Q}\not\Rightarrow a\in\mathbb{Z}$. ``Các phân số bằng nhau là các cách viết khác nhau của cùng 1 số hữu tỷ.'' -- \cite[p. 6]{SGK_Toan_7_Canh_Dieu_tap_1}
+
+\subsection{Biểu diễn số hữu tỷ trên trục số}
+``Tương tự như đối với số nguyên, ta có thể biểu diễn mọi số hữu tỷ trên trục số. Trên trục số, điểm biểu diễn số hữu tỷ $a\in\mathbb{Q}$ được gọi là điểm $a$. Do các phân số bằng nhau cùng biểu diễn 1 số hữu tỷ nên khi biểu diễn số hữu tỷ trên trục số, ta có thể chọn 1 trong những phân số đó để biểu diễn số hữu tỷ trên trục số. Thông thường, ta chọn phân số tối giản để biểu diễn số hữu tỷ đó.'' -- \cite[p. 6]{SGK_Toan_7_Canh_Dieu_tap_1}. Vì $-\frac{a}{b} = \frac{a}{-b} = \frac{-a}{b}$, $\forall a,b\in\mathbb{Z}$, $b\ne 0$ nên 3 điểm biểu diễn 3 phân số này trùng nhau.
+
+\subsection{Số đối của 1 số hữu tỷ}
+
+\begin{dinhnghia}[2 số hữu tỷ đối nhau]
+	Trên trục số, 2 số hữu tỷ (phân biệt) có điểm biểu diễn nằm về 2 phía của điểm gốc $0$ \& cách đều điểm gốc $0$ được gọi là \emph{2 số đối nhau}. Số đối của số hữu tỷ $a\in\mathbb{Q}$, ký hiệu là $-a\in\mathbb{Q}$. Số đối của số $0$ là $0$.
+\end{dinhnghia}
+``Số đối của số $-a$ là số $a$, i.e., $-(-a) = a$.'' -- \cite[p. 8]{SGK_Toan_7_Canh_Dieu_tap_1}
+
+\subsection{So sánh các số hữu tỷ}
+
+\subsubsection{So sánh 2 số hữu tỷ}
+``Cũng như số nguyên, trong 2 số hữu tỷ khác nhau luôn có 1 số nhỏ hơn số kia. Nếu số hữu tỷ $a\in\mathbb{Q}$ nhỏ hơn số hữu tỷ $b\in\mathbb{Q}$ thì ta viết $a < b$ hay $b > a$. Số hữu tỷ lớn hơn $0$ gọi là \emph{số hữu tỷ dương}. Số hữu tỷ nhỏ hơn $0$ gọi là \emph{số hữu tỷ âm}. Số hữu tỷ $0$ không là số hữu tỷ dương, cũng không là số hữu tỷ âm. Nếu $a < b$ \& $b < c$ thì $a < c$'' -- \cite[p. 8]{SGK_Toan_7_Canh_Dieu_tap_1} Tính chất cuối cùng được gọi là \textit{tính chất bắc cầu của thứ tự các số hữu tỷ}, được viết dưới dạng mệnh đề toán học bằng ký hiệu như sau: $((a < b)\land(b < c))\Rightarrow(a < c)$, $\forall a,b,c\in\mathbb{Q}$.
+
+\subsubsection{Cách so sánh 2 số hữu tỷ}
+``Ở lớp 6, ta đã biết cách so sánh 2 phân số \& cách so sánh 2 số thập phân.'' ``Khi 2 số hữu tỷ cùng là phân số hoặc cùng là số thập phân, ta so sánh chúng theo những quy tắc đã biết ở lớp 6. Ngoài 2 trường hợp trên, để so sánh 2 số hữu tỷ, ta viết chúng về cùng dạng phân số (hoặc cùng dạng số thập phân) rồi so sánh chúng.'' -- \cite[p. 9]{SGK_Toan_7_Canh_Dieu_tap_1}
+
+\subsection{Minh họa trên trục số}
+``Giả sử 2 điểm $x,y$ lần lượt biểu diễn 2 số hữu tỷ $x,y$ trên trục số nằm ngang. Khi so sánh 2 số hữu tỷ, ta viết chúng ở dạng phân số có cùng mẫu số dương rồi so sánh 2 tử số, tức là so sánh 2 số nguyên. Vì vậy, cũng như số nguyên, nếu $x < y$ hay $y > x$ thì điểm $x$ nằm bên trái điểm $y$. Tương tự, nếu $x < y$ hay $y > x$ thì điểm $x$ nằm phía dưới điểm $y$ trên trục số thẳng đứng.'' -- \cite[pp. 9--10]{SGK_Toan_7_Canh_Dieu_tap_1}
 
 \section{Cộng, Trừ, Nhân, Chia Số Hữu Tỷ}
 
@@ -173,7 +206,7 @@
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_math/NQBH_elementary_math.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
+	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics/NQBH_some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
 \end{thebibliography}
 
 %------------------------------------------------------------------------------%
