@@ -1,0 +1,193 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Elementary Mathematics\texttt{/}Grade 11}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\mainmatter
+
+\part{Đại Số \& Giải Tích}
+
+\chapter{Hàm Số Lượng Giác \& Phương Trình Lượng Giác}
+
+\section{Các Hàm Số Lượng Giác}
+
+\section{Phương Trình Lượng Giác Cơ Bản}
+
+\section{1 Số Dạng Phương Trình Lượng Giác Cơ Bản}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Tổ Hợp \& Xác Suất}
+
+\section{2 Quy Tắc Đếm Cơ Bản}
+
+\section{Hoán Vị, Chỉnh Hợp \& Tổ Hợp}
+
+\section{Nhị Thức Newton}
+
+\section{Biến Cố \& Xác Suất của Biến Cố}
+
+\section{Các Quy Tắc Tính Xác Suất}
+
+\section{Biến Ngẫu Nhiên Rời Rạc}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Dãy Số. Cấp Số Cộng \& Cấp Số Nhân}
+
+\section{Phương Pháp Quy Nạp Toán Học}
+
+\section{Dãy Số}
+
+\section{Cấp Số Cộng}
+
+\section{Cấp Số Nhân}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Giới Hạn}
+
+\section{Dãy Số Có Giới Hạn $0$}
+
+\section{Dãy Số Có Giới Hạn Hữu Hạn}
+
+\section{Dãy Số Có Giới Hạn Vô Cực}
+
+\section{Định Nghĩa \& 1 Số Định Lý về Giới Hạn của Hàm Số}
+
+\section{Giới Hạn 1 Bên}
+
+\section{1 Vài Quy Tắc Tìm Giới Hạn Vô Cực}
+
+\section{Các Dạng Vô Hình}
+
+\section{Hàm Số Liên Tục}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Đạo Hàm}
+
+\section{Khái Niệm Đạo Hàm}
+
+\section{Các Quy Tắc Tính Đạo Hàm}
+
+\section{Đạo Hàm của Các Hàm Số Lượng Giác}
+
+\section{Vi Phân}
+
+\section{Đạo Hàm Cấp Cao}
+
+%------------------------------------------------------------------------------%
+
+\part{Hình Học}
+
+\chapter{Phép Dời Hình \& Phép Đồng Dạng Trong Mặt Phẳng}
+
+\section{Mở Đầu về Phép Biến Hình}
+
+\section{Phép Tịnh Tiến \& Phép Dời Hình}
+
+\section{Phép Đối Xứng Trục}
+
+\section{Phép Quay \& Phép Đối Xứng Tâm}
+
+\section{2 Hình bằng Nhau}
+
+\section{Phép Vị Tự}
+
+\section{Phép Đồng Dạng}
+
+\section{Hình Tự Đồng Dạng \& Hình Học Fractal}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Đường Thẳng \& Mặt Phẳng Trong Không Gian}
+
+\section{Đại Cương về Đường Thẳng \& Mặt Phẳng}
+
+\section{2 Đường Thẳng Song Song}
+
+\section{Đường Thẳng Song Song với Mặt Phẳng}
+
+\section{2 Mặt Phẳng Song Song}
+
+\section{Phép Chiếu Song Song}
+
+\section{Phương Pháp Tiên Đề Trong Hình Học}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Vector Trong Không Gian. Quan Hệ Vuông Góc}
+
+\section{Vector Trong Không Gian. Sự Đồng Phẳng của Các Vector}
+
+\section{2 Đường Thẳng Vuông Góc}
+
+\section{Đường Thẳng Vuông Góc với Mặt Phẳng}
+
+\section{2 Mặt Phẳng Vuông Góc}
+
+\section{Khoảng Cách}
+
+%------------------------------------------------------------------------------%
+
+\begin{thebibliography}{99}
+	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics/NQBH_some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
+\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
