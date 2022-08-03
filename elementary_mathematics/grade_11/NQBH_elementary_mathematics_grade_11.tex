@@ -194,6 +194,108 @@ Căn cứ vào đồ thị của hàm số $y = \cos x$, ta lập được bản
 \subsection{Các hàm số $y = \tan x$ \& $y = \cot x$}
 
 \subsubsection{Định nghĩa}
+\begin{itemize}
+	\item ``Với mỗi số thực $x\in\mathbb{R}$ mà $\cos x\ne 0$, i.e., $x\ne\frac{\pi}{2} + k\pi$ ($k\in\mathbb{Z}$), ta xác định được số thực $\tan x = \frac{\sin x}{\cos x}$. Đặt $\mathcal{D}_1\coloneqq\mathbb{R}\backslash\left\{\frac{\pi}{2} + k\pi|k\in\mathbb{Z}\right\}$.
+	
+	\begin{dinhnghia}[Hàm số $\tan$]
+		Quy tắc đặt tương ứng mỗi số $x\in\mathcal{D}_1$ với số thực $\tan x = \frac{\sin x}{\cos x}$ được gọi là \emph{hàm số tang}, ký hiệu là $y = \tan x$.
+	\end{dinhnghia}
+	Vậy hàm số $y = \tan x$ có tập xác định $\mathcal{D}_1$; ta viết
+	\begin{align*}
+		\tan:\mathcal{D}_1&\to\mathbb{R}\\
+		x&\mapsto\tan x.
+	\end{align*}
+	\item Với mỗi số thực $x\in\mathbb{R}$ mà $\sin x\ne 0$, i.e., $x\ne k\pi$tan ($k\in\mathbb{Z}$), ta xác định được số thực $\cot x = \frac{\cos x}{\sin x}$. Đặt $\mathcal{D}_2\coloneqq\mathbb{R}\backslash\{k\pi|k\in\mathbb{Z}\}$.
+	
+	\begin{dinhnghia}[Hàm số $\cot$]
+		Quy tắc đặt tương ứng mỗi số $x\in\mathcal{D}_2$ với số thực $\cot x = \frac{\cos x}{\sin x}$ được gọi là \emph{hàm số côtang}, ký hiệu là $y = \cot x$.
+	\end{dinhnghia}
+	Vậy hàm số $y = \cot x$ có tập xác định là $\mathcal{D}_2$; ta viết
+	\begin{align*}
+		\cot:\mathcal{D}_2&\to\mathbb{R}\\
+		x&\mapsto\cot x.
+	\end{align*}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{truc_tan_truc_cot}
+		\caption{Trục tang \& trục côtang.}
+		\label{fig:truc tan truc cot}
+	\end{figure}
+	Trên hình \ref{fig:truc tan truc cot}, ta có $(OA,OM) = x$, $\tan x = \overline{AT}$, $\cot x = \overline{BS}$.
+	
+	\begin{nhanxet}
+		\begin{enumerate}
+			\item Hàm số $y = \tan x$ là 1 \emph{hàm số lẻ} vì nếu $x\in\mathcal{D}_1$ thì $-x\in\mathcal{D}_1$ \& $\tan(-x) = -\tan x$.
+			\item Hàm số $y = \cot x$ cũng là 1 \emph{hàm số lẻ} vì nếu $x\in\mathcal{D}_2$ thì $-x\in\mathcal{D}_2$ \& $\cot(-x) = -\cot x$.'' -- \cite[pp. 9--10]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+		\end{enumerate}
+	\end{nhanxet}	
+\end{itemize}
+
+\subsubsection{Tính chất tuần hoàn}
+``Có thể chứng minh rằng $T = \pi$ là số dương nhỏ nhất thỏa mãn $\tan(x + T) = \tan x$, $\forall x\in\mathcal{D}_1$, \& $T = \pi$ cũng là số dương nhỏ nhất thỏa mãn $\cot(x + T) = \cot x$, $\forall x\in\mathcal{D}_2$. Ta nói các hàm số $y = \tan x$ \& $y = \cot x$ là những \textit{hàm số tuần hoàn với chu kỳ $\pi$}.'' -- \cite[p. 10]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\subsubsection{Sự biến thiên \& đồ thị của hàm số $y = \tan x$}
+``Do tính chất tuần hoanf với chu kỳ $\pi$ của hàm số $y = \tan x$, ta chỉ cần khảo sát sự biến thiên \& vẽ đồ thị của nó trên khoảng $\left(-\frac{\pi}{2};\frac{\pi}{2}\right)\subset\mathcal{D}_1$, rồi tịnh tiến phần đồ thị vừa vẽ sang trái, sang phải các đoạn của độ dài $\pi,2\pi,3\pi,\ldots$ thì được toàn bộ đồ thị của hàm số $y = \tan x$.
+\begin{itemize}
+	\item \textit{Chiều biến thiên}:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{chieu_bien_thien_tan}
+		\caption{Chiều biến thiên của hàm $y = \tan x$.}
+		\label{fig:chieu bien thien tan}
+	\end{figure}
+	Khi cho $x = (OA,OM)$ tăng từ $-\frac{\pi}{2}$ đến $\frac{\pi}{2}$ (không kể $\pm\frac{\pi}{2}$) thì điểm $M$ chạy trên đường tròn lượng giác theo chiều dương từ $B'$ đến $B$ (không kể $B'$ \& $B$). Khi đó điểm $T$ thuộc trục tang $At$ sao cho $\overline{AT} = \tan x$ chạy dọc theo $At$ suốt từ dưới lên trên, nên $\tan x$ \textit{tăng từ $-\infty$ đến $+\infty$} (qua quá trị $0$ khi $x = 0$).''
+	\item \textit{Đồ thị}: ``Đồ thị của hàm số $y = \tan x$ có dạng như ở hình \ref{fig:graph tan}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{graph_tan}
+		\caption{Đồ thị của hàm $y = \tan x$.}
+		\label{fig:graph tan}
+	\end{figure}
+
+	\begin{nhanxet}
+		\begin{enumerate}
+			\item Khi $x$ thay đổi, hàm số $y = \tan x$ nhận mọi giá trị thực. Ta nói \emph{tập giá trị} của hàm số $y = \tan x$ là $\mathbb{R}$.
+			\item Vì hàm số $y = \tan x$ là hàm số lẻ nên đồ thị của nó nhận gốc tọa độ làm tâm đối xứng.
+			\item Hàm số $y = \tan x$ không xác định tại $x = \frac{\pi}{2} + k\pi$ ($k\in\mathbb{Z}$). Với mỗi $k\in\mathbb{Z}$, đường thẳng vuông góc với trục hành, đi qua điểm $\left(\frac{\pi}{2} + k\pi;0\right)$ gọi là 1 \emph{đường tiệm cận} của đồ thị hàm số $y = \tan x$. (Từ ``tiệm cận'' có nghĩa là ngày càng gần. E.g., nói đường thẳng $x = \frac{\pi}{2}$ là 1 đường tiệm cận của đồ thị hàm số $y = \tan x$ nhằm diễn tả tính chất: điểm $M$ trên đồ thị có hoành độ càng gần $\frac{\pi}{2}$ thì $M$ càng gần đường thẳng $x = \frac{\pi}{2}$).'' -- \cite[pp. 11--12]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+		\end{enumerate}
+	\end{nhanxet}	   
+\end{itemize}
+
+\subsubsection{Sự biến thiên \& đồ thị của hàm số $y = \cot x$}
+``Hàm số $y = \cot x$ xác định trên $\mathcal{D}_2 = \mathbb{R}\backslash\{k\pi|k\in\mathbb{Z}\}$ là 1 hàm số tuần hoàn với chu kỳ $\pi$. Ta có thể khảo sát sự biến thiên \& vẽ đồ thị của nó tương tự như đã làm đối với hàm số $y = \tan x$. Đồ thị của hàm số $y = \cot x$ có dạng như hình \ref{fig:graph cot}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{graph_cot}
+	\caption{Đồ thị của hàm $y = \cot x$.}
+	\label{fig:graph cot}
+\end{figure}
+Nó nhận mỗi đường thẳng vuông góc với trục hoành, đi qua điểm $(k\pi;0)$, $k\in\mathbb{Z}$ làm 1 đường tiệm cận.'' -- \cite[p. 12]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{9cm}|p{9cm}|}
+		\hline
+		\textbf{Hàm số $y = \tan x$} & \textbf{Hàm số $y = \cot x$} \\
+		\hline
+		Có tập xác định là $\mathcal{D}_1 = \mathbb{R}\backslash\left\{\frac{\pi}{2} + k\pi|k\in\mathbb{Z}\right\}$ & Có tập xác định là $\mathcal{D}_2 = \mathbb{R}\backslash\{k\pi|k\in\mathbb{Z}\}$ \\
+		\hline
+		Có tập giá trị là $\mathbb{R}$ & Có tập giá trị là $\mathbb{R}$ \\
+		\hline
+		Là hàm số lẻ & Là hàm số lẻ \\
+		\hline
+		Là hàm số tuần hoàn với chu kỳ $\pi$ & Là hàm số tuần hoàn với chu kỳ $\pi$ \\
+		\hline
+		Đồng biến trên mỗi khoảng $\left(-\frac{\pi}{2} + k\pi;\frac{\pi}{2} + k\pi\right)$, $k\in\mathbb{Z}$ & Nghịch biến trên mỗi khoảng $(k\pi;\pi + k\pi)$, $k\in\mathbb{Z}$ \\
+		\hline
+		Có đồ thị nhận mỗi đường thẳng $x = \frac{\pi}{2} + k\pi$ ($k\in\mathbb{Z}$) làm 1 đường tiệm cận & Có đồ thị nhận mỗi đường thẳng $x = k\pi$ ($k\in\mathbb{Z}$) làm 1 đường tiệm cận \\
+		\hline
+	\end{tabular}
+	\caption{So sánh tính chất của 2 hàm số $y = \tan x$ \& $y = \cot x$.}
+\end{table}
+
+\subsection{Về khái niệm hàm số tuần hoàn}
 
 \section{Phương Trình Lượng Giác Cơ Bản}
 
