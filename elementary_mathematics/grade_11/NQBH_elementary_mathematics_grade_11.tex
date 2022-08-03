@@ -5,11 +5,12 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab}
 \usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
 \newtheorem{hequa}{Hệ quả}[section]
@@ -98,12 +99,101 @@ Từ tính chất tuần hoàn với chu kỳ $2\pi$, ta thấy khi biết giá 
 \begin{itemize}
 	\item \textbf{Chiều biến thiên.} \textit{Bảng biến thiên của hàm số $y = \sin x$ trên đoạn $[-\pi;\pi]$}:
 	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{bang_bien_thien_sin}
+		\caption{Bảng biến thiên của hàm số $y = \sin x$ trên đoạn $[-\pi;\pi]$.}
+	\end{figure}
 	
-	\item \textbf{Đồ thị.}
+	\item \textbf{Đồ thị.} ``Khi vẽ đồ thị của hàm số $y = \sin x$ trên đoạn $[-\pi;\pi]$, ta nên để ý rằng: Hàm số $y = \sin x$ là 1 hàm số lẻ, do đó đồ thị của nó nhận gốc tọa độ làm tâm đối xứng. Vì vậy, đầu tiên ta vẽ đồ thị của hàm số $y = \sin x$ trên đoạn $[0;\pi]$.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{graph_sin}
+		\caption{Đồ thị của hàm số $y = \sin x$ trên đoạn $[0,\pi]$.}
+		\label{fig:graph of sin}
+	\end{figure}
+	Trên đoạn $[0;\pi]$, đồ thị của hàm số $y = \sin x$ (Fig. \ref{fig:graph of sin}) đi qua các điểm có tọa độ $(x;y)$ trong bảng sau:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			$x$ & $0$ & $\frac{\pi}{6}$ & $\frac{\pi}{4}$ & $\frac{\pi}{3}$ & $\frac{\pi}{2}$ & $\frac{2\pi}{3}$ & $\frac{3\pi}{4}$ & $\frac{5\pi}{6}$ & $\pi$ \\
+			\hline
+			$y = \sin x$ & $0$ & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & $1$ & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & $0$ \\
+			\hline
+		\end{tabular}
+		\caption{Các giá trị của hàm $y = \sin x$ tại 1 số điểm $\in[0;\pi]$.}
+	\end{table}
+	Phần đồ thị của hàm số $y = \sin x$ trên đoạn $[0;\pi]$ cùng với hình đối xứng của nó qua gốc $O$ lập thành đồ thị của hàm số $y = \sin x$ trên đoạn $[-\pi,\pi]$ (Fig. \ref{fig:duong hinh sin}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{duong_hinh_sin}
+		\caption{Đồ thị của hàm số $y = \sin x$ trên $\mathbb{R}$ -- \textit{đường hình sin}.}
+		\label{fig:duong hinh sin}
+	\end{figure}
+	Tịnh tiến phần đồ thị vừa vẽ sang trái, sang phải những đoạn có độ dài $2\pi,4\pi,6\pi,\ldots$ thì được toàn bộ đồ thị hàm số $y = \sin x$. Đồ thị đó được gọi là 1 \textit{đường hình sin} (Fig. \ref{fig:duong hinh sin}).'' -- \cite[pp. 6--7]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
 \end{itemize}
 
+\begin{nhanxet}
+	\begin{enumerate}
+		\item ``Khi $x$ thay đổi, hàm số $y = \sin x$ nhận mọi giá trị thuộc đoạn $[-1;1]$. Ta nói \emph{tập giá trị} của hàm số $y = \sin x$ là đoạn $[-1;1]$.
+		\item Hàm số $y = \sin x$ đồng biến trên khoảng $\left(-\frac{\pi}{2};\frac{\pi}{2}\right)$. Từ đó, do tính chất tuần hoàn với chu kỳ $2\pi$, hàm số $y = \sin x$ đồng biến trên mỗi khoảng $\left(-\frac{\pi}{2} + k2\pi;\frac{\pi}{2} + k2\pi\right)$, $k\in\mathbb{Z}$.'' -- \cite[p. 7]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+	\end{enumerate}
+\end{nhanxet}
 
+\subsubsection{Sự biến thiên \& đồ thị của hàm số $y = \cos x$}
+``Ta có thể tiến hành khảo sát sự biến thiên \& vẽ đồ thị của hàm số $y = \cos x$ tương tự như đã làm đối với hàm số $y = \sin x$ trên đây. Tuy nhiên, ta nhận thấy $\cos x = \sin\left(x + \frac{\pi}{2}\right)$, $\forall x\in\mathbb{R}$, nên bằng cách tịnh tiến đồ thị hàm số $y = \sin x$ sang trái 1 đoạn có độ dài $\frac{\pi}{2}$, ta được đồ thị hàm số $y = \cos x$ (nó cùng được gọi là 1 \textit{đường hình sin}) (Fig. \ref{fig:graph cos}).
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{graph_cos}
+	\caption{Đồ thị của hàm số $y = \cos x$ trên $\mathbb{R}$.}
+	\label{fig:graph cos}
+\end{figure}
+Căn cứ vào đồ thị của hàm số $y = \cos x$, ta lập được bảng biến thiên của hàm số đó trên đoạn $[-\pi;\pi]$ (Fig. \ref{fig:bang bien thien cos}):
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{bang_bien_thien_cos}
+	\caption{Bảng biến thiên của hàm số $y = \cos x$ trên đoạn $[-\pi;\pi]$.}
+	\label{fig:bang bien thien cos}
+\end{figure}
+
+\begin{nhanxet}
+	\begin{enumerate}
+		\item Khi $x$ thay đổi, hàm số $y = \cos x$ nhận mọi giá trị thuộc đoạn $[-1;1]$. Ta nói \emph{tập giá trị} của hàm số $y = \cos x$ là đoạn $[-1;1]$.
+		\item Do hàm số $y = \cos x$ là hàm số chẵn nên đồ thị của hàm số $y = \cos x$ nhận trục tung làm trục đối xứng.
+		\item Hàm số $y = \cos x$ đồng biến trên khoảng $(-\pi;0)$. Từ đó do tính chất tuần hoàn với chu kỳ $2\pi$, hàm số $y = \cos x$ đồng biến trên mỗi khoảng $(-\pi + k2\pi;k2\pi)$, $k\in\mathbb{Z}$.'' -- \cite[pp. 8--9]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+	\end{enumerate}
+\end{nhanxet}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{9cm}|p{9cm}|}
+		\hline
+		\textbf{Hàm số $y = \sin x$} & \textbf{Hàm số $y = \cos x$} \\
+		\hline
+		Có tập xác định là $\mathbb{R}$ & Có tập xác định là $\mathbb{R}$ \\
+		\hline
+		Có tập giá trị là $[-1;1]$ & Có tập giá trị là $[-1;1]$ \\
+		\hline
+		Là hàm số lẻ & Là hàm số chẵn \\
+		\hline
+		Là hàm số tuần hoàn với chu kỳ $2\pi$ & Là hàm số tuần hoàn với chu kỳ $2\pi$ \\
+		\hline
+		Đồng biến trên mỗi khoảng $\left(-\frac{\pi}{2} + k2\pi;\frac{\pi}{2} + k2\pi\right)$ \& nghịch biến trên mỗi khoảng $\left(\frac{\pi}{2} + k2\pi;\frac{3\pi}{2} + k2\pi\right)$, $k\in\mathbb{Z}$ & Đồng biến trên mỗi khoảng $(-\pi + k2\pi;k2\pi)$ \& nghịch biến trên mỗi khoảng $(k2\pi;\pi + k2\pi)$, $k\in\mathbb{Z}$ \\
+		\hline
+		Có đồ thị là 1 đường hình sin & Có đồ thị là 1 đường hình sin \\
+		\hline
+	\end{tabular}
+	\caption{So sánh tính chất của 2 hàm số $y = \sin x$ \& $y = \cos x$.}
+\end{table}
+
+\subsection{Các hàm số $y = \tan x$ \& $y = \cot x$}
+
+\subsubsection{Định nghĩa}
 
 \section{Phương Trình Lượng Giác Cơ Bản}
 
