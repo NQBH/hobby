@@ -56,11 +56,54 @@
 
 \mainmatter
 
-\part{Đại Số \& Giải Tích}
+\part{Đại Số \& Giải Tích -- Algebra \& Analysis}
 
-\chapter{Hàm Số Lượng Giác \& Phương Trình Lượng Giác}
+\chapter{Hàm Số Lượng Giác \& Phương Trình Lượng Giác -- Trigonometric Function \& Trigonometric Equation}
 
-\section{Các Hàm Số Lượng Giác}
+``Nhiều hiện tượng tuần hoàn đơn giản trong thực tế được mô tả bởi những hàm số lượng giác. Chương này cung cấp những kiến thức cơ bản về các \textit{hàm số lượng giác} \& cách giải các \textit{phương trình lượng giác} đơn giản.'' -- \cite[p. 3]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Tính chất tuần hoàn của các hàm số lượng giác \& phương pháp sử dụng đường tròn lượng giác để tìm nghiệm của các phương trình lượng giác cơ bản, kỹ năng biến đổi lượng giác \& kỹ năng giải các dạng phương trình lượng giác}.
+\end{quotation}
+
+\section{Các Hàm Số Lượng Giác -- Trigonometric Functions}
+``Các hàm số lượng giác\texttt{/}trigonometric\footnote{\textbf{trigonometric} [a] (also \textbf{trigonometrical}) (\textit{mathematics}) connected with the types of mathematics that deals with the relationship between the sides \& angles of triangles.}\,\footnote{\textbf{trigonometry} [n] [uncountable] the type of mathematics that deals with the relationship between the sides \& angles of triangles.} functions thường được dùng để mô tả những hiện tượng thay đổi 1 cách tuần hoàn hay gặp trong thực tiễn, khoa học \& kỹ thuật.'' -- \cite[p. 4]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\subsection{Các hàm số $y = \sin x$ \& $y = \cos x$}
+
+\subsubsection{Khái niệm}
+
+\begin{dinhnghia}[Hàm số $\sin,\cos$]
+	Quy tắc đặt tương ứng mỗi số thực $x\in\mathbb{R}$ với $\sin$ của góc lượng giác có số đo radian bằng $x$ được gọi là \emph{hàm số $\sin$}, ký hiệu là $y = \sin x$. Quy tắc đặt tương ứng mỗi số thực $x\in\mathbb{R}$ với côsin của góc lượng giác có số đo radian bằng $x$ được gọi là \emph{hàm số côsin}, ký hiệu là $y = \cos x$.
+\end{dinhnghia}
+``Tập xác định của các hàm số $y = \sin x$, $y = \cos x$ là $\mathbb{R}$. Do đó các hàm số sin \& côsin được viết là:
+\begin{equation*}
+	\begin{split}
+		\sin:\mathbb{R}&\to\mathbb{R}\\
+		x&\mapsto\sin x
+	\end{split},\ \begin{split}
+		\cos:\mathbb{R}&\to\mathbb{R}\\
+		x&\mapsto\cos x
+	\end{split}.
+\end{equation*}
+Hàm số $y = \sin x$ là 1 \textit{hàm số lẻ} vì $\sin(-x) = -\sin(x)$, $\forall x\in\mathbb{R}$, trong khi hàm số $y = \cos x$ là 1 \textit{hàm số chẵn} vì $\cos(-x) = \cos x$, $\forall x\in\mathbb{R}$.'' -- \cite[p. 4]{SGK_Toan_11_dai_so_giai_tich_nang_cao}. Về định nghĩa \& tính chất của hàm số chẵn \& hàm số lẻ, xem Sect. \ref{sect: even & odd functions}. Có thể xem thêm \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\texttt{/}hàm số chẵn \& lẻ} \& \href{https://en.wikipedia.org/wiki/Even_and_odd_functions}{Wikipedia\texttt{/}even \& odd functions}.
+
+\subsubsection{Tính chất tuần hoàn của các hàm số $y = \sin x$ \& $y = \cos x$}
+``Với mỗi $k\in\mathbb{Z}$, số $k2\pi$ thỏa mãn: $\sin(x + k2\pi) = \sin x$, $\forall x\in\mathbb{R},\,\forall k\in\mathbb{Z}$. Ngược lại, có thể chứng minh rằng số $T$ sao cho $\sin(x + T) = \sin x$, $\forall x\in\mathbb{R}$ phải có dạng $T = k2\pi$, với $k\in\mathbb{Z}$. Rõ ràng, trong các số dạng $k2\pi$ ($k\in\mathbb{Z}$), số dương nhỏ nhất là $2\pi$. Vậy đối với hàm số $y = \sin x$, số $T = 2\pi$ là số dương nhỏ nhất thỏa mãn $\sin(x + T) = \sin x$, $\forall x\in\mathbb{R}$. Hàm số $y = \cos x$ cũng có tinh chất tương tự. Ta nói 2 hàm số đó là những \textit{hàm số tuần hoàn với chu kỳ $2\pi$}.
+
+Từ tính chất tuần hoàn với chu kỳ $2\pi$, ta thấy khi biết giá trị các hàm số $y = \sin x$ \& $y = \cos x$ trên 1 đoạn có độ dài $2\pi$ (e.g., đoạn $[0;2\pi]$ hay đoạn $[-\pi;\pi]$) thì ta tính được giá trị của chúng tại mọi $x\in\mathbb{R}$. (Cứ mỗi khi biến số được cộng thêm $2\pi$ thì giá trị của các hàm số đó lại trở về như cũ; điều này giải thích từ ``tuần hoàn'').'' -- \cite[p. 4--5]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\subsubsection{Sự biến thiên \& đồ thị của hàm số $y = \sin x$}
+``Do hàm số $y = \sin x$ là hàm số tuần hoàn với chu kỳ $2\pi$ nên ta chỉ cần khảo sát hàm số đó trên 1 đoạn có độ dài $2\pi$, e.g., trên đoạn $[-\pi;\pi]$.''
+\begin{itemize}
+	\item \textbf{Chiều biến thiên.} \textit{Bảng biến thiên của hàm số $y = \sin x$ trên đoạn $[-\pi;\pi]$}:
+	
+	
+	\item \textbf{Đồ thị.}
+\end{itemize}
+
+
+
 
 \section{Phương Trình Lượng Giác Cơ Bản}
 
@@ -130,7 +173,7 @@
 
 %------------------------------------------------------------------------------%
 
-\part{Hình Học}
+\part{Hình Học -- Geometry}
 
 \chapter{Phép Dời Hình \& Phép Đồng Dạng Trong Mặt Phẳng}
 
@@ -179,6 +222,83 @@
 \section{2 Mặt Phẳng Vuông Góc}
 
 \section{Khoảng Cách}
+
+%------------------------------------------------------------------------------%
+
+\appendix
+
+\chapter{Phụ Lục -- Appendices}
+
+\section{Hàm Số Chẵn \& Hàm Số Lẻ -- Even \& Odd Functions}
+\label{sect: even & odd functions}
+``Trong toán học, \textit{hàm số chẵn} \& \textit{hàm số lẻ} là các \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91}{hàm số} thỏa mãn các quan hệ \href{https://vi.wikipedia.org/wiki/%C4%90%E1%BB%91i_x%E1%BB%A9ng}{đối xứng} nhất định khi lấy \href{https://vi.wikipedia.org/wiki/Ngh%E1%BB%8Bch_%C4%91%E1%BA%A3o_ph%C3%A9p_c%E1%BB%99ng}{nghịch đảo phép cộng}. Chúng rất quan trọng trong nhiều lĩnh vực của \href{https://vi.wikipedia.org/wiki/Gi%E1%BA%A3i_t%C3%ADch_to%C3%A1n}{giải tích toán}, đặc biệt trong lý thuyết chuỗi lũy thừa \& \href{https://vi.wikipedia.org/wiki/Chu%E1%BB%97i_Fourier}{chuỗi Fourier}. Chúng được đặt tên theo \href{https://vi.wikipedia.org/wiki/T%C3%ADnh_ch%E1%BA%B5n_l%E1%BA%BB}{tính chẵn lẻ} của số mũ lũy thừa của \href{https://vi.wikipedia.org/wiki/L%C5%A9y_th%E1%BB%ABa}{hàm lũy thừa} thỏa mãn từng điều kiện: hàm số $f(x) = x^n$ là 1 hàm chẵn nếu $n$ là 1 số nguyên chẵn, \& nó là hàm lẻ nếu $n$ là 1 số nguyên lẻ.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\texttt{/}hàm số chẵn \& lẻ}
+
+\subsection{Hàm số chẵn -- Even function}
+
+\begin{dinhnghia}[Hàm số chẵn]
+	``Cho $f$ là 1 hàm số giá trị thực của 1 đối số thực, $f$ là \emph{hàm số chẵn} nếu điều kiện sau được thỏa mãn với mọi $x$ sao cho cả $x$ \& $-x$ đều thuộc miền xác định của $f$: $f(x) = f(-x)$, $\forall x\in\operatorname{dom}(f)$, với $\operatorname{dom}(f)$ ký hiệu miền xác định của $f$, hoặc phát biểu 1 cách tương đương, nếu phương trình sau thỏa mãn $f(x) - f(-x) = 0$, $\forall x\in\operatorname{dom}(f)$.
+\end{dinhnghia}
+Về mặt hình học, đồ thị của 1 hàm số chẵn \href{https://vi.wikipedia.org/wiki/%C4%90%E1%BB%91i_x%E1%BB%A9ng}{đối xứng} qua trục $y$, nghĩa là đồ thị của nó giữ không đổi sau phép \href{https://vi.wikipedia.org/wiki/%C4%90%E1%BB%91i_x%E1%BB%A9ng_tr%E1%BB%A5c}{lấy đối xứng qua trục $y$}.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\texttt{/}hàm số chẵn \& lẻ}
+
+\begin{vidu}[Hàm chẵn]
+	\href{https://vi.wikipedia.org/wiki/Gi%C3%A1_tr%E1%BB%8B_tuy%E1%BB%87t_%C4%91%E1%BB%91i}{Hàm trị tuyệt đối} $x\mapsto|x|$, các hàm đơn thức dạng $x\mapsto x^{2n}$, \href{https://vi.wikipedia.org/wiki/H%C3%A0m_l%C6%B0%E1%BB%A3ng_gi%C3%A1c}{hàm cosin} $\cos$, \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{hàm cosin hyperbolic} $\cosh$.
+\end{vidu}
+
+\subsection{Hàm số chẵn -- Odd function}
+
+\begin{dinhnghia}[Hàm số lẻ]
+	Cho $f$ là 1 hàm số giá trị thực của 1 đối số (biến) thực, $f$ là hàm số \emph{lẻ} nếu điều kiện sau được thỏa mãn với mọi $x$ sao cho cả $x$ \& $-x$ đều thuộc miền xác định của $f$: $f(-x) = -f(x)$, $\forall x\in\operatorname{dom}(f)$, với $\operatorname{dom}(f)$ ký hiệu miền xác định của $f$, hoặc phát biểu 1 cách tương đương, nếu phương trình sau thỏa mãn $f(x) + f(-x) = 0$, $\forall x\in\operatorname{dom}(f)$.
+\end{dinhnghia}
+``Về mặt hình học, đồ thị của 1 hàm lẻ có tính đối xứng tâm quay qua gốc tọa độ, i.e., đồ thị của nó không đổi sau khi thực hiện phép quay $180^\circ$ quanh điểm gốc.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\texttt{/}hàm số chẵn \& lẻ}
+
+\begin{vidu}[Hàm số lẻ]
+	Hàm đồng nhất $x\mapsto x$, các hàm đơn thức dạng $x\mapsto x^{2n + 1}$, \href{https://vi.wikipedia.org/wiki/Sin}{hàm sin} $\sin$, \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{hàm sin hyperbol} $\sinh$, \href{https://vi.wikipedia.org/wiki/H%C3%A0m_l%E1%BB%97i}{hàm lỗi} $\operatorname{erf}$.
+\end{vidu}
+
+\subsection{Các tính chất cơ bản}
+
+\subsubsection{Tính duy nhất}
+\begin{itemize}
+	\item ``Nếu 1 hàm số vừa chẵn \& vừa lẻ, nó bằng $0$ ở mọi điểm mà nó được xác định.
+	\item Nếu 1 hàm là lẻ thì \href{https://vi.wikipedia.org/wiki/Gi%C3%A1_tr%E1%BB%8B_tuy%E1%BB%87t_%C4%91%E1%BB%91i}{giá trị tuyệt đối} của hàm đó là 1 hàm chẵn.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\texttt{/}hàm số chẵn \& lẻ}
+\end{itemize}
+
+\subsubsection{Cộng \& trừ hàm số chẵn lẻ}
+\begin{itemize}
+	\item Tổng \& hiệu của 2 hàm số chẵn là 2 hàm số chẵn.
+	\item Tổng \& hiệu của 2 hàm lẻ là 2 hàm lẻ.
+	\item Tổng của 1 hàm chẵn \& 1 hàm lẻ thì không chẵn cũng không lẻ, trừ khi 1 trong các hàm ấy bằng $0$ trên miền đã cho.
+\end{itemize}
+
+\subsubsection{Nhân \& chia hàm số chẵn lẻ}
+\begin{itemize}
+	\item Tích \& thương của 2 hàm chẵn là 2 hàm chẵn.
+	\item Tích \& thương của 2 hàm lẻ là 2 hàm chẵn.
+	\item Tích \& thương của 1 hàm chẵn với 1 hàm lẻ là 2 hàm lẻ.
+\end{itemize}
+
+\subsubsection{Hàm hợp (tích ánh xạ)}
+\begin{itemize}
+	\item Hàm hợp của 2 hàm chẵn là hàm chẵn.
+	\item Hàm hợp của 2 hàm lẻ là hàm lẻ.
+	\item 1 hàm chẵn hợp với 1 hàm lẻ là hàm chẵn.
+	\item Hàm hợp của bất kỳ hàm số nào với 1 hàm chẵn là hàm chẵn (nhưng điều ngược lại không đúng).
+\end{itemize}
+
+\subsection{Phân tích chẵn--lẻ}
+``Mọi hàm có thể được phân tích duy nhất thành tổng của 1 hàm chẵn \& 1 hàm lẻ, được gọi tương ứng là \textit{phần chẵn} \& \textit{phần lẻ} của 1 hàm số, nếu ta đặt như sau:
+\begin{align*}
+	f_{\rm e}(x)\coloneqq\frac{f(x) + f(-x)}{2},\ f_{\rm o}(x)\coloneqq\frac{f(x) - f(-x)}{2},
+\end{align*}
+sau đó $f_{\rm e}$ là hàm chẵn, $f_{\rm o}$ là hàm lẻ, \& $f(x) = f_{\rm e}(x) + f_{\rm o}(x)$. Ngược lại nếu $f(x) = g(x) + h(x)$, trong đó $g$ là chẵn \& $h$ là lẻ, thì $g = f_{\rm e}$ \& $h = f_{\rm o}$, bởi vì
+\begin{align*}
+	2f_{\rm e}(x) &= f(x) + f(-x) = g(x) + g(-x) + h(x) + h(-x) = 2g(x),\\
+	2f_{\rm o}(x) &= f(x) - f(-x) = g(x) - g(-x) + h(x) - h(-x) = 2h(x).
+\end{align*}
+
+\begin{vidu}
+	Hàm \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{cosin hyperbolic} \& \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{sin hyperbolic} có thể được coi là các phần chẵn \& phần lẻ của hàm số lũy thừa tự nhiên, bởi vì hàm thứ nhất là chẵn, hàm thứ 2 là lẻ, \& $e^x = \sinh x + \cosh x$.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\texttt{/}hàm số chẵn \& lẻ}
+\end{vidu}
 
 %------------------------------------------------------------------------------%
 
