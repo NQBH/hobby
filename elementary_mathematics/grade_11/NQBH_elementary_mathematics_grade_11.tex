@@ -6,6 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab}
+\DeclareMathOperator{\arccot}{arccot}
 \usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
@@ -382,7 +383,7 @@ trong đó $m$ là 1 số cho trước. Hiển nhiên phương trình \eqref{cos
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.2]{truc_cos}
+	\includegraphics[scale=0.15]{truc_cos}
 	\caption{Trục côsin.}
 	\label{fig:truc cos}
 \end{figure}
@@ -418,6 +419,80 @@ Do $|m|\le 1$ nên đường thẳng $(l)$ cắt đường tròn lượng giác 
 \end{luuy}
 
 \subsection{Phương trình $\tan x = m$}
+``Cho $m$ là 1 số tùy ý. Xét phương trình
+\begin{align}
+	\label{tan}
+	\tag{tan}
+	\tan x = m.
+\end{align}
+Điều kiện xác định (ĐKXĐ) của phương trình \eqref{tan} là $\cos x\ne 0$. Ta đã biết, khi $x$ thay đổi, $\tan x$ nhận mọi giá trị từ $-\infty$ đến $+\infty$. Do đó phương trình \eqref{tan} luôn có nghiệm. Để tìm tất cả các nghiệm của \eqref{tan}, trên tục tang, ta lấy điểm $T$ sao cho $\overline{AT} = m$. Đường thẳng $OT$ cắt đường tròn lượng giác tại 2 điểm $M_1$ \& $M_2$ (Fig. \ref{fig:truc tan}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{truc_tan}
+	\caption{Trục tang.}
+	\label{fig:truc tan}
+\end{figure}
+Ta có: $\tan(OA,OM_1) = \tan(OA,OM_2) = \overline{AT} = m$. Gọi số đo của 1 trong các góc lượng giác $(OA,OM_1)$ \& $(OA,OM_2)$ là $\alpha$; i.e., $\alpha$ là 1 nghiệm nào đó của phương trình \eqref{tan}. Khi đó, các góc lượng giác $(OA,OM_1)$ \& $(OA,OM_2)$. Khi đó, các góc lượng giác $(OA,OM_1)$ \& $(OA,OM_2)$ có các số đo là $\alpha + k\pi$. Đó là tất cả các nghiệm của phương trình \eqref{tan} (hiển nhiên chúng thỏa mãn ĐKXĐ của \eqref{tan}). Vậy ta có:
+
+\begin{tcolorbox}
+	Nếu $\alpha$ là 1 nghiệm của phương trình \eqref{tan}, i.e., $\tan\alpha = m$ thì
+	\begin{align}
+		\label{root tan}
+		\tan x = m\Leftrightarrow x = \alpha + k\pi.
+	\end{align}
+\end{tcolorbox}
+
+\begin{luuy}
+	\begin{enumerate}
+		\item Dễ thấy rằng với mọi số $m\in\mathbb{R}$ cho trước, phương trình $\tan x = m$ có đúng 1 nghiệm nằm trong khoảng $\left(-\frac{\pi}{2};\frac{\pi}{2}\right)$. Người ta thường ký hiệu nghiệm đó là $\arctan m$. Khi đó
+		\begin{align*}
+			\boxed{\tan x = m\Leftrightarrow x = \arctan m + k\pi.}
+		\end{align*}
+		\item Từ \eqref{root tan} ta thấy rằng: Nếu $\alpha$ \& $\beta$ là 2 số thực mà $\tan\alpha$, $\tan\beta$ xác định thì $\tan\beta = \tan\alpha$ khi \& chỉ khi có số nguyên $k$ để $\beta = \alpha + k\pi$.'' -- \cite[pp. 25--26]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+	\end{enumerate}
+\end{luuy}
+
+\subsection{Phương trình $\cot x = m$}
+``Cho $m\in\mathbb{R}$ là 1 số tùy ý, xét phương trình
+\begin{align}
+	\label{cot}
+	\tag{cot}
+	\cot x = m.
+\end{align}
+ĐKXĐ của phương trình \eqref{cot} là $\sin x\ne 0$. Tương tự như đối với phương trình $\tan x = m$, ta có
+
+\begin{tcolorbox}
+	Nếu $\alpha$ là 1 nghiệm của phương trình \eqref{cot}, i.e., $\cot\alpha = m$ thì
+	\begin{align}
+		\label{root cot}
+		\cot x = m\Leftrightarrow x = \alpha + k\pi.
+	\end{align}
+\end{tcolorbox}
+'' -- \cite[pp. 26--27]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\begin{luuy}
+	Dễ thấy rằng với mọi số $m\in\mathbb{R}$ cho trước, phương trình $\cot x = m$ có đúng 1 nghiệm nằm trong khoảng $(0;\pi)$. Người ta thường ký hiệu nghiệm đó là $\arccot m$. Khi đó:
+	\begin{align*}
+		\boxed{\cot x = m\Leftrightarrow x = \arccot m + k\pi.}
+	\end{align*}
+\end{luuy}
+
+\subsection{1 số điều cần lưu ý}
+\begin{enumerate}
+	\item Khi đã cho số $m$, ta có thể tính được các giá trị $\arcsin m,\arccos m$ (với $|m|\le 1$), $\arctan m$ bằng máy tính bỏ túi với các phím $\sin^{-1},\cos^{-1}$ \& $\tan^{-1}$.
+	\item $\arcsin m,\arccos m$ (với $|m|\le 1$), $\arctan m$ \& $\arccot m$ có giá trị là những số thực. Do đó ta viết, e.g., $\arctan 1 = \frac{\pi}{4}$ mà không viết $\arctan 1 = 45^\circ$.
+	\item Khi xét các phương trình lượng giác ta đã coi ẩn số $x$ là số đo radian của các góc lượng giác. Trên thực tế, ta còn gặp những bài toán yêu cầu tìm số đo độ của các góc (cung) lượng giác sao cho sin (côsin, tang hoặc côtang) của chúng bằng số $m\in\mathbb{R}$ cho trước e.g. $\sin(x + 20^\circ) = \frac{\sqrt{3}}{2}$. Khi giải các phương trình này (mà làm dụng ngôn ngữ, ta vẫn gọi là giải các phương trình lượng giác), ta có thể áp dụng các công thức nêu trên \& lưu ý sử dụng ký hiệu số đo độ trong ``công thức nghiệm'' cho thống nhất, e.g., viết $x = 30^\circ + k360^\circ$ chứ không viết $x = 30^\circ + k2\pi$.
+	
+	Tuy nhiên, ta quy ước rằng nếu không có giải thích gì thêm hoặc trong phương trình lượng giác không sử dụng đơn vị đo góc là độ thì mặc nhiên ẩn số là số đo radian của góc lượng giác.'' -- \cite[p. 27]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+\end{enumerate}
+
+\subsection{Dùng máy tính bỏ túi để tìm 1 góc khi biết 1 giá trị lượng giác của nó}
+``Các phím $\sin^{-1},\cos^{-1}$ \& $\tan^{-1}$ của máy tính bỏ túi \textsc{Casio} \textit{fx-500MS} được dùng để tìm số đo (độ hoặc radian) của 1 góc khi biết 1 trong các giá trị lượng giác của nó. Muốn thế đối với máy tính CASIO \textit{fx-500MS} ta thực hiện 2 bước sau:
+\begin{enumerate}
+	\item \textit{Ấn định đơn vị đo góc (độ hoặc radian)}. Muốn tìm số đo độ, ta ấn \fbox{MODE} \fbox{MODE} \fbox{MODE} \fbox{1}. Lúc này dòng trên cùng của màn hình xuất hiện chữ nhỏ \fbox{D}. Muốn tìm số đo radian, ta ấn \fbox{MODE} \fbox{MODE} \fbox{MODE} \fbox{2}. Lúc này dòng trên cùng của màn hình xuất hiện chữ nhỏ \fbox{R}.
+	\item \textit{Tìm số đo góc}. Khi biết sin, côsin hay tang của góc $\alpha$ cần tìm bằng $m$, ta lần lượt ấn phím \fbox{SHIFT}, \& 1 trong các phím $\boxed{\sin^{-1}},\boxed{\cos^{-1}},\boxed{\tan^{-1}}$
+\end{enumerate}
 
 \section{1 Số Dạng Phương Trình Lượng Giác Cơ Bản}
 
