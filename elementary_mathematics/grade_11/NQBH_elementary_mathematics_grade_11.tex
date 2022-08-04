@@ -239,6 +239,7 @@ Căn cứ vào đồ thị của hàm số $y = \cos x$, ta lập được bản
 ``Do tính chất tuần hoanf với chu kỳ $\pi$ của hàm số $y = \tan x$, ta chỉ cần khảo sát sự biến thiên \& vẽ đồ thị của nó trên khoảng $\left(-\frac{\pi}{2};\frac{\pi}{2}\right)\subset\mathcal{D}_1$, rồi tịnh tiến phần đồ thị vừa vẽ sang trái, sang phải các đoạn của độ dài $\pi,2\pi,3\pi,\ldots$ thì được toàn bộ đồ thị của hàm số $y = \tan x$.
 \begin{itemize}
 	\item \textit{Chiều biến thiên}:
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.15]{chieu_bien_thien_tan}
@@ -247,6 +248,7 @@ Căn cứ vào đồ thị của hàm số $y = \cos x$, ta lập được bản
 	\end{figure}
 	Khi cho $x = (OA,OM)$ tăng từ $-\frac{\pi}{2}$ đến $\frac{\pi}{2}$ (không kể $\pm\frac{\pi}{2}$) thì điểm $M$ chạy trên đường tròn lượng giác theo chiều dương từ $B'$ đến $B$ (không kể $B'$ \& $B$). Khi đó điểm $T$ thuộc trục tang $At$ sao cho $\overline{AT} = \tan x$ chạy dọc theo $At$ suốt từ dưới lên trên, nên $\tan x$ \textit{tăng từ $-\infty$ đến $+\infty$} (qua quá trị $0$ khi $x = 0$).''
 	\item \textit{Đồ thị}: ``Đồ thị của hàm số $y = \tan x$ có dạng như ở hình \ref{fig:graph tan}.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.15]{graph_tan}
@@ -265,6 +267,7 @@ Căn cứ vào đồ thị của hàm số $y = \cos x$, ta lập được bản
 
 \subsubsection{Sự biến thiên \& đồ thị của hàm số $y = \cot x$}
 ``Hàm số $y = \cot x$ xác định trên $\mathcal{D}_2 = \mathbb{R}\backslash\{k\pi|k\in\mathbb{Z}\}$ là 1 hàm số tuần hoàn với chu kỳ $\pi$. Ta có thể khảo sát sự biến thiên \& vẽ đồ thị của nó tương tự như đã làm đối với hàm số $y = \tan x$. Đồ thị của hàm số $y = \cot x$ có dạng như hình \ref{fig:graph cot}.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.15]{graph_cot}
@@ -310,8 +313,111 @@ Nó nhận mỗi đường thẳng vuông góc với trục hoành, đi qua đi�
 ``Nhiều hiện tượng tự nhiên thay đổi có tính chất tuần hoàn (lặp đi lặp lại sau khoảng thời gian xác định) như: Chuyển động của các hành tinh trong hệ mặt trời, chuyển động của guồng nước quay, chuyển động của quả lắc đồng hồ, sự biến thiên của cường độ dòng điện xoay chiều, $\ldots$. Hiện tượng tuần hoàn đơn giản nhất là \textit{dao động điều hòa} được mô tả bởi hàm số $y = A\sin(\omega x + \alpha) + B$, trong đó $A,B,\omega$ \& $\alpha$ là những hằng số; $A$ \& $\omega$ khác $0$. Đó là hàm số tuần hoàn với chu kỳ $\frac{2\pi}{|\omega|}$; $|A|$ gọi là \textit{biên độ}. Đồ thị của nó là 1 \textit{đường hình sin} có được từ đồ thị của hàm số $y = A\sin\omega x$ bằng cách tịnh tiến thích hợp (theo vector $-\frac{\alpha}{\omega}\vec{i}$ rồi theo vector $B\vec{j}$, i.e., tịnh tiến theo vector $-\frac{\alpha}{\omega}\vec{i} + B\vec{j}$).'' -- \cite[pp. 15--16]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
 
 \subsection{Âm thanh}
+``Âm thanh được tạo nên bởi sự thay đổi áp suất của môi trường vật chất (chất khí, chất lỏng, chất rắn) 1 cách tuần hoàn theo thời gian (dao động tuần hoàn) \& được lan truyền trong môi trường đó (sóng âm thanh).
 
-\section{Phương Trình Lượng Giác Cơ Bản}
+Nếu dao động tuần hoàn ấy có chu kỳ $T$ (đo bằng đơn vị thời gian là giây) thì $\frac{1}{T}$ gọi là \textit{tần số} của dao động (i.e., số chu kỳ trong 1 giây); đơn vị của tần số là Hertz (abbr., Hz). Âm thanh tai người nghe được là dao động có tần số trong khoảng từ 17--20 Hz đến 20000 Hz. Dao động có tần số cao hơn 20000 Hz được gọi là \textit{siêu âm}.
+
+Trong âm nhạc (nghệ thuật phối hợp các âm thanh) người ta thường dùng những nốt nhạc để ghi những âm có tần số xác định. Tần số dao động càng lớn thì âm càng cao. Khi tăng tần số 1 âm lên gấp đôi thì ta nói cao độ của âm đó được tăng thêm 1 quãng 8. Người ta thường chia quãng 8 đó thành 12 quãng bằng nhau, mỗi quãng gọi là 1 bán cung để đo chênh lệch cao độ giữa các âm (xem SGK Âm nhạc \& Mỹ thuật lớp 7). Với 2 âm cách nhau 1 bán cung, tỷ số các tần số của chúng bằng $\sqrt[12]{2}$; với 2 âm cách nhau 1 cung (i.e., 2 bán cung), tỷ số các tần số của chúng bằng $(\sqrt[12]{2})^2 = \sqrt[6]{2}$. Ở khuông nhạc dưới đây có ghi các nốt nhạc của 1 ``âm giai'' (quãng 8) cùng khoảng cách cao độ giữa 2 âm ứng với 2 nốt kề nhau. Âm \textit{la} của âm giai đó có tần số 440 Hz (do đó, e.g., âm \textit{si} kế đó có tần số $440\sqrt[6]{2}$ Hz).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{khuong_nhac}
+	\caption{Khuông nhạc.}
+	\label{fig:khuong nhac}
+\end{figure}
+Trong âm nhạc, ngoài các âm riêng lẻ còn có hợp âm (kết hợp các âm thanh). Nhà toán học Pháp \href{https://en.wikipedia.org/wiki/Joseph_Fourier}{Joseph Fourier} (1768--1830) đã chứng minh rằng 1 hàm số tuần hoàn với chu kỳ $T$ có thể phân tích thành ``tổng'' của 1 hằng số với những hàm số tuần hoàn có đồ thị là những đường hình sin với chu kỳ $\frac{T}{n}$ ($n\in\mathbb{N}^\star$). Điều đó giúp ta hiểu sâu hơn về hợp âm, hòa âm, âm bội \& âm sắc.'' -- \cite[p. 18]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\section{Phương Trình Lượng Giác Cơ Bản -- Basic Trigonometric Equation}
+``Trên thực tế, có nhiều bài toán dẫn đến việc giải các phương trình có 1 trong các dạng $\sin x = m$, $\cos x = m$, $\tan x = m$, \& $\cot x = m$, trong đó $x$ là ẩn số ($x\in\mathbb{R}$) \& $m$ là 1 số cho trước. Đó là các \textit{phương trình lượng giác cơ bản}.'' -- \cite[p. 19]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\subsection{Phương trình $\sin x = m$}
+``Giả sử $m$ là 1 số đã cho. Xét phương trình
+\begin{align}
+	\label{sin}
+	\tag{sin}
+	\sin x = m.
+\end{align}
+Hiển nhiên phương trình \eqref{sin} xác định với mọi $x\in\mathbb{R}$. Ta đã biết $|\sin x|\le 1$ với mọi $x\in\mathbb{R}$. Do đó phương trình \eqref{sin} vô nghiệm khi $|m| > 1$. Mặt khác, khi $x$ thay đổi, $\sin x$ nhận mọi giá trị từ $-1$ đến $1$ nên phương trình \eqref{sin} luôn có nghiệm khi $|m|\le 1$.'' -- \cite[p. 20]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+\begin{tcolorbox}
+	Nếu $\alpha$ là 1 nghiệm của phương trình \eqref{sin}, i.e., $\sin\alpha = m$ thì
+	\begin{equation}
+		\label{root sin}
+		\sin x = m\Leftrightarrow\left[\begin{split}
+			x &= \alpha + k2\pi\\
+			x &= \pi - \alpha + k2\pi
+		\end{split}\right.\ (k\in\mathbb{Z}).
+	\end{equation}
+\end{tcolorbox}
+``Ta nói rằng $x = \alpha + k2\pi$ \& $x = \pi - \alpha + k2\pi$ là 2 \textit{họ nghiệm} của phương trình \eqref{sin}.
+
+Kể từ đây, để cho gọn ta quy ước rằng nếu trong 1 biểu thức nghiệm của phương trình lượng giác có chứa $k$ mà không giải thích gì thêm thì ta hiểu rằng $k$ nhận mọi giá trị thuộc $\mathbb{Z}$. E.g., $x = \alpha + k2\pi$ có nghĩa là $x$ lấy mọi giá trị thuộc tập hợp $\{\alpha,\alpha\pm 2\pi,\alpha\pm 4\pi,\alpha\pm 6\pi,\ldots\}$.'' -- \cite[p. 21]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+``Trong mặt phẳng tọa độ, nếu vẽ đồ thị $(G)$ của hàm số $y = \sin x$ \& đường thẳng $(d)$: $y = m$ thì hoành độ mỗi giao điểm của $(d)$ \& $(G)$ (nếu có) là 1 nghiệm của phương trình $\sin x = m$.'' -- \cite[p. 22]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+
+\begin{luuy}
+	\begin{enumerate}
+		\item ``Khi $m\in\{0;\pm 1\}$, công thức \eqref{root sin} có thể viết gọn như sau:
+		\begin{align*}
+			\sin x = 1\Leftrightarrow x = \frac{\pi}{2} + k2\pi,\ \sin x = -1\Leftrightarrow x = -\frac{\pi}{2} + k2\pi,\ \sin x = 0\Leftrightarrow x = k\pi.
+		\end{align*}
+		\item Dễ thấy rằng với $m$ cho trước mà $|m|\le 1$, phương trình $\sin x = m$ có đúng 1 nghiệm nằm trong đoạn $\left[-\frac{\pi}{2};\frac{\pi}{2}\right]$. Người ta thường ký hiệu đó là $\arcsin m$. Khi đó
+		\begin{equation*}
+			\boxed{\sin x = m \Leftrightarrow\left[\begin{split}
+				x &= \arcsin m + k2\pi,\\
+				x &= \pi - \arcsin m + k2\pi.
+			\end{split}\right.}
+		\end{equation*}
+		\item Từ \eqref{root sin} ta thấy rằng: Nếu $\alpha$ \& $\beta$ là 2 số thực thì $\sin\beta = \sin\alpha$ khi \& chỉ khi có số nguyên $k$ để $\beta = \alpha + k2\pi$ hoặc $\beta = \pi - \alpha + k2\pi$, $k\in\mathbb{Z}$.'' -- \cite[pp. 22--23]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+	\end{enumerate}
+\end{luuy}
+
+\subsection{Phương trình $\cos x = m$}
+``Xét phương trình
+\begin{align*}
+	\label{cos}
+	\tag{cos}
+	\cos x = m,
+\end{align*}
+trong đó $m$ là 1 số cho trước. Hiển nhiên phương trình \eqref{cos} xác định với mọi $x\in\mathbb{R}$. Dễ thấy rằng: Khi $|m| > 1$, phương trình \eqref{cos} vô nghiệm. Khi $|m|\le 1$, phương trình (II) luôn có nghiệm. Để tìm tất cả các nghiệm của (II), trên trục côsin ta lấy điểm $H$ sao cho $\overline{OH} = m$. Gọi $(l)$ là đường thẳng đi qua $H$ \& vuông góc với trục côsin (Fig. \ref{fig:truc cos}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{truc_cos}
+	\caption{Trục côsin.}
+	\label{fig:truc cos}
+\end{figure}
+Do $|m|\le 1$ nên đường thẳng $(l)$ cắt đường tròn lượng giác tại 2 điểm $M_1$ \& $M_2$. 2 điểm này đối xứng với nhau qua trục côsin (chúng trùng nhau nếu $m = \pm 1$). Ta thấy số đo của các góc lượng giác $(OA,OM_1)$ \& $(OA,OM_2)$ là tất cả các nghiệm của \eqref{cos}. Nếu $\alpha$ là số đo của 1 góc trong chúng, nói cách khác, nếu $\alpha$ là 1 nghiệm của \eqref{cos} thì các góc đó có các số đo là $\pm\alpha + k2\pi$. Vậy ta có
+
+\begin{tcolorbox}
+	Nếu $\alpha$ là 1 nghiệm của phương trình \eqref{cos}, i.e., $\cos\alpha = m$ thì
+	\begin{equation}
+		\label{root cos}
+		\cos x = m\Leftrightarrow\left[\begin{split}
+			x &= \alpha + k2\pi,\\
+			x &= -\alpha + k2\pi.
+		\end{split}\right.
+	\end{equation}
+\end{tcolorbox}
+
+\begin{luuy}
+	\begin{enumerate}
+		\item Đặc biệt, khi $m\in\{0;\pm 1\}$, công thức \eqref{root cos} có thể viết gọn như sau:
+		\begin{align*}
+			\cos x = 1\Leftrightarrow x = k2\pi,\ \cos x = -1\Leftrightarrow x = \pi + k2\pi,\ \cos x = 0\Leftrightarrow x = \frac{\pi}{2} + k\pi.
+		\end{align*}
+		\item Dễ thấy rằng với mọi số $m$ cho trước mà $|m|\le 1$, phương trình $\cos x = m$ có đúng 1 nghiệm nằm trong đoạn $[0;\pi]$. Người ta thường ký hiệu nghiệm đó là $\arccos m$. Khi đó
+		\begin{equation*}
+			\cos x = m\Leftrightarrow\left[\begin{split}
+				x &= \arccos m + k2\pi,\\
+				x &= -\arccos m + k2\pi,
+			\end{split}\right.
+		\end{equation*}
+		mà cũng thường được viết là $x = \pm\arccos m + k2\pi$.
+		\item Từ \eqref{root cos} ta thấy rằng: Nếu $\alpha$ \& $\beta$ là 2 số thực thì $\cos\beta = \cos\alpha$ khi \& chỉ khi có số nguyên $k$ để $\beta = \alpha + k2\pi$ hoặc $\beta = -\alpha + k2\pi$, $k\in\mathbb{Z}$.'' -- \cite[pp. 23--24]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+	\end{enumerate}
+\end{luuy}
+
+\subsection{Phương trình $\tan x = m$}
 
 \section{1 Số Dạng Phương Trình Lượng Giác Cơ Bản}
 
