@@ -147,7 +147,7 @@ Bình phương của 1 hiệu 2 số bằng hiệu của tổng bình phương 2
 \begin{align}
 	a^2 - b^2 = (a + b)(a - b),\ \forall a,b\in\mathbb{R}.
 \end{align}
-``Với $A$ \& $B$ là các biểu thức tùy ý, ta cũng có:
+Với $A$ \& $B$ là các biểu thức tùy ý, ta cũng có:
 \begin{align}
 	A^2 - B^2 = (A + B)(A - B).
 \end{align}
@@ -173,20 +173,152 @@ Tổng quát hơn,
 \end{baitoan}
 
 \subsection{Lập phương của 1 tổng -- Cube of a sum}
+\begin{align}
+	\label{cube of a sum}
+	(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3,\ \forall a,b\in\mathbb{R}.
+\end{align}
+Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
+\begin{align*}
+	(A + B)^3 = A^3 + 3A^2B + 3AB^2 + B^3.
+\end{align*}
+
+\subsection{Lập phương của 1 hiệu -- Cube of a difference}
+\begin{align}
+	\label{cube of a difference}
+	(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3,\ \forall a,b\in\mathbb{R}.
+\end{align}
+Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
+\begin{align*}
+	(A - B)^3 = A^3 - 3A^2B + 3AB^2 - B^3.
+\end{align*}
+
+\begin{luuy}
+	Vì $x^{2n} = (-x)^{2n}$, $x^{2n + 1} = -(-x)^{2n + 1}$, $\forall x\in\mathbb{R}$, $\forall n\in\mathbb{N}$, nên
+	\begin{align*}
+		(a - b)^{2n} = (b - a)^{2n},\ (a - b)^{2n + 1} = -(b - a)^{2n + 1},\ \forall a,b\in\mathbb{R},\ \forall n\in\mathbb{N}.
+	\end{align*}
+\end{luuy}
+
+\subsection{Tổng 2 lập phương -- Sum of cubes}
+\begin{align}
+	\label{sum of cubes}
+	a^3 + b^3 = (a + b)(a^2 - ab + b^2),\ \forall a,b\in\mathbb{R}.
+\end{align}
+Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
+\begin{align*}
+	A^3 + B^3 = (A + B)(A^2 - AB + B^2).
+\end{align*}
+
+\begin{luuy}
+	``Ta quy ước gọi $A^2 - AB + B^2$ là \emph{bình phương thiếu của hiệu $A - B$}.'' -- \cite[p. 15]{SGK_Toan_8_tap_1}
+\end{luuy}
+
+\subsection{Hiệu 2 lập phương -- Difference of cubes}
+\begin{align}
+	\label{sum of cubes}
+	a^3 - b^3 = (a - b)(a^2 + ab + b^2),\ \forall a,b\in\mathbb{R}.
+\end{align}
+Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
+\begin{align*}
+	A^3 - B^3 = (A - B)(A^2 + AB + B^2).
+\end{align*}
+
+\begin{luuy}
+	``Ta quy ước gọi $A^2 + AB + B^2$ là \emph{bình phương thiếu của hiệu $A + B$}.'' -- \cite[p. 15]{SGK_Toan_8_tap_1}
+\end{luuy}
+
+\begin{tcolorbox}
+	\centering
+	\textsc{7 hằng đẳng thức đáng nhớ.}
+	\begin{align*}
+			(A + B)^2 &= A^2 + 2AB + B^2,\\
+			(A - B)^2 &= A^2 - 2AB + B^2,\\
+			A^2 - B^2 &= (A + B)(A - B),\\
+			(A + B)^3 &= A^3 + 3A^2B + 3AB^2 + B^3,\\
+			(A - B)^3 &= A^3 - 3A^2B + 3AB^2 - B^3,\\
+			A^3 + B^3 &= (A + B)(A^2 - AB + B^2),\\
+			A^3 - B^3 &= (A - B)(A^2 + AB + B^2).
+	\end{align*}
+\end{tcolorbox}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{31.}, p. 16]
+	Chứng minh rằng:
+	\begin{align*}
+		a^3 + b^3 = (a + b)^3 - 3ab(a + b),\ a^3 - b^3 = (a - b)^3 + 3ab(a - b),\ \forall a,b\in\mathbb{R}.
+	\end{align*}
+	Áp dụng: Tính $a^3 + b^3$ biết $ab = m$ \& $a + b = n$ với $m,n\in\mathbb{R}$ cho trước. Tính $a^3 - b^3$ biết $ab = m$ \& $a - b = k$ với $m,k\in\mathbb{R}$ cho trước.
+\end{baitoan}
 
 \section{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Đặt Nhân Tử Chung}
 
+\begin{dinhnghia}[Phân tích đa thức thành nhân tử]
+	\emph{Phân tích đa thức thành nhân tử (hay thừa số)} là biến đổi đa thức đó thành 1 tích của những đa thức.	
+\end{dinhnghia}
+Phân tích đa thức thành nhân tử bằng phương pháp đặt nhân tử chung. ``Nhiều khi để làm xuất hiện nhân tử chung ta cần đổi dấu các hạng tử (lưu ý tới tính chất $A = -(-A)$).'' -- \cite[p. 18]{SGK_Toan_8_tap_1}
+
 \section{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Dùng Hằng Đẳng Thức}
+Phân tích đa thức thành nhân tử bằng phương pháp dùng hằng đẳng thức.
 
 \section{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Nhóm Hạng Tử}
+Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử. ``Đối với 1 đa thức có thể có nhiều cách nhóm những hạng tử thích hợp.'' -- \cite[p. 21]{SGK_Toan_8_tap_1}
 
 \section{Phân Tích Đa Thức Thành Nhân Tử Bằng Cách Phối Hợp Nhiều Phương Pháp}
 
+\begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{58.}, p. 25]
+	Chứng minh rằng $n^3 - n\ \vdots\ 6$, $\forall n\in\mathbb{Z}$.
+\end{baitoan}
+
 \section{Chia Đơn Thức Cho Đơn Thức}
+``Cho $A$ \& $B$ là 2 đa thức, $B\ne 0$. Ta nói đa thức $A$ chia hết cho đa thức $B$ nếu tìm được 1 đa thức $Q$ sao cho $A = B\cdot Q$. $A$ được gọi là \textit{đa thức bị chia}, $B$ được gọi là đa thức chia, $Q$ được gọi là \textit{đa thức thương} (gọi tắt \textit{thương}). Ký hiệu $Q = A:B$ hoặc $Q = \frac{A}{B}$. Trong \cite[\S10]{SGK_Toan_8_tap_1}, ta xét trường hợp đơn giản nhất của phép chia 2 đa thức, đó là phép chia đơn thức cho đơn thức.'' -- \cite[p. 25]{SGK_Toan_8_tap_1}
+
+\subsection{Quy tắc}
+``Ở lớp 7 ta đã biết:
+\begin{equation*}
+	x^m:x^n = \left\{\begin{split}
+		&x^{m - n}&&\mbox{ nếu } m > n,\\
+		&1&&\mbox{ nếu } m = n.
+	\end{split}\right.\ \forall x\in\mathbb{R}\backslash\{0\},\ \forall m,n\in\mathbb{N},\ m\ge n.
+\end{equation*}
+Đơn thức $A$ chia hết cho đơn thức $B$ khi mỗi biến của $B$ đều là biến của $A$ với số mũ không lớn hơn số mũ của nó trong $A$.
+
+\textbf{Quy tắc.} Muốn chia đơn thức $A$ cho đơn thức $B$ (trường hợp $A$ chia hết cho $B$) ta làm như sau:
+\begin{itemize}
+	\item Chia hệ số của đơn thức $A$ cho hệ số của đơn thức $B$.
+	\item Chia lũy thừa của từng biến trong $A$ cho lũy thừa của cùng biến đó trong $B$.
+	\item Nhân các kết quả vừa tìm được với nhau.
+\end{itemize}
+
+\begin{vidu}[Chia 2 đơn thức 1 biến]
+	\begin{align*}
+		ax^m:bx^n = \frac{a}{b}x^{m-n},\ \forall a,b\in\mathbb{R},\,b\ne 0,\ \forall m,n\in\mathbb{N},\,m\ge n.
+	\end{align*}
+\end{vidu}
+
+\begin{vidu}[Chia 2 đơn thức 2 biến]
+	\begin{align*}
+		ax^{m_1}y^{m_2}:bx^{n_1}y^{n_2} = \frac{a}{b}x^{m_1 - n_1}y^{m_2 - n_2},\ \forall a,b\in\mathbb{R},\,b\ne 0,\ \forall m_i,n_i\in\mathbb{N},\,m_i\ge n_i,\,i = 1,2.
+	\end{align*}
+\end{vidu}
+
+\begin{vidu}[Chia 2 đơn thức $k$ biến]
+	Cho $k\in\mathbb{N}$, $k\ge 2$.
+	\begin{align*}
+		ax_1^{m_1}\cdots x_k^{m_k}:bx_1^{n_1}\cdots x_k^{n_k} = \frac{a}{b}x_1^{m_1 - n_1}\cdots x_k^{m_k - n_k},\ \forall a,b\in\mathbb{R},\,b\ne 0,\ \forall m_i,n_i\in\mathbb{N},,\,m_i\ge n_i,\,i = 1,\ldots,k.
+	\end{align*}
+\end{vidu}
 
 \section{Chia Đa Thức Cho Đơn Thức}
+``Ta có quy tắc chia đa thức cho đơn thức (trường hợp các hạng tử của đa thức $A$ đều chia hết cho đơn thức $B$) như sau:
+
+\textbf{Quy tắc.} Muốn chia đa thức $A$ cho đơn thức $B$ (trường hợp các hạng tử của đa thức $A$ đều chia hết cho đơn thức $B$), ta chia mỗi hạng tử của $A$ cho $B$ rồi cộng các kết quả với nhau.'' -- \cite[p. 27]{SGK_Toan_8_tap_1}. ``Trong thực hành ta có thể tính nhẩm \& bỏ bớt 1 số phép tính trung gian.'' -- \cite[p. 28]{SGK_Toan_8_tap_1}
 
 \section{Chia Đa Thức 1 Biến Đã Sắp Xếp}
+
+\subsection{Phép chia hết}
+``Phép chia có dư bằng $0$ là phép chia hết.'' -- \cite[p. 30]{SGK_Toan_8_tap_1}
+
+\subsection{Phép chia có dư}
+``Người ta chứng minh được rằng đối với 2 đa thức tùy ý $A$ \& $B$ của cùng 1 biến ($B\ne 0$), tồn tại duy nhất 1 cặp đa thức $Q$ \& $R$ sao cho $A = B\cdot Q + R$, trong đó $R$ bằng 0 hoặc bậc của $R$ nhỏ hơn bậc của $B$ ($R$ được gọi là \textit{dư} trong phép chia $A$ cho $B$). Khi $R = 0$ phép chia $A$ cho $B$ là phép chia hết.'' -- \cite[p. 31]{SGK_Toan_8_tap_1}
 
 %------------------------------------------------------------------------------%
 
