@@ -23,6 +23,7 @@
 \newtheorem{problem}{Problem}[section]
 \newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
 \newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{remark}{Remark}[section]
@@ -324,15 +325,111 @@ Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử
 
 \chapter{Phân Thức Đại Số}
 
+\begin{align*}
+	\frac{a}{b}\in\mathbb{Q},\ a,b\in\mathbb{Z},\,b\ne 0\longrightarrow\frac{A(x)}{B(x)},\ \forall A(x),B(x)\mbox{ là 2 đa thức 1 biến } x,\,B(x)\ne 0.
+\end{align*}
+``Ở lớp 7 ta đã biết, từ tập hợp các số nguyên $\mathbb{Z}$ ta thiết lập được tập hợp các số hữu tỷ $\mathbb{Q}$. Khi đó, mỗi số nguyên cũng là 1 số hữu tỷ. Tương tự, bây giờ từ tập hợp các đa thức ta sẽ thiết lập 1 tập hợp mới gồm những biểu thức gọi là những \textit{phân  thức đại số}.''
+
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Phân thức đại số, các quy tắc làm tính trên các phân thức đại số\footnote{Những quy tắc này tương tự như các quy tắc làm tính trên các phân số}}.
+\end{quotation}
+
 \section{Phân Thức Đại Số}
 
+\subsection{Định nghĩa}
+
+\begin{dinhnghia}[Phân thức đại số]
+	\emph{1 phân thức đại số} (hay nói gọn là \emph{phân thức}) là 1 biểu thức có dạng $\frac{A}{B}$, trong đó $A,B$ là những đa thức \& $B$ khác đa thức $0$. $A$ được gọi là \emph{tử thức} (hay \emph{tử}), $B$ được gọi là \emph{mẫu thức} (hay \emph{mẫu}).
+\end{dinhnghia}
+``Mỗi đa thức cũng được coi như 1 phân thức với mẫu thức bằng $1$.'' ``Số $0$, số $1$ cũng là những phân thức đại số.'' -- \cite[p. 35]{SGK_Toan_8_tap_1}
+
+\subsection{2 phân thức bằng nhau}
+
+\begin{dinhnghia}[2 phân thức bằng nhau]
+	2 phân thức $\frac{A}{B}$ \& $\frac{C}{D}$ gọi là \emph{bằng nhau} nếu $A\cdot D = B\cdot C$. Ta viết
+	\begin{align*}
+		\frac{A}{B} = \frac{C}{D}\mbox{ nếu } A\cdot D = B\cdot C.
+	\end{align*}
+\end{dinhnghia}
+
 \section{Tính Chất Cơ Bản của Phân Thức}
+``Phân thức đại số có tính chất cơ bản sau:
+
+\begin{menhde}
+	Nếu nhân cả tử \& mẫu của 1 phân thức với cùng 1 đa thức khác đa thức $0$ thì được 1 phân thức bằng phân thức đã cho:
+	\begin{align*}
+		\frac{A}{B} = \frac{A\cdot M}{B\cdot M}\ (M\mbox{ là 1 đa thức khác đa thức } 0).
+	\end{align*}
+	Nếu chia cả tử \& mẫu của 1 phân thức cho 1 nhân tử chung của chúng thì được 1 phân thức bằng phân thức đã cho:
+	\begin{align*}
+		\frac{A}{B} = \frac{A:N}{B:N}\ (N\mbox{ là 1 nhân tử chung}).
+	\end{align*}
+\end{menhde}
+Tính chất này được gọi là \textit{tính chất cơ bản của phân thức}.'' -- \cite[p. 37]{SGK_Toan_8_tap_1}
+
+\subsection{Quy tắc đổi dấu}
+
+\begin{menhde}
+	Nếu đổi dấu cả tử \& mẫu của 1 phân thức thì được 1 phân thức bằng phân thức đã cho:
+	\begin{align*}
+		\frac{A}{B} = \frac{-A}{-B}.
+	\end{align*}
+\end{menhde}
 
 \section{Rút Gọn Phân Thức}
+``Muốn rút gọn 1 phân thức ta có thể:
+\begin{enumerate*}
+	\item Phân tích tử \& mẫu thành nhân tử (nếu cần) để tìm nhân tử chung;
+	\item Chia cả tử \& mẫu cho nhân tử chung.''
+\end{enumerate*}
+``Có khi cần đổi dấu ở tử hoặc mẫu để nhận ra nhân tử chugn của tử \& mẫu (lưu ý tới tính chất $A = -(-A)$).'' -- \cite[p. 39]{SGK_Toan_8_tap_1}
 
 \section{Quy Đồng Mẫu thức Nhiều Phân Thức}
 
+\begin{dinhnghia}[Quy đồng mẫu thức nhiều phân thức]
+	\emph{Quy đồng mẫu thức nhiều phân thức} là biến đổi các phân thức đã cho thành những phân thức mới có cùng mẫu thức \& lần lượt bằng các phân thức đã cho.
+\end{dinhnghia}
+Ta thường ký hiệu ``mẫu thức chung'' bởi MTC. Để quy đồng mẫu thức nhiều phân thức, trước hết ta hãy xem có thể tìm mẫu thức chung của những phân thức mới này như thế nào.'' -- \cite[p. 41]{SGK_Toan_8_tap_1}
+
+\subsection{Tìm mẫu thức chung}
+``Có thể chọn mẫu thức chung là 1 tích chia hết cho mẫu thức của mỗi phân thức đã cho.'' -- \cite[p. 41]{SGK_Toan_8_tap_1}
+
+``Khi quy đồng mẫu thức nhiều phân thức, muốn tìm mẫu thức chung ta có thể làm như sau: 
+\begin{enumerate}
+	\item Phân tích mẫu thức của các phân thức đã cho thành nhân tử;
+	\item Mẫu thức chung cần tìm là 1 tích mà các nhân tử được chọn như sau:
+	\begin{itemize}
+		\item Nhân tử bằng số của mẫu thức chung là tích các nhân tử bằng số ở các mẫu thức của các phân thức đã cho. (Nếu các nhân tử bằng số ở các mẫu thức là những số nguyên dương thì nhân tử bằng số của mẫu thức chung là BCNN của chúng);
+		\item Với mỗi lũy thừa của cùng 1 biểu thức có mặt trong các biểu thức, ta chọn lũy thừa với số mũ cao nhất.'' -- \cite[p. 42]{SGK_Toan_8_tap_1}		
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Quy đồng mẫu thức}
+``Muốn quy đồng mẫu thức nhiều phân thức ta có thể làm như sau:
+\begin{enumerate*}
+	\item Phân tích các mẫu thức thành nhân tử rồi tìm mẫu thức chung;
+	\item Tìm nhân tử phụ của mỗi mẫu thức;
+	\item Nhân cả tử \& mẫu của mỗi phân thức với nhân tử phụ tương ứng.'' -- \cite[p. 42]{SGK_Toan_8_tap_1}
+\end{enumerate*}
+
 \section{Phép Cộng Các Phân Thức Đại Số}
+
+\subsection{Cộng 2 phân thức cùng mẫu thức}
+``Quy tắc cộng 2 phân thức cũng tương tự như quy tắc cộng 2 phân số.
+
+\textbf{Quy tắc.} Muốn cộng 2 phân thức có cùng mẫu thức, ta cộng các tử thức với nhau \& giữ nguyên mẫu thức.'' -- \cite[p. 44]{SGK_Toan_8_tap_1}
+
+\subsection{Cộng 2 phân thức có mẫu thức khác nhau}
+``Ta đã biết quy đồng mẫu thức 2 phân thức \& quy tắc cộng 2 phân thức cùng mẫu thức. Có thể áp dụng những điều đó để cộng 2 phân thức có mẫu thức khác nhau.'' ``Ta có quy tắc cộng 2 phân thức có mẫu thức khác nhau như sau:
+
+\textbf{Quy tắc.} Muốn cộng 2 phân thức có mẫu thức khác nhau, ta quy đồng mẫu thức rồi cộng các phân thức có cùng mẫu thức vừa tìm được.
+
+Kết quả của phép cộng 2 phân thức được gọi là \textit{tổng} của 2 phân thức ấy. Ta thường viết tổng này dưới dạng rút gọn.'' ``Phép cộng các phân thức cũng có các tính chất sau:
+\begin{enumerate}
+	\item Giao hoán: $\frac{A}{B} + \frac{C}{D} = \frac{C}{D} + \frac{A}{B}$;
+	\item Kết hợp: $\left(\frac{A}{B} + \frac{C}{D}\right) + \frac{E}{F} = \frac{A}{B} + \left(\frac{C}{D} + \frac{E}{F}\right)$.
+\end{enumerate}
+Nhờ tính chất kết hợp, trong 1 dãy phép cộng nhiều phân thức, ta không cần đặt dấu ngoặc.'' -- \cite[p. 45]{SGK_Toan_8_tap_1}
 
 \section{Phép Trừ Các Phân Thức Đại Số}
 
