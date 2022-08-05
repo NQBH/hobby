@@ -53,13 +53,69 @@
 
 %------------------------------------------------------------------------------%
 
+\chapter*{Preface}
+
+\section*{Ký Hiệu, Viết Tắt, Quy Ước -- Notation, Abbreviation, Convention}
+\addcontentsline{toc}{section}{\protect\numberline{}Ký Hiệu, Viết Tắt, Quy Ước -- Notation, Abbreviation, Convention}
+
+\subsection*{Ký Hiệu -- Notation}
+\begin{itemize}
+	\item $\land$: và, (logical) and.
+	\item $\lor$: hoặc, (logical) or.
+	\item $\Sigma$: tổng, sum, e.g., $\sum_{i=a}^b f(i) = f(a) + f(a + 1) + \cdots + f(b - 1) + f(b)$, $\forall a,b\in\mathbb{Z}$, $a\le b$.
+	\item $\prod$: tích, product, e.g., $\prod_{i=a}^b f(i) = f(a)f(a + 1)\cdots f(b - 1)f(b)$, $\forall a,b\in\mathbb{Z}$, $a\le b$.
+\end{itemize}
+
+\subsection*{Viết Tắt -- Abbreviation}
+\begin{itemize}
+	\item \textbf{abbr.} (abbr., abbreviation): viết tắt, abbreviation, for short.
+	\item \textbf{i.e.} stands for the Latin \textit{id est}, or `that is,' \& is used in front of a word or phrase that restates what has been said previously: tức là, nghĩa là, that is, that means, in another term.
+	\item \textbf{e.g.} stands for \textit{exempli gratia} in Latin: ví dụ là, chẳng hạn, for example, for instance.
+	\item \textbf{w.l.o.g.} (abbr., without loss of generality): không mất tính tổng quát.
+\end{itemize}
+
+\subsection*{Quy Ước -- Convention}
+
+%------------------------------------------------------------------------------%
+
+\mainmatter
 \part{Đại Số -- Algebra}
 
 \chapter{Phép Nhân \& Phép Chia Các Đa Thức}
 
 \section{Nhân Đơn Thức với Đa Thức}
 
+\subsection{Quy tắc}
+``Muốn nhân 1 đơn thức với 1 đa thức, ta nhân đơn thức với từng hạng tử của đa thức rồi cộng các tích với nhau.'' -- \cite[p. 4]{SGK_Toan_8_tap_1}.
+
+\begin{vidu}[Đơn thức 1 biến nhân đa thức 1 biến]
+	Phép nhân 1 đơn thức 1 biến $ax^m$ với 1 đa thức bậc $n$ được thực hiện như sau:
+	\begin{align*}
+		ax^m\sum_{i=0}^n a_ix^i &= ax^m\left(a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0\right)\\
+		&= aa_nx^{m+n} + aa_{n-1}x^{m+ n-1} + \cdots + aa_1x^{m+1} + aa_0x^m,\ \forall a,a_i\in\mathbb{R},\,i = 0,\ldots,n,\,\forall m,n\in\mathbb{N}.
+	\end{align*}
+\end{vidu}
+
+\begin{vidu}[Đơn thức $\le 2$ biến nhân đa thức $\le 2$ biến]
+	Phép nhân 1 đơn thức 2 biến $ax^{m_1}y^{m_2}$ với 1 đa thức 2 biến được thực hiện như sau:
+	\begin{align*}
+		ax^{m_1}y^{m_2}\cdot\left(\sum_{i=0}^{n_1}\sum_{j=0}^{n_2} a_{ij}x^iy^j\right) = \sum_{i=0}^{n_1}\sum_{j=0}^{n_2} aa_{ij}x^{m_1 + i}y^{m_2 + j},\ \forall a,a_{ij}\in\mathbb{R},\,i = 1,\ldots,n_1,\,j = 0,\ldots,n_2,\ \forall m_i,n_i\in\mathbb{N},\,i = 1,2.
+	\end{align*}
+\end{vidu}
+Tổng quát,
+\begin{vidu}[Đơn thức $\le k$ biến nhân đa thức $\le k$ biến]
+	Với $k\in\mathbb{N}$, $k\ge 2$ cho trước. Phép nhân 1 đơn thức $k$ biến $ax_1^{m_1}x_2^{m_2}\cdots x_k^{m_k} = a\prod_{i=1}^k x_i^{m_i}$ với 1 đa thức $k$ biến được thực hiện như sau:
+	\begin{align*}
+		a\prod_{i=1}^k x_i^{m_i}\left(\sum_{i_1 = 0}^{n_1}\ldots\sum_{i_k = 0}^{n_k} a_{i_1\ldots i_k}\prod_{j=1}^k x_j^{i_j}\right) &= ax_1^{m_1}\ldots x_k^{m_k}\sum_{i_1 = 0}^{n_1}\ldots\sum_{i_k = 0}^{n_k} a_{i_1\ldots i_k}x_1^{i_1}\ldots x_k^{i_k}\\
+		&= \sum_{i_1 = 0}^{n_1}\ldots\sum_{i_k = 0}^{n_k} aa_{i_1\ldots i_k}x_1^{m_1 + i_1}\ldots x_k^{m_k + i_k},
+	\end{align*}
+	$\forall a,a_{i_1\ldots i_k}\in\mathbb{R}$, $i_1 = 0,\ldots,n_1;\ldots;i_k = 0,\ldots,n_k$, $\forall m_i,n_i\in\mathbb{N}$, $i = 1,\ldots,k$.\footnote{Điều kiện $i_1 = 0,\ldots,n_1;\ldots;i_k = 0,\ldots,n_k$ có thể viết gọn hơn thành $(i_1,\ldots,i_k)\in\overline{0,n_1}\times\cdots\times\overline{0,n_k}$ với ký hiệu $\overline{0,n}\coloneqq\{0,1,\ldots,n\}$, $\forall n\in\mathbb{N}$.}
+\end{vidu}
+
 \section{Nhân Đa Thức với Đa Thức}
+
+\subsection{Quy tắc}
+``Muốn nhân 1 đa thức với 1 đa thức, ta nhân mỗi hạng tử của đa thức này với từng hạng tử của đa thức kia rồi cộng các tích với nhau.'' ``Tích của 2 đa thức là 1 đa thức.'' -- \cite[p. 7]{SGK_Toan_8_tap_1}. Tổng quát, muốn nhân 2 đa thức bậc $P,Q$ lần lượt có bậc $m,n$ (ký hiệu $\deg P = m,\deg Q = n$), $P(x) = \sum_{i=0}^m a_ix^i$, $Q(x) = \sum_{i=0}^n b_ix^i$.
 
 \section{Những Hằng Đẳng Thức Đáng Nhớ}
 
