@@ -1,0 +1,285 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Elementary Mathematics\texttt{/}Grade 6}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\title{Problems in Elementary Mathematics\texttt{/}Grade 6}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Một số bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: 
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Tập Hợp Các Số Tự Nhiên}
+
+\subsection{Tập hợp}
+\textsc{Kiến thức cần nhớ.}
+\begin{tcolorbox}	
+	Tên tập hợp được viết bằng chữ cái in hoa. Cho $A = \{a;b;c\}$. Khi đó, $a,b,c$ là các phần tử của tập hợp $A$. $a\in A$ đọc là \textit{$a$ thuộc tập hợp $A$} hay \textit{$a$ là phần tử của tập hợp $A$}. $d\notin A$, đọc là \textit{$d$ không thuộc tập hợp $A$} hay \textit{$d$ không là phần tử của tập hợp $A$}.
+	
+	Cách viết tập hợp có 2 cách:
+	\begin{itemize}
+		\item \textit{Cách 1.} Liệt kê các phần tử của tập hợp: các phần tử của 1 tập hợp được viết trong 2 dấu ngoặc nhọn $\{\ \}$, cách nhau bởi dấu ``;'' (nếu có phần tử là số) hoặc dấu ``,''. Mỗi phần tử được liệt kê 1 lần, thứ tự liệt kê tùy ý.
+		\item \textit{Cách 2.} Chỉ ra tính chất đặc trưng của các phần tử của tập hợp.
+	\end{itemize}
+	\textbf{Các ký hiệu.} $\mathbb{N}$: tập hợp các số tự nhiên. $\mathbb{N}^\star$: tập hợp các số tự nhiên khác $0$. $|$: sao cho, thỏa mãn. $\ge$: lớn hơn hoặc bằng ($>$ hoặc $=$). $\le$: nhỏ hơn hoặc bằng ($<$ hoặc $=$). $\emptyset$: tập hợp rỗng, i.e., tập hợp không có phần tử nào.
+\end{tcolorbox}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{7.}, p. 6]
+	Tập hợp $M$ gồm các chữ cái của từ ``THANG LONG''. Hãy viết tập $M$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{8.}, p. 6]
+	Tập hợp $B$ gồm các chữ cái của từ ``NGOẠI NGỮ''. Hãy viết tập $B$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{9.}, p. 6]
+	Tập hợp $A$ gồm các số tự nhiên nhỏ hơn $3$. Viết tập hợp $A$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{10.}, p. 6]
+	Tập hợp $E$ gồm các số chẵn nhỏ hơn $5$. Viết tập hợp $E$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{11.}, p. 6]
+	Tập hợp $H$ gồm các số lẻ nhỏ hơn $8$. Viết tập hợp $H$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{12.}, p. 7]
+	Tập hợp $C$ gồm các số tự nhiên nhỏ hơn hoặc bằng $4$. Viết tập hợp $C$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{13.}, p. 7]
+	Tập hợp $E$ gồm các số tự nhiên không vượt quá $11$. Viết tập hợp $E$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{14.}, p. 7]
+	Tập hợp $C$ gồm các số tự nhiên lớn hơn $1$ \& nhỏ hơn $5$. Viết tập hợp $C$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{15.}, p. 7]
+	Tập hợp $D$ gồm các số tự nhiên lớn hơn hoặc bằng $6$ \& nhỏ hơn $12$. Viết tập hợp $D$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{16.}, p. 7]
+	Tập hợp $E$ gồm các số tự nhiên lớn hơn $4$ \& nhỏ hơn $9$. Viết tập hợp $E$ bằng cách liệt kê các phần tử.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{17.}, p. 7]
+	Tập hợp $A$ gồm các số tự nhiên nhỏ hơn $3$. Viết tập hợp $A$ bằng cách chỉ ra các tính chất đặc trưng cho các phần tử của tập hợp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{18.}, p. 7]
+	Tập hợp $B$ gồm các số tự nhiên nhỏ hơn $8$. Viết tập hợp $A$ bằng cách chỉ ra các tính chất đặc trưng cho các phần tử của tập hợp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{19.}, p. 7]
+	Tập hợp $C$ gồm các số tự nhiên lớn hơn $11$. Viết tập hợp $C$ bằng cách chỉ ra các tính chất đặc trưng cho các phần tử của tập hợp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{20.}, p. 7]
+	Tập hợp $A$ gồm các số tự nhiên lớn hơn hoặc bằng $8$. Viết tập hợp $A$ bằng cách chỉ ra các tính chất đặc trưng cho các phần tử của tập hợp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{21.}, p. 7]
+	Tập hợp $B$ gồm các số tự nhiên lớn hơn $7$ \& nhỏ hơn $17$. Viết tập hợp $B$ bằng cách chỉ ra các tính chất đặc trưng cho các phần tử của tập hợp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{22.}, p. 7]
+	Tập hợp $C$ gồm các số tự nhiên lớn hơn hoặc bằng $7$ \& nhỏ hơn $14$. Viết tập hợp $C$ bằng cách chỉ ra các tính chất đặc trưng cho các phần tử của tập hợp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{23.}, p. 7]
+	Tập hợp $A$ gồm các số tự nhiên khác $0$ \& nhỏ hơn hoặc bằng $5$. Viết tập hợp $A$ bằng cách chỉ ra các tính chất đặc trưng cho các phần tử của tập hợp.
+\end{baitoan}
+
+\subsection{Tập hợp các số tự nhiên. Cộng, trừ, nhân, chia số tự nhiên}
+
+\subsection{Lũy thừa của 1 số tự nhiên}
+
+\subsection{Thứ tự thực hiện phép tính}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất Chia Hết Trong Tập Hợp Các Số Tự Nhiên}
+
+\subsection{Dấu hiệu chia hết}
+
+\subsection{Tính chất chia hết của 1 tổng, 1 hiệu}
+
+\subsection{Ước \& bội}
+
+\subsection{Số nguyên tố. Hợp số}
+
+\subsection{Ước chung \& bội chung}
+
+\subsection{Ước chung lớn nhất}
+
+\subsection{Bội chung nhỏ nhất}
+
+%------------------------------------------------------------------------------%
+
+\section{Số Nguyên}
+
+\subsection{Tập hợp các số nguyên}
+
+\subsection{Phép cộng \& phép trừ số nguyên}
+
+\subsection{Quy tắc dấu ngoặc}
+
+\subsection{Quy tắc chuyển vế}
+
+\subsection{Phép nhân \& phép chia hết 2 số nguyên}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Học Trực Quan}
+
+\subsection{Tam giác đều -- hình vuông -- lục giác đều}
+
+\subsection{Hình chữ nhật -- hình thoi -- hình bình hành -- hình thang cân}
+
+\subsection{Chu vi \& diện tích của 1 số tứ giác đã học}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Đối Xứng của Hình Phẳng Tự Nhiên}
+
+\subsection{Hình có trục đối xứng}
+
+\subsection{Hình có tâm đối xứng}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Số}
+
+\subsection{Mở rộng khái niệm phân số}
+
+\subsection{Phân số bằng nhau}
+
+\subsection{Tính chất cơ bản của phân số}
+
+\subsection{So sánh phân số}
+
+\subsection{Phép cộng \& trừ phân số}
+
+\subsection{Phép nhân \& chia phân số}
+
+\subsection{Hỗn số}
+
+\subsection{Tìm giá trị phân số của 1 số cho trước}
+
+\subsection{Tìm 1 số biết giá trị 1 phân số của nó}
+
+%------------------------------------------------------------------------------%
+
+\section{Số Thập Phân}
+
+\subsection{Số thập phân. Phần trăm}
+
+\subsection{Tính toán với số thập phân}
+
+\subsection{Làm tròn số thập phân \& ước lượng kết quả}
+
+\subsection{Tỷ số \& tỷ số phần trăm}
+
+\subsection{2 bài toán về tỷ số phần trăm}
+
+%------------------------------------------------------------------------------%
+
+\section{Những Hình Học Cơ Bản}
+
+\subsection{Điểm \& đường thẳng}
+
+\subsection{Điểm nằm giữa 2 điểm. Tia}
+
+\subsection{Đoạn thẳng \& độ dài đoạn thẳng}
+
+\subsection{Trung điểm của đoạn thẳng}
+
+\subsection{Nửa mặt phẳng}
+
+\subsection{Góc}
+
+\subsection{Số đo góc}
+
+%------------------------------------------------------------------------------%
+
+\section{Xác Suất Thống Kê}
+
+\subsection{Phép thử nghiệm -- Sự kiện}
+
+\subsection{Thu thập \& phân loại dữ liệu}
+
+\subsection{Biểu diễn dữ liệu trên bảng}
+
+\subsection{Bảng thống kê \& biểu dồ tranh}
+
+\subsection{Biểu đồ cột}
+
+\subsection{Biểu đồ cột kép}
+
+\subsection{Xác suất thực nghiệm}
+
+\subsection{Hoạt động thực hành \& trải nghiệm}
+
+%------------------------------------------------------------------------------%
+
+%\selectlanguage{english}
+%\begin{thebibliography}{99}
+%	\bibitem[]{}
+%\end{thebibliography}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
