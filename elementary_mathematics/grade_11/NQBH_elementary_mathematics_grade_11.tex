@@ -564,9 +564,131 @@ Ta có: $\tan(OA,OM_1) = \tan(OA,OM_2) = \overline{AT} = m$. Gọi số đo củ
 
 \chapter{Phép Dời Hình \& Phép Đồng Dạng Trong Mặt Phẳng}
 
+``Bức tranh của họa sĩ Hà Lan M.C. Escher gồm những hình bằng nhau mô tả các chiến binh trên lưng ngựa. Các hình này phủ kín mặt phẳng. 2 chiến binh \& ngựa cùng màu (trắng hoặc đen) tương ứng với nhau qua 1 phép tịnh tiến. 2 chiến binh \& ngựa khác màu thì tương ứng với nhau qua 1 phép đối xứng trục \& tiếp theo là 1 phép tịnh tiến. Nghệ thuật dùng những hình bằng nhau để lấp đầy mặt phẳng được phát triển mạnh mẽ vào thế kỷ XIII ở nước Ý\texttt{/}Italia.'' -- \cite[p. 3]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Các phép dời hình \& đồng dạng trong mặt phẳng: phép tịnh tiến, phép đối xứng trục, phép quay, phép vị tự, $\ldots$; 2 hình bằng nhau, 2 hình đồng dạng 1 cách tổng quát}.
+\end{quotation}
+
 \section{Mở Đầu về Phép Biến Hình}
 
+\subsection{Phép biến hình}
+Khái niệm ``hàm số'' -- 1 khái niệm quan trọng trong Đại số: ``Nếu có 1 quy tắc để với mỗi số $x\in\mathbb{R}$, xác định được 1 số duy nhất $y\in\mathbb{R}$ thì quy tắc đó gọi là \textit{1 hàm số xác định trên tập số thực $\mathbb{R}$}. Bây giờ, trong mệnh đề trên ta thay \textit{số thực} bằng \textit{điểm thuộc mặt phẳng} thì ta được khái niệm về phép biến hình trong mặt phẳng. Cụ thể là: Nếu có 1 quy tắc để với mỗi điểm $M$ thuộc mặt phẳng, xác định được 1 điểm duy nhất $M'$ thuộc mặt phẳng ấy thì quy tắc đó gọi là \textit{1 phép biến hình (trong mặt phẳng)}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+\begin{dinhnghia}[Phép biến hình]
+	\emph{Phép biến hình} (trong mặt phẳng) là 1 quy tắc để với mỗi điểm $M$ thuộc mặt phẳng, xác định được 1 điểm duy nhất $M'$ thuộc mặt phẳng ấy. Điểm $M'$ gọi là \emph{ảnh} của điểm $M$ qua phép biến hình đó.
+\end{dinhnghia}
+
+\begin{vidu}[Phép chiếu vuông góc lên 1 đường thẳng]
+	``Cho đường thẳng $d$. Với mỗi điểm $M$, ta xác định $M'$ là hình chiếu (vuông góc) của $M$ trên $d$ thì ta được 1 phép biến hình.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{phep_chieu_vuong_goc}
+		\caption{Phép chiếu vuông góc lên đường thẳng $d$.}
+		\label{fig:phep chieu vuong goc len duong thang}
+	\end{figure}
+	Phép biến hình này gọi là \emph{phép chiếu (vuông góc) lên đường thẳng $d$}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
+\end{vidu}
+
+\begin{vidu}
+	``Cho vector $\vec{u}$, với mỗi điểm $M$ ta xác định điểm $M'$ theo quy tắc $\overrightarrow{MM'} = \vec{u}$ (Fig. \ref{fig:phep tinh tien theo vector}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{phep_tinh_tien_theo_vector}
+		\caption{Phép tịnh tiến theo vector $\vec{u}$.}
+		\label{fig:phep tinh tien theo vector}
+	\end{figure}
+	Như vậy ta cũng có 1 phép biến hình. Phép biến hình đó gọi là \emph{phép tịnh tiến theo vector $\vec{u}$}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
+\end{vidu}
+
+\begin{vidu}[Phép đồng nhất]
+	Với mỗi điểm $M$, ta xác định điểm $M'$ trùng với $M$ thì ta cũng được 1 phép biến hình.
+\end{vidu}
+
+\subsection{Ký hiệu \& thuật ngữ}
+``Nếu ta ký hiệu 1 phép biến hình nào đó là $F$ \& điểm $M'$ là ảnh của điểm $M$ qua phép biến hình $F$ thì ta viết $M' = F(M)$, hoặc $F(M) = M'$. Khi đó, ta còn nói \textit{phép biến hình $F$ biến điểm $M$ thành điểm $M'$}.
+
+Với mỗi hình $\mathcal{H}$, ta gọi hình $\mathcal{H}'$ gồm các điểm $M' = F(M)$, trong đó $M\in\mathcal{H}$, là \textit{ảnh của $\mathcal{H}$ qua phép biến hình $F$}, \& viết $\mathcal{H}' = F(\mathcal{H})$.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}
+
 \section{Phép Tịnh Tiến \& Phép Dời Hình}
+
+\subsection{Định nghĩa phép tịnh tiến}
+
+\begin{dinhnghia}[Phép tịnh tiến]
+	\emph{Phép tịnh tiến} theo vector $\vec{u}$ là 1 phép biến hình biến điểm $M$ thành điểm $M'$ sao cho $\overrightarrow{MM'} = \vec{u}$.
+\end{dinhnghia}
+``Phép tịnh tiến theo vector $\vec{u}$ thường được ký hiệu là $T$ hoặc $T_{\vec{u}}$. Vector $\vec{u}$ được gọi là \textit{vector tịnh tiến}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}. Phép đồng nhất là phép tịnh tiến theo vector $\vec{u} = \vec{0}$.
+
+\subsection{Các tính chất của phép tịnh tiến}
+
+\begin{dinhly}[Phép tịnh tiến bảo toàn khoảng cách]
+	\label{thm: phep tinh tien bao toan khoang cach}
+	Nếu phép tịnh tiến biến 2 điểm $M$ \& $N$ lần lượt thành 2 điểm $M'$ \& $N'$ thì $M'N' = MN$.
+\end{dinhly}
+``Người ta diễn tả tính chất trên của phép tịnh tiến là: \textit{Phép tịnh tiến không làm thay đổi khoảng cách giữa 2 điểm bất kỳ}.'' -- \cite[p. 6]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+\begin{dinhly}[Phép tịnh tiến bảo toàn tính chất thẳng hàng \& thứ tự các điểm thẳng hàng]
+	Phép tịnh tiến biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	``Giả sử phép tịnh tiến biến 3 điểm $A,B,C$ thành 3 điểm $A',B',C'$. Theo Định lý \ref{thm: phep tinh tien bao toan khoang cach}, ta có $A'B' = AB$, $B'C' = BC$, \& $A'C' = AC$. Nếu $A,B,C$ thẳng hàng, $B$ nằm giữa $A$ \& $C$ thì $AB + AC = AC$. Do đó ta cùng có $A'B' + B'C' = A'C'$, i.e., $A',B',C'$ thẳng hàng, trong đó $B'$ nằm giữa $A'$ \& $C'$.
+\end{proof}
+
+\begin{hequa}
+	Phép tịnh tiến biến đường thẳng thành đường thẳng, biến tia thành tia, biến đoạn thẳng thành đoạn thẳng bằng nó, biến tam giác thành tam giác bằng nó, biến đường tròn thành đường tròn có cùng bán kính, biến góc thành góc bằng nó.
+\end{hequa}
+
+\subsection{Biểu thức tọa độ của phép tịnh tiến}
+``Trong mặt phẳng với hệ trục tọa độ $Oxy$, cho phép tịnh tiến theo vector $\vec{u}$. Biết tọa độ của $\vec{u}$ là $(a;b)$. Giả sử điểm $M(x;y)$ biến thành điểm $M(x';y')$ (Fig. \ref{fig:phep tinh tien tren he truc toa do}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{phep_tinh_tien_tren_he_truc_toa_do}
+	\caption{Phép tịnh tiến trên hệ trục tọa độ.}
+	\label{fig:phep tinh tien tren he truc toa do}
+\end{figure}
+Khi đó ta có:
+\begin{equation*}
+	\boxed{\left\{\begin{split}
+		x' &= x + a,\\
+		y' &= y + b.
+	\end{split}\right.}
+\end{equation*}
+Công thức trên gọi là \textit{biểu thức tọa độ của phép tịnh tiến theo vector $\vec{u}(a;b)$}.'' -- \cite[pp. 6--7]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+\subsection{Ứng dụng của phép tịnh tiến}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, p. 7]
+	Cho 2 điểm $B,C$ cố định trên đường tròn $(O;R)$ \& 1 điểm $A$ thay đổi trên đường tròn đó. Chứng minh rằng trực tâm $\Delta ABC$ nằm trên 1 đường tròn cố định.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Nếu $BC$ là đường kính thì trực tâm $H$ của $\Delta ABC$ chính là $A$. Vậy $H$ nằm trên đường tròn cố định $(O;R)$. Nếu $BC$ không phải là đường kính, vẽ đường kính $BB'$ của đường tròn. Nếu $H$ là trực tâm của $\Delta ABC$ thì $\overrightarrow{AH} = \overrightarrow{B'C}$ (suy ra từ nhận xét tứ giác $AHCB'$ là hình bình hành). Như vậy, phép tịnh tiến theo vector cố định $\overrightarrow{B'C}$ biến điểm $A$ thành điểm $H$. Do đó, khi $A$ thay đổi trên $(O;R)$ thì trực tâm $H$ luôn nằm trên đường tròn cố định là ảnh của đường tròn $(O;R)$ qua phép tịnh tiến nói trên.
+\end{proof}
+
+\begin{baitoan}
+	2 thôn nằm ở 2 vị trí $A$ \& $B$ cách nhau 1 con sông (xem rằng 2 bờ sông là 2 đường thẳng song song). Người ta dự định xây 1 chiếc cầu $MN$ bắt qua sông (cố nhiên cầu phải vuông góc với bờ sông) \& làm 2 đoạn thẳng từ $A$ đến $M$ \& từ $B$ đến $N$. Hãy xác định vị trí chiếc cầu $MN$ sao cho $AM + BN$ ngắn nhất.
+\end{baitoan}
+
+\begin{proof}[Hint]
+	Trường hợp tổng quát có thể đưa về trường hợp con sông rất hẹp -- hẹp đến mức 2 bờ sông $a$ \& $b$ xem như trùng nhau bằng 1 phép tịnh tiến theo vector $\overrightarrow{MN}$ để $a$ trùng $b$. Khi đó điểm $A$ biến thành điểm $A'$ sao cho $\overrightarrow{AA'} = \overrightarrow{MN}$ \& do đó $A'N = AM$.
+\end{proof}
+
+\subsection{Phép dời hình}
+``Không phải chỉ có phép tịnh tiến ``không làm thay đổi khoảng cách giữa 2 điểm'' mà còn nhiều phép biến hình khác cũng có tính chất đó (tính chất này còn được gọi là tính chất \textit{bảo toàn khoảng cách} giữa 2 điểm). Người ta gọi các phép biến hình như vậy là phép dời hình.
+
+\begin{dinhnghia}[Phép dời hình]
+	\emph{Phép dời hình} là phép biến hình không làm thay đổi khoảng cách giữa 2 điểm bất kỳ.
+\end{dinhnghia}
+Chú ý rằng các tính chất đã nêu của phép tịnh tiến được chứng minh dựa vào tính chất ``\textit{không làm thay đổi khoảng cách giữa 2 điểm}''. Bởi vậy, các phép dời hình cũng có những tính chất đó. Cụ thể ta có:
+
+\begin{dinhly}
+	Phép dời hình biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó, biến đường thằng thành đường thẳng, biến tia thành tia, biến đoạn thẳng thành đoạn thẳng bằng nó, biến tam giác thành tam giác bằng nó, biến đường tròn thành đường tròn có cùng bán kính, biến góc thành góc bằng nó.
+\end{dinhly}
+'' -- \cite[p. 8]{SGK_Toan_11_hinh_hoc_nang_cao}
 
 \section{Phép Đối Xứng Trục}
 
