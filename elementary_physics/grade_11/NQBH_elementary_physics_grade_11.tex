@@ -41,6 +41,13 @@
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
+\makeatletter
+\let\old@endpart\@endpart
+\renewcommand\@endpart[1][]{%
+	\begin{quote}#1\end{quote}%
+	\old@endpart}
+\makeatother
+
 \title{Some Topics in Elementary Physics\texttt{/}Grade 11}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
@@ -56,12 +63,44 @@
 %------------------------------------------------------------------------------%
 
 \mainmatter
-
 \part{Điện Học -- Điện Từ Học}
+[``Phần Điện học -- Điện từ học đề cập đến các hiện tượng liên quan đến tương tác giữa các điện tích đứng yên \& chuyển động, gọi chung là \textit{hiện tượng điện từ} \& các quy luật chi phối các hiện tượng này. Các hiện tượng điện từ rất phổ biến trong tự nhiên, rất phong phú \& đa dạng. Chúng được ứng dụng rộng rãi trong khoa học \& kỹ thuật, cũng như trong cuộc sống.'' -- \cite{SGK_Vat_Ly_11_nang_cao}, p. 3]
+
+
 
 \chapter{Điện Tích -- Điện Trường}
 
-\section{Điện Tích. Định Luật Colomb}
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Định luật tương tác giữa các điện tích điểm (định luật Coulomb), điện trường, cường độ điện trường của điện tích điểm, hiệu điện thế, điện thế \& công của lực điện, năng lượng điện trường, tụ điện, ghép tụ điện}.
+\end{quotation}
+
+\section{Điện Tích. Định Luật Coulomb}
+\begin{quotation}
+	\textbf{Nội dung.} \textit{1 số khái niệm mở đầu về điện tích (điện tích dương, điện tích âm, sự nhiễm điện của các vật) \& về định luật tương tác giữa 2 điện tích}.
+\end{quotation}
+
+\subsection{2 loại điện tích. Sự nhiễm điện của các vật}
+
+\subsubsection{2 loại điện tích}
+``Có 2 loại điện tích: điện tích dương, điện tích âm. Các điện tích cùng dấu thì đẩy nhau, các điện tích khác dấu thì hút nhau. Đơn vị điện tích là coulomb\footnote{\textsc{Charles Coulomb} (1736--1806), nhà vật lý người Pháp. Có thể đọc thêm \href{https://vi.wikipedia.org/wiki/Charles-Augustin_de_Coulomb}{Wikipedia\texttt{/}Charles-Augustin de Coulomb
+} \& \href{https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb}{Charles-Augustin de Coulomb}.}, ký hiệu là C. Điện tích của electron là điện tích âm \& có độ lớn $e = 1,6\cdot 10^{-19}$ C. 1 điện tích $e = 1,6\cdot 10^{-19}$ C được gọi là \textit{điện tích nguyên tố}. Thí nghiệm đã chứng tỏ rằng, trong tự nhiên không có hạt nào có điện tích nhỏ hơn điện tích nguyên tố. Độ lớn của điện tích 1 hạt bao giờ cũng bằng 1 số nguyên lần điện tích nguyên tố.
+
+Dựa vào sự tương tác giữa các điện tích cùng dấu người ta chế tạo ra điện nghiệm.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{dien_nghiem}
+	\caption{Điện nghiệm. 1. Bình thủy tinh; 2. Nút cách điện; 3. Nút kim loại; 4. Thanh kim loại; 5. 2 lá kim loại nhẹ.}
+\end{figure}
+Điện nghiệm dùng để phát hiện điện tích ở 1 vật. Khi 1 vật nhiễm điên chạm vào núm kim loại, thì điện tích truyền đến 2 lá kim loại (nhiễm điện do tiếp xúc). Do đó, 2 lá kim loại đẩy nhau \& xòe ra.'' -- \cite[p. 6]{SGK_Vat_Ly_11_nang_cao}
+
+\subsubsection{Sự nhiễm điện của các vật}
+
+\paragraph{Nhiễm điện do cọ xát.} ``Sau khi cọ xát vào lụa, thanh thủy tinh có thể hút được các mẩu giấy vụn. Người ta nói thanh thủy tinh được \textit{nhiễm điện do cọ xát}.'' -- \cite[p. 6]{SGK_Vat_Ly_11_nang_cao}
+
+\paragraph{Nhiễm điện do tiếp xúc.} ``Cho thanh kim loại không nhiễm điện chạm vào quả cầu đã nhiễm điện thì thanh kim loại nhiễm điện cùng dấu với điện tích của quả cầu (Fig. ??). Người ta nói thanh kim loại được \textit{nhiễm điện do tiếp xúc}. Đưa thanh kim loại ra xa quả cầu thì thanh kim loại vẫn nhiễm điện.'' -- \cite[p. 7]{SGK_Vat_Ly_11_nang_cao}
+
+\paragraph{Nhiễm điện do hưởng ứng.} ``
 
 \section{Thuyết Electron. Định Luật Bảo Toàn Điện Tích}
 
@@ -69,7 +108,7 @@
 
 \section{Công của Lực Điện. Hiệu Điện Thế}
 
-\section{Bài Tập về Lực Colomb \& Điện Trường}
+\section{Bài Tập về Lực Coulomb \& Điện Trường}
 
 \section{Vật Dẫn \& Điện Môi Trong Điện Trường}
 
