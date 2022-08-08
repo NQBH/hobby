@@ -127,7 +127,68 @@ $\forall$: ``với mọi'', $\exists$: ``tồn tại'' hoặc ``có 1'' (tồn t
 \section{Tập Hợp. Các Phép Toán Trên Tập Hợp}
 
 \subsection{Tập hợp}
+``Người ta còn minh họa tập hợp bằng 1 vòng kín, mỗi phần tử của tập hợp được biểu diễn bởi 1 chấm bên trong vòng kín, còn phần tử không thuộc tập hợp đó được biểu diễn bởi 1 chấm bên ngoài vòng kín. Cách minh họa tập hợp như vậy được gọi là biểu đồ Venn.'' -- \cite[p. 12]{SGK_Toan_10_Canh_Dieu_tap_1}
 
+``Tập hợp không chứa phần tử nào được gọi là tập hợp rỗng, ký hiệu là $\emptyset$. 1 tập hợp có thể không có phần tử nào, cũng có thể có 1 phần tử, có nhiều phần tử, có vô số phần tử. Khi tập hợp $C$ là tập hợp rỗng, ta viết $C = \emptyset$ \& không được viết là $C = \{\emptyset\}$.'' -- \cite[p. 13]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\subsection{Tập con \& tập hợp bằng nhau}
+
+\subsubsection{Tập con}
+
+\begin{dinhnghia}
+	Nếu mọi phần tử của tập hợp $A$ đều là phần tử của tập hợp $B$ thì ta nói $A$ là 1 \emph{tập con} của tập hợp $B$ \& viết là $A\subset B$. Ta còn đọc là $A$ chứa trong $B$.
+\end{dinhnghia}
+``\textit{Quy ước:} Tập hợp rỗng được coi là tập con của mọi tập hợp.'' ``$A\subset B\Leftrightarrow(\forall x,\ x\in A\Rightarrow x\in B)$. Khi $A\subset B$, ta cũng viết $B\supset A$ (đọc là $B$ chứa $A$). Nếu $A$ không phải là tập con của $B$, ta viết $A\not\subset B$.'' -- \cite[p. 13]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\begin{menhde}
+	$A\subset A$ với mọi tập hợp $A$. Nếu $A\subset B$ \& $B\subset C$ thì $A\subset C$.
+\end{menhde}
+Tính chất $((A\subset B)\land(B\subset C))\Rightarrow(A\subset C)$ được gọi là \textit{tính chất bắc cầu}.
+
+\subsubsection{Tập hợp bằng nhau}
+
+\begin{dinhnghia}
+	Khi $A\subset B$ \& $B\subset A$ thì ta nói 2 tập hợp $A$ \& $B$ \emph{bằng nhau}, viết là $A = B$.
+\end{dinhnghia}
+
+\subsection{Giao của 2 tập hợp}
+
+\begin{dinhnghia}[Giao của 2 tập hợp]
+	Tập hợp gồm tất cả các phần tử vừa thuộc $A$ vừa thuộc $B$ được gọi là \emph{giao} của $A$ \& $B$, ký hiệu $A\cap B$.
+\end{dinhnghia}
+``Vậy $A\cap B = \{x|x\in A\mbox{ \& } x\in B\}$.'' ``$x\in A\cap B$ khi \& chỉ khi $x\in A$ \& $x\in B$.'' -- \cite[p. 14]{SGK_Toan_10_Canh_Dieu_tap_1}, i.e., $(x\in A\cap B)\Leftrightarrow((x\in A)\land(x\in B))$.
+
+\subsection{Hợp của 2 tập hợp}
+
+\begin{dinhnghia}[Hợp của 2 tập hợp]
+	Tập hợp gồm các phần tử thuộc $A$ hoặc thuộc $B$ được gọi là \emph{hợp} của $A$ \& $B$, ký hiệu $A\cup B$.
+\end{dinhnghia}
+``Vậy $A\cup B = \{x|x\in A\mbox{ hoặc } x\in B\}$.'' $x\in A\cup B$ khi \& chỉ khi $x\in A$ \& $x\in B$.'' -- \cite[p. 15]{SGK_Toan_10_Canh_Dieu_tap_1}, i.e., $(x\in A\cup B)\Leftrightarrow((x\in A)\lor(x\in B))$.
+
+\begin{vidu}
+	Với tập hợp $\mathbb{Q}$ các số hũu tỷ \& tập hợp $I$ các số vô tỷ. $\mathbb{Q}\cap I = \emptyset$, $\mathbb{Q}\cup I = \mathbb{R}$.
+\end{vidu}
+
+\subsection{Phần bù. Hiệu của 2 tập hợp}
+``Tập hợp $\mathbb{Q}$ các số hữu tỷ là phần bù của tập hợp $I$ các số vô tỷ trong tập hợp  $\mathbb{R}$.'' -- \cite[p. 15]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\begin{dinhnghia}[Phần bù]
+	Cho tập hợp $A$ là tập con của tập hợp $B$. Tập hợp những phần tử $B$ mà không phải là phần tử của $A$ được gọi là \emph{phần bù} của $A$ trong $B$, ký hiệu $C_BA$.
+\end{dinhnghia}
+$B = A\cup C_BA$ \& $C_BA\cap A = \emptyset$, $\forall$ tập hợp $A,B$.
+
+\begin{dinhnghia}[Hiệu của 2 tập hợp]
+	Tập hợp gồm các phần tử thuộc $A$ nhưng không thuộc $B$ được gọi là \emph{hiệu} của $A$ \& $B$, ký hiệu $A\backslash B$.
+\end{dinhnghia}
+``Vậy $A\backslash B = \{x|x\in A\mbox{ \& } x\notin B\}$.'' ``$x\in A\backslash B$ khi \& chỉ khi $x\in A$ \& $x\notin B$.'' ``Nếu $B\subset A$ thì $A\backslash B = C_AB$.'' -- \cite[p. 16]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\subsection{Các tập hợp số}
+
+\subsubsection{Các tập hợp số đã học}
+``Ta đã biết $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{R}$ lần lượt là tập hợp số tự nhiên, tập hợp số nguyên, tập hợp số hữu tỷ, tập hợp số thực. Ta có quan hệ sau: $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}$.'' -- \cite[p. 17]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\subsubsection{1 số tập con thường dùng của tập hợp số thực}
+``$\mathbb{R}$: tập hợp số thực $(-\infty;+\infty)$. $\{x\in\mathbb{R}|a\le x\le b\}$: đoạn $[a;b]$. $\{x\in\mathbb{R}|a < x < b\}$: khoảng $(a;b)$. $\{x\in\mathbb{R}|x  > a\}$: khoảng $(a;+\infty)$. $\{x\in\mathbb{R}|x < b\}$: khoảng $(-\infty;b)$. $\{x\in\mathbb{R}|a\le x < b\}$: nửa khoảng $[a;b)$. $\{x\in\mathbb{R}|a < x\le b\}$: nửa khoảng $(a;b]$. $\{x\in\mathbb{R}|x\ge a\}$: nửa khoảng $[a;+\infty)$. $\{x\in\mathbb{R}|x\le b\}$: nửa khoảng $(-\infty;b]$. Ký hiệu $-\infty$ đọc là \textit{âm vô cực}, ký hiệu $+\infty$ đọc là \textit{dương vô cực}; $a$ \& $b$ được gọi là \textit{đầu mút} của các đoạn, khoảng, nửa khoảng. Ta cũng có thể biểu diễn tập hợp trên trục số bằng cách gạch bỏ phần không thuộc tập đó.'' -- \cite[p. 17]{SGK_Toan_10_Canh_Dieu_tap_1}
 
 %------------------------------------------------------------------------------%
 
