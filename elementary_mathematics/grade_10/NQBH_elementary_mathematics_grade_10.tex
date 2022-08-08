@@ -1,25 +1,37 @@
-\documentclass{article}
+\documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,enumitem}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Định nghĩa}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{theorem}{Định lý}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{remark}{Lưu ý}[section]
-\newtheorem{example}{Ví dụ}[section]
-\newtheorem{question}{Câu hỏi}[section]
-\newtheorem{problem}{Bài toán}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -30,455 +42,139 @@
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{Elementary Mathematics\texttt{/}Grade 10}
-\author{Nguyễn Quản Bá Hồng}
+\title{Some Topics in Elementary Mathematics\texttt{/}Grade 10}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
+\frontmatter
 \maketitle
-\begin{abstract}
-	Tóm tắt kiến thức Toán lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
-\end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
+\newpage
 
 %------------------------------------------------------------------------------%
 
-\section*{Principles\texttt{/}Nguyên Tắc}
-Về nguyên tắc cá nhân của tôi trong việc dạy \& học Toán Sơ Cấp, xem \href{https://github.com/NQBH/hobby/blob/master/elementary_math/principle/NQBH_elementary_math_principle.pdf}{GitHub\texttt{/}NQBH\texttt{/}elementary math\texttt{/}principle}.
+\mainmatter
+
+\chapter*{Preface}
+
+Tóm tắt kiến thức Toán lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
 
 %------------------------------------------------------------------------------%
 
-\section{Mệnh Đề \& Tập Hợp}
-\textbf{Nội dung.} ``$\ldots$ cung cấp những khái niệm \& ký hiệu logic thường dùng, củng cố \& mở rộng hiểu biết ban đầu về lý thuyết tập hợp đã được học ở các lớp dưới. Từ đó góp phần hình thành khả năng suy luận có lý, khả năng tiếp nhận, diễn đạt các vẫn đề 1 cách chính xác, tạo cơ sở để học tốt các nội dung toán học khác.'' -- \cite[p. 5]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\chapter{Mệnh Đề Toán học. Tập Hợp}
 
-\subsection{Mệnh Đề}
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Mệnh đề toán học, tập hợp \& các phép toán trên tập hợp}.
+\end{quotation}
 
-\subsubsection{Mệnh đề, mệnh đề chứa biến}
+\section{Mệnh Đề Toán Học}
 
-\paragraph{Mệnh đề.}
-\begin{definition}[Mệnh đề]
-	Những khẳng định có tính đúng hoặc sai là 1 \emph{mệnh đề logic} (gọi tắt là \emph{mệnh đề}).
-\end{definition}
-``Những câu không xác định được tính đúng sai không phải là mệnh đề.'' -- \cite[p. 6]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\subsection{Mệnh đề toán học}
 
-\begin{proposition}
-	Mỗi mệnh đề phải hoặc đúng hoặc sai. 1 mệnh đề không thể vừa đúng vừa sai.
-\end{proposition}
+\begin{dinhnghia}[Mệnh đề toán học]
+	1 mệnh đề khẳng định về 1 sự kiện trong toán học, gọi là \emph{mệnh đề toán học}.
+\end{dinhnghia}
+``Khi không sợ nhầm lẫn, ta thường gọi tắt mệnh đề toán học là \textit{mệnh đề}.'' -- \cite[p. 5]{SGK_Toan_10_Canh_Dieu_tap_1}
 
-\begin{remark}
-	``Người ta thường sử dụng các chữ cái $P,Q,R,\ldots$ để biểu thị các mệnh đề.'' -- \cite[p. 6]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
-``Thông thường, những câu nghi vấn, câu cảm thán, câu cầu khiến không phải là mệnh đề.'' -- \cite[p. 6]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\begin{menhde}
+	 Mỗi mệnh đề toán học phải hoặc đúng hoặc sai. 1 mệnh đề toán học không thể vừa đúng, vừa sai.
+\end{menhde}
 
-\begin{definition}[Mệnh đề toán học]
-	Những mệnh đề liên quan đến toán học được gọi là \emph{mệnh đề toán học}.
-\end{definition}
+\begin{dinhnghia}[Mệnh đề đúng\texttt{/}sai]
+	Khi mệnh đề toán học là đúng, ta gọi mệnh đề đó là 1 \textit{mệnh đề đúng}. Khi mệnh đề toán học là sai, ta gọi mệnh đề đó là 1 \textit{mệnh đề sai}.
+\end{dinhnghia}
 
-\paragraph{Mệnh đề chứa biến.} Câu $P(n)$ với $P(n)$ là 1 mệnh đề đúng hoặc sai với mỗi giá trị của $n$ được gọi là 1 \emph{mệnh đề chứa biến}.
+\subsection{Mệnh đề chứa biến}
 
-\subsubsection{Mệnh đề phủ định}
-``Để phủ định 1 mệnh đề $P$, người ta thường thêm\texttt{/}bớt từ ``không'' hoặc ``không phải'' vào trước vị ngữ của mệnh đề $P$. Ta ký hiệu mệnh đề phủ định của mệnh đề $P$ là $\overline{P}$.
+\begin{dinhnghia}[Mệnh đề chứa biến]
+	Với mỗi bộ giá trị cụ thể của bộ biến $(x_1,\ldots,x_n)$, $n\in\mathbb{N}^\star$, mệnh đề $P(x_1,\ldots,x_n)$ cho ta 1 mệnh đề toán học mà ta có thể khẳng định được tính đúng sai của mệnh đề đó. Khi đó, $P(x_1,\ldots,x_n)$ được gọi là \emph{mệnh đề chứa biến}.
+\end{dinhnghia}
+``Ta thường ký hiệu mệnh đề chứa biến $n$ là $P(n)$; mệnh đề chứa biến $x,y$ là $P(x,y)$; $\ldots$'' -- \cite[p. 6]{SGK_Toan_10_Canh_Dieu_tap_1}
 
-\begin{proposition}
-	Mệnh đề $P$ \& mệnh đề $\overline{P}$ là 2 phát biểu trái ngược nhau. Nếu $P$ đúng thì $\overline{P}$ sai, còn nếu $P$ sai thì $\overline{P}$ đúng.
-\end{proposition}
+\subsection{Phủ định của 1 mệnh đề}
 
-\subsubsection{Mệnh đề kéo theo, mệnh đề đảo}
+\begin{dinhnghia}[Mệnh đề phủ định]
+	Cho mệnh đề $P$. Mệnh đề ``Không phải $P$'' được gọi là \emph{mệnh đề phủ định} của mệnh đề $P$ \& ký hiệu là $\overline{P}$.
+\end{dinhnghia}
+``Mệnh đề $\overline{P}$ \textit{đúng} khi $P$ sai. Mệnh đề $\overline{P}$ \textit{sai} khi $P$ đúng.'' ``Để phủ định 1 mệnh đề, ta chỉ cần thêm\texttt{/}bớt từ ``không'' (hoặc ``không phải'') vào trước vị ngữ của mệnh đề đó.'' -- \cite[p. 7]{SGK_Toan_10_Canh_Dieu_tap_1}
 
-\paragraph{Mệnh đề kéo theo.}
-\begin{definition}[Mệnh đề kéo theo]
-	Mệnh đề ``Nếu $P$ thì $Q$'' được gọi là 1 \emph{mệnh đề kéo theo} \& ký hiệu là $P\Rightarrow Q$.
-\end{definition}
+\subsection{Mệnh đề kéo theo}
 
-\begin{definition}
-	Các định lý toán học là những mệnh đề đúng \& thường có dạng $P\Rightarrow Q$. Khi đó ta nói: $P$ là \emph{giả thiết} của định lý, $Q$ là \emph{kết luận} của định lý, hoặc ``$P$ là \emph{điều kiện đủ} để có $Q$'' hoặc ``$Q$ là \emph{điều kiện cần} để có $P$''.
-\end{definition}
+\begin{dinhnghia}[Mệnh đề kéo theo]
+	Cho 2 mệnh đề $P$ \& $Q$. Mệnh đề ``Nếu $P$ thì $Q$'' được gọi là \emph{mệnh đề kéo theo} \& ký hiệu là $P\Rightarrow Q$. mệnh đề $P\Rightarrow Q$ sai khi $P$ đúng, $Q$ sai \& đúng trong các trường hợp còn lại.
+\end{dinhnghia}
+``Tùy theo nội dung cụ thể, đôi khi người ta còn phát biểu mệnh đề $P\Rightarrow Q$ là ``$P$ kéo theo $Q$'' hay ``$P$ suy ra $Q$'' hay ``Vì $P$ nên $Q$'' $\ldots$'' ``Các định lý toán học là những mệnh đề đúng \& thường phát biểu ở dạng mệnh đề kéo theo $P\Rightarrow Q$. Khi đó ta nói: $P$ là \textit{giả thiết}, $Q$ là \textit{kết luận} của định lý, hay $P$ là \textit{điều kiện đủ} để có $Q$, hoặc $Q$ là \textit{điều kiện cần} để có $P$.'' -- \cite[p. 7]{SGK_Toan_10_Canh_Dieu_tap_1}
 
-\paragraph{Mệnh đề đảo.}
-\begin{definition}
-	Mệnh đề $Q\Rightarrow P$ được gọi là \emph{mệnh đề đảo} của mệnh đề $P\Rightarrow Q$.
-\end{definition}
+\subsection{Mệnh đề đảo. 2 mệnh đề tương đương}
 
-\begin{remark}
-	``Mệnh đề đảo của 1 mệnh đề đúng không nhất thiết là đúng.'' -- \cite[p. 9]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1} I.e., $(P\Rightarrow Q)\not\Leftrightarrow(Q\Rightarrow P)$.
-\end{remark}
-Dùng biểu đồ Venn để minh họa.
+\begin{dinhnghia}[Mệnh đề đảo, 2 mệnh đề tương đương]
+	Mệnh đề $Q\Rightarrow P$ được gọi là \emph{mệnh đề đảo} của mệnh đề $P\Rightarrow Q$. Nếu cả 2 mệnh đề $P\Rightarrow Q$ \& $Q\Rightarrow P$ đều đúng thì ta nói $P$ \& $Q$ là \emph{2 mệnh đề tương đương}, ký hiệu $P\Leftrightarrow Q$.
+\end{dinhnghia}
+``Mệnh đề $P\Leftrightarrow Q$ có thể phát biểu ở những dạng như sau: ``$P$ tương đương $Q$''; ``$P$ là điều kiện cần \& đủ để có $Q$''; ``$P$ khi \& chỉ khi $Q$''; ``$P$ nếu \& chỉ nếu $Q$''.'' -- \cite[p. 8]{SGK_Toan_10_Canh_Dieu_tap_1}
 
-\subsubsection{Mệnh đề tương đương}
+``Trong toán học, những câu khẳng định đúng phát biểu ở dạng ``$P\Leftrightarrow Q$'' cũng được coi là 1 mệnh đề toán học, gọi là \textit{mệnh đề tương đương}.'' -- \cite[p. 9]{SGK_Toan_10_Canh_Dieu_tap_1}
 
-\begin{definition}[Mệnh đề tương đương]
-	Mệnh đề ``$P$ nếu \& chỉ nếu $Q$'' được gọi là 1 \emph{mệnh đề tương đương} \& ký hiệu $P\Leftrightarrow Q$.
-\end{definition}
+\subsection{Ký hiệu $\forall$ \& $\exists$}
+$\forall$: ``với mọi'', $\exists$: ``tồn tại'' hoặc ``có 1'' (tồn tại 1) hoặc ``có ít nhất 1'' (tồn tại ít nhất 1). Phương pháp chứng minh 1 mệnh đề có ký hiệu ``$\forall$'', ``$\exists$'', là đúng hoặc sai.
 
-\begin{remark}
-	``Nếu cả 2 mệnh đề $P\Rightarrow Q$ \& $Q\Rightarrow P$ đều đúng thì mệnh đề tương đương $P\Leftrightarrow Q$ đúng. Khi đó ta nói ``$P$ \emph{tương đương} với $Q$'' hoặc ``$P$ là \emph{điều kiện cần \& đủ} để có $Q$'' hoặc ``$P$ khi \& chỉ khi $Q$''. -- \cite[p. 9]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}. I.e., $((P\Rightarrow Q)\land(Q\Rightarrow P))\Rightarrow(P\Leftrightarrow Q)$.
-\end{remark}
+\begin{menhde}
+	Cho mệnh đề ``$P(x)$, $x\in X$''. Phủ định của mệnh đề $\forall x\in X$, $P(x)$'' là mệnh đề ``$\exists x\in X$, $\overline{P(x)}$''. Phủ định của mệnh đề $\exists x\in X$, $P(x)$'' là mệnh đề ``$\forall x\in X$, $\overline{P(x)}$''.
+\end{menhde}
 
-\subsubsection{Mệnh đề có chứa ký hiệu $\forall,\exists$}
-Ký hiệu $\forall$ đọc là ``với mọi'', ký hiệu ``$\exists$ đọc là ``tồn tại''.
+\section{Tập Hợp. Các Phép Toán Trên Tập Hợp}
 
-``Logic mệnh đề lần đầu tiên được phát triển 1 cách có hệ thống bởi nhà triết học Hy Lạp Aristotle hơn 2300 năm trước \& được thảo luận bởi nhà toán học người Anh George Boole vào năm 1854 trong cuốn sách ``The Laws of Think''.'' -- \cite[p. 11]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\subsection{Tập hợp}
 
-\subsection{Tập Hợp \& Các Phép Toán Trên Tập Hợp}
-
-\subsubsection{Các khái niệm cơ bản về tập hợp}
-
-\paragraph{Tập hợp.} ``Có thể mô tả 1 tập hợp bằng 1 trong 2 cách sau:
-\begin{itemize}
-	\item \textit{Cách 1.} Liệt kê các phần tử của tập hợp;
-	\item \textit{Cách 2.} Chỉ ra tính chất đặc trưng cho các phần tử của tập hợp.
-\end{itemize}
-$a\in S$: phần tử $a$ thuộc tập hợp $S$. $a\notin S$: phần tử $a$ không thuộc tập hợp $S$.''\footnote{$S$ ở đây viết tắt của \textit{set}, i.e., tập hợp.} -- \cite[p. 13]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\begin{remark}
-	Số phần tử của tập hợp $S$ được ký hiệu là $n(S)$, hoặc $|S|$, $\#S$.
-\end{remark}
-
-\begin{definition}[Tập rỗng]
-	Tập hợp không chứa phần tử nào được gọi là \emph{tập rỗng}, ký hiệu là $\emptyset$.
-\end{definition}
-
-\paragraph{Tập hợp con.}
-\begin{definition}[Tập hợp con]
-	\label{def: subset}
-	Nếu mọi phần tử của tập hợp $T$ đều là phần tử của tập hợp $S$ thì ta nói $T$ là 1 \emph{tập hợp con} (\emph{tập con}) của $S$ \& viết là $T\subset S$ (đọc là $T$ \emph{chứa trong} $S$ hoặc $T$ là \emph{tập con} của $S$.)
-\end{definition}
-``Thay cho $T\subset S$ , ta còn viết $S\supset T$ (đọc là \textit{$S$ chứa $T$}). Ký hiệu $T\not\subset S$ để chỉ $T$ không là tập con của $S$.'' -- \cite[p. 14]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\begin{remark}
-	Từ định nghĩa \ref{def: subset}, $T$ là tập con của $S$ nếu mệnh đề sau đúng: $\forall x,\ x\in T\Rightarrow x\in S$. Quy ước tập rông là tập con của mọi tập hợp, i.e., $\emptyset\subset A$, $\forall$ tập hợp $A$.
-\end{remark}
-``Người ta thường minh họa 1 tập hợp bằng 1 hình phẳng được bao quanh bởi 1 đường kín, gọi là \textit{biểu đồ Venn}.''\footnote{\textsc{en}: \textit{Venn diagram}, đối tượng này đã được nhắc đến trong \cite{Thai_Anh_Dat_Ha_Loan_Nam_Quang_Toan_6_tap_1}.} -- \cite[p. 14]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\paragraph{2 Tập hợp bằng nhau.}
-\begin{definition}[2 tập hợp bằng nhau]
-	2 tập hợp $S$ \& $T$ được gọi là \emph{2 tập hợp bằng nhau} nếu mỗi phần tử của $T$ cũng là phần tử của tập hợp $S$ \& ngược lại. Ký hiệu là $S = T$.
-\end{definition}
-``Nếu $S\subset T$ \& $T\subset $ thì $S = T$.'' -- \cite[p. 14]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}. I.e., $((S\subset T)\land(T\subset S))\Rightarrow(S = T)$.
-
-\subsubsection{Các tập hợp số}
-
-\paragraph{Mối quan hệ giữa các tập hợp số.} \textit{Tập hợp các số tự nhiên} $\mathbb{N}\coloneqq\{0;1;2;3;\ldots\}$. \textit{Tập hợp các số nguyên} $\mathbb{Z}$ gồm các số tự nhiên \& các số nguyên âm: $\mathbb{Z}\coloneqq\{\ldots;-3;-2;-1;0;1;2;3;\ldots\}$. \textit{Tập hợp các số hữu tỷ} $\mathbb{Q}$ gồm các số viết được dưới dạng phân số $\frac{a}{b}$, với $a,b\in\mathbb{Z}$, $b\ne 0$, i.e., $\mathbb{Q}\coloneqq\left\{\frac{a}{b};a,b\in\mathbb{Z},\ b\ne 0\right\}$. Số hữu tỷ còn được biểu diễn dưới dạng số thập phân hữu hạn hoặc vô hạn tuần hoàn. \textit{Tập hợp các số thực $\mathbb{R}$} gồm các số hữu tỷ \& các số vô tỷ. Số vô tỷ là các số thập phân vô hạn không tuần hoàn.
-
-\begin{theorem}[Mối quan hệ giữa các tập số]
-	$\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}$.
-\end{theorem}
-
-\paragraph{Các tập con thường dùng của $\mathbb{R}$.} ``1 số tập con thường dùng của tập số thực $\mathbb{R}$: \textit{Khoảng} $(a,b)\coloneqq\{x\in\mathbb{R};a < x < b\}$, $(a,+\infty)\coloneqq\{x\in\mathbb{R};x > a\}$, $(-\infty,b)\coloneqq\{x\in\mathbb{R};x < b\}$, $(-\infty,+\infty)$, \textit{đoạn} $[a,b]\coloneqq\{x\in\mathbb{R};a\le x\le b\}$, \textit{nửa khoảng} $[a,b) = \{x\in\mathbb{R};a\le x < b\}$, $(a,b] = \{x\in\mathbb{R};a < x\le b\}$, $[a,+\infty)\coloneqq\{x\in\mathbb{R};x\ge a\}$, $(-\infty,b] = \{x\in\mathbb{R};x\le b\}$. Ký hiệu $+\infty$ đọc là \textit{dương vô cực}\texttt{/}\textit{dương vô cùng}. Ký hiệu $-\infty$ đọc là \textit{âm vô cực}\texttt{/}\textit{âm vô cùng}. $a,b$ được gọi là các \textit{đầu mút} của đoạn, khoảng hay nửa khoảng.
-
-\subsubsection{Các phép toán trên tập hợp}
-
-\paragraph{Giao của 2 tập hợp.}
-\begin{definition}[Giao của 2 tập hợp]
-	Tập hợp các phần tử thuộc cả 2 tập hợp $S$ \& $T$ gọi là \emph{giao của 2 tập hợp} $S$ \& $T$, ký hiệu là $S\cap T$. $S\cap T = \{x;x\in S\mbox{ \& } x\in T\}$.
-\end{definition}
-
-\paragraph{Hợp của 2 tập hợp.}
-\begin{definition}[Hợp của 2 tập hợp]
-	Tập hợp gồm các phần tử thuộc tập hợp $S$ hoặc thuộc tập hợp $T$ gọi là \emph{hợp của 2 tập hợp} $S$ \& $T$, ký hiệu là $S\cup T$. $S\cup T = \{x;x\in S\mbox{ hoặc } x\in T\}$.
-\end{definition}
-
-\paragraph{Hiệu của 2 tập hợp.}
-\begin{definition}[Hiệu của 2 tập hợp]
-	\emph{Hiệu} của 2 tập hợp $S$ \& $T$ là tập hợp gồm các phần tử thuộc $S$ nhưng không thuộc $T$, ký hiệu là $S\backslash T$. $S\backslash T = \{x;x\in S\mbox{ \& } x\notin T\}$. Nếu $T\subset S$ thì $S\backslash T$ được gọi là \emph{phần bù} của $T$ trong $S$, ký hiệu $C_ST$.
-\end{definition}
-
-\begin{remark}
-	$C_SS = \emptyset$.
-\end{remark}
-Dễ chứng minh: $n(A\cup B) = n(A) + n(B) - n(A\cap B)$.
 
 %------------------------------------------------------------------------------%
 
-\section{Bất Phương Trình \& Hệ Bất Phương Trình Bậc Nhất 2 Ẩn}
-\textbf{Nội dung.} ``Các bất phương trình bậc nhất 2 ẩn \& hệ bất phương trình bậc nhất 2 ẩn xuất hiện trong nhiều bài toán kinh tế, như là những ràng buộc trong các bài toán sản xuất, bài toán phân phối hàng hóa, $\ldots$'' ``$\ldots$ cung cấp cách biểu diễn miền nghiệm của các bất phương trình \& hệ bất phương trình bậc nhất 2 ẩn trên mặt phẳng tọa độ.'' -- \cite[p. 22]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\chapter{Bất Phương Trình \& Hệ Bất Phương Trình Bậc Nhất 2 Ẩn}
 
-\subsection{Bất Phương Trình Bậc Nhất 2 Ẩn}
+\section{Bất Phương Trình Bậc Nhất 2 Ẩn}
 
-\subsubsection{Bất phương trình bậc nhất 2 ẩn}
-
-\begin{definition}[Bất phương trình bậc nhất 2 ẩn]
-	\emph{Bất phương trình bậc nhất 2 ẩn} $x,y$ có dạng tổng quát là: $ax + by\le c$ ($ax + by\ge c$, $ax + by < c$, $ax + by > c$) trong đó $a,b,c$ là những số thực đã cho, $a$ \& $b$ không đồng thời bằng 0, $x$ \& $y$ là các \emph{ẩn số}.
-\end{definition}
-
-\begin{definition}[Nghiệm của bất phương trình bậc nhất 2 ẩn]
-	Cặp số $(x_0,y_0)$ được gọi là 1 \emph{nghiệm} của bất phương trình bậc nhất 2 ẩn $ax + by\le c$ nếu bất đẳng thức $ax_0 + by_0\le c$ đúng.
-\end{definition}
-
-\begin{remark}
-	``Bất phương trình bậc nhất 2 ẩn luôn có vô số nghiệm.'' -- \cite[p. 23]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
-
-\subsubsection{Biểu diễn miền nghiệm của bất phương trình bậc nhất 2 ẩn trên mặt phẳng tọa độ}
-
-\begin{definition}
-	Trong mặt phẳng tọa độ $Oxy$, tập hợp các điểm có tọa độ là nghiệm của bất phương trình $ax + by\le c$ được gọi là \emph{miền nghiệm} của bất phương trình đó.
-\end{definition}
-``Người ta chứng minh được rằng đường thẳng $d$ có phương trình $ax + by = c$ chia mặt phẳng tọa độ $Oxy$ thành 2 nửa mặt phẳng bờ $d$:
-\begin{itemize}
-	\item 1 nửa mặt phẳng (không kể bờ $d$) gồm các điểm có tọa độ $(x,y)$ thỏa mãn $ax + by > c$;
-	\item Nửa mặt phẳng còn lại (không kể bờ $d$) gồm các điểm có tọa độ $(x,y)$ thỏa mãn $ax + by < c$.
-\end{itemize}
-Bờ $d$ gồm các điểm có tọa độ $(x,y)$ thỏa mãn $ax + by = c$.'' -- \cite[p. 24]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-``Cách biểu diễn miền nghiệm của bất phương trình bậc nhất 2 ẩn $ax + by\le c$.
-\begin{itemize}
-	\item Vẽ đường thẳng $d:ax + by = c$ trên mặt phẳng tọa độ $Oxy$.
-	\item Lấy 1 điểm $M_0(x_0,y_0)$ không thuộc $d$.
-	\item Tính $ax_0 + by_0$ \& so sánh với $c$.
-	\item Nếu $ax_0 + by_0 < c$ thì nửa mặt phẳng bờ $d$ chứa $M_0$ là miền nghiệm của bất phương trình. Nếu $ax_0 + by_0 > c$ thì nửa mặt phẳng bờ $d$ không chứa $M_0$ là miền nghiệm của bất phương trình.
-\end{itemize}
-Nếu $c\ne 0$, ta thường chọn $M_0$ chính là gốc tọa độ $(0,0)$. Nếu $c = 0$, ta thường chọn $M_0$ có tọa độ $(1,0)$ hoặc $(0,1)$.'' -- \cite[p. 24]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\begin{remark}
-	``Miền nghiệm của bất phương trình $ax + by < c$ là miền nghiệm của bất phương trình $ax + by\le c$ bỏ đi đường thẳng $ax + by = c$ \& biểu diễn đường thẳng bằng nét đứt.'' -- \cite[p. 24]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
-
-\subsection{Hệ Bất Phương Trình Bậc Nhất 2 Ẩn}
-
-\subsubsection{Hệ bất phương trình bậc nhất 2 ẩn}
-
-\begin{definition}[Hệ bất phương trình bậc nhất 2 ẩn, nghiệm của hệ bất phương trình bậc nhất 2 ẩn]
-	\emph{Hệ bất phương trình bậc nhất 2 ẩn} là 1 hệ gồm 2 hay nhiều bất phương trình bậc nhất 2 ẩn. Cặp số $(x_0,y_0)$ là \emph{nghiệm} của 1 hệ bất phương trình bậc nhất 2 ẩn khi $(x_0,y_0)$ đồng thời là nghiệm của tất cả các bất phương trình trong hệ đó.
-\end{definition}
-
-\subsubsection{Biểu diễn miền nghiệm của hệ bất phương trình bậc nhất 2 ẩn trên mặt phẳng tọa độ}
-``Phương trình của truc $Ox$ là $y = 0$ \& phương trình của trục $Oy$ là $x = 0$.'' -- \cite[p. 27]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\begin{definition}[Miền nghiệm của hệ bất phương trình bậc nhất 2 ẩn]
-	 Trong mặt phẳng tọa độ, tập hợp các điểm có tọa độ là nghiệm của hệ bất phương trình bậc nhất 2 ẩn là \emph{miền nghiệm} của hệ bất phương trình đó. \emph{Miền nghiệm} của hệ là giao các miền nghiệm của các bất phương trình trong hệ.
-\end{definition}
-``Cách xác định miền nghiệm của 1 hệ bất phương trình bậc nhất 2 ẩn:
-\begin{itemize}
-	\item Trên cùng 1 mặt phẳng tọa độ, xác định miền nghiệm của mỗi bất phương trình bậc nhất 2 ẩn trong hệ \& gạch bỏ miền còn lại.
-	\item Miền không bị gạch là miền nghiệm của hệ bất phương trình đã cho.'' -- \cite[p. 28]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{itemize}
-
-\subsubsection{Ứng dụng của hệ bất phương trình bậc nhất 2 ẩn}
-
-\begin{remark}
-	``Tổng quát, người ta chứng minh được rằng giá trị lớn nhất\emph{\texttt{/}}nhỏ nhất của biểu thức $F(x,y) = ax + by$, với $(x,y)$ là tọa độ các điểm thuộc miền đa giác $A_1A_2\ldots A_n$, i.e., các điểm nằm bên trong hay nằm trên các cạnh của đa giác, đạt được tại 1 trong các đỉnh của đa giác đó.'' -- \cite[p. 29]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
+\section{Hệ Bất Phương Trình Bậc Nhất 2 Ẩn}
 
 %------------------------------------------------------------------------------%
 
-\section{Hệ Thức Lượng Trong Tam Giác}
-``Lượng giác được phát triển từ nhu cầu tính toán góc \& khoảng cách trong rất nhiều lĩnh vực như thiên văn học, lập bản đồ, bản vẽ thiết kế, khảo sát \& tìm tầm bắn của pháo binh.'' -- \cite[p. 33]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\chapter{Hàm Số \& Đồ Thị}
 
-\subsection{Giá Trị Lượng Giác của 1 Góc $\in[0^\circ,180^\circ]$}
+\section{Hàm Số \& Đồ Thị}
 
-\subsubsection{Giá trị lượng giác của 1 góc}
-``Trong mặt phẳng tọa độ $Oxy$, nửa đường tròn tâm $O$, bán kính $R = 1$ nằm phía trên trục hoành được gọi là \textit{nửa đường tròn đơn vị}. Cho trước 1 góc $\alpha\in[0^\circ,180^\circ]$. Khi đó, có duy nhất điểm $M(x_0,y_0)$ trên nửa đường tròn đơn vị nói trên để $\widehat{xOM} = \alpha$.'' [$\ldots$] ``Mở rộng khái niệm tỷ số lượng giác của 1 góc nhọn cho 1 góc bất kỳ $\in[0^\circ,180^\circ]$, ta có định nghĩa sau: Với mỗi góc $\alpha\in[0^\circ,180^\circ]$, gọi $M(x_0,y_0)$ là điểm trên nửa đường tròn đơn vị sao cho $\widehat{xOM} = \alpha$. Khi đó:
-\begin{itemize}
-	\item \textit{sin}\footnote{Ở đây, \textit{sin} là viết tắt của \textit{sine} trong Toán học, i.e.,
-		
-		 \textbf{sin} [abbr.] (\textit{mathematics}) (in writing) sine.
-		 
-		 Cần phân biệt $\sin$ này với từ \textit{sin} trong tiếng Anh:
-	
-	\textbf{sin} [n] \textbf{1.} [countable] a crime against God or against a religious or moral law; \textbf{2.} [uncountable] the act of breaking a religious or moral law.} của góc $\alpha$ là tung độ $y_0$ của điểm $M$, được ký hiệu là $\sin\alpha$;
-	\item \textit{côsin} của góc $\alpha$ là hoành độ $x_0$ của điểm $M$, được ký hiệu là $\cos\alpha$;
-	\item Khi $\alpha\ne 90^\circ$ (hay là $x_0\ne 0$), \textit{tang} của $\alpha$ là $\frac{y_0}{x_0}$, được ký hiệu là $\tan\alpha$;
-	\item Khi $\alpha\ne 0^\circ$ \& $\alpha\ne 180^\circ$ (hay là $y_0\ne 0$), \textit{côtang} của $\alpha$ là $\frac{x_0}{y_0}$, được ký hiệu là $\cot\alpha$.
-\end{itemize}
-Từ định nghĩa trên, ta có:
-\begin{align*}
-	\tan\alpha = \frac{\sin\alpha}{\cos\alpha},\ \cot\alpha = \frac{\cos\alpha}{\sin\alpha}\ (\alpha\ne 0^\circ,\,\alpha\ne 180^\circ),\ \tan\alpha = \frac{1}{\cot\alpha}\ (\alpha\notin\{0^\circ,90^\circ,180^\circ\}).
-\end{align*}
-Sau đây là bảng giá trị lượng giác (GTLG) của 1 số góc đặc biệt:
+\section{Hàm Số Bậc 2. Đồ Thị Hàm Số Bậc 2 \& Ứng Dụng}
 
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-		\hline
-		& $0^\circ$ & $30^\circ$ & $45^\circ$ & $60^\circ$ & $90^\circ$ & $120^\circ$ & $135^\circ$ & $150^\circ$ & $180^\circ$ \\
-		\hline
-		$\sin\alpha$ & 0 & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & 1 & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 \\
-		\hline
-		$\cos\alpha$ & 1 & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 & $-\frac{1}{2}$ & $-\frac{\sqrt{2}}{2}$ & $-\frac{\sqrt{3}}{2}$ & $-1$ \\
-		\hline
-		$\tan\alpha$ & 0 & $\frac{\sqrt{3}}{3}$ & 1 & $\sqrt{3}$ & $||$ & $-\sqrt{3}$ & $-1$ & $-\frac{\sqrt{3}}{3}$ & 0 \\
-		\hline
-		$\cot\alpha$ & $||$ & $\sqrt{3}$ & 1 & $\frac{\sqrt{3}}{3}$ & 0 & $-\frac{\sqrt{3}}{3}$ & $-1$ & $-\sqrt{3}$ & $||$ \\
-		\hline
-	\end{tabular}
-\end{table}
-Trong bảng, ký hiệu $||$ chỉ giá trị lượng giác tương ứng không xác định.'' -- \cite[p. 34]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\section{Dấu của Tam Thức Bậc 2}
 
-``Ta có thể sử dụng máy tính cầm tay để tính (đúng\texttt{/}gần đúng) các giá trị lượng giác của 1 góc \& tính góc khi biết giá trị lượng giác của góc đó. E.g., với 1 loại máy tính cầm tay, sau khi mở máy ta bấm phím \fbox{\texttt{Shift}} \fbox{\texttt{MODE}} (SETUP) rồi bấm phím \fbox{\texttt{3}} để chọn đơn vị đo góc là ``độ'' (\texttt{3: Deg}\footnote{\textbf{deg} [abbr.] degree.}). Sau đó tính giá trị lượng giác của góc hoặc tính góc khi biết giá trị lượng giác của góc đó. [$\ldots$]'' Xem ví dụ \& thao tác bấm phím ở \cite[p. 35]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}.
+\section{Bất Phương Trình Bậc 2 1 Ẩn}
 
-\begin{remark}
-	``Khi tìm $x$ biết $\sin x$, máy tính chỉ đưa ra giá trị $x\le 90^\circ$. Muốn tìm $x$ khi biết $\cos x$, $\tan x$, ta cũng làm tương tự như trên, chỉ thay phím \fbox{\texttt{sin}} tương ứng bởi phím \fbox{\texttt{cos}}, \fbox{\texttt{tan}}.'' -- \cite[p. 35]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
-
-\subsubsection{Mối quan hệ giữa các giá trị lượng giác của 2 góc bù nhau}
-
-\begin{proposition}
-	Đối với 2 góc bù nhau, $\alpha\in[0^\circ,180^\circ]$ \& $180^\circ - \alpha$, ta có: $\sin(180^\circ - \alpha) = \sin\alpha$, $\cos(180^\circ - \alpha) = -\cos\alpha$, $\tan(180^\circ - \alpha) = -\tan\alpha$, $(\alpha\ne 90^\circ$), $\cot(180^\circ - \alpha) = -\cot\alpha$ ($\alpha\in(0^\circ,180^\circ)$).
-\end{proposition}
-``2 góc bù nhau có sin bằng nhau; có côsin, tang, côtang đối nhau. 2 góc phụ nhau có sin góc này bằng côsin góc kia, tang góc này bằng côtang góc kia.'' -- \cite[p. 36]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\subsection{Hệ Thức Lượng trong Tam Giác}
-
-\subsubsection{Định Lý Côsin}
-
-\begin{question}
-	``Có hay không, 1 kiểu định lý Pythagore cho tam giác tùy ý?'' -- \cite[p. 38]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{question}
-``Đối với tam giác $ABC$, ta thường ký hiệu $A,B,C$ là các \textit{góc} của tam giác tại đỉnh tương ứng; $a,b,c$ tương ứng là độ dài của các cạnh đối diện với đỉnh $A,B,C$; $p$ (abbr., perimeter) là \textit{nửa chu vi}; $S$ là \textit{diện tích}; $R,r$ tương ứng là bán kính đường tròn ngoại tiếp, nội tiếp tam giác.'' -- \cite[p. 38]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\begin{theorem}[Cosin theorem]
-	Với tam giác $ABC$:
-	\begin{align*}
-		a^2 = b^2 + c^2 - 2bc\cos A,\ b^2 = c^2 + a^2 - 2ca\cos B,\ c^2 = a^2 + b^2 - 2ab\cos C.
-	\end{align*}
-\end{theorem}
-Định lý Pythagore là 1 trường hợp đặc biệt của Định lý côsin. Thật vậy, w.l.o.g., giả sử $A = 90^\circ$, đẳng thức đầu tiên của định lý cosin trở thành $a^2 = b^2 + c^2 - 2bc\cos 90^\circ = b^2 + c^2$, i.e., định lý Pythagore.
-
-\begin{corollary}
-	Với tam giác $ABC$,
-	\begin{align*}
-		\cos A = \frac{b^2 + c^2 - a^2}{2bc},\ \cos B = \frac{c^2 + a^2 - b^2}{2ca},\ \cos C = \frac{a^2 + b^2 - c^2}{2ab}.
-	\end{align*}
-\end{corollary}
-
-\subsubsection{Định lý sin}
-
-\begin{theorem}[Sin theorem]
-	Với tam giác $ABC$:
-	\begin{align*}
-		\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R. 
-	\end{align*}
-\end{theorem}
-
-\subsubsection{Giải tam giác \& ứng dụng thực tế}
-
-\begin{definition}[Giải tam giác]
-	Việc tính độ dài các cạnh \& số đo các góc của 1 tam giác khi biết 1 số yếu tố của tam giác đó được gọi là \emph{giải tam giác}.
-\end{definition}
-
-\begin{remark}
-	``Áp dụng các Định lý côsin, sin \& sử dụng máy tính cầm tay, ta có thể tinh (gần đúng) các cạnh \& các góc của 1 tam giác trong các trường hợp sau: (i) Biết 2 cạnh \& góc xen giữa; (ii) Biết 3 cạnh; (iii) Biết 1 cạnh \& 2 góc kề.
-\end{remark}
-
-\subsubsection{Công thức tính diện tích tam giác}
-
-\begin{question}
-	``Ta đã biết tính diện tích 1 tam giác theo chiều cao \& độ dài cạnh đáy tương ứng. Liệu còn công thức nào khác để tính diện tích tam giác hay không?'' -- \cite[p. 41]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{question}
-
-\begin{theorem}[Công thức tính diện tích tam giác]
-	 Diện tích tam giác $ABC$:
-	 \begin{align*}
-	 	S = pr = \frac{(a + b + c)r}{2} = \frac{1}{2}bc\sin A = \frac{1}{2}ca\sin B = \frac{1}{2}ab\sin C = \frac{abc}{4R}.
-	 \end{align*}
-\end{theorem}
-Trong đó 2 đẳng thức đầu tiên nghĩa là: Diện tích của 1 tam giác bằng tích nửa chu vi \& bán kính đường tròn nội tiếp của tam giác đó.
-
-\begin{question}
-	``Ta đã biết tính $\cos A$ theo độ dài các cạnh của tam giác $ABC$. Liệu $\sin A$ \& diện tích $S$ có tính được theo độ dài các cạnh của tam giác $ABC$ hay không?
-\end{question}
-
-\begin{theorem}[Heron formula]
-	Với tam giác $ABC$, $S = \sqrt{p(p - a)(p - b)(p - c)}$.
-\end{theorem}
-``Hướng S$\alpha^\circ$E là hướng tạo với hướng nam góc $\alpha^\circ$ \& tạo với hướng đông góc $90^\circ - \alpha^\circ$. Các hướng S$\alpha^\circ$W, N$\alpha^\circ$E, N$\alpha^\circ$W cũng được định nghĩa 1 cách tương tự. N (North): hướng bắc, S (South): hướng nam, W (West): hướng tây, E (East): hướng đông.'' -- \cite[p. 42]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-``Heron (Heron of Alexandria) là 1 nhà phát minh, nhà toán học Hy Lạp, sống vào khoảng thế kỷ I. Mặc dù cỗ máy với động cơ hơi nước đầu tiên trên thế giới ra đời ở thế kỷ XVIII -- 1 sự kiện quan trọng góp phần tạo nên cuộc cách mạng công nghiệp lần thứ nhất, nhưng chính Heron là người đầu tiên mô tả 1 mô hình đơn giản cho phép biến hơi nước thành chuyển động quay. Trong toán học, Heron mô tả cách tính diện tích của các đa giác đều từ 3--12 cạnh, diện tích 1 số mặt \& thể tích 1 số hình trong không gian.'' -- \cite[p. 43]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
+\section{2 Dạng Phương Trình Quy về Phương Trình Bậc 2}
 
 %------------------------------------------------------------------------------%
 
-\section{Vector}
-``1 số đại lượng như lực, vận tốc cũng được đặc trưng bởi 2 yếu tố là độ lớn \& hướng.''
+\chapter{Hệ Thức Lượng Trong Tam Giác. Vector}
 
-\noindent\textbf{Nội dung.} ``\ldots xây dựng 1 đối tượng toán học, được gọi là \textit{vector}, mà ta có thể dùng nó để biểu diễn các đại lượng nói trên. Vector còn được sử dụng để xây dựng các khái niệm toán học, là công cụ để giải quyết nhiều bài toán \& góp phần vào việc hình thành \& phát triển năng lực tư duy tuyến tính\footnote{NQBH: ``Năng lực tư duy tuyến tính'' là gì? Có khái niệm ``Năng lực tư duy phi tuyến'' không? Nếu có thì sự khác biệt mấu chốt giữa chúng là gì? Có lẽ đây là những khái niệm cơ bản trong chuyên ngành Giáo dục (Education) mà tôi không biết. Sẽ bổ sung sau ở đây nếu tôi quan tâm.} cho người học.''
+\section{Giá Trị Lượng Giác của 1 Góc$\in[0^\circ;180^\circ]$. Định Lý Côsin \& Định Lý Sin Trong Tam Giác}
 
-\begin{remark}
-	Về phương diện nghiên cứu Toán Cao Cấp, tôi vẫn \& phải sử dụng vector rất rất nhiều, bởi vì các chuyên ngành chính của tôi là Phương Trình Vi Phân Đạo Hàm Riêng\emph{\texttt{/}}Partial Differential Equations (abbr., PDEs), \& Toán Lý\emph{\texttt{/}}Mathematical Physics, đặc biệt là Cơ Học Chất Lỏng (Tính Toán)\emph{\texttt{/}}(Computational) Fluid Dynamics (also, Hydrodynamics). Các đại lượng vật lý mà tôi phải sử dụng vector để mô tả là vận tốc (velocity) ${\bf u}$ của dòng chất lỏng (e.g., nước, khí), độ xoáy (vorticity) $\boldsymbol{\omega}$, etc.
-	
-	Hơn nữa, trong Toán Cao Cấp, thay vì sử dụng ký hiệu mũi tên $\vec{u}$ như các nhà Vật Lý (physicists), chuyên gia Cơ học, \& các kỹ sư (engineers) sử dụng, đa số các nhà Toán học (mathematicians) thường dùng ký hiệu in đậm ${\bf u}$t để ám chỉ vector.
-\end{remark}
+\section{Giải Tam Giác}
 
-\subsection{Các Khái Niệm Mở Đầu}
+\section{Khái Niệm Vector}
 
-\begin{question}
-	``Nhiệt độ \& gió là 2 yếu tố luôn cùng được đề cập trong các bản tin dự báo thời tiết. Tuy nhiên, nhiêt độ là đại lượng chỉ có độ lớn, còn gió có cả hướng \& độ lớn. Với 1 đơn vị đo, ta có thể dùng số để biểu diễn nhiêt độ. Đối với các đại lượng gồm hướng \& độ lớn như vận tốc gió thì sao? Ta có thể dùng đối tượng toán học nào để biểu diễn chúng?''
-\end{question}
+\section{Tổng \& Hiệu của 2 Vector}
 
-\subsubsection{Khái niệm vector}
+\section{Tích của 1 Số với 1 Vector}
 
-\begin{definition}[Vector, độ dài của vector]
-	\emph{Vector} là 1 đoạn thẳng có hướng, i.e., trong 2 điểm mút của đoạn thẳng, đã chỉ rõ điểm đầu, điểm cuối. \emph{Độ dài của vector} là khoảng cách giữa điểm đầu \& điểm cuối của vector đó.
-\end{definition}
-
-\begin{remark}
-	Vector có điểm đầu $A$ \& điểm cuối $B$ được ký hiệu là $\vec{AB}$, đọc là \emph{vector $AB$}. Để vẽ 1 vector, ta vẽ đoạn thẳng nối điểm đầu \& điểm cuối của nó, rồi đánh dấu mũi tên ở điểm cuối. Vector còn được ký hiệu là $\vec{a},\vec{b},\vec{x},\vec{y},\ldots$. Độ dài của vector $\overrightarrow{AB},\vec{a}$ tương ứng được ký hiệu là $|\overrightarrow{AB}|$, $|\vec{a}|$.
-\end{remark}
-
-\subsubsection{2 Vector cùng phương, cùng hướng, bằng nhau}
-
-\begin{definition}[Giá của vector, 2 vector cùng phương]
-	Đường thẳng đi qua điểm đầu \& điểm cuối của 1 vector được gọi là \emph{giá} của vector đó. 2 vector được gọi là \emph{cùng phương} nếu chúng có giá song song hoặc trùng nhau.
-\end{definition}
-``Đối với 2 vector cùng phương thì chúng \textit{cùng hướng} hoặc \textit{ngược hướng}. Chỉ khi 2 vector cùng phương, ta mới nói tới chúng cùng hướng hay ngược hướng.'' -- \cite[p. 48]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-
-\begin{definition}
-	2 vector $\vec{a}$ \& $\vec{b}$ được gọi là \emph{bằng nhau}, ký hiệu $\vec{a} = \vec{b}$, nếu chúng có cùng độ dài \& cùng hướng.
-\end{definition}
-
-\begin{remark}
-	``Ta cũng xét các vector có điểm đầu \& điểm cuối trùng nhau (e.g., $\overrightarrow{AA},\overrightarrow{BB}$), được gọi là các \emph{vector-không}. Ta quy ước vector-không có độ dài bằng 0, cùng hướng (do đó cùng phương) với mọi vector. Các vector-không có cùng độ dài \& cùng hướng nên bằng nhau \& được ký hiệu chung là $\vec{0}$. Với mỗi điểm $O$ \& vector $\vec{a}$ cho trước, có duy nhất điểm $A$ sao cho $\overrightarrow{OA} = \vec{a}$.'' -- \cite[p. 48]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
-
-\begin{remark}
-	``3 điểm $A,B,C$ thẳng hàng khi \& chỉ khi $\overrightarrow{AB},\overrightarrow{BC}$ cùng phương.'' ``Ta có thể dùng ngôn ngữ vector để biểu thị 1 số quan hệ hình học.'' -- \cite[p. 49]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
-
-\begin{remark}
-	``Ta có thể dùng vector để biểu diễn các đại lượng như lực, vận tốc, gia tốc. Hướng của vector chỉ hướng của đại lượng, độ dài của vector thể hiện cho độ lớn của đại lượng \& được lấy tỷ lệ với độ lớn của đại lượng.'' -- \cite[p. 49]{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_1}
-\end{remark}
-
-\subsection{Tổng \& Hiệu của 2 Vector}
-
-%------------------------------------------------------------------------------%
-
-\section{Các Số Đặc Trưng của Mẫu Số Liệu Không Ghép Nhóm}
-
-%------------------------------------------------------------------------------%
-
-\section*{Hoạt Động Thực Hành \& Trải Nghiệm}
-
-%------------------------------------------------------------------------------%
-
-\section{Hàm Số, Đồ thị \& Ứng Dụng}
-\cite{Khoai_Anh_Tan_Thang_Anh_Cuong_Duong_Dang_Ha_Hanh_Hong_Son_Tuan_Vuong_Toan_10_tap_2}
-
-%------------------------------------------------------------------------------%
-
-\section{Phương Pháp Tọa Độ Trong Mặt Phẳng}
-
-%------------------------------------------------------------------------------%
-
-\section{Đại Số Tổ Hợp}
-
-%------------------------------------------------------------------------------%
-
-\section{Tính Xác Suất Theo Định Nghĩa Cổ Điển}
-
-%------------------------------------------------------------------------------%
-
-\section*{Hoạt Động Thực Hành \& Trải Nghiệm}
+\section{Tích Vô Hướng của 2 Vector}
 
 %------------------------------------------------------------------------------%
 
 \begin{thebibliography}{99}
-	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/NQBH_elementary_mathematics.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
+	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics/NQBH_some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
 \end{thebibliography}
 
 %------------------------------------------------------------------------------%
 
 \printbibliography[heading=bibintoc]
-	
+
 \end{document}
