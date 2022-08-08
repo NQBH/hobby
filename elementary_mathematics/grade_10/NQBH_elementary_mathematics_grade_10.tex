@@ -194,9 +194,79 @@ $B = A\cup C_BA$ \& $C_BA\cap A = \emptyset$, $\forall$ tập hợp $A,B$.
 
 \chapter{Bất Phương Trình \& Hệ Bất Phương Trình Bậc Nhất 2 Ẩn}
 
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Bất phương trình bậc nhất 2 ẩn; hệ bất phương trình bậc nhất 2 ẩn \& ứng dụng của chúng vào bài toán thực tiễn}.
+\end{quotation}
+
 \section{Bất Phương Trình Bậc Nhất 2 Ẩn}
 
+\subsection{Bất phương trình bậc nhất 2 ẩn}
+
+\begin{dinhnghia}[Bất phương trình bậc nhất 2 ẩn]
+	\emph{Bất phương trình bậc nhất 2 ẩn $x,y$} là bất phương trình có 1 trong các dạng sau: $ax + by < c$, $ax + by > c$, $ax + by\le c$, $ax + by\ge c$, trong đó $a,b,c$ là những số cho trước với $a,b$ không đồng thời bằng $0$, $x$ \& $y$ là các ẩn.
+	
+	Cho bất phương trình bậc nhất 2 ẩn $ax + by < c$. Mỗi cặp số $(x_0;y_0)$ sao cho $ax_0 + by_0 < c\ (\star)$  được gọi là 1 \emph{nghiệm} của bất phương trình $(\star)$. Trong mặt phẳng tọa độ $Oxy$, tập hợp các điểm có tọa độ là nghiệm của bất phương trình $(\star)$ được gọi là \emph{miền nghiệm} của bất phương trình đó.
+\end{dinhnghia}
+``Nghiệm \& miền nghiệm của các bất phương trình dạng $ax + by > c$, $ax + by\le c$ \& $ax + by\ge c$ được định nghĩa tương tự.'' -- \cite[p. 21]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\subsection{Biểu diễn miền nghiệm của bất phương trình bậc nhất 2 ẩn}
+
+\subsubsection{Mô tả miền nghiệm của bất phương trình bậc nhất 2 ẩn}
+``Người ta chứng minh được định lý sau: 
+
+\begin{dinhly}
+	Trong mặt phẳng tọa độ $Oxy$, phương trình $ax + by = c$ (với $a$ \& $b$ không đồng thời bằng $0$) xác định 1 đường thẳng $d$ như sau:
+	\begin{itemize}
+		\item $d$ có phương trình là $x = \frac{c}{a}$ nếu $b = 0$;
+		\item $d$ có phương trình là $y = -\frac{a}{b}x + \frac{c}{b}$ nếu $b\ne 0$.
+	\end{itemize}
+\end{dinhly}
+Ngoài ra, người ta cũng chứng minh được định lý sau:
+
+\begin{dinhly}
+	Trong mặt phẳng tọa độ $Oxy$, đường thẳng $d:ax + by = c$ chia mặt phẳng thành 2 nửa mặt phẳng. 1 trong 2 nửa mặt phẳng (không kể $d$) là \emph{miền nghiệm} của bất phương trình $ax + by < c$, nửa mặt phẳng còn lại (không kể $d$) là \emph{miền nghiệm} của bất phương trình $ax + by > c$.
+\end{dinhly}
+Đối với bất phương trình dạng $ax + by\le c$ hoặc $ax + by\ge c$ thì miền nghiệm là nửa mặt phẳng kể cả đường thẳng $d$.'' -- \cite[p. 22]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\subsubsection{Biểu diễn miền nghiệm của bất phương trình bậc nhất 2 ẩn}
+``Quy tắc thực hành biểu diễn miền nghiệm của bất phương trình bậc nhất 2 ẩn như sau:
+
+\begin{tcolorbox}
+	Các bước biểu diễn miền nghiệm của bất phương trình $ax + by < c$ trong mặt phẳng tọa độ $Oxy$:
+	\begin{enumerate}
+		\item Vẽ đường thẳng $d:ax + by = c$. Đường thẳng $d$ chia mặt phẳng tọa độ thành 2 nửa mặt phẳng.
+		\item Lấy 1 điểm $M(x_0;y_0)$ không nằm trên $d$ (thường lấy gốc tọa độ $O$ nếu $c\ne 0$). Tính $ax_0 + by_0$ \& so sánh với $c$.
+		\item Kết luận:
+		\begin{itemize}
+			\item Nếu $ax_0 + by_0 < c$ thì nửa mặt phẳng (không kể $d$) chứa điểm $M$ là miền nghiệm của bất phương trình $ax + by < c$.
+			\item Nếu $ax_0 + by_0 > c$ thì nửa mặt phẳng (không kể $d$) không chứa điểm $M$ là miền nghiệm của bất phương trình $ax + by < c$.
+		\end{itemize}
+	\end{enumerate}
+\end{tcolorbox}
+Thông thường khi sử dụng phần mềm toán học để biểu diễn miền nghiệm của bất phương trình bậc nhất 2 ẩn, miền nghiệm của bất phương trình đó được tô màu.'' --\cite[pp. 23--24]{SGK_Toan_10_Canh_Dieu_tap_1}
+
 \section{Hệ Bất Phương Trình Bậc Nhất 2 Ẩn}
+
+\subsection{Hệ bất phương trình bậc nhất 2 ẩn}
+
+\begin{dinhnghia}[Hệ bất phương trình bậc nhất 2 ẩn]
+	\emph{Hệ bất phương trình bậc nhất 2 ẩn $x,y$} là 1 hệ gồm 1 số bất phương trình bậc nhất 2 ẩn $x,y$. Mỗi nghiệm chung của các bất phương trình trong hệ được gọi là 1 \emph{nghiệm} của hệ bất phương trình đó.
+\end{dinhnghia}
+
+\subsection{Biểu diễn miền nghiệm của hệ bất phương trình bậc nhất 2 ẩn}
+``Cũng như bất phương trình bậc nhất 2 ẩn, ta có thể biểu diễn miền nghiệm của hệ bất phương trình bậc nhất 2 ẩn trên mặt phẳng tọa độ.'' --\cite[p. 26]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\begin{dinhnghia}[Miền nghiệm của hệ bất phương trình bậc nhất 2 ẩn]
+	\emph{Miền nghiệm} của hệ bất phương trình là giao các miền nghiệm của các bất phương trình trong hệ.
+\end{dinhnghia}
+
+\begin{tcolorbox}
+	``Để biểu diễn miền nghiệm của hệ bất phương trình bậc nhất 2 ẩn, ta làm như sau:
+	\begin{itemize}
+		\item Trong cùng mặt phẳng tọa độ, biểu diễn miền nghiệm của mỗi bất phương trình trong hệ bằng cách gạch bỏ phần không thuộc miền nghiệm của nó.
+		\item Phần không bị gạch là miền nghiệm cần tìm.'' --\cite[p. 27]{SGK_Toan_10_Canh_Dieu_tap_1}
+	\end{itemize}
+\end{tcolorbox}
 
 %------------------------------------------------------------------------------%
 
