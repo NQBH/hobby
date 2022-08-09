@@ -16,6 +16,7 @@
 \newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{dinhluat}{Định luật}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{vidu}{Ví dụ}[section]
 \newtheorem{lemma}{Lemma}[section]
@@ -66,8 +67,6 @@
 \part{Điện Học -- Điện Từ Học}
 [``Phần Điện học -- Điện từ học đề cập đến các hiện tượng liên quan đến tương tác giữa các điện tích đứng yên \& chuyển động, gọi chung là \textit{hiện tượng điện từ} \& các quy luật chi phối các hiện tượng này. Các hiện tượng điện từ rất phổ biến trong tự nhiên, rất phong phú \& đa dạng. Chúng được ứng dụng rộng rãi trong khoa học \& kỹ thuật, cũng như trong cuộc sống.'' -- \cite{SGK_Vat_Ly_11_nang_cao}, p. 3]
 
-
-
 \chapter{Điện Tích -- Điện Trường}
 
 \begin{quotation}
@@ -90,7 +89,7 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.15]{dien_nghiem}
-	\caption{Điện nghiệm. 1. Bình thủy tinh; 2. Nút cách điện; 3. Nút kim loại; 4. Thanh kim loại; 5. 2 lá kim loại nhẹ.}
+	\caption{Điện nghiệm. 1. Bình thủy tinh; 2. Nút cách điện; 3. Nút kim loại; 4. Thanh kim loại; 5. 2 lá kim loại nhẹ. \cite[Hình 1.1, p. 6]{SGK_Vat_Ly_11_nang_cao}}
 \end{figure}
 Điện nghiệm dùng để phát hiện điện tích ở 1 vật. Khi 1 vật nhiễm điên chạm vào núm kim loại, thì điện tích truyền đến 2 lá kim loại (nhiễm điện do tiếp xúc). Do đó, 2 lá kim loại đẩy nhau \& xòe ra.'' -- \cite[p. 6]{SGK_Vat_Ly_11_nang_cao}
 
@@ -98,27 +97,131 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \paragraph{Nhiễm điện do cọ xát.} ``Sau khi cọ xát vào lụa, thanh thủy tinh có thể hút được các mẩu giấy vụn. Người ta nói thanh thủy tinh được \textit{nhiễm điện do cọ xát}.'' -- \cite[p. 6]{SGK_Vat_Ly_11_nang_cao}
 
-\paragraph{Nhiễm điện do tiếp xúc.} ``Cho thanh kim loại không nhiễm điện chạm vào quả cầu đã nhiễm điện thì thanh kim loại nhiễm điện cùng dấu với điện tích của quả cầu (Fig. ??). Người ta nói thanh kim loại được \textit{nhiễm điện do tiếp xúc}. Đưa thanh kim loại ra xa quả cầu thì thanh kim loại vẫn nhiễm điện.'' -- \cite[p. 7]{SGK_Vat_Ly_11_nang_cao}
+\paragraph{Nhiễm điện do tiếp xúc.} ``Cho thanh kim loại không nhiễm điện chạm vào quả cầu đã nhiễm điện thì thanh kim loại nhiễm điện cùng dấu với điện tích của quả cầu (Fig. \ref{fig:nhiem dien do tiep xuc}). Người ta nói thanh kim loại được \textit{nhiễm điện do tiếp xúc}. Đưa thanh kim loại ra xa quả cầu thì thanh kim loại vẫn nhiễm điện.'' -- \cite[p. 7]{SGK_Vat_Ly_11_nang_cao}
 
-\paragraph{Nhiễm điện do hưởng ứng.} ``
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{nhiem_dien_do_tiep_xuc}
+	\caption{Nhiễm điện do tiếp xúc, \cite[Hình 1.3, p. 7]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:nhiem dien do tiep xuc}
+\end{figure}
+
+\paragraph{Nhiễm điện do hưởng ứng.} ``Đưa thanh kim loại không nhiễm điện đến gần quả cầu đã nhiễm điện nhưng không chạm vào quả cầu, thì 2 đầu thanh kim loại đươc nhiễm điện. Đầu gần quả cầu hơn nhiễm điện trái dấu với điện tích của quả cầu, đầu xa hơn nhiễm điện cùng dấu (Fig. \ref{fig:nhiem dien do huong ung}). Đưa thanh kim loại ra xa quả cầu thì thanh kim loại trở về trạng thái không nhiễm điện như lúc đầu.'' ``1 vật được nhiễm điện cũng gọi là vật được tích điện.'' -- \cite[p. 7]{SGK_Vat_Ly_11_nang_cao}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{nhiem_dien_do_huong_ung}
+	\caption{Nhiễm điện do hưởng ứng, \cite[Hình 1.4, p. 7]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:nhiem dien do huong ung}
+\end{figure}
+
+\subsection{Định luật Coulomb}
+``Coulomb đã dùng chiếc cân xoắn (Fig. \ref{fig:can xoan Coulomb}) để khảo sát lực tương tác giữa 2 quả cầu nhiễm điện tích có kích thước nhỏ so với khoảng cách giữa chúng. Các vật nhiễm điện có kích thước nhỏ như vậy gọi là các \textit{điện tích điểm}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{can_xoan_Coulomb}
+	\caption{Cân xoắn Coulomb, \cite[Hình 1.5, p. 7]{SGK_Vat_Ly_11_nang_cao}. Khoảng cách giữa 2 quả cầu $A,B$ được điều chỉnh nhờ chiếc núm xoay $C$ của cân. Độ xoắn của sợi dây treo cho phép ta xác định lực tương tác giữa 2 quả cầu.}
+	\label{fig:can xoan Coulomb}
+\end{figure}
+Năm 1785, Coulomb tổng kết các kết quả thí nghiệm của mình \& nêu thành định luật sau đây gọi là \textit{định luật Coulomb}:
+
+\begin{dinhluat}[Định luật Coulomb]
+	Độ lớn của lực tương tác giữa 2 điện tích điểm tỷ lệ thuận với tích các độ lớn của 2 điện tích đó \& tỷ lệ nghịch với bình phương khoảng cách giữa chúng. Phương của lực tương tác giữa 2 điện tích điểm là đường thẳng nối 2 điện tích điểm đó. 2 điện tích cùng dấu thì đẩy nhau, 2 điện tích trái dấu thì hút nhau (Fig. \ref{fig:luc tuong tac giua 2 dien tich diem}).
+\end{dinhluat}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{luc_tuong_tac_giua_2_dien_tich_diem}
+	\caption{Phương \& chiều của lực tương tác giữa 2 điện tích điểm, \cite[Hình 1.6, p. 7]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:luc tuong tac giua 2 dien tich diem}
+\end{figure}
+Lực tương tác giữa 2 điện tích gọi là \textit{lực điện}, hay cũng gọi là \textit{lực Coulomb}.'' -- \cite[p. 7]{SGK_Vat_Ly_11_nang_cao}
+
+``Công thức tính độ lớn của lực tương tác giữa 2 điện tích điểm:
+\begin{align}
+	\label{luc tuong tac giua 2 dien tich diem}
+	F = k\frac{|q_1q_2|}{r^2},
+\end{align}
+$r$ là khoảng cách giữa 2 điện tích điểm $q_1,q_2$; $k$ là hệ số tỷ lệ phụ thuộc vào hệ đơn vị. Trong hệ SI, $k = 9\cdot 10^9\frac{N\cdot m^2}{C^2}$.'' -- \cite[p. 8]{SGK_Vat_Ly_11_nang_cao}
+
+\subsection{Lực tương tác của các điện tích trong điện môi (chất cách điện)}
+``Thí nghiệm chứng tỏ rằng, lực tương tác giữa các điện tích điểm đặt trong điện môi đồng tính, chiếm đầy không gian xung quanh điện tích, giảm đi $\varepsilon$ lần so với khi chúng được đặt trong chân không.
+\begin{align}
+	\label{luc tuong tac cua cac dien tich trong dien moi}
+	F = k\frac{|q_1q_2|}{\varepsilon r^2}.
+\end{align}
+Đại lượng $\varepsilon$ chỉ phụ thuộc vào tính chất của điện môi mà không phụ thuộc vào độ lớn các điện tích \& khoảng cách giữa các điện tích. $\varepsilon$ được gọi là \textit{hằng số điện môi}.
+
+Người ta quy ước hằng số điện môi của chân không bằng $1$. Trong bảng \ref{tab:hang so dien moi}, ta chú ý hằng số điện môi của không khí gần bằng $1$. Thí nghiệm Coulomb được tiến hành trong không khí, nhưng vì hằng số điện môi của không khí gần bằng $1$ nên kết quả của thí nghiệm cũng được coi là đúng cả trong chân không.'' -- \cite[p. 8]{SGK_Vat_Ly_11_nang_cao}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|}
+		\hline
+		\textbf{Chất} & \textbf{Hằng số điện môi} \\
+		\hline
+		Thủy tinh & $5\div 10$ \\
+		\hline
+		Sứ & $5.5$ \\
+		\hline
+		Êbônit & $2.7$ \\
+		\hline
+		Cao su & $2.3$ \\
+		\hline
+		Nước nguyên chất & $81.0$ \\
+		\hline
+		Dầu hỏa & $2.1$ \\
+		\hline
+		Không khí & $1.000594$ \\
+		\hline
+	\end{tabular}
+	\caption{Hằng số điện môi của 1 số chất, \cite[Bảng 1.1, p. 8]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{tab:hang so dien moi}
+\end{table}
+
+\subsection{Máy lọc bụi}
+``Sơ đồ của máy lọc bụi được trình bày trên \cite[Hình 1.8, p. 9]{SGK_Vat_Ly_11_nang_cao}. Không khí có nhiều bụi được quạt vào máy qua lớp lọc bụi thông thường. Tại đây, các hạt bụi có kích thước lớn bị gạt lại. Dòng không khí có lẫn các hạt bụi kích thước nhỏ vẫn bay lên. 2 lưới 1 \& 2 thực chất là 2 điện cực: lưới 1 là điện cực dương, lưới 2 là điện cực âm. Khi bay qua lưới 1 các hạt bụi nhiễm điện dương. Do đó, khi gặp lưới 2 nhiễm điện âm, các hạt bụt bị hút vào lưới. Vì vậy, khi qua lưới 2, không khí đã được lọc sạch bụi. Sau đó có thể cho không khí đi qua lớp lọc bằng than để khử mùi. Bằng cách này có thể loc đến $95\%$ bụi trong không khí.
+
+Máy lọc bụi là 1 ứng dụng của lực tương tác giữa các điện tích. Ngoài ra, lực tương tác giữa các điện tích còn có nhiều ứng dụng khác trong công nghiệp cũng như trong đời sống. E.g., kỹ thuật sơn tĩnh điện là 1 trong những ứng dụng đó. Muốn sơn vỏ xe ô tô, người ta làm cho sơn \& vỏ xe nhiễm điện trái dấu nhau. Khi sơn được phun vào vỏ xe, thì các hạt sơn nhỏ li ti sẽ bị hút \& bám chặt vào mặt vỏ xe.'' -- \cite[p. 9]{SGK_Vat_Ly_11_nang_cao}
+
+%------------------------------------------------------------------------------%
 
 \section{Thuyết Electron. Định Luật Bảo Toàn Điện Tích}
 
+%------------------------------------------------------------------------------%
+
 \section{Điện Trường}
+
+%------------------------------------------------------------------------------%
 
 \section{Công của Lực Điện. Hiệu Điện Thế}
 
+%------------------------------------------------------------------------------%
+
 \section{Bài Tập về Lực Coulomb \& Điện Trường}
+
+%------------------------------------------------------------------------------%
 
 \section{Vật Dẫn \& Điện Môi Trong Điện Trường}
 
+%------------------------------------------------------------------------------%
+
 \section{Tụ Điện}
+
+%------------------------------------------------------------------------------%
 
 \section{Năng Lượng Điện Trường}
 
+%------------------------------------------------------------------------------%
+
 \section{Bài Tập về Tụ Điện}
 
+%------------------------------------------------------------------------------%
+
 \section{Máy Sao Chụp Quang Học (Photocopy)}
+
+%------------------------------------------------------------------------------%
 
 \section{Tóm Tắt Chương 1}
 
@@ -128,19 +231,35 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \section{Dòng Điện Không Đổi. Nguồn Điện}
 
+%------------------------------------------------------------------------------%
+
 \section{Pin \& Acquy}
+
+%------------------------------------------------------------------------------%
 
 \section{Điện Năng \& Công Suất Điện. Định Luật Jun--Len-xơ}
 
+%------------------------------------------------------------------------------%
+
 \section{Định Luật Ôm Đối với Toàn Mạch}
+
+%------------------------------------------------------------------------------%
 
 \section{Định Luật Ôm Đối với Các Loại Mạch Điện. Mắc Các Nguồn Điện Thành Bộ}
 
+%------------------------------------------------------------------------------%
+
 \section{Bài Tập về Định Luật Ôm \& Công Suất Điện}
+
+%------------------------------------------------------------------------------%
 
 \section{Điện Tâm Đồ}
 
+%------------------------------------------------------------------------------%
+
 \section{Thực Hành: Đo Suất Điện Động \& Điện Trở Trong của Nguồn Điện}
+
+%------------------------------------------------------------------------------%
 
 \section{Tóm Tắt Chương 2}
 
@@ -150,21 +269,39 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \section{Dòng Điện Trong Kim Loại}
 
+%------------------------------------------------------------------------------%
+
 \section{Hiện Tượng Nhiệt Điện. Hiện Tượng Siêu Dẫn}
+
+%------------------------------------------------------------------------------%
 
 \section{Dòng Điện Trong Chất Điện Phân. Định Luật Faraday}
 
+%------------------------------------------------------------------------------%
+
 \section{Bài Tập về Dòng Điện Trong Kim Loại \& Chất Điện Phân}
+
+%------------------------------------------------------------------------------%
 
 \section{Dòng Điện Trong Chân Không}
 
+%------------------------------------------------------------------------------%
+
 \section{Dòng Điện Trong Chất Khí}
+
+%------------------------------------------------------------------------------%
 
 \section{Dòng Điện Trong Chất Bán Dẫn}
 
+%------------------------------------------------------------------------------%
+
 \section{Linh Kiện Bán Dẫn}
 
+%------------------------------------------------------------------------------%
+
 \section{Thực Hành: Khảo Sát Đặc Tính Chỉnh Lưu của Diot Bán Dẫn \& Đặc Tính Khuếch Đại của Tranzito}
+
+%------------------------------------------------------------------------------%
 
 \section{Tóm Tắt Chương 3}
 
@@ -174,29 +311,55 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \section{Từ Trường}
 
+%------------------------------------------------------------------------------%
+
 \section{Phương \& Chiều của Lực Từ Tác Dụng Lên Dòng Điện}
+
+%------------------------------------------------------------------------------%
 
 \section{Cảm Ứng Từ. Định Luật Ampe}
 
+%------------------------------------------------------------------------------%
+
 \section{Từ Trường của 1 Số Dòng Điện Có Dạng Đơn Giản}
+
+%------------------------------------------------------------------------------%
 
 \section{Bài Tập về Từ Trường}
 
+%------------------------------------------------------------------------------%
+
 \section{Tương Tác Giữa 2 Dòng Điện Thẳng Song Song. Định Nghĩa Đơn Vị Ampe}
+
+%------------------------------------------------------------------------------%
 
 \section{Lực Lo-ren-xơ}
 
+%------------------------------------------------------------------------------%
+
 \section{Khung Dây có Dòng Điện Đặt trong Từ Trường}
+
+%------------------------------------------------------------------------------%
 
 \section{Sự Từ Hóa Các Chất. Sắt Từ}
 
+%------------------------------------------------------------------------------%
+
 \section{Từ Trường Trái Đất}
+
+%------------------------------------------------------------------------------%
 
 \section{Bài Tập về Lực Từ}
 
+%------------------------------------------------------------------------------%
+
 \section{Từ Trường \& Máy Gia Tốc}
 
+%------------------------------------------------------------------------------%
+
 \section{Thực Hành: Xác Định Thành Phần Năm Ngang của Từ Trường Trái Đất}
+
+%------------------------------------------------------------------------------%
 
 \section{Tóm Tắt Chương 4}
 
@@ -206,17 +369,31 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \section{Hiện Tượng Cảm Ứng Điện Từ. Suất Điện Động Cảm Ứng}
 
+%------------------------------------------------------------------------------%
+
 \section{Suất Điện Động Cảm Ứng Tron 1 Đoạn Dây Dẫn Chuyển Động}
+
+%------------------------------------------------------------------------------%
 
 \section{Dòng Điện Fu-cô}
 
+%------------------------------------------------------------------------------%
+
 \section{Hiện Tượng Tự Cảm}
+
+%------------------------------------------------------------------------------%
 
 \section{Năng Lượng Từ Trường}
 
+%------------------------------------------------------------------------------%
+
 \section{Bài Tập về Cảm Ứng Điện Từ}
 
+%------------------------------------------------------------------------------%
+
 \section{1 Số Mốc Thời Gian Đáng Lưu Ý Trong Lĩnh Vực Điện Tử}
+
+%------------------------------------------------------------------------------%
 
 \section{Tóm Tắt Chương 5}
 
@@ -228,11 +405,19 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \section{Khúc Xạ Ánh Sáng}
 
+%------------------------------------------------------------------------------%
+
 \section{Phản Xạ Toàn Phần}
+
+%------------------------------------------------------------------------------%
 
 \section{Bài Tập về Khúc Xạ Ánh Sáng \& Phản Xạ Toàn Phần}
 
+%------------------------------------------------------------------------------%
+
 \section{Bài Đọc Thêm. Hiện Tượng Ảo Ảnh}
+
+%------------------------------------------------------------------------------%
 
 \section{Tóm Tắt Chương 6}
 
@@ -242,23 +427,43 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \section{Lăng Kính}
 
+%------------------------------------------------------------------------------%
+
 \section{Thấu Kính Mỏng}
+
+%------------------------------------------------------------------------------%
 
 \section{Bài Tập về Lăng Kính \& Thấu Kính Mỏng}
 
+%------------------------------------------------------------------------------%
+
 \section{Mắt}
+
+%------------------------------------------------------------------------------%
 
 \section{Các Tật của Mắt \& Cách Khắc Phục}
 
+%------------------------------------------------------------------------------%
+
 \section{Kính Lúp}
+
+%------------------------------------------------------------------------------%
 
 \section{Kính Hiển Vi}
 
+%------------------------------------------------------------------------------%
+
 \section{Kính Thiên Văn}
+
+%------------------------------------------------------------------------------%
 
 \section{Bài Tập về Dụng Cụ Quang}
 
+%------------------------------------------------------------------------------%
+
 \section{Thực Hành: Xác Định Chiết Suất của Nước \& Tiêu Cự của Thấu Kính Phân Kỳ}
+
+%------------------------------------------------------------------------------%
 
 \section{Tóm Tắt Chương 7}
 
