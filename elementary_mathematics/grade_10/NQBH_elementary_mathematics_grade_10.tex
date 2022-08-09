@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox}
 \DeclareMathOperator{\arccot}{arccot}
 \usepackage[inline]{enumitem}
 \allowdisplaybreaks
@@ -451,9 +451,197 @@ Trong 2 bất phương trình $f(x)\ge 0$ \& $g(x)\ge 0$, ta thường chọn b�
 
 \chapter{Hệ Thức Lượng Trong Tam Giác. Vector}
 
-\section{Giá Trị Lượng Giác của 1 Góc$\in[0^\circ;180^\circ]$. Định Lý Côsin \& Định Lý Sin Trong Tam Giác}
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Giá trị lượng giác của 1 góc $\in[0^\circ;180^\circ]$, định lý côsin \& định lý sin trong tam giác, giải tam giác; vector, tổng \& hiệu 2 vector, tích của 1 số với 1 vector, tích vô hướng của 2 vector; ứng dụng vào giải các bài toán thực tiễn}.
+\end{quotation}
 
-\section{Giải Tam Giác}
+\section{Giá Trị Lượng Giác của 1 Góc $\in[0^\circ;180^\circ]$. Định Lý Côsin \& Định Lý Sin Trong Tam Giác}
+
+\subsection{Giá trị lượng giác của 1 góc $\in[0^\circ;180^\circ]$}
+``Cho $\Delta ABC$ vuông tại $A$ có góc $\widehat{ABC} = \alpha$:
+\begin{align*}
+	\sin\alpha &= \frac{AC}{BC},\ \cos\alpha = \frac{AB}{BC},\ \tan\alpha = \frac{AC}{AB},\ \cot\alpha = \frac{AB}{AC},\\
+	\sin(90^\circ - \alpha) &= \cos\alpha,\ \cos(90^\circ - \alpha) = \sin\alpha,\ \tan(90^\circ - \alpha) = \cot\alpha,\ \cot(90^\circ - \alpha) = \tan\alpha.
+\end{align*}
+Trong mặt phẳng tọa độ $Oxy$, nửa đường tròn tâm $O$ nằm phía trên trục hoành bán kính $R = 1$ được gọi là \textit{nửa đường tròn đơn vị} (Fig. \ref{fig:nua duong tron don vi}). 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{nua_duong_tron_don_vi_1}
+	\caption{Nửa đường tròn đơn vị.}
+	\label{fig:nua duong tron don vi}
+\end{figure}
+Với mỗi góc nhọn $\alpha$ ta có thể xác định 1 điểm $M$ duy nhất trên nửa đường tròn đơn vị sao cho $\widehat{xOM} = \alpha$. Giả sử điểm $M$ có tọa độ $(x_0,y_0)$. Xét $\Delta OMH$ vuông tại $H$, ta có:
+\begin{align*}
+	\sin\alpha = \frac{MH}{OM} = \frac{y_0}{1} = y_0,\ \cos\alpha = \frac{OH}{OM} = \frac{x_0}{1} = x_0,\ \tan\alpha = \frac{MH}{OH} = \frac{y_0}{x_0},\ \cot\alpha = \frac{OH}{MH} = \frac{x_0}{y_0}.
+\end{align*}
+Mở rộng khái niệm tỷ số lượng giác đối với góc nhọn cho những góc $\alpha\in[0^\circ,180^\circ]$, ta có định nghĩa sau đây: Với mỗi góc $\alpha$ ($0^\circ\le\alpha\le 180^\circ$), ta xác định 1 điểm $M(x_0,y_0)$ trên nửa đường tròn đơn vị sao cho $\widehat{xOM} = \alpha$ (Fig. \ref{fig:nua duong tron don vi 2}). Khi đó:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{nua_duong_tron_don_vi_2}
+	\caption{Nửa đường tròn đơn vị.}
+	\label{fig:nua duong tron don vi 2}
+\end{figure}
+sin của góc $\alpha$, ký hiệu là $\sin\alpha$, được xác định bởi $\sin\alpha = y_0$, côsin của góc $\alpha$, ký hiệu là $\cos\alpha$, được xác định bởi $\cos\alpha = x_0$, tang của góc $\alpha$, ký hiệu là $\tan\alpha$, được xác định bởi $\tan\alpha = \frac{y_0}{x_0}$ ($x_0\ne 0$), côtang của góc $\alpha$, ký hiệu là $\cot\alpha$, được xác định bởi $\cot\alpha = \frac{x_0}{y_0}$ ($y_0\ne 0$). Các số $\sin\alpha,\cos\alpha,\tan\alpha,\cot\alpha$ được gọi là các \textit{giá trị lượng giác} của góc $\alpha$.'' -- \cite[pp. 63--64]{SGK_Toan_10_Canh_Dieu_tap_1}
+\begin{align*}
+	\tan\alpha &= \frac{\sin\alpha}{\cos\alpha},\ (\alpha\ne 90^\circ),\ \cot\alpha = \frac{\cos\alpha}{\sin\alpha}\ (0 < \alpha < 180^\circ),\\
+	\sin(90^\circ - \alpha) &= \cos\alpha\ (0^\circ\le\alpha\le 90^\circ),\ \cos(90^\circ - \alpha) = \sin\alpha\ (0^\circ\le\alpha\le 90^\circ),\\
+	\tan(90^\circ - \alpha) &= \cot\alpha\ (0^\circ < \alpha\le 90^\circ),\ \cot(90^\circ - \alpha) = \tan\alpha\ (0^\circ\le\alpha < 90^\circ).
+\end{align*}
+
+\begin{menhde}
+	Với $0^\circ\le\alpha\le 180^\circ$ thì: $\sin(180^\circ - \alpha) = \sin\alpha$, $\cos(180^\circ - \alpha) = -\cos\alpha$, $\tan(180^\circ - \alpha) = -\tan\alpha$ ($\alpha\ne 90^\circ$), $\cot(180^\circ - \alpha) = -\cot\alpha$ ($\alpha\ne 0^\circ$, $\alpha\ne 180^\circ$).
+\end{menhde}
+Bảng giá trị lượng giác (GTLG) của 1 số góc đặc biệt:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\diagbox{GTLG}{$\alpha$}& $0^\circ$ & $30^\circ$ & $45^\circ$ & $60^\circ$ & $90^\circ$ & $120^\circ$ & $135^\circ$ & $150^\circ$ & $180^\circ$ \\
+		\hline
+		$\sin\alpha$ & 0 & $\frac{1}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{3}}{2}$ & $1$ & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & $0$ \\
+		\hline
+		$\cos\alpha$ & 1 & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{2}}{2}$ & $\frac{1}{2}$ & 0 & $-\frac{1}{2}$ & $-\frac{\sqrt{2}}{2}$ & $-\frac{\sqrt{3}}{2}$ & $-1$ \\
+		\hline
+		$\tan\alpha$ & 0 & $\frac{\sqrt{3}}{2}$ & $1$ & $\sqrt{3}$ & $||$ & $-\sqrt{3}$ & $-1$ & $-\frac{\sqrt{3}}{3}$ & $0$ \\
+		\hline
+		$\cot\alpha$ & $||$ & $\sqrt{3}$ & $1$ & $\frac{\sqrt{3}}{3}$ & $0$ & $-\frac{\sqrt{3}}{3}$ & $-1$ & $-\sqrt{3}$ & $||$ \\
+		\hline
+	\end{tabular}
+	\caption{Bảng giá trị lượng giác (GTLG) của 1 số góc đặc biệt.}
+\end{table}
+``Ta có thể tìm giá trị lượng giác (đúng hoặc gần đúng) của 1 góc (từ $0^\circ$ đến $180^\circ$) bằng cách sử dụng các phím: $\boxed{\sin},\boxed{\cos},\boxed{\tan}$ trên máy tính cầm tay.'' ``Ta có thể tìm số đo (đúng hoặc gần đúng) của 1 góc từ $0^\circ$ đến $180^\circ$ khi biết giá trị lượng giác của góc đó bằng cách sử dụng các phím: \fbox{SHIFT} cùng với $\boxed{\sin},\boxed{\cos},\boxed{\tan}$ trên máy tính cầm tay.'' ``Khi tìm góc $\alpha$ ($0^\circ\le\alpha\le 180^\circ$) nếu đã biết $\sin\alpha$, trên máy tính chỉ hiện lên kết quả góc $\alpha$ trong khoảng từ $0^\circ$ đến $90^\circ$. Giá trị còn lại cần tìm là $180^\circ - \alpha$.'' -- \cite[p. 66]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\subsection{Định lý côsin -- cos theorem}
+
+\begin{dinhly}[Định lý côsin]
+	\label{thm: cos theorem}
+	Cho $\Delta ABC$ có $BC = a$, $CA = b$, $AB = c$. Khi đó:
+	\begin{equation*}
+		\left\{\begin{split}
+			a^2 &= b^2 + c^2 - 2bc\cos A,\\
+			b^2 &= c^2 + a^2 - 2ca\cos B,\\
+			c^2 &= a^2 + b^2 - 2ab\cos C,
+		\end{split}\right.\ \ \left\{\begin{split}
+			\cos A &= \frac{b^2 + c^2 - a^2}{2bc},\\
+			\cos B &= \frac{c^2 + a^2 - b^2}{2ca},\\
+			\cos C &= \frac{a^2 + b^2 - c^2}{2ab}.
+	\end{split}\right.		
+	\end{equation*}
+\end{dinhly}
+Nếu đặt $\alpha\coloneqq\widehat{A}$, $\beta = \widehat{B}$, $\gamma\coloneqq\widehat{C}$ (theo số đo độ hoặc số đo radian -- nhưng phải sử dụng chỉ 1 trong 2 loại này để các công thức tương thích\texttt{/}consistent với nhau), các công thức trong định lý côsin \ref{thm: cos theorem} có thể viết lại thành:
+\begin{equation*}
+	\left\{\begin{split}
+		a^2 &= b^2 + c^2 - 2bc\cos\alpha,\\
+		b^2 &= c^2 + a^2 - 2ca\cos\beta,\\
+		c^2 &= a^2 + b^2 - 2ab\cos\gamma,
+	\end{split}\right.\ \ \left\{\begin{split}
+		\cos\alpha &= \frac{b^2 + c^2 - a^2}{2bc},\\
+		\cos\beta &= \frac{c^2 + a^2 - b^2}{2ca},\\
+		\cos\gamma &= \frac{a^2 + b^2 - c^2}{2ab}.
+	\end{split}\right.		
+\end{equation*}
+
+\begin{luuy}
+	\label{luu y:khoang gia tri 3 goc tam giac}
+	Vì $1 + \cos A = \frac{(b + c)^2 - a^2}{2bc} > 0$ do $b + c > a > 0$ (i.e., \textit{bất đẳng thức tam giác}\emph{\texttt{/}}\textit{triangle inequality}: trong 1 tam giác, tổng độ dài 2 cạnh bất kỳ luôn lớn hơn độ dài cạnh còn lại), nên $\cos A > -1$, suy ra $\widehat{A}\ne 180^\circ$ (hay $\widehat{A}\ne\pi$ nếu sử dụng số đo radian thay vì số đo độ). Tương tự, vì $1 - \cos A = \frac{a^2 - (b - c)^2}{2bc} < 0$ do $a < |b - c|$ (suy ra trực tiếp từ bất đẳng thức tam giác vừa đề cập bằng cách xét dấu để bỏ dấu giá trị tuyệt đối), nên $\cos A < 1$, suy ra $\widehat{A}\ne 0^\circ$ (hay $\widehat{A}\ne 0$  nếu sử dụng số đo radian thay vì số đo độ). Cả 2 điều này hợp lý vì tổng 3 góc bất kỳ của 1 tam giác bằng $180^\circ$, i.e., với $\Delta ABC$, $\widehat{A} + \widehat{B} + \widehat{C} = 180^\circ$, mà $\widehat{A} > 0^\circ$, $\widehat{B} > 0^\circ$, $\widehat{C} > 0^\circ$, nên ta phải có $\widehat{A},\widehat{B},\widehat{C}\in(0^\circ;180^\circ)$ (hay $\widehat{A},\widehat{B},\widehat{C}\in(0;\pi)$ nếu sử dụng số đo radian thay vì số đo độ). Các lý luận này cho thấy sự hợp lý của các công thức trong định lý côsin \ref{thm: cos theorem}.
+\end{luuy}
+
+\subsection{Định lý sin -- sin theorem}
+
+\begin{dinhly}[Định lý sin]
+	\label{thm: sin theorem}
+	Cho $\Delta ABC$ có $BC = a$, $CA = b$, $AB = c$ \& bán kính đường tròn ngoại tiếp là $R$. Khi đó:
+	\begin{align*}
+		\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R,\ \ a = 2R\sin A,\ b = 2R\sin B,\ c = 2R\sin C.
+	\end{align*}
+\end{dinhly}
+
+\begin{hequa}
+	\label{corollary: sin theorem}
+	Trong 1 tam giác, tỷ số của 2 cạnh bất kỳ bằng tỷ số sin của 2 góc tương ứng đối diện 2 cạnh đó. Cụ thể, với $\Delta ABC$ có $BC = a$, $CA = b$, $AB = c$:
+	\begin{align*}
+		 \frac{a}{b} = \frac{\sin A}{\sin B},\ \frac{b}{c} = \frac{\sin B}{\sin C},\ \frac{c}{a} = \frac{\sin C}{\sin A}.
+	\end{align*}
+\end{hequa}
+Sử dụng ký hiệu $\alpha,\beta,\gamma$ vừa giới thiệu, 2 công thức trên được viết lại thành:
+\begin{align*}
+	\frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma} = 2R,\ \ a = 2R\sin\alpha,\ b = 2R\sin\beta,\ c = 2R\sin\gamma,\ \frac{a}{b} = \frac{\sin\alpha}{\sin\beta},\ \frac{b}{c} = \frac{\sin\beta}{\sin\gamma},\ \frac{c}{a} = \frac{\sin\gamma}{\sin\alpha}.
+\end{align*}
+
+\section{Giải Tam Giác -- Solve Triangle}
+``Từ xa xưa, con người đã cần đo đạc các khoảng cách mà không thể trực tiếp đo được. E.g., để đo khoảng cách từ vị trí $A$ trên bờ biển tới 1 hòn đảo (hay con tàu, $\ldots$) trên biển, người xưa đã tìm ra 1 cách đo khoảng cách đó như sau: Từ vị trí $A$, đo góc nghiêng $\alpha$ so với bờ biển tới 1 vị trí $C$ quan sát được trên đảo. Sau đó di chuyển dọc bờ biển đến vị trí $B$ cách $A$ 1 khoảng $d$ \& tiếp tục đo góc nghiêng $\beta$ so với bờ biển tới vị trí $C$ đã chọn. Bằng cách giải $\Delta ABC$, họ tính được khoảng cách $AC$.'' -- \cite[p. 72]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\subsection{Tính các cạnh \& góc của tam giác dựa trên 1 số điều kiện cho trước}
+``Như ta đã biết, 1 tam giác hoàn toàn xác định nếu biết 1 trong những dữ kiện sau:
+\begin{enumerate*}
+	\item Biết độ dài 2 cạnh \& độ lớn góc xen giữa 2 cạnh đó;
+	\item Biết độ dài 3 cạnh;
+	\item Biết độ dài 1 cạnh \& độ lớn 2 góc kề với cạnh đó.
+\end{enumerate*}
+\textit{Giải tam giác} là tính các cạnh \& các góc của tam giác dựa trên những dữ kiện cho trước.'' -- \cite[p. 72]{SGK_Toan_10_Canh_Dieu_tap_1}
+
+\begin{baitoan}
+	Giải tam giác khi biết 2 độ dài 2 cạnh \& độ lớn góc xen giữa 2 cạnh đó.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi tam giác đã cho là $\Delta ABC$. Giả sử $AB = c$, $AC = b$, $\widehat{A} = \alpha$ cho trước. Áp dụng định lý côsin \ref{thm: cos theorem}, ta được $a\coloneqq BC = \sqrt{b^2 + c^2 - 2bc\cos A} = \sqrt{b^2 + c^2 - 2bc\cos\alpha}$, $\cos B = \frac{c^2 + a^2 - b^2}{2ca}$, nên $\beta\coloneqq\widehat{B} = \arccos\frac{c^2 + a^2 - b^2}{2ca}\in(0^\circ,180^\circ)$, tương tự, $\cos C = \frac{a^2 + b^2 - c^2}{2ab}$, nên $\gamma\coloneqq\widehat{C} = \arccos\frac{a^2 + b^2 - c^2}{2ab}\in(0^\circ,180^\circ)$. Việc giải $\Delta ABC$ hoàn tất.
+\end{proof}
+
+\begin{luuy}[$\arccos$]
+	``Dễ thấy rằng với mọi số $m\in\mathbb{R}$ cho trước mà $|m|\le 1$, phương trình $\cos x = m$ có đúng 1 nghiệm nằm trong đoạn $[0;\pi]$. Người ta thường ký hiệu nghiệm đó là $\arccos m$. Khi đó
+	\begin{equation*}
+		\cos x = m\Leftrightarrow\left[\begin{split}
+			x &= \arccos m + k2\pi,\\
+			x &= -\arccos m + k2\pi,
+		\end{split}\right.
+	\end{equation*}
+	mà cũng thường được viết là $x = \pm\arccos m + k2\pi$.'' -- \cite[p. 24]{SGK_Toan_11_dai_so_giai_tich_nang_cao}. Sử dụng công thức này với $m = \frac{c^2 + a^2 - b^2}{2ca}$, suy ra nghiệm của phương trình $\cos x = \frac{c^2 + a^2 - b^2}{2ca}$ có nghiệm $x = \pm\arccos\frac{c^2 + a^2 - b^2}{2ca} + k2\pi$. Nhưng $\beta\coloneqq\widehat{B}\in(0^\circ,180^\circ)$ (i.e., $\widehat{B} = \beta\in(0;\pi)$ nếu sử dụng số đo radian thay vì số đo độ). Kết hợp 2 điều này, suy ra $\widehat{B} = \arccos\frac{c^2 + a^2 - b^2}{2ca}\in(0^\circ;180^\circ)$ như trong lời giải trên.
+\end{luuy}
+Ngoài ra, áp dụng tiếp định lý sin \ref{thm: sin theorem}, đẳng thức $\frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma} = 2R$ có thể viết lại thành:
+\begin{align*}
+	\frac{\sqrt{b^2 + c^2 - 2bc\cos\alpha}}{\sin\alpha} = \frac{b}{\sin\arccos\frac{c^2 + a^2 - b^2}{2ca}} = \frac{c}{\sin\arccos\frac{a^2 + b^2 - c^2}{2ab}} = 2R.
+\end{align*}
+Thay tiếp $a = \sqrt{b^2 + c^2 - 2bc\cos\alpha}$ vào đẳng vừa thu được cho ta đẳng thức sau được biểu diễn chỉ bởi dữ kiện $(b,c,\alpha)$:
+\begin{align*}
+	\frac{\sqrt{b^2 + c^2 - 2bc\cos\alpha}}{\sin\alpha} = \frac{b}{\sin\arccos\frac{c - b\cos\alpha}{\sqrt{b^2 + c^2 - 2bc\cos\alpha}}} = \frac{c}{\sin\arccos\frac{b - c\cos\alpha}{\sqrt{b^2 + c^2 - 2bc\cos\alpha}}} = 2R,
+\end{align*}
+dùng để tính đường kính của hình tròn ngoại tiếp $\Delta ABC$, suy ra các công thức sau để tính bán kính $R$ của đường tròn ngoại tiếp $\Delta ABC$:
+\begin{align*}
+	R = \frac{\sqrt{b^2 + c^2 - 2bc\cos\alpha}}{2\sin\alpha} = \frac{b}{2\sin\arccos\frac{c - b\cos\alpha}{\sqrt{b^2 + c^2 - 2bc\cos\alpha}}} = \frac{c}{2\sin\arccos\frac{b - c\cos\alpha}{\sqrt{b^2 + c^2 - 2bc\cos\alpha}}}.
+\end{align*}
+Đẳng thức đầu tiên hiển nhiên có nhiều lợi thế hơn 2 đẳng thức còn lại để tính $R$ do không chứa hàm hợp $\sin\arccos(\cdot)$.
+
+Vì vai trò của $a,b,c$ là bình đẳng, không mất tính tổng quát (without loss of generality, abbr., w.l.o.g.), 
+
+\begin{baitoan}
+	Giải tam giác khi biết độ dài 3 cạnh.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi tam giác đã cho là $\Delta ABC$. Giả sử $AB = c$, $BC = a$, $CA = b$ cho trước. Áp dụng định lý côsin \ref{thm: cos theorem}, ta được $\cos A = \frac{b^2 + c^2 - a^2}{2bc}$, $\cos B = \frac{c^2 + a^2 - b^2}{2ca}$, $\cos C = \frac{a^2 + b^2 - c^2}{2ab}$. Tương tự lời giải bài toán trước, suy ra $\alpha\coloneqq\widehat{A} = \arccos\frac{b^2 + c^2 - a^2}{2bc}$, $\beta\coloneqq\widehat{B} = \arccos\frac{c^2 + a^2 - b^2}{2ca}$, $\gamma\coloneqq\widehat{C} = \arccos\frac{a^2 + b^2 - c^2}{2ab}$. Theo Lưu ý \ref{luu y:khoang gia tri 3 goc tam giac}, $\alpha,\beta,\gamma\in(0^\circ;180^\circ)$ nếu sử dụng số đo độ hay $\alpha,\beta,\gamma\in(0;\pi)$ nếu sử dụng số đo radian. Việc giải $\Delta ABC$ hoàn tất.
+\end{proof}
+Tương tự, áp dụng tiếp định lý sin \ref{thm: sin theorem}, đẳng thức $\frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma} = 2R$ có thể viết lại thành:
+\begin{align*}
+	\frac{a}{\sin\arccos\frac{b^2 + c^2 - a^2}{2bc}} = \frac{b}{\sin\arccos\frac{c^2 + a^2 - b^2}{2ca}} = \frac{c}{\sin\arccos\frac{a^2 + b^2 - c^2}{2ab}} = 2R.
+\end{align*}
+
+\begin{baitoan}
+	Giải tam giác khi biết độ dài 1 cạnh \& độ lớn 2 góc kề với cạnh đó.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi tam giác đã cho là $\Delta ABC$. Giả sử $BC = a$, $\widehat{B} = \beta$, $\widehat{C} = \gamma$ cho trước. Ngay lập tức, ta có $\alpha\coloneqq\widehat{A} = 180^\circ - \widehat{B} - \widehat{C} = 180^\circ - \beta - \gamma$ (hay $\alpha = \pi - \beta - \gamma$ nếu sử dụng số đo radian). Áp dụng định lý sin \ref{thm: sin theorem} hoặc trực tiếp hơn là Hệ quả \ref{corollary: sin theorem}, ta có: $b\coloneqq AC = a\frac{\sin\beta}{\sin\alpha} = \frac{a\sin\beta}{\sin(180^\circ - \beta - \gamma)}$, $c\coloneqq AB = a\frac{\sin\gamma}{\sin\alpha} = \frac{a\sin\gamma}{\sin(180^\circ - \beta - \gamma)}$. Việc giải $\Delta ABC$ hoàn tất.
+\end{proof}
+Do lời giải của bài toán này đã áp dụng định lý sin \ref{thm: sin theorem}, ta áp dụng tiếp định lý côsin \ref{thm: cos theorem} để thu được:
+\begin{align*}
+	\frac{a}{\sin(180^\circ)} = 2R.
+\end{align*}
+
+
 
 \section{Khái Niệm Vector}
 
