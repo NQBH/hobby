@@ -491,10 +491,59 @@ Ta có: $\tan(OA,OM_1) = \tan(OA,OM_2) = \overline{AT} = m$. Gọi số đo củ
 ``Các phím $\sin^{-1},\cos^{-1}$ \& $\tan^{-1}$ của máy tính bỏ túi \textsc{Casio} \textit{fx-500MS} được dùng để tìm số đo (độ hoặc radian) của 1 góc khi biết 1 trong các giá trị lượng giác của nó. Muốn thế đối với máy tính CASIO \textit{fx-500MS} ta thực hiện 2 bước sau:
 \begin{enumerate}
 	\item \textit{Ấn định đơn vị đo góc (độ hoặc radian)}. Muốn tìm số đo độ, ta ấn \fbox{MODE} \fbox{MODE} \fbox{MODE} \fbox{1}. Lúc này dòng trên cùng của màn hình xuất hiện chữ nhỏ \fbox{D}. Muốn tìm số đo radian, ta ấn \fbox{MODE} \fbox{MODE} \fbox{MODE} \fbox{2}. Lúc này dòng trên cùng của màn hình xuất hiện chữ nhỏ \fbox{R}.
-	\item \textit{Tìm số đo góc}. Khi biết sin, côsin hay tang của góc $\alpha$ cần tìm bằng $m$, ta lần lượt ấn phím \fbox{SHIFT}, \& 1 trong các phím $\boxed{\sin^{-1}},\boxed{\cos^{-1}},\boxed{\tan^{-1}}$
+	\item \textit{Tìm số đo góc}. Khi biết sin, côsin hay tang của góc $\alpha$ cần tìm bằng $m$, ta lần lượt ấn phím \fbox{SHIFT}, \& 1 trong các phím $\boxed{\sin^{-1}}$, $\boxed{\cos^{-1}}$, $\boxed{\tan^{-1}}$, rồi nhập giá trị lượng giác $m$ \& cuối cùng ấn phím $=$. Lúc này, trên màn hình cho kết quả là số đo của góc $\alpha$ (độ hay radian tùy theo bước 1).
 \end{enumerate}
 
+\begin{luuy}
+	\begin{enumerate}
+		\item Ở chế độ số đo radian, các phím $\sin^{-1},\cos^{-1}$ cho kết quả (khi $|m|\le 1$) là $\arcsin m,\arccos m$; phím $\tan^{-1}$ cho kết quả là $\arctan m$.
+		\item Ở chế độ số đo độ, các phím $\sin^{-1}$ \& $\tan^{-1}$ cho kết quả là số đo góc $\alpha$ từ $-90^\circ$ đến $90^\circ$; phím $\cos^{-1}$ cho kết quả là số đo góc $\alpha$ từ $0^\circ$ đến $180^\circ$. Các kết quả ấy được hiển thị dưới dạng số thập phân.'' -- \cite[p. 27]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
+	\end{enumerate}
+\end{luuy}
+Xem \cite[Ví dụ 1--3, p. 31]{SGK_Toan_11_dai_so_giai_tich_nang_cao} để biết chi tiết thao tác bấm phím trên máy tính cầm tay.
+
 \section{1 Số Dạng Phương Trình Lượng Giác Cơ Bản}
+
+\subsection{1 số dạng phương trình lượng giác đơn giản}
+
+\subsubsection{Phương trình bậc nhất \& bậc 2 đối với 1 hàm số lượng giác}
+Để giải các phương trình lượng giác có dạng $P(\sin x) = 0$, $P(\cos x) = 0$, $P(\tan x) = 0$, $P(\cot x) = 0$ với $P$ là 1 đa thức có bậc 1 hoặc 2 (i.e., $\deg P\in\{1,2\}$ \footnote{Ký $\deg$ là viết tắt của từ ``degree'' tức là ``bậc''.}), ta chọn 1 biểu thức lượng giác thích hợp có mặt trong phương trình làm ẩn phụ \& quy về phương trình bậc nhất hoặc bậc 2 đối với ẩn phụ đó (có thể nêu hoặc không nêu ký hiệu ẩn phụ).
+
+\paragraph{Phương trình bậc nhất đối với 1 hàm số lượng giác.} Xét các phương trình lượng giác có dạng $P(\sin x) = 0$, $P(\cos x) = 0$, $P(\tan x) = 0$, $P(\cot x) = 0$ với $P$ là 1 đa thức có bậc 1 (i.e., $\deg P = 1$), i.e.:
+\begin{align*}
+	a\sin(mx + n) + b = 0,\ a\cos(mx + n) + b = 0,\ a\tan(mx + n) + b = 0,\ a\cot(mx + n) + b = 0,\ a,b,m,n\in\mathbb{R},\,a\ne 0,\,m\ne 0.
+\end{align*}
+Tổng quát hơn, giải các phương trình lượng giác sau:
+\begin{align*}
+	a\sin f(x) + b = 0,\ a\cos f(x) + b = 0,\ a\tan f(x) + b = 0,\ a\cot f(x) + b = 0,
+\end{align*}
+trong đó $a,b\in\mathbb{R}$, $a\ne 0$, \& $f$ là 1 hàm số (đa thức, phân thức, hàm căn thức) sao cho phương trình $f(x) = m$ có thể giải được\texttt{/}solvable (có nghiệm hoặc vô nghiệm) trên tập số thực $\mathbb{R}$.
+
+\paragraph{Phương trình bậc 2 đối với 1 hàm số lượng giác.} Xét các phương trình lượng giác có dạng $P(\sin x) = 0$, $P(\cos x) = 0$, $P(\tan x) = 0$, $P(\cot x) = 0$ với $P$ là 1 đa thức có bậc 2 (i.e., $\deg P = 2$), i.e.,
+\begin{align*}
+	a\sin^2(mx + n) + b\sin(mx + n) + c &= 0,\ a\cos^2(mx + n) + b\cos(mx + n) + c = 0,\\
+	a\tan^2(mx + n) + b\tan(mx + n) + c &= 0,\ a\cot^2(mx + n) + b\tan(mx + n) + c = 0,\ 
+\end{align*}
+trong đó $a,b,c,m,n\in\mathbb{R}$, $a\ne 0$, $m\ne 0$. Tổng quát hơn, giải các phương trình lượng giác sau:
+\begin{align*}
+	a\sin^2f(x) + b\sin f(x) + c &= 0,\ a\cos^2f(x) + b\cos f(x) + c = 0,\\
+	a\tan^2f(x) + b\tan f(x) + c &= 0,\ a\cot^2f(x) + b\cot f(x) + c = 0,\ ,
+\end{align*}
+trong đó $a,b,c\in\mathbb{R}$, $a\ne 0$, \& $f$ là 1 hàm số (đa thức, phân thức, hàm căn thức) sao cho phương trình $f(x) = m$ có thể giải được (solvable) trên tập số thực $\mathbb{R}$. 
+
+\paragraph{Phương trình bậc $n\in\mathbb{N}$ đối với 1 hàm số lượng giác.} Xét các phương trình lượng giác có dạng $P(\sin x) = 0$, $P(\cos x) = 0$, $P(\tan x) = 0$, $P(\cot x) = 0$ với $P$ là 1 đa thức có bậc $n\in\mathbb{N}$ (i.e., $\deg P = n$), i.e., với $P(x) = \sum_{i=0}^n a_ix^i$, $a_i\in\mathbb{R}$, $i = 0,\ldots,n$, hệ số cao nhất $a_n\ne 0$, xét các phương trình lượng giác có dạng
+\begin{align*}
+	P(\sin(mx + n)) &= \sum_{i=0}^n a_i\sin^i(mx + n) = 0,\ P(\cos(mx + n)) = \sum_{i=0}^n a_i\cos^i(mx + n)  = 0,\\
+	P(\tan(mx + n)) &= \sum_{i=0}^n a_i\tan^i(mx + n)  = 0,\ P(\cot(mx + n)) = \sum_{i=0}^n a_i\cot^i(mx + n) = 0.
+\end{align*}
+Tổng quát hơn, giải các phương trình lượng giác sau:
+\begin{align*}
+	P(\sin f(x)) &= \sum_{i=0}^n a_i\sin^if(x) = 0,\ P(\cos f(x)) = \sum_{i=0}^n a_i\cos^if(x) = 0,\\
+	P(\tan f(x)) &= \sum_{i=0}^n a_i\tan^if(x) = 0,\ P(\cot f(x)) = \sum_{i=0}^n a_i\cot^if(x) = 0.
+\end{align*}
+Về đa thức tổng quát bậc $n$ \& các tính chất liên quan, có thể xem các tài liệu chuyên khảo về đa thức hoặc phần đầu của tài liệu của tác giả cho chương trình Toán lớp 8 ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.}.
+
+
 
 %------------------------------------------------------------------------------%
 
