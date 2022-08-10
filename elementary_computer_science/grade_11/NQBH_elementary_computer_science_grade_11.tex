@@ -71,18 +71,144 @@ Tóm tắt kiến thức Tin học lớp 11 theo chương trình giáo dục c�
 \end{quotation}
 
 \section{Khái Niệm Lập Trình \& Ngôn Ngữ Lập Trình}
+``Mọi bài toán có thuật toán đều có thể giải được trên máy tính điện tử. Khi giải bài toán trên máy tính điện tử, sau các bước xác định bài toán \& xây dựng hoặc lựa chọn thuật toán khả thi là \textit{bước lập trình}. \textit{Lập trình} là sử dụng cấu trúc dữ liệu \& các câu lệnh của ngôn ngữ lập trình cụ thể để mô tả dữ liệu \& diễn đạt các thao tác của thuật toán. \textit{Chương trình viết bằng ngôn ngữ máy} có thể được nạp trực tiếp vào bộ nhớ \& thực hiện ngay, còn \textit{chương trình viết bằng ngôn ngữ lập trình bậc cao} phải được chuyển đổi thành chương trình trên ngôn ngữ máy mới có thể thực hiện được. Chương trình đặc biệt có chức năng chuyển đổi chương trình được viết bằng ngôn ngữ lập trình bậc cao thành chương trình thực hiện được trên máy tính được gọi là \textit{chương trình dịch}. Chương trình dịch nhận đầu vào là chương trình viết bằng ngôn ngữ lập trình bậc cao (\textit{chương trình nguồn}), thực hiện chuyển đổi sang ngôn ngữ máy (\textit{chương trình đích}).'' -- \cite[p. 4]{SGK_Tin_Hoc_11}
+\begin{center}
+	Chương trình nguồn $\longrightarrow$ \fbox{Chương trình dịch} $\longrightarrow$ Chương trình đích
+\end{center}
+Cf. \textit{thông dịch} vs. \textit{biên dịch}. ``Chương trình dịch của 2 loại là \textit{thông dịch} \& \textit{biên dịch}.'' -- \cite[p. 5]{SGK_Tin_Hoc_11}
 
-\section{Bạn Biết Gì Về Các Ngôn Ngữ Lập Trình?}
+\subsection{Thông dịch}
+``\textit{Thông dịch} (\textit{interpreter}) được thực hiện bằng cách lặp lại dãy các bước sau:
+\begin{enumerate}
+	\item Kiểm tra tính đúng đẵn của câu lệnh tiếp theo trong chương trình nguồn;
+	\item Chuyển đổi câu lệnh đó thành 1 hay nhiều câu lệnh tương ứng trong ngôn ngữ máy;
+	\item Thực hiện các câu lệnh vừa chuyển đổi được.
+\end{enumerate}
+Như vậy, quá trình dịch \& thực hiện các câu lệnh là luân phiên. Các chương trình thông dịch lần lượt dịch \& thực hiện từng câu lệnh. Loại chương trình dịch này đặc biệt thích hợp cho môi trường đối thoại giữa người \& hệ thống. Tuy nhiên, 1 câu lệnh nào đó phải thực hiện bao nhiêu lần thì nó phải được dịch bấy nhiêu lần. Các ngôn ngữ khai thác hệ quản trị cơ sở dữ liệu, ngôn ngữ đối thoại với hệ điều hành, $\ldots$ đều sử dụng trình thông dịch.'' -- \cite[p. 5]{SGK_Tin_Hoc_11}
+
+\subsection{Biên dịch}
+``\textit{Biên dịch} (\textit{compiler}) được thực hiện qua 2 bước:
+\begin{enumerate}
+	\item Duyệt, phát hiện lỗi, kiểm tra tính đúng đắn của các câu lệnh trong chương trình nguồn;
+	\item Dịch toàn bộ chương trình nguồn thành 1 chương trình đích có thể thực hiện  trên máy \& có thể lưu trữ để sử dụng lại khi cần thiết.
+\end{enumerate}
+Như vậy, trong thông dịch, không có chương trình đích để lưu trữ, trong biên dịch cả chương trình nguồn \& chương trình đích có thể lưu trữ lại để sử dụng về sau. Thông thường, trong môi trường làm việc trên 1 ngôn ngữ lập trình cụ thể, ngoài chương trình dịch còn có 1 số thành phần có chức năng liên quan như biên soạn, lưu trữ, tìm kiếm, cho biết các kết quả trung gian, $\ldots$ E.g., Turbo Pascal 7.0, Free Pascal 1.2, Visual Pascal 2.1, $\ldots$ là các môi trường làm việc trên ngôn ngữ Pascal; Turbo C++, Visual C++, $\ldots$ là các môi trường làm việc trên ngôn ngữ C++. Các môi trường lập trình khác nhau ở những dịch vụ mà nó cung cấp, đặc biệt là các dịch vụ nâng cấp, tăng cường các khả năng mới cho ngôn ngữ lập trình.'' -- \cite[p. 5]{SGK_Tin_Hoc_11}
+
+\section{Các Ngôn Ngữ Lập Trình}
+``Đã có hàng nghìn ngôn ngữ lập trình được thiết kế \& mỗi năm lại có thêm nhiều ngôn ngữ lập trình mới xuất hiện. Các ngôn ngữ thường được nhắc đến là: \textsc{Ada, Algol, APL, Assembly, Basic, C, C++, C\#, Cobol, Delphi, Fortran, Java, JavaScript, Lisp, Logo, Pascal, Perl, PHP, Prolog, Python, Ruby}, $\ldots$ Sự phát triển của ngôn ngữ lập trình gắn liền với sự phát triển của tin học. Mỗi loại ngôn ngữ phù hợp hơn với 1 số lớp bài toán nhất định. Cùng với tên các ngôn ngữ lập trình, các thuật ngữ thường được nhắc tới là ``lập trình cấu trúc'', ``lập trình hướng đối tượng'', ``lập trình web'', $\ldots$
+
+Những ngôn ngữ lập trình hiện nay thường cung cấp các thư viện bao gồm nhiều hàm hỗ trợ giao diện người dùng \& các thiết bị đầu cuối. \textit{Cập nhật dữ liệu theo thời gian thực} là 1 hướng phát triển nhằm đáp ứng các nhu cầu đồng bộ hóa nhanh dữ liệu dùng chung cho nhiều nơi hay là để thỏa mãn nhu cầu cần đồng bộ hóa dữ liệu của các dịch vụ (như trong ngân hàng, hàng không \& quân sự). Ngoài việc hỗ trợ cho các giao diện, ngày nay hầu hết các hệ điều hành (UNIX\texttt{/}Linux, Netware \& Windows) đều có khả năng đa nhiệm nâng cao hiệu quả của máy tính. Do đó, các ngôn ngữ thường có thêm các hàm, thủ tục hay các biến cho phép người lập trình tận dụng điều này. Dưới dây giới thiệu 1 số ngôn ngữ lập trình thông dụng: \textsc{Fortran, Algol, Lisp, Cobol, Basic, Pascal, C, C++, Java}, $\ldots$
+\begin{itemize}
+	\item \textsc{Fortran} là 1 ngôn ngữ lập trình được phát triển từ những năm 1950 \& vẫn được dùng nhiều trong tính toán khoa học cho đến hơn nửa thế kỷ sau. Tên gọi này xuất phát từ việc ghép các từ tiếng Anh \textit{\textbf{For}mula \textbf{Tran}slator}, i.e., \textit{dịch công thức}. Các phiên bản đầu có tên chính thức là FORTRAN. Điểm yếu của FORTRAN là thiếu hỗ trợ trực tiếp cho các kết cấu có cấu trúc, kiểu dữ liệu còn nghèo, không thuận lợi cho xử lý xâu. Fortran được phát triển ban đầu như là 1 ngôn ngữ thủ tục. Tuy nhiên các phiên bản mới của Fortran đã có các tính năng hỗ trợ lập trình hướng đối tượng.
+	\item ALGOL do Ủy ban các nhà tin học châu Âu \& Hoa Kỳ tạo ra năm 1958, là ngôn ngữ tiên phong đưa ra tập các thủ tục, định kiểu dữ liệu cực kỳ phong phú, $\ldots$ \& có ảnh hưởng mạnh tới các ngôn ngữ đời sau.
+	\item LISP do John McCarthy của Học viện Công nghệ Massachusetts tạo ra năm 1958, là ngôn ngữ đặc biệt thích hợp cho thao tác ký hiệu \& xử lý danh sách thường gặp trong các bài toán tổ hợp, thích hợp cho việc chứng minh định lý. Gần đây LISP được dùng để phát triển hệ chuyên gia \& các hệ thống dựa trên tri thức.
+	\item COBOL ra đời năm 1959, được chấp nhận dùng cho các ứng dụng xử lý dữ liệu thương mại, kinh doanh.
+	\item BASIC là ngôn ngữ được phát triển năm 1963 bởi John Kemeny \& Thomas Kurtz. BASIC là ngôn ngữ còn nhiều hạn chế như thực hiện câu lệnh chủ yếu là tuần tự từ trên xuống, điều khiển chương trình chỉ nhờ lệnh IF $\ldots$ THEN \& GOSUB.
+	\item PASCAL do Niklaus Wirth phát triển dựa trên Algol năm 1970. Pascal là tên nhà toán học \& triết học người Pháp Blaise Pascal. Pascal là ngôn ngữ đặc biệt thích hợp cho kiểu lập trình cấu trúc. Cho đến nay, Pascal vẫn được dùng để giảng dạy về lập trình trong nhiều trường trung học \& đại học trên thế giới. Đó là ngôn ngữ cho phép mô tả thuật toán thuận tiện. Pascal cũng phục vụ nhiều ứng dụng kỹ nghệ khoa học \& lập trình hệ thống. Phần lớn hệ điều hành Macintosh được viết bằng Pascal. Hệ sắp chữ \TeX\ được Donald Knuth viết bằng ngôn ngữ mang nhiều yếu tố của Pascal. Trình biên dịch Free Pascal được viết bằng Pascal là 1 trình biên dịch mạnh có khả năng biên dịch cả ứng dụng cũ \& mới (phân phối miễn phí dưới giấy phép GNU), hỗ trợ nhiều hệ điều hành.
+	\item C là ngôn ngữ được xây dựng bởi Dennis Ritchie năm 1972 \& được dùng trong hệ điều hành UNIX. Từ đó C còn được dùng trong nhiều hệ điều hành khác \& trở thành 1 trong những ngôn ngữ phổ dụng nhất. C rất hiệu quả \& được ưa chuộng để viết các phần mềm hệ thống, mặc dù nó cũng được dùng cho việc viết các ứng dụng. Ngoài ra, C cũng thường được dùng làm ngôn ngữ giảng dạy lập trình. Ngày nay, C được phát triển \& mang nhiều tính năng mới làm cho nó mềm dẻo thêm.
+	\item C++ là ngôn ngữ lập trình hỗ trợ lập trình cấu trúc (thủ tục, dữ liệu trừu tượng), lập trình hướng đối tượng. Từ thập nieen 1990, C++ đã trở thanh 1 trong những ngôn ngữ phổ biến nhất. C++ góp phần xây dựng những ứng dụng lớn nhất hiện nay như hệ điều hành Windows, trình duyệt \& máy tìm kiếm Google, $\ldots$ Năm 1983, Bjarne Stroustrup ở phòng thí nghiệm Bell đã phát triển C++. Trong suốt thập niên 1980 ``C với các lớp'' được coi là 1 bản nâng cao của ngôn ngữ C. Tên C++ được dùng lần đầu tiên vào tháng 12\texttt{/}1983. Cái tên C++ cho biết C++ là ngôn ngữ được phát triển trên cơ sở ngôn ngữ C.
+	\item \textsc{Java} được khởi đầu bởi James Gosling \& các đồng nghiệp ở Sun Microsystems năm 1991 là 1 phần của \textit{Dự án Xanh}. Ban đầu ngôn ngữ này được gọi là Oak (i.e., cây sồi, do bên ngoài cơ quan của ông Gosling có trồng nhiều loại cây này). Họ dự định phát triển ngôn ngữ này thay cho C++. Công ty Sun Microsystems đang giữ bản quyền \& phát triển Java thường xuyên. Java được phát hành vào năm 1994, rồi nó trở nên nổi tiếng khi Netscape tuyên bố tại hội thảo \textit{SunWorld năm 1995} là trình duyệt Navigator của họ sẽ hỗ trợ Java. Java có thể tương thích với nhiều họ máy như PC, Macintosh, tương thích với nhiều hệ điều hành như Windows, Linux. Người ta nói Java là ngôn ngữ lập trình 1 lần (trên 1 máy) nhưng có thể chạy nhiều lần (trên nhiều máy). Java được sử dụng chủ yếu để lập trình trên môi trường mạng \& Internet.'' -- \cite[pp. 6--8]{SGK_Tin_Hoc_11}
+\end{itemize}
 
 \section{Các Thành Phần Của Ngôn Ngữ Lập Trình}
 
+\subsection{Các thành phần cơ bản}
+``Mỗi ngôn ngữ lập trình thường có 3 thành phần cơ bản là \textit{bảng chữ cái, cú pháp} \& \textit{ngữ nghĩa}.'' ``\textit{Bảng chữ cái} là tập các ký tự được dùng để viết chương trình. Không được phép dùng bất kỳ ký tự nào ngoài các ký tự quy định trong bảng chữ cái. Trong Pascal, bảng chữ cái bao gồm các ký tự sau:
+\begin{itemize}
+	\item Các chữ cái thường \& các chữ cái in hoa của bảng chữ cái tiếng Anh: \texttt{a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z}
+	\item 10 chữ số thập phân Ả Rập: \texttt{0 1 2 3 4 5 6 7 8 9}
+	\item Các ký tự đặc biệt: \verb|+ - * / = / < > [ ] . , ; # ^ $ @ & ( ) { } : ' - |, dấu cách (mã ASCII 32).
+\end{itemize}
+Bảng chữ cái của các ngôn ngữ lập trình nói chung không khác nhau nhiều. E.g., bảng chữ cái của ngôn ngữ lập trình C++ chỉ khác Pascal là có sử dụng thêm các ký tự như dấu nháy kép (\verb|"|), dấu sổ ngược (\verb|\|), dấu chấm than (\verb|!|). \textit{Cú pháp} là bộ quy tắc để viết chương trình. Dựa vào chúng, người lập trình \& chương trình dịch biết được tổ hợp nào của các ký tự trong bảng chữ cái là hợp lệ \& tổ hợp nào là không hợp lệ. Nhờ đó, có thể mô tả chính xác thuật toán để máy thực hiện. \textit{Ngữ nghĩa} xác định ý nghĩa thao tác cần phải thực hiện, ứng với tổ hợp ký tự dựa vào ngữ cảnh của nó.'' -- \cite[p. 9]{SGK_Tin_Hoc_11}
+
+``Cú pháp cho biết cách viết 1 chương trình hợp lệ, còn ngữ nghĩa xác định ý nghĩa của các tổ hợp ký tự trong chương trình. Các lỗi cú pháp được chương trình dịch phát hiện \& thông báo cho người lập trình biết. Chỉ có các chương trình không còn lỗi cú pháp mới được dịch sang ngôn ngữ máy. Các lỗi ngữ nghĩa khó phát hiện hơn. Phần lớn các lỗi ngữ nghĩa chỉ được phát hiện khi thực hiện chương trình trên dữ liệu cụ thể.'' -- \cite[p. 10]{SGK_Tin_Hoc_11}
+
+\subsection{1 số khái niệm}
+
+\subsubsection{Tên}
+``Mọi đối tượng trong chương trình đều phải được đặt tên theo quy tắc của ngôn ngữ lập trình \& từng chương trình dịch cụ thể. Trong Turbo Pascal, tên là 1 dãy liên tiếp \textit{không quá $127$ ký tự bao gồm chữ số, chữ cái hoặc dấu gạch dưới \& bắt đầu bằng chữ cái hoặc dấu gạch dưới}. Trong chương trình dịch Free Pascal, tên có thể có độ dài tới 255 ký tự.'' -- \cite[p. 10]{SGK_Tin_Hoc_11}. ``Ngôn ngữ Pascal không phân biệt chữ hoa, chữ thường trong tên. 1 số ngôn ngữ lập trình khác (e.g., C++) phân biệt chữ hoa, chữ thường. E.g., $AB$ \& $Ab$ là 1 tên trong Pascal, nhưng lại là 2 tên khác nhau trong C++. Nhiều ngôn ngữ lập trình, trong đó có Pascal, phân biệt 3 loại tên: tên dành riêng, tên chuẩn, tên do người lập trình đặt.
+\begin{itemize}
+	\item \textbf{Tên dành riêng.} 1 số tên được ngôn ngữ lập trình quy định dùng với \textit{ý nghĩa riêng xác định}, người lập trình không được sử dụng với ý nghĩa khác. Những tên này được gọi là \textit{tên dành riêng} (còn được gọi là \textit{từ khóa}). E.g., 1 số tên dành riêng: Trong Pascal: \texttt{program, uses, const, type, var, begin, end}. Trong C$++$: \texttt{main, include, if, while, void}.
+	\item \textbf{Tên chuẩn.} 1 số tên được ngôn ngữ lập trình dùng với \textit{ý nghĩa nhất định nào đó}. Những tên này được gọi là \textit{tên chuẩn}. Tuy nhiên, người lập trình có thể khai báo \& dùng chúng với ý nghĩa \& mục đích khác. Ý nghĩa của các tên chuẩn được quy định trong các \textit{thư viện} của ngôn ngữ lập trình. E.g., 1 số tên chuẩn: Trong Pascal: \texttt{abs, integer, real, sqr, longint, extended, sqrt, byte, break}. Trong C++: \texttt{cin, cout, getchar}.
+	\item \textbf{Tên do người lập trình đặt.} Tên do người lập trình đặt được dùng với ý nghĩa riêng, xác định bằng cách khai báo trước khi sử dụng. Các tên này không được trùng với tên dành riêng.'' -- \cite[p. 11]{SGK_Tin_Hoc_11}
+\end{itemize}
+
+\subsubsection{Hằng \& biến}
+
+\paragraph{Hằng.}
+\begin{dinhnghia}[Hằng]
+	\emph{Hằng} là đại lượng có giá trị không thay đổi trong quá trình thực hiện chương trình.
+\end{dinhnghia}
+``Trong các ngôn ngữ lập trình thường có các hằng số học, hằng logic, hằng xâu.
+\begin{itemize}
+	\item \textit{Hằng số học} là các số nguyên hay số thực (dấu phẩy tĩnh hoặc dấu phẩy động).
+	\item \textit{Hằng logic} là giá trị \textit{đúng} hoặc \textit{sai} tương ứng với \textit{true} hoặc \textit{false}.
+	\item Hằng xâu là dãy ký tự trong bộ mã ASCII. Khi viết, chuỗi ký tự này được đặt trong cặp dấu nháy (Pascal dùng dấu nháy đơn, còn C++ dùng dấu nháy kép).
+\end{itemize}
+
+\begin{luuy}
+	Hằng dấu nháy đơn trong Pascal được viết là \verb|''''|. Để có xâu tiếng Anh \emph{I'm a student}, trong Pascal cần viết là \verb|'I''m a student'|.
+\end{luuy}
+
+\paragraph{Biến.}
+\begin{dinhnghia}[Biến]
+	\emph{Biến} là đại lượng được đặt tên, dùng để lưu trữ giá trị \& giá trị có thể được thay đổi trong quá trình thực hiện chương trình.
+\end{dinhnghia}
+Tùy theo cách lưu trữ \& xử lý, Pascal phân biệt nhiều loại biến. Các biến dùng trong chương trình đều phải khai báo. Việc khai báo biến sẽ được trình bày ở các phần sau.'' -- \cite[p. 12]{SGK_Tin_Hoc_11}
+
+\subsubsection{Chú thích}
+``Có thể đặt ra các đoạn chú thích trong chương trình nguồn. Các chú thích này giúp cho người đọc chương trình nhận biết ý nghĩa của chương trình đó dễ hơn. Chú thích không ảnh hưởng đến nội dung chương trình nguồn \& được chương trình dịch bỏ qua. Trong Pascal các đoạn chú thích được đặt giữa cặp dấu \verb|{| \& \verb|}| hoặc \verb|(*| \verb|*)|. 1 trong những cách tạo chú thích trong C++ là đặt chúng giữa cặp dấu \verb|/*| \& \verb|*/|.'' -- \cite[p. 13]{SGK_Tin_Hoc_11}
+
+\subsection{Tóm tắt}
+\begin{itemize}
+	\item ``Cần có chương trình dịch để chuyển chương trình nguồn thành chương trình đích.
+	\item Có 2 loại chương trình dịch: thông dịch \& biên dịch.
+	\item Các thành phần của ngôn ngữ lập trình: bảng chữ cái, cú pháp \& ngữ nghĩa.
+	\item Mọi đối tượng trong chương trình đều phải được đặt tên:
+	\begin{itemize}
+		\item \textit{Tên dành riêng}: Được dùng với ý nghĩa riêng, không được dùng với ý nghĩa khác.
+		\item \textit{Tên chuẩn}: Tên dùng với ý nghĩa nhất định, khi cần dùng với ý nghĩa khác thì phải khai báo.
+		\item \textit{Tên do người lập trình đặt}: Cần phải khai báo trước khi sử dụng.
+	\end{itemize}
+	\item \textit{Hằng}: Đại lượng có giá trị không thay đổi trong quá trình thực hiện chương trình.
+	\item \textit{Biến}: Đại lượng được đặt tên. Giá trị của biến có thể thay đổi trong quá trình thực hiện chương trình.'' -- \cite[p. 13]{SGK_Tin_Hoc_11}
+\end{itemize}
+
 \section{Ngôn Ngữ Pascal}
+
+\subsection{Vài nét về tác giả của ngôn ngữ Pascal}
+``GS. \textsc{Niklaus Wirth}, tác giả của ngôn ngữ Pascal sinh năm 1934 tại Thụy Sĩ. Ông tốt nghiệp ĐH Công nghệ Liên bang Thụy Sĩ\footnote{ETH Zurich (English: ETH; Swiss Federal Institute of Technology in Z\"urich; German: Eidgen\"ossische Technische Hochschule Z\"urich). Có thể xem \href{https://en.wikipedia.org/wiki/ETH_Zurich}{Wikipedia\texttt{/}ETH Zurich}. Official website: \url{https://ethz.ch/en.html}.} (ETH) tại thành phố quê hương Zurich vào năm 1959. Ông nhận bằng Thạc sĩ tại trường Đại học Tổng hợp Laval ở Quebec, Canada năm 1960. Năm 1963, tại Đại học Tổng hợp California (Mỹ) dưới sự lãnh đạo của GS. Harry Huskey ông thực hiện đề án mở rộng ngôn ngữ Algol-60 (ngôn ngữ Euler) \& bảo vệ luận án tiến sĩ. Trong các năm 1963--1967, ông giảng dạy tại Đại học Tổng hợp Stanford (Mỹ). Cũng trong thời gian này ông được mời vào nhóm chuyên gia quốc tế IFIP thiết kế Algol-68. Năm 1967, Wirth trở về nước \& giảng dạy tại Tổng hợp Zurich. Năm 1968, ông chuyển sang ETH, tại đây ông bắt đầu tham gia thiết kế Pascal. Năm 1970, chương trình dịch Pascal đầu tiên được hoàn thành. Trong thời gian 1978--1981, Wirth lãnh đạo dự án thiết kế ngôn ngữ Modula-2, máy tính cá nhân 16-bit Lilit dựa trên nó \& hệ điều hành OS Medos. Tất cả các chương trình, kể cả chương trình hệ thống, được thực hiện hoàn toàn trên Modula-2. Năm 1984, do công lao to lớn trong việc phát triển các ngôn ngữ lập trình \& thiết kế máy tính cá nhân Lilit, ông được giải thưởng Alan Turing -- giải thưởng cao quý nhất trong giới Tin học, mà về ý nghĩa được coi là tương đương với giải Nobel. Trong thời gian 1986--1989, Wirth lãnh đạo dự án phát triển ngôn ngữ Oberon, hệ điều hành hướng đối tượng Oberon \& trạm làm việc 32-bit Ceres. Rất nhiều ý tưởng của dự án này được các đồng nghiệp từ phòng thí nghiệm Sun Labs sử dụng cho ngôn ngữ \& công nghệ Java. Từ năm 1990 ông lãnh đạo Viện Các hệ thống máy tính tại ETH. Năm 1999, ông nghỉ hưu \& trở thành GS danh dự của ETH.'' -- \cite[p. 14]{SGK_Tin_Hoc_11}
+
+\subsection{Pascal -- Ngôn ngữ của học đường?}
+``Pascal! Hỏi có người lập trình nào không biết ngôn ngữ này? Thành công vang dội của nó bắt đầu vào những năm 1980, thời kỳ của cuộc cách mạng trong công nghiệp máy tính \& giai đoạn nở rộ của lập trình có cấu trúc. Có thể nói Pascal xứng đáng là điểm khởi đầu cho 1 kỷ nguyên mới của các ngôn ngữ lập trình.'' -- \cite[p. 15]{SGK_Tin_Hoc_11}
+
+\subsubsection{Pascal -- Sự ra đời \& đặc điểm}
+``Vào đầu năm 1971, bản mô tả ngôn ngữ mới của Viện Công nghệ Liên bang Thụy Sĩ được công bố trong số đầu tiên của tạp chí Acta Informatica. Sự ra đời của Pascal có thể được tính từ thời điểm này. Tác giá của nó, GS. Niklaus Wirth trở nên nổi tiếng vì sự xuất hiện của Pascal. Những dự án sau này của ông chứng minh hùng hồn cho thế giới rằng chìa khóa tới các bí mật của máy tính chính là ở sự kết hợp hài hòa giữa Toán học, Công nghệ \& Lập trình. \& nếu tiếp cận vấn đề 1 cách hợp lý thì có thể tạo ra các ngôn ngữ, hệ điều hành \& ngay cả các máy tính tuyệt vời vượt các chuẩn công nghiệp, $\ldots$ chỉ bằng sức lực của những sinh viên.
+
+Người ta thường nói đến các điểm khác biệt của Pascal so với những ngôn ngữ khác, e.g., ngôn ngữ C. Nhưng chính Dennis Ritchie, tác giả của C đã phát biểu (1993): [translated] ``Tôi khẳng định rằng Pascal rất gần với C. 2 ngôn ngữ này khác biệt về chi tiết, nhưng về cơ sở chúng là giống nhau $\ldots$ Khi nhìn vào các kiểu dữ liệu, cũng như các phép toán trên chúng, ta có thể phát hiện ra những sự giống nhau rất lớn, mặc dù rằng ý đồ của Wirth khi tạo ra Pascal rất khác với ý đồ của chúng tôi khi tạo ra C. Wirth tạo ngôn ngữ để giảng dạy \& do vậy tất nhiên cần đáp ứng các yêu cầu sư phạm.
+
+Khác với C, Pascal không được tạo ra để làm ngôn ngữ lập trình hệ thống. Để đề cao tính đơn giản \& hiệu quả dựa trên mức độ hiểu về khoa học lập trình thời bấy giờ, Wirth chủ tâm chấp nhận các hạn chế của ngôn ngữ, trước tiên trong các vấn đề liên quan đến thế giới bên ngoài (vào\texttt{/}ra \& các công cụ phụ thuộc hệ thống). Mặc dù vậy, nếu nghĩ rằng Pascal là ngôn ngữ chỉ dành để giảng dạy thì sẽ sai lầm. Hãy nghe chính ý kiến của Wirth về vấn đề này (1984): [translated] ``Có người cho rằng Pascal được thiết kế như 1 ngôn ngữ để giảng dạy. Mặc dù điều này là đúng, nhưng việc sử dụng nó để giảng dạy không phải là mục đích duy nhất. Thực tế, tôi không tin vào sự thành công của việc áp dụng trong khi học các công cụ \& phương pháp mà không thể sử dụng để giải quyết các bài toán thực tế. Theo các tiêu chuẩn ngày nay thì Pascal có những nhược điểm rõ ràng khi lập trình các hệ thống lớn, nhưng 15 năm trước, nó là thỏa hiệp hợp lý giữa cái mong muốn \& hiệu quả''.'' -- \cite[p. 15]{SGK_Tin_Hoc_11}
+
+\subsubsection{Pascal \& lập trình có cấu trúc}
+``Ngôn ngữ Pascal được Wirth tạo ra dưới ảnh hưởng các tư tưởng của C. A. R. Hoare, đăng trong công trình ``Bàn về cấu trúc dữ liệu'' (\textit{Notes on Data Structuring}, Academic Press, 1972). Đóng góp của nhà bác học người Anh lớn tới mức có thể gọi ông là cha đỡ đầu của Pascal. Pascal được coi như khởi đầu của kỷ nguyên lập trình cấu trúc. Tất cả bắt đầu từ bài báo của chuyên gia người Hà Lan E. W. Dijkstra ``Lập trình cấu trúc'' (Structured Programming, 1969). Trong bài báo này ông đề xuất hạn chế các cấu trúc điều khiển chương trình chỉ ở 3 dạng là tuần tự, rẽ nhánh, \& lặp. Từ đó suy ra rằng \textit{câu lệnh chuyển vô điều kiện} (\texttt{goto}) trong các ngôn ngữ ALGOL \& PL\texttt{/}1 (rất phổ biến thời bấy giờ) là hoàn toàn không cần thiết. Thật sự là Wirth cũng không dám loại câu lệnh này khỏi Pascal. Nhưng điều chủ yếu nằm ở chỗ khác: Lập trình cấu trúc liên quan đến nguyên tắc ``từ trên xuống dưới'' (làm mịn từng bước), yêu cầu tính cấu trúc của điều khiển \& dữ liệu, dựa vào sự đơn giản \& cơ sở toán học mà tăng độ tin cậy của phần mềm. Tất cả những điều này đều khả thi nhờ các khả năng của Pascal.
+
+Về ý đồ khi xây dựng Pascal, Wirth viết: ``Điểm mới của Pascal là đưa ra các cấu trúc \& kiểu dữ liệu phong phú, cũng giống như ALGOL đưa ra các loại cấu trúc điều khiển. Trong ALGOL chỉ có 3 kiểu dữ liệu cơ sở: các số nguyên \& thực, giá trị chân lý, mảng; Pascal đã đưa thêm các kiểu dữ liệu cơ sở \& còn cho khả năng xác định những kiểu cơ sở mới (kiểu liệt kê, kiểu miền con), cũng như các dạng cấu trúc dữ liệu mới: bản ghi, tập hợp, tệp, mà 1 số trong chúng đã có trong COBOL. \& tất nhiên, quan trọng nhất là \textit{tính đệ quy} trong việc mô tả các cấu trúc \& hệ quả của điều này là khả năng kết hợp \& lồng các cấu trúc''.'' -- \cite[p. 15]{SGK_Tin_Hoc_11}
+
+\subsubsection{Pascal có tiếp tục tồn tại?}
+``Để kết luận, xin trích dẫn lời của Dennis Ritchie tác giả ngôn ngữ C: [translated] ``Pascal là 1 ngôn ngữ thanh lịch. Nó vẫn tiếp tục tồn tại. Nó đã khởi nguồn cho không ít ngôn ngữ đàn em \& có ảnh hưởng sâu sắc đến việc thiết kế các ngôn ngữ lập trình nói chung''.'' -- \cite[p. 15]{SGK_Tin_Hoc_11}
 
 %------------------------------------------------------------------------------%
 
 \chapter{Chương Trình Đơn Giản}
 
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Cấu trúc chương trình; các kiến thức cơ bản về kiểu dữ liệu, phép toán, biểu thức, câu lệnh gán, tổ chức vào\emph{\texttt{/}}ra đơn giản; cách thực hiện chương trình trong môi trường Pascal}.
+\end{quotation}
+
 \section{Cấu Trúc Chương Trình}
+
+\subsection{Cấu trúc chung}
+p. 19/145
 
 \section{1 Số Kiểu Dữ Liệu Chuẩn}
 
