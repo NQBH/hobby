@@ -1,0 +1,169 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Elementary Computer Science\texttt{/}Grade 11}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\mainmatter
+
+\chapter*{Preface}
+
+Tóm tắt kiến thức Tin học lớp 11 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
+
+%------------------------------------------------------------------------------%
+
+\chapter{1 Số Khái Niệm về Lập Trình \& Ngôn Ngữ Lập Trình}
+
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Khái niệm cơ sở về lập trình, khái niệm \& các thành phần của ngôn ngữ lập trình, vai trò \& phân loại chương trình dịch}.
+\end{quotation}
+
+\section{Khái Niệm Lập Trình \& Ngôn Ngữ Lập Trình}
+
+\section{Bạn Biết Gì Về Các Ngôn Ngữ Lập Trình?}
+
+\section{Các Thành Phần Của Ngôn Ngữ Lập Trình}
+
+\section{Ngôn Ngữ Pascal}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Chương Trình Đơn Giản}
+
+\section{Cấu Trúc Chương Trình}
+
+\section{1 Số Kiểu Dữ Liệu Chuẩn}
+
+\section{Khai Báo Biến}
+
+\section{Phép Toán, Biểu Thức, Câu Lệnh Gán}
+
+\section{Các Thủ Tục Chuẩn Vào\texttt{/}Ra Đơn Giản}
+
+\section{Soạn Thảo, Dịch, Thực Hiện \& Hiệu Chỉnh Chương Trình}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Cấu Trúc Rẽ Nhánh \& Lặp}
+
+\section{Cấu Trúc Rẽ Nhánh}
+
+\section{Cấu Trúc Lặp}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Kiểu Dữ Liệu Có Cấu Trúc}
+
+\section{Kiểu Mảng}
+
+\section{Kiểu Xâu}
+
+\section{Kiểu Bản Ghi}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Tệp \& Thao Tác với Tệp}
+
+\section{Kiểu Dữ Liệu Tệp}
+
+\section{Thao Tác với Tệp}
+
+\section{Ví Dụ Làm Việc với Tệp}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Chương Trình Con \& Lập Trình Có Cấu Trúc}
+
+\section{Chương Trình Con \& Phân Loại}
+
+\section{Ví Dụ về Cách Viết \& Sử Dụng Chương Trình Con}
+
+\section{Ai Là Lập Trình Viên Đầu Tiên?}
+
+\section{Thư Viện Chương Trình Con Chuẩn}
+
+\section{Âm Thanh}
+
+%------------------------------------------------------------------------------%
+
+\appendix
+
+\chapter{Miscellaneous}
+
+\section{1 Số Phép Toán Thường Dùng}
+
+\section{Giá Trị Phép Toán Logic}
+
+\section{Môi Trường Turbo Pascal}
+
+\section{1 Số Tên Dành Riêng}
+
+\section{1 Số Kiểu Dữ Liệu Chuẩn}
+
+\section{1 Số Thủ Tục \& Hàm Chuẩn}
+
+\section{Câu Lệnh Rẽ Nhánh \& Lặp}
+
+\section{Câu Lệnh \texttt{with}}
+
+\section{1 Số Thông Báo Lỗi}
+
+\section{Câu Lệnh Rẽ Nhánh \& Lặp Trong C++}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
