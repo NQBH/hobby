@@ -50,7 +50,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp 6. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/problem/NQBH_elementary_mathematics_grade_6_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}problem}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/problem/NQBH_elementary_mathematics_grade_6_problem.pdf}.}.
+	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp 6. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.} của tác giả viết cho Toán lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/problem/NQBH_elementary_mathematics_grade_6_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}problem}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/problem/NQBH_elementary_mathematics_grade_6_problem.pdf}.}.
 \end{abstract}
 
 \tableofcontents
@@ -524,10 +524,160 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 \begin{tcolorbox}
 	``Muốn tìm số hạng chưa biết, ta lấy tổng trừ đi số hạng đã biết. Muốn tìm số bị trừ, ta lấy hiệu cộng với số trừ. Muốn tìm số trừ, ta lấy số bị trừ trừ đi hiệu. Muốn tìm thừa số chưa biết, ta lấy tích chia cho thừa số đã biết. Muốn tìm số bị chia, ta lấy thương nhân với số chia. Muốn tìm số chia, ta lấy số bị chia chia cho thương.'' -- \cite[p. 16]{Trong_Toan_6_2021}
 	
+	``Cho 2 số tự nhiên $a$ \& $b$, trong đó $b\ne 0$, ta luôn tìm được 2 số tự nhiên $q$ \& $r$ duy nhất sao cho:
 	
+	\fbox{số bị chia $=$ số chia $\cdot$ thương $+$ số dư}, i.e., $a = bq + r$, trong đó $0\le r < b$. Nếu $r = 0$ thì ta có phép chia hết. Nếu $r\ne 0$ thì ta có phép chia có dư. Điều kiện để thực hiện phép trừ các số tự nhiên là số bị trừ lớn hơn hoặc bằng số trừ. Số chia bao giờ cũng khác $0$.'' -- \cite[p. 18]{Trong_Toan_6_2021}
 \end{tcolorbox}
 
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{42.}, p. 19]
+	Tìm $a\in\mathbb{N}$ biết khi chia $a$ cho $4$ thì được thương là $14$ \& có số dư là $12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{43.}, p. 19]
+	Tìm $m\in\mathbb{N}$ biết khi chia $m$ cho $13$ thì được thương là $4$ \& có số dư là $12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{44.}, p. 19]
+	Tìm $a\in\mathbb{N}$ biết khi chia $58$ cho $a$ thì được thương là $4$ \& có số dư là $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{45.}, p. 19]
+	Tìm $b\in\mathbb{N}$ biết khi chia $64$ cho $b$ thì được thương là $4$ \& có số dư là $12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{46.}, p. 19]
+	Tìm $a\in\mathbb{N}$ biết khi chia $a$ cho $13$ thì được thương là $4$ \& có số dư $r$ lớn hơn $11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{47.}, p. 19]
+	Tìm $a\in\mathbb{N}$ biết khi chia $a$ cho $13$ thì được thương là $4$ \& số dư là số lớn nhất có thể được trong phép chia ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{48.}, p. 19]
+	Tìm $a\in\mathbb{N}$, biết khi chia $a$ cho $17$ thì được thương là $6$ \& số dư là số lớn nhất có thể có trong phép chia ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{49.}, p. 19]
+	Tìm $a\in\mathbb{N}$, biết khi chia $a$ cho $17$ thì được thương là $6$ \& số dư lớn hơn $15$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{50.}, p. 19]
+	\begin{enumerate*}
+		\item Minh dùng $23000$đ để mua bút. Mỗi cây bút giá $2000$đ. Hỏi Minh mua được nhiều nhất bao nhiêu cây bút? \& còn dư mấy ngàn?
+		\item Lan dùng $5000$đ để mua bút. 1 cây bút giá $2000$đ. Hỏi Lan mua được nhiều nhất mấy cây bút? \& còn dư mấy ngàn?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{51.}, p. 19]
+	1 trường có $50$ phòng học, mỗi phòng có $11$ bộ bàn ghế, mỗi bộ bàn ghế có thể xếp cho $4$ học sinh ngồi. Trường có thể nhận nhiều nhất bao nhiêu học sinh để mọi học sinh đều có chỗ ngồi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{52.}, p. 19]
+	1 trường Trung học cơ sở có $997$ học sinh tham dự lễ tổng kết cuối năm. Ban tổ chức đã chuẩn bị những chiếc băng $5$ chỗ ngồi. Phải có ít nhất bao nhiêu ghế băng như vậy để tất cả học sinh đều có chỗ ngồi?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{53.}, p. 19]
+	1 tàu hỏa cần chở $900$ khách. Mỗi toa tàu chứa được $88$ khách. Hỏi cần ít nhất bao nhiêu toa để chở hết khách?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{54.}, p. 19]
+	Tỉnh Bắc Giang có dân số $1803905$ \& đứng thứ $12$ về dân số trong $63$ tỉnh thành toàn quốc. Tính dân số Thanh Hóa (tỉnh đông dân thứ 3), biết rằng gấp đôi số dân Bắc Giang vẫn còn kém dân số Thanh Hóa $32228$ người.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{55.}, p. 19]
+	1 tàu hỏa cần chở $980$ khách. Mỗi toa tàu có $11$ khoang, mỗi khoang có $8$ chỗ ngồi. Hỏi cần có ít nhất bao nhiêu toa để chở hết khách?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{56.}, p. 19]
+	Mỗi hội trường có $32$ chỗ ngồi cho 1 hàng ghế. Nếu có $890$ đại biểu tham dự họp thì phải dùng ít nhất bao nhiêu hàng ghế?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{57.}, p. 19]
+	Tìm $a,b\in\mathbb{N}$, biết $ab + 13 = 200$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{58.}, p. 19]
+	Trong 1 phép chia có số bị chia là $200$, số dư là $13$. Tìm số chia \& thương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{59.}, p. 19]
+	Trong tháng $7$ nhà ông Khánh dùng hết $115$ số điện. Hỏi ông Khánh phải trả bao nhiêu tiền điện, biết đơn giá điện như sau: Giá tiền cho $50$ số đầu tiên là $1678$đ\emph{\texttt{/}}số. Giá tiền cho $50$ số tiếp theo $51$--$100$) là $1734$đ\emph{\texttt{/}}số. Giá tiền cho $100$ số tiếp theo ($101$--$200$) là $2014$đ\emph{\texttt{/}}số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{60.}, p. 20]
+	1 phòng chiếu phim có $18$ hàng ghế, mỗi hàng có $18$ ghế. Giá 1 vé xem phim là $50000$đ.
+	\begin{enumerate*}
+		\item[(a)] Tối thứ $7$, tất cả các vé đều được bán hết. Số tiền bán vé thu được là bao nhiêu?
+		\item[(b)] Tối thứ $6$, số tiền bán vé thu được là $10550000$đ. Hỏi có bao nhiêu vé không bán được?
+		\item[(c)] Chủ Nhật còn $41$ vé không bán được. Hỏi số tiền bán vé thu được là bao nhiêu?
+	\end{enumerate*}
+\end{baitoan}
+	
 \subsection{Lũy thừa của 1 số tự nhiên}
+\textsc{Kiến thức cần nhớ.}
+\begin{tcolorbox}
+	``\textbf{Dạng.} Lũy thừa là tích của nhiều thừa số giống nhau.
+	\begin{align}
+		a^n = \underbrace{a\cdot a\cdots a}_{n\mbox{ \footnotesize thừa số }},\ \forall n\in\mathbb{N}^\star.
+	\end{align}
+	$a^n$, trong đó $a$ là \textit{cơ số}, $n$ là \textit{số mũ}. Quy ước: $a^0 = 1$, $\forall a\in\mathbb{N}^\star$.'' -- \cite[p. 20]{Trong_Toan_6_2021}
+\end{tcolorbox}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{13.}, p. 21]
+	Tìm $c\in\mathbb{N}$, biết rằng với mọi $n\in\mathbb{N}^\star$ ta có:
+	\begin{enumerate*}
+		\item[(a)] $c^n = 1$;
+		\item[(b)] $c^n = 0$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{14.}, p. 21]
+	Tính $11^2,111^2$. Từ đó dự đoán kết quả của $1111^2,11111^2$, \& $1\ldots 1^2$ với $n$ số $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{15.}, p. 21]
+	Ta có: $1 + 3 + 5 = 9 = 3^2$. Viết các tổng sau dưới dạng bình phương của 1 số tự nhiên:
+	\begin{enumerate*}
+		\item[(a)] $1 + 3 + 5 + 7$;
+		\item[(b)] $1 + 3 + 5 + 7 + 9$;
+		\item[(c)] $1 + 3 + 5 + 7 + 9 + 11$;
+		\item[(d)] Tổng của $n$ số lẻ đầu tiên: $1 + 3 + \cdots + (2n - 3) + (2n - 1) = \sum_{i=1}^n (2i - 1)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{16.}, p. 21]
+	\emph{Số chính phương} là số bằng bình phương của 1 số tự nhiên (e.g., $0,1,4,9,16,\ldots$). Mỗi tổng sau có là 1 số chính phương không?
+	\begin{enumerate*}
+		\item[(a)] $1^3 + 2^3$;
+		\item[(b)] $1^3 + 2^3 + 3^3$;
+		\item[(c)] $1^3 + 2^3 + 3^3 + 4^3$.
+		\item[(d)] $\sum_{i=1}^n i^3 = 1^3 + 2^3 + \cdots + n^3$.
+	\end{enumerate*}
+\end{baitoan}
+\noindent\textsc{Kiến thức cần nhớ.}
+\begin{tcolorbox}
+	``Khi nhân 2 hay nhiều lũy thừa cùng cơ số, ta giữa nguyên cơ số \& cộng các số mũ. $a^ma^n = a^{m + n}$, $\forall a,m,n\in\mathbb{N}$. Khi chia 2 lũy thừa cùng cơ số (khác $0$), ta giữ nguyên cơ số \& trừ các số mũ. $a^m:a^n = a^{m-n}$, $\forall a,m,n\in\mathbb{N}$, $a\ne 0$, $m\ge n$.'' -- \cite[p. 22]{Trong_Toan_6_2021}
+\end{tcolorbox}
+
+\begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{22.}, p. 22]
+	Biết rằng khối lượng của Trái Đất khoảng $600\ldots 00$ tấn với $21$ chữ số $0$, khối lượng của Mặt Trăng khoảng $7500\ldots 00$ với $18$ chữ số $0$.
+	\begin{enumerate*}
+		\item[(a)] Viết khối lượng Trái Đất \& khối lượng Mặt Trăng dưới dạng tích của 1 số với lũy thừa của $10$.
+		\item[(b)] Khối lượng của Trái Đất gấp bao nhiêu lần khối lượng Mặt Trăng?
+	\end{enumerate*}
+\end{baitoan}
+\noindent\textsc{Kiến thức cần nhớ.}
+\begin{tcolorbox}
+	``Muốn tìm $x$ ở số mũ, ta đưa về lũy thừa cùng cơ số rồi suy ra số mũ bằng số mũ. Trong tập hợp số tự nhiên $\mathbb{N}$, muốn tìm $x$ ở cơ số, ta đưa về lũy thừa cùng số mũ, suy ra cơ số bằng cơ số.'' -- \cite[p. 22]{Trong_Toan_6_2021}
+\end{tcolorbox}
+
+\begin{baitoan}
+	Giải \& biện luận phương trình $m^x = m^n$ với $m,n\in\mathbb{N}$ cho trước. Tương tự, giải \& biện luận phương trình $m^{f(x)} = m^n$ với $m,n\in\mathbb{N}$ với $f$ là 1 hàm số sao cho phương trình $f(x) = m$ giải được \& có các nghiệm tự nhiên là các số $x_i$, $i = 1,\ldots,k$, $k\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}
+	Giải \& biện luận phương trình $(ax + b)^n = m^n$ với $a,b,m,n\in\mathbb{N}$ cho trước. Tương tự, giải \& biện luận phương trình $(f(x))^n = m^n$ với $f$ là 1 hàm số sao cho phương trình $f(x) = \pm m$ giải được \& có các nghiệm tự nhiên là các số $x_i$, $i = 1,\ldots,k$, $k\in\mathbb{N}$.
+\end{baitoan}
 
 \subsection{Thứ tự thực hiện phép tính}
 
