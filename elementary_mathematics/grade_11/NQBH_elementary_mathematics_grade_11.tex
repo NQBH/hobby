@@ -68,6 +68,57 @@
 	\textbf{Nội dung.} \textit{Tính chất tuần hoàn của các hàm số lượng giác \& phương pháp sử dụng đường tròn lượng giác để tìm nghiệm của các phương trình lượng giác cơ bản, kỹ năng biến đổi lượng giác \& kỹ năng giải các dạng phương trình lượng giác}.
 \end{quotation}
 
+\section{Công Thức Lượng Giác}
+
+\begin{quotation}
+	\textbf{Nội dung.} \textit{1 số công thức lượng giác cơ bản, trình bày số phức dưới dạng lượng giác \& ứng dụng}.
+\end{quotation}
+
+\subsection{Công thức lượng giác cơ bản}
+
+\subsubsection{Công thức cộng}
+\begin{equation}
+	\label{ctc}
+	\tag{ctc}
+	\boxed{\left\{\begin{split}
+		\cos(\alpha - \beta) &= \cos\alpha\cos\beta + \sin\alpha\sin\beta,\\
+		\cos(\alpha + \beta) &= \cos\alpha\cos\beta - \sin\alpha\sin\beta,\\
+		\sin(\alpha - \beta) &= \sin\alpha\cos\beta - \cos\alpha\sin\beta,\\
+		\sin(\alpha + \beta) &= \sin\alpha\cos\beta + \cos\alpha\sin\beta.
+	\end{split}\right.\ \forall\alpha,\beta\in\mathbb{R}.}
+\end{equation}
+
+\begin{proof}[Chứng minh \eqref{ctc}]
+	\begin{enumerate}
+		\item[(a)] ``Ta chỉ cần chứng minh công thức đầu tiên rồi từ đó dùng giá trị lượng giác của các góc liên kết để suy ra các công thức còn lại. Giả sử các điểm $M$ \& $N$ nằm trên đường tròn lượng giác tâm $O$, gốc $A$ sao cho góc lượng giác $(OA,OM) = \alpha$, $(OA,ON) = \beta$ thì $\overrightarrow{OM}$ có tọa độ $(\cos\alpha;\sin\alpha)$, $\overrightarrow{ON}$ có tọa độ $(\cos\beta;\sin\beta)$, từ đó tích vô hướng $\overrightarrow{OM}\cdot\overrightarrow{ON} = \cos\alpha\cos\beta + \sin\alpha\sin\beta$. Mặt khác, $\overrightarrow{OM}\cdot\overrightarrow{ON} = |\overrightarrow{OM}||\overrightarrow{ON}|\cos\widehat{NOM} = \cos\widehat{NOM} = \cos(ON,OM) = \cos[(OA,OM) - (OA,ON)] = \cos(\alpha - \beta)$, nên suy ra $\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$.'' -- \cite[pp. 5--6]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+		\item[(b)] Thay $\beta$ trong công thức vừa thu được ở (a) bởi $-\beta$ cho ta: $\cos(\alpha + \beta) = \cos\alpha\cos(-\beta) + \sin\alpha\sin(-\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$.
+		\item[(c)] $\sin(\alpha - \beta) = \cos\left(\frac{\pi}{2} - \alpha + \beta\right) = \cos\left(\frac{\pi}{2} - \alpha\right)\cos\beta - \sin\left(\frac{\pi}{2} - \alpha\right)\sin\beta = \sin\alpha\cos\beta - \cos\alpha\sin\beta$, trong đó ta sử dụng công thức $\sin x = \cos\left(\frac{\pi}{2} - x\right)$, $\cos x = \sin\left(\frac{\pi}{2} - x\right)$, $\forall x\in\mathbb{R}$\footnote{I.e., với 2 góc phụ nhau, sin 1 góc bất kỳ bằng côsin góc còn lại.} \& công thức vừa chứng minh ở (b) với $\alpha$ được thay bởi $\frac{\pi}{2} - \alpha$.
+		\item[(d)] Thay $\beta$ trong công thức vừa thu được ở (c) bởi $-\beta$.
+	\end{enumerate}
+	Các công thức cộng \eqref{ctc} được chứng minh.
+\end{proof}
+Kiểm tra nhanh tính hợp lý của \eqref{ctc}:
+\begin{align*}
+	&\sin^2(\alpha - \beta) + \cos^2(\alpha - \beta) = (\sin\alpha\cos\beta - \cos\alpha\sin\beta)^2 + (\cos\alpha\cos\beta + \sin\alpha\sin\beta)^2\\
+	&\hspace{5mm}= \sin^2\alpha\cos^2\beta - 2\sin\alpha\cos\beta\cos\alpha\sin\beta + \cos^2\alpha\sin^2\beta + \cos^2\alpha\cos^2\beta + 2\cos\alpha\cos\beta\sin\alpha\sin\beta + \sin^2\alpha\sin^2\beta\\
+	&\hspace{5mm}= \sin^2\alpha\cos^2\beta + \cos^2\alpha\sin^2\beta + \cos^2\alpha\cos^2\beta + \sin^2\alpha\sin^2\beta = (\sin^2\alpha + \cos^2\alpha)(\sin^2\beta + \cos^2\beta)  = 1,\\
+	&\sin^2(\alpha + \beta) + \cos^2(\alpha + \beta) = (\sin\alpha\cos\beta + \cos\alpha\sin\beta)^2 + (\cos\alpha\cos\beta - \sin\alpha\sin\beta)^2\\
+	&\hspace{5mm}= \sin^\alpha\cos^2\beta + 2\sin\alpha\cos\beta\cos\alpha\sin\beta + \cos^2\alpha\sin^2\beta + \cos^2\alpha\cos^2\beta - 2\cos\alpha\cos\beta\sin\alpha\sin\beta + \sin^2\alpha\sin^2\beta\\
+	&\hspace{5mm}= \sin^2\alpha\cos^2\beta + \cos^2\alpha\sin^2\beta + \cos^2\alpha\cos^2\beta + \sin^2\alpha\sin^2\beta = (\sin^2\alpha + \cos^2\alpha)(\sin^2\beta + \cos^2\beta)  = 1.
+\end{align*}
+Từ \eqref{ctc} dễ suy ra
+\begin{align}
+	\label{ctc 1}
+	\tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta},\ \tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta}.
+\end{align}
+
+\begin{proof}[Chứng minh \eqref{ctc 1}]
+	
+\end{proof}
+
+
+%------------------------------------------------------------------------------%
+
 \section{Các Hàm Số Lượng Giác -- Trigonometric Functions}
 ``Các hàm số lượng giác\texttt{/}trigonometric\footnote{\textbf{trigonometric} [a] (also \textbf{trigonometrical}) (\textit{mathematics}) connected with the types of mathematics that deals with the relationship between the sides \& angles of triangles.}\,\footnote{\textbf{trigonometry} [n] [uncountable] the type of mathematics that deals with the relationship between the sides \& angles of triangles.} functions thường được dùng để mô tả những hiện tượng thay đổi 1 cách tuần hoàn hay gặp trong thực tiễn, khoa học \& kỹ thuật.'' -- \cite[p. 4]{SGK_Toan_11_dai_so_giai_tich_nang_cao}
 
