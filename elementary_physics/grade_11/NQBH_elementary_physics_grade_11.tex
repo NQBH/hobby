@@ -381,10 +381,107 @@ Cách giải đáp thứ 2 cho rằng, có tương tác hấp dẫn giữa 2 v�
 \end{cauhoi}
 
 \subsection{Công của lực điện}
+``Ta xét công của lực điện tác dụng lên 1 điện tích $q$ chuyển động từ $M$ đến $N$ trong điện trường đều, e.g. điện trường giữa 2 tấm kim loại rộng, song song, mang điện tích trái dấu có độ lớn bằng nhau. Giả sử $q > 0$ \& đường đi của điện tích $q$ là đoạn đường cong $MN$ (Fig. \ref{fig:cong luc dien}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{cong_luc_dien}
+	\caption{Công của lực điện tác dụng lên 1 điện tích $q$ chuyển động từ $M$ đến $N$ trong điện trường đều giữa 2 tấm kim loại rộng, song song, mang điện tích trái dấu có độ lớn bằng nhau, \cite[Hình 4.1, p. 19]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:cong luc dien}
+\end{figure}
+Để tính công của lực điện trên đoạn đường cong $MN$, ta chia $MN$ thành nhiều đoạn nhỏ, công của lực điện tác dụng lên $q$ bằng tổng các công trên các đoạn nhỏ đó. Vì $q > 0$ nên lực điện tác dụng lên $q$ có chiều hướng từ tấm mang điện tích dương sang tấm mang điện tích âm. Coi rằng đoạn đường cong $MN$ được chia thành nhiều đoạn nhỏ sao cho mỗi đoạn nhỏ đó có thể coi là đoạn thẳng\footnote{Quá trình phân 1 đường cong ra thành những ``đoạn thẳng đủ nhỏ'' này thường được dùng trong vi phân \& tích phân, xem chương trình Toán 11 \& Toán 12 \& tài liệu của tác giả: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}lecture} \& \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_12/NQBH_elementary_mathematics_grade_12.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 12\texttt{/}lecture}.}. Khi đó công thức tính công trên 1 đoạn nhỏ nào đó, e.g., đoạn $PQ$, là:
+\begin{align*}
+	\Delta A_{PQ} = qE\cdot PQ\cdot\cos\alpha = qE\cdot\overline{P'Q'},
+\end{align*}
+ở đây $\overline{P'Q'}$ là hình chiếu của $PQ$ lên trục $Ox$; quy ước vẽ trục $Ox$ có chiều trùng với chiều của đường sức. Công trên toàn đoạn $MN$ bằng:
+\begin{align}
+	A_{MN} = \sum \Delta A = qE\left(\overline{M'R'} + \cdots + \overline{P'Q'} + \cdots + \overline{S'N'}\right) = qE\cdot\overline{M'N'}.
+\end{align}
+Kết quả trên đây được rút ra từ giả thiết $q > 0$. Tuy nhiên, nếu $q < 0$ ta cũng rút ra được công thức như trên. Do đó có thể viết:
+\begin{align}
+	\label{cong cua luc dien}
+	A_{MN} = qE\cdot\overline{M'N'},
+\end{align}
+$M',N'$ là hình chiếu của 2 điểm $M,N$ lên trục $Ox$; $\overline{M'N'}$ là độ dài đại số của đoạn $M'N'$; còn $q$ có dấu tùy ý. Từ  \eqref{cong cua luc dien} ta có nhận xét là, công của lực điện tác dụng lên điện tích $q$ không phụ thuộc vào dạng của đoạn đường đi $MN$ mà chỉ phụ thuộc vào vị trí của 2 điểm $M,N$, i.e., của điểm đầu \& điểm cuối của đường đi. Người ta đã chứng minh nhận xét trên đây cũng đúng cả trong trường hợp điện trường không đều.
+
+\begin{dinhluat}
+	Công của lực điện tác dụng lên 1 điện tích không phụ thuộc dạng đường đi của điện tích mà chỉ phụ thuộc vào vị trí điểm đầu \& điểm cuối của đường đi trong điện trường.
+\end{dinhluat}
+Do đó, người ta nói \textit{điện trường tĩnh là 1 trường thế năng} (tương tự như trường hấp dẫn).'' ``Trong \textit{Cơ học}\texttt{/}Mechanics\footnote{\textbf{mechanics} [n] \textbf{1.} [uncountable] the science of movement \& force; \textbf{2.} [plural] \textbf{mechanics of something} the way something works or is done.} ta cũng đã rút ra kết luận là \textit{công của lực hấp dẫn không phụ thuộc vào dạng đường đi của vật mà chỉ phụ thuộc vào điểm đầu \& điểm cuối của đường đi}.'' -- \cite[pp. 19--20]{SGK_Vat_Ly_11_nang_cao}
+
+\subsection{Khái niệm hiệu điện thế}
+
+\subsubsection{Công của lực điện \& hiệu thế năng của điện tích}
+``Công của trọng lực \& công của lực điện cùng có 1 đặc tính quan trọng là những công này không phụ thuộc dạng đường đi của vật mà chỉ phụ thuộc vị trí điểm đầu \& điểm cuối của đường đi. Ta đã biết, công của trọng lực được biểu diễn qua hiệu thế năng tại vị trí đầu \& cuối đường đi của vật đó (\cite[\S35, pp. 164--166]{SGK_Vat_Ly_10_nang_cao}). Ở đây, ta cũng coi 1 điện tích $q$ ở trong điện trường thì có thế năng, \& công của lực điện khi điện tích $q$ di chuyển từ điểm $M$ đến điểm $N$ cũng được biểu diễn qua hiệu của các thế năng của điện tích $q$ tại 2 điểm đó: $A_{MN} = W_M - W_N$.'' -- \cite[p. 20]{SGK_Vat_Ly_11_nang_cao}
+
+\subsubsection{Hiệu điện thế, điện thế}
+``Hiệu thế năng của vật trong trọng trường tỷ lệ với khối lượng $m$ của vật. Ở đây, ta cũng coi hiệu thế năng của điện tích $q$ trong điện trường tỷ lệ với điện tích $q$, i.e., có thể biểu diễn $A_{MN}$ dưới dạng sau:
+\begin{align}
+	\label{hieu the nang}
+	A_{MN} = q(V_M - V_N),
+\end{align}
+$(V_M - V_N)$ được gọi là \textit{hiệu điện thế} (hay \textit{điện áp}) giữa 2 điểm $M,N$ \& ký hiệu là $U_{MN}$. Từ \eqref{hieu the nang} rút ra công thức sau đây được coi là công thức định nghĩa hiệu điện thế:
+\begin{align}
+	\label{hieu dien the}
+	U_{MN} = V_M - V_N = \frac{A_{MN}}{q}.
+\end{align}
+\textit{Hiệu điện thế giữa 2 điểm trong điện trường là đại lượng đặc trưng cho khả năng thực hiện công của điện trường khi có 1 điện tích di chuyển giữa 2 điểm đó}. Các đại lượng $V_M,V_N$ được gọi là \textit{điện thế của điện trường} tại điểm $M,N$ tương ứng. Điện thế của điện trường phụ thuộc vào cách chọn mốc tính điện thế. Thường người ta chọn điện thế ở xa vô cực làm mốc. Cũng có khi người ta chọn điện thế ở mặt đất làm mốc (i.e., coi điện thế ở mặt đất bằng $0$). Vì vậy, khi nói tới điện thế tại 1 điểm $A$ nào đó thì thực chất đó là hiệu điện thế $V_A - V_B$, trong đó $V_B$ là điện thế được chọn làm mốc, i.e., $V_B = 0$.
+
+Trong hệ SI, đơn vị điện thế \& hiệu điện thế là vôn ký hiệu là V. Từ công thức \eqref{hieu the nang} suy ra, nếu $U_{MN} = 1$ V, $q = 1$ C thì $A_{MN} = 1$ J. Vậy vôn là hiệu điện thế giữa 2 điểm $M,N$ mà khi 1 điện tích dương 1 C di chuyển từ điểm $M$ đến điểm $N$ thì lực điện sẽ thực hiện 1 công dương là $1$ J. Để đo hiệu điện thế giữa 2 vật, người ta dùng \textit{tĩnh điện kế} (Fig. \ref{fig:tinh dien ke}). Trong kỹ thuật, hiệu điện thế gọi là \textit{điện áp}.'' ``Muốn đo hiệu điện thế giữa 2 vật, ta nối 1 vật với cần của tĩnh điện kế, vật kia với vỏ. Độ lệch của kim cho biết hiệu điện thế giữa 2 vật đó.'' -- \cite[p. 21]{SGK_Vat_Ly_11_nang_cao}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{tinh_dien_ke}
+	\caption{Tĩnh điện kế: 1. Kim của tĩnh điện kế; 2. Trục quay của kim; 3. Thanh kim loại, gọi là \textit{cần của tĩnh điện kế}; 4. Vỏ tĩnh điện kế bằng kim loại, \cite[Hình 4.2, p. 21]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:tinh dien ke}
+\end{figure}
+
+\subsection{Liên hệ giữa cường độ điện trường \& hiệu điện thế}
+``So sánh 2 công thức \eqref{hieu the nang} \& \eqref{hieu dien the} ta rút ra:
+\begin{align}
+	\label{lien he giua cuong do dien truong & hieu dien the doi voi dien truong deu}
+	E = \frac{U_{MN}}{\overline{M'N'}}.
+\end{align}
+Đó là công thức biểu thị mối liên hệ giữa cường độ điện trường \& hiệu điện thế đối với điện trường đều. Các điểm $M,N,M',N'$ được chỉ rõ trên Fig. \ref{fig:cong luc dien}. Từ \eqref{lien he giua cuong do dien truong & hieu dien the doi voi dien truong deu} ta hiểu tại sao đơn vị cường độ điện trường là vôn trên mét. Mối liên hệ giữa cường độ điện trường \& hiệu điện thế thường được viết dưới dạng đơn giản như sau:
+\begin{align}
+	\label{lien he giua cuong do dien truong & hieu dien the}
+	E = \frac{U}{d},
+\end{align}
+$d$ là \textit{khoảng cách} giữa 2 điểm $M',N'$, i.e., $d\coloneqq = M'N' = |\overrightarrow{M'N'}$.'' -- \cite[pp. 21--22]{SGK_Vat_Ly_11_nang_cao} Từ công thức \eqref{lien he giua cuong do dien truong & hieu dien the}, điện thế giảm theo chiều của đường sức.
+
+\subsection{Thí nghiệm Millikan}
+``Thí nghiệm Millikan (Robert Andrews Millikan, 1868--1953, nhà vật lý người Mỹ, giải Nobel năm 1925) nhằm xác định điện tích nhỏ nhất trong tự nhiên. Sơ đồ thí nghiệm Millikan được trình bày trên Fig. \ref{fig:so do thi nghiem Millikan}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{so_do_thi_nghiem_Millikan}
+	\caption{Sơ đồ thí nghiệm Millikan: 1, 2. 2 tấm kim loại; 3. Máy phun; 4. Lỗ nhỏ; 5. Đèn chiếu sáng; 6. Kính quan sát, \cite[Hình 4.6, p. 24]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:so do thi nghiem Millikan}
+\end{figure}
+Trong hình đó 1 \& 2 là 2 tấm kim loại đường kính khoảng 20 cm. 2 tấm được đặt nằm ngang \& cách nhau chừng 2 cm. Dùng máy phun, phun vào lỗ nhỏ ở tấm kim loại 1 những hạt dầu có kích thước rất nhỏ (vào cỡ 1 $\rm\mu m$). Do cọ xát với miệng vòi phun mà 1 số hạt dầu được nhiễm điện. Qua lỗ nhỏ có 1 số hạt dầu rời vào bên trong khoảng không gian giữa 2 tấm kim loại. Dùng kính quan sát các hạt đó trong khoảng thời gian chừng vài ba giờ. Đầu tiên, khi 2 tấm 1 \& 2 chưa nối với nguồn, ta thấy những hạt dầu rơi xuống với tốc độ lớn dần. Sau đó tốc độ rơi của chúng không đổi. Đó là lúc lực ma sát cân bằng với lực hấp dẫn. Ở đây lực ma sát tỷ lệ với tốc độ rơi của hạt. Ký hiệu tốc độ không đổi này là $v$ thì $f_{\rm ms} = kv$. Ta có hệ thức sau: $mg = f_{\rm ms} = kv$  ($k$ là 1 hệ số tỷ lệ). Bây giờ nối tấm 1 với cực dương \& tấm 2 với cực âm của 1 nguồn điện. Khi đó có 1 số hạt không rơi xuống mà lại chuyển động từ dưới lên trên, đó là những hạt nhiễm điện âm. Khi những hạt này đạt đến tốc độ không đổi $v_1$, ta có thể viết công thức sau:
+\begin{align}
+	\label{SGK Vat ly 11 (1) p. 24}
+	q\frac{U}{d} = mg + kv_1,
+\end{align}
+trong đó $q$ là điện tích của hạt dầu, $U$ là hiệu điện thế giữa 2 tấm kim loại, $d$ là khoảng cách giữa 2 tấm đó.
+
+Ion hóa không khí trong khoảng không gian giữa 2 tấm kim loại (bằng tia $X$, tia phóng xạ, $\ldots$) thì có 1 số hạt thay đổi tốc độ đột ngột do chúng nhậm thêm hạt mang điện từ không khí. Khi những hạt nhận thêm điện tích này đạt đến tốc độ không đổi $v_2$, ta có thể viết hệ thức sau:
+\begin{align}
+	\label{SGK Vat ly 11 (2) p. 24}
+	(q + q_n)\frac{U}{d} = mg + kv_2,
+\end{align}
+ở đây $q_n$ là điện tích mà hạt dầu nhận thêm được. Từ \eqref{SGK Vat ly 11 (1) p. 24} \& \eqref{SGK Vat ly 11 (2) p. 24} ta rút ra:
+\begin{align*}
+	\frac{U}{d}q_n = k(v_2 - v_1),
+\end{align*}
+$d$ \& $U$ là những đại lượng có thể đo đươc, $v_2$ \& $v_1$ có thể xác định được bằng kính quan sát. Còn $k$ phải xác định bằng những phương pháp riêng xuất phát từ hệ thức $mg = kv$ (ở đây không nói đến). Từ đó ta tìm được $q_n$.
+
+Trong khoảng thời gian 1909--1913, Millikan \& các cộng sự của ông đã đo điện tích của chừng vài nghìn hạt. Ông nhận thấy rằng, không có hạt nào có điện tích nhỏ hơn $1.6\cdot 10^{-19}$ C \& điện tích của các hạt đều bằng 1 số nguyên lần $1.6\cdot 10^{-19}$ C. Từ đó ông rút ra kết luận rằng, trong tự nhiên tồn tại điện tích nguyên tố ($1.6\cdot 10^{-19}$ C).'' -- \cite[pp. 23--24]{SGK_Vat_Ly_11_nang_cao}
 
 %------------------------------------------------------------------------------%
 
 \section{Bài Tập về Lực Coulomb \& Điện Trường}
+p. 25
 
 %------------------------------------------------------------------------------%
 
