@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
 \usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
@@ -26,6 +26,7 @@
 \newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{nguyenly}{Nguyên lý}[section]
 \newtheorem{question}{Question}[section]
 \newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{remark}{Remark}[section]
@@ -95,7 +96,7 @@ Dựa vào sự tương tác giữa các điện tích cùng dấu người ta c
 
 \subsubsection{Sự nhiễm điện của các vật}
 
-\paragraph{Nhiễm điện do cọ xát.} ``Sau khi cọ xát vào lụa, thanh thủy tinh có thể hút được các mẩu giấy vụn. Người ta nói thanh thủy tinh được \textit{nhiễm điện do cọ xát}.'' -- \cite[p. 6]{SGK_Vat_Ly_11_nang_cao}
+\paragraph{Nhiễm điện do cọ xát.} ``Sau khi cọ xát vào lụa, thanh thủy tinh có thể hút được các mẩu giấy vụn (\cite[Hình 1.2: \textsf{Thanh thủy tin nhiễm điện hút các mẩu giấy}, p. 6]{SGK_Vat_Ly_11_nang_cao}). Người ta nói thanh thủy tinh được \textit{nhiễm điện do cọ xát}.'' -- \cite[p. 6]{SGK_Vat_Ly_11_nang_cao}
 
 \paragraph{Nhiễm điện do tiếp xúc.} ``Cho thanh kim loại không nhiễm điện chạm vào quả cầu đã nhiễm điện thì thanh kim loại nhiễm điện cùng dấu với điện tích của quả cầu (Fig. \ref{fig:nhiem dien do tiep xuc}). Người ta nói thanh kim loại được \textit{nhiễm điện do tiếp xúc}. Đưa thanh kim loại ra xa quả cầu thì thanh kim loại vẫn nhiễm điện.'' -- \cite[p. 7]{SGK_Vat_Ly_11_nang_cao}
 
@@ -181,9 +182,7 @@ Người ta quy ước hằng số điện môi của chân không bằng $1$. T
 \end{table}
 
 \subsection{Máy lọc bụi}
-``Sơ đồ của máy lọc bụi được trình bày trên \cite[Hình 1.8, p. 9]{SGK_Vat_Ly_11_nang_cao}. Không khí có nhiều bụi được quạt vào máy qua lớp lọc bụi thông thường. Tại đây, các hạt bụi có kích thước lớn bị gạt lại. Dòng không khí có lẫn các hạt bụi kích thước nhỏ vẫn bay lên. 2 lưới 1 \& 2 thực chất là 2 điện cực: lưới 1 là điện cực dương, lưới 2 là điện cực âm. Khi bay qua lưới 1 các hạt bụi nhiễm điện dương. Do đó, khi gặp lưới 2 nhiễm điện âm, các hạt bụt bị hút vào lưới. Vì vậy, khi qua lưới 2, không khí đã được lọc sạch bụi. Sau đó có thể cho không khí đi qua lớp lọc bằng than để khử mùi. Bằng cách này có thể loc đến $95\%$ bụi trong không khí.
-
-Máy lọc bụi là 1 ứng dụng của lực tương tác giữa các điện tích. Ngoài ra, lực tương tác giữa các điện tích còn có nhiều ứng dụng khác trong công nghiệp cũng như trong đời sống. E.g., kỹ thuật sơn tĩnh điện là 1 trong những ứng dụng đó. Muốn sơn vỏ xe ô tô, người ta làm cho sơn \& vỏ xe nhiễm điện trái dấu nhau. Khi sơn được phun vào vỏ xe, thì các hạt sơn nhỏ li ti sẽ bị hút \& bám chặt vào mặt vỏ xe.'' -- \cite[p. 9]{SGK_Vat_Ly_11_nang_cao}
+``Sơ đồ của máy lọc bụi được trình bày trên \cite[Hình 1.8: \textsf{Sơ đồ máy lọc bụi}, p. 9]{SGK_Vat_Ly_11_nang_cao}. Không khí có nhiều bụi được quạt vào máy qua lớp lọc bụi thông thường. Tại đây, các hạt bụi có kích thước lớn bị gạt lại. Dòng không khí có lẫn các hạt bụi kích thước nhỏ vẫn bay lên. 2 lưới 1 \& 2 thực chất là 2 điện cực: lưới 1 là điện cực dương, lưới 2 là điện cực âm. Khi bay qua lưới 1 các hạt bụi nhiễm điện dương. Do đó, khi gặp lưới 2 nhiễm điện âm, các hạt bụt bị hút vào lưới. Vì vậy, khi qua lưới 2, không khí đã được lọc sạch bụi. Sau đó có thể cho không khí đi qua lớp lọc bằng than để khử mùi. Bằng cách này có thể loc đến $95\%$ bụi trong không khí. Máy lọc bụi là 1 ứng dụng của lực tương tác giữa các điện tích. Ngoài ra, lực tương tác giữa các điện tích còn có nhiều ứng dụng khác trong công nghiệp cũng như trong đời sống. E.g., kỹ thuật sơn tĩnh điện là 1 trong những ứng dụng đó. Muốn sơn vỏ xe ô tô, người ta làm cho sơn \& vỏ xe nhiễm điện trái dấu nhau. Khi sơn được phun vào vỏ xe, thì các hạt sơn nhỏ li ti sẽ bị hút \& bám chặt vào mặt vỏ xe.'' -- \cite[p. 9]{SGK_Vat_Ly_11_nang_cao}
 
 %------------------------------------------------------------------------------%
 
@@ -192,9 +191,9 @@ Máy lọc bụi là 1 ứng dụng của lực tương tác giữa các điện
 \subsection{Thuyết electron}
 ``Thuyết dựa vào sự có mặt của electron \& chuyển động của chúng để giải thích 1 số hiện tượng điện từ gọi là \textit{thuyết electron}. Thuyết electron trong phạm vi giải thích tính dẫn điện hay cách điện \& sự nhiễm điện của các vật gồm 1 số nội dung chính như sau:
 \begin{itemize}
-	\item Bình thường tổng đại số tất cả các điện tích trong nguyên tử bằng không, nguyên tử trung hòa về điện.
+	\item Bình thường tổng đại số tất cả các điện tích trong nguyên tử bằng không, nguyên tử trung hòa về điện (\cite[Hình 2.1: \textsf{Mô hình đơn giản của nguyên tử liti}, p. 10]{SGK_Vat_Ly_11_nang_cao}).
 	
-	Nếu nguyên tử bị mất đi 1 số electron thì tổng đại số các điện tích trong nguyên tử là 1 số dương, nó là 1 \textit{ion dương}. Ngược lại, nếu nguyên tử nhận thêm 1 số electron thì nó là \textit{ion âm}.
+	Nếu nguyên tử bị mất đi 1 số electron thì tổng đại số các điện tích trong nguyên tử là 1 số dương, nó là 1 \textit{ion dương}. Ngược lại, nếu nguyên tử nhận thêm 1 số electron thì nó là \textit{ion âm} (\cite[Hình 2.2: \textsf{Mô hình đơn giản của nguyên tử liti. (a) ion dương liti; (b) ion âm liti}, p. 10]{SGK_Vat_Ly_11_nang_cao}).
 	\item Khối lượng của electron rất nhỏ nên độ linh động của electron rất lớn. Vì vậy, do 1 số điều kiện nào đó (cọ xát, tiếp xúc, nung nóng, $\ldots$) 1 số electron có thể bứt ra khỏi nguyên tử, di chuyển trong vật hay di chuyển từ vật này sang vật khác. Electron di chuyển từ vật này sang vật khác làm cho các vật \textit{nhiễm điện}. Vật nhiễm điện âm là vật thừa electron, vật nhiễm điện dương là vật thiếu electron.'' -- \cite[p. 10]{SGK_Vat_Ly_11_nang_cao}
 \end{itemize}
 ``Nhiều trường hợp lẽ ra phải nói ``hạt mang điện'' hay ``vật mang điện'' thì người ta lại quen nói gọn là ``điện tích''. Ngoài ra, thuật ngữ ``điện tích'' nhiều khi được dùng với ý nghĩa là điện lượng.'' -- \cite[p. 10]{SGK_Vat_Ly_11_nang_cao}
@@ -205,13 +204,13 @@ Máy lọc bụi là 1 ứng dụng của lực tương tác giữa các điện
 \subsection{Giải thích 3 hiện tượng nhiễm điện}
 
 \subsubsection{Nhiễm điện do cọ xát}
-``Nếu có những điểm tiếp xúc chặt chẽ giữa thanh thủy tinh \& mảnh lụa, thì ở những điểm đó có 1 số electron từ thủy tinh di chuyển sang lụa. Khi thanh thủy tinh cọ xát với lụa thì số điểm tiếp xúc chặt chẽ tăng lên rất lớn. Do đó số electron di chuyển từ thủy tinh sang lụa cũng tăng lên. Vì vậy, thanh thủy tinh nhiễm điện dương, mảnh lụa nhiễm điện âm (\cite[Hình 2.3, p. 11]{SGK_Vat_Ly_11_nang_cao}).'' -- \cite[p. 11]{SGK_Vat_Ly_11_nang_cao}
+``Nếu có những điểm tiếp xúc chặt chẽ giữa thanh thủy tinh \& mảnh lụa, thì ở những điểm đó có 1 số electron từ thủy tinh di chuyển sang lụa. Khi thanh thủy tinh cọ xát với lụa thì số điểm tiếp xúc chặt chẽ tăng lên rất lớn. Do đó số electron di chuyển từ thủy tinh sang lụa cũng tăng lên. Vì vậy, thanh thủy tinh nhiễm điện dương, mảnh lụa nhiễm điện âm (\cite[Hình 2.3: \textsf{Nhiễm điện do cọ xát}, p. 11]{SGK_Vat_Ly_11_nang_cao}).'' -- \cite[p. 11]{SGK_Vat_Ly_11_nang_cao}
 
 \subsubsection{Nhiễm điện do tiếp xúc}
-``Khi thanh kim loại trung hòa điện tiếp xúc với quả cầu nhiễm điện âm, thì 1 phần trong số electron thừa ở quả cầu di chuyển sang thanh kim loại. Vì thế thanh kim loại cũng thừa electron. Do đó, thanh kim loại nhiễm điện âm (\cite[Hình 2.4, p.11]{SGK_Vat_Ly_11_nang_cao}). Ngược lại, nếu thanh kim loại trung hòa điện tiếp xúc với quả cầu nhiễm điện dương, thì 1 số electron tự do từ thanh kim loại sẽ di chuyển sang quả cầu. Vì thế thanh kim loại trở thành thiếu electron. Do đó, thanh kim loại nhiễm điện dương.'' -- \cite[p. 11]{SGK_Vat_Ly_11_nang_cao}
+``Khi thanh kim loại trung hòa điện tiếp xúc với quả cầu nhiễm điện âm, thì 1 phần trong số electron thừa ở quả cầu di chuyển sang thanh kim loại. Vì thế thanh kim loại cũng thừa electron. Do đó, thanh kim loại nhiễm điện âm (\cite[Hình 2.4: \textsf{Nhiễm điện do tiếp xúc}, p.11]{SGK_Vat_Ly_11_nang_cao}). Ngược lại, nếu thanh kim loại trung hòa điện tiếp xúc với quả cầu nhiễm điện dương, thì 1 số electron tự do từ thanh kim loại sẽ di chuyển sang quả cầu. Vì thế thanh kim loại trở thành thiếu electron. Do đó, thanh kim loại nhiễm điện dương.'' -- \cite[p. 11]{SGK_Vat_Ly_11_nang_cao}
 
 \subsubsection{Nhiễm điện do hưởng ứng}
-``Thanh kim loại trung hòa điện đặt gần quả cầu nhiễm điện âm, thì các electron tự do trong thanh kim loại bị đẩy ra xa quả cầu. Do đó, đầu thanh kim loại xa quả cầu thừa electron, nên nhiễm điện âm. Đầu thanh kim loại gần quả cầu thiếu electron, nên nhiễm điện dương (\cite[Hình 2.5, p.11]{SGK_Vat_Ly_11_nang_cao}). Thanh kim loại đặt gần quả cầu nhiễm điện dương, thì electron tự do trong thanh kim loại bị hút lại gần quả cầu. Do đó, đầu thanh gần quả cầu thừa electron nên nhiễm điện âm, còn đầu kia thiếu electron nên nhiễm điện dương. Vậy thực chất của sự nhiễm điện do hưởng ứng là sự phân bố lại điện tích trong thanh kim loại.'' -- \cite[pp. 11--12]{SGK_Vat_Ly_11_nang_cao}
+``Thanh kim loại trung hòa điện đặt gần quả cầu nhiễm điện âm, thì các electron tự do trong thanh kim loại bị đẩy ra xa quả cầu. Do đó, đầu thanh kim loại xa quả cầu thừa electron, nên nhiễm điện âm. Đầu thanh kim loại gần quả cầu thiếu electron, nên nhiễm điện dương (\cite[Hình 2.5: \textsf{Nhiễm điện do hưởng ứng}, p.11]{SGK_Vat_Ly_11_nang_cao}). Thanh kim loại đặt gần quả cầu nhiễm điện dương, thì electron tự do trong thanh kim loại bị hút lại gần quả cầu. Do đó, đầu thanh gần quả cầu thừa electron nên nhiễm điện âm, còn đầu kia thiếu electron nên nhiễm điện dương. Vậy thực chất của sự nhiễm điện do hưởng ứng là sự phân bố lại điện tích trong thanh kim loại.'' -- \cite[pp. 11--12]{SGK_Vat_Ly_11_nang_cao}
 
 \subsection{Định luật bảo toàn điện tích}
 
@@ -227,13 +226,161 @@ Máy lọc bụi là 1 ứng dụng của lực tương tác giữa các điện
 \subsection{Điện trường}
 
 \subsubsection{Khái niệm điện trường}
-``1 vật tác dụng lực hấp dẫn lên các vật khác ở gần nó vì xung quanh vật đó có trường hấp dẫn. Ở đây ta cũng có hiện tượng tương tự. \textit{1 điện tích tác dụng lực điện lên các điện tích khác ở gần nó. Ta nói, xung quanh điện tích có điện trường}. Các điện tích tương tác được với nhau là vì điện trường của điện tích này tác dụng lên điện tích kia. Hiện nay, khoa học chứng tỏ những điều trên là đúng.'' -- \cite[p. 13]{SGK_Vat_Ly_11_nang_cao}
+``1 vật tác dụng lực hấp dẫn lên các vật khác ở gần nó vì xung quanh vật đó có trường hấp dẫn. Ở đây ta cũng có hiện tượng tương tự. \textit{1 điện tích tác dụng lực điện lên các điện tích khác ở gần nó. Ta nói, xung quanh điện tích có điện trường}. Các điện tích tương tác được với nhau là vì điện trường của điện tích này tác dụng lên điện tích kia. Hiện nay, khoa học chứng tỏ những điều trên là đúng.'' ``Con cá mập đầu búa có thể nhận biết được điện trường.'' -- \cite[p. 13]{SGK_Vat_Ly_11_nang_cao}
 
 \subsubsection{Tính chất cơ bản của điện trường}
+``\textit{Tính chất cơ bản của điện trường là nó tác dụng lực điện lên điện tích đặt trong nó}. 1 vật có kích thước nhỏ, mang 1 điện tích nhỏ, được dùng để phát hiện lực điện tác dụng lên nó gọi là \textit{điện tích thử}. Người ta dùng điện tích thử để nhận biết điện trường.'' `Trong \cite[Chap. 1]{SGK_Vat_Ly_11_nang_cao}, ta chỉ xét điện trường của các điện tích đứng yên đối với nhau, i.e., \textit{điện trường tĩnh}, gọi tắt là \textit{điện trường}.'' -- \cite[p. 13]{SGK_Vat_Ly_11_nang_cao}
+
+\subsection{Cường độ điện trường}
+``Giả sử ta có 1 số điện tích thử $q_1,q_2,q_3,\ldots$ Đặt lần lượt các điện tích này tại 1 điểm nhất định trong điện trường \& xác định các lực $\overrightarrow{F_1},\overrightarrow{F_2},\overrightarrow{F_3},\ldots$ tác dụng lên chúng. Thí nghiệm cho biết các lực $\overrightarrow{F_1},\overrightarrow{F_2},\overrightarrow{F_3}$, có độ lớn khác nhau, nhưng các thương số dạng $\frac{F}{|q|}$ thì bằng nhau. Nếu để ý đến cả chiều của các lực tác dụng lên các điện tích thử thì các thương dạng $\frac{\overrightarrow{F}}{q}$ cũng không đổi, i.e., $\frac{\overrightarrow{F_i}}{q_i} = \mbox{const}$, $i\in\mathbb{N}$. Làm thí nghiệm ở các điểm khác nhau thì các thương $\frac{\overrightarrow{F}}{q}$ là khác nhau. Thương $\frac{\overrightarrow{F}}{q}$ đặc trưng cho điện trường ở điểm đang xét về mặt tác dụng lực gọi là \textit{cường độ điện trường} \& ký hiệu là $\overrightarrow{E}$.
+\begin{align}
+	\label{cuong do dien truong}
+	\boxed{\overrightarrow{E} = \frac{\overrightarrow{F}}{q}.}
+\end{align}
+Trong trường hợp đã biết cường độ điện trường, thì từ công thức \eqref{cuong do dien truong} suy ra:
+\begin{align}
+	\label{cuong do dien truong 1}
+	\overrightarrow{F} = q\overrightarrow{E}.
+\end{align}
+Từ \eqref{cuong do dien truong 1} ta thấy nếu $q > 0$ thì $\overrightarrow{F}$ cùng chiều với $\overrightarrow{E}$ (Fig. \ref{fig:chieu luc dien}), ngược lại nếu $q < 0$ thì $\overrightarrow{F}$ ngược chiều với $\overrightarrow{E}$ (Fig. \ref{fig:chieu luc dien}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{chieu_luc_dien}
+	\caption{Chiều của lực điện tác dụng lên điện tích, \cite[Hình 3.1, p. 14]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:chieu luc dien}
+\end{figure}
+Trong hệ SI, đơn vị cường độ điện trường có thể là Newton trên Coulomb, nhưng thường dùng đơn vị Von trên mét, ký hiệu là V\texttt{/}m.'' ``Cường độ điện trường ($\overrightarrow{E}$) là đại lượng vector, nhưng nhiều khi người ta cũng gọi độ lớn của $\overrightarrow{E}$, ký hiệu $E\coloneqq| \overrightarrow{E}|$, là cường độ điện trường.'' -- \cite[p. 14]{SGK_Vat_Ly_11_nang_cao}
+
+\subsection{Đường sức điện}
+
+\subsubsection{Định nghĩa}
+``Có nhiều cách mô tả điện trường. Cách mô tả có tính trực quan rõ rệt là dùng cách vẽ các đường sức điện.
+
+\begin{dinhnghia}[Đường sức điện]
+	\emph{Đường sức điện} là đường được vẽ trong điện trường sao cho tiếp tuyến tại bất kỳ điểm nào trên đường cũng trùng với phương của vector cường độ điện trường tại điểm đó.
+\end{dinhnghia}
+Tuy nhiên, trong thực tế người ta thường quy định cho đường sức 1 chiều đi sao cho chiều của đường sức \& chiều của vector cường độ điện trường tại các điểm trên đường là trùng nhau. Khi đó, ta hiểu các đường sức là các đường có chiều xác định (Fig. \ref{fig:duong suc dien})
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{duong_suc_dien}
+	\caption{Đường sức điện \& vector cường độ điện trường, \cite[Hình 3.2, p. 15]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:duong suc dien}
+\end{figure}
+Các đường sức điện của 1 điện tích điểm \& của hệ 2 điện tích điểm được trình bày trên Figs. \ref{fig:duong suc cua 1 dien tich diem}--\ref{fig:duong suc cua he 2 dien tich diem}.'' --  \cite[pp. 14--15]{SGK_Vat_Ly_11_nang_cao}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.3\linewidth]{duong_suc_dien_tich_diem_duong}
+		\caption{Đường sức của 1 điện tích điểm dương.}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.3\linewidth]{duong_suc_dien_tich_diem_am}
+		\caption{Đường sức của 1 điện tích điểm âm.}
+	\end{subfigure}
+	\caption{Đường sức của 1 điện tích điểm, \cite[Hình 3.3, p. 15]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:duong suc cua 1 dien tich diem}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{duong_suc_he_2_dien_tich_diem_duong}
+		\caption{2 điện tích điểm dương.}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{duong_suc_he_2_dien_tich_diem_trai_dau}
+		\caption{2 điện tích trái dấu.}
+	\end{subfigure}
+	\caption{Đường sức của hệ 2 điện tích điểm, \cite[Hình 3.4, p. 15]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:duong suc cua he 2 dien tich diem}
+\end{figure}
+
+\subsubsection{Các tính chất của đường sức điện}
+``Các đường sức điện có 1 số tính chất sau đây:
+\begin{itemize}
+	\item \textit{Tại mỗi điểm trong điện trường, ta có thể vẽ được 1 \& chỉ 1 đường sức điện đi qua.}
+	\item \textit{Các đường sức điện là các đường cong không kín. Nó xuất phát từ các điện tích dương \& tận cùng ở các điện tích âm (hoặc ở vô cực)}. Trong trường hợp chỉ có 1 điện tích, thì các đường sức xuất phát từ điện tích dương ra vô cực, hoặc từ vô cực đến điện tích âm (Fig. \ref{fig:duong suc cua 1 dien tich diem}).
+	\item \textit{Nơi nào cường độ điện trường lớn hơn thì các đường sức điện ở đó được vẽ mau hơn (dày hơn), nơi nào cường độ điện trường nhỏ hơn thì các đường sức điện ở đó được vẽ thưa hơn}. E.g., trên các Figs. \ref{fig:duong suc cua 1 dien tich diem}--\ref{fig:duong suc cua he 2 dien tich diem}, ở nơi gần điện tích, các đường sức điện mau hơn nơi xa điện tích.'' --  \cite[p. 15]{SGK_Vat_Ly_11_nang_cao}
+\end{itemize}
+
+\subsubsection{Điện phổ}
+``Dùng 1 loại bột cách điện rắc vào dầu cách điện \& khuấy đều. Sau đó đặt 1 quả cầu nhỏ nhiễm điện vào trong dầu. Gõ nhẹ vào khay dầu thì các hạt bột sẽ sắp xếp thành các ``đường hạt bột''. Ta gọi hệ các ``đường hạt bột'' đó là \textit{điện phổ} của quả cầu nhiễm điện. Điện phổ cho phép ta hình dung dạng \& sự phân bố các đường sức điện. Đường sức điện vẽ trong các Figs. \ref{fig:duong suc cua 1 dien tich diem}--\ref{fig:duong suc cua he 2 dien tich diem} tương ứng với các điện phổ ở \cite[Hình 3.5: \textsf{Điện phổ của 1 quả cầu nhiễm điện} \& Hình 3.6: \textsf{Điện phổ của 2 quả cầu nhiễm điện cùng \& trái dấu}, p. 16]{SGK_Vat_Ly_11_nang_cao}
+
+\subsection{Điện trường đều}
+
+\begin{dinhnghia}[Điện trường đều]
+	1 điện trường mà vector cường độ điện trường tại mọi điểm đều bằng nhau gọi là \emph{điện trường đều}.
+\end{dinhnghia}
+Theo tính chất của đường sức, ta suy ra các đường sức của điện trường đều là các đường thẳng song song \& cách đều nhau. \cite[Hình 3.7: \textsf{Điện phổ của điện trường ở giữa 2 tấm kim loại phẳng, rộng, song song, mang điện tích trái dấu, có độ lớn bằng nhau}, p. 16]{SGK_Vat_Ly_11_nang_cao} cho biết điện phổ của 2 tấm kim loại phẳng, rộng, song song, mang điện tích trái dấu, có độ lớn bằng nhau. Ở rìa của 2 tấm kim loại, các ``đường hạt bột'' là các đường cong, còn ở giữa 2 tấm, các ``đường hạt bột'' song song \& cách đều nhau. Dựa vào điện phổ, ta có thể nói điện trường giữa 2 tấm kim loại là \textit{điện trường đều}. Đường sức của điện trường này được vẽ trên Fig. \ref{fig:duong suc dien truong deu}.'' -- \cite[p. 16]{SGK_Vat_Ly_11_nang_cao}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{duong_suc_dien_truong_deu}
+	\caption{Các đường sức ở giữa 2 tấm kim loại phẳng, rộng, song song, mang điện tích trái dấu, có độ lớn bằng nhau. Các đường sức này song song với nhau \& cách đều nhau, \cite[Hình 3.8, p. 16]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:duong suc dien truong deu}
+\end{figure}
+
+\subsection{Điện trường của 1 điện tích điểm}
+``2 điện tích điểm $q,Q$ đặt cách nhau 1 khoảng $r$ trong chân không thì lực Coulomb tác dụng lên điện tích $q$ được viết dưới dạng:
+\begin{align*}
+	F = 9\cdot 10^9\frac{|qQ|}{r^2}.
+\end{align*}
+Từ công thức \eqref{cuong do dien truong} ta suy ra cường độ điện trường của điện tích điểm $Q$ tại 1 điểm là:
+\begin{align}
+	\label{cuong do dien truong 2}
+	E = 9\cdot 10^9\frac{|Q|}{r^2},
+\end{align}
+$r$ là khoảng cách từ điểm khảo sát đến điện tích $Q$. Nếu $Q > 0$ thì cường độ điện trường hướng ra xa điện tích $Q$ (Fig. \ref{fig:chieu cua vector cuong do dien truong cua dien tich duong}), nếu $Q < 0$ thì cường độ điện trường hướng về phía điện tích $Q$ (Fig. {fig:chieu cua vector cuong do dien truong cua dien tich am}).'' -- \cite[pp. 16--17]{SGK_Vat_Ly_11_nang_cao}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{chieu_cua_vector_cuong_do_dien_truong_cua_dien_tich_diem_duong}
+		\caption{$Q > 0$.}
+		\label{fig:chieu cua vector cuong do dien truong cua dien tich duong}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{chieu_cua_vector_cuong_do_dien_truong_cua_dien_tich_diem_am}
+		\caption{$Q < 0$.}
+		\label{fig:chieu cua vector cuong do dien truong cua dien tich am}
+	\end{subfigure}
+	\caption{Chiều của vector cường độ điện trường của điện tích điểm phụ thuộc vào dấu của điện tích, \cite[Hình 3.9, p. 17]{SGK_Vat_Ly_11_nang_cao}.}
+	\label{fig:chieu cua vector cuong do dien truong cua dien tich}
+\end{figure}
+
+\subsection{Nguyên lý chồng chất điện trường}
+
+\begin{nguyenly}[Nguyên lý chồng chất điện trường]
+	Giả sử ta có hệ $n$ điện tích điểm $\{Q_i\}_{i=1}^n$. Gọi cường độ điện trường của hệ ở 1 điểm nào đó là $\overrightarrow{E}$. Cường độ điện trường chỉ của điện tích $Q_i$ là $\overrightarrow{E_i}$ tại điểm đang xét, $i = 1,\ldots, n$. Khi đó ta có:
+	\begin{align}
+		\label{nguyen ly chong chat dien truong}
+		\overrightarrow{E} = \sum_{i=1}^n \overrightarrow{E_i} = \overrightarrow{E_1} + \cdots + \overrightarrow{E_n}.
+	\end{align}
+\end{nguyenly}
+
+\subsection{Tương tác gần \& tương tác xa}
+``Tương tác giữa 2 vật không tiếp xúc với nhau được thực hiện bằng cách nào? Có 2 cách giải  đáp câu hỏi đó. Cách giải đáp thứ nhất cho rằng 2 vật không tiếp xúc với nhau vẫn có thể tương tác với nhau. Quan điểm này gọi là \textit{quan điểm tương tác xa}. Định luật vạn vật hấp dẫn \& định luật Coulomb thể hiện quan điểm đó.
+
+Cách giải đáp thứ 2 cho rằng, có tương tác hấp dẫn giữa 2 vật không tiếp xúc với nhau là vì vật này được đặt trong trường hấp dẫn của vật kia, lực hấp dẫn tác dụng lên vật $B$ là do trường hấp dẫn của vật $A$ tại điểm đặt vật $B$ gây ra. Tương tự như vậy, nếu có 2 điện tích $A$ \& $B$, thì có lực điện tác dụng lên điện tích $B$ là vì $B$ được đặt trong điện trường của điện tích $A$. Điện trường của điện tích $A$ là thực thể vật lý truyền lực điện từ điện tích $A$ đến điện tích $B$. Quan điểm này gọi là \textit{quan điểm tương tác gần}. Theo quan điểm tương tác xa thì tốc độ truyền tương tác là vô hạn. Điều đó trái với thực tế. Còn theo quan điểm tương tác gần thì tốc độ truyền tương tác là hữu hạn. Nhiều sự kiện thực nghiệm đã chứng tỏ quan điểm tương tác gần là phù hợp với thực tế.'' -- \cite[p. 18]{SGK_Vat_Ly_11_nang_cao}
 
 %------------------------------------------------------------------------------%
 
 \section{Công của Lực Điện. Hiệu Điện Thế}
+
+\begin{cauhoi}
+	``Công của trọng lực được biểu diễn qua hiệu thế năng hấp dẫn. Còn công của lực điện có thể biểu diễn qua đại lượng nào?'' -- \cite[p. 19]{SGK_Vat_Ly_11_nang_cao}
+\end{cauhoi}
+
+\subsection{Công của lực điện}
 
 %------------------------------------------------------------------------------%
 
