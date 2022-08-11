@@ -128,7 +128,7 @@ Công thức \eqref{ctc1} cũng được gọi là công thức cộng. Có th�
 	\end{align*}
 	trong đó đẳng thức thứ 3 thu được bằng cách chia cả tử thức \& mẫu thức cho $\cos\alpha\cos\beta$ (phép chia này có nghĩa vì $\cos\alpha\cos\beta\ne 0$). Thay $\beta$ bởi $-\beta$ trong biểu thức vừa thu được, ta thu được biểu thức còn lại.
 \end{proof}
-Ta vừa chứng minh \eqref{ctc1} từ vế trái sang vế phải (i.e., LHS $= \cdots =$ RHS\footnote{LHS is the abbreviation of `Left Hand Side' \& RHS is the abbreviation of `Right Hand Side'. In many English texts in mathematics, the abbreviations l.h.s. \& r.h.s. are also used. In Vietnamese texts in mathematics, the abbreviations VT (vế trái) \& VP\texttt{/}VF (vế phải) are also used.}, hay VT $=\cdots =$ VP), cách chứng minh sau đi theo chiều ngược lại (i.e., RHS $= \cdots =$ LHS, hay VP $=\cdots =$ VT).
+Ta vừa chứng minh \eqref{ctc1} từ vế trái sang vế phải (i.e., LHS $= \cdots =$ RHS\footnote{LHS is the abbreviation of `Left Hand Side' \& RHS is the abbreviation of `Right Hand Side'. In many English texts in mathematics, the abbreviations l.h.s. \& r.h.s. are also used. In Vietnamese texts in mathematics, the abbreviations VT (vế trái) \& VP\texttt{/}VF (vế phải) are commonly used.}, hay VT $=\cdots =$ VP), cách chứng minh sau đi theo chiều ngược lại (i.e., RHS $= \cdots =$ LHS, hay VP $=\cdots =$ VT).
 
 \begin{proof}[2nd Chứng minh \eqref{ctc1}]
 	Với $\alpha,\beta\in\mathbb{R}$ thỏa giả thiết,
@@ -182,7 +182,7 @@ Từ công thức nhân đôi \eqref{ctn2} suy ra công thức hạ bậc:
 	\boxed{\cos^2\alpha = \frac{1 + \cos2\alpha}{2},\ \sin^2\alpha = \frac{1 - \cos2\alpha}{2},\ \forall\alpha\in\mathbb{R}.}
 \end{align}
 
-\subsubsection{Công thức biến đổi tích thành tổng \& công thuwc biến đổi tổng thành tích}
+\subsubsection{Công thức biến đổi tích thành tổng \& công thức biến đổi tổng thành tích}
 ``Từ các công thức cộng \eqref{ctc}, dễ dàng suy ra
 \begin{equation*}
 	\boxed{\left\{\begin{split}
@@ -202,6 +202,11 @@ Tất cả các công thức trên được dùng nhiều khi giải phương tr
 \subsection{Số phức \& dạng lượng giác của nó -- Complex number \& its trigonometric representation}
 
 \subsubsection{Số phức -- Complex number}
+``Người ta xây dựng được 1 tập hợp số gọi là \textit{tập hợp số phức}, ký hiệu $\mathbb{C}$, chứa tập hợp số thực $\mathbb{R}$, trong đó có 2 phép toán cộng \& nhân (mà khi thu hẹp lên $\mathbb{R}$ thì đó là phép toán cộng, nhân số thực) thỏa mãn các tính chất tương tự phép toán cộng \& nhân số thực (giao, hoán, kết hợp, phân phối, $\ldots$), trong đó mọi số thực âm đều có căn bậc 2, mọi phương trình đa thức đều có nghiệm. Cụ thể là:
+\begin{itemize}
+	\item[(a)] Mỗi số phức được viết dưới dạng $z = a + bi$, $a,b\in\mathbb{R}$, $i$ là \textit{đơn vị ảo} ($i^2 = -1$), $a$ gọi là phần thực của $z$, $b$ gọi là \textit{phần ảo của $z$}.
+\end{itemize}
+\texttt{Skipped due to Toan 12}'' -- \cite[p. 7]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 
 %------------------------------------------------------------------------------%
 
@@ -762,7 +767,10 @@ Về đa thức tổng quát bậc $n$ \& các tính chất liên quan, có th�
 Khái niệm ``hàm số'' -- 1 khái niệm quan trọng trong Đại số: ``Nếu có 1 quy tắc để với mỗi số $x\in\mathbb{R}$, xác định được 1 số duy nhất $y\in\mathbb{R}$ thì quy tắc đó gọi là \textit{1 hàm số xác định trên tập số thực $\mathbb{R}$}. Bây giờ, trong mệnh đề trên ta thay \textit{số thực} bằng \textit{điểm thuộc mặt phẳng} thì ta được khái niệm về phép biến hình trong mặt phẳng. Cụ thể là: Nếu có 1 quy tắc để với mỗi điểm $M$ thuộc mặt phẳng, xác định được 1 điểm duy nhất $M'$ thuộc mặt phẳng ấy thì quy tắc đó gọi là \textit{1 phép biến hình (trong mặt phẳng)}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
 
 \begin{dinhnghia}[Phép biến hình]
-	\emph{Phép biến hình} (trong mặt phẳng) là 1 quy tắc để với mỗi điểm $M$ thuộc mặt phẳng, xác định được 1 điểm duy nhất $M'$ thuộc mặt phẳng ấy. Điểm $M'$ gọi là \emph{ảnh} của điểm $M$ qua phép biến hình đó.
+	\begin{itemize}
+		\item ``Quy tắc đặt tương ứng mỗi điểm $M$ của mặt phẳng với 1 điểm xác định duy nhất $M'$ của mặt phẳng đó được gọi là \emph{phép biến hình} trong mặt phẳng.'' ``Nếu ký hiệu phép biến hình là $F$ thì ta viết $F(M) = M'$ hay $M' = F(M)$ \& gọi điểm $M'$ là \emph{ảnh} của điểm $M$ qua phép biến hình $F$.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_co_ban}
+		\item ``\emph{Phép biến hình} (trong mặt phẳng) là 1 quy tắc để với mỗi điểm $M$ thuộc mặt phẳng, xác định được 1 điểm duy nhất $M'$ thuộc mặt phẳng ấy. Điểm $M'$ gọi là \emph{ảnh} của điểm $M$ qua phép biến hình đó.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
+	\end{itemize}	
 \end{dinhnghia}
 
 \begin{vidu}[Phép chiếu vuông góc lên 1 đường thẳng]
@@ -777,35 +785,48 @@ Khái niệm ``hàm số'' -- 1 khái niệm quan trọng trong Đại số: ``N
 	Phép biến hình này gọi là \emph{phép chiếu (vuông góc) lên đường thẳng $d$}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
 \end{vidu}
 
-\begin{vidu}
-	``Cho vector $\vec{u}$, với mỗi điểm $M$ ta xác định điểm $M'$ theo quy tắc $\overrightarrow{MM'} = \vec{u}$ (Fig. \ref{fig:phep tinh tien theo vector}).
+\begin{vidu}[Phép tịnh tiến theo vector]
+	``Cho vector $\vec{u}$, với mỗi điểm $M$ ta xác định điểm $M'$ theo quy tắc $\overrightarrow{MM'} = \vec{u}$ (Fig. \ref{fig:phep tinh tien theo vector}). Như vậy ta cũng có 1 phép biến hình. Phép biến hình đó gọi là \emph{phép tịnh tiến theo vector $\vec{u}$}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.15]{phep_tinh_tien_theo_vector}
 		\caption{Phép tịnh tiến theo vector $\vec{u}$.}
 		\label{fig:phep tinh tien theo vector}
-	\end{figure}
-	Như vậy ta cũng có 1 phép biến hình. Phép biến hình đó gọi là \emph{phép tịnh tiến theo vector $\vec{u}$}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_nang_cao}
+	\end{figure}	
 \end{vidu}
 
 \begin{vidu}[Phép đồng nhất]
-	Với mỗi điểm $M$, ta xác định điểm $M'$ trùng với $M$ thì ta cũng được 1 phép biến hình.
+	``Với mỗi điểm $M$, ta xác định điểm $M'$ trùng với $M$ thì ta cũng được 1 phép biến hình.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}
 \end{vidu}
 
+\begin{dinhnghia}[Phép đồng nhất]
+	``Phép biến hình biến mỗi điểm $M$ thành chính nó được gọi là \emph{phép đồng nhất}.'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_co_ban}. Phép đồng nhất thường được ký hiệu là $\operatorname{id}$ (identity mapping), $\operatorname{id}(M) = M$, $\forall M\in\mathbb{R}^2$, \& $\operatorname{id}(\mathcal{H}) = \mathcal{H}$, với mọi hình $\mathcal{H}\subset\mathbb{R}^2$.
+\end{dinhnghia}
+
+\begin{vidu}
+	Cho trước số dương $a\in(0;+\infty)$, với mỗi điểm $M$ trong mặt phẳng, gọi $M'$ là 1 điểm sao cho $MM' = a$. Khi đó tập hợp các điểm $M'$ thỏa mãn điều kiện này là đường tròn tâm $M$ bán kính $a$, i.e., $\{M'\in\mathbb{R}^2|MM' = a\} = \operatorname{circle}(M;a)$, là 1 tập có vô hạn không đếm được các phần tử, thậm chí lực lượng\emph{\texttt{/}}cardinality\footnote{See, e.g., \href{https://en.wikipedia.org/wiki/Cardinality}{Wikipedia\texttt{/}cardinality}.} của 1 hình tròn với bán kính là 1 số dương bất kỳ bằng lực lượng của $\mathbb{R}$ \& bằng $\mathfrak{c}$ (cardinality of the continuum\footnote{See, e.g., \href{https://en.wikipedia.org/wiki/Cardinality_of_the_continuum}{Wikipedia\texttt{/}cardinality of the continuum}.}). Quy tắc này hiển nhiên không là 1 phép biến hình do vi phạm yêu cầu về tính xác định duy nhất của ảnh.
+\end{vidu}
+Về lực lượng \& các tính chất sâu sắc hơn của tập hợp, có thể tham khảo \cite{Halmos1960, Halmos1974, Kaplansky1972, Kaplansky1977}\footnote{Đây là những quyển sách đầu tiên tác giả đọc khi bắt đầu học Toán Cao Cấp ở bậc Đại học}.
+
 \subsection{Ký hiệu \& thuật ngữ}
-``Nếu ta ký hiệu 1 phép biến hình nào đó là $F$ \& điểm $M'$ là ảnh của điểm $M$ qua phép biến hình $F$ thì ta viết $M' = F(M)$, hoặc $F(M) = M'$. Khi đó, ta còn nói \textit{phép biến hình $F$ biến điểm $M$ thành điểm $M'$}.
+\begin{itemize}
+	\item ``Nếu $\mathcal{H}$ là 1 hình nào đó trong mặt phẳng thì ta ký hiệu $\mathcal{H}'\coloneqq F(\mathcal{H})$ là tập các điểm $M' = F(M)$, $\forall M\in\mathcal{H}$. Khi đó ta nói $F$ \textit{biến hình $\mathcal{H}$ thành hình $\mathcal{H}'$}, hay \textit{hình $\mathcal{H}'$ là ảnh của hình $\mathcal{H}$} qua phép biến hình $F$.
+	'' -- \cite[p. 4]{SGK_Toan_11_hinh_hoc_co_ban}
+	\item ``Nếu ta ký hiệu 1 phép biến hình nào đó là $F$ \& điểm $M'$ là ảnh của điểm $M$ qua phép biến hình $F$ thì ta viết $M' = F(M)$, hoặc $F(M) = M'$. Khi đó, ta còn nói \textit{phép biến hình $F$ biến điểm $M$ thành điểm $M'$}. Với mỗi hình $\mathcal{H}$, ta gọi hình $\mathcal{H}'$ gồm các điểm $M' = F(M)$, trong đó $M\in\mathcal{H}$, là \textit{ảnh của $\mathcal{H}$ qua phép biến hình $F$}, \& viết $\mathcal{H}' = F(\mathcal{H})$.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}, i.e.,
+	\begin{align*}
+		\mathcal{H}'\coloneqq\{M'\in\mathbb{R}^2|\exists M\in\mathcal{H},\ M' = F(M)\} = \{F(M)|M\in\mathcal{H}\} = F(\mathcal{H}).
+	\end{align*}
+\end{itemize}
 
-Với mỗi hình $\mathcal{H}$, ta gọi hình $\mathcal{H}'$ gồm các điểm $M' = F(M)$, trong đó $M\in\mathcal{H}$, là \textit{ảnh của $\mathcal{H}$ qua phép biến hình $F$}, \& viết $\mathcal{H}' = F(\mathcal{H})$.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}
-
-\section{Phép Tịnh Tiến \& Phép Dời Hình}
+\section{Phép Tịnh Tiến}
 
 \subsection{Định nghĩa phép tịnh tiến}
 
 \begin{dinhnghia}[Phép tịnh tiến]
-	\emph{Phép tịnh tiến} theo vector $\vec{u}$ là 1 phép biến hình biến điểm $M$ thành điểm $M'$ sao cho $\overrightarrow{MM'} = \vec{u}$.
+	``\emph{Phép tịnh tiến} theo vector $\vec{u}$ là 1 phép biến hình biến điểm $M$ thành điểm $M'$ sao cho $\overrightarrow{MM'} = \vec{u}$.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}
 \end{dinhnghia}
-``Phép tịnh tiến theo vector $\vec{u}$ thường được ký hiệu là $T$ hoặc $T_{\vec{u}}$. Vector $\vec{u}$ được gọi là \textit{vector tịnh tiến}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}. Phép đồng nhất là phép tịnh tiến theo vector $\vec{u} = \vec{0}$.
+``Phép tịnh tiến theo vector $\vec{u}$ thường được ký hiệu là $T$ hoặc $T_{\vec{u}}$. Vector $\vec{u}$ được gọi là \textit{vector tịnh tiến}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}. ``Như vậy, $T_{\vec{u}}(M) = M'\Leftrightarrow\overrightarrow{MM'} = \vec{u}$. Phép tịnh tiến theo vector $\vec{0}$ chính là \textit{phép đồng nhất}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_co_ban}
 
 \subsection{Các tính chất của phép tịnh tiến}
 
@@ -814,6 +835,8 @@ Với mỗi hình $\mathcal{H}$, ta gọi hình $\mathcal{H}'$ gồm các điể
 	Nếu phép tịnh tiến biến 2 điểm $M$ \& $N$ lần lượt thành 2 điểm $M'$ \& $N'$ thì $M'N' = MN$.
 \end{dinhly}
 ``Người ta diễn tả tính chất trên của phép tịnh tiến là: \textit{Phép tịnh tiến không làm thay đổi khoảng cách giữa 2 điểm bất kỳ}.'' -- \cite[p. 6]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+``Nếu $T_{\vec{u}}(M) = M'$, $T_{\vec{u}}(N) = N'$ thì $\overrightarrow{M'N'} = \overrightarrow{MN}$ \& từ đó suy ra $M'N' = MN$.''
 
 \begin{dinhly}[Phép tịnh tiến bảo toàn tính chất thẳng hàng \& thứ tự các điểm thẳng hàng]
 	Phép tịnh tiến biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó.
@@ -863,11 +886,15 @@ Công thức trên gọi là \textit{biểu thức tọa độ của phép tịn
 	Trường hợp tổng quát có thể đưa về trường hợp con sông rất hẹp -- hẹp đến mức 2 bờ sông $a$ \& $b$ xem như trùng nhau bằng 1 phép tịnh tiến theo vector $\overrightarrow{MN}$ để $a$ trùng $b$. Khi đó điểm $A$ biến thành điểm $A'$ sao cho $\overrightarrow{AA'} = \overrightarrow{MN}$ \& do đó $A'N = AM$.
 \end{proof}
 
-\subsection{Phép dời hình}
-``Không phải chỉ có phép tịnh tiến ``không làm thay đổi khoảng cách giữa 2 điểm'' mà còn nhiều phép biến hình khác cũng có tính chất đó (tính chất này còn được gọi là tính chất \textit{bảo toàn khoảng cách} giữa 2 điểm). Người ta gọi các phép biến hình như vậy là phép dời hình.
+\section{Phép Dời Hình Phẳng}
+
+\subsection{Đại cương về các phép dời hình phẳng}
+``Không phải chỉ có phép tịnh tiến ``không làm thay đổi khoảng cách giữa 2 điểm'' mà còn nhiều phép biến hình khác cũng có tính chất đó (tính chất này còn được gọi là tính chất \textit{bảo toàn khoảng cách} giữa 2 điểm). Người ta gọi các phép biến hình như vậy là phép dời hình.'' -- \cite[p. 8]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+\subsubsection{Định nghĩa phép dời hình}
 
 \begin{dinhnghia}[Phép dời hình]
-	\emph{Phép dời hình} là phép biến hình không làm thay đổi khoảng cách giữa 2 điểm bất kỳ.
+	``\emph{Phép dời hình} là phép biến hình không làm thay đổi khoảng cách giữa 2 điểm bất kỳ.'' -- \cite[p. 8]{SGK_Toan_11_hinh_hoc_nang_cao}
 \end{dinhnghia}
 Chú ý rằng các tính chất đã nêu của phép tịnh tiến được chứng minh dựa vào tính chất ``\textit{không làm thay đổi khoảng cách giữa 2 điểm}''. Bởi vậy, các phép dời hình cũng có những tính chất đó. Cụ thể ta có:
 
@@ -922,7 +949,7 @@ Chú ý rằng các tính chất đã nêu của phép tịnh tiến được ch
 
 \appendix
 
-\chapter{Phụ Lục -- Appendices}
+\chapter{Phụ Lục -- Appendix}
 
 \section{Hàm Số Chẵn \& Hàm Số Lẻ -- Even \& Odd Functions}
 \label{sect: even & odd functions}
@@ -992,7 +1019,7 @@ sau đó $f_{\rm e}$ là hàm chẵn, $f_{\rm o}$ là hàm lẻ, \& $f(x) = f_{\
 \end{align*}
 
 \begin{vidu}
-	Hàm \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{cosin hyperbolic} \& \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{sin hyperbolic} có thể được coi là các phần chẵn \& phần lẻ của hàm số lũy thừa tự nhiên, bởi vì hàm thứ nhất là chẵn, hàm thứ 2 là lẻ, \& $e^x = \sinh x + \cosh x$.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\texttt{/}hàm số chẵn \& lẻ}
+	Hàm \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{cosin hyperbolic} \& \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{sin hyperbolic} có thể được coi là các phần chẵn \& phần lẻ của hàm số lũy thừa tự nhiên, bởi vì hàm thứ nhất là chẵn, hàm thứ 2 là lẻ, \& $e^x = \sinh x + \cosh x$.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\emph{\texttt{/}}hàm số chẵn \& lẻ}
 \end{vidu}
 
 %------------------------------------------------------------------------------%
