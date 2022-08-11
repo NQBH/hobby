@@ -87,14 +87,18 @@
 		\sin(\alpha + \beta) &= \sin\alpha\cos\beta + \cos\alpha\sin\beta.
 	\end{split}\right.\ \forall\alpha,\beta\in\mathbb{R}.}
 \end{equation}
+Có thể viết tắt \eqref{ctc}bằng cách sử dụng các ký hiệu $\pm,\mp$ như sau:
+\begin{align*}
+	\boxed{\cos(\alpha\pm\beta) = \cos\alpha\cos\beta \mp \sin\alpha\sin\beta,\ \sin(\alpha\pm\beta) = \sin\alpha\cos\beta\pm\cos\alpha\sin\beta,\ \forall\alpha,\beta\in\mathbb{R}.}
+\end{align*}
 
 \begin{proof}[Chứng minh \eqref{ctc}]
-	\begin{enumerate}
-		\item[(a)] ``Ta chỉ cần chứng minh công thức đầu tiên rồi từ đó dùng giá trị lượng giác của các góc liên kết để suy ra các công thức còn lại. Giả sử các điểm $M$ \& $N$ nằm trên đường tròn lượng giác tâm $O$, gốc $A$ sao cho góc lượng giác $(OA,OM) = \alpha$, $(OA,ON) = \beta$ thì $\overrightarrow{OM}$ có tọa độ $(\cos\alpha;\sin\alpha)$, $\overrightarrow{ON}$ có tọa độ $(\cos\beta;\sin\beta)$, từ đó tích vô hướng $\overrightarrow{OM}\cdot\overrightarrow{ON} = \cos\alpha\cos\beta + \sin\alpha\sin\beta$. Mặt khác, $\overrightarrow{OM}\cdot\overrightarrow{ON} = |\overrightarrow{OM}||\overrightarrow{ON}|\cos\widehat{NOM} = \cos\widehat{NOM} = \cos(ON,OM) = \cos[(OA,OM) - (OA,ON)] = \cos(\alpha - \beta)$, nên suy ra $\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$.'' -- \cite[pp. 5--6]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
-		\item[(b)] Thay $\beta$ trong công thức vừa thu được ở (a) bởi $-\beta$ cho ta: $\cos(\alpha + \beta) = \cos\alpha\cos(-\beta) + \sin\alpha\sin(-\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$.
-		\item[(c)] $\sin(\alpha - \beta) = \cos\left(\frac{\pi}{2} - \alpha + \beta\right) = \cos\left(\frac{\pi}{2} - \alpha\right)\cos\beta - \sin\left(\frac{\pi}{2} - \alpha\right)\sin\beta = \sin\alpha\cos\beta - \cos\alpha\sin\beta$, trong đó ta sử dụng công thức $\sin x = \cos\left(\frac{\pi}{2} - x\right)$, $\cos x = \sin\left(\frac{\pi}{2} - x\right)$, $\forall x\in\mathbb{R}$\footnote{I.e., với 2 góc phụ nhau, sin 1 góc bất kỳ bằng côsin góc còn lại.} \& công thức vừa chứng minh ở (b) với $\alpha$ được thay bởi $\frac{\pi}{2} - \alpha$.
-		\item[(d)] Thay $\beta$ trong công thức vừa thu được ở (c) bởi $-\beta$.
-	\end{enumerate}
+	\begin{enumerate*}
+		\item[\textbf{(a)}] ``Ta chỉ cần chứng minh công thức đầu tiên rồi từ đó dùng giá trị lượng giác của các góc liên kết để suy ra các công thức còn lại. Giả sử các điểm $M$ \& $N$ nằm trên đường tròn lượng giác tâm $O$, gốc $A$ sao cho góc lượng giác $(OA,OM) = \alpha$, $(OA,ON) = \beta$ thì $\overrightarrow{OM}$ có tọa độ $(\cos\alpha;\sin\alpha)$, $\overrightarrow{ON}$ có tọa độ $(\cos\beta;\sin\beta)$, từ đó tích vô hướng $\overrightarrow{OM}\cdot\overrightarrow{ON} = \cos\alpha\cos\beta + \sin\alpha\sin\beta$. Mặt khác, $\overrightarrow{OM}\cdot\overrightarrow{ON} = |\overrightarrow{OM}||\overrightarrow{ON}|\cos\widehat{NOM} = \cos\widehat{NOM} = \cos(ON,OM)$ $= \cos[(OA,OM) - (OA,ON)] = \cos(\alpha - \beta)$, nên suy ra $\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$.'' -- \cite[pp. 5--6]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}.
+		\item[\textbf{(b)}] Thay $\beta$ trong công thức vừa thu được ở (a) bởi $-\beta$, $\cos(\alpha + \beta) = \cos\alpha\cos(-\beta) + \sin\alpha\sin(-\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$.
+		\item[\textbf{(c)}] $\sin(\alpha - \beta) = \cos\left(\frac{\pi}{2} - \alpha + \beta\right) = \cos\left(\frac{\pi}{2} - \alpha\right)\cos\beta - \sin\left(\frac{\pi}{2} - \alpha\right)\sin\beta = \sin\alpha\cos\beta - \cos\alpha\sin\beta$, trong đó ta sử dụng công thức $\sin x = \cos\left(\frac{\pi}{2} - x\right)$, $\cos x = \sin\left(\frac{\pi}{2} - x\right)$, $\forall x\in\mathbb{R}$\footnote{I.e., với 2 góc phụ nhau, sin 1 góc bất kỳ bằng côsin góc còn lại.} \& công thức vừa chứng minh ở (b) với $\alpha$ được thay bởi $\frac{\pi}{2} - \alpha$.
+		\item[\textbf{(d)}] Thay $\beta$ trong công thức vừa thu được ở (c) bởi $-\beta$.
+	\end{enumerate*}
 	Các công thức cộng \eqref{ctc} được chứng minh.
 \end{proof}
 Kiểm tra nhanh tính hợp lý của \eqref{ctc}:
@@ -106,16 +110,98 @@ Kiểm tra nhanh tính hợp lý của \eqref{ctc}:
 	&\hspace{5mm}= \sin^\alpha\cos^2\beta + 2\sin\alpha\cos\beta\cos\alpha\sin\beta + \cos^2\alpha\sin^2\beta + \cos^2\alpha\cos^2\beta - 2\cos\alpha\cos\beta\sin\alpha\sin\beta + \sin^2\alpha\sin^2\beta\\
 	&\hspace{5mm}= \sin^2\alpha\cos^2\beta + \cos^2\alpha\sin^2\beta + \cos^2\alpha\cos^2\beta + \sin^2\alpha\sin^2\beta = (\sin^2\alpha + \cos^2\alpha)(\sin^2\beta + \cos^2\beta)  = 1.
 \end{align*}
-Từ \eqref{ctc} dễ suy ra
+Từ \eqref{ctc} dễ suy ra:
 \begin{align}
-	\label{ctc 1}
-	\tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta},\ \tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta}.
+	\label{ctc1}
+	\tag{ctc'}
+	\boxed{\tan(\alpha + \beta) = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta},\ \tan(\alpha - \beta) = \frac{\tan\alpha - \tan\beta}{1 + \tan\alpha\tan\beta},\ \forall\alpha,\beta\in\mathbb{R}\mbox{ s.t. } \cos\alpha\cos\beta\cos(\alpha\pm\beta)\ne 0,\,\tan\alpha\tan\beta\ne\pm 1.}
 \end{align}
+Công thức \eqref{ctc1} cũng được gọi là công thức cộng. Có thể viết tắt \eqref{ctc1}bằng cách sử dụng các ký hiệu $\pm,\mp$ như sau:
+\begin{align*}
+	\boxed{\tan(\alpha\pm\beta) = \frac{\tan\alpha\pm\tan\beta}{1\mp\tan\alpha\tan\beta},\ \forall\alpha,\beta\in\mathbb{R}\mbox{ s.t. } \cos\alpha\cos\beta\cos(\alpha\pm\beta)\ne 0,\,\tan\alpha\tan\beta\ne\pm 1.}
+\end{align*}
 
-\begin{proof}[Chứng minh \eqref{ctc 1}]
-	
+\begin{proof}[1st Chứng minh \eqref{ctc1}]
+	Sử dụng \eqref{ctc}, với $\alpha,\beta\in\mathbb{R}$ thỏa giả thiết,
+	\begin{align*}
+		\tan(\alpha + \beta) = \frac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)} = \frac{\sin\alpha\cos\beta + \cos\alpha\sin\beta}{\cos\alpha\cos\beta - \sin\alpha\sin\beta} = \frac{\frac{\sin\alpha}{\cos\alpha} + \frac{\sin\beta}{\cos\beta}}{1 - \frac{\sin\alpha\sin\beta}{\cos\alpha\cos\beta}} = \frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta},
+	\end{align*}
+	trong đó đẳng thức thứ 3 thu được bằng cách chia cả tử thức \& mẫu thức cho $\cos\alpha\cos\beta$ (phép chia này có nghĩa vì $\cos\alpha\cos\beta\ne 0$). Thay $\beta$ bởi $-\beta$ trong biểu thức vừa thu được, ta thu được biểu thức còn lại.
+\end{proof}
+Ta vừa chứng minh \eqref{ctc1} từ vế trái sang vế phải (i.e., LHS $= \cdots =$ RHS\footnote{LHS is the abbreviation of `Left Hand Side' \& RHS is the abbreviation of `Right Hand Side'. In many English texts in mathematics, the abbreviations l.h.s. \& r.h.s. are also used. In Vietnamese texts in mathematics, the abbreviations VT (vế trái) \& VP\texttt{/}VF (vế phải) are also used.}, hay VT $=\cdots =$ VP), cách chứng minh sau đi theo chiều ngược lại (i.e., RHS $= \cdots =$ LHS, hay VP $=\cdots =$ VT).
+
+\begin{proof}[2nd Chứng minh \eqref{ctc1}]
+	Với $\alpha,\beta\in\mathbb{R}$ thỏa giả thiết,
+	\begin{align*}
+		\frac{\tan\alpha + \tan\beta}{1 - \tan\alpha\tan\beta} = \frac{\frac{\sin\alpha}{\cos\alpha} + \frac{\sin\beta}{\cos\beta}}{1 - \frac{\sin\alpha\sin\beta}{\cos\alpha\cos\beta}} = \frac{\sin\alpha\cos\beta + \cos\alpha\sin\beta}{\cos\alpha\cos\beta - \sin\alpha\sin\beta} = \frac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)} = \tan(\alpha + \beta),
+	\end{align*}
+	trong đó đẳng thức thứ 3 sử dụng \eqref{ctc}. Thay $\beta$ bởi $-\beta$ trong biểu thức vừa thu được, ta thu được biểu thức còn lại.
 \end{proof}
 
+\subsubsection{Công thức nhân đôi, nhân 3}
+Áp dụng công thức cộng \eqref{ctc}--\eqref{ctc1} với $\alpha = \beta$,
+\begin{equation}
+	\label{ctn2}
+	\tag{ctn2}
+	\boxed{\left\{\begin{split}
+		\cos2\alpha &= \cos^2\alpha - \sin^2\alpha = 2\cos^2\alpha - 1 = 1 - 2\sin^2\alpha,\ \sin2\alpha = 2\sin\alpha\cos\alpha,\ \forall\alpha\in\mathbb{R}\\
+		\tan2\alpha &= \frac{2\tan\alpha}{1 - \tan^2\alpha},\ \forall\alpha\in\mathbb{R}\mbox{ s.t. }\cos2\alpha\ne 0,\,\tan\alpha\ne\pm 1.
+	\end{split}\right.}
+\end{equation}
+\& áp dụng tiếp \eqref{ctc} với $(\alpha,\beta) = (\alpha,2\alpha)$,
+\begin{align}
+	\label{ctn3}
+	\tag{ctn3}
+	\boxed{\cos3\alpha = 4\cos^3\alpha - 3\cos\alpha,\ \sin3\alpha = 3\sin\alpha - 4\sin^3\alpha,\ \forall\alpha\in\mathbb{R}.}
+\end{align}
+
+\begin{proof}[Chứng minh \eqref{ctn2}]
+	Với $\alpha\in\mathbb{R}$ bất kỳ, áp dụng \eqref{ctc} với $(\alpha,\beta) = (\alpha,2\alpha)$:
+	\begin{align*}
+		\cos3\alpha &= \cos(\alpha + 2\alpha) = \cos\alpha(2\cos^2\alpha - 1) - 2\sin^2\alpha\cos\alpha = \cos\alpha(2\cos^2\alpha - 1) - 2(1 - \cos^2\alpha)\cos\alpha = 4\cos^3\alpha - 3\cos\alpha,\\
+		\sin3\alpha &= \sin(\alpha + 2\alpha) = \sin\alpha\cos2\alpha + \cos\alpha\sin2\alpha = \sin\alpha(1 - 2\sin^2\alpha) + 2\sin\alpha\cos^2\alpha\\
+		&= \sin\alpha(1 - 2\sin^2\alpha) + 2\sin\alpha(1 - \sin^2\alpha) = 3\sin\alpha - 4\sin^3\alpha.
+	\end{align*}
+	Hoàn tất chứng minh.
+\end{proof}
+
+\begin{luuy}[Các khai triển khác của $\sin3\alpha,\cos3\alpha$]
+	Sử dụng các biểu thức khác của $\sin2\alpha$ \& $\cos2\alpha$, ta cũng thu được:
+	\begin{align*}
+		\cos3\alpha &= \cos^3\alpha - 3\sin^2\alpha\cos\alpha = 2\cos^3\alpha - \cos\alpha - 2\sin^2\alpha\cos\alpha = \cos\alpha - 4\sin^2\alpha\cos\alpha,\\
+		\sin3\alpha &= 3\sin\alpha\cos^2\alpha - \sin^3\alpha = 4\sin\alpha\cos^2\alpha - \sin\alpha = \sin\alpha - 2\sin^3\alpha + 2\sin\alpha\cos^2\alpha.
+	\end{align*}
+	Tuy nhiên, 2 công thức của \eqref{ctn3} mang lại nhiều lợi thế hơn do chúng là 2 đa thức bậc 3 của hàm $\sin\alpha$ \& $\cos\alpha$, chứ không phải là 1 biểu thức đại số gồm cả $\sin\alpha$ \& $\cos\alpha$.
+\end{luuy}
+
+\subsubsection{Công thức hạ bậc}
+Từ công thức nhân đôi \eqref{ctn2} suy ra công thức hạ bậc:
+\begin{align}
+	\label{cthb}
+	\tag{cthb}
+	\boxed{\cos^2\alpha = \frac{1 + \cos2\alpha}{2},\ \sin^2\alpha = \frac{1 - \cos2\alpha}{2},\ \forall\alpha\in\mathbb{R}.}
+\end{align}
+
+\subsubsection{Công thức biến đổi tích thành tổng \& công thuwc biến đổi tổng thành tích}
+``Từ các công thức cộng \eqref{ctc}, dễ dàng suy ra
+\begin{equation*}
+	\boxed{\left\{\begin{split}
+		\cos\alpha\cos\beta &= \frac{1}{2}[\cos(\alpha + \beta) + \cos(\alpha - \beta)],&&\sin\alpha\sin\beta = -\frac{1}{2}[\cos(\alpha + \beta) - \cos(\alpha - \beta)],\\
+		\sin\alpha\cos\beta &= \frac{1}{2}[\sin(\alpha + \beta) + \sin(\alpha - \beta)],&&\cos\alpha\sin\beta = \frac{1}{2}[\sin(\alpha + \beta) - \sin(\alpha - \beta)],
+	\end{split}\right.\ \forall\alpha,\beta\in\mathbb{R}.}
+\end{equation*}
+Trong các công thức đó, đặt $x\coloneqq\alpha + \beta$, $y\coloneqq\alpha - \beta$ thì suy ra
+\begin{equation*}
+	\boxed{\left\{\begin{split}
+		\cos x + \cos y &= 2\cos\frac{x + y}{2}\cos\frac{x - y}{2},&&\cos x - \cos y = -2\sin\frac{x + y}{2}\sin\frac{x - y}{2},\\
+		\sin x + \sin y &= 2\sin\frac{x + y}{2}\cos\frac{x - y}{2},&&\sin x - \sin y = 2\cos\frac{x + y}{2}\sin\frac{x - y}{2},
+	\end{split}\right.\ \forall x,y\in\mathbb{R}.}
+\end{equation*}
+Tất cả các công thức trên được dùng nhiều khi giải phương trình lượng giác.'' -- \cite[p. 7]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsection{Số phức \& dạng lượng giác của nó -- Complex number \& its trigonometric representation}
+
+\subsubsection{Số phức -- Complex number}
 
 %------------------------------------------------------------------------------%
 
