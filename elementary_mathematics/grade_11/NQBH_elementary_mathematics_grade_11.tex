@@ -931,6 +931,44 @@ Công thức trên gọi là \textit{biểu thức tọa độ của phép tịn
 	Trường hợp tổng quát có thể đưa về trường hợp con sông rất hẹp -- hẹp đến mức 2 bờ sông $a$ \& $b$ xem như trùng nhau bằng 1 phép tịnh tiến theo vector $\overrightarrow{MN}$ để $a$ trùng $b$. Khi đó điểm $A$ biến thành điểm $A'$ sao cho $\overrightarrow{AA'} = \overrightarrow{MN}$ \& do đó $A'N = AM$.
 \end{proof}
 
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{1.}, p. 9]
+	Qua phép tịnh tiến $T$ theo vector $\vec{u}\ne\vec{0}$, đường thẳng $d$ biến thành đường thẳng $d'$. Trong trường hợp nào thì: $d\equiv d'$? $d\parallel d'$? $d$ cắt $d'$? 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{2.}, p. 9]
+	Cho 2 đường thẳng song song $a$ \& $a'$. Tìm tất cả những phép tịnh tiến biến $a$ thành $a'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{3.}, p. 9]
+	Cho 2 phép tịnh tiến $T_{\vec{u}}$ \& $T_{\vec{v}}$. Với điểm $M$ bất kỳ, $T_{\vec{u}}$ biến $M$ thành điểm $M'$, $T_{\vec{v}}$ biến $M'$ thành điểm $M''$. Chứng tỏ rằng phép biến hình biến $M$ thành $M''$ là 1 phép tịnh tiến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{4.}, p. 9]
+	Cho đường tròn $(O)$ \& 2 điểm $A,B$. 1 điểm $M$ thay đổi trên đường tròn $(O)$. Tìm quỹ tích điểm $M'$ sao cho $\overrightarrow{MM'} + \overrightarrow{MA} = \overrightarrow{MB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{5.}, p. 9]
+	Trong mặt phẳng tọa độ $Oxy$, với $\alpha,a,b$ là những số cho trước, xét phép biến hình $F$ biến mỗi điểm $M(x;y)$ thành điểm $M'(x';y')$, trong đó
+	\begin{equation*}
+		\left\{\begin{split}
+			x' &= x\cos\alpha - y\sin\alpha + a,\\
+			y' &= x\sin\alpha + y\cos\alpha + b.
+		\end{split}\right.
+	\end{equation*}
+	\begin{enumerate*}
+		\item[(a)] Cho 2 điểm $M(x_1;y_1)$, $N(x_2;y_2)$ \& gọi $M',N'$ lần lượt là ảnh của $M,N$ qua phép $F$. Tìm tọa độ của $M'$ \& $N'$.s
+		\item[(b)] Tính khoảng cách $d$ giữa $M$ \& $N$; khoảng cách $d'$ giữa $M'$ \& $N'$.
+		\item[(c)] Phép $F$ có phải là phép dời hình hay không?
+		\item Khi $\alpha = 0$, chứng tỏ rằng $F$ là phép tịnh tiến.
+	\end{enumerate*}
+\end{baitoan}
+Tổng quát hơn của bài toán \cite[\textbf{6.}, p. 9]{SGK_Toan_11_hinh_hoc_nang_cao}:
+\begin{baitoan}
+	Trong mặt phẳng tọa độ $Oxy$, xét các phép biến hình sau đây: Phép biến hình $F$ biến mỗi điểm $M(x;y)$ thành điểm $M'(f(x,y);g(x;y))$ với $f,g:\mathbb{R}^2\to\mathbb{R}$ là 2 hàm sốt. Với $f,g$ thỏa điều kiện nào thì $F$ là 1 phép dời hình?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
 \section{Phép Dời Hình Phẳng}
 
 \subsection{Đại cương về các phép dời hình phẳng}
@@ -939,14 +977,74 @@ Công thức trên gọi là \textit{biểu thức tọa độ của phép tịn
 \subsubsection{Định nghĩa phép dời hình}
 
 \begin{dinhnghia}[Phép dời hình]
-	``\emph{Phép dời hình} là phép biến hình không làm thay đổi khoảng cách giữa 2 điểm bất kỳ.'' -- \cite[p. 8]{SGK_Toan_11_hinh_hoc_nang_cao}
+	\begin{itemize}
+		\item ``\emph{Phép dời hình} là phép biến hình không làm thay đổi khoảng cách giữa 2 điểm bất kỳ.'' -- \cite[p. 8]{SGK_Toan_11_hinh_hoc_nang_cao}
+		\item ``1 phép biến hình $f:\mathcal{P}\to\mathcal{P}$ được gọi là 1 \emph{phép dời hình} của mặt phẳng, ký hiệu là $\mathcal{D}$, nếu với 2 điểm bất kỳ $M,N$ nào của $\mathcal{P}$ \& các ảnh $M' = f(M)$, $N' = f(N)$ của chúng, ta đều có $M'N' = MN$.
+		
+		Nói 1 cách ngắn gọn, phép dời hình của mặt phẳng, hay gọi vắn tắt là \emph{phép dời hình phẳng}, là phép biến hình bảo toàn khoảng cách giữa 2 điểm bất kỳ nào của mặt phẳng. Vậy là, nếu ký hiệu tập hợp các phép dời hình của mặt phẳng là $\{\mathcal{D}\}$ thì: $f\in\{\mathcal{D}\}$ của $\mathcal{P}\Leftrightarrow f(M)f(N) = MN$, $\forall M,N\in\mathcal{P}$.'' -- \cite[p. 5]{TL_chuyen_Toan_Hinh_Hoc_11}
+	\end{itemize}
 \end{dinhnghia}
+``Chính vì phép dời hình bảo toàn khoảng cách giữa 2 điểm bất kỳ nào nên người ta còn gọi nó là \textit{phép biến hình đẳng cự}, hay vắn tắt là \textit{phép đẳng cự}.'' -- \cite[p. 5]{TL_chuyen_Toan_Hinh_Hoc_11}. Từ định nghĩa của phép dời hình ta suy ra:
+
+\begin{hequa}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, p. 5]
+	\begin{enumerate*}
+		\item[(a)] Phép biến hình đồng nhất $\operatorname{id}$ là 1 phép dời hình.
+		\item[(b)] Phép biến hình đảo ngược của 1 phép dời hình cũng là 1 phép dời hình.
+		\item[(c)] Hợp thành (i.e., tích) của 2, hay $n$ ($n\in\mathbb{N}$, $n > 2$) phép dời hình là 1 phép dời hình.
+		\item[(d)] Phép đối xứng trục, phép đối xứng tâm, phép tịnh tiến, phép quay (xung quanh 1 điểm) là những phép dời hình phẳng.
+	\end{enumerate*}
+\end{hequa}
+
+\subsubsection{Các tính chất của phép dời hình}
 Chú ý rằng các tính chất đã nêu của phép tịnh tiến được chứng minh dựa vào tính chất ``\textit{không làm thay đổi khoảng cách giữa 2 điểm}''. Bởi vậy, các phép dời hình cũng có những tính chất đó. Cụ thể ta có:
 
-\begin{dinhly}
-	Phép dời hình biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó, biến đường thằng thành đường thẳng, biến tia thành tia, biến đoạn thẳng thành đoạn thẳng bằng nó, biến tam giác thành tam giác bằng nó, biến đường tròn thành đường tròn có cùng bán kính, biến góc thành góc bằng nó.
+\begin{dinhly}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, p. 8; \cite{TL_chuyen_Toan_Hinh_Hoc_11}, p. 6]
+	Phép dời hình biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó, biến 1 đường thằng thành 1 đường thẳng, biến 1 tia thành 1 tia, biến 1 đoạn thẳng thành 1 đoạn thẳng bằng nó, biến 1 tam giác thành 1 tam giác bằng nó, biến 1 đường tròn thành đường tròn có cùng bán kính, trong đó tâm biến thành tâm, biến 1 góc thành 1 góc bằng nó.
 \end{dinhly}
-'' -- \cite[p. 8]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+\begin{dinhly}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, p. 6]
+	Phép dời hình bảo toàn sự thẳng hàng của 3 điểm \& thứ tự của chúng trên đường thẳng chứa 3 điểm đó.
+\end{dinhly}
+``Cụ thể là: Phép dời hình biến 3 điểm $A,B,C$ thẳng hàng, trong đó $B$ ở giữa $A$ \& $C$ thành 3 điểm $A',B',C'$ thẳng hàng cũng theo thứ tự đó.'' -- \cite[p. 6]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\begin{dinhly}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, p. 6]
+	1 phép dời hình phẳng có 3 điểm bất động không thẳng hàng là phép biến hình đồng nhất.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	``Giả sử $f:\mathcal{P}\to\mathcal{P}$ là 1 phép dời hình phẳng có 3 điểm bất động không thẳng hàng: $A = A' = f(A)$, $B = B' = f(B)$, $C = C' = f(C)$. Thế thì theo tính chất của phép dời hình, bất kỳ 1 điểm nào trên các đường thẳng $(BC),(CA)$, hoặc $(AB)$ đều là điểm bất động. Từ đó dễ dàng suy ra mọi điểm $M$ của mặt phẳng $(ABC)$ đều là điểm bất động, \& do đó $f = \operatorname{id}$.'' -- \cite[p. 6]{TL_chuyen_Toan_Hinh_Hoc_11}
+\end{proof}
+
+\begin{hequa}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, p. 6]
+	1 phép dời hình phẳng $\mathcal{D}\ne\operatorname{id}$ thì hoặc không có điểm bất động nào, hoặc có 1 điểm bất động duy nhất, hoặc có 1 đường thẳng mà mọi điểm của nó đều là điểm bất động (i.e., có 1 đường thẳng cố định).
+\end{hequa}
+Các ví dụ về các phép dời hình có 0 điểm bất động, 1 điểm bất động, \& 1 tập hợp các điểm bất động là 1 đường thẳng cố định trong hệ quả vừa phát biểu lần lượt là phép tịnh tiến theo 1 vector khác $\vec{0}$, phép đối xứng tâm, \& phép đối xứng trục.
+
+\subsubsection{Khái niệm về 2 hình bằng nhau}
+``Phép dời hình biến $\Delta ABC$ thành $\Delta A'B'C'$ bằng nó, trong đó các cạnh tương ứng bằng nhau \& các góc tương ứng bằng nhau: $B'C' = BC$, $C'A' = CA$, $A'B' = AB$; $\widehat{A'} = \widehat{A}$, $\widehat{B'} = \widehat{B}$, $\widehat{C'} = \widehat{C}$. 1 cách tổng quát, giả sử 1 phép dời hình $\mathcal{D}$ biến 1 hình (phẳng) $\mathcal{H}$ thành 1 hình $\mathcal{H}'$, ký hiệu $\mathcal{H}' = \mathcal{D}(\mathcal{H})$.'' -- \cite[pp. 6--7]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\begin{dinhnghia}[2 hình bằng nhau]
+	``2 hình $\mathcal{H}$ \& $\mathcal{H}'$ được gọi là \emph{bằng nhau}, nếu có 1 phép dời hình $\mathcal{D}$ biến hình $\mathcal{H}$ thành hình $\mathcal{H}'$ (\& do đó, phép dời hình $\mathcal{D}^{-1}$, đảo ngược của phép dời hình $\mathcal{D}$ biến $\mathcal{H}'$ thành $\mathcal{H}$), ký hiệu như thông thường: $\mathcal{H}'\coloneqq\mathcal{H}$.'' -- \cite[p. 7]{TL_chuyen_Toan_Hinh_Hoc_11}
+\end{dinhnghia}
+
+\subsection{Sự xác định 1 phép dời hình phẳng}
+\begin{itemize}
+	\item ``Khi chúng ta nói cho 1 phép dời hình $\mathcal{D}$ mà tổng quát hơn là cho 1 phép biến hình $f$ của $\mathcal{P}$ (mặt phẳng), i.e., chỉ ra đầy đủ các yếu tốt để xác định hoàn toàn phép dời hình (hay phép biến hình) đó của $\mathcal{P}$. I.e.: Với 1 điểm $M$ bất kỳ của $\mathcal{P}$, ta phải chỉ ra cách (quy tắc) dựng, cũng là cách xác định được điểm tương ứng (ảnh) $M'$ của nó qua phép dời hình (hay phép biến hình) này.
+	\item Về phép dời hình, ta đã biết rằng 1 phép dời hình biến 1 $\Delta ABC$ thành 1 $\Delta A'B'C'$ bằng nó, trong đó các cạnh tương ứng bằng nhau, các góc tương ứng bằng nhau.
+\end{itemize}
+Mệnh đề sau đây khẳng định điều ngược lại.
+
+\begin{dinhly}[Về sự xác định 1 phép dời hình phẳng]
+	$\Delta ABC$ \& $\Delta A'B'C'$ là 2 tam giác bằng nhau cho trước trong mặt phẳng $\mathcal{P}$ ($B'C' = BC$, $C'A' = CA$, $A'B' = AB$). Bao giờ cũng có 1 \& chỉ 1 phép dời hình $\mathcal{D}:\mathcal{P}\to\mathcal{P}$ biến $A$ thành $A'$, $B$ thành $B'$ \& $C$ thành $C'$. Đồng thời, phép dời hình $\mathcal{D}$ này có thể phân tích thành tích của không quá 3 phép đối xứng trục.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Xem \cite[p. 7]{TL_chuyen_Toan_Hinh_Hoc_11}
+\end{proof}
+
+'' -- \cite[pp. 7--]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+
 
 \section{Phép Đối Xứng Trục}
 
