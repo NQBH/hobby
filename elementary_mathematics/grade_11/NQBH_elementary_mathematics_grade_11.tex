@@ -826,7 +826,14 @@ Về lực lượng \& các tính chất sâu sắc hơn của tập hợp, có 
 \begin{dinhnghia}[Phép tịnh tiến]
 	``\emph{Phép tịnh tiến} theo vector $\vec{u}$ là 1 phép biến hình biến điểm $M$ thành điểm $M'$ sao cho $\overrightarrow{MM'} = \vec{u}$.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}
 \end{dinhnghia}
-``Phép tịnh tiến theo vector $\vec{u}$ thường được ký hiệu là $T$ hoặc $T_{\vec{u}}$. Vector $\vec{u}$ được gọi là \textit{vector tịnh tiến}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}. ``Như vậy, $T_{\vec{u}}(M) = M'\Leftrightarrow\overrightarrow{MM'} = \vec{u}$. Phép tịnh tiến theo vector $\vec{0}$ chính là \textit{phép đồng nhất}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_co_ban}
+``Phép tịnh tiến theo vector $\vec{u}$ thường được ký hiệu là $T$ hoặc $T_{\vec{u}}$. Vector $\vec{u}$ được gọi là \textit{vector tịnh tiến}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_nang_cao}.
+
+``Như vậy, $T_{\vec{u}}(M) = M'\Leftrightarrow\overrightarrow{MM'} = \vec{u}$. Phép tịnh tiến theo vector $\vec{0}$ chính là \textit{phép đồng nhất}.'' -- \cite[p. 5]{SGK_Toan_11_hinh_hoc_co_ban}
+
+\begin{baitoan}[\cite{SGK_Toan_11_dai_so_giai_tich_co_ban}, \textbf{1.}, p. 7]
+	\label{prob:phep tinh tien}
+	Chứng minh: $M' = T_{\vec{u}}(M)\Leftrightarrow M = T_{-\vec{u}}(M')$.
+\end{baitoan}
 
 \subsection{Các tính chất của phép tịnh tiến}
 
@@ -834,9 +841,15 @@ Về lực lượng \& các tính chất sâu sắc hơn của tập hợp, có 
 	\label{thm: phep tinh tien bao toan khoang cach}
 	Nếu phép tịnh tiến biến 2 điểm $M$ \& $N$ lần lượt thành 2 điểm $M'$ \& $N'$ thì $M'N' = MN$.
 \end{dinhly}
-``Người ta diễn tả tính chất trên của phép tịnh tiến là: \textit{Phép tịnh tiến không làm thay đổi khoảng cách giữa 2 điểm bất kỳ}.'' -- \cite[p. 6]{SGK_Toan_11_hinh_hoc_nang_cao}
+``Người ta diễn tả tính chất trên của phép tịnh tiến là: \textit{Phép tịnh tiến không làm thay đổi khoảng cách giữa 2 điểm bất kỳ}.'' -- \cite[p. 6]{SGK_Toan_11_hinh_hoc_nang_cao}. ``Nếu $T_{\vec{u}}(M) = M'$, $T_{\vec{u}}(N) = N'$ thì $\overrightarrow{M'N'} = \overrightarrow{MN}$ \& từ đó suy ra $M'N' = MN$.'' ``Nói cách khác, phép tịnh tiến bảo toàn khoảng cách giữa 2 điểm bất kỳ.'' -- \cite[p. 6]{SGK_Toan_11_hinh_hoc_co_ban}, i.e.,
+\begin{align}
+	\label{phep tinh tien bao toan khoang cach}
+	((T_{\vec{u}}(M) = M')\land(T_{\vec{u}}(N) = N'))\Rightarrow\overrightarrow{M'N'} = \overrightarrow{MN}\Rightarrow M'N' = MN.
+\end{align}
 
-``Nếu $T_{\vec{u}}(M) = M'$, $T_{\vec{u}}(N) = N'$ thì $\overrightarrow{M'N'} = \overrightarrow{MN}$ \& từ đó suy ra $M'N' = MN$.''
+\begin{proof}[Chứng minh \eqref{phep tinh tien bao toan khoang cach}]
+	Vì $\overrightarrow{MM'} = \overrightarrow{NN'} = \vec{u}$ \& $\overrightarrow{M'M} = -\vec{u}$, $\overrightarrow{M'N'} = \overrightarrow{M'M} + \overrightarrow{MN} + \overrightarrow{NN'} = -\vec{u} + \overrightarrow{MN} + \vec{u} = \overrightarrow{MN}$. Suy ra $|\overrightarrow{M'N'}| = |\overrightarrow{MN}|$, i.e., $M'N' = MN$.
+\end{proof}
 
 \begin{dinhly}[Phép tịnh tiến bảo toàn tính chất thẳng hàng \& thứ tự các điểm thẳng hàng]
 	Phép tịnh tiến biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó.
@@ -845,9 +858,11 @@ Về lực lượng \& các tính chất sâu sắc hơn của tập hợp, có 
 \begin{proof}[Chứng minh]
 	``Giả sử phép tịnh tiến biến 3 điểm $A,B,C$ thành 3 điểm $A',B',C'$. Theo Định lý \ref{thm: phep tinh tien bao toan khoang cach}, ta có $A'B' = AB$, $B'C' = BC$, \& $A'C' = AC$. Nếu $A,B,C$ thẳng hàng, $B$ nằm giữa $A$ \& $C$ thì $AB + AC = AC$. Do đó ta cùng có $A'B' + B'C' = A'C'$, i.e., $A',B',C'$ thẳng hàng, trong đó $B'$ nằm giữa $A'$ \& $C'$.
 \end{proof}
+Từ định lý \ref{thm: phep tinh tien bao toan khoang cach}, suy ra:
 
 \begin{hequa}
-	Phép tịnh tiến biến đường thẳng thành đường thẳng, biến tia thành tia, biến đoạn thẳng thành đoạn thẳng bằng nó, biến tam giác thành tam giác bằng nó, biến đường tròn thành đường tròn có cùng bán kính, biến góc thành góc bằng nó.
+	\label{cor:phep tinh tien}
+	Phép tịnh tiến biến đường thẳng thành đường thẳng song song hoặc trùng với nó, biến tia thành tia song song cùng hướng hoặc trùng với nó, biến đoạn thẳng thành đoạn thẳng bằng nó, biến tam giác thành tam giác bằng nó, biến đường tròn thành đường tròn có cùng bán kính, biến góc thành góc bằng nó.
 \end{hequa}
 
 \subsection{Biểu thức tọa độ của phép tịnh tiến}
@@ -866,7 +881,36 @@ Khi đó ta có:
 		y' &= y + b.
 	\end{split}\right.}
 \end{equation*}
-Công thức trên gọi là \textit{biểu thức tọa độ của phép tịnh tiến theo vector $\vec{u}(a;b)$}.'' -- \cite[pp. 6--7]{SGK_Toan_11_hinh_hoc_nang_cao}
+Công thức trên gọi là \textit{biểu thức tọa độ của phép tịnh tiến $T_{\vec{u}}$ theo vector $\vec{u}(a;b)$}.'' -- \cite[pp. 6--7]{SGK_Toan_11_hinh_hoc_nang_cao}
+
+\begin{baitoan}
+	Trong mặt phẳng tọa độ $Oxy$ cho vector $\vec{u} = (u_1;u_2)$, 2 điểm $A(a_1;a_2)\not\equiv B(b_1,b_2)$ (i.e., phân biệt\emph{\texttt{/}}không trùng nhau) \& đường thẳng $d$ có phương trình $ax + by + c = 0$ với $a,b\in\mathbb{R}$ sao cho $a^2 + b^2\ne 0$.
+	\begin{enumerate*}
+		\item[(a)] Tìm tọa độ của các điểm $A',B'$ theo thứ tự là ảnh của $A,B$ qua phép tịnh tiến theo $\vec{u}$.
+		\item[(b)] Tìm tọa độ của điểm $C$ sao cho $A$ là ảnh của $C$ qua phép tịnh tiến theo $\vec{u}$.
+		\item[(c)] Tìm phương trình của đường thẳng $d'$  là ảnh của $d$ qua phép tịnh tiến theo $\vec{u}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	\begin{enumerate*}
+		\item[(a)] $A' = T_{\vec{u}}(A)$, $B' = T_{\vec{u}}(B)$, sử dụng biểu thức tọa độ của phép tịnh tiến $T_{\vec{u}}$, thu được $A'(a_1 + u_1;a_2 + u_2)$, $B'(b_1 + u_1;b_2 + u_2)$.
+		\item[(b)] Giả sử $C(c_1;c_2)$, $A = T_{\vec{u}}(C)$,\footnote{Sử dụng bài toán \ref{prob:phep tinh tien} cho ta $C = T_{-\vec{u}}(A)$, có thể sử dụng biểu thức tọa độ của $T_{-\vec{u}}$ để thu được trực tiếp $c_i = a_i - u_i$, $i = 1,2$.} sử dụng biểu thức tọa độ của $T_{\vec{u}}$, thu được $a_i = c_i + u_i$, $i = 1,2$, suy ra $c_i = a_i - u_i$, $i = 1,2$, hay $C(a_1 - u_1,a_2 - u_2)$.
+		\item[(c)] Nếu $\vec{u} = \vec{0}$ thì $d\equiv d'$ \& có chung phương trình $ax + by + c = 0$. Nếu $\vec{u}\ne\vec{0}$. Giả sử đường thẳng $d'$ có phương trình $a'x + b'y + c' = 0$ với $a',b'\in\mathbb{R}$ với $(a')^2 + (b')^2\ne 0$. Sử dụng hệ quả \ref{cor:phep tinh tien} thu được $d'\parallel d$, nên $\frac{a}{a'} = \frac{b}{b'} = \frac{c}{c'} = k = \mbox{const}$ với quy ước nếu mẫu số bằng $0$ thì tử bằng $0$. W.l.o.g., có thể giả sử $a' = a$, $b' = b$ (chia các hệ số của $d'$ cho hằng số $k$ trong dãy tỷ số bằng nhau vừa thu được), ta cần tìm $c'$ bằng cách xác định 1 điểm thuộc $d'$. Vì $a^2 + b^2\ne 0$, 1 trong số $a,b$ phải khác $0$. W.l.o.g., giả sử $a\ne 0$, thì điểm $D_1\left(-\frac{c}{a};0\right)\in d$, khi đó ảnh của $D_1$ qua $T_{\vec{u}}$ là $D_1'\coloneqq T_{\vec{u}}(D_1) = \left(-\frac{c}{a} + u_1;u_2\right)\in d'$, i.e., $a\left(-\frac{c}{a} + u_1\right) + bu_2 + c' = 0$, hay $c' = c - au_1 - bu_2$. (Nếu $b\ne 0$, thì có thể lấy điểm $D_2\left(0;-\frac{c}{b}\right)$, khi đó $D_2'\coloneqq T_{\vec{u}}(D_2) = \left(u_1;-\frac{c}{b} + u_2\right)\in d'$, i.e., $au_1 + b\left(-\frac{c}{b} + u_2\right) + c' = 0$, cũng cho ta $c' = c - au_1 - bu_2$.). Vậy phương trình đường thẳng $d' = T_{\vec{u}}(d)$ là $ax + by + c - au_1 - bu_2 = 0$.
+	\end{enumerate*}
+\end{proof}
+
+\begin{nhanxet}
+	Vài nhận xét về lời giải trên:
+	\begin{enumerate}
+		\item Nếu $\vec{u} = \vec{0}$, i.e., $u_1 = u_2 = 0$, phương trình của $d'$ thu được ở (c) trùng với phương trình của $d$ như đã lý luận ở đầu lời giải của (c) (consistency).
+		\item Nếu vector tịnh tiến $\vec{u}$  có tọa độ trùng với hệ số của $d$, i.e., $u_1 = a$, $u_2 = b$, $\vec{u}(a;b)$, thì $d\not\equiv d'$. Thật vậy, phương trình của $d'$ thu được ở (c) trở thành: $ax + by + c - a^2 - b^2 = 0$, \& vì $a^2 + b^2\ne 0$ (ít nhất 1 trong 2 số phải khác $0$) nên $c - a^2 - b^2\ne c$, nên $d'\parallel d$ nhưng $d\not\equiv d'$ trong trường hợp này.
+		\item 1 ý tưởng giải khác cho (c) là tìm 2 điểm phân biệt thuộc $d$ (e.g., 2 điểm $\left(0;-\frac{c}{b}\right)$, $\left(-\frac{c}{a};0\right)$ nếu $ab\ne 0$; còn nếu $ab = 0$ thì phải tìm thêm 1 điểm khác), tìm 2 ảnh của 2 điểm đó qua $T_{\vec{u}}$ như (a), (b), rồi viết phương trình đường thẳng $d'$ đi qua 2 điểm ảnh vừa tìm được. Cách này cũng sẽ cho cùng kết quả với lời giải (c) ở trên nhưng không hay \&\emph{\texttt{/}}vì sẽ tốn nhiều công sức tính toán hơn, bởi vì không tận dụng trực tiếp tính chất của phép tịnh tiến biến đường thẳng thành đường thẳng song song hoặc trùng với nó. Cho nên, cần ưu tiên các lập luận logic (thông minh) sử dụng các tính chất đã biết của 1 đối tượng toán học nói chung hoặc 1 phép biến hình nói riêng, để tiết kiệm công sức tính toán \& thời gian đi tìm phương hướng tiếp cận khi giải 1 bài toán bất kỳ:
+		\begin{align*}
+			\boxed{\mbox{Smart strategies}\gg\mbox{heavy calculation\emph{\texttt{/}}computation skills.}}
+		\end{align*}		
+	\end{enumerate}
+\end{nhanxet}
 
 \subsection{Ứng dụng của phép tịnh tiến}
 
