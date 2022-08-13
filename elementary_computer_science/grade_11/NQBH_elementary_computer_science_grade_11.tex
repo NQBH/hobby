@@ -94,6 +94,8 @@ Như vậy, quá trình dịch \& thực hiện các câu lệnh là luân phiê
 \end{enumerate}
 Như vậy, trong thông dịch, không có chương trình đích để lưu trữ, trong biên dịch cả chương trình nguồn \& chương trình đích có thể lưu trữ lại để sử dụng về sau. Thông thường, trong môi trường làm việc trên 1 ngôn ngữ lập trình cụ thể, ngoài chương trình dịch còn có 1 số thành phần có chức năng liên quan như biên soạn, lưu trữ, tìm kiếm, cho biết các kết quả trung gian, $\ldots$ E.g., Turbo Pascal 7.0, Free Pascal 1.2, Visual Pascal 2.1, $\ldots$ là các môi trường làm việc trên ngôn ngữ Pascal; Turbo C++, Visual C++, $\ldots$ là các môi trường làm việc trên ngôn ngữ C++. Các môi trường lập trình khác nhau ở những dịch vụ mà nó cung cấp, đặc biệt là các dịch vụ nâng cấp, tăng cường các khả năng mới cho ngôn ngữ lập trình.'' -- \cite[p. 5]{SGK_Tin_Hoc_11}
 
+%------------------------------------------------------------------------------%
+
 \section{Các Ngôn Ngữ Lập Trình}
 ``Đã có hàng nghìn ngôn ngữ lập trình được thiết kế \& mỗi năm lại có thêm nhiều ngôn ngữ lập trình mới xuất hiện. Các ngôn ngữ thường được nhắc đến là: \textsc{Ada, Algol, APL, Assembly, Basic, C, C++, C\#, Cobol, Delphi, Fortran, Java, JavaScript, Lisp, Logo, Pascal, Perl, PHP, Prolog, Python, Ruby}, $\ldots$ Sự phát triển của ngôn ngữ lập trình gắn liền với sự phát triển của tin học. Mỗi loại ngôn ngữ phù hợp hơn với 1 số lớp bài toán nhất định. Cùng với tên các ngôn ngữ lập trình, các thuật ngữ thường được nhắc tới là ``lập trình cấu trúc'', ``lập trình hướng đối tượng'', ``lập trình web'', $\ldots$
 
@@ -109,6 +111,8 @@ Những ngôn ngữ lập trình hiện nay thường cung cấp các thư việ
 	\item C++ là ngôn ngữ lập trình hỗ trợ lập trình cấu trúc (thủ tục, dữ liệu trừu tượng), lập trình hướng đối tượng. Từ thập nieen 1990, C++ đã trở thanh 1 trong những ngôn ngữ phổ biến nhất. C++ góp phần xây dựng những ứng dụng lớn nhất hiện nay như hệ điều hành Windows, trình duyệt \& máy tìm kiếm Google, $\ldots$ Năm 1983, Bjarne Stroustrup ở phòng thí nghiệm Bell đã phát triển C++. Trong suốt thập niên 1980 ``C với các lớp'' được coi là 1 bản nâng cao của ngôn ngữ C. Tên C++ được dùng lần đầu tiên vào tháng 12\texttt{/}1983. Cái tên C++ cho biết C++ là ngôn ngữ được phát triển trên cơ sở ngôn ngữ C.
 	\item \textsc{Java} được khởi đầu bởi James Gosling \& các đồng nghiệp ở Sun Microsystems năm 1991 là 1 phần của \textit{Dự án Xanh}. Ban đầu ngôn ngữ này được gọi là Oak (i.e., cây sồi, do bên ngoài cơ quan của ông Gosling có trồng nhiều loại cây này). Họ dự định phát triển ngôn ngữ này thay cho C++. Công ty Sun Microsystems đang giữ bản quyền \& phát triển Java thường xuyên. Java được phát hành vào năm 1994, rồi nó trở nên nổi tiếng khi Netscape tuyên bố tại hội thảo \textit{SunWorld năm 1995} là trình duyệt Navigator của họ sẽ hỗ trợ Java. Java có thể tương thích với nhiều họ máy như PC, Macintosh, tương thích với nhiều hệ điều hành như Windows, Linux. Người ta nói Java là ngôn ngữ lập trình 1 lần (trên 1 máy) nhưng có thể chạy nhiều lần (trên nhiều máy). Java được sử dụng chủ yếu để lập trình trên môi trường mạng \& Internet.'' -- \cite[pp. 6--8]{SGK_Tin_Hoc_11}
 \end{itemize}
+
+%------------------------------------------------------------------------------%
 
 \section{Các Thành Phần Của Ngôn Ngữ Lập Trình}
 
@@ -174,6 +178,8 @@ Tùy theo cách lưu trữ \& xử lý, Pascal phân biệt nhiều loại biế
 	\item \textit{Biến}: Đại lượng được đặt tên. Giá trị của biến có thể thay đổi trong quá trình thực hiện chương trình.'' -- \cite[p. 13]{SGK_Tin_Hoc_11}
 \end{itemize}
 
+%------------------------------------------------------------------------------%
+
 \section{Ngôn Ngữ Pascal}
 
 \subsection{Vài nét về tác giả của ngôn ngữ Pascal}
@@ -208,15 +214,157 @@ Về ý đồ khi xây dựng Pascal, Wirth viết: ``Điểm mới của Pascal
 \section{Cấu Trúc Chương Trình}
 
 \subsection{Cấu trúc chung}
-p. 19/145
+``Nói chung, chương trình được viết bằng 1 ngôn ngữ lập trình bậc cao thường gồm \textit{phần khai báo} \& \textit{phần thân}. Phần thân chương trình nhất thiết phải có. Phần khai báo có thể có hoặc không tùy theo từng chương trình cụ thể. Khi diễn giải cú pháp của ngôn ngữ lập trình người ta thường sử dụng ngôn ngữ tự nhiên. Các diễn giải bằng ngôn ngữ tự nhiên được đặt giữa cặp dấu \verb|<| \& \verb|>|. Các thành phần của chương trình có thể có hoặc không được đặt trong cặp dấu \verb|[| \& \verb|]|.'' -- \cite[p. 18]{SGK_Tin_Hoc_11}. Với quy ước này, cấu trúc của 1 chương trình này có thể được mô tả như sau:
+\begin{verbatim}
+	[<phần khai báo>]
+    	<phần thân>
+\end{verbatim}
+
+\subsection{Các thành phần của chương trình}
+
+\subsubsection{Phần khai báo}
+``Có thể có các khai báo cho: tên chương trình, thư viện, hằng, biến \& chương trình con.
+
+\paragraph{Khai báo tên chương trình.} Phần này có thể có hoặc không. Với Pascal, nếu có, phần khai báo tên chương trình bắt đầu bằng từ khóa \texttt{program}, tiếp đến là tên chương trình:
+\begin{verbatim}
+	program	<tên chương trình>;
+\end{verbatim}
+trong đó, \texttt{tên chương trình} là tên do người lập trình đặt theo đúng quy định về tên.
+
+\paragraph{Khai báo thư viện.} Mỗi ngôn ngữ lập trình thường có sẵn 1 số thư viện cung cấp 1 số chương trình thông dụng đã được lập sẵn. Để sử dụng các chương trình đó cần khai báo thư viện chứa nó.
+
+\begin{vidu}[Khai báo thư viện]
+	Trong Pascal: \verb|uses crt;|. Trong \emph{C++}:
+	\begin{verbatim}
+		#include <stdio.h>
+		#include <conio.h>
+	\end{verbatim}
+	Thư viện \verb|crt| trong Pascal hoặc \verb|stdio.h| \& \verb|conio.h| trong \emph{C++} cung cấp các chương trình có sẵn để làm việc với màn hình \& bàn phím. E.g., muốn xóa những gì đang có trên màn hình: Trong Pascal, sau khi khai báo thư viện \verb|crt|, ta dùng lệnh: \verb|clrscr;|. Trong \emph{C++}, sau khi khai báo thư viện \verb|conio.h|, ta dùng lệnh: \verb|clrscr();|
+\end{vidu}
+
+\paragraph{Khai báo hằng.}
+\begin{vidu}[Khai báo hằng]
+	Trong Pascal:
+	\begin{verbatim}
+		const MaxN = 1000;
+		      PI = 3.1416;
+		      KQ = 'Ket qua:';
+	\end{verbatim}
+	Trong \emph{C++}:
+	\begin{verbatim}
+		const int MaxN = 1000;
+		const float PI = 3.1416;
+		const char* KQ = "ketqua:";
+	\end{verbatim}
+\end{vidu}
+Khai báo hằng thường được sử dụng cho những giá trị xuất hiện nhiều lần trong chương trình.
+
+\paragraph{Khai báo biến.} Tất cả các biến dùng trong chương trình đều phải đặt tên \& phải khai báo cho chương trình dịch biết để lưu trữ \& xử lý. Biến chỉ nhận 1 giá trị tại mỗi thời điểm thực hiện chương trình được gọi là \textit{biến đơn}.'' -- \cite[pp. 18--19]{SGK_Tin_Hoc_11}
+
+\subsubsection{Phần thân chương trình}
+``Dãy lệnh trong phạm vi được xác định bởi cặp dấu hiệu mở đầu \& kết thục tạo thành thân chương trình.
+
+\begin{vidu}[Thân chương trình trong Pascal]
+	\begin{verbatim}
+		begin
+		    [<Dãy lệnh>]
+		end.
+	\end{verbatim}
+\end{vidu}
+với \texttt{begin} là tên dành riêng \textit{bắt đầu}, \textit{end.} là tên dành riêng \textit{kết thúc}.'' -- \cite[p. 19]{SGK_Tin_Hoc_11}
+
+\subsection{Ví dụ chương trình đơn giản}
+
+\begin{vidu}
+	Chương trình sau thực hiện việc đưa ra màn hình thông báo ``\texttt{announcement}''. Trong Pascal:
+	\begin{verbatim}
+		program print_text;
+		begin
+		writeln('announcement');
+		end.
+	\end{verbatim}
+	Phần khai báo chỉ có khai báo tên chương trình gồm tên dành riêng \texttt{program} \& tên chương trình là \verb|print_text|. Phần thân chương trình chỉ có 1 câu lệnh \texttt{writeln}, đưa thông báo ra màn hình. Trong C++:
+	\begin{verbatim}
+		#include <stdio.h>
+		void main()
+		{
+			printf("announcement");
+		}
+	\end{verbatim}
+	Phần khai báo chỉ có 1 câu lệnh \texttt{include} khai báo thư viện \texttt{stdio.h}. Phần thân chương trình chỉ có 1 câu lệnh \texttt{printf} đưa thông báo ra màn hình.	
+\end{vidu}
+
+\begin{vidu}
+	Chương trình Pascal sau đưa ra các thông báo ``\texttt{1st announcement}'' \& ``\texttt{2nd announcement}'' ra màn hình.
+	\begin{verbatim}
+		begin
+		    writeln('1st announcement');
+		    writeln('2nd announcement');
+		end
+	\end{verbatim}
+	Chương trình trên không có phần khai báo. Phần thân chương trình có 2 câu lệnh đưa 2 thông báo tương ứng ra màn hình.
+\end{vidu}
+
+%------------------------------------------------------------------------------%
 
 \section{1 Số Kiểu Dữ Liệu Chuẩn}
+``Các bài toán trong thực tế thường có dữ liệu vào \& kết quả ra thuộc những kiểu dữ liệu quen biết như số nguyên, số thực, ký tự, $\ldots$ Khi cần lập trình cho những bài toán như vậy, người lập trình sử dụng các kiểu dữ liệu đó thường gặp 1 số hạn chế nhất định, phụ thuộc vào các yếu tố như dung lượng bộ nhớ, khả năng xử lý của CPU, $\ldots$ Vì vậy, mỗi ngôn ngữ lập trình thường cung cấp 1 số kiểu dữ liệu chuẩn cho biết phạm vi giá trị có thể lưu trữ, dung lượng bộ nhớ cần thiết để lưu trữ \& các phép toán tác động lên dữ liệu. Dưới đây xét 1 số kiểu dữ liệu chuẩn thường dùng cho các biến đơn trong Pascal.'' -- \cite[p. 21]{SGK_Tin_Hoc_11}
+
+\subsection{Kiểu nguyên}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Kiểu} & \textbf{Bộ nhớ lưu trữ 1 giá trị} & \textbf{Phạm vi giá trị} \\
+		\hline
+		\texttt{byte} & 1 byte & $0\to255$ \\
+		\hline
+		\texttt{integer} & 2 byte & $-32768\to32767$ \\
+		\hline
+		\texttt{word} & 2 byte & $0\to65535$ \\
+		\hline
+		\texttt{longint} & 4 byte & $-2147483648\to2147483647$ \\
+		\hline
+	\end{tabular}
+	\caption{Kiểu nguyên.}
+\end{table}
+
+\subsection{Kiểu thực}
+``Có nhiều kiểu dùng để khai báo các đại lượng nhận giá trị là số thực. Thường dùng hơn cả là các kiểu được liệt kê trong bảng sau:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|l|}
+		\hline
+		\textbf{Kiểu} & \textbf{Bộ nhớ lưu trữ 1 giá trị} & \textbf{Phạm vi giá trị} \\
+		\hline
+		\texttt{real} & 6 byte & $0$ hoặc có giá trị tuyệt đối $\in[2.9\times 10^{-39};1.7\times 10^{38}]$ \\
+		\hline
+		\texttt{extended} & 10 byte & $0$ hoặc có giá trị tuyệt đối $\in[10^{-4932};10^{4932}]$ \\
+		\hline
+	\end{tabular}
+	\caption{Kiểu nguyên.}
+\end{table}
+
+\subsection{Kiểu ký tự}
+``Ta hiểu ký tự là các ký tự thuộc bộ mã ASCII gồm 256 ký tự có mã ASCII thập phân từ 0--255.
+
+'' -- \cite[p. 22]{SGK_Tin_Hoc_11}
+
+%------------------------------------------------------------------------------%
 
 \section{Khai Báo Biến}
 
+%------------------------------------------------------------------------------%
+
 \section{Phép Toán, Biểu Thức, Câu Lệnh Gán}
 
+%------------------------------------------------------------------------------%
+
 \section{Các Thủ Tục Chuẩn Vào\texttt{/}Ra Đơn Giản}
+
+%------------------------------------------------------------------------------%
 
 \section{Soạn Thảo, Dịch, Thực Hiện \& Hiệu Chỉnh Chương Trình}
 
@@ -226,6 +374,8 @@ p. 19/145
 
 \section{Cấu Trúc Rẽ Nhánh}
 
+%------------------------------------------------------------------------------%
+
 \section{Cấu Trúc Lặp}
 
 %------------------------------------------------------------------------------%
@@ -234,7 +384,11 @@ p. 19/145
 
 \section{Kiểu Mảng}
 
+%------------------------------------------------------------------------------%
+
 \section{Kiểu Xâu}
+
+%------------------------------------------------------------------------------%
 
 \section{Kiểu Bản Ghi}
 
@@ -244,7 +398,11 @@ p. 19/145
 
 \section{Kiểu Dữ Liệu Tệp}
 
+%------------------------------------------------------------------------------%
+
 \section{Thao Tác với Tệp}
+
+%------------------------------------------------------------------------------%
 
 \section{Ví Dụ Làm Việc với Tệp}
 
@@ -254,11 +412,19 @@ p. 19/145
 
 \section{Chương Trình Con \& Phân Loại}
 
+%------------------------------------------------------------------------------%
+
 \section{Ví Dụ về Cách Viết \& Sử Dụng Chương Trình Con}
+
+%------------------------------------------------------------------------------%
 
 \section{Ai Là Lập Trình Viên Đầu Tiên?}
 
+%------------------------------------------------------------------------------%
+
 \section{Thư Viện Chương Trình Con Chuẩn}
+
+%------------------------------------------------------------------------------%
 
 \section{Âm Thanh}
 
@@ -270,23 +436,52 @@ p. 19/145
 
 \section{1 Số Phép Toán Thường Dùng}
 
+%------------------------------------------------------------------------------%
+
 \section{Giá Trị Phép Toán Logic}
+
+%------------------------------------------------------------------------------%
 
 \section{Môi Trường Turbo Pascal}
 
+%------------------------------------------------------------------------------%
+
 \section{1 Số Tên Dành Riêng}
+
+%------------------------------------------------------------------------------%
 
 \section{1 Số Kiểu Dữ Liệu Chuẩn}
 
+%------------------------------------------------------------------------------%
+
 \section{1 Số Thủ Tục \& Hàm Chuẩn}
+
+%------------------------------------------------------------------------------%
 
 \section{Câu Lệnh Rẽ Nhánh \& Lặp}
 
+%------------------------------------------------------------------------------%
+
 \section{Câu Lệnh \texttt{with}}
+
+%------------------------------------------------------------------------------%
 
 \section{1 Số Thông Báo Lỗi}
 
+%------------------------------------------------------------------------------%
+
 \section{Câu Lệnh Rẽ Nhánh \& Lặp Trong C++}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Lazarus on Ubuntu}
+
+\section{Definition of \texttt{lazarus}?}
+
+\begin{definition}[Lazarus]
+	``\emph{Lazarus} is an IDE to create (graphical \& console) applications with Free Pascal, the (L)GPLed Pascal \& Object Pascal compiler that runs on Windows, Linux, Mac OS X, FreeBSD \& more.'' -- \href{https://installati.one/ubuntu/22.04/lazarus/}{Installati.one\emph{\texttt{/}}how to install lazarus on Ubuntu 22.04}
+\end{definition}
+See also, e.g., \href{https://vi.wikipedia.org/wiki/Lazarus_(IDE)}{Wikipedia\texttt{/}Lazarus (IDE)}.
 
 %------------------------------------------------------------------------------%
 
