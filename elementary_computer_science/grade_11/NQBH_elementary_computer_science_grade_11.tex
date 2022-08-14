@@ -344,17 +344,69 @@ với \texttt{begin} là tên dành riêng \textit{bắt đầu}, \textit{end.} 
 		\texttt{extended} & 10 byte & $0$ hoặc có giá trị tuyệt đối $\in[10^{-4932};10^{4932}]$ \\
 		\hline
 	\end{tabular}
-	\caption{Kiểu nguyên.}
+	\caption{Kiểu thực.}
 \end{table}
 
 \subsection{Kiểu ký tự}
-``Ta hiểu ký tự là các ký tự thuộc bộ mã ASCII gồm 256 ký tự có mã ASCII thập phân từ 0--255.
+``Ta hiểu ký tự là các ký tự thuộc bộ mã ASCII gồm 256 ký tự có mã ASCII thập phân từ 0--255. E.g., ký tự \textit{A} có mã ASCII là 65, ký tự \textit{a} có mã ASCII là 97. Ký tự đặc biệt, dùng để thể hiện sự ngăn cách giữa 2 từ viết liên tiếp trong các văn bản, là dấu cách. Dấu cách được gõ bằng phím \textit{Space} -- phím dài nhất trên bàn phím \& có mã ASCII bằng 32.'' -- \cite[p. 22]{SGK_Tin_Hoc_11}
 
-'' -- \cite[p. 22]{SGK_Tin_Hoc_11}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|l|}
+		\hline
+		\textbf{Kiểu} & \textbf{Bộ nhớ lưu trữ 1 giá trị} & \textbf{Phạm vi giá trị} \\
+		\hline
+		\texttt{char} & 1 byte & $0$ 256 ký tự trong bộ mã ASCII \\
+		\hline
+	\end{tabular}
+	\caption{Kiểu ký tự.}
+\end{table}
+
+\subsection{Kiểu logic}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|l|}
+		\hline
+		\textbf{Kiểu} & \textbf{Bộ nhớ lưu trữ 1 giá trị} & \textbf{Phạm vi giá trị} \\
+		\hline
+		\texttt{boolean} & 1 byte & $0$ \texttt{true} hoặc \texttt{false} \\
+		\hline
+	\end{tabular}
+	\caption{Kiểu ký tự.}
+\end{table}
+
+\begin{luuy}
+	``Người lập trình cần tìm hiểu đặc trưng của các kiểu dữ liệu chuẩn được xác định bởi bộ dịch \& sử dụng để khai báo biến.'' -- \cite[p. 22]{SGK_Tin_Hoc_11}
+\end{luuy}
 
 %------------------------------------------------------------------------------%
 
 \section{Khai Báo Biến}
+``Như đã nêu ở trên, mọi biến dùng trong chương trình đều cần khai báo tên \& kiểu dữ liệu. Tên biến dùng để xác lập quan hệ giữa biến với địa chỉ bộ nhớ nơi lưu trữ giá trị biến. Mỗi biến chỉ được khai báo 1 lần. Trong phần này ta chỉ xét khai báo các biến đơn.
+
+Trong Pascal, khai báo biến bắt đầu bằng từ khóa \texttt{var} có dạng
+\begin{verbatim}
+	var <danh sách biến>: <kiểu dữ liệu>;
+\end{verbatim}
+trong đó:
+\begin{itemize}
+	\item \textit{danh sách biến} là 1 hoặc nhiều tên biến, các tên biến được viết cách nhau bởi dấu phẩy \texttt{;}
+	\item \textit{kiểu dữ liệu} thường là 1 trong các kiểu dữ liệu chuẩn hoặc kiểu dữ liệu do người lập trình định nghĩa.
+\end{itemize}
+Sau từ khóa \texttt{var} có thể khai báo nhiều danh sách khác nhau, i.e., cấu trúc:
+\begin{verbatim}
+	<danh sách biến>: <kiểu dữ liệu>;
+\end{verbatim}
+có thể xuất hiện nhiều lần.'' -- \cite[pp. 22--23]{SGK_Tin_Hoc_11}
+
+\begin{luuy}[1 số chú ý khi khao báo biến]
+	\begin{itemize}
+		\item ``Cần đặt tên biến sao cho gọi nhớ đến ý nghĩa của biến đó. Điều này rất có lợi cho việc đọc, hiểu \& sửa đổi chương trình khi cần thiết.''
+		\item ``Không nên đặt tên biến quá ngắn hay quá dài, dễ mắc lỗi khi viết nhiều lần tên biến.''
+		\item ``Khi khai báo biến cần đặc biệt lưu ý đến phạm vi giá trị của nó.'' -- \cite[p. 23]{SGK_Tin_Hoc_11}
+	\end{itemize}
+\end{luuy}
 
 %------------------------------------------------------------------------------%
 
