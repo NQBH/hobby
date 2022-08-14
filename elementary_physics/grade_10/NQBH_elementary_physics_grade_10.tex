@@ -1,0 +1,153 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Elementary Physics\texttt{/}Grade 10}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\mainmatter
+
+\chapter*{Preface}
+
+Tóm tắt kiến thức Vật lý lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
+
+``Vật lý được biết đến như là 1 trong những ngành của Khoa học tự nhiên xuất hiện sớm nhất trong lịch sử loài người. Vật lý nghiên cứu sự vận hành của vật chất, năng lượng cấu thành vũ trụ \& sự tương tác giữa chúng. Những kiến thức vật lý đã, đang \& sẽ có tác động mạnh mẽ vào sự phát triển của mọi lĩnh vực trong cuộc sống, công nghệ, khoa học kỹ thuật.'' -- \cite{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Mở Đầu}
+
+\section{Khái Quát về Môn Vật Lý}
+
+\section{Vấn Đề An Toàn Trong Vật Lý}
+
+\section{Đơn Vị \& Sai Số Trong Vật Lý}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Mô Tả Chuyển Động}
+
+\section{Chuyển Động Thẳng}
+
+\section{Chuyển Động Tổng Hợp}
+
+\section{Thực Hành Đo Tốc Độ của Vật Chuyển Động Thẳng}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Chuyển Động Biến Đổi}
+
+\section{Gia Tốc -- Chuyển Động Thẳng Biến Đổi Đều}
+
+\section{Thực Hành Đo Gia Tốc Rơi Tự Do}
+
+\section{Chuyển Động Ném}
+
+%------------------------------------------------------------------------------%
+
+\chapter{3 Định Luật Newton. 1 Số Lực Trong Thực Tiễn}
+
+\section{3 Định Luật Newton về Chuyển Động}
+
+\section{1 Số Lực Trong Thực Tiễn}
+
+\section{Chuyển Động của Vật Trong Chất Lưu}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Moment Lực. Điều Kiện Cân Bằng}
+
+\section{Tổng Hợp Lực -- Phân Tích Lực}
+
+\section{Moment Lực. Điều kiện Cân Bằng của Vật}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Năng Lượng}
+
+\section{Năng Lượng \& Công}
+
+\section{Công Suất -- Hiệu Suất}
+
+\section{Động Năng \& Thế Năng. Định Luật Bảo Toàn Cơ Năng}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Động Lượng}
+
+\section{Động Lượng \& Định Luật Bảo Toàn Động Lượng}
+
+\section{Các Loại Va Chạm}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Chuyển Động Tròn}
+
+\section{Động Học của Chuyển Động Tròn}
+
+\section{Động Lực Học của Chuyển Động Tròn. Lực Hướng Tâm}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Biến Dạng của Vật Rắn}
+
+\section{Biến Dạng của Vật Rắn. Đặc Tính của Lò Xo}
+
+\section{Định Luật Hooke}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
