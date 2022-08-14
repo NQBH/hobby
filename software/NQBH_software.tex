@@ -8,19 +8,20 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{example}{Example}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{notation}{Notation}[chapter]
-\newtheorem{principle}{Principle}[chapter]
-\newtheorem{problem}{Problem}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{question}{Question}[chapter]
-\newtheorem{remark}{Remark}[chapter]
-\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{warning}{Warning}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -32,13 +33,75 @@
 \def\labelitemii{$\circ$}
 
 \title{Software}
-\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
+\frontmatter
 \maketitle
-\selectlanguage{english}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
 \tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\mainmatter
+\chapter{Git}
+
+\section{\href{https://docs.github.com/en/repositories/working-with-files/managing-large-files}{GitHub\texttt{/}Repositories\texttt{/}Working with Files\texttt{/}Managing Large Files}}
+``You can manage large files with Git Large File Storage.''
+
+\subsection{\href{https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github}{GitHub\texttt{/}repositories\texttt{/}working with files\texttt{/}managing large files\texttt{/}about large files on GitHub}}
+``GitHub limits the size of files you can track in regular Git repositories. Learn how to track or remove files that are beyond the limit.''
+
+\subsubsection{About size limits on GitHub}
+``GitHub tries to provide abundant storage for all Git repositories, although there are hard limits for file \& repository sizes. To ensure performance \& reliability for our users, we actively monitor signals of overall repository health. \textit{Repository health} is a function of various interacting factors, including size, commit frequency, contents, \& structure.
+
+\paragraph{File size limits.} ``GitHub limits the size of files allowed in repositories. If you attempt to add or update a file that is $> 50$ MB, you will receive a warning from Git. The changes will still successfully push to your repository, but you can consider removign the commit to minimize performance impact.
+
+\begin{remark}
+	If you add a file to a repository via a browser, the file can be no $> 25$ MB. For more information, see \href{https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository}{GitHub\texttt{/}repositories\texttt{/}working with files\texttt{/}managing files\texttt{/}adding a file to a repository}.
+\end{remark}
+GitHub blocks pushes that exceed 100 MB. To track files beyond this limit, you must use Git Large File Storage (Git LFS). For more information, see \href{https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage}{GitHub\texttt{/}repositories\texttt{/}working with files\texttt{/}managing large files\texttt{/}about GitHub Large File Storage}. If you need to distribute large files within your repository, you can create releases on GitHub.com instead of tracking the files. For more information, see \href{https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#distributing-large-binaries}{GitHub\texttt{/}repositories\texttt{/}working with files\texttt{/}managing large files\texttt{/}about GitHub Large File Storage\texttt{/}distributing large binaries}. Git is not designed to handle large SQL file. To share large databases with other developers, we recommend using \href{https://www.dropbox.com/}{Dropbox}.''
+
+\paragraph{Repository size limits.} ``We recommend repositories remain small, ideally $< 1$ GB, \& $< 5$ is strongly recommended. Smaller repositories are faster to clone \& easier to work with \& maintain. If your repository excessively impacts our infrastructure, you might receive an email from GitHub Support asking you to take corrective action. We try to be flexible, especially with large projects that have many collaborators, \& will work with you to find a resolution whenever possible. You can prevent your repository from impacting our infrastructure by effectively managing your repository's size \& overall health. You can find advice \& a tool for repository analysis in the \href{https://github.com/github/git-sizer}{github\texttt{/}git-sizer} repository.
+
+External dependencies can cause Git repositories to become very large. To avoid filling a repository with external dependencies, we recommend you use a package manager. Popular package managers for common languages include \href{http://bundler.io/}{Bundler}, \href{http://npmjs.org/}{Node's Package Manager}, \& \href{http://maven.apache.org/}{Maven}. These package managers support using Git repositories directly, so you don't need pre-packaged sources. Git is not designed to serve as a backup tool. However, there are many solutions specifically designed for performing backups, e.g., \href{https://www.arqbackup.com/}{Arq}, \href{http://www.carbonite.com/}{Carbonite}, \& \href{https://www.crashplan.com/en-us/}{CrashPlan}.''
+
+\subsubsection{Removing files from a repository's history}
+
+\begin{warning}
+	``These procedures will permanently remove files from the repository on your computer \& GitHub.com. If the file is important, make a local backup copy in a directory outside of the repository.
+\end{warning}
+
+\paragraph{Removing a file added in the most recent unpushed commit.} ``If the file was added with your most recent commit, \& you have not pushed to GitHub.com, you can delete the file \& amend the commit:
+\begin{enumerate}
+	\item Open Terminal.
+	\item Change the current working directory to your local repository.
+	\item To remove the file, enter \texttt{git rm --cached}:
+	\begin{verbatim}
+		$ git rm --cached giant_file
+		# Stage our giant file for removal, but leave it on disk
+	\end{verbatim}
+	\item Commit this change using \texttt{--amend --CHEAD}:
+	\begin{verbatim}
+		$ git commit --amend -CHEAD
+		# Amend the previous commit with your change
+		# Simply making a new commit won't work, as you need
+		# to remove the file from the unpushed history as well
+	\end{verbatim}
+	\item Push your commits to GitHub.com:
+	\begin{verbatim}
+		$ git push
+		# Push our rewritten, smaller commit
+	\end{verbatim}
+\end{enumerate}
+
+\paragraph{Removing a file that was added in an earlier commit.} If you added a file in an earlier commit, you need to remove it from the repository's history. To remove files from the repository's history, you can use the BFG Repo-Cleaner or the \texttt{git filter-branch} command. For more information see \href{https://docs.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository}{GitHub\texttt{/}authenticating to GitHub\texttt{/}removing sensitive data from a repository}.''
+
+\subsubsection{Distributing large binaries}
+``If you need to distribute large files within your repository, you can create releases on GitHub.com. Releases allow you to package software, release notes, \& links to binary files, for other people to use. For more information, visit \href{https://docs.github.com/en/github/administering-a-repository/about-releases}{GitHub\texttt{/}administering a repository\texttt{/}about releases}. We don't limit the total size of the binary files in the release or the bandwidth used to deliver them. However, each individual file must be $< 2$ GB.''
 
 %------------------------------------------------------------------------------%
 
@@ -311,13 +374,6 @@ or, for the same results
 	\item \href{https://docs.gitlab.com/ee/user/markdown.html}{GitLab flavored Markdown}
 \end{itemize}
 Originally contributed by \textsc{Dan Turkel}, \& updated by \href{https://github.com/adambard/learnxinyminutes-docs/blame/master/markdown.html.markdown}{13 contributor(s)}.'' 
-
-%------------------------------------------------------------------------------%
-
-\selectlanguage{english}
-\begin{thebibliography}{99}
-	\bibitem[]{}
-\end{thebibliography}
 
 %------------------------------------------------------------------------------%
 
