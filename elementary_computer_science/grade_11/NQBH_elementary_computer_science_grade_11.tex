@@ -511,6 +511,36 @@ Trong trường hợp đơn giản, \texttt{tên biến} là tên của biến �
 %------------------------------------------------------------------------------%
 
 \section{Các Thủ Tục Chuẩn Vào\texttt{/}Ra Đơn Giản}
+``Để khởi tạo giá trị ban đầu cho biến, ta có thể dùng lệnh gán để gán 1 giá trị cho biến. Như vậy, mỗi chương trình luôn làm việc với 1 bộ dữ liệu vào. Để chương trình có thể làm việc với nhiều bộ dữ liệu vào khác nhau, thư viện của các ngôn ngữ lập trình cung cấp 1 số chương trình dùng để đưa dữ liệu vào \& đưa dữ liệu ra. Những chương trình đưa dữ liệu vào co phép đưa dữ liệu từ bàn phím hoặc từ đĩa vào gán cho các biến, làm cho chương trình trở nên linh hoạt, có thể tính toán với nhiều bộ dữ liệu đầu vào khác nhau. Kết quả tính toán được lưu trữ tạm thời trong bộ nhớ. Những chương trình đưa dữ liệu ra dùng để đưa các kết quả này ra màn hình, in ra giấy hoặc lưu trên đĩa. Các chương trình đưa dữ liệu vào \& ra đó được gọi chung là các \textit{thủ tục chuẩn vào}\texttt{/}\textit{ra đơn giản}. Trong phần này, ta sẽ xét các \textit{thủ tục chuẩn vào}\texttt{/}\textit{ra đơn giản} của Pascal để nhập dữ liệu vào từ bàn phím \& đưa thông tin ra màn hình.'' -- \cite[p. 29]{SGK_Tin_Hoc_11}
+
+\subsection{Nhập dữ liệu vào từ bàn phím}
+``Việc nhập dữ liệu từ bàn phím được thực hiện bằng thủ tục chuẩn:\verb|read(<danh sách biến vào>);| hoặc\\\verb|readln(<danh sách biến vào>);| trong đó \textit{danh sách biến vào} là \textit{1} hay \textit{nhiều} tên biến đơn (trừ biến kiểu boolean). Trong trường hợp nhiều biến thì các tên biến được viết cách nhau bởi \textit{dấu phẩy}.'' -- \cite[p. 29]{SGK_Tin_Hoc_11}
+
+``Khi nhập giá trị cho nhiều biến, nhưng giá trị này được gõ cách nhau bởi ít nhất 1 dấu cách hoặc ký tự xuống dòng (nhấm phím \texttt{Enter}). Các giá trị ứng với biến nguyên phải được biểu diễn dưới dạng số nguyên (không có dấu chấm thập phân). Các giá trị ứng với biến thực có thể được nhập dưới dạng số nguyên, số thực dạng thông thường hoặc số thực dạng dấu phẩy động.'' -- \cite[p. 30]{SGK_Tin_Hoc_11}
+
+\subsection{Đưa dữ liệu ra màn hình}
+``Để đưa dữ liệu ra màn hình, Pascal cung cấp thủ tục chuẩn: \verb|write(<danh sách kết quả ra>);| hoặc\\\verb|writeln(<danh sách kết quả ra>);| trong đó, \textit{danh sách kết quả ra} có thể là \textit{tên biến đơn, biểu thức} hoặc \textit{hằng}. Các hằng xâu thường được dùng để tách các kết quả hoặc đưa ra chú thích. Các thành phần trong kết quả ra được viết cách nhau bởi dấu phẩy. Với thủ tục \texttt{write}, sau khi đưa các kết quả ra màn hình, con trỏ không chuyển xuống dòng tiếp theo. Với thủ tục \texttt{writeln}, sau khi đưa thông tin ra màn hình, con trỏ sẽ chuyển xuống đầu dòng tiếp theo.'' -- \cite[p. 30]{SGK_Tin_Hoc_11}
+
+``Để chương trình được sử dụng 1 cách tiện lợi, khi nhập giá trị từ bàn phím cho biến, ta nên có thêm xâu ký tự nhắc nhở việc nhập giá trị cho biến nào, kiểu dữ liệu gì, $\ldots$ E.g., khi cần nhập 1 số $N\in\mathbb{N}^\star$, $N\le 100$ từ bàn phím, ta có thể sử dụng cặp thủ tục sau:
+\begin{verbatim}
+	write('Nhap so nguyen duong N <= 100: ');
+	readln(N);
+\end{verbatim}
+'' ``Thủ tục \texttt{readln} cuối cùng dùng để tạm dừng thực hiện chương trình cho người dùng có thể quan sát kết quả của chương trình đưa ra trên màn hình. Muốn chương trình chạy tiếp cần nhấn phím \texttt{Enter}.
+
+\begin{luuy}
+	\begin{itemize}
+		\item Các thủ tục \texttt{readln} \& \texttt{writeln} có thể không có tham số.
+		\item Trong thủ tục \texttt{write} hoặc \texttt{writeln}, sau mỗi kết quả ra (biến, hằng, biểu thức) có thể có \emph{quy cách ra}. Quy cách ra có dạng: Đối với kết quả thực: \verb|: <độ rộng>:<số chữ số thập phân>|. Đối với các kết quả khác: \verb|:<độ rộng>| trong đó, \emph{độ rộng} \& \emph{số chữ số thập phân} là các hằng nguyên không âm. E.g.,
+		\begin{verbatim}
+			writeln(N:5,x:6:2);
+			write(i:3,j:4,a+b:8:3);
+		\end{verbatim}
+		Trong thủ tục thứ nhất, 5 vị trí kể từ vị trí con trỏ hiện thời được dành để đưa ra giá trị $N$. Nếu $N$ có giá trị nguyên dưới $5$ chữ số hoặc giá trị âm dưới $4$ chữ số thì những vị trí đầu sẽ được điền dấu cách. Tiếp theo là $6$ vị trí được dành để đưa $x$ ra, trong đó $2$ vị trí dành để đưa ra phần thập phân. Do phần nguyên \& phần thập phân được cách nhau bởi dấu chấm nên còn lại 3 vị trí cho phần nguyên.
+		
+		Trong thủ tục thứ 2, $i$ được đưa ra trên $3$ vị trí, $j$ được đưa ra trên $4$ vị trí \& kết quả $a + b$ được đưa ra trên $8$ vị trí, trong đó có $3$ vị trí dành cho phần thập phân.'' -- \cite[p. 31]{SGK_Tin_Hoc_11}
+	\end{itemize}
+\end{luuy}
 
 %------------------------------------------------------------------------------%
 
