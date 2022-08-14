@@ -514,7 +514,7 @@ Trong trường hợp đơn giản, \texttt{tên biến} là tên của biến �
 ``Để khởi tạo giá trị ban đầu cho biến, ta có thể dùng lệnh gán để gán 1 giá trị cho biến. Như vậy, mỗi chương trình luôn làm việc với 1 bộ dữ liệu vào. Để chương trình có thể làm việc với nhiều bộ dữ liệu vào khác nhau, thư viện của các ngôn ngữ lập trình cung cấp 1 số chương trình dùng để đưa dữ liệu vào \& đưa dữ liệu ra. Những chương trình đưa dữ liệu vào co phép đưa dữ liệu từ bàn phím hoặc từ đĩa vào gán cho các biến, làm cho chương trình trở nên linh hoạt, có thể tính toán với nhiều bộ dữ liệu đầu vào khác nhau. Kết quả tính toán được lưu trữ tạm thời trong bộ nhớ. Những chương trình đưa dữ liệu ra dùng để đưa các kết quả này ra màn hình, in ra giấy hoặc lưu trên đĩa. Các chương trình đưa dữ liệu vào \& ra đó được gọi chung là các \textit{thủ tục chuẩn vào}\texttt{/}\textit{ra đơn giản}. Trong phần này, ta sẽ xét các \textit{thủ tục chuẩn vào}\texttt{/}\textit{ra đơn giản} của Pascal để nhập dữ liệu vào từ bàn phím \& đưa thông tin ra màn hình.'' -- \cite[p. 29]{SGK_Tin_Hoc_11}
 
 \subsection{Nhập dữ liệu vào từ bàn phím}
-``Việc nhập dữ liệu từ bàn phím được thực hiện bằng thủ tục chuẩn:\verb|read(<danh sách biến vào>);| hoặc\\\verb|readln(<danh sách biến vào>);| trong đó \textit{danh sách biến vào} là \textit{1} hay \textit{nhiều} tên biến đơn (trừ biến kiểu boolean). Trong trường hợp nhiều biến thì các tên biến được viết cách nhau bởi \textit{dấu phẩy}.'' -- \cite[p. 29]{SGK_Tin_Hoc_11}
+``Việc nhập dữ liệu từ bàn phím được thực hiện bằng thủ tục chuẩn: \verb|read(<danh sách biến vào>);| hoặc\\\verb|readln(<danh sách biến vào>);| trong đó \textit{danh sách biến vào} là \textit{1} hay \textit{nhiều} tên biến đơn (trừ biến kiểu boolean). Trong trường hợp nhiều biến thì các tên biến được viết cách nhau bởi \textit{dấu phẩy}.'' -- \cite[p. 29]{SGK_Tin_Hoc_11}
 
 ``Khi nhập giá trị cho nhiều biến, nhưng giá trị này được gõ cách nhau bởi ít nhất 1 dấu cách hoặc ký tự xuống dòng (nhấm phím \texttt{Enter}). Các giá trị ứng với biến nguyên phải được biểu diễn dưới dạng số nguyên (không có dấu chấm thập phân). Các giá trị ứng với biến thực có thể được nhập dưới dạng số nguyên, số thực dạng thông thường hoặc số thực dạng dấu phẩy động.'' -- \cite[p. 30]{SGK_Tin_Hoc_11}
 
@@ -545,12 +545,59 @@ Trong trường hợp đơn giản, \texttt{tên biến} là tên của biến �
 %------------------------------------------------------------------------------%
 
 \section{Soạn Thảo, Dịch, Thực Hiện \& Hiệu Chỉnh Chương Trình}
+``Để có thể thực hiện chương trình được viết bằng 1 ngôn ngữ lập trình, ta cần soạn thảo, sử dung chương trình dịch để dịch chương trình đó sang ngôn ngữ máy. Các hệ thống lập trình cụ thể thường cung cấp phần mềm phục vụ cho việc soạn thảo, dịch \& hiệu chỉnh chương trình. Với ngôn ngữ Pascal, người ta thường dùng các phần mềm Turbo Pascal 7.0 hay Free Pascal. Free Pascal cho phép tận dụng nhiều hơn khả năng của hệ thống. Tuy nhiên, cách làm việc với Turbo Pascal \& Free Pascal là tương tự nên dưới đây chỉ giới thiệu cách làm việc với Turbo Pascal. Trong khuôn khổ SGK, để thực hiện các ví dụ \& bài thực hành, trong máy tinh cần có các tệp: \texttt{turbo.exe, turbo.tpl, graph.tpu, egavga.bgi}. Màn hình làm việc của Pascal có dạng như Fig. \ref{fig:Turbo Pascal interface}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Turbo_Pascal_interface}
+	\caption{Màn hình làm việc của Pascal.}
+	\label{fig:Turbo Pascal interface}
+\end{figure}
+Dòng thứ 2 của màn hình được gọi là \textit{thanh bảng chọn}, mỗi mục trong bảng chọn tương ứng với 1 nhóm việc ta có thể lựa chọn, 2 số ở phía dưới của màn hình ngăn cách nhau bằng dấu 2 chấm (\texttt{:}) cho ta biết con trỏ soạn thảo đang ở dòng nào \& cột nào trên màn hình.
+
+Dưới dây là 1 số thao tác \& phím tắt thường sử dụng để soạn thảo \& thực hiện 1 chương trình viết bằng Pascal.
+\begin{itemize}
+	\item \textit{Soạn thảo}: Gõ nội dung của chương trình gồm phần khai báo \& các lệnh trong thân chương trình. Về cơ bản, việc soạn thảo chương trình tương tự như soạn thảo văn bản. Lưu chương trình vào đĩa bằng cách nhấn phím \texttt{F2}, nhập tên tệp rồi nhấn phím \texttt{Enter} (phần mở rộng của tệp ngầm định là \texttt{.pas}).
+	\item \textit{Biên dịch chương trình}: Nhấn tổ hợp phím \texttt{Alt}$+$\texttt{F9}. Nếu chương trình có lỗi cú pháp, phần mềm sẽ hiển thị 1 thông báo. Cần phải sửa lỗi nếu có, lưu lại chương trình rồi tiến hành biên dịch lại cho tới khi không còn lỗi.
+	\item \textit{Chạy chương trình}: Nhấn tổ hợp phím \texttt{Ctrl}$+$\texttt{F9}.
+	\item \textit{Đóng cửa sổ chương trình}: Nhấn tổ hợp phím \texttt{Alt}$+$\texttt{F3}.
+	\item \textit{Thoát khỏi phần mềm}: Nhấn tổ hợp phím \texttt{Alt}$+$\texttt{X}.'' -- \cite[pp. 32--33]{SGK_Tin_Hoc_11}
+\end{itemize}
+
+\subsection{Tóm tắt}
+\begin{itemize}
+	\item ``Dữ liệu của bài toán được biểu diễn thông qua biến trong chương trình theo các quy tắc của ngôn ngữ lập trình cụ thể.
+	\item Kiểu dữ liệu của mọi ngôn ngữ lập trình chỉ cho phép mô tả các đại lượng rời rạc \& hữu hạn.
+	\item 1 chương trình thường có 2 phần: Phần khai báo \& phần thân chương trình. Phần khai báo có thể có hoặc không.
+	\item Kiểu dữ liệu chuẩn: Kiểu nguyên, kiểu thực, kiểu ký tư, kiểu logic.
+	\item Các biến đều phải được khai báo \& mỗi biến chỉ khai báo 1 lần.
+	\item Các phép toán: số học, quan hệ \& logic.
+	\item Các ngôn ngữ lập trình có:
+	\begin{itemize}
+		\item Lệnh gán dùng để gán giá trị của biểu thức cho biến.
+		\item Các thủ tục chuẩn dùng để đưa dữ liệu vào \& ra.'' -- \cite[p. 33]{SGK_Tin_Hoc_11}
+	\end{itemize}
+\end{itemize}
+
+\section{Bài Tập \& Thực Hành}
+\textbf{Mục đích, yêu cầu.} ``Giới thiệu 1 chương trình Pascal hoàn chỉnh đơn giản. Làm quen với 1 số dịch vụ cơ bản của Turbo Pascal\texttt{/}Free Pascal trong việc soạn thảo, lưu trữ, dịch \& thực hiện chương trình.'' ``Dấu chấm phẩy \texttt{;} dùng để ngăn cách các khai báo \& các câu lệnh. Có thể bỏ qua dấu chấm phẩy sau câu lệnh trước từ khóa \texttt{end}. Sau từ khóa \texttt{end} cuối chương trình phải đặt dấu chấm.'' -- \cite[p. 34]{SGK_Tin_Hoc_11}. Xem chương trình Pascal giải phương trình bậc 2 ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/solve_quadratic_equation.pas}{NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Pascal\texttt{/}\texttt{solve\_quadratic\_equation.pas}} \& its executable file: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/solve_quadratic_equation}{NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Pascal\texttt{/}\texttt{solve\_quadratic\_equation}}.
+
+\begin{baitoan}[\cite{SGK_Tin_Hoc_11}, \textbf{10.}, p. 36]
+	Lập trình tính \& đưa ra màn hình vận tốc $v$ khi chạm đất của 1 vật rơi từ độ cao $h$, biết rằng $v = \sqrt{2gh}$, trong đó $g$ là \emph{gia tốc rơi tự do} \& $g = 9.8{\rm m\texttt{/}s^2}$. Độ cao $h$ (m) được nhập từ bàn phím.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
 \chapter{Cấu Trúc Rẽ Nhánh \& Lặp}
 
+\begin{quotation}
+	\textbf{Nội dung.} \textit{Cấu trúc rẽ nhánh \& lặp trong lập trình; các câu lệnh thực hiện rẽ nhánh \& lặp của Pascal}.
+\end{quotation}
+
 \section{Cấu Trúc Rẽ Nhánh}
+
+\subsection{Rẽ nhánh}
+p. 38/144
 
 %------------------------------------------------------------------------------%
 
