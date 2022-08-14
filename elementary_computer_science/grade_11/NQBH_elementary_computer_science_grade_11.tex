@@ -411,6 +411,102 @@ có thể xuất hiện nhiều lần.'' -- \cite[pp. 22--23]{SGK_Tin_Hoc_11}
 %------------------------------------------------------------------------------%
 
 \section{Phép Toán, Biểu Thức, Câu Lệnh Gán}
+``Để mô tả các thao tác trong thuật toán, mỗi ngôn ngữ lập trình đều xác định \& sử dụng 1 số khái niệm cơ bản: phép toán, biểu thức, gán giá trị cho biến. Dưới đây sẽ xét các khái niệm đó trong Pascal.'' -- \cite[p. 24]{SGK_Tin_Hoc_11}
+
+\subsection{Phép toán}
+``Tương tự trong toán học, trong các ngôn ngữ lập trình đều có những phép toán số học như cộng, trừ, nhân, chia trên các đại lượng thực, các phép toán chia nguyên \& lấy phần dư, các phép toán quan hệ, $\ldots$ Bảng dưới đây là ký hiệu các phép toán đó trong toán \& trong Pascal:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Phép toán} & \textbf{Trong toán học} & \textbf{Trong Pascal} \\
+		\hline
+		Các phép toán số học với số nguyên & $+$, $-$, $\times$, div (chia nguyên), mod (lấy phần dư) & \verb|+,-,*,div,mod| \\
+		\hline
+		Các phép toán số học với số thực & $+,-,\times,:$ & \verb|+,-,*,/| \\
+		\hline
+		Các phép toán quan hệ & $<,\le,>,\ge,=,\ne$ & \verb|<,<=,>,>=,=,<>| \\
+		\hline
+		Các phép toán logic & $\neg$ (phủ định), $\lor$ (hoặc), $\land$ (\&) & \verb|not,or,and| \\
+		\hline
+	\end{tabular}
+	\caption{Ký hiệu các phép toán trong toán \& trong Pascal.}
+\end{table}
+
+\begin{luuy}
+	Kết quả của các phép toán quan hệ cho giá trị logic. 1 trong những ứng dụng của phép toán logic là để tạo ra các biểu thức phức tạp từ các quan hệ đơn giản.'' -- \cite[p. 24]{SGK_Tin_Hoc_11}
+\end{luuy}
+
+\subsection{Biểu thức số học}
+``Trong lập trình, biểu thức số học là 1 biến kiểu số hoặc 1 hằng số hoặc các biến kiểu số \& các hằng số liên kết với nhau bởi 1 số hữu hạn phép toán số học, các dấu ngoặc tròn ( \& ) tạo thành 1 biểu thức có dạng tương tự như cách viết trong toán học với những quy tắc sau:
+\begin{itemize}
+	\item Chỉ dùng cặp ngoặc tròn để xác định trình tự thực hiện phép toán trong trường hợp cần thiết;
+	\item Viết lần lượt từ trái qua phải;
+	\item Không được bỏ qua dấu nhân (*) trong tích.
+\end{itemize}
+Các phép toán được thực hiện theo thứ tự:
+\begin{itemize}
+	\item Thực hiện các phép toán trong ngoặc trước;
+	\item Trong dãy các phép toán không chứa ngoặc thì thực hiện từ trái sang phải, theo thứ tự các phép toán nhân (*), chia (\texttt{/}), chia nguyên (div), lấy phần dư (mod) thực hiện trước \& các phép toán cộng ($+$), trừ ($-$) thực hiện sau.''
+\end{itemize}
+
+\begin{luuy}
+	\begin{itemize}
+		\item ``Nếu biểu thức chứa 1 hằng hay biến kiểu thực thì ta có biểu thức số học thực, giá trị của biểu thức cũng thuộc kiểu thực.
+		\item Trong 1 số trường hợp nên dùng biến trung gian để có thể tránh được việc tính 1 biểu thức nhiều lần.'' -- \cite[p. 25]{SGK_Tin_Hoc_11}
+	\end{itemize}
+\end{luuy}
+
+\subsection{Hàm số học chuẩn}
+``Để lập trình được dễ dàng, thuận lợi hơn, các ngôn ngữ lập trình đều có thư viện chứa 1 số chương trình tính giá trị những hàm toán học thường dùng. Các chương trình như vậy được gọi là các \textit{hàm số học chuẩn}. Mỗi hàm chuẩn có tên chuẩn riêng. Đối số của hàm là 1 hay nhiều biểu thức số học \& được đặt trong cặp ngoặc tròn ( \& ) sau tên hàm. Bản thân hàm chuẩn cũng được coi là 1 biểu thức số học \& nó có thể tham gia vào biểu thức số học như 1 toán hạng (giống như biến \& hằng). Kết quả của hàm có thể là nguyên hoặc thực hay phụ thuộc vào kiểu của đối số. Bảng dưới đây cho biết 1 số hàm chuẩn thường dùng.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|}
+		\hline
+		\textbf{Hàm} & \textbf{Biểu diễn toán học} & \textbf{Biểu diễn trong Pascal} & \textbf{Kiểu đối số} & \textbf{Kiểu kết quả} \\
+		\hline
+		Bình phương & $x^2$ & \texttt{sqr(x)} & thực hoặc nguyên & theo kiểu của đối số \\
+		\hline
+		Căn bậc 2 & $\sqrt{x}$ & \texttt{sqrt(x)} & thực hoặc nguyên & thực \\
+		\hline
+		giá trị tuyệt đối & $|x|$ & \texttt{abs(x)} & thực hoặc nguyên & theo kiểu của đối số \\
+		\hline
+		logarith tự nhiên & $\ln x$ & \texttt{ln(x)} & thực & thực \\
+		\hline
+		Lũy thừa của số $e$ & $e^x$ & \texttt{exp()} & thực & thực \\
+		\hline
+		Sin & $\sin x$ & \texttt{sin(x)} & thực & thực \\
+		\hline
+		Cos & $\cos x$ & \texttt{cos(x)} & thực & thực \\
+		\hline
+	\end{tabular}
+	\caption{1 số hàm chuẩn thường dùng.}
+\end{table}
+Ngoài những hàm số học chuẩn trên, còn có các hàm chuẩn khác được giới thiệu trong những phần sau.'' -- \cite[p. 26]{SGK_Tin_Hoc_11}
+
+\subsection{Biểu thức quan hệ}
+``2 biểu thức cùng kiểu liên kết với nhau bởi phép toán quan hệ cho ta 1 biểu thức quan hệ. Biểu thức quan hệ có dạng:
+\begin{verbatim}
+	<biểu thức 1> <phép toán quan hệ> <biểu thức 2>
+\end{verbatim}
+trong đó, \texttt{biểu thức 1} \& \texttt{biểu thức 2} cùng là xâu hoặc cùng là biểu thức số học.'' ``Biểu thức quan hệ được thực hiện theo trình tự:
+\begin{itemize}
+	\item Tính giá trị các biểu thức.
+	\item Thực hiện phép toán quan hệ.
+\end{itemize}
+Kết quả của biểu thức quan hệ là giá trị logic: \texttt{true} (đúng) hoặc \texttt{false} (sai).'' -- \cite[p. 27]{SGK_Tin_Hoc_11}
+
+\subsection{Biểu thức logic}
+``\textit{Biểu thức logic đơn giản} là biến logic hoặc hằng logic. \textit{Biểu thức logic} là các biểu thức logic đơn giản, các biểu thức quan hệ liên kết với nhau bởi phép toán logic. Giá trị biểu thức logic là \texttt{true} hoặc \texttt{false}. Các biểu thức quan hệ thường được đặt trong cặp ngoặc ( \& ). Phép toán \textit{not} được viết trước biểu thức cần phủ định, e.g.: \verb|not(x < 1)| thể hiện phát biểu ``$x$ không nhỏ hơn 1'' \& điều này tương đương với biểu thức quan hê \verb|x>=1|. Các phép toán \texttt{and} \& \texttt{or} dùng để kết hợp nhiều biểu thức logic hoặc quan hệ thành 1 biểu thức, thường được dùng để diễn tả các điều kiện phức tạp.'' -- \cite[p. 28]{SGK_Tin_Hoc_11}
+
+\subsection{Câu lệnh gán}
+``Lệnh gán là 1 trong những lệnh cơ bản nhất của các ngôn ngữ lập trình. Trong Pascal câu lệnh gán có dạng:
+\begin{verbatim}
+	<tên biến> := <biểu thức>;
+\end{verbatim}
+Trong trường hợp đơn giản, \texttt{tên biến} là tên của biến đơn. Kiểu của giá trị biểu thức phải phù hợp với kiểu của biến. Chức năng của lệnh gán là đặt cho biến có tên ở vế trái dấu ``\texttt{:=}'' giá trị mới bằng gía trị của biểu thức ở vế phải.'' -- \cite[p. 28]{SGK_Tin_Hoc_11}
 
 %------------------------------------------------------------------------------%
 
