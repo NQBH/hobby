@@ -1,0 +1,372 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Elementary Chemistry\texttt{/}Grade 11}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\chapter*{Preface}
+
+Tóm tắt kiến thức Hóa học lớp 11 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
+
+%------------------------------------------------------------------------------%
+
+\mainmatter
+
+\chapter{Sự Điện Ly}
+
+``S. Arrhenius (1859--1927), người Thụy Điển, được giải Nobel về Hóa học năm 1903.'' -- \cite[p. 3]{SGK_Hoa_Hoc_11_nang_cao}
+
+\section{Sự Điện Ly}
+\textbf{Nội dung.} \textit{Các khái niệm về sự điện ly \& chất điện ly, nguyên nhân tính dẫn điện của dung dịch chất điện ly \& cơ chế của quá trình điện ly}.
+
+\subsection{Hiện tượng điện ly}
+
+\subsubsection{Thí nghiệm}
+``Chuẩn bị 3 cốc: cốc a đựng nước cất, cốc b đựng dung dịch saccarozơ ($\rm C_{12}H_{22}O_{11}$), cốc c đựng dung dịch natri clorua (NaCl) rồi lắp vào bộ dụng cụ như \cite[Hình 1.1: \textsf{Bộ dụng cụ chứng minh tính dẫn điện của dung dịch}, p. 4]{SGK_Hoa_Hoc_11_nang_cao}. Khi nối các đầu dây dẫn điện với cùng 1 nguồn điện, ta chỉ thấy bóng đèn ở cốc đựng dung dịch NaCl bật sáng. Vậy dung dịch NaCl dẫn điện, còn nước cất \& dung dịch saccarozơ không dẫn điện. Nếu làm các thí nghiệm tương tự, người ta thấy NaCl rắn, khan; NaOH rắn, khan; các dung dịch ancol etylic ($\rm C_2H_5OH$); glixerol ($\rm HOCH_2CH(OH)CH_2OH$) không dẫn điện. Ngược lại các dung dịch axit, bazơ, \& muối đều dẫn điện.'' -- \cite[p. 4]{SGK_Hoa_Hoc_11_nang_cao}
+
+\subsubsection{Nguyên nhân tính dẫn điện của các dung dịch axit, bazơ, \& muối trong nước}
+``Ngay từ năm 1887, Arrhenius đã giả thiết \& sau này thực nghiệm đã xác nhận rằng, tính dẫn điện của các dung dịch axit, bazơ, \& muối là do trong dung dịch của chúng có các tiểu phân mang điện tích chuyển động tự do được gọi là các \textit{ion}. Như vậy các axit, bazơ, \& muối khi hòa tan trong nước phân ly ra các ion, nên dung dịch của chúng dẫn điện.
+
+\begin{dinhnghia}[Sự điện ly, chất điện ly]
+	Quá trình phân lý các chất trong nước ra ion là \emph{sự điện ly}. Những chất tan trong nước phân ly ra ion được gọi là \emph{những chất điện ly}\footnote{Nhiều chất khi nóng chảy cũng phân ly ra ion, nên ở trạng thái nóng chảy các chất này dẫn diện được.}.
+\end{dinhnghia}
+Vậy axit, bazơ, \& muối là những chất điện ly.'' -- \cite[p. 5]{SGK_Hoa_Hoc_11_nang_cao}
+
+\subsection{Cơ chế của quá trình điện ly}
+
+\subsubsection{Cấu tạo của phân tử $\rm H_2O$}
+``Phân tử $\rm H_2O$ có cấu tạo như \cite[Hình 1.2: \textsf{Cấu tạo của phân tử nước. Mô hình đặc của phân tử nước}, p. 5]{SGK_Hoa_Hoc_11_nang_cao}. Liên kết $\rm O$ -- $\rm H$ là liên kết cộng hóa trị phân cực, cặp electron dùng chung lệch về phía oxi, nên ở oxi có dư điện tích âm, còn ở hiđro có dư điện tích dương. Vì vậy, phân tử $\rm H_2O$ là phân tử có cực.'' -- \cite[p. 5]{SGK_Hoa_Hoc_11_nang_cao}
+
+\subsubsection{Quá trình điện ly của NaCl trong nước}
+``NaCl là \textit{hợp chất ion}, i.e., gồm những cation $\rm Na^+$ \& anion $\rm Cl^-$  liên kết với nhau bằng lực tĩnh điện. Khi cho NaCl tinh thể vào nước, những ion $\rm Na^+$ \& $\rm Cl^-$ trên bề mặt tinh thể hút về chúng các phân tử $\rm H_2O$ (cation hút đầu âm \& anion hút đầu dương). Quá trình tương tác giữa các phân tử nước có cực \& các ion của muối kết hợp với sự chuyển động hỗn loạn không ngừng của các phân tử nước làm cho các ion $\rm Na^+$ \& $\rm Cl^-$ của muối tách dần khỏi tinh thể \& hòa tan trong nước (\cite[p. 1.3: \textsf{Sơ đồ quá trình phân ly ra ion của tinh thể NaCl trong nước}, p. 6]{SGK_Hoa_Hoc_11_nang_cao}). Từ sơ đồ trên ta thấy sự điện ly của NaCl trong nước có thể được biểu diễn bằng \textit{phương trình điện ly} như sau: $\rm NaCl\ (dd)\to Na^+\ (dd) + Cl^-\ (dd)$. Tuy nhiên, để đơn giản người ta thường viết: $\rm NaCl\to Na^+ + Cl^-$.'' -- \cite[p. 6]{SGK_Hoa_Hoc_11_nang_cao}
+
+\subsubsection{Quá trình điện ly của HCl trong nước}
+``Phân tử hiđro clorua (HCl) cũng là phân tử có cực tương tự phân tử nước. Cực dương ở phía hiddro, cực âm ở phía clo. Khi tan trong nước, các phần tử HCl hút về chúng những cực ngược dấu của các phân tử nước. Do sự tương tác giữa các phân tử nước \& phân tử HCl, kết hợp với sự chuyển động không ngừng của các phân tử nước dẫn đến sự điện ly phân tử HCl ra các ion $\rm H^+$ \& $Cl^-$ (\cite[Hình 1.4: \textsf{Sơ đồ quá  trình phân ly ra ion của phân tử HCl trong nước (Thực tế trong dung dịch $\rm H^+$ luôn tồn tại dưới dạng $\rm H_3O^+$)}, p. 6]{SGK_Hoa_Hoc_11_nang_cao}). Phương trình điện ly của HCl trong nước như sau: $\rm HCl\to H^+ + Cl^-$. Trong các phân tử ancol etylic, saccarozơ, glixerol, có liên kết phân cực nhưng rất yếu, nên dưới tác dụng của các phân tử nước chúng không thể phân ly ra ion được, chúng là các \textit{chất không điện ly}.'' -- \cite[pp. 6--7]{SGK_Hoa_Hoc_11_nang_cao}
+
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Loại Các Chất Điện Ly}
+\textbf{Nội dung.} \textit{Độ điện ly, cân bằng điện ly, chất điện ly mạnh \& chất điện ly yếu}.
+
+\subsection{Độ điện ly}
+
+\subsubsection{Thí nghiệm}
+
+%------------------------------------------------------------------------------%
+
+\section{Axit, Bazow, \& Muối}
+
+%------------------------------------------------------------------------------%
+
+\section{Sự Điện Ly của Nước. pH. Chất Chỉ Thị Axit--Bazow}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Axit, Bazơ, \& Muối}
+
+%------------------------------------------------------------------------------%
+
+\section{Phản Ứng Trao Đổi Ion Trong Dung Dịch Các Chất Điện Ly}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Phản Ứng Trao Đổi Ion Trong Dung Dịch Các Chất Điện Ly}
+
+%------------------------------------------------------------------------------%
+
+\section{Thực Hành: Tính Axit -- Bazơ. Phản Ứng Trao Đổi Ion Trong Dung Dịch Các Chất Điện Ly}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Nhóm Nitơ}
+
+\section{Khái Quát về Nhóm Nitơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Nitơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Amoniac \& Muối Amoni}
+
+%------------------------------------------------------------------------------%
+
+\section{Axit Nitric \& Muối Nitrat}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Tính Chất của Nitơ \& Hợp Chất của Nitơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Photpho}
+
+%------------------------------------------------------------------------------%
+
+\section{Axit Photphoric \& Muối Photphat}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Bón Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Tính Chất của Photpho \& Các Hợp Chất của Photpho}
+
+%------------------------------------------------------------------------------%
+
+\section{Thực Hành: Tính Chất của 1 Số Hợp Chất Nitơ, Photpho. Phân Biệt 1 Số Loại Phân Bón Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Nhóm Cacbon}
+
+\section{Khái Quát về Nhóm Cacbon}
+
+%------------------------------------------------------------------------------%
+
+\section{Cacbon}
+
+%------------------------------------------------------------------------------%
+
+\section{Hợp Chất của Cacbon}
+
+%------------------------------------------------------------------------------%
+
+\section{Silic \& Hợp Chất của Silic}
+
+%------------------------------------------------------------------------------%
+
+\section{Công Nghiệp Silicat}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Tính Chất của Cacbon, Silic, \& Hợp Chất của Chúng}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Đại Cương về Hóa Học Hữu Cơ}
+
+\section{Hóa Học Hữu Cơ \& Hợp Chất Hữu Cơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Loại \& Gọi Tên Hợp Chất Hữu Cơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Tích Nguyên Tố}
+
+%------------------------------------------------------------------------------%
+
+\section{Công Thức Phân Tử Hợp Chất Hữu Cơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Chất Hữu Cơ, Công Thức Phân Tử}
+
+%------------------------------------------------------------------------------%
+
+\section{Cấu Trúc Phân Tử Hợp Chất Hữu Cơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Phản Ứng Hữu Cơ}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Cấu Trúc Phân Tử Hợp Chất Hữu Cơ}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Hidrocacbon No}
+
+\section{Ankan: Đồng Đẳng, Đồng Phân \& Danh Pháp}
+
+%------------------------------------------------------------------------------%
+
+\section{Ankan: Cấu Trúc Phân Tử \& Tính Chất Vật Lý}
+
+%------------------------------------------------------------------------------%
+
+\section{Ankan: Tính Chất Hóa Học, Điều Chế \& Ứng Dụng}
+
+%------------------------------------------------------------------------------%
+
+\section{Xicloankan}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Ankan \& Xicloankan}
+
+%------------------------------------------------------------------------------%
+
+\section{Thực Hành: Phân Tích Định Tính: Điều Chế \& Tính Chất của Metan}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Hidrocacbon Không No}
+
+\section{Anken: Danh Pháp, Cấu Trúc, \& Đồng Phân}
+
+%------------------------------------------------------------------------------%
+
+\section{Anken: Tính Chất, Điều Chế, \& Ứng Dụng}
+
+%------------------------------------------------------------------------------%
+
+\section{Ankađien}
+
+%------------------------------------------------------------------------------%
+
+\section{Khái Niệm về Tecpen}
+
+%------------------------------------------------------------------------------%
+
+\section{Ankin}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Hidrocacbon Không No}
+
+%------------------------------------------------------------------------------%
+
+\section{Thực Hành: Tính Chất của Hidrocacbon Không No}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Hidrocacbon Thơm -- Nguồn Hidrocacbon Thiên Nhiên}
+
+\section{Benzen \& Ankylbenzen}
+
+%------------------------------------------------------------------------------%
+
+\section{Stiren \& Naphtalen}
+
+%------------------------------------------------------------------------------%
+
+\section{Nguồn Hidrocacbon Thiên Nhiên}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: So Sánh Đặc Điểm Cấu Trúc \& Tính Chất của Hidrocacbon Thơm với Hidrocacbon No \& Không No}
+
+%------------------------------------------------------------------------------%
+
+\section{Thực Hành: Tính Chất của 1 Số Hidrocacbon Thơm}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Dẫn Xuất Halogen. Ancol -- Phenol}
+
+\section{Dẫn Xuất Halogen của Hidrocacbon}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Dẫn Xuất Halogen}
+
+%------------------------------------------------------------------------------%
+
+\section{Ancol: Cấu Tạo, Danh Pháp, Tính Chất Vật Lý}
+
+%------------------------------------------------------------------------------%
+
+\section{Ancol: Tính Chất Hóa Học, Điều Chế, \& Ứng Dụng}
+
+%------------------------------------------------------------------------------%
+
+\section{Phenol}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Ancol, Phenol}
+
+%------------------------------------------------------------------------------%
+
+\section{Thực Hành: Tính Chất của 1 Vài Dẫn Xuất Halogen, Ancol, \& Phenol}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Anđehit -- Xeton -- Axit Cacboxylic}
+
+\section{Anđehit \& Xeton}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Anđehit \& Xeton}
+
+%------------------------------------------------------------------------------%
+
+\section{Axit Cacboxylic: Cấu Trúc, Danh Pháp, \& Tính Chất Vật Lý}
+
+%------------------------------------------------------------------------------%
+
+\section{Axit Cacboxylic: Tính Chất Hóa Học, Điều Chế, \& Ứng Dụng}
+
+%------------------------------------------------------------------------------%
+
+\section{Luyện Tập: Axit Cacboxylic}
+
+%------------------------------------------------------------------------------%
+
+\section{Thực Hành: Tính Chất của Anđehit \& Axit Cacboxylic}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
