@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Problems in Elementary Physics\texttt{/}Grade 11}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán học sơ cấp lớp 11. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}lecture}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}.} của tác giả viết cho Toán lớp 11. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/problem/NQBH_elementary_mathematics_grade_11_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}problem}\footnote{Explicitly, \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/problem/NQBH_elementary_mathematics_grade_11_problem.pdf}.}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Hàm Số Lượng Giác \& Phương Trình Lượng Giác -- Trigonometric Function \& Trigonometric Equation}
+
+%------------------------------------------------------------------------------%
+
+\section{Tổ Hợp \& Xác Suất -- Combinatorics \& Probability}
+
+%------------------------------------------------------------------------------%
+
+\section{Dãy Số. Cấp Số Cộng \& Cấp Số Nhân -- Series. Arithmetic Progression\texttt{/}Sequence \& Geometric Progression\texttt{/}Sequence}
+
+%------------------------------------------------------------------------------%
+
+\section{Giới Hạn -- Limits}
+
+%------------------------------------------------------------------------------%
+
+\section{Đạo Hàm -- Derivative}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Dời Hình \& Phép Đồng Dạng Trong Mặt Phẳng}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Thẳng \& Mặt Phẳng Trong Không Gian -- Line \& Plane in Euclidean Space $\mathbb{R}^n$}
+
+%------------------------------------------------------------------------------%
+
+\section{Vector Trong Không Gian. Quan Hệ Vuông Góc -- Vector in Euclidean Space $\mathbb{R}^n$. Perpendicular Relation}
+
+%------------------------------------------------------------------------------%
+
+\section{Solutions}
+
+%------------------------------------------------------------------------------%
+
+Tài liệu: 
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
