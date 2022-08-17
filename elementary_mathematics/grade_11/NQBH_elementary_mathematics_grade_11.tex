@@ -700,10 +700,208 @@ See \href{https://www.facebook.com/statsystem}{FaceBook\texttt{/}Statsystem} -- 
 \begin{dinhnghia}[Thống kê]
 	\emph{Thống kê} là khoa học về phương pháp thu thập, tổ chức, trình bày, phân tích \& xử lý số liệu.
 \end{dinhnghia}
+Thống kê giúp ta thu thập, phân tích các số liệu 1 cách khoa học \& rút ra các tri thức, thông tin chứa đựng trong các số liệu đó. Trên cơ sở này, chúng ta mới có thể đưa ra được những dự báo \& những quyết định đúng đắn. Chính vì thế, thống kê đóng 1 vai trò cực kỳ quan trọng, 1 vai trò không thể thiếu trong rất nhiều hoạt động của con người, từ khoa học tự nhiên, kinh tế, nông nghiệp, y học cho tới khoa học xã hội, khoa học quản lý \& hoạch định chính sách. Lenin\footnote{See, e.g., \href{https://vi.wikipedia.org/wiki/Vladimir_Ilyich_Lenin}{Wikipedia\texttt{/}Vladimir Ilyich Lenin} \& \href{https://en.wikipedia.org/wiki/Vladimir_Lenin}{Wikipedia\texttt{/}Vladimir Lenin}.} đã từng ví von rằng thống kê giống như tai, như mắt của Nhà nước; không có thống kê, Nhà nước như người mù \& điếc. Ngay từ đầu thế kỷ 20, nhà khoa học người Anh H. D. Well đã cho rằng: \texttt{[translated]} ``Trong tương lai không xa, kiến thức thống kê \& tư duy thống kê phải trở thành 1 yếu tố không thể thiếu được trong học vấn phổ thông của mỗi công dân, giống như khả năng biết đọc biết viết vậy''.'' -- \cite[p. ]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+Có thể xem thêm \href{https://en.wikipedia.org/wiki/Statistics}{Wikipedia\texttt{/}Statistics}.
+
+\subsection{Mẫu số liệu -- Data sample}
+Xem \cite[Chap. IV: 1 Số Yếu Tố Thống Kê \& Xác Suất, pp. 3--24]{SGK_Toan_6_Canh_Dieu_tap_2} \& tài liệu của tác giả cho chương trình Toán lớp 6 \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}.
+
+\begin{dinhnghia}[Mẫu số liệu, kích thước mẫu, số liệu của mẫu]
+	\begin{enumerate*}
+		\item[(i)] ``1 tập con hữu hạn các đơn vị điều tra được gọi là 1 \emph{mẫu}. Số phần tử của 1 mẫu được gọi là \emph{kích thước mẫu}. Các giá trị của dấu hieuj thu được trên mẫu được gọi là 1 \emph{mẫu số liệu}. Mỗi giá trị trong mẫu số liệu được gọi là 1 \emph{số liệu của mẫu}.
+		\item[(ii)] Nếu thực hiện việc điều tra trên mọi đơn vị điều tra thì đó là \emph{điều tra toàn bộ}.
+		\item[(iii)] Nếu chỉ điều tra trên 1 mẫu thì đó là điều tra mẫu.'' -- \cite[p. 62]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+	\end{enumerate*}
+\end{dinhnghia}
+
+\begin{luuy}
+	``Điều tra toàn bộ nói chung không được thực hiện khi số lượng các đơn vị điều tra quá lớn hoặc khi điều tra thì phải phá hủy đơn vị điều tra. Người ta thường chỉ điều tra mẫu \& dựa trên các thông tin thu được, phân tích, suy diễn để rút ra những kết luận \& dự báo cần thiết liên quan tới toàn bộ đơn vị điều tra.'' -- \cite[p. 62]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{luuy}
+
+\subsection{Trình bày 1 mẫu số liệu -- Representation of a data sample}
+
+\subsubsection{Bảng phân bố tần số -- tần suất}
+
+\begin{dinhnghia}
+	Giả sử trong 1 mẫu số liệu kích thước $N$ có $m$ giá trị khác nhau $x_1 < x_2 < \cdots < x_m$.
+	\begin{enumerate*}
+		\item[(i)] \emph{Tần số} của giá trị $x_i$ (ký hiệu là $n_i$) là số lần xuất hiện của $x_i$ trong mẫu số liệu.
+		\item[(ii)] \emph{Tần suất} của giá trị $x_i$ (ký hiệu là $f_i$) là tỷ số giữa tần số $n_i$ \& kích thước mẫu $N$, $f_i = \frac{n_i}{N}$. Người ta thường viết tần suất dưới dạng phần trăm (\%).
+		\item[(iii)] Bảng sau đây được gọi là \emph{bảng phân bố tần số -- tần suất} (gọi tắt là \emph{bảng tần số -- tần suất}):
+	\end{enumerate*}
+\end{dinhnghia}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Giá trị & $x_1$ & $x_2$ & $\cdots$ & $x_m$ &  \\
+		\hline
+		Tần số & $n_1$ & $n_2$ & $\cdots$ & $n_m$ & $N = \sum_{i=1}^m n_i$ \\
+		\hline
+		Tần suất (\%) & $f_1$ & $f_2$ & $\cdots$ & $f_m$ & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{luuy}
+	``Bảng tần số -- tần suất ở trên có dạng ``ngang'' với 3 dòng \& $m + 2$ cột. Ta có thể trình bày bảng tần số -- tần suất dưới dạng ``dọc'' (chuyển hàng thành cột). Khi đó bảng sẽ có 3 cột \& $m + 2$ dòng.'' -- \cite[p. 63]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{luuy}
+
+\subsubsection{Bảng phân bố tần số -- tần suất ghép lớp}
+``Trong trường hợp ta có mẫu số liệu với kích thước lớn, ta thường thực hiện việc ghép số liệu thành các lớp sao cho mỗi số liệu thuộc vào 1 \& chỉ 1 lớp. Mỗi lớp thường là 1 đoạn hoặc nửa khoảng. Việc phân lớp thế nào là tùy nhu cầu của ta trong mỗi tình huống cụ thể.
+
+\begin{dinhnghia}[Tần số\texttt{/}tần suất ghép lớp]
+	Giả sử ta xác định $m$ lớp $C_1,C_2,\ldots,C_m$.
+	\begin{enumerate*}
+		\item[(i)] \emph{Tần số của lớp $C_i$} (ký hiệu $n_i$) là số số liệu của mẫu nằm trong lớp $C_i$.
+		\item[(ii)] \emph{Tần suất của lớp $C_i$} (ký hiệu $f_i$) là tỷ số giữa tần số $n_i$ của lớp $C_i$ \& kích thước mẫu $N$, $f_i = \frac{n_i}{N}$.
+	\end{enumerate*}
+\end{dinhnghia}
+Bảng sau đây được gọi là \textit{bảng phân bố tần số -- tần suất ghép lớp của mẫu số liệu}:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Lớp & Tần số & Tần suất (\%) \\
+		\hline
+		$C_1$ & $n_1$ & $f_1$ \\
+		\hline
+		$C_2$ & $n_2$ & $f_2$ \\
+		\hline
+		$\vdots$ & $\vdots$ & $\vdots$ \\
+		\hline
+		$C_m$ & $n_m$ & $f_m$ \\
+		\hline
+		& $N = \sum_{i=1}^m n_i$ &  \\
+		\hline
+	\end{tabular}
+	\caption{Bảng phân bố tần số -- tần suất ghép lớp của mẫu số liệu.}
+\end{table}
+Trong nhiều trường hợp, ta ghép lớp theo các nửa khoảng sao cho mút bên phải của 1 nửa khoảng cũng là mút bên trái của nửa khoảng tiếp theo.'' -- \cite[pp. 64--65]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsubsection{Biểu đồ}
+``Tục ngữ có những câu: ``Trăm nghe không bằng 1 thấy''; ``1 hình ảnh có giá trị hơn ngàn lời nói''. Chính vì thế, để trình bày mẫu số liệu 1 cách trực quan sinh động, dễ nhớ \& gây ấn tượng, người ta sử dụng biểu đồ. Sau đây là 1 số biểu đồ thông dụng nhất:
+\begin{itemize}
+	\item[(i)] \textit{Biểu đồ tần số, tần suất hình cột.} Đây là cách thể hiện rất tốt bảng phân bố tần số -- tần suất. Trên mỗi đoạn (hay nửa khoảng) xác định lớp, ta dựng 1 hình chữ nhật với đáy là đoạn đó (hay nửa khoảng đó) \& chiều cao bằng tần số của lớp. Khi đó ta có biểu đồ tần số hình cột.'' ``Nếu trên mỗi đoạn (hay nửa khoảng) xác định lớp, ta dựng 1 hình chữ nhật với đáy là đoạn đó (hay nửa khoảng đó) \& chiều cao bằng tần suất của lớp thì ta có biểu đồ tần suất hình cột.
+	\item[(ii)] \textit{Biểu đồ tần suất hình quạt.} Biểu đồ hình quạt rất thích hợp cho việc thể hiện bảng phân bố tần suất ghép lớp. Hình tròn được chia thành những hình quạt. Mỗi lớp được tương ứng với 1 hình quạt mà diện tích của nó tỷ lệ với tần suất của lớp đó.'' -- \cite[pp. 65--66]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
 \section{Các Số Đặc Trưng của Mẫu Số Liệu}
+``Để nhanh chóng nắm bắt được những thông tin quan trọng chứa đựng trong mẫu số liệu, ta đưa ra 1 vài chỉ số gọi là \textit{các số đặc trưng của mẫu số liệu}.'' -- \cite[p. 69]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsection{Số trung bình}
+``Cho mẫu số liệu kích thước $N$: $\{x_i\}_{i=1}^N = \{x_1,\ldots,x_N\}$. \textit{Số trung bình} của mẫu số liệu này, ký hiệu là $\overline{x}$, được tính bởi công thức sau:
+\begin{align}
+	\overline{x}\coloneqq\frac{\sum_{i=1}^N x_i}{N}.
+\end{align}
+Nếu mẫu số liệu được cho dưới dạng bảng tần số:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Giá trị & $x_1$ & $x_2$ & $\cdots$ & $x_m$ &  \\
+		\hline
+		Tần số & $n_1$ & $n_2$ & $\ldots\ldots$ & $n_m$ & $N = \sum_{i=1}^m n_i$ \\
+		\hline
+	\end{tabular}
+\end{table}
+\noindent thì trong tổng $\sum_{i=1}^N x_i$ mỗi giá trị $x_i$ xuất hiện đúng $n_i$ lần. Thành thử công thứ tính số trung bình trở thành
+\begin{align*}
+	\overline{x}\coloneqq\frac{\sum_{i=1}^m n_ix_i}{N} = \frac{\sum_{i=1}^m n_ix_i}{\sum_{i=1}^m n_i}.
+\end{align*}
+Nếu mẫu số liệu được cho dưới dạng bảng tần số -- tần suất ghép lớp thì ta thường tính gần đúng số trung bình theo cách sau: Giả sử các số liệu được chia thành $m$ lớp $C_1,C_2,\ldots,C_m$, trong đó mỗi lớp $C_i$ là 1 đoạn $[a_i;b_i]$ hoặc 1 nửa khoảng $[a_i;b_i)$. Ta gọi giá trị $x_i = \frac{a_i + b_i}{2}$ là \textit{giá trị đại diện} của lớp $C_i$. Các gía trị thuộc lớp $C_i$ có thể coi như xấp xỉ bằng $x_i$. Gọi $n_i$ là tần số của lớp $C_i$. Khi đó số trung bình của mẫu số liệu này được tính xấp xỉ theo công thức
+\begin{align*}
+	\overline{x}\approx\frac{\sum_{i=1}^m n_ix_i}{N} = \frac{\sum_{i=1}^m n_i(a_i + b_i)}{2\sum_{i=1}^m n_i}.
+\end{align*}
+\textbf{Ý nghĩa của số trung bình.} \textit{Số trung bình của mẫu số liệu dùng làm đại diện cho các giá tri trong mẫu số liệu}.'' -- \cite[pp. 69--70]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsection{Số trung vị}
+``Giả sử ta có 1 mẫu số liệu kích thước $N$. Sắp xếp các số liệu trong mẫu theo thứ tự không giảm $x_1\le x_2\le\cdots\le x_N$. Nếu $N$ là 1 số lẻ thì số liệu $x_{\frac{N+1}{2}}$ (số liệu đứng chính giữa) được gọi là \textit{số trung vị}. Nếu $N$ là 1 số chẵn thì trung bình cộng của $x_{\frac{N}{2}}$ \& $x_{\frac{N}{2} + 1}$, i.e., $\frac{1}{2}\left(x_{\frac{N}{2}} + x_{\frac{N}{2} + 1}\right)$ được gọi là \textit{số trung vị}. Số trung vị được ký hiệu là $M_e$.'' -- \cite[p. 70]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\begin{luuy}
+	``Khi các số liệu trong mẫu có sự chênh lệch rất lớn với nhau thì số trung bình \& số trung vị cũng khác biệt lớn. Khi đó số trung bình không đại diện tốt cho các số liệu trong mẫu, số trung vị làm đại diện tốt hơn.'' ``Khi các số liệu trong mẫu không có sự chênh lệch rất lớn với nhau thì số trung bình \& số trung vị xấp xỉ nhau.'' -- \cite[p. 71]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{luuy}
+``Nếu mẫu số liệu được cho dưới dạng bảng tần số -- tần suất ghép lớp thì ta thường tính gần đúng số trung vị theo cách sau: Giả sử mẫu số liệu kích thước $N$ được chia làm $m$ lớp, trong đó mỗi lớp là 1 nửa khoảng có độ dài $h$:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Lớp & Tần số \\
+		\hline
+		$[a_1;a_2)$ & $n_1$ \\
+		\hline
+		$[a_2;a_3)$ & $n_2$ \\
+		\hline
+		$\vdots$ & $\vdots$ \\
+		\hline
+		$[a_m;a_{m+1})$ & $n_m$ \\
+		\hline
+		& $N$ \\
+		\hline
+	\end{tabular}
+\end{table}
+ký hiệu $S_l = \sum_{i=1}^l n_i$. Ta xác định số nguyên dương $k$ thỏa mãn bất đẳng thức $S_{k-1} < \frac{N}{2}\le S_k$, i.e., trong dãy $S_1 < S_2 < \cdots < S_m = N$, $k$ là số nguyên dương đầu tiên thỏa mãn $S_k\ge\frac{N}{2}$. Đặt $p\coloneqq\frac{N}{2} - S_{k-1}$. Khi đó số trung vị được tính xấp xỉ bởi công thức $M_e\approx a_k + \frac{hp}{n_k}$.'' -- \cite[pp. 71--72]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsection{Mốt -- Mode}
+``Cho mẫu số liệu dưới dạng bảng phân bố tần số:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Giá trị & $x_1$ & $x_2$ & $\cdots$ &  $x_m$ &  \\
+		\hline
+		Tần số & $n_1$ & $n_2$ & $\cdots$ & $n_m$ & $N = \sum_{i=1}^m n_i$ \\
+		\hline
+	\end{tabular}
+	\caption{Bảng phân bố tần số.}
+	\label{tab:bang phan bo tan so}
+\end{table}
+
+\begin{dinhnghia}[Mốt]
+	Giá trị có tần số lớn nhất được gọi là \emph{mốt} của mẫu số liệu \& ký hiệu là $M_0$, i.e., $M_0 = x_k$ nếu $n_k\ge n_i$, $\forall i = 1,\ldots,m$.
+\end{dinhnghia}
+
+\begin{luuy}
+	Từ đinh nghĩa ta thấy 1 mẫu số liệu có thể có 1 hay nhiều mốt.'' -- \cite[p. 73]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{luuy}
+``Nếu mẫu số liệu được cho dưới dạng bảng tần số -- tần suất ghép lớp thì ta thường tính gần đúng mốt theo cách sau: Giả sử mẫu số liệu kích thước $N$ được chia làm $m$ lớp, trong đó mỗi lớp là 1 đoạn hoặc 1 nửa khoảng. Ta xác định lớp có tần số cao nhất \& giá trị đại diện của lớp có tần số cao nhất này được xem là mốt của bảng phân bố tần số ghép lớp.'' -- \cite[p. 74]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsection{Phương sai \& độ lệch chuẩn}
+``Cho mẫu số liệu kích thước $N$ là $\{x_1,x_2,\ldots,x_N\}$ có $\overline{x}$ là số trung bình. \textit{Phương sai} của mẫu số liệu này, ký hiệu là $s^2$, được tính bởi công thức sau:
+\begin{align}
+	\label{phuong sai}
+	s^2 = \frac{\sum_{i=1}^N \left(x_i - \overline{x}\right)^2}{N}.
+\end{align}
+Căn bậc 2 của phương sai, ký hiệu là $s$, được gọi là \textit{độ lệch chuẩn}
+\begin{align}
+	\label{do lech chuan}
+	s = \sqrt{\frac{\sum_{i=1}^N \left(x_i - \overline{x}\right)^2}{N}}.
+\end{align}
+
+\begin{luuy}
+	Phương sai có thể tính theo công thức sau đây:
+	\begin{align}
+		\label{phuong sai 1}
+		s^2 = \frac{1}{N}\sum_{i=1}^N x_i^2 - \frac{1}{N^2}\left(\sum_{i=1}^N x_i\right)^2 = \frac{C}{N} - \frac{B^2}{N^2},\mbox{ với } B = \sum_{i=1}^N x_i,\ C = \sum_{i=1}^N x_i^2.
+	\end{align}
+	Công thức này thường được sử dụng trong tính toán. Thật vậy, ta có $B = N\overline{x}$. Vậy $\sum_{i=1}^N \left(x_i - \overline{x}\right)^2 = C - 2B\overline{x} + N\overline{x}^2 = C - 2N\overline{x}^2 + N\overline{x}^2 = C - N\overline{x}^2 = C - \frac{B^2}{N}$. Suy ra $s^2 = \frac{C}{N} - \frac{B^2}{N^2}$.'' -- \cite[pp. 74--75]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{luuy}
+``Nếu mẫu số liệu được cho dưới dạng bảng tần số \ref{tab:bang phan bo tan so} thì trong tổng $\sum_{i=1}^N x_i$ \& $\sum_{i=1}^N x_i^2$, mỗi giá trị $x_i$ xuất hiện đúng $n_i$ lần. Thành thử công thức tính phương sai \eqref{phuong sai 1} trở thành:
+\begin{align*}
+	s^ 2 = \frac{1}{N}\sum_{i=1}^m n_ix_i^2 - \frac{1}{N^2}\left(\sum_{i=1}^m n_ix_i\right)^2.
+\end{align*}
+Nếu mẫu số liệu được cho dưới dạng bảng tần số -- tần suất ghép lớp thì ta thường tính gần đúng số trung bình theo cách sau: Các số liệu được chia thành $m$ lớp $C_1,C_2,\ldots,C_m$, trong đó mỗi lớp $C_i$ là 1 đoạn $[a_i;b_i]$ hoặc 1 nửa khoảng $[a_i;b_i)$. Ta gọi giá trị $x_i = \frac{a_i + b_i}{2}$ là giá trị đại diện của lớp $C_i$. Các giá trị thuộc lớp $C_i$ có thể coi như xấp xỉ bằng $x_i$. Gọi $n_i$ là tần số của lớp $C_i$. Khi đó phương sai của mẫu số liệu này được tính xấp xỉ theo công thức
+\begin{align*}
+	s^2\approx\frac{1}{N}\sum_{i=1}^m n_ix_i^2 - \frac{1}{N^2}\left(\sum_{i=1}^m n_ix_i\right)^2.
+\end{align*}
+\textbf{Ý nghĩa của phương sai \& độ lệch chuẩn.} Từ công thức tính phương sai trong định nghĩa ta thấy phương sai là trung bình cộng của bình phương khoảng cách từ mỗi số liệu tới số trung bình. Như vậy phương sai đo mức độ phân tán của các số liệu trong mẫu quanh số trung bình. Khi số liệu có đơn vị (thứ nguyên) thì đơn vị của phương sai là bình phương đơn vị của số liệu. Độ lệch chuẩn là căn bậc 2 của phương sai, do đó nó cũng là 1 số đo mức độ phân tán của các số liệu trong mẫu quanh số trung bình. Khi số liệu có đơn vị (thứ nguyên) thì độ lệch chuẩn \& số liệu có cùng đơn vị.'' -- \cite[pp. 76--77]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 
 %------------------------------------------------------------------------------%
 
