@@ -39,7 +39,7 @@
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{Problems in Elementary Physics\texttt{/}Grade 11}
+\title{Problems in Elementary Mathematics\texttt{/}Grade 11}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
@@ -59,7 +59,11 @@
 
 \section{Tổ Hợp \& Xác Suất -- Combinatorics \& Probability}
 
-\subsection{2 quy tắc đếm cơ bản}
+\subsection{2 quy tắc đếm cơ bản -- 2 basic rules of counting}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, Ví dụ 2, p. 81]
+	Trong 1 kỳ thi đại học, trong số các thí sinh dự thi vào trường Đại học Sư phạm ở khối A có $51$ em đạt điểm giỏi môn Toán, $73$ em đạt điểm giỏi môn Vật lý, $64$ em đạt điểm giỏi môn Hóa học, $32$ em đạt điểm giỏi cả 2 môn Toán \& Vật lý, $45$ em đạt điểm giỏi cả 2 môn Vật lý \& Hóa học, $21$ em đạt điểm giỏi cả 2 môn Toán \& Hóa học \& $10$ em đạt điểm giỏi cả 3 môn Toán, Vật lý, Hóa học. Có $767$ em mà cả 3 môn đều không có môn nào đạt điểm giỏi. Hỏi có bao nhiêu thí sinh dự thi vào trường Đại học Sư phạm ở khối A?
+\end{baitoan}
 
 \begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{1.}, p. 83]
 	Có bao nhiêu số nguyên dương không vượt quá $1000$ mà chia hết cho $3$ hoặc chia hết cho $5$.
@@ -103,7 +107,74 @@
 	1 con bò có thể mang virus A, virus B, hoặc virus C; có thể mang đồng thời 2 hoặc nhiều hơn các virus nói trên; \& cũng có thể không mang virus nào. Trong bản báo cáo của 1 nông trường nuôi bò cho biết: ``Kiểm tra $1200$ con bò thì có $675$ con có virus A; $682$ con có virus B; $684$ con có virus C; $195$ con có virus A \& B; $467$ con có virus A \& C; $318$ con có virus B \& C; $165$ con có virus A, B, C''. Chỉ ra rằng các số liệu trong báo cáo là không chính xác.
 \end{baitoan}
 
-\subsection{Hoán vị, chỉnh hợp, tổ hợp}
+\subsection{Hoán vị, chỉnh hợp, tổ hợp -- Permutation, arrangement, combination}
+Mở rộng \cite[Ví dụ 1, p. 87]{TL_chuyen_Toan_Dai_So_Giai_Tich_11} cho trường hợp tổng quát $n$ điểm phân biệt:
+ 
+\begin{baitoan}
+	\begin{enumerate*}
+		\item[(a)] Trong mặt phẳng cho 1 tập hợp $P$ gồm $6$ điểm phân biệt. Có bao nhiêu vector (khác $\vec{0}$) có điểm đầu \& điểm cuối thuộc $P$?
+		\item[(b)] Trong mặt phẳng cho 1 tập hợp $Q$ gồm $7$ điểm phân biệt, trong đó không có 3 điểm nào thẳng hàng. Có bao nhiêu tam giác có 3 đỉnh đều thuộc $Q$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, Ví dụ 3, p. 88]
+	Chứng minh hằng đẳng thức
+	\begin{align*}
+		C_{2n}^2 = 2C_n^2 + n^2,\ \forall n\in\mathbb{N}.
+	\end{align*}
+	\begin{enumerate*}
+		\item[(a)] Bằng biến đổi đại số.
+		\item[(b)] Bằng suy luận tổ hợp.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{8.}, p. 88]
+	Hỏi có bao nhiêu số có $5$ chữ số khác nhau chia hết cho $5$ mà trong biểu diễn thập phân của nó không có các chữ số $7,8,9$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{9.}, p. 88]
+	Chứng minh
+	\begin{align*}
+		C_n^k + 3C_n^{k-1} + 3C_n^{k-2} + C_n^{k-3} = C_{n+3}^k,\ \forall n,k\in\mathbb{N}^\star,\,3\le k\le n.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{10.}, p. 88]
+	Chứng minh
+	\begin{align*}
+		\sum_{k=0}^r C_n^kC_m^{r-k} = C_{m+n}^r,\ \forall m,n,r\in\mathbb{N}^\star,\,r < \min\{m,n\}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{11.}, p. 88]
+	Chứng minh bằng quy nạp
+	\begin{align*}
+		\sum_{k=0}^r C_{n+k}^k = C_{n+r+1}^r,\ \forall n,r\in\mathbb{N}^\star.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{12.}, p. 88]
+	Trong 1 nhóm có $5$ người $A,B,C,D,E$.
+	\begin{enumerate*}
+		\item[(a)] Có bao nhiêu cách xếp $5$ người này thành hàng ngang sao cho $A$ \& $B$ đứng cạnh nhau?
+		\item[(b)] Có bao nhiêu cách xếp $5$ người này thành hàng ngang sao cho $C$ \& $D$ không đứng cạnh nhau?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{13.}, p. 88]
+	Có bao nhiêu số có $5$ chữ số khác nhau mà biểu diễn thập phân không có các chữ số $6,7,8,9$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{14.}, p. 88]
+	1 lớp học có $n$ học sinh ($n > 3$). Thầy chủ nhiệm cần chọn ra 1 nhóm \& chỉ định 1 em trong nhóm làm nhóm trưởng. Số học sinh trong nhóm phải $\in(1;n)$. Gọi $T$ là số cách chọn.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $T = \sum_{k=2}^{n-1} kC_n^k$.
+		\item[(b)] Chứng minh $T = n\left(2^{n-1} - 2\right)$.
+		\item[(c)] Từ đó suy ra đẳng thức $\sum_{k=1}^n kC_n^k = n2^{n-1}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\subsection{Nhị thức Newton -- Newton's binomial}
 
 %------------------------------------------------------------------------------%
 
