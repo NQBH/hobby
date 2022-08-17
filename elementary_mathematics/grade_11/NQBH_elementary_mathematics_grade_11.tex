@@ -908,10 +908,86 @@ Nếu mẫu số liệu được cho dưới dạng bảng tần số -- tần s
 \chapter{Tổ Hợp \& Xác Suất -- Combinatorics \& Probability}
 
 \section{2 Quy Tắc Đếm Cơ Bản}
+\textbf{Nội dung.} \textit{2 quy tắc đếm cơ bản} -- (goal) nhờ đó có thể tính chính xác \& nhanh chóng số phần tử của 1 tập hợp mà không cần đếm trực tiếp bằng cách liệt kê.
+
+\subsection{Quy tắc cộng}
+
+\subsubsection{Quy tắc cộng}
+``Quy tắc cộng có thể phát biểu dưới dạng sau:
+\begin{enumerate*}
+	\item[(i)] Giả sử 1 công việc nào đó có thể thực hiện theo phương án $A$ hoặc phương án $B$. Có $n$ cách thực hiện phương án $A$ \& có $m$ cách thực hiện phương án $B$. Khi đó công việc có thể thực hiện theo $n + m$ cách.
+	\item[(ii)] 1 cách tổng quát, giả sử 1 công việc nào đó có thể thực hiện theo 1 trong $k$ phương án $A_1,A_2,\ldots,A_k$. Phương án $A_i$ có $n_i$ cách thực hiện ($i = 1,2,\ldots,k$). Khi đó công việc có thể thực hiện theo $\sum_{i=1}^k n_i = n_1 + n_2 + \cdots + n_k$ cách.'' -- \cite[p. 79]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{enumerate*}
+
+\subsubsection{Tính số phần tử của hợp 2 tập hợp}
+``Bản chất toán học của quy tắc cộng (i) là công thức tính số phần tử của hợp 2 tập hợp không giao nhau: \textit{Nếu $A$ \& $B$ là 2 tập hợp hữu hạn không giao nhau thì $|A\cup B| = |A| + |B|$}. 1 cách tổng quát, bản chất toán học của quy tắc cộng (ii) là công thức tính số phần tử của tập $n$ tập hợp hữu hạn đôi một không giao nhau. Quy tắc cộng cho nhiều phần tử đôi một không giao nhau được phát biểu như sau: \textit{Cho $n$ tập hợp $A_1,A_2,\ldots,A_k$ đôi một không giao nhau. Khi đó: $|A_1\cup A_2\cup\cdots\cup A_n| = \sum_{i=1}^k |A_i|$}. Trong nhiều bài toán tổ hợp, chúng ta phải tính số phần tử của hợp 2 tập hợp bất kỳ (có thể không rời nhau).'' -- \cite[pp. 79--80]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\begin{dinhly}[Công thức tính số phần tử của hợp 2 tập hợp bất kỳ]
+	\label{thm:công thức tính số phần tử của hợp 2 tập hợp bất kỳ}
+	Cho $A$ \& $B$ là 2 tập hợp hữu hạn bất kỳ. Khi đó ta có
+	\begin{align}
+		\label{so phan tu cua hop 2 tap hop bat ky}
+		|A\cup B| = |A| + |B| - |A\cap B|.
+	\end{align}
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	$B$ \& $A\backslash B$ là 2 tập hợp không giao nhau \& $A\cup B = B\cup(A\backslash B)$ nên $|A\cup B| = |B| + |A\backslash B|$. Mặt khác, $A\cap B$ \& $A\backslash B$ là 2 tập hợp không giao nhau \& $A = (A\cap B)\cup(A\backslash B)$ nên $|A| = |A\cap B| + |A\backslash B|$, do đó $|A\backslash B| = |A| - |A\cap B|$. Kết hợp 2 biểu thức vừa thu được suy ra \eqref{so phan tu cua hop 2 tap hop bat ky}.
+\end{proof}
+
+\subsubsection{Tính số phần tử của hợp 3 tập hợp}
+Với 3 tập hợp bất kỳ, ta có định lý sau:
+
+\begin{dinhly}[Công thức tính số phần tử của hợp 3 tập hợp bất kỳ]
+	Cho $A,B,C$ là 3 tập hợp. Khi đó:
+	\begin{align}
+		\label{so phan tu cua hop 3 tap hop bat ky}
+		|A\cup B\cup C| = |A| + |B| + |C| - |A\cap B| - |B\cap C| - |C\cap A| + |A\cap B\cap C|.
+	\end{align}
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Theo định lý \ref{thm:công thức tính số phần tử của hợp 2 tập hợp bất kỳ} ta có $|A\cup B\cup C| = |A\cup (B\cup C)| = |A| + |B\cup C| - |A\cap(B\cup C)|$. Mặt khác cũng theo Định lý 1, $|B\cup C| = |B| + |C| - |B\cap C|$ \& $|A\cap(B\cup C)| = |(A\cap B)\cup(A\cap C)| = |A\cap B| + |A\cap C| - |(A\cap B)\cap(A\cap C)| = |A\cap B| + |A\cap C| - |A\cap B\cap C|$. Kết hợp 3 biểu thức vừa thu được suy ra \eqref{so phan tu cua hop 3 tap hop bat ky}.
+\end{proof}
+
+\subsection{Quy tắc nhân}
+
+\subsubsection{Quy tắc nhân}
+\begin{enumerate*}
+	\item[(i)] ``Giả sử 1 công việc nào đó bao gồm 2 công đoạn $A$ \& $B$. Công đoạn $A$ có thể làm theo $n$ cách. Với mỗi cách thực hiện công đoạn $A$ thì công đoạn $B$ có thể làm theo $m$ cách. Khi đó công việc có thể thực hiện theo $mn$ cách.
+	\item[(ii)] Giả sử 1 công việc nào đó bao gồm $k$ công đoạn $A_1,A_2,\ldots,A_k$. Giả sử rằng công đoạn $A_1$ có thể làm theo $n_1$ cách. Với mỗi $i\ge 2$ \& với mỗi cách thực hiện các công đoạn $A_1,A_2,\ldots,A_{i-1}$ thì công đoạn $A_i$ có thể thực hiện theo $n_i$ cách. Khi đó công việc có thể thực hiện theo $\prod_{i=1}^k n_i = n_1n_2\cdots n_k$ cách.'' -- \cite[p. 82]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{enumerate*}
+
+\subsubsection{Tính số phần tử của tích Descartes của 2 tập hợp}
+``Giả sử công đoạn đầu có thể tiến hành theo $n$ cách: $a_1,a_2,\ldots,a_n$. Công đoạn thứ 2 có thể tiến hành theo $m$ cách $b_1,b_2,\ldots,b_m$. Như vậy nếu công đoạn đầu tiến hành theo cách $a_i$ ($i = 1,2,\ldots,n$), công đoạn thứ 2 tiến hành theo cách $b_j$ ($j = 1,2,\ldots,m$) thì việc thực hiện công việc được mô tả bởi cặp $(a_i,b_j)$. Thành thử tập hợp tất cả các cách thực hiện công việc được mô tả bởi tập hợp tất cả các cặp $\{(a_i,b_j)\}$  ($i = 1,2,\ldots,n$; $j = 1,2,\ldots,m$), i.e., tích Descartes $A\times B$ của 2 tập hợp $A$ \& $B$.'' -- \cite[p. 82]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}. Như vậy bản chất toán học của quy tắc nhân là:
+
+\begin{dinhly}
+	Số phần tử của tích Descartes $A\times B$ của 2 tập hợp hữu hạn $A$ \& $B$ bằng số phần tử của $A$ nhân với số phần tử của $B$, $|A\times B| = |A||B|$.
+\end{dinhly}
+
+\subsubsection{Tính số phần tử của tích Descartes của nhiều tập hợp}
+``1 cách tổng quát, bản chất toán học của quy tắc nhân (ii) cho công việc nhiều công đoạn là công thức tính số phần tử của tích Descartes của nhiều tập hợp.
+
+\begin{dinhly}
+	Cho $k$ tập hợp $A_1,A_2,\ldots,A_k$. Tập hợp tất cả các bộ $\{(a_1,a_2,\ldots,a_k)\}$ với $a_i\in A_i$ ($i = 1,2,\ldots,k$) được gọi là \emph{tích Descartes của $k$ tập hợp $A_1,A_2,\ldots,A_k$} \& ký hiệu là $A_1\times A_2\times\cdots\times A_k$. Ta có quy tắc nhân sau đây:
+	\begin{align*}
+		|A_1\times A_2\times\cdots\times A_k| = \prod_{i=1}^k |A_i| = |A_1||A_2|\cdots|A_k|.
+	\end{align*}
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Sử dụng phương pháp quy nạp \& nhận xét $A_1\times A_2\times\cdots\times A_k\times A_{k+1} = (A_1\times A_2\times\cdots\times A_k)\times A_{k+1}$.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
 \section{Hoán Vị, Chỉnh Hợp \& Tổ Hợp}
+
+\subsection{Hoán vị}
+
+\subsection{Chỉnh hợp}
+
+\subsection{Tổ hợp}
 
 %------------------------------------------------------------------------------%
 
@@ -1094,7 +1170,7 @@ Về lực lượng \& các tính chất sâu sắc hơn của tập hợp, có 
 \subsection{Các tính chất của phép tịnh tiến}
 
 \begin{dinhly}[Phép tịnh tiến bảo toàn khoảng cách]
-	\label{thm: phep tinh tien bao toan khoang cach}
+	\label{thm:phep tinh tien bao toan khoang cach}
 	Nếu phép tịnh tiến biến 2 điểm $M$ \& $N$ lần lượt thành 2 điểm $M'$ \& $N'$ thì $M'N' = MN$.
 \end{dinhly}
 ``Người ta diễn tả tính chất trên của phép tịnh tiến là: \textit{Phép tịnh tiến không làm thay đổi khoảng cách giữa 2 điểm bất kỳ}.'' -- \cite[p. 6]{SGK_Toan_11_hinh_hoc_nang_cao}. ``Nếu $T_{\vec{u}}(M) = M'$, $T_{\vec{u}}(N) = N'$ thì $\overrightarrow{M'N'} = \overrightarrow{MN}$ \& từ đó suy ra $M'N' = MN$.'' ``Nói cách khác, phép tịnh tiến bảo toàn khoảng cách giữa 2 điểm bất kỳ.'' -- \cite[p. 6]{SGK_Toan_11_hinh_hoc_co_ban}, i.e.,
