@@ -981,9 +981,9 @@ Với 3 tập hợp bất kỳ, ta có định lý sau:
 
 %------------------------------------------------------------------------------%
 
-\section{Hoán Vị, Chỉnh Hợp \& Tổ Hợp}
+\section{Hoán Vị, Chỉnh Hợp \& Tổ Hợp -- Permutation, Arrangement, \& Combination}
 
-\subsection{Hoán vị}
+\subsection{Hoán vị -- Permutation}
 
 \begin{dinhnghia}[Hoán vị]
 	Cho tập hợp $A$ có $n$ phần tử. Mỗi cách sắp xếp $n$ phần tử này theo 1 thứ tự cho ta 1 hoán vị của tập hợp $A$. Số các hoán vị của tập hợp có $n$ phần tử được ký hiệu là $P_n$.
@@ -1001,7 +1001,7 @@ Ký hiệu $P$ được lấy từ chữ cái đầu của từ \textit{permutat
 	``Việc sắp xếp thứ tự $n$ phần tử của tập hợp $A$ có $n$ phần tử là công việc gồm $n$ công đoạn. Công đoạn 1 là chọn phần tử để xếp vào vị trí thứ nhất: có $n$ cách thực hiện. Sau khi thực hiện công đoạn 1, công đoạn 2 là chọn phần tử xếp vào vị trí thứ 2: có $n - 1$ cách thực hiện. Sau khi thực hiện xong $i - 1$ công đoạn (chọn $i - 1$ phần tử của $A$ vào các vị trí thứ $1,2,\ldots,i - 1$), công đoạn thứ $i$ tiếp theo là chọn phần tử xếp vào vị trí thứ $i$: có $n - i + 1$ cách thực hiện. Công đoạn cuối cùng (công đoạn thứ $n$) có 1 cách thực hiện. Theo quy tắc nhân, ta có $n(n - 1)\cdots 2\cdot 1 = n!$ cách sắp xếp thứ tự $n$ phần tử của tập $A$, i.e., có $n!$ hoán vị.'' -- \cite[p. 85]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 \end{proof}
 
-\subsection{Chỉnh hợp}
+\subsection{Chỉnh hợp -- Arrangement}
 
 \begin{dinhnghia}[Chỉnh hợp]
 	Cho tập hợp $A$ gồm $n$ phần tử \& số nguyên dương $k$ với $1\le k\le n$. Khi lấy ra $k$ phần tử của $A$ \& sắp xếp chúng theo 1 thứ tự ta được 1 \emph{chỉnh hợp chập $k$ của $n$ phần tử của $A$} (gọi tắt là 1 \emph{chỉnh hợp chập $k$ của $A$}). Số các chỉnh hợp chập $k$ của tập hợp có $n$ phần tử được ký hiệu là $A_n^k$.
@@ -1023,7 +1023,7 @@ Ký hiệu $P$ được lấy từ chữ cái đầu của từ \textit{permutat
 	``Việc thiết lập 1 chỉnh hợp chập $k$ của tập $A$ có $n$ phần tử là công việc gồm $k$ công đoạn. Công đoạn 1 là chọn phần tử để xếp vào vị trí thứ nhất: có $n$ cách thực hiện. Sau khi thực hiện công đoạn 1, công đoạn 2 là chọn phần tử xếp vào vị trí thứ 2: có $n - 1$ cách thực hiện. Sau khi thực hiện xong $i - 1$ công đoạn (chọn $i - 1$ phần tử của $A$ vào các vị trí thứ $1,2,\ldots,i - 1$), công đoạn thứ $i$ tiếp theo là chọn phần tử xếp vào vị trí thứ $i$: có $n - i + 1$ cách thực hiện. Công đoạn cuối cùng (công đoạn thứ $k$) có $n - k + 1$ cách thực hiện. Theo quy tắc nhân, ta có $\prod_{i = n - k + 1}^n i = n(n - 1)\cdots(n - k + 1)$ cách lập 1 chỉnh hợp chập $k$ của tập $A$ có $n$ phần tử, i.e., có $\prod_{i = n - k + 1}^n i = n(n - 1)\cdots(n - k + 1)$ chỉnh hợp chập $k$ của tập $A$ có $n$ phần tử.'' -- \cite[p. 86]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 \end{proof}
 
-\subsection{Tổ hợp}
+\subsection{Tổ hợp -- Combination}
 
 \begin{dinhnghia}[Tổ hợp]
 	Cho tập hợp $A$ gồm $n$ phần tử \& $k\in\mathbb{N}^\star$ với $1\le k\le n$. Mỗi tập con có $k$ phần tử của $A$ được gọi là 1 \emph{tổ hợp chập $k$ của $n$ phần tử của $A$} (gọi tắt là 1 \emph{tổ hợp chập $k$} của $A$). Số các tổ hợp chập $k$ của tập hợp có $n$ phần tử được ký hiệu là $C_n^k$.
@@ -1062,7 +1062,7 @@ Ký hiệu $P$ được lấy từ chữ cái đầu của từ \textit{permutat
 
 %------------------------------------------------------------------------------%
 
-\section{Nhị Thức Newton}
+\section{Nhị Thức Newton -- Newton's Binomial}
 
 \subsection{Công thức nhị thức Newton -- Newton's binomial theorem}
 ``1 cách tổng quát, khai triển của $(a + b)^n$ được cho bởi công thức sau:
@@ -1108,7 +1108,7 @@ Có thể gộp chung 2 công thức thành:
 	``Khi khai triển $(a + b)^n = (a + b)(a + b)\cdots(a + b)$ ($n$ thừa số $(a + b)$) theo quy tắc phân phối của phép nhân, ta được 1 tổng các đơn thức dạng $x_1x_2\cdots x_n$ trong đó $x_i\in\{a,b\}$. Bây giờ ta thực hiện việc ghép các số hạng đồng dạng. Khi tất cả $n$ giá trị $x_i$ bằng $a$, ta nhận được đơn thức $a^n$. Chỉ có 1 đơn thức như vậy. Khi $n - 1$ giá trị $x_i$ bằng $a$ \& giá trị còn lại bằng $b$, ta nhận được đơn thức $a^{n-1}b$. Số các đơn thức như thế bằng số cách chọn 1 số bằng $b$ trong $n$ số $x_1,x_2,\ldots,x_n$, i.e., bằng $C_n^1$. Do đó ta thu được số hạng $C_n^1a^{n-1}b$. Khi $n - 2$ giá trị $x_i$ bằng $a$ \& 2 giá trị còn lại bằng $b$, ta nhận được đơn thức $a^{n-2}b^2$. Số các đơn thức như thế bằng số cách chọn 2 số bằng $b$ trong $n$ số $x_1,x_2,\ldots,x_n$, i.e., bằng $C_n^2$. Do đó ta thu được số hạng $C_n^2a^{n-2}b^2$. Tiếp tục như vậy, khi $n - k$ giá trị $x_i$ bằng $a$ \& $k$ giá trị còn lại bằng $b$, ta nhận được đơn thức $a^{n-k}b^k$. Số các đơn thức như thế bằng số cách chọn $k$ số bằng $b$ trong $n$ số $x_1,\ldots,x_n$, i.e., bằng $C_n^k$. Do đó ta thu được số hạng $C_n^ka^{n-k}b^k$. Cuối cùng, khi tất cả $n$ giá trị bằng $b$, ta được đơn thức $b^n$. Chỉ có 1 đơn thức như vậy. Vậy $(a + b)^n = \sum_{k=0}^n C_n^ka^{n-k}b^k = a^n + C_n^1a^{n-1}b + \cdots + C_n^{n-1}ab^{n-1} + b^n$, $\forall a,b\in\mathbb{R}$, $\forall n\in\mathbb{N}^\star$.'' -- \cite[pp. 92--93]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 \end{proof}
 
-\subsection{Tam giác Pascal}
+\subsection{Tam giác Pascal -- Pascal triangle}
 ``Tam giác Pascal là 1 bảng số được lập theo quy luật sau: Đỉnh của tam giác được ghi số 1. Hàng thứ nhất được ghi 2 số 1. Nếu đã có hàng thứ $n\in\mathbb{N}^\star$ thì hàng thứ $n + 1$ tiếp theo được thiết lập bằng cách cộng 2 số liên tiếp của hàng thứ $n$ rồi viết kết quả xuống hàng dưới ở vị trị giữa 2 số này. Sau đó viết số 1 ở đầu \& cuối hàng.
 
 \begin{dinhly}
@@ -1122,6 +1122,130 @@ Có thể gộp chung 2 công thức thành:
 %------------------------------------------------------------------------------%
 
 \section{Biến Cố \& Xác Suất của Biến Cố -- Event \& Probability of Event}
+
+\subsection{Phép thử ngẫu nhiên \& không gian mẫu -- Random trial \& sample space}
+
+\subsubsection{Phép thử ngẫu nhiên -- Random trial}
+
+\begin{dinhnghia}[Phép thử ngẫu nhiên]
+	``\emph{Phép thử ngẫu nhiên} (gọi tắt là \emph{phép thử}) là 1 thí nghiệm hay 1 hành động mà:
+	\begin{enumerate*}
+		\item[$\bullet$] Kết quả của nó không dự đoán trước được.
+		\item[$\bullet$] Có thể xác định được tập hợp tất cả các kết quả có thể của nó.
+	\end{enumerate*}
+	Phép thử thường được ký hiệu bởi chữ $T$.'' -- \cite[p. 95]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{dinhnghia}
+Ký hiệu $T$ của phép thử được lấy từ chữ cái đầu của từ \textit{trial}\footnote{\textbf{trial} [n] [countable, uncountable] \textbf{1.} the process of testing something\texttt{/}somebody to find out whether they are effective, successful, suitable, etc.; \textbf{2.} a formal examination of evidence in court by a judge \& often a jury, to decide if somebody accused of a crime is guilty or not; \textbf{trial \& error} [idiom] the process of solving a problem by trying various methods, amounts, etc. until you find one that is successful; [v] \textbf{trial something} to test something\texttt{/}somebody to find out whether they are effective, successful, suitable, etc.}, i.e., thử, phép thử.
+
+\subsubsection{Không gian mẫu -- Sample space}
+
+\begin{dinhnghia}[Không gian mẫu]
+	``Tập hợp tất cả các kết quả có thể của phép thử được gọi là \emph{không gian mẫu} của phép thử \& được ký hiệu bởi chữ $\Omega$.'' -- \cite[p. 95]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{dinhnghia}
+
+\subsection{Biến cố -- Event}
+
+\begin{dinhnghia}[Biến cố]
+	\begin{enumerate*}
+		\item[(a)] ``1 \emph{biến cố} $A$ (còn gọi là \emph{sự kiện} $A$) liên quan tới phép thử $T$ là biến cố mà việc xảy ra hay không xảy ra của nó tùy thuộc vào kết quả $T$. Mỗi kết quả của phép thử $T$ làm cho biến cố $A$ xảy ra được gọi là 1 \emph{kết quả thuận lợi} cho $A$.
+		\item[(b)] Tập hợp các kết quả thuận lợi cho $A$ được ký hiệu bởi $\Omega_A$. Để đơn giản, ta có thể dùng chính chữ $A$ để ký hiệu tập hợp các kết quả thuận lợi cho $A$. Khi đó ta cũng nói biến cố $A$ được mô tả bởi tập $A$.
+		\item[(c)] \emph{Biến cố chắc chắn} là biến cố luôn luôn xảy ra khi thực hiện phép thử $T$. Biến cố chắc chắn được mô tả bởi tập $\Omega$ \& được ký hiệu là $\Omega$.
+		\item[(d)] \emph{Biến cố không thể} là biến cố không bao giờ xảy ra khi thực hiện phép thử $T$. Biến cố không thể được mô tả bởi tập $\emptyset$ \& được ký hiệu là $\emptyset$.'' -- \cite[pp. 95--96]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+	\end{enumerate*}
+\end{dinhnghia}
+
+\subsection{Xác suất của biến cố -- Probability of event}
+``Trong cuộc sống hàng ngày, khi nói về biến cố, ta thường nói biến cố này có nhiều khả năng xảy ra, biến cố kia có ít khả năng xảy ra, biến cố này có nhiều khả năng xảy ra hơn biến cố kia. Toán học đã định lượng hóa các khả năng này bằng cách gán cho mỗi biến cố 1 số $\in[0;1]$ gọi là \textit{xác suất của biến cố} đó. \textit{Xác suất của biến cố $A$} được ký hiệu bởi $P(A)$. Nó đo lường khả năng khách quan xuất hiện biến cố $A$.'' -- \cite[p. 96]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsubsection{Định nghĩa cố điển của xác suất -- Classical definition of probability}
+
+\begin{dinhnghia}[Xác suất]
+	``Giả sử phép thử $T$ có 1 số hữu hạn kết quả có thể đồng khả năng. Khi đó \emph{xác suất của 1 biến cố  $A$} liên quan tới $T$ là tỷ số giữa số kết quả thuận lợi cho $A$ \& số kết quả có thể: $P(A)\coloneqq\frac{|A|}{|\Omega|}$.
+\end{dinhnghia}
+Như vậy, việc giải 1 bài toán tính xác suất của 1 biến cố $A$ theo định nghĩa cổ điển sẽ được quy về 1 bài toán tổ hợp: đếm số kết quả có thể của $T$ \& đếm số kết quả thuận lợi cho $A$. Cụ thể chúng ta có 3 bước sau:
+\begin{enumerate}
+	\item Xác định không gian mẫu $\Omega$ rồi tính số phần tử của $\Omega$, i.e., đếm số kết quả có thể của phép thử $T$.
+	\item Xác định tập con $A$ mô tả biến cố $A$ rồi tính số phần tử của $A$, i.e., đếm số kết quả thuận lợi cho $A$.
+	\item Lấy kết quả của bước 2 chia cho bước 1.
+\end{enumerate}
+Nói chung việc tính số các kết quả có thể (bước 1) thường dễ dàng hơn nhiều so với việc tính số các kết quả thuận lợi cho $A$ (bước 2). Để giải tốt các bài toán tính xác suất, các bạn phải nắm chắc phần tổ hợp. 1 giả thiết quan trọng khi áp dụng định nghĩa cố điển là các kết quả của phép thử $T$ (i.e., các phần tử của $\Omega$) được coi là \textit{đồng khả năng}. I.e., tất cả các kết quả của $T$ đều có khả năng xuất hiện như nhau, ta không có 1 lý do gì để cho rằng kết quả này lại hay xảy ra hơn kết quả kia. E.g.: Nếu phép thử $T$ liên quan tới gieo súc sắc, tung đồng tiền, ta giả thiết con súc sắc, đồng tiền được chế tạo cân đối, đồng chất thì các kết quả của $T$ là đồng khả năng. Khi nói tới việc ``chọn ngẫu nhiên'' 1 phần tử trong 1 tập hợp nào đó, ta phải hiểu là việc chọn vô tư, không thiên vị, do đó mỗi phần tử đều có khả năng được chọn như nhau.'' -- \cite[pp. 96--97]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsubsection{Định nghĩa thống kê của xác suất -- Statistical definition of probability}
+``Trong định nghĩa cổ điển của xác suất, ta cần giả thiết phép thử $T$ có 1 số hữu hạn kết qủa có thể đồng khả năng. Nếu giả thiết đó bị vi phạm thì định nghĩa đó sẽ được thay bởi định nghĩa sau gọi là định nghĩa thống kê của xác suất.
+
+\begin{dinhnghia}[Xác suất]
+	Xét phép thử $T$ \& biến cố $A$ liên quan tới $T$. Ta tiến hành lặp đi lặp lại $N$ lần phép thử $T$. Giả sử trong $N$ lần thực hiện phép thử $T$ đó, biến cố $A$ xuất hiện $k = k(N)$ lần. Người ta chứng minh được rằng khi $N\to+\infty$ thì tỷ số $\frac{k(N)}{N}$ luôn dần tới 1 giới hạn xác định. Giới hạn đó được gọi là \emph{xác suất} của $A$, i.e., $P(A) = \lim\frac{k(N)}{N}$.
+\end{dinhnghia}
+Trong trường hợp phép thử $T$ có 1 số hữu hạn kết quả có thể đồng khả năng thì xác suất của biến cố $A$ theo định nghĩa thống kê cũng trùng với xác suất của biến cố $A$ theo định nghĩa cổ điển. Tỷ số $\frac{k(N)}{N}$ được gọi là \emph{tần suất} của $A$ trong $N$ lần thực hiện phép thử $T$. Khi $N$ càng lớn thì tần suất càng gần với xác suất. Thành thử tần suất được xem như giá trị gần đúng của xác suất. Số phép thử $N$ càng lớn thì sai số giữa tần suất \& xác suất càng bé.'' -- \cite[pp. 98--99]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsection{Quy tắc cộng xác suất -- Addition rule of probability}
+
+\subsubsection{Biến cố hợp}
+
+\begin{dinhnghia}[Biến cố hợp]
+	``Cho 2 biến cố $A$ \& $B$. Biến cố ``$A$ hoặc $B$ xảy ra'', ký hiệu là $A\cup B$, được gọi là \emph{hợp} của 2 biến cố $A$ \& $B$. 1 cách tổng quát, cho $k$ biến cố $A_1,A_2,\ldots,A_k$. Biến cố: ``Có ít nhất 1 trong các biến cố $A_1,A_2,\ldots,A_k$ xảy ra'', ký hiệu là $A_1\cup A_2\cup\cdots\cup A_k$, được gọi là \emph{hợp} của $k$ biến cố đó.'' -- \cite[p. 99]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{dinhnghia}
+
+\subsubsection{Biến cố xung khắc}
+
+\begin{dinhnghia}[Biến cố xung khắc]
+	``2 biến cố $A$ \& $B$ được gọi là \emph{xung khắc} với nhau nếu biến cố này xảy ra thì biến cố kia không xảy ra.'' -- \cite[p. 99]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{dinhnghia}
+
+\subsubsection{Biến cố đối -- Addition rule of probability}
+
+\begin{dinhnghia}[Biến cố đối]
+	``Cho $A$ là 1 biến cố. Khi đó biến cố ``Không xảy ra $A$'' được gọi là \emph{biến cố đối} của $A$. Biến cố đối của $A$ ký hiệu là $\overline{A}$.'' -- \cite[p. 99]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{dinhnghia}
+``Rõ ràng $A$ \& $\overline{A}$ là 2 biến cố xung khắc \& hợp của chúng là 1 biến cố chắc chắn: $\Omega = A\cup\overline{A}$.'' -- \cite[p. 100]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsubsection{Quy tắc cộng xác suất}
+
+\begin{dinhly}[Quy tắc cộng xác suất]
+	\begin{itemize}
+		\item[(a)] Nếu 2 biến cố $A,B$ xung khắc với nhau thì $P(A\cup B) = P(A) + P(B)$.
+		\item[(b)] Nếu $A_1,A_2,\ldots,A_k$ là $k$ biến cố đôi một xung khắc với nhau thì $P\left(A_1\cup A_2\cup\cdots\cup A_k\right) = \sum_{i=1}^k P(A_i) = P(A_1) + P(A_2) + \cdots + P(A_k)$, i.e.,
+		\begin{align*}
+			P\left(\bigcup_{i=1}^k A_i\right) = \sum_{i=1}^k P(A_i).
+		\end{align*}
+	\end{itemize}	
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	\begin{enumerate*}
+		\item[(a)] Sử dụng công thức $|A\cup B| = |A| + |B| - |A\cap B|$ với mọi tập $A,B$, \& nếu có thêm $A\cap B = \empty$, i.e., $A$ \& $B$ xung khắc, thì $|A\cup B| = |A| + |B|$. Chia 2 vế cho $|\Omega|$, thu được $P(A\cup B) = P(A) + P(B)$.
+		\item[(b)] Có thể chứng minh bằng quy nạp dựa vào bước cơ sở $k = 2$ chính là (a) hoặc sử dụng trực tiếp công thức tương ứng ở ngôn ngữ tập hợp: $|\bigcup_{i=1}^k A_i| = \sum_{i=1}^k |A_i|$, với mọi tập hợp $A_i$, $i = 1,\ldots,k$, đôi một không giao nhau.
+	\end{enumerate*}
+\end{proof}
+
+\subsubsection{Công thức tính xác suất biến cố đối}
+``Xác suất của biến cố đối $\overline{A}$ của biến cố $A$ là $P(\overline{A}) = 1 - P(A)$. Thật vậy, vì $P(\Omega) = 1$; $A$ \& $\overline{A}$ là 2 biến cố xung khắc \& $\Omega = A\cup\overline{A}$ nên từ quy tắc cộng suy ra $1 = P(A) + P(\overline{A})$.'' -- \cite[p. 100]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\subsection{Quy tắc nhân xác suất -- Multiplication rule of probability}
+
+\subsubsection{Biến cố giao}
+
+\begin{dinhnghia}
+	``Cho 2 biến cố $A$ \& $B$. Biến cố ``Cả $A$ \& $B$ đều xảy ra'' ký hiệu là $AB$ được gọi là \emph{giao} của 2 biến cố $A$ \& $B$. 1 cách tổng quát, cho $k$ biến cố $A_1,A_2,\ldots,A_k$. Biến cố: ``Tất cả $k$ biến số $A_1,A_2,\ldots,A_k$ đều xảy ra'', ký hiệu là $A_1A_2\ldots A_k$, được gọi là \emph{giao} của $k$ biến cố đó.'' -- \cite[p. 101]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{dinhnghia}
+
+\subsubsection{Biến cố độc lập}
+
+\begin{dinhnghia}[Biến cố độc lập]
+	``2 biến cố $A$ \& $B$ được gọi là \emph{độc lập với nhau} nếu việc xảy ra hay không xảy ra của biến cố này không làm ảnh hưởng tới xác suất xảy ra của biến cố kia. 1 cách tổng quát, cho $k$ biến cố $A_1,A_2,\ldots,A_k$. Chúng được goị là \emph{độc lập với nhau} nếu việc xảy ra hay không xảy ra của 1 nhóm bất kỳ trong các biến cố trên không làm ảnh hưởng tới xác suất xảy ra của các biến cố còn lại.'' -- \cite[p. 101]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+\end{dinhnghia}
+
+\subsubsection{Quy tắc nhân xác suất}
+
+\begin{dinhly}[Quy tắc nhân xác suất]
+	Nếu $A,B$ là 2 biến cố độc lập thì $P(AB) = P(A)P(B)$. 1 cách tổng quát, nếu $k$ biến cố $A_1,A_2,\ldots,A_k$ là độc lập thì $P(A_1A_2\ldots A_k) = \prod_{i=1}^k P(A_i) = P(A_1)P(A_2)\cdots P(A_k)$.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	***
+\end{proof}
+
+
 %------------------------------------------------------------------------------%
 
 \section{Các Quy Tắc Tính Xác Suất -- Rules of Probability}
