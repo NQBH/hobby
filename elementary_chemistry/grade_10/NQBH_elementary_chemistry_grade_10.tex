@@ -1,0 +1,222 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Elementary Chemistry\texttt{/}Grade 10}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\mainmatter
+
+\chapter*{Preface}
+
+Tóm tắt kiến thức Hóa học lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
+
+\section*{Notation, Abbreviation, Convention}
+\begin{itemize}
+	\item askt: ánh sáng khuếch tán.
+	\item asmt: ánh sáng mặt trời.
+	\item đpnc: điện phân nóng chảy.
+	\item $\uparrow,\downarrow$: sản phẩm khí, sản phẩm rắn (kết tủa).
+	\item (s): solid -- chất rắn.
+	\item (l): liquid -- chất lỏng.
+	\item (g): gas, chất khí (hơi).
+	\item (aq): aqueous\footnote{\textbf{aqueous} [a] [usually before noun] (\textit{specialist}) containing or involving water.} -- chất tan trong nước (dung dịch).
+	\item $E_{\rm a}$: activation\footnote{\textbf{activation} [n] [uncountable] \textbf{activation (of something)} the fact or process of making something such as a device or chemical process start working.} energy\footnote{\textbf{energy} [n] \textbf{1.} [uncountable, countable] the ability of matter or radiation to perform work because of its mass, movement, electrical charge, etc.; \textbf{2.} [uncountable] a source of power that can be used by somebody\texttt{/}something, e.g. to provide light \& heat, or to work machines; \textbf{3.} [uncountable] the effort needed to do work or other physical or mental activities; \textbf{4.} (\textbf{energies}) [plural] the physical \& mental effort that you use to do something.} -- năng lượng hoạt hóa.
+	\item $E_{\rm b}$: bond\footnote{\textbf{bond} [n] \textbf{1.} something that forms a connection between people or groups, such as a feeling of friendship or shared ideas \& experiences; \textbf{2.} the way in which atoms are held together in a chemical compound; \textbf{3.} an agreement by a government or a company to pay somebody interest on the money they have lent after a particular period of time; a document containing this agreement; \textbf{4.} the way in which 2 surfaces are joined together, often using glue; [v] \textbf{1.} [transitive, intransitive] to join 2 things firmly together; to join firmly to something else; \textbf{2.} [transitive] to join atoms together by a chemical bond; \textbf{3.} [intransitive] \textbf{bond (with somebody)} to develop or create a relationship of trust with somebody.} energy -- năng lượng liên kết.
+	\item SATP: standard ambient\footnote{\textbf{ambient} [a] [only before noun] in the surrounding area; on all sides.} temperature \& pressure -- điều kiện chuẩn về nhiệt độ \& áp suất.
+	\item $\Delta H$: enthalpy change -- biến thiên enthalpy.
+	\item $\Delta_{\rm f}H_{298}^0$: standard enthalpy of formation\footnote{\textbf{formation} [n] \textbf{1.} [uncountable] the action of forming something; the process of being formed; \textbf{2.} [countable] a thing that has been formed, especially in a particular place or in a particular way; \textbf{3.} [countable, uncountable] a particular arrangement or pattern of people or things.} at $298$ K -- enthalpy tạo thành chuẩn ở $298$ K.
+	\item $\Delta_{\rm r}H_{298}^0$: standard enthalpy change of reaction\footnote{\textbf{reaction} [n] \textbf{1.} [countable, uncountable] what you do, say or think as a result of something that has happened; \textbf{2.} [countable] (\textit{chemistry}) a chemical change produced by 2 or more substances acting on each other; \textbf{3.} [countable, uncountable] (\textit{medical}) a response by the body, usually a bad one, to something such as a drug or a chemical substance; \textbf{4.} [uncountable, countable] (\textit{physics}) a force shown by something in response to another force, which is of equal strength \& acts in the opposite direction; \textbf{5.} [countable, usually singular] \textbf{reaction (against something)} a change in people's attitudes or behavior caused by strong disapproval of other very different attitudes; \textbf{6.} [uncountable] opposition to social or political progress or change; \textbf{7.} (\textbf{reactions}) [plural] the ability to move quickly in response to something, especially if in danger.} at $298$ K -- biến thiên enthalpy chuẩn của phản ứng ở $298$ K.
+\end{itemize}
+``Từ lâu, hóa học được mệnh danh là ``trung tâm của các ngành khoa học'' vì nhiều ngành khoa học như vật lý, sinh học, y học, khoa học Trái Đất, $\ldots$ đều lấy hóa học làm nền tảng cho sự phát triển. Hóa học cũng là cơ sở phát triển cho nhiều ngành công nghiệp khác như vật liệu, luyện kim, điện tử, dược phẩm, dầu khí, $\ldots$ Trong cuộc sống hằng ngày, hóa học hiện diễn ở khắp mọi nơi. Từ lương thực -- thực phẩm, đồ dùng thiết yếu trong gia đình, dụng cụ học tập, thuốc chữa bệnh, nguyên liệu sản xuất, $\ldots$ đến hương thơm quyến rũ của nước hoa, mỹ phẩm, $\ldots$ đều là những sản phẩm của hóa học.'' -- \cite[p. 3]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+
+%------------------------------------------------------------------------------%
+
+\section{Nhập Môn Hóa Học}
+\textbf{Nội dung.} \textit{Đối tượng nghiên cứu của hóa học, vai trò của hóa học đối với đời sống, sản xuất, $\ldots$, phương pháp học tập \& nghiên cứu hóa học}.
+
+\subsection{Đối tượng nghiên cứu của hóa học}
+
+\begin{dinhnghia}[Hóa học]
+	``\emph{Hóa học} là ngành khoa học thuộc lĩnh vực khoa học tự nhiên, nghiên cứu về thành phần, cấu trúc, tính chất, \& sự biến đổi của chất cũng như ứng dụng của chúng.'' -- \cite[p. 7]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\end{dinhnghia}
+``Khi đốt nến (được làm bằng paraffin), nếu chảy ra ở dạng lỏng, thấm vào bấc, cháy trong không khí, sinh ra khí carbon dioxide \& hơi nước.'' -- \cite[p. 7]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+
+\subsubsection{Vai trò của hóa học trong đời sống \& sản xuất}
+``Hóa học có vai trò quan trọng trong đời sống, sản xuất \& nghiên cứu khoa học.'' -- \cite[p. 8]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+
+\subsubsection{Phương pháp học tập Hóa học}
+``Phương pháp học tập hóa học nhằm phát triển năng lực hóa học, bao gồm:
+\begin{enumerate*}
+	\item[\textbf{1.}] Phương pháp tìm hiểu lý thuyết;
+	\item[\textbf{2.}] Phương pháp học tập thông qua thực hành thí nghiệm;
+	\item[\textbf{3.}] Phương pháp luyện tập, ôn tập;
+	\item[\textbf{4.}] Phương pháp học tập trải nghiệm.'' -- \cite[p. 9]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\end{enumerate*}
+
+\subsubsection{Phương pháp nghiên cứu Hóa học}
+``Khi nghiên cứu 1 vấn đề hóa học, chúng ta cần có phương pháp nghiên cứu. Không có phương pháp nào là chung cho mọi nghiên cứu. Tùy vào mục đích \& đối tượng nghiên cứu mà chúng ta lựa chọn phương pháp cho phù hợp.
+\begin{enumerate}
+	\item \textbf{Phương pháp nghiên cứu lý thuyết} là sử dụng những định luật, nguyên lý, quy tắc, cơ chế, mô hình, $\ldots$ cũng như các kết quả nghiên cứu đã có để tiếp tục làm rõ những vấn đề của lý thuyết hóa học.
+	\item \textbf{Phương pháp nghiên cứu thực nghiệm} là nghiên cứu những vấn đề dựa trên kết quả thí nghiệm, khảo sát, thu thập số liệu, phân tích, định lượng, $\ldots$
+	\item \textbf{Phương pháp nghiên cứu ứng dụng} nhằm mục đích giải quyết các vấn đề hóa học được ứng dụng trong các lĩnh vực khác nhau.'' -- \cite[p. 10]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\end{enumerate}
+
+\begin{vidu}
+	``Để nghiên cứu thành phần hóa học \& bước đầu ứng dụng tinh dầu tràm trà (\emph{Melaleuca alternifolia}) trong sản xuất nước súc miệng, các nhà nghiên cứu đã thực hiện theo các bước được mô tả trong  \cite[Hình 1.12: \textsf{Các bước thực hiện trong đề tài nghiên cứu thành phần hóa học \& bước đầu ứng dụng tinh dầu tràm trà trong sản xuất nước súc miệng}, p. 10]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}:
+	\begin{enumerate*}
+		\item[\textbf{1.}] Nghiên cứu thành phần hóa học \& ứng dụng của tinh dầu tràm trà làm nước súc miệng qua các công trình khoa học trên các tạp chí đã được xuất bản.
+		\item[\textbf{2.}] Đặt giả thuyết: tinh dầu tràm trà có khả năng kháng khuẩn.
+		\item[\textbf{3.}] Thí nghiệm chiết xuất tinh dầu bằng phương pháp chưng cất lôi cuốn hơi nước.
+		\item[\textbf{4.}] Khảo sát hoạt tính kháng khuẩn của sản phẩm nước súc miệng từ tinh dầu tràm trà.'' -- \cite[p. 10]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+	\end{enumerate*}
+\end{vidu}
+``\textit{Phương pháp nghiên cứu hóa học} bao gồm: nghiên cứu lý thuyết, nghiên cứu thực nghiệm \& nghiên cứu ứng dụng. Phương pháp nghiên cứu hóa học thường bao gồm 1 số bước:
+\begin{enumerate*}
+	\item[\textbf{1.}] Xác định vấn đề nghiên cứu;
+	\item[\textbf{2.}] Nêu giả thuyết khoa học;
+	\item[\textbf{3.}] Thực hiện nghiên cứu (lý thuyết, thực nghiệm, ứng dụng);
+	\item[\textbf{4.}] Viết báo cáo: thảo luận kết quả \& kết luận vấn đề.'' -- \cite[p. 11]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\end{enumerate*}
+``\textit{Mưa acid} là 1 thuật ngữ chung chỉ sự tích lũy của các chất gây ô nhiễm, có khả năng chuyển hóa trong nước mưa tạo nên môi trường acid. Các chất gây ô nhiễm chủ yếu là khí $\rm SO_2$ \& $\rm NO_x$ thải ra từ các quá trình sản xuất trong đời sống, đặc biệt là quá trình đối cháy than đá, dầu mỏ, \& các nhiên liệu tự nhiên khác. Hiện tượng này gây ảnh hưởng trực tiếp đến đời sống con người, động -- thực vật \& có thể làm thay đổi thành phần của nước các sông, hồ, giết chết các loài cá \& những sinh vật khác, đồng thời hủy hoại các công trình kiến trúc.'' -- \cite[p. 11]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+
+``Hóa học là 1 ngành khoa học thuộc lĩnh vực khoa học tự nhiên, kết hợp chặt chẽ giữa lý thuyết \& thực nghiệm. Hóa học còn được gọi là ``khoa học trung tâm'' vì nó là cầu nối giữa các ngành khoa học tự nhiên khác như vật lý, địa chất, \& sinh học, $\ldots$ Theo truyền thống, hóa học được chia thành 5 chuyên ngành chính, bao gồm: hóa lý thuyết \& hóa lý, hóa vô cơ, hóa hữu cơ, hóa phân tích, hóa sinh.'' -- \cite[p. 11]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Cấu Tạo Nguyên Tử}
+
+\section{Thành Phần của Nguyên Tử}
+
+%------------------------------------------------------------------------------%
+
+\section{Nguyên Tố Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Cấu Trúc Lớp Vỏ Electron của Nguyên Tử}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+
+\section{Cấu Tạo Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Xu Hướng Biến Đổi 1 Số Tính Chất của Nguyên Tử Các Nguyên Tố, Thành Phần \& 1 Số Tính Chất của Hợp Chất Trong 1 Chu Kỳ \& Nhóm}
+
+%------------------------------------------------------------------------------%
+
+\section{Định Luật Tuần Hoàn -- Ý Nghĩa của Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Liên Kết Hóa Học}
+
+\section{Quy Tắc Octet}
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Kết Ion}
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Kết Cộng Hóa Trị}
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Kết Hyđrogen \& Tương Tác van der Waals}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Phản Ứng Oxi Hóa -- Khử}
+
+\section{Phản Ứng Oxi Hóa -- Khử \& Ứng Dụng Trong Cuộc Sống}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Năng Lượng Hóa Học}
+
+\section{Enthalpy Tạo Thành \& Biến Thiên Enthalpy của Phản Ứng Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Biến Thiên Enthalpy của Phản Ứng Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Tốc Độ Phản Ứng Hóa Học}
+
+\section{Phương Trình Tốc Độ Phản Ứng \& Hằng Số Tốc Độ Phản Ứng}
+
+%------------------------------------------------------------------------------%
+
+\section{Các Yếu Tố Ảnh Hưởng Đến Tốc Độ Phản Ứng Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Nguyên Tố Nhóm VIIA -- Halogen}
+
+\section{Tính Chất Vật Lý \& Hóa Học Các Đơn Chất Nhóm VIIA}
+
+%------------------------------------------------------------------------------%
+
+\section{Hyđrogen Halide \& 1 Số Phản Ứng của Ion Halide} 
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
