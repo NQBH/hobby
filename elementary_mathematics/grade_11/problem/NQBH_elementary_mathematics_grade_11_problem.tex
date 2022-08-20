@@ -262,17 +262,96 @@ Mở rộng \cite[Ví dụ 1, p. 87]{TL_chuyen_Toan_Dai_So_Giai_Tich_11} cho tr�
 
 \subsection{Phép tịnh tiến}
 
+\begin{baitoan}[\cite{SGK_Toan_11_dai_so_giai_tich_co_ban}, \textbf{1.}, p. 7]
+	\label{prob:phep tinh tien}
+	Chứng minh: $M' = T_{\vec{u}}(M)\Leftrightarrow M = T_{-\vec{u}}(M')$.
+\end{baitoan}
+
+\begin{baitoan}
+	Trong mặt phẳng tọa độ $Oxy$ cho vector $\vec{u} = (u_1;u_2)$, 2 điểm $A(a_1;a_2)\not\equiv B(b_1,b_2)$ (i.e., phân biệt\emph{\texttt{/}}không trùng nhau) \& đường thẳng $d$ có phương trình $ax + by + c = 0$ với $a,b\in\mathbb{R}$ sao cho $a^2 + b^2\ne 0$.
+	\begin{enumerate*}
+		\item[(a)] Tìm tọa độ của các điểm $A',B'$ theo thứ tự là ảnh của $A,B$ qua phép tịnh tiến theo $\vec{u}$.
+		\item[(b)] Tìm tọa độ của điểm $C$ sao cho $A$ là ảnh của $C$ qua phép tịnh tiến theo $\vec{u}$.
+		\item[(c)] Tìm phương trình của đường thẳng $d'$  là ảnh của $d$ qua phép tịnh tiến theo $\vec{u}$.
+		\item[(d)] Cho đường tròn tâm $O_1(o_1;o_2)$ bán kính $R > 0$ có phương trình: $(x - o_1)^2 + (y - o_2)^2 = R^2$. Tìm ảnh của đường tròn đó qua phép tịnh tiến theo $\vec{u}$.
+	\end{enumerate*}
+\end{baitoan}
+Có thể mở rộng bài toán trên cho các đường conic, i.e., ellipse, parabol, \& hyperbol.
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, p. 7]
+	Cho 2 điểm $B,C$ cố định trên đường tròn $(O;R)$ \& 1 điểm $A$ thay đổi trên đường tròn đó. Chứng minh rằng trực tâm $\Delta ABC$ nằm trên 1 đường tròn cố định.
+\end{baitoan}
+
+\begin{baitoan}
+	2 thôn nằm ở 2 vị trí $A$ \& $B$ cách nhau 1 con sông (xem rằng 2 bờ sông là 2 đường thẳng song song). Người ta dự định xây 1 chiếc cầu $MN$ bắt qua sông (cố nhiên cầu phải vuông góc với bờ sông) \& làm 2 đoạn thẳng từ $A$ đến $M$ \& từ $B$ đến $N$. Hãy xác định vị trí chiếc cầu $MN$ sao cho $AM + BN$ ngắn nhất.
+\end{baitoan}
+
+\begin{proof}[Hint]
+	Trường hợp tổng quát có thể đưa về trường hợp con sông rất hẹp -- hẹp đến mức 2 bờ sông $a$ \& $b$ xem như trùng nhau bằng 1 phép tịnh tiến theo vector $\overrightarrow{MN}$ để $a$ trùng $b$. Khi đó điểm $A$ biến thành điểm $A'$ sao cho $\overrightarrow{AA'} = \overrightarrow{MN}$ \& do đó $A'N = AM$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{1.}, p. 9]
+	Qua phép tịnh tiến $T$ theo vector $\vec{u}\ne\vec{0}$, đường thẳng $d$ biến thành đường thẳng $d'$. Trong trường hợp nào thì: $d\equiv d'$? $d\parallel d'$? $d$ cắt $d'$? 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{2.}, p. 9]
+	Cho 2 đường thẳng song song $a$ \& $a'$. Tìm tất cả những phép tịnh tiến biến $a$ thành $a'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{3.}, p. 9]
+	Cho 2 phép tịnh tiến $T_{\vec{u}}$ \& $T_{\vec{v}}$. Với điểm $M$ bất kỳ, $T_{\vec{u}}$ biến $M$ thành điểm $M'$, $T_{\vec{v}}$ biến $M'$ thành điểm $M''$. Chứng tỏ rằng phép biến hình biến $M$ thành $M''$ là 1 phép tịnh tiến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{4.}, p. 9]
+	Cho đường tròn $(O)$ \& 2 điểm $A,B$. 1 điểm $M$ thay đổi trên đường tròn $(O)$. Tìm quỹ tích điểm $M'$ sao cho $\overrightarrow{MM'} + \overrightarrow{MA} = \overrightarrow{MB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, \textbf{5.}, p. 9]
+	Trong mặt phẳng tọa độ $Oxy$, với $\alpha,a,b$ là những số cho trước, xét phép biến hình $F$ biến mỗi điểm $M(x;y)$ thành điểm $M'(x';y')$, trong đó
+	\begin{equation*}
+		\left\{\begin{split}
+			x' &= x\cos\alpha - y\sin\alpha + a,\\
+			y' &= x\sin\alpha + y\cos\alpha + b.
+		\end{split}\right.
+	\end{equation*}
+	\begin{enumerate*}
+		\item[(a)] Cho 2 điểm $M(x_1;y_1)$, $N(x_2;y_2)$ \& gọi $M',N'$ lần lượt là ảnh của $M,N$ qua phép $F$. Tìm tọa độ của $M'$ \& $N'$.s
+		\item[(b)] Tính khoảng cách $d$ giữa $M$ \& $N$; khoảng cách $d'$ giữa $M'$ \& $N'$.
+		\item[(c)] Phép $F$ có phải là phép dời hình hay không?
+		\item Khi $\alpha = 0$, chứng tỏ rằng $F$ là phép tịnh tiến.
+	\end{enumerate*}
+\end{baitoan}
+Tổng quát hơn của bài toán \cite[\textbf{6.}, p. 9]{SGK_Toan_11_hinh_hoc_nang_cao}:
+\begin{baitoan}
+	Trong mặt phẳng tọa độ $Oxy$, xét các phép biến hình sau đây: Phép biến hình $F$ biến mỗi điểm $M(x;y)$ thành điểm $M'(f(x,y);g(x;y))$ với $f,g:\mathbb{R}^2\to\mathbb{R}$ là 2 hàm sốt. Với $f,g$ thỏa điều kiện nào thì $F$ là 1 phép dời hình?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
 \subsection{Phép đối xứng trục}
 
 \begin{baitoan}
-	Trong mặt phẳng tọa độ $Oxy$ cho điểm $A(a_1;a_2)$ \& đường thẳng $d$ có phương trình $ax + by + c = 0$ ($a^2 + b^2\ne 0$). Tìm ảnh của $A$ \& đường thẳng $d$ qua phép đối xứng trục $d_1$ có phương trình $a_1x + b_1y + c_1 = 0$ ($a_1^2 + b_1^2\ne 0$). Suy ra các trường hợp riêng khi $d_1$ là $Ox$ hoặc $Oy$.
+	Trong mặt phẳng tọa độ $Oxy$ cho điểm $A(a_1;a_2)$ \& đường thẳng $d$ có phương trình $ax + by + c = 0$ ($a^2 + b^2\ne 0$). Tìm ảnh của $A$ \& đường thẳng $d$ qua phép đối xứng trục $d_1$ có phương trình $a_1x + b_1y + c_1 = 0$ ($a_1^2 + b_1^2\ne 0$). Suy ra các trường hợp riêng khi $d_1$ là $Ox$ hoặc $Oy$. Cho đường tròn tâm $O_1(o_1;o_2)$ bán kính $R > 0$ có phương trình: $(x - o_1)^2 + (y - o_2)^2 = R^2$. Tìm ảnh của đường tròn đó qua phép đối xứng trục $d$.
 \end{baitoan}
+Có thể mở rộng bài toán trên cho các đường conic, i.e., ellipse, parabol, \& hyperbol.
+
+%------------------------------------------------------------------------------%
 
 \subsection{Phép đối xứng tâm}
 
 \begin{baitoan}
-	Trong mặt phẳng tọa độ $Oxy$ cho điểm $A(a_1;a_2)$ \& đường thẳng $d$ có phương trình $ax + by + c = 0$ ($a^2 + b^2\ne 0$). Tìm ảnh của $A$ \& đường thẳng $d$ qua phép đối xứng tâm $O$ \& phép đối xứng tâm $O_1(o_1;o_2)$.
+	Trong mặt phẳng tọa độ $Oxy$ cho điểm $A(a_1;a_2)$ \& đường thẳng $d$ có phương trình $ax + by + c = 0$ ($a^2 + b^2\ne 0$). Tìm ảnh của $A$ \& đường thẳng $d$ qua phép đối xứng tâm $O$ \& phép đối xứng tâm $O_1(o_1;o_2)$. Cho đường tròn tâm $O_1(o_1;o_2)$ bán kính $R > 0$ có phương trình: $(x - o_1)^2 + (y - o_2)^2 = R^2$. Tìm ảnh của đường tròn đó qua phép đối xứng tâm $O$ \& phép đối xứng tâm $O_1$.
 \end{baitoan}
+Có thể mở rộng bài toán trên cho các đường conic, i.e., ellipse, parabol, \& hyperbol.
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phép quay}
+
+\begin{baitoan}
+	Trong mặt phẳng toaj độ $Oxy$ cho điểm $A(a_1;a_2)$ \& đường thẳng $d$ có phương trình $ax + by + c = 0$ ($a^2 + b^2\ne 0$). Tìm ảnh của $A$ \& $d$ qua phép quay tâm $O$ góc $\alpha$ (radian). Cho đường tròn tâm $O_1(o_1;o_2)$ bán kính $R > 0$ có phương trình: $(x - o_1)^2 + (y - o_2)^2 = R^2$. Tìm ảnh của đường tròn đó qua phép quay tâm $O$ góc $\alpha$ (radian).
+\end{baitoan}
+
 
 %------------------------------------------------------------------------------%
 
