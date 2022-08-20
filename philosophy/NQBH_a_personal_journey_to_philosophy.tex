@@ -5,22 +5,33 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{example}{Example}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{notation}{Notation}[chapter]
-\newtheorem{principle}{Principle}[chapter]
-\newtheorem{problem}{Problem}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{question}{Question}[chapter]
-\newtheorem{remark}{Remark}[chapter]
-\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -166,6 +177,59 @@ Bruce Lee was an avid follower of wrestler \href{https://en.wikipedia.org/wiki/G
 
 \subsection{Notable practitioners}
 ``For practitioners of Jeet Kune Do, see \href{https://en.wikipedia.org/wiki/Category:Jeet_Kune_Do_practitioners}{Wikipedia\texttt{/}Category: Jeet Kune Do practitioners}.'' See a list at \href{https://en.wikipedia.org/wiki/Jeet_Kune_Do#Notable_practitioners}{Wikipedia\texttt{/}Jeet Kune Do\texttt{/}notable practitioners}
+
+%------------------------------------------------------------------------------%
+
+\section{\href{https://en.wikipedia.org/wiki/Man's_Search_for_Meaning}{Wikipedia\texttt{/}Man's Search for Meaning}}
+\textsf{Man's Search For Meaning: An Introduction to Logotherapy}. 2e (1947)
+\begin{itemize}
+	\item \textbf{Author.} \href{https://en.wikipedia.org/wiki/Viktor_Frankl}{Viktor E. Frankl}
+	\item \textbf{Original title.} \textit{Ein Psychologe erlebt das Konzentrationslager}
+	\item \textbf{Translator.} Ilse Lasch (Part 1)
+	\item \textbf{Country.} Austria
+	\item \textbf{Language.} German
+	\item \textbf{Genre.} Psychology
+	\item \textbf{Publisher.} Verlag f\"ur Jugend und Volk (Austria), \href{https://en.wikipedia.org/wiki/Beacon_Press}{Beacon Press} (English)
+	\item \textbf{Publication date.} 1946 (Vienna, Austria), 1959 (United States)
+	\item \textbf{Pages.} 200
+	\item \textbf{Followed by.} \textit{The Doctor \& the Soul: From Psychotherapy in Logotherapy}
+\end{itemize}
+``\textit{Man's Search for Meaning} is a 1946 book by \href{https://en.wikipedia.org/wiki/Viktor_Frankl}{Viktor E. Frankl} chronicling his experiences as a prisoner in \href{https://en.wikipedia.org/wiki/Nazi_concentration_camps}{Nazi concentration camps} during WWII, \& describing his \href{https://en.wikipedia.org/wiki/Psychotherapeutic}{psychotherapeutic} method, which involved identifying a purpose in life to feel positive about, \& then immersively imagining that outcome. According to Frankl, the way a prisoner imagined the future affected his longevity. The book intends to answer the question ``How was everyday life in a concentration camp reflected in the mind of the average prisoner?'' Part 1 constitutes Frankl's analysis of his experiences in the concentration camps, while Part 2 introduces his ideas of \href{https://en.wikipedia.org/wiki/Meaning_(existential)}{meaning} \& his theory called \href{https://en.wikipedia.org/wiki/Logotherapy}{logotherapy}.
+
+According to a survey conducted by the \href{https://en.wikipedia.org/wiki/Book-of-the-Month_Club}{Book-of-the-Month Club} \& the \href{https://en.wikipedia.org/wiki/Library_of_Congress}{Library of Congress}, \textit{Man's Search for Meaning} belongs to a list of ``the 10 most influential books in the United States.'' At the time of the author's death in 1997, the book had sold over 10 million copies \& had been translated into 24 languages.'' -- \href{https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning}{Wikipedia\texttt{/}Man's Search for Meaning}
+
+\subsection{Editions}
+``The book's original title is \textit{Ein Psychologe erlebt das Konzentrationslager} (``A Psychologist Experiences the Concentration Camp''). Later \href{https://en.wikipedia.org/wiki/German_language}{German} editions prefixed the title with \textit{Trotzdem Ja zum Leben Sagen} (``Nevertheless Say Yes to Life''), taken from a line in \textit{Das Buchenwaldlied}, a song written by \href{https://en.wikipedia.org/wiki/Fritz_L%C3%B6hner-Beda}{Dr. Friedrich L\"ohner-Beda} while an inmate at \href{https://en.wikipedia.org/wiki/Buchenwald_concentration_camp}{Buchenwald}. The title of the 1st English-language translation was \textit{From Death-Camp to Existentialism}. The book's common full English title is \textit{Man's Search for Meaning: An Introduction to Logotherapy}, although this subtitle is often not printed on the cover of modern editions.'' -- \href{https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning#Editions}{Wikipedia\texttt{/}Man's Search for Meaning\texttt{/}editions}
+
+\subsection{Experiences in a concentration camp}
+``Frankl identifies 3 psychological reactions experienced by all inmates to 1 degree or another:
+\begin{enumerate*}
+	\item[\textbf{1.}] shock during the initial admission phase to the camp,
+	\item[\textbf{2.}] apathy after becoming accustomed to camp existence, in which the inmate values only that which helps himself \& his friends survive, \&
+	\item[\textbf{3.}] reactions of \href{https://en.wikipedia.org/wiki/Depersonalization}{depersonalization}, moral deformity, bitterness, \& disillusionment if he survives \& is liberated.
+\end{enumerate*}
+Frankl concludes that the \href{https://en.wikipedia.org/wiki/Meaning_of_life}{meaning of life} is found in every moment of living; life never ceases to have meaning, even in suffering \& death. In a \href{https://en.wikipedia.org/wiki/Group_therapy}{group therapy} session during a mass fast inflicted on the camp's inmates trying to protect an anonymous fellow inmate from fatal retribution by authorities, Frankl offered the thought that for everyone in a dire condition there is someone looking down, a friend, family member, or even God, who would expect not to be disappointed. Frankl concludes from his experience that a prisoner's psychological reactions are not solely the result of the conditions of his life, but also from the \href{https://en.wikipedia.org/wiki/Freedom_of_choice}{freedom of choice} he always has even in severe suffering. The inner hold a prisoner has on his spiritual self relies on having a hope in the future, \& that once a prisoner loses that hope, he is doomed.
+
+Frankl also concludes that there are only 2 races of men, decent men \& indecent. No society is free of either of them, \& thus there were ``decent'' \href{https://en.wikipedia.org/wiki/Nazi}{Nazi} guards \& ``indecent'' prisoners, most notably the \href{https://en.wikipedia.org/wiki/Kapo_(concentration_camp)}{kapo} who would torture \& abuse their fellow prisoners for personal gain.
+
+His concluding passage in Part 1 describes the psychological reaction of the inmates to their liberation, which he separates into 3 stages. The 1st is depersonalization -- a period of readjustment, in which a prisoner gradually returns to the world. Initially, the liberated prisoners are so numb that they are unable to understand what freedom means, or to emotionally respond to it. Part of them believes that it is an illusion or a dream that will be taken away from them. In their 1st foray outside their former prison, the prisoners realized that they could not comprehend pleasure. Flowers \& the reality of the freedom they had dreamed about for years were all surreal, unable to be grasped in their depersonalization.
+
+The body is the 1st element to break out of this stage, responding by big appetites of eating \& wanting more sleeping. Only after the partial replenishing of the body is the mind finally able to respond, as ``feeling suddenly broke through the strange fetters which had restrained it'' (p. 111).
+
+This begins the 2nd stage, in which there is a danger of deformation. As the intense pressure on the mind is released, mental health can be endangered. Frankl uses the analogy of a diver \href{https://en.wikipedia.org/wiki/Decompression_sickness}{suddenly released from his pressure chamber}. He recounts the story of a friend who became immediately obsessed with dispensing the same violence in judgment of his abusers that they had inflicted on him.
+
+Upon returning home, the prisoners had to struggle with 2 fundamental experiences which could also damage their mental health: bitterness \& disillusionment. The last stage is bitterness at the lack of responsiveness of the world outside -- a ``superficiality \& lack of feeling $\ldots$ so disgusting that one finally felt like creeping into a hole \& neither hearing nor seeing human beings any more'' (p. 113). Worse has disillusionment, which was the discovery that suffering does not end, that the longed-for happiness will not come. This was the experience of those who -- like Frankl -- returned home to discover that no one awaited them. The hope that had sustained them throughout their time in the concentration camp was now gone. Frankl cites this experience as the most difficult to overcome.
+
+As time passed, however, the prisoner's experience in a concentration camp finally became nothing but a remembered nightmare. What is more, he comes to believe that he has nothing left to fear any more, ``except his God'' (p. 115).'' -- \href{https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning#Experiences_in_a_concentration_camp}{Wikipedia\texttt{/}Man's Search for Meaning\texttt{/}experiences in a concentration camp}
+
+\subsection{Reception}
+``The book has been identified as 1 of the most influential books in the United States. At the time of Frankl's death in 1997, the book had sold over 10 million copies \& had been translated into 24 languages.
+
+\href{https://en.wikipedia.org/wiki/Gordon_Allport}{Gordon Allport}, who wrote a preface to the book, described it as a ``gem of dramatic narrative'' which ``provides a compelling introduction to the most significant psychological movement of our day''. \href{https://en.wikipedia.org/wiki/Sarah_Bakewell}{Sarah Bakewell} describes it as ``an incredibly powerful \& moving example of what \href{https://en.wikipedia.org/wiki/Existentialist}{existentialist} thought can actually be for in real life'' while \href{https://en.wikipedia.org/wiki/Mary_Fulbrook}{Mary Fulbrook} praises ``the way [Frankl] explores the importance of meaning in life as the key to survival.''
+
+However, aspects of the book have garnered criticism. 1 of Frankl's main ideas in the book is that a \href{https://en.wikipedia.org/wiki/Positive_mental_attitude}{positive attitude} made one better equipped for surviving the camps. Richard Middleton-Kaplan has said that this implies, whether intentionally or unintentionally, that those who died had given up \& that this paved the way for the idea of the Jews going \href{https://en.wikipedia.org/wiki/Like_sheep_to_the_slaughter}{like sheep to the slaughter}. Holocaust analyst \href{https://en.wikipedia.org/wiki/Lawrence_L._Langer}{Lawrence L. Langer} criticizes Frankl's promotion of logotherapy \& says the book has a problematic subtext. He also accuses Frankl of having a tone of self-aggrandizement \& a general inhumane sense of studying-detachment towards victims of the Holocaust.
+
+In his book \textit{Faith in Freedom}, psychiatrist \href{https://en.wikipedia.org/wiki/Thomas_Szasz}{Thomas Szasz} states that Frankl's survivor testimony was written to misdirect, \& betrays instead an intent of a transparent effort to conceal Frankl's actions \& his collaboration with the Nazis, \& that, in the assessment of \href{https://en.wikipedia.org/wiki/Raul_Hilberg}{Raul Hilberg}, the founder of \href{https://en.wikipedia.org/wiki/Holocaust_studies}{Holocaust Studies}, Frankl's historical account is a deception akin to \href{https://en.wikipedia.org/wiki/Fragments:_Memories_of_a_Wartime_Childhood}{Binjamin Wilkomirski}'s infamous memoirs, which were translated into 9 languages before being exposed as fraudulent in Hilberg's 1996, \textit{Politics of Memory}. Szasz's criticism of Frankl is not universally embraced. Similarly, Hilberg's allegations have been rebutted by several reviewers.'' -- \href{https://en.wikipedia.org/wiki/Man%27s_Search_for_Meaning#Reception}{Wikipedia\texttt{/}Man's Search for Meaning\texttt{/}reception}
 
 %------------------------------------------------------------------------------%
 
@@ -622,9 +686,16 @@ Let me give you another example, a personal example, of a simple linguistic thin
 
 The 1st sentence of the book begins, ``L'intersection $\ldots$'' (I'll explain in a moment why I am showing this in French). I can tell you that I spent 2 days on this 1 sentence. It's only 1 sentence, but looking back at this sentence, I see now that it is just perfect. There is nothing to change in it; every single word, even the smallest, is important in its own way. I wanted to show you the English translation, but the English translation is so bad compared to the French of Jean-Pierre Serre. Serre's language is \fbox{so efficient, so elegant, so simple}. It is so simple that I don't understand it. Even the smallest words, like ``d'un corps K en,'' this 2-letter word ``en'' is fundamental. Everything, every single word is fundamental. Yet, from the Kolmogorov point of view, this is very simple. But as a student I knew almost nothing about ``anneaux int\`egres'' \& all these other things. It looked so complicated. Finally, at the end of the 2nd day, all of a sudden, I grasped\footnote{\textbf{grasp} [v] \textbf{1.} to understand something completely; \textbf{2.} \textbf{grasp an opportunity} to take an opportunity without hesitating \& use it; \textbf{3.} \textbf{grasp somebody\texttt{/}something} to take a firm hold of somebody\texttt{/}something, \textsc{synonym}: \textbf{grip}; [n] [usually singular] \textbf{1.} a person's understanding of a subject; \textbf{2.} a firm hold of somebody\texttt{/}something or control over somebody\texttt{/}something; \textbf{3.} the ability to get or achieve something.} it \& I was so happy that I could understand it. From Kolmogorov's point of view, it's simple, \& yet for me -- \&, I imagine many students -- it's not simple.
 
-Let me give you another example from Jean-Pierre Serre. I should mention that Serre is perhaps the most famous French mathematician. We mathematicians from France, we consider him to be some kind of (semi) God.
+Let me give you another example from Jean-Pierre Serre. I should mention that Serre is perhaps the most famous French mathematician. We mathematicians from France, we consider him to be some kind of (semi) God. He writes exquisitely\footnote{\textbf{exquisitely} [adv] \textbf{1.} in a way that is extremely beautiful or carefully made; \textbf{2.} (\textit{formal}) in a way that is very strongly felt; \textbf{3.} (\textit{formal}) in way that is very sensitive.}. Most of my students, when they are writing their PhD theses, or whenever they write badly, which is usually the case, I say to them, ``go to the library, open any book of Jean-Pierre Serre, \& try to copy!'' In terms of elegance \& economy, there is nothing better. Back to the example I wanted to mention. A long time ago, maybe 15 years ago, I was giving a talk in the Bourbaki seminar. I was describing a construction in dynamical systems due to Krystyna Kuperberg of a very fascinating counterexample\footnote{\textbf{counterexample} [n] \textbf{counterexample (to something)} an example that provides evidence against an idea or theory.} to an old conjuncture of Herbert Seifert (the construction of a vector field on the 3-sphere with no periodic orbits\footnote{\textbf{orbit} [n] \textbf{1.} [countable, uncountable] the curved path of something that is moving around something else, e.g. the path of the earth moving around the sun. An \textbf{orbit} is also 1 of the movements all the way around something.; \textbf{2.} [singular] an area of activity, interest or influence; [v] [transitive, intransitive] to move in a curved path around something, in the way that the earth moves around the sun.}). This is a wonderful, simple idea, really wonderful. For my talk, I prepared pictures, \& here is 1 of the pictures that I showed (\textsf{Fig. 5. An illustration, reproduced from [2, p. 293].}).
 
-p. 4 (23/314)
+It's not important to my point that you understand what this object is. In my talk I explained the construction saying, you know, ``you do this, \& this $\ldots$'' [\textit{gesturing\footnote{\textbf{gesture} [n] \textbf{1.} [countable, uncountable] a movement that you make with your hands, your head or your face to show a particular meaning; \textbf{2.} [countable] something that you do or say to show a particular feeling or intention; [v] [intransitive, transitive] to move your hands, head, face, etc. as a way of expressing what you mean or want.} towards the picture with both hands}]. After the talk, well, I thought it was successful, people were happy. Then Jean-Pierre Serre came up to me \& said, ``That was interesting what you said. I have a question.'' \& he asked, ``Would you consider this to be a theorem?'' In other words, he was questioning whether the fact that I was using pictures, \& not words, didn't disqualify\footnote{\textbf{disqualify} [v] \textbf{1.} to prevent somebody from being or doing something because they have broken a rule or are not suitable, \textsc{synonym}: \textbf{bar}; \textbf{2.} \textbf{disqualify something (from something\texttt{/}from being something)} to cause something not to belong in a particular group.} me from transmitting mathematics. My feeling, \& this feeling is shared by others who you will see in a second, is that pictures \&, more than pictures, even movies, should be incorporated into the world of mathematics as genuine tools of proof. Not just for fun, but for veracity\footnote{\textbf{veracity} [n] [uncountable] (\textit{formal}) the quality of being true; the habit of telling the truth, \textsc{synonym}: \textbf{truth, truthfulness}.}, \& for presenting mathematics.
+
+So let me explain something to show that I'm far from being the only one to think this way. We'll discuss Hilbert's 24th problem in this meeting, but today I want to discuss the 0th Hilbert problem. When Hilbert gave his famous lecture in Paris on problems for the future of mathematics, his paper contained 23 problems. These were preceded by a general introduction on what makes a good problem, what is interesting, where should we go, etc. There is something in this introduction that I want to show you because I believe that, to this day, it presents a fundamental question for mathematics. The point is that we should incorporate pictures as genuine tools for understanding \& transmitting mathematics. So, here's an extract\footnote{\textbf{extract} [v] \textbf{1.} to remove or obtain a substance from something, e.g. by using an industrial or chemical process.} from Hilbert's introduction of what I call his 0th problem [3]:
+\begin{quotation}
+	\fbox{To new concepts correspond, necessarily, new signs.} These we choose in such a way that they remind us of the phenomena which were the occasion for the formation of the new concepts. So the geometrical figures are signs or mnemonic symbols of space intuition \& are used as such by all mathematicians. Who does not always use along with the double inequality $a > b > c$ the picture of 3 points following one another on a straight line as the geometrical picture of the idea of `between'?
+\end{quotation}
+
+p. 8 (27/314)
 
 '' -- \cite[pp. 3--]{Kossak_Ording2017}
 
@@ -712,8 +783,9 @@ Watch \& listen \href{https://www.youtube.com/watch?v=IPfJnp1guPc}{Youtube\textt
 	\bibitem[NQBH\texttt{/}psychology]{NQBH/psychology} \selectlanguage{vietnamese} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/psychology/NQBH_a_personal_journey_to_psychology.pdf}{\textit{A Personal Journey to Psychology: The Way I Perceive}}. March 2022--now.
 \end{thebibliography}
 
-\selectlanguage{english}
+%------------------------------------------------------------------------------%
 
+\selectlanguage{vietnamese}
 \printbibliography[heading=bibintoc]
 	
 \end{document}
