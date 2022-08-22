@@ -31,6 +31,7 @@
 \newtheorem{remark}{Remark}[section]
 \newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
 \newtheorem{dinhly}{Định lý}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
@@ -1580,7 +1581,7 @@ Tổng quát hơn của bài toán \cite[\textbf{6.}, p. 9]{SGK_Toan_11_hinh_hoc
 Chú ý rằng các tính chất đã nêu của phép tịnh tiến được chứng minh dựa vào tính chất ``\textit{không làm thay đổi khoảng cách giữa 2 điểm}''. Bởi vậy, các phép dời hình cũng có những tính chất đó. Cụ thể ta có:
 
 \begin{dinhly}[\cite{SGK_Toan_11_hinh_hoc_nang_cao}, p. 8; \cite{TL_chuyen_Toan_Hinh_Hoc_11}, p. 6]
-	Phép dời hình biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó, biến 1 đường thằng thành 1 đường thẳng, biến 1 tia thành 1 tia, biến 1 đoạn thẳng thành 1 đoạn thẳng bằng nó, biến 1 tam giác thành 1 tam giác bằng nó, biến 1 đường tròn thành đường tròn có cùng bán kính, trong đó tâm biến thành tâm, biến 1 góc thành 1 góc bằng nó.
+	Phép dời hình biến 3 điểm thẳng hàng thành 3 điểm thẳng hàng \& không làm thay đổi thứ tự 3 điểm đó, biến 1 đường thẳng thành 1 đường thẳng, biến 1 tia thành 1 tia, biến 1 đoạn thẳng thành 1 đoạn thẳng bằng nó, biến 1 tam giác thành 1 tam giác bằng nó, biến 1 đường tròn thành đường tròn có cùng bán kính, trong đó tâm biến thành tâm, biến 1 góc thành 1 góc bằng nó.
 \end{dinhly}
 
 \begin{dinhly}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, p. 6]
@@ -1623,8 +1624,6 @@ Mệnh đề sau đây khẳng định điều ngược lại.
 	Xem \cite[p. 7]{TL_chuyen_Toan_Hinh_Hoc_11}
 \end{proof}
 
-'' -- \cite[pp. 7--]{TL_chuyen_Toan_Hinh_Hoc_11}
-
 %------------------------------------------------------------------------------%
 
 \section{Phép Đối Xứng Trục}
@@ -1632,6 +1631,15 @@ Mệnh đề sau đây khẳng định điều ngược lại.
 %------------------------------------------------------------------------------%
 
 \section{Phép Quay \& Phép Đối Xứng Tâm}
+\texttt{Quick notes.} Hình có tâm đối xứng phải có chẵn đỉnh (i.e., số đỉnh của hình đó phải là 1 số chẵn). Hình có số đỉnh là 1 số lẻ chắc chắn không phải là hình có tâm đối xứng.
+
+Hình có vô số tâm đối xứng, e.g.:
+\begin{itemize}
+	\item 1 đường thẳng với tâm đối xứng là bất kỳ điểm nào thuộc nó, i.e., tập hợp các tâm đối xứng của 1 đường thẳng là chính nó. 
+	\item 2 đường thẳng song song có tâm đối xứng là 1 điểm bất kỳ nằm trên đường thẳng song song \& cách đều 2 đường thẳng đó. Đường thẳng này cũng là tập hợp các tâm đối xứng của hình gồm 2 đường thẳng song song này.
+\end{itemize}
+
+đẳng cự
 
 %------------------------------------------------------------------------------%
 
@@ -1651,9 +1659,77 @@ Mệnh đề sau đây khẳng định điều ngược lại.
 
 %------------------------------------------------------------------------------%
 
-\chapter{Đường Thẳng \& Mặt Phẳng Trong Không Gian -- Line \& Plane in Euclidean Space $\mathbb{R}^n$}
+\chapter{Đường Thẳng \& Mặt Phẳng Trong Không Gian. Quan Hệ Song Song -- Line \& Plane in Euclidean Space $\mathbb{R}^n$. Parallelism}
+
+``Từ trước đến nay trong phần hình học phẳng, chúng ta xem xét các vấn đề, các bài toán trong đó các đối tượng, các hình thể \& các chuyển động đều được cho trong 1 mặt phẳng. Tuy nhiên, trong thực tế, không gian mà chúng đang sống không chỉ bó hẹp trong 1 mặt phẳng; các vật thể, các dịch chuyển mà chúng ta vẫn quan sát hàng ngày không phải lúc nào cũng có thể được mô tả bằng những mô hình đã có trong hình học phẳng. \textit{Hình học không gian}\texttt{/}\textit{hình học khối} đã phần nào giúp ta khắc phục những thiếu sót đó''. ``Bên cạnh điểm \& đường thẳng thư đã có trong hình học phẳng, chúng ta cần xem thêm 1 đối tượng cơ bản nữa là mặt phẳng \& các hình thể được xét đến trong hình học không gian chủ yếu đều có dạng ``khối'' như tứ diện, hình chóp, hình lăng trụ, hình cầu, $\ldots$'' -- \cite[p. 43]{TL_chuyen_Toan_Hinh_Hoc_11}
 
 \section{Đại Cương về Đường Thẳng \& Mặt Phẳng}
+
+\subsection{Điểm, đường thẳng, mặt phẳng, \& các tiên đề}
+``$\ldots$ trong hình học phẳng, điểm, đường thẳng là các đối tượng cơ bản \& xuất phát từ các đối tượng này cũng như từ các mối tương quan ban đầu giữa chúng (mà người ta thường gọi đó là các \textit{tiên đề}), ta có thể xây dựng \& định nghĩa các đối tượng, các khái niệm khác \& thiết lập các mối tương quan mới giữa chúng. Trong hình học không gian, ta sẽ xuất phát từ các đối tượng cơ bản là \textit{điểm, đường thằng, mặt phẳng}. Đây là các đối tượng được thừa nhận từ đầu, không qua định nghĩa. Có thể nói rằng chính chúng là sự thể hiện của những hình tượng, những đường nét quen thuộc mà chúng ta vẫn thường gặp \& cảm nhận được khi quan sát các vật thể xung quanh cùng những chuyển động của chúng trong cuộc sống hằng ngày. E.g., điểm có thể được xem là biểu tượng chung của những ngôi sao lấp lánh trên bầu trời về đêm hoặc những lỗ khoan trên 1 tấm bảng gỗ, $\ldots$ đường thẳng là đường nét chính hiện hữu trong những tia sáng mặt trời hoặc trong những sợi dây được kéo căng, $\ldots$ Còn mặt biển yên ả không gợn sóng hoặc bề mặt 1 bức tường là những hình ảnh thực tế của 1 phần mặt phẳng, $\ldots$
+
+Trong hình học không gian các điểm thường được biểu thị trên hình vẽ bằng các chấm nhỏ \& được ký hiệu bằng các chữ in lớn như: $A,B,C,\ldots$. Các đường thẳng thường được biểu thị bằng các nét kẻ thẳng \& ký hiệu bằng các chữ in thường như: $a,b,c,\ldots$. Còn các mặt phẳng thường được biểu thị bằng các hình bình hành \& ký hiệu bằng chữ cái Hy Lạp hoặc chữ in hoa được ghi trong ngoặc đơn như: $(\alpha),(\beta),(\gamma),\ldots$ hoặc $(P),(Q),\ldots$. Đường thẳng \& mặt phẳng là các tập hợp điểm. Nếu điểm $A$ thuộc đường thẳng $a$, ký hiệu $A\in a$ \& đôi khi còn nói rằng đường thẳng $a$ đi qua điểm $A$. Nếu điểm $A$ thuộc mặt phẳng $(\alpha)$, ký hiệu $A\in(\alpha)$ \& đôi khi còn nói rằng mặt phẳng $(\alpha)$ đi qua điểm $A$. Nếu đường thẳng $a$ chứa trong mặt phẳng $(\alpha)$, ký hiệu $a\subset(\alpha)$ \& đôi khi còn nói rằng mặt phẳng $(\alpha)$ đi qua (hoặc chứa) đường thẳng $a$.
+
+Bên cạnh việc lấy điểm, đường thẳng, mặt phẳng làm các đối tượng cơ bản (mà không định nghĩa), chúng ta còn thừa nhận 1 số tương quan cơ bản giữa chúng (mà không chứng minh). Các tương quan này thường xuất phát từ những nhận định đơn giản nhất về các mối quan hệ giữa điểm, đường thẳng, mặt phẳng có trong thực tế \& thường được gọi là các \textit{tiên đề}. Trên cơ sở các đối tượng cơ bản là điểm, đường thẳng, mặt phẳng, \& các tiên đề được thừa nhận, người ta xây dựng các đối tượng, các khái niệm khác \& thiết lập 1 cách chặt chẽ các tính chất cũng như các mối tương quan giữa các đối tượng mới này.
+
+\begin{tiende}
+	Trong không gian với 2 điểm phân biệt cho trước có 1 \& chỉ 1 đường thẳng đi qua.
+\end{tiende}
+Như vậy với 2 điểm phân $A,B$ tồn tại duy nhất 1 đường thằng chứa cả 2 điểm này \& đường thẳng đó thường được gọi là \textit{đường thẳng $AB$}.
+
+\begin{tiende}
+	\label{TLCT Hinh Hoc 11 Tien de 2 p. 45}
+	Trong không gian, với 3 điểm cho trước không cùng thuộc 1 đường thẳng, có 1 \& chỉ 1 mặt phẳng đi qua.
+\end{tiende}
+Do đó đối với 3 điểm $A,B,C$ không cùng thuộc 1 đường thẳng, tồn tại duy nhất 1 mặt phẳng chứa cả 3 điểm này \& mặt phẳng đó thường được gọi lfa \textit{mặt phẳng đi qua $A,B,C$} \& ký hiệu là $(ABC)$.
+
+\begin{tiende}
+	\label{TLCT Hinh Hoc 11 Tien de 3 p. 45}
+	Trong không gian, 2 mặt phẳng phân biệt có 1 điểm chung thì phải có điểm chung thứ 2.
+\end{tiende}
+
+\begin{tiende}
+	Trong không gian có ít nhất 4 điểm không cùng thuộc bất cứ mặt phẳng nào.
+\end{tiende}
+Nếu có 1 số điểm cùng thuộc 1 mặt phẳng thì ta thường nói rằng các điểm đó \textit{đồng phẳng}. Tiên đề \ref{TLCT Hinh Hoc 11 Tien de 2 p. 45} cho thấy rằng 3 điểm bất kỳ thì luôn luôn đồng phẳng. Nhưng đối với 4 điểm, tiên đề 4 cho thấy rằng điều tương tự không phải bao giờ cũng đúng.
+
+\begin{tiende}
+	Trong mỗi mặt phẳng của không gian, các tiên đề của hình học phẳng đều đúng.
+\end{tiende}
+Như vậy tiên đề này cho phép chúng ta sử dụng các kết quả đã có của hình học phẳng trong trường hợp nếu các đối tượng mà ta đang lưu ý xem xét \& các chuyển động của chúng được giới hạn trong phạm vi 1 mặt phẳng nào đó của không gian.
+
+Từ các tiên đề vừa được phát biểu, chúng ta có thể thiết lập được 1 tổng thể về vị trí tương đối của các đường thẳng \& mặt phẳng trong không gian.'' -- \cite[pp. 43--45]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\subsection{Vị trí tương đối của các đường thẳng \& mặt phẳng trong không gian}
+
+\subsubsection{Vị trí tương đối của 1 đường thẳng \& 1 mặt phẳng}
+``Cho đường thẳng $d$ \& mặt phẳng $(\alpha)$. Có thể xảy ra 1 trong các khả năng sau:
+\begin{itemize}
+	\item Đường thẳng $d$ \& mặt phẳng $(\alpha)$ không có điểm chung. Trong trường hợp này ta sẽ nói rằng đường thẳng $d$ song song với mặt phẳng $(\alpha)$ \& ký hiệu $d\parallel(\alpha)$.
+	\item Đường thẳng $d$ \& mặt phẳng $(\alpha)$ có đúng 1 điểm chung. Trong trường hợp này ta sẽ nói rằng đường thẳng $d$ cắt mặt phẳng $(\alpha)$ tại điểm $A$ \& ký hiệu $d\cap(\alpha) = \{A\}$.
+	\item Đường thẳng $d$ \& mặt phẳng $(\alpha)$ có nhiều hơn 1 điểm chung. Lúc này ta sẽ chứng minh rằng đường thẳng $d$ thuộc mặt phẳng $(\alpha)$ \& ký hiệu $d\subset(\alpha)$. Thật vậy, giả sử $d$ \& $(\alpha)$ có 2 điểm chung là $P$ \& $Q$. Xét đường thẳng $a$ đi qua $P$ \& $Q$ trong mặt phẳng $(\alpha)$. Theo tiên đề 1 thì $d$ \& $a$ phải trùng nhau, thành thử đường thẳng $d$ phải thuộc mặt phẳng $(\alpha)$.
+\end{itemize}
+Vậy \textit{với 1 đường thẳng \& 1 mặt phẳng cho trước thì: Đường thẳng hoặc song song, hoặc cắt mặt phẳng tại 1 điểm hoặc thuộc mặt phẳng đó}.'' -- \cite[p. 46]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\subsubsection{Vị trí tương đối của 2 mặt phẳng}
+``Cho 2 mặt phẳng phân biệt $(\alpha)$ \& $(\beta)$. Có thể xảy ra 1 trong các khả năng sau:
+\begin{itemize}
+	\item Các mặt phẳng $(\alpha)$ \& $(\beta)$ không có điểm chung. Trong trường hợp này ta sẽ nói rằng các mặt phẳng $(\alpha)$ \& $(\beta)$ song song với nhau \& ký hiệu $(\alpha)\parallel(\beta)$.
+	\item Các mặt phẳng $(\alpha)$ \& $(\beta)$ có ít nhất 1 điểm chung. Lúc này ta sẽ chứng minh rằng các mặt phẳng $(\alpha)$ \& $(\beta)$ có phần chung là 1 đường thẳng. Thật vậy theo tiên đề \ref{TLCT Hinh Hoc 11 Tien de 3 p. 45} phải có ít nhất 2 điểm chung là $A$ \& $B$. Theo phần vị trí tương đối của đường thẳng \& mặt phẳng ở trên thì $(\alpha)$ \& $(\beta)$ đều chứa đường thẳng $AB$. Hơn nữa có thể thấy chúng không thể có điểm chung nào khác ngoài đường thẳng $AB$. Nếu không, gọi $C$ là điểm như vậy thì các mặt phẳng $(\alpha)$ \& $(\beta)$ đều đi qua 3 điểm $A,B,C$ không thẳng hàng nên phải trùng nhau. Vô lý. Vậy $(\alpha)$ \& $(\beta)$ có phần chung là đường thẳng $d$. Trong trường hợp này ta thường nói rằng các mặt phẳng $(\alpha)$ \& $(\beta)$ cắt nhau theo \textit{giao tuyến} là đường thẳng $d$ \& ký hiệu $(\alpha)\cap(\beta) = d$.
+\end{itemize}
+Vậy \textit{với 2 mặt phẳng phân biệt cho trước thì: 2 mặt phẳng đó hoặc song song hoặc cắt nhau theo giao tuyến là 1 đường thẳng}.'' -- \cite[pp. 46--47]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\subsubsection{Vị trí tương đối của 2 đường thẳng}
+``Cho 2 đường thẳng phân biệt $a$ \& $b$. Có thể xảy ra 1 trong các khả năng sau:
+\begin{itemize}
+	\item Các đường thẳng $a$ \& $b$ cùng thuộc 1 mặt phẳng. Trong trường hợp này ta thường nói rằng các đường thẳng $a$ \& $b$ đồng phẳng \& trong hình học phẳng ta biết rằng $a$ \& $b$ lúc đó hoặc cắt nhau tại 1 điểm hoặc không cắt nhau. Trường hợp 2 đường thẳng $a$ \& $b$ đồng phẳng \& không cắt nhau, cũng như trong hình học phẳng, ta sẽ nói rằng \textit{$a$ \& $b$ song song với nhau} \& ký hiệu $a\parallel b$.
+	\item Các đường thẳng $a$ \& $b$ không cùng thuộc bất cứ 1 mặt phẳng nào. Trong trường hợp này ta thường nói rằng \textit{các đường thẳng $a$ \& $b$ chéo nhau}. Nhận xét rằng nếu các đường thẳng $a$ \& $b$ chéo nhau thì chúng không có điểm chung. Thật vậy, nếu $a$ \& $b$ chéo nhau \& có điểm chung là $O$. Lấy trên $a$ \& $b$ các điểm $A$ \& $B$ khác $O$. Rõ ràng $O,A,B$ không cùng thuộc 1 đường thẳng. Do đó theo vị trí tương đối giữa đường thẳng \& mặt phẳng thì các đường thẳng $a$ \& $b$ đều thuộc mặt phẳng $(OAB)$. Vô lý! Vậy $a$ \& $b$ không có điểm chung.
+\end{itemize}
+Như vậy có thể thấy rằng khác với hình học phẳng, trong hình học không gian, 2 đường thẳng không có điểm chung không nhất thiết phải song song với nhau mà có thể chéo nhau.
+
+Vậy \textit{với 2 đường thẳng phân biệt trong không gian thì: 2 đường thẳng đó hoặc đồng dạng hoặc chéo nhau. Trong trường hợp đồng phẳng, chúng hoặc cắt nhau tại 1 điểm hoặc song song với nhau}.'' -- \cite[pp. 47--48]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\subsection{Xác định mặt phẳng trong không gian}
 
 %------------------------------------------------------------------------------%
 
