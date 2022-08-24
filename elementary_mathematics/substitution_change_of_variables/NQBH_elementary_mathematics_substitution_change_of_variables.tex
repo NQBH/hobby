@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Substitution \& Change of Variables in Elementary Mathematics}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{english}
+\begin{abstract}
+	Various substitutions in elementary mathematics. This text is also a chapter in the book \textit{Some Topics in Inequality} written by the author.
+\end{abstract}
+
+\tableofcontents
+\selectlanguage{vietnamese}
+
+%------------------------------------------------------------------------------%
+
+\section{Basic Concepts}
+Start from some basic concepts:
+
+\begin{definition}[Change of variables]
+	``In mathematics, a \emph{change of variables} is a basic technique used to simplify problems in which the original \href{https://en.wikipedia.org/wiki/Variable_(mathematics)}{variables} are replaced with \href{https://en.wikipedia.org/wiki/Function_(mathematics)}{functions} of other variables.'' -- \href{https://en.wikipedia.org/wiki/Change_of_variables}{Wikipedia\emph{\texttt{/}}change of variables}
+\end{definition}
+``The intent is that when expressed in new variables, \textit{the problem may become simpler, or equivalent to a better understood problem}. Change of variables is an operation that is related to \href{https://en.wikipedia.org/wiki/Substitution_(algebra)}{\textit{substitution}}. However, these are different operations, as can be seen when considering \href{https://en.wikipedia.org/wiki/Derivative}{differentiation} (\href{https://en.wikipedia.org/wiki/Chain_rule}{chain rule}) or \href{https://en.wikipedia.org/wiki/Integral}{integration} (\href{https://en.wikipedia.org/wiki/Integration_by_substitution}{integration by substitution}).'' -- \href{https://en.wikipedia.org/wiki/Change_of_variables}{Wikipedia\texttt{/}change of variables}
+
+\begin{definition}[Substitution (algebra)]
+	``In \href{https://en.wikipedia.org/wiki/Algebra}{algebra}, the operation of \emph{substitution} can be applied in various contexts involving formal objects containing symbols (often called \href{https://en.wikipedia.org/wiki/Variable_(mathematics)}{variables} or \href{https://en.wikipedia.org/wiki/Indeterminate_(variable)}{indeterminates}); the operation consists of systematically replacing occurrences of some symbol by a given value.'' -- \href{https://en.wikipedia.org/wiki/Substitution_(algebra)}{Wikipedia\emph{\texttt{/}}substitution (algebra)}
+\end{definition}
+``Substitution is a basic operation of \href{https://en.wikipedia.org/wiki/Computer_algebra}{computer algebra}. It is generally called ``subs'' or ``subst'' in \href{https://en.wikipedia.org/wiki/Computer_algebra_system}{computer algebra systems}.'' -- \href{https://en.wikipedia.org/wiki/Substitution_(algebra)}{Wikipedia\texttt{/}substitution (algebra)}
+
+\begin{example}[Substitution in some CASs]
+	
+\end{example}
+
+\begin{example}[Substitution in some programming languages]
+	
+\end{example}
+
+``A common case of substitution involves \href{https://en.wikipedia.org/wiki/Polynomial}{polynomials}, where substitution of a numerical value for the indeterminate of a (univariate) polynomial amounts of evaluating the polynomial at that value. Indeed, this operation occurs so frequently that the notation for polynomials is often adapted to it.'' -- \href{https://en.wikipedia.org/wiki/Substitution_(algebra)}{Wikipedia\texttt{/}substitution (algebra)}
+
+\begin{example}[Substitution in polynomial]
+	Let $P(x)\coloneqq\sum_{i=0}^n a_ix^i$ be a polynomial of degree $n$, $a_i\in\mathbb{R}$, $i = 0,\ldots,n$, $a_n\ne 0$, $\deg P = n$. Then the value of $P(x)$ when\emph{\texttt{/}}at the point $x = a$ for some $a\in\mathbb{R}$ can be calculated by plugging the substitution $x = a$ into $P(x)$, i.e., $P(a) = \sum_{i=0}^n a_ia^i$, $\forall a\in\mathbb{R}$. Similarly, with $f:\mathbb{R}\to\mathbb{R}$ be an arbitrary function, the composition function $(P\circ f)(x) = P(f(x))$ can be obtained by substituting ``$x = f(x)$'' into $P(x)$, i.e., $P(f(x)) = \sum_{i=0}^n a_i(f(x))^i$, $\forall x\in\mathbb{R}$.
+\end{example}
+
+%------------------------------------------------------------------------------%
+
+\section{Various Forms of Substitutions \& Changes of Variables}
+
+\subsection{Substitution in Solving Equations \& Inequations}
+
+\subsection{Substitution in Proving Inequality}
+
+\subsection{Integration by Substitution}
+
+\subsection{Trigonometric Substitution}
+
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
