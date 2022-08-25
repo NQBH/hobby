@@ -238,7 +238,9 @@ Mở rộng \cite[Ví dụ 1, p. 87]{TL_chuyen_Toan_Dai_So_Giai_Tich_11} cho tr�
 
 %------------------------------------------------------------------------------%
 
-\section{Dãy Số. Cấp Số Cộng \& Cấp Số Nhân -- Series. Arithmetic Progression\texttt{/}Sequence \& Geometric Progression\texttt{/}Sequence}
+\section{Dãy Số. Cấp Số Cộng \& Cấp Số Nhân -- Sequence. Arithmetic Progression \& Geometric Progression}
+
+\subsection{Phương Pháp Quy Nạp Toán Học -- Method of Mathematical Induction}
 
 \begin{baitoan}
 	Chứng minh bằng quy nạp quy tắc cộng \& quy tắc nhân tổng quát.
@@ -247,6 +249,66 @@ Mở rộng \cite[Ví dụ 1, p. 87]{TL_chuyen_Toan_Dai_So_Giai_Tich_11} cho tr�
 \begin{baitoan}
 	Chứng minh bằng quy nạp công thức tính số phần tử của hợp $n$, $n\in\mathbb{N}^\star$, $n\ge 2$ tập hợp bất kỳ.
 \end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Dãy số -- Sequence}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{1.}, p. 121]
+	Tìm $5$ số hạng đầu của mỗi dãy số sau:
+	\begin{enumerate*}
+		\item[(a)] Dãy số $(u_n)$ với $u_n = \left(1 + \frac{1}{n}\right)^n$, $\forall n\in\mathbb{N}^\star$.
+		\item[(b)] Dãy số $(u_n)$ xác định bởi $u_1 = 1$, $u_2 = -2$, \& $u_{n+1} = u_n - 2u_{n-1}$, $\forall n\ge 2$.
+		\item[(c)] $(u_n)$ là dãy các hợp số nguyên dương sắp theo thứ tự tăng dần.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{2.}, p. 121]
+	Cho dãy số $(u_n)$ xác định bởi: $u_0 = 2$, $u_1 = 5$, \& $u_{n+1} = 5u_n - 6u_{n-1}$, $\forall n\in\mathbb{N}^\star$. Bằng phương pháp quy nạp, chứng minh rằng với $u_n = 2^n + 3^n$, $\forall n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{3.}, p. 122]
+	Cho $\Delta ABC$ đều có cạnh bằng $4$. Trên cạnh $BC$, ta lấy điểm $A_1$ sao cho $CA_1 = 1$. Gọi $B_1$ là hình chiếu của $A_1$ trên $CA$, $C_1$ là hình chiếu của $B_1$ trên $AB$, $A_2$ là hình chiếu của $C_1$ trên $BC$, $B_2$ là hình chiếu của $A_2$ trên $CA$, $\ldots$ \& cứ tiếp tục như thế. Đặt $u_n = CA_n$. Cho dãy số $(u_n)$ nói trên bởi hệ thức truy hồi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{4.}, p. 122]
+	Xét tính tăng, giảm, bị chặn trên, bị chặn dưới của các dãy số sau:
+	\begin{enumerate*}
+		\item[(a)] Dãy số $(u_n)$ với $u_n = n^3 - 3n^2 + 5n - 7$.
+		\item[(b)] Dãy số $(u_n)$ với $u_n = \frac{n + 1}{3^n}$.
+		\item[(c)] Dãy số $(a_n)$ với $a_{n+1} = \sqrt{n + 1} - \sqrt{n}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{5.}, p. 122]
+	Xét các dãy số $(u_n)$, $(v_n)$ xác định như sau: $u_n = \left(1 + \frac{1}{n}\right)^n$, $v_n = \left(1 + \frac{1}{n}\right)^{n+1}$, $\forall n\in\mathbb{N}^\star$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh rằng $(u_n)$ là dãy số tăng còn $(v_n)$ là dãy số giảm;
+		\item[(b)] Chứng minh rằng $(u_n),(v_n)$ là các dãy số bị chặn.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{6.}, p. 122]
+	Cho dãy số $(u_n)$ xác định bởi $u_1 = 1$ \& $u_{n+1} = u_n + (n + 1)2^n$, $\forall n\in\mathbb{N}^\star$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh rằng $(u_n)$ là 1 dãy số tăng.
+		\item[(b)] Chứng minh rằng $u_n = 1 + (n - 1)2^n$, $\forall n\in\mathbb{N}^\star$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Dai_So_Giai_Tich_11}, \textbf{7.}, p. 122]
+	Cho dãy số $(u_n)$ xác định bởi $u_1 = 1$, $u_2 = 2$, $u_{n+1} = au_n - u_{n-1}$, $\forall n\in\mathbb{N}$, $n\ge 2$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh rằng với $a = \sqrt{3}$ thì dãy số $(u_n)$ tuần hoàn.
+		\item[(b)] Chứng minh rằng với $a = \frac{3}{2}$ thì dãy số $(u_n)$ không tuần hoàn.
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Cấp số -- Progression}
+
+
 
 %------------------------------------------------------------------------------%
 
