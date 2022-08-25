@@ -1478,7 +1478,7 @@ Công thức trên gọi là \textit{biểu thức tọa độ của phép tịn
 	\begin{enumerate*}
 		\item[(a)] $A' = T_{\vec{u}}(A)$, $B' = T_{\vec{u}}(B)$, sử dụng biểu thức tọa độ của phép tịnh tiến $T_{\vec{u}}$, thu được $A'(a_1 + u_1;a_2 + u_2)$, $B'(b_1 + u_1;b_2 + u_2)$.
 		\item[(b)] Giả sử $C(c_1;c_2)$, $A = T_{\vec{u}}(C)$,\footnote{Sử dụng bài toán \ref{prob:phep tinh tien} cho ta $C = T_{-\vec{u}}(A)$, có thể sử dụng biểu thức tọa độ của $T_{-\vec{u}}$ để thu được trực tiếp $c_i = a_i - u_i$, $i = 1,2$.} sử dụng biểu thức tọa độ của $T_{\vec{u}}$, thu được $a_i = c_i + u_i$, $i = 1,2$, suy ra $c_i = a_i - u_i$, $i = 1,2$, hay $C(a_1 - u_1,a_2 - u_2)$.
-		\item[(c)] Nếu $\vec{u} = \vec{0}$ thì $d\equiv d'$ \& có chung phương trình $ax + by + c = 0$. Nếu $\vec{u}\ne\vec{0}$. Giả sử đường thẳng $d'$ có phương trình $a'x + b'y + c' = 0$ với $a',b'\in\mathbb{R}$ với $(a')^2 + (b')^2\ne 0$. Sử dụng hệ quả \ref{cor:phep tinh tien} thu được $d'\parallel d$, nên $\frac{a}{a'} = \frac{b}{b'} = \frac{c}{c'} = k = \mbox{const}$ với quy ước nếu mẫu số bằng $0$ thì tử bằng $0$. W.l.o.g., có thể giả sử $a' = a$, $b' = b$ (chia các hệ số của $d'$ cho hằng số $k$ trong dãy tỷ số bằng nhau vừa thu được), ta cần tìm $c'$ bằng cách xác định 1 điểm thuộc $d'$. Vì $a^2 + b^2\ne 0$, 1 trong số $a,b$ phải khác $0$. W.l.o.g., giả sử $a\ne 0$, thì điểm $D_1\left(-\frac{c}{a};0\right)\in d$, khi đó ảnh của $D_1$ qua $T_{\vec{u}}$ là $D_1'\coloneqq T_{\vec{u}}(D_1) = \left(-\frac{c}{a} + u_1;u_2\right)\in d'$, i.e., $a\left(-\frac{c}{a} + u_1\right) + bu_2 + c' = 0$, hay $c' = c - au_1 - bu_2$. (Nếu $b\ne 0$, thì có thể lấy điểm $D_2\left(0;-\frac{c}{b}\right)$, khi đó $D_2'\coloneqq T_{\vec{u}}(D_2) = \left(u_1;-\frac{c}{b} + u_2\right)\in d'$, i.e., $au_1 + b\left(-\frac{c}{b} + u_2\right) + c' = 0$, cũng cho ta $c' = c - au_1 - bu_2$.). Vậy phương trình đường thẳng $d' = T_{\vec{u}}(d)$ là $ax + by + c - au_1 - bu_2 = 0$.
+		\item[(c)] Nếu $\vec{u} = \vec{0}$ thì $d\equiv d'$ \& có chung phương trình $ax + by + c = 0$. Nếu $\vec{u}\ne\vec{0}$. Giả sử đường thẳng $d'$ có phương trình $a'x + b'y + c' = 0$ với $a',b'\in\mathbb{R}$ với $(a')^2 + (b')^2\ne 0$. Sử dụng hệ quả \ref{cor:phep tinh tien} thu được $d'\equiv d$ hoặc $d'\parallel d$, nên $\frac{a}{a'} = \frac{b}{b'} = \frac{c}{c'} = k = \mbox{const}$ với quy ước nếu mẫu số bằng $0$ thì tử bằng $0$. W.l.o.g., có thể giả sử $a' = a$, $b' = b$ (chia các hệ số của $d'$ cho hằng số $k$ trong dãy tỷ số bằng nhau vừa thu được), ta cần tìm $c'$ bằng cách xác định 1 điểm thuộc $d'$. Vì $a^2 + b^2\ne 0$, 1 trong số $a,b$ phải khác $0$. W.l.o.g., giả sử $a\ne 0$, thì điểm $D_1\left(-\frac{c}{a};0\right)\in d$, khi đó ảnh của $D_1$ qua $T_{\vec{u}}$ là $D_1'\coloneqq T_{\vec{u}}(D_1) = \left(-\frac{c}{a} + u_1;u_2\right)\in d'$, i.e., $a\left(-\frac{c}{a} + u_1\right) + bu_2 + c' = 0$, hay $c' = c - au_1 - bu_2$. (Nếu $b\ne 0$, thì có thể lấy điểm $D_2\left(0;-\frac{c}{b}\right)$, khi đó $D_2'\coloneqq T_{\vec{u}}(D_2) = \left(u_1;-\frac{c}{b} + u_2\right)\in d'$, i.e., $au_1 + b\left(-\frac{c}{b} + u_2\right) + c' = 0$, cũng cho ta $c' = c - au_1 - bu_2$.). Vậy phương trình đường thẳng $d' = T_{\vec{u}}(d)$ là $ax + by + c - au_1 - bu_2 = 0$.
 	\end{enumerate*}
 \end{proof}
 
@@ -1666,7 +1666,7 @@ Hình có vô số tâm đối xứng, e.g.:
 \section{Đại Cương về Đường Thẳng \& Mặt Phẳng}
 
 \subsection{Điểm, đường thẳng, mặt phẳng, \& các tiên đề}
-``$\ldots$ trong hình học phẳng, điểm, đường thẳng là các đối tượng cơ bản \& xuất phát từ các đối tượng này cũng như từ các mối tương quan ban đầu giữa chúng (mà người ta thường gọi đó là các \textit{tiên đề}), ta có thể xây dựng \& định nghĩa các đối tượng, các khái niệm khác \& thiết lập các mối tương quan mới giữa chúng. Trong hình học không gian, ta sẽ xuất phát từ các đối tượng cơ bản là \textit{điểm, đường thằng, mặt phẳng}. Đây là các đối tượng được thừa nhận từ đầu, không qua định nghĩa. Có thể nói rằng chính chúng là sự thể hiện của những hình tượng, những đường nét quen thuộc mà chúng ta vẫn thường gặp \& cảm nhận được khi quan sát các vật thể xung quanh cùng những chuyển động của chúng trong cuộc sống hằng ngày. E.g., điểm có thể được xem là biểu tượng chung của những ngôi sao lấp lánh trên bầu trời về đêm hoặc những lỗ khoan trên 1 tấm bảng gỗ, $\ldots$ đường thẳng là đường nét chính hiện hữu trong những tia sáng mặt trời hoặc trong những sợi dây được kéo căng, $\ldots$ Còn mặt biển yên ả không gợn sóng hoặc bề mặt 1 bức tường là những hình ảnh thực tế của 1 phần mặt phẳng, $\ldots$
+``$\ldots$ trong hình học phẳng, điểm, đường thẳng là các đối tượng cơ bản \& xuất phát từ các đối tượng này cũng như từ các mối tương quan ban đầu giữa chúng (mà người ta thường gọi đó là các \textit{tiên đề}), ta có thể xây dựng \& định nghĩa các đối tượng, các khái niệm khác \& thiết lập các mối tương quan mới giữa chúng. Trong hình học không gian, ta sẽ xuất phát từ các đối tượng cơ bản là \textit{điểm, đường thẳng, mặt phẳng}. Đây là các đối tượng được thừa nhận từ đầu, không qua định nghĩa. Có thể nói rằng chính chúng là sự thể hiện của những hình tượng, những đường nét quen thuộc mà chúng ta vẫn thường gặp \& cảm nhận được khi quan sát các vật thể xung quanh cùng những chuyển động của chúng trong cuộc sống hằng ngày. E.g., điểm có thể được xem là biểu tượng chung của những ngôi sao lấp lánh trên bầu trời về đêm hoặc những lỗ khoan trên 1 tấm bảng gỗ, $\ldots$ đường thẳng là đường nét chính hiện hữu trong những tia sáng mặt trời hoặc trong những sợi dây được kéo căng, $\ldots$ Còn mặt biển yên ả không gợn sóng hoặc bề mặt 1 bức tường là những hình ảnh thực tế của 1 phần mặt phẳng, $\ldots$
 
 Trong hình học không gian các điểm thường được biểu thị trên hình vẽ bằng các chấm nhỏ \& được ký hiệu bằng các chữ in lớn như: $A,B,C,\ldots$. Các đường thẳng thường được biểu thị bằng các nét kẻ thẳng \& ký hiệu bằng các chữ in thường như: $a,b,c,\ldots$. Còn các mặt phẳng thường được biểu thị bằng các hình bình hành \& ký hiệu bằng chữ cái Hy Lạp hoặc chữ in hoa được ghi trong ngoặc đơn như: $(\alpha),(\beta),(\gamma),\ldots$ hoặc $(P),(Q),\ldots$. Đường thẳng \& mặt phẳng là các tập hợp điểm. Nếu điểm $A$ thuộc đường thẳng $a$, ký hiệu $A\in a$ \& đôi khi còn nói rằng đường thẳng $a$ đi qua điểm $A$. Nếu điểm $A$ thuộc mặt phẳng $(\alpha)$, ký hiệu $A\in(\alpha)$ \& đôi khi còn nói rằng mặt phẳng $(\alpha)$ đi qua điểm $A$. Nếu đường thẳng $a$ chứa trong mặt phẳng $(\alpha)$, ký hiệu $a\subset(\alpha)$ \& đôi khi còn nói rằng mặt phẳng $(\alpha)$ đi qua (hoặc chứa) đường thẳng $a$.
 
@@ -1675,7 +1675,7 @@ Bên cạnh việc lấy điểm, đường thẳng, mặt phẳng làm các đ�
 \begin{tiende}
 	Trong không gian với 2 điểm phân biệt cho trước có 1 \& chỉ 1 đường thẳng đi qua.
 \end{tiende}
-Như vậy với 2 điểm phân $A,B$ tồn tại duy nhất 1 đường thằng chứa cả 2 điểm này \& đường thẳng đó thường được gọi là \textit{đường thẳng $AB$}.
+Như vậy với 2 điểm phân $A,B$ tồn tại duy nhất 1 đường thẳng chứa cả 2 điểm này \& đường thẳng đó thường được gọi là \textit{đường thẳng $AB$}.
 
 \begin{tiende}
 	\label{TLCT Hinh Hoc 11 Tien de 2 p. 45}
@@ -1727,17 +1727,102 @@ Vậy \textit{với 2 mặt phẳng phân biệt cho trước thì: 2 mặt ph�
 \end{itemize}
 Như vậy có thể thấy rằng khác với hình học phẳng, trong hình học không gian, 2 đường thẳng không có điểm chung không nhất thiết phải song song với nhau mà có thể chéo nhau.
 
-Vậy \textit{với 2 đường thẳng phân biệt trong không gian thì: 2 đường thẳng đó hoặc đồng dạng hoặc chéo nhau. Trong trường hợp đồng phẳng, chúng hoặc cắt nhau tại 1 điểm hoặc song song với nhau}.'' -- \cite[pp. 47--48]{TL_chuyen_Toan_Hinh_Hoc_11}
+Vậy \textit{với 2 đường thẳng phân biệt trong không gian thì: 2 đường thẳng đó hoặc đồng phẳng hoặc chéo nhau. Trong trường hợp đồng phẳng, chúng hoặc cắt nhau tại 1 điểm hoặc song song với nhau}.'' -- \cite[pp. 47--48]{TL_chuyen_Toan_Hinh_Hoc_11}
 
 \subsection{Xác định mặt phẳng trong không gian}
+``Từ tiên đề \ref{TLCT Hinh Hoc 11 Tien de 2 p. 45} ở trên, ta biết rằng 1 mặt phẳng được xác định bởi 3 điểm cho trước không cùng thuộc 1 đường thẳng. Trong các phần lý thuyết \& bài tập về sau, mặt phẳng còn có thể được xác định bằng các cách thức khác. Ta nói rằng mặt phẳng được xác định bởi 1 cách thức nếu tồn tại duy nhất 1 mặt phẳng thỏa mãn tất cả các yêu cầu của cách thức đó. Mệnh đề sau đây cho ta 1 số cách thức xác định mặt phẳng quan trọng nhất.
+
+\begin{menhde}
+	1 mặt phẳng trong không gian có thể được xác định bởi 1 trong các cách thức sau:
+	\begin{enumerate*}
+		\item[(a)] Mặt phẳng đó đi qua 3 điểm không cùng thuộc 1 đường thẳng;
+		\item[(b)] Mặt phẳng đó đi qua 1 đường thẳng \& 1 điểm ngoài đường thẳng ấy;
+		\item[(c)] Mặt phẳng đó đi qua 2 đường thẳng cắt nhau;
+		\item[(d)] Mặt phẳng đó đi qua 2 đưởng thẳng song song với nhau.
+	\end{enumerate*}
+\end{menhde}
+
+\begin{proof}[Chứng minh]
+	\begin{enumerate*}
+		\item[\textbf{(a)}] Tiên đề \ref{TLCT Hinh Hoc 11 Tien de 2 p. 45}.
+		\item[\textbf{(b)}] Cho đường thẳng $d$ \& điểm $A$ ở ngoài $d$. Ta chứng minh tồn tại duy nhất 1 mặt phẳng $(\alpha)$ đi qua $d$ \& $A$. Thật vậy, lấy trên đường thẳng $d$ 2 điểm $B,C$ \& gọi $(\alpha)$ là mặt phẳng đi qua 3 điểm $A,B,C$ thì đường thẳng $d$ phải thuộc mặt phẳng $(\alpha)$ thành thử $(\alpha)$ đi qua $d$ \& $A$. Do mọi mặt phẳng chứa $d$ \& $A$ đều phải đi qua 3 điểm $A,B,C$ nên theo tiên đề \ref{TLCT Hinh Hoc 11 Tien de 2 p. 45}, $(\alpha)$ chính là mặt phẳng duy nhất đi qua đường thẳng $d$ \& điểm $A$.
+		\item[\textbf{(c)}--\textbf{(d)}] Cho 2 đường thẳng $a$ \& $b$ cắt nhau hoặc song song với nhau. Theo vị trí tương đối của 2 đường thẳng thì $a$ \& $b$ cùng thuộc 1 mặt phẳng $(\alpha)$. Theo vị trí tương đối của 2 mặt phẳng thì 2 mặt phẳng phân biệt không có chung 2 đường thẳng khác nhau nên $(\alpha)$ chính là mặt phẳng duy nhất đi qua các đường thẳng $a$ \& $b$.
+	\end{enumerate*}
+\end{proof}
+Mặt phẳng đi qua đường thẳng $d$ \& điểm $A$ ở ngoài nó thường được ký hiệu là mặt phẳng $(d;A)$. Mặt phăng đi qua 2 đường thẳng $a$ \& $b$ cắt nhau hoặc song song với nhau thường được ký hiệu là mặt phẳng $(a;b)$.'' -- \cite[pp. 48--49]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\begin{nhanxet}
+	``Giao tuyến của 2 mặt phẳng là 1 đường thẳng; do vậy việc xác định giao tuyến của 2 mặt phẳng tương đương với việc xác định 2 điểm cùng thuộc đồng thời 2 mặt phẳng đã cho. Ngoài ra, nếu biết được rằng 3 điểm cũng thuộc đồng thời 2 mặt phẳng thì 3 điểm đó phải nằm trên 1 đường thẳng.'' -- \cite[p. 50]{TL_chuyen_Toan_Hinh_Hoc_11}
+\end{nhanxet}
+
+\subsection{Hình chóp \& tứ diện}
+
+\subsubsection{Hình chóp}
+``Hình chóp $S.A_1A_2\ldots A_n$ là hình được lập thành tử 1 đa giác $A_1A_2\ldots A_n$ \& điểm $S$ nằm ngoài mặt phẳng chứa đa giác. Điểm $S$ được gọi là \textit{đỉnh} của hình chóp. Đa giác $A_1A_2\ldots A_n$ được gọi là \textit{đáy} của hình chóp \& các đoạn $A_iA_{i+1}$, $i = 1,\ldots,n$, với $A_{n+1}\coloneqq A_1$, được gọi là các \textit{cạnh đáy} của hình chóp. Các $\Delta SA_iA_{i+1}$, $i = 1,\ldots,n$, được gọi là các \textit{mặt bên} của hình chóp. Các đoạn $SA_i$, $i = 1,\ldots,n$ được gọi là các \textit{cạnh bên} của hình chóp. Nếu đáy là tam giác, tứ giác hoặc ngũ giác, $\ldots$ thì hình chóp tương ứng được gọi là \textit{hình chóp tam giác, tứ giác hoặc ngũ giác}, $\ldots$'' -- \cite[pp. 51--52]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\subsubsection{Tứ diện}
+``Tứ diện $ABCD$ là hình được lập thanh từ 4 điểm không đồng phẳng $A,B,C,D$. Các điểm $A,B,C,D$ được gọi là các \textit{đỉnh} của tứ diện, các $\Delta BCD,\Delta CDA,\Delta DAB,\Delta ABC$ được gọi là các \textit{mặt} của tứ diện đối diện với các đỉnh $A,B,C,D$ \& các đoạn $AB,CD,AC,BD,AD,BC$ được gọi là \textit{cạnh} của tứ diện. Trong đó các cặp cạnh $AB$ \& $CD$, $AC$ \& $BD$, $AD$ \& $BC$ thường được gọi là các \textit{cặp cạnh đối} của tứ diện. Như vậy khác với hình chóp tam giác khi 1 đỉnh đã được chọn trước \& 3 điểm còn lại lập thành đáy hình chóp, trong tứ diện mỗi 1 trong 4 điểm đã cho đều là đỉnh \& 3 điểm còn lại lập thành mặt đối của đỉnh đó.'' -- \cite[p. 52]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\begin{nhanxet}
+	\begin{enumerate*}
+		\item[(a)] ``Để xác định giao điểm của đường thẳng $d$ với mặt phẳng $(\alpha)$, ta thường đi tìm trước 1 đường thẳng $a$ trong mặt phẳng $(\alpha)$ sao cho $a$ \& $d$ đồng phẳng \& lấy giao điểm của $d$ \& $a$ Việc tìm đường thẳng $a$ như vậy thường yêu cầu phải dựng thêm 1 vài điểm bổ sung trong mặt phẳng $(\alpha)$.
+		\item[(b)] Việc xác định giao tuyến của 2 mặt phẳng \& xác định giao điểm của đường thẳng \& mặt phẳng chính là phương tiện giúp chúng ta giải quyết vấn đề xác định thiết diện của 1 hình cắt bởi 1 mặt phẳng.'' ``Cho hình chóp $S.A_1A_2\ldots A_n$ \& mặt phẳng $(\alpha)$. Lúc đó mặt phẳng $(\alpha)$ có thể cắt 1 số mặt của hình chóp (${\rm mp}(\alpha)$ có thể không cắt hết các mặt của hình chóp). Mỗi mặt như vậy được $(\alpha)$ cắt theo 1 đoạn thẳng gọi là \emph{đoạn giao tuyến} (Fig. \ref{fig:thiet_dien_hinh_chop}). Khi sắp các đoạn giao tuyến đó 1 cách liên tiếp: $P_iP_{i+1}$, $i = 1,\ldots,m$, với $P_{m+1}\coloneqq P_1$ (điểm đầu của đoạn sau là điểm cuối của đoạn trước), ta được các cạnh liền nhau của 1 đa giác $P_1P_2\ldots P_m$. Đa giác này chính là \emph{thiết diện} (đôi khi còn gọi là \emph{mặt cắt}) của hình chóp cắt bởi mặt phẳng $(\alpha)$.'' -- \cite[pp. 53--54]{TL_chuyen_Toan_Hinh_Hoc_11}
+	\end{enumerate*}
+\end{nhanxet}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.13]{thiet_dien_hinh_chop}
+	\caption{Thiết diện của hình chóp, \cite[Hình 2.10, p. 53]{TL_chuyen_Toan_Hinh_Hoc_11}.}
+	\label{fig:thiet_dien_hinh_chop}
+\end{figure}
+
+\begin{nhanxet}
+	``Để xác định thiết diện của hình chóp $S.A_1A_2\ldots A_n$ cắt bởi mặt phẳng $(\alpha)$ với các đường thẳng chứa các cạnh của hình chóp. Thiết diện cần xác định chính là đa giác với các đỉnh phải là các giao điểm của $(\alpha)$ với các cạnh của hình chóp (\& mỗi cạnh của thiết diện phải là 1 đoạn giao tuyến với 1 mặt của hình chóp).'' -- \cite[p. 55]{TL_chuyen_Toan_Hinh_Hoc_11}
+\end{nhanxet}
 
 %------------------------------------------------------------------------------%
 
-\section{2 Đường Thẳng Song Song}
+\section{Quan Hệ Song Song -- Parallelism}
+``Quá trình xác định thiết diện của 1 hình cắt bởi 1 mặt phẳng thường được thực hiện thông qua việc tìm giao tuyến của 2 mặt phẳng cũng như tìm giao điểm của 1 đường thẳng \& 1 mặt phẳng. Trong quá trình đó, mỗi đỉnh của 1 thiết diện cần dựng có thể xác định như là giao điểm của 2 đường thẳng đồng phẳng được chọn lựa phù hợp với tình hình cụ thể của từng bài toán. Trong 1 vài trường hợp, khi 2 đường thẳng đồng phẳng được chọn lựa không thể cắt nhau, việc tìm các yếu tố cần thiết cho bài toán xác định thiết diện (như giao tuyến, giao điểm) có thể được thực hiện dựa trên 1 số tính chất liên quan đến các mối quan hệ song song. Các tính chất này còn cho phép chúng ta bổ sung thêm những cách thức khác để xác định 1 đường thẳng hoặc 1 mặt phẳng trong không gian.'' -- \cite[p. 59]{TL_chuyen_Toan_Hinh_Hoc_11}
 
-%------------------------------------------------------------------------------%
+\subsection{Đường thẳng song song với đường thẳng}
 
-\section{Đường Thẳng Song Song với Mặt Phẳng}
+\subsubsection{Định nghĩa}
+``2 đường thẳng phân biệt bất kỳ hoặc chéo nhau hoặc đồng phẳng \& nếu đồng phẳng thì 2 đường thẳng đó hoặc cắt nhau tại 1 điểm hoặc không cắt nhau. Nếu 2 đường thẳng phân biệt đồng phẳng \& không cắt nhau thì cũng như trong hình học phẳng ta nói rằng 2 đường thẳng đó song song với nhau. Vậy, trong không gian: 2 đường thẳng $a$ \& $b$ được gọi là \textit{song song} với nhau, ký hiệu $a\parallel b$, nếu chúng đồng phẳng \& không cắt nhau.'' -- \cite[pp. 59--60]{TL_chuyen_Toan_Hinh_Hoc_11}
+
+\subsubsection{Tính chất}
+``Trong hình học phẳng, ta biết rằng với 1 đường thẳng $d$ cho trước \& 1 điểm $A$ cho trước nằm ngoài $d$, tồn tại duy nhất 1 đường thẳng $a$ đi qua $A$ \& song song với $d$. Khẳng định này cho ta 1 cách xác định đường thẳng trong mặt phẳng \& được thừa nhận như là 1 tiên đề. Tiên đề này thường được gọi là \textit{tiên đề 5 của hình học phẳng}. Trong không gian, tính chất này cũng đúng nhưng khác với trong mặt phẳng, nó có thể được chứng minh bằng cách sử dụng tiên đề 5 của hình học phẳng.
+
+\begin{dinhly}
+	Trong không gian, cho đường thẳng $d$ \& điểm $A$ ngoài $d$. Lúc đó tồn tại duy nhất 1 đường thẳng $a$ đi qua điểm $A$ \& song song với đường thẳng $d$.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Xét mặt phẳng $(d;A)$. Trong mặt phẳng này theo tiên đề 5 của hình học phẳng, tồn tại 1 đường thẳng $a$ đi qua $A$ \& song song với đường thẳng $d$. Nếu trong không gian còn có 1 đường thẳng $b$ cũng đi qua $A$ \& song song với $d$ thì mặt phẳng $(d;b)$ xác định bởi các đường thẳng song song $b$ \& $d$ cũng chính là mặt phẳng $(d;A)$. Theo tính chất của tiên đề 5 trong mặt phẳng này thì các đường thẳng $a$ \& $b$ phải trùng nhau. Vậy đường thẳng $a$ tồn tại \& duy nhất.
+\end{proof}
+Định lý vừa được chứng minh cho ta thêm 1 cách xác định đường thẳng trong không gian: đó là đường thẳng đi qua 1 điểm \& song song với 1 đường thẳng cho trước không chứa điểm đó. Kết hợp với mệnh đề dưới đây, nó còn cho 1 phương thức bổ sung để tìm giao tuyến của 2 mặt phẳng.
+
+\begin{menhde}
+	\label{TLCT Hinh Hoc 11 Menh de 1 p. 61}
+	Nếu 2 mặt phẳng chứa lần lượt 2 đường thẳng song song với nhau \& 2 mặt phẳng đó cắt nhau theo 1 đường thẳng thì đường thẳng này song song với cả 2 đường thẳng trên hoặc trùng với 1 trong chúng.
+\end{menhde}
+
+\begin{proof}[Chứng minh]
+	Giả sử các mặt phẳng $(\alpha)$ \& $(\beta)$ chứa lần lượt các đường thẳng $a$ \& $b$ song song với nhau \& $(\alpha),(\beta)$ cắt nhau theo giao tuyến $d$. Xét mặt phẳng $(a;b)$. Nếu mặt phẳng này trùng với $(\alpha)$ thì ta có: $(\alpha)\cap(\beta) = b$ \& do đó $b$ trùng với $d$. Tương tự nếu mặt phẳng $(a;b)$ trùng với $(\beta)$ thì $a$ trùng với $d$ \& mệnh đề được chứng minh. Bây giờ giả sử rằng $(a;b)$ không trùng với cả $(\alpha)$ lẫn $(\beta)$. Lấy điểm $P$ bất kỳ trên $d$. Nếu $P\in a$ thì $P\notin b$, suy ra các mặt phẳng $(\beta)$ \& $(a;b)$ phải trùng nhau vì cùng chứa $P$ \& $b$. Vô lý! Thành thử với mọi điểm $P\in d$ thì $P\notin a$ nên $d\parallel a$. Lập luận tương tự ta cũng được $d\parallel b$. Vậy $d$ song song với cả $a$ \& $b$.
+\end{proof}
+Từ mệnh đề \ref{TLCT Hinh Hoc 11 Menh de 1 p. 61}, có thể chứng minh tính chất sau:
+
+\begin{menhde}
+	2 đường thẳng phân biệt cùng song song với 1 đường thẳng thứ 3 thì song song với nhau.
+\end{menhde}
+Mệnh đề này thường được gọi là \textit{tính bắc cầu trong quan hệ song song giữa các đường thẳng} \& có thể được ghi vắn tắt dưới dạng: $(d_1\parallel d_2)\land(d_2\parallel d_3)\Rightarrow(d_1\parallel d_3)$. Trong hình học phẳng, đây là 1 tính chất quen thuộc \& là hệ quả của tiên đề 5. Còn trong hình học không gian, ta chứng minh nó như sau:
+
+\begin{proof}[Chứng minh]
+	Giả sử 2 đường thẳng $a,b$ cùng song song với đường thẳng $c$. Nếu $a,b$, \& $c$ cùng thuộc 1 mặt phẳng thì theo tính chất quen thuộc đã biết trong hình học phẳng, hệ quả được chứng minh. Giả sử 3 đường thẳng này không cùng thuộc 1 mặt phẳng. Lấy 1 điểm $P\in a$. Các mặt phẳng $(b;P)$ \& $(c;a)$ không trùng nhau \& có điểm $P$ chung nên chúng cắt nhau theo giao tuyến là 1 đường thẳng. Đường thẳng này cũng đi qua $P$ \& song song với $c$ như đường thẳng $a$ nên đó chính là đường thẳng $a$. Theo mệnh đề \ref{TLCT Hinh Hoc 11 Menh de 1 p. 61}, giao tuyến $a$ song song với $b$ \& $c$. Mệnh đề được chứng minh.'' -- \cite[pp. 60--62]{TL_chuyen_Toan_Hinh_Hoc_11}
+\end{proof}
+
+\subsection{Đường thẳng song song với mặt phẳng}
 
 %------------------------------------------------------------------------------%
 
