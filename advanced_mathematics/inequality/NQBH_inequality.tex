@@ -1,0 +1,437 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Inequality}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter{Wikipedia's}
+
+\section{\href{https://en.wikipedia.org/wiki/Inequality_(mathematics)}{Wikipedia\texttt{/}Inequality (Mathematics)}}
+
+%------------------------------------------------------------------------------%
+
+\chapter{\cite{Hardy_Littlewood_Polya1952}. Inequality}
+
+\begin{quotation}
+	\textit{``Oh! the little more, \& how much it is! \& the little less, \& what worlds away!''} -- Robert Browning
+\end{quotation}
+
+\section*{Preface to 1st Edition}
+``This book was planned \& begun in 1929. Our original intention was that it should be 1 of the \textit{Cambridge Tracts}, but it soon became plain that a tract\footnote{\textbf{tract} [n] \textbf{1.} (\textit{biology}) a system of connected organs or tissues along which materials or messages pass; \textbf{2.} \textbf{tract (of something)} an area of land, especially a large one; \textbf{3.} a short piece of writing, especially on a religious, moral or political subject, that is intended to influence people's ideas.} would be much too short for our purpose.
+
+Our subjects in writing the book are explained sufficiently in the introductory chapter, but we add a note here about history \& bibliography\footnote{\textbf{bibliography} [n] (plural \textbf{bibliographies}) the list of books, etc. that have been used by somebody writing an article, essay, etc.; a list of books or articles about a particular subject or by a particular author.}. Historical \& bibliographical questions are particularly troublesome\footnote{\textbf{troublesome} [a] causing trouble, pain or difficulties.} in a subject like this, which \fbox{has applications in every part of mathematics but has never been developed systematically}.
+
+It is often really difficult to trace the origin of a familiar inequality. It is quite likely to occur 1st as an auxiliary proposition, often without explicit statement, in a memoir on geometry or astronomy; it may have been rediscovered, many years later, by half a dozen different authors; \& no accessible statement of it may be quite complete. We have almost always found, even with the most famous inequalities, that we have a little new to add.
+
+We have done our best to be accurate \& have given all references we can, but we have never undertaken\footnote{\textbf{undertake} [v] \textbf{1.} \textbf{undertake something} to make yourself responsible for something \& start doing it; \textbf{2.} to agree or promise that you will do something.} systematic bibliographical research. We follow the common practice, when a particular inequality is habitually\footnote{\textbf{habitual} [a] [only before noun] usual or typical of somebody\texttt{/}something.} associated with a particular mathematician's name; we speak of the inequalities of Schwarz, H\"older, \& Jensen, though all these inequalities can be traced further back; \& we do not enumerate\footnote{\textbf{enumerate} [v] (\textit{formal}) \textbf{enumerate something} to name things on a list 1 by 1.} explicitly all the minor additions which are necessary for absolute completeness.
+
+%------------------------------------------------------------------------------%
+
+\section{Introduction}
+
+\subsection{Finite, infinite, \& integral inequalities}
+
+\subsection{Notations}
+
+\subsection{Positive inequalities}
+
+\subsection{Homogeneous inequalities}
+
+\subsection{The axiomatic basis of algebraic inequalities}
+
+\subsection{Comparable functions}
+
+\subsection{Selection of proofs}
+
+\subsection{Selection of subjects}
+
+%------------------------------------------------------------------------------%
+
+\section{Elementary Mean Values}
+
+\subsection{Ordinary means}
+
+\subsection{Weighted means}
+
+\subsection{Limiting cases of $\mathfrak{M}_r(a)$}
+
+\subsection{Cauchy's inequality}
+
+\subsection{The theorem of the arithmetic \& geometric means}
+
+\subsection{Other proofs of the theorem of the means}
+
+\subsection{H\"older's inequality \& its extensions}
+
+\subsection{General properties of the means $\mathfrak{M}_r(a)$}
+
+\subsection{The sums $\mathfrak{G}_r(a)$}
+
+\subsection{Minkowski's inequality}
+
+\subsection{A companion to Minkowski's inequality}
+
+\subsection{Illustrations \& applications of the fundamental inequalities}
+
+\subsection{Inductive proofs of the fundamental inequalities}
+
+\subsection{Elementary inequalities connected with Theorem 37}
+
+\subsection{Elementary proof of Theorem 3}
+
+\subsection{Tchebychef's inequality}
+
+\subsection{Muirhead's theorem}
+
+\subsection{Proof of Muirhead's theorem}
+
+\subsection{An alternative theorem}
+
+\subsection{Further theorems on symmetrical means}
+
+\subsection{The elementary symmetric functions of $n$ positive numbers}
+
+\subsection{A note on definite forms}
+
+\subsection{A theorem concerning strictly positive forms}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Mean Values with an Arbitrary Function \& the Theory of Convex Functions}
+
+\subsection{Definitions}
+
+\subsection{Equivalent means}
+
+\subsection{A characteristic property of the means $\mathfrak{M}_r$}
+
+\subsection{Comparability}
+
+\subsection{Convex functions}
+
+\subsection{Continuous convex functions}
+
+\subsection{An alternative definition}
+
+\subsection{Equality in the fundamental inequalities}
+
+\subsection{Restatements \& extensions of Theorem 85}
+
+\subsection{Twice differentiable convex functions}
+
+\subsection{Applications of the properties of twice differentiable convex functions}
+
+\subsection{Convex functions of several variables}
+
+\subsection{Generalizations of H\"older's inequality}
+
+\subsection{Some theorems concerning monotonic functions}
+
+\subsection{Sums with an arbitrary function: generalizations of Jensen's inequality}
+
+\subsection{Generalizations of Minkowski's inequality}
+
+\subsection{Comparison of sets}
+
+\subsection{Further general properties of convex functions}
+
+\subsection{Further properties of continuous convex functions}
+
+\subsection{Discontinuous convex functions}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Various Applications of the Calculus}
+
+\subsection{Introduction}
+
+\subsection{Applications of the mean value theorem}
+
+\subsection{Further applications of elementary differential calculus}
+
+\subsection{Maxima \& minima of functions of 1 variable}
+
+\subsection{Use of Taylor's series}
+
+\subsection{Applications of the theory of maxima \& minima of functions of several variables}
+
+\subsection{Comparison of series \& integrals}
+
+\subsection{An inequality of W. H. Young}
+
+%------------------------------------------------------------------------------%
+
+\section{Infinite Series}
+
+\subsection{Introduction}
+
+\subsection{The means $\mathfrak{M}_r$}
+
+\subsection{The generalization of Theorems 3 \& 9}
+
+\subsection{H\"older's inequality \& its extensions}
+
+\subsection{The means $\mathfrak{M}_r$ (\textit{cont}.)}
+
+\subsection{The sums $\mathfrak{G}_r$}
+
+\subsection{Minkowski's inequality}
+
+\subsection{Tchebychef's inequality}
+
+\subsection{A summary}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Integrals}
+
+\subsection{Preliminary remarks on Lebesgue integrals}
+
+\subsection{Remarks on null sets \& null functions}
+
+\subsection{Further remarks concerning integration}
+
+\subsection{Remarks on methods of proof}
+
+\subsection{Further remarks on method: the inequality of Schwarz}
+
+\subsection{Definition of the means $\mathfrak{M}_r(f)$ when $r\ne 0$}
+
+\subsection{The geometric mean of a function}
+
+\subsection{Further properties of the geometric mean}
+
+\subsection{H\"older's inequality for integrals}
+
+\subsection{General properties of the means $\mathfrak{M}_r(f)$}
+
+\subsection{Convexity of $\log\mathfrak{M}_r^r$}
+
+\subsection{Minkowski's inequality for integrals}
+
+\subsection{Mean values depending on an arbitrary function}
+
+\subsection{The definition of the Stieltjes integral}
+
+\subsection{Special cases of the Stieltjes integral}
+
+\subsection{Extensions of earlier theorems}
+
+\subsection{The means $\mathfrak{M}_r(f;\phi)$}
+
+\subsection{Distribution functions}
+
+\subsection{Characterization of means values}
+
+\subsection{Remarks on the characteristic properties}
+
+\subsection{Completion of the proof of Theorem 215}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Some Applications of the Calculus of Variations}
+
+\subsection{Some general remarks}
+
+\subsection{Object of the present chapter}
+
+\subsection{Example of an inequality corresponding to an unattained extremum}
+
+\subsection{1st proof of Theorem 254}
+
+\subsection{2nd proof of Theorem 254}
+
+\subsection{Further examples illustrative of variational methods}
+
+\subsection{Further examples: Wirtinger's inequality}
+
+\subsection{An example involving 2nd derivatives}
+
+\subsection{A simpler theorem}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Some Theorems Concerning Bilinear \& Multilinear Forms}
+
+\subsection{Introduction}
+
+\subsection{An inequality for multilinear forms with positive variables \& coefficients}
+
+\subsection{A theorem of W. H. Young}
+
+\subsection{Generalizations \& analogues}
+
+\subsection{Applications to Fourier series}
+
+\subsection{The convexity theorem for positive multilinear forms}
+
+\subsection{The convexity theorem for positive multilinear forms}
+
+\subsection{General bilinear forms}
+
+\subsection{Definition of a bounded bilinear form}
+
+\subsection{Some properties of bounded forms in $[p,q]$}
+
+\subsection{The Faltung of 2 forms in $[p,p']$}
+
+\subsection{Some special theorems on forms in $[2,2]$}
+
+\subsection{Application to Hilbert's forms}
+
+\subsection{The convexity theorem for bilinear forms with complex variables \& coefficients}
+
+\subsection{Further properties of a maximal set $(x,y)$}
+
+\subsection{Proof of Theorem 295}
+
+\subsection{Applications of the theorem of M. Riesz}
+
+\subsection{Applications to Fourier series}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Hilbert's Inequality \& Its Analogues \& Extensions}
+
+\subsection{Hilbert's double series theorem}
+
+\subsection{A general class of bilinear forms}
+
+\subsection{The corresponding theorem for integrals}
+
+\subsection{Extensions of Theorems 318 \& 319}
+
+\subsection{Best possible constants: proof of Theorem 317}
+
+\subsection{Further remarks on Hilbert's theorems}
+
+\subsection{Applications of Hilbert's theorems}
+
+\subsection{Hardy's inequality}
+
+\subsection{Further integral inequalities}
+
+\subsection{Further theorems concerning series}
+
+\subsection{Deduction of theorems on series from theorems on integrals}
+
+\subsection{Carleman's inequality}
+
+\subsection{Theorems with $0 < p < 1$}
+
+\subsection{A theorem with 2 parameters $p$ \& $q$}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Rearrangements}
+
+\subsection{Rearrangements of finite sets of variables}
+
+\subsection{A theorem concerning the rearrangements of 2 sets}
+
+\subsection{A 2nd proof of Theorem 368}
+
+\subsection{Restatement of Theorem 368}
+
+\subsection{Theorems concerning the rearrangements of 3 sets}
+
+\subsection{Reduction of Theorem 373 to a special case}
+
+\subsection{Completion of the proof}
+
+\subsection{Another proof of Theorem 371}
+
+\subsection{Rearrangements of any number of sets}
+
+\subsection{A further theorem on the rearrangement of any number of sets}
+
+\subsection{Applications}
+
+\subsection{The rearrangement of a function}
+
+\subsection{On the rearrangement of 2 functions}
+
+\subsection{On the rearrangement of 3 functions}
+
+\subsection{Completion of the proof of Theorem 379}
+
+\subsection{An alternative proof}
+
+\subsection{Applications}
+
+\subsection{Another theorem concerning the rearrangement of a function in decreasing order}
+
+\subsection{Proof of Theorem 384}
+
+\subsection{Miscellaneous theorems \& examples}
+
+%------------------------------------------------------------------------------%
+
+\section{Appendices}
+
+\subsection{Appendix I: On strictly positive forms}
+
+\subsection{Appendix II: Thorin's proof \& extension of Theorem 295}
+
+\subsection{Appendix III: On Hilbert's inequality}
+
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
