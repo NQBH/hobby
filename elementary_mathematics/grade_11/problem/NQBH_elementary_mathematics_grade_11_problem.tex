@@ -315,15 +315,15 @@ Có thể mở rộng bài toán trên cho các đường conic, i.e., ellipse, 
 		\end{split}\right.
 	\end{equation*}
 	\begin{enumerate*}
-		\item[(a)] Cho 2 điểm $M(x_1;y_1)$, $N(x_2;y_2)$ \& gọi $M',N'$ lần lượt là ảnh của $M,N$ qua phép $F$. Tìm tọa độ của $M'$ \& $N'$.s
+		\item[(a)] Cho 2 điểm $M(x_1;y_1)$, $N(x_2;y_2)$ \& gọi $M',N'$ lần lượt là ảnh của $M,N$ qua phép $F$. Tìm tọa độ của $M'$ \& $N'$.
 		\item[(b)] Tính khoảng cách $d$ giữa $M$ \& $N$; khoảng cách $d'$ giữa $M'$ \& $N'$.
 		\item[(c)] Phép $F$ có phải là phép dời hình hay không?
-		\item Khi $\alpha = 0$, chứng tỏ rằng $F$ là phép tịnh tiến.
+		\item[(d)] Khi $\alpha = 0$, chứng tỏ rằng $F$ là phép tịnh tiến.
 	\end{enumerate*}
 \end{baitoan}
 Tổng quát hơn của bài toán \cite[\textbf{6.}, p. 9]{SGK_Toan_11_hinh_hoc_nang_cao}:
 \begin{baitoan}
-	Trong mặt phẳng tọa độ $Oxy$, xét các phép biến hình sau đây: Phép biến hình $F$ biến mỗi điểm $M(x;y)$ thành điểm $M'(f(x,y);g(x;y))$ với $f,g:\mathbb{R}^2\to\mathbb{R}$ là 2 hàm sốt. Với $f,g$ thỏa điều kiện nào thì $F$ là 1 phép dời hình?
+	Trong mặt phẳng tọa độ $Oxy$, xét các phép biến hình sau đây: Phép biến hình $F$ biến mỗi điểm $M(x;y)$ thành điểm $M'(f(x,y);g(x;y))$ với $f,g:\mathbb{R}^2\to\mathbb{R}$ là 2 hàm số. Với $f,g$ thỏa điều kiện nào thì $F$ là 1 phép dời hình?
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -349,13 +349,216 @@ Có thể mở rộng bài toán trên cho các đường conic, i.e., ellipse, 
 \subsection{Phép quay}
 
 \begin{baitoan}
-	Trong mặt phẳng toaj độ $Oxy$ cho điểm $A(a_1;a_2)$ \& đường thẳng $d$ có phương trình $ax + by + c = 0$ ($a^2 + b^2\ne 0$). Tìm ảnh của $A$ \& $d$ qua phép quay tâm $O$ góc $\alpha$ (radian). Cho đường tròn tâm $O_1(o_1;o_2)$ bán kính $R > 0$ có phương trình: $(x - o_1)^2 + (y - o_2)^2 = R^2$. Tìm ảnh của đường tròn đó qua phép quay tâm $O$ góc $\alpha$ (radian).
+	Trong mặt phẳng tọa độ $Oxy$ cho điểm $A(a_1;a_2)$ \& đường thẳng $d$ có phương trình $ax + by + c = 0$ ($a^2 + b^2\ne 0$). Tìm ảnh của $A$ \& $d$ qua phép quay tâm $O$ góc $\alpha$ (radian). Cho đường tròn tâm $O_1(o_1;o_2)$ bán kính $R > 0$ có phương trình: $(x - o_1)^2 + (y - o_2)^2 = R^2$. Tìm ảnh của đường tròn đó qua phép quay tâm $O$ góc $\alpha$ (radian).
 \end{baitoan}
 
 
 %------------------------------------------------------------------------------%
 
 \section{Đường Thẳng \& Mặt Phẳng Trong Không Gian -- Line \& Plane in Euclidean Space $\mathbb{R}^n$}
+
+\subsection{Đại cương về đường thẳng \& mặt phẳng}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, Ví dụ 1, p. 49]
+	Cho mặt phẳng $(\alpha)$ \& 2 đường thẳng $a,b$ cùng thuộc $(\alpha)$ sao cho $a$ \& $b$ không song song với nhau. Gọi $A$ là 1 điểm thuộc đường thẳng $a$ nhưng không thuộc $b$ \& $P$ là 1 điểm nằm ngoài $(\alpha)$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh rằng các đường thẳng $PA$ \& $b$ chéo nhau;
+		\item[(b)] Xác định giao tuyến của 2 mặt phẳng $(a;P)$ \& $(b;P)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, Ví dụ 1, p. 49]
+	Trong mặt phẳng $(\alpha)$ cho $\Delta ABC$ \& 1 điểm $S$ ở ngoài $(\alpha)$. Gọi $D,E$ là các điểm thuộc các đoạn $SA,SB$ sao cho $DE$ không song song với $AB$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao tuyến của 2 mặt phẳng $(CAB)$ \& $(CDE)$;
+		\item[(b)] $P$ là 1 điểm thay đổi trên đoạn $SC$. Giả sử các đường thẳng $PD$ \& $PE$ lần lượt cắt các đường thẳng $CA$ \& $CB$ tại $M$ \& $N$. Chứng minh rằng đường thẳng $MN$ luôn đi qua 1 điểm cố định.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{luuy}
+	Trong bài toán trên, ``ta giả thiết rằng $DE$ không song song với $AB$. Trong trường hợp $DE\parallel AB$, có thể thấy rằng đường thẳng $MN$ thay đổi nhưng luôn song song với đường thẳng $AB$ \& do đó không đi qua điểm cố định nào.'' -- \cite[p. 51]{TL_chuyen_Toan_Hinh_Hoc_11}
+\end{luuy}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, Ví dụ 3, p. 52]
+	Cho hình chóp tứ giác $S.ABCD$ với đáy $ABCD$ có các cạnh đối không song song với nhau \& $M$ là 1 điểm trên cạnh $SA$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao điểm của đường thẳng $SB$ với mặt phẳng $(MCD)$;
+		\item[(b)] Xác định giao điểm của đường thẳng $MC$ với mặt phẳng $(SBD)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, Ví dụ 4, p. 54]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang với $AD$ là đáy lớn \& $P$ là 1 điểm trên cạnh $SD$.
+	\begin{enumerate*}
+		\item[(a)] Xác định thiết diện của hình chóp cắt bởi mặt phẳng $(ABP)$;
+		\item[(b)] Gọi $M,N$ là trung điểm các cạnh $AB,BC$. Xác định thiết diện của hình chóp cắt bởi mặt phẳng $(MNP)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{1.}, p. 55]
+	Cho 4 điểm $A,B,C,D$ không cùng thuộc 1 mặt phẳng \& $I,J$ lần lượt là trung điểm của $AD,BC$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $AJ,BI$ không đồng phẳng. Xác định giao tuyến của $(AJD)$ \& $(BIC)$.
+		\item[(b)] $M,N$ là các điểm thuộc các đoạn $AB,AC$. Xác định giao tuyến của $(BIC)$ \& $(MDN)$.
+		\item[(c)] $K$ là 1 điểm thuộc đoạn $MN$. Xác định giao điểm của $DK$ với $(BIC)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{2.}, p. 55]
+	\begin{enumerate*}
+		\item[(a)] Cho $n$ điểm trong không gian ($n\ge 4$). Biết rằng 4 điểm bất kỳ trong $n$ điểm đã cho cùng thuộc 1 mặt phẳng. Chứng minh tất cả $n$ điểm cùng thuộc 1 mặt phẳng.
+		\item[(b)] Cho $n$ mặt phẳng trong không gian ($n\ge 4$). Biết rằng 4 mặt phẳng bất kỳ trong $n$ mặt phẳng đã cho có 1 điểm chung. Chứng minh tất cả $n$ mặt phẳng có 1 điểm chung.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{3.}, pp. 55--56]
+	Cho 2 mặt phẳng $(\alpha)$ \& $(\beta)$ cắt nhau theo giao tuyến $d$, đường thẳng $a$ thuộc $(\alpha)$, điểm $O$ ngoài $(\alpha)$ \& ngoài $(\beta)$. $M$ là 1 điểm thay đổi trên đường thẳng $a$, $OM$ cắt $(\beta)$ tại điểm $N$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $N$ luôn thuộc 1 đường thẳng cố định.
+		\item[(b)] $P$ là 1 điểm thay đổi trong mặt phẳng $(\alpha)$, $OP$ cắt $(\beta)$ tại điểm $Q$. Gọi $K$ là giao điểm của $MP$ \& $NQ$. Chứng minh $K$ luôn thuộc 1 đường thẳng cố định.
+	\end{enumerate*}	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{4.}, p. 56]
+	Cho 2 mặt phẳng $(\alpha)$ \& $(\beta)$ cắt nhau theo giao tuyến $d$, 2 điểm $A,B$ ngoài $(\alpha)$ \& ngoài $(\beta)$ sao cho đường thẳng $AB$ không song song với $(\alpha)$ \& với $(\beta)$. $P$ là 1 điểm thay đổi trên $(\alpha)$; $PA,PB$ cắt $(\beta)$ tại $M,N$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $MN$ luôn đi qua 1 điểm cố định.
+		\item[(b)] $MN$ cắt $d$ tại điểm $Q$. Chứng minh $PQ$ luôn đi qua 1 điểm cố định.
+		\item[(c)] Cho $a$ là 1 đường thẳng thuộc mặt phẳng $(\alpha)$ ($a$ không song song với $d$). Giả sử điểm $P$ thay đổi trên $(\alpha)$ sao cho $P$ luôn thuộc $a$. Chứng minh $M,N$ luôn thuộc lần lượt 2 đường thẳng cố định $d_1,d_2$ \& $d,d_1,d_2$ đồng quy.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{5.}, p. 56]
+	Cho tứ diện $ABCD$ có $M$ là trung điểm cạnh $AB$, $N$ là điểm trên cạnh $BC$: $BN = 2CN$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao điểm của $MN$ với ${\rm mp}(ACD)$.
+		\item[(b)] $P$ là 1 điểm thuộc cạnh $CD$. Xác định giao tuyến của $(MCD)$ \& $(ANP)$.
+		\item[(c)] Xác định thiết diện của tứ diện cắt bởi ${\rm mp}(MNP)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{6.}, p. 56]
+	Cho tứ diện $ABCD$ có $G$ là trọng tâm mặt $(ABC)$, $I$ là trung điểm cạnh $BD$ \& $J$ là điểm thuộc cạnh $CD$: $\frac{JC}{JD} = 2$.
+	\begin{enumerate*}
+		\item[(a)] Xác định thiết diện của tứ giác cắt bởi $(GIJ)$.
+		\item[(b)] $M$ là 1 điểm trên đoạn $AJ$. Xác định giao điểm của $GM$ với $(ABD)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{7.}, p. 56]
+	Cho tứ diện $ABCD$ \& các điểm $M,N,P,Q$  lần lượt thuộc các cạnh $AB,BC,CD,DA$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh nếu $M,N,P,Q$ cùng thuộc 1 mặt phẳng thì $\frac{AM}{BM}\cdot\frac{BN}{CN}\cdot\frac{CP}{DP}\cdot\frac{DQ}{AQ} = 1$.
+		\item[(b)] Khẳng định ngược lại có đúng không? Vì sao?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{8.}, pp. 56--57]
+	Cho tứ diện $ABCD$ có $M,N$ là trung điểm cạnh $AB,CD$ \& $P$ là 1 điểm thuộc cạnh $BC$ ($P$ không là trung điểm $BC$).
+	\begin{enumerate*}
+		\item[(a)] Xác định thiết diện của tứ diện cắt bởi $(MNP)$.
+		\item[(b)] Chứng minh $MN$ chia đôi diện tích thiết diện.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{9.}, p. 57]
+	Cho tứ diện $ABCD$ có $M$ là trung điểm cạnh $AB$ \& $N$ là điểm thuộc cạnh $AC$: $\frac{NA}{NC} = 2$. Mặt phẳng $(\alpha)$ thay đổi đi qua $M,N$ cắt các cạnh $BD,CD$ ở $P,Q$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $MN,PQ$, \& $BC$ đồng quy.
+		\item[(b)] Gọi $K$ là giao điểm của $MQ$ \& $NP$. Chứng minh $K$ luôn thuộc 1 đường thẳng cố định.
+		\item[(c)] Gọi $I$ là giao điểm của $MP$ \& $NQ$. Biết $ID = AD$, tính các tỷ số $\frac{PB}{PD},\frac{QC}{QD}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{10.}, p. 57]
+	Cho hình chóp $S.ABC$ có $M$ là trung điểm cạnh bên $SA$, $N$ là điểm thuộc cạnh bên $SB$: $SN = \frac{3}{4}SB$ \& $O$ là 1 điểm thuộc mặt đáy $(ABC)$.
+	\begin{enumerate*}
+		\item[(a)] Xác định thiết diện của hình chóp cắt bởi $(MNO)$.
+		\item[(b)] $P$ là 1 điểm thuộc cạnh bên $SC$. Xác định giao điểm của $SO$ với $(MNP)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{11.}, p. 57]
+	Cho hình chóp $S.ABC$, $D$ là 1 điểm thuộc cạnh bên $SA$, $M$ là 1 điểm thay đổi trên cạnh $BC$ \& $N$ là trung điểm $AM$. Gọi $K$ là giao điểm của $SN$ \& $DM$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $K$ luôn thuộc 1 đường thẳng $d$ cố định \& xác định đường thẳng $d$.
+		\item[(b)] $E$ là 1 điểm thuộc cạnh bên $SC$. Xác định giao điểm của $d$ với $(AEM)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{12.}, p. 57]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành, $M$ là trung điểm cạnh bên $SA$ \& $N$ là 1 điểm thuộc cạnh $BC$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao điểm của $SC$ với $(MND)$.
+		\item[(b)] $P$ là 1 điểm thuộc cạnh $CD$. Xác định giao tuyến của $(MND)$ \& $(SBP)$.
+		\item[(c)] Xác định thiết diện của hình chóp cắt bởi $(MNP)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{13.}, pp. 57--58]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang với đáy lớn $AD$, $M$ là trung điểm cạnh bên $SA$ \& $N$ là 1 điểm thuộc cạnh bên $SC$ ($N$ không là trung điểm $SC$).
+	\begin{enumerate*}
+		\item[(a)] Xác định giao tuyến của $(ABN)$ \& $(CDM)$.
+		\item[(b)] Xác định giao điểm của $MN$ với $(SBD)$.
+		\item[(c)] $P$ là 1 điểm thuộc cạnh $AB$. Xác định thiết diện của hình chóp cắt bởi $(MNP)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{14.}, p. 58]
+	Cho hình chóp $S.ABCD$ \& $M$ là 1 điểm thuộc mặt bên $(SCD)$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao tuyến của $(SAC)$ \& $(SBM)$.
+		\item[(b)] Xác định giao điểm của $AM$ với $(SBD)$.
+		\item[(c)] Gọi $I,J$ là trung điểm $AB,AD$. Xác định thiết diện của hình chóp cắt bởi $(MIJ)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{15.}, p. 58]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình bình hành \& $M$ là điểm thuộc cạnh bên $SD$: $SM = \frac{1}{3}SD$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao điểm của $BM$ với mặt phẳng $(SAC)$.
+		\item[(b)] $N$ là 1 điểm thay đổi trên cạnh $BC$. Xác định giao tuyến của $(AMN)$ \& $(SBC)$. Chứng minh giao tuyến này luôn đi qua 1 điểm cố định.
+		\item[(c)] $G$ là trọng tâm mặt bên $(SAB)$. Xác định thiết diện của hình chóp cắt bởi $(MNG)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{16.}, p. 58]
+	Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang với cạnh đáy lớn $AD$, $M$ là 1 điểm thuộc mặt bên $(SCD)$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao tuyến của mặt phẳng $(SAM)$ với mặt phẳng $(SBC)$.
+		\item[(b)] $N$ là 1 điểm thuộc cạnh $AB$. Xác định giao điểm của $SB$ với $(DMN)$.
+		\item[(c)] $P$ là 1 điểm thuộc cạnh bên $SB$. Xác định thiết diện của hình chóp cắt bởi $(MNP)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{17.}, p. 58]
+	Cho hình chóp $S.ABCD$, $M$ là trung điểm cạnh bên $SB$ \& $N$ là điểm thuộc cạnh bên $SC$ sao cho: $SN = \frac{2}{3}SC$.
+	\begin{enumerate*}
+		\item[(a)] Xác định giao điểm của $CD$ với mặt phẳng $(AMN)$.
+		\item[(b)] $P$ là 1 điểm thuộc mặt bên $(SAD)$. Xác định giao tuyến của mặt phẳng $(AMN)$ \& mặt phẳng $(PBD)$.
+		\item[(c)] Xác định thiết diện của hình chóp cắt bởi mặt phẳng $(MNP)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{18.}, p. 59]
+	Trong không gian cho $n\in\mathbb{N}$, $n\ge 3$, đường thẳng không cùng thuộc 1 mặt phẳng.
+	\begin{enumerate*}
+		\item[(a)] Biết rằng 2 đường thẳng bất kỳ trong $n$ đường thẳng đã cho cắt nhau, chứng minh rằng tất cả $n$ đường thẳng đồng quy.
+		\item[(b)] Kết luận gì nếu 2 đường thẳng bất kỳ đồng phẳng? Vì sao?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Hinh_Hoc_11}, \textbf{19.}, p. 59]
+	Cho tứ diện $ABCD$ có $G_1,G_2,G_3,G_4$ \& $I_1,I_2,I_3,I_4$ lần lượt là trọng tâm \& tâm đường tròn nội tiếp các mặt $BCD,CDA,DAB,ACB$ của tứ diện. 
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $AG_1,BG_2,CG_3,DG_4$ đồng quy.
+		\item[(b)] Biết tứ diện $ABCD$ thỏa mãn: $AB\cdot CD = AC\cdot BD = AD\cdot BC$. Chứng minh $AI_1,BI_2,CI_3,DI_4$ đồng quy.
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Quan hệ song song -- Parallelism}
 
 %------------------------------------------------------------------------------%
 
