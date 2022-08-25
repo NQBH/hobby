@@ -1263,7 +1263,7 @@ Trong trường hợp phép thử $T$ có 1 số hữu hạn kết quả có th�
 
 %------------------------------------------------------------------------------%
 
-\section{Dãy Số -- Sequences}
+\section{Dãy Số -- Sequence}
 \textbf{Nội dung.} \textit{Dãy số \& các khái niệm cơ bản liên quan, các cách xác định 1 dãy số, dãy số tăng, dãy số giảm, dãy số bị chặn, dãy số tuần hoàn}.
 
 \subsection{Định nghĩa}
@@ -1326,11 +1326,37 @@ Vì các dãy số hữu hạn thì hiển nhiên là bị chặn (e.g., 1 chặ
 
 %------------------------------------------------------------------------------%
 
-\section{Cấp Số Cộng}
+\section{Cấp Số -- Progression}
+``Có những dãy số xác định bởi quy luật đặc biệt gọi là \textit{cấp số}\footnote{\textbf{progression} [n] \textbf{1.} [uncountable, countable] the process of developing gradually from 1 stage or state to another; \textbf{2.} [countable] \textbf{progression (of something)} a number of things that come in a series.}. Có 2 dạng cấp số cơ bản thường gặp nhất là \textit{cấp số cộng} \& \textit{cấp số nhân}.'' -- \cite[p. 123]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 
-%------------------------------------------------------------------------------%
+\subsection{Cấp số cộng -- Arithmetic progression}
 
-\section{Cấp Số Nhân}
+\begin{dinhnghia}
+	``\emph{Cấp số cộng} là 1 dãy số (hữu hạn hay vô hạn) mà trong đó, kể từ số hạng thứ 2, mỗi số hạng đều bằng tổng của số hạng đứng ngay trước nó \& 1 số $d$ không đổi, i.e., $(u_n)$ là cấp số cộng $\Leftrightarrow\forall n\in\mathbb{N}$, $n\ge 2$, $u_n = u_{n-1} + d$.
+\end{dinhnghia}
+$u_1$ được gọi là \textit{số hạng đầu tiên}, $u_k$ là \textit{số hạng thứ $k$} của cấp số cộng; $d$ được gọi là \textit{công sai} của cấp số cộng. Nếu cấp số cộng là hữu hạn \& có $n$ số hạng thì $n$ gọi là \textit{số số hạng} còn $u_n$ được gọi là \textit{số hạng cuối} của cấp số cộng. Sở dĩ có thuật ngữ công sai này là vì $u_2 - u_1 = u_3 - u_2 = \cdots = u_n - u_{n-1} = d$, i.e., $d$ là \textit{sai biệt chung} của các số hạng kề nhau của dãy số. Ngoài các cấp số cộng có hữu hạn phần tử, người ta còn xét những cấp số cộng có vô hạn phần tử.''
+
+\begin{vidu}[Dãy các bội của 1 số nguyên dương]
+	\label{vidu:day boi cua 1 so nguyen duong}
+	Dãy các bội số dương của $m\in\mathbb{N}^\star$ bất kỳ là 1 cấp số cộng có vô hạn phần tử với số hạng đầu là $m$ \& công sai là $m$, i.e., $\operatorname{B}(m) = \{mn|n\in\mathbb{Z}\}$, $\operatorname{B}(m)\cap(0;\infty) = \{mn|n\in\mathbb{N}^\star\} = (mn)_{n=1}^\infty$, $\forall m\in\mathbb{N}^\star$.
+\end{vidu}
+Dãy các số tự nhiên lẻ $(2n + 1)_{n=0}^\infty$ \& dãy các số tự nhiên chẵn $(2n)_{n=0}^\infty$ là 2 cấp số cộng với công sai $d = 2$. Tương tự, với $m\in\mathbb{N}^\star$ \& $r\in\mathbb{N}$, $r < m$, bất kỳ, dãy các số tự nhiên chia $m$ dư $r$ là 1 cấp số cộng có vô hạn phần tử với số hạng đầu là $r$ \& công sai là $m$, i.e., $\{mn + r|n\in\mathbb{N}\} = (mn + r)_{n=0}^\infty$, $\forall m\in\mathbb{N}^\star$, $\forall r\in\mathbb{N}$. Với $r = 0$, phép chia có số dư là $r$ này là 1 phép chia hết \& dãy số này trở thành dãy các bội của $m$ trong Ví dụ \ref{vidu:day boi cua 1 so nguyen duong} với số $0$ được thêm vào đầu dãy.
+
+\begin{dinhly}[Các tính chất cơ bản của cấp số cộng]
+	\begin{itemize}
+		\item[(a)] \emph{(Tính chất đặc trưng của cấp số cộng)} Nếu $(u_n)$ là 1 cấp số cộng thì kể từ số hạng thứ $2$, mỗi số hạng (trừ số hạng cuối đối với cấp số cộng hữu hạn) đều là trung bình cộng của 2 số hạng đứng kề nó trong dãy, i.e., $u_k = \frac{u_{k-1} + u_{k+1}}{2}$.
+		\item[(b)] \emph{(Số hạng tổng quát của cấp số cộng)} Nếu 1 cấp số cộng có số hạng đầu $u_1$ \& công sai $d$ thì số hạng tổng quát $u_n$ của nó được xác định theo công thức sau: $u_n = u_1 + (n - 1)d$.
+		\item[(c)] \emph{(Tổng $n$ số hạng đầu tiên của cấp số cộng)} Giả sử $(u_n)$ là 1 cấp số cộng. Với mỗi số nguyên dương $n$, gọi $S_n$ là tổng $n$ số hạng đầu tiên của nó ($S_n = \sum_{i=1}^n u_i$). Khi đó ta có: $S_n = \frac{(u_1 + u_n)n}{2}$.
+	\end{itemize}
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	\begin{enumerate*}
+		\item[(a)] Gọi $d$ là công sai của cấp số cộng $(u_n)$. Với mọi $k\ge 2$, ta có $u_{k+1} = u_k + d$, $u_{k-1} = u_k - d$. Từ 
+	\end{enumerate*}
+\end{proof}
+
+\subsection{Cấp số nhân -- Geometric progression}
 
 %------------------------------------------------------------------------------%
 
