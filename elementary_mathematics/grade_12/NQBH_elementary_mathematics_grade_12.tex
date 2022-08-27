@@ -28,6 +28,7 @@
 \newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
 \newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
 \newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
@@ -106,8 +107,8 @@ I.e., ``nếu hàm số $f$ xác định trên $K$ thì hàm số $f$ đồng bi
 	\begin{center}
 		\begin{tikzpicture}
 			\tkzTabInit
-			[lgt=1,espcl=0.01\linewidth] % tùy chọn
-			{$x$/.5, $f’(x)$/.5, $f(x)$/1.5} % cột đầu tiên
+			[lgt=1,espcl=3] % tùy chọn
+			{$x$/.4, $f’(x)$/.5, $f(x)$/1.5} % cột đầu tiên
 			{$a$,$b$} % hàng 1 cột 2
 			\tkzTabLine{,+,} % hàng 2 cột 2
 			\tkzTabVar{-/ $f(a)$ , +/ $f(b)$} % hàng 3 cột 2
@@ -128,6 +129,117 @@ Có thể mở rộng định lý \ref{thm:dau dao ham & tinh dong bien} như sa
 \textbf{Nội dung.} \textit{Cực đại, cực tiểu của hàm số; quan hệ giữa cực đại, cực tiểu với dấu của đạo hàm cấp 1 \& đạo hàm cấp 2 của hàm số}.
 
 \subsection{Khái niệm cực trị của hàm số}
+
+\begin{dinhnghia}[Cực trị]
+	``Giả sử hàm số $f$ xác định trên tập hợp $\mathcal{D}\subset\mathbb{R}$ \& $x_0\in\mathcal{D}$.
+	\begin{enumerate*}
+		\item[(a)] $x_0$ được gọi là 1 \emph{điểm cực đại} của hàm số $f$ nếu tồn tại 1 khoảng $(a;b)$ chứa điểm $x_0$ sao cho $(a;b)\subset\mathcal{D}$ \& $f(x) < f(x_0)$, $\forall x\in(a;b)\backslash\{x_0\}$. Khi đó $f(x_0)$ được gọi là \emph{giá trị cực đại} của hàm số $f$.
+		\item[(b)] $x_0$ được gọi là 1 \emph{điểm cực tiểu} của hàm số $f$ nếu tồn tại 1 khoảng $(a;b)$ chứa điểm $x_0$ sao cho $(a;b)\subset\mathcal{D}$ \& $f(x) > f(x_0)$, $\forall x\in(a;b)\backslash\{x_0\}$. Khi đó $f(x_0)$ được gọi là \emph{giá trị cực tiểu} của hàm số $f$.
+	\end{enumerate*}
+	Điểm cực đại \& điểm cực tiểu được gọi chung là \emph{điểm cực trị}. Giá trị cực đại \& giá trị cực tiểu được gọi chung là \emph{cực trị}.
+\end{dinhnghia}
+Nếu $x_0$ là 1 điểm cực trị của hàm số $f$ thì người ta nói rằng hàm số $f$ đạt cực trị tại điểm $x_0$.'' -- \cite[p. 10]{SGK_Toan_12_giai_tich_nang_cao}
+
+\begin{luuy}
+	\begin{enumerate*}
+		\item[(a)] ``Giá trị cực đại (cực tiểu) $f(x_0)$ của hàm số $f$ nói chung không phải là giá trị lớn nhất (nhỏ nhất) của hàm số $f$ trên tập hợp $\mathcal{D}$; $f(x_0)$ chỉ là giá trị lớn nhất (nhỏ nhất) của hàm số $f$ trên 1 khoảng $(a;b)$ nào đó chứa điểm $x_0$.
+		\item[(b)] Hàm số $f$ có thể đạt cực đại hoặc cực tiểu tại nhiều điểm trên tập hợp $\mathcal{D}$. Hàm số cũng có thể không có cực trị trên 1 tập hợp số thực cho trước.
+		\item[(c)] Đôi khi người ta cũng nói đến điểm cực trị của đồ thị.
+	\end{enumerate*}
+\end{luuy}
+Nếu $x_0$ là 1 điểm cực trị của hàm số $f$ thì điểm $(x_0;f(x_0))$ được gọi là \textit{điểm cực trị của đồ thị} hàm số $f$.'' -- \cite[p. 11]{SGK_Toan_12_giai_tich_nang_cao}
+
+\subsection{Điều kiện cần để hàm số đạt được cực trị}
+``Quan sát đồ thị của hàm số $y = f(x)$, ta thấy nếu hàm số $f$ đạt cực trị tại điểm $x_0$ \& nếu đồ thị của hàm số có tiếp tuyến tại điểm $(x_0;f(x_0))$ thì tiếp tuyến đó song song với trục hoành, i.e., $f'(x_0) = 0$.
+
+\begin{dinhly}
+	Giả sử hàm số $f$ đạt cực trị tại điểm $x_0$. Khi đó, nếu $f$ có đạo hàm tại $x_0$ thì $f'(x_0) = 0$.
+\end{dinhly}
+``Điều ngược lại có thể không đúng. Đạo hàm $f'$ có thể bằng $0$ tại điểm $x_0$ nhưng hàm số không đạt cực trị tại điểm $x_0$. E.g., xét hàm số $f(x) = x^3$, ta có $f'(x) = 3x^2$ \& $f'(0) = 0$. Tuy nhiên, hàm số $f$ không đạt cực trị tại điểm $x = 0$. Thật vậy, vì $f'(x) > 0$, $\forall x\ne 0$ nên hàm số $f$ đồng biến trên $\mathbb{R}$.'' -- \cite[p. 11]{SGK_Toan_12_giai_tich_nang_cao}
+
+\begin{luuy}
+	``Hàm số có thể đạt cực trị tại 1 điểm mà tại điểm đó hàm số không có đạo hàm. E.g., hàm số $y = f(x) = |x|$ xác định trên $\mathbb{R}$. Vì $f(0) = 0$ \& $f(x) > 0$, $\forall x\ne 0$ nên hàm số đạt cực tiểu tại điểm $x = 0$. Dễ thấy hàm số $y = |x|$ không có đạo hàm tại điểm $x = 0$ (Fig. \ref{fig:graph_abs}).
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{graph_abs}
+		\caption{Đồ thị của hàm số $y = f(x) = |x|$.}
+		\label{fig:graph_abs}
+	\end{figure}
+	Như vậy, 1 hàm số chỉ có thể đạt cực trị tại 1 điểm mà tại đó đạo hàm của hàm số bằng $0$, hoặc tại đó hàm số không có đạo hàm.'' -- \cite[p. 11]{SGK_Toan_12_giai_tich_nang_cao}
+\end{luuy}
+
+\subsection{Điều kiện đủ để hàm số đạt cực trị}
+``Định lý sau cho ta 1 điều kiện đủ để hàm số đạt cực trị.
+
+\begin{dinhly}
+	\label{thm:dieu kien du de ham so dat cuc tri}
+	Giả sử hàm số $f$ liên tục trên khoảng $(a;b)$ chứa điểm $x_0$ \& có đạo hàm trên các khoảng $(a;x_0)$ \& $(x_0;b)$. Khi đó:
+	\begin{enumerate*}
+		\item[(a)] Nếu $f'(x) < 0$, $\forall x\in(a;x_0)$ \& $f'(x) > 0$, $\forall x\in(x_0;b)$ thì hàm số $f$ đạt cực tiểu tại điểm $x_0$.
+		\item[(b)] Nếu $f'(x) > 0$, $\forall x\in(a;x_0)$ \& $f'(x) < 0$, $\forall x\in(x_0;b)$ thì hàm số $f$ đạt cực đại tại điểm $x_0$.
+	\end{enumerate*}
+\end{dinhly}
+I.e.,
+\begin{enumerate*}
+	\item[(a)] Nếu $f'(x)$ đổi dấu từ âm sang dương khi $x$ qua điểm $x_0$  (theo chiều tăng) thì hàm số đạt cực tiểu tại điểm $x_0$.
+	\item[(b)] Nếu $f'(x)$ đổi dấu từ dương sang âm khi $x$ qua điểm $x_0$ (theo chiều tăng) thì hàm số đạt cực đại tại điểm $x_0$.
+\end{enumerate*}
+
+\begin{proof}[Chứng minh]
+	\begin{enumerate*}
+		\item[(a)] Vì hàm số $f$ liên tục trên nửa khoảng $(a;x_0]$ \& $f'(x) < 0$, $\forall x\in(a;x_0)$ nên hàm số $f$ nghịch biến trên $(a;x_0]$. Do đó, $f(x) > f(x_0)$, $\forall x\in(a;x_0)$. Tương tự, vì hàm số $f$ liên tục trên nửa khoảng $[x_0;b)$ \& $f'(x) > 0$, $\forall x\in(x_0;b)$ nên hàm số đồng biến trên $[x_0;b)$. Do đó $f(x) > f(x_0)$, $\forall x\in(x_0;b)$. Vậy $f(x) > f(x_0)$, $\forall x\in(a;b)\backslash\{x_0\}$, i.e., hàm số $f$ đạt cực tiểu tại điểm $x_0$.
+		\item[(b)] Chứng minh tương tự.
+	\end{enumerate*}
+\end{proof}
+Định lý \ref{thm:dieu kien du de ham so dat cuc tri} được viết gọn lại trong 2 bảng biến thiên sau:
+
+\begin{center}
+	\begin{tikzpicture}
+		\tkzTabInit
+		[lgt=1,espcl=2] % tùy chọn
+		{$x$/.4, $f’(x)$/.5, $f(x)$/1.5} % cột đầu tiên
+		{$a$, $x_0$, $b$} % hàng 1 cột 2
+		\tkzTabLine{,-,,+,} % hàng 2 cột 2
+		\tkzTabVar{+/ , -/ $f(x_0)$ , +/ } % hàng 3 cột 2
+	\end{tikzpicture}\hspace{1cm}
+	\begin{tikzpicture}
+		\tkzTabInit
+		[lgt=1,espcl=2] % tùy chọn
+		{$x$/.4, $f’(x)$/.5, $f(x)$/1.5} % cột đầu tiên
+		{$a$, $x_0$, $b$} % hàng 1 cột 2
+		\tkzTabLine{,-,,+,} % hàng 2 cột 2
+		\tkzTabVar{-/ , +/ $f(x_0)$ , -/ } % hàng 3 cột 2
+	\end{tikzpicture}
+\end{center}
+Từ định lý \ref{thm:dieu kien du de ham so dat cuc tri} ta có quy tắc tìm cực trị sau đây.
+
+\begin{quytac}
+	\begin{enumerate*}
+		\item[\textbf{1.}] Tìm $f'(x)$.
+		\item[\textbf{2.}] Tìm các điểm $x_i$ tại đó đạo hàm của hàm số bằng $0$ hoặc hàm số liên tục nhưng không có đạo hàm.
+		\item[\textbf{3.}] Xét dấu $f'(x)$. Nếu $f'(x)$ đổi dấu khi $x$ qua điểm $x_i$ thì hàm số đạt cực trị tại $x_i$.'' -- \cite[pp. 11--14]{SGK_Toan_12_giai_tich_nang_cao}
+	\end{enumerate*}
+\end{quytac}
+``Có thể sử dụng đạo hàm cấp 2 để tìm cực trị của hàm số.
+
+\begin{dinhly}
+	\label{thm:dao ham cap 2 & cuc tri ham so}
+	Giả sử hàm số $f$ có đạo hàm cấp 1 trên khoảng $(a;b)$ chứa điểm $x_0$, $f'(x_0) = 0$ \& $f$ có đạo hàm cấp 2 khác $0$ tại điểm $x_0$.
+	\begin{enumerate*}
+		\item[(a)] Nếu $f''(x_0) < 0$ thì hàm số $f$ đạt cực đại tại điểm $x_0$.
+		\item[(b)] Nếu $f''(x_0) > 0$ thì hàm số $f$ đạt cực tiểu tại điểm $x_0$.
+	\end{enumerate*}
+\end{dinhly}
+Từ định lý \ref{thm:dao ham cap 2 & cuc tri ham so}, ta có 1 quy tắc khác để tìm cực trị của hàm số (nếu hàm số có đạo hàm cấp 2).
+
+\begin{quytac}
+	\begin{enumerate*}
+		\item[\textbf{1.}] Tìm $f'(x)$.
+		\item[\textbf{2.}] Tìm các nghiệm $x_i$ của phương trình $f'(x) = 0$.
+		\item[\textbf{3.}] Tìm $f''(x)$ \& tính $f''(x_i)$. Nếu $f''(x_i) < 0$ thì hàm số đạt cực đại tại điểm $x_i$. Nếu $f''(x_i) > 0$ thì hàm số đạt cực tiểu tại điểm $x_i$.'' -- \cite[pp. 15--16]{SGK_Toan_12_giai_tich_nang_cao}
+	\end{enumerate*}
+\end{quytac}
 
 %------------------------------------------------------------------------------%
 
