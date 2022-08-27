@@ -216,9 +216,9 @@ Từ định lý \ref{thm:dieu kien du de ham so dat cuc tri} ta có quy tắc t
 
 \begin{quytac}
 	\begin{enumerate*}
-		\item[\textbf{1.}] Tìm $f'(x)$.
-		\item[\textbf{2.}] Tìm các điểm $x_i$ tại đó đạo hàm của hàm số bằng $0$ hoặc hàm số liên tục nhưng không có đạo hàm.
-		\item[\textbf{3.}] Xét dấu $f'(x)$. Nếu $f'(x)$ đổi dấu khi $x$ qua điểm $x_i$ thì hàm số đạt cực trị tại $x_i$.'' -- \cite[pp. 11--14]{SGK_Toan_12_giai_tich_nang_cao}
+		\item Tìm $f'(x)$.
+		\item Tìm các điểm $x_i$ tại đó đạo hàm của hàm số bằng $0$ hoặc hàm số liên tục nhưng không có đạo hàm.
+		\item Xét dấu $f'(x)$. Nếu $f'(x)$ đổi dấu khi $x$ qua điểm $x_i$ thì hàm số đạt cực trị tại $x_i$.'' -- \cite[pp. 11--14]{SGK_Toan_12_giai_tich_nang_cao}
 	\end{enumerate*}
 \end{quytac}
 ``Có thể sử dụng đạo hàm cấp 2 để tìm cực trị của hàm số.
@@ -235,15 +235,46 @@ Từ định lý \ref{thm:dao ham cap 2 & cuc tri ham so}, ta có 1 quy tắc kh
 
 \begin{quytac}
 	\begin{enumerate*}
-		\item[\textbf{1.}] Tìm $f'(x)$.
-		\item[\textbf{2.}] Tìm các nghiệm $x_i$ của phương trình $f'(x) = 0$.
-		\item[\textbf{3.}] Tìm $f''(x)$ \& tính $f''(x_i)$. Nếu $f''(x_i) < 0$ thì hàm số đạt cực đại tại điểm $x_i$. Nếu $f''(x_i) > 0$ thì hàm số đạt cực tiểu tại điểm $x_i$.'' -- \cite[pp. 15--16]{SGK_Toan_12_giai_tich_nang_cao}
+		\item Tìm $f'(x)$.
+		\item Tìm các nghiệm $x_i$ của phương trình $f'(x) = 0$.
+		\item Tìm $f''(x)$ \& tính $f''(x_i)$. Nếu $f''(x_i) < 0$ thì hàm số đạt cực đại tại điểm $x_i$. Nếu $f''(x_i) > 0$ thì hàm số đạt cực tiểu tại điểm $x_i$.'' -- \cite[pp. 15--16]{SGK_Toan_12_giai_tich_nang_cao}
 	\end{enumerate*}
 \end{quytac}
 
 %------------------------------------------------------------------------------%
 
 \section{Giá Trị Lớn Nhất \& Giá Trị Nhỏ Nhất của Hàm Số}
+\textbf{Nội dung.} \textit{Các bài toán dẫn đến việc tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số trên 1 tập hợp số thực cho trước, ứng dụng tính đơn điệu \& cực trị của hàm số để tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số}.
+
+\begin{dinhnghia}[Giá trị lớn\texttt{/}nhỏ nhất]
+	``Giả sử hàm số $f$ xác định trên tập hợp $\mathcal{D}\subset\mathbb{R}$.
+	\begin{enumerate*}
+		\item[(a)] Nếu tồn tại 1 điểm $x_0\in\mathcal{D}$ sao cho $f(x)\le f(x_0)$, $\forall x\in\mathcal{D}$ thì số $M = f(x_0)$ được gọi là \emph{giá trị lớn nhất} của hàm số $f$ trên $\mathcal{D}$, ký hiệu là $M\coloneqq\max_{x\in\mathcal{D}} f(x)$.
+		\item[(b)] Nếu tồn tại 1 điểm $x_0\in\mathcal{D}$ sao cho $f(x)\ge f(x_0)$, $\forall x\in\mathcal{D}$ thì số $m = f(x_0)$ được gọi là \emph{giá trị nhỏ nhất} của hàm số $f$ trên $\mathcal{D}$, ký hiệu là $m = \min_{x\in\mathcal{D}} f(x)$.
+	\end{enumerate*}
+\end{dinhnghia}
+Như vậy, muốn chứng tỏ rằng số $M$ (hoặc $m$) là giá trị lớn nhất (hoặc giá trị nhỏ nhất) của hàm số $f$ trên tập hợp $\mathcal{D}$ cần chỉ rõ:
+\begin{enumerate*}
+	\item[(a)] $f(x)\le M$ (hoặc $f(x)\ge m$), $\forall x\in\mathcal{D}$.
+	\item[(b)] Tồn tại ít nhất 1 điểm $x_0\in\mathcal{D}$ sao cho $f(x_0) = M$ (hoặc $f(x_0) = m$).
+\end{enumerate*}
+Ta quy ước rằng khi nói giá trị lớn nhất hay nhỏ nhất của hàm số $f$ (mà không nói ``trên tập $\mathcal{D}$'') thì ta hiểu đó là giá trị lớn nhất hay nhỏ nhất của $f$ trên tập xác định của nó.'' -- \cite[p. 18]{SGK_Toan_12_giai_tich_nang_cao}
+
+``Phương pháp thường được sử dụng để tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số trên 1 tập hợp là lập bảng biến thiên của hàm số trên tập hợp đó.'' -- \cite[p. 19]{SGK_Toan_12_giai_tich_nang_cao}
+
+\begin{nhanxet}
+	``Người ta đã chứng minh được rằng hàm số liên tục trên 1 đoạn thì đạt được giá trị lớn nhất \& nhỏ nhất trên đoạn đó. Trong nhiều trường hợp, có thể tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số trên 1 đoạn mà không cần lập bảng biến thiên của nó.
+\end{nhanxet}
+Giả sử hàm số $f$ liên tục trên đoạn $[a;b]$ \& có đạo hàm trên khoảng $(a;b)$, có thể trừ 1 số hữu hạn điểm. Nếu $f'(x) = 0$ chỉ tại 1 số hữu hạn điểm thuộc $(a;b)$ thì ta có quy tắc tìm giá trị lớn nhất \& nhỏ nhất của hàm $f$ trên đoạn $[a;b]$ như sau:
+
+\begin{quytac}
+	\begin{enumerate*}
+		\item Tìm các điểm $x_i\in(a;b)$, $i = 1,\ldots,m$, tại đó hàm số $f$ có đạo hàm bằng $0$ hoặc không có đạo hàm.
+		\item Tính $f(x_i)$, $i = 1,\ldots,m$, $f(a)$, \& $f(b)$.
+		\item So sánh các giá trị tìm được.
+	\end{enumerate*}
+	Số lớn nhất trong các giá trị đó là giá trị lớn nhất của $f$ trên đoạn $[a;b]$, số nhỏ nhất trong các gía trị đó là giá trị nhỏ nhất của $f$ trên đoạn $[a;b]$.'' -- \cite[p. 21]{SGK_Toan_12_giai_tich_nang_cao}
+\end{quytac}
 
 %------------------------------------------------------------------------------%
 
