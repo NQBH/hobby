@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
 \DeclareMathOperator{\arccot}{arccot}
 \usepackage[inline]{enumitem}
 \allowdisplaybreaks
@@ -291,7 +291,7 @@ Người ta còn gọi đồ thị của hàm số $y = f(x)$ là \textit{đư�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.15]{2_he_truc_toa_do}
+	\includegraphics[scale=0.13]{2_he_truc_toa_do}
 	\caption{2 hệ trục tọa độ, \cite[Hình 1.5, p. 25]{SGK_Toan_12_giai_tich_nang_cao}.}
 	\label{fig:2_he_truc_toa_do}
 \end{figure}
@@ -303,6 +303,115 @@ Giả sử $M$ là 1 điểm bất kỳ của mặt phẳng. Gọi $(x;y)$ là t
 %------------------------------------------------------------------------------%
 
 \section{Đường Tiệm Cận của Đồ Thị Hàm Số}
+
+\subsection{Đường tiệm cận đứng \& đường tiệm cận ngang}
+``Ta đã biết đồ thị của hàm số $f(x) = \frac{1}{x}$ là đường hyperbĐol gồm 2 nhánh nằm trong góc phần 4 thứ nhất \& thứ 3 của mặt phẳng tọa độ.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.13]{hyperbol}
+	\caption{Đồ thị của hàm số $f(x) = \frac{1}{x}$, \cite[Hình 1.6, p. 28]{SGK_Toan_12_giai_tich_nang_cao}.}
+	\label{fig:hyperbol}
+\end{figure}
+Ta có: $\lim_{x\to+\infty} f(x) = \lim_{x\to+\infty} \frac{1}{x} = 0$, $\lim_{x\to-\infty} f(x) = \lim_{x\to-\infty} \frac{1}{x} = 0$. I.e., khoảng cách $MH = |f(x)|$ từ điểm $M$ của đồ thị đến trục hoành dần đến $0$ khi điểm $M$ theo đường hyperbol đi xa ra vô tận về phía phải hoặc phía trái. Người ta gọi trục hoành là đường tiệm cận ngang của đồ thị hàm số $y = \frac{1}{x}$. Ta cũng có: $\lim_{x\to 0^+} f(x) = \lim_{x\to 0^+} \frac{1}{x} = +\infty$ \& $\lim_{x\to 0^-} f(x) = \lim_{x\to 0^-} \frac{1}{x} = -\infty$. I.e., khoảng cách $NK = |x|$ từ 1 điểm $N$ của đồ thị đến trục tung dần đến $0$ khi điểm $N$ theo đồ thị đi xa ra vô tận về phía trên hoặc phía dưới. Người ta gọi trục tung là \textit{đường tiệm cận đứng} của đồ thị hàm số $y = \frac{1}{x}$. 1 cách tổng quát, ta có:
+
+\begin{dinhnghia}[Tiệm cận ngang]
+	Đường thẳng $y = y_0$ được gọi là \emph{đường tiệm cận ngang} (gọi tắt là \emph{tiệm cận ngang}) của đồ thị hàm số $y = f(x)$ nếu $\lim_{x\to+\infty} f(x) = y_0$ hoặc $\lim_{x\to-\infty} f(x) = y_0$.
+\end{dinhnghia}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{tiem_can_ngang_a}
+		\caption{Đường thẳng $y = y_0$ là tiệm cận ngang của đồ thị (khi $x\to+\infty$).}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{tiem_can_ngang_b}
+		\caption{Đường thẳng $y = y_0$ là tiệm cận ngang của đồ thị (khi $x\to-\infty$).}
+	\end{subfigure}
+	\caption{Tiệm cận ngang của đồ thị, \cite[Hình 1.7, p. 29]{SGK_Toan_12_giai_tich_nang_cao}.}
+	\label{fig:tiem_can_ngang}
+\end{figure}
+
+\begin{dinhnghia}[Tiệm cận đứng]
+	Đường thẳng $x = x_0$ được gọi là \emph{đường tiệm cận đứng} (gọi tắt là \emph{tiệm cận đứng}) của đồ thị hàm số $y = f(x)$ nếu ít nhất 1 trong các điều kiện sau được thỏa mãn: $\lim_{x\to x_0^-} f(x) = +\infty$, $\lim_{x\to x_0^+} f(x) = +\infty$, $\lim_{x\to x_0^-} f(x) = -\infty$, $\lim_{x\to x_0^+} f(x) = -\infty$.'' -- \cite[pp. 28--30]{SGK_Toan_12_giai_tich_nang_cao}
+\end{dinhnghia}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{tiem_can_dung_a}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{tiem_can_dung_b}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{tiem_can_dung_c}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{tiem_can_dung_d}
+		\caption{}
+	\end{subfigure}
+	\caption{(a) \& (c) Đường thẳng $x = x_0$ là tiệm cận đứng của đồ thị (khi $x\to x_0^-$), (b) \& (d) Đường thẳng $x = x_0$ là tiệm cận đứng của đồ thị (khi $x\to x_0^+$), \cite[Hình 1.8, p. 30]{SGK_Toan_12_giai_tich_nang_cao}.}
+	\label{fig:tiem_can_dung}
+\end{figure}
+
+\subsection{Đường tiệm cận xiên}
+``Cho $(\mathcal{C})$ là đồ thị của hàm số $y = f(x)$ \& $(d)$ là đường thẳng $y = ax + b$ ($a\ne 0$). Gọi $M$ \& $N$ là 2 điểm của $(\mathcal{C})$ \& $(d)$ có cùng hoành độ $x$ (Fig. \ref{fig:tiem_can_xien}).
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.6\linewidth]{tiem_can_xien_a}
+		\caption{Đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị (khi $x\to+\infty$).}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.5\linewidth]{tiem_can_xien_b}
+		\caption{Đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị (khi $x\to-\infty$).}
+	\end{subfigure}
+	\caption{Tiệm cận xiên của đồ thị, \cite[Hình 1.11, p. 33]{SGK_Toan_12_giai_tich_nang_cao}.}
+	\label{fig:tiem_can_xien}
+\end{figure}
+Nếu độ dài của đoạn thẳng $MN$ dần đến $0$ khi $x$ dần đến $+\infty$ (hoặc khi $x$ dần đến $-\infty$) thì đường thẳng $(d)$ được gọi là \textit{đường tiệm cận xiên} của $(\mathcal{C})$. Vì $MN = |f(x) - (ax + b)|$ nên ta có định nghĩa sau:
+
+\begin{dinhnghia}[Tiệm cận xiên]
+	\label{def:tiem can xien}
+	Đường thẳng $y = ax + b$, $a\ne 0$, được gọi là \emph{đường tiệm cận xiên} (gọi tắt là \emph{tiệm cận xiên}) của đồ thị hàm số $y = f(x)$ nếu $\lim_{x\to+\infty} [f(x) - (ax + b)] = 0$, hoặc $\lim_{x\to-\infty} [f(x) - (ax + b)] = 0$.'' -- \cite[p. 32]{SGK_Toan_12_giai_tich_nang_cao}
+\end{dinhnghia}
+
+\begin{luuy}
+	``Để xác định các hệ số $a,b$ trong phương trình của đường tiệm cận xiên, ta có thể áp dụng các công thức sau: $a = \lim_{x\to+\infty} \frac{f(x)}{x}$, $b = \lim_{x\to+\infty} [f(x) - ax]$, hoặc $a = \lim_{x\to-\infty} \frac{f(x)}{x}$, $b = \lim_{x\to-\infty} [f(x) - ax]$. (Khi $a = 0$ thì ta có tiệm cận ngang).
+\end{luuy}
+
+\begin{proof}[Chứng minh]
+	Thật vậy, xét trường hợp $x\to+\infty$, giả sử hàm số $f$ xác định trên khoảng $(\alpha;+\infty)$ \& đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ (khi $x\to+\infty$). Khi đó, theo định nghĩa \ref{def:tiem can xien}, ta có:
+	\begin{align}
+		\label{SGK Giai Tich 12 (1) p. 34}
+		\lim_{x\to+\infty} [f(x) - (ax + b)] = 0.
+	\end{align}
+	Do đó $\lim_{x\to+\infty} \frac{f(x) - (ax + b)}{x} = 0$, i.e., $\lim_{x\to+\infty} \left[\frac{f(x)}{x} - a - \frac{b}{x}\right] = 0$. Vì $\lim_{x\to+\infty} \frac{b}{x} = 0$ nên
+	\begin{align}
+		\label{SGK Giai Tich 12 (2) p. 34}
+		a = \lim_{x\to+\infty} \frac{f(x)}{x}.
+	\end{align}
+	Từ \eqref{SGK Giai Tich 12 (1) p. 34} suy ra
+	\begin{align}
+		\label{SGK Giai Tich 12 (3) p. 34}
+		b = \lim_{x\to+\infty} [f(x) - ax].
+	\end{align}
+	Đảo lại, nếu $a$ \& $b$ thỏa mãn \eqref{SGK Giai Tich 12 (2) p. 34} \& \eqref{SGK Giai Tich 12 (3) p. 34} thì từ \eqref{SGK Giai Tich 12 (3) p. 34} suy ra \eqref{SGK Giai Tich 12 (1) p. 34}. Do đó đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ nếu $a\ne 0$ \& là tiệm cận ngang nếu $a = 0$. Trường hợp $x\to-\infty$ được chứng minh tương tự.'' -- \cite[p. 34]{SGK_Toan_12_giai_tich_nang_cao}
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
