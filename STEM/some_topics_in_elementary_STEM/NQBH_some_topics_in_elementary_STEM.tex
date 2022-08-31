@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[english,vietnamese]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol,tipa}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{\underline{\textbf{Series}}\\Some Topics in Elementary STEM}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{vietnamese}
+\begin{abstract}
+	Bài viết này là 1 bài luận ngắn về STEM \& cũng là phần Giới thiệu cho bộ sách cùng tên.
+\end{abstract}
+
+\tableofcontents
+\selectlanguage{vietnamese}
+
+%------------------------------------------------------------------------------%
+
+\section{Preface}
+\textsc{[Forward vs. Preface\footnote{\textbf{preface} \textipa{/`pref@s/} [n]}]:}
+
+\textit{About the Title.}
+
+\subsection{Dream vs. Reality}
+
+\section{Basic Concepts}
+
+\begin{definition}[STEM]
+	
+\end{definition}
+
+\section{The Elements of Logic}
+
+\subsection{Counterexamples \& its Role in Elementary Mathematics -- Phản Ví Dụ \& Vai Trò Trong Toán Sơ Cấp}
+
+\begin{definition}
+	``A \emph{counterexample}\footnote{\textbf{counterexample} \textipa{/`kaUnt@rIgzA:mpl/, /`kaUnt@rIgz\ae mpl/} [n] \textbf{counterexample (to something)} an example that provides evidence against an idea or theory.} is any exception to a \href{https://en.wikipedia.org/wiki/Generalization}{generalization}. In \href{https://en.wikipedia.org/wiki/Logic}{logic} a counterexample disproves the generalization, \& does so \href{https://en.wikipedia.org/wiki/Rigor}{rigorously} in the fields of \href{https://en.wikipedia.org/wiki/Mathematics}{mathematics} \& \href{https://en.wikipedia.org/wiki/Philosophy}{philosophy}.'' -- \href{https://en.wikipedia.org/wiki/Counterexample}{Wikipedia\emph{\texttt{/}}counterexample}
+\end{definition}
+``In mathematics, the term ``counterexample'' is also used (by a slight abuse) to refer to examples which illustrate the necessity of the full hypothesis of a theorem. This is most often done by considering a case where a part of the hypothesis is not satisfied \& the conclusion of the theorem does not hold.'' -- \href{https://en.wikipedia.org/wiki/Counterexample}{Wikipedia\texttt{/}counterexample}
+
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
