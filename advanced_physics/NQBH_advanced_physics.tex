@@ -1,0 +1,87 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Advanced Physics}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter{Wikipedia's}
+
+\section{\href{https://en.wikipedia.org/wiki/Stationary-action_principle}{Wikipedia\texttt{/}Stationary-Action Principle}}
+``The \textit{stationary-action principle} -- also known as the \textit{principle of least action} -- is a \href{https://en.wikipedia.org/wiki/Variational_principle}{variational principle} that, when applied to the \href{https://en.wikipedia.org/wiki/Action_(physics)}{\textit{action}} of a \href{https://en.wikipedia.org/wiki/Mechanics}{mechanical} system, yields the \href{https://en.wikipedia.org/wiki/Equations_of_motion}{equations of motion} for that system. The principle states that the trajectories (i.e., the solutions of the equations of motions) are \href{https://en.wikipedia.org/wiki/Stationary_point}{\textit{stationary points}} of the system's \textit{action functional}. The term ``least action'' is a historical misnomer since the principle has no minimality requirement: the value of the action functional need not be minimal (even locally) on the trajectories. Least action refers to the absolute value of the action functional being minimized.
+
+The principle can be used to derive \href{https://en.wikipedia.org/wiki/Newtonian_mechanics}{Newtonian}, \href{https://en.wikipedia.org/wiki/Lagrangian_mechanics}{Lagrangian}, \& \href{https://en.wikipedia.org/wiki/Hamiltonian_mechanics}{Hamiltonian} \href{https://en.wikipedia.org/wiki/Equations_of_motion}{equations of motion}, \& even \href{https://en.wikipedia.org/wiki/General_relativity}{general relativity} (see \href{https://en.wikipedia.org/wiki/Einstein%E2%80%93Hilbert_action}{Einstein--Hilbert action}). In relativity, a different action must be minimized or maximized.
+
+The classical mechanics \& electromagnetic expressions are a consequence of quantum mechanics. The stationary action method helped in the development of quantum mechanics. In 1933, the physicist \href{https://en.wikipedia.org/wiki/Paul_Dirac}{Paul Dirac} demonstrated how this principle can be used in quantum calculations by discerning the \href{https://en.wikipedia.org/wiki/Path_integral_formulation#Quantum_action_principle}{quantum mechanical underpinning} of the principle in the \href{https://en.wikipedia.org/wiki/Interference_(wave_propagation)#Quantum_interference}{quantum interference} of amplitudes. Subsequently \href{https://en.wikipedia.org/wiki/Julian_Schwinger}{Julian Schwinger} \& \href{https://en.wikipedia.org/wiki/Richard_Feynman}{Richard Feynman} independently applied this principle in quantum electrodynamics.
+
+The principle remains central in \href{https://en.wikipedia.org/wiki/Modern_physics}{modern physics} \& mathematics, being applied in \href{https://en.wikipedia.org/wiki/Thermodynamics}{thermodynamics}, \href{https://en.wikipedia.org/wiki/Fluid_mechanics}{fluid mechanics}, the \href{https://en.wikipedia.org/wiki/Theory_of_relativity}{theory of relativity}, \href{https://en.wikipedia.org/wiki/Quantum_mechanics}{quantum mechanics}, \href{https://en.wikipedia.org/wiki/Particle_physics}{particle physics}, \& \href{https://en.wikipedia.org/wiki/String_theory}{string theory} \& is a focus of modern mathematical investigation in \href{https://en.wikipedia.org/wiki/Morse_theory}{Morse theory}. \href{https://en.wikipedia.org/wiki/Maupertuis%27_principle}{Maupertuis' principle} \& \href{https://en.wikipedia.org/wiki/Hamilton%27s_principle}{Hamilton's principle} exemplify the principle of stationary action.
+
+The action principle is preceded by earlier ideas in \href{https://en.wikipedia.org/wiki/Optics}{optics}. In \href{https://en.wikipedia.org/wiki/Ancient_Greece}{ancient Greece}, \href{https://en.wikipedia.org/wiki/Euclid}{Euclid} wrote in his \textit{Catoptrica} that, for the path of light reflecting from a mirror, the \href{https://en.wikipedia.org/wiki/Angle_of_incidence_(optics)}{angle of incidence} equals the \href{https://en.wikipedia.org/wiki/Angle_of_reflection}{angle of reflection}. \href{https://en.wikipedia.org/wiki/Hero_of_Alexandria}{Hero of Alexandria} later showed that this path was the shortest length \& least time.
+
+Scholars often credit \href{Pierre Louis Maupertuis} for formulating the principle of least action because he wrote about it in 1744 \& 1746. However, \href{https://en.wikipedia.org/wiki/Leonhard_Euler}{Leonhard Euler} discussed the principle in 1744, \& evidence shows that \href{https://en.wikipedia.org/wiki/Gottfried_Leibniz}{Gottfried Leibniz} preceded both by 39 years.'' -- \href{https://en.wikipedia.org/wiki/Stationary-action_principle}{Wikipedia\texttt{/}stationary-action principle}
+
+\subsection{General statement}
+
+\subsection{Origins, statements, \& controversy}
+
+\subsubsection{Fermat}
+
+\subsubsection{Maupertuis}
+
+\subsubsection{Euler}
+
+\subsubsection{Disputed priority}
+
+\subsection{Further development}
+
+\subsubsection{Lagrange \& Hamilton}
+
+\subsubsection{Jacobi, Morse, \& Caratheodory}
+
+\subsubsection{Gauss \& Hertz}
+
+\subsection{Disputes about possible teleological aspects}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
