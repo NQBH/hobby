@@ -43,6 +43,55 @@
 
 %------------------------------------------------------------------------------%
 
+\chapter{Wikipedia's}
+
+\section{\href{https://en.wikipedia.org/wiki/Symmetrization_methods}{Wikipedia\texttt{/}Symmetrization Methods}}
+``In mathematics the \textit{symmetrization methods} are algorithms of transforming a set $A\subset\mathbb{R}^n$ to a ball $B\subset\mathbb{R}^n$ with equal volume $\operatorname{vol}(B) = \operatorname{vol}(A)$ \& centered at the origin. $B$ is called the \textit{symmetrized version} of $A$, usually denoted $A^\star$. These algorithms show up in solving the classical \href{https://en.wikipedia.org/wiki/Isoperimetric_inequality}{isoperimetric inequality} problem, which asks: Given all 2D shapes of a given area, which of them has the minimal \href{https://en.wikipedia.org/wiki/Perimeter}{perimeter}. The conjectured answer was the disk \& \href{https://en.wikipedia.org/wiki/Jakob_Steiner}{Steiner} in 1838 showed this to be true using the Steiner symmetrization method. From this many other isoperimetric problems sprung \& other symmetrization algorithms. E.g., Rayleigh's conjecture is that the 1st \href{https://en.wikipedia.org/wiki/Eigenvalue}{eigenvalue} of the \href{https://en.wikipedia.org/wiki/Dirichlet_problem}{Dirichlet problem} is minimized for the ball (see \href{https://en.wikipedia.org/wiki/Rayleigh%E2%80%93Faber%E2%80%93Krahn_inequality}{Rayleigh--Faber--Krahn inequality} for details). Another problem is that the Newtonian \href{https://en.wikipedia.org/wiki/Capacity_of_a_set}{capacity of a set} $A$ is minimized by $A^\star$ \& this was proved by Polya \& G. Szego (1951) using circular symmetrization.'' -- \href{https://en.wikipedia.org/wiki/Symmetrization_methods}{Wikipedia\texttt{/}symmetrization methods}
+
+\subsection{Symmetrization}
+``If $\Omega\subset\mathbb{R}^n$ is measurable, then it is denoted by $\Omega^\star$ the symmetrized version of $\Omega$, i.e., a ball $\Omega^\star\coloneqq B_r(0)\subset\mathbb{R}^n$ s.t. $\operatorname{vol}(\Omega^\star) = \operatorname{vol}(\Omega)$. We denote by $f^\star$ the \href{https://en.wikipedia.org/wiki/Symmetric_decreasing_rearrangement}{symmetric decreasing rearrangement} of nonnegative measurable function $f$ \& define it as $f^\star(x)\coloneqq\int_0^\infty 1_{\{y:f(y) > t\}^\star}(x){\rm d}t$, where $\{y:f(y) > t\}^\star$ is the symmetrized version of preimage set $\{y:f(y) > t\}$. The methods described below have been proved to transform $\Omega$ to $\Omega^\star$, i.e., given a sequence of symmetrization transformations $\{T_k\}$ there is $\lim_{k\to\infty} d_{\rm Ha}(\Omega^\star,T_k(K)) = 0$, where $d_{\rm Ha}$ is the \href{https://en.wikipedia.org/wiki/Hausdorff_distance}{Hausdorff distance} (for discussion \& proofs see [Burchard2009]).'' -- \href{https://en.wikipedia.org/wiki/Symmetrization_methods#Symmetrization}{Wikipedia\texttt{/}symmetrization methods\texttt{/}symmetrization}
+
+\subsection{Steiner symmetrization}
+\textsf{Steiner Symmetrization of set $\Omega$.}
+
+``Steiner symmetrization was introduced by Steiner (1838) to solve the isoperimetric theorem stated above. Let $H\subset\mathbb{R}^n$ be a \href{https://en.wikipedia.org/wiki/Hyperplane}{hyperplane} through the origin. Rotate space so that $H$ is the $x_n = 0$ ($x_n$ is $n$th coordinate in $\mathbb{R}^n$) hyperplane. For each ${\bf x}\in H$ let the perpendicular line through ${\bf x}\in H$ be $L_{\bf x} = \{{\bf x} + y{\bf e}_n:y\in\mathbb{R}\}$. Then by replacing each $\Omega\cap L_{\bf x}$ by a line centered at $H$ \& with length $|\Omega\cap L_{\bf x}|$ we obtain the \textit{Steiner symmetrized version}.
+\begin{align*}
+	\operatorname{St}(\Omega)\coloneqq\left\{{\bf x} + y{\bf e}_n:{\bf x} + z{\bf e}_n\in\Omega\mbox{ for some }{\bf z}\mbox{ \& }|y|\le\frac{1}{2}|\Omega\cap L_x|\right\}.
+\end{align*}
+It is denoted by $\operatorname{St}(f)$ the \textit{Steiner symmetrization} w.r.t. $x_n = 0$ hyperplane of nonnegative measurable function $f:\mathbb{R}^d\to\mathbb{R}$ \& for fixed $x_1,\ldots,x_{n-1}$ define it as $\operatorname{St}:f(x_1,\ldots,x_{n-1},\cdot)\mapsto(f(x_1,\ldots,x_{n-1}))^\star$.
+
+\subsubsection{Properties}
+It preserves convexity: if $\Omega$ is convex, then $\operatorname{St}(\Omega)$ is also convex. It is linear: $\operatorname{St}({\bf x} + \lambda\Omega) = \operatorname{St}({\bf x}) + \lambda\operatorname{St}(\Omega)$. Super-additive: $\operatorname{St}(K) + \operatorname{St}(U)\subset\operatorname{St}(K + U)$.'' -- \href{https://en.wikipedia.org/wiki/Symmetrization_methods#Steiner_symmetrization}{Wikipedia\texttt{/}symmetrization methods\texttt{/}Steiner symmetrization}
+
+\subsection{Circular symmetrization}
+\textsf{Fig. Circular symmetrization of set $\Omega$.}
+
+``A popular method for symmetrization in the plane is \textit{Polya's circular symmetrization}. After, its generalization will be described to higher dimensions. Let $\Omega\subset\mathbb{C}$ be a domain; then its circular symmetrization $\operatorname{Circ}(\Omega)$ with regard to the positive real axis is defined as follows: Let $\Omega_t\coloneqq\{\theta\in[0,2\pi]:te^{i\theta}\in\Omega\}$, i.e., contain the arcs of radius $t$ contained in $\Omega$. So it is defined
+\begin{itemize}
+	\item If $\Omega_t$ is the full circle, then $\operatorname{Circ}(\Omega)\cap\{|z| = t\}\coloneqq\{|z| = t\}$.
+	\item If the length is $\operatorname{m}(\Omega_t) = \alpha$, then $\operatorname{Circ}(\Omega)\cap\{|z| = t\}\coloneqq\left\{te^{i\theta}:|\theta| < \frac{\alpha}{2}\right\}$.
+	\item $0,\infty\in\operatorname{Circ}(\Omega)$ if $0,\infty\in\Omega$.
+\end{itemize}
+In higher dimensions $\Omega\subset\mathbb{R}^n$, its spherical symmetrization $\operatorname{Sp}^n(\Omega)$ w.r.t. the positive axis of $x_1$ is defined as follows: Let $\Omega_r\coloneqq\{{\bf x}\in\mathbb{S}^{n-1}:r{\bf x}\in\Omega\}$, i.e., contain the caps of radius $r$ contained in $\Omega$. Also, for the 1st coordinate let $\operatorname{angle}(x_1)\coloneqq\theta$ if $x_1 = r\cos\theta$. So as above
+\begin{itemize}
+	\item If $\Omega_r$ is the full cap, then $\operatorname{Sp}^n(\Omega)\cap\{|z| = r\}\coloneqq\{|z| = t\}$.
+	\item If the surface area is $\operatorname{m}_{\rm s}(\Omega_t) = \alpha$, then $\operatorname{Sp}^n(\Omega)\cap\{|z| = r\}\coloneqq\{x:|x| = r\mbox{ \& }0\le\operatorname{angle}(x_1)\le\theta_\alpha\}=:C(\theta_\alpha)$ where $\theta_\alpha$ is picked so that its surface area is $\operatorname{m}_s(C(\theta_\alpha)) = \alpha$. In words, $C(\theta_\alpha)$ is a cap symmetric around the positive axis $x_1$ with the same area as the intersection $\Omega\cap\{|z| = r\}$.
+	\item $0,\infty\in\operatorname{Sp}^n(\Omega)$ iff $0,\infty\in\Omega$.'' -- \href{https://en.wikipedia.org/wiki/Symmetrization_methods#Circular_symmetrization}{Wikipedia\texttt{/}symmetrization methods\texttt{/}circular symmetrization}
+\end{itemize}
+
+\subsection{Polarization}
+\textsf{Fig: Polarization of set $\Omega$.}
+
+``Let $\Omega\subset\mathbb{R}^n$ be a domain \& $H^{n-1}\subset\mathbb{R}^n$ be a hyperplane through the origin. Denote the reflection across that plane to the positive halfspace $\mathbb{H}^+$ as $\sigma_H$ or just $\sigma$ when it is clear from the context. Also, the reflected $\Omega$ across hyperplane $H$ is defined as $\sigma\Omega$. Then, the polarized $\Omega$ is denoted as $\Omega^\alpha$ \& defined as follows
+\begin{itemize}
+	\item If ${\bf x}\in\Omega\cap\mathbb{H}^+$, then ${\bf x}\in\Omega^\alpha$.
+	\item If ${\bf x}\in\Omega\cap\sigma(\Omega)\cap\mathbb{H}^-$, then ${\bf x}\in\Omega^\sigma$.
+	\item If ${\bf x}\in(\Omega\backslash\sigma(\Omega))\cap\mathbb{H}^-$, then $\sigma{\bf x}\in\Omega^\sigma$.
+\end{itemize}
+In words, $(\Omega\backslash\sigma(\Omega))\cap\mathbb{H}^-$ is simply reflected to the halfspace $\mathbb{H}^+$. It turns out that this transformation can approximate the above ones (in the \href{https://en.wikipedia.org/wiki/Hausdorff_distance}{Hausdorff distance}) (see [Brock \& Solynin2000]).'' -- \href{https://en.wikipedia.org/wiki/Symmetrization_methods#Polarization}{Wikipedia\texttt{/}symmetrization methods\texttt{/}polarization}
+
+%------------------------------------------------------------------------------%
+
 \chapter{Terence Tao's}
 
 \section{\cite{Tao2007}. What Is Good Mathematics?}
