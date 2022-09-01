@@ -1,0 +1,99 @@
+\documentclass[oneside]{book}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Some Topics in Inequality}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\chapter*{Preface}
+
+\selectlanguage{vietnamese}
+\section*{Notation}
+\cite{Anh_Quang2022}.
+\begin{itemize}
+	\item $\sum_{\rm cyc}$: cyclic sum\texttt{/}tổng hoán vị.
+	\item $\sum_{\rm sym}$: symmetric sum\texttt{/}tổng đối xứng.
+	\item $\prod_{\rm cyc}$: cyclic product\texttt{/}tích hoán vị.
+	\item $\prod_{\rm sym}$: symmetric product\texttt{/}tích đối xứng.
+\end{itemize}
+MATLAB, Maple, CAS
+
+%------------------------------------------------------------------------------%
+
+\selectlanguage{english}
+\part{Inequalities in Elementary Mathematics}
+
+\chapter{Elements of Inequality}
+
+%------------------------------------------------------------------------------%
+
+\chapter{2-Variables Inequality}
+
+%------------------------------------------------------------------------------%
+
+\chapter{3-Variables Inequality}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Multivariate Inequality}
+
+\selectlanguage{vietnamese}
+\section{A General Framework}
+Cho $m,n\in\mathbb{N}^\star$, xét các đại lượng $f_i(a_1,\ldots,a_n)$, $i = 1,\ldots,m$ sao cho $f_1(a_1,\ldots,a_n)\le f_2(a_1,\ldots,a_n)\le\cdots f_m(a_1,\ldots,a_n)$, hay có thể viết gọn hơn là $f_i(a_1,\ldots,a_n)\le f_j(a_1,\ldots,a_n)\le$, $\forall i,j\in\{1,\ldots,m\}$, $i < j$, hay tương đương $f_i(a_1,\ldots,a_n)\le f_{i+1}(a_1,\ldots,a_n)$, $\forall i = 1,\ldots,m - 1$. Xét các đánh giá có dạng, với $i_0\in\{1,\ldots,m\}$:
+\begin{align}
+	f_{i_0}(a_1,\ldots,a_n)\le\sum_{i=1,\,i\ne i_0}^m \lambda_if(a_1,\ldots,a_n),
+\end{align}
+hoặc phân hoạch tập chỉ số $\{1,\ldots,m\}$ thành các tập con $I_1,I_2$ \& xét các đánh giá có dạng:
+\begin{align}
+	\sum_{i\in I_1} f_{i_0}(a_1,\ldots,a_n)\le\sum_{i\in I_2} \lambda_if(a_1,\ldots,a_n),
+\end{align}
+Với $f_i$ là các đại lượng trung bình cộng, trung bình nhân, trung bình tổng lũy thừa, i.e., $\sum_{i=1}^n a_i$, $\prod_{i=1}^n a_i$, $\sqrt[k]{\frac{1}{n}\sum_{i=1}^n a_i^k}$.
+
+%------------------------------------------------------------------------------%
+
+\part{Inequalities in Advanced Mathematics}
+
+%------------------------------------------------------------------------------%
+
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
