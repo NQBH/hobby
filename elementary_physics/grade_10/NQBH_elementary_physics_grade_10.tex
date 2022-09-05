@@ -415,10 +415,52 @@ So sánh với biểu thức $\vec{\bf v}_{\rm tb} = \frac{\vec{\bf d}}{\Delta t
 %------------------------------------------------------------------------------%
 
 \section{Chuyển Động Tổng Hợp}
+\textbf{Nội dung.} \textit{Độ dịch chuyển tổng hợp, vận tốc tổng hợp}.
+
+\subsection{Độ dịch chuyển tổng hợp -- vận tốc tổng hợp}
+
+\subsubsection{Tính tương đối của chuyển động}
+``1 vật có thể xem như là đứng yên trong hệ quy chiếu này, nhưng lại chuyển động trong hệ quy chiếu khác. Do đó, chuyển động có \textit{tính tương đối}. \textit{Hệ quy chiếu đứng yên} là hệ quy chiếu gắn với vật làm gốc được quy ước là đứng yên, e.g., sân ga, người quan sát đứng yên trên mặt đất. \textit{Hệ quy chiếu chuyển động} là hệ quy chiếu gắn với vật làm gốc chuyển động so với hệ quy chiếu đứng yên, e.g., tàu hỏa chuyển động so với sân ga, bậc thang cuộn khi đang hoạt động so với mặt đất, \& dòng nước đang trôi so với người đứng yên trên mặt đất.'' -- \cite[p. 32]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+
+\subsubsection{Độ dịch chuyển tổng hợp -- vận tốc tổng hợp}
+``Khi vật 1 có độ dịch chuyển $\vec{\bf d}_{12}$ trong hệ quy chiếu chuyển động, đồng thời hệ quy chiếu chuyển động cũng có độ dịch chuyển $\vec{\bf d}_{23}$ so với hệ quy chiếu đứng yên. Dựa vào phương pháp tọa độ của toán học, ta suy ra biểu thức của độ dịch chuyển tổng hợp: $\vec{\bf d}_{13} = \vec{\bf d}_{12} + \vec{\bf d}_{23}$. Xét trong khoảng thời gian $\Delta t$ rất nhỏ kết hợp với định nghĩa của vận tốc, ta suy ra biểu thức của vận tốc tổng hợp: $\vec{\bf v}_{13} = \vec{\bf v}_{12} + \vec{\bf v}_{23}$.'' ``Minh họa về ý nghĩa thực tiễn của vận tốc tổng hợp: khi thuyền đi xuôi dòng trên sông, nhờ có thêm sự chuyển động cùng chiều của dòng nước nên thuyền sẽ có tốc độ lớn hơn so với khi nước không chảy (trong 1 hồ nước). Tương tự, khi thuyền đi ngược dòng, vì có thêm sự chuyển động ngược lại của dòng nước nên thuyền sẽ có tốc độ nhỏ hơn so với khi nước không chảy. \textit{Vận tốc tuyệt đối} (vận tốc của vật đối với hệ quy chiếu đứng yên) bằng tổng \textit{vận tốc tương đối} (vận tốc của vật đối với hệ quy chiếu chuyển động) \& \textit{vận tốc kéo theo} (vận tốc của hệ quy chiếu chuyển động đối với hệ quy chiếu đứng yên).'' -- \cite[p. 33]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+
+\subsubsection{Vận dụng công thức tính tốc độ, vận tốc}
+
+\begin{baitoan}
+	1 xe chạy liên tục trong $\Delta t$ giờ, trong mỗi khoảng $\Delta t_i$ giờ rời nhau \& liên tiếp nhau, $i = 1,\ldots,n$, $\sum_{i=1}^n \Delta t_i = \Delta t$ (e.g., $(\Delta t_i)_{i=1}^n$ là 1 ``phân hoạch'' của $\Delta t$), tốc độ trung bình của xe là $v_i$ km\emph{\texttt{/}}h. Tính tốc độ trung bình của xe trong toàn bộ khoảng thời gian chuyển động.
+\end{baitoan}
+
+\begin{proof}[Solution]
+	Theo định nghĩa của tốc độ trung bình: $v_{\rm tb} = \frac{\sum_{i=1}^n v_i\Delta t_i}{\sum_{i=1}^n \Delta t_i} = \frac{1}{\Delta t}\sum_{i=1}^n v_i\Delta t_i$ km\texttt{/}h.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
 \section{Thực Hành Đo Tốc Độ của Vật Chuyển Động Thẳng}
+\textbf{Nội dung.} \textit{Thiết kế \& thực hiện thí nghiệm đo tốc độ, các phương pháp đo tốc độ thông dụng}.
+
+``Muốn biết chuyển động của 1 vật là nhanh hay chậm tại 1 thời điểm nào đó, ta cần đo được tốc độ tức thời của chúng.'' -- \cite[p. 36]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+
+\subsection{Thí nghiệm đo tốc độ}
+``\textbf{Giới thiệu về cổng quang điện.} Cổng quang điện có tác dụng như 1 công tắc điện, dạng hình chữ U, sử dụng cảm biến ánh sáng \& thường được nối với đồng hồ đo thời gian hiện số để xác định thời gian vật chuyển động. Khi vật chuyển động qua cổng quang điện, ta nói vật chắn cổng quang điện \& tùy vào mục đích thực hiện sẽ có 5 MODE tương ứng để chọn trên đồng hồ.
+\begin{enumerate*}
+	\item[\textbf{1.}] MODE A \& B: để đo khoảng thời gian vật chắn cổng quang điện A hoặc cổng quang điện B.
+	\item[\textbf{2.}] MODE A $+$ B: để đo tổng thời gian mà vật chắn cổng quang điện A \& cổng quang điện B.
+	\item[\textbf{3.}] MODE A $\leftrightarrow$ B: để đo khoảng thời gian từ lúc vật bắt đầu chắn cổng quang điện A đến thời điểm vật bắt đầu chắn cổng quang điện B.
+	\item[\textbf{4.}] MODE T: được dùng với thanh chắn sáng có dạng chữ U. Trong chương trình THPT ta không sử dụng đến chế độ này.
+\end{enumerate*}
+
+\noindent\textbf{Giới thiệu về đồng hồ đo thời gian hiện số.} Đồng hồ đo thời gian hiện số là loại dụng cụ đo thời gian với độ chính xác cao, có 2 thang đo là $9.999$ s \& $99.99$ s ứng với độ chia nhỏ nhất là $0.001$ s \& $0.01$ s. Nó có thể hoạt động như 1 đồng hồ bấm giây \& được điều khiển bởi công tắc điện hoặc cổng quang điện. 1 đồng hồ đo thời gian hiện số có cấu tạo gồm các bộ phận như sau:
+\begin{enumerate*}
+	\item[\textbf{1.}] 1 nút gạt để chọn thang đo thời gian là $9.999$s hoặc $99.99$ s.
+	\item[\textbf{2.}] 1 núm vặn MODE được dùng để chọn 1 trong 5 chế độ đo thời gian: A, B, A $+$ B, A $\leftrightarrow$ B, \& $T$.
+	\item[\textbf{3.}] 1 ô màn hình LED ``Thời gian'' dùng hiển thị số đo thời gian.
+	\item[\textbf{4.}] 1 nút nhấn RESET dùng để đưa số chỉ thời gian trên màn hình về $0.000$.
+	\item[\textbf{5.}] Mặt sau có công tắc ON-OFF dùng đóng ngắt điện cấp cho đồng hồ \& 3 ổ cắm A, B, C (có thể ở mặt trước của đồng hồ).'' -- \cite[p. 38]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+\end{enumerate*}
+
+\subsection{1 số phương pháp đo tốc độ}
 
 %------------------------------------------------------------------------------%
 
