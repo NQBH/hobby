@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,diagbox,subcaption}
 \DeclareMathOperator{\arccot}{arccot}
 \usepackage[inline]{enumitem}
 \allowdisplaybreaks
@@ -385,6 +385,32 @@ Khi 1 vật chuyển động với tốc độ tức thời không đổi, ta n�
 \end{luuy}
 
 \subsubsection{Xác định vận tốc từ đồ dốc của đồ thị ($d$--$t$)}
+``Xét vật chuyển động từ vị trí 1 (tại thời điểm $t_1$) đến vị trí 2 (tại thời điểm $t_2$) lần lượt được biểu diễn bởi 2 điểm $P$ \& $Q$ trên đồ thị ($d$--$t$) trong Fig. \ref{fig:chuyen_dong_cua_con_rua_vien_bi}.
+
+\begin{figure}[H]
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.5\linewidth]{chuyen_dong_cua_con_rua}
+			\caption{Chuyển động của con rùa.}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.6\linewidth]{chuyen_dong_roi_cua_vien_bi}
+			\caption{Chuyển động rơi của viên bi.}
+		\end{subfigure}
+		\caption{Minh họa cách xác định vận tốc tức thời từ đồ thị ($d$--$t$) của 2 chuyển động, \cite[Hình 4.10, p. 29]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}.}
+		\label{fig:chuyen_dong_cua_con_rua_vien_bi}
+	\end{figure}
+\end{figure}
+So sánh với biểu thức $\vec{\bf v}_{\rm tb} = \frac{\vec{\bf d}}{\Delta t} = \frac{\Delta\vec{\bf x}}{\Delta t}$ để xác định vận tốc trung bình, ta có: độ dịch chuyển $d$ của vật chính là đoạn $\overline{HQ}$, khoảng thời gian $\Delta t$ chính là độ dài $PH$. Từ đó, ta thấy vận tốc trung bình chính là độ dốc của đoạn $PQ$ nối 2 điểm trên đồ thị biểu diễn vị trí đầu đến vị trí cuối của vật. Xét vật ở vị trí 1. Khi $\Delta t$ rất bé, $PQ$ trở thành tiếp tuyến của đồ thị tại điểm đang xét (điểm $P$ trên Fig. \ref{fig:chuyen_dong_cua_con_rua_vien_bi}). \textit{Vận tốc tức thời của vật tại 1 thời điểm được xác định bởi độ dốc của tiếp tuyến với đồ thị ($d$--$t$) tại thời điểm đang xét. Tốc độ tức thời tại 1 thời điểm chính là độ lớn của độ dốc tiếp tuyến của đồ thị ($d$--$t$) tại điểm đó}.'' -- \cite[p. 29]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+
+\textbf{Độ dịch chuyển--vận tốc trong mặt phẳng.} ``Khi vật chuyển động trong mặt phẳng, độ dịch chuyển chính là vector có gốc đặt tại điểm xuất phát \& ngọn tài điểm kết thúc của quỹ đạo.'' ``Vận tốc tức thời có phương tiếp tuyến với quỹ đạo \& có chiều là chiều chuyển động.''
+
+\begin{luuy}
+	``Trong chuyển động thẳng, vận tốc tức thời nằm dọc theo quỹ đạo của vật \& tốc độ tức thời của vật là độ lớn của vận tốc tức thời tại mỗi thời điểm.'' -- \cite[p. 30]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+\end{luuy}
 
 %------------------------------------------------------------------------------%
 
