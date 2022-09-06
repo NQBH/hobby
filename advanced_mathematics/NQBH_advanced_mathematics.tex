@@ -92,6 +92,62 @@ In words, $(\Omega\backslash\sigma(\Omega))\cap\mathbb{H}^-$ is simply reflected
 
 %------------------------------------------------------------------------------%
 
+\section{\href{https://en.wikipedia.org/wiki/Interpolation_space}{Wikipedia\texttt{/}Interpolation Space}}
+``In the field of \href{https://en.wikipedia.org/wiki/Mathematical_analysis}{mathematical analysis}, an \textit{interpolation space} is a space which lies ``in between'' 2 other \href{https://en.wikipedia.org/wiki/Banach_space}{Banach spaces}. The main applications are in \href{https://en.wikipedia.org/wiki/Sobolev_space}{Sobolev spaces}, where spaces of functions that have a noninteger number of \href{https://en.wikipedia.org/wiki/Derivative}{derivatives} are interpolated from the spaces of functions with integer number of derivatives.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space}{Wikipedia\texttt{/}interpolation space}
+
+\subsection{History}
+``The theory of interpolation of vector spaces began by an observation of \href{https://en.wikipedia.org/wiki/J%C3%B3zef_Marcinkiewicz}{J\'ozef Marcinkiewicz}, later generalized \& now known as the \href{https://en.wikipedia.org/wiki/Riesz-Thorin_theorem}{Riesz--Thorin theorem}. In simple terms, if a linear function is continuous on a certain \href{https://en.wikipedia.org/wiki/Lp_space}{space $L^p$} \& also on a certain space $L^q$, then it is also continuous on the space $L^r$, for any intermediate $r$ between $p$ \& $q$. In other words, $L^r$ is a space which is intermediate between $L^p$ \& $L^q$.
+
+In the development of Sobolev spaces, it became clear that the trace spaces were not any of the usual function spaces (with integer number of derivatives), \& \href{https://en.wikipedia.org/wiki/Jacques-Louis_Lions}{Jacques-Louis Lions} discovered that indeed these trace spaces were constituted of functions that have a noninteger degree of differentiability.
+
+Many methods were designed to generate such spaces of functions, including the \href{https://en.wikipedia.org/wiki/Fourier_transform}{Fourier transform}, complex interpolation, real interpolation, as well as other tools (see e.g. \href{https://en.wikipedia.org/wiki/Fractional_derivative}{fractional derivative}).'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#History}{Wikipedia\texttt{/}interpolation space\texttt{/}history}
+
+\subsection{The setting of interpolation}
+``A \href{https://en.wikipedia.org/wiki/Banach_space}{Banach space} $X$ is said to be \textit{continuously embedded} in a Hausdorff \href{https://en.wikipedia.org/wiki/Topological_vector_space}{topological vector space} $Z$ when $X$ is a linear subspace of $Z$ s.t. the inclusion map from $X$ into $Z$ is continuous. A \textit{compatible couple} $(X_0,X_1)$ of Banach spaces consists of 2 Banach spaces $X_0$ \& $X_1$ that are continuously embedded in the same Hausdorff topological vector space $Z$. The embedding in a linear space $Z$ allows to consider the 2 linear subspaces $X_0\cap X_1$ \& $X_0 + X_1 = \{z\in Z;z = x_0 + x_1,\,x_0\in X_0,\,x_1\in X_1\}$. Interpolation does not depend only upon the isomorphic (nor isometric) equivalence classes of $X_0$ \& $X_1$. It depends in an essential way from the specific \textit{relative position} that $X_0$ \& $X_1$ occupy in a larger space $Z$. One can define norms on $X_0\cap X_1$ \& $X_0 + X_1$ by $\|x\|_{X_0\cap X_1}\coloneqq\max\left(\|x\|_{X_0},\|x\|_{X_1}\right)$, $\|x\|_{X_0 + X_1}\coloneqq\inf\left\{\|x_0\|_{X_0} + \|x_1\|_{X_1};x = x_0 + x_1,\,x_0\in X_0,\,x_1\in X_1\right\}$. Equipped with these norms, the intersection \& the sum are Banach spaces. The following inclusions are all continuous: $X_0\cap X_1\subset X_0$, $X_1\subset X_0 + X_1$. Interpolation studies the family of spaces $X$ that are \textit{intermediate spaces} between $X_0$ \& $X_1$ in the sense that $X_0\cap X_1\subset X\subset X_0 + X_1$, where the 2 inclusions maps are continuous.
+
+An example of this situation is the pair ($L^1(\mathbb{R})$, $L^\infty(\mathbb{R})$), where the 2 Banach spaces are continuously embedded in the space $Z$ of measurable functions on the real line, equipped with the topology of convergence in measure. In this situation, the spaces $L^p(\mathbb{R})$, for $1\le p\le\infty$ are intermediate between $L^1(\mathbb{R})$ \& $L^\infty(\mathbb{R})$. More generally,
+\begin{align*}
+	L^{p_0}(\mathbb{R})\cap L^{p_1}(\mathbb{R})\subset L^p(\mathbb{R})\subset L^{p_0}(\mathbb{R}) + L^{p_1}(\mathbb{R}),\mbox{ when } 1\le p_0\le p\le p_1\le\infty,
+\end{align*}
+with continuous injections, so that, under the given condition, $L^p(\mathbb{R})$ is intermediate between $L^{p_0}(\mathbb{R})$ \& $L^{p_1}(\mathbb{R})$.
+
+\begin{definition}[Interpolation pair]
+	Given 2 compatible couples $(X_0,X_1)$ \& $(Y_0,Y_1)$, an \emph{interpolation pair} is a couple $(X,Y)$ of Banach spaces with the 2 following properties:
+	\begin{itemize}
+		\item The space $X$ is intermediate between $X_0$ \& $X_1$, \& $Y$ is intermediate between $Y_0$ \& $Y_1$.
+		\item If $L$ is any linear operator from $X_0 + X_1$ to $Y_0 + Y_1$, which maps continuously $X_0$ to $Y_0$ \& $X_1$ to $Y_1$, then it also maps continuously $X$ to $Y$.
+	\end{itemize}
+\end{definition}
+The interpolation pair $(X,Y)$ is said to be of \textit{exponent} $\theta$ (with $0 < \theta < 1$) if there exists a constant $C$ s.t. $\|L\|_{X,Y}\le C\|L\|_{X_0,Y_0}^{1-\theta}\|L\|_{X_1,Y_1}^\theta$ for all operators $L$ as above. The notation $\|L\|_{X,Y}$  is for the norm of $L$ as a map from $X$ to $Y$. If $C = 1$, we say that $(X,Y)$ is an \textit{exact interpolation pair of exponent $\theta$}.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#The_setting_of_interpolation}{Wikipedia\texttt{/}interpolation space\texttt{/}the setting of interpolation}
+
+\subsection{Complex interpolation}
+
+\subsection{Real interpolation}
+
+\subsubsection{K-method}
+
+\paragraph{Example.}
+
+\subsubsection{J-method}
+
+\paragraph{Example.}
+
+\subsubsection{Relations between the interpolation methods}
+
+\paragraph{Example.}
+
+\subsection{The reiteration theorem}
+
+\subsection{Duality}
+
+\subsection{Discrete definitions}
+
+\subsubsection{A general interpolation method}
+
+\subsection{Interpolation of Sobolev \& Besov spaces}
+
+%------------------------------------------------------------------------------%
+
 \chapter{Terence Tao's}
 
 \section{\cite{Tao2007}. What Is Good Mathematics?}
@@ -113,14 +169,6 @@ In words, $(\Omega\backslash\sigma(\Omega))\cap\mathbb{H}^-$ is simply reflected
 	\item Good mathematical \textit{taste} (e.g. a research goal which is inherently interesting \& impacts important topics, themes, or questions);
 	\item Good mathematical \textit{public relations} (e.g. an effective showcasing of a mathematical achievement to non-mathematicians or from 1 field of mathematics to another);
 \end{enumerate}  
-
-
-%------------------------------------------------------------------------------%
-
-%\selectlanguage{english}
-%\begin{thebibliography}{99}
-%	\bibitem[]{}
-%\end{thebibliography}
 
 %------------------------------------------------------------------------------%
 
