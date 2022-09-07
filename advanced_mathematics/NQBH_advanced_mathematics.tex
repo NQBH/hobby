@@ -121,30 +121,189 @@ with continuous injections, so that, under the given condition, $L^p(\mathbb{R})
 The interpolation pair $(X,Y)$ is said to be of \textit{exponent} $\theta$ (with $0 < \theta < 1$) if there exists a constant $C$ s.t. $\|L\|_{X,Y}\le C\|L\|_{X_0,Y_0}^{1-\theta}\|L\|_{X_1,Y_1}^\theta$ for all operators $L$ as above. The notation $\|L\|_{X,Y}$  is for the norm of $L$ as a map from $X$ to $Y$. If $C = 1$, we say that $(X,Y)$ is an \textit{exact interpolation pair of exponent $\theta$}.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#The_setting_of_interpolation}{Wikipedia\texttt{/}interpolation space\texttt{/}the setting of interpolation}
 
 \subsection{Complex interpolation}
+``If the scalars are \href{https://en.wikipedia.org/wiki/Complex_number}{complex numbers}, properties of complex \href{https://en.wikipedia.org/wiki/Analytic_function}{analytic functions} are used to define an interpolation space. Given a compatible couple $(X_0,X_1)$ of Banach spaces, the linear space $\mathcal{F}(X_0,X_1)$ consists of all functions $f:\mathbb{C}\to X_0 + X_1$, that are analytic on $S = \{z:0 < \operatorname{Re}(z) < 1\}$, continuous on $\overline{S} = \{z:0\le\operatorname{Re}(z)\le 1\}$, \& for which all the following subsets are bounded: $\{f(z):z\in S\}\subset X_0 + X_1$, $\{f(it):t\in\mathbb{R}\}\subset X_0$, $\{f(1 + it):t\in\mathbb{R}\}\subset X_1$. $\mathcal{F}(X_0,X_1)$ is a Banach space under the norm
+\begin{align*}
+	\|f\|_{\mathcal{F}(X_0,X_1)}\coloneqq\max\left\{\sup_{t\in\mathbb{R}} \|f(it)\|_{X_0},\sup_{t\in\mathbb{R}} \|f(1 + it)\|_{X_1}\right\}.
+\end{align*}
+
+\begin{definition}
+	For $0 < \theta < 1$, the \emph{complex interpolation space} $(X_0,X_1)_\theta$ is the linear subspace of $X_0 + X_1$ consisting of all values $f(\theta)$ when $f$ varies in the preceding space of functions, $(X_0,X_1)_\theta = \{x\in X_0 + X_1:x = f(\theta),\,f\in\mathcal{F}(X_0,X_1)\}$. The norm on the complex interpolation space $(X_0,X_1)_\theta$ is defined by $\|x\|_\theta = \inf\left\{\|f\|_{\mathcal{F}(X_0,X_1)}:f(\theta) = x,\,f\in\mathcal{F}(X_0,X_1)\right\}$.
+\end{definition}
+Equipped with this norm, the complex interpolation space $(X_0,X_1)_\theta$ is a Banach space.
+
+\begin{theorem}
+	Given 2 compatible couples of Banach spaces $(X_0,X_1)$ \& $(Y_0,Y_1)$, the pair $((X_0,X_1)_\theta,(Y_0,Y_1)_\theta)$ is an exact interpolation pair of exponent $\theta$, i.e., if $T:X_0 + X_1\to Y_0 + Y_1$, is a linear operator bounded from $X_j$ to $Y_j$, $j = 0,1$, then $T$ is bounded from $(X_0,X_1)_\theta$ to $(Y_0,Y_1)_\theta$ \& $\|T\|_\theta\le\|T\|_0^{1-\theta}\|T\|_1^\theta$.
+\end{theorem}
+The family of $L^p$ spaces (consisting of complex valued functions) behaves well under complex interpolation. If $(R,\Sigma,\mu)$ is an arbitrary \href{https://en.wikipedia.org/wiki/Measure_(mathematics)}{measure space}, if $1\le p_0,p_1\le\infty$ \& $0 < \theta < 1$, then
+\begin{align*}
+	(L^{p_0}(R,\Sigma,\mu),L^{p_1}(R,\Sigma,\mu))_\theta = L^p(R,\Sigma,\mu),\ \frac{1}{p} = \frac{1 - \theta}{p_0} + \frac{\theta}{p_1},
+\end{align*}
+with equality of norms. This fact is closely related to the \href{https://en.wikipedia.org/wiki/Riesz%E2%80%93Thorin_theorem}{Riesz--Thorin theorem}.'' - \href{https://en.wikipedia.org/wiki/Interpolation_space#Complex_interpolation}{Wikipedia\texttt{/}interpolation space\texttt{/}complex interpolation}
 
 \subsection{Real interpolation}
+``There are 2 ways for introducing the \textit{real interpolation method}. The 1st \& most commonly used when actually identifying examples of interpolation spaces is the K-method. The 2nd method, the J-method, gives the same interpolation spaces as the K-method when the parameter $\theta$ is in $(0,1)$. That the J- \& K-methods agree is important for the study of duals of interpolation spaces: basically, the dual of an interpolation space constructed by the K-method appears to be a space constructed form the dual couple by the J-method.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#Real_interpolation}{Wikipedia\texttt{/}interpolation space\texttt{/}real interpolation}
 
 \subsubsection{K-method}
+``The K-method of real interpolation can be used for Banach spaces over the field $\mathbb{R}$ of \href{https://en.wikipedia.org/wiki/Real_number}{real numbers}.
 
-\paragraph{Example.}
+\begin{definition}
+	Let $(X_0,X_1)$ be a compatible couple of Banach spaces. For $t > 0$ \& every $x\in X_0 + X_1$, let $K(x,t;X_0,X_1) = \inf\left\{\|x_0\|_{X_0} + t\|x_1\|_{X_1}\:x = x_0 + x_1,\,x_0\in X_0,\,x_1\in X_1\right\}$. Changing the order of the 2 spaces results in: $K(x,t;X_0,X_1) = tK(x,t^{-1};X_1,X_0)$. Let
+	\begin{align*}
+		\|x\|_{\theta,q;K} &= \left(\int_0^\infty \left(t^{-\theta}K(x,t;X_0,X_1)\right)^q\frac{{\rm d}t}{t}\right)^{\frac{1}{q}},\ 0 < \theta < 1,\,1\le q < \infty,\\
+		\|x\|_{\theta,\infty;K} &= \sup_{t > 0} t^{-\theta}K(x,t;X_0,X_1),\ 0\le\theta\le 1.
+	\end{align*}
+	The K-method of real interpolation consists in taking $K_{\theta,q}(X_0,X_1)$ to be the linear subspace of $X_0 + X_1$ consisting of all $x$ s.t. $\|x\|_{\theta,q;K} < \infty$.
+\end{definition}
+
+\begin{example}
+	An important example is that of the couple $(L^1(\mathbb{R},\Sigma,\mu),L^\infty(\mathbb{R},\Sigma,\mu))$, where the functional $K(t,f;L^1,L^\infty)$ can be computed explicitly. The measure $\mu$ is supposed \href{https://en.wikipedia.org/wiki/%CE%A3-finite_measure}{$\sigma$-finite}. In this context, the best way of cutting the function $f\in L^1 + L^\infty$ as sum of 2 functions $f_0\in L^1$ \& $f_1\in L^\infty$ is, for some $s > 0$ to be chosen as function of $t$, to let $f_1(x)$ be given for all $x\in\mathbb{R}$ by
+	\begin{equation*}
+		f_1(x) = \left\{\begin{split}
+			&f(x),&&|f(x)| < s,\\
+			&\frac{sf(x)}{|f(x)|},&&\mbox{otherwise}.
+		\end{split}\right.
+	\end{equation*}
+	The optimal choice of $s$ leads to the formula
+	\begin{align*}
+		K(f,t;L^1,L^\infty) = \int_0^1 f^\star(u)\,{\rm d}u,
+	\end{align*}
+	where $f^\star$ is the \href{https://en.wikipedia.org/wiki/Lorentz_space#Decreasing_rearrangements}{decreasing rearrangement} of $f$.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#K-method}{Wikipedia\texttt{/}interpolation space\texttt{/}real interpolation\texttt{/}K-method}
+\end{example}
 
 \subsubsection{J-method}
+``As with the K-method, the J-method can be used for real Banach spaces.
 
-\paragraph{Example.}
+\begin{definition}
+	Let $(X_0,X_1)$ be a compatible couple of Banach spaces. For $t > 0$ \& for every vector $x\in X_0\cap X_1$, let $J(x,t;X_0,X_1) = \max(\|x\|_{X_0},t\|x\|_{X_1})$. A vector $x$ in $X_0 + X_1$ belongs to the interpolation space $J_{\theta,q}(X_0,X_1)$ iff it can be written as $x = \int_0^\infty v(t)\frac{{\rm d}t}{t}$, where $v(t)$ is measurable with values in $X_0\cap X_1$ \& s.t.
+	\begin{align*}
+		\Phi(v) = \left(\int_0^\infty \left(t^{-\theta}J(v(t),t;X_0,X_1)\right)^q\frac{{\rm d}t}{t}\right)^{\frac{1}{q}} < \infty.
+	\end{align*}
+	The norm of $x$ in $J_{\theta,q}(X_0,X_1)$ is given by the formula
+	\begin{align*}
+		\|x\|_{\theta,q;J}\coloneqq\inf_v\left\{\Phi(v):x = \int_0^\infty v(t)\frac{{\rm d}t}{t}\right\}.
+	\end{align*}
+\end{definition}
+\noindent'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#J-method}{Wikipedia\texttt{/}interpolation space\texttt{/}real interpolation\texttt{/}J-method}
 
 \subsubsection{Relations between the interpolation methods}
+``The 2 real interpolation methods are equivalent when $0 < \theta < 1$.
 
-\paragraph{Example.}
+\begin{theorem}
+	Let $(X_0,X_1)$ be a compatible couple of Banach spaces. If $0 < \theta < 1$ \& $1\le q\le\infty$, then $J_{\theta,q}(X_0,X_1) = K_{\theta,q}(X_0,X_1)$, with \href{https://en.wikipedia.org/wiki/Norm_(mathematics)#Definition}{equivalence of norms}.
+\end{theorem}
+The theorem covers degenerate cases that have not been excluded: e.g. if $X_0$ \& $X_1$ form a direct sum, then the intersection \& the $J$-spaces are the null space, \& a simple computation shows that the K-spaces are also null.
+
+When $0 < \theta < 1$, one can speak, up to an equivalent renorming, about \textit{the} Banach space obtained by the real interpolation method with parameters $\theta$ \& $q$. The notation for this real interpolation space is $(X_0,X_1)_{\theta,q}$. One has that
+\begin{align*}
+	(X_0,X_1)_{\theta,q} = (X_1,X_0)_{1-\theta,q},\ 0 < \theta < 1,\,1\le q\le\infty.
+\end{align*}
+For a given value of $\theta$, the real interpolation spaces increase with $q$: if $0 < \theta < 1$ \& $1\le q\le r\le\infty$, the following continuous inclusion holds true: $(X_0,X_1)_{\theta,q}\subset(X_0,X_1)_{\theta,r}$.
+
+\begin{theorem}
+	Given $0 < \theta < 1$, $1\le q\le\infty$ \& 2 compatible couples $(X_0,X_1)$ \& $(Y_0,Y_1)$, the pair $((X_0,X_1)_{\theta,q},(Y_0,Y_1)_{\theta,q})$ is an exact interpolation pair of exponent $\theta$.
+\end{theorem}
+A complex interpolation space is usually not isomorphic to 1 of the spaces given by the real interpolation method. However, there is a general relationship.
+
+\begin{theorem}
+	Let $(X_0,X_1)$ be a compatible couple of Banach spaces. If $0 < \theta < 1$, then $(X_0,X_1)_{\theta,1}\subset(X_0,X_1)_\theta\subset(X_0,X_1)_{\theta,\infty}$.
+\end{theorem}
+
+\begin{example}
+	When $X_0 = C([0,1])$ \& $X_1 = C^1([0,1])$, the space of continuously differentiable functions on $[0,1]$, the $(\theta,\infty)$ interpolation method, for $0 < \theta < 1$, gives the \href{https://en.wikipedia.org/wiki/H%C3%B6lder_condition}{H\"older space} $C^{0,\theta}$ of exponent $\theta$. This is because the K-functional $K(f,t;X_0,X_1)$ of this couple is equivalent to
+	\begin{align*}
+		\sup\left\{|f(u)|,\frac{|f(u) - f(v)|}{1 + t^{-1}|u - v|}:u,v\in[0,1]\right\}.
+	\end{align*}
+	Only values $0 < t < 1$ are interesting here.
+\end{example}
+Real interpolation between $L^p$ spaces gives the family of \href{https://en.wikipedia.org/wiki/Lorentz_space}{Lorentz spaces}. Assuming $0 < \theta < 1$ \& $1\le q\le\infty$, one has
+\begin{align*}
+	(L^1(\mathbb{R},\Sigma,\mu),L^\infty(\mathbb{R},\Sigma,\mu))_{\theta,q} = L^{p,q}(\mathbb{R},\Sigma,\mu),\mbox{ where }\frac{1}{p} = 1 - \theta,
+\end{align*}
+with equivalent norms. This follows from an \href{https://en.wikipedia.org/wiki/Hardy%27s_inequality}{inequality of Hardy} \& from the value given above of the K-functional for this compatible couple. When $q = p$, the Lorentz space $L^{p,p}$ is equal to $L^p$, up to renorming. When $q = \infty$, the Lorentz space $L^{p,\infty}$ is equal to \href{https://en.wikipedia.org/wiki/Lp_space#Weak_Lp}{weak-$L^p$}.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#Relations_between_the_interpolation_methods}{Wikipedia\texttt{/}interpolation space\texttt{/}real interpolation\texttt{/}relations between the interpolation methods}
 
 \subsection{The reiteration theorem}
+``An intermediate space $X$ of the compatible couple $(X_0,X_1)$ is said to be of \textit{class $\theta$} if $(X_0,X_1)_{\theta,1}\subset X\subset(X_0,X_1)_{\theta,\infty}$, with continuous injections. Beside all real interpolation spaces $(X_0,X_1)_{\theta,q}$ with parameter $\theta$ \& $1\le q\le\infty$, the complex interpolation space $(X_0,X_1)_\theta$ is an intermediate space of class $\theta$ of the compatible couple $(X_0,X_1)$.
+
+The reiteration theorems says, in essence, that interpolating with a parameter $\theta$ behaves, in some way, like forming a \href{https://en.wikipedia.org/wiki/Convex_combination}{convex combination} $a = (1 - \theta)x_0 + \theta x_1$: taking a further convex combination of 2 convex combinations gives another convex combination.
+
+\begin{theorem}
+	Let $A_0,A_1$ be intermediate spaces of the compatible couple $(X_0,X_1)$, of class $\theta_0$ \& $\theta_1$ resp., with $0 < \theta_0\ne\theta_1 < 1$. When $0 < \theta < 1$ \& $1\le q\le\infty$, one has $(A_0,A_1)_{\theta,q} = (X_0,X_1)_{\eta,q}$, $\eta = (1 - \theta)\theta_0 + \theta\theta_1$.
+\end{theorem}
+It is notable that when interpolating with the real method between $A_0 = (X_0,X_1)_{\theta_0,q_0}$ \& $A_1 = (X_0,X_1)_{\theta_1,q_1}$, only the values of $\theta_0$ \& $\theta_1$ matter. Also, $A_0$ \& $A_1$ can be complex interpolation spaces between $X_0$ \& $X_1$, with parameters $\theta_0$ \& $\theta_1$ resp.
+
+There is also a reiteration theorem for the complex method.
+
+\begin{theorem}
+	Let $(X_0,X_1)$ be a compatible couple of complex Banach spaces, \& assume that $X_0\cap X_1$ is dense in $X_0$ \& in $X_1$. Let $A_0 = (X_0,X_1)_{\theta_0}$ \& $A_1 = (X_0,X_1)_{\theta_1}$, where $0\le\theta_0\le\theta_1\le 1$. Assume further that $X_0\cap X_1$ is dense in $A_0\cap A_1$. Then, for every $0\le\theta\le 1$,
+	\begin{align*}
+		\left((X_0,X_1)_{\theta_0},(X_0,X_1)_{\theta_1}\right)_\theta = (X_0,X_1)_\eta,\ \eta = (1 - \theta)\theta_0 + \theta\theta_1.
+	\end{align*}
+\end{theorem}
+The density condition is always satisfied when $X_0\subset X_1$ or $X_1\subset X_0$.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#The_reiteration_theorem}{Wikipedia\texttt{/}interpolation space\texttt{/}the reinteration theorem}
 
 \subsection{Duality}
+``Let $(X_0,X_1)$ be a compatible couple, \& assume that $X_0\cap X_1$ is dense in $X_0$ \& in $X_1$. In this case, the restriction map from the (continuous) \href{https://en.wikipedia.org/wiki/Dual_space#Continuous_dual_space}{dual} $X_j'$ of $X_j$, $j = 0,1$, to the dual of $X_0\cap X_1$ is 1-1. It follows that the pair of duals $(X_0',X_1')$ is a compatible couple continuously embedded in the dual $(X_0\cap X_1)'$.
+
+For the complex interpolation method, the following duality result holds:
+
+\begin{theorem}
+	Let $(X_0,X_1)$ be a compatible couple of complex Banach spaces, \& assume that $X_0\cap X_1$ is dense in $X_0$ \& in $X_1$. If $X_0$ \& $X_1$ are \href{https://en.wikipedia.org/wiki/Reflexive_space}{reflexive}, then the dual of the complex interpolation space is obtained by interpolating the duals, $((X_0,X_1)_\theta)' = (X_0',X_1')_\theta$, $0 < \theta < 1$.
+\end{theorem}
+In general, the dual of the space $(X_0,X_1)_\theta$ is equal to $(X_0',X_1')^\theta$, a space defined by a variant of the complex method. The upper-$\theta$ \& lower-$\theta$ methods do not coincide in general, but they do if at least 1 of $X_0,X_1$ is a reflexive space.
+
+For the real interpolation method, the duality holds provided that the parameter $q$ is finite:
+
+\begin{theorem}
+	Let $0 < \theta < 1$, $1\le q < \infty$ \& $(X_0,X_1)$ a compatible couple of real Banach spaces. Assume that $X_0\cap X_1$ is dense in $X_0$ \& in $X_1$. Then
+	\begin{align*}
+		\left((X_0,X_1)_{\theta,q}\right)' = (X_0',X_1')_{\theta,q'},\mbox{ where }\frac{1}{q'} = 1 - \frac{1}{q}.
+	\end{align*}
+\end{theorem}
+\noindent'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#Duality}{Wikipedia\texttt{/}interpolation space\texttt{/}duality}
 
 \subsection{Discrete definitions}
+``Since the function $t\to K(x,t)$ varies regularly (it is increasing, but $\frac{1}{t}K(x,y)$ is decreasing), the definition of the $K_{\theta,q}$-norm of a vector $n$, previously given by an integral, is equivalent to a definition given by a series. This series is obtained by breaking $(0,\infty)$ into pieces $(2^n,2^{n+1})$ of equal mass for the measure $\frac{{\rm d}t}{t}$,
+\begin{align*}
+	\|x\|_{\theta,q;K}\simeq\left(\sum_{n\in\mathbb{Z}} \left(2^{-\theta n}K(x,2^n;X_0,X_1)\right)^q\right)^{\frac{1}{q}}.
+\end{align*}
+In the special case where $X_0$ is continuously embedded in $X_1$, one can omit the part of the series with negative indies $n$. In this case, each of the functions $x\to K(x,2^n;X_0,X_1)$ defines an equivalent norm on $X_1$.
+
+The interpolation space $(X_0,X_1)_{\theta,q}$ is a ``diagonal subspace'' of an $l^q$-sum of a sequence of Banach spaces (each one being isomorphic to $X_0 + X_1$). Therefore, when $q$ is finite, the dual of $(X_0,X_1)_{\theta,q}$ is a \href{https://en.wikipedia.org/wiki/Banach_space#General_theory}{quotient} of the $l^p$-sum of the duals, $\frac{1}{p} + \frac{1}{q} = 1$, which leads to the following formula for the discrete $J_{\theta,p}$-norm of a functional $x'$ in the dual of $(X_0,X_1)_{\theta,q}$:
+\begin{align*}
+	\|x'\|_{\theta,p;J}\simeq\inf\left\{\left(\sum_{n\in\mathbb{Z}} \left(2^{\theta n}\max\left(\|x_n'\|_{X_0'},2^{-n}\|x_n'\|_{X_1'}\right)\right)^p\right)^{\frac{1}{p}}:x' = \sum_{n\in\mathbb{Z}} x_n'\right\}.
+\end{align*}
+The usual formula for the discrete $J_{\theta,p}$-norm is obtained by changing $n$ to $-n$.
+
+The discrete definition makes several questions easier to study, among which the already mentioned identification of the dual. Other such questions are compactness or weak-compactness of linear operators. Lions \& Peetre have proved that:
+
+\begin{theorem}
+	If the linear operator $T$ is \href{https://en.wikipedia.org/wiki/Compact_operator}{compact} from $X_0$ to a Banach space $Y$ \& bounded from $X_1$ to $Y$, then $T$ is compact from $(X_0,X_1)_{\theta,q}$ to $Y$ when $0 < \theta < 1$, $1\le q\le\infty$.
+\end{theorem}
+Davis, Figiel, Johnson, \& Pe\l czy\'nski have used interpolation in their proof of the following result:
+
+\begin{theorem}
+	A bounded linear operator between 2 Banach spaces is \href{https://en.wikipedia.org/wiki/Weak_topology}{weakly compact} iff it factors through a \href{https://en.wikipedia.org/wiki/Reflexive_space}{reflexive space}.
+\end{theorem}
+\noindent'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#Discrete_definitions}{Wikipedia\texttt{/}interpolation space\texttt{/}discrete definitions}
 
 \subsubsection{A general interpolation method}
+``The space $l^q$ used for the discrete definition can be replaced by an arbitrary \href{https://en.wikipedia.org/wiki/Sequence_space}{sequence space} $Y$ with \href{https://en.wikipedia.org/wiki/Schauder_basis#Unconditionality}{unconditional basis}, \& the weights $a_n = 2^{-\theta n}$, $b_n = 2^{(1 - \theta)n}$, that are used for the $K_{\theta,q}$-norm, can be replaced by general weights $a_n,b_n > 0$, $\sum_{n=1}^\infty \min(a_n,b_n) < \infty$. The interpolation space $K(X_0,X_1,Y,\{a_n\},\{b_n\})$ consists of the vectors $x$ in $X_0 + X_1$ s.t.
+\begin{align*}
+	\|x\|_{K(X_0,X_1)} = \sup_{m\ge 1} \left\|\sum_{n=1}^m a_nK\left(x,\frac{b_n}{a_n};X_0,X_1\right)y_n\right\|_Y < \infty,
+\end{align*}
+where $\{y_n\}$ is the unconditional basis of $Y$. This abstract method can be used, e.g., for the proof of the following result:
+
+\begin{theorem}
+	A Banach space with unconditional basis is isomorphic to a complemented subspace of a space with \href{https://en.wikipedia.org/wiki/Schauder_basis#Unconditionality}{symmetric basis}.
+\end{theorem}
+\noindent'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#A_general_interpolation_method}{Wikipedia\texttt{/}interpolation space\texttt{/}discrete definitions\texttt{/}a general interpolation method}
 
 \subsection{Interpolation of Sobolev \& Besov spaces}
+Several interpolation results are available for \href{https://en.wikipedia.org/wiki/Sobolev_space}{Sobolev spaces} \& \href{https://en.wikipedia.org/wiki/Besov_space}{Besov spaces} on $\mathbb{R}^n$, $H_p^s$, $s\in\mathbb{R}$, $1\le p\le\infty$, $B_{p,q}^s$, $s\in\mathbb{R}$, $1\le p,q\le\infty$. These spaces are spaces of \href{https://en.wikipedia.org/wiki/Measurable_function}{measurable functions} on $\mathbb{R}^n$ when $s\ge 0$, \& of \href{https://en.wikipedia.org/wiki/Distribution_(mathematics)}{tempered distributions} on $\mathbb{R}^n$ when $s < 0$. For the rest of the section, the following setting \& notation will be used: $0 < \theta < 1$, $1\le p,p_0,p_1,q,q_0,q_1\le\infty$, $s,s_0,s_1\in\mathbb{R}$, $s_\theta = (1 - \theta)s_0 + \theta s_1$, $\frac{1}{p_\theta} = \frac{1 - \theta}{p_0} + \frac{\theta}{p_1}$, $\frac{1}{q_\theta} = \frac{1 - \theta}{q_0} + \frac{\theta}{q_1}$.
+
+Complex interpolation works well on the class of Sobolev spaces $H_p^s$ (the \href{https://en.wikipedia.org/wiki/Sobolev_space#Bessel_potential_spaces}{Bessel potential spaces}) as well as Besov spaces: $(H_{p_0}^{s_0},H_{p_1}^{s_1})_\theta = H_{p_\theta}^{s_\theta}$, $s_0\ne s_1$, $1 < p_0,p_1 < \infty$. $(B_{p_0,q_0}^{s_0},B_{p_1,q_1}^{s_1})_\theta = B_{p_\theta,q_\theta}^{s_\theta}$, $s_0\ne s_1$.
+
+Real interpolation between Sobolev spaces may give Besov spaces, except when $s_0 = s_1$, $(H_{p_0}^s,H_{p_1}^s)_{\theta,p_\theta} = H_{p_\theta}^s$. When $s_0\ne s_1$ but $p_0 = p_1$, real interpolation between Sobolev spaces gives a Besov space: $(H_p^{s_0},H_p^{s_1})_{\theta,q} = B_{p,q}^{s_\theta}$, $s_0\ne s_1$. Also, $(B_{p,q_0}^{s_0},B_{p,q_1}^{s_1})_{\theta,q} = B_{p,q}^{s_\theta}$, $s_0\ne s_1$. $(B_{p,q_0}^s,B_{p,q_1}^s)_{\theta,q} = B_{p,q_\theta}^s$. $(B_{p_0,q_0}^{s_0},B_{p_1,q_1}^{s_1})_{\theta,q_\theta} = B_{p_\theta,q_\theta}^{s_\theta}$, $s_0\ne s_1$, $p_\theta = q_\theta$.'' -- \href{https://en.wikipedia.org/wiki/Interpolation_space#Interpolation_of_Sobolev_and_Besov_spaces}{Wikipedia\texttt{/}interpolation space\texttt{/}interpolation of Sobolev \& Besov spaces}
 
 %------------------------------------------------------------------------------%
 
