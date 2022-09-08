@@ -26,6 +26,7 @@
 \newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{nguyenly}{Nguyên lý}[section]
 \newtheorem{question}{Question}[section]
 \newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{remark}{Remark}[section]
@@ -1260,6 +1261,29 @@ Trong trường hợp phép thử $T$ có 1 số hữu hạn kết quả có th�
 \chapter{Dãy Số. Cấp Số Cộng \& Cấp Số Nhân -- Series. Arithmetic Progression\texttt{/}Sequence \& Geometric Progression\texttt{/}Sequence}
 
 \section{Phương Pháp Quy Nạp Toán Học -- Method of Mathematical Induction}
+``\textit{Phương pháp quy nạp} là 1 trong những công cụ hữu hiệu nhất thường dùng khi chứng minh các mệnh đề Toán học. Cơ sở của phương pháp được xây dựng dựa trên nguyên lý sau:
+
+\begin{nguyenly}[Nguyên lý quy nạp Toán học]
+	Giả sử $S$ là 1 tập hợp các số nguyên dương nào đó, chứa số $k\in\mathbb{N}^\star$. Khi đó, nếu với mọi $n\ge k$, $n\in S$, $S$ đều chứa số $n + 1$, thì $S$ là tập hợp tất cả các số nguyên dương không nhỏ hơn $k$.
+\end{nguyenly}
+Từ nguyên lý quy nạp, ta thấy rằng để chứng minh 1 mệnh đề $P(n)$ nào đó đúng với tập hợp các số nguyên dương $n$, $n\ge k$, i.e., $\{n\in\mathbb{Z};n\ge k\}$, ta chỉ cần thực hiện 2 bước:
+\begin{enumerate}
+	\item Chứng minh $P(k)$ đúng (với $k$ là số nhỏ nhất của tập hợp đó).
+	\item Chứng minh nếu $P(n)$ đúng thì $P(n+1)$ cũng đúng. (Phần giả thiết $P(n)$ đúng được gọi là \textit{giả thiết quy nạp}).
+\end{enumerate}
+Phương pháp quy nạp được sử dụng rộng rãi trên khắp các lĩnh vực của Toán học, trong đó có bất đẳng thức. Rất nhiều kết quả kinh điển trong bất đẳng thức (e.g., bất đẳng thức AM--GM, bất đẳng thức Chebyshev, $\ldots$) đều được xây dựng từ quy nạp. Ngoài ra, quy nạp cũng là 1 công cụ rất hiệu quả thường được sử dụng trong giải toán bất đẳng thức.'' -- \cite[p. 136]{TL_chuyen_Toan_Giai_Tich_12}
+
+``$\ldots$ 2 ví dụ ứng dụng trực tiếp phương pháp quy nạp trong chứng minh bất đẳng thức, ta chỉ việc áp dụng thẳng, không cần phải suy xét gì mà vẫn đi đến kết quả. Tuy nhiên trong thực tế giải toán, muốn sử dụng quy nạp thành công, ta còn phải xét đến nhiều yếu tố khác (thứ tự các biến, \textit{sự bảo tồn} giả thiết, $\ldots$).'' -- \cite[p. 138]{TL_chuyen_Toan_Giai_Tich_12}
+
+``Có 1 kinh nghiệm rất thú vị khi sử dụng quy nạp để chứng minh bất đẳng thức: Có những bài toán ta không thể sử dụng quy nạp trực tiếp để giải chúng, nhưng sau khi tìm cách ``làm mạnh'' thích hợp, ta lại có thể sử dụng được quy nạp.'' -- \cite[p. 140]{TL_chuyen_Toan_Giai_Tich_12}
+
+\begin{nhanxet}
+	``Ý tưởng chính ở đây là ta tìm cách ``làm mạnh'' bài toán sao cho kết quả ``làm mạnh'' có tính chất: \emph{Nếu giả thiết mệnh đề $P(n)$ đúng thì ta có thể sử dụng giả thiết đó để chứng minh mệnh đề $P(n + 1)$ cũng đúng}. Khi ấy, chỉ cần tìm được 1 số $n_0$ sao cho kết quả bài toán ``làm mạnh'' đúng là ta có thể sử dụng quy nạp để suy ra ngay kết quả bài toán ``làm mạnh'' đúng với mọi $n\ge n_0$, i.e., ta đã chứng minh được kết quả bài toán đã cho ban đầu đúng với mọi $n\ge n_0$. Cần chú ý rằng: 
+	\begin{itemize}
+		\item Có nhiều cách ``làm mạnh'' bài toán khác nhau tùy thuộc vào kinh nghiệm \& khả năng suy luận của người giải.
+		\item Số $n_0$ không nhất thiết phải trùng với số nhỏ nhất trong tập hợp các số được cho ở đề bài. Trong trường hợp $n_0$ không phải là số nhỏ nhất thì từ kết quả bài toán ``làm mạnh'', ta cũng đã loại đi được 1 trường hợp lớn cho cả bài toán ban đầu là $n\ge n_0$, \& việc còn lại ta phải làm chỉ là đi xét từng trường hợp cụ thể của $n$ thỏa $n < n_0$ nữa là xong.'' -- \cite[pp. 141--142]{TL_chuyen_Toan_Giai_Tich_12}
+	\end{itemize}
+\end{nhanxet}
 
 %------------------------------------------------------------------------------%
 
@@ -2019,12 +2043,6 @@ sau đó $f_{\rm e}$ là hàm chẵn, $f_{\rm o}$ là hàm lẻ, \& $f(x) = f_{\
 \begin{vidu}
 	Hàm \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{cosin hyperbolic} \& \href{https://vi.wikipedia.org/wiki/H%C3%A0m_hyperbolic}{sin hyperbolic} có thể được coi là các phần chẵn \& phần lẻ của hàm số lũy thừa tự nhiên, bởi vì hàm thứ nhất là chẵn, hàm thứ 2 là lẻ, \& $e^x = \sinh x + \cosh x$.'' -- \href{https://vi.wikipedia.org/wiki/H%C3%A0m_s%E1%BB%91_ch%E1%BA%B5n_v%C3%A0_l%E1%BA%BB}{Wikipedia\emph{\texttt{/}}hàm số chẵn \& lẻ}
 \end{vidu}
-
-%------------------------------------------------------------------------------%
-
-\begin{thebibliography}{99}
-	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics/NQBH_some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
-\end{thebibliography}
 
 %------------------------------------------------------------------------------%
 
