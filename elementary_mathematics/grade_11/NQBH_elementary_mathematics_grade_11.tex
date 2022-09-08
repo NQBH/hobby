@@ -1367,6 +1367,7 @@ $u_1$ được gọi là \textit{số hạng đầu tiên}, $u_k$ là \textit{s�
 Dãy các số tự nhiên lẻ $(2n + 1)_{n=0}^\infty$ \& dãy các số tự nhiên chẵn $(2n)_{n=0}^\infty$ là 2 cấp số cộng với công sai $d = 2$. Tương tự, với $m\in\mathbb{N}^\star$ \& $r\in\mathbb{N}$, $r < m$, bất kỳ, dãy các số tự nhiên chia $m$ dư $r$ là 1 cấp số cộng có vô hạn phần tử với số hạng đầu là $r$ \& công sai là $m$, i.e., $\{mn + r|n\in\mathbb{N}\} = (mn + r)_{n=0}^\infty$, $\forall m\in\mathbb{N}^\star$, $\forall r\in\mathbb{N}$. Với $r = 0$, phép chia có số dư là $r$ này là 1 phép chia hết \& dãy số này trở thành dãy các bội của $m$ trong Ví dụ \ref{vidu:day boi cua 1 so nguyen duong} với số $0$ được thêm vào đầu dãy.
 
 \begin{dinhly}[Các tính chất cơ bản của cấp số cộng]
+	\label{thm:cac tinh chat co ban cua cap so cong}
 	\begin{itemize}
 		\item[(a)] \emph{(Tính chất đặc trưng của cấp số cộng)} Nếu $(u_n)$ là 1 cấp số cộng thì kể từ số hạng thứ $2$, mỗi số hạng (trừ số hạng cuối đối với cấp số cộng hữu hạn) đều là trung bình cộng của 2 số hạng đứng kề nó trong dãy, i.e., $u_k = \frac{u_{k-1} + u_{k+1}}{2}$.
 		\item[(b)] \emph{(Số hạng tổng quát của cấp số cộng)} Nếu 1 cấp số cộng có số hạng đầu $u_1$ \& công sai $d$ thì số hạng tổng quát $u_n$ của nó được xác định theo công thức sau: $u_n = u_1 + (n - 1)d$.
@@ -1375,10 +1376,13 @@ Dãy các số tự nhiên lẻ $(2n + 1)_{n=0}^\infty$ \& dãy các số tự n
 \end{dinhly}
 
 \begin{proof}[Chứng minh]
-	\begin{enumerate*}
-		\item[(a)] Gọi $d$ là công sai của cấp số cộng $(u_n)$. Với mọi $k\ge 2$, ta có $u_{k+1} = u_k + d$, $u_{k-1} = u_k - d$. Từ 
+	``\begin{enumerate*}
+		\item[(a)] Gọi $d$ là công sai của cấp số cộng $(u_n)$. Với mọi $k\ge 2$, ta có $u_{k+1} = u_k + d$, $u_{k-1} = u_k - d$. Từ 2 đẳng thức trên ta được $u_{k+1} + u_{k-1} = 2u_k$, $\forall k\ge 2$. Từ đó suy ra điều phải chứng minh.
+		\item[(b)] Ta chứng minh bằng phương pháp quy nạp. Công thức đúng khi $n = 1$, vì $u_1 = u_1 + 0d$. Giả sử công thức đúng khi $n = k$, ($k\in\mathbb{N}^\star$), i.e., $u_k = u_1 + (k - 1)d$. Khi đó ta có $u_{k+1} = u_k + d = [u_1 + (k-1)d] + d = u_1 + kd$. Vậy công thức cũng đúng khi $n = k + 1$. Từ đó suy ra điều phải chứng minh.
+		\item[(c)] Để ý rằng $u_1 + u_n = u_2 + u_{n-1} = u_3 + u_{n-2} = \ldots = u_n + u_1$ nên ta có $2S_n = \sum_{i=1}^n u_i + \sum_{i=n}^1 u_i = \sum_{i=1}^n u_i + \sum_{i=1}^n u_{n+1-i} = \sum_{i=1}^n (u_i + u_{n+1-i}) = \sum_{i=1}^n (u_1 + u_n) = n(u_1 + u_n)$. Từ đó suy ra $S_n = \frac{(a_1 + a_n)n}{2}$.'' -- \cite[pp. 124--125]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 	\end{enumerate*}
 \end{proof}
+``Công thức tính số số hạng của 1 cấp số cộng khi biết số hạng đầu, số hạng cuối \& công sai: Số số hạng $=$ [(số hạng đầu $-$ số hạng cuối): công sai] $+ 1$. Đây chính là công thức của bài toán trồng cây quen thuộc ở cấp 2.'' ``ý tưởng của Gauss (lúc còn là 1 cậu bé) khi ông  tính tổng $\sum_{i=1}^{100} i = 1 + 2 + \cdots + 100$ rằng $1 + 100 = 2 + 99 = \cdots = 50 + 51$ gồm $50$ cặp số, mỗi cặp có tổng bằng $101$. Tư (b)--(c) của định lý \ref{thm:cac tinh chat co ban cua cap so cong} dễ dàng suy ra: $S_n = \frac{1}{2}[2u_1 + (n - 1)d]n$.'' -- \cite[p. 126]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 
 \subsection{Cấp số nhân -- Geometric progression}
 
