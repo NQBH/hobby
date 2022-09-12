@@ -397,20 +397,20 @@ Nếu độ dài của đoạn thẳng $MN$ dần đến $0$ khi $x$ dần đế
 \begin{proof}[Chứng minh]
 	Thật vậy, xét trường hợp $x\to+\infty$, giả sử hàm số $f$ xác định trên khoảng $(\alpha;+\infty)$ \& đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ (khi $x\to+\infty$). Khi đó, theo định nghĩa \ref{def:tiem can xien}, ta có:
 	\begin{align}
-		\label{SGK Giai Tich 12 (1) p. 34}
+		\label{SGK_Toan_12_giai_tich_nang_cao (1) p. 34}
 		\lim_{x\to+\infty} [f(x) - (ax + b)] = 0.
 	\end{align}
 	Do đó $\lim_{x\to+\infty} \frac{f(x) - (ax + b)}{x} = 0$, i.e., $\lim_{x\to+\infty} \left[\frac{f(x)}{x} - a - \frac{b}{x}\right] = 0$. Vì $\lim_{x\to+\infty} \frac{b}{x} = 0$ nên
 	\begin{align}
-		\label{SGK Giai Tich 12 (2) p. 34}
+		\label{SGK_Toan_12_giai_tich_nang_cao (2) p. 34}
 		a = \lim_{x\to+\infty} \frac{f(x)}{x}.
 	\end{align}
-	Từ \eqref{SGK Giai Tich 12 (1) p. 34} suy ra
+	Từ \eqref{SGK_Toan_12_giai_tich_nang_cao (1) p. 34} suy ra
 	\begin{align}
-		\label{SGK Giai Tich 12 (3) p. 34}
+		\label{SGK_Toan_12_giai_tich_nang_cao (3) p. 34}
 		b = \lim_{x\to+\infty} [f(x) - ax].
 	\end{align}
-	Đảo lại, nếu $a$ \& $b$ thỏa mãn \eqref{SGK Giai Tich 12 (2) p. 34} \& \eqref{SGK Giai Tich 12 (3) p. 34} thì từ \eqref{SGK Giai Tich 12 (3) p. 34} suy ra \eqref{SGK Giai Tich 12 (1) p. 34}. Do đó đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ nếu $a\ne 0$ \& là tiệm cận ngang nếu $a = 0$. Trường hợp $x\to-\infty$ được chứng minh tương tự.'' -- \cite[p. 34]{SGK_Toan_12_giai_tich_nang_cao}
+	Đảo lại, nếu $a$ \& $b$ thỏa mãn \eqref{SGK_Toan_12_giai_tich_nang_cao (2) p. 34} \& \eqref{SGK_Toan_12_giai_tich_nang_cao (3) p. 34} thì từ \eqref{SGK_Toan_12_giai_tich_nang_cao (3) p. 34} suy ra \eqref{SGK_Toan_12_giai_tich_nang_cao (1) p. 34}. Do đó đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ nếu $a\ne 0$ \& là tiệm cận ngang nếu $a = 0$. Trường hợp $x\to-\infty$ được chứng minh tương tự.'' -- \cite[p. 34]{SGK_Toan_12_giai_tich_nang_cao}
 \end{proof}
 
 %------------------------------------------------------------------------------%
@@ -441,14 +441,139 @@ Nếu độ dài của đoạn thẳng $MN$ dần đến $0$ khi $x$ dần đế
 \begin{dinhnghia}
 	``Điểm $U(x_0;f(x_0))$ được gọi là \emph{điểm uốn} của đồ thị hàm số $y = f(x)$ nếu tồn tại 1 khoảng $(a;b)$ chứa điểm $x_0$ sao cho trên 1 trong 2 khoảng $(a;x_0)$ \& $(x_0;b)$ tiếp tuyến của đồ thị tại điểm $U$ nằm phía trên đồ thị còn trên khoảng kia tiếp tuyến nằm phía dưới đồ thị.
 \end{dinhnghia}
+Người ta nói rằng tiếp tuyến tại điểm uốn xuyên qua đồ thị. Để tìm điểm uốn của đồ thị có thể sử dụng điều khẳng định đã được chứng minh sau đây.
+
+\begin{dinhly}
+	Nếu hàm số $y = f(x)$ có đạo hàm cấp 2 trên 1 khoảng chứa điểm $x_0$, $f''(x_0) = 0$  \& $f''(x)$ đổi dấu khi $x$ qua điểm $x_0$ thì $U(x_0;f(x_0))$ là 1 điểm uốn của đồ thị hàm số $y = f(x)$.''
+\end{dinhly}
+``Dễ chứng minh được rằng: 
+
+\begin{dinhly}
+	Đồ thị của hàm số bậc 3 $f(x) = ax^3 + bx^2 + cx + d$, $(a\ne 0)$ luôn có 1 điểm uốn \& điểm đó là tâm đối xứng của đồ thị.''  -- \cite[p. 39]{SGK_Toan_12_giai_tich_nang_cao}
+\end{dinhly}
+
+\subsection{Hàm số trùng phương $y = ax^4 + bx^2 + c$ ($a\ne 0$)}
+Hàm số $y = ax^4 + bx^2 + c$ là hàm số chẵn nên đồ thị của nó nhận trục tung làm trục đối xứng.
+
+\begin{luuy}
+	``Gọi $(\mathcal{C})$ là đồ thị của hàm số $y = ax^4 + bx^2 + c$, $(a\ne 0)$. Người ta chứng minh được rằng:
+	\begin{enumerate*}
+		\item[$\bullet$] Nếu phương trình $f''(x) = 0$ có 2 nghiệm phân biệt $x = \pm x_0$ ($x_0 > 0$) thì đồ thị $(\mathcal{C})$ có 2 điểm uốn $U_1(x_0;f(x_0))$ \& $U_2(-x_0;f(-x_0))$ đối xứng với nhau qua trục tung.
+		\item[$\bullet$] Nếu phương trình $f''(x) = 0$ có 1 nghiệm kép hoặc vô nghiệm thì đồ thị $(\mathcal{C})$ không có điểm uốn.'' -- \cite[p. 43]{SGK_Toan_12_giai_tich_nang_cao}
+	\end{enumerate*}
+\end{luuy}
 
 %------------------------------------------------------------------------------%
 
 \section{Khảo Sát Sự Biến Thiên \& Vẽ Đồ Thị của 1 Số Hàm Phân Thức Hữu Tỷ}
 
+\subsection{Hàm số $y = \frac{ax + b}{cx + d}$ ($c\ne 0$ \& $ad - bc\ne 0$)}
+
+\subsection{Hàm số $y = \frac{ax^2 + bx + c}{a'x + b'}$ ($a\ne 0,a'\ne 0$)}
+
 %------------------------------------------------------------------------------%
 
 \section{1 Số Bài Toán Thường Gặp về Đồ Thị}
+
+\subsection{Giao điểm của 2 đồ thị}
+``Các đồ thị của 2 hàm số $y = f(x)$ \& $y = g(x)$ cắt nhau tại điểm $M(x_0;y_0)$ khi \& chỉ khi $y_0 = f(x_0)$ \& $y_0 = g(x_0)$, i.e., $(x_0;y_0)$ là 1 nghiệm của hệ phương trình
+\begin{equation*}
+	\left\{\begin{split}
+		y &= f(x),\\
+		y &= g(x).
+	\end{split}\right.
+\end{equation*}
+Như vậy hoành độ giao điểm của 2 đồ thị trên là nghiệm của phương trình $f(x) = g(x)$. Số nghiệm của phương trình $f(x) = g(x)$ bằng số giao điểm của 2 đồ thị.'' -- \cite[p. 51]{SGK_Toan_12_giai_tich_nang_cao}
+
+\begin{baitoan}
+	Với các giá trị nào của $a,b,c,m$, đường thẳng $y = m$ cắt đường cong $y = ax^4 + bx^2 + c$, $(a\ne 0)$, tại 4 điểm phân biệt?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Hoành độ giao điểm của đường thẳng \& đường cong đã cho là nghiệm của phương trình $ax^4 + bx^2 + c = m$, i.e., $ax^4 + bx^2 + c - m = 0$. Đặt $X = x^2$, $X\ge 0$, ta được $aX^2 + bX + c - m = 0$. Đường thẳng cắt đường cong đã cho tại 4 điểm phân biệt khi \& chỉ khi phương trình $ax^4 + bx^2 + c - m = 0$ có 4 nghiệm phân biệt. Điều này xảy ra khi \& chỉ khi phương trình $aX^2 + bX + c - m = 0$  có 2 nghiệm dương $X_1,X_2$ phân biệt, i.e.,
+	\begin{equation*}
+		\left\{\begin{split}
+			\Delta &> 0,\\
+			X_1X_2 &> 0,\\
+			X_1 + X_2 &> 0,
+		\end{split}\right.\Leftrightarrow\left\{\begin{split}
+			b^2 - 4a(c - m) &> 0,\\
+			c - m &> 0,\\
+			b &< 0,
+		\end{split}\right.\Leftrightarrow\left\{\begin{split}
+		4am &> 4ac - b^2,\\
+		m &< c,\\
+		b &< 0,
+	\end{split}\right.
+	\end{equation*}
+	Để đơn giản tiếp, xét dấu của $a$. Nếu $a > 0$, hệ bất phương trình cuối tương đương với $(b < 0)\land\left(m\in\left(c - \frac{b^2}{4a};c\right)\right)$. Nếu $a < 0$, hệ bất phương trình cuối tương đương với $(b < 0)\land(m < c)$. Vậy tập hợp các bộ $(a,b,c,m)$ thỏa mãn là $\left\{(a,b,c,d)\in\mathbb{R}^4;b < 0,\left(a > 0,m\in\left(c - \frac{b^2}{4a};c\right)\right)\lor(a < 0,m < c)\right\}$.
+\end{proof}
+
+\subsection{Sự tiếp xúc của 2 đường cong}
+
+\begin{dinhnghia}[2 đường cong tiếp xúc, tiếp điểm]
+	``Giả sử 2 hàm số $f$ \& $g$ có đạo hàm tại điểm $x_0$. Ta nói rằng 2 đường cong $y = f(x)$ \& $y = g(x)$ \emph{tiếp xúc} với nhau tại điểm $M(x_0;y_0)$ nếu $M$ là 1 điểm chung của chúng \& 2 đường cong có tiếp tuyến chung tại điểm $M$. Điểm $M$ được gọi là \emph{tiếp điểm} của 2 đường cong đã cho.
+\end{dinhnghia}
+Hiển nhiên các đồ thị của 2 hàm số đã cho tiếp xúc với nhau tại điểm $M(x_0;y_0)$ (Fig. \ref{fig:2_duong_cong_tiep_xuc}) khi \& chỉ khi $y_0 = f(x_0)$, $y_0 = g(x_0)$ \& $f'(x_0) = g'(x_0)$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{2_duong_cong_tiep_xuc}
+	\caption{2 đường cong tiếp xúc nhau, \cite[Hình 1.20, p. 52]{SGK_Toan_12_giai_tich_nang_cao}.}
+	\label{fig:2_duong_cong_tiep_xuc}
+\end{figure}
+Từ đó dễ dàng suy ra rằng
+
+\begin{dinhly}
+	2 đường cong $y = f(x)$ \& $y = g(x)$ tiếp xúc với nhau khi \& chỉ khi hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			f(x) &= g(x),\\
+			f'(x) &= g'(x),
+		\end{split}\right.
+	\end{equation*}
+	có nghiệm \& nghiệm của hệ phương trình trên là hoành độ tiếp điểm của 2 đường cong đó.'' -- \cite[p. 52]{SGK_Toan_12_giai_tich_nang_cao}
+\end{dinhly}
+
+\begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, Ví dụ 3, pp. 53--54]
+	``Chứng minh rằng đường thẳng $y = px + q$ là tiếp tuyến của parabol $y = ax^2 + bx + c$ khi \& chỉ khi phương trình $ax^2 + bx + c = px + q$ hay
+	\begin{align}
+		\label{SGK_Toan_12_giai_tich_nang_cao (3) p. 54}
+		ax^2 + (b - p)x + c - q = 0
+	\end{align}
+	có nghiệm kép, i.e., $\Delta = (b - p)^2 - 4(c - q) = 0$.
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Đường thẳng \& parabol đã cho tiếp xúc với nhau khi \& chỉ khi hệ phương trình
+	\begin{equation}
+		\label{SGK_Toan_12_giai_tich_nang_cao (4) p. 54}
+		\left\{\begin{split}
+			ax^2 + bx + c &= px + q,\\
+			(ax^2 + bx + c)' &= (px + q)'
+		\end{split}\right.\mbox{ hay }\left\{\begin{split}
+			ax^2 + (b - p)x + c - q &= 0,\\
+			2ax + b & = p,
+		\end{split}\right.
+	\end{equation}
+	có nghiệm. Nếu đường thẳng tiếp xúc với parabol thì hệ phương trình trên có nghiệm. Giả sử $x = x_0$ là nghiệm của hệ phương trình trên. Khi đó, vì $a\ne 0$ nên từ \eqref{SGK_Toan_12_giai_tich_nang_cao (4) p. 54} ta có $x_0 = \frac{p - b}{2a}$. Thay vào \eqref{SGK_Toan_12_giai_tich_nang_cao (3) p. 54}, ta được $a\frac{(p - b)^2}{4a^2} + (b - p)\frac{p - b}{2a} + c - q = 0$. Từ đó suy ra $(b - p)^2 - 4a(c - q) = 0$. Vậy phương trình \eqref{SGK_Toan_12_giai_tich_nang_cao (3) p. 54} có nghiệm kép. Đảo lại, nếu phương trình \eqref{SGK_Toan_12_giai_tich_nang_cao (3) p. 54} có nghiệm kép $x_0$ thì $x_0 = \frac{p - b}{2a}$. Hiển nhiên $x = x_0$ cũng là nghiệm của phương trình \eqref{SGK_Toan_12_giai_tich_nang_cao (4) p. 54}. Vậy hệ phương trình trên có nghiệm. Do đó đường thẳng là tiếp tuyến của parabol.'' -- \cite[pp. 53--54]{SGK_Toan_12_giai_tich_nang_cao}
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_12_giai_tich_nang_cao}, \textbf{61.}, p. 56]
+	1 viên đạn được bắn ra với vận tốc ban đầu $v_0 > 0$ từ 1 nòng súng đặt ở gốc tọa độ $O$, nghiêng 1 góc $\alpha$ với mặt đất (nòng súng nằm trong mặt phẳng thẳng đứng $Oxy$ \& tạo với trục hoành $Ox$ góc $\alpha$) (Fig. \ref{fig:quy_dao_chuyen_dong_cua_vien_dan})
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{quy_dao_chuyen_dong_cua_vien_dan}
+		\caption{Quỹ đạo chuyển động của viên đạn là parabol, \cite[Hình 1.21, p. 56]{SGK_Toan_12_giai_tich_nang_cao}.}
+		\label{fig:quy_dao_chuyen_dong_cua_vien_dan}
+	\end{figure}
+	Biết quỹ đạo chuyển động của viên đạn là parabol.
+	\begin{align*}
+		(\gamma_\alpha):\ y = -\frac{g}{2v_0^2}(1 + \tan^2\alpha)x^2 + x\tan\alpha,
+	\end{align*}
+	($g$ là \emph{gia tốc trọng trường}). Chứng minh rằng với mọi $\alpha\in\left(0;\frac{\pi}{2}\right)$, $(\gamma_\alpha)$ luôn tiếp xúc với parabol $(\Gamma)$ có phương trình là $y = -\frac{g}{2v_0^2}x^2 + \frac{v_0^2}{2g}$ \& tìm tọa độ tiếp điểm ($(\Gamma)$ được gọi là \emph{parabol an toàn}).
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
