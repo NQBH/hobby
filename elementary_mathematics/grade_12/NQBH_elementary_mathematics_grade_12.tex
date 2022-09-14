@@ -43,6 +43,22 @@
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+
+\newcommand{\arc@arc}[2]{%
+	\sbox0{$\m@th#1#2$}%
+	\vbox{
+		\hbox{\resizebox{\wd0}{\height}{\arc@char}}
+		\nointerlineskip
+		\box0
+	}%
+}
+\makeatother
 
 \title{Some Topics in Elementary Mathematics\texttt{/}Grade 12}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -574,6 +590,56 @@ Từ đó dễ dàng suy ra rằng
 	\end{align*}
 	($g$ là \emph{gia tốc trọng trường}). Chứng minh rằng với mọi $\alpha\in\left(0;\frac{\pi}{2}\right)$, $(\gamma_\alpha)$ luôn tiếp xúc với parabol $(\Gamma)$ có phương trình là $y = -\frac{g}{2v_0^2}x^2 + \frac{v_0^2}{2g}$ \& tìm tọa độ tiếp điểm ($(\Gamma)$ được gọi là \emph{parabol an toàn}).
 \end{baitoan}
+
+\section{Tính Lồi, Lõm \& Điểm Uốn của Đường Cong}
+``Đường cong $(\mathcal{C})$ trên Fig. \ref{fig:duong_cong_3_cung} gồm 3 cung $\arc{AB},\arc{BC}$, \& $\arc{CD}$. Ta thấy tiếp tuyến của đường cong tại mỗi điểm $M$ của cung $\arc{AB}$ đều nằm phía trên của cung; nguowif ta gọi $\arc{AB}$ là 1 \textit{cung lồi}. Trái lại, tiếp tuyến tại mỗi điểm của cung $\arc{BC}$ nằm phía dưới của cung; $\arc{BC}$ được gọi là 1 \textit{cung lõm}. Điểm $B$ là điểm phân chia 2 cung lồi \& cung lõm của đường cong; người ta gọi nó là 1 \textit{điểm uốn} của đường cong $(\mathcal{C})$. Tương tự, $C$ cũng là 1 điểm uốn vì nó phân chia cung lõm $\arc{BC}$ \& cung lồi $\arc{CD}$. Ta cũng thấy tiếp tuyến của đường cong tại điểm uốn xuyên qua đường cong.'' -- \cite[p. 59]{SGK_Toan_12_giai_tich_nang_cao}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{duong_cong_3_cung}
+	\caption{Đường cong $(\mathcal{C}$) gồm 3 cung, \cite[Hình 1.22, p. 59]{SGK_Toan_12_giai_tich_nang_cao}.}
+	\label{fig:duong_cong_3_cung}
+\end{figure}
+
+\subsection{Tính lồi, lõm của đồ thị}
+
+\begin{dinhnghia}[Đồ thị lồi\texttt{/}lõm]
+	``Giả sử hàm số $f$ có đạo hàm trên khoảng $I$. Ta nói rằng:
+	\begin{enumerate*}
+		\item[(a)] Đồ thị $(\mathcal{C})$ của hàm số $y = f(x)$ lồi trên khoảng $I$ nếu tiếp tuyến của $(\mathcal{C}$) tại mỗi điểm của nó đều nằm phía trên đồ thị.
+		\item[(b)] Đồ thị $(\mathcal{C})$ của hàm số $y = f(x)$ lõm trên khoảng $I$ nếu tiếp tuyến của $(\mathcal{C}$) tại mỗi điểm của nó đều nằm phía dưới đồ thị.''
+	\end{enumerate*}
+\end{dinhnghia}
+
+\begin{dinhly}
+	``Giả sử hàm số $f$ có đạo hàm cấp 3 trên khoảng $I$. Khi đó:
+	\begin{enumerate*}
+		\item[(a)] Nếu $f''(x) < 0$, $\forall x\in I$ thì đồ thị $(\mathcal{C})$ của hàm số $y = f(x)$ lồi trên $I$.
+		\item[(b)] Nếu $f''(x) > 0$, $\forall x\in I$ thì đồ thị $(\mathcal{C})$ của hàm số $y = f(x)$ lõm trên $I$.''
+	\end{enumerate*}
+\end{dinhly}
+
+\begin{luuy}
+	``Điều kiện nêu trong định lý trên chỉ là điều kiện đủ chứ không phải điều kiện cần của tính lồi, lõm của đồ thị. E.g., đường cong $f(x) = x^4$ là lõm trên $\mathbb{R}$ vì tiếp tuyến của đường cong tại mỗi điểm của nó đều nằm phía dưới đường cong. Tuy nhiên, ta có $f''(x) = 12x^2\ge 0$, $\forall x\in\mathbb{R}$ \& $f''(x) = 0$ tại $x = 0$.'' -- \cite[pp. 59--60]{SGK_Toan_12_giai_tich_nang_cao}
+\end{luuy}
+
+\subsection{Điểm uốn của đồ thị}
+
+\begin{dinhnghia}[Điểm uốn]
+	``Giả sử hàm số $f$ có đạo hàm trên khoảng $(a;b)$ chứa điểm $x_0$. Nếu đồ thị $(\mathcal{C})$ của hàm số $y = f(x)$ lồi trên 1 trong 2 khoảng $(a;x_0)$, $(x_0;b)$ \& lõm trên khoảng còn lại thì $U(x_0;f(x_0))$ được gọi là \emph{điểm uốn} của đồ thị $(\mathcal{C})$ (Fig. \ref{fig:diem_uon}).
+\end{dinhnghia}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{diem_uon}
+	\caption{Điểm uốn của đồ thị, \cite[Hình 1.23, p. 60]{SGK_Toan_12_giai_tich_nang_cao}.}
+	\label{fig:diem_uon}
+\end{figure}
+I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& lõm của đồ thị. Tiếp tuyến của đồ thị tại điểm uốn luôn xuyên qua đồ thị. Từ định lý về tính lồi, lõm của đồ thị, dễ dàng suy ra:
+
+\begin{dinhly}
+	Giả sử hàm số $f$ có đạo hàm cấp 2 trên khoảng $I$ chứa điểm $x_0$. Nếu $f''(x_0) = 0$ \& $f''(x)$ đổi dấu khi $x$ qua điểm $x0$ thì $U(x_0;f(x_0))$ là 1 điểm uốn của đồ thị hàm số $y = f(x)$.'' -- \cite[p. 60]{SGK_Toan_12_giai_tich_nang_cao}
+\end{dinhly}
 
 %------------------------------------------------------------------------------%
 
