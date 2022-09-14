@@ -647,6 +647,101 @@ I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& l
 
 \section{Lũy Thừa với Số Mũ Hữu Tỷ}
 
+\subsection{Lũy thừa với số mũ nguyên}
+Để có khái niệm lũy thừa với số mũ nguyên, ta còn phải định nghĩa lũy thừa với số mũ 0 \& số mũ nguyên âm.
+
+\subsubsection{Lũy thừa với số mũ 0 \& số mũ nguyên âm}
+
+\begin{dinhnghia}[Lũy thừa với số mũ nguyên âm]
+	Với $a\ne 0$, $n = 0$ hoặc $n$ là 1 số nguyên âm, \emph{lũy thừa bậc $n$ của $a$} là số $a^n$ xác định bởi $a^0 = 1$, $a^n = \frac{1}{a^{-n}}$.
+\end{dinhnghia}
+
+\begin{vidu}
+	Sử dụng lũy thừa với số mũ nguyên của $10$ để biểu diễn 1 số thập phân dạng $\overline{a_na_{n-1}\ldots a_1a_0.a_{-1}a_{-2}\ldots a_{-m}}$, với $m,n\in\mathbb{N}$, $a_i\in\{0,1,2,3,4,5,6,7,8,9\}$, $i = -m,\ldots,n$, $a_n\ne 0$, $a_{-m}\ne 0$:
+	\begin{align*}
+		\overline{a_na_{n-1}\ldots a_1a_0.a_{-1}a_{-2}\ldots a_{-m}} = \sum_{i=-m}^n 10^ia_i = 10^{-m}a_{-m} + \cdots + 10^{-1}a_{-1} + a_0 + 10a_1 + \cdots + 10^{n-1}a_{n-1} + 10^na_n.
+	\end{align*}
+\end{vidu}
+
+\begin{luuy}
+	\begin{enumerate*}
+		\item[(a)] ``Các ký hiệu $0^0$, $0^n$ ($n$ nguyên âm) không có nghĩa.
+		\item[(b)] $a^n = \frac{1}{a^{-n}}$, $\forall a\ne 0$, $\forall n\in\mathbb{Z}$.
+		\item[(c)] Người ta thường dùng các lũy thừa của $10$ với số mũ nguyên để biểu thị những số rất lớn \& những số rất bé. E.g., khối lượng của Trái Đất là $5.97\cdot 10^{24}$ kg, khối lượng nguyên tử của hydro là $1.66\cdot 10^{-24}$ g, trò chơi Rubik có hơn $4\cdot 10^{19}$ cách sắp xếp.'' -- \cite[p. 70]{SGK_Toan_12_giai_tich_nang_cao}
+	\end{enumerate*}
+\end{luuy}
+
+\subsubsection{Tính chất của lũy thừa với số mũ nguyên}
+
+\paragraph{Quy tắc tính.} ``Từ định nghĩa lũy thừa với số mũ của 1 số, ta thấy các quy tắc tính toán cho lũy thừa với số mũ tự nhiên vẫn còn đúng với số mũ nguyên.'' -- \cite[p. 70]{SGK_Toan_12_giai_tich_nang_cao}
+
+\begin{dinhly}
+	$\forall a\ne 0,b\ne 0$, $\forall m,n\in\mathbb{Z}$,
+	\begin{enumerate*}
+		\item[(a)] $a^ma^n = a^{m+n}$;
+		\item[(b)] $\frac{a^m}{a^n} = a^{m-n}$;
+		\item[(c)] $(a^m)^n = a^{mn}$;
+		\item[(d)] $(ab)^n = a^nb^n$;
+		\item[(e)] $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$.
+	\end{enumerate*}
+\end{dinhly}
+
+\paragraph{So sánh các lũy thừa.}
+\begin{dinhly}
+	\label{thm:so sanh cac luy thua}
+	Cho $m,n\in\mathbb{Z}$. Khi đó:
+	\begin{enumerate*}
+		\item[(a)] Với $a > 1$ thì $a^m > a^n$ khi \& chỉ khi $m > n$;
+		\item[(b)] Với $0 < a < 1$ thì $a^m > a^n$ khi \& chỉ khi $m < n$.
+	\end{enumerate*}
+\end{dinhly}
+
+\begin{hequa}
+	Với $0 < a < b$ \& $m\in\mathbb{Z}$ thì
+	\begin{enumerate*}
+		\item[(a)] $a^m < b^m\Leftrightarrow m > 0$;
+		\item[(b)] $a^m > b^m\Leftrightarrow m < 0$.
+	\end{enumerate*}
+\end{hequa}
+
+\begin{proof}[Chứng minh]
+	``Vì $0 < a < b$ nên $f\frac{b}{a} > 1$ \& $0 < \frac{a}{b} < 1$. Theo (a) của định lý \ref{thm:so sanh cac luy thua}, ta có $\left(\frac{b}{a}\right)^m > \left(\frac{b}{a}\right)^0\Leftrightarrow m > 0$, hay $a^m < b^m\Leftrightarrow m > 0$. Theo (b) của định lý \ref{thm:so sanh cac luy thua}, ta có $\left(\frac{a}{b}\right)^m > \left(\frac{a}{b}\right)^0\Leftrightarrow m < 0$, hay $a^m > b^m\Leftrightarrow m < 0$.'' -- \cite[p. 71]{SGK_Toan_12_giai_tich_nang_cao}
+\end{proof}
+
+\begin{hequa}
+	Với $a < b$, $n\in\mathbb{N}$, $n$ lẻ thì $a^n < b^n$.
+\end{hequa}
+
+\begin{hequa}
+	Với $a,b > 0$, $n\in\mathbb{Z}^\star$ thì $a^n = b^n\Leftrightarrow a = b$.
+\end{hequa}
+
+\subsection{Căn bậc $n$ \& lũy thừa với số mũ hữu tỷ}
+
+\begin{dinhnghia}[Căn bậc $n$]
+	``Với $n\in\mathbb{N}^\star$, \emph{căn bậc $n$} của $a\in\mathbb{R}$ là $b\in\mathbb{R}$ sao cho $b^n = a$.''
+\end{dinhnghia}
+
+\begin{menhde}
+	``Khi $n$ là số lẻ, mỗi $a\in\mathbb{R}$ chỉ có 1 căn bậc $n$. Căn đó được ký hiệu là $\sqrt[n]{a}$. Khi $n$ là số chẵn, mỗi $a\in(0;+\infty)$ có đúng 2 căn bậc $n$ là 2 số đối nhau. Căn có giá trị dương ký hiệu là $\sqrt[n]{a}$ (còn gọi là \emph{căn số học bậc $n$} của $a$), căn có giá trị âm ký hiệu là $-\sqrt[n]{a}$. Đặc biệt, $\sqrt[2]{a}$ được ký hiệu đơn giản là $\sqrt{2}$.'' -- \cite[p. 72]{SGK_Toan_12_giai_tich_nang_cao}
+\end{menhde}
+
+\begin{nhanxet}
+	\begin{enumerate*}
+		\item[(a)] Căn bậc 1 của số $a$ chính là $a$.
+		\item[(b)] Căn bậc $n$ của số $0$ là $0$.
+		\item[(c)] Số âm không có căn bậc chẵn vì lũy thừa bậc chẵn của 1 số thực bất kỳ là số không âm.
+		\item[(d)] Với $n\in\mathbb{N}$, $n$ lẻ, ta có $\sqrt[n]{a} > 0$ khi $a > 0$, $\sqrt[n]{a} < 0$ khi $a < 0$.
+	\end{enumerate*}
+	(e)
+	\begin{equation*}
+		\sqrt[n]{a^n} = \left\{\begin{split}
+			&a,&&\mbox{khi } n\mbox{ lẻ},\\
+			&|a|,&&\mbox{khi } n\mbox{ chẵn}.
+		\end{split}\right.
+	\end{equation*}
+\end{nhanxet}
+
 %------------------------------------------------------------------------------%
 
 \section{Lũy Thừa với Số Mũ Thực}
