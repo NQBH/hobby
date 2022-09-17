@@ -32,7 +32,7 @@
 \def\labelitemii{$\circ$}
 
 \title{Computer Science}
-\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
@@ -239,9 +239,183 @@ viii
 
 %------------------------------------------------------------------------------%
 
-%\begin{thebibliography}{99}
-%	\bibitem[]{}
-%\end{thebibliography}
+\chapter{\cite{Matthes2019}. Python Crash Course: A Hands-on, Project-based Introduction to Programming}
+
+\section*{Preface to the 2nd Edition}
+``\textit{Python Crash Course} is being used in middle schools \& high schools, \& also in college classes. Students who are assigned more advanced textbooks are using \textit{Python Crash Course} as a companion text for their classes \& finding it a worthwhile supplement. People are using it to enhance their skills on the job \& to start working on their own side projects. In short, people are using the book for the full range of purposes I had hoped they would.
+
+The opportunity to write a 2nd edition of \textit{Python Crash Course} has been thoroughly enjoyable. Although Python is a mature language, it continues to evolve as every language does. My goal in revising the book was to make it \fbox{leaner \& simpler}. There is no longer any reason to learn Python 2, so this edition focuses on Python 3 only. Many Python packages have become easier to install, so setup \& installation instructions are easier. I've added a few topics that I've realized readers would benefit from, \& I've updated some sections to reflect new, simpler ways of doing things in Python. I've also clarified some sections where certain details of the languages were not presented as accurately as they could have been. All the projects have been completely updated using popular, well-maintained libraries that you can confidently use to build your own projects.
+
+The following is a summary of specific changes that have been made in the 2nd edition:
+\begin{itemize}
+	\item In Chap. 1, the instructions for installing Python have been simplified for users of all major operating systems. I now recommend the text editor Sublime Text, which is popular among beginner \& professional programmers \& works well on all operating systems.
+	\item In Chap. 2 includes a more accurate description of how variables are implemented in Python. Variables are described as \textit{labels} for values, which leads to a better understanding of how variables behave in Python. The book now users f-strings, introduced in Python 3.6. This is a much simpler way to use variable values in strings. The use of underscores to represent large numbers, such as \verb|1_000_000|, was also introduced in Python 3.6 \& is included in this edition. Multiple assignment of variables was previously introduced in 1 of the projects, \& that description has been generalized \& moved to Chap. 2 for the benefit of all readers. Finally, a clear convention for representing constant values in Python is included in this chapter.
+	\item In Chap. 6, I introduce the \texttt{get()} method for retrieving values from a dictionary, which can return a default value if a key does not exist.
+	\item The Alien Invasion project (Chaps. 12--14) is now entirely class-based. The game itself is a class, rather than a series of functions. This greatly simplifies the overall structure of the game, vastly reducing the number of function calls \& parameters required. Readers familiar with the 1st edition will appreciate the simplicity this new class-based approach provides. Pygame can now be installed in 1 line on all systems, \& readers are given the option of running the game in fullscreen mode or in a windowed mode.
+	\item In the data visualization projects, the installation instructions for Matplotlib are simpler for all operating systems. The visualizations featuring Matplotlib use the \texttt{subplots()} function, which will be easier to build upon as you learn to create more complex visualizations. The Rolling Dice project in Chap. 15 uses Plotly, a well-maintained visualization library that features a clean syntax \& beautiful, fully customizable output.
+	\item In Chap. 16, the weather project is based on data from NOAA, which should be more stable over the next few years than the site used in the 1st edition. The mapping project focuses on global earthquake activity; by the end of this project you'll have a stunning visualization showing Earth's tectonic plate boundaries through a focus on the locations of all earthquakes over a given time period. You'll learn to plot any data set involving geographic points.
+	\item Chap. 17 uses Plotly to visualize Python-related activity in open source projects on GitHub.
+	\item The Learning Log project (Chaps. 18--20) is built using the latest version of Django \& styled using the latest version of Bootstrap. The process of deploying the project to Heroku has been simplified using the \texttt{django-heroku} package, \& uses environment variables rather than modifying the \texttt{settings.py} files. This is a simpler approach \& is more consistent with how professional programmers deploy modern Django projects.
+	\item Appendix A has been fully updated to recommend current best practices in installing Python. Appendix B includes detailed instructions for setting up Sublime Text \& brief descriptions of most of the major text editors \& IDEs in current use. Appendix C directs readers to newer, more popular online resources for getting help, \& Appendix D continues to offer a mini crash course in using Git for version control.
+	\item The index has been thoroughly updated to allow you to use \textit{Python Crash Course} as a reference for all of your future Python projects.'' -- \cite[Preface to the 2nd Edition, pp. xxvii--xxix]{Matthes2019}
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section*{Introduction}
+
+\subsection*{Who is This Book For?}
+``The goal of this book is to bring you up to speed with Python as quickly as possible so you can build programs that work -- games, data visualizations, \& web applications -- while developing a foundation in programming that will serve you well for the rest of your life. \textit{Python Crash Course} is writing for people of any age who have never before programmed in Python or have never programmed at all. This book is for those who want to learn the basics of programming quickly so they can focus on interesting projects, \& those who like to test their understanding of new concepts by solving meaningful problems. \textit{Python Crash Course} is also perfect for middle school \& high school teachers who want to offer their students a project-based introduction to programming. If you're taking a college class \& want a friendlier introduction to Python than the text you've been assigned, this book could make your class easier as well.'' -- \cite[Introduction, p. xxxiv]{Matthes2019}
+
+\subsection*{What Can You Expect to Learn?}
+``The purpose of this book is to make you a good programmer in general \& a good Python programmer in particular. You'll learn efficiently \& adopt good habits as I provide you with a solid foundation in general programming concepts. After working your way through \textit{Python Crash Course}, you should be ready to move on to more advanced Python techniques, \& your next programming language will be even easier to grasp.
+
+In the 1st part of this book, you'll learn basic programming concepts you need to know to write Python programs. These concepts are the same as those you'd learn when starting out in almost any programming language. You'll learn about different kinds of data \& the ways you can store data in lists \& dictionaries within your programs. You'll learn to build collections of data \& work through those collections in efficient ways. You'll learn to use \texttt{while} loops \& \texttt{if} statements to test for certain conditions so you can run specific sections of code while those conditions are true \& run other sections when they're not -- a technique that greatly helps you automate processes.
+
+You'll learn to accept input from users to make your programs interactive \& to keep your programs running as long as the user is active. You'll explore how to write functions to make parts of your program reusable, so you only have to write blocks of code that perform certain actions once \& then use that code as many times as you like. You'll then extend this concept to more complicated behavior with classes, making fairly simple programs respond to a variety of situations. You'll learn to write programs that handle common errors gracefully. After working through each of these basic concepts, you'll write a few short programs that solve some well-defined problems. Finally, you'll take your 1st step toward intermediate programming by learning how to write tests for your code so you can develop your programs further without worrying about introducing bugs. All the information in Part I will prepare you for taking on larger, more complex projects.
+
+In Part II, you'll apply what you learned in Part I to 3 projects. You can do any or all of these projects in whichever order works best for you. In the 1st project (Chaps. 12--14), you'll create a \textit{Space Invaders}--style shooting game called \textit{Alien Invasion}, which consists of levels of increasing difficulty. After you've completed this project, you should be well on your way to being able to develop your own 2D games.
+
+The 2nd project (Chaps. 15--17) introduces you to data visualization. Data scientists aim to make sense of the vast amount of information available to them through a variety of visualization techniques. You'll work with data sets that you generate through code, data sets that you download from online sources, \& data sets your programs download automatically. After you've completed this project, you'll be able to write programs that sift through large data sets \& make visual representations of that stored information.
+
+In the 3rd project (Chaps. 18--20), you'll build a small web application called Learning Log. This project allows you to keep a journal of ideas \& concepts you've learned about a specific topic. You'll be able to keep separate logs for different topics \& allow others to create an account \& start their own journals. You'll also learn how to deploy your project so anyone can access it online from anywhere.'' -- \cite[Introduction, pp. xxxiv--xxxv]{Matthes2019}
+
+\subsection*{Online Resources}
+``You can find all the supplementary resources for the book online at \url{https://nostarch.com/pythoncrashcourse2e/} or \url{http://ehmatthes.github.io/pcc_2e/}. These resources include:
+\begin{itemize}
+	\item \textbf{Setup instructions.} These instructions are identical to what's in the book but include active links you can click for all the difference pieces. If you're having any setup issues, refer to this resource.
+	\item \textbf{Updates.} Python, like all languages, is constantly evolving. I maintain a thorough set of updates, so if anything isn't working, check here to see whether instructions have changed.
+	\item \textbf{Solutions to exercises.} You should spend significant time on your own attempting the exercises in the ``Try It Yourself'' sections. But if you're stuck \& can't make any progress, solutions to most of the exercises are online.
+	\item \textbf{Cheat sheets.} A full set of downloadable cheat sheets for a quick reference to major concepts is also online.'' -- \cite[Introduction, p. xxxv]{Matthes2019}
+\end{itemize}
+
+\subsection*{Why Python?}
+``Every year I consider whether to continue using Python or whether to move on to a different language -- perhaps one that's newer to the programming world. But I continue to focus on Python for many reasons. \fbox{Python is an incredibly efficient language}: your programs will do more in fewer lines of code than many other languages would require. Python's syntax will also help you write ``clean'' code. Your code will be easy to read, easy to debug, \& easy to extend \& build upon compared to other languages.
+
+People use Python for many purposes: to make games, build web applications, solve business problems, \& develop internal tools at all kinds of interesting companies. Python is also used heavily in scientific fields for academic research \& applied work.
+
+1 of the most important reasons I continue to use Python is because of the Python community, which includes an incredibly diverse \& welcoming group of people. \fbox{Community is essential to programmers because programming isn't a solitary pursuit.} Most of us, even the most experienced programmers, need to ask advice from others who have already solved similar problems. Having a well-connected \& supportive community is fully supportive of people like you who are learning Python as your 1st programming language. Python is a great language to learn $\ldots$'' -- \cite[Introduction, p. xxxvi]{Matthes2019}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\huge Part I: Basics
+\end{center}
+
+\section{Getting Started}
+
+%------------------------------------------------------------------------------%
+
+\section{Variables \& Simple Data Types}
+
+%------------------------------------------------------------------------------%
+
+\section{Introducing Lists}
+
+%------------------------------------------------------------------------------%
+
+\section{Working with Lists}
+
+%------------------------------------------------------------------------------%
+
+\section{\texttt{if} Statements}
+
+%------------------------------------------------------------------------------%
+
+\section{Dictionaries}
+
+%------------------------------------------------------------------------------%
+
+\section{User Input \& \texttt{while} Loops}
+
+%------------------------------------------------------------------------------%
+
+\section{Functions}
+
+%------------------------------------------------------------------------------%
+
+\section{Classes}
+
+%------------------------------------------------------------------------------%
+
+\section{Files \& Exceptions}
+
+%------------------------------------------------------------------------------%
+
+\section{Testing Your Code}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\huge Part II: Projects
+\end{center}
+
+\begin{center}
+	\Large Project 1: Alien Invasion
+\end{center}
+
+\section{A Ship that Fires Bullets}
+
+%------------------------------------------------------------------------------%
+
+\section{Aliens!}
+
+%------------------------------------------------------------------------------%
+
+\section{Scoring}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\Large Project 2: Data Visualization
+\end{center}
+
+\section{Generating Data}
+
+%------------------------------------------------------------------------------%
+
+\section{Downloading Data}
+
+%------------------------------------------------------------------------------%
+
+\section{Working with APIs}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\Large Project 3: Web Applications
+\end{center}
+
+\section{Getting Started with Django}
+
+%------------------------------------------------------------------------------%
+
+\section{User Accounts}
+
+%------------------------------------------------------------------------------%
+
+\section{Styling \& Deploying an App}
+
+%------------------------------------------------------------------------------%
+
+\section*{Afterword}
+
+%------------------------------------------------------------------------------%
+
+\section{Appendix A: Installation \& Troubleshooting}
+
+%------------------------------------------------------------------------------%
+
+\section{Appendix B: Text Editors \& IDEs}
+
+%------------------------------------------------------------------------------%
+
+\section{Appendix C: Getting Help}
+
+%------------------------------------------------------------------------------%
+
+\section{Appendix D: Using Git for Version Control}
+
 
 %------------------------------------------------------------------------------%
 
