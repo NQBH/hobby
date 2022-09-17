@@ -301,8 +301,148 @@ People use Python for many purposes: to make games, build web applications, solv
 \begin{center}
 	\huge Part I: Basics
 \end{center}
+``Part I of this book teaches you the basic concepts you'll need to write Python programs. Many of these concepts are common to all programming languages, so they'll be useful throughout your life as a programmer.
+\begin{itemize}
+	\item In Chap. 1 you'll install Python on your computer \& run your 1st program, which prints the message \textit{Hello world!} to the screen.
+	\item In Chap. 2 you'll learn to store information in variables \& work with text \& numerical values.
+	\item Chaps. 3--4 introduce lists. Lists can store as much information as you want in 1 variable, allowing you to work with that data efficiently. You'll be able to work with hundreds, thousands, \& even millions of values in just a few lines of code.
+	\item In Chap. 5 you'll use \texttt{if} statements to write code that responds 1 way if certain conditions are true, \& responds in a different way if those conditions are not true.
+	\item Chap. 6 shows you how to use Python's dictionaries, which let you make connections between different pieces of information. Like lists, dictionaries can contain as much information as you need to store.
+	\item In Chap. 7 you'll learn how to accept input from users to make your programs interactive. You'll also learn about \texttt{while} loops, which run blocks of code repeatedly as long as certain conditions remain true.
+	\item In Chap. 8 you'll write functions, which are named blocks of code that perform a specific task \& can be run whether you need them.
+	\item Chap. 9 introduces \textit{classes}, which allow you to model real-world objects, such as dogs, cats, people, cars, rockets, \& much more, so your code can represent anything real or abstract.
+	\item Chap. 10 shows you how to work with files \& handle errors so your programs won't crash unexpectedly. You'll store data before your program closes, \& read the data back in when the program runs again. You'll learn about Python's exceptions, which allow you to anticipate errors, \& make your programs handle those errors gracefully.
+	\item In Chap. 11 you'll learn to write tests fr your code to check that your programs work the way you intend them to. As a result, you'll be able to expand your programs without worrying about introducing new bugs. Testing your code is 1 of the 1st skills that will help you transition from beginner to intermediate programmer.'' -- \cite[pp. 1--2]{Matthes2019}
+\end{itemize}
 
 \section{Getting Started}
+
+\subsection{Setting Up Your Programming Environment}
+``Python differs slightly on different operating systems, so you'll need to keep a few considerations in mind. In the following sections, we'll make sure Python is set up correctly on your system.'' -- \cite[p. 3]{Matthes2019}
+
+\subsubsection{Python Versions}
+``Every programming language evolves as new ideas \& technologies emerge, \& the developers of Python have continually made the language more versatile \& powerful.'' ``In this section, we'll find out if Python is already installed on your system \& whether you need to install a newer version. Appendix A contains a comprehensive guide to installing the latest version of Python on each major operating system as well. Some old Python projects still use Python 2, but you should use Python 3. If Python 2 is installed on your system, it's probably there to support some older programs that your system needs.'' -- \cite[p. 4]{Matthes2019}
+
+\subsubsection{Running Snippets of Python Code}
+``You can run Python's interpreter in a terminal window, allowing you to try bits of Python code without having to save \& run an entire program.'' ``The \texttt{>>>} prompt indicates that you should be using the terminal window, \& the bold text is the code you should type in \& then execute by pressing \texttt{Enter}. Most of the examples in the book are small, self-contained programs that you'll run from your text editor rather than the terminal, because you'll write most of your code in the text editor. But sometimes basic concepts will be shown in a series of snippets run through a Python terminal session to demonstrate particular concepts more efficiently. When you see 3 angle brackets in a code listing, you're looking at code \& output from a terminal session.'' -- \cite[p. 4]{Matthes2019}
+
+\subsection{About the Sublime Text Editor}
+``Sublime Text is a simple text editor that can be installed on all modern operating systems. Sublime Text lets you run almost all of your programs directly from the editor instead of through a terminal. Your code runs in a terminal session embedded in the Sublime Text window, which makes it easy to see the output.
+
+Sublime Text is a beginner-friendly editor, but many professional programmers use it as well. If you become comfortable using it while learning Python, you can continue using it as you progress to larger \& more complicated projects. Sublime Text has a very liberal licensing policy: you can use the editor free of charge as long as you want, but the developers request that you purchase a license if you like it \& want to keep using it.
+
+Appendix B provides information on other text editors. If you're curious about the other options, you might want to skim that appendix at this point. If you want to begin programming quickly, you can use Sublime Text to start \& consider other editors once you've gained some experience as a programmer.'' -- \cite[pp. 4--5]{Matthes2019}
+
+\subsection{Python on Different Operating Systems}
+``Python is a cross-platform programming language, which means it runs on all the major operating systems. Any Python program you write should run on any modern computer that has Python installed. However, the methods for setting up Python on different operating systems vary slightly.'' -- \cite[p. 5]{Matthes2019}
+
+\subsubsection{Python on Windows}
+``Window doesn't always come with Python, so you'll probably need to install it, \& then install Sublime Text.'' -- \cite[p. 5]{Matthes2019}
+
+\paragraph{Installing Python.} ``1st, check whether Python is installed on your system. Open a command window by entering \texttt{command} into the Start menu or by holding down the \texttt{Shift} key while right-clicking on your desktop \& selecting \texttt{Open command window here} from the menu. In the terminal window, enter \texttt{python} in lowercase. If you get a Python prompt (\texttt{>>>}) in response, Python is installed on your system. If you see an error message telling you that \texttt{python} is not a recognized command, Python isn't installed.
+
+In that case, or if you see a version of Python earlier than Python 3.6, you need to download a Python installer for Windows. Go to \url{https://python.org/} \& hover over the \textbf{Downloads} link. You should see a button for downloading the latest version of Python. Click the button, which should automatically start downloading the correct installer for your system. After you've downloaded the file, run the installer. Make sure you select the option \texttt{Add Python to PATH}, which will make it easier to configure your system correctly.'' -- \cite[pp. 5--6]{Matthes2019}
+
+\paragraph{Running Python in a Terminal Session.} ``Open a command window \& enter \texttt{python} in lowercase. You should see a Python prompt (\texttt{>>>}), which means Windows has found the version of Python you just installed.''
+
+\begin{verbatim}
+	C:\> python
+	Python 3.7.2 (v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit
+	(AMD64)] on win32
+	Type "help", "copyright", "credits" or "license" for more information.
+	>>>
+\end{verbatim}
+``Any time you want to run a snippet of Python code, open a command window \& start a Python terminal session. To close the terminal session, press \texttt{Ctrl}-\texttt{Z} \& then press \texttt{Enter}, or enter the command \texttt{exit()}.'' -- \cite[p. 6]{Matthes2019}
+
+\paragraph{Installing Sublime Text.} ``You can download an installer for Sublime text at \url{https://sublimetext.com/}. Click the download link \& look for a Windows installer. After downloading the installer, run the installer \& accept all of its defaults.'' -- \cite[p. 7]{Matthes2019}
+
+\subsubsection{Python on macOS}
+``Python is already installed on most macOS systems, but it's most likely an outdated version that you won't want to learn on.'' -- \cite[p. 7]{Matthes2019}
+
+\paragraph{Checking Whether Python 3 Is Installed.} ``Open a terminal window by going to \texttt{Applications $\triangleright$ Utilities $\triangleright$ Terminal}. You can also press \texttt{cmd}-spacebar, type \texttt{terminal}, \& then press \texttt{Enter}. To see which version of Python is installed, enter \texttt{python} with a lowercase \texttt{p} -- this also starts the Python interpreter within the terminal, allowing you to enter Python commands. You should see output telling you which Python version is installed on your system \& a \texttt{>>>} prompt where you can start entering Python commands, like this:
+\begin{verbatim}
+	$ python
+	Python 2.7.15 (default, Aug 17 2018, 22:39:05)
+	[GCC 4.2.1 Compatible Apple LLVM 9.1.0 (clang-902.0.39.2)] on darwin
+	Type "help", "copyright", "credits", or "license" for more information.
+	>>>
+\end{verbatim}
+This output indicates that Python 2.7.15 is currently the default version installed on this computer. Once you've seen this output, press \texttt{Ctrl}-\texttt{D} or enter \texttt{exit()} to leave the Python prompt \& return to a terminal prompt.
+
+To check whether you have Python 3 installed, enter the command \texttt{python3}. You'll probably get an error message, meaning you don't have any versions of Python 3 installed. If the output shows you have Python 3.6 or a later version installed, you can skip ahead to ``Running Python in a Terminal Session'' on p. 8. If Python 3 isn't installed by default, you'll need to install it manually. Note that whenever you see the \texttt{python} command in this book, you need to use the \texttt{python3} command instead to make sure you're using Python 3, not Python 2; they different significantly enough that you'll run into trouble trying to run the code in this book using Python 2.
+
+If you see any version earlier than Python 3.6, follow the instructions in the next section to install the latest version.'' -- \cite[p. 7]{Matthes2019}
+
+\paragraph{Installing the Latest Version of Python.} ``You can find a Python installer for your system at \url{https://python.org/}. Hover over the \textbf{Download} link, \& you should see a button for downloading the latest Python version. Click the button, which should automatically start downloading the correct installer for your system. After the file downloads, run the installer. When you're finished, enter the following at a terminal prompt:
+\begin{verbatim}
+	$ python3 --version
+	Python 3.7.2
+\end{verbatim}
+You should see output similar to this, in which case, you're ready to try out Python. Whenever you see the command \texttt{python}, make sure you see \texttt{python3}.'' -- \cite[pp. 7--8]{Matthes2019}
+
+\paragraph{Running Python in a Terminal Session.} ``You can now try running snippets of Python code by opening a terminal \& typing \texttt{python3}.'' ``Remember that you can close the Python interpreter by pressing \texttt{Ctrl}-\texttt{D} or by entering the command \texttt{exit()}.'' -- \cite[p. 8]{Matthes2019}
+
+\paragraph{Installing Sublime Text.} ``To install the Sublime Text editor, you need to download the installer at \url{https://sublimetext.com/}. Click the \textbf{Download} link \& look for an installer for macOS. After the installer downloads, open it \& then drag the Sublime Text icon into your \texttt{Applications} folder.'' -- \cite[p. 8]{Matthes2019}
+
+\subsubsection{Python on Linux}
+``\fbox{Linux systems are designed for programming, so Python is already installed on most Linux computers}. The people who write \& maintain Linux expect you to do your own programming at some point \& encourage you to do so. For this reason, there's very little to install \& only a few settings to change to start programming.'' -- \cite[p. 8]{Matthes2019}
+
+\paragraph{Checking Your Version of Python.} ``Open a terminal window by running the Terminal application on your system (in Ubuntu, you can press \texttt{Ctrl}-\texttt{Alt}-\texttt{T}). To find out which version of Python is installed, this command starts the Python interpreter. You should see output indicating which version of Python is installed \& a \texttt{>>>} prompt where you can start entering Python commands, like this:
+\begin{verbatim}
+	$ python3
+	Python 3.7.2 (default, Dec 27 2018, 04:01:51)
+	[GCC 7.3.0] on linux
+	Type "help", "copyright", "credits" or "license" for more information.
+	>>>
+\end{verbatim}
+This output indicates that Python 3.7.2 is currently the default version of Python installed on this computer. When you've seen this output, press \texttt{Ctrl}-\texttt{D} or enter \texttt{exit()} to leave the Python prompt \& return to a terminal prompt. Whenever you see the \texttt{python} command in this book, enter \texttt{python3} instead.'' -- \cite[pp. 8--9]{Matthes2019}
+
+\paragraph{Running Python in a Terminal Session.} ``You can try running snippets of Python code by opening a terminal \& entering \texttt{python3}, as you did when checking your version. Do this again, \& when you have Python running, enter the following line in the terminal session:
+\begin{verbatim}
+	>>> print("Hello Python interpreter!")
+	Hello Python interpreter!
+	>>>
+\end{verbatim}
+The message should print directly in the current terminal window. Remember that you can close the Python interpreter by pressing \texttt{Ctrl}-\texttt{D} or by entering the command \texttt{exit()}.'' -- \cite[p. 9]{Matthes2019}
+
+\paragraph{Installing Sublime Text.} ``On Linux, you can install Sublime Text from the Ubuntu Software Center. Click the Ubuntu Software icon in your menu, \& search for \textbf{Sublime Text}. Click to install it, \& then launch it.'' -- \cite[p. 9]{Matthes2019}
+
+\subsection{Running a Hello World Program}
+``With a recent version of Python \& Sublime Text installed, you're almost ready to run your 1st Python program written in a text editor. But before doing so, you need to make sure Sublime Text is set up to use the correct version of Python on your system.'' -- \cite[p. 9]{Matthes2019}
+
+\subsubsection{Configuring Sublime Text to Use the Correct Python Version}
+``If the \texttt{python} command on your system runs Python 3, you won't need to configure anything \& can skip to the next section. If you use the \texttt{python3} command, you'll need to configure Sublime Text to use the correct Python version when it runs your programs.
+
+Click the Sublime Text icon to launch it, or search for Sublime Text in your system's search bar \& then launch it. Go to \texttt{Tools $\triangleright$ Build System $\triangleright$ New Build System}, which will open a new configuration file for you. Delete what you see \& enter the following: \texttt{Python3.sublime-build}
+\begin{verbatim}
+	{
+	    "cmd": ["python3", "-u", "$file"],
+	}
+\end{verbatim}
+This code tells Sublime Text to use your system's \texttt{python3} command when running your Python program files. Save the file as \texttt{Python3.sublime-build} in the default directory that Sublime Text opens when you choose Save.'' -- \cite[pp. 9--10]{Matthes2019}
+
+\subsubsection{Running \texttt{hello\_world.py}}
+``Before you write your 1st program, make a folder called \verb|python_work| somewhere on your system for your projects. It's best to use lowercase letters \& underscores for spaces in file \& folder names, because Python uses these naming conventions.
+
+Open Sublime Text, \& save an empty Python (\texttt{File $\triangleright$ Save As}) called \verb|hello_world.py| in your \verb|python_work| folder. The extension \texttt{.py} tells Sublime Text that the code in your file is written in Python, which tells it how to run the program \& highlight the text in a helpful way. After you've saved your file, enter the following line in the text editor: \verb|hello_world.py|
+\begin{verbatim}
+	print("Hello Python world!")
+\end{verbatim}
+If the \texttt{python} command works on your system, you can run your program by selecting \texttt{Tools $\triangleright$ Build} in the menu or by pressing \texttt{Ctrl}-\texttt{B} (\texttt{cmd}-\texttt{B} on macOS). If you had to configure Sublime Text in the previous section, select \texttt{Tools $\triangleright$ Build System} \& then select \texttt{Python 3}. From now on you'll be able to select \texttt{Tools $\triangleright$ Build} or just press \texttt{Ctrl}-\texttt{B} (or \texttt{cmd}-\texttt{B}) to run your programs. A terminal screen should appear at the bottom of the Sublime Text window, showing the following output:
+\begin{verbatim}
+	Hello Python world!
+	[Finished in 0.1s]
+\end{verbatim}
+If you don't see this output, something might have gone wrong in the program. Check every character on the line you entered. Did you accidentally capitalize \texttt{print}? Did you forget 1 or both of the quotation marks or parentheses? Programming languages expect very specific syntax, \& if you don't provide that, you'll get errors.'' -- \cite[p. 10]{Matthes2019}
+
+\subsection{Troubleshooting}
+``If you can't get \verb|hello_world.py| to run, here are a few remedies you can try that are also good general solutions for any programming problem:
+\begin{itemize}
+	\item When a program contains a significant error, Python displays a \textit{traceback}, which is an error report. Python looks through the file \& tries to identify the problem. Check the traceback; it might give you a clue as to what issue is preventing the program from running.
+	\item Step away from your computer, take a short break, \& then try again. Remember that syntax is very important in programming so even a missing colon, a mismatched quotation mark, or mismatched parentheses can prevent a program from running properly. Reread the relevant parts of this chapter, look over your code, \& try to find the mistake.
+	\item Start over again. You probably don't need to uninstall any software, but it might make sense to delete your \verb|hello_world.py| file \& re-create it from scratch.
+	\item Ask someone else to follow the steps in this chapter, on your computer or a different one, \& what they do carefully. You might have missed 1 small step that someone else happens to catch.
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
