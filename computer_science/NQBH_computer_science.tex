@@ -442,7 +442,40 @@ If you don't see this output, something might have gone wrong in the program. Ch
 	\item Step away from your computer, take a short break, \& then try again. Remember that syntax is very important in programming so even a missing colon, a mismatched quotation mark, or mismatched parentheses can prevent a program from running properly. Reread the relevant parts of this chapter, look over your code, \& try to find the mistake.
 	\item Start over again. You probably don't need to uninstall any software, but it might make sense to delete your \verb|hello_world.py| file \& re-create it from scratch.
 	\item Ask someone else to follow the steps in this chapter, on your computer or a different one, \& what they do carefully. You might have missed 1 small step that someone else happens to catch.
+	\item Find someone who knows Python \& ask them to help you get set up. If you ask around, you might find that you unexpectedly know someone who uses Python.
+	\item The setup instructions in this chapter are also available through the book's companion website at \url{https://nostarch.com/pythoncrashcourse2e/}. The online version of these instructions might work better for you because you can simply cut \& paste code.
+	\item Ask for help online. Appendix C provides a number of resources, such as forums \& live chat sites, where you can ask for solutions from people who've already worked through the issue you're currently facing.
 \end{itemize}
+Never worry that you're bothering experienced programmers. Every programmer has been struck at some point, \& most programmers are happy to help you set up your system correctly. As long as you can state clearly what you're trying to do, what you've already tried, \& the results you're getting, there's a good chance someone will be able to help you. As mentioned in the Introduction, the Python community is very friendly \& welcoming to beginners.
+
+Python should run well on any modern computer. Early setup issues can be frustrating, but they're well worth sorting out. Once you get \verb|hello_world.py| running, you can start to learn Python, \& your programming work will become more interesting \& satisfying.'' -- \cite[p. 11]{Matthes2019}
+
+\subsection{Running Python Programs from a Terminal}
+``Most of the programs you write in your text editor you'll run directly from the editor. But sometimes it's useful to run programs from a terminal instead. E.g., you might want to run an existing program without opening it for editing. You can do this on any system with Python installed if you know how to access the directory where the program file is stored. To try this, make sure you've saved the \verb|hello_world.py| file in the \verb|python_work| folder on your desktop.'' -- \cite[p. 12]{Matthes2019}
+
+\subsubsection{On Windows}
+``You can use the terminal command \texttt{cd}, for \textit{change directory}, to navigate through your filesystem in a command window. The command \texttt{dir}, for \textit{directory}, shows you all the files that exist in the current directory. Open a new terminal window \& enter the following commands to run \verb|hello_world.py|:
+\begin{verbatim}
+	C:\> cd Desktop\python_work
+	C:\Desktop\python_work> dir
+	hello_world.py
+	C:\Desktop\python_work> python hello_world.py
+	Hello Python world!
+\end{verbatim}
+At \textbf{1} you use the cd command to navigate to \verb|python_work| folder, which is in the \texttt{Desktop} folder. Next, you use the \texttt{dir} command to make sure \verb|hello_world.py| is in this folder \textbf{2}. Then you run the file using the comand \verb|python hello_world.py|. Most of your programs will run fine directly from your editor. But as your work becomes more complex, you'll want to run some of your programs from a terminal.'' -- \cite[p. 12]{Matthes2019}
+
+\subsubsection{On macOS \& Linux}
+``Running a Python program from a terminal session is the same on Linux \& macOS. You can use the terminal command \texttt{cd}, for \textit{change directory}, to navigate through your filesystem in a terminal session. The command \texttt{ls}, for \textit{list}, shows you all the nonhidden files that exist in the current directory. Open a new terminal window \& enter the following commands to run \verb|hello_world.py|:
+\begin{verbatim}
+	~$ cd Desktop/python_work/
+	~/Desktop/python_work$ ls
+	hello_world.py
+	~/Desktop/python_work$ python hello_world.py
+	Hello Python world!
+\end{verbatim}
+At \textbf{1} you use the \texttt{cd} command to navigate to the \verb|python_work| folder, which is in the \texttt{Desktop} folder. Next, you use the \texttt{ls} command to make sure \verb|hello_world.py| is in this folder \textbf{2}. Then you run the file using the command \verb|python hello_world.py| \textbf{3}. It's that simple. You just use the \texttt{python} (or \texttt{python3}) command to run Python programs.''
+
+``\textbf{python.org.} Explore the Python home page \url{https://python.org/} to find topics that interests you. As you become familiar with Python, different parts of the site will be more useful to you.'' ``\textbf{Infinite Skills.} If you had infinite programming skills, what would you build? You're about to learn how to program. If you have an end goal in mind, you'll have an immediate use for your new skills; now is a great time to draft descriptions of what you want to create. It's a good habit to keep an ``ideas'' notebook that you can refer to whenever you want to start a new project. Take a few minutes now to describe 3 programs you want to create.'' -- \cite[pp. 12--13]{Matthes2019}
 
 %------------------------------------------------------------------------------%
 
