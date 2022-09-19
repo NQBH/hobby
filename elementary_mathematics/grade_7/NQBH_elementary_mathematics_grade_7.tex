@@ -34,7 +34,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Subsect.} ~\thesubsection}
+\lhead{\small Subsect. ~\thesubsection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -47,7 +47,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	content...
+	\textsc{[en]} This text summarizes Elementary Mathematics grade 7.
+	
+	\vspace{2mm}
+	\textsc{[vi]}
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -148,7 +151,10 @@ Cũng như lũy thừa với cơ số là số tự nhiên, đối với cơ s�
 Lũy thừa của 1 tích bằng tích các lũy thừa: $(xy)^n = x^ny^n$, $\forall x,y\in\mathbb{Q},\,\forall n\in\mathbb{N}$.
 
 \paragraph{Lũy thừa của 1 thương}
-Lũy thừa của 1 thương bằng thương các lũy thừa: $\left(\dfrac{x}{y}\right)^n = \dfrac{x^n}{y^n}$, $\forall x,y\in\mathbb{Q},\,y\ne 0,\,\forall n\in\mathbb{N}$.
+Lũy thừa của 1 thương bằng thương các lũy thừa:
+\begin{align*}
+	\left(\dfrac{x}{y}\right)^n = \dfrac{x^n}{y^n},\ \forall x,y\in\mathbb{Q},\,y\ne 0,\,\forall n\in\mathbb{N}.
+\end{align*}
 
 \subsection{Thứ Tự Thực Hiện Các Phép Tính. Quy Tắc Dấu Ngoặc}
 
@@ -588,11 +594,65 @@ I.e., $S_{\rm xq} = Ch$, trong đó $S_{\rm xq}$ là \textit{diện tích xung q
 \subsection{Góc ở Vị Trí Đặc Biệt}
 
 \subsubsection{2 góc kề nhau}
-p. 90 (91/114)
+
+\begin{dinhnghia}[2 tia nằm về 2 phía của 1 đường thẳng]
+	Nếu 2 tia $Oz,Ot$ thỏa mãn tính chất: đoạn thẳng $AB$ nối điểm $A$ bất kỳ trên tia $Oz$ ($A\ne O$) với điểm $B$ bất kỳ trên tia $Ot$ ($B$ khác $O$) thì cắt đường thẳng $xy$, thì 2 tia $Oz$ \& $Ot$ được gọi là \emph{nằm về 2 phía} của đường thẳng $xy$.
+\end{dinhnghia}
+
+\begin{dinhnghia}[2 góc kề nhau]
+	Nếu 2 góc $xOy$ \& $zOy$ thỏa mãn tính chất: 2 góc đó có đỉnh chung, có 1 cạnh chung \& 2 cạnh còn lại nằm về 2 phía của đường thẳng chứa 2 cạnh đó, thì 2 góc $xOy$ \& $zOy$ được gọi là \emph{2 góc kề nhau}.
+\end{dinhnghia}
+``Cho góc $xOz$ \& tia $Oy$ nằm trong góc đó, i.e., mỗi điểm $M$ ($M\ne O$) của tia $Oy$ đều là điểm trong của góc $xOz$. Khi đó 2 góc $xOy$ \& $yOz$ là 2 góc kề nhau \& $\widehat{xOz} = \widehat{xOy} + \widehat{yOz}$.'' -- \cite[p. 91]{SGK_Toan_7_Canh_Dieu_tap_1}.
+
+\subsubsection{2 góc bù nhau. 2 góc kề bù}
+
+\begin{dinhnghia}[2 góc bù nhau]
+	\emph{2 góc bù nhau} là 2 góc có tổng số đo bằng $180^\circ$.
+\end{dinhnghia}
+
+\begin{dinhnghia}[2 góc kề bù]
+	2 góc vừa kề nhau, vừa bù nhau gọi là \emph{2 góc kề bù}.
+\end{dinhnghia}
+``2 góc kề bù có tổng số đo bằng $180^\circ$.'' -- \cite[p. 92]{SGK_Toan_7_Canh_Dieu_tap_1}.
+
+\subsubsection{2 góc đối đỉnh}
+
+\begin{dinhnghia}[2 góc đối đỉnh]
+	\emph{2 góc đối đỉnh} là 2 góc mà mỗi cạnh của góc này là tia đối của 1 cạnh của góc kia.
+\end{dinhnghia}
+
+\begin{dinhly}
+	2 góc đối đỉnh thì bằng nhau.
+\end{dinhly}
 
 \subsection{Tia Phân Giác của 1 Góc}
 
+\subsubsection{Định nghĩa}
+
+\begin{dinhnghia}[Tia phân giác]
+	\emph{Tia phân giác} của 1 góc là tia nằm trong góc \& tạo với 2 cạnh của góc đó 2 góc bằng nhau.
+\end{dinhnghia}
+
+\subsubsection{Vẽ tia phân giác của 1 góc}
+``Cho góc $xOy$. Vẽ tia phân giác của góc đó bằng thước thẳng \& compa. Để vẽ tia phân giác của góc $xOy$:
+\begin{enumerate*}
+	\item[\textbf{1.}] Trên tia $Ox$ lấy điểm $A$ bất kỳ ($A\ne O$); vẽ 1 phần đường tròn tâm $O$ bán kính $OA$, cắt tia $Oy$ tại điểm $B$.
+	\item[\textbf{2.}] Vẽ 1 phần đường tròn tâm $A$ bán kính $AO$.
+	\item[\textbf{3.}] Vẽ 1 phần đường tròn tâm $B$ bán kính $AO$, cắt phần đường tròn tâm $A$ bán kính $AO$ tại điểm $C$ nằm trong góc $xOy$.
+	\item[\textbf{4.}] Vẽ tia $OC$, ta được tia phân giác của góc $xOy$.'' -- \cite[p. 97]{SGK_Toan_7_Canh_Dieu_tap_1}
+\end{enumerate*}
+
+``Để vẽ tia phân giác của góc $mIn$ bằng thước 2 lề:
+\begin{enumerate*}
+	\item[\textbf{1.}] Đặt thước 2 lề sao cho 1 cạnh của thước trùng với cạnh $Im$ của góc $mIn$; dùng bút, vạch 1 vạch thẳng theo cạnh kia của thước.
+	\item[\textbf{2.}] Đặt thước 2 lề sao cho 1 cạnh của thước trùng với cạnh $In$ của góc $mIn$; dùng bút, vạch 1 vạch thẳng theo cạnh kia của thước.
+	\item[\textbf{3.}] 2 nét vạch thẳng vẽ ở \textbf{1}--\textbf{2} cắt nhau tại điểm $K$ nằm trong góc $mIn$. Vẽ tia $IK$, ta được tia phân giác của góc $mIn$.'' -- \cite[p. 98]{SGK_Toan_7_Canh_Dieu_tap_1}
+\end{enumerate*}
+``Đường thẳng chứa tia phân giác của 1 góc là trục đối xứng của góc đó.'' -- \cite[p. 99]{SGK_Toan_7_Canh_Dieu_tap_1}
+
 \subsection{2 Đường Thẳng Song Song}
+
+\subsubsection{2 góc đồng vị. 2 góc so le trong}
 
 \subsection{Định Lý}
 
@@ -657,12 +717,6 @@ p. 90 (91/114)
 \subsection{Tính Chất 3 Đường Trung Trực của Tam Giác}
 
 \subsection{Tính Chất 3 Đường Cao của Tam Giác}
-
-%------------------------------------------------------------------------------%
-
-\begin{thebibliography}{99}
-	\bibitem[NQBH\texttt{/}elementary math]{NQBH/elementary math} Nguyễn Quản Bá Hồng. \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics/NQBH_some_topics_in_elementary_mathematics_problems_theories_applications_bridges_to_advanced_mathematics.pdf}{\textit{Some Topics in Elementary Mathematics: Problems, Theories, Applications, \& Bridges to Advanced Mathematics}}. Mar 2022--now.
-\end{thebibliography}
 
 %------------------------------------------------------------------------------%
 
