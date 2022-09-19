@@ -1,4 +1,4 @@
-\documentclass[oneside]{book}
+\documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -34,7 +34,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small \textsc{Subsect.} ~\thesubsection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -46,6 +46,9 @@
 
 \begin{document}
 \maketitle
+\begin{abstract}
+	content...
+\end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
@@ -53,54 +56,51 @@
 
 %------------------------------------------------------------------------------%
 
-\chapter{Số Hữu Tỷ -- Rational Number\texttt{/}Rational}
+\section{Số Hữu Tỷ -- Rational Number\texttt{/}Rational}
+\textbf{Nội dung.} \textit{Tập hợp các số hữu tỷ $\mathbb{Q}$; các phép tính trong tập hợp các số hữu tỷ; thứ tự thực hiện các phép tính; quy tắc chuyển vế \& quy tắc dấu ngoặc; biểu diễn thập phân của số hữu tỷ}.
 
-\begin{quotation}
-	\textbf{Nội dung.} \textit{Tập hợp các số hữu tỷ $\mathbb{Q}$; các phép tính trong tập hợp các số hữu tỷ; thứ tự thực hiện các phép tính; quy tắc chuyển vế \& quy tắc dấu ngoặc; biểu diễn thập phân của số hữu tỷ}.
-\end{quotation}
-
-\section{Tập Hợp $\mathbb{Q}$ Các Số Hữu Tỷ -- Set $\mathbb{Q}$ of Rationals}
+\subsection{Tập Hợp $\mathbb{Q}$ Các Số Hữu Tỷ -- Set $\mathbb{Q}$ of Rationals}
 Ký hiệu $\mathbb{Q}$ được lấy từ chữ cái đầu \textit{Q} của từ \textit{quotient}\footnote{\textbf{quotient} [n] \textbf{1.} (in compounds) a degree or amount of a particular quality or characteristic; \textbf{2.} (\textit{mathematics}) a number which is the result when 1 number is divided by another.}, i.e., thương số.
 
-\subsection{Số hữu tỷ}
+\subsubsection{Số hữu tỷ}
 
 \begin{dinhnghia}[Số hữu tỷ]
 	\emph{Số hữu tỷ} là số viết được dưới dạng phân số $\frac{a}{b}$ với $a,b\in\mathbb{Z}$, $b\ne 0$. \emph{Tập hợp các số hữu tỷ} được ký hiệu là $\mathbb{Q}$, i.e., $\mathbb{Q}\coloneqq\left\{\frac{a}{b}|a,b\in\mathbb{Z},\ b\ne 0\right\}$.
 \end{dinhnghia}
 ``Mỗi số nguyên là 1 số hữu tỷ.'' i.e., $n\in\mathbb{Z}\Rightarrow n\in\mathbb{Q}$ bởi vì $\mathbb{Z}\subset\mathbb{Q}$\footnote{Rộng hơn, $\mathbb{N}^\star\subset\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$ với $\mathbb{R}$ là \textit{tập hợp các số thực} sẽ đề cập ở Chương 2 chương trình Toán 7 (\& cả tài liệu này), \& $\mathbb{C}$ là \textit{tập hợp các số phức}, sẽ được học ở chương trình Toán 12, phần Đại số.}. Nhưng 1 số hữu tỷ bất kỳ chưa chắc là 1 số nguyên, i.e., $a\in\mathbb{Q}\not\Rightarrow a\in\mathbb{Z}$. ``Các phân số bằng nhau là các cách viết khác nhau của cùng 1 số hữu tỷ.'' -- \cite[p. 6]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Biểu diễn số hữu tỷ trên trục số}
+\subsubsection{Biểu diễn số hữu tỷ trên trục số}
 ``Tương tự như đối với số nguyên, ta có thể biểu diễn mọi số hữu tỷ trên trục số. Trên trục số, điểm biểu diễn số hữu tỷ $a\in\mathbb{Q}$ được gọi là điểm $a$. Do các phân số bằng nhau cùng biểu diễn 1 số hữu tỷ nên khi biểu diễn số hữu tỷ trên trục số, ta có thể chọn 1 trong những phân số đó để biểu diễn số hữu tỷ trên trục số. Thông thường, ta chọn phân số tối giản để biểu diễn số hữu tỷ đó.'' -- \cite[p. 6]{SGK_Toan_7_Canh_Dieu_tap_1}. Vì $-\frac{a}{b} = \frac{a}{-b} = \frac{-a}{b}$, $\forall a,b\in\mathbb{Z}$, $b\ne 0$ nên 3 điểm biểu diễn 3 phân số này trùng nhau.
 
-\subsection{Số đối của 1 số hữu tỷ}
+\subsubsection{Số đối của 1 số hữu tỷ}
 
 \begin{dinhnghia}[2 số hữu tỷ đối nhau]
 	Trên trục số, 2 số hữu tỷ (phân biệt) có điểm biểu diễn nằm về 2 phía của điểm gốc $0$ \& cách đều điểm gốc $0$ được gọi là \emph{2 số đối nhau}. Số đối của số hữu tỷ $a\in\mathbb{Q}$, ký hiệu là $-a\in\mathbb{Q}$. Số đối của số $0$ là $0$.
 \end{dinhnghia}
 ``Số đối của số $-a$ là số $a$, i.e., $-(-a) = a$.'' -- \cite[p. 8]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{So sánh các số hữu tỷ}
+\subsubsection{So sánh các số hữu tỷ}
 
-\subsubsection{So sánh 2 số hữu tỷ}
+\paragraph{So sánh 2 số hữu tỷ}
 ``Cũng như số nguyên, trong 2 số hữu tỷ khác nhau luôn có 1 số nhỏ hơn số kia. Nếu số hữu tỷ $a\in\mathbb{Q}$ nhỏ hơn số hữu tỷ $b\in\mathbb{Q}$ thì ta viết $a < b$ hay $b > a$. Số hữu tỷ lớn hơn $0$ gọi là \emph{số hữu tỷ dương}. Số hữu tỷ nhỏ hơn $0$ gọi là \emph{số hữu tỷ âm}. Số hữu tỷ $0$ không là số hữu tỷ dương, cũng không là số hữu tỷ âm. Nếu $a < b$ \& $b < c$ thì $a < c$.'' -- \cite[p. 8]{SGK_Toan_7_Canh_Dieu_tap_1}. Tính chất cuối cùng được gọi là \textit{tính chất bắc cầu của thứ tự các số hữu tỷ}, được viết dưới dạng mệnh đề toán học bằng ký hiệu như sau: $((a < b)\land(b < c))\Rightarrow(a < c)$, $\forall a,b,c\in\mathbb{Q}$.
 
-\subsubsection{Cách so sánh 2 số hữu tỷ}
+\paragraph{Cách so sánh 2 số hữu tỷ}
 ``Ở lớp 6, ta đã biết cách so sánh 2 phân số \& cách so sánh 2 số thập phân.'' ``Khi 2 số hữu tỷ cùng là phân số hoặc cùng là số thập phân, ta so sánh chúng theo những quy tắc đã biết ở lớp 6. Ngoài 2 trường hợp trên, để so sánh 2 số hữu tỷ, ta viết chúng về cùng dạng phân số (hoặc cùng dạng số thập phân) rồi so sánh chúng.'' -- \cite[p. 9]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Minh họa trên trục số}
+\subsubsection{Minh họa trên trục số}
 ``Giả sử 2 điểm $x,y$ lần lượt biểu diễn 2 số hữu tỷ $x,y$ trên trục số nằm ngang. Khi so sánh 2 số hữu tỷ, ta viết chúng ở dạng phân số có cùng mẫu số dương rồi so sánh 2 tử số, tức là so sánh 2 số nguyên. Vì vậy, cũng như số nguyên, nếu $x < y$ hay $y > x$ thì điểm $x$ nằm bên trái điểm $y$. Tương tự, nếu $x < y$ hay $y > x$ thì điểm $x$ nằm phía dưới điểm $y$ trên trục số thẳng đứng.'' -- \cite[pp. 9--10]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Cộng, Trừ, Nhân, Chia Số Hữu Tỷ -- Addition, Subtraction, Multiplication, Division on Rationals}
+\subsection{Cộng, Trừ, Nhân, Chia Số Hữu Tỷ -- Addition, Subtraction, Multiplication, Division on Rationals}
 
-\subsection{Cộng, trừ 2 số hữu tỷ. Quy tắc chuyển vế}
+\subsubsection{Cộng, trừ 2 số hữu tỷ. Quy tắc chuyển vế}
 
-\subsubsection{Quy tắc cộng, trừ 2 số hữu tỷ}
+\paragraph{Quy tắc cộng, trừ 2 số hữu tỷ}
 ``Vì mọi số hữu tỷ đều viết được dưới dạng phân số nên ta có thể cộng, trừ 2 số hữu tỷ bằng cách viết chúng dưới dạng phân số rồi áp dụng quy tắc cộng, trừ phân số. Tuy nhiên, khi 2 số hữu tỷ cùng viết ở dạng số thập phân (với hữu hạn chữ số khác $0$ ở phần thập phân) thì ta có thể cộng, trừ 2 số đó theo quy tắc cộng, trừ số thập phân.'' -- \cite[p. 12]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsubsection{Tính chất của phép cộng các số hữu tỷ}
+\paragraph{Tính chất của phép cộng các số hữu tỷ}
 ``Giống như phép cộng các số nguyên, phép cộng các số hữu tỷ cũng có các tính chất: giao hoán, kết hợp, cộng với $0$, cộng với số đối. Ta có thể chuyển phép trừ cho 1 số hữu tỷ thành phép cộng với số đối của số hữu tỷ đó. Vì thế, trong 1 biểu thức số chỉ gồm các phép cộng \& phép trừ, ta có thể thay đổi tùy ý vị trí các số hạng kèm theo dấu của chúng.'' -- \cite[p. 13]{SGK_Toan_7_Canh_Dieu_tap_1}. $a - b = a + (-b)$, $\forall a,b\in\mathbb{Q}$.
 
-\subsubsection{Quy tắc chuyển vế}
+\paragraph{Quy tắc chuyển vế}
 Ta có quy tắc ``chuyển vế'' đối với số hữu tỷ như sau:
 
 \begin{menhde}
@@ -110,17 +110,17 @@ Ta có quy tắc ``chuyển vế'' đối với số hữu tỷ như sau:
 	\end{align*}
 \end{menhde}
 
-\subsection{Nhân, chia 2 số hữu tỷ}
+\subsubsection{Nhân, chia 2 số hữu tỷ}
 
-\subsubsection{Quy tắc nhân, chia 2 số hữu tỷ}
+\paragraph{Quy tắc nhân, chia 2 số hữu tỷ}
 ``Vì mọi số hữu tỷ đều viết được dưới dạng phân số nên ta có thể nhân, chia 2 số hữu tỷ bằng cách viết chúng dưới dạng phân số rồi áp dụng quy tắc nhân, chia phân số. Tuy nhiên, khi 2 số hữu tỷ cùng viết ở dạng số thập phân (với hữu hạn chữ số khác $0$ ở phần thập phân) thì ta có thể nhân, chia 2 số đó theo quy tắc nhân, chia số thập phân.'' -- \cite[p. 14]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsubsection{Tính chất của phép nhân các số hữu tỷ}
+\paragraph{Tính chất của phép nhân các số hữu tỷ}
 Ký hiệu $\mathbb{Q}^\star\coloneqq\mathbb{Q}\backslash\{0\}$ là tập các số hữu tỷ khác $0$. ``Giống như phép nhân các số nguyên, phép nhân các số hữu tỷ cũng có các tính chất: giao hoán, kết hợp, nhân với số $1$, phân phối của phép nhân đối với phép cộng \& phép trừ.'' ``Mỗi số hữu tỷ $a$ khác $0$ (i.e., $a\in\mathbb{Q}^\star$) đều có số nghịch đảo sao cho tích của số đó với $a$ bằng $1$.'' ``\textit{Số nghịch đảo} của số hữu tỷ $a$ khác $0$ (i.e., $a\in\mathbb{Q}^\star$) ký hiệu là $\frac{1}{a}$, ta có $a\cdot\frac{1}{a} = 1$, $\forall a\in\mathbb{Q}^\star$. Số nghịch đảo của số hữu tỷ $\frac{1}{a}$ là $a$. Nếu $a,b\in\mathbb{Q}$ \& $b\ne 0$ thì $a:b = a\cdot\frac{1}{b}$.'' -- \cite[p. 15]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Phép Tính Lũy Thừa với Số Mũ Tự Nhiên của 1 Số Hữu Tỷ}
+\subsection{Phép Tính Lũy Thừa với Số Mũ Tự Nhiên của 1 Số Hữu Tỷ}
 
-\subsection{Phép tính lũy thừa với số mũ tự nhiên}
+\subsubsection{Phép tính lũy thừa với số mũ tự nhiên}
 Tương tự như đối với số tự nhiên, với số hữu tỷ ta cũng có:
 
 \begin{dinhnghia}[Lũy thừa của số hữu tỷ]
@@ -128,34 +128,34 @@ Tương tự như đối với số tự nhiên, với số hữu tỷ ta cũng 
 \end{dinhnghia}
 ``$x^n$ đọc là ``$x$ mũ $n$'' hoặc ``$x$ lũy thừa $n$'' hoặc ``lũy thừa bậc $n$ của $x$''; $x^2$ còn được đọc là ``$x$ bình phương'' hay ``bình phương của $x$''; $x^3$ còn được đọc là ``$x$ lập phương'' hay ``lập phương của $x$''.'' -- \cite[p. 17]{SGK_Toan_7_Canh_Dieu_tap_1}. ``Để viết lũy thừa bậc $n$ của phân số $\frac{a}{b}$, ta phải viết $\frac{a}{b}$ trong dấu ngoặc $(\ )$, i.e., $\left(\frac{a}{b}\right)^n$.'' -- \cite[p. 18]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Tích \& thương của 2 lũy thừa cùng cơ số}
+\subsubsection{Tích \& thương của 2 lũy thừa cùng cơ số}
 Cũng như lũy thừa với cơ số là số tự nhiên, đối với cơ số là số hữu tỷ, ta có các quy tắc sau:
 
 \begin{dinhly}
 	Khi nhân 2 lũy thừa cùng cơ số, ta giữ nguyên cơ số \& cộng các số mũ: $x^m\cdot x^n = x^{m + n}$, $\forall x\in\mathbb{Q},\,\forall m,n\in\mathbb{N}$. Khi chia 2 lũy thừa cùng cơ số (khác $0$), ta giữ nguyên cơ số \& lấy số mũ của lũy thừa bị chia trừ đi số mũ của lũy thừa chia: $x^m:x^n = \frac{x^m}{x^n} = x^{m - n}$, $\forall x\in\mathbb{Q}^\star,\,\forall m,n\in\mathbb{N},\,m\ge n$. Quy ước: $x^0 = 1$, $\forall x\in\mathbb{Q}^\star$.
 \end{dinhly}
 
-\subsection{Lũy thừa của 1 lũy thừa}
+\subsubsection{Lũy thừa của 1 lũy thừa}
 Đối với lũy thừa mà cơ số là số hữu tỷ, ta có:
 
 \begin{dinhly}
 	Khi tính lũy thừa của 1 lũy thừa, ta giữ nguyên cơ số \& nhân 2 số mũ: $(x^m)^n = x^{mn}$, $\forall x\in\mathbb{Q},\,\forall m,n\in\mathbb{N}$.
 \end{dinhly}
 
-\subsection{Lũy thừa của 1 tích, 1 thương}
+\subsubsection{Lũy thừa của 1 tích, 1 thương}
 
-\subsubsection{Lũy thừa của 1 tích}
+\paragraph{Lũy thừa của 1 tích}
 Lũy thừa của 1 tích bằng tích các lũy thừa: $(xy)^n = x^ny^n$, $\forall x,y\in\mathbb{Q},\,\forall n\in\mathbb{N}$.
 
-\subsubsection{Lũy thừa của 1 thương}
+\paragraph{Lũy thừa của 1 thương}
 Lũy thừa của 1 thương bằng thương các lũy thừa: $\left(\dfrac{x}{y}\right)^n = \dfrac{x^n}{y^n}$, $\forall x,y\in\mathbb{Q},\,y\ne 0,\,\forall n\in\mathbb{N}$.
 
-\section{Thứ Tự Thực Hiện Các Phép Tính. Quy Tắc Dấu Ngoặc}
+\subsection{Thứ Tự Thực Hiện Các Phép Tính. Quy Tắc Dấu Ngoặc}
 
-\subsection{Thứ tự thực hiện các phép tính}
+\subsubsection{Thứ tự thực hiện các phép tính}
 ``Ở lớp 6, ta đã học thứ tự thực hiện các phép tính đối với số tự nhiên, số nguyên, phân số, số thập phân. Thứ tự thực hiện các phép tính đối với số hữu tỷ cũng tương tự thứ tự thực hiện các phép tính đối với các loại số trên.'' -- \cite[p. 23]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Quy tắc dấu ngoặc}
+\subsubsection{Quy tắc dấu ngoặc}
 ``Ở lớp 6, ta đã học quy tắc dấu ngoặc đối với số nguyên, phân số, số thập phân. Quy tắc dấu ngoặc đối với số hữu tỷ cũng tương tự quy tắc dấu ngoặc đối với các loại số trên.
 \begin{itemize}
 	\item Khi bỏ dấu ngoặc có dấu ``$+$'' đằng trước, ta giữ nguyên dấu của các số hạng trong dấu ngoặc.
@@ -169,15 +169,15 @@ Lũy thừa của 1 thương bằng thương các lũy thừa: $\left(\dfrac{x}{
 \end{itemize}
 Nếu đưa các số hạng vào trong dấu ngoặc có dấu ``$-$'' đằng trước thì phải đối dấu các số hạng đó.'' -- \cite[p. 24]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Biểu Diễn Thập Phân của Số Hữu Tỷ}
+\subsection{Biểu Diễn Thập Phân của Số Hữu Tỷ}
 
-\subsection{Số thập phân hữu hạn \& số thập phân vô hạn tuần hoàn}
+\subsubsection{Số thập phân hữu hạn \& số thập phân vô hạn tuần hoàn}
 ``Các số thập phân chỉ gồm hữu hạn chữ số sau dấu ``,'' được gọi là \textit{số thập phân hữu hạn}.'' -- \cite[p. 27]{SGK_Toan_7_Canh_Dieu_tap_1} Các số thập phân vô hạn tuần hoàn có tính chất: Trong phần thập phân, bắt đầu từ 1 hàng nào đó, có \textit{1 chữ số} hay \textit{1 cụm chữ số liền nhau} xuất hiện liên tiếp mãi, \& chữ số đó hoặc cụm chữ số đó được gọi là \textit{chu kỳ} của số thập phân vô hạn tuần hoàn đó, e.g., $\overline{a_na_{n-1}\ldots a_1a_0,a_{-1}a_{-2}\ldots a_{-m}}(\overline{b_kb_{k-1}\ldots b_1b_0}) = \overline{a_na_{n-1}\ldots a_1a_0,a_{-1}a_{-2}\ldots a_{-m}b_kb_{k-1}\ldots b_1b_0b_kb_{k-1}\ldots}$.
 
-\subsection{Biểu diễn thập phân của số hữu tỷ}
+\subsubsection{Biểu diễn thập phân của số hữu tỷ}
 ``Ta đã biết mỗi số hữu tỷ đều viết được dưới dạng phân số $\frac{a}{b}$ với $a,b\in\mathbb{Z}$, $b > 0$. Thực hiện phép tính $a:b$, ta có thể biểu diễn số hữu tỷ đó dưới dạng số thập phân hữu hạn hoặc vô hạn tuần hoàn. Mỗi số hữu tỷ được biểu diễn bởi 1 số thập phân hữu hạn hoặc vô hạn tuần hoàn.'' -- \cite[p. 28]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Dạng biểu diễn thập phân của số hữu tỷ}
+\subsubsection{Dạng biểu diễn thập phân của số hữu tỷ}
 ``Ta đã biết mỗi số hữu tỷ được biểu diễn bởi 1 số thập phân \textit{hữu hạn} hoặc \textit{vô hạn tuần hoàn}. Vấn đề đặt ra là biểu diễn thập phân của số hữu tỷ khi nào là số thập phân hữu hạn? Khi nào là số thập phân vô hạn tuần hoàn? Giả sử số hữu tỷ $r$ viết được dưới dạng phân số tối giản $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b> 0$. Người ta đã chứng minh được định lý sau:
 \begin{itemize}
 	\item Các phân số tối giản với mẫu dương mà mẫu không có ước nguyên tố khác $2$ \& $5$ thì viết được dưới dạng số thập phân hữu hạn \& chỉ những phân số đó mới viết được dưới dạng số thập phân hữu hạn.
@@ -207,35 +207,32 @@ thì $\mathbb{Q}_{\rm finite}$ là tập hợp các phân số\texttt{/}số h�
 
 %------------------------------------------------------------------------------%
 
-\chapter{Số Thực -- Real Number\texttt{/}Real}
+\section{Số Thực -- Real Number\texttt{/}Real}
+\textbf{Nội dung.} \textit{Số vô tỷ; căn bậc 2 số học; tập hợp các số thực $\mathbb{R}$; giá trị tuyệt đối của 1 số thực; làm tròn \& ước lượng; tỷ lệ thức, dãy tỷ số bằng nhau; đại lượng tỷ lệ thuận, đại lượng tỷ lệ nghịch \& áp dụng vào bài toán thực tế}.
 
-\begin{quotation}
-	\textbf{Nội dung.} \textit{Số vô tỷ; căn bậc 2 số học; tập hợp các số thực $\mathbb{R}$; giá trị tuyệt đối của 1 số thực; làm tròn \& ước lượng; tỷ lệ thức, dãy tỷ số bằng nhau; đại lượng tỷ lệ thuận, đại lượng tỷ lệ nghịch \& áp dụng vào bài toán thực tế}.
-\end{quotation}
-
-\section{Số Vô Tỷ. Căn Bậc 2 Số Học -- Irrational Number\texttt{/}Irrational. Square Root}
+\subsection{Số Vô Tỷ. Căn Bậc 2 Số Học -- Irrational Number\texttt{/}Irrational. Square Root}
 ``Ngay từ thời xa xưa, phân số đã gắn bó với đời sống thực tiễn của con người trong suốt quá trình đo đạc, tính toán. Các nhà toán học Hy Lạp cổ đại thuộc trường phái Pythagoras còn cho rằng: ``Tất cả các hiện tượng trong vũ trụ có thể được thu gọn thành các số nguyên \& tỷ số của chúng''. Họ gọi các số nguyên \& tỷ số của chúng là số \textit{rational}, tức là những số \textit{có lý}, mà ngày nay chúng ta quen gọi là số hữu tỷ. Tuy nhiên, vào thế kỷ V trước Công nguyên, nhà toán học Hippasus (530--450 trước Công nguyên) đã phát hiện ra rằng có những đối tượng trong thế giới tự nhiên không biểu thị được qua số hữu tỷ, e.g., tỷ số giữa độ dài đường chéo hình vuông với cạnh của hình vuông đó thì không thể là số hữu tỷ. Phát minh của ông không được chấp nhận trong 1 thời gian dài, thậm chí những số như thế còn bị gọi là \textit{irrational}, tức là những số \textit{vô lý} hay \textit{không có lý}. (Nguồn: M. Kline, \textit{Mathematical Thought from Ancient to Modern Times}, Vol. 1, Oxford University Press, New York, 1990)''  -- \cite[p. 32]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Số vô tỷ}
+\subsubsection{Số vô tỷ}
 
-\subsubsection{Khái niệm số vô tỷ}
+\paragraph{Khái niệm số vô tỷ}
 ``Trong đời sống thực tiễn của con người, ta thường gặp những số không phải là số hữu tỷ, những số đó được gọi là \textit{số vô tỷ}.
 
 \begin{vidu}
 	Số Pi được người Babylon cổ đại phát hiện gần 4000 năm trước \& được biểu diễn bằng chữ cái Hy Lạp $\pi$ từ giữa thế kỷ XVIII. Số $\pi$ là tỷ số giữa độ dài của 1 đường tròn với độ dài đường kính của đường tròn đó. Năm 1760, nhà toán học Johann Heinrich Lambert (1728--1777, người Thụy Sĩ) đã chứng tỏ được rằng số $\pi$ là số vô tỷ. Nguồn: M. Kline, \textit{Mathematical Thought from Ancient to Modern Times}, Vol. 1, Oxford University Press, New York, 1990)'' -- \cite[p. 32]{SGK_Toan_7_Canh_Dieu_tap_1}
 \end{vidu}
 
-\subsubsection{Số thập phân vô hạn không tuần hoàn}
+\paragraph{Số thập phân vô hạn không tuần hoàn}
 Những số thập phân có vô số chữ số khác $0$ ở phần thập phân của số đó được gọi là \textit{số thập phân vô hạn}. Những số thập phân vô hạn mà ở phần thập phân của nó không có 1 chu kỳ nào cả được gọi là \textit{số thập phân vô hạn không tuần hoàn}.
 
-\subsubsection{Biểu diễn thập phân của số vô tỷ}
+\paragraph{Biểu diễn thập phân của số vô tỷ}
 Cũng như số $\pi$, người ta chứng tỏ được rằng:
 
 \begin{dinhly}
 	Số vô tỷ được viết dưới dạng số thập phân vô hạn không tuần hoàn.
 \end{dinhly}
 
-\subsection{Căn bậc 2 số học}
+\subsubsection{Căn bậc 2 số học}
 
 \begin{dinhnghia}[Căn bậc 2 số học\texttt{/}square root]
 	\emph{Căn bậc 2 số học} của số $a\ge 0$ là số $x\ge 0$ sao cho $x^2 = a$.
@@ -244,68 +241,68 @@ Cũng như số $\pi$, người ta chứng tỏ được rằng:
 
 Ta có thể tính được giá trị (đúng hoặc gần đúng) căn bậc 2 số học của 1 số dương bằng máy tính cầm tay bằng cách sử dụng nút dấu căn bậc 2 số học $\boxed{\sqrt{\square}}$.
 
-\subsection{Tỷ số vàng trong nghệ thuật \& kiến trúc -- Golden ratio in art \& architecture}
+\subsubsection{Tỷ số vàng trong nghệ thuật \& kiến trúc -- Golden ratio in art \& architecture}
 ``\textit{Tỷ số vàng} là tỷ số chuẩn giữa các thành tố trong thiết kế nhằm đem lại hiệu ứng cao nhất cho con người khi thưởng thức các tác phẩm nghệ thuật. Những tỷ số đó thường là các số vô tỷ. Từ thời Hy Lạp cổ đại \& Ai Cập cổ đại, người ta cho rằng \textit{hình chữ nhật vàng} là hình chữ nhật có tỷ số giữa chiều dài \& chiều rộng là $\frac{1 + \sqrt{5}}{2}\approx 1.618$ (từ hình vuông $AMND$, gọi $O$ là trung điểm của cạnh $DN$, vẽ đường tròn tâm $O$, bán kính $OM$; đường tròn này cắt đường thẳng $DN$ ở $C$, dựng hình chữ nhật $ABCD$ ta có 1 hình chữ nhật vàng).
 
 \textit{Đường xoắn ốc vàng} là đường xoắn ốc tiếp xúc trong với các cạnh của 1 chuỗi các hình chữ nhật vàng.
 
 Tỷ số vàng chi phối hầu hết các tác phẩm nghệ thuật, thiết kế đồ họa \& kiến trúc nổi tiếng thế giới. Ví dụ, chúng ta có thể thấy đường xoắn ốc vàng trong bức chân dung nàng Mona Lisa của danh họa Leonardo Vinci (1452--1519, người Ý), trong bức tranh ``Thiếu nữ bên hoa huệ'' của danh họa Tô Ngọc Vân (1906--1954, người Việt Nam) hay trong nhiều kiến trúc nổi tiếng thế giới như Đền thờ Parthenon ở Thủ đô Athens của Hy Lạp.'' -- \cite[p. 36]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Tỷ số vàng \& vũ trụ}
+\subsubsection{Tỷ số vàng \& vũ trụ}
 ``Trong vũ trụ có rất nhiều dải ngân hà xoắn ốc theo đúng tỷ lệ của đường xoắn ốc vàng. Ví dụ dải ngân hà NGC 5 194 ở hình bên cách dải ngân hà của chúng ta khoảng 31 triệu năm ánh sáng (1 năm ánh sáng bằng khoảng $9.5$ nghìn kilomet).'' -- \cite[p. 36]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Tập Hợp $\mathbb{R}$ Các Số Thực -- Set $\mathbb{R}$ of Reals}
+\subsection{Tập Hợp $\mathbb{R}$ Các Số Thực -- Set $\mathbb{R}$ of Reals}
 
-\subsection{Tập hợp số thực}
+\subsubsection{Tập hợp số thực}
 
-\subsubsection{Số thực}
+\paragraph{Số thực}
 
 \begin{dinhnghia}[Số thực, tập hợp các số thực]
 	Số hữu tỷ \& số vô tỷ được gọi chung là \emph{số thực}. \emph{Tập hợp các số thực} được ký hiệu là $\mathbb{R}$.
 \end{dinhnghia}
 
-\subsubsection{Biểu diễn thập phân của số thực}
+\paragraph{Biểu diễn thập phân của số thực}
 ``Mỗi số thực là số hữu tỷ hoặc số vô tỷ. Vì thế, mỗi số thực đều biểu diễn được dưới dạng số thập phân hữu hạn hoặc vô hạn. Cụ thể, ta có sơ đồ sau: \fbox{Số thực} bao gồm:
 \begin{itemize}
 	\item \fbox{Số hữu tỷ} $\to$ Biểu diễn bằng số thập phân hữu hạn hoặc vô hạn tuần hoàn
 	\item \fbox{Số vô tỷ} $\to$ Biểu diễn bằng số thập phân vô hạn không tuần hoàn.'' -- \cite[p. 38]{SGK_Toan_7_Canh_Dieu_tap_1}
 \end{itemize}
 
-\subsection{Biểu diễn số thực trên trục số}
+\subsubsection{Biểu diễn số thực trên trục số}
 ``Tương tự như đối với số hữu tỷ, ta có thể biểu diễn mọi số thực trên trục số, khi đó điểm biểu diễn số thực $x\in\mathbb{R}$ được gọi là điểm $x$. Các điểm biểu diễn số hữu tỷ không lấp đầy trục số. Người ta chứng minh được rằng: Mỗi số thực được biểu diễn bởi 1 điểm trên trục số. Ngược lại, mỗi điểm trên trục số đều biểu diễn 1 số thực. Vì thế, trục số còn được gọi là \textit{trục số thực}.'' -- \cite[p. 39]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Số đối của 1 số thực}
+\subsubsection{Số đối của 1 số thực}
 
 \begin{dinhnghia}
 	Trên trục số, 2 số thực (phân biệt) có điểm biểu diễn nằm về 2 phía của điểm gốc $0$ \& cách đều điểm gốc $0$ được gọi là \emph{2 số đối nhau}. \emph{Số đối} của số thực $a\in\mathbb{R}$ ký hiệu là $-a$. Số đối của số $0$ là $0$.
 \end{dinhnghia}
 ``Số đối của số $-a$ là số $a$, i.e., $-(-a) = a$, $\forall a\in\mathbb{R}$.
 
-\subsection{So sánh các số thực}
+\subsubsection{So sánh các số thực}
 
-\subsubsection{So sánh 2 số thực}
+\paragraph{So sánh 2 số thực}
 ``Cũng như số hữu tỷ, trong 2 số thực khác nhau luôn có 1 số nhỏ hơn số kia. Nếu số thực $a\in\mathbb{R}$ nhỏ hơn số thực $b\in\mathbb{R}$ thì ta viết $a < b$ hay $b > a$. Số thực lớn hơn $0$ gọi là \textit{số thực dương}. Số thực nhỏ hơn $0$ gọi là \textit{số thực âm}. Số $0$ không phải là số thực dương cũng không phải là số thực âm. Nếu $a < b$ \& $b < c$ thì $a < c$.'' -- \cite[p. 40]{SGK_Toan_7_Canh_Dieu_tap_1}. Tính chất cuối được gọi là \textit{tính chất bắc cầu}, \& được viết gọn bằng ký hiệu toán học như sau: $((a < b)\land(b < c))\Rightarrow(a < c)$, $\forall a,b,c\in\mathbb{R}$.
 
-\subsubsection{Cách so sánh 2 số thực}
+\paragraph{Cách so sánh 2 số thực}
 ``Trong những trường hợp thuận lợi, ta có thể so sánh 2 số thực bằng cách biểu diễn thập phân mỗi số thực đó rồi so sánh 2 số thập phân đó.'' -- \cite[p. 40]{SGK_Toan_7_Canh_Dieu_tap_1} ``Việc biểu diễn 1 số thực dưới dạng số thập phân (hữu hạn hoặc vô hạn) thường là phức tạp. Trong 1 số trường hợp ta dùng quy tắc sau: Với $a,b$ là 2 số thực dương, nếu $a > b$ thì $\sqrt{a} > \sqrt{b}$.'' -- \cite[p. 41]{SGK_Toan_7_Canh_Dieu_tap_1}, i.e., $(a > b)\Rightarrow(\sqrt{a} > \sqrt{b})$, $\forall a,b\in\mathbb{R}_{> 0}$, với $\mathbb{R}_{> 0}\coloneqq\{x\in\mathbb{R}|x > 0\} = (0,\infty)$.
 
-\subsubsection{Minh họa trên trục số}
+\paragraph{Minh họa trên trục số}
 ``Giả sử 2 điểm $x,y$ lần lượt biểu diễn 2 số thực $x,y\in\mathbb{R}$ trên trục số nằm ngang. Ta thừa nhận nhận xét sau: Nếu $x < y$ hay $y > x$ thì điểm $x$ nằm bên trái điểm $y$. Ngược lại, nếu điểm $x$ nằm bên trái điểm $y$ thì $x < y$ hay $y > x$.
 
 Đối với 2 điểm $x,y$ lần lượt biểu diễn 2 số thực $x,y$ trên trục số thẳng đứng, ta cũng thừa nhận nhận xét sau: Nếu $x < y$ hay $y > x$ thì điểm $x$ nằm phía dưới điểm $y$. Ngược lại, nếu điểm $x$ nằm phía dưới điểm $y$ thì $x < y$ hay $y > x$.'' -- \cite[p. 41]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Các phép tính với số thực}
+\subsubsection{Các phép tính với số thực}
 ``Trong tập hợp các số thực cũng có các phép tính (cộng, trừ, nhân, chia, lũy thừa với số mũ tự nhiên) \& các tính chất tương tự như các phép tính trong tập hợp các số hữu tỷ.
 
-\subsubsection{Tính chất của phép cộng các số thực}
+\paragraph{Tính chất của phép cộng các số thực}
 \begin{itemize}
 	\item Giao hoán: $a + b = b + a$, $\forall a,b\in\mathbb{R}$;
 	\item Kết hợp: $(a + b) + c = a + (b + c)$, $\forall a,b,c\in\mathbb{R}$;
 	\item Cộng với số $0$: $a + 0 = 0 + a = a$, $\forall a\in\mathbb{R}$;
-	\item Cộng với số đối: $a + (-a) = (-a) + a = 0$, $\forall a\in\mathbb{R}$.F
+	\item Cộng với số đối: $a + (-a) = (-a) + a = 0$, $\forall a\in\mathbb{R}$.
 \end{itemize}
 
-\subsubsection{Tính chất của phép nhân các số thực}
+\paragraph{Tính chất của phép nhân các số thực}
 \begin{itemize}
 	\item Giao hoán: $ab = ba$, $\forall a,b\in\mathbb{R}$;
 	\item Kết hợp: $(ab)c = a(bc)$, $\forall a,b,c\in\mathbb{R}$;
@@ -314,7 +311,7 @@ Tỷ số vàng chi phối hầu hết các tác phẩm nghệ thuật, thiết 
 	\item Với mỗi số thực $a\ne 0$, có số nghịch đảo $\frac{1}{a}$ sao cho: $a\cdot\frac{1}{a} = 1$.
 \end{itemize}
 
-\subsubsection{Phép tính lũy thừa với số mũ tự nhiên của số thực}
+\paragraph{Phép tính lũy thừa với số mũ tự nhiên của số thực}
 \begin{itemize}
 	\item Lũy thừa với số mũ tự nhiên: $x^n = \underbrace{x\cdot x\cdots x}_{n\mbox{ \footnotesize thừa số } x}$, $\forall x\in\mathbb{R}$, $\forall n\in\mathbb{N}$;
 	\item Tích \& thương của 2 lũy thừa cùng cơ số: $x^mx^n = x^{m + n}$, $\forall x\in\mathbb{R}$, $\forall m,n\in\mathbb{N}$; $x^m:x^n = \frac{x^m}{x^n} = x^{m - n}$, $x\in\mathbb{R}$, $x\ne 0$, $\forall m,n\in\mathbb{N}$, $m\ge n$;
@@ -326,16 +323,16 @@ Tỷ số vàng chi phối hầu hết các tác phẩm nghệ thuật, thiết 
 \end{itemize}
 ``Thứ tự thực hiện các phép tính, quy tắc chuyển vế, quy tắc dấu ngoặc trong tập hợp số thực cũng giống như trong tập hợp số hữu tỷ.'' -- \cite[p. 43]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Giá Trị Tuyệt Đối của 1 Số Thực -- Absolute Value of a Real}
+\subsection{Giá Trị Tuyệt Đối của 1 Số Thực -- Absolute Value of a Real}
 
-\subsection{Khái niệm}
+\subsubsection{Khái niệm}
 
 \begin{dinhnghia}[Giá trị tuyệt đối của số thực]
 	Khoảng cách từ điểm $x$ đến điểm gốc $0$ trên trục số được gọi là \emph{giá trị tuyệt đối của số $x\in\mathbb{R}$}, ký hiệu là $|x|$.
 \end{dinhnghia}
 ``Giá trị tuyệt đối của 1 số luôn là 1 số không âm: $|x|\ge 0$, $\forall x\in\mathbb{R}$. 2 số thực đối nhau có giá trị tuyệt đối bằng nhau.'' -- \cite[p. 44]{SGK_Toan_7_Canh_Dieu_tap_1}, i.e., $|-x| = |x|$, $\forall x\in\mathbb{R}$.
 
-\subsection{Tính chất}
+\subsubsection{Tính chất}
 
 \begin{menhde}
 	Nếu $x$ là số dương thì giá trị tuyệt đối của $x$ là chính nó: $|x| = x$, $\forall x\in\mathbb{R}$, $x > 0$. Nếu $x$ là số âm thì giá trị tuyệt đối của $x$ là số đối của nó: $|x| = -x$, $\forall x\in\mathbb{R}$, $x < 0$. Giá trị tuyệt đối của $0$ là $0$: $|0| = 0$.
@@ -358,18 +355,18 @@ Tỷ số vàng chi phối hầu hết các tác phẩm nghệ thuật, thiết 
 	Muốn nhân 2 số thực khác dấu, ta nhân 2 giá trị tuyệt đối của chúng rồi đặt dấu ``$-$'' trước kết quả nhận được.'' -- \cite[p. 47]{SGK_Toan_7_Canh_Dieu_tap_1}
 \end{itemize}
 
-\section{Làm Tròn \& Ước Lượng -- Round up \& Estimation}
+\subsection{Làm Tròn \& Ước Lượng -- Round up \& Estimation}
 
-\subsection{Làm tròn số}
+\subsubsection{Làm tròn số}
 
-\subsubsection{Số làm tròn}
+\paragraph{Số làm tròn}
 ``Trong đo đạc \& tính toán thực tiễn, đôi khi ta không sử dụng được các số chính xác mà phải sử dụng những số làm tròn xấp xỉ với số chính xác.''
 
 \begin{dinhnghia}[Số làm tròn]
 	``Ở nhiều tình huống thực tiễn, ta cần tìm 1 số thực khác xấp xỉ với số thực đã cho để thuận tiện hơn trong ghi nhớ, đo đạc hay tính toán. Số thực tìm được như thế được gọi là \emph{số làm tròn} của số thực đã cho.'' -- \cite[p. 48]{SGK_Toan_7_Canh_Dieu_tap_1}
 \end{dinhnghia}
 
-\subsubsection{Làm tròn số với độ chính xác cho trước}
+\paragraph{Làm tròn số với độ chính xác cho trước}
 
 \begin{dinhnghia}[Làm tròn số với độ chính xác cho trước]
 	Ta nói số $a$ được làm tròn đến số $b$ với độ chính xác $d$ nếu khoảng cách giữa điểm $a$ \& điểm $b$ trên trục số không vượt quá $d$.
@@ -378,17 +375,17 @@ Tỷ số vàng chi phối hầu hết các tác phẩm nghệ thuật, thiết 
 
 ``Trong đo đạc \& tính toán thực tiễn, ta thường cố gắng làm tròn số thực với độ chính xác $d$ càng nhỏ càng tốt. Trong thực tế, làm tròn số thực là 1 công việc có nhiều khó khăn. Tuy nhiên, người ta cũng biết 1 số cách để làm tròn số thực.'' -- \cite[p. 51]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Ước lượng -- Estimation}
+\subsubsection{Ước lượng -- Estimation}
 ``Trong thực tiễn, đôi lúc ta không quá quan tâm đến tính chính xác của kết quả tính toán mà chỉ cần ước lượng kết quả, i.e., tìm 1 số gần sát với kết quả chính xác.'' -- \cite[p. 51]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Tỷ Lệ Thức}
+\subsection{Tỷ Lệ Thức}
 
 \begin{dinhnghia}[Tỷ lệ thức]
 	\emph{Tỷ lệ thức} là đẳng thức của 2 tỷ số $\frac{a}{b}$ \& $\frac{c}{d}$, viết là $\frac{a}{b} = \frac{c}{d}$.
 \end{dinhnghia}
 ``Tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$ còn được viết là $a:b = c:d$, các số $a,b,c,d$ gọi là các số hạng của tỷ lệ thức.'' -- \cite[p. 52]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Tính chất}
+\subsubsection{Tính chất}
 
 \begin{menhde}
 	Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$.
@@ -402,16 +399,16 @@ Tỷ số vàng chi phối hầu hết các tác phẩm nghệ thuật, thiết 
 	ad = bc\Leftrightarrow\frac{a}{b} = \frac{c}{d}\Leftrightarrow\frac{a}{c} = \frac{b}{d}\Leftrightarrow\frac{d}{b} = \frac{c}{a}\Leftrightarrow\frac{d}{c} = \frac{b}{a}.
 \end{align*}
 
-\section{Dãy Tỷ Số Bằng Nhau}
+\subsection{Dãy Tỷ Số Bằng Nhau}
 
-\subsection{Khái niệm}
+\subsubsection{Khái niệm}
 
 \begin{dinhnghia}[Dãy tỷ số bằng nhau]
 	Những tỷ số bằng nhau \& được viết nối với nhau bởi các dấu đẳng thức tạo thành \emph{dãy tỷ số bằng nhau}.
 \end{dinhnghia}
 ``Với dãy tỷ số bằng nhau $\frac{a}{b} = \frac{c}{d} = \frac{e}{f}$, ta cũng viết $a:b = c:d = e:f$. Khi có dãy tỷ số bằng nhau $\frac{a}{b} = \frac{c}{d} = \frac{e}{f}$, ta nói các số $a,c,e$ tỷ lệ với các số $b,d,f$ \& viết là $a:c:e = b:d:f$.'' -- \cite[p. 55]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Tính chất}
+\subsubsection{Tính chất}
 
 \begin{menhde}
 	Từ tỷ lệ thức $\dfrac{a}{b} = \dfrac{c}{d}$, ta suy ra: $\dfrac{a}{b} = \dfrac{c}{d} = \dfrac{a + c}{b + d} = \dfrac{a - c}{b - d}$, ($b\ne d$ \& $b\ne -d$).
@@ -435,12 +432,12 @@ Tổng quát hơn:
 \end{baitoan}
 Với $n = 2,3$, bài toán này cho 2 trường hợp riêng là 2 bài toán trước nó.
 
-\subsection{Ứng dụng}
+\subsubsection{Ứng dụng}
 ``Các tính chất của dãy tỷ số bằng nhau có nhiều ứng dụng trong thực tiễn, e.g., ứng dụng vào bài toán chia 1 đại lượng cho trước thành các phần theo tỷ lệ cho trước.'' -- \cite[p. 57]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\section{Đại Lượng Tỷ Lệ Thuận}
+\subsection{Đại Lượng Tỷ Lệ Thuận}
 
-\subsection{Khái niệm}
+\subsubsection{Khái niệm}
 
 \begin{dinhnghia}[Đại lượng tỷ lệ thuận, hệ số tỷ lệ]
 	Nếu đại lượng $y$ liên hệ với đại lượng $x$ theo công thức $y = kx$ (với $k$ là 1 hằng số khác $0$) thì ta nói \emph{$y$ tỷ lệ thuận} với $x$ theo \emph{hệ số tỷ lệ $k$}.
@@ -451,7 +448,7 @@ Với $n = 2,3$, bài toán này cho 2 trường hợp riêng là 2 bài toán t
 	Chu vi đường tròn $C = \pi d = 2\pi r$ tỷ lệ thuận với đường kính $d$ \& bán kính $r$ theo hệ số tỷ lệ lần lượt là $\pi$ \& $2\pi$. 
 \end{vidu}
 
-\subsection{Tính chất}
+\subsubsection{Tính chất}
 
 \begin{menhde}
 	Nếu 2 đại lượng tỷ lệ thuận với nhau thì:
@@ -464,16 +461,16 @@ Với $n = 2,3$, bài toán này cho 2 trường hợp riêng là 2 bài toán t
 
 Có thể viết gọn thành: $\dfrac{y_i}{x_i} = k$, $\forall i\in\mathbb{N}^\star$, $\dfrac{x_i}{x_j} = \dfrac{y_i}{y_j}$, $i,j\in\mathbb{N}^\star$.
 
-\section{Đại Lượng Tỷ Lệ Nghịch}
+\subsection{Đại Lượng Tỷ Lệ Nghịch}
 
-\subsection{Khái niệm}
+\subsubsection{Khái niệm}
 
 \begin{dinhnghia}[Đại lượng tỷ lệ nghịch]
 	Nếu đại lượng $y$ liên hệ với đại lượng $x$ theo công thức $y = \frac{a}{x}$ hay $xy = a$ (với $a$ là 1 hằng số khác $0$) thì ta nói \emph{$y$ tỷ lệ nghịch} với $x$ theo \emph{hệ số tỷ lệ $a$}.
 \end{dinhnghia}
 ``Nếu $y$ tỷ lệ nghịch với $x$ theo hệ số tỷ lệ $a$ thì $x$ cũng tỷ lệ nghịch với $y$ theo hệ số tỷ lệ $a$. Ta nói $x$ \& $y$ là 2 đại lượng tỷ lệ nghịch với nhau.'' -- \cite[p. 64]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Tính chất}
+\subsubsection{Tính chất}
 
 \begin{menhde}
 	Nếu 2 đại lượng tỷ lệ nghịch với nhau thì:
@@ -488,17 +485,17 @@ Có thể viết gọn thành: $\dfrac{y_i}{x_i} = k$, $\forall i\in\mathbb{N}^\
 	Năng suất lao động \& thời gian hoàn thành công việc là 2 đại lượng tỷ lệ nghịch.
 \end{vidu}
 
-\subsection{1 số bài toán}
+\subsubsection{1 số bài toán}
 
 \begin{vidu}
 	Số công nhân làm việc \& thời gian hoàn thành công việc là 2 đại lượng tỷ lệ nghịch.
 \end{vidu}
 
-\section{Hoạt Động Thực Hành \& Trải Nghiệm: 1 Số Hình Thức Khuyến Mãi trong Kinh Doanh}
+\subsection{Hoạt Động Thực Hành \& Trải Nghiệm: 1 Số Hình Thức Khuyến Mãi trong Kinh Doanh}
 
-\subsection{Nội dung chính của chủ đề}
+\subsubsection{Nội dung chính của chủ đề}
 
-\subsubsection{Giới thiệu về khuyến mãi trong kinh doanh}
+\paragraph{Giới thiệu về khuyến mãi trong kinh doanh}
 ``Như ta đã biết, để tăng lãi trong kinh doanh người ta thường sử dụng 2 cách chính sau đây:
 \begin{enumerate*}
 	\item[(i)] Nâng giá mặt hàng;
@@ -516,14 +513,14 @@ Trong thực tế kinh doanh hiện nay ở Việt Nam, các doanh nghiệp nêu
 \end{enumerate*}
 Các hình thức khuyến mãi được đưa ra phải đảm bảo những nguyên tắc sau: Việc khuyến mãi được thực hiện hợp pháp, trung thực, công khai, minh bạch, cạnh tranh lành mạnh, không xâm hại đến lợi ích hợp pháp của người tiêu dùng, của các nhà kinh doanh, tổ chức hoặc cá nhân khác, đặc biệt không được lợi dụng lòng tin \& sự thiếu hiểu biết, thiếu kinh nghiệm của khách hàng.'' -- \cite[p. 71]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsubsection{Hình thức giảm giá trong khuyến mãi}
+\paragraph{Hình thức giảm giá trong khuyến mãi}
 ``Dưới đây là 1 số hình thức giảm giá phổ biến:
 \begin{enumerate*}
 	\item Giảm giá bán của sản phẩm: Thay vì bán với giá niêm yết, khách hàng được mua hàng với giá giảm 5\% hoặc 10\%, 15\%,$\ldots$ tùy theo chiến lược kinh doanh của cửa hàng.
 	\item Giảm giá khi mua nhiều sản phẩm: E.g., mua 2 sản phẩm được giảm 5\%; mua 3 sản phẩm được giảm 10\%; $\ldots$
 \end{enumerate*}
 
-\subsubsection{Kiến thức toán học}
+\paragraph{Kiến thức toán học}
 
 \begin{menhde}
 	Sau khi giảm $x$\% số $a$, ta nhận được số $a(100\% - x\%)$. Sau khi tăng $x$\% số $a$, ta nhận được số $a(100\% + x\%)$.
@@ -531,21 +528,18 @@ Các hình thức khuyến mãi được đưa ra phải đảm bảo những ng
 
 %------------------------------------------------------------------------------%
 
-\chapter{Hình Học Trực Quan -- Visual Geometry}
+\section{Hình Học Trực Quan -- Visual Geometry}
+\textbf{Nội dung.} \textit{Hình hộp chữ nhật, hình lập phương, hình lăng trụ đứng tam giác, hình lăng trụ đứng tứ giác}.
 
-\begin{quotation}
-	\textbf{Nội dung.} \textit{Hình hộp chữ nhật, hình lập phương, hình lăng trụ đứng tam giác, hình lăng trụ đứng tứ giác}.
-\end{quotation}
+\subsection{Hình Hộp Chữ Nhật. Hình Lập Phương}
 
-\section{Hình Hộp Chữ Nhật. Hình Lập Phương}
-
-\subsection{Hình hộp chữ nhật}
+\subsubsection{Hình hộp chữ nhật}
 ``Hình hộp chữ nhật có 6 mặt, 12 cạnh, 8 đỉnh.'' -- \cite[p. 76]{SGK_Toan_7_Canh_Dieu_tap_1}. ``Hình hộp chữ nhật $ABCD.A'B'C'D'$. Đáy dưới $ABCD$, đáy trên $A'B'C'D'$. Các mặt bên: $AA'B'B$, $BB'C'C$, $CC'D'D$, $DD'A'A$. Các cạnh đáy: $AB$, $BC$, $CD$, $DA$, $A'B'$, $B'C'$, $C'D'$, $D'A'$. Các cạnh bên: $AA'$, $BB'$, $CC'$, $DD'$. Các đỉnh: $A,B,C,D,A',B',C',D'$.'' ``Khi ngồi trước 1 hình hộp chữ nhật, bạn chỉ nhìn thấy 3 mặt được tô màu, còn 1 số cạnh không nhìn thấy được. Tuy nhiên, để nhận dạng tốt hơn cả hình hộp chữ nhật, người ta vẫn vẽ các cạnh không nhìn thấy đó, nhưng bằng nét đứt.'' ``Hình hộp chữ nhật có: Các mặt đều là hình chữ nhật. Các cạnh bên bằng nhau.'' ``Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Mỗi đoạn thẳng $A'C,B'D,C'A,D'B$ gọi là đường chéo của hình hộp chữ nhật đó.'' ``Hình hộp chữ nhật có 4 đường chéo.'' -- \cite[p. 77]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Hình lập phương}
+\subsubsection{Hình lập phương}
 ``Hình lập phương có 6 mặt, 12 cạnh, 8 đỉnh, 4 đường chéo.'' ``Hình lập phương $ABCD.A'B'C'D'$. Đáy dưới $ABCD$, đáy trên $A'B'C'D'$. Các mặt bên: $AA'B'B$, $BB'C'C$, $CC'D'D$, $DD'A'A$. Các cạnh đáy: $AB,BC,CD,DA,A'B',B'C',C'D',D'A'$. Các cạnh bên: $AA',BB',CC',DD'$. Các đỉnh: $A,B,C,D,A',B',C',D'$. Các đường chéo: $A'C,B'D,C'A,D'B$.'' ``Hình lập phương có: Các mặt đều là hình vuông. Các cạnh đều bằng nhau.'' -- \cite[p. 78]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Diện tích xung quanh \& thể tích của hình hộp chữ nhật, hình lập phương}
+\subsubsection{Diện tích xung quanh \& thể tích của hình hộp chữ nhật, hình lập phương}
 ``Cho hình hộp chữ nhật có 3 kích thước: chiều dài là $a$, chiều rộng là $b$, chiều cao là $c$ ($a,b,c$ cùng đơn vị đo). Cho hình lập phương có độ dài cạnh là $d$. Ta có 1 số công thức sau:
 \begin{table}[H]
 	\centering
@@ -560,15 +554,15 @@ Các hình thức khuyến mãi được đưa ra phải đảm bảo những ng
 	\end{tabular}
 \end{table}
 
-\section{Hình Lăng Trụ Đứng Tam Giác. Hình Lăng Trụ Đứng Tứ Giác}
+\subsection{Hình Lăng Trụ Đứng Tam Giác. Hình Lăng Trụ Đứng Tứ Giác}
 
-\subsection{Hình lăng trụ đứng tam giác}
+\subsubsection{Hình lăng trụ đứng tam giác}
 ``Lăng trụ đứng tam giác có 5 mặt, 9 cạnh, 6 đỉnh.'' -- \cite[p. 81]{SGK_Toan_7_Canh_Dieu_tap_1}. ``Lăng trụ đứng tam giác $ABC.A'B'C'$. Đáy dưới $ABC$, đáy trên $A'B'C'$. Các mặt bên: $AA'B'B$, $BB'C'C$, $CC'A'A$. Các cạnh đáy: $AB$, $BC$, $CA$, $A'B'$, $B'C'$, $C'A'$. Các cạnh bên: $AA',BB',CC'$. Các đỉnh $A,B,C,A',B',C'$.'' ``Lăng trụ đứng tam giác có: 2 mặt đáy cùng là tam giác \& song song với nhau. Mỗi mặt bên là hình chữ nhật. Các cạnh bên bằng nhau. Chiều cao của hình lăng trụ đứng tam giác là độ dài 1 cạnh bên.'' -- \cite[p. 82]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Hình lăng trụ đứng tứ giác}
+\subsubsection{Hình lăng trụ đứng tứ giác}
 ``Lăng trụ đứng tứ giác có 6 mặt, 12 cạnh, 8 đỉnh.'' ``Lăng trụ đứng tứ giác $ABCD.A'B'C'D'$. Đáy dưới $ABCD$, đáy trên $A'B'C'D'$. Các mặt bên: $AA'B'B$, $BB'C'C$, $CC'D'D$, $DD'A'A$. Các cạnh đáy: $AB,BC,CD,DA,A'B',B'C',C'D',D'A'$. Các cạnh bên: $AA',BB',CC',DD'$. Các đỉnh: $A,B,C,D,A',B',C',D'$.'' ``Lăng trụ đứng tức giác có: 2 mặt đáy cùng là tứ giác \& song song với nhau. Mỗi mặt bên là hình chữ nhật. Các cạnh bên bằng nhau. Chiều cao của hình lăng trụ đứng tứ giác là độ dài 1 cạnh bên.'' ``Hình hộp chữ nhật \& hình lập phương cũng là lăng trụ đứng tứ giác.'' -- \cite[p. 83]{SGK_Toan_7_Canh_Dieu_tap_1}
 
-\subsection{Thể tích \& diện tích xung quanh của hình lăng trụ đứng tam giác, lăng trụ đứng tứ giác}
+\subsubsection{Thể tích \& diện tích xung quanh của hình lăng trụ đứng tam giác, lăng trụ đứng tứ giác}
 ``Đối với hình lăng trụ đứng tứ giác, các tính thể tích cũng tương tự như cách tính thể tích của hình hộp chữ nhật.
 
 \begin{menhde}
@@ -588,84 +582,81 @@ I.e., $S_{\rm xq} = Ch$, trong đó $S_{\rm xq}$ là \textit{diện tích xung q
 
 %------------------------------------------------------------------------------%
 
-\chapter{Góc. Đường Thẳng Song Song -- Angle\texttt{/}Paralleling Lines}
+\section{Góc. Đường Thẳng Song Song -- Angle\texttt{/}Paralleling Lines}
+\textbf{Nội dung.} \textit{Góc ở vị trí đặc biệt; tia phân giác của 1 góc; 2 đường thẳng song song; tiên đề Euclid về đường thẳng song song; định lý, chứng minh định lý}.
 
-\begin{quotation}
-	\textbf{Nội dung.} \textit{Góc ở vị trí đặc biệt; tia phân giác của 1 góc; 2 đường thẳng song song; tiên đề Euclid về đường thẳng song song; định lý, chứng minh định lý}.
-\end{quotation}
+\subsection{Góc ở Vị Trí Đặc Biệt}
 
-\section{Góc ở Vị Trí Đặc Biệt}
-
-\subsection{2 góc kề nhau}
+\subsubsection{2 góc kề nhau}
 p. 90 (91/114)
 
-\section{Tia Phân Giác của 1 Góc}
+\subsection{Tia Phân Giác của 1 Góc}
 
-\section{2 Đường Thẳng Song Song}
+\subsection{2 Đường Thẳng Song Song}
 
-\section{Định Lý}
-
-%------------------------------------------------------------------------------%
-
-\chapter{1 Số Yếu Tố Thống Kê \& Xác Suất -- Some Ingredients in Statistics \& Probability}
-
-\section{Thu Thập, Phân Loại \& Biểu Diễn Dữ Liệu}
-
-\section{Phân Tích \& Xử Lý Dữ Liệu}
-
-\section{Biểu Đồ Đoạn Thẳng}
-
-\section{Biểu Đồ Hình Quạt Tròn}
-
-\section{Biến Cố Trong 1 Số Trò Chơi Đơn Giản}
-
-\section{Xác Suất của Biến Cố Ngẫu Nhiên trong 1 Số Trò Chơi Đơn Giản}
-
-\section{Hoạt Động Thực Hành \& Trải Nghiệm: Dung Tích Phổi}
+\subsection{Định Lý}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Biểu Thức Đại Số -- Algebraic Expression}
+\section{1 Số Yếu Tố Thống Kê \& Xác Suất -- Some Ingredients in Statistics \& Probability}
 
-\section{Biểu Thức Số. Biểu Thức Đại Số}
+\subsection{Thu Thập, Phân Loại \& Biểu Diễn Dữ Liệu}
 
-\section{Đa Thức 1 Biến. Nghiệm của Đa Thức 1 Biến}
+\subsection{Phân Tích \& Xử Lý Dữ Liệu}
 
-\section{Phép Cộng, Phép Trừ Đa Thức 1 Biến}
+\subsection{Biểu Đồ Đoạn Thẳng}
 
-\section{Phép Nhân Đa Thức 1 Biến}
+\subsection{Biểu Đồ Hình Quạt Tròn}
 
-\section{Phép Chia Đa Thức 1 Biến}
+\subsection{Biến Cố Trong 1 Số Trò Chơi Đơn Giản}
+
+\subsection{Xác Suất của Biến Cố Ngẫu Nhiên trong 1 Số Trò Chơi Đơn Giản}
+
+\subsection{Hoạt Động Thực Hành \& Trải Nghiệm: Dung Tích Phổi}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Tam Giác -- Triangle}
+\section{Biểu Thức Đại Số -- Algebraic Expression}
 
-\section{Tổng Các Góc của 1 Tam Giác}
+\subsection{Biểu Thức Số. Biểu Thức Đại Số}
 
-\section{Quan Hệ Giữa Góc \& Cạnh Đối Diện. Bất Đẳng Thức Tam Giác}
+\subsection{Đa Thức 1 Biến. Nghiệm của Đa Thức 1 Biến}
 
-\section{2 Tam Giác Bằng Nhau}
+\subsection{Phép Cộng, Phép Trừ Đa Thức 1 Biến}
 
-\section{Trường Hợp Bằng Nhau Thứ Nhất của Tam Giác: Cạnh -- Cạnh -- Cạnh}
+\subsection{Phép Nhân Đa Thức 1 Biến}
 
-\section{Trường Hợp Bằng Nhau Thứ 2 của Tam Giác: Cạnh -- Góc -- Cạnh}
+\subsection{Phép Chia Đa Thức 1 Biến}
 
-\section{Trường Hợp Bằng Nhau Thứ 3 của Tam Giác: Góc -- Cạnh -- Góc}
+%------------------------------------------------------------------------------%
 
-\section{Tam Giác Cân}
+\section{Tam Giác -- Triangle}
 
-\section{Đường Vuông Góc \& Đường Xiên}
+\subsection{Tổng Các Góc của 1 Tam Giác}
 
-\section{Đường Trung Trực của 1 Đoạn Thẳng}
+\subsection{Quan Hệ Giữa Góc \& Cạnh Đối Diện. Bất Đẳng Thức Tam Giác}
 
-\section{Tính Chất 3 Đường Trung Tuyến của Tam Giác}
+\subsection{2 Tam Giác Bằng Nhau}
 
-\section{Tính Chất 3 Đường Phân Giác của Tam Giác}
+\subsection{Trường Hợp Bằng Nhau Thứ Nhất của Tam Giác: Cạnh -- Cạnh -- Cạnh}
 
-\section{Tính Chất 3 Đường Trung Trực của Tam Giác}
+\subsection{Trường Hợp Bằng Nhau Thứ 2 của Tam Giác: Cạnh -- Góc -- Cạnh}
 
-\section{Tính Chất 3 Đường Cao của Tam Giác}
+\subsection{Trường Hợp Bằng Nhau Thứ 3 của Tam Giác: Góc -- Cạnh -- Góc}
+
+\subsection{Tam Giác Cân}
+
+\subsection{Đường Vuông Góc \& Đường Xiên}
+
+\subsection{Đường Trung Trực của 1 Đoạn Thẳng}
+
+\subsection{Tính Chất 3 Đường Trung Tuyến của Tam Giác}
+
+\subsection{Tính Chất 3 Đường Phân Giác của Tam Giác}
+
+\subsection{Tính Chất 3 Đường Trung Trực của Tam Giác}
+
+\subsection{Tính Chất 3 Đường Cao của Tam Giác}
 
 %------------------------------------------------------------------------------%
 
