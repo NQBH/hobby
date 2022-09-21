@@ -38,7 +38,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -87,8 +87,201 @@
 %------------------------------------------------------------------------------%
 
 \section{Dao Động Cơ}
+\textsf{\textbf{Nội dung.} Các mô hình cơ học của dao động điều hòa: con lắc lò xo, con lắc đơn; các đặc trưng của dao động điều hòa; dao động tắt dần, dao động cưỡng bức, cộng hưởng; vector quay, phương pháp giản đồ Frenen.}
+
+``Hằng ngày, chúng ta thấy rất nhiều chuyển động đu đưa, vật chuyển động luôn luôn thay đổi chiều, đi qua đi lại quanh 1 vị trí cân bằng, đó là \textit{chuyển động dao động}.'' ``khảo sát chuyển động dao động điều hòa, đưa ra các đại lượng đặc trưng cho chuyển động ấy: biên độ, tần số, pha, pha ban đầu, ly độ, vận tốc, gia tốc. Ngoài ra, chúng ta còn xét xem khi nào thì xảy ra dao động điều hòa, dao động tắt dần, dao động duy trì, dao động cưỡng bức.'' -- \cite[p. 28]{SGK_Vat_Ly_12_nang_cao}
 
 \subsection{Dao Động Điều Hòa}
+
+\subsubsection{Dao động}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.33\textwidth}
+		\centering
+		\includegraphics[width=.6\linewidth]{con_lac_day}
+		\caption{Con lắc dây.}
+	\end{subfigure}%
+	\begin{subfigure}{.33\textwidth}
+		\centering
+		\includegraphics[height=0.6\linewidth]{con_lac_lo_xo_thang_dung}
+		\caption{Con lắc lò xo thẳng đứng}
+	\end{subfigure}%
+	\begin{subfigure}{.33\textwidth}
+		\centering
+		\includegraphics[width=0.85\linewidth]{con_lac_lo_xo_nam_ngang}
+		\caption{Con lắc lò xo nằm ngang trên đệm không khí.}
+	\end{subfigure}
+	\caption{1 số dao động điều hòa, \cite[Hình 6.1, p. 28]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:1_so_dao_dong_dieu_hoa}
+\end{figure}
+``$\ldots$ quan sát chuyển động của vật nặng trong con lắc dây (a), con lắc lò xo thẳng đứng (b) \& con lắc lò xo nằm ngang trên đệm không khí (c) ở Fig. \ref{fig:1_so_dao_dong_dieu_hoa}. Từ sự quan sát, có thể rút ra các nhận xét sau đây về chuyển động của vật nặng trong cả 3 trường hợp trên:
+\begin{enumerate*}
+	\item[$\bullet$] \textit{Có 1 vị trí cân bằng}.
+	\item[$\bullet$] Nếu đưa vật nặng ra khỏi vị trí cân bằng rồi thả cho vật tự do thì vật sẽ \textit{chuyển động qua lại quanh vị trí cân bằng}.
+\end{enumerate*}
+
+\begin{dinhnghia}[Dao động]
+	Chuyển động qua lại quanh 1 vị trí cân bằng được gọi là \emph{dao động}.
+\end{dinhnghia}
+Dao động có thể là tuần hoàn, có thể không tuần hoàn. \textit{Dao động tuần hoàn}: Xét Fig. \ref{fig:1_so_dao_dong_dieu_hoa}(a), nếu thả vật từ $B$ thì vật đi sang trái qua $M$, tới $A$ thì dừng lại, rồi đi ngược lại về phía phải qua $M$ \& trở lại $B$. Sau đó, \textit{chuyển động được lặp lại như thế liên tiếp \& mãi mãi}. Chuyển động như vậy được gọi là \textit{dao động tuần hoàn}. Giai đoạn chuyển động $BMAMB$ nói trên được lặp lại đúng như trước. Đó là giai đoạn nhỏ nhất được lặp lại trong \textit{dao động tuần hoàn}. Ta gọi giai đoạn đó là \textit{1 dao động toàn phần} hay \textit{1 chu trình}. Thời gian thực hiện 1 dao động toàn phần được gọi là \textit{chu kỳ} (ký hiệu là $T$) của dao động tuần hoàn. Đơn vị của chu kỳ là giây (s). Trong 1 giây, chuyển động thực hiện được $f = \frac{1}{T}$ dao động toàn phần, $f$ được gọi là \textit{tần số} của dao động tuần hoàn. Đơn vị của tần số là $\frac{1}{\rm s}$, gọi là héc (ký hiệu Hz).'' -- \cite[pp. 28--29]{SGK_Vat_Ly_12_nang_cao}
+
+``\textbf{Thí nghiệm về tính tuần hoàn của chuyển động con lắc dây (Fig. \ref{fig:1_so_dao_dong_dieu_hoa}(a)).} Lấy 1 vật mốc có dạng đoạn thẳng đặt song song với dây treo, ở phía sau dây treo. Dùng đồng hồ bấm giây đo khoảng thời gian giữa 2 lần liên tiếp dây treo đi ngang qua vật mốc theo cùng 1 chiều \& ghi lại kết quả. Trong phạm vi sai số, những khoảng thời gian đó bằng nhau \& bằng chu kỳ dao động. \textbf{Đồ thị dao động.} Nếu gọi $N$ là vị trí của vật vào thời điểm $t$ \& ký hiệu $\alpha$ là góc hợp bởi đường thẳng đứng $OM$ \& dây treo $ON$, thì đồ thị sự phụ thuộc của $\alpha$ vào thời gian là 1 đồ thị biểu diễn dao động của vật (Fig. \ref{fig:do_thi_dao_dong}).'' -- \cite[p. 28]{SGK_Vat_Ly_12_nang_cao}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{do_thi_dao_dong}
+	\caption{Đồ thị biểu diễn dao động của vật, \cite[Hình 6.2, p. 29]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:do_thi_dao_dong}
+\end{figure}
+
+\subsubsection{Thiết lập phương trình động lực học của vật dao động trong con lắc lò xo}
+``Xét chuyển động của vật nặng trong con lắc lò xo nằm ngang (Fig. \ref{fig:con_lac_lo_xo}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{con_lac_lo_xo}
+	\caption{Con lắc lò xo. (a) Vật nặng ở vị trí cân bằng $O$, lò xo không dãn. (b) Vật nặng ở vị trí $M$, ly độ $x$, vật chịu tác dụng của lực đàn hồi $F = -kx$ của lò xo, \cite[Hình 6.3, p. 29]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:con_lac_lo_xo}
+\end{figure}
+Con lắc lò xo gồm 1 vật năng gắn vào đầu 1 lò xo có khối lượng không đáng kể, đầu kia của lò xo cố định. Trục $x$ như hình vẽ, gốc $O$ ứng với vị trí cân bằng. Tọa độ $x$ của vật tính từ vị trí cân bằng gọi là \textit{ly độ}. Lực $F$ tác dụng lên vật nặng là lực đàn hồi của lò xo, lực này luôn hướng về $O$ (trái dấu với ly độ) \& có độ lớn tỷ lệ với ly độ, nên: $F = -kx$, hệ số tỷ lệ $k$ là \textit{độ cứng} của lò xo. Lực $F$ luôn luôn hướng về vị trí cân bằng nên được gọi là \textit{lực kéo về} hay \textit{lực hồi phục}. Gia tốc của vật nặng (khối lượng $m$) bằng đạo hàm hạng 2 của ly độ theo thời gian $x''$. Bỏ qua ma sát \& áp dụng định luật II Newton, ta có: $mx'' = -kx$, hay là
+\begin{align}
+	\label{phuong trinh dong luc hoc}
+	x'' + \frac{k}{m}x = 0.
+\end{align}
+Đặt $\omega^2 = \frac{k}{m}$, phương trình \eqref{phuong trinh dong luc hoc} trở thành:
+\begin{align}
+	\label{phuong trinh dong luc hoc 1}
+	x'' + \omega^2x = 0.
+\end{align}
+Phương trình \eqref{phuong trinh dong luc hoc} hoặc \eqref{phuong trinh dong luc hoc 1} được gọi là \textit{phương trình động lực học} của dao động.'' -- \cite[pp. 29--30]{SGK_Vat_Ly_12_nang_cao}
+
+``Xét 1 vật có 1 vị trí cân bằng xác định \& 1 khi dời khỏi vị trí này 1 đoạn thẳng có độ dài $x$ thì vật chịu tác dụng của 1 lực hướng về vị trí cân bằng \& có độ lớn tỷ lệ với $x$ (cũng gọi là \textit{lực kéo về}). Ta thiết lập được phương trình \eqref{phuong trinh dong luc hoc} cho chuyển động của vật theo cách hoàn toàn tương tự như đối với vật nặng của con lắc lò xo. Như vậy, vật mà ta xét sẽ dao động điều hòa.'' -- \cite[p. 30]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Nghiệm của phương trình động lực học: phương trình dao động điều hòa}
+``Toán học cho biết nghiệm của phương trình \eqref{phuong trinh dong luc hoc 1} có dạng:
+\begin{align}
+	\label{phuong trinh dao dong dieu hoa}
+	x = A\cos(\omega t + \varphi),
+\end{align}
+trong đó $A$ \& $\varphi$ là 2 hằng số bất kỳ.'' ``Vế phải của phương trình \eqref{phuong trinh dao dong dieu hoa} là $A\cos(\omega t + \varphi)$ còn gọi là \textit{biểu thức của dao động}.'' ``Có thể thử lại điều đó bằng cách tính đạo hàm của $x$: $x' = -\omega A\sin(\omega t + \varphi)$, $x'' = -\omega^2A\cos(\omega t + \varphi) = -\omega^2x$. Thay biểu thức cuối của $x''$ vào phương trình \eqref{phuong trinh dong luc hoc 1}, ta thấy rằng phương trình này được nghiệm đúng. Phương trình \eqref{phuong trinh dao dong dieu hoa} cho sự phụ thuộc của ly độ $x$ vào thời gian, gọi là \textit{phương trình dao động}.
+
+\begin{dinhnghia}
+	Dao động mà phương trình có dạng \eqref{phuong trinh dao dong dieu hoa}, i.e., vế phải là hàm côsin hay sin của thời gian nhân với 1 hằng số, được gọi là \emph{dao động điều hòa}.
+\end{dinhnghia}
+Bằng phép biến đổi lượng giác, bất kỳ hàm côsin nào cũng có thể đổi thành hàm sin \& ngược lại, e.g., $A\cos(\omega t + \varphi) = A\sin\left(\omega t + \varphi + \frac{\pi}{2}\right)$. Vì thế cả hàm côsin \& hàm sin đều gọi chung là \textit{hàm dạng sin}.'' -- \cite[pp. 30--31]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Các đại lượng đặc trưng của dao động điều hòa}
+``Với giá trị của $A > 0$ trong \eqref{phuong trinh dao dong dieu hoa}:
+\begin{enumerate*}
+	\item[$\bullet$] $A$ được gọi là \textit{biên độ}, đó là giá trị cực đại của ly độ $x$ ứng với lúc $\cos(\omega t + \varphi) = 1$. Biên độ luôn luôn dương.
+	\item[$\bullet$] $(\omega t + \varphi)$ được gọi là \textit{pha} của dao động tại thời điểm $t$, pha chính là đối số của hàm côsin \& là 1 góc. Với 1 biên độ đã cho thì pha xác định ly độ $x$ của dao động.
+	\item[$\bullet$] $\varphi$ là \textit{pha ban đầu}, i.e., pha $\omega t + \varphi$ vào thời điểm $t = 0$.
+	\item[$\bullet$] $\omega$ gọi là \textit{tần số góc} của dao động. $\omega$ là tốc độ biến đổi của góc pha, có đơn vị là rad\texttt{/}s hoặc $\rm{}^\circ\texttt{/}s$. Với 1 con lắc lò xo đã cho thì tần số góc $\omega$ chỉ có 1 giá trị xác định cho bởi $\omega^2 = \frac{k}{m}$.
+\end{enumerate*}
+
+Nếu trong \eqref{phuong trinh dao dong dieu hoa}, $A < 0$ thì ta viết lại như sau: $x = A\cos(\omega t + \varphi) = -|A|\cos(\omega t + \varphi) = |A|\cos(\omega t + \varphi + \pi)$. Biên độ dao động điều hòa là $|A|$ (luôn luôn dương) \& pha ban đầu là $\varphi + \pi$.'' -- \cite[p. 31]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Đồ thị (ly độ) của dao động điều hòa}
+``Xuất phát từ phương trình dao động \eqref{phuong trinh dao dong dieu hoa}, cho $\varphi = 0$ để đơn giản. Lập bảng biến thiên của ly độ $x$ theo thời gian $t$ (xem Bảng \ref{tab:bien_thien_cua_x_theo_t}) \& vẽ đường biểu diễn $x$ theo $t$ (Fig. \ref{fig:duong_bieu_dien_dao_dong_dieu_hoa}).
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		$t$ & $0$ & $\frac{\pi}{2\omega}$ & $\frac{\pi}{\omega}$ & $\frac{3\pi}{2\omega}$ & $\frac{2\pi}{\omega}$ \\
+		\hline
+		$\omega t$ & $0$ & $\frac{\pi}{2}$ & $\pi$ & $\frac{3\pi}{2}$ & $2\pi$ \\
+		\hline
+		$x$ & $A$ & $0$ & $-A$ & $0$ & $A$ \\
+		\hline
+	\end{tabular}
+	\caption{Biến thiên của $x$ theo $t$, \cite[Bảng 6.1, p. 31]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{tab:bien_thien_cua_x_theo_t}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{duong_bieu_dien_dao_dong_dieu_hoa}
+	\caption{Đường biểu diễn $x = A\cos(\omega t + \varphi)$ với $\varphi = 0$. Trục hoành biểu diễn thời gian $t$, trục tung biểu diễn ly độ $x$. $A$ là giá trị cực đại của ly độ $x$, \cite[Hình 6.4, p. 31]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:duong_bieu_dien_dao_dong_dieu_hoa}
+\end{figure}
+Từ đồ thị ta thấy rằng, dao động điều hòa là chuyển động tuần hoàn.'' -- \cite[pp. 31--32]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Chu kỳ \& tần số của dao động điều hòa}
+``Từ đồ thị ly độ của dao động điều hòa (Fig. \ref{fig:duong_bieu_dien_dao_dong_dieu_hoa}) ta thấy rằng, nếu tịnh tiến đoạn đồ thị $\left(9,\frac{2\pi}{\omega}\right)$ 1 đoạn $\frac{2\pi}{\omega}$ theo trục $t$, ta sẽ được đoạn đồ thị tiếp theo. Như vậy, giai đoạn chuyển động từ thời điểm $t = 0$ đến thời điểm $t = \frac{2\pi}{\omega}$ là giai đoạn ngắn nhất được lặp lại liên tục \& mãi mãi, đó là 1 dao động toàn phần hay 1 chu trình. Thời gian $\frac{2\pi}{\omega}$ thực hiện dao động toàn phần là chu kỳ $T$ của dao động điều hòa.
+\begin{align}
+	\label{chu ky cua dao dong dieu hoa}
+	T = \frac{2\pi}{\omega}.
+\end{align}
+Tần số $f$ của dao động điều hòa, theo định nghĩa, là:
+\begin{align}
+	\label{tan so cua dao dong dieu hoa}
+	f = \frac{1}{T} = \frac{\omega}{2\pi}.
+\end{align}
+
+\begin{proof}[Chứng minh tính chất tuần hoàn]
+	Vào thời điểm $t$ bất kỳ, vật có ly độ cho bởi \eqref{phuong trinh dao dong dieu hoa}. Vào thời điểm $t + T$ vật có ly độ:
+	\begin{align*}
+		x(t + T) = x\left(t + \frac{2\pi}{\omega}\right) = A\cos\left[\omega\left(t + \frac{2\pi}{\omega}\right) + \varphi\right] = A\cos(\omega t + 2\pi + \varphi) = A\cos(\omega t + \varphi) = x(t),
+	\end{align*}
+	đúng bằng ly độ vào thời điểm $t$. Điều này chứng tỏ rằng $T = \frac{2\pi}{\omega}$ cũng là chu kỳ của dao động điều hòa.
+\end{proof}
+3 đại lượng: chu kỳ $T$, tần số $f$, \& tần số góc $\omega$ liên quan với nhau theo \eqref{chu ky cua dao dong dieu hoa}--\eqref{tan so cua dao dong dieu hoa} cùng đặc trưng cho 1 tính chất biến đổi nhanh hay chậm của pha. Chỉ dùng 1 trong 3 đại lượng đó là đủ.'' -- \cite[p. 32]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Vận tốc trong dao động điều hòa}
+``Vận tốc bằng đạo hàm của ly độ theo thời gian:
+\begin{align}
+	\label{van toc dao dong dieu hoa}
+	v = x' = -\omega A\sin(\omega t + \varphi) = \omega A\cos\left(\omega t + \varphi + \frac{\pi}{2}\right),
+\end{align}
+như vậy là vận tốc cũng biến đổi điều hòa \& có cùng chu kỳ với ly độ. Đồ thị vận tốc (đường đứt nét) đối chiếu với độ thị ly độ (đường liền nét) được vẽ trên Fig. \ref{fig:do_thi_van_toc_ly_do_thoi_gian}. Chú ý: Ở vị trí giới hạn $x = \pm A$ thì vận tốc có giá trị bằng $0$. Ở vị trí cân bằng $x = 0$ thì vận tốc $v$ có độ lớn cực đại bằng $\omega A$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{do_thi_van_toc_ly_do_thoi_gian}
+	\caption{Đồ thị vận tốc \& đồ thị ly độ (pha ban đầu $\varphi\ne 0$), \cite[Hình 6.5, p. 32]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:do_thi_van_toc_ly_do_thoi_gian}
+\end{figure}
+Trục hoành biểu diễn thời gian $t$. Nếu trục tung biểu diễn ly độ $x$ thì đường liền nét (2) biểu diễn $x$ theo $t$ (đồ thị ly độ). Nếu trục tung biểu diễn vận tốc $v$ thì đường đứt nét (1) biểu diễn $v$ theo $t$ (đồ thị vận tốc). Khi $t = t_1$ thì $x = 0$ thì $x = 0$, $v = v_{\max} = \omega A$. Khi $t = t_1 + \frac{T}{4} = t_2$ thì $x = x_{\max} = A$, $v = 0$.'' -- \cite[p. 32]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Gia tốc trong dao động điều hòa}
+``Gia tốc $a$ bằng đạo hàm của vận tốc theo thời gian:
+\begin{align}
+	\label{gia toc dao dong dieu hoa}
+	a = v' = x'' = -\omega^2A\cos(\omega t + \varphi) = -\omega^2x.
+\end{align}
+Gia tốc luôn luôn trái dấu với ly độ \& có độ lớn tỷ lệ với độ lớn của ly độ. Người ta nói rằng, gia tốc ngược pha với ly độ.'' ``Từ \eqref{phuong trinh dao dong dieu hoa} \& \eqref{van toc dao dong dieu hoa}, ta thấy rằng ly độ $x$ \& vận tốc $v$ đều là hàm côsin với cùng tần số góc $\omega$, pha ban đầu của $v$ là $\varphi + \frac{\pi}{2}$, lớn hơn pha ban đầu của $x$. Người ta nói rằng vận tốc $v$ sớm pha $\frac{\pi}{2}$ so với ly độ $x$, hoặc ly độ $x$ trễ pha $\frac{\pi}{2}$ so với vận tốc $v$.'' -- \cite[p. 33]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Biểu diễn dao động điều hòa bằng vector quay}
+``Để biểu diễn dao động điều hòa \eqref{phuong trinh dao dong dieu hoa} người ta dùng \textit{1 vector $\overrightarrow{OM}$ có độ dài là $A$ (biên độ), quay đều quanh điểm $O$ trong mặt phẳng chứa trục $Ox$ với tốc độ góc là $\omega$. Ở thời điểm ban đầu $t = 0$, góc giữa trục $Ox$ \& $\overrightarrow{OM}$ là $\varphi$ (pha ban đầu)} (Fig. \ref{fig:vector_quay_vao_thoi_diem_0}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{vector_quay_vao_thoi_diem_0}
+	\caption{Vector quay vào thời điểm $t = 0$, \cite[Hình 6.6, p. 33]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:vector_quay_vao_thoi_diem_0}
+\end{figure}
+Ở thời điểm $t$, góc giữa trục $Ox$ \& $\overrightarrow{OM}$ sẽ là $\omega t + \varphi$ (Fig. \ref{fig:vector_quay_vao_thoi_diem_bat_ky}), góc đó chính là pha của dao động.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{vector_quay_vao_thoi_diem_bat_ky}
+	\caption{Vector quay vào thời điểm $t$ bất kỳ, \cite[Hình 6.7, p. 33]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:vector_quay_vao_thoi_diem_bat_ky}
+\end{figure}
+Độ dài đại số của hình chiếu vector quay $\overrightarrow{OM}$ trên trục $x$ sẽ là:
+\begin{align}
+	\label{do dai dai so cua hinh chieu vector quay tren truc x}
+	\operatorname{ch}_x\overrightarrow{OM} = \overline{OP} = A\cos(\omega t + \varphi),
+\end{align}
+đó chính là biểu thức trong vế phải của \eqref{phuong trinh dao dong dieu hoa} \& là ly độ $x$ của dao động. Như vậy: \textit{Độ dài đại số của hình chiếu trên trục $x$ của vector quay $\overrightarrow{OM}$ biểu diễn dao động điều hòa chính là ly độ $x$ của dao động}. Đẳng thức \eqref{do dai dai so cua hinh chieu vector quay tren truc x} cũng thể hiện mối quan hệ giữa dao động điều hòa \& chuyển động tròn đều: Điểm $P$ dao động điều hòa trên trục $Ox$ với biên độ $A$ \& tần số góc $\omega$ có thể coi như hình chiếu lên $Ox$ của 1 điểm $M$ chuyển động tròn đều với tốc độ góc $\omega$ trên quỹ đạo tròn tâm $O$, bán kính $A$. Trục $Ox$ trùng với 1 đường kính của quỹ đạo đó.'' -- \cite[p. 33]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Điều kiện ban đầu: sự kích thích dao động}
+``Xét 1 vật dao động, e.g., vật nặng trong con lắc lò xo. Trong phần trước, ta đã tìm được phương trình dao động của vật, trong đó có 2 hằng số $A$ \& $\varphi$. Trong 1 chuyển động cụ thể thì $A$ \& $\varphi$ có giá trị xác định, tùy theo cách kích thích dao động. Giả thiết rằng vật nặng đứng yên ở vị trí cân bằng, nó sẽ đứng yên mãi. Ta có thể kích thích dao động của vật bằng cách đưa nó ra khỏi vị trí cân bằng 1 đoạn $x_0$ rồi thả tự do (vận tốc ban đầu bằng $0$). Dưới tác dụng của lực đàn hồi của lò xo, vật sẽ dao động. Nếu chọn gốc thời gian $t = 0$ là lúc thả vật tự do ở ly độ $x_0$, ta sẽ có \textit{điều kiện ban đầu} sau đây: $x(0) = x_0$ \& $v(0) = 0$. Cho $t = 0$ trong công thức \eqref{phuong trinh dao dong dieu hoa} của ly độ $x$ \& trong công thức \eqref{van toc dao dong dieu hoa} của vận tốc, thì: $x(0) = A\cos\varphi = x_0$, $v(0) = -\omega A\sin\varphi = 0$. Từ phương trình sau, ta suy ra $\sin\varphi = 0$, $\varphi = 0$. Thay vào phương trình trước, ta có $A = x_0$. Vậy, phương trình của dao động điều hòa được kích thích như trên sẽ là: $x = x_0\cos\omega t$.'' -- \cite[pp. 33--34]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Cân ở nơi không có trọng lượng}
+``Để biết diễn biến sức khỏe của nhà du hành vũ trụ, người ta theo dõi xem nhà du hành tăng cân hay giảm cân. Khi tập luyện trên mặt đất, bác sĩ dùng 1 cái cân thông thường để đo trọng lượng nhà du hành, rồi từ đó suy ra khối lượng. Khi bay trên con tàu vũ trụ, nhà du hành ở trạng thái không trọng lượng, không có cân nào hoạt động được nữa. \textit{Vậy làm thế nào để đo khối lượng nhà du hành?} Lúc này phải dựa vào quán tính để đo khối lượng. Nhà du hành ngồi \& buộc mình vào 1 cái ghế, ghế gắn vào đầu 1 lò xo, đầu kia của lò xo gắn chặt vào 1 điểm. Cho ghế dao động ở đầu lò xo. 1 đồng hồ điện tử đo chu kỳ của dao động. Từ chu kỳ dao động có thể tính được khối lượng của nhà du hành.'' -- \cite[p. 35]{SGK_Vat_Ly_12_nang_cao}
 
 %------------------------------------------------------------------------------%
 
