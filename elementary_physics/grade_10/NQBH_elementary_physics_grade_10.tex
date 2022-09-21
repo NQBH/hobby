@@ -1,4 +1,4 @@
-\documentclass[oneside]{book}
+\documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -47,8 +47,10 @@
 \date{\today}
 
 \begin{document}
-\frontmatter
 \maketitle
+\begin{abstract}
+	Tóm tắt kiến thức Vật lý lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
+\end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
@@ -56,28 +58,22 @@
 
 %------------------------------------------------------------------------------%
 
-\mainmatter
-
-\chapter*{Preface}
-
-Tóm tắt kiến thức Vật lý lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
-
 ``Vật lý được biết đến như là 1 trong những ngành của Khoa học tự nhiên xuất hiện sớm nhất trong lịch sử loài người. Vật lý nghiên cứu sự vận hành của vật chất, năng lượng cấu thành vũ trụ \& sự tương tác giữa chúng. Những kiến thức vật lý đã, đang \& sẽ có tác động mạnh mẽ vào sự phát triển của mọi lĩnh vực trong cuộc sống, công nghệ, khoa học kỹ thuật.'' -- \cite[p. 3]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Mở Đầu}
+\section{Mở Đầu}
 
-\section{Khái Quát về Môn Vật Lý}
+\subsection{Khái Quát về Môn Vật Lý}
 \textbf{Nội dung.} \textit{Đối tượng nghiên cứu, mục tiêu \& phương pháp nghiên cứu của vật lý; ảnh hưởng của Vật lý đối với cuộc sống \& sự phát triển của khoa học, công nghệ \& kỹ thuật}.
 
 \begin{cauhoi}[What? Why?\texttt{/}For what? How?]
 	Vật lý nghiên cứu gì? Nghiên cứu vật lý để làm gì? Nghiên cứu vật lý bằng cách nào?
 \end{cauhoi}
 
-\subsection{Đối tượng -- Mục tiêu -- Phương pháp nghiên cứu vật lý}
+\subsubsection{Đối tượng -- Mục tiêu -- Phương pháp nghiên cứu vật lý}
 
-\subsubsection{Đối tượng nghiên cứu của Vật lý}
+\paragraph{Đối tượng nghiên cứu của Vật lý}
 ``Vật lý là môn khoa học tìm hiểu về thế giới tự nhiên. Trong tiếng Hy Lạp, ``Vật lý'' cũng có nghĩa là ``kiến thức về tự nhiên''. Ngày nay, Vật lý được phân làm rất nhiều lĩnh vực, nhiều phân ngành. Khi xem xét nội dung nghiên cứu thuộc các lĩnh vực \& phân ngành của Vật lý, ta có kết luận sau:
 
 \begin{quotation}
@@ -85,7 +81,7 @@ Tóm tắt kiến thức Vật lý lớp 10 theo chương trình giáo dục c�
 \end{quotation}
 Vào năm 1905, nhà vật lý vĩ đại Albert Einstein (1879--1955) đã đưa ra được biểu thức mô tả mối liên hệ giữa năng lượng \& khối lượng $E = mc^2$ \cite[Hình 1.1, p. 5]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}.'' -- \cite[p. 5]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Mục tiêu của vật lý}
+\paragraph{Mục tiêu của vật lý}
 ``Theo các Từ điển bách khoa về Khoa học:
 
 \begin{quotation}
@@ -95,12 +91,12 @@ Vào năm 1905, nhà vật lý vĩ đại Albert Einstein (1879--1955) đã đư
 
 Học tập môn Vật lý giúp học sinh hiểu được các \textit{quy luật của tự nhiên}, vận dụng kiến thức vào cuộc sống, từ đó hình thành các năng lực khoa học \& công nghệ. Những người có năng khiếu \& đam mê có thể học tiếp lên các bậc cao hơn để trở thành các nhà khoa học trong lĩnh vực Vật lý.'' -- \cite[p. 6]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Phương pháp nghiên cứu của Vật lý}
+\paragraph{Phương pháp nghiên cứu của Vật lý}
 ``Phương pháp nghiên cứu của Khoa học nói chung \& Vật lý nói riêng được hình thành qua các thời kỳ phát triển của nền văn minh nhân loại, bao gồm 2 phương pháp chính: \textit{phương pháp thực nghiệm} \& \textit{phương pháp lý thuyết}.'' -- \cite[p. 6]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\paragraph{Phương pháp thực nghiệm.} ``Thí nghiệm về sự rơi của vật được thực hiện bởi Galileo Galilei tại đỉnh tháp nghiêng Pisa cao 57 m (nước Ý) (\cite[Hình 1.3: \textsf{Galileo Galilei (1564--1642) \& tháp nghiêng Pisa.}, p. 6]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}) là 1 ví dụ minh họa cho phương pháp thực nghiệm. Tại đây, Galileo Galilei đã thả rơi 2 vật có khối lượng khác nhau (nhưng cùng hình dạng). Kết quả cho thấy 2 vật rơi \& chạm đất cùng lúc. Nhờ kết quả từ thí nghiệm này, Galileo Galilei đã bác bỏ được nhận định của Aristotle (384 BC--322) (1 triết học gia lỗi lạc thời Hy Lạp cổ đại) cho rằng việc vật nặng rơi nhanh hơn vật nhẹ là bản chất tự nhiên của các vật.'' -- \cite[pp. 6--7]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+\subparagraph{Phương pháp thực nghiệm.} ``Thí nghiệm về sự rơi của vật được thực hiện bởi Galileo Galilei tại đỉnh tháp nghiêng Pisa cao 57 m (nước Ý) (\cite[Hình 1.3: \textsf{Galileo Galilei (1564--1642) \& tháp nghiêng Pisa.}, p. 6]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}) là 1 ví dụ minh họa cho phương pháp thực nghiệm. Tại đây, Galileo Galilei đã thả rơi 2 vật có khối lượng khác nhau (nhưng cùng hình dạng). Kết quả cho thấy 2 vật rơi \& chạm đất cùng lúc. Nhờ kết quả từ thí nghiệm này, Galileo Galilei đã bác bỏ được nhận định của Aristotle (384 BC--322) (1 triết học gia lỗi lạc thời Hy Lạp cổ đại) cho rằng việc vật nặng rơi nhanh hơn vật nhẹ là bản chất tự nhiên của các vật.'' -- \cite[pp. 6--7]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\paragraph{Phương pháp lý thuyết.} ``Trong quá trình nghiên cứu khoa học, việc hình thành các giả thuyết khoa học la vô cùng quan trọng. Lý thuyết vật lý được xây dựng dựa trên các quan sát ban đầu \& trực giác của các nhà vật lý, trong nhiều trường hợp có tính định hướng \& dẫn dắt cho thực nghiệm kiểm chứng. 1 ví dụ cụ thể cho phương pháp lý thuyết trong Vật lý là công trình dự đoán sự tồn tại của Hải Vương tinh trong hệ Mặt Trời (Fig. \ref{fig:cac hanh tinh trong he Mat Troi}), được thực hiện độc lập bởi các nhà vật lý Johann Gottfried Galle (1812--1910), Urbain Jean Joseph Le Verrier (1811--1877) \& John Couch Adams (1819--1892) vào thế kỷ XIX.
+\subparagraph{Phương pháp lý thuyết.} ``Trong quá trình nghiên cứu khoa học, việc hình thành các giả thuyết khoa học la vô cùng quan trọng. Lý thuyết vật lý được xây dựng dựa trên các quan sát ban đầu \& trực giác của các nhà vật lý, trong nhiều trường hợp có tính định hướng \& dẫn dắt cho thực nghiệm kiểm chứng. 1 ví dụ cụ thể cho phương pháp lý thuyết trong Vật lý là công trình dự đoán sự tồn tại của Hải Vương tinh trong hệ Mặt Trời (Fig. \ref{fig:cac hanh tinh trong he Mat Troi}), được thực hiện độc lập bởi các nhà vật lý Johann Gottfried Galle (1812--1910), Urbain Jean Joseph Le Verrier (1811--1877) \& John Couch Adams (1819--1892) vào thế kỷ XIX.
 
 \begin{figure}[H]
 	\centering
@@ -121,7 +117,7 @@ Việc hình thành lý thuyết dẫn dắt các thực nghiệm kiểm chứng
 	\item 2 phương pháp hỗ trợ cho nhau, trong đó phương pháp thực nghiệm có tính quyết định.'' -- \cite[pp. 7--8]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{itemize}
 
-\paragraph{Tìm hiểu thế giới tự nhiên dưới góc độ vật lý.}
+\subparagraph{Tìm hiểu thế giới tự nhiên dưới góc độ vật lý.}
 ``Quá trình nghiên cứu của các nhà khoa học nói chung \& nhà vật lý nói riêng chính là quá trình tìm hiểu thế giới tự nhiên. Quá trình này có tiến trình gồm các bước như sau:
 \begin{itemize}
 	\item Quan sát hiện tượng để xác định đối tượng nghiên cứu.
@@ -135,9 +131,9 @@ Việc hình thành lý thuyết dẫn dắt các thực nghiệm kiểm chứng
 	Trong mỗi bước của tiến trình, công cụ toán học có tính định hướng \& hỗ trợ các tính toán, đặc biệt là đối với Vật lý hiện đại. Để đạt hiệu quả cao, quá trình học tập môn Vật lý ở trường Trung học phổ thông cần được thực hiện theo tiến trình tương tự, trong đó có sự kết hợp hài hòa giữa phương pháp thực nghiệm \& phương pháp lý thuyết.'' -- \cite[p. 9]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{luuy}
 
-\subsection{Ảnh hưởng của Vật lý đến 1 số lĩnh vực trong đời sống \& kỹ thuật}
+\subsubsection{Ảnh hưởng của Vật lý đến 1 số lĩnh vực trong đời sống \& kỹ thuật}
 
-\subsubsection{Ảnh hưởng của Vật lý trong 1 số lĩnh vực}
+\paragraph{Ảnh hưởng của Vật lý trong 1 số lĩnh vực}
 \begin{itemize}
 	\item ``\textbf{Thông tin liên lạc.} Ngày nay, nền tảng Internet kết hợp với \textit{điện thoại thông minh} \& \textit{1 số thiết bị công nghệ} đã tạo ra 1 phương tiện thông tin liên lạc vô cùng hữu ích. Tin tức, tiếng nói, hình ảnh được truyền đi nhanh chóng đến mọi nơi trên thế giới. Nhờ đó, khoảng cách địa lý không còn là trở ngại \& thế giới hiện nay ngày càng trở nên ``phẳng'' hơn.
 	\item \textbf{Y tế.} Các phương pháp chẩn đoán \& chữa bệnh có áp dụng kiến thức vật lý như \textit{phép nội soi, chụp X-quang, chụp cắt lớp vi tính (CT), chụp cộng hưởng từ (MRI), xạ trị}, $\ldots$ đã giúp cho việc chẩn đoán \& chữa trị của bác sĩ đạt hiệu quả cao. Nhờ đó, sức khỏe của con người ngày càng tăng. Tuổi thọ trung bình của người Việt Nam vào năm 2020 là 73.7 tuổi (theo Cục thống kê).
@@ -156,18 +152,18 @@ Việc hình thành lý thuyết dẫn dắt các thực nghiệm kiểm chứng
 
 %------------------------------------------------------------------------------%
 
-\section{Vấn Đề An Toàn Trong Vật Lý}
+\subsection{Vấn Đề An Toàn Trong Vật Lý}
 \textbf{Nội dung.} \textit{Quy tắc an toàn trong nghiên cứu \& học tập môn Vật lý}.
 
-\subsection{Vấn đề an toàn trong nghiên cứu \& học tập Vật lý}
+\subsubsection{Vấn đề an toàn trong nghiên cứu \& học tập Vật lý}
 
-\subsubsection{Những quy tắc an toàn trong nghiên cứu \& học tập môn Vật lý}
+\paragraph{Những quy tắc an toàn trong nghiên cứu \& học tập môn Vật lý}
 
-\paragraph{Vấn đề 1: \textit{Phóng xạ}.} ``Hiện tượng phóng xạ tự nhiên được nhà vật lý người Pháp Becquerel (1852--1908) tình cờ khám phá ra vào cuối thế kỷ XIX \& được phát triển nhờ những nghiên cứu của Marie Curie -- người phụ nữ đầu tiên đoạt 2 giải Nobel (Vật lý \& Hóa học). Việc sử dụng chất phóng xạ không đúng cách sẽ ảnh hưởng nghiêm trọng đến sức khỏe con người. Đã có những trường hợp tử vong bởi phóng xạ do chiến tranh, do vô ý phơi nhiễm hay do bị đầu độc.
+\subparagraph{Vấn đề 1: \textit{Phóng xạ}.} ``Hiện tượng phóng xạ tự nhiên được nhà vật lý người Pháp Becquerel (1852--1908) tình cờ khám phá ra vào cuối thế kỷ XIX \& được phát triển nhờ những nghiên cứu của Marie Curie -- người phụ nữ đầu tiên đoạt 2 giải Nobel (Vật lý \& Hóa học). Việc sử dụng chất phóng xạ không đúng cách sẽ ảnh hưởng nghiêm trọng đến sức khỏe con người. Đã có những trường hợp tử vong bởi phóng xạ do chiến tranh, do vô ý phơi nhiễm hay do bị đầu độc.
 
 Để hạn chế những rủi ro \& sự nguy hiểm do chất phóng xạ gây ra, chúng ta phải đảm bảo 1 số quy tắc an toàn như: giảm thời gian tiếp xúc với nguồn phóng xạ, tăng khoảng cách từ ta đến nguồn phóng xạ, đảm bảo che chắn những cơ quan trọng yếu của cơ thể. Ngày nay, các chất phóng xạ đã được ứng dụng rất rộng rãi trong đời sống: sử dụng trong y học để chẩn đoán hình ảnh \& điều trị ung thư, sử dụng trong nông nghiệp để tạo đột biến cải thiện giống cây trồng, sử dụng trong công nghiệp để phát hiện các khiếm khuyết trong vật liệu, sử dụng trong khảo cổ để xác định tuổi của các mẫu vật, $\ldots$'' -- \cite[pp. 12--13]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\paragraph{Vấn đề 2: \textit{An toàn trong phòng thí nghiệm}.} ``Trong Vật lý, việc tiến hành các hoạt động học trong phòng thí nghiệm nhằm khảo sát, kiểm chứng kiến thức có vai trò quan trọng trong việc phát triển năng lực tìm hiểu thế giới tự nhiên của học sinh. Tuy nhiên, nếu những vấn đề an toàn không được đảm bảo, quá trình tổ chức hoạt động học tập trong phòng thí nghiệm có thể xảy ra nhiều sự cố nguy hiểm cho học sinh. E.g., học sinh có thể bị bỏng khi xảy ra sự cố chập điện hoặc cháy nổ do lửa, hóa chất. Học sinh cũng có thể bị chấn thương cơ thể khi sử dụng những vật sắc nhọn hoặc thủy tinh trong quá trình tiến hành thí nghiệm không đúng cách. Ngoài ra, những tai nạn liên quan đến điện giật thường gây ra hậu quả nghiêm trọng khi học sinh không đảm bảo những nguyên tắc an toàn khi sử dụng điện. Từ đó, ta thấy rằng trong 1 số trường hợp, đối tượng hoặc hiện tượng cần nghiên cứu có thể đem đến những rủi ro, gây nguy hiểm đến sức khỏe của học sinh \& nhà nghiên cứu.'' -- \cite[pp. 13--14]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
+\subparagraph{Vấn đề 2: \textit{An toàn trong phòng thí nghiệm}.} ``Trong Vật lý, việc tiến hành các hoạt động học trong phòng thí nghiệm nhằm khảo sát, kiểm chứng kiến thức có vai trò quan trọng trong việc phát triển năng lực tìm hiểu thế giới tự nhiên của học sinh. Tuy nhiên, nếu những vấn đề an toàn không được đảm bảo, quá trình tổ chức hoạt động học tập trong phòng thí nghiệm có thể xảy ra nhiều sự cố nguy hiểm cho học sinh. E.g., học sinh có thể bị bỏng khi xảy ra sự cố chập điện hoặc cháy nổ do lửa, hóa chất. Học sinh cũng có thể bị chấn thương cơ thể khi sử dụng những vật sắc nhọn hoặc thủy tinh trong quá trình tiến hành thí nghiệm không đúng cách. Ngoài ra, những tai nạn liên quan đến điện giật thường gây ra hậu quả nghiêm trọng khi học sinh không đảm bảo những nguyên tắc an toàn khi sử dụng điện. Từ đó, ta thấy rằng trong 1 số trường hợp, đối tượng hoặc hiện tượng cần nghiên cứu có thể đem đến những rủi ro, gây nguy hiểm đến sức khỏe của học sinh \& nhà nghiên cứu.'' -- \cite[pp. 13--14]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 ``Khi nghiên cứu \& học tập Vật lý, ta cần phải:
 \begin{itemize}
@@ -179,12 +175,12 @@ Việc hình thành lý thuyết dẫn dắt các thực nghiệm kiểm chứng
 
 %------------------------------------------------------------------------------%
 
-\section{Đơn Vị \& Sai Số Trong Vật Lý}
+\subsection{Đơn Vị \& Sai Số Trong Vật Lý}
 \textbf{Nội dung.} \textit{Đơn vị \& thứ nguyên, các loại sai số đơn giản \& cách hạn chế}.
 
-\subsection{Đơn vị \& thứ nguyên trong vật lý}
+\subsubsection{Đơn vị \& thứ nguyên trong vật lý}
 
-\subsubsection{Hệ đơn vị SI, đơn vị cơ bản \& đơn vị dẫn suất}
+\paragraph{Hệ đơn vị SI, đơn vị cơ bản \& đơn vị dẫn suất}
 ``Tập hợp của đơn vị được gọi là hệ đơn vị. Trong khoa học có rất nhiều hệ đơn vị được sử dụng, trong đó thông dụng nhất là hệ đơn vị đo lường quốc tế \textbf{SI} (\textbf{S}yst\`eme \textbf{I}nternational d'unit\'es) được xây dựng trên cơ sở của \textit{7 đơn vị cơ bản} (Bảng \ref{tab:cac don vi co ban trong he SI}).
 \begin{table}[H]
 	\centering
@@ -234,7 +230,7 @@ Khi số đo của đại lượng đang xem xét là 1 bội số hoặc ước
 \end{table}
 ``Ngoài 7 đơn vị cơ bản, những đơn vị còn lại được gọi là \textit{đơn vị dẫn xuất}. Mọi đơn vị dẫn xuất đều có thể phân tích thành các đơn vị cơ bản dựa vào mối liên hệ giữa các đại lượng tương ứng.'' -- \cite[p. 16]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Thứ nguyên}
+\paragraph{Thứ nguyên}
 ``\textit{Thứ nguyên} của 1 đại lượng là quy luật nêu lên sự phụ thuộc của đơn vị đo đại lượng đó vào các đơn vị cơ bản. Thứ nguyên của 1 đại lượng $X$ được biểu diễn dưới dạng $[X]$. Thứ nguyên của 1 số đại lượng cơ bản thường sử dụng được thể hiện trong Bảng \ref{tab:thu nguyen cua 1 so dai luong co ban}. 1 đại lượng vật lý có thể được biểu diễn bằng nhiều đơn vị khác nhau nhưng chỉ có 1 thứ nguyên duy nhất. 1 số đại lượng vật lý có thể có cùng thứ nguyên. E.g., Tọa độ, quãng đường đi được có thể được biểu diễn bằng đơn vị mét, cây số, hải lý, feet, dặm, $\ldots$ nhưng chỉ có 1 thứ nguyên $L$. Tốc độ, vận tốc có thể được biểu diễn bằng đơn vị m\texttt{/}s, km\texttt{/}h, dặm\texttt{/}giờ nhưng chỉ có 1 thứ nguyên $\rm LT^{-1}$.'' -- \cite[p. 16]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 \begin{table}[H]
@@ -254,20 +250,20 @@ Khi số đo của đại lượng đang xem xét là 1 bội số hoặc ước
 	``Trong các biểu thức vật lý: Các số hạng trong phép cộng (hoặc trừ) phải có cùng thứ nguyên. 2 vế của 1 biểu thức vật lý phải có cùng thứ nguyên.'' -- \cite[p. 17]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{luuy}
 
-\subsubsection{Vận dụng mối liên hệ giữa đơn vị dẫn xuất tới 7 đơn vị cơ bản của hệ SI}
+\paragraph{Vận dụng mối liên hệ giữa đơn vị dẫn xuất tới 7 đơn vị cơ bản của hệ SI}
 ``Trong hệ SI, $s,v$, \& $t$ lần lượt có đơn vị là $\rm m,ms^{-1},s$.'' ``Hiện nay có những đơn vị thường được dùng trong đời sống như picomet (pm), miliampe (mA) (e.g., kích thước của 1 hạt bụi là khoảng $2.5$ pm; cường độ dòng điện dùng trong châm cứu $\approx2$ mA).'' ``Lực cản không khí tác dụng lên vật phụ thuộc vào vận tốc chuyển động của vật theo công thức $F = -kv^2$. Thứ nguyên của lực là $MLT^{-2}$.'' -- \cite[p. 17]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 ``Sep 23, 1999, tàu quỹ đạo thăm dò khí hậu của hỏa tinh có trị giá 125 triệu USD của NASA đã bị phá hủy hoàn toàn khi không đáp ứng được độ cao cần thiết so với bề mặt Hỏa tinh. Sau khi tiến hành điều tra, các nhà khoa học của NASA đã phát hiện ra nguyên nhân của vụ tại nạn chính là sự thiếu thống nhất trong việc chuyển đổi giữa hệ đơn vị SI \& hệ đơn vị của Anh đối với nhóm thiết kế \& nhóm thực hiện nhiệm vụ phóng tàu. Đây là 1 trong những ví dụ cho thấy tầm quan trọng của việc xác định chính xác đơn vị khi tiến hành tính toán \& đo đạc, từ đó giúp cho chúng ta phòng tránh được những thiệt hại đáng tiếc.'' -- \cite[p. 18]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsection{Sai số trong phép đo \& cách hạn chế}
+\subsubsection{Sai số trong phép đo \& cách hạn chế}
 
-\subsubsection{Các phép đo trong Vật lý}
+\paragraph{Các phép đo trong Vật lý}
 
 \begin{dinhnghia}[Phép đo các đại lượng vật lý]
 	``\emph{Phép đo các đại lượng vật lý} là phép so sánh chúng với đại lượng cùng loại được quy ước làm đơn vị. \emph{Phép đo trực tiếp}: giá trị của đại lượng cần đo được đọc trực tiếp trên dụng cụ đo (e.g., đo khối lượng bằng cân, đo thể tích bằng bình chia độ). \emph{Phép đo gián tiếp}: giá trị của đại lượng cần đo được xác định thông qua các đại lượng được đo trực tiếp (e.g., đo khối lượng riêng).'' -- \cite[p. 18]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{dinhnghia}
 
-\subsubsection{Các loại sai số của phép đo}
+\paragraph{Các loại sai số của phép đo}
 ``Trong quá trình thực hiện phép đo, chúng ta không thể tránh khỏi sự chênh lệch giữa giá trị thật \& số đo (giá trị đo được). Độ chênh lệch này gọi là \textit{sai số}. Như vậy, mọi phép đo đều tồn tại sai số. Nguyên nhân gây ra sai số là do giới hạn về độ chính xác của dụng cụ đo, do kỹ thuật đo, quy trình đo, chủ quan của người đo, $\ldots$ Xét theo nguyên nhân thì sai số của phép đo được phân thành 2 loại là \textit{sai số hệ thống} \& \textit{sai số ngẫu nhiên}.'' -- \cite[p. 19]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 \begin{dinhnghia}[Sai số hệ thống]
@@ -280,14 +276,14 @@ Sai số hệ thống thường xuất phát từ dụng cụ đo. E.g., kết q
 \end{dinhnghia}
 ``E.g., khi đo thời gian rơi của 1 vật bằng đồng hồ bấm giây, phản xạ của người đo sẽ gây ra sai số ngẫu nhiên. Khi đo khối lượng của 1 vật nhỏ bằng 1 cân hiện số có độ nhạy cao, các yếu tố khách quan như gió, bụi cũng có thể gây ra sai số ngẫu nhiên. Sai số ngẫu nhiên có thể được hạn chế bằng cách thực hiện phép đo nhiều lần \& lấy giá trị trung bình để hạn chế sự phân tán của số liệu đo.'' -- \cite[p. 20]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Cách biểu diễn sai số của phép đo}
+\paragraph{Cách biểu diễn sai số của phép đo}
 ``Khi tiến hành đo đạc, giá trị $x$ của 1 đại lượng vật lý thường được ghi dưới dạng $x = \overline{x}\pm\Delta x$ với $\overline{x}$ là \textit{giá trị trung bình} của đại lượng cần đo khi tiến hành phép đo nhiều lần: $\overline{x}\coloneqq\frac{1}{n}\sum_{i=1}^n x_i$.  Giá trị trung bình có thể xem là giá trị gần đúng nhất với giá trị thật của đại lượng vật lý cần đo. Sai số của phép đo có thể biểu diễn dưới dạng:
 \begin{itemize}
 	\item \textbf{Sai số tuyệt đối} là $\Delta x$ trong công thức $x = \overline{x}\pm\Delta x$. \textit{Sai số tuyệt đối ứng với mỗi lần đo} được xác định bằng trị tuyệt đối của hiệu giữa giá trị trung bình \& giá trị của mỗi lần đo. $\Delta x_i\coloneqq|\overline{x} - x_i|$ với $x_i$ là \textit{giá trị đo lần thứ $i$}. \textit{Sai số tuyệt đối trung bình} của $n$ lần đo được xác định theo công thức: $\overline{\Delta x} = \frac{1}{n}\sum_{i=1}^n \Delta x_i$. \textit{Sai số tuyệt đối của phép đo cho biết phạm vi biến thiên của giá trị đo được \& bằng tổng của sai số ngẫu nhiên \& sai số dụng cụ}: $\Delta x = \overline{\Delta x} + \Delta x_{\rm dc}$, trong đó \textit{sai số dụng cụ} $\Delta x_{\rm dc}$ thường được xem có giá trị bằng 1 \textit{nửa độ chia nhỏ nhất} đối với những dụng cụ đơn giản như thước kẻ, cân bàn, bình chia độ, $\ldots$ Trong nhiều trường hợp, sai số dụng cụ thường được cung cấp chính xác bởi nhà sản xuất.
 	\item \textbf{Sai số tương đối} được xác định bằng tỷ số giữa sai số tuyệt đối \& giá trị trung bình của đại lượng cần đo theo công thức: $\delta x = \frac{\Delta x}{\overline{x}}\cdot 100\%$. Sai số tương đối cho biết mức độ chính xác của phép đo.'' -- \cite[p. 21]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{itemize}
 
-\subsubsection{Cách xác định sai số trong phép đo gián tiếp}
+\paragraph{Cách xác định sai số trong phép đo gián tiếp}
 ``Trong đa số trường hợp, 1 đại lượng cần đo (có giá trị $F$) được xác định gián tiếp thông qua việc đo trực tiếp những đại lượng khác (có giá trị $x,y,z,\ldots$). E.g., khối lượng riêng được xác định bằng thương số của khối lượng \& thể tích, chu vi hình chữ nhật được xác định bằng 2 lần tổng của 2 cạnh liên tiếp. Nguyên tắc xác định sai số trong phép đo gián tiếp như sau:
 \begin{enumerate*}
 	\item[$\bullet$] Sai số tuyệt đối của 1 tổng hay hiệu bằng tổng sai số tuyệt đối của các số hạng: $F = x\pm y\mp z\ldots\Rightarrow\Delta F = \Delta x + \Delta y + \Delta z\ldots$.
@@ -299,26 +295,26 @@ Sai số hệ thống thường xuất phát từ dụng cụ đo. E.g., kết q
 \end{luuy}
 Các chữ số có nghĩa bao gồm: Các chữ số khác $0$, các chữ số $0$ nằm giữa 2 chữ số $\ne 0$ hoặc nằm bên phải của dấu thập phân \& 1 chữ số $\ne 0$.'' -- \cite[pp. 21--22]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\section{Tổng Kết Chương}
+\subsection{Tổng Kết Chương}
 ``\textbf{1.} \textsc{Đối tượng nghiên cứu của vật lý.} Các dạng vận động của vật chất \& năng lượng. \textbf{2.} \textsc{Mục tiêu nghiên cứu của vật lý.} Tìm được quy luật tổng quát chi phối sự biến đổi \& vận hành của vật chất, năng lượng. \textbf{3.} \textsc{Phương pháp nghiên cứu của vật lý.} Có 2 phương pháp nghiên cứu vật lý: phương pháp thực nghiệm \& phương pháp lý thuyết. \textbf{4.} \textsc{Ảnh hưởng của vật lý.} Ngày càng rộng khắp, bao trùm mọi lĩnh vực: đời sống, công nghiệp, nông nghiệp, nghiên cứu khoa học. \textbf{5.} \textsc{Vấn đề an toàn trong nghiên cứu \& học tập môn Vật lý.} Hiểu các rủi ro, thực hieej các biện pháp an toàn cho bản thân, cộng đồng, môi trường theo quy định của nơi học tập, làm việc. \textbf{6.} \textsc{Các loại sai số \& cách hạn chế.} Sai số của phép đo gồm sai số hệ thống \& sai số ngẫu nhiên. Sai số của phép đo có thể biểu diễn dưới dạng \textit{sai số tuyệt đối} \& \textit{sai số tương đối}. Hạn chế sai số: thao tác đúng cách, lựa chọn thiết bị phù hợp, tiến hành đo nhiều lần.'' -- \cite[pp. 23]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Mô Tả Chuyển Động}
+\section{Mô Tả Chuyển Động}
 
-\section{Chuyển Động Thẳng}
+\subsection{Chuyển Động Thẳng}
 \textbf{Nội dung.} \textit{Tốc độ trung bình, quãng đường đi được, độ dịch chuyển, vận tốc, đồ thị độ dịch chuyển--thời gian}.
 
-\subsection{Tốc độ -- Speed}
+\subsubsection{Tốc độ -- Speed}
 
-\subsubsection{1 số khái niệm cơ bản trong chuyển động}
+\paragraph{1 số khái niệm cơ bản trong chuyển động}
 \begin{itemize}
 	\item ``\textbf{Vị trí.} Để xác định vị trí của vật, ta cần phải chọn 1 vật khác làm gốc. Sau đó gắn vào vật này 1 trục $Ox$ (chuyển động thẳng) hoặc hệ tọa độ $Oxy$ (chuyển động trong mặt phẳng). Khi đó, vị trí của vật có thể được xác định bởi tọa độ $x = \overline{OM}$ hoặc $(x,y)$. Vật làm gốc, hệ trục tọa độ kết hợp với đồng hồ đo thời gian tạo thành \textit{hệ quy chiếu}.
 	\item \textbf{Thời điểm.} Thời gian có thể biểu diễn thành 1 trục gọi là \textit{trục thời gian}. Chọn 1 điểm nhất định làm gốc thời gian thì mọi điểm khác trên trục thời gian được gọi là \textit{thời điểm}.
 	\item \textbf{Quỹ đạo.} Đường nối những vị trí liên tiếp của vật theo thời gian trong quá trình chuyển động.'' -- \cite[pp. 24]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{itemize}
 
-\subsubsection{Tốc độ trung bình -- Averaged speed}
+\paragraph{Tốc độ trung bình -- Averaged speed}
 ``Đại lượng đặc trưng cho tính chất \textit{nhanh, chậm} của chuyển động chính là \textit{tốc độ}. Nếu trong khoảng thời gian $\Delta t$ vật di chuyển được 1 quãng đường $s$ thì:
 
 \begin{dinhnghia}[Tốc độ trung bình]
@@ -326,7 +322,7 @@ Các chữ số có nghĩa bao gồm: Các chữ số khác $0$, các chữ số
 \end{dinhnghia}
 Trong hệ SI, đơn vị của tốc độ là m\texttt{/}s (mét trên giây). 1 số đơn vị thường dùng khác của tốc độ là km\texttt{/}h (kilomet trên giờ), km\texttt{/}s (kilomet trên giây), mi\texttt{/}h (dặm trên giờ), cm\texttt{/}s (xentimet trên giây).'' -- \cite[pp. 25]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Tốc độ tức thời -- Instantaneous speed}
+\paragraph{Tốc độ tức thời -- Instantaneous speed}
 ``Tốc độ trung bình có thể không diễn tả đúng tính nhanh, chậm của chuyển động ở mỗi thời điểm. Để xét tính chất chuyển động nhanh, chậm của vật tại mỗi thời điểm, tốc độ phải được xét trong những \textit{khoảng thời gian rất nhỏ}.
 
 \begin{dinhnghia}
@@ -334,9 +330,9 @@ Trong hệ SI, đơn vị của tốc độ là m\texttt{/}s (mét trên giây).
 \end{dinhnghia}
 Khi 1 vật chuyển động với tốc độ tức thời không đổi, ta nói chuyển động của vật là \textit{chuyển động đều}. Ngược lại, ta nói chuyển động của vật là \textit{không đều}. Trên thực tế, tốc độ tức thời được hiển thị bởi tốc kế trên nhiều phương tiện giao thông.'' -- \cite[pp. 25]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsection{Vận Tốc -- Velocity}
+\subsubsection{Vận Tốc -- Velocity}
 
-\subsubsection{Độ dịch chuyển}
+\paragraph{Độ dịch chuyển}
 ``Phân tích cho thấy đại lượng quãng đường đi được của vật không thể hiện được chiều chuyển động của vật. Do đó, để biểu diễn hướng của chuyển động, ta phải xét \textit{độ dịch chuyển} $d$ của vật.
 
 \begin{dinhnghia}[Độ dịch chuyển]
@@ -350,7 +346,7 @@ Khi 1 vật chuyển động với tốc độ tức thời không đổi, ta n�
 	\end{enumerate*}
 \end{luuy}
 
-\subsubsection{Vận tốc -- Velocity}
+\paragraph{Vận tốc -- Velocity}
 ``Tương tự như quãng đường đi được, khái niệm tốc độ không thể hiện được chiều chuyển động của vật. Khi thay quãng đường đi được trong công thức xác định tốc độ trung bình $v_{\rm tb} = \frac{s}{\Delta t}$ bằng độ dịch chuyển, ta rút ra được:
 
 \begin{dinhnghia}[Vận tốc trung bình]
@@ -369,9 +365,9 @@ Khi 1 vật chuyển động với tốc độ tức thời không đổi, ta n�
 	Như vậy, vận tốc tức thời cũng là 1 đại lượng vector ($\vec{\bf v}$), có gốc tại vị trí vật chuyển động, hướng theo hướng của chuyển động \& có độ dài tỷ lệ với độ lớn của vận tốc tức thời theo 1 tỷ xích xác định.'' -- \cite[pp. 27--28]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{luuy}
 
-\subsection{Đồ thị độ dịch chuyển--thời gian}
+\subsubsection{Đồ thị độ dịch chuyển--thời gian}
 
-\subsubsection{Vẽ đồ thị độ dịch chuyển--thời gian dựa vào số liệu cho trước}
+\paragraph{Vẽ đồ thị độ dịch chuyển--thời gian dựa vào số liệu cho trước}
 ``Xét 2 chuyển đông với số liệu về tọa độ \& thời điểm đi kèm: Chuyển động của con rùa theo đường thẳng \& chuyển động rơi của viên bi. Chọn gốc tọa độ tại vị trí xuất phát, chiều dương ($+$) là chiều chuyển động.'' -- \cite[p. 28]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 ``Từ các đồ thị ($d$--$t$), ta có nhận xét:
@@ -384,7 +380,7 @@ Khi 1 vật chuyển động với tốc độ tức thời không đổi, ta n�
 	Các đồ thị ($d$--$t$) hay ($x$--$t$) là công cụ toán học thể hiện tính chất của chuyển động. Tránh lầm lẫn với quỹ đạo của vật.'' -- \cite[p. 29]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{luuy}
 
-\subsubsection{Xác định vận tốc từ đồ dốc của đồ thị ($d$--$t$)}
+\paragraph{Xác định vận tốc từ đồ dốc của đồ thị ($d$--$t$)}
 ``Xét vật chuyển động từ vị trí 1 (tại thời điểm $t_1$) đến vị trí 2 (tại thời điểm $t_2$) lần lượt được biểu diễn bởi 2 điểm $P$ \& $Q$ trên đồ thị ($d$--$t$) trong Fig. \ref{fig:chuyen_dong_cua_con_rua_vien_bi}.
 
 \begin{figure}[H]
@@ -414,18 +410,18 @@ So sánh với biểu thức $\vec{\bf v}_{\rm tb} = \frac{\vec{\bf d}}{\Delta t
 
 %------------------------------------------------------------------------------%
 
-\section{Chuyển Động Tổng Hợp}
+\subsection{Chuyển Động Tổng Hợp}
 \textbf{Nội dung.} \textit{Độ dịch chuyển tổng hợp, vận tốc tổng hợp}.
 
-\subsection{Độ dịch chuyển tổng hợp -- vận tốc tổng hợp}
+\subsubsection{Độ dịch chuyển tổng hợp -- vận tốc tổng hợp}
 
-\subsubsection{Tính tương đối của chuyển động}
+\paragraph{Tính tương đối của chuyển động}
 ``1 vật có thể xem như là đứng yên trong hệ quy chiếu này, nhưng lại chuyển động trong hệ quy chiếu khác. Do đó, chuyển động có \textit{tính tương đối}. \textit{Hệ quy chiếu đứng yên} là hệ quy chiếu gắn với vật làm gốc được quy ước là đứng yên, e.g., sân ga, người quan sát đứng yên trên mặt đất. \textit{Hệ quy chiếu chuyển động} là hệ quy chiếu gắn với vật làm gốc chuyển động so với hệ quy chiếu đứng yên, e.g., tàu hỏa chuyển động so với sân ga, bậc thang cuộn khi đang hoạt động so với mặt đất, \& dòng nước đang trôi so với người đứng yên trên mặt đất.'' -- \cite[p. 32]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Độ dịch chuyển tổng hợp -- vận tốc tổng hợp}
+\paragraph{Độ dịch chuyển tổng hợp -- vận tốc tổng hợp}
 ``Khi vật 1 có độ dịch chuyển $\vec{\bf d}_{12}$ trong hệ quy chiếu chuyển động, đồng thời hệ quy chiếu chuyển động cũng có độ dịch chuyển $\vec{\bf d}_{23}$ so với hệ quy chiếu đứng yên. Dựa vào phương pháp tọa độ của toán học, ta suy ra biểu thức của độ dịch chuyển tổng hợp: $\vec{\bf d}_{13} = \vec{\bf d}_{12} + \vec{\bf d}_{23}$. Xét trong khoảng thời gian $\Delta t$ rất nhỏ kết hợp với định nghĩa của vận tốc, ta suy ra biểu thức của vận tốc tổng hợp: $\vec{\bf v}_{13} = \vec{\bf v}_{12} + \vec{\bf v}_{23}$.'' ``Minh họa về ý nghĩa thực tiễn của vận tốc tổng hợp: khi thuyền đi xuôi dòng trên sông, nhờ có thêm sự chuyển động cùng chiều của dòng nước nên thuyền sẽ có tốc độ lớn hơn so với khi nước không chảy (trong 1 hồ nước). Tương tự, khi thuyền đi ngược dòng, vì có thêm sự chuyển động ngược lại của dòng nước nên thuyền sẽ có tốc độ nhỏ hơn so với khi nước không chảy. \textit{Vận tốc tuyệt đối} (vận tốc của vật đối với hệ quy chiếu đứng yên) bằng tổng \textit{vận tốc tương đối} (vận tốc của vật đối với hệ quy chiếu chuyển động) \& \textit{vận tốc kéo theo} (vận tốc của hệ quy chiếu chuyển động đối với hệ quy chiếu đứng yên).'' -- \cite[p. 33]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Vận dụng công thức tính tốc độ, vận tốc}
+\paragraph{Vận dụng công thức tính tốc độ, vận tốc}
 
 \begin{baitoan}
 	1 xe chạy liên tục trong $\Delta t$ giờ, trong mỗi khoảng $\Delta t_i$ giờ rời nhau \& liên tiếp nhau, $i = 1,\ldots,n$, $\sum_{i=1}^n \Delta t_i = \Delta t$ (e.g., $(\Delta t_i)_{i=1}^n$ là 1 ``phân hoạch'' của $\Delta t$), tốc độ trung bình của xe là $v_i$ km\emph{\texttt{/}}h. Tính tốc độ trung bình của xe trong toàn bộ khoảng thời gian chuyển động.
@@ -437,12 +433,12 @@ So sánh với biểu thức $\vec{\bf v}_{\rm tb} = \frac{\vec{\bf d}}{\Delta t
 
 %------------------------------------------------------------------------------%
 
-\section{Thực Hành Đo Tốc Độ của Vật Chuyển Động Thẳng}
+\subsection{Thực Hành Đo Tốc Độ của Vật Chuyển Động Thẳng}
 \textbf{Nội dung.} \textit{Thiết kế \& thực hiện thí nghiệm đo tốc độ, các phương pháp đo tốc độ thông dụng}.
 
 ``Muốn biết chuyển động của 1 vật là nhanh hay chậm tại 1 thời điểm nào đó, ta cần đo được tốc độ tức thời của chúng.'' -- \cite[p. 36]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
-\subsection{Thí nghiệm đo tốc độ}
+\subsubsection{Thí nghiệm đo tốc độ}
 ``\textbf{Giới thiệu về cổng quang điện.} Cổng quang điện có tác dụng như 1 công tắc điện, dạng hình chữ U, sử dụng cảm biến ánh sáng \& thường được nối với đồng hồ đo thời gian hiện số để xác định thời gian vật chuyển động. Khi vật chuyển động qua cổng quang điện, ta nói vật chắn cổng quang điện \& tùy vào mục đích thực hiện sẽ có 5 MODE tương ứng để chọn trên đồng hồ.
 \begin{enumerate*}
 	\item[\textbf{1.}] MODE A \& B: để đo khoảng thời gian vật chắn cổng quang điện A hoặc cổng quang điện B.
@@ -460,7 +456,7 @@ So sánh với biểu thức $\vec{\bf v}_{\rm tb} = \frac{\vec{\bf d}}{\Delta t
 	\item[\textbf{5.}] Mặt sau có công tắc ON-OFF dùng đóng ngắt điện cấp cho đồng hồ \& 3 ổ cắm A, B, C (có thể ở mặt trước của đồng hồ).'' -- \cite[p. 38]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{enumerate*}
 
-\subsection{1 số phương pháp đo tốc độ}
+\subsubsection{1 số phương pháp đo tốc độ}
 ``Trên thực tiễn, chúng ta có thể sử dụng 1 số thiết bị để đo tốc độ chuyển động của vật:
 \begin{itemize}
 	\item \textbf{Đồng hồ bấm giây} kết hợp với thước: Thường dùng để đo tốc độ trung bình của vật chuyển động. Được ứng dụng để đo tốc độ chạy trong lớp thể dục, đo tốc độ rơi tự do từ 1 độ cao xác định. \textit{Ưu điểm}: Nhanh, đơn giản, dễ thực hiện. \textit{Nhược điểm}: Kém chính xác do phụ thuộc vào phản xạ của người bấm đồng hồ.
@@ -468,90 +464,107 @@ So sánh với biểu thức $\vec{\bf v}_{\rm tb} = \frac{\vec{\bf d}}{\Delta t
 	\item \textbf{Súng bắn tốc độ.} Đo trực tiếp tốc độ tức thời của các phương tiện giao thông. Thường được Cảnh sát giao thông sử dụng trong việc kiểm soát tốc độ của các phương tiện giao thông khi di chuyển trên đường. \textit{Ưu điểm}: Đo trực tiếp tốc độ tức thời với độ chính xác cao. \textit{Nhược điểm}: Giá thành cao.'' -- \cite[pp. 38--39]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 \end{itemize}
 
-\section{Tổng Kết Chương}
+\subsection{Tổng Kết Chương}
 ``\textbf{1.} \textsc{Tốc độ.} \textit{Tốc độ trung bình}: đại lượng được xác định bằng thương số giữa quãng đường vật đi được \& thời gian để vật thực hiện quãng đường đó. $v_{\rm tb} = \frac{s}{\Delta t}$. \textit{Tốc độ tức thời} ($v$): tốc độ trung bình tính trong khoảng thời gian rất nhỏ, diễn tả sự nhanh, chậm của chuyển động tại thời điểm đó. Trong hệ SI, đơn vị của tốc độ là m\texttt{/}s. \textbf{2.} \textsc{Độ dịch chuyển.} Độ dịch chuyển được xác định bằng độ biến thiên tọa độ của vật. $d = x_2 - x_1 = \Delta x$. \textbf{3.} \textsc{Vận tốc.} \textit{Vận tốc trung bình}: đại lượng vector được xác định bằng thương số giữa độ dịch chuyển của vật \& thời gian để vật thực hiện độ dịch chuyển đó. $\vec{\bf v}_{\rm tb} = \frac{\vec{\bf d}}{\Delta t} = \frac{\Delta\vec{\bf x}}{\Delta t}$. \textit{Vận tốc tức thời}: vận tốc trung bình trong 1 khoảng thời gian rất nhỏ. Độ lớn của vận tốc tức thời chính là tốc độ tức thời. Vận tốc tức thời của vật tại 1 thời điểm được xác định bởi \textit{độ dốc} của tiếp tuyến với đồ thị ($d$--$t$) tại thời điểm đang xét. Tốc độ tức thời chính là độ lớn của độ dốc tiếp tuyến. \textbf{4.} \textsc{Công thức xác định vận tốc tổng hợp.} Vận tốc tuyệt đối bằng tổng vận tốc tương đối \& vận tốc kéo theo. $\vec{\bf v}_{13} = \vec{\bf v}_{12} + \vec{\bf v}_{23}$.'' -- \cite[p. 39]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Chuyển Động Biến Đổi}
+\section{Chuyển Động Biến Đổi}
 
-\section{Gia Tốc -- Chuyển Động Thẳng Biến Đổi Đều}
+\subsection{Gia Tốc -- Chuyển Động Thẳng Biến Đổi Đều}
 
-%------------------------------------------------------------------------------%
+\subsubsection{Đồ thị vận tốc--thời gian trong chuyển động thẳng \& khái niệm gia tốc}
 
-\section{Thực Hành Đo Gia Tốc Rơi Tự Do}
+\paragraph{Gia tốc}
+``Trên thực tế, vận tốc của vật chuyển động trong đa số trường hợp luôn thay đổi theo thời gian. E.g., khi xe ô tô bắt đầu chuyển động hoặc hãm phanh (xét chuyển động thẳng) thì vận tốc của xe thay đổi về độ lớn. Khi xe thay đổi hướng chuyển động như rẽ trái, rẽ phải thì vận tốc của xe bị thay đổi về hướng \& có thể cả độ lớn. Xét vật chuyển động thẳng có vận tốc đầu là $v_1$ \& vận tốc của vật chuyển động sau khoảng thời gian $\Delta t$ là $v_2$. Từ kết quả thí nghiệm \& đồ thị vận tốc--thời gian ($v$--$t$) (Fig. \ref{fig:do_thi_van_toc_thoi_gian}), ta có thể thấy trong suốt quá trình chuyển đông, vận tốc tức thời của vật có độ lớn thay đổi theo thời gian (đồ thị không song song với trục thời gian), đây gọi là \textit{chuyển động biến đổi}. Sự thay đổi vận tốc của vật theo thời gian được đặc trưng bởi 1 đại lượng gọi là \textit{gia tốc}, được xác định bằng độ dốc (hệ số góc) của đồ thị vận tốc theo thời gian.
 
-%------------------------------------------------------------------------------%
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{do_thi_van_toc_thoi_gian}
+	\caption{Minh họa đồ thị vận tốc--thời gian \& cách xác định gia tốc, \cite[Hình 7.3, p. 42]{SGK_Vat_Ly_10_Chan_Troi_Sang_Tao}.}
+	\label{fig:do_thi_van_toc_thoi_gian}
+\end{figure}
 
-\section{Chuyển Động Ném}
-
-%------------------------------------------------------------------------------%
-
-\chapter{3 Định Luật Newton. 1 Số Lực Trong Thực Tiễn}
-
-\section{3 Định Luật Newton về Chuyển Động}
-
-%------------------------------------------------------------------------------%
-
-\section{1 Số Lực Trong Thực Tiễn}
-
-%------------------------------------------------------------------------------%
-
-\section{Chuyển Động của Vật Trong Chất Lưu}
+\begin{dinhnghia}[Gia tốc, gia tốc trung bình]
+	Đại lượng đặc trưng cho độ biến thiên của vận tốc theo thời gian được gọi là \emph{gia tốc}. Trong chuyển động thẳng, \emph{gia tốc trung bình} được xác định theo biểu thức: $a_{\rm tb} = \frac{\Delta v}{\Delta t} = \frac{v_2 - v_1}{\Delta t}$. Gia tốc tức thời tại 1 thời điểm có giá trị bằng độ dốc của tiếp tuyến của đồ thị vận tốc--thời gian ($v$--$t$) tại thời điểm đó.
+\end{dinhnghia}
+Trong hệ SI, gia tốc có đơn vị là $\rm m\texttt{/}s^2$. Tổng quát, do vận tốc là 1 đại lượng vector nên gia tốc cũng là 1 đại lượng vector. \emph{Gia tốc trung bình} được xác định: $\vec{\bf a}_{\rm tb} = \frac{\Delta\vec{\bf v}}{\Delta t} = \frac{\vec{\bf v}_2 - \vec{\bf v}_1}{\Delta t}$. Khi $\Delta t$ rất nhỏ, gia tốc trung bình trở thành \textit{gia tốc tức thời} có gốc tại vị trí của vật, hướng cùng hướng với độ biến thiên vận tốc $\Delta\vec{\bf v}$, độ dài tỷ lệ với độ lớn của vector $\Delta\vec{\bf v}$ theo 1 tỷ xích xác định. Trong 1 số phương tiện giao thông như máy bay, xe đua, gia tốc tức thời được đo trực tiếp bằng \textit{gia tốc kế}. 
 
 %------------------------------------------------------------------------------%
 
-\chapter{Moment Lực. Điều Kiện Cân Bằng}
-
-\section{Tổng Hợp Lực -- Phân Tích Lực}
+\subsection{Thực Hành Đo Gia Tốc Rơi Tự Do}
 
 %------------------------------------------------------------------------------%
 
-\section{Moment Lực. Điều kiện Cân Bằng của Vật}
+\subsection{Chuyển Động Ném}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Năng Lượng}
+\section{3 Định Luật Newton. 1 Số Lực Trong Thực Tiễn}
 
-\section{Năng Lượng \& Công}
-
-%------------------------------------------------------------------------------%
-
-\section{Công Suất -- Hiệu Suất}
+\subsection{3 Định Luật Newton về Chuyển Động}
 
 %------------------------------------------------------------------------------%
 
-\section{Động Năng \& Thế Năng. Định Luật Bảo Toàn Cơ Năng}
+\subsection{1 Số Lực Trong Thực Tiễn}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Động Lượng}
-
-\section{Động Lượng \& Định Luật Bảo Toàn Động Lượng}
+\subsection{Chuyển Động của Vật Trong Chất Lưu}
 
 %------------------------------------------------------------------------------%
 
-\section{Các Loại Va Chạm}
+\section{Moment Lực. Điều Kiện Cân Bằng}
+
+\subsection{Tổng Hợp Lực -- Phân Tích Lực}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Chuyển Động Tròn}
-
-\section{Động Học của Chuyển Động Tròn}
+\subsection{Moment Lực. Điều kiện Cân Bằng của Vật}
 
 %------------------------------------------------------------------------------%
 
-\section{Động Lực Học của Chuyển Động Tròn. Lực Hướng Tâm}
+\section{Năng Lượng}
+
+\subsection{Năng Lượng \& Công}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Biến Dạng của Vật Rắn}
+\subsection{Công Suất -- Hiệu Suất}
 
-\section{Biến Dạng của Vật Rắn. Đặc Tính của Lò Xo}
+%------------------------------------------------------------------------------%
+
+\subsection{Động Năng \& Thế Năng. Định Luật Bảo Toàn Cơ Năng}
+
+%------------------------------------------------------------------------------%
+
+\section{Động Lượng}
+
+\subsection{Động Lượng \& Định Luật Bảo Toàn Động Lượng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Các Loại Va Chạm}
+
+%------------------------------------------------------------------------------%
+
+\section{Chuyển Động Tròn}
+
+\subsection{Động Học của Chuyển Động Tròn}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Động Lực Học của Chuyển Động Tròn. Lực Hướng Tâm}
+
+%------------------------------------------------------------------------------%
+
+\section{Biến Dạng của Vật Rắn}
+
+\subsection{Biến Dạng của Vật Rắn. Đặc Tính của Lò Xo}
 
 %------------------------------------------------------------------------------%
 R
-\section{Định Luật Hooke}
+\subsection{Định Luật Hooke}
 
 %------------------------------------------------------------------------------%
 
