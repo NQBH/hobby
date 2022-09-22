@@ -1,0 +1,210 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[vietnamese,english]{babel}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\usepackage[inline]{enumitem}
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small \textsc{Sect.} ~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Python}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	A short lecture on Python programming language.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Wikipedia's}
+
+\subsection{\href{https://en.wikipedia.org/wiki/Python_(programming_language)}{Wikipedia\texttt{/}Python (Programming Language)}}
+``Python is a \href{https://en.wikipedia.org/wiki/High-level_programming_language}{high-level}, \href{https://en.wikipedia.org/wiki/General-purpose_programming_language}{general-purpose programmming language}. Its design philosophy emphasizes \href{https://en.wikipedia.org/wiki/Code_readability}{code readability} with the use of \href{https://en.wikipedia.org/wiki/Off-side_rule}{significant indentation}. Python is \href{https://en.wikipedia.org/wiki/Type_system#DYNAMIC}{dynamically-typed} \& \href{https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)}{garbage-collected}. It supports multiple \href{https://en.wikipedia.org/wiki/Programming_paradigm}{programming paradigms}, including \href{https://en.wikipedia.org/wiki/Structured_programming}{structured} (particularly \href{https://en.wikipedia.org/wiki/Procedural_programming}{procedural}), \href{https://en.wikipedia.org/wiki/Object-oriented_programming}{object-oriented} \& \href{https://en.wikipedia.org/wiki/Functional_programming}{functional programming}. It is often described as a ``batteries included'' language due to its comprehensive \href{https://en.wikipedia.org/wiki/Standard_library}{standard library}. \href{https://en.wikipedia.org/wiki/Guido_van_Rossum}{Guido van Rossum} began working on Python in the late 1980s as a successor to the \href{https://en.wikipedia.org/wiki/ABC_(programming_language)}{ABC programming language} \& 1st released it in 1991 as Python 0.9.0. Python 2.0 was released in 2000 \& introduced new features such as \href{https://en.wikipedia.org/wiki/List_comprehension}{list comprehensions}, \href{https://en.wikipedia.org/wiki/Cycle_detection}{cycle-detecting} garbage collection, \href{https://en.wikipedia.org/wiki/Reference_counting}{reference counting}, \& \href{https://en.wikipedia.org/wiki/Unicode}{Unicode} support. Python 3.0, released in 2008, was a major revision that is not completely \href{https://en.wikipedia.org/wiki/Backward_compatibility}{backward-compatible} with earlier versions. Python 2 was discontinued with version 2.7.18 in 2020. Python consistently ranks as 1 of the most popular programming languages.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)}{Wikipedia\texttt{/}Python (programming language)}
+
+\subsubsection{History of Python}
+``Main article: \href{https://en.wikipedia.org/wiki/History_of_Python}{Wikipedia\texttt{/}history of Python}. Python was conceived in the late 1980s by \href{https://en.wikipedia.org/wiki/Guido_van_Rossum}{Guido van Rossum} at \href{https://en.wikipedia.org/wiki/Centrum_Wiskunde_%26_Informatica}{Centrum Wiskunde \& Informatica} (CWI) in the \href{https://en.wikipedia.org/wiki/Netherlands}{Netherlands} as a successor to the \href{https://en.wikipedia.org/wiki/ABC_(programming_language)}{ABC programming language}, which was inspired by \href{https://en.wikipedia.org/wiki/SETL}{SETL}, capable of \href{https://en.wikipedia.org/wiki/Exception_handling}{exception handling} \& interfacing with the \href{https://en.wikipedia.org/wiki/Amoeba_(operating_system)}{Amoeba} operating system. Its implementation began in Dec 1989. Van Rossum shouldered sole responsibility for the project, as the lead developer, until Jul 12, 2018, when he announced his ``permanent vacation'' from his responsibilities as Python's ``\href{https://en.wikipedia.org/wiki/Benevolent_dictator_for_life}{benevolent dictator for life}'', a title the Python community bestowed upon him to reflect his long-term commitment as the project's chief decision-maker. In Jan 2019, active Python core developers elected a 5-member Steering Council to lead the project.
+
+Python 2.0 was released on Oct 16, 2000, with many major new features. Python 3.0, released on Dec 3, 2008, with many of its major features \href{https://en.wikipedia.org/wiki/Backporting}{backported} to Python 2.6.x \& 2.7.x. Releases of Python 3 include the \texttt{2to3} utility, which automates the translation of Python 2 code to Python 3.
+
+Python 2.7's \href{https://en.wikipedia.org/wiki/End-of-life_(product)}{end-of-life} was initially set for 2015, then postponed to 2020 out of concern that a large body of existing code could not easily be forward-ported to Python 3. No further security patches or other improvements will be released for it. With Python 2's \href{https://en.wikipedia.org/wiki/End-of-life_(product)}{end-of-life}, only Python 3.6.x \& later were supported. Later, support for 3.6 was also discontinued. In 2021, Python 3.9.2 \& 3.8.8 were expedited as all versions of Python (including 2.7) had security issues leading to possible \href{https://en.wikipedia.org/wiki/Remote_code_execution}{remote code execution} \& \href{https://en.wikipedia.org/wiki/Cache_poisoning}{web cache poisoning}.
+
+In 2022, Python 3.10.4 \& 3.9.12 were expedited \& so were older releases including 3.8.13, \& 3.7.13 because of many security issues. When Python 3.9.13 was released in May 2022, it was announced that the 3.9 series (joining the older series 3.8 \& 3.7) will only receive security fixes going forward. On Sep 7, 2022, 4 new releases were made due to a potential \href{https://en.wikipedia.org/wiki/Denial-of-service_attack}{denial-of-service attack}: 3.10.7, 3.9.14, 3.8.14, \& 3.7.14.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#History}{Wikipedia\texttt{/}Python (programming language)\texttt{/}history}
+
+\subsubsection{Design philosophy \& features}
+``Python is a \href{https://en.wikipedia.org/wiki/Multi-paradigm_programming_language}{multi-paradigm programming language}. \href{https://en.wikipedia.org/wiki/Object-oriented_programming}{Object-oriented programming} \& \href{https://en.wikipedia.org/wiki/Structured_programming}{structured programming} are fully supported, \& many of its features support functional programming \& \href{https://en.wikipedia.org/wiki/Aspect-oriented_programming}{aspect-oriented programming} (including \href{https://en.wikipedia.org/wiki/Metaprogramming}{metaprogramming} \& \href{https://en.wikipedia.org/wiki/Metaobject}{metaobjects} [magic methods]). Many other paradigms are supported via extensions, including \href{https://en.wikipedia.org/wiki/Design_by_contract}{design by contract} \& \href{https://en.wikipedia.org/wiki/Logic_programming}{logic programming}. Python uses \href{https://en.wikipedia.org/wiki/Dynamic_typing}{dynamic typing} \& a combination of \href{https://en.wikipedia.org/wiki/Reference_counting}{reference counting} \& a cycle-detecting garbage collector for \href{https://en.wikipedia.org/wiki/Memory_management}{memory management}. It uses dynamic \href{https://en.wikipedia.org/wiki/Name_resolution_(programming_languages)}{name resolution} (\href{https://en.wikipedia.org/wiki/Late_binding}{late binding}), which binds method \& variable names during program execution. Its design offers some support for functional programming in the \href{https://en.wikipedia.org/wiki/Lisp_(programming_language)}{Lisp} tradition. It has \texttt{filter}, \texttt{map}, \& \texttt{reduce} functions; \href{https://en.wikipedia.org/wiki/List_comprehension}{list comprehensions}, \href{https://en.wikipedia.org/wiki/Associative_array}{dictionaries}, sets, \& \href{https://en.wikipedia.org/wiki/Generator_(computer_programming)}{generator} expressions. The standard library has 2 modules (\texttt{itertools} \& \texttt{functools}) that implement functional tools borrowed from \href{https://en.wikipedia.org/wiki/Haskell_(programming_language)}{Haskell} \& \href{https://en.wikipedia.org/wiki/Standard_ML}{Standard ML}.
+
+Its core philosophy is summarized in the document \textit{The \href{https://en.wikipedia.org/wiki/Zen_of_Python}{Zen of Python}} (\textit{PEP 20}), which includes \href{https://en.wikipedia.org/wiki/Aphorism}{aphorisms} such as:
+\begin{enumerate*}
+	\item[$\bullet$] Beautiful is better than ugly.
+	\item[$\bullet$] Explicit is better than implicit.
+	\item[$\bullet$] Simple is better than complex.
+	\item[$\bullet$] Complex is better than complicated.
+	\item[$\bullet$] Readability counts.
+\end{enumerate*}
+
+Rather than building all of its functionality into its core, Python was designed to be highly \href{https://en.wikipedia.org/wiki/Extensibility}{extensible} via modules. This compact modularity has made it particularly popular as a means of adding programmable interfaces to existing applications. Van Rossum's vision of a small core language with a large standard library \& easily extensible interpreter stemmed from his frustrations with \href{https://en.wikipedia.org/wiki/ABC_(programming_language)}{ABC}, which espoused the opposite approach.
+
+Python strives for a simpler, less-cluttered syntax \& grammar while giving developers a choice in their coding methodology. In contrast to \href{https://en.wikipedia.org/wiki/Perl}{Perl}'s ``\href{https://en.wikipedia.org/wiki/There_is_more_than_one_way_to_do_it}{there is more than 1 way to do it}'' motto, Python embraces a ``there should be one -- \& preferably only 1 -- obvious way to do it'' philosophy. \href{https://en.wikipedia.org/wiki/Alex_Martelli}{Alex Martelli}, a \href{https://en.wikipedia.org/wiki/Fellow}{Fellow} at the \href{https://en.wikipedia.org/wiki/Python_Software_Foundation}{Python Software Foundation} \& Python book author, wrote: ``To describe something as `clever' is \textit{not} considered a compliment in the Python culture.''
+
+Python's developers strive to avoid \href{https://en.wikipedia.org/wiki/Premature_optimization}{premature optimization} \& reject patches to non-critical parts of the \href{https://en.wikipedia.org/wiki/CPython}{CPython} reference implementation that would offer marginal increases in speed at the cost of clarity. When speed is important, a Python programmer can move time-critical functions to extension modules written in languages such as C; or use \href{https://en.wikipedia.org/wiki/PyPy}{Pypy}, a \href{https://en.wikipedia.org/wiki/Just-in-time_compilation}{just-in-time compiler}. \href{https://en.wikipedia.org/wiki/Cython}{Cython} is also available, which translates a Python script into C \& makes direct C-level API calls into the Python interpreter.
+
+Python's developers aim for it to be fun to use. This is reflected in its name -- a tribute to the British comedy group \href{https://en.wikipedia.org/wiki/Monty_Python}{Monty Python} -- \& in occasionally playful approaches to tutorials \& reference materials, such as examples that refer to spam \& eggs (a reference to a \href{https://en.wikipedia.org/wiki/Spam_(Monty_Python)}{Monty Python sketch}) instead of the standard \href{https://en.wikipedia.org/wiki/Foobar}{foo \& bar}.
+
+The programming language's name `Python' came from the BBC Comedy series \href{https://en.wikipedia.org/wiki/Monty_Python%27s_Flying_Circus}{Monty Python's Flying Circus}. \href{https://en.wikipedia.org/wiki/Guido_van_Rossum}{Guido van Rossum} thought he needed a name that was short, unique \& slightly mysterious, \& so, he decided to name the programming language `Python'. 
+
+A common \href{https://en.wikipedia.org/wiki/Neologism}{neologism} in the Python community is \textit{pythonic}, which has a wide range of meanings related to program style. ``Pythonic'' code may use Python idioms well, be natural or show fluency in the language, or conform with Python's minimalist philosophy \& emphasis on readability. Code that is difficult to understand or reads like a rough transcription from another programming language is called \textit{unpythonic}. Python users \& admirers, especially those considered knowledgeable or experienced, are often referred to as \textit{Pythonistas}.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Design_philosophy_and_features}{Wikipedia\texttt{/}Python (programming language)\texttt{/}design philosophy \& features}
+
+\subsubsection{Syntax \& semantics}
+``Main article: \href{https://en.wikipedia.org/wiki/Python_syntax_and_semantics}{Wikipedia\texttt{/}Python syntax \& semantics}. Python is meant to be an easily readable language. Its formatting is visually uncluttered \& often uses English keywords where other languages use punctuation. Unlike many other languages, it does not use \href{https://en.wikipedia.org/wiki/Curly_bracket_programming_language}{curly brackets} to delimit blocks, \& semicolons after statements are allowed but rarely used. It has fewer syntactic exceptions \& special cases than \href{https://en.wikipedia.org/wiki/C_(programming_language)}{C} or \href{https://en.wikipedia.org/wiki/Pascal_(programming_language)}{Pascal}.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Syntax_and_semantics}{Wikipedia\texttt{/}Python (programming language)\texttt{/}syntax \& semantics}
+
+\paragraph{Indentation.} ``Main article: \href{https://en.wikipedia.org/wiki/Python_syntax_and_semantics#Indentation}{Wikipedia\texttt{/}Python syntax \& semantics\texttt{/}indentation}. Python uses \href{https://en.wikipedia.org/wiki/Whitespace_character}{whitespace} indentation, rather than \href{https://en.wikipedia.org/wiki/Curly_bracket_programming_language}{curly brackets} or keywords, to delimit \href{https://en.wikipedia.org/wiki/Block_(programming)}{blocks}. An increase in indentation comes after certain statements; a decrease in indentation signifies the end of the current block. Thus, the program's visual structure accurately represents its semantic structure. This feature is sometimes termed the \href{https://en.wikipedia.org/wiki/Off-side_rule}{off-side rule}. Some other languages use indentation this way; but in most, indentation has no semantic meaning. The recommended indent size is 4 spaces.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Indentation}{Wikipedia\texttt{/}Python (programming language)\texttt{/}syntax \& semantics\texttt{/}indentation}
+
+\paragraph{Statements \& control flow.} ``Python's \href{https://en.wikipedia.org/wiki/Statement_(computer_science)}{statements} include:
+\begin{enumerate*}
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/Assignment_(computer_science)}{assignment} statement, using a single equals sign \texttt{=}.
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/If-then-else}{\texttt{if}} statement, which conditionally executes a block of code, along with \texttt{else} \& \texttt{elif} (a contraction of else-if).
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/Foreach#Python}{\texttt{for}} statement, which iterates over an iterable object, capturing each element to a local variable for use by the attached block.
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/While_loop#Python}{\texttt{while}} statement, which executes a block of code as long as its condition is true.
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/Exception_handling_syntax#Python}{\texttt{try}} statement, which allows exceptions raised in its attached code block to be caught \& handled by \texttt{except} clauses (or new syntax \texttt{except*} in Python 3.11 for exception groups); it also ensures that clean-up code in a \texttt{finally} block is always run regardless of how the block exits.
+	\item[$\bullet$] The \texttt{raise} statement, used to raise a specified exception or re-raise a caught exception.
+	\item[$\bullet$] The \texttt{class} statement, which executes a block of code \& attaches its local namespace to a \href{https://en.wikipedia.org/wiki/Class_(computer_science)}{class}, for use in object-oriented programming.
+	\item[$\bullet$] The \texttt{def} statement, which defines a \href{https://en.wikipedia.org/wiki/Function_(computing)}{function} or \href{https://en.wikipedia.org/wiki/Method_(computing)}{method}.
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/Dispose_pattern#Language_constructs}{\texttt{with}} statement, which encloses a code block within a context manager (e.g., acquiring a \href{https://en.wikipedia.org/wiki/Lock_(computer_science)}{lock} before it is run, then releasing the lock; or opening \& closing a \href{https://en.wikipedia.org/wiki/Computer_file}{file}), allowing \href{https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization}{resource-acquisition-is-initialization} (RAII)-like behavior \& replacing a common try\texttt{/}finally idiom.
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/Break_statement}{\texttt{break}} statement, which exits a loop.
+	\item[$\bullet$] The \texttt{continue} statement, which skips the current iteration \& continues with the next.
+	\item[$\bullet$] The \texttt{del} statement, which removes a variable -- deleting the reference from the name to the value, \& producing an error if the variable is referred to before it is redefined.
+	\item[$\bullet$] The \texttt{pass} statement, serving as a \href{https://en.wikipedia.org/wiki/NOP_(code)}{NOP}, syntactically needed to create an empty code block.
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/Assertion_(programming)}{\texttt{assert}} statement, used in debugging to check for conditions that should apply.
+	\item[$\bullet$] The \texttt{yield} statement, which returns a value from a \href{https://en.wikipedia.org/wiki/Generator_(computer_programming)#Python}{generator} function (\& also an operator); used to implement \href{https://en.wikipedia.org/wiki/Coroutine}{coroutines}.
+	\item[$\bullet$] The \texttt{return} statement, used to return a value from a function.
+	\item[$\bullet$] The \href{https://en.wikipedia.org/wiki/Include_directive}{\texttt{import}} statement, used to import modules whose functions or variables can be used in the current program.
+\end{enumerate*}
+
+The assignment statement (\texttt{=}) binds a name as a \href{https://en.wikipedia.org/wiki/Pointer_(computer_programming)}{reference} to a separate, dynamically-allocated \href{https://en.wikipedia.org/wiki/Object_(computer_science)}{object}. Variables may subsequently be rebound at any time to any object. In Python, a variable name is a generic reference holder without a fixed \href{https://en.wikipedia.org/wiki/Type_system}{data type}; however, it always refers to \textit{some} object with a type. This is called \href{https://en.wikipedia.org/wiki/Dynamic_type}{dynamic typing} -- in contrast to \href{https://en.wikipedia.org/wiki/Statically-typed}{statistically-typed} languages, where each variable may contain only a value of a certain type.
+
+Python does not support \href{https://en.wikipedia.org/wiki/Tail_call}{tail call} optimization or \href{https://en.wikipedia.org/wiki/First-class_continuations}{1st-class continuations}, \&, according to van Rossum, it never will. However, better support for \href{https://en.wikipedia.org/wiki/Coroutine}{coroutine}-like functionality is provided by extending Python's \href{https://en.wikipedia.org/wiki/Generator_(computer_programming)}{generators}. Before 2.5, generators were \href{https://en.wikipedia.org/wiki/Lazy_evaluation}{lazy} \href{https://en.wikipedia.org/wiki/Iterator}{iterators}; data was passed unidirectionally out of the generator. From Python 2.5 on, it is possible to pass data back into a generator function; \& from version 3.3, it can be passed through multiple stack levels.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Statements_and_control_flow}{Wikipedia\texttt{/}Python (programming language)\texttt{/}syntax \& semantics\texttt{/}statements \& control flow}
+
+\paragraph{Expressions.} ``Some Python \href{https://en.wikipedia.org/wiki/Expression_(computer_science)}{expressions} are similar to those in languages such as C \& \href{https://en.wikipedia.org/wiki/Java_(programming_language)}{Java}, while some are not:
+\begin{enumerate*}
+	\item[$\bullet$] Addition, subtraction, \& multiplication are the same, but the behavior of division differs. There are 2 types of divisions in Python: \href{https://en.wikipedia.org/wiki/Floor_division}{floor division} (or integer division) \texttt{//} \& floating-point \texttt{/} division. Python also uses the \texttt{**} operator for exponentiation.
+	\item[$\bullet$] The \texttt{@} infix operator. It is intended to be used by libraries such as \href{https://en.wikipedia.org/wiki/NumPy}{NumPy} for \href{https://en.wikipedia.org/wiki/Matrix_multiplication}{matrix multiplication}.
+	\item[$\bullet$] The syntax \texttt{:=}, called the ``walrus operator'', was introduced in Python 3.8. It assigns values to variables as part of a larger expression.
+	\item[$\bullet$] In Python, \texttt{==} compares by value, vs. Java, which compares numerics by value \& objects by reference. Python's \texttt{is} operator may be used to compare object identities (comparison by reference), \& comparisons may be chained -- e.g., \texttt{a <= b <= c}.
+	\item[$\bullet$] Python uses \texttt{and}, \texttt{or}, \& \texttt{not} as boolean operators rather than the symbolic \verb|&&|, \verb!||!, \verb|!| in Java \& C.
+	\item[$\bullet$] Python has a type of extension called a \href{https://en.wikipedia.org/wiki/List_comprehension#Python}{\textit{list comprehension}}, as well as a more general expression called a \textit{\href{https://en.wikipedia.org/wiki/Generator_(computer_programming)}{generator} expression}.
+	\item[$\bullet$] \href{https://en.wikipedia.org/wiki/Anonymous_function}{Anonymous functions} are implemented using \href{https://en.wikipedia.org/wiki/Lambda_(programming)}{lambda expressions};  however, there may be only 1 expression in each body.
+	\item[$\bullet$] Conditional expressions are written as \texttt{x if c else y} (different in order of operands from the \href{https://en.wikipedia.org/wiki/%3F:}{\texttt{c ? x : y}} operator common to many other languages).
+	\item[$\bullet$] Python makes a distinction between \href{https://en.wikipedia.org/wiki/List_(computer_science)}{lists} \& \href{https://en.wikipedia.org/wiki/Tuple}{tuples}. Lists are written as \texttt{[1, 2, 3]}, are mutable, \& cannot be used as the keys of dictionaries (dictionary keys must be \href{https://en.wikipedia.org/wiki/Immutable}{immutable} in Python). Tuples, written as \texttt{(1, 2, 3)}, are immutable \& thus can be used as keys of dictionaries, provided all of the tuple's elements are immutable. The \texttt{+} operator can be used to concatenate 2 tuples, which does not directly modify their contents, but produces a new tuple containing the elements of both. Thus, given the variable $t$ initially equal to \texttt{(1, 2, 3)}, executing \texttt{t = t + (4, 5)} 1st evaluates \texttt{t + (4, 5)}, which yields \texttt{(1, 2, 3, 4, 5)}, which is then assigned back to \texttt{t} -- thereby effectively ``modifying the contents'' of \texttt{t} while conforming to the immutable nature of tuple objects. Parentheses are optional for tuples in unambiguous contexts.
+	\item[$\bullet$] Python features \textit{sequence unpacking} where multiple expressions, each evaluating to anything that can be assigned (to a variable, writable property, etc.) are associated in an identical manner to that forming tuple literals -- \&, as a whole, are put on the LHS of the equal sign in an assignment statement. The statement expects an \textit{iterable} object on the RHS of the equal sign that produces the same number of values as the provided writable expressions; when iterated through them, it assigns each of the produced values to the corresponding expression on the left.
+	\item[$\bullet$] Python has a ``string format'' operator \verb|%| that functions analogously to \texttt{printf} format strings in C -- e.g., \verb|"spam=%s eggs=%d" % ("blah", 2)| evaluates to \verb|"spam=blah eggs=2"|. In Python 2.6+ \& 3+, this was supplemented by the \texttt{format()} method of the \texttt{str} class, e.g., \verb|"spam={0} eggs={1}".format("blah", 2)|. Python 3.6 added ``f-strings'': \verb|spam = "blah"; eggs = 2; f'spam={spam} eggs={eggs}'|.
+	\item[$\bullet$] Strings in Python can be \href{https://en.wikipedia.org/wiki/Concatenation}{concatenated} by ``adding'' them (with the same operator as for adding integers \& floats), e.g. \verb|"spam" + "eggs"| returns \verb|"spameggs"|. If strings contain numbers, they are added as strings rather than integers, e.g., \verb|"2" + "2"| returns \verb|"22"|.
+	\item[$\bullet$] Python has various \href{https://en.wikipedia.org/wiki/String_literal}{string literals}:
+	\begin{enumerate*}
+		\item[$\circ$] Delimited by \textit{single}\texttt{/}\textit{double quote marks}. Unlike in \href{https://en.wikipedia.org/wiki/Unix_shell}{Unix shells}, \href{https://en.wikipedia.org/wiki/Perl}{Perls}, \& Perl-influenced languages, single \& double quote marks function identically. Both use the backslash (\verb|\|) as an \href{https://en.wikipedia.org/wiki/Escape_character}{escape character}. \href{https://en.wikipedia.org/wiki/String_interpolation}{String interpolation} became available in Python 3.6 as ``formatted string literals''.
+		\item[$\circ$] \textit{Triple-quoted} (beginning \& ending with 3 single or double quote marks), which may span multiple lines \& function like \href{https://en.wikipedia.org/wiki/Here_document}{here documents} in shells, Perl, \& \href{https://en.wikipedia.org/wiki/Ruby_(programming_language)}{Ruby}.
+		\item[$\circ$] \href{https://en.wikipedia.org/wiki/Raw_string}{Raw string} varieties, denoted by prefixing the string literal with \texttt{r}. Escape sequences are not interpreted; hence raw strings are useful where literal backslashes are common, such as \href{https://en.wikipedia.org/wiki/Regular_expression}{regular expressions} \& \href{https://en.wikipedia.org/wiki/Microsoft_Windows}{Windows}-style paths. (Compare ``\verb|@|-quoting'' in \href{https://en.wikipedia.org/wiki/C_Sharp_(programming_language)}{C\#}.)
+	\end{enumerate*}
+	\item[$\bullet$] Python has \href{https://en.wikipedia.org/wiki/Array_index}{array index} \& \href{https://en.wikipedia.org/wiki/Array_slicing}{array slicing} expressions in lists, denoted as \texttt{a[key]}, \texttt{a[start:stop]} or \texttt{a[start:stop:step]}. Indexes are \href{https://en.wikipedia.org/wiki/Zero-based_numbering}{zero-based}, \& negative indexes are relative to the end. Slices take elements from the \textit{start} index up to, but not including, the \textit{stop} index. The 3rd slice parameter, called \textit{step} or \textit{stride}, allows elements to be skipped \& reversed. Slice indexes may be omitted -- e.g., \texttt{a[:]} returns a copy of the entire list. Each element of a slice is a \href{https://en.wikipedia.org/wiki/Shallow_copy}{shallow copy}.
+\end{enumerate*}
+
+In Python, a distinction between expressions \& statements is rigidly enforced, in contrast to languages such as \href{https://en.wikipedia.org/wiki/Common_Lisp}{Common Lisp}, \href{https://en.wikipedia.org/wiki/Scheme_(programming_language)}{Scheme}, or \href{https://en.wikipedia.org/wiki/Ruby_(programming_language)}{Ruby}. This leads to duplicating some functionality. E.g.:
+\begin{enumerate*}
+	\item[$\bullet$] \href{https://en.wikipedia.org/wiki/List_comprehensions}{List comprehensions} vs. \texttt{for}-loops.
+	\item[$\bullet$] \href{https://en.wikipedia.org/wiki/Conditional_(programming)}{Conditional} expressions vs. \texttt{if} blocks.
+	\item[$\bullet$] The \texttt{eval()} vs. \texttt{exec()} built-in functions (in Python 2, \texttt{exec} is a statement); the former is for expressions, the latter is for statements.
+\end{enumerate*}
+
+Statements cannot be a part of an expression -- so list \& other comprehensions or \href{https://en.wikipedia.org/wiki/Lambda_(programming)}{lambda expressions}, all being expressions, cannot contain statements. A particular case is that an assignment statement such as \texttt{a = 1} cannot form part of the conditional expression of a conditional statement. This has the advantage of avoiding a classic C error of mistaking an assignment operator \texttt{=} for an equality operator \texttt{==} in conditions: \verb|if (c = 1) { ... }| is syntactically valid (but probably unintended) C code, but \verb|if c = 1: ...| causes a syntax error in Python.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Expressions}{Wikipedia\texttt{/}Python (programming language)\texttt{/}syntax \& semantics\texttt{/}expressions}
+
+\paragraph{Methods.} ``\href{https://en.wikipedia.org/wiki/Method_(programming)}{Methods} on objects are \href{https://en.wikipedia.org/wiki/Function_(programming)}{functions} attached to the object's class; the syntax \verb|instance.method(argument)| is, for normal methods \& functions, \href{https://en.wikipedia.org/wiki/Syntactic_sugar}{syntactic sugar} for \verb|Class.method(instance, argument)|. Python methods have an explicit \href{https://en.wikipedia.org/wiki/This_(computer_programming)}{\texttt{self}} parameter to access \href{https://en.wikipedia.org/wiki/Instance_data}{instance data}, in contrast to the implicit self (or \texttt{this}) in some other object-oriented programming language (e.g., \href{https://en.wikipedia.org/wiki/C%2B%2B}{C++}, Java, \href{https://en.wikipedia.org/wiki/Objective-C}{Objective-C}, \href{https://en.wikipedia.org/wiki/Ruby_(programming_language)}{Ruby}). Python also provides methods, often called \textit{dunder methods} (due to their names beginning \& ending with double-underscores), to allow user-defined classes to modify how they are handled by native operations including length, comparison, in \href{https://en.wikipedia.org/wiki/Arithmetic_operations}{arithmetic operations} \& type conversion.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Methods}{Wikipedia\texttt{/}Python (programming language)\texttt{/}syntax \& semantics\texttt{/}methods}
+
+\paragraph{Typing.} ``Python uses \href{https://en.wikipedia.org/wiki/Duck_typing}{duck typing} \& has typed objects buts untyped variable names. Type constraints are not checked at \href{https://en.wikipedia.org/wiki/Compile_time}{compile time}; rather, operations on an object may fail, signifying that it is not of a suitable type. Despite being \href{https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information}{dynamically typed}, Python is \href{https://en.wikipedia.org/wiki/Strong_and_weak_typing}{strongly typed}, forbidding operations that are not well-defined (e.g., adding a number to string) rather than silently attempting to make sense of them.
+
+Python allows programmers to define their own types using \href{https://en.wikipedia.org/wiki/Class_(computer_science)}{classes}, most often used for \href{https://en.wikipedia.org/wiki/Object-oriented_programming}{object-oriented programming}. New \href{https://en.wikipedia.org/wiki/Object_(computer_science)}{instances} of classes are constructed by calling the class (e.g., \texttt{SpamClass()} or \texttt{EggsClass()}), \& the classes are instances of the \href{https://en.wikipedia.org/wiki/Metaclass}{metaclass} \texttt{type} (itself an instance of itself), allowing metaprogramming \& \href{https://en.wikipedia.org/wiki/Reflection_(computer_science)}{reflection}.
+
+Before version 3.0, Python had 2 kinds of classes (both using the same syntax): \textit{old-style} \& \textit{new-style}, current Python versions only support the semantics new style.
+
+The long-term plan is to support \href{https://en.wikipedia.org/wiki/Gradual_typing}{gradual typing}. Python's syntax allows specifying static types, but they are checked in the default implementation, \href{https://en.wikipedia.org/wiki/CPython}{CPython}. An experimental optional static typechecker, \textit{mypy}, supports compile-time type checking. \textsf{Table: Summary of Python 3's built-in types}.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Typing}{Wikipedia\texttt{/}Python (programming language)\texttt{/}syntax \& semantics\texttt{/}typing}
+
+\paragraph{Arithmetic operations.} ``Python has the usual symbols for arithmetic operators (\verb|+, -, *, /|), the floor division operator \verb|//| \& the \href{https://en.wikipedia.org/wiki/Modulo_operation}{modulo operation} \verb|%| (where the remainder can be negative, e.g., \verb|4 % -3 == -2|). It also has \texttt{**} for \href{https://en.wikipedia.org/wiki/Exponentiation}{exponentiation}, e.g., \verb|5**3 == 125| \& \verb|9**0.5 == 3.0|, \& a matrix-multiplication operator \verb|@|. These operators work like in traditional math; with the same \href{https://en.wikipedia.org/wiki/Order_of_operations}{precedence rules}, the operators \href{https://en.wikipedia.org/wiki/Infix_notation}{infix} (\texttt{+} \& \texttt{-} can also be \href{https://en.wikipedia.org/wiki/Unary_operation}{unary} to represent positive \& negative numbers respectively).
+
+The division between integers produces floating-point results. The behavior of division has changed significantly over time:
+\begin{enumerate*}
+	\item[$\bullet$] Current Python (i.e. since 3.0) changed \verb|/| to always be floating-point division, e.g., \verb|5/2 == 2.5|.
+	\item[$\bullet$] The floor division \verb|//| operator was introduced. So \verb|7//3 == 2|, \verb|-7//3 == -3|, \verb|7.5//3 == 2.0|, \& \verb|-7.5//3 == -3.0|. Adding \newline\verb|from __future__ import division| causes a module used in Python 2.7 to use Python 3.0 rules for division.
+\end{enumerate*}
+
+In Python terms, \verb|/| is \textit{true division} (or simply \textit{division}), \& \verb|//| is \textit{floor division}. \verb|/| before version 3.0 is \textit{classic division}.
+
+Rounding towards negative infinity, though different from most languages, adds consistency. E.g., it means that the equation \verb|(a + b)//b == a//b + 1| is always true. It also means that the equation \verb|b*(a//b) + a%b == a| is valid for both positive \& negative values of \texttt{a}. However, maintaining the validity of this equation means that while the result of \verb|a%b| is, as expected, in the \href{https://en.wikipedia.org/wiki/Half-open_interval}{half-open interval} $[0,b)$, where \texttt{b} is a positive integer, it has to lie in the interval $(b,0]$ when \texttt{b} is negative.
+
+Python provides a \texttt{round} function for \href{https://en.wikipedia.org/wiki/Rounding}{rounding} a float to the nearest integer. For \href{https://en.wikipedia.org/wiki/Rounding#Tie-breaking}{tie-breaking}, Python 3 uses \href{https://en.wikipedia.org/wiki/Round_to_even}{round to even}: \verb|round(1.5)| \& \verb|round(2.5)| both produce \texttt{2}. Versions before 3 used \href{https://en.wikipedia.org/wiki/Rounding#Rounding_away_from_zero}{round-away-from-zero}: \verb|round(0.5)| is \texttt{1.0}, \verb|round(-0.5)| is \texttt{-1.0}.
+
+Python allows boolean expressions with multiple equality relations in a manner that is consistent with general use in mathematics. E.g., the expression \texttt{a < b < c} tests whether \texttt{a} is less than \texttt{b} \& \texttt{b} is less than \texttt{c}. C-derived languages interpret this expression differently: in C, the expression would 1st evaluate \texttt{a < b}, resulting in 0  or 1, \& that result would then be compared with \texttt{c}.
+
+Python uses \href{https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic}{arbitrary-precision arithmetic} for all integer operations. The \texttt{Decimal} type\texttt{/}class in the \texttt{decimal} module provides \href{https://en.wikipedia.org/wiki/Decimal_floating_point}{decimal floating-point numbers} to a pre-defined arbitrary precision \& several rounding modes. The \texttt{Fraction} class in the \texttt{fractions} module provides arbitrary precision for \href{https://en.wikipedia.org/wiki/Rational_number}{rational numbers}.
+
+Due to Python's extensive mathematics library, \& the 3rd-party library \href{https://en.wikipedia.org/wiki/NumPy}{NumPy} that further extends the native capabilities, it is frequently used as a scientific scripting language to aid in problems such as numerical data processing \& manipulation.'' -- \href{https://en.wikipedia.org/wiki/Python_(programming_language)#Arithmetic_operations}{Wikipedia\texttt{/}Python (programming language)\texttt{/}syntax \& semantics\texttt{/}arithmetic operations}
+
+\subsubsection{Libraries}
+
+\subsubsection{Development environments}
+
+\subsubsection{Implementations}
+
+\paragraph{Reference implementation.}
+
+\paragraph{Other implementations.}
+
+\paragraph{Unsupported implementations.}
+
+\paragraph{Cross-compilers to other languages.}
+
+\paragraph{Performance.}
+
+\subsubsection{Development}
+
+\subsubsection{API documentation generators}
+
+\subsubsection{Naming}
+
+\subsubsection{Popularity}
+
+%------------------------------------------------------------------------------%
+
+\textbf{References.} \cite{Knuth1997, Matthes2019}.
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
