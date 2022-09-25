@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Cheatsheet in Elementary Mathematics\texttt{/}Grade 7}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Bảng tóm tắt công thức trong chương trình Toán Sơ Cấp lớp 7.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Số Hữu Tỷ}
+\textbf{\S1. Tập hợp $\mathbb{Q}$ các số hữu tỷ.} $\mathbb{Q} = \left\{\frac{a}{b}|a,b\in\mathbb{Z},\ b\ne 0\right\} = \left\{\frac{a}{b}|a,b\in\mathbb{Z},\ b > 0\right\}$. $\mathbb{N}^\star\subset\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}\subset\mathbb{C}$. $\frac{a}{b} = \frac{an}{bn}$, $\forall a,b\in\mathbb{Z}$, $b\ne 0$, $\mbox{ƯCLN}(a,b) = 1$, $\forall n\in\mathbb{Z}^\star\coloneqq\mathbb{Z}\backslash\{0\}$. $-\frac{a}{b} = \frac{a}{-b} = \frac{-a}{b}$, $\forall a,b\in\mathbb{Z}$, $b\ne 0$. $a + (-a) = 0$, $\forall a\in\mathbb{Q}$. $-0 = 0$. $-(-a) = a$, $\forall a\in\mathbb{Q}$. Tính chất bắc cầu: $((a < b)\land(b < c))\Rightarrow(a < c)$, $\forall a,b,c\in\mathbb{Q}$. \textbf{\S2. $\boldsymbol{\pm,\cdot,:}$ trên $\mathbb{Q}$.} \textit{Tính chất của $+$ trên $\mathbb{Q}$}: giao hoán: $a + b = b + a$, $\forall a,b\in\mathbb{Q}$; kết hợp: $(a + b) + c = a + (b + c)$, $\forall a,b,c\in\mathbb{Q}$; cộng với số $0$: $a + 0 = 0 + a = a$, $\forall a\in\mathbb{Q}$; cộng với số đối: $a + (-a) = 0$, $\forall a\in\mathbb{Q}$. $a - b = a + (-b)$, $\forall a,b\in\mathbb{Q}$. Quy tắc chuyển vế: $x + y = z\Rightarrow x = z - y$, $x - y = z\Rightarrow x = z + y$, $\forall x,y,z\in\mathbb{Q}$. \textit{Tính chất của $\cdot$ trên $\mathbb{Q}$}: giao hoán $ab = ba$, $\forall a,b\in\mathbb{Q}$; kết hợp: $(ab)c= a(bc)$, $\forall a,b,c\in\mathbb{Q}$; nhân với số 1: $a\cdot 1 = 1a = a$, $\forall a\in\mathbb{Q}$; phân phối của phép nhân đối với phép cộng \& phép trừ: $a(b + c) = ab + ac$, $a(b - c) = ab - ac$, $\forall a,b,c\in\mathbb{Q}$. $\frac{a}{b}\cdot\frac{b}{a} = 1$, $\forall a,b\in\mathbb{Z}^\star$. $a\cdot\frac{1}{a} = 1$, $\forall a\in\mathbb{Q}$. $\frac{1}{\frac{1}{a}} = a$, $\forall a\in\mathbb{Q}$. $a:b = a\cdot\frac{1}{b}$, $\forall a,b\in\mathbb{Q}$, $b\ne 0$. \textbf{\S3. Phép tính lũy thừa với số mũ tự nhiên của 1 số hữu tỷ.} $x^n = x\cdot\cdots\cdot x$ ($n$ thừa số $x$), $\forall x\in\mathbb{Q}$, $\forall n\in\mathbb{N}^\star$. Quy ước: $x^1 = 1$, $\forall x\in\mathbb{Q}$. $x^mx^n = x^{m + n}$, $\forall x\in\mathbb{Q}$, $\forall m,n\in\mathbb{N}$, $x^2 + m^2n^2\ne 0$. $x^m:x^n = \frac{x^m}{x^n} = x^{m - n}$, $\forall x\in\mathbb{Q}^\star\coloneqq\mathbb{Q}\backslash\{0\}$, $\forall m,n\in\mathbb{N}$, $m\ge n$. Quy ước: $x^0 = 1$, $\forall x\in\mathbb{Q}^\star$. $(x^m)^n = x^{mn}$, $\forall x\in\mathbb{Q}$, $\forall m,n\in\mathbb{N}$, $x^2 + m^2n^2\ne 0$. $(xy)^n = x^ny^n$, $\forall x,y\in\mathbb{Q}$, $\forall n\in\mathbb{N}$, $x^2y^2 + n^2\ne 0$. $\left(\frac{x}{y}\right)^n = \frac{x^n}{y^n}$, $\forall x,y\in\mathbb{Q}$, $y\ne 0$, $\forall n\in\mathbb{N}$, $x^2 + n^2\ne 0$. \textbf{\S4. Thứ tự thực hiện các phép tính. Quy tắc dấu ngoặc.} $()\to[]\to\{\}$, $\widehat{\ }\to\cdot,:\to\pm$. Quy tắc dấu ngoặc: $a + (b + c) = a + b + c$, $a + (b - c) = a + b - c$, $a - (b + c) = a - b - c$, $a - (b - c) = a - b + c$, $\forall a,b,c\in\mathbb{Q}$. Quy tắc dấu: $++\to +$, $+-\to-$, $-+\to -$, $--\to +$. \textbf{\S5. Biểu diễn thập phân của số hữu tỷ.} Số thập phân hữu hạn: $\overline{a_na_{n-1}\ldots a_1a_0,a_{-1}a_{-2}\ldots a_{-m + 1}a_{-m}}$, $\forall m,n\in\mathbb{N}$, $a_i\in\{0;1;2;3;4;5;6;7;8;9\}$, $\forall i = -m,\ldots,n$, $a_n\ne 0$, $a_{-m}\ne 0$. Số thập phân vô hạn tuần hoàn: $\overline{a_na_{n-1}\ldots a_1a_0,a_{-1}a_{-2}\ldots a_{-m + 1}a_{-m}(b_1b_2\ldots b_k)}$, $\forall m,n,k\in\mathbb{N}$, $a_i,b_j\in\{0;1;2;3;4;5;6;7;8;9\}$, $\forall i = -m,\ldots,n$, $\forall j = 1,\ldots,k$, $a_n\ne 0$, $a_{-m}\ne 0$, trong đó $\overline{b_1b_2\ldots b_k}$ là \textit{chu kỳ}. Mỗi số hữu tỷ được biểu diễn bởi 1 số thập phân hữu hạn hoặc vô hạn tuần hoàn. Tập hợp các số thập phân hữu hạn $\mathbb{Q}_{\rm hh}\coloneqq\left\{\frac{a}{2^m5^n}|a\in\mathbb{Z},\,m,n\in\mathbb{N},\,\mbox{ƯCLN}(a,10) = 1\right\}$, tập hợp các số thập phân vô hạn tuần hoàn $\mathbb{Q}_{\rm vhth}\coloneqq\left\{\frac{a}{b}|a,b\in\mathbb{Z},\,b > 0,\,\mbox{ƯCLN}(a,b) = 1,\,b\mbox{ có ước nguyên tố }p\ne 2,\,p\ne 5\right\}$, $\mathbb{Q}_{\rm hh}\cap\mathbb{Q}_{\rm vhth} = \emptyset$, $\mathbb{Q}_{\rm hh}\cup\mathbb{Q}_{\rm vhth} = \mathbb{Q}$.
+
+%------------------------------------------------------------------------------%
+
+\section{Số Thực}
+\textbf{\S1. Số vô tỷ. Căn bậc 2 số học.} $\pi\in\mathbb{R}\backslash\mathbb{Q}$. Số vô tỷ được viết dưới dạng số thập phân vô hạn không tuần hoàn, i.e., $\overline{a_na_{n-1}\ldots a_1a_0,a_{-1}a_{-2}\ldots}$, sao cho phần thập phân $\overline{a_{-1}a_{-2}\ldots}$ không có chu kỳ. $x = \pm\sqrt{a}\Leftrightarrow x^2 = a$, $\forall a\ge 0$\footnote{$\forall a\ge 0$, i.e., $\forall a\in\mathbb{R}$, $a\ge 0$. Tương tự, $\forall a > 0$, $\forall a < 0$, $\forall a\le 0$ được ngầm hiểu là $\forall a\in\mathbb{R}$ \& $a$ thỏa bất đẳng thức tương ứng.}. $\sqrt{0} = 0$. $\sqrt{a} = b\Leftrightarrow(b\ge 0\land b^2 = a)$, $\forall a\ge 0$. $-\sqrt{a} = b\Leftrightarrow(b\le 0\land b^2 = a)$, $\forall a\ge 0$. $(\sqrt{a})^2 = (-\sqrt{a})^2 = a$, $\forall a\ge 0$. $(a\ge 0,\,a\ne n^2,\,\forall n\in\mathbb{N})\Leftrightarrow\sqrt{a}\in\mathbb{R}\backslash\mathbb{Q}$. \textbf{\S2. Tập hợp $\mathbb{R}$ các số thực.} $\mathbb{R} = \mathbb{Q}\cup(\mathbb{R}\backslash\mathbb{Q})$, $\mathbb{Q}\cap(\mathbb{R}\backslash\mathbb{Q}) = \emptyset$. $\mathbb{R} = \mathbb{Q}_{\rm hh}\cup\mathbb{Q}_{\rm vhth}\cup(\mathbb{R}\backslash\mathbb{Q})$. $a + (-a) = 0$, $-(-a) = a$, $\forall a\in\mathbb{R}$, $-0 = 0$. Tính chất bắc cầu: $((a < b)\land(b < c))\Rightarrow a < c$, $\forall a,b,c\in\mathbb{R}$. $a > b\ge 0\Leftrightarrow\sqrt{a} > \sqrt{b}$. \textit{Tính chất của $+$ trên $\mathbb{R}$}: giao hoán: $a + b = b + a$, $\forall a,b\in\mathbb{R}$; kết hợp: $(a + b) + c = a + (b + c)$, $\forall a,b,c\in\mathbb{R}$; cộng với số $0$: $a + 0 = 0 + a = a$, $\forall a\in\mathbb{R}$; cộng với số đối: $a + (-a) = (-a) + a = 0$, $\forall a\in\mathbb{R}$. \textit{Tính chất của $\cdot$ trên $\mathbb{R}$}: giao hoán: $ab = ba$, $\forall a,b\in\mathbb{R}$; kết hợp: $(ab)c = a(bc)$, $\forall a,b,c\in\mathbb{R}$; nhân với số $1$: $a\cdot 1 = 1a = a$, $\forall a\in\mathbb{R}$; phân phối của $\cdot$ đối với $\pm$: $a(b + c) = ab + ac$, $a(b - c) = ab - ac$, $\forall a,b,c\in\mathbb{R}$; $\forall a\in\mathbb{R}^\star\coloneqq\mathbb{R}\backslash\{0\}$, $\exists\frac{1}{a}\in\mathbb{R}$ s.t. $a\cdot\frac{1}{a} = 1$. $x^n = x\cdot\cdots\cdot x$ ($n$ thừa số $x$), $\forall x\in\mathbb{R}$, $\forall n\in\mathbb{N}$, $x^2 + n^2\ne 0$. $x^mx^n = x^{m + n}$, 
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Học Trực Quan}
+
+%------------------------------------------------------------------------------%
+
+\section{Góc. Đường Thẳng Song Song}
+
+%------------------------------------------------------------------------------%
+
+\section{1 Số Yếu Tố Thống Kê \& Xác Suất}
+
+%------------------------------------------------------------------------------%
+
+\section{Biểu Thức Đại Số}
+
+%------------------------------------------------------------------------------%
+
+\section{Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
