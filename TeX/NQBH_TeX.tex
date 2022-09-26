@@ -1,49 +1,63 @@
 \documentclass{article}
+\usepackage[vietnamese,english]{babel}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{notation}{Notation}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small Subsect.~\thesubsection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
 \title{\TeX}
-\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam.\\e-mail: \texttt{nguyenquanbahong@gmail.com}.}}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
-	Some notes on \TeX.
+	This text contains some personal notes on \TeX. The latest version of this text \& its \TeX\ file have been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/TeX/NQBH_TeX.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}\TeX.pdf}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/TeX/NQBH_TeX.pdf}.} \& \href{https://github.com/NQBH/hobby/blob/master/TeX/NQBH_TeX.tex}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}\TeX.tex}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/TeX/NQBH_TeX.tex}.}.
 \end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
 
-\section{Resources}
+\section*{Resources}
 
 \begin{enumerate}
 	\item \href{https://ctan.org/}{The Comprehensive \TeX\ Archive Network} (CTAN) is the central place for all kinds of material around \TeX. Most of the packages are free \& can be downloaded \& used immediately.
@@ -60,7 +74,90 @@
 
 %------------------------------------------------------------------------------%
 
-\section{\href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}international language support}}
+\section{\href{https://www.overleaf.com/learn/latex/Chemistry_formulae}{Overleaf\texttt{/}Chemistry Formulae}}
+``There are a few \LaTeX\ packages to create chemistry formulae: \href{http://www.ctan.org/pkg/chemfig}{chemfig}, \href{http://www.ctan.org/pkg/ochem}{ochem}, \href{http://ctan.org/pkg/streetex}{streetex}, \& \href{http://www.ctan.org/pkg/xymtex}{xymtex}. The most intuitive is probably the \texttt{chemfig} package. This article explains how to use the \texttt{chemfig} package to create chemical formulae in \LaTeX.''
+
+\subsection{Introduction}
+``Drawing a molecule consists mainly of connecting groups of atoms with lines. Simple linear formulae can be easily drawn using the \texttt{chemfig} package, as shown in the following example:
+\begin{verbatim}
+	\documentclass{article}
+	\usepackage{chemfig}
+	\begin{document}
+		
+		\section{Introduction}
+		Writing chemical formulae with chemfig is straightforward.
+		
+		\chemfig{O=H}
+	\end{document}
+\end{verbatim}
+The package is imported by \verb|\usepackage{chemfig}| in the preamble. The command \verb|\chemfig{O=H}| the draws the molecule. The symbol \texttt{=} determines the type of bond.''
+
+\subsection{Angles}
+``There are several ways to define angles between bonds in molecules.
+\begin{verbatim}
+	To define chemical formulae you can use units that define the angles
+	
+	\chemfig{A-[1]B-[7]C}
+	
+	Absolute angles
+	
+	\chemfig{A-[:50]B-[:-25]C}
+	
+	Relative angles
+	
+	\chemfig{A-[::50]B-[::-25]C}
+\end{verbatim}
+Each 1 of the 3 commands in the example above uses a different method to determine the angle between bonds.
+\begin{enumerate*}
+	\item[$\bullet$] \texttt{default units}: In the command \verb|\chemfig{A-[1]B-[7]C}| the parameters inside brackets set the angle in special units, each unit equals $45^\circ$. Hence in the example the angles are $45^\circ$ \& $315^\circ$.
+	\item[$\bullet$] \texttt{absolute units}: The angles can be set in absolute units, in the command \verb|\chemfig{A-[:50]B-[:-25]C}| the parameter inside the brackets represent the angle, in degrees, measured from the horizontal baseline. Negative angles are allowed.
+	\item[$\bullet$] \texttt{relative angles}: In the 3rd example \verb|\chemfig{A-[::50]B-[::-25]C}| the angles are measured from the previous bond, instead of the baseline.''
+\end{enumerate*}
+
+\subsection{Rings}
+
+\subsubsection{Connected rings}
+
+\subsection{Branches}
+``Chemical formulae are not always linear, branched formulae are actually the most common type. Below an example on how to create them.
+\begin{verbatim}
+	Branched molecule \vspace{.5cm}
+	
+	\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H}
+\end{verbatim}
+Branches in each node are created by adding formulas inside parentheses. E.g., the code \verb|C(-[2]H)(-[6]H)| creates 2 branches in \texttt{C}, one with a 2 units angle ($90^\circ$) \& other with a 6 units angle ($270^\circ$). Branches are also be added to rings:
+\begin{verbatim}
+	Branched ring
+	\vspace{.5cm}
+	
+	\chemfig{A*6(-B=C(-CH_3)-D-E-F(=G)=)}
+\end{verbatim}
+The syntax is similar, using parentheses a branch can be attached to a node (atom). E.g., \verb|F(=G)| attaches a branch to the node \texttt{F}. More complex examples can be created using nested branches \& even attaching rings as branches.''
+
+\subsection{Customizing the formulae}
+``Several parameters such as colors \& the node separation can be changed, also additional text to describe the formula can be added.
+\begin{verbatim}
+	{\huge 
+		\setchemfig{atom sep=2em,bond style={line width=1pt,red,dash pattern=on 2pt off 2pt}}  
+		\chemname
+		{\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H}}    
+		{Ethanal}
+	}
+\end{verbatim}
+There are 3 new commands here:
+\begin{enumerate*}
+	\item[$\bullet$] \verb|\setbondstyle{ }|: Inside the braces several style-related commands can be passed using the \verb|<code<tikz| syntax.
+	\item[$\bullet$] \verb|\setatomstep{2em}|: The separation between atoms (nodes) in the formula is set to \texttt{2em}. Other \href{https://www.overleaf.com/learn/latex/Lengths_in_LaTeX}{\LaTeX\ units} can be used.
+	\item[$\bullet$] \verb|\chemname{}{}|: The 1st parameter in this command is a \texttt{chemfig} formula, the 2nd one is some text that will be printed below the formula. In the example the text is ``Ethanal''.
+\end{enumerate*}
+
+Notice also that the font used is \texttt{huge}. You can use any other \href{https://www.overleaf.com/learn/latex/Font_sizes_and_kinds}{font size} \& the formula will be scaled accordingly.''
+
+\subsection{Reference guide}
+
+%------------------------------------------------------------------------------%
+
+\section{\href{https://www.overleaf.com/learn/latex/International_language_support}{Overleaf\texttt{/}International Language Support}}
 ``\LaTeX\ supports many worldwide languages by means of some special packages.''
 
 \subsection{Introduction}
