@@ -94,7 +94,7 @@ Có thể viết tắt \eqref{ctc}bằng cách sử dụng các ký hiệu $\pm,
 \begin{proof}[Chứng minh \eqref{ctc}]
 	\begin{enumerate*}
 		\item[\textbf{(a)}] ``Ta chỉ cần chứng minh công thức đầu tiên rồi từ đó dùng giá trị lượng giác của các góc liên kết để suy ra các công thức còn lại. Giả sử các điểm $M$ \& $N$ nằm trên đường tròn lượng giác tâm $O$, gốc $A$ sao cho góc lượng giác $(OA,OM) = \alpha$, $(OA,ON) = \beta$ thì $\overrightarrow{OM}$ có tọa độ $(\cos\alpha;\sin\alpha)$, $\overrightarrow{ON}$ có tọa độ $(\cos\beta;\sin\beta)$, từ đó tích vô hướng $\overrightarrow{OM}\cdot\overrightarrow{ON} = \cos\alpha\cos\beta + \sin\alpha\sin\beta$. Mặt khác, $\overrightarrow{OM}\cdot\overrightarrow{ON} = |\overrightarrow{OM}||\overrightarrow{ON}|\cos\widehat{NOM} = \cos\widehat{NOM} = \cos(ON,OM)$ $= \cos[(OA,OM) - (OA,ON)] = \cos(\alpha - \beta)$, nên suy ra $\cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta$.'' -- \cite[pp. 5--6]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}.
-		\item[\textbf{(b)}] Thay $\beta$ trong công thức vừa thu được ở (a) bởi $-\beta$, $\cos(\alpha + \beta) = \cos\alpha\cos(-\beta) + \sin\alpha\sin(-\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$.
+		\item[\textbf{(b)}] Thay $\beta$ trong công thức vừa thu được ở (a) bởi $-\beta$, $\cos(\alpha + \beta) = \cos\alpha\cos(-\beta) + \sin\alpha\sin(-\beta)$\\$= \cos\alpha\cos\beta - \sin\alpha\sin\beta$.
 		\item[\textbf{(c)}] $\sin(\alpha - \beta) = \cos\left(\frac{\pi}{2} - \alpha + \beta\right) = \cos\left(\frac{\pi}{2} - \alpha\right)\cos\beta - \sin\left(\frac{\pi}{2} - \alpha\right)\sin\beta = \sin\alpha\cos\beta - \cos\alpha\sin\beta$, trong đó ta sử dụng công thức $\sin x = \cos\left(\frac{\pi}{2} - x\right)$, $\cos x = \sin\left(\frac{\pi}{2} - x\right)$, $\forall x\in\mathbb{R}$\footnote{I.e., với 2 góc phụ nhau, sin 1 góc bất kỳ bằng côsin góc còn lại.} \& công thức vừa chứng minh ở (b) với $\alpha$ được thay bởi $\frac{\pi}{2} - \alpha$.
 		\item[\textbf{(d)}] Thay $\beta$ trong công thức vừa thu được ở (c) bởi $-\beta$.
 	\end{enumerate*}
@@ -286,7 +286,7 @@ Từ tính chất tuần hoàn với chu kỳ $2\pi$, ta thấy khi biết giá 
 \end{nhanxet}
 
 \subsubsection{Sự biến thiên \& đồ thị của hàm số $y = \cos x$}
-``Ta có thể tiến hành khảo sát sự biến thiên \& vẽ đồ thị của hàm số $y = \cos x$ tương tự như đã làm đối với hàm số $y = \sin x$ trên đây. Tuy nhiên, ta nhận thấy $\cos x = \sin\left(x + \frac{\pi}{2}\right)$, $\forall x\in\mathbb{R}$, nên bằng cách tịnh tiến đồ thị hàm số $y = \sin x$ sang trái 1 đoạn có độ dài $\frac{\pi}{2}$, ta được đồ thị hàm số $y = \cos x$ (nó cùng được gọi là 1 \textit{đường hình sin}) (Fig. \ref{fig:graph cos}).
+``Ta có thể tiến hành khảo sát sự biến thiên \& vẽ đồ thị của hàm số $y = \cos x$ tương tự như đã làm đối với hàm số $y = \sin x$ trên đây. Tuy nhiên, ta nhận thấy $\cos x = \sin\left(x + \frac{\pi}{2}\right)$, $\forall x\in\mathbb{R}$, nên bằng cách tịnh tiến đồ thị hàm số $y = \sin x$ sang trái 1 đoạn có độ dài $\frac{\pi}{2}$, ta được đồ thị hàm số $y = \cos x$ (nó cũng được gọi là 1 \textit{đường hình sin}) (Fig. \ref{fig:graph cos}).
 
 \begin{figure}[H]
 	\centering
@@ -1385,6 +1385,17 @@ Dãy các số tự nhiên lẻ $(2n + 1)_{n=0}^\infty$ \& dãy các số tự n
 ``Công thức tính số số hạng của 1 cấp số cộng khi biết số hạng đầu, số hạng cuối \& công sai: Số số hạng $=$ [(số hạng đầu $-$ số hạng cuối): công sai] $+ 1$. Đây chính là công thức của bài toán trồng cây quen thuộc ở cấp 2.'' ``ý tưởng của Gauss (lúc còn là 1 cậu bé) khi ông  tính tổng $\sum_{i=1}^{100} i = 1 + 2 + \cdots + 100$ rằng $1 + 100 = 2 + 99 = \cdots = 50 + 51$ gồm $50$ cặp số, mỗi cặp có tổng bằng $101$. Tư (b)--(c) của định lý \ref{thm:cac tinh chat co ban cua cap so cong} dễ dàng suy ra: $S_n = \frac{1}{2}[2u_1 + (n - 1)d]n$.'' -- \cite[p. 126]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
 
 \subsection{Cấp số nhân -- Geometric progression}
+
+\begin{dinhnghia}[Cấp số nhân]
+	``\emph{Cấp số nhân} là 1 dãy số (hữu hạn hay vô hạn) mà trong đó, kể từ số hạng thứ 2, mỗi số hạng đều bằng tích của số hạng đứng ngay trước đó \& 1 số $q$ không đổi. I.e., $(u_n)$ là cấp số nhân $\Leftrightarrow\forall n\ge 2$, $u_n = qu_{n-1}$.
+\end{dinhnghia}
+$u_1$ được gọi là \textit{số hạng đầu tiên}, $u_k$ là \textit{số hạng thứ $k$} của cấp số nhân, $q$ được gọi là \textit{công bội} của cấp số nhân. Nếu cấp số nhân là hữu hạn \& có $n$ số hạng thì $n$ được gọi là \textit{số số hạng} còn $u_n$ được gọi là \textit{số hạng cuối} của cấp số nhân.'' -- \cite[p. 128]{TL_chuyen_Toan_Dai_So_Giai_Tich_11}
+
+\textsc{Cách chuyển các dãy số có công thức truy hồi dạng $u_{n+1} = au_n + b$ thành cấp số cộng \& cấp số nhân.} Cho dãy số $(u_n)_n$ (ở đây ta chỉ quan tâm tới công thức truy hồi chứ không quan tâm đến tập các chỉ số, e.g., chỉ số đầu\texttt{/}cuối, nên chỉ ký hiệu đơn giản là $(u_n)_n$ thay vì chỉ ra cụ thể tập các chỉ số, e.g., $(u_n)_{n=1}^\infty$ hay $(u_n)_{n=0}^N$) xác định bởi công thức truy hồi $u_{n+1} = au_n + b$ với $a\ne 0$ (nếu $a = 0$, thì $u_n = b$, $\forall n$, nên là 1 dãy hằng, i.e., 1 cấp số cộng có công sai bằng 0 \& đồng thời là 1 cấp số nhân có công bội bằng 1, i.e., 1 trường hợp tầm thường không đáng quan tâm).
+\begin{itemize}
+	\item \textit{Chuyển $(u_n)_n$ về cấp số nhân.} Thử đặt $v_n\coloneqq xu_n + y$, $\forall n$ ($x\ne 0$), thì $v_{n+1} = xu_{n+1} + y = x(au_n + b) + y = axu_n + bx + y = a(xu_n + y) + bx + y - ay = av_n + bx + (1 - a)y$. Để $(v_n)_n$ là 1 cấp số nhân, ta phải chọn $x,y$ sao cho $bx + (1 - a)y = 0$, hay $bx = (a - 1)y$. Ngược lại, ta thấy nếu các số $x,y$ thỏa mãn $bx = (a - 1)y$ thì $(v_n)_n$ là 1 cấp số nhân với công bội $a$. Có thể chọn, e.g., $(x,y) = (a - 1,b)$ hoặc $(x,y) = \left(\frac{a - 1}{k},\frac{b}{k}\right)$ với $k\in\mathbb{Z}^\star$ tùy ý.
+	\item \textit{Chuyển $(u_n)_n$ về cấp số cộng.} \textit{How?}
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
