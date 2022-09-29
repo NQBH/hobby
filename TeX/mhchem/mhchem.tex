@@ -1,0 +1,1744 @@
+%% mhchem.tex
+%% 2021-12-31
+%% Copyright 2004-2021 Martin Hensel
+%
+%% This file is part of the mhchem bundle for LaTeX
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c
+% which is included as lppl-1-3c.txt.
+%
+% This work has the LPPL maintenance status "maintained".
+% The Current Maintainer of this work is Martin Hensel.
+%
+% ( In order to fight spam, the maintainer's contact      )
+% ( information is "encrypted" with ROT13.                )
+% ( If you do not know ROT13 yet and have no tool for     )
+% ( decryption, simply do an Internet search for "ROT13". )
+%
+% ,---[ ROT 13 ]---
+% | Gur Pheerag Znvagnvare bs guvf jbex vf Znegva Urafry
+% |   jub pna or pbagnpgrq ivn
+% |     zupurz@ZnegvaUrafry.qr
+% |   be ivn znvy
+% |     Znegva Urafry
+% |     Cbfgfge. 20
+% |     09232 Unegznaafqbes
+% |     Treznal
+% `----------
+%
+% This work consists of all files listed in manifest.txt.
+%
+%
+\documentclass[a4paper,notitlepage,parskip=half]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,UKenglish]{babel}
+\usepackage{tgpagella}% URW Palladio
+\usepackage{upgreek}
+\addtokomafont{disposition}{\rmfamily}
+\linespread{1.1}
+\usepackage{mathpazo}% math font
+\usepackage[scale=0.9]{sourcecodepro}
+\usepackage{AlegreyaSans}
+\usepackage[bookmarks,bookmarksopen,pdfstartview=FitH]{hyperref}
+\usepackage[alwaysadjust]{paralist}
+\usepackage{ragged2e}
+\usepackage{fancyvrb-ex}% example environments
+\usepackage{xcolor}
+\usepackage{nameref}
+
+\usepackage[version=4]{mhchem}
+\usepackage{hpstatement}
+\usepackage{rsphrase}
+\usepackage{tikz}
+\usepgflibrary{arrows.meta}
+
+\setcounter{secnumdepth}{-1}
+\newcommand\macro[1]{\mbox{\ttfamily\textbackslash#1}}
+\newcommand\fromversion[1]{\marginpar{{\scriptsize version$\geq$#1}}}
+\newenvironment{annotation}{\bgroup\footnotesize}{\par\egroup}
+
+\definecolor{mhchem}{HTML}{A33E00}
+\makeatletter
+\def\mhchem@hook@beforeCe{\color{mhchem}}
+\makeatother
+
+\begin{document}
+
+\title{%
+  The mhchem Bundle\\[0.3em]
+  \Large\textmd{%
+    Documentation for the \LaTeX{} Packages\\
+    mhchem v4.09,\\% check
+    hpstatement v2.0.0 and\\
+    rsphrase v3.11}%
+}
+\author{%
+  Martin Hensel\\
+  mhchem\makebox[0pt][l]{\textcolor{white}{NOSPAM}}@MartinHensel\makebox[1pt][l]{\textcolor{white}{.}}.de%
+}
+\date{%
+  2021-12-31% check
+}
+\maketitle
+
+\vfill
+
+\begin{abstract}
+  \noindent
+  The \textbf{mhchem} package provides commands for typesetting chemical
+  molecular formulae and equations.
+
+  \medskip
+  \noindent The \textbf{hpstatement} package provides commands for the
+  official hazard statements and precautionary statements (H and P statements)
+  that are used to label chemicals. 1272/2008, GHS.
+
+  \medskip
+  \noindent
+  The \textbf{rsphrase} package provides commands for the official Risk and
+  Safety (R and S) Phrases that are used to label chemicals.
+\end{abstract}
+
+
+
+\clearpage
+\tableofcontents
+
+
+
+\clearpage
+\chapter{The mhchem Package}
+
+
+\section{Preamble}
+
+To use mhchem, request it in your document's preamble with the command
+
+{\color{mhchem}\Large\verb|\usepackage|{\ttfamily\bfseries [version=4]}\verb|{mhchem}|}
+\marginpar{\Large !}
+
+\begin{annotation}
+What about the \verb|version=4|? During development, I became aware that additional functionality could not be added without changing the user-interface slightly. But what about backward compatibility? I could, of course freeze mhchem and publish an mhchem2 package. However, I decided to use a parameter in order to switch to the new interface. One can use \verb|version=4| for the most-recent version of mhchem, but \verb|version=2| to \verb|version=1| are still there for existing documents that use an old user-interface of mhchem. Those old documents should still produce the same results. However, spacing might differ slightly.
+\end{annotation}
+
+mhchem needs a couple of other packages. For instance, expl3, amsmath and calc.
+
+
+\section{Chemical Equations}
+
+\begin{SideBySideExample}[xrightmargin=6cm]
+  \ce{CO2 + C -> 2 CO}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=6cm]
+  \ce{Hg^2+ ->[I-] HgI2
+            ->[I-] [Hg^{II}I4]^2-}
+\end{SideBySideExample}
+
+
+
+\section{Chemical Formulae}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{H2O}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{Sb2O3}
+\end{SideBySideExample}
+
+
+This works in text mode (even in headings) and in math mode. (For PDF bookmarks you might have to specify a text-only version.)
+
+{
+\let\sffamilyorig\sffamily
+\def\sffamily{\color{mhchem}\sffamilyorig}
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \sffamily\itshape
+  This is text with \ce{H2O} and $\ce{H2O}$.
+\end{SideBySideExample}
+}
+
+For how to fine-tune the font usage, see \nameref{sec:FineTuning}.
+
+
+\section{Charges}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{H+}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{CrO4^2-}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{[AgCl2]-}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{Y^99+}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{Y^{99+}}
+\end{SideBySideExample}
+
+This will work in text mode and math mode. For text, the en-dash will be used as a minus sign.
+
+
+\section{Oxidation States}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{Fe^{II}Fe^{III}2O4}
+\end{SideBySideExample}
+
+\section{Stoichiometric Numbers}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{2H2O}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{2 H2O}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{0.5H2O}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{1/2H2O}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{(1/2)H2O} % IUPAC Green Book
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{$n$H2O}
+\end{SideBySideExample}
+
+This works in text mode and math mode. (The fraction line always comes from math mode and might appear too small when using bold text fonts.)
+
+
+\section{Nuclides, Isotopes}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{^{227}_{90}Th+}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{^227_90Th+}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{^{0}_{-1}n^{-}}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{^0_-1n-}
+\end{SideBySideExample}
+
+It might be ambiguous whether a superscript belongs to the left or right letter. You can make sure by hand (using \verb|{}|) or leave it to the automatic detection (digits only~= mass number~= belongs to right side).
+
+\begin{SideBySideExample}[xrightmargin=2.5cm]
+  \ce{H{}^3HO}\\
+  \ce{H^3HO}
+\end{SideBySideExample}
+
+Of course, all of this works in text mode and math mode.
+
+
+\section{Parenthesis, Brackets, Braces}
+
+Use parenthesis \verb|( )| and brackets \verb|[ ]| normally. Write braces as \verb|\{ \}|.
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \ce{(NH4)2S}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \ce{[\{(X2)3\}2]^3+}
+\end{SideBySideExample}
+
+Small parenthesis etc. work in both, text mode and math mode. Large parenthesis etc. are a math-mode only feature.
+
+Both, \macro{left} and \macro{right} macros, need to be in the same math environment, so you might have to put \macro{ce} into \verb|$| into \macro{ce}, but that's fine.
+
+$\displaystyle\ce{CH4 + 2 $\left( \ce{O2 + 79/21 N2} \right)$}$\par
+{\raggedleft\verb|\ce{CH4 + 2 $\left( \ce{O2 + 79/21 N2} \right)$}|\par}
+
+
+\section{States of Aggregation}
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \ce{H2(aq)} % IUPAC recommendation
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \ce{CO3^2-{}_{(aq)}} % not IUPAC-conform
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \ce{NaOH(aq,$\infty$)}
+\end{SideBySideExample}
+
+This works in text mode and math mode.
+
+
+\section{Unpaired Electrons, Radical Dots}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{OCO^{.-}}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{NO^{(2.)-}}
+\end{SideBySideExample}
+
+This superscript-only feature works in text mode and math mode. A math bullet is used.
+
+
+\section {Variables like x, n, 2n+1}
+
+Typographical conventions say that variables are typeset in italic font, while other entities (like chemical elements) are typeset in an upright font.
+
+mhchem tries to recognize common patterns and use the correct (italic) font, like the $x$ and $2n$ in the following examples.
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  $\ce{NO_x}$ \sffamily\bfseries \ce{NO_x}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  $\ce{Fe^n+}$ \sffamily\bfseries \ce{Fe^n+}
+\end{SideBySideExample}
+
+$\ce{x Na(NH4)HPO4 ->[\Delta] (NaPO3)_x + x NH3 ^ + x H2O}$\par
+{\raggedleft\verb|$\ce{x Na(NH4)HPO4 ->[\Delta] (NaPO3)_x + x NH3 ^ + x H2O}$|\par}
+
+If a more complex term is not properly recognized, you can switch to math mode (= italics) explicitly.
+
+
+\section{Greek Characters}
+
+Just write \macro{alpha} etc. This works in text mode and math mode.
+
+Typographical conventions say that variables are typeset in italic font, while other entities (like chemical elements) are typeset in an upright font.
+Here, the Greek character is \emph{not} a variable that stands for a number, therefore an upright font is used.
+
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \ce{\mu-Cl}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \ce{[Pt(\eta^2-C2H4)Cl3]-}
+\end{SideBySideExample}
+
+If the greek character is followed by a space, you need to type \verb|{}|, otherwise the space will be lost.
+
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \ce{^234_90Th -> ^0_-1\beta{} + ^234_91Pa}
+\end{SideBySideExample}
+
+\textbf{By defaut, \LaTeX{} does not come with upright Greek characters.} Therefore, it is recommended to load a package for that, that visually fits to your font. For more details, see the section \nameref{sec:GreekFont}.
+
+If you need an italic Greek character (i.\,e. a variable that stands for a number), use math mode like \verb|$\alpha$|.
+
+
+\section{(Italic) Math}
+
+By using \verb|$...$|, you can esacpe to `font-corrected math mode'.
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  $\ce{NaOH(aq,$\infty$)}$\\
+  \sffamily\bfseries
+  \ce{NaOH(aq,$\infty$)}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  $\ce{Fe(CN)_{$\frac{6}{2}$}}$\\
+  \sffamily\bfseries
+  \ce{Fe(CN)_{$\frac{6}{2}$}}
+\end{SideBySideExample}
+
+In font-corrected math mode, mhchem regonizes some common patterns and prints them font-corrected (e.\,g. for use in headings). Otherwise, it will fall back to `full math mode'.
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  $\ce{NO_$x$}$ \sffamily\bfseries \ce{NO_$x$}
+\end{SideBySideExample}
+
+You can force `full math mode' with \verb|${...}$|.
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  $\ce{NO_${x}$}$ \sffamily\bfseries \ce{NO_${x}$}
+\end{SideBySideExample}
+
+
+\section{Italic Text}
+
+With the same mechanism, you can switch to italic font.
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  $\ce{$cis${-}[PtCl2(NH3)2]}$\\
+  \sffamily\bfseries
+  \ce{$cis${-}[PtCl2(NH3)2]}
+\end{SideBySideExample}
+
+Spaces will be ignored. Use a \verb|~| when you need to typeset a space.
+
+This works for the text mode as long as you use latin characters. It also works for the math font.
+
+
+\section{Escape Parsing, Upright Text}
+
+If you want to escape parsing, for instance for a simple hyphen (that should not become a bond), use \verb|{...}|.
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \ce{{(+)}_589{-}[Co(en)3]Cl3}\\
+  \sffamily\bfseries
+  \ce{{(+)}_589{-}[Co(en)3]Cl3}
+\end{SideBySideExample}
+
+
+\section{Addition Compounds}
+
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \ce{KCr(SO4)2*12H2O}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \ce{KCr(SO4)2.12H2O}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \ce{KCr(SO4)2 * 12 H2O}
+\end{SideBySideExample}
+
+The centered dot is taken from math font.
+
+
+\section{Bonds}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{C6H5-CHO}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A-B=C#D}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \sffamily\bfseries
+  \ce{A-B=C#D}
+\end{SideBySideExample}
+
+mhchem tries to differentiate whether \verb|\ce{-}| should be a bond, a charge or a hyphen.
+
+The \verb|#| bond might not work if you pass it through other commands. In this case, use \verb|\bond{3}| instead.
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A\bond{-}B\bond{=}C\bond{#}D}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A\bond{1}B\bond{2}C\bond{3}D}
+\end{SideBySideExample}
+
+\mhchemoptions{minus-text-sidebearing-left=0.1em,minus-text-sidebearing-right=0.18em}
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A\bond{~}B\bond{~-}C}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A\bond{~--}B\bond{~=}C\bond{-~-}D}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A\bond{...}B\bond{....}C}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A\bond{->}B\bond{<-}C}
+\end{SideBySideExample}
+
+Text mode: Line-based bonds are based on the text-font's en-dash. For all the others, math glyphs are used.
+
+Math mode: Bonds are based on the math-font minus sign.  All bonds are vertically aligned on the math axis. For most math fonts, this  is slightly lower than half the height of a capital letter.
+
+If you switch to another font, the sidebearing of the minus sign may vary, which would cause the dashed bonds to align badly. In that  case, adjust the alignment by using the following command with slightly changed values. Use \verb|\mhchemoptions{minus-text-sidebearing-left=0.10em,| \verb|minus-text-sidebearing-right=0.16em}| for text font adjustment and \verb|\mhchemoptions{minus-math-sidebearing-left=0.06em,| \verb|minus-math-sidebearing-right=0.11em}| for math font.
+
+
+\section{Reaction Arrows}
+
+\makebox[3cm][l]{\ce{A -> B}}\verb|\ce{A -> B}|\\
+\makebox[3cm][l]{\ce{A <- B}}\verb|\ce{A <- B}|\\
+\makebox[3cm][l]{\ce{A <-> B}}\verb|\ce{A <-> B}% not to be used according to IUPAC|\\ % Green Book p.52
+\makebox[3cm][l]{\ce{A <--> B}}\verb|\ce{A <--> B}|\\
+\makebox[3cm][l]{\ce{A <=> B}}\verb|\ce{A <=> B}|\\
+\makebox[3cm][l]{\ce{A <=>> B}}\verb|\ce{A <=>> B}|\\
+\makebox[3cm][l]{\ce{A <<=> B}}\verb|\ce{A <<=> B}|
+
+The arrow arguments use the same syntax as the \macro{ce} command.
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A ->[H2O] B}\\% chemistry
+  \sffamily\bfseries
+  \ce{A ->[H2O] B}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A ->[{text above}][{text below}] B}\\% text
+  \sffamily\bfseries
+  \ce{A ->[{text above}][{text below}] B}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A ->[$x$][$x_i$] B}\\% font-corrected math
+  \sffamily\bfseries
+  \ce{A ->[$x$][$x_i$] B}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A ->[${x}$] B}\\% full math
+  \sffamily\bfseries
+  \ce{A ->[${x}$] B}
+\end{SideBySideExample}
+
+For how you can change the layout of the arrows, see \nameref{sec:FineTuning}.
+
+
+\section{Equation Operators}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A + B}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A - B} % not to be confused with bonds
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A = B} % not to be confused with bonds
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \ce{A \pm B}
+\end{SideBySideExample}
+
+This works in text mode and math mode. The respective font is used, except for \macro{pm}, which always come from math font.
+
+
+\section{Precipitate and Gas}
+
+\begin{SideBySideExample}[xrightmargin=6cm]
+  \ce{SO4^2- + Ba^2+ -> BaSO4 v}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=6cm]
+  \ce{A v B (v) -> B ^ B (^)}
+\end{SideBySideExample}
+
+
+\section{Further Examples}
+
+\begin{Example}[xrightmargin=15cm]
+  \ce{Zn^2+
+    <=>[+ 2OH-][+ 2H+]
+    $\underset{\text{amphoteres Hydroxid}}{\ce{Zn(OH)2 v}}$
+    <=>[+ 2OH-][+ 2H+]
+    $\underset{\text{Hydroxozikat}}{\ce{[Zn(OH)4]^2-}}$
+  }
+\end{Example}
+
+\begin{Example}[xrightmargin=5cm]
+  $K = \frac{[\ce{Hg^2+}][\ce{Hg}]}{[\ce{Hg2^2+}]}$
+\end{Example}
+
+\begin{Example}[xrightmargin=5cm]
+  $K = \ce{\frac{[Hg^2+][Hg]}{[Hg2^2+]}}$
+\end{Example}
+
+\begin{Example}[xrightmargin=5cm]
+  \ce{Hg^2+ ->[I-]
+    $\underset{\mathrm{red}}{\ce{HgI2}}$
+    ->[I-]
+    $\underset{\mathrm{red}}{\ce{[Hg^{II}I4]^2-}}$
+  }
+\end{Example}
+
+
+
+\section{Equation Environments}
+
+\subsection{Aligning Equations}
+
+You can use \verb|&| and \verb|\\| inside \macro{ce} to align equations.
+
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \begin{align*}
+    \ce{RNO2 &<=>[+e] RNO2^{-.} \\
+         RNO2^{-.} &<=>[+e] RNO2^2-}
+  \end{align*}
+\end{SideBySideExample}
+
+
+\subsection{Own Equation Command}
+
+When you use equation environments containing a \macro{ce} very often, you might want to create your own command. You could---preferably in your preamble---define the following two commands
+
+\begin{Verbatim}
+  \newcommand\reaction[1]{\begin{equation}\ce{#1}\end{equation}}
+  \newcommand\reactionnonumber[1]%
+    {\begin{equation*}\ce{#1}\end{equation*}}
+\end{Verbatim}
+
+and then use them as follows.
+
+\newcommand\reaction[1]{\begin{equation}\ce{#1}\end{equation}}
+\newcommand\reactionnonumber[1]%
+  {\begin{equation*}\ce{#1}\end{equation*}}
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \reaction{CO2 + C}
+  \reactionnonumber{CO2 + C}
+\end{SideBySideExample}
+
+The advanced \LaTeX\ user could replace the two definitions by one
+\begin{Verbatim}
+  \makeatletter
+    \newcommand\reaction@[1]{\begin{equation}\ce{#1}\end{equation}}
+    \newcommand\reaction@nonumber[1]%
+      {\begin{equation*}\ce{#1}\end{equation*}}
+    \newcommand\reaction{\@ifstar{\reaction@nonumber}{\reaction@}}
+  \makeatother
+\end{Verbatim}
+
+and then write
+
+\makeatletter
+  \newcommand\reaction@[1]{\begin{equation}\ce{#1}\end{equation}}
+  \newcommand\reaction@nonumber[1]%
+    {\begin{equation*}\ce{#1}\end{equation*}}
+  \renewcommand\reaction{\@ifstar{\reaction@nonumber}{\reaction@}}
+\makeatother
+\begin{SideBySideExample}[xrightmargin=5cm]
+  \reaction{CO2 + C}
+  \reaction*{CO2 + C}
+\end{SideBySideExample}
+
+for the same result.
+
+\minisec{}
+
+So far, so good. All reactions will be labelled exactly as all the equations. A few people asked for a \emph{different} set of numbers for equations and reactions. One could use this code:
+
+\begin{Verbatim}
+  \makeatletter
+  \newcounter{reaction}
+  %%% >> for article <<
+  %\renewcommand\thereaction{C\,\arabic{reaction}}
+  %%% << for article <<
+  %%% >> for report and book >>
+  \renewcommand\thereaction{C\,\thechapter.\arabic{reaction}}
+  \@addtoreset{reaction}{chapter}
+  %%% << for report and book <<
+  \newcommand\reactiontag%
+    {\refstepcounter{reaction}\tag{\thereaction}}
+  \newcommand\reaction@[2][]%
+    {\begin{equation}\ce{#2}%
+    \ifx\@empty#1\@empty\else\label{#1}\fi%
+    \reactiontag\end{equation}}
+  \newcommand\reaction@nonumber[1]%
+    {\begin{equation*}\ce{#1}\end{equation*}}
+  \newcommand\reaction%
+    {\@ifstar{\reaction@nonumber}{\reaction@}}
+  \makeatother
+\end{Verbatim}
+
+With that, all reactions will be labelled independently of the equations.
+
+\makeatletter
+\newcounter{reaction}
+%%% >> for article <<
+%\renewcommand\thereaction{C\,\arabic{reaction}}
+%%% << for article <<
+%%% >> for report and book >>
+\renewcommand\thereaction{C\,\thechapter.\arabic{reaction}}
+\@addtoreset{reaction}{chapter}
+%%% << for report and book <<
+\newcommand\reactiontag%
+  {\refstepcounter{reaction}\tag{\thereaction}}
+\renewcommand\reaction@[2][]%
+  {\begin{equation}\ce{#2}%
+  \ifx\@empty#1\@empty\else\label{#1}\fi%
+  \reactiontag\end{equation}}
+\renewcommand\reaction@nonumber[1]%
+  {\begin{equation*}\ce{#1}\end{equation*}}
+\renewcommand\reaction%
+  {\@ifstar{\reaction@nonumber}{\reaction@}}
+\makeatother
+\begin{SideBySideExample}[xrightmargin=6.5cm]
+  \begin{equation}a+b\end{equation}
+  \reaction{CO2 + C}
+  \reaction*{CO2 + C}
+  \reaction[react:co]{CO2 + C}
+  \begin{equation}a+b\end{equation}
+\end{SideBySideExample}
+
+
+
+\section{Splitting the \macro{ce} command}
+
+As mentioned before, you can use  \verb|$| to switch to math mode inside \macro{ce}. But maybe, you want to `escape' to outside of \macro{ce}.
+
+
+\subsection{Comma Example}
+
+Assume, you are getting tired of typing
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \ce{N2}, \ce{O2}, \ce{CO2}
+\end{SideBySideExample}
+
+Then you could define your own command that splits at commas (plus space).
+
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \newcommand*\cec[1]{\cesplit{{\,\ }{\0}}{#1}}
+  \cec{N2, O2, CO2}
+\end{SideBySideExample}
+
+You could re-define \macro{ce} with \verb|\newcommand*\ce{\cesplit{...}{#1}}|, if you do not like to create a new name.
+
+
+\subsection{Layer Stacks}
+
+Another example shows how physicists can use mhchem to write layer stacks.
+
+\medskip
+\begin{SideBySideExample}[xrightmargin=4cm]
+  \newcommand*\stackslash{\text{/}\allowbreak}
+  \newcommand*\stackhyphen{\text{-}\allowbreak}
+  \newcommand\stack[1]{%
+    \cesplit{%
+      {\/}{\c{stackslash}}%
+      {-}{\c{stackhyphen}}%
+    }{#1}%
+  }
+  \ldots\ structure of
+  \stack{Co-Fe-B/HfO2/Co-Fe-B} is resp\ldots
+\end{SideBySideExample}
+
+
+\subsection{The Details}
+
+\macro{cesplit} takes two parameters. The first one is a list of search-and-replace pairs, the second parameter is the chemistry string as you would put into \macro{ce}. The search-and-replace list uses the syntax of \verb|l3regex|. As a rule of thumb, precede every non-letter with a backslash. You can replace it with some other text, or use \verb|\0| to retain the match. If you want to replace with a macro, write \verb|\c{macroname}|. For further details, refer to the \verb|l3regex| manual.
+
+Do not nest \macro{cesplit} commands.
+
+The result of \macro{cesplit} does \emph{not} have the feature to use \verb|&| and \verb|\\| as you might to want to deal with them differently. \macro{ce} is itself defined by \macro{cesplit} (which, technically speaking, does not split \macro{ce}, but an internal command). As \macro{ce} is defined by
+
+\begin{Verbatim}
+    \cesplit % spaced added for readability
+      {
+        { \c{\\}(\[.*?\])? } { \0 }
+        { \& } { \0 }
+      }
+      {#1}
+\end{Verbatim}
+
+you could add these rules to you own \macro{cesplit} definition.
+
+
+
+\section{Fine Tuning}\label{sec:FineTuning}
+
+All options explained here, can either be set using the \macro{mhchemoptions} command
+
+\begin{Verbatim}[commandchars=+()]
+  +textbf(\mhchemoptions{)arrows=pgf+textbf(})
+\end{Verbatim}
+
+or as options to the package
+
+\begin{Verbatim}[commandchars=+()]
+  +textbf(\usepackage[version=4,)arrows=pgf+textbf(]{mhchem})
+\end{Verbatim}
+
+
+\subsection{Text Font and Math Font} \label{sec:Fonts}
+
+mhchem uses the current text font (if you use \macro{ce} in text mode) or the  current math font (if you use \macro{ce} in math mode). If you want, however, you can set a font that will be used for all your formulae and equations.
+
+Inside your document, you can use
+
+\begin{Verbatim}[commandchars=+()]
+  \mhchemoptions{+textbf(textfontcommand=\sffamily)}
+  \mhchemoptions{+textbf(mathfontcommand=\mathsf)}
+\end{Verbatim}
+
+in order to get sanf-serif fonts in both, text mode and math mode.
+
+You can use any font command there, not only the mentioned ones. Please be aware that the text-font command is a font switching command (taking no arguments) while the math-font command takes one argument and typesets it.
+
+You can specify the commands by name only, i.\,e. without the \verb|\|.
+
+\begin{Verbatim}[commandchars=+()]
+  \mhchemoptions{+textbf(textfontname=sffamily)}
+  \mhchemoptions{+textbf(mathfontname=mathsf)}
+\end{Verbatim}
+
+\noindent
+Only the latter options can be used with the \macro{usepackage} command, because the font commands are not properly defined in the preamble, yet. The shortcut
+
+\begin{Verbatim}[commandchars=+()]
+  \mhchemoptions{+textbf(font=sf)}
+\end{Verbatim}
+
+sets the two fonts to sans-serif, as mentioned above, and
+
+\begin{Verbatim}[commandchars=+()]
+  \mhchemoptions{+textbf(font=)}
+\end{Verbatim}
+
+switches back to the default, which is equivalent to
+
+\begin{Verbatim}[commandchars=+()]
+  \mhchemoptions{+textbf(textfontcommand=,mathfontcommand=\mathrm)}
+\end{Verbatim}
+
+
+\subsection{Greek Font} \label{sec:GreekFont}
+
+If you load a package for upright Greek characters, this will automatically be used. You can load any of the following packages (e.g. \verb|\usepackage{textgreek}| in the preamble). Choose the one that visually fits your font.
+\begin{compactitem}[--]
+  \item textgreek,
+  \item upgreek,
+  \item newtx,
+  \item kpfonts,
+  \item mathdesign,
+  \item fourier,
+  \item textalpha,
+  \item fontspec.
+\end{compactitem}
+\sloppypar This functionality was possible by the very neat chemgreek package of Clemens Niederberger. If you want to have different Greek fonts for text mode and math mode, you can specify these `mappings' by (for instance) \verb|\mhchemoptions{text-greek=upgreek,| \verb|math-greek=default}|. You can use any of the package names from above, or \verb|default| or \verb|var-default|. Refer to the	 \href{http://mirrors.ctan.org/macros/latex/contrib/chemgreek/chemgreek_en.pdf}{chemgreek manual} for details (in particular its Appendix `Overviews Over the Mappings').
+
+
+\subsection{Arrows}
+
+By default, mhchem uses arrows that are composed of different math-font characters, because it uses some features of the amsmath package.
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \mhchemoptions{arrows=font}% default
+  \ce{A <--> B}
+\end{SideBySideExample}
+
+But you may switch to arrows drawn with PGF (using TikZ). These are activated by
+
+\begin{Verbatim}[commandchars=+()]
+  \usepackage[version=3,+textbf(arrows=pgf)]{mhchem}
+  % or
+  \usepackage[version=3,+textbf(arrows=pgf-filled)]{mhchem}
+\end{Verbatim}
+
+The \verb|tikz| package is loaded automatically if you switch to PGF arrows in the preamble (as you do when using \verb|\usepackage|). If you switch inside your document (with \macro{mhchemoptions}), don't forget to load the required packages manually in your preamble: \verb|\RequirePackage{tikz}\usetikzlibrary{arrows.meta}|.
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \mhchemoptions{arrows=pgf}
+  \ce{A <--> B}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \mhchemoptions{arrows=pgf-filled}
+  \ce{A <--> B}
+\end{SideBySideExample}
+
+You can select other pre-defined PGF arrows (see PGF manual) or even define your own. Activate them with the option \verb|pgf={arrow-name}{line-width}|. The dimensions of your custom arrows are expected to be close to those of the built-in mhchem arrows. By the way, they have line width of 0.09ex.
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \mhchemoptions{arrows=%
+    pgf{Kite[length=0pt 4,width'=0pt 1]}{0.15ex}}
+  \ce{A <--> B}
+\end{SideBySideExample}
+
+
+\subsection{Stacked Superscripts and Subscripts}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \mhchemoptions{layout=staggered-flat}% default
+  \ce{CrO4^2-}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \mhchemoptions{layout=staggered-deep}
+  \ce{CrO4^2-}
+\end{SideBySideExample}
+
+\begin{SideBySideExample}[xrightmargin=3cm]
+  \mhchemoptions{layout=stacked}
+  \ce{CrO4^2-} % not IUPAC-conform
+\end{SideBySideExample}
+
+
+
+\section{Rudimentary \TeX 4ht (htlatex) support}
+
+mhchem has basic support for \TeX 4ht (htlatex). Summary formulae should work fine. Special bonds and reaction arrows are recognizable, but ugly. Complex math with mhchem inside might fail completely.
+
+\clearpage
+\section{Major Changes}
+\label{sec:WhatSNew}
+
+\subsection{Migrating from version 1}
+
+Inner \verb|-| characters are considered to be bonds. Use \verb|$...$| for math mode inside \macro{ce} (no braces any more).
+
+\subsection{Migrating from version 2}
+
+Meaning and usage of \macro{bond} changed.
+
+\subsection{Migrating from version 3}
+
+The arrow arguments are set with the same syntax as the \macro{ce} command---use \verb|$...$| or \verb|${...}$| for math.
+Deprecated commands like \macro{cf}, \verb|,| and \verb|`| and \macro{hyphen} and \macro{cmath} were removed completely. \macro{cee} was removed---just use \macro{ce}.
+\verb|{...}| does escape to text now, not math.
+\verb|$...$| does only escape to `font-corrected math mode'---check the results.
+Additional spaces will be inserted: A \verb|$x\,$H2O| should be changed to \verb|$x$ H2O|.
+Appearance of bonds, radical dot, $x$, single-letter variables, \verb|-| in subscripts etc. slightly changed---check if this fits with your font, in particular your text font.
+Check all complex subscripts and superscripts (more than just number or a charge).
+
+
+\section{Most Recent Changes}% check
+
+\minisec{2021-12-31 mhchem v4.09}
+\begin{compactitem}
+\item Bring back lost TeX4ht support
+\end{compactitem}
+
+\minisec{2018-06-22 mhchem v4.08}
+\begin{compactitem}
+\item Work around unicode-math incompatibilities
+\end{compactitem}
+
+\minisec{2017-07-24 mhchem v4.07}
+\begin{compactitem}
+\item Adapt to \LaTeX3 (expl3) changes
+\end{compactitem}
+
+\minisec{2017-01-16 mhchem v4.06}
+\begin{compactitem}
+\item Adapt to upcoming \LaTeX3 change
+\end{compactitem}
+
+\minisec{2016-08-07 mhchem v4.05}
+\begin{compactitem}
+\item extended variable recognition -- single lower-case letters in superscripts/subscripts are typeset in an italic font
+\item improved bond/charge/hyphen distinction 
+\item fixed error handling for nonstopmode
+\end{compactitem}
+
+\minisec{2016-02-07 mhchem v4.04}
+\begin{compactitem}
+\item support for negative subscripts, \verb|\ce{^0_-1n-}|
+\item \verb|\frac{}{}| added
+\item \verb|$\alpha$| fixed (math Greek)
+\end{compactitem}
+
+\minisec{2015-11-29 mhchem v4.03}
+\begin{compactitem}
+\item reworked arrows and provided option for custom pgf arrows
+\item improved speed
+\end{compactitem}
+
+\minisec{2015-07-23 mhchem v4.02}
+\begin{compactitem}
+\item added rudimentary TeX4ht support
+\item fixed the \verb|\str_case:nnn| bug---expl3 removed that function
+\end{compactitem}
+
+\minisec{2015-04-23 mhchem v4.01}
+\begin{compactitem}
+\item support upright greek characters (chemgreek)
+\item syntax improvements% $n$H2O, D2-3[T4O10], Fe^{III}2
+\item recognition of states of aggregation% HCl(g), OH-(aq)
+\item text-font operators \verb|+|, \verb|-|, \verb|=|
+\end{compactitem}
+
+\minisec{2015-04-07 mhchem v4.00}
+\begin{compactitem}
+\item many syntax improvements
+\item many layout improvements
+\item stricter distinction between text font and math font, many math features are translated into their text equivalent, e.g. italic variables
+\item new options
+\item removed deprecated commands
+\end{compactitem}
+
+
+
+\chapter{The hpstatement Package and the rsphrase Package}\label{sec:rsphrase}
+
+The \textbf{hpstatement} package contains all official
+hazard statements and precautionary statements (H and P) of the
+Globally Harmonized System of Classification and Labelling of Chemicals (GHS)
+and of the CLP Regulation of the European Union.
+
+The statements are fully supported in
+  English,
+  French,
+  and
+  German.
+For other languages, just the base forms are available.
+
+\bigskip
+
+The \textbf{rsphrase} package contains the text of all official
+Risk and Safety (R and S) Phrases that were used to label chemicals.
+
+These phrases are
+available in Danish, Englisch, French, German, Spanish, and
+Italian.
+
+\bigskip
+
+Please be advised that, as stated in the license, the authors provide no
+warranty of correctness.
+
+
+\section{Usage}
+
+The \textbf{hpstatement} package contains all text versions published by the European Parliament.
+Load the package with \verb|\usepackage{hpstatement}| to get the most-recent versions.
+Or load with \verb|\usepackage[date=2021-01-01]{hpstatement}| to get texts of a certain date and keep the document stable even after an update.
+In case you would need to switch within a document, use \verb|\hpsetup{date=2021-01-01}|.
+
+The package provides two commands: \verb|\hpstatement| and \verb|\hpnumber|.
+\verb|\hpstatement| inserts the statement's text,
+\verb|\hpnumber| its formatted number.\bigskip
+
+\begin{addmargin}[1em]{0em}
+\begin{SideBySideExample}[xrightmargin=7cm]
+  The statement \hpnumber{H200}\\
+  is `\hpstatement{H200}'
+\end{SideBySideExample}
+\end{addmargin}
+\bigskip
+
+\noindent One can use the two commands with an empty argument. It is then assumed that the argument is equivalent to the one used previously. \bigskip
+
+\begin{addmargin}[1em]{0em}
+\begin{SideBySideExample}[xrightmargin=7cm]
+  The statement \hpnumber{H200}\\
+  is `\hpstatement{}'
+\end{SideBySideExample}
+\end{addmargin}
+\bigskip
+
+\noindent The commands add text in your currently selected language.
+\bigskip
+
+\begin{addmargin}[1em]{0em}
+\begin{SideBySideExample}[xrightmargin=7cm]
+  \selectlanguage{ngerman}% babel
+  \hpnumber{H200}:
+  \hpstatement{}
+\end{SideBySideExample}
+\end{addmargin}
+\bigskip
+
+\noindent Some phrases allow you to choose between certain alternatives.
+In these cases, special numbers (<number>.1, <number>.2, \textellipsis) are available for \verb|\hpstatement|.
+Of course, the official number is typeset if you call \verb|\hpnumber| with a special number.
+\bigskip
+
+\begin{addmargin}[1em]{0em}
+\begin{SideBySideExample}[xrightmargin=7cm]
+  \hpnumber{P241.2}:
+  \hpstatement{}
+\end{SideBySideExample}
+\end{addmargin}
+\bigskip
+
+\noindent For phrases with selection, an additional special number is provided that refers to the base form as stated in the regulations: <number>.0 (e.\,g. P241.0).
+\bigskip
+
+\begin{addmargin}[1em]{0em}
+\begin{SideBySideExample}[xrightmargin=7cm]
+  \hpnumber{P241.0}:
+  \hpstatement{}
+\end{SideBySideExample}
+\end{addmargin}
+\bigskip
+
+\noindent Some statements refer to `this label'.
+If you are creating documents that are not labels, you might want to rephrase this.
+You can do so, by using the (unofficial) <number>.nolabel statement (e.\,g. P321.nolabel).
+\bigskip
+
+See the appendix for a complete list of all implemented English statements, including all options.
+
+\bigskip
+
+\noindent The \textbf{rsphrase} package has no date option, but otherwise works the same way, and provides the commands \verb|\rsnumber| and \verb|\rsphrase|.
+
+\bigskip
+
+\begin{annotation}\RaggedRight\sloppypar Source of the H and P statements:
+This project contains data extracted from
+\emph{The Regulation (EC) No 1272/2008 of the European Parliament and of the Council of 16 December 2008 on classification, labelling and packaging of substances and mixtures}
+(`CLP regulation'),
+from \url{https://eur-lex.europa.eu},
+enhanced by individual contributors.
+This work is licensed under the
+Creative Commons Attribution 4.0 International licence
+(\url{https://creativecommons.org/licenses/by/4.0/}).
+This means that you can re-use the content provided you acknowledge the source and indicate any changes you have made.
+The data is not necessarily comprehensive, complete, accurate or up to date.
+The acknowledgement is not needed when using statements of the data set for labelling products, of course, as this is the intended usage.
+© European Union, \url{https://eur-lex.europa.eu}, 1998-2021, CC BY 4.0,
+© hpstatements contributors, \url{https://github.com/mhchem/hpstatements/contributors}, 2019-2021, CC BY 4.0
+
+Sources for the R and S phrases were documents downloaded from
+\url{http://europa.eu.int}, previously to be found under
+\url{http://europa.eu.int/comm/environment/dansub/pdfs/annex3_en.pdf} and
+\url{http://europa.eu.int/comm/environment/dansub/pdfs/annex4_en.pdf}
+which in turn were linked from
+\url{http://europa.eu.int/comm/environment/dansub/main67_548/index_en.htm}.
+\end{annotation}
+
+
+\section{Most Recent Changes}% check
+
+\minisec{2021-12-31 hpstatement v2.0.0}
+\begin{compactitem}
+  \item Using most-recent statements from the EU
+  \item Adding date option and all statements in all versions ever published by the EU
+  \item Enhanced statements just for English, French, German
+\end{compactitem}
+
+
+
+\appendix
+\chapter{Appendix}
+
+\section{List of Implemented H and P Statements}
+
+These statements are available in English, French, and German.
+
+For other languages, just the base forms are available, e.\,g. P241, but not P241.0, P241.1, etc.
+A package update that brings full support might lead to an error message that will be easy to fix.
+If you are a native speaker of either
+Bulgarian,
+Czech,
+Danish,
+Dutch,
+Estonian,
+Finnish,
+Greek,
+Hungarian,
+Irish,
+Italian,
+Latvian,
+Lithuanian,
+Maltese,
+Polish,
+Portuguese,
+Romanian,
+Slovak,
+Slovenian,
+Spanish or
+Swedish,
+and would like to help offering the statements in those languages, please
+contact the author. It's not much work to do.
+
+The statements are available in all the versions published by the European Union. Oldest version: 2008-12-16. Newest version: 2021-10-01.% check
+
+\medskip
+
+\newcommand\hpmanual[3]{\textbf{#1} (\hpnumber#3): \hpstatement#3}
+\bgroup\footnotesize%
+\hpmanual{H200}{F}{{H200}}
+\hpmanual{H201}{F}{{H201}}
+\hpmanual{H202}{F}{{H202}}
+\hpmanual{H203}{F}{{H203}}
+\hpmanual{H204}{F}{{H204}}
+\hpmanual{H205}{F}{{H205}}
+\hpmanual{H206}{F}{{H206}}
+\hpmanual{H207}{F}{{H207}}
+\hpmanual{H208}{F}{{H208}}
+\hpmanual{H220}{F}{{H220}}
+\hpmanual{H221}{F}{{H221}}
+\hpmanual{H222}{F}{{H222}}
+\hpmanual{H223}{F}{{H223}}
+\hpmanual{H224}{F}{{H224}}
+\hpmanual{H225}{F}{{H225}}
+\hpmanual{H226}{F}{{H226}}
+\hpmanual{H228}{F}{{H228}}
+\hpmanual{H229}{F}{{H229}}
+\hpmanual{H230}{F}{{H230}}
+\hpmanual{H231}{F}{{H231}}
+\hpmanual{H232}{F}{{H232}}
+\hpmanual{H240}{F}{{H240}}
+\hpmanual{H241}{F}{{H241}}
+\hpmanual{H242}{F}{{H242}}
+\hpmanual{H250}{F}{{H250}}
+\hpmanual{H251}{F}{{H251}}
+\hpmanual{H252}{F}{{H252}}
+\hpmanual{H260}{F}{{H260}}
+\hpmanual{H261}{F}{{H261}}
+\hpmanual{H270}{F}{{H270}}
+\hpmanual{H271}{F}{{H271}}
+\hpmanual{H272}{F}{{H272}}
+\hpmanual{H280}{F}{{H280}}
+\hpmanual{H281}{F}{{H281}}
+\hpmanual{H290}{F}{{H290}}
+\hpmanual{H300}{F}{{H300}}
+\hpmanual{H301}{F}{{H301}}
+\hpmanual{H302}{F}{{H302}}
+\hpmanual{H304}{F}{{H304}}
+\hpmanual{H310}{F}{{H310}}
+\hpmanual{H311}{F}{{H311}}
+\hpmanual{H312}{F}{{H312}}
+\hpmanual{H314}{F}{{H314}}
+\hpmanual{H315}{F}{{H315}}
+\hpmanual{H317}{F}{{H317}}
+\hpmanual{H318}{F}{{H318}}
+\hpmanual{H319}{F}{{H319}}
+\hpmanual{H330}{F}{{H330}}
+\hpmanual{H331}{F}{{H331}}
+\hpmanual{H332}{F}{{H332}}
+\hpmanual{H334}{F}{{H334}}
+\hpmanual{H335}{F}{{H335}}
+\hpmanual{H336}{F}{{H336}}
+\hpmanual{H340.0}{T}{{H340.0}}
+\hpmanual{H340[]}{F}{[]{H340}}
+\hpmanual{H340[abc]}{F}{[{[abc]}]{H340}}
+\hpmanual{H341.0}{T}{{H341.0}}
+\hpmanual{H341[]}{F}{[]{H341}}
+\hpmanual{H341[abc]}{F}{[{[abc]}]{H341}}
+\hpmanual{H350.0}{T}{{H350.0}}
+\hpmanual{H350[]}{F}{[]{H350}}
+\hpmanual{H350[abc]}{F}{[{[abc]}]{H350}}
+\hpmanual{H350i}{F}{{H350i}}
+\hpmanual{H351.0}{T}{{H351.0}}
+\hpmanual{H351[]}{F}{[]{H351}}
+\hpmanual{H351[abc]}{F}{[{[abc]}]{H351}}
+\hpmanual{H360.0}{T}{{H360.0}}
+\hpmanual{H360[]}{F}{[]{H360}}
+\hpmanual{H360[abc]}{F}{[{[abc]}]{H360}}
+\hpmanual{H360F}{F}{{H360F}}
+\hpmanual{H360D}{F}{{H360D}}
+\hpmanual{H360FD}{F}{{H360FD}}
+\hpmanual{H360Fd}{F}{{H360Fd}}
+\hpmanual{H360Df}{F}{{H360Df}}
+\hpmanual{H361.0}{T}{{H361.0}}
+\hpmanual{H361[]}{F}{[]{H361}}
+\hpmanual{H361[abc]}{F}{[{[abc]}]{H361}}
+\hpmanual{H361f}{F}{{H361f}}
+\hpmanual{H361d}{F}{{H361d}}
+\hpmanual{H361fd}{F}{{H361fd}}
+\hpmanual{H362}{F}{{H362}}
+\hpmanual{H370.0}{T}{{H370.0}}
+\hpmanual{H370.1}{T}{{H370.1}}
+\hpmanual{H370.1[def]}{T}{[{[def]}]{H370.1}}
+\hpmanual{H370[abc]}{F}{[{[abc]}]{H370}}
+\hpmanual{H370[abc][def]}{F}{[{[abc]}][{[def]}]{H370}}
+\hpmanual{H371.0}{T}{{H371.0}}
+\hpmanual{H371.1}{T}{{H371.1}}
+\hpmanual{H371.1[def]}{T}{[{[def]}]{H371.1}}
+\hpmanual{H371[abc]}{F}{[{[abc]}]{H371}}
+\hpmanual{H371[abc][def]}{F}{[{[abc]}][{[def]}]{H371}}
+\hpmanual{H372.0}{T}{{H372.0}}
+\hpmanual{H372.1}{T}{{H372.1}}
+\hpmanual{H372.1[def]}{T}{[{[def]}]{H372.1}}
+\hpmanual{H372[abc]}{F}{[{[abc]}]{H372}}
+\hpmanual{H372[abc][def]}{F}{[{[abc]}][{[def]}]{H372}}
+\hpmanual{H373.0}{T}{{H373.0}}
+\hpmanual{H373.1}{T}{{H373.1}}
+\hpmanual{H373.1[def]}{T}{[{[def]}]{H373.1}}
+\hpmanual{H373[abc]}{F}{[{[abc]}]{H373}}
+\hpmanual{H373[abc][def]}{F}{[{[abc]}][{[def]}]{H373}}
+\hpmanual{H300+H310}{F}{{H300+H310}}
+\hpmanual{H300+H310+H330}{F}{{H300+H310+H330}}
+\hpmanual{H300+H330}{F}{{H300+H330}}
+\hpmanual{H301+H311}{F}{{H301+H311}}
+\hpmanual{H301+H311+H331}{F}{{H301+H311+H331}}
+\hpmanual{H301+H331}{F}{{H301+H331}}
+\hpmanual{H302+H312}{F}{{H302+H312}}
+\hpmanual{H302+H312+H332}{F}{{H302+H312+H332}}
+\hpmanual{H302+H332}{F}{{H302+H332}}
+\hpmanual{H310+H330}{F}{{H310+H330}}
+\hpmanual{H311+H331}{F}{{H311+H331}}
+\hpmanual{H312+H332}{F}{{H312+H332}}
+\hpmanual{H400}{F}{{H400}}
+\hpmanual{H410}{F}{{H410}}
+\hpmanual{H411}{F}{{H411}}
+\hpmanual{H412}{F}{{H412}}
+\hpmanual{H413}{F}{{H413}}
+\hpmanual{H420}{F}{{H420}}
+\hpmanual{EUH014}{F}{{EUH014}}
+\hpmanual{EUH018.0}{T}{{EUH018.0}}
+\hpmanual{EUH018.1}{T}{{EUH018.1}}
+\hpmanual{EUH018.2}{T}{{EUH018.2}}
+\hpmanual{EUH019}{F}{{EUH019}}
+\hpmanual{EUH029}{F}{{EUH029}}
+\hpmanual{EUH031}{F}{{EUH031}}
+\hpmanual{EUH032}{F}{{EUH032}}
+\hpmanual{EUH044}{F}{{EUH044}}
+\hpmanual{EUH066}{F}{{EUH066}}
+\hpmanual{EUH070}{F}{{EUH070}}
+\hpmanual{EUH071}{F}{{EUH071}}
+\hpmanual{EUH201}{F}{{EUH201}}
+\hpmanual{EUH201A}{F}{{EUH201A}}
+\hpmanual{EUH202}{F}{{EUH202}}
+\hpmanual{EUH203}{F}{{EUH203}}
+\hpmanual{EUH204}{F}{{EUH204}}
+\hpmanual{EUH205}{F}{{EUH205}}
+\hpmanual{EUH206}{F}{{EUH206}}
+\hpmanual{EUH207}{F}{{EUH207}}
+\hpmanual{EUH208.0}{T}{{EUH208.0}}
+\hpmanual{EUH208[abc]}{F}{[{[abc]}]{EUH208}}
+\hpmanual{EUH209}{F}{{EUH209}}
+\hpmanual{EUH209A}{F}{{EUH209A}}
+\hpmanual{EUH210}{F}{{EUH210}}
+\hpmanual{EUH211}{F}{{EUH211}}
+\hpmanual{EUH212}{F}{{EUH212}}
+\hpmanual{EUH401}{F}{{EUH401}}
+\hpmanual{P101}{F}{{P101}}
+\hpmanual{P102}{F}{{P102}}
+\hpmanual{P103}{F}{{P103}}
+\hpmanual{P201}{F}{{P201}}
+\hpmanual{P202}{F}{{P202}}
+\hpmanual{P210}{F}{{P210}}
+\hpmanual{P211}{F}{{P211}}
+\hpmanual{P212}{F}{{P212}}
+\hpmanual{P220}{F}{{P220}}
+\hpmanual{P222}{F}{{P222}}
+\hpmanual{P223}{F}{{P223}}
+\hpmanual{P230.0}{T}{{P230.0}}
+\hpmanual{P230[abc]}{T}{[{[abc]}]{P230}}
+\hpmanual{P231.0}{T}{{P231.0}}
+\hpmanual{P231.1}{T}{{P231.1}}
+\hpmanual{P231[abc]}{F}{[{[abc]}]{P231}}
+\hpmanual{P232}{F}{{P232}} 
+\hpmanual{P233}{F}{{P233}}
+\hpmanual{P234}{F}{{P234}}
+\hpmanual{P235}{F}{{P235}}
+\hpmanual{P240}{F}{{P240}}
+\hpmanual{P241.0}{T}{{P241.0}}
+\hpmanual{P241.1}{T}{{P241.1}}
+\hpmanual{P241.2}{T}{{P241.2}}
+\hpmanual{P241.3}{T}{{P241.3}}
+\hpmanual{P242}{F}{{P242}}
+\hpmanual{P243}{F}{{P243}}
+\hpmanual{P244}{F}{{P244}}
+\hpmanual{P250.0}{T}{{P250.0}}
+\hpmanual{P250.1}{T}{{P250.1}}
+\hpmanual{P250.2}{T}{{P250.2}}
+\hpmanual{P250.3}{T}{{P250.3}}
+\hpmanual{P251}{F}{{P251}}
+\hpmanual{P260.0}{T}{{P260.0}}
+\hpmanual{P260.1}{T}{{P260.1}}
+\hpmanual{P260.2}{T}{{P260.2}}
+\hpmanual{P260.3}{T}{{P260.3}}
+\hpmanual{P260.4}{T}{{P260.4}}
+\hpmanual{P260.5}{T}{{P260.5}}
+\hpmanual{P260.6}{T}{{P260.6}}
+\hpmanual{P261.0}{T}{{P261.0}}
+\hpmanual{P261.1}{T}{{P261.1}}
+\hpmanual{P261.2}{T}{{P261.2}}
+\hpmanual{P261.3}{T}{{P261.3}}
+\hpmanual{P261.4}{T}{{P261.4}}
+\hpmanual{P261.5}{T}{{P261.5}}
+\hpmanual{P261.6}{T}{{P261.6}}
+\hpmanual{P262}{F}{{P262}}
+\hpmanual{P263}{F}{{P263}}
+\hpmanual{P264.0}{T}{{P264.0}}
+\hpmanual{P264[abc]}{T}{[{[abc]}]{P264}}
+\hpmanual{P270}{F}{{P270}}
+\hpmanual{P271}{F}{{P271}}
+\hpmanual{P272}{F}{{P272}}
+\hpmanual{P273}{F}{{P273}}
+\hpmanual{P280.0}{T}{{P280.0}}
+\hpmanual{P280.1}{T}{{P280.1}}
+\hpmanual{P280.2}{T}{{P280.2}}
+\hpmanual{P280.3}{T}{{P280.3}}
+\hpmanual{P280.4}{T}{{P280.4}}
+\hpmanual{P282}{F}{{P282}}
+\hpmanual{P283}{F}{{P283}}
+\hpmanual{P284}{F}{{P284}}
+\hpmanual{P231+P232.0}{T}{{P231+P232.0}}
+\hpmanual{P231+P232.1}{T}{{P231+P232.1}}
+\hpmanual{P231+P232[abc]}{T}{[{[abc]}]{P231+P232}}
+\hpmanual{P301}{F}{{P301}}
+\hpmanual{P302}{F}{{P302}}
+\hpmanual{P303}{F}{{P303}}
+\hpmanual{P304}{F}{{P304}}
+\hpmanual{P305}{F}{{P305}}
+\hpmanual{P306}{F}{{P306}}
+\hpmanual{P308}{F}{{P308}}
+\hpmanual{P310.0}{T}{{P310.0}}
+\hpmanual{P310.1}{T}{{P310.1}}
+\hpmanual{P310.2}{T}{{P310.2}}
+\hpmanual{P310[abc]}{T}{[{[abc]}]{P310}}
+\hpmanual{P311.0}{T}{{P311.0}}
+\hpmanual{P311.1}{T}{{P311.1}}
+\hpmanual{P311.2}{T}{{P311.2}}
+\hpmanual{P311[abc]}{T}{[{[abc]}]{P311}}
+\hpmanual{P312.0}{T}{{P312.0}}
+\hpmanual{P312.1}{T}{{P312.1}}
+\hpmanual{P312.2}{T}{{P312.2}}
+\hpmanual{P312[abc]}{T}{[{[abc]}]{P312}}
+\hpmanual{P313}{F}{{P313}}
+\hpmanual{P314}{F}{{P314}}
+\hpmanual{P315}{F}{{P315}}
+\hpmanual{P320.0}{T}{{P320.0}}
+\hpmanual{P320[abc]}{T}{[{[abc]}]{P320}}
+\hpmanual{P320.nolabel[abc] (non-official)}{T}{[{[abc]}]{P320.nolabel}}
+\hpmanual{P321.0}{T}{{P321.0}}
+\hpmanual{P321[abc]}{F}{[{[abc]}]{P321}}
+\hpmanual{P321.nolabel[abc] (non-official)}{F}{[{[abc]}]{P321.nolabel}}
+\hpmanual{P330}{F}{{P330}}
+\hpmanual{P331}{F}{{P331}}
+\hpmanual{P332}{F}{{P332}}
+\hpmanual{P333}{F}{{P333}}
+\hpmanual{P334.0}{T}{{P334.0}}
+\hpmanual{P334.1}{T}{{P334.1}}
+\hpmanual{P334.2}{T}{{P334.2}}
+\hpmanual{P335}{F}{{P335}}
+\hpmanual{P336}{F}{{P336}}
+\hpmanual{P337}{F}{{P337}}
+\hpmanual{P338}{F}{{P338}}
+\hpmanual{P340}{F}{{P340}}
+\hpmanual{P342}{F}{{P342}}
+\hpmanual{P351}{F}{{P351}}
+\hpmanual{P352.0}{T}{{P352.0}}
+\hpmanual{P352.1}{T}{{P352.1}}
+\hpmanual{P352[abc]}{T}{[{[abc]}]{P352}}
+\hpmanual{P353.0}{T}{{P353.0}}
+\hpmanual{P353.1}{T}{{P353.1}}
+\hpmanual{P353.2}{T}{{P353.2}}
+\hpmanual{P360}{F}{{P360}}
+\hpmanual{P361}{F}{{P361}}
+\hpmanual{P362}{F}{{P362}}
+\hpmanual{P363}{F}{{P363}}
+\hpmanual{P364}{F}{{P364}}
+\hpmanual{P370}{F}{{P370}}
+\hpmanual{P371}{F}{{P371}}
+\hpmanual{P372}{F}{{P372}}
+\hpmanual{P373}{F}{{P373}}
+\hpmanual{P375}{F}{{P375}}
+\hpmanual{P376}{F}{{P376}}
+\hpmanual{P377}{F}{{P377}}
+\hpmanual{P378.0}{T}{{P378.0}}
+\hpmanual{P378[abc]}{F}{[{[abc]}]{P378}}
+\hpmanual{P380}{F}{{P380}}
+\hpmanual{P381}{F}{{P381}}
+\hpmanual{P390}{F}{{P390}}
+\hpmanual{P391}{F}{{P391}}
+\hpmanual{P301+P310.0}{T}{{P301+P310.0}}
+\hpmanual{P301+P310.1}{T}{{P301+P310.1}}
+\hpmanual{P301+P310.2}{T}{{P301+P310.2}}
+\hpmanual{P301+P310[abc]}{T}{[{[abc]}]{P301+P310}}
+\hpmanual{P301+P312.0}{T}{{P301+P312.0}}
+\hpmanual{P301+P312.1}{T}{{P301+P312.1}}
+\hpmanual{P301+P312.2}{T}{{P301+P312.2}}
+\hpmanual{P301+P312[abc]}{T}{[{[abc]}]{P301+P312}}
+\hpmanual{P301+P330+P331}{F}{{P301+P330+P331}}
+\hpmanual{P302+P334}{F}{{P302+P334}}
+\hpmanual{P302+P335+P334.0}{T}{{P302+P335+P334.0}}
+\hpmanual{P302+P335+P334.1}{T}{{P302+P335+P334.1}}
+\hpmanual{P302+P335+P334.2}{T}{{P302+P335+P334.2}}
+\hpmanual{P302+P352.0}{T}{{P302+P352.0}}
+\hpmanual{P302+P352.1}{T}{{P302+P352.1}}
+\hpmanual{P302+P352[abc]}{T}{[{[abc]}]{P302+P352}}
+\hpmanual{P303+P361+P353.0}{T}{{P303+P361+P353.0}}
+\hpmanual{P303+P361+P353.1}{T}{{P303+P361+P353.1}}
+\hpmanual{P303+P361+P353.2}{T}{{P303+P361+P353.2}}
+\hpmanual{P304+P340}{F}{{P304+P340}}
+\hpmanual{P305+P351+P338}{F}{{P305+P351+P338}}
+\hpmanual{P306+P360}{F}{{P306+P360}}
+\hpmanual{P308+P311.0}{T}{{P308+P311.0}}
+\hpmanual{P308+P311.1}{T}{{P308+P311.1}}
+\hpmanual{P308+P311.2}{T}{{P308+P311.2}}
+\hpmanual{P308+P311[abc]}{T}{[{[abc]}]{P308+P311}}
+\hpmanual{P308+P313}{F}{{P308+P313}}
+\hpmanual{P332+P313}{F}{{P332+P313}}
+\hpmanual{P333+P313}{F}{{P333+P313}}
+\hpmanual{P336+P315}{F}{{P336+P315}}
+\hpmanual{P337+P313}{F}{{P337+P313}}
+\hpmanual{P342+P311.0}{T}{{P342+P311.0}}
+\hpmanual{P342+P311.1}{T}{{P342+P311.1}}
+\hpmanual{P342+P311.2}{T}{{P342+P311.2}}
+\hpmanual{P342+P311[abc]}{T}{[{[abc]}]{P342+P311}}
+\hpmanual{P361+P364}{F}{{P361+P364}}
+\hpmanual{P362+P364}{F}{{P362+P364}}
+\hpmanual{P370+P372+P380+P373}{F}{{P370+P372+P380+P373}}
+\hpmanual{P370+P376}{F}{{P370+P376}}
+\hpmanual{P370+P378.0}{T}{{P370+P378.0}}
+\hpmanual{P370+P378[abc]}{T}{[{[abc]}]{P370+P378}}
+\hpmanual{P370+P380+P375}{F}{{P370+P380+P375}}
+\hpmanual{P370+P380+P375+P378.0}{T}{{P370+P380+P375+P378.0}}
+\hpmanual{P370+P380+P375+P378[abc]}{T}{[{[abc]}]{P370+P380+P375+P378}}
+\hpmanual{P371+P380+P375}{F}{{P371+P380+P375}}
+\hpmanual{P401.0}{T}{{P401.0}}
+\hpmanual{P401[abc]}{T}{[{[abc]}]{P401}}
+\hpmanual{P402}{F}{{P402}}
+\hpmanual{P403}{F}{{P403}}
+\hpmanual{P404}{F}{{P404}}
+\hpmanual{P405}{F}{{P405}}
+\hpmanual{P406.0}{T}{{P406.0}}
+\hpmanual{P406.1}{T}{{P406.1}}
+\hpmanual{P406[abc]}{T}{[{[abc]}]{P406}}
+\hpmanual{P407}{F}{{P407}}
+\hpmanual{P410}{F}{{P410}}
+\hpmanual{P411.0}{T}{{P411.0}}
+\hpmanual{P411.1[abc]}{T}{[abc]{P411.1}}
+\hpmanual{P411.2[abc]}{T}{[{[abc]}]{P411.2}}
+\hpmanual{P412.0}{T}{{P412.0}}
+\hpmanual{P412.1}{T}{{P412.1}}
+\hpmanual{P412.2}{T}{{P412.2}}
+\hpmanual{P413.0}{T}{{P413.0}}
+\hpmanual{P413.1[abc][def]}{T}{[{[abc]}][{[def]}]{P413.1}}
+\hpmanual{P413.2[abc][def]}{T}{[{[abc]}][{[def]}]{P413.2}}
+\hpmanual{P420}{F}{{P420}}
+\hpmanual{P402+P404}{F}{{P402+P404}}
+\hpmanual{P403+P233}{F}{{P403+P233}}
+\hpmanual{P403+P235}{F}{{P403+P235}}
+\hpmanual{P410+P403}{F}{{P410+P403}}
+\hpmanual{P410+P412.0}{T}{{P410+P412.0}}
+\hpmanual{P410+P412.1}{T}{{P410+P412.1}}
+\hpmanual{P410+P412.2}{T}{{P410+P412.2}}
+\hpmanual{P501.0}{T}{{P501.0}}
+\hpmanual{P501.0[abc]}{T}{[{[abc]}]{P501.0}}
+\hpmanual{P501.1[abc]}{T}{[{[abc]}]{P501.1}}
+\hpmanual{P501.2[abc]}{T}{[{[abc]}]{P501.2}}
+\hpmanual{P502}{F}{{P502}}
+\par\egroup%
+
+
+
+\section{List of Implemented R and S Phrases}
+
+\bgroup\footnotesize\noindent
+R1,
+R2,
+R3,
+R4,
+R5,
+R6,
+R7,
+R8,
+R9,
+R10,
+R11,
+R12,
+R14,
+R15,
+R16,
+R17,
+R18,
+R19,
+R20,
+R21,
+R22,
+R23,
+R24,
+R25,
+R26,
+R27,
+R28,
+R29,
+R30,
+R31,
+R32,
+R33,
+R34,
+R35,
+R36,
+R37,
+R38,
+R39,
+R40,
+R41,
+R42,
+R43,
+R44,
+R45,
+R46,
+R48,
+R49,
+R50,
+R51,
+R52,
+R53,
+R54,
+R55,
+R56,
+R57,
+R58,
+R59,
+R60,
+R61,
+R62,
+R63,
+R64,
+R65,
+R66,
+R67,
+R68,
+R14/15,
+R15/29,
+R20/21,
+R20/22,
+R20/21/22,
+R21/22,
+R23/24,
+R23/25,
+R23/24/25,
+R24/25,
+R26/27,
+R26/28,
+R26/27/28,
+R27/28,
+R36/37,
+R36/38,
+R36/37/38,
+R37/38,
+R39/23,
+R39/24,
+R39/25,
+R39/23/24,
+R39/23/25,
+R39/24/25,
+R39/23/24/25,
+R39/26,
+R39/27,
+R39/28,
+R39/26/27,
+R39/26/28,
+R39/27/28,
+R39/26/27/28,
+R42/43,
+R48/20,
+R48/21,
+R48/22,
+R48/20/21,
+R48/20/22,
+R48/21/22,
+R48/20/21/22,
+R48/23,
+R48/24,
+R48/25,
+R48/23/24,
+R48/23/25,
+R48/24/25,
+R48/23/24/25,
+R50/53,
+R51/53,
+R52/53,
+R68/20,
+R68/21,
+R68/22,
+R68/20/21,
+R68/20/22,
+R68/21/22,
+R68/20/21/22
+
+S1,
+S2,
+S3,
+S4,
+S5[abc],
+S6[abc],
+S7,
+S8,
+S9,
+S12,
+S13,
+S14[abc],
+S15,
+S16,
+S17,
+S18,
+S20,
+S21,
+S22,
+S23[abc],
+S23.0,
+S23.1,
+S23.2,
+S23.3,
+S23.4,
+S24,
+S25,
+S26,
+S27,
+S28[abc],
+S29,
+S30,
+S33,
+S35,
+S36,
+S37,
+S38,
+S39,
+S40[abc],
+S41,
+S42
+S43.0[abc],
+S43.1[abc],
+S45,
+S46[abc],
+S47[abc],
+S48[abc],
+S49,
+S50[abc],
+S51,
+S52,
+S53,
+S56,
+S57,
+S59,
+S60,
+S61,
+S62[abc],
+S63,
+S64,
+S1/2,
+S3/7,
+S3/9/14[abc],
+S3/9/14/49[abc],
+S3/9/49[abc],
+S3/14[abc],
+S7/8,
+S7/9,
+S7/47[abc],
+S20/21,
+S24/25,
+S27/28[abc],
+S29/35,
+S29/56,
+S36/37,
+S36/37/39[abc],
+S36/39[abc],
+S37/39,
+S47/49[abc]
+
+\textbf{Danish}
+Thanks to the extensive help of Rasmus Villemoes, the Danish phrases could be included. There were a couple of typos in the official documents: We changed `bebølse' to `beboelse', `omgåænde' to `omgående' and `producentesn' to `producenten'.
+
+\textbf{French}
+Dominique Richard helped with the French phrases. Many thanks to him!
+
+\textbf{German}
+I adapted the German R and S Phrases to the current (`new') spelling. Therefore, when writing a text in \verb|german| and using rsphrase, you will get a warning (`Your current language setting is german, rsphrase only knows the current German spelling (ngerman) which therefore was used.').
+
+\textbf{Italian}
+Italian phrases implemented by Lorenzo Vagnarelli. Thanks a lot.
+
+\textbf{Spanish}
+Ignacio Fernández Galván sent me the Spanish phrases. Thanks a lot!
+\egroup
+
+\end{document}
