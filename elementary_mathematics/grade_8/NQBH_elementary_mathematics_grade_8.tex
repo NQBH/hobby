@@ -1,4 +1,4 @@
-\documentclass[oneside]{book}
+\documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -45,7 +45,6 @@
 \date{\today}
 
 \begin{document}
-\frontmatter
 \maketitle
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -53,8 +52,6 @@
 \newpage
 
 %------------------------------------------------------------------------------%
-
-\chapter*{Preface}
 
 \section*{Ký Hiệu, Viết Tắt, Quy Ước -- Notation, Abbreviation, Convention}
 \addcontentsline{toc}{section}{\protect\numberline{}Ký Hiệu, Viết Tắt, Quy Ước -- Notation, Abbreviation, Convention}
@@ -79,14 +76,11 @@
 
 %------------------------------------------------------------------------------%
 
-\mainmatter
-\part{Đại Số -- Algebra}
+\section{Phép Nhân \& Phép Chia Các Đa Thức}
 
-\chapter{Phép Nhân \& Phép Chia Các Đa Thức}
+\subsection{Nhân Đơn Thức với Đa Thức}
 
-\section{Nhân Đơn Thức với Đa Thức}
-
-\subsection{Quy tắc}
+\subsubsection{Quy tắc}
 ``Muốn nhân 1 đơn thức với 1 đa thức, ta nhân đơn thức với từng hạng tử của đa thức rồi cộng các tích với nhau.'' -- \cite[p. 4]{SGK_Toan_8_tap_1}.
 
 \begin{vidu}[Đơn thức 1 biến nhân đa thức 1 biến]
@@ -113,14 +107,14 @@ Tổng quát,
 	$\forall a,a_{i_1\ldots i_k}\in\mathbb{R}$, $i_1 = 0,\ldots,n_1;\ldots;i_k = 0,\ldots,n_k$, $\forall m_i,n_i\in\mathbb{N}$, $i = 1,\ldots,k$.\footnote{Điều kiện $i_1 = 0,\ldots,n_1;\ldots;i_k = 0,\ldots,n_k$ có thể viết gọn hơn thành $(i_1,\ldots,i_k)\in\overline{0,n_1}\times\cdots\times\overline{0,n_k}$ với ký hiệu $\overline{0,n}\coloneqq\{0,1,\ldots,n\}$, $\forall n\in\mathbb{N}$.}
 \end{vidu}
 
-\section{Nhân Đa Thức với Đa Thức}
+\subsection{Nhân Đa Thức với Đa Thức}
 
-\subsection{Quy tắc}
+\subsubsection{Quy tắc}
 ``Muốn nhân 1 đa thức với 1 đa thức, ta nhân mỗi hạng tử của đa thức này với từng hạng tử của đa thức kia rồi cộng các tích với nhau.'' ``Tích của 2 đa thức là 1 đa thức.'' -- \cite[p. 7]{SGK_Toan_8_tap_1}. Tổng quát, muốn nhân 2 đa thức bậc $P,Q$ lần lượt có bậc $m,n$ (ký hiệu $\deg P = m,\deg Q = n$), $P(x) = \sum_{i=0}^m a_ix^i$, $Q(x) = \sum_{i=0}^n b_ix^i$.
 
-\section{Những Hằng Đẳng Thức Đáng Nhớ}
+\subsection{Những Hằng Đẳng Thức Đáng Nhớ}
 
-\subsection{Bình phương của 1 tổng -- Square of a sum}
+\subsubsection{Bình phương của 1 tổng -- Square of a sum}
 \begin{align}
 	\label{square of sum}
 	\tag{sos}
@@ -132,7 +126,7 @@ Tổng quát,
 \end{align*}
 '' -- \cite[p. 9]{SGK_Toan_8_tap_1}. Bình phương của 1 tổng 2 số bằng tổng của tổng bình phương 2 số đó với 2 lần tích 2 số đó.
 
-\subsection{Bình phương của 1 hiệu -- square of a difference}
+\subsubsection{Bình phương của 1 hiệu -- square of a difference}
 \begin{align}
 	\label{square of difference}
 	\tag{sod}
@@ -144,7 +138,7 @@ Tổng quát,
 \end{align*}
 Bình phương của 1 hiệu 2 số bằng hiệu của tổng bình phương 2 số đó với 2 lần tích 2 số đó. 
 
-\subsection{Hiệu 2 bình phương -- Difference of 2 squares}
+\subsubsection{Hiệu 2 bình phương -- Difference of 2 squares}
 \begin{align}
 	a^2 - b^2 = (a + b)(a - b),\ \forall a,b\in\mathbb{R}.
 \end{align}
@@ -173,7 +167,7 @@ Tổng quát hơn,
 	Với $n\in\mathbb{N}^\star$ cho trước, tính $\left(\sum_{i=1}^n a_i\right)^2 = (a_1 + \cdots + a_n)^2$, sau đó phát biểu đẳng thức tìm được bằng lời. Từ đó suy ra kết quả của $\left(\sum_{i=1}^n \pm a_i\right)^2 = (\pm a_1\pm\cdots\pm a_n)^2$.
 \end{baitoan}
 
-\subsection{Lập phương của 1 tổng -- Cube of a sum}
+\subsubsection{Lập phương của 1 tổng -- Cube of a sum}
 \begin{align}
 	\label{cube of a sum}
 	(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3,\ \forall a,b\in\mathbb{R}.
@@ -183,7 +177,7 @@ Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
 	(A + B)^3 = A^3 + 3A^2B + 3AB^2 + B^3.
 \end{align*}
 
-\subsection{Lập phương của 1 hiệu -- Cube of a difference}
+\subsubsection{Lập phương của 1 hiệu -- Cube of a difference}
 \begin{align}
 	\label{cube of a difference}
 	(a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3,\ \forall a,b\in\mathbb{R}.
@@ -200,7 +194,7 @@ Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
 	\end{align*}
 \end{luuy}
 
-\subsection{Tổng 2 lập phương -- Sum of cubes}
+\subsubsection{Tổng 2 lập phương -- Sum of cubes}
 \begin{align}
 	\label{sum of cubes}
 	a^3 + b^3 = (a + b)(a^2 - ab + b^2),\ \forall a,b\in\mathbb{R}.
@@ -214,7 +208,7 @@ Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
 	``Ta quy ước gọi $A^2 - AB + B^2$ là \emph{bình phương thiếu của hiệu $A - B$}.'' -- \cite[p. 15]{SGK_Toan_8_tap_1}
 \end{luuy}
 
-\subsection{Hiệu 2 lập phương -- Difference of cubes}
+\subsubsection{Hiệu 2 lập phương -- Difference of cubes}
 \begin{align}
 	\label{sum of cubes}
 	a^3 - b^3 = (a - b)(a^2 + ab + b^2),\ \forall a,b\in\mathbb{R}.
@@ -250,29 +244,29 @@ Với $A$ \& $B$ là các biểu thức tùy ý ta cũng có:
 	Áp dụng: Tính $a^3 + b^3$ biết $ab = m$ \& $a + b = n$ với $m,n\in\mathbb{R}$ cho trước. Tính $a^3 - b^3$ biết $ab = m$ \& $a - b = k$ với $m,k\in\mathbb{R}$ cho trước.
 \end{baitoan}
 
-\section{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Đặt Nhân Tử Chung}
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Đặt Nhân Tử Chung}
 
 \begin{dinhnghia}[Phân tích đa thức thành nhân tử]
 	\emph{Phân tích đa thức thành nhân tử (hay thừa số)} là biến đổi đa thức đó thành 1 tích của những đa thức.	
 \end{dinhnghia}
 Phân tích đa thức thành nhân tử bằng phương pháp đặt nhân tử chung. ``Nhiều khi để làm xuất hiện nhân tử chung ta cần đổi dấu các hạng tử (lưu ý tới tính chất $A = -(-A)$).'' -- \cite[p. 18]{SGK_Toan_8_tap_1}
 
-\section{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Dùng Hằng Đẳng Thức}
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Dùng Hằng Đẳng Thức}
 Phân tích đa thức thành nhân tử bằng phương pháp dùng hằng đẳng thức.
 
-\section{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Nhóm Hạng Tử}
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Nhóm Hạng Tử}
 Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử. ``Đối với 1 đa thức có thể có nhiều cách nhóm những hạng tử thích hợp.'' -- \cite[p. 21]{SGK_Toan_8_tap_1}
 
-\section{Phân Tích Đa Thức Thành Nhân Tử Bằng Cách Phối Hợp Nhiều Phương Pháp}
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Cách Phối Hợp Nhiều Phương Pháp}
 
 \begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{58.}, p. 25]
 	Chứng minh rằng $n^3 - n\ \vdots\ 6$, $\forall n\in\mathbb{Z}$.
 \end{baitoan}
 
-\section{Chia Đơn Thức Cho Đơn Thức}
+\subsection{Chia Đơn Thức Cho Đơn Thức}
 ``Cho $A$ \& $B$ là 2 đa thức, $B\ne 0$. Ta nói đa thức $A$ chia hết cho đa thức $B$ nếu tìm được 1 đa thức $Q$ sao cho $A = B\cdot Q$. $A$ được gọi là \textit{đa thức bị chia}, $B$ được gọi là đa thức chia, $Q$ được gọi là \textit{đa thức thương} (gọi tắt \textit{thương}). Ký hiệu $Q = A:B$ hoặc $Q = \frac{A}{B}$. Trong \cite[\S10]{SGK_Toan_8_tap_1}, ta xét trường hợp đơn giản nhất của phép chia 2 đa thức, đó là phép chia đơn thức cho đơn thức.'' -- \cite[p. 25]{SGK_Toan_8_tap_1}
 
-\subsection{Quy tắc}
+\subsubsection{Quy tắc}
 ``Ở lớp 7 ta đã biết:
 \begin{equation*}
 	x^m:x^n = \left\{\begin{split}
@@ -308,22 +302,22 @@ Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử
 	\end{align*}
 \end{vidu}
 
-\section{Chia Đa Thức Cho Đơn Thức}
+\subsection{Chia Đa Thức Cho Đơn Thức}
 ``Ta có quy tắc chia đa thức cho đơn thức (trường hợp các hạng tử của đa thức $A$ đều chia hết cho đơn thức $B$) như sau:
 
 \textbf{Quy tắc.} Muốn chia đa thức $A$ cho đơn thức $B$ (trường hợp các hạng tử của đa thức $A$ đều chia hết cho đơn thức $B$), ta chia mỗi hạng tử của $A$ cho $B$ rồi cộng các kết quả với nhau.'' -- \cite[p. 27]{SGK_Toan_8_tap_1}. ``Trong thực hành ta có thể tính nhẩm \& bỏ bớt 1 số phép tính trung gian.'' -- \cite[p. 28]{SGK_Toan_8_tap_1}
 
-\section{Chia Đa Thức 1 Biến Đã Sắp Xếp}
+\subsection{Chia Đa Thức 1 Biến Đã Sắp Xếp}
 
-\subsection{Phép chia hết}
+\subsubsection{Phép chia hết}
 ``Phép chia có dư bằng $0$ là phép chia hết.'' -- \cite[p. 30]{SGK_Toan_8_tap_1}
 
-\subsection{Phép chia có dư}
+\subsubsection{Phép chia có dư}
 ``Người ta chứng minh được rằng đối với 2 đa thức tùy ý $A$ \& $B$ của cùng 1 biến ($B\ne 0$), tồn tại duy nhất 1 cặp đa thức $Q$ \& $R$ sao cho $A = B\cdot Q + R$, trong đó $R$ bằng 0 hoặc bậc của $R$ nhỏ hơn bậc của $B$ ($R$ được gọi là \textit{dư} trong phép chia $A$ cho $B$). Khi $R = 0$ phép chia $A$ cho $B$ là phép chia hết.'' -- \cite[p. 31]{SGK_Toan_8_tap_1}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Phân Thức Đại Số}
+\section{Phân Thức Đại Số}
 
 \begin{align*}
 	\frac{a}{b}\in\mathbb{Q},\ a,b\in\mathbb{Z},\,b\ne 0\longrightarrow\frac{A(x)}{B(x)},\ \forall A(x),B(x)\mbox{ là 2 đa thức 1 biến } x,\,B(x)\ne 0.
@@ -334,16 +328,16 @@ Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử
 	\textbf{Nội dung.} \textit{Phân thức đại số, các quy tắc làm tính trên các phân thức đại số\footnote{Những quy tắc này tương tự như các quy tắc làm tính trên các phân số}}.
 \end{quotation}
 
-\section{Phân Thức Đại Số}
+\subsection{Phân Thức Đại Số}
 
-\subsection{Định nghĩa}
+\subsubsection{Định nghĩa}
 
 \begin{dinhnghia}[Phân thức đại số]
 	\emph{1 phân thức đại số} (hay nói gọn là \emph{phân thức}) là 1 biểu thức có dạng $\frac{A}{B}$, trong đó $A,B$ là những đa thức \& $B$ khác đa thức $0$. $A$ được gọi là \emph{tử thức} (hay \emph{tử}), $B$ được gọi là \emph{mẫu thức} (hay \emph{mẫu}).
 \end{dinhnghia}
 ``Mỗi đa thức cũng được coi như 1 phân thức với mẫu thức bằng $1$.'' ``Số $0$, số $1$ cũng là những phân thức đại số.'' -- \cite[p. 35]{SGK_Toan_8_tap_1}
 
-\subsection{2 phân thức bằng nhau}
+\subsubsection{2 phân thức bằng nhau}
 
 \begin{dinhnghia}[2 phân thức bằng nhau]
 	2 phân thức $\frac{A}{B}$ \& $\frac{C}{D}$ gọi là \emph{bằng nhau} nếu $A\cdot D = B\cdot C$. Ta viết
@@ -352,7 +346,7 @@ Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử
 	\end{align*}
 \end{dinhnghia}
 
-\section{Tính Chất Cơ Bản của Phân Thức}
+\subsection{Tính Chất Cơ Bản của Phân Thức}
 ``Phân thức đại số có tính chất cơ bản sau:
 
 \begin{menhde}
@@ -367,7 +361,7 @@ Phân tích đa thức thành nhân tử bằng phương pháp nhóm hạng tử
 \end{menhde}
 Tính chất này được gọi là \textit{tính chất cơ bản của phân thức}.'' -- \cite[p. 37]{SGK_Toan_8_tap_1}
 
-\subsection{Quy tắc đổi dấu}
+\subsubsection{Quy tắc đổi dấu}
 
 \begin{menhde}
 	Nếu đổi dấu cả tử \& mẫu của 1 phân thức thì được 1 phân thức bằng phân thức đã cho:
@@ -376,7 +370,7 @@ Tính chất này được gọi là \textit{tính chất cơ bản của phân 
 	\end{align*}
 \end{menhde}
 
-\section{Rút Gọn Phân Thức}
+\subsection{Rút Gọn Phân Thức}
 ``Muốn rút gọn 1 phân thức ta có thể:
 \begin{enumerate*}
 	\item Phân tích tử \& mẫu thành nhân tử (nếu cần) để tìm nhân tử chung;
@@ -384,14 +378,14 @@ Tính chất này được gọi là \textit{tính chất cơ bản của phân 
 \end{enumerate*}
 ``Có khi cần đổi dấu ở tử hoặc mẫu để nhận ra nhân tử chugn của tử \& mẫu (lưu ý tới tính chất $A = -(-A)$).'' -- \cite[p. 39]{SGK_Toan_8_tap_1}
 
-\section{Quy Đồng Mẫu thức Nhiều Phân Thức}
+\subsection{Quy Đồng Mẫu thức Nhiều Phân Thức}
 
 \begin{dinhnghia}[Quy đồng mẫu thức nhiều phân thức]
 	\emph{Quy đồng mẫu thức nhiều phân thức} là biến đổi các phân thức đã cho thành những phân thức mới có cùng mẫu thức \& lần lượt bằng các phân thức đã cho.
 \end{dinhnghia}
 Ta thường ký hiệu ``mẫu thức chung'' bởi MTC. Để quy đồng mẫu thức nhiều phân thức, trước hết ta hãy xem có thể tìm mẫu thức chung của những phân thức mới này như thế nào.'' -- \cite[p. 41]{SGK_Toan_8_tap_1}
 
-\subsection{Tìm mẫu thức chung}
+\subsubsection{Tìm mẫu thức chung}
 ``Có thể chọn mẫu thức chung là 1 tích chia hết cho mẫu thức của mỗi phân thức đã cho.'' -- \cite[p. 41]{SGK_Toan_8_tap_1}
 
 ``Khi quy đồng mẫu thức nhiều phân thức, muốn tìm mẫu thức chung ta có thể làm như sau: 
@@ -404,7 +398,7 @@ Ta thường ký hiệu ``mẫu thức chung'' bởi MTC. Để quy đồng mẫ
 	\end{itemize}
 \end{enumerate}
 
-\subsection{Quy đồng mẫu thức}
+\subsubsection{Quy đồng mẫu thức}
 ``Muốn quy đồng mẫu thức nhiều phân thức ta có thể làm như sau:
 \begin{enumerate*}
 	\item Phân tích các mẫu thức thành nhân tử rồi tìm mẫu thức chung;
@@ -412,14 +406,14 @@ Ta thường ký hiệu ``mẫu thức chung'' bởi MTC. Để quy đồng mẫ
 	\item Nhân cả tử \& mẫu của mỗi phân thức với nhân tử phụ tương ứng.'' -- \cite[p. 42]{SGK_Toan_8_tap_1}
 \end{enumerate*}
 
-\section{Phép Cộng Các Phân Thức Đại Số}
+\subsection{Phép Cộng Các Phân Thức Đại Số}
 
-\subsection{Cộng 2 phân thức cùng mẫu thức}
+\subsubsection{Cộng 2 phân thức cùng mẫu thức}
 ``Quy tắc cộng 2 phân thức cũng tương tự như quy tắc cộng 2 phân số.
 
 \textbf{Quy tắc.} Muốn cộng 2 phân thức có cùng mẫu thức, ta cộng các tử thức với nhau \& giữ nguyên mẫu thức.'' -- \cite[p. 44]{SGK_Toan_8_tap_1}
 
-\subsection{Cộng 2 phân thức có mẫu thức khác nhau}
+\subsubsection{Cộng 2 phân thức có mẫu thức khác nhau}
 ``Ta đã biết quy đồng mẫu thức 2 phân thức \& quy tắc cộng 2 phân thức cùng mẫu thức. Có thể áp dụng những điều đó để cộng 2 phân thức có mẫu thức khác nhau.'' ``Ta có quy tắc cộng 2 phân thức có mẫu thức khác nhau như sau:
 
 \textbf{Quy tắc.} Muốn cộng 2 phân thức có mẫu thức khác nhau, ta quy đồng mẫu thức rồi cộng các phân thức có cùng mẫu thức vừa tìm được.
@@ -431,139 +425,137 @@ Kết quả của phép cộng 2 phân thức được gọi là \textit{tổng}
 \end{enumerate}
 Nhờ tính chất kết hợp, trong 1 dãy phép cộng nhiều phân thức, ta không cần đặt dấu ngoặc.'' -- \cite[p. 45]{SGK_Toan_8_tap_1}
 
-\section{Phép Trừ Các Phân Thức Đại Số}
+\subsection{Phép Trừ Các Phân Thức Đại Số}
 
-\section{Phép Nhân Các Phân Thức Đại Số}
+\subsection{Phép Nhân Các Phân Thức Đại Số}
 
-\section{Phép Chia Các Phân Thức Đại Số}
+\subsection{Phép Chia Các Phân Thức Đại Số}
 
-\section{Biến Đổi Các Biểu Thức Hữu Tỷ. Giá Trị của Phân Thức}
-
-%------------------------------------------------------------------------------%
-
-\chapter{Phương Trình Đại Số 1 Ẩn -- Algebraic Equation with 1 Unknown}
-
-\section{Mở Đầu về Phương Trình}
-
-\section{Phương Trình Bậc Nhất 1 Ẩn \& Cách Giải}
-
-\section{Phương Trình Đưa Được về Dạng $ax + b = 0$}
-
-\section{Phương Trình Tích}
-
-\section{Phương Trình Chứa Ẩn ở Mẫu}
-
-\section{Giải Bài Toán Bằng Cách Lập Phương Trình}
+\subsection{Biến Đổi Các Biểu Thức Hữu Tỷ. Giá Trị của Phân Thức}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Bất Phương Trình Bậc Nhất 1 Ẩn -- Algebraic Inequation with 1 Unknown}
+\section{Phương Trình Đại Số 1 Ẩn -- Algebraic Equation with 1 Unknown}
 
-\section{Liên Hệ Giữa Thứ Tự \& Phép Cộng}
+\subsection{Mở Đầu về Phương Trình}
 
-\section{Liên Hệ Giữa Thứ Tự \& Phép Nhân}
+\subsection{Phương Trình Bậc Nhất 1 Ẩn \& Cách Giải}
 
-\section{Bất Phương Trình 1 Ẩn}
+\subsection{Phương Trình Đưa Được về Dạng $ax + b = 0$}
 
-\section{Bất Phương Trình Bậc Nhất 1 Ẩn}
+\subsection{Phương Trình Tích}
 
-\section{Phương Trình Chứa Dấu Giá Trị Tuyệt Đối}
+\subsection{Phương Trình Chứa Ẩn ở Mẫu}
+
+\subsection{Giải Bài Toán Bằng Cách Lập Phương Trình}
 
 %------------------------------------------------------------------------------%
 
-\part{Hình Học -- Geometry}
+\section{Bất Phương Trình Bậc Nhất 1 Ẩn -- Algebraic Inequation with 1 Unknown}
 
-\chapter{Tứ Giác}
+\subsection{Liên Hệ Giữa Thứ Tự \& Phép Cộng}
+
+\subsection{Liên Hệ Giữa Thứ Tự \& Phép Nhân}
+
+\subsection{Bất Phương Trình 1 Ẩn}
+
+\subsection{Bất Phương Trình Bậc Nhất 1 Ẩn}
+
+\subsection{Phương Trình Chứa Dấu Giá Trị Tuyệt Đối}
+
+%------------------------------------------------------------------------------%
 
 \section{Tứ Giác}
 
-\section{Hình Thang}
+\subsection{Tứ Giác}
 
-\section{Hình Thang Cân}
+\subsection{Hình Thang}
 
-\section{Đường Trung Bình của Tam Giác, của Hình Thang}
+\subsection{Hình Thang Cân}
 
-\section{Dựng Hình Bằng Thước \& Compa. Dựng Hình thang}
+\subsection{Đường Trung Bình của Tam Giác, của Hình Thang}
 
-\section{Đối Xứng Trục}
+\subsection{Dựng Hình Bằng Thước \& Compa. Dựng Hình thang}
 
-\section{Hình Bình Hành}
+\subsection{Đối Xứng Trục}
 
-\section{Đối Xứng Tâm}
+\subsection{Hình Bình Hành}
 
-\section{Hình Chữ Nhật}
+\subsection{Đối Xứng Tâm}
 
-\section{Đường Thẳng Song Song với 1 Đường Thẳng Cho Trước}
+\subsection{Hình Chữ Nhật}
 
-\section{Hình Thoi}
+\subsection{Đường Thẳng Song Song với 1 Đường Thẳng Cho Trước}
 
-\section{Hình Vuông}
+\subsection{Hình Thoi}
 
-%------------------------------------------------------------------------------%
-
-\chapter{Đa Giác. Diện Tích Đa Giác}
-
-\section{Đa Giác. Đa Giác Đều}
-
-\section{Diện Tích Hình Chữ Nhật}
-
-\section{Diện Tích Tam Giác}
-
-\section{Diện Tích Hình Thang}
-
-\section{Diện Tích Hình Thoi}
-
-\section{Diện Tích Đa Giác}
+\subsection{Hình Vuông}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Tam Giác Đồng Dạng}
+\section{Đa Giác. Diện Tích Đa Giác}
 
-\section{Định Lý Thales Trong Tam Giác}
+\subsection{Đa Giác. Đa Giác Đều}
 
-\section{Định Lý Đảo \& Hệ Quả của Định Lý Thales}
+\subsection{Diện Tích Hình Chữ Nhật}
 
-\section{Tính Chất Đường Phân Giác của Tam Giác}
+\subsection{Diện Tích Tam Giác}
 
-\section{Khái Niệm 2 Tam Giác Đồng Dạng}
+\subsection{Diện Tích Hình Thang}
 
-\section{Trường Hợp Đồng Dạng Thứ Nhất}
+\subsection{Diện Tích Hình Thoi}
 
-\section{Trường Hợp Đồng Dạng Thứ 2}
-
-\section{Trường Hợp Đồng Dạng Thứ 3}
-
-\section{Các Trường Hợp Đồng Dạng của Tam Giác Vuông}
-
-\section{Ứng Dụng Thực Tế của Tam Giác Đồng Dạng}
+\subsection{Diện Tích Đa Giác}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Hình Lăng Trụ Đứng. Hình Chóp Đều}
+\section{Tam Giác Đồng Dạng}
+
+\subsection{Định Lý Thales Trong Tam Giác}
+
+\subsection{Định Lý Đảo \& Hệ Quả của Định Lý Thales}
+
+\subsection{Tính Chất Đường Phân Giác của Tam Giác}
+
+\subsection{Khái Niệm 2 Tam Giác Đồng Dạng}
+
+\subsection{Trường Hợp Đồng Dạng Thứ Nhất}
+
+\subsection{Trường Hợp Đồng Dạng Thứ 2}
+
+\subsection{Trường Hợp Đồng Dạng Thứ 3}
+
+\subsection{Các Trường Hợp Đồng Dạng của Tam Giác Vuông}
+
+\subsection{Ứng Dụng Thực Tế của Tam Giác Đồng Dạng}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Lăng Trụ Đứng. Hình Chóp Đều}
 
 \begin{center}
 	\Large A -- Hình Lăng Trụ Đứng
 \end{center}
 
-\section{Hình Hộp Chữ Nhật}
+\subsection{Hình Hộp Chữ Nhật}
 
-\section{Thể Tích của Hình Hộp Chữ Nhật}
+\subsection{Thể Tích của Hình Hộp Chữ Nhật}
 
-\section{Hình Lăng Trụ Đứng}
+\subsection{Hình Lăng Trụ Đứng}
 
-\section{Diện Tích Xung Quanh của Hình Lăng Trụ Đứng}
+\subsection{Diện Tích Xung Quanh của Hình Lăng Trụ Đứng}
 
-\section{Thể Tích của Hình Lăng Trụ Đứng}
+\subsection{Thể Tích của Hình Lăng Trụ Đứng}
 
 \begin{center}
 	\Large B -- Hình Chóp Đều
 \end{center}
 
-\section{Hình Chóp Đều \& Hình Chóp Cụt Đều}
+\subsection{Hình Chóp Đều \& Hình Chóp Cụt Đều}
 
-\section{Diện Tích Xung Quanh của Hình Chóp Đều}
+\subsection{Diện Tích Xung Quanh của Hình Chóp Đều}
 
-\section{Thể Tích của Hình Chóp Đều}
+\subsection{Thể Tích của Hình Chóp Đều}
 
 %------------------------------------------------------------------------------%
 
