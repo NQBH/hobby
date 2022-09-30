@@ -1,0 +1,225 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,booktabs}
+\usepackage[version=4]{mhchem}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Problems in Elementary Chemistry\texttt{/}Grade 11}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao cho Hóa học sơ cấp lớp 11. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/NQBH_elementary_chemistry_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/NQBH_elementary_chemistry_grade_11.pdf}.} của tác giả viết cho Toán lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/problem/NQBH_elementary_chemistry_grade_11_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 6\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/problem/NQBH_elementary_chemistry_grade_11_problem.pdf}.}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Sự Điện Ly}
+\begin{dangtoan}[]
+	Phân biệt chất dẫn điện\emph{\texttt{/}}không dẫn điện.
+\end{dangtoan}
+
+\begin{proof}[Cách giải]
+	\begin{enumerate*}
+		\item[$\bullet$] \textit{Chất dẫn điện.} Dung dịch acid, dung dịch base, dung dịch muối.
+		\item[$\bullet$] \textit{Chất không dẫn điện.} Nước cất, dung dịch saccarozơ, NaCl rắn khan, NaOH rắn khan, dung dịch ancol etylic $\rm C_2H_5OH$; glixerol $\rm HOCH_2CH(OH)CH_2OH$.
+	\end{enumerate*}
+\end{proof}
+
+\begin{dangtoan}
+	Phân biệt chất phân ly\emph{\texttt{/}}không phân ly ra ion.
+\end{dangtoan}
+
+\subsection{Xác định vai trò acid, base, lưỡng tính hay trung tính của các chất}
+``Theo Br\"onsted: Acid là chất có khả năng cho proton $\rm H^+$, base là chất có khả năng nhận proton $\rm H^+$. E.g., \ce{HCl (acid) + H2O (base) -> H3O+ + Cl-}, \ce{NH3 (base) + H2O (acid) <=> NH4+ + OH-}.'' -- \cite[p. 8]{An2004}
+
+\begin{baitoan}[\cite{An2004}, \textbf{1.}, p. 5, đề thi Học viện Bưu chính Viễn thông 1999]
+	Theo định nghĩa mới acid, base thì \emph{\ce{NH3,NH4+}} chất nào là acid, chất nào là base? Cho phản ứng minh họa, giải thích tại sao \emph{\ce{NH3}} có tính chất đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{2.}, p. 5]
+	Các chất \& ion cho dưới đây đóng vai trò acid, base, lưỡng tính hay trung tính: \emph{\ce{NH4+,Al(H2O)^3+,C6H5O^-,S^2-,Zn(OH)2,K+,Cl-}}? Tại sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{3.}, p. 6, đề thi tuyển sinh ĐH Bách Khoa 1998]
+	Viết phương trình phản ứng dưới dạng phân tử \& ion thu gọn của dung dịch \emph{\ce{NaHCO3}} với từng dung dịch: \emph{\ce{H2SO4}} loãng, \emph{\ce{KOH,Ba(OH)2}} dư. Trong mỗi phản ứng đó, ion \emph{\ce{HCO3}} đóng vai trò acid hay base?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{4.}, p. 6]
+	Hoàn thành các phương trình phản ứng acid-base \& hãy cho biết chất nào là acid, base?
+	\begin{enumerate*}
+		\item[(a)] \emph{\ce{CH3NH2 + H2O}};
+		\item[(b)] \emph{\ce{C2H5COO + H2O}};
+		\item[(c)] \emph{\ce{C2H5O + H20}};
+		\item[(d)] \emph{\ce{C6H5OH + H2O}}.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{5.}, p. 7]
+	Trong các ion sau: \emph{\ce{CO3^2-,CH3COO-,HSO4,HCO3}} là acid, base lưỡng tính hay trung tính? Tại sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{6.}, p. 7]
+	\begin{enumerate*}
+		\item[(a)] Theo quan điểm mới về acid base (theo thuyết Br\"onsted) thì phèn nhôm amoni có công thức là \emph{\ce{NH4Al(SO4)2.12H2O}} \& soda có công thức là \emph{\ce{Na2CO3}} là acid hay base. Viết các phương trình phản ứng để giải thích.
+		\item[(b)] Dùng thuyết Br\"onsted, giải thích vì sao các chất \emph{\ce{Al(OH)3.H2O,NaHCO3}} được coi là chất lưỡng tính.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{7.}, p. 8]
+	Cho $a$ mol \emph{\ce{NO2}} hấp thụ hoàn toàn vào dung dịch chứa $a$ mol \emph{\ce{NaOH}}. Dung dịch thu được có giá trị pH lớn hơn hay nhỏ hơn 7? Tại sao?
+\end{baitoan}
+
+\subsection{Môi trường của dung dịch muối}
+``\textbf{Sự thủy phân của muối.} Phản ứng trao đổi giữa chất tan với nước được gọi là \textit{sự thủy phân}. Tương tác giữa các ion trong muối với nước được gọi là \textit{sự thủy phân muối}.
+\begin{enumerate*}
+	\item[(a)] \textit{Muối tạo bởi acid mạnh, base mạnh} (\ce{NaCl,Na2SO4,KNO3}, $\ldots$) không bị thủy phân vì các cation của base mạnh \& các anion của acid mạnh đều không thể liên kết với các ion của nước $\rm pH = 7$.
+	\item[(b)] \textit{Thủy phân muối tạo bởi acid yếu \& base mạnh} (\ce{Na2CO3,K2S,CH3COONa}, $\ldots$): dung dịch có tính base nên $\rm pH > 7$. E.g., \ce{Na2S = 2Na+ + S^2-} (\ce{Na^+}: cation của base mạnh), \ce{S^2-}: anion của acid yếu, \ce{S^2- + H2O <=> HS- + OH-}, \ce{Na2CO3 -> 2Na+ + CO3^2-}, \ce{CO3^2- + H2O <=> HCO3- + OH-}.
+	\item[(c)] \textit{Thủy phân muối tạo bởi acid mạnh \& base yếu} (\ce{NH4Cl,FeCl3,Al2(SO4)3}, $\ldots$) dung dịch có tính acid nên $\rm pH < 7$. E.g., \ce{NH4Cl -> NH4^+ + Cl-}, \ce{NH4^+ + H2O <=> NH3 + H3O^+}.
+	\item[(d)] \textit{Thủy phân muối tạo bởi acid yếu \& base yếu} (\ce{CH3COONH4,(NH4)2CO3}, $\ldots$). E.g., \ce{CH3COONH4 -> NH4+ + CH3COO-}, \ce{NH4+ + CH3COO- + HOH <=> CH3COOH + NH4OH}. Phương trình phản ứng cho thấy là kết quả của phản ứng thủy phân tạo ra acid yếu \& base yếu. Dung dịch có tính trung tính nếu các hằng số điện ly của base \& acid gần như nhau. Nếu chúng khác nhau 1 vài bậc thì môi trường có thể là acid yếu hay base yếu.
+\end{enumerate*}
+
+\begin{luuy}
+	Khi viết phương trình phản ứng của ion có trong muối với nước bao giờ ta cũng lấy ion yếu tác dụng với nước.'' -- \cite[pp. 8--9]{An2004}
+\end{luuy}
+
+\begin{baitoan}[\cite{An2004}, \textbf{8.}, p. 10]
+	Những loại muối nào dễ bị thủy phân? Phản ứng thủy phân có phải là phản ứng trao đổi proton hay không? Nước đóng vai trò acid hay base?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{9.}, p. 10]
+	Cho \emph{\ce{NO2}} tác dụng với dung dịch \emph{\ce{KOH}} dư. Sau đó lấy dung dịch thu được cho tác dụng với \emph{\ce{Zn}} sinh ra hỗn hợp khí \emph{\ce{NH3}} \& \emph{\ce{H2}}. Viết phương trình phản ứng xảy ra.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{11.}, p. 11]
+	Hòa tan $5$ muối \emph{\ce{NaCl,NH4Cl,AlCl3,Na2S,C6H5ONa}} vào nước thành $5$ dung dịch, sau đó cho vào mỗi dung dịch 1 ít quỳ tím. Hỏi dung dịch có màu gì? Tại sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{12.}, p. 11]
+	Đánh giá gần đúng pH ($> 7, =7, < 7$) của các dung dịch nước của các chất sau \& giải thích:
+	\begin{enumerate*}
+		\item[(a)] \emph{\ce{Ba(NO3)2,CH3COOH,Na2CO3}};
+		\item[(b)] \emph{\ce{NaHSO4,CH3NH2,Ba(CH3COO)2}}.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{13.}, p. 12, đề thi tuyển sinh ĐH Hàng hải 1998]
+	Trình bày hiện tượng thủy phân của hợp chất vô cơ \& nêu bản chất của hiện tượng đó. Nước đóng vai trò gì trong quá trình thủy phân, cho ví dụ minh họa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{14.}, p. 13]
+	Thế nào là muối trung hòa, muối acid? Cho ví dụ. Acid phosphorơ \emph{\ce{H3PO3}} là acid, 2 lần acid, vậy hợp chất \emph{\ce{Na2HPO3}} là muối acid hay muối trung hòa?
+\end{baitoan}
+
+\subsection{Tính độ điện ly, hằng số điện ly của chất điện ly}
+
+\subsubsection{Tính độ điện ly dựa vào hằng số điện ly \& ngược lại}
+\begin{itemize}
+	\item[(a)] \textit{Độ điện ly $\alpha$.} $\alpha = \frac{\mbox{số phân tử phân ly}}{\mbox{số phân tử hòa tan}}$.
+	\item[(b)] \textit{Mối liên hệ giữa độ điện ly $\alpha$ \& hằng số điện ly $K$.} Giả sử chất điện ly yếu MA với nồng độ ban đầu là $C$ \& độ điện ly $\alpha$. $K_{\rm cb} = \frac{(C\alpha)^2}{C(1 - \alpha)}$  vì $\alpha$ bé nên $K = \alpha^2C$. Do đó $\alpha = \sqrt{\frac{K}{C}}$.
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{cccc}
+			& \multicolumn{3}{c}{\ce{MA <=> M+ + A-}}\\
+			Nồng độ ban đầu & $C$ &  &  \\
+			Nồng độ cân bằng & $C(1 - \alpha)$ & $C\alpha$ & $C\alpha$ \\
+		\end{tabular}
+	\end{table}	
+\end{itemize}
+
+\begin{baitoan}[\cite{An2004}, \textbf{15.}, p. 14]
+	Ở $300^\circ{\rm K}$ độ điện ly của dung dịch \emph{\ce{NH3}} $0.17$ \emph{g\texttt{/}l} là $4.2\%$. Tính độ điện ly của dung dịch khi thêm $0.535$ \emph{g} \emph{\ce{NH4Cl}} vào $\rm 1\ l$ dung dịch trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{16.}, p. 14]
+	Sự điện ly \& sự điện phân có phải là quá trình oxi hóa khử không? Nêu ví dụ. Tính độ điện ly của Acid hydrocyanic \emph{\ce{HCN}} trong dung dịch $0.05$ \emph{M}? Biết hằng số điện ly $k = 7\cdot 10^{-10}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{17.}, p. 15, đề thi tuyển sinh ĐHQG Hà Nội 1997]
+	Tính nồng độ lúc cân bằng của các ion \emph{\ce{H3O+}} \& \emph{\ce{CH3COO}} trong dung dịch \emph{\ce{CH3COOH}} $0.1$ \emph{M} \& độ điện ly $\alpha$ của dung dịch đó. Biết hằng số ion hóa (hay hằng số acid) của \emph{\ce{CH3COOH}} là $K_{\rm a} = 1.8\cdot 10^{-5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{18.}, p. 16]
+	Tính độ điện ly $\alpha$ \& pH của dung dịch \emph{\ce{CH3COOH}} $10^{-1}$ \emph{M} \& dung dịch \emph{\ce{CH3COOH}} $10^{-2}$ \emph{M}, biết rằng $K_{\rm a} = 10^{-4.75}$. So sánh $\alpha$ ở 2 trường hợp \& giải thích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2004}, \textbf{19.}, p. 16]
+	Lấy $2.5$ \emph{ml} dung dịch \emph{\ce{CH3COOH}} $4$ \emph{M} rồi pha loãng với \emph{\ce{H2O}} thành $1$ \emph{l} dung dịch A. Tính độ điện ly $\alpha$ của axit axetic \& pH của dung dịch A, biết rằng trong $1$ \emph{ml} A có $6.28\cdot 10^{18}$ ion \& phân tử acid không phân ly.
+\end{baitoan}
+
+\subsection{Tính pH}
+
+\begin{dangtoan}
+	Tính pH của dung dịch khi pha 1 số acid \& 1 số base với nhau, với nồng độ cho trước.
+\end{dangtoan}
+
+\begin{proof}[Cách giải]
+	Dựa vào thể tích dung dịch \& nồng độ các chất trong dung dịch, tính $n_{\rm H^+}$ \& $n_{\rm OH^-}$. Biện luận theo các trường hợp sau:
+	\begin{itemize}
+		\item[(a)] Nếu $n_{\rm H^+} = n_{\rm OH^-}$. Dung dịch trung hòa, $\rm pH = 7$.
+		\item[(b)] Nếu $n_{\rm H^+} > n_{\rm OH^-}$. Dung dịch có tính axit. Phương trình ion rút gọn: $\rm H^+ + OH^-\rightarrow H_2O$. $\rm OH^-$ phản ứng hết \& $\rm H^+$ còn dư. $n_{\rm H^+,\mbox{dư}} = n_{H^+} - n_{\rm OH^-}$.
+		\begin{align*}
+			\rm[H^+] = \frac{n_{H^+,\mbox{dư}}}{V_{\rm dd}} = 
+		\end{align*}
+		\item[(b)] Nếu $n_{\rm H^+} < n_{\rm OH^-}$.
+	\end{itemize}
+\end{proof}
+
+\begin{baitoan}
+	Trộn lẫn $V_{\rm HCl}$ \emph{l} dung dịch $\rm HCl$ $C_{\rm M,HCl}$ \emph{M} \& $V_{\rm NaOH}$ \emph{l} dung dịch $\rm NaOH$ $C_{\rm M,NaOH}$ \emph{M} được dung dịch A. Tính pH của dung dịch A.
+\end{baitoan}
+
+\begin{baitoan}
+	Trộn lẫn $V_{\rm HCl}$ \emph{l} dung dịch $\rm HCl$ $C_{\rm M,HCl}$ \emph{M} \& $V_{\rm NaOH}$ \emph{l} dung dịch $\rm NaOH$ $C_{\rm M,NaOH}$ \emph{M} được dung dịch A. Tính pH của dung dịch A.
+\end{baitoan}
+
+
+
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
