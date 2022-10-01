@@ -1,0 +1,373 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Problems in Elementary Mathematics\texttt{/}Grade 8}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp *. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.} của tác giả viết cho Toán lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/problem/NQBH_elementary_mathematics_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/problem/NQBH_elementary_mathematics_grade_8_problem.pdf}.}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Nhân \& Phép Chia Các Đa Thức}
+
+\subsection{Nhân Đơn Thức với Đa Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Nhân Đa Thức với Đa Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Những Hằng Đẳng Thức Đáng Nhớ}
+\begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{23.}, p. 12]
+	Chứng minh các đẳng thức sau:
+	\begin{align*}
+		(a + b)^2 = (a - b)^2 + 4ab,\ (a - b)^2 = (a + b)^2 - 4ab,\ \forall a,b\in\mathbb{R}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{25.}, p. 12]
+	Tính
+	\begin{enumerate*}
+		\item[(a)] $(a + b + c)^2$;
+		\item[(b)] $(a + b - c)^2$;
+		\item[(c)] $a - b - c)^2$.
+	\end{enumerate*}
+\end{baitoan}
+Tổng quát hơn,
+\begin{baitoan}
+	Với $n\in\mathbb{N}^\star$ cho trước, tính $\left(\sum_{i=1}^n a_i\right)^2 = (a_1 + \cdots + a_n)^2$, sau đó phát biểu đẳng thức tìm được bằng lời. Từ đó suy ra kết quả của $\left(\sum_{i=1}^n \pm a_i\right)^2 = (\pm a_1\pm\cdots\pm a_n)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{31.}, p. 16]
+	Chứng minh rằng:
+	\begin{align*}
+		a^3 + b^3 = (a + b)^3 - 3ab(a + b),\ a^3 - b^3 = (a - b)^3 + 3ab(a - b),\ \forall a,b\in\mathbb{R}.
+	\end{align*}
+	Áp dụng: Tính $a^3 + b^3$ biết $ab = m$ \& $a + b = n$ với $m,n\in\mathbb{R}$ cho trước. Tính $a^3 - b^3$ biết $ab = m$ \& $a - b = k$ với $m,k\in\mathbb{R}$ cho trước.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Đặt Nhân Tử Chung}
+
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Dùng Hằng Đẳng Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Phương Pháp Nhóm Hạng Tử}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phân Tích Đa Thức Thành Nhân Tử Bằng Cách Phối Hợp Nhiều Phương Pháp}
+\begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{58.}, p. 25]
+	Chứng minh rằng $n^3 - n\ \vdots\ 6$, $\forall n\in\mathbb{Z}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Chia Đơn Thức Cho Đơn Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Chia Đa Thức Cho Đơn Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Chia Đa Thức 1 Biến Đã Sắp Xếp}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Thức Đại Số}
+
+\subsection{Phân Thức Đại Số}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Tính Chất Cơ Bản của Phân Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Rút Gọn Phân Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Quy Đồng Mẫu thức Nhiều Phân Thức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phép Cộng Các Phân Thức Đại Số}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phép Trừ Các Phân Thức Đại Số}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phép Nhân Các Phân Thức Đại Số}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phép Chia Các Phân Thức Đại Số}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Biến Đổi Các Biểu Thức Hữu Tỷ. Giá Trị của Phân Thức}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Đại Số 1 Ẩn -- Algebraic Equation with 1 Unknown}
+
+\subsection{Mở Đầu về Phương Trình}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phương Trình Bậc Nhất 1 Ẩn \& Cách Giải}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phương Trình Đưa Được về Dạng $ax + b = 0$}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phương Trình Tích}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phương Trình Chứa Ẩn ở Mẫu}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Giải Bài Toán Bằng Cách Lập Phương Trình}
+
+%------------------------------------------------------------------------------%
+
+\section{Bất Phương Trình Bậc Nhất 1 Ẩn -- Algebraic Inequation with 1 Unknown}
+
+\subsection{Liên Hệ Giữa Thứ Tự \& Phép Cộng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Liên Hệ Giữa Thứ Tự \& Phép Nhân}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Bất Phương Trình 1 Ẩn}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Bất Phương Trình Bậc Nhất 1 Ẩn}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phương Trình Chứa Dấu Giá Trị Tuyệt Đối}
+
+%------------------------------------------------------------------------------%
+
+\section{Tứ Giác}
+
+\subsection{Tứ Giác}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hình Thang}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hình Thang Cân}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Đường Trung Bình của Tam Giác, của Hình Thang}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Dựng Hình Bằng Thước \& Compa. Dựng Hình thang}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Đối Xứng Trục}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hình Bình Hành}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Đối Xứng Tâm}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hình Chữ Nhật}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Đường Thẳng Song Song với 1 Đường Thẳng Cho Trước}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hình Thoi}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hình Vuông}
+
+%------------------------------------------------------------------------------%
+
+\section{Đa Giác. Diện Tích Đa Giác}
+
+\subsection{Đa Giác. Đa Giác Đều}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Diện Tích Hình Chữ Nhật}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Diện Tích Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Diện Tích Hình Thang}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Diện Tích Hình Thoi}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Diện Tích Đa Giác}
+
+%------------------------------------------------------------------------------%
+
+\section{Tam Giác Đồng Dạng}
+
+\subsection{Định Lý Thales Trong Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Định Lý Đảo \& Hệ Quả của Định Lý Thales}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Tính Chất Đường Phân Giác của Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Khái Niệm 2 Tam Giác Đồng Dạng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Trường Hợp Đồng Dạng Thứ Nhất}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Trường Hợp Đồng Dạng Thứ 2}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Trường Hợp Đồng Dạng Thứ 3}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Các Trường Hợp Đồng Dạng của Tam Giác Vuông}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Ứng Dụng Thực Tế của Tam Giác Đồng Dạng}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Lăng Trụ Đứng. Hình Chóp Đều}
+
+\begin{center}
+	\Large A -- Hình Lăng Trụ Đứng
+\end{center}
+
+\subsection{Hình Hộp Chữ Nhật}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Thể Tích của Hình Hộp Chữ Nhật}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hình Lăng Trụ Đứng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Diện Tích Xung Quanh của Hình Lăng Trụ Đứng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Thể Tích của Hình Lăng Trụ Đứng}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\Large B -- Hình Chóp Đều
+\end{center}
+
+\subsection{Hình Chóp Đều \& Hình Chóp Cụt Đều}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Diện Tích Xung Quanh của Hình Chóp Đều}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Thể Tích của Hình Chóp Đều}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
