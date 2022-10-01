@@ -8,6 +8,7 @@
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption,chemfig}
 \DeclareMathOperator{\arccot}{arccot}
 \usepackage[inline]{enumitem}
+\usepackage[version=4]{mhchem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
@@ -68,18 +69,14 @@
 
 \subsubsection{Khái niệm về este \& dẫn xuất khác của axit cacboxylic}
 
-\paragraph{Cấu tạo phân tử.} ``Khi thay nhóm OH ở nhóm cacboxyl của axit cacboxylic bằng nhóm OR thì được este. Este đơn giản có công thức cấu tạo:
+\paragraph{Cấu tạo phân tử.} ``Khi thay nhóm OH ở nhóm cacboxyl của axit cacboxylic bằng nhóm OR thì được este. Este đơn giản có công thức cấu tạo: \chemfig[atom sep=2em]{R-C(=[6]O)-O-R'} với R, R' là gốc hydrocarbon no, không no hoặc thơm (trừ trường hợp este của axit fomic có R là H). Este là dẫn xuất của axit cacboxylic. 1 vài dẫn xuất khác của axit cacboxylic có công thức cấu tạo như sau: anhiđrit axit, halogenua axit, amit.'' -- \cite[p. 4]{SGK_Hoa_Hoc_12_nang_cao}
 \begin{center}
-	\chemfig{R-C(=[6]O)-O-R'}
-\end{center}
-với R, R' là gốc hydrocarbon no, không no hoặc thơm (trừ trường hợp este của axit fomic có R là H). Este là dẫn xuất của axit cacboxylic. 1 vài dẫn xuất khác của axit cacboxylic có công thức cấu tạo như sau: anhiđrit axit, halogenua axit, amit.'' -- \cite[p. 4]{SGK_Hoa_Hoc_12_nang_cao}
-\begin{center}
-	\chemfig{R-C(=[6]O)-O-C(=[6]O)-R'},\ \chemfig{R-C(=[6]O)-X},\ \chemfig{R-C(=[6]O)-NR_2'}
+	\chemfig[atom sep=2em]{R-C(=[6]O)-O-C(=[6]O)-R'},\ \chemfig[atom sep=2em]{R-C(=[6]O)-X},\ \chemfig[atom sep=2em]{R-C(=[6]O)-NR_2'}
 \end{center}
 
 \paragraph{Cách gọi tên este.} ``Tên este gồm: tên gốc hydrocarbon R' $+$ tên anion gốc axit (đuôi ``at''). etyl fomat, vinyl axetat, metyl benzoat, benzyl axetat.'' -- \cite[p. 4]{SGK_Hoa_Hoc_12_nang_cao}
 \begin{center}
-	\chemfig{H-C(=[6]O)-O-C_2H_5},\ \chemfig{CH_3-C(=[6]O)-O-CH=CH_2},\\\chemfig{C_6H_5-C(=[6]O)-O-CH_3},\ \chemfig{CH_3-C(=[6]O)-O-CH_2C_6H_5}
+	\chemfig[atom sep=2em]{H-C(=[6]O)-O-C_2H_5},\ \chemfig[atom sep=2em]{CH_3-C(=[6]O)-O-CH=CH_2},\ \chemfig[atom sep=2em]{C_6H_5-C(=[6]O)-O-CH_3},\ \chemfig[atom sep=2em]{CH_3-C(=[6]O)-O-CH_2C_6H_5}
 \end{center}
 
 \paragraph{Tính chất vật lý của este.} ``Giữa các phân tử este không có liên kết hydro vì thế este có nhiệt độ sôi thấp hơn so với axit \& ancol có cùng số nguyên tử C. Các este thường là những chất lỏng, nhẹ hơn nước, rất ít tan trong nước, có khả năng hòa tan được nhiều chất hữu cơ khác nhau. Những este có khối lượng phân tử rất lớn có thể ở trạng thái rắn (như mỡ động vật, sáp ong, $\ldots$). Các este thường có mùi thơm dễ chịu, e.g., isoamyl axetat có mùi chuối chín, etyl butirat có mùi dứa, etyl isovalerat có mùi áo, $\ldots$'' -- \cite[pp. 4--5]{SGK_Hoa_Hoc_12_nang_cao}
@@ -88,7 +85,17 @@ với R, R' là gốc hydrocarbon no, không no hoặc thơm (trừ trường h�
 
 \paragraph{Phản ứng ở nhóm chức.}
 
-\subparagraph{Phản ứng thủy phân.} ``Este bị thủy phân cả trong môi trường axit \& môi trường kiềm. Thủy phân este trong môi trường axit là phản ứng nghịch với phản ứng este hóa:
+\subparagraph{Phản ứng thủy phân.} ``Este bị thủy phân cả trong môi trường axit \& môi trường kiềm. Thủy phân este trong môi trường axit là phản ứng nghịch với phản ứng este hóa: \ce{R-COO-{R'} + H-OH <-->[H2SO4,$t^\circ$] R-COOH + {R'}-OH}. Thủy phân este trong môi trường kiềm là phản ứng 1 chiều \& còn được gọi là \textit{phản ứng xà phòng hóa}: \ce{R-COO-{R'} + NaOH ->[H2O,$t^\circ$] R-COONa + {R'}-OH}.'' -- \cite[pp. 5]{SGK_Hoa_Hoc_12_nang_cao}
+
+\subparagraph{Phản ứng khử.} ``Este bị khử bởi liti nhôm hiđrua (\ce{LiAlH4}), khi đó nhóm \chemfig[atom sep=2em]{R-C(=[6]O)-} (gọi là \textit{nhóm axyl}) trở thành ancol bậc I: \ce{R-COO-{R'} ->[LiAlH4,$t^\circ$] R-CH2-OH + {R'}-OH}.'' -- \cite[pp. 5]{SGK_Hoa_Hoc_12_nang_cao}
+
+\paragraph{Phản ứng ở gốc hydrocarbon.} ``Este có thể tham gia phản ứng thế, cộng, tách, trùng hợp, $\ldots$ Sau đây chỉ xét phản ứng cộng \& phản ứng trùng hợp.'' -- \cite[pp. 5]{SGK_Hoa_Hoc_12_nang_cao}
+
+\subparagraph{Phản ứng cộng vào gốc không no.} ``Gốc hydrocarbon không no ở este có phản ứng cộng với \ce{H2,Br2,Cl2}, $\ldots$ giống như hydrocarbon không no. E.g., \ce{CH3[CH2]7CH=CH[CH2]7COOCH3 (metyl oleat) + H2 ->[Ni,$t^\circ$] CH3[CH2]16COOCH3 (metyl stearat)}.'' -- \cite[pp. 5]{SGK_Hoa_Hoc_12_nang_cao}
+
+\subparagraph{Phản ứng trùng hợp.} ``1 số este đơn giản có liên kết \ce{C=C} tham gia phản ứng trùng hợp giống như anken. E.g.,
+\setchemfig{scheme debug=false}
+\schemestart\chemfig[atom sep=2em]{nCH_2=CH-C(=[6]O)-O-CH_3} (metyl acrylat)\ce{->[xt,$t^\circ$]}(\chemfig[atom sep=2em]{-CH(-[6]COOCH3)-CH2-})$_n$ (poly(metyl acrylat))\schemestop
 
 %------------------------------------------------------------------------------%
 
