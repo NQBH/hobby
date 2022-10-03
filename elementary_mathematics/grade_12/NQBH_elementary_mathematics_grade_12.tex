@@ -1,4 +1,4 @@
-\documentclass[oneside]{book}
+\documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -38,7 +38,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -65,8 +65,10 @@
 \date{\today}
 
 \begin{document}
-\frontmatter
 \maketitle
+\begin{abstract}
+	
+\end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
@@ -74,18 +76,11 @@
 
 %------------------------------------------------------------------------------%
 
-\mainmatter
+\section{Ứng Dụng Đạo Hàm Để Khảo Sát \& Vẽ Đồ Thị của Hàm Số}
+\textsf{\textbf{Nội dung.} Ứng dụng đạo hàm \& giới hạn để xét 1 số tính chất quan trọng của hàm số \& đồ thị như: tính đơn điệu, cực trị, giá trị lớn nhất, giá trị nhỏ nhất của hàm số \& các đường tiệm cận của đồ thị; khảo sát sự biến thiên, khảo sát tính lồi lõm, \& vẽ đồ thị của hàm số của 1 số hàm số đơn giản, e.g., căn thức, đa thức, phân thức; 1 số dạng toán liên quan đến đồ thị hàm số \& ứng dụng của đồ thị hàm số trong các bài toán về biện luận số nghiệm của phương trình.}
 
-\part{Đại Số \& Giải Tích -- Algebra \& Analysis}
-
-\chapter{Ứng Dụng Đạo Hàm Để Khảo Sát \& Vẽ Đồ Thị của Hàm Số}
-
-\begin{quotation}
-	\textbf{Nội dung.} \textit{Ứng dụng đạo hàm \& giới hạn để xét 1 số tính chất quan trọng của hàm số \& đồ thị như: tính đơn điệu, cực trị, giá trị lớn nhất, giá trị nhỏ nhất của hàm số \& các đường tiệm cận của đồ thị; khảo sát sự biến thiên \& vẽ đồ thị của hàm số của 1 số hàm số đơn giản}.
-\end{quotation}
-
-\section{Tính Đơn Điệu của Hàm Số}
-\textbf{Nội dung.} \textit{Ứng dụng đạo hàm để xét tính \emph{đơn điệu} (i.e., tính \emph{đồng biến} \& tính \emph{nghịch biến}) của hàm số}.
+\subsection{Tính Đơn Điệu của Hàm Số}
+\textsf{\textbf{Nội dung.} Ứng dụng đạo hàm để xét tính \emph{đơn điệu} (i.e., tính \emph{đồng biến} \& tính \emph{nghịch biến}) của hàm số.}
 
 \begin{dinhnghia}[Hàm số đồng\texttt{/}nghịch biến]
 	Giả sử $K$ là 1 khoảng, 1 đoạn hoặc 1 nửa khoảng \& $f$ là hàm số xác định trên $K$. Hàm số $f$ được gọi là \emph{đồng biến} trên $K$ nếu $\forall x_1,x_2\in K$, $x_1 < x_2\Rightarrow f(x_1) < f(x_2)$. Hàm số $f$ được gọi là \emph{nghịch biến} trên $K$ nếu $\forall x_1,x_2\in K$, $x_1 > x_2\Rightarrow f(x_1) < f(x_2)$.
@@ -141,10 +136,10 @@ Có thể mở rộng định lý \ref{thm:dau dao ham & tinh dong bien} như sa
 
 %------------------------------------------------------------------------------%
 
-\section{Cực Trị của Hàm Số}
-\textbf{Nội dung.} \textit{Cực đại, cực tiểu của hàm số; quan hệ giữa cực đại, cực tiểu với dấu của đạo hàm cấp 1 \& đạo hàm cấp 2 của hàm số}.
+\subsection{Cực Trị của Hàm Số}
+\textsf{\textbf{Nội dung.} Cực đại, cực tiểu của hàm số; quan hệ giữa cực đại, cực tiểu với dấu của đạo hàm cấp 1 \& đạo hàm cấp 2 của hàm số.}
 
-\subsection{Khái niệm cực trị của hàm số}
+\subsubsection{Khái niệm cực trị của hàm số}
 
 \begin{dinhnghia}[Cực trị]
 	``Giả sử hàm số $f$ xác định trên tập hợp $\mathcal{D}\subset\mathbb{R}$ \& $x_0\in\mathcal{D}$.
@@ -165,7 +160,7 @@ Nếu $x_0$ là 1 điểm cực trị của hàm số $f$ thì người ta nói 
 \end{luuy}
 Nếu $x_0$ là 1 điểm cực trị của hàm số $f$ thì điểm $(x_0;f(x_0))$ được gọi là \textit{điểm cực trị của đồ thị} hàm số $f$.'' -- \cite[p. 11]{SGK_Toan_12_giai_tich_nang_cao}
 
-\subsection{Điều kiện cần để hàm số đạt được cực trị}
+\subsubsection{Điều kiện cần để hàm số đạt được cực trị}
 ``Quan sát đồ thị của hàm số $y = f(x)$, ta thấy nếu hàm số $f$ đạt cực trị tại điểm $x_0$ \& nếu đồ thị của hàm số có tiếp tuyến tại điểm $(x_0;f(x_0))$ thì tiếp tuyến đó song song với trục hoành, i.e., $f'(x_0) = 0$.
 
 \begin{dinhly}
@@ -176,7 +171,7 @@ Nếu $x_0$ là 1 điểm cực trị của hàm số $f$ thì điểm $(x_0;f(x
 \begin{luuy}
 	``Hàm số có thể đạt cực trị tại 1 điểm mà tại điểm đó hàm số không có đạo hàm. E.g., hàm số $y = f(x) = |x|$ xác định trên $\mathbb{R}$. Vì $f(0) = 0$ \& $f(x) > 0$, $\forall x\ne 0$ nên hàm số đạt cực tiểu tại điểm $x = 0$. Dễ thấy hàm số $y = |x|$ không có đạo hàm tại điểm $x = 0$ (Fig. \ref{fig:graph_abs}).
 	
-	\begin{figure}[H]
+	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.15]{graph_abs}
 		\caption{Đồ thị của hàm số $y = f(x) = |x|$, \cite[Hình 1.3, p. 12]{SGK_Toan_12_giai_tich_nang_cao}.}
@@ -185,7 +180,7 @@ Nếu $x_0$ là 1 điểm cực trị của hàm số $f$ thì điểm $(x_0;f(x
 	Như vậy, 1 hàm số chỉ có thể đạt cực trị tại 1 điểm mà tại đó đạo hàm của hàm số bằng $0$, hoặc tại đó hàm số không có đạo hàm.'' -- \cite[p. 11]{SGK_Toan_12_giai_tich_nang_cao}
 \end{luuy}
 
-\subsection{Điều kiện đủ để hàm số đạt cực trị}
+\subsubsection{Điều kiện đủ để hàm số đạt cực trị}
 ``Định lý sau cho ta 1 điều kiện đủ để hàm số đạt cực trị.
 
 \begin{dinhly}
@@ -259,8 +254,8 @@ Từ định lý \ref{thm:dao ham cap 2 & cuc tri ham so}, ta có 1 quy tắc kh
 
 %------------------------------------------------------------------------------%
 
-\section{Giá Trị Lớn Nhất \& Giá Trị Nhỏ Nhất của Hàm Số}
-\textbf{Nội dung.} \textit{Các bài toán dẫn đến việc tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số trên 1 tập hợp số thực cho trước, ứng dụng tính đơn điệu \& cực trị của hàm số để tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số}.
+\subsection{Giá Trị Lớn Nhất \& Giá Trị Nhỏ Nhất của Hàm Số}
+\textsf{\textbf{Nội dung.} Các bài toán dẫn đến việc tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số trên 1 tập hợp số thực cho trước, ứng dụng tính đơn điệu \& cực trị của hàm số để tìm giá trị lớn nhất \& giá trị nhỏ nhất của hàm số.}
 
 \begin{dinhnghia}[Giá trị lớn\texttt{/}nhỏ nhất]
 	``Giả sử hàm số $f$ xác định trên tập hợp $\mathcal{D}\subset\mathbb{R}$.
@@ -294,48 +289,102 @@ Giả sử hàm số $f$ liên tục trên đoạn $[a;b]$ \& có đạo hàm tr
 
 %------------------------------------------------------------------------------%
 
-\section{Đồ Thị của Hàm Số \& Phép Tịnh Tiến Hệ Tọa Độ}
-\textbf{Nội dung.} \textit{Phép tịnh tiến hệ tọa độ, nhờ đó có thể xác định được trục đối xứng \& tâm đối xứng của 1 số đường cong}.
+\subsection{Đồ Thị của Hàm Số \& Phép Tịnh Tiến Hệ Tọa Độ}
+\textsf{\textbf{Nội dung.} Phép tịnh tiến hệ tọa độ, nhờ đó có thể xác định được trục đối xứng \& tâm đối xứng của 1 số đường cong.}
 
 \begin{dinhnghia}[Đồ thị của hàm số]
-	``\emph{Đồ thị của hàm số} $y = f(x)$ xác định trên tập $\mathcal{D}$ là tập hợp tất cả các điểm $(x;f(x))$, $x\in\mathcal{D}$ của mặt phẳng tọa độ.
+	\begin{itemize}
+		\item ``\emph{Đồ thị của hàm số} $y = f(x)$ xác định trên tập $\mathcal{D}$ là tập hợp tất cả các điểm $(x;f(x))$, $x\in\mathcal{D}$ của mặt phẳng tọa độ.'' -- -- \cite[p. 24]{SGK_Toan_12_giai_tich_nang_cao}
+		\item ``Nếu $f$ là 1 hàm số có miền xác định $D$ thì \emph{đồ thị} của hàm số $f$ là tập hợp các cặp sắp thứ tự $\{(x;f(x))|x\in D\}$. I.e., đồ thị của $f$ bao gồm tất cả các điểm $(x;y)$ của mặt phẳng tọa độ với $y = f(x)$ \& $x$ thuộc vào miền xác định. (Đôi khi cũng gọi đồ thị đó là 1 \emph{đường cong}, đặc biệt khi miền xác định là 1 khoảng, đoạn).'' -- \cite[p. 5]{TL_chuyen_Toan_Giai_Tich_12}
+	\end{itemize}	
 \end{dinhnghia}
-Người ta còn gọi đồ thị của hàm số $y = f(x)$ là \textit{đường cong có phương trình là $y = f(x)$} (gọi tắt là \textit{đường cong} $y = f(x)$). Trong nhiều trường hợp việc thay hệ tọa độ đã có bởi 1 hệ tọa độ mới giúp ta nghiên cứu đường cong thuận tiện hơn.'' -- \cite[p. 24]{SGK_Toan_12_giai_tich_nang_cao}
+``Người ta còn gọi đồ thị của hàm số $y = f(x)$ là \textit{đường cong có phương trình là $y = f(x)$} (gọi tắt là \textit{đường cong} $y = f(x)$). Trong nhiều trường hợp việc thay hệ tọa độ đã có bởi 1 hệ tọa độ mới giúp ta nghiên cứu đường cong thuận tiện hơn.'' -- \cite[p. 24]{SGK_Toan_12_giai_tich_nang_cao}
 
-\subsection{Phép tịnh tiến hệ tọa độ \& công thức chuyển hệ tọa độ}
-``Giả sử $I$ là 1 điểm của mặt phẳng \& $(x_0;y_0)$ là tọa độ của điểm $I$ đối với hệ tọa độ $Oxy$. Gọi $IXY$ là hệ tọa độ mới có gốc là điểm $I$ \& 2 truc $IX,IY$ theo thứ tự có cùng các vector đơn vị $\vec{i},\vec{j}$ với 2 trục $Ox,Oy$ (Fig. \ref{fig:2_he_truc_toa_do}).
+``Về mặt nguyên tắc, 1 hàm số bất kỳ có thể được khảo sát \& vẽ đồ thị theo 1 sơ đồ tổng quát \ldots. Tuy nhiên, đồ thị của những hàm số có mối liên quan đặc biệt có thể thu được từ nhau trực tiếp thông qua các phép biến đổi đồ thị. Điều này rút ngắn thời gian thực hiện cũng như cho phép chúng ta nhìn các đồ thị trong 1 mối tương quan thống nhất chứ không phải là các đối tượng riêng lẻ.'' -- \cite[p. 5]{TL_chuyen_Toan_Giai_Tich_12}
 
-\begin{figure}[H]
+\subsubsection{Phép tịnh tiến hệ tọa độ \& công thức chuyển hệ tọa độ}
+
+\begin{dinhly}
+	``Trong mặt phẳng tọa độ $Oxy$, cho đồ thị $(G)$ của hàm số $y = f(x)$; $p$ \& $q$ là 2 số dương tùy ý. Khi đó:
+	\begin{enumerate*}
+		\item[(a)] Tịnh tiến $(G)$ lên trên $q$ đơn vị thì được đồ thị của hàm số $y = f(x) + q$;
+		\item[(b)] Tịnh tiến $(G)$ xuống dưới $q$ đơn vị thì được đồ thị của hàm số $y = f(x) - q$;
+		\item[(c)] Tịnh tiến $(G)$ sang trái $p$ đơn vị thì được đồ thị của hàm số $y = f(x + p)$;
+		\item[(d)] Tịnh tiến $(G)$ sang phải $p$ đơn vị thì được đồ thị của hàm số $y = f(x - p)$.'' -- \cite[p. 6]{TL_chuyen_Toan_Giai_Tich_12}
+	\end{enumerate*}
+\end{dinhly}
+
+\begin{dinhly}
+	``Nếu $(G)$ là đồ thị của hàm số $y = f(x)$. Khi đó:
+	\begin{enumerate*}
+		\item[(a)] Nếu lấy hình đối xứng của $(G)$ qua trục $Oy$, ta được đồ thị của hàm số $y = f(-x)$;
+		\item[(b)] Nếu lấy phần $(G^{\rm p})$ của $(G)$ nằm bên phải của trục $Oy$ hợp với ảnh của $(G^{\rm p})$ qua phép đối xứng qua trục $Oy$, ta được đồ thị của hàm số $y = f(|x|)$;
+		\item[(c)] Nếu lấy hình đối xứng của $(G)$ qua trục $Ox$, ta được đồ thị hàm số $y = -f(x)$;
+		\item[(d)] Nếu lấy phần $(G^{\rm t})$ của $(G)$ nằm bên trên trục $Ox$ hợp với ảnh của $(G^{\rm d})$ (là phần của $(G)$ nằm bên dưới trục $Ox$) qua phép đối xứng qua trục $Ox$, ta được đồ thị của hàm số $y = |f(x)|$.'' -- \cite[p. 6]{TL_chuyen_Toan_Giai_Tich_12}
+	\end{enumerate*}
+\end{dinhly}
+``Giả sử $I$ là 1 điểm của mặt phẳng \& $(x_0;y_0)$ là tọa độ của điểm $I$ đối với hệ tọa độ $Oxy$. Gọi $IXY$ là hệ tọa độ mới có gốc là điểm $I$ \& 2 trục $IX,IY$ theo thứ tự có cùng các vector đơn vị $\vec{i},\vec{j}$ với 2 trục $Ox,Oy$ (Fig. \ref{fig:2_he_truc_toa_do}).
+
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.13]{2_he_truc_toa_do}
 	\caption{2 hệ trục tọa độ, \cite[Hình 1.5, p. 25]{SGK_Toan_12_giai_tich_nang_cao}.}
 	\label{fig:2_he_truc_toa_do}
 \end{figure}
-Giả sử $M$ là 1 điểm bất kỳ của mặt phẳng. Gọi $(x;y)$ là tọa độ của điểm $M$ đối với hệ tọa độ $Oxy$ \& $(X;Y)$ là tọa độ của điểm $M$ đối với hệ tọa độ $IXY$. Khi đó: $\overrightarrow{OM} = \overrightarrow{OI} + \overrightarrow{IM}$ hay $x\vec{i} + y\vec{j} = (x_0\vec{i} + y_0\vec{j}) + (X\vec{i} + Y\vec{j}) = (X + x_0)\vec{i} + (Y + y_0)\vec{j}$. Do đó $(x = X + x_0)\land(y = Y + y_0)$. Các hệ thức trên gọi là \textit{công thức chuyển hệ tọa độ} trong phép tịnh tiến theo vector $\overrightarrow{OI}$.'' -- \cite[p. 25]{SGK_Toan_12_giai_tich_nang_cao}
+Giả sử $M$ là 1 điểm bất kỳ của mặt phẳng. Gọi $(x;y)$ là tọa độ của điểm $M$ đối với hệ tọa độ $Oxy$ \& $(X;Y)$ là tọa độ của điểm $M$ đối với hệ tọa độ $IXY$. Khi đó: $\overrightarrow{OM} = \overrightarrow{OI} + \overrightarrow{IM}$ hay $x\vec{i} + y\vec{j} = (x_0\vec{i} + y_0\vec{j}) + (X\vec{i} + Y\vec{j}) = (X + x_0)\vec{i} + (Y + y_0)\vec{j}$. Do đó
+\begin{equation*}
+	\left\{\begin{split}
+		x &= X + x_0,\\
+		y &= Y + y_0.
+	\end{split}\right.
+\end{equation*}
+Các hệ thức trên gọi là \textit{công thức chuyển hệ tọa độ} trong phép tịnh tiến theo vector $\overrightarrow{OI}$.'' -- \cite[p. 25]{SGK_Toan_12_giai_tich_nang_cao}; \cite[p. 6]{TL_chuyen_Toan_Giai_Tich_12}
 
-\subsection{Phương trình của đường cong đối với hệ tọa độ mới}
-``Giả sử $(\mathcal{G})$\footnote{Ký hiệu $\mathcal{G}$ được lấy từ chữ cái đầu của từ \textit{graph}, i.e., đồ thị.} là đồ thị\footnote{\textbf{graph} [n] a diagram, consisting of a line or lines, showing the relation between 2 or more sets of numbers.} của hàm số $y = f(x)$ đối với hệ tọa độ $Oxy$ đã cho. Khi đó phương trình của đường cong $(\mathcal{G})$ đối với hệ tọa độ $Oxy$ là $y = f(x)$. Ta sẽ viết phương trình của $(\mathcal{G})$ đối với hệ tọa độ mới $IXY$. Giả sử $M$ là 1 điểm bất kỳ của mặt phẳng, $(x;y)$ \& $(X;Y)$ là tọa độ của điểm $M$, theo thứ tự, đối với hệ tọa độ $Oxy$ \& $IXY$. Khi đó: $M\in(\mathcal{G})\Leftrightarrow y = f(x)$. Áp dụng công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$, ta có $M\in(\mathcal{G})\Leftrightarrow Y + y_0 = f(X + x_0)\Leftrightarrow Y = f(X + x_0) - y_0$. Vậy phương trình của đường cong $\mathcal{G}$ đối với hệ tọa độ $IXY$ là $Y = f(X + x_0) - y_0$.'' -- \cite[pp. 25--26]{SGK_Toan_12_giai_tich_nang_cao}
+\subsubsection{Phương trình của đường cong đối với hệ tọa độ mới}
+``Giả sử $(\mathcal{G})$\footnote{Ký hiệu $\mathcal{G}$ được lấy từ chữ cái đầu của từ \textit{graph}, i.e., đồ thị.} là đồ thị\footnote{\textbf{graph} [n] a diagram, consisting of a line or lines, showing the relation between 2 or more sets of numbers.} của hàm số $y = f(x)$ đối với hệ tọa độ $Oxy$ đã cho. Khi đó phương trình của đường cong $(\mathcal{G})$ đối với hệ tọa độ $Oxy$ là $y = f(x)$. Ta sẽ viết phương trình của $(\mathcal{G})$ đối với hệ tọa độ mới $IXY$. Giả sử $M$ là 1 điểm bất kỳ của mặt phẳng, $(x;y)$ \& $(X;Y)$ là tọa độ của điểm $M$, theo thứ tự, đối với hệ tọa độ $Oxy$ \& $IXY$. Khi đó: $M\in(\mathcal{G})\Leftrightarrow y = f(x)$. Áp dụng công thức chuyển hệ tọa độ trong phép tịnh tiến theo vector $\overrightarrow{OI}$, ta có $M\in(\mathcal{G})\Leftrightarrow Y + y_0 = f(X + x_0)\Leftrightarrow Y = f(X + x_0) - y_0$. Vậy phương trình của đường cong $\mathcal{G}$ đối với hệ tọa độ $IXY$ là $Y = f(X + x_0) - y_0$.'' -- \cite[pp. 25--26]{SGK_Toan_12_giai_tich_nang_cao}; \cite[pp. 6--7]{TL_chuyen_Toan_Giai_Tich_12}
+
+\subsubsection{Sơ lược về phép co dãn theo phương trục hoành}
+``Cho $p\in(0;+\infty)$. Ta xét phép biến đổi biến điểm $M_0(x_0;y_0)$ thành điểm $M_1(px_0;y_0)$. Ta nói đây là \textit{phép co dãn theo trục hoành}. Nếu $p < 1$, đó là \textit{phép co}, $p > 1$ thì đó là \textit{phép dãn}, với $p = 1$ ta có \textit{phép biến đổi đồng nhất}. Số $p$ được gọi là \textit{tỷ số của phép co}\texttt{/}\textit{dãn} theo phương trục hoành.''
+
+\begin{dinhly}
+	``Nếu $(G)$ là đồ thị hàm số $y = f(x)$ \& $p\in(0;+\infty)$. Khi đó, nếu lấy ảnh của $(G)$ qua phép co dãn theo phương trục hoành với tỷ số $p$, ta được đồ thị $(G_p)$ của hàm số $y = f\left(\frac{x}{p}\right)$.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Giả sử $M(x_0;y_0)\in(G)$, ta có $y_0 = f(x_0)$. Ảnh của $M_0$ qua phép co dãn theo phương trục hoành với tỷ số $p$ là $M_1(x_1;y_1)$ với $x_1 = px_0$, $y_1 = y_0$. Đẳng thức $y_0 = f(x_0)$ bây giờ có thể viết lại thành $y_1 = f\left(\frac{x_1}{p}\right)$,  do đó $M_1\in(G_p)$.'' -- \cite[pp. 7--8]{TL_chuyen_Toan_Giai_Tich_12}
+\end{proof}
+
+\subsubsection{Sơ lược về phép co dãn theo phương trục tung}
+``Cho $q\in(0;+\infty)$. Ta xét phép biến đổi biến điểm $M_0(x_0;y_0)$ thành điểm $M_1(x_0;qy_0)$. Ta nói đây là \textit{phép co dãn theo trục tung}. Nếu $q < 1$, đó là \textit{phép co}; $q > 1$, đó là \textit{phép dãn}; với $q = 1$ ta có \textit{phép biến đổi đồng nhất}. Số $q$ được gọi là \textit{tỷ số của phép co}\texttt{/}\textit{dãn} theo phương trục tung.''
+
+\begin{dinhly}
+	``Nếu $(G)$ là đồ thị hàm số $y = f(x)$ \& $q\in(0;+\infty)$. Khi đó, nếu lấy $(G_q)$ là ảnh của $(G)$ qua phép co dãn theo phương trục tung với tỷ số $q$, ta được đồ thị hàm số $y = qf(x)$.'' -- \cite[p. 8]{TL_chuyen_Toan_Giai_Tich_12}
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Giả sử $M(x_0;y_0)\in(G)$, ta có $y_0 = f(x_0)$. Ảnh của $M_0$ qua phép co dãn theo phương trục tung với tỷ số $q$ là $M(x_1;y_1)$ với $x_1 = x_0$, $y_1 = qy_0$. Đẳng thức $y_0 = f(x_0)$ bây giờ có thể viết lại thành $y_1 = qf(x_1)$, do đó $M_1$ thuộc đồ thị của hàm số $y = qf(x)$.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
-\section{Đường Tiệm Cận của Đồ Thị Hàm Số}
+\subsection{Đường Tiệm Cận của Đồ Thị Hàm Số}
 
-\subsection{Đường tiệm cận đứng \& đường tiệm cận ngang}
-``Ta đã biết đồ thị của hàm số $f(x) = \frac{1}{x}$ là đường hyperbĐol gồm 2 nhánh nằm trong góc phần 4 thứ nhất \& thứ 3 của mặt phẳng tọa độ.
+\subsubsection{Đường tiệm cận đứng \& đường tiệm cận ngang}
+``Ta đã biết đồ thị của hàm số $f(x) = \frac{1}{x}$ là đường hyperbol gồm 2 nhánh nằm trong góc phần 4 thứ nhất \& thứ 3 của mặt phẳng tọa độ.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.13]{hyperbol}
 	\caption{Đồ thị của hàm số $f(x) = \frac{1}{x}$, \cite[Hình 1.6, p. 28]{SGK_Toan_12_giai_tich_nang_cao}.}
 	\label{fig:hyperbol}
 \end{figure}
-Ta có: $\lim_{x\to+\infty} f(x) = \lim_{x\to+\infty} \frac{1}{x} = 0$, $\lim_{x\to-\infty} f(x) = \lim_{x\to-\infty} \frac{1}{x} = 0$. I.e., khoảng cách $MH = |f(x)|$ từ điểm $M$ của đồ thị đến trục hoành dần đến $0$ khi điểm $M$ theo đường hyperbol đi xa ra vô tận về phía phải hoặc phía trái. Người ta gọi trục hoành là đường tiệm cận ngang của đồ thị hàm số $y = \frac{1}{x}$. Ta cũng có: $\lim_{x\to 0^+} f(x) = \lim_{x\to 0^+} \frac{1}{x} = +\infty$ \& $\lim_{x\to 0^-} f(x) = \lim_{x\to 0^-} \frac{1}{x} = -\infty$. I.e., khoảng cách $NK = |x|$ từ 1 điểm $N$ của đồ thị đến trục tung dần đến $0$ khi điểm $N$ theo đồ thị đi xa ra vô tận về phía trên hoặc phía dưới. Người ta gọi trục tung là \textit{đường tiệm cận đứng} của đồ thị hàm số $y = \frac{1}{x}$. 1 cách tổng quát, ta có:
+Ta có: $\lim_{x\to+\infty} f(x) = \lim_{x\to+\infty} \frac{1}{x} = 0$, $\lim_{x\to-\infty} f(x) = \lim_{x\to-\infty} \frac{1}{x} = 0$. I.e., khoảng cách $MH = |f(x)|$ từ điểm $M$ của đồ thị đến trục hoành dần đến $0$ khi điểm $M$ theo đường hyperbol đi xa ra vô tận về phía phải hoặc phía trái. Người ta gọi trục hoành là \textit{đường tiệm cận ngang} của đồ thị hàm số $y = \frac{1}{x}$. Ta cũng có: $\lim_{x\to 0^+} f(x) = \lim_{x\to 0^+} \frac{1}{x} = +\infty$ \& $\lim_{x\to 0^-} f(x) = \lim_{x\to 0^-} \frac{1}{x} = -\infty$. I.e., khoảng cách $NK = |x|$ từ 1 điểm $N$ của đồ thị đến trục tung dần đến $0$ khi điểm $N$ theo đồ thị đi xa ra vô tận về phía trên hoặc phía dưới. Người ta gọi trục tung là \textit{đường tiệm cận đứng} của đồ thị hàm số $y = \frac{1}{x}$. 1 cách tổng quát, ta có:
 
 \begin{dinhnghia}[Tiệm cận ngang]
 	Đường thẳng $y = y_0$ được gọi là \emph{đường tiệm cận ngang} (gọi tắt là \emph{tiệm cận ngang}) của đồ thị hàm số $y = f(x)$ nếu $\lim_{x\to+\infty} f(x) = y_0$ hoặc $\lim_{x\to-\infty} f(x) = y_0$.
 \end{dinhnghia}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -352,10 +401,10 @@ Ta có: $\lim_{x\to+\infty} f(x) = \lim_{x\to+\infty} \frac{1}{x} = 0$, $\lim_{x
 \end{figure}
 
 \begin{dinhnghia}[Tiệm cận đứng]
-	Đường thẳng $x = x_0$ được gọi là \emph{đường tiệm cận đứng} (gọi tắt là \emph{tiệm cận đứng}) của đồ thị hàm số $y = f(x)$ nếu ít nhất 1 trong các điều kiện sau được thỏa mãn: $\lim_{x\to x_0^-} f(x) = +\infty$, $\lim_{x\to x_0^+} f(x) = +\infty$, $\lim_{x\to x_0^-} f(x) = -\infty$, $\lim_{x\to x_0^+} f(x) = -\infty$.'' -- \cite[pp. 28--30]{SGK_Toan_12_giai_tich_nang_cao}
+	Đường thẳng $x = x_0$ được gọi là \emph{đường tiệm cận đứng} (gọi tắt là \emph{tiệm cận đứng}) của đồ thị hàm số $y = f(x)$ nếu ít nhất 1 trong các điều kiện sau được thỏa mãn: $\lim_{x\to x_0^-} f(x) = +\infty$, $\lim_{x\to x_0^+} f(x) = +\infty$, $\lim_{x\to x_0^-} f(x) = -\infty$, $\lim_{x\to x_0^+} f(x) = -\infty$.'' -- \cite[pp. 28--30]{SGK_Toan_12_giai_tich_nang_cao}; \cite[p. 10--11]{TL_chuyen_Toan_Giai_Tich_12}
 \end{dinhnghia}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering
@@ -381,7 +430,7 @@ Ta có: $\lim_{x\to+\infty} f(x) = \lim_{x\to+\infty} \frac{1}{x} = 0$, $\lim_{x
 	\label{fig:tiem_can_dung}
 \end{figure}
 
-\subsection{Đường tiệm cận xiên}
+\subsubsection{Đường tiệm cận xiên}
 ``Cho $(\mathcal{C})$ là đồ thị của hàm số $y = f(x)$ \& $(d)$ là đường thẳng $y = ax + b$ ($a\ne 0$). Gọi $M$ \& $N$ là 2 điểm của $(\mathcal{C})$ \& $(d)$ có cùng hoành độ $x$ (Fig. \ref{fig:tiem_can_xien}).
 
 \begin{figure}[H]
@@ -403,7 +452,7 @@ Nếu độ dài của đoạn thẳng $MN$ dần đến $0$ khi $x$ dần đế
 
 \begin{dinhnghia}[Tiệm cận xiên]
 	\label{def:tiem can xien}
-	Đường thẳng $y = ax + b$, $a\ne 0$, được gọi là \emph{đường tiệm cận xiên} (gọi tắt là \emph{tiệm cận xiên}) của đồ thị hàm số $y = f(x)$ nếu $\lim_{x\to+\infty} [f(x) - (ax + b)] = 0$, hoặc $\lim_{x\to-\infty} [f(x) - (ax + b)] = 0$.'' -- \cite[p. 32]{SGK_Toan_12_giai_tich_nang_cao}
+	Đường thẳng $y = ax + b$, $a\ne 0$, được gọi là \emph{đường tiệm cận xiên} (gọi tắt là \emph{tiệm cận xiên}) của đồ thị hàm số $y = f(x)$ nếu $\lim_{x\to+\infty} [f(x) - (ax + b)] = 0$, hoặc $\lim_{x\to-\infty} [f(x) - (ax + b)] = 0$.'' -- \cite[p. 32]{SGK_Toan_12_giai_tich_nang_cao}; \cite[p. 13]{TL_chuyen_Toan_Giai_Tich_12}
 \end{dinhnghia}
 
 \begin{luuy}
@@ -411,29 +460,14 @@ Nếu độ dài của đoạn thẳng $MN$ dần đến $0$ khi $x$ dần đế
 \end{luuy}
 
 \begin{proof}[Chứng minh]
-	Thật vậy, xét trường hợp $x\to+\infty$, giả sử hàm số $f$ xác định trên khoảng $(\alpha;+\infty)$ \& đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ (khi $x\to+\infty$). Khi đó, theo định nghĩa \ref{def:tiem can xien}, ta có:
-	\begin{align}
-		\label{SGK_Toan_12_giai_tich_nang_cao (1) p. 34}
-		\lim_{x\to+\infty} [f(x) - (ax + b)] = 0.
-	\end{align}
-	Do đó $\lim_{x\to+\infty} \frac{f(x) - (ax + b)}{x} = 0$, i.e., $\lim_{x\to+\infty} \left[\frac{f(x)}{x} - a - \frac{b}{x}\right] = 0$. Vì $\lim_{x\to+\infty} \frac{b}{x} = 0$ nên
-	\begin{align}
-		\label{SGK_Toan_12_giai_tich_nang_cao (2) p. 34}
-		a = \lim_{x\to+\infty} \frac{f(x)}{x}.
-	\end{align}
-	Từ \eqref{SGK_Toan_12_giai_tich_nang_cao (1) p. 34} suy ra
-	\begin{align}
-		\label{SGK_Toan_12_giai_tich_nang_cao (3) p. 34}
-		b = \lim_{x\to+\infty} [f(x) - ax].
-	\end{align}
-	Đảo lại, nếu $a$ \& $b$ thỏa mãn \eqref{SGK_Toan_12_giai_tich_nang_cao (2) p. 34} \& \eqref{SGK_Toan_12_giai_tich_nang_cao (3) p. 34} thì từ \eqref{SGK_Toan_12_giai_tich_nang_cao (3) p. 34} suy ra \eqref{SGK_Toan_12_giai_tich_nang_cao (1) p. 34}. Do đó đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ nếu $a\ne 0$ \& là tiệm cận ngang nếu $a = 0$. Trường hợp $x\to-\infty$ được chứng minh tương tự.'' -- \cite[p. 34]{SGK_Toan_12_giai_tich_nang_cao}
+	Thật vậy, xét trường hợp $x\to+\infty$, giả sử hàm số $f$ xác định trên khoảng $(\alpha;+\infty)$ \& đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ (khi $x\to+\infty$). Khi đó, theo định nghĩa \ref{def:tiem can xien}, ta có $\lim_{x\to+\infty} [f(x) - (ax + b)] = 0$ (1). Do đó $\lim_{x\to+\infty} \frac{f(x) - (ax + b)}{x} = 0$, i.e., $\lim_{x\to+\infty} \left[\frac{f(x)}{x} - a - \frac{b}{x}\right] = 0$. Vì $\lim_{x\to+\infty} \frac{b}{x} = 0$ nên $a = \lim_{x\to+\infty} \frac{f(x)}{x}$ (2). Từ (1) suy ra $b = \lim_{x\to+\infty} [f(x) - ax]$ (3). Đảo lại, nếu $a$ \& $b$ thỏa mãn (2) \& (3) thì từ (3) suy ra (1). Do đó đường thẳng $y = ax + b$ là tiệm cận xiên của đồ thị hàm số $y = f(x)$ nếu $a\ne 0$ \& là tiệm cận ngang nếu $a = 0$. Trường hợp $x\to-\infty$ được chứng minh tương tự.'' -- \cite[p. 34]{SGK_Toan_12_giai_tich_nang_cao}; \cite[pp. 14--15]{TL_chuyen_Toan_Giai_Tich_12}
 \end{proof}
 
 %------------------------------------------------------------------------------%
 
-\section{Khảo Sát Sự Biến Thiên \& Vẽ Đồ Thị của 1 Số Hàm Đa Thức}
+\subsection{Khảo Sát Sự Biến Thiên \& Vẽ Đồ Thị của 1 Số Hàm Đa Thức}
 
-\subsection{Các bước khảo sát sự biến thiên \& vẽ đồ thị của hàm số}
+\subsubsection{Các bước khảo sát sự biến thiên \& vẽ đồ thị của hàm số}
 ``Khi khảo sát \& vẽ đồ thị của hàm số, ta tiến hành các bước sau đây:
 \begin{enumerate*}
 	\item[\textbf{1.}] Tìm tập xác định của hàm số.
@@ -442,7 +476,7 @@ Nếu độ dài của đoạn thẳng $MN$ dần đến $0$ khi $x$ dần đế
 		\item[(a)] Tìm giới hạn tại vô cực \& giới hạn vô cực (nếu có) của hàm số. Tìm các đường tiệm cận của đồ thị (nếu có).
 		\item[(b)] Lập bảng biến thiên của hàm số, bao gồm: Tìm đạo hàm của hàm số, xét dấu đạo hàm, xét chiều biến thiên \& tìm cực trị của hàm số (nếu có), điền các kết quả vào bảng.
 	\end{enumerate*}
-	\item Vẽ đồ thị của hàm số.
+	\item[\textbf{3.}] Vẽ đồ thị của hàm số.
 	\begin{enumerate*}
 		\item[(a)] Vẽ các đường tiệm cận của đồ thij (nếu có).
 		\item[(b)] Xác định 1 số điểm đặc biệt của đồ thị, e.g. tìm giao điểm của đồ thị với các trục tọa độ. (Trong trường hợp đồ thị không cắt các trục tọa độ hoặc việc tìm tọa độ giao điểm phức tạp thì bỏ qua phần này).
@@ -450,9 +484,34 @@ Nếu độ dài của đoạn thẳng $MN$ dần đến $0$ khi $x$ dần đế
 	\end{enumerate*}
 \end{enumerate*}
 
-\subsection{Hàm số $y = ax^3 + bx^2 + cx + d$ ($a\ne 0$)}
+``Để khảo sát sự biến thiên \& vẽ đồ thị của 1 hàm số bất kỳ, ta thực hiện các bước như sau:
+\begin{enumerate*}
+	\item[\textbf{1.}] Tìm tập xác định của hàm số.
+	\item[\textbf{2.}] Khảo sát sự biến thiên của hàm số.
+	\begin{enumerate*}
+		\item[(a)] Tìm 1 số giới hạn của hàm số: giới hạn tại vô cực \& giới hạn vô cực. Tìm các tiệm cận của đồ thị.
+		\item[(b)] Lập bảng biến thiên của hàm số:
+		\begin{enumerate*}
+			\item[$\bullet$] Tìm đạo hàm $y'$ của hàm số.
+			\item[$\bullet$] Xét dấu $y'$. Từ đó suy ra chiều biến thiên \& tìm cực trị của hàm số.
+			\item[$\bullet$] Điền các kết quả vào bảng biến thiên.
+		\end{enumerate*}
+	\end{enumerate*}
+	\item[\textbf{3.}] Tìm điểm uốn của đồ thị hàm số: Tìm đạo hàm $y''$; xét dấu $y''$, từ đó suy ra các điểm uốn của đồ thị hàm số.
+	\item[\textbf{4.}] Vẽ đồ thị của hàm số:
+	\begin{enumerate*}
+		\item[$\bullet$] Vẽ các đường tiệm cận của đồ thị (nếu có).
+		\item[$\bullet$] Xác định các điểm cực trị. Tìm các điểm đặc biệt khác của đồ thị (giao điểm của đồ thị với các trục tọa độ $\ldots$).
+		\item[$\bullet$] Vẽ đồ thị của hàm số.
+		\item[$\bullet$] Nhận xét về đồ thị: chỉ ra trục đối xứng \& tâm đối xứng của đồ thị (nếu có).'' -- \cite[pp. 16--17]{TL_chuyen_Toan_Giai_Tich_12}
+	\end{enumerate*}
+\end{enumerate*}
 
-\subsubsection{Điểm uốn của đồ thị}
+\subsubsection{Khảo sát 1 số hàm số đa thức}
+
+\paragraph{Hàm số $y = ax^3 + bx^2 + cx + d$ ($a\ne 0$).}
+
+\subparagraph{Điểm uốn của đồ thị}
 
 \begin{dinhnghia}
 	``Điểm $U(x_0;f(x_0))$ được gọi là \emph{điểm uốn} của đồ thị hàm số $y = f(x)$ nếu tồn tại 1 khoảng $(a;b)$ chứa điểm $x_0$ sao cho trên 1 trong 2 khoảng $(a;x_0)$ \& $(x_0;b)$ tiếp tuyến của đồ thị tại điểm $U$ nằm phía trên đồ thị còn trên khoảng kia tiếp tuyến nằm phía dưới đồ thị.
@@ -468,8 +527,7 @@ Người ta nói rằng tiếp tuyến tại điểm uốn xuyên qua đồ th�
 	Đồ thị của hàm số bậc 3 $f(x) = ax^3 + bx^2 + cx + d$, $(a\ne 0)$ luôn có 1 điểm uốn \& điểm đó là tâm đối xứng của đồ thị.''  -- \cite[p. 39]{SGK_Toan_12_giai_tich_nang_cao}
 \end{dinhly}
 
-\subsection{Hàm số trùng phương $y = ax^4 + bx^2 + c$ ($a\ne 0$)}
-Hàm số $y = ax^4 + bx^2 + c$ là hàm số chẵn nên đồ thị của nó nhận trục tung làm trục đối xứng.
+\paragraph{Hàm số trùng phương $y = ax^4 + bx^2 + c$ ($a\ne 0$).} Hàm số $y = ax^4 + bx^2 + c$ là hàm số chẵn nên đồ thị của nó nhận trục tung làm trục đối xứng.
 
 \begin{luuy}
 	``Gọi $(\mathcal{C})$ là đồ thị của hàm số $y = ax^4 + bx^2 + c$, $(a\ne 0)$. Người ta chứng minh được rằng:
@@ -481,17 +539,17 @@ Hàm số $y = ax^4 + bx^2 + c$ là hàm số chẵn nên đồ thị của nó 
 
 %------------------------------------------------------------------------------%
 
-\section{Khảo Sát Sự Biến Thiên \& Vẽ Đồ Thị của 1 Số Hàm Phân Thức Hữu Tỷ}
+\subsection{Khảo Sát Sự Biến Thiên \& Vẽ Đồ Thị của 1 Số Hàm Phân Thức Hữu Tỷ}
 
-\subsection{Hàm số $y = \frac{ax + b}{cx + d}$ ($c\ne 0$ \& $ad - bc\ne 0$)}
+\subsubsection{Hàm số $y = \frac{ax + b}{cx + d}$ ($c\ne 0$ \& $ad - bc\ne 0$)}
 
-\subsection{Hàm số $y = \frac{ax^2 + bx + c}{a'x + b'}$ ($a\ne 0,a'\ne 0$)}
+\subsubsection{Hàm số $y = \frac{ax^2 + bx + c}{a'x + b'}$ ($a\ne 0,a'\ne 0$)}
 
 %------------------------------------------------------------------------------%
 
-\section{1 Số Bài Toán Thường Gặp về Đồ Thị}
+\subsection{1 Số Bài Toán Thường Gặp về Đồ Thị}
 
-\subsection{Giao điểm của 2 đồ thị}
+\subsubsection{Giao điểm của 2 đồ thị}
 ``Các đồ thị của 2 hàm số $y = f(x)$ \& $y = g(x)$ cắt nhau tại điểm $M(x_0;y_0)$ khi \& chỉ khi $y_0 = f(x_0)$ \& $y_0 = g(x_0)$, i.e., $(x_0;y_0)$ là 1 nghiệm của hệ phương trình
 \begin{equation*}
 	\left\{\begin{split}
@@ -525,7 +583,7 @@ Như vậy hoành độ giao điểm của 2 đồ thị trên là nghiệm củ
 	Để đơn giản tiếp, xét dấu của $a$. Nếu $a > 0$, hệ bất phương trình cuối tương đương với $(b < 0)\land\left(m\in\left(c - \frac{b^2}{4a};c\right)\right)$. Nếu $a < 0$, hệ bất phương trình cuối tương đương với $(b < 0)\land(m < c)$. Vậy tập hợp các bộ $(a,b,c,m)$ thỏa mãn là $\left\{(a,b,c,d)\in\mathbb{R}^4;b < 0,\left(a > 0,m\in\left(c - \frac{b^2}{4a};c\right)\right)\lor(a < 0,m < c)\right\}$.
 \end{proof}
 
-\subsection{Sự tiếp xúc của 2 đường cong}
+\subsubsection{Sự tiếp xúc của 2 đường cong}
 
 \begin{dinhnghia}[2 đường cong tiếp xúc, tiếp điểm]
 	``Giả sử 2 hàm số $f$ \& $g$ có đạo hàm tại điểm $x_0$. Ta nói rằng 2 đường cong $y = f(x)$ \& $y = g(x)$ \emph{tiếp xúc} với nhau tại điểm $M(x_0;y_0)$ nếu $M$ là 1 điểm chung của chúng \& 2 đường cong có tiếp tuyến chung tại điểm $M$. Điểm $M$ được gọi là \emph{tiếp điểm} của 2 đường cong đã cho.
@@ -591,7 +649,7 @@ Từ đó dễ dàng suy ra rằng
 	($g$ là \emph{gia tốc trọng trường}). Chứng minh rằng với mọi $\alpha\in\left(0;\frac{\pi}{2}\right)$, $(\gamma_\alpha)$ luôn tiếp xúc với parabol $(\Gamma)$ có phương trình là $y = -\frac{g}{2v_0^2}x^2 + \frac{v_0^2}{2g}$ \& tìm tọa độ tiếp điểm ($(\Gamma)$ được gọi là \emph{parabol an toàn}).
 \end{baitoan}
 
-\section{Tính Lồi, Lõm \& Điểm Uốn của Đường Cong}
+\subsection{Tính Lồi, Lõm \& Điểm Uốn của Đường Cong}
 ``Đường cong $(\mathcal{C})$ trên Fig. \ref{fig:duong_cong_3_cung} gồm 3 cung $\arc{AB},\arc{BC}$, \& $\arc{CD}$. Ta thấy tiếp tuyến của đường cong tại mỗi điểm $M$ của cung $\arc{AB}$ đều nằm phía trên của cung; nguowif ta gọi $\arc{AB}$ là 1 \textit{cung lồi}. Trái lại, tiếp tuyến tại mỗi điểm của cung $\arc{BC}$ nằm phía dưới của cung; $\arc{BC}$ được gọi là 1 \textit{cung lõm}. Điểm $B$ là điểm phân chia 2 cung lồi \& cung lõm của đường cong; người ta gọi nó là 1 \textit{điểm uốn} của đường cong $(\mathcal{C})$. Tương tự, $C$ cũng là 1 điểm uốn vì nó phân chia cung lõm $\arc{BC}$ \& cung lồi $\arc{CD}$. Ta cũng thấy tiếp tuyến của đường cong tại điểm uốn xuyên qua đường cong.'' -- \cite[p. 59]{SGK_Toan_12_giai_tich_nang_cao}
 
 \begin{figure}[H]
@@ -601,7 +659,7 @@ Từ đó dễ dàng suy ra rằng
 	\label{fig:duong_cong_3_cung}
 \end{figure}
 
-\subsection{Tính lồi, lõm của đồ thị}
+\subsubsection{Tính lồi, lõm của đồ thị}
 
 \begin{dinhnghia}[Đồ thị lồi\texttt{/}lõm]
 	``Giả sử hàm số $f$ có đạo hàm trên khoảng $I$. Ta nói rằng:
@@ -623,7 +681,7 @@ Từ đó dễ dàng suy ra rằng
 	``Điều kiện nêu trong định lý trên chỉ là điều kiện đủ chứ không phải điều kiện cần của tính lồi, lõm của đồ thị. E.g., đường cong $f(x) = x^4$ là lõm trên $\mathbb{R}$ vì tiếp tuyến của đường cong tại mỗi điểm của nó đều nằm phía dưới đường cong. Tuy nhiên, ta có $f''(x) = 12x^2\ge 0$, $\forall x\in\mathbb{R}$ \& $f''(x) = 0$ tại $x = 0$.'' -- \cite[pp. 59--60]{SGK_Toan_12_giai_tich_nang_cao}
 \end{luuy}
 
-\subsection{Điểm uốn của đồ thị}
+\subsubsection{Điểm uốn của đồ thị}
 
 \begin{dinhnghia}[Điểm uốn]
 	``Giả sử hàm số $f$ có đạo hàm trên khoảng $(a;b)$ chứa điểm $x_0$. Nếu đồ thị $(\mathcal{C})$ của hàm số $y = f(x)$ lồi trên 1 trong 2 khoảng $(a;x_0)$, $(x_0;b)$ \& lõm trên khoảng còn lại thì $U(x_0;f(x_0))$ được gọi là \emph{điểm uốn} của đồ thị $(\mathcal{C})$ (Fig. \ref{fig:diem_uon}).
@@ -643,14 +701,14 @@ I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& l
 
 %------------------------------------------------------------------------------%
 
-\chapter{Hàm Số Lũy Thừa, Hàm Số Mũ, \& Hàm Số Logarith}
+\section{Hàm Số Lũy Thừa, Hàm Số Mũ, \& Hàm Số Logarith}
 
-\section{Lũy Thừa với Số Mũ Hữu Tỷ}
+\subsection{Lũy Thừa với Số Mũ Hữu Tỷ}
 
-\subsection{Lũy thừa với số mũ nguyên}
+\subsubsection{Lũy thừa với số mũ nguyên}
 Để có khái niệm lũy thừa với số mũ nguyên, ta còn phải định nghĩa lũy thừa với số mũ 0 \& số mũ nguyên âm.
 
-\subsubsection{Lũy thừa với số mũ 0 \& số mũ nguyên âm}
+\paragraph{Lũy thừa với số mũ 0 \& số mũ nguyên âm}
 
 \begin{dinhnghia}[Lũy thừa với số mũ nguyên âm]
 	Với $a\ne 0$, $n = 0$ hoặc $n$ là 1 số nguyên âm, \emph{lũy thừa bậc $n$ của $a$} là số $a^n$ xác định bởi $a^0 = 1$, $a^n = \frac{1}{a^{-n}}$.
@@ -671,9 +729,9 @@ I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& l
 	\end{enumerate*}
 \end{luuy}
 
-\subsubsection{Tính chất của lũy thừa với số mũ nguyên}
+\paragraph{Tính chất của lũy thừa với số mũ nguyên}
 
-\paragraph{Quy tắc tính.} ``Từ định nghĩa lũy thừa với số mũ của 1 số, ta thấy các quy tắc tính toán cho lũy thừa với số mũ tự nhiên vẫn còn đúng với số mũ nguyên.'' -- \cite[p. 70]{SGK_Toan_12_giai_tich_nang_cao}
+\subparagraph{Quy tắc tính.} ``Từ định nghĩa lũy thừa với số mũ của 1 số, ta thấy các quy tắc tính toán cho lũy thừa với số mũ tự nhiên vẫn còn đúng với số mũ nguyên.'' -- \cite[p. 70]{SGK_Toan_12_giai_tich_nang_cao}
 
 \begin{dinhly}
 	$\forall a\ne 0,b\ne 0$, $\forall m,n\in\mathbb{Z}$,
@@ -686,7 +744,7 @@ I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& l
 	\end{enumerate*}
 \end{dinhly}
 
-\paragraph{So sánh các lũy thừa.}
+\subparagraph{So sánh các lũy thừa.}
 \begin{dinhly}
 	\label{thm:so sanh cac luy thua}
 	Cho $m,n\in\mathbb{Z}$. Khi đó:
@@ -705,7 +763,7 @@ I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& l
 \end{hequa}
 
 \begin{proof}[Chứng minh]
-	``Vì $0 < a < b$ nên $f\frac{b}{a} > 1$ \& $0 < \frac{a}{b} < 1$. Theo (a) của định lý \ref{thm:so sanh cac luy thua}, ta có $\left(\frac{b}{a}\right)^m > \left(\frac{b}{a}\right)^0\Leftrightarrow m > 0$, hay $a^m < b^m\Leftrightarrow m > 0$. Theo (b) của định lý \ref{thm:so sanh cac luy thua}, ta có $\left(\frac{a}{b}\right)^m > \left(\frac{a}{b}\right)^0\Leftrightarrow m < 0$, hay $a^m > b^m\Leftrightarrow m < 0$.'' -- \cite[p. 71]{SGK_Toan_12_giai_tich_nang_cao}
+	``Vì $0 < a < b$ nên $\frac{b}{a} > 1$ \& $0 < \frac{a}{b} < 1$. Theo (a) của định lý \ref{thm:so sanh cac luy thua}, ta có $\left(\frac{b}{a}\right)^m > \left(\frac{b}{a}\right)^0\Leftrightarrow m > 0$, hay $a^m < b^m\Leftrightarrow m > 0$. Theo (b) của định lý \ref{thm:so sanh cac luy thua}, ta có $\left(\frac{a}{b}\right)^m > \left(\frac{a}{b}\right)^0\Leftrightarrow m < 0$, hay $a^m > b^m\Leftrightarrow m < 0$.'' -- \cite[p. 71]{SGK_Toan_12_giai_tich_nang_cao}
 \end{proof}
 
 \begin{hequa}
@@ -716,7 +774,7 @@ I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& l
 	Với $a,b > 0$, $n\in\mathbb{Z}^\star$ thì $a^n = b^n\Leftrightarrow a = b$.
 \end{hequa}
 
-\subsection{Căn bậc $n$ \& lũy thừa với số mũ hữu tỷ}
+\subsubsection{Căn bậc $n$ \& lũy thừa với số mũ hữu tỷ}
 
 \begin{dinhnghia}[Căn bậc $n$]
 	``Với $n\in\mathbb{N}^\star$, \emph{căn bậc $n$} của $a\in\mathbb{R}$ là $b\in\mathbb{R}$ sao cho $b^n = a$.''
@@ -744,127 +802,138 @@ I.e., điểm uốn của đồ thị là điểm phân chia 2 phần lồi \& l
 
 %------------------------------------------------------------------------------%
 
-\section{Lũy Thừa với Số Mũ Thực}
+\subsection{Lũy Thừa với Số Mũ Thực}
 
 %------------------------------------------------------------------------------%
 
-\section{Logarithm}
+\subsection{Logarithm}
 
 %------------------------------------------------------------------------------%
 
-\section{Số $\rm e$ \& Logarith Tự Nhiên}
+\subsection{Số $\rm e$ \& Logarith Tự Nhiên}
 
 %------------------------------------------------------------------------------%
 
-\section{Hàm Số Mũ \& Hàm Số Logarithm}
+\subsection{Hàm Số Mũ \& Hàm Số Logarithm}
 
 %------------------------------------------------------------------------------%
 
-\section{Hàm Số Lũy Thừa}
+\subsection{Hàm Số Lũy Thừa}
 
 %------------------------------------------------------------------------------%
 
-\section{Phương Trình Mũ \& Logarithm}
+\subsection{Phương Trình Mũ \& Logarithm}
 
 %------------------------------------------------------------------------------%
 
-\section{Hệ Phương Trình Mũ \& Logarithm}
+\subsection{Hệ Phương Trình Mũ \& Logarithm}
 
 %------------------------------------------------------------------------------%
 
-\section{Bất Phương Trình Mũ \& Logarithm}
+\subsection{Bất Phương Trình Mũ \& Logarithm}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Nguyên Hàm, Tích Phân, \& Ứng Dụng}
+\section{Nguyên Hàm, Tích Phân, \& Ứng Dụng}
 
-\section{Nguyên Hàm}
-
-%------------------------------------------------------------------------------%
-
-\section{1 Số Phương Pháp Tìm Nguyên Hàm}
+\subsection{Nguyên Hàm}
 
 %------------------------------------------------------------------------------%
 
-\section{Tích Phân}
+\subsection{1 Số Phương Pháp Tìm Nguyên Hàm}
 
 %------------------------------------------------------------------------------%
 
-\section{1 Số Phương Pháp Tính Tích Phân}
+\subsection{Tích Phân}
 
 %------------------------------------------------------------------------------%
 
-\section{Ứng Dụng Tích Phân Để Tính Diện Tích Hình Phẳng}
+\subsection{1 Số Phương Pháp Tính Tích Phân}
 
 %------------------------------------------------------------------------------%
 
-\section{Ứng Dụng Tích Phân Để Tính Thể Tích Vật Thể}
+\subsection{Ứng Dụng Tích Phân Để Tính Diện Tích Hình Phẳng}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Số Phức}
+\subsection{Ứng Dụng Tích Phân Để Tính Thể Tích Vật Thể}
+
+%------------------------------------------------------------------------------%
 
 \section{Số Phức}
 
-%------------------------------------------------------------------------------%
-
-\section{Căn Bậc 2 của Số Phức \& Phương Trình Bậc 2}
+\subsection{Số Phức}
 
 %------------------------------------------------------------------------------%
 
-\section{Dạng Lượng Giác của Số Phức \& Ứng Dụng}
+\subsection{Căn Bậc 2 của Số Phức \& Phương Trình Bậc 2}
 
 %------------------------------------------------------------------------------%
 
-\part{Hình Học -- Geometry}
-
-\chapter{Khối Đa Diện \& Thể Tích của Chúng}
-
-\section{Khái Niệm về Khối Đa Diện}
+\subsection{Dạng Lượng Giác của Số Phức \& Ứng Dụng}
 
 %------------------------------------------------------------------------------%
 
-\section{Phép Đối Xứng qua Mặt Phẳng \& Sự Bằng Nhau của Các Khối Đa Diện}
+\section{Khối Đa Diện \& Thể Tích của Chúng}
+\textsf{\textbf{Nội dung.} Khối đa diện, hình đa diện, sự bằng nhau \& sự đồng dạng của các khối đa diện, các khối đa diện đều; công thức tính thể tích khối chóp, khối lăng trụ, các tính thể tích các khối phức tạp hơn.}
+
+\subsection{Khái Niệm về Khối Đa Diện}
+
+\subsubsection{Khối đa diện. Khối chóp, khối lăng trụ}
+
+\begin{dinhnghia}[Khối đa diện]
+	``1 tập hợp điểm $\mathcal{H}\ne\emptyset$ \& không nằm trên 1 mặt phẳng được gọi là \emph{hình đa diện} nếu nó là hợp của 1 số hữu hạn các miền đa giác phẳng (mà ta gọi là các \emph{mặt của hình đa diện} $\mathcal{H}$) có các tính chất sau đây:
+	\begin{enumerate*}
+		\item[(a)] 2 mặt phân biệt của $\mathcal{H}$ hoặc không có điểm chung, hoặc có 1 đỉnh chung, hoặc có 1 cạnh chung.
+		\item[(b)] Mỗi cạnh của mặt nào cũng là cạnh chung của đúng 2 mặt.
+		\item[(c)] Với 2 mặt bất kỳ $s$ \& $s'$ của $\mathcal{H}$, luôn luôn có 1 dãy các mặt $(s_i)_{i=1}^n$ sao cho $s_i$ \& $s_{i+1}$ có cạnh chung, với $s_1$ là $s$, $s_n$ là $s'$.
+	\end{enumerate*}
+\end{dinhnghia}
+Các đỉnh, các cạnh của các mặt gọi là \textit{đỉnh} \& \textit{cạnh} của đa diện $\mathcal{H}$. Mỗi mặt của $\mathcal{H}$ là 1 tam giác, tứ giác, $\ldots$, nói chung là 1 $p$-giác với $p\ge 3$. Góc ở đỉnh của 1 mặt nào đó của $\mathcal{H}$ gọi là \textit{1 góc phẳng ở đỉnh} của $\mathcal{H}$. Mỗi đỉnh của $\mathcal{H}$ là đỉnh chung của $q$ mặt ($q\ge 3$), tức cũng là đỉnh chung của $q$ cạnh. Tập hợp các góc phẳng ở 1 đỉnh nào đó của $\mathcal{H}$ tạo thành 1 góc đa diện gọi là \textit{góc đa diện} của $\mathcal{H}$ (tại đỉnh ấy). Như vậy $\mathcal{H}$ có thể có các góc tam diện, các góc tứ diện, $\ldots$'' -- \cite[p. 5]{TL_chuyen_Toan_Hinh_Hoc_12}
 
 %------------------------------------------------------------------------------%
 
-\section{Phép Vị Tự \& Sự Đồng Dạng của Các Khối Đa Diện. Các Khối Đa Diện Đều}
+\subsection{Phép Đối Xứng qua Mặt Phẳng \& Sự Bằng Nhau của Các Khối Đa Diện}
 
 %------------------------------------------------------------------------------%
 
-\section{Thể Tích của Khối Đa Diện}
+\subsection{Phép Vị Tự \& Sự Đồng Dạng của Các Khối Đa Diện. Các Khối Đa Diện Đều}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Mặt Cầu, Mặt Trụ, Mặt Nón}
-
-\section{Mặt Cầu, Khối Cầu}
+\subsection{Thể Tích của Khối Đa Diện}
 
 %------------------------------------------------------------------------------%
 
-\section{Khái Niệm về Mặt Tròn Xoay}
+\section{Mặt Cầu, Mặt Trụ, Mặt Nón}
+
+\subsection{Mặt Cầu, Khối Cầu}
 
 %------------------------------------------------------------------------------%
 
-\section{Mặt Trụ, Hình Trụ, \& Khối Trụ}
+\subsection{Khái Niệm về Mặt Tròn Xoay}
 
 %------------------------------------------------------------------------------%
 
-\section{Mặt Nón, Hình Nón, \& Khối Nón}
+\subsection{Mặt Trụ, Hình Trụ, \& Khối Trụ}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Phương Pháp Tọa Độ Trong Không Gian}
-
-\section{Hệ Tọa Độ Trong Không Gian}
+\subsection{Mặt Nón, Hình Nón, \& Khối Nón}
 
 %------------------------------------------------------------------------------%
 
-\section{Phương Trình Mặt Phẳng}
+\section{Phương Pháp Tọa Độ Trong Không Gian}
+
+\subsection{Hệ Tọa Độ Trong Không Gian}
 
 %------------------------------------------------------------------------------%
 
-\section{Phương Trình Đường Thẳng}
+\subsection{Phương Trình Mặt Phẳng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phương Trình Đường Thẳng}
 
 %------------------------------------------------------------------------------%
 
