@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[vietnamese,english]{babel}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Cheatsheet for Elementary Mathematics\texttt{/}Grade 6}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\selectlanguage{vietnamese}
+\begin{abstract}
+	\textsc{[en]} This text is a cheatsheet of formulas in Elementary Mathematics Grade 6.
+	\vspace{2mm}
+
+	\textsc{[vi]} Tài liệu này là 1 bảng tóm tắt kiến thức \& công thức của Toán Sơ Cấp lớp 6.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Số Tự Nhiên}
+\textbf{\S1. Tập hợp.} Cho tập hợp bằng cách liệt kê các phần tử: $A = \{a;b;c\}$, $a\in A$, $d\notin A$. Cho tập hợp bằng cách chỉ ra tính chất đặc trưng cho các phần tử: $B = \{x|x\mbox{ thỏa mãn các điều kiện được nêu rõ}\}$. Tập con: $A\subset B\Leftrightarrow B\supset A\Leftrightarrow(x\in A\Rightarrow x\in B,\,\forall x)$, $C\not\subset D\Leftrightarrow D\not\supset C\Leftrightarrow(\exists x\in C,\,x\notin D)$. \textbf{\S2. Tập hợp các số tự nhiên.} $\mathbb{N} = \{0;1;2;3;\ldots\} = \mathbb{N}^\star\cup\{0\}\supset\mathbb{N}^\star$. $\mathbb{N}^\star = \{1;2;3;\ldots\} = \mathbb{N}\backslash\{0\}\subset\mathbb{N}$. $a\in\mathbb{N}\Leftrightarrow a = \overline{a_na_{n-1}\ldots a_1a_0} = \sum_{i=0}^n 10^ia_i = a_0 + 10a_1 + 10^2a_2 + \cdots + 10^{n-1}a_{n-1} + 10^na_n$, với $n\in\mathbb{N}$, $\forall a_i\in\{0;1;2;3;4;5;6;7;8;9\}$, $i = 0,\ldots,n$, $a_n\ne 0$. Số La Mã: I $= 1$, II $= 2$, III $= 3$, IV $= 4$, V $= 5$, VI $= 6$, VII $= 7$, VIII $= 8$, IX $= 9$, X = $10$, XI $= 11$, XII $= 12$, XIII $= 13$, XIV $= 14$, XV $= 15$, XVI $= 16$, XVII $= 17$, XVIII $= 18$, XIX $= 19$, XX = $20$, XXI $= 21$, XXII $= 22$, XXIII $= 23$, XXIV $= 24$, XXV $= 25$, XXVI $= 26$, XXVII $= 27$, XXVIII $= 28$, XXIX $= 29$, XXX = $30$. $\forall a,b\in\mathbb{N}$, $(a < b)\lor(a = b)\lor(a > b)$. Tính chất bắc cầu: $((a < b)\land(b < c))\Rightarrow(a < c)$, $\forall a,b,c\in\mathbb{N}$.
+
+%------------------------------------------------------------------------------%
+
+\section{Số Nguyên}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Học Trực Quan}
+
+%------------------------------------------------------------------------------%
+
+\section{1 Số Yếu Tố Thống Kê \& Xác Suất}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Số \& Số Thập Phân}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Học Phẳng}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
