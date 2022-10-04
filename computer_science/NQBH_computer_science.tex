@@ -26,7 +26,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -511,6 +511,156 @@ It can take some practice to learn how to create good variable names, especially
 This distinction probably won't matter much in your initial programs, but it's worth learning earlier rather than later. At some point, you'll see unexpected behavior from a variable, \& an accurate understanding of how variables work will help you identify what's happening in your code.'' -- \cite[pp. 18--19]{Matthes2019}
 
 \subsubsection{Strings}
+``Because most programs define \& gather some sort of data, \& then do something useful with it, it helps to classify different types of data. The 1st data type we'll look at is the string. Strings are quite simple at 1st glance, but you can use them in many different ways. A \textit{string} is a series of characters. Anything inside quotes is considered a string in Python, \& you can use single or double quotes around your strings like this: \verb|"This is a string." 'This is also a string.'|. This flexibility allows you to use quotes \& apostrophes within your strings:
+\begin{verbatim}
+	'I told my friend, "Python is my favorite language!"'
+	"The language 'Python' is named after Monty Python, not the snake."
+	"One of Python's strengths is its diverse and supportive community."
+\end{verbatim}
+'' -- \cite[p. 19]{Matthes2019}
+
+\paragraph{Changing Case in a String with Methods.} ``1 of the simplest tasks you can do with strings is change the case of the words in a string.'' -- \cite[p. 20]{Matthes2019}
+\begin{verbatim}
+	name = "ada lovelace"
+	print(name.title())
+\end{verbatim}
+Output: \texttt{Ada Lovelace}. ``In this example, the variable \texttt{name} refers to the lowercase string \texttt{"ada lovelace"}. The method \texttt{title()} appears after the variable in the \texttt{print()} call. A \textit{method} is an action that Python can perform on a piece of data. The dot (\texttt{.}) after \texttt{name} in \texttt{name.title()} tells Python to make the \texttt{title()} method act on the variable \texttt{name}. Every method is followed by a set of parentheses, because methods often need additional information to do their work. That information is provided inside the parentheses. The \texttt{title()} function doesn't need any additional information, so its parentheses are empty.
+
+The \texttt{title()} method changes each word to title case, where each word begins with a capital letter. This is useful because you'll often want to think of a name as a piece of information. E.g., you might want your program to recognize the input values \texttt{Ada, ADA}, \& \texttt{ada} as the same name, \& display all of them as \texttt{Ada}.
+
+Several other useful methods are available for dealing with case as well. E.g., you can change a string to all uppercase or all lowercase letters like this:
+\begin{verbatim}
+	name = "Ada Lovelace"
+	print(name.upper())
+	print(name.lower())
+\end{verbatim}
+This will display the following:
+\begin{verbatim}
+	ADA LOVELACE
+	ada lovelace
+\end{verbatim}
+The \texttt{lower()} method is particularly useful for storing data. Many times you won't want to trust the capitalization that your users provide, so you'll convert strings to lowercase before storing them. Then when you want to display the information, you'll use the case that makes the most sense for each string.'' -- \cite[p. 20]{Matthes2019}
+
+\paragraph{Using Variables in Strings.} ``In some situations, you'll want to use a variable's value inside a string. E.g., you might want 2 variables to represent a 1st name \& a last name respectively, \& then want to combine those values to display someone's full name:
+\begin{verbatim}
+	first_name = "ada"
+	last_name = "lovelace"
+	full_name = f"{first_name} {last_name}"
+	print(full_name)
+\end{verbatim}
+To insert a variable's value into a string, place the letter \texttt{f} immediately before the opening quotation mark. Put braces around the name or names of any variable you want to use inside the string. Python will replace each variable with its value when the string is displayed.
+
+These strings are called \textit{f-strings}. The \textit{f} is for \textit{format}, because Python formats the string by replacing the name of any variable in braces with its value. The output from the previous code is: \texttt{ada lovelace}. You can do a lot with f-strings. E.g., you can use f-strings to compose complete messages using the information associated with a variable, as shown here:
+\begin{verbatim}
+	first_name = "ada"
+	last_name = "lovelace"
+	full_name = f"{first_name} {last_name}"
+	print(f"Hello, {full_name.title()}!")
+\end{verbatim}
+The full name is used in a sentence that greets the user, \& the \texttt{title()} method changes the name to title case. This code returns a simple but nicely formatted greeting: \texttt{Hello, Ada Lovelace!} You can also use f-strings to compose a message, \& then assign the entire message to a variable:
+\begin{verbatim}
+	first_name = "ada"
+	last_name = "lovelace"
+	full_name = f"{first_name} {last_name}"
+	message = f"Hello, {full_name.title()}!"
+	print(message)
+\end{verbatim}
+This code displays the message \texttt{Hello, Ada Lovelace!} as well, but by assigning the message to a variable, we make the final \texttt{print()} call much simpler.'' -- \cite[p. 21]{Matthes2019}
+
+\begin{remark}
+	``F-strings were 1st introduced in Python 3.6. If you're using Python 3.5 or earlier, you'll need to use the \texttt{format()} method rather than this \texttt{f} syntax. To use \texttt{format()}, list the variables you want to use in the string inside the parentheses following \texttt{format}. Each variable is referred to by a set of braces; the braces will be filled by the values listed in parentheses in the order provided: \verb|full_name = "{} {}".format(first_name, last_name)|.'' -- \cite[p. 22]{Matthes2019}
+\end{remark}
+
+\paragraph{Adding Whitespace to Strings with Tabs or Newlines.} ``In programming, \textit{whitespace} refers to any nonprinting character, such as spaces, tabs, \& end-of-line symbols. You can use whitespace to organize your output so it's easier for users to read. To add a tab to your text, use the character combination \verb|\t| as shown:
+\begin{verbatim}
+	>>> print("Python")
+	Python
+	>>> print("\tPython")
+	    Python
+\end{verbatim}
+To add a newline in a string, use the character combination \verb|\n|:
+\begin{verbatim}
+	>>> print("Languages:\nPython\nC\nJavaScript")
+	Languages:
+	Python
+	C
+	JavaScript
+\end{verbatim}
+You can also combine tabs \& newlines in a single string. The string \verb|"\n\t"| tells Python to move to a new line, \& start the next line with a tab. The following example shows how you can use a 1-line string to generate 4 lines of output:
+\begin{verbatim}
+	>>> print("Languages:\n\tPython\n\tC\n\tJavaScript")
+	Languages:
+	    Python
+	    C
+	    JavaScript
+\end{verbatim}
+Newlines \& tabs will be very useful in the next 2 chapters when you start to produce many lines of output from just a few lines of code.'' -- \cite[p. 22]{Matthes2019}
+
+\paragraph{Stripping Whitespace.} ``Extra whitespace can be confusing in your programs. To programmers \verb|'python'| \& \verb|'python  '| look pretty much the same. But to a program, they are 2 different strings. Python detects the extra space in \verb|'python  '| \& considers it significant unless you tell it otherwise.
+
+It's important to think about whitespace, because often you'll want to compare 2 strings to determine whether they are the same. E.g., 1 important instance might involve checking people's usernames when they log in to a website. Extra whitespace can be confusing in much simpler situation as well. Fortunately, Python makes it easy to eliminate extraneous whitespace from data that people enter.
+
+Python can look for extra whitespace on the right \& left sides of a string. To ensure that no whitespace exists at the right end of a string, use the \texttt{rstrip()} method.
+\begin{verbatim}
+	>>> favorite_language = 'python '
+	>>> favorite_language
+	'python '
+	>>> favorite_language.rstrip()
+	'python'
+	>>> favorite_language
+	'python '
+\end{verbatim}
+The value associated with \verb|favorite_language| at 1st line contains extra whitespace at the end of the string. When you ask Python for this value in a terminal session, you can see the space at the end of the value. When the \texttt{rstrip()} method acts on the variable \verb|favorite_language|, this extra space is removed. However, it is only removed temporarily. If you ask for the value of \verb|favorite_language| again, you can see that the string looks the same as when it was entered, including the extra whitespace.
+
+To remove the whitespace from the string permanently, you have to associate the stripped value with the variable name:
+\begin{verbatim}
+	>>> favorite_language = 'python '
+	>>> favorite_language = favorite_language.rstrip()
+	>>> favorite_language
+	'python'
+\end{verbatim}
+To remove the whitespace from the string, you strip the whitespace from the right side of the string \& then associate this new value with the original variable. Changing a variable's value is done often in programming. This is how a variable's value can be updated as a program is executed or in response to user input.
+
+You can also strip whitespace from the left side of a string using the \texttt{lstrip()} method, or from both sides at once using \texttt{strip()}:
+\begin{verbatim}
+	>>> favorite_language = ' python '
+	>>> favorite_language.rstrip()
+	' python'
+	>>> favorite_language.lstrip()
+	'python '
+	>>> favorite_language.strip()
+	'python'
+\end{verbatim}
+In this example, we start with a value that has whitespace at the beginning \& the end. We then remove the extra space from the right side, from the left side, \& from both sides. Experimenting with these stripping functions can help you become familiar with manipulating strings. In the real world, these stripping functions are used most often to clean up user input before it's stored in a program.'' -- \cite[pp. 22--23]{Matthes2019}
+
+\paragraph{Avoiding Syntax Errors with Strings.} ``1 kind of error that you might see with some regularity is a syntax error. A \textit{syntax error} occurs when Python doesn't recognize a section of your program as valid Python code. E.g., if you use an apostrophe within single quotes, you'll produce an error. This happens because Python interprets everything between the 1st single quote \& the apostrophe as a string. It then tries to interpret the rest of the text as Python code, which causes errors. Here's how to use single \& double quotes correctly. Save this program as \texttt{apostrophe.py} \& then run it:
+\begin{verbatim}
+	message = "One of Python's strengths is its diverse community."
+	print(message)
+\end{verbatim}
+The apostrophe appears inside a set of double quotes, so the Python interpreter has no trouble reading the string correctly:
+\begin{verbatim}
+	One of Python's strengths is its diverse community.
+\end{verbatim}
+However, if you use single quotes, Python can't identify where the string should end:
+\begin{verbatim}
+	message = 'One of Python's strengths is its diverse community.'
+	print(message)
+\end{verbatim}
+You'll see the following output:
+\begin{verbatim}
+	  File "apostrophe.py", line 1
+	    message = 'One of Python's strengths is its diverse community.'
+	                            ^
+	SyntaxError: invalid syntax
+\end{verbatim}
+In the output you can see that the error occurs at \verb|^| right after the 2nd single quote. This syntax error indicates that the interpreter doesn't recognize something in the code as valid Python code. Errors can come from a variety of sources, \& I'll point out some common ones as they arise. You might see syntax errors often as you learn to write proper Python code. Syntax errors are also the least specific kind of error, so they can be difficult \& frustrating to identify \& correct. If you get stuck on a particularly stubborn error, see the suggestions in Appendix C.'' -- \cite[p. 24]{Matthes2019}
+
+\begin{remark}
+	``Your editor's syntax highlighting feature should help you spot some syntax errors quickly as you write your programs. If you see Python code highlighted as if it's English or English highlighted as if it's Python code, you probably have a mismatched quotation mark somewhere in your file.'' -- \cite[p. 25]{Matthes2019}
+\end{remark}
+
+\subsubsection{Numbers}
 
 %------------------------------------------------------------------------------%
 
