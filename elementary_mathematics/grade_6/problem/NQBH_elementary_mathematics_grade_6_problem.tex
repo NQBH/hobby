@@ -33,15 +33,11 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
-\rhead{\small \nouppercase{\leftmark}}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
-
-\title{Some Topics in Elementary Mathematics\texttt{/}Grade 6}
-\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
-\date{\today}
 
 \title{Problems in Elementary Mathematics\texttt{/}Grade 6}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -338,6 +334,29 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 	Để đánh số trang 1 quyển sách người ta dùng hết $831$ chữ số. Hỏi quyển sách đó có bao nhiêu trang?
 \end{baitoan}
 
+\begin{baitoan}
+	Với $a,b$ là 2 số tự nhiên cho trước, viết mỗi tập hợp sau bằng cách liệt kê các phần tử của tập hợp đó:
+	\begin{align*}
+		A_1 &= \{x|x\mbox{ là số tự nhiên},\ a < x < b\},\ &&A_2 = \{x|x\mbox{ là số tự nhiên},\ a\le x < b\},\\
+		A_3 &= \{x|x\mbox{ là số tự nhiên},\ a < x\le b\},\ &&A_4 = \{x|x\mbox{ là số tự nhiên},\ a\le x\le b\},\\
+		B_1 &= \{x|x\mbox{ là số tự nhiên chẵn},\ a < x < b\},\ &&B_2 = \{x|x\mbox{ là số tự nhiên chẵn},\ a\le x < b\},\\
+		B_3 &= \{x|x\mbox{ là số tự nhiên chẵn},\ a < x\le b\},\ &&B_4 = \{x|x\mbox{ là số tự nhiên chẵn},\ a\le x\le b\},\\
+		C_1 &= \{x|x\mbox{ là số tự nhiên lẻ},\ a < x < b\},\ &&C_2 = \{x|x\mbox{ là số tự nhiên lẻ},\ a\le x < b\},\\ C_3 &= \{x|x\mbox{ là số tự nhiên lẻ},\ a < x\le b\},\ &&C_4 = \{x|x\mbox{ là số tự nhiên lẻ},\ a\le x\le b\}.
+	\end{align*}
+\end{baitoan}
+\textit{Hint.} So sánh $a,b$. Nếu $a > b$ thì các tập hợp trên đều là tập hợp rỗng $\emptyset$. Nếu $a\le b$, xét tiếp tính chẵn lẻ của $a,b$ cho các tập $B_i$, $i = 1,2,3,4$, \& $C_j$, $j = 1,2,3,4$.
+
+\begin{baitoan}
+	Viết các tập hợp sau bằng cách liệt kê các phần tử của tập hợp đó:
+	\begin{align*}
+		A_1 &= \{x|x\mbox{ là số tự nhiên},\ ax + b = c\},\ && A_2 = \{x|x\mbox{ là số tự nhiên},\ ax - b = c\},\\
+		A_3 &= \{x|x\mbox{ là số tự nhiên},\ a - bx = c\},\ && A_4 = \left\{x|x\mbox{ là số tự nhiên},\ \frac{x}{a} + b = c\right\},\\
+		A_5 &= \left\{x|x\mbox{ là số tự nhiên},\ \frac{a}{x} + b = c\right\},\ && A_6 = \left\{x|x\mbox{ là số tự nhiên},\ \frac{ax + b}{c} = d\right\},\\
+		A_7 &= \left\{x|x\mbox{ là số tự nhiên},\ \frac{a}{bx + c} = d\right\},\ && A_8 = \{x|x\mbox{ là số tự nhiên},\ f(x) = 0\}.
+	\end{align*}
+\end{baitoan}
+Tổng quát của dạng toán này là viết tập hợp $A = \{x|x\mbox{ là số tự nhiên},\ x \mbox{ thỏa mãn phương nào đại số }f(x) = 0\mbox{ nào đó}\}$. Nếu phương trình đại số đó vô nghiệm trên tập hợp các số tự nhiên thì $A = \emptyset$. Nếu phương trình đại số đó có các nghiệm $x_1,\ldots,x_n$ là các số tự nhiên, với $n$ là số tự nhiên khác 0, thì $A = \{x_1,\ldots,x_n\}$. Điểm cốt lõi ở đây là giải phương trình đại số đó trên tập các số tự nhiên.
+
 \subsection{Tập hợp các số tự nhiên. Cộng, trừ, nhân, chia số tự nhiên}
 \textsc{Kiến thức cần nhớ.}
 \begin{tcolorbox}
@@ -604,6 +623,53 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 		\item[(c)] Chủ Nhật còn $41$ vé không bán được. Hỏi số tiền bán vé thu được là bao nhiêu?
 	\end{enumerate*}
 \end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 6]
+	Tìm số tự nhiên có 5 chữ số, biết rằng nếu viết thêm chữ số 2 vào đằng sau số đó thì được số lớn gấp 3 lần số có được bằng cách viết thêm chữ số 2 vào đằng trước nó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, p. 7]
+	Tìm số tự nhiên nhỏ nhất có chữ số đầu tiên ở bên trái là 2, khi chuyển chữ số 2 này xuống cuối cùng thì số đó tăng gấp 3 lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, p. 7]
+	Tìm số tự nhiên có 5 chữ số, biết rằng nếu viết thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp 3 lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{8.}, p. 8]
+	Tìm số tự nhiên có tận cùng bằng 3, biết rằng nếu xóa chữ số hàng đơn vị thì số đó giảm đi 1992 đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{9.}, p. 8]
+	Tìm số tự nhiên có 6 chữ số, biết rằng chữ số hàng đơn vị là 4 \& nếu chuyển chữ số đó lên hàng đầu tiên thì số đó tăng gấp 4 lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{10.}, p. 8]
+	Cho 4 chữ số $a,b,c,d$ khác nhau \& khác 0. Lập số tự nhiên lớn nhất \& số tự nhiên nhỏ nhất có 4 chữ số gồm cả 4 chữ số ấy. Tổng của 2 số này bằng 11330. Tìm tổng các chữ số $a + b + c + d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{11.}, p. 8]
+	Cho 3 chữ số $a,b,c$ sao cho $0 < a < b < c$.
+	\begin{itemize}
+		\item[(a)] Viết tập hợp $A$ các số tự nhiên có 3 chữ số gồm cả 3 chữ số $a,b,c$.
+		\item[(b)] Biết tổng 2 số nhỏ nhất trong tập hợp $A$ bằng 488. Tìm 3 chữ số $a,b,c$ nói trên.
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{12.}, p. 8]
+	Tìm 3 chữ số khác nhau \& khác 0, biết rằng nếu dùng cả 3 chữ số này lập thành các số tự nhiên có 3 chữ số thì 2 số lớn nhất có tổng bằng 1444.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{6.}, p. 8]
+	Với cả 2 chữ số I \& X, viết được bao nhiêu số La Mã? (mỗi chữ số có thể viết nhiều lần, nhưng không viết liên tiếp quá 3 lần).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{7.}, p. 8]
+	\begin{itemize}
+		\item[(a)] Dùng 3 que diêm, xếp được các số La Mã nào?
+		\item[(b)] Để viết các số La Mã từ 4000 trở lên, e.g. số 19520, người ta viết XIXmDXX (chữ m biểu thị \emph{1 nghìn}, m là chữ đầu của từ \emph{mille}, tiếng Latin là 1 nghìn). Hãy viết các số sau bằng chữ số La Mã: 7203, 121512.
+	\end{itemize}
+\end{baitoan}
 	
 \subsection{Lũy thừa của 1 số tự nhiên}
 \textsc{Kiến thức cần nhớ.}
@@ -869,24 +935,777 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 	\end{enumerate*}
 \end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 5^\star$, p. 9]
+	Tìm kết quả của phép nhân $A = \underbrace{3\ldots 3}_{50\mbox{ \footnotesize chữ số}}\cdot\underbrace{9\ldots 9}_{50\mbox{ \footnotesize chữ số}}$.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 6^\star$, p. 10]
+	Tổng của 2 số tự nhiên gấp $3$ hiệu của chúng. Tìm thương của 2 số tự nhiên ấy.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 7, p. 10]
+	Khi chia số tự nhiên $a$ cho $54$, ta được số dư là $38$. Chia số $a$ cho $18$, ta được  thương là $14$ \& còn dư. Tìm số $a$.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 8^\star$, p. 10]
+	Chứng minh rằng $A$ là 1 lũy thừa của $2$, với $A = 4 + 2^2 + 2^3 + 2^4 + \cdots + 2^{20}$.
+\end{baitoan}
+Dùng ký hiệu tổng $\sum$, có thể viết gọn $A$ thành: $A = 4 + \sum_{i=2}^{20} 2^i$.
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{13.}, p. 11]
+	Có thể viết được hay không 9 số vào 1 bảng vuông $3\times 3$, sao cho: Tổng các số trong 3 dòng theo thứ tự bằng $352, 463, 541$; tổng các số trong 3 cột theo thứ tự bằng $335, 687, 234$?
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{14.}, p. 11]
+	Cho 9 số xếp vào 9 ô thành 1 hàng ngang, trong đó số đầu tiên là $4$, số cuối cùng là $8$, \& tổng 3 số ở 3 ô liền nhau bất kỳ bằng $17$. Hãy tìm 9 số đó.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{15.}, p. 11]
+	Tìm số có $3$ chữ số, biết rằng chữ số hàng trăm gấp $4$ lần chữ số hàng đơn vị \& nếu viết số ấy theo thứ tự ngược lại thì nó giảm đi $594$ đơn vị.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{16.}, p. 11]
+	Thay các dấu * bởi các chữ số thích hợp: $**** - *** = **$ biết rằng số bị trừ, số trừ \& hiệu đều không đổi nếu đọc mỗi số từ phải sang trái.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{18.}, p. 11]
+	Hiệu của 2 số là $4$. Nếu tăng 1 số gấp $3$ lần, giữ nguyên số kia thì hiệu của chúng bằng $60$. Tìm 2 số đó.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{19.}, p. 11]
+	Tìm 2 số, biết rằng tổng của chúng gấp $5$ lần hiệu của chúng, tích của chúng gấp $24$ lần hiệu của chúng.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{20.}, p. 11]
+	Tìm 2 số, biết rằng tổng của chúng gấp $7$ lần hiệu của chúng, còn tích của chúng gấp $192$ lần hiệu của chúng.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{21.}, p. 11]
+	Tích của 2 số là $6210$. Nếu giảm 1 thừa số đi $7$ đơn vị thì tích mới là $5265$. Tìm các thừa số của tích.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{22.}, p. 11]
+	Bạn Bảo làm 1 phép nhân, trong đó số nhân là $102$. Nhưng khi viết số nhân, bạn đã quên không viết chữ số $0$ nên tích bị giảm đi $21870$ đơn vị so với tích đúng. Tìm số bị nhân của phép nhân đó.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{23.}, p. 11]
+	1 học sinh nhân $78$ với số nhân là số có 2 chữ số, trong đó chữ số hàng chục gấp $3$ lần chữ số hàng đơn vị. Do nhầm lẫn bạn đó viết đổi thứ tự 2 chữ số của số nhân, nên tích giảm đi $2808$ đơn vị so với tích đúng. Tìm số nhân đúng.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{24.}, p. 12]
+	1 học sinh nhân 1 số với $463$. Vì bạn đó viết các chữ số tận cùng của các tích riêng ở cùng 1 cột nên tích bằng $30524$. Tìm số bị nhân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{25.}, p. 12]
+	Hãy chứng tỏ rằng hiệu sau có thể viết được thành 1 tích của 2 thừa số bằng nhau: $11111111 - 2222$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{26.}, p. 12]
+	Chỉ ra 2 số khác nhau sao cho nếu nhân mỗi số với $7$ thì ta được kết quả là các số gồm toàn các chữ số $9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 27^\star.$, p. 12]
+	Tìm kết quả của phép nhân sau: $\underbrace{3\ldots 3}_{50\mbox{ \footnotesize chữ số}}\cdot\underbrace{3\ldots 3}_{50\mbox{ \footnotesize chữ số}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{28.}, p. 12]
+	Chứng minh rằng các số sau có thể viết được thành 1 tích của 2 số tự nhiên liên tiếp: $111222$, $444222$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{29.}, p. 12]
+	Tìm 2 số tự nhiên có thương bằng $35$, biết rằng nếu số bị chia tăng thêm $1056$ đơn vị thì thương bằng $57$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{30.}, p. 12]
+	Tìm số bị chia \& số chia, biết rằng: Thương bằng $6$, số dư bằng $49$, tổng của số bị chia, số chia \& số dư bằng $595$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{31.}, p. 12]
+	1 phép chia có thương bằng $4$, số dư bằng $25$. Tổng của số bị chia, số chia \& số dư bằng $210$. Tìm số bị chia \& số chia.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{32.}, p. 12]
+	Trong 1 năm, có ít nhất bao nhiêu ngày chủ nhật? Có nhiều nhất bao nhiêu ngày chủ nhật?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{33.}, p. 12]
+	Ngày 19\emph{\texttt{/}}8\emph{\texttt{/}}2002 vào ngày thứ 2. Tính xem ngày 19\emph{\texttt{/}}8\emph{\texttt{/}}1945 vào ngày nào trong tuần?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{34.}, p. 12]
+	Tìm thương của 1 phép nhân, biết rằng nếu thêm $15$ vào số bị chia \& thêm $5$ vào số chia thì thương \& số dư không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{35.}, p. 12]
+	Tìm thương của 1 phép chia, biết rằng nếu tăng số bị chia $90$ đơn vị, tăng số chia $6$ đơn vị thì thương \& số dư không đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{36.}, p. 12]
+	Tìm thương của 1 phép chia, biết rằng nếu tăng số bị chia $73$ đơn vị, tăng số chia $4$ đơn vị thì thương không đổi, còn số dư tăng $5$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{37.}, p. 12]
+	Xác định phép chia, biết rằng số bị chia, số chia, thương \& số dư là 4 số trong các số sau:
+	\begin{enumerate*}
+		\item[(a)] $3,4,16,64,256,772$.
+		\item[(b)] $2,3,9,27,81,243,567$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{38.}, pp. 12--13]
+	Khi chia 1 số tự nhiên gồm 3 chữ số như nhau cho 1 số tự nhiên gồm 3 chữ số như nhau, ta được thương là $2$ \& còn dư. Nếu xóa 1 chữ số ở số bị chia \& xóa 1 chữ số ở số chia thì thương của phép chia vẫn bằng $3$ nhưng số dư giảm hơn trước là $100$. Tìm số bị chia \& số chia lúc đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{39.}, p. 13]
+	Trong 1 phép chia có dư, số bị chia gồm 4 chữ số như nhau, số chia gồm 3 chữ số như nhau, thương bằng $13$ \& còn dư. Nếu xóa 1 chữ số ở số bị chia, xóa 1 chữ số ở số chia thì thương không đổi, còn số dư giảm hơn trước là $100$ đơn vị. Tìm số bị chia \& số chia lúc đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{40.}, p. 13]
+	Tính:\\
+	\begin{enumerate*}
+		\item[(a)] $4^{10}\cdot 8^{15}$;
+		\item[(b)] $4^{15}\cdot 5^{30}$;
+		\item[(c)] $27^{16}:9^{10}$;
+		\item[(d)] $A = \dfrac{72^3\times 54^2}{108^4}$;
+		\item[(e)] $B = \dfrac{3^{10}\cdot 11 + 3^{10}\cdot 5}{3^9\cdot 2^4}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{41.}, p. 13]
+	Tính giá trị của các biểu thức:
+	\begin{itemize}
+		\item[(a)] $\dfrac{2^{10}\cdot 13 + 2^{10}\cdot 65}{2^8\cdot 104}$;
+		\item[(b)] $(1 + 2 + 3 + \cdots + 100)\cdot(1^2 + 2^2 + 3^2 + \cdots + 10^2)\cdot(65\cdot 111 - 13\cdot 15\cdot 37)$.
+	\end{itemize}
+\end{baitoan}
+Biểu thức câu (b) có thể viết gọn hơn như sau: $\left(\sum_{i=1}^{100} i\right)\left(\sum_{i=1}^{10} i^2\right)\cdot(65\cdot 111 - 13\cdot 15\cdot 37)$, hoặc gọn hơn nữa (vì 2 tổng $\sum$ có cùng chỉ số chạy $i$ nên được hiểu ngầm là rời nhau chứ không phải lồng vào nhau): $\left(\sum_{i=1}^{100} i\sum_{i=1}^{10} i^2\right)\cdot(65\cdot 111 - 13\cdot 15\cdot 37)$.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{42.}, p. 13]
+	Tìm $x\in\mathbb{N}$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] $2^x\cdot 4 = 128$;
+		\item[(b)] $x^{15} = x$;
+		\item[(c)] $(2x + 1)^3 = 125$;
+		\item[(d)] $(x - 5)^4 = (x - 5)^6$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{43.}, p. 13]
+	Cho $A = 3 + 3^2 + 3^3 + \cdots + 3^{100} = \sum_{i=1}^{100} 3^i$. Tìm $n\in\mathbb{N}$, biết rằng $2A + 3 = 3^n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{44.}, p. 13]
+	Tìm số tự nhiên có 3 chữ số, biết rằng bình phương của chữ số hàng chục bằng tích của 2 chữ số kia \& số tự nhiên đó trừ đi số gồm 3 chữ số ấy viết theo thứ tự ngược lại bằng $495$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{45.}, p. 13]
+	Tính nhanh:
+	\begin{enumerate*}
+		\item[(a)] $19\cdot 64 + 76\cdot 34$;
+		\item[(b)] $35\cdot 12 + 65\cdot 13$;
+		\item[(c)] $136\cdot 68 + 16\cdot 272$;
+		\item[(d)] $(2 + 4 + 6 + \cdots + 100)\cdot(36\cdot 333 - 108\cdot 111) = \left(\sum_{i=1}^{50} 2i\right)\cdot(36\cdot 333 - 108\cdot 111)$;		
+		\item[(e)] $19991999\cdot 1998 - 19981998\cdot 1999$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{46.}, pp. 13--14]
+	Không tính cụ thể các giá trị của $A$ \& $B$, hãy cho biết số nào lớn hơn \& lớn hơn bao nhiêu?
+	\begin{enumerate*}
+		\item[(a)] $A = 1998\cdot 1998$, $B = 1996\cdot 2000$.
+		\item[(b)] $A = 2000\cdot 2000$, $B = 1990\cdot 2010$.
+		\item[(c)] $A = 25\cdot 33 - 10$, $B = 31\cdot 26 + 10$.
+		\item[(d)] $A = 32\cdot 53 - 31$, $B = 53\cdot 31 + 32$.
+	\end{enumerate*}
+\end{baitoan}
+Bài toán trên có thể được tổng quát như sau:
+
+\begin{baitoan}
+	Cho $n,k\in\mathbb{N}^\star$. Không tính cụ thể các giá trị của $A_i$ \& $B_i$, $i = 1,2$, hãy cho biết số nào lớn hơn \& lớn hơn bao nhiêu?
+	\begin{enumerate*}
+		\item[(a)] $A_1 = n\cdot n = n^2$, $B_1 = (n - k)(n + k)$.
+		\item[(b)] $A_2 = n^3$, $B_2 = (n - k)n(n + k)$.
+	\end{enumerate*}	
+\end{baitoan}
+
+\begin{proof}[Giải]
+	\begin{itemize}
+		\item[(a)] Khai triển $B_1$ hoặc dùng \textit{hằng đẳng thức đáng nhớ} $(a + b)(a - b) = a^2 - b^2$, $\forall a,b\in\mathbb{R}$, ta có $B_1 = (n - k)(n + k) = n^2 + nk - kn - k^2 = n^2 - k^2 = A_1 - k^2 < A_1$ do $k\ge 1$. Vậy $A_1 > B_1$ \& lớn hơn 1 lượng bằng $k^2$.
+		\item[(b)] Nhận thấy $A_2 = nA_1$, $B_2 = nB_1$, nên $A_2 - B_2 = n(A_1 - B_1) = nk^2 > 0$.
+	\end{itemize}
+	Hoàn tất.
+\end{proof}
+Bài toán trên có thể được tổng quát hơn nữa như sau, ý tưởng giải vẫn là sử dụng \textit{nhiều lần} hằng đẳng thức $(a + b)(a - b) = a^2 - b^2$, $\forall a,b\in\mathbb{R}$, 1 cách thích hợp:
+
+\begin{baitoan}
+	Cho $m,n,k\in\mathbb{N}^\star$. Không tính cụ thể các giá trị của $A_i$ \& $B_i$, $i = 1,2$, hãy cho biết số nào lớn hơn \& lớn hơn bao nhiêu?
+	\begin{itemize}
+		\item[(a)] $A_1 = n^{2m}$, $B_1 = (n - mk)(n - (m - 1)k)\cdots(n - k)(n + k)\cdots(n + mk)$.
+		\item[(b)] $A_2 = n^{2m + 1}$, $B_2 = (n - mk)(n - (m - 1)k)\cdots(n - k)n(n + k)\cdots(n + mk)$.
+	\end{itemize}
+\end{baitoan}
+Khi $m = 1$, bài toán tổng quát này trở thành bài toán trước đó.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{47.}, p. 14]
+	Tìm thương của phép chia sau mà không tính kết quả cụ thể của số bị chia \& số chia: $\dfrac{37\cdot 13 - 13}{24 + 37\cdot 12}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{48.}, p. 14]
+	Tính:
+	\begin{itemize}
+		\item[(a)] $A = \dfrac{101 + 100 + 99 + 98 + \cdots + 3 + 2 + 1}{101 - 100 + 99 - 98 + \cdots + 3 - 2 + 1} = \dfrac{\sum_{i=1}^{101} i}{\sum_{i=1}^{101} (-1)^{i+1}i}$;
+		\item[(b)] $B = \dfrac{3737\cdot 43 - 4343\cdot 37}{2 + 4 + 6 + \cdots + 100} = \dfrac{3737\cdot 43 - 4343\cdot 37}{\sum_{i=1}^{50} 2i}$.
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{49.}, p. 14]
+	Vận dụng tính chất các phép tính để tìm các kết quả bằng cách nhanh chóng:
+	\begin{enumerate*}
+		\item[(a)] $1990\cdot 1992\cdot 1998$;
+		\item[(b)] $\dfrac{1374\cdot 57 + 687\cdot 86}{26\cdot 13 + 74\cdot 14}$;
+		\item[(c)] $\dfrac{124\cdot 237 + 152}{870 + 235\cdot 122}$;
+		\item[(d)] $\dfrac{423134\cdot 846267 - 423133}{846267\cdot 423133 + 423134}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{50.}, p. 14]
+	Tìm $a\in\mathbb{N}$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] $697:\dfrac{15a + 364}{a} = 17$;
+		\item[(b)] $92\cdot 4 - 27 = \dfrac{a + 350}{a} + 315$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{51.}, p. 14]
+	Tìm $x\in\mathbb{N}$, biết rằng:
+	\begin{itemize}
+		\item[(a)] $\dfrac{720}{41 - (2x - 5)} = 2^3\cdot 5$;
+		\item[(b)] $(x + 1) + (x + 2) + (x + 3) + \cdots + (x + 100) = \sum_{i=1}^{100} (x + i) = 5750$.
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{52.}, p. 14]
+	Hãy viết 5 dãy tính có kết quả bằng 100, với 6 chữ số 5 cùng với dấu các phép  tính (\& dấu ngoặc nếu cần).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{53.}, p. 14]
+	\begin{enumerate*}
+		\item[(a)] Hãy viết dãy tính có kết quả bằng 100, với 5 chữ số như nhau cùng với dấu các phép tính (\& dấu ngoặc nếu cần).
+		\item[(b)] Cũng hỏi như trên với 6 chữ số như nhau.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{54.}, p. 14]
+	\begin{enumerate*}
+		\item[(a)] Hãy viết dãy tính có kết quả bằng $1,000,000$, với 5 chữ số như nhau cùng với dấu các phép tính (\& dấu ngoặc nếu cần).
+		\item[(b)] Cũng hỏi như trên với 6 chữ số như nhau.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{55.}, p. 14]
+	Cho số $123456789$. Hãy đặt 1 số dấu ``$+$'' \& ``-'' vào giữa các chữ số để kết quả của phép tính bằng $100$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{56.}, p. 14]
+	Cho số $987654321$. Hãy đặt 1 số dấu ``$+$'' \& ``$-$'' vào giữa các chữ số để kết quả của phép tính bằng:
+	\begin{enumerate*}
+		\item[(a)] $100$;
+		\item[(b)] $99$.
+	\end{enumerate*}
+\end{baitoan}
 
 \subsection{Dấu hiệu chia hết}
 
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 9, p. 16]
+	Chứng minh rằng:
+	\begin{enumerate*}
+		\item[(a)] $\overline{ab} + \overline{ba}\ \vdots\ 11$;
+		\item[(b)] $\overline{ab} - \overline{ba}\ \vdots\ 9$ với $a > b$.
+	\end{enumerate*}
+\end{baitoan}
+Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của số nguyên ở Chương 2\texttt{/}Chap. 2.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 10, p. 16]
+	Chứng minh rằng nếu $\overline{ab} + \overline{cd}\ \vdots\ 11$ thì $\overline{abcd}\ \vdots\ 11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 11, p. 16]
+	Cho số $\overline{abc}\ \vdots\ 27$. Chứng minh rằng $\overline{bca}\ \vdots\ 27$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{57.}, p. 16]
+	Có thể chọn được 5 số trong dãy số sau để tổng của chúng bằng $70$ không?
+	\begin{enumerate*}
+		\item[(a)] $1,2,\ldots,30$;
+		\item[(b)] $1,3,5,\ldots,27,29$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{58.}, p. 16]
+	Cho 9 số: $1,3,5,7,9,11,13,15,17$. Có thể phân chia được hay không 9 số trên thành 2 nhóm sao cho:
+	\begin{enumerate*}
+		\item[(a)] Tổng các số thuộc nhóm I gấp đôi tổng các số thuộc nhóm II?
+		\item[(b)] Tổng các số thuộc nhóm I bằng tổng các số thuộc nhóm II?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{59.}, pp. 16--17]
+	\begin{enumerate*}
+		\item[(a)] Có 3 số tự nhiên nào mà tổng của chúng tận cùng bằng 4, tích của chúng tận cùng bằng 1 hay không?
+		\item[(b)] Có tồn tại hay không 4 số tự nhiên mà tổng của chúng \& tích của chúng đều là số lẻ?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{60.}, p. 17]
+	Chứng minh rằng không tồn tại $a,b,c\in\mathbb{N}$ mà $abc + a = 333$, $abc + b = 335$, $abc + c = 341$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{61.}, p. 17]
+	\begin{enumerate*}
+		\item[(a)] Chứng minh rằng nếu viết thêm vào đằng sau 1 số tự nhiên có 2 chữ số số gồm chính 2 chữ số ấy viết theo thứ tự ngược lại thì được 1 số chia hết cho $11$.
+		\item[(b)] Cũng chứng minh như trên đối với số tự nhiên có 3 chữ số.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{62.}, p. 17]
+	Chứng minh rằng nếu $\overline{ab} = 2\cdot\overline{cd}$ thì $\overline{abcd}\ \vdots\ 67$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{63.}, p. 17]
+	Chứng minh rằng:
+	\begin{enumerate*}
+		\item[(a)] $\overline{abcabc}$ chia hết cho $7,11$, \& $13$;
+		\item[(b)] $\overline{abcdef}$ chia hết cho $23$ \& $29$, biết rằng $\overline{abc} = 2\cdot\overline{def}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{64.}, p. 17]
+	Chứng minh rằng nếu $\overline{ab} + \overline{cd} + \overline{ef}\ \vdots\ 11$ thì $\overline{abcdef}\ \vdots\ 11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{65.}, p. 17]
+	\begin{enumerate*}
+		\item[(a)] Cho $\overline{abc} + \overline{def}\ \vdots\ 37$. Chứng minh rằng $\overline{abcdef}\ \vdots\ 37$.
+		\item[(b)] Cho $\overline{abc} - \overline{def}\ \vdots\ 7$. Chứng minh rằng $\overline{abcdef}\ \vdots\ 7$.
+		\item[(c)] Cho 8 số tự nhiên có 3 chữ số. Chứng minh rằng trong 8 số đó, tồn tại 2 số mà khi viết liên tiếp nhau thì tạo thành 1 số có 6 chữ số chia hết cho 7.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{66.}, p. 17]
+	Tìm chữ số $a$ biết rằng $\overline{20a20a20a}\ \vdots\ 7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{67.}, p. 17]
+	Cho 3 chữ số khác nhau \& khác 0. Lập tất cả các số tự nhiên có 3 chữ số gồm cả 3 chữ số ấy. Chứng minh rằng tổng của chúng chia hết cho $6$ \& $37$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{68.}, p. 17]
+	Có 2 số tự nhiên $x,y$ nào mà $(x + y)(x - y) = 1002$ hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{69.}, p. 17]
+	Tìm số tự nhiên có 2 chữ số, sao cho nếu viết nó tiếp sau số $1999$ thì ta được 1 số chia hết cho $37$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{70.}, p. 17]
+	Cho $n\in\mathbb{N}$. Chứng minh rằng:
+	\begin{enumerate*}
+		\item[(a)] $(n + 10)(n + 15)\ \vdots\ 2$;
+		\item[(b)] $n(n + 1)(n + 2)$ chia hết cho $2$ \& cho $3$;
+		\item[(c)] $n(n + 1)(2n + 1)$ chia hết cho $2$ \& cho $3$. 
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{71.}, p. 17]
+	Tìm $a,b\in\mathbb{N}$, sao cho $a\ \vdots\ b$ \& $b\ \vdots\ a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{72.}, p. 17]
+	1 học sinh viết các số tự nhiên từ $1$ đến $\overline{abc}$. Bạn đó phải viết tất cả $m$ chữ số. Biết rằng $m\ \vdots\ \overline{abc}$, tìm $\overline{abc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{73.}, p. 18]
+	Cho 9 số tự nhiên viết theo thứ tự giảm dần từ 9 đến 1: $9\ 8\ 7\ 6\ 5\ 4\ 3\ 2\ 1$. Có thể đặt được hay không 1 số dấu ``$+$'' hoặc ``$-$'' vào giữa các số đó để kết quả của phép tính bằng:
+	\begin{enumerate*}
+		\item[(a)] $5$;
+		\item[(b)] $6$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{74.}, p. 18]
+	Cho tổng $1 + 2 + 3 + \cdots + 9 = \sum_{i=1}^9 i$. Xóa 2 số bất kỳ rồi thay bằng hiệu của chúng \& cứ làm như vậy nhiều lần. Có cách nào làm cho kết quả cuối cùng bằng 0 được hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 75^\star$, p. 18]
+	Chứng minh rằng tổng các số ghi trên vé xổ số có 6 chữ số mà tổng 3 chữ số đầu bằng tổng 3 chữ số cuối thì chia hết cho $13$ (các chữ số đầu có thể bằng 0).
+\end{baitoan}
+
 \subsection{Tính chất chia hết của 1 tổng, 1 hiệu}
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 12, p. 18]
+	Tìm số tự nhiên có 4 chữ số, chia hết cho 5 \& cho 27 biết rằng 2 chữ số giữa của số đó là $97$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 13, p. 18]
+	2 số tự nhiên $a$ \& $2a$ đều có tổng các chữ số bằng $k$. Chứng minh rằng $a\ \vdots\ 9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 14, p. 19]
+	Chứng minh rằng số gồm $27$ chữ số 1 thì chia hết cho $27$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 15, p. 19]
+	Cho số tự nhiên $\overline{ab}$ bằng 3 lần tích các chữ số của nó.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh rằng $b\ \vdots\ a$.
+		\item[(b)] Giả sử $b = ka$ ($k\in\mathbb{N}$), chứng minh rằng $k$ là ước của $10$.
+		\item[(c)] Tìm các số $\overline{ab}$ nói trên.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 16^\star$, p. 20]
+	Tìm số tự nhiên có chữ số, biết rằng số đó chia hết cho tích các chữ số của nó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{76.}, p. 20]
+	Cho $A = 13! - 11!$.
+	\begin{enumerate*}
+		\item[(a)] $A$ có chia hết cho $2$ hay không?
+		\item[(b)] $A$ có chia hết cho $5$ hay không?
+		\item[(c)] $A$ có chia hết cho $155$ hay không?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{77.}, p. 21]
+	Tổng các số tự nhiên từ 1 đến 154, i.e., $\sum_{i=1}^{154} i$, có chia hết cho 2 hay không? Có chia hết cho 5 hay không?
+\end{baitoan}
+Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
+\begin{align*}
+	\boxed{1 + 2 + \cdots + n = \sum_{i=1}^n i = \frac{n(n + 1)}{2},\ \forall n\in\mathbb{N}^\star.}
+\end{align*}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{78.}, p. 21]
+	Cho $A = 11^9 + 11^8 + \cdots + 11 + 1 = \sum_{i=0}^9 11^i$. Chứng minh rằng $A\ \vdots\ 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{79.}, p. 21]
+	Chứng minh rằng $\forall n\in\mathbb{N}$, $n^2 + n + 6\not\vdots\ 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{80.}, p. 21]
+	Trong các số tự nhiên $< 1000$, có bao nhiêu số chia hết cho $2$ nhưng không chia hết cho $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{81.}, p. 21]
+	Tìm các số tự nhiên chia cho $4$ thì dư $1$, còn chia cho $25$ thì dư $3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{82.}, p. 21]
+	Tìm các số tự nhiên chia cho $3$ thì dư $3$, chia cho $125$ thì dư $12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{83.}, p. 21]
+	Có phép trừ 2 số tự nhiên nào mà số trừ gấp 3 lần hiệu \& số bị trừ bằng $1030$ hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{84.}, p. 21]
+	Điền các chữ số thích hợp vào dấu *, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $\overline{521*}\ \vdots 8$;
+		\item[(b)] $\overline{2*8*7}\ \vdots\ 9$, biết rằng chữ số hàng chục lớn hơn chữ số hàng nghìn là $2$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{85.}, p. 21]
+	Tìm các chữ số $a,b$, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $a - b =4$ \& $\overline{7a5b1}\ \vdots\ 3$.
+		\item[(b)] $a - b = 6$ \& $\overline{4a7} + \overline{1b5}\ \vdots\ 9$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{86.}, p. 21]
+	Tìm số tự nhiên có 3 chữ số, chia hết cho $5$ \& $9$, biết rằng chữ số hàng chục bằng trung bình cộng của 2 chữ số kia.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{87.}, p. 21]
+	Tìm 2 số tự nhiên chia hết cho $9$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] Tổng của chúng bằng $\overline{*657}$ \& hiệu của chúng bằng $\overline{5*91}$;
+		\item[(b)] Tổng của chúng bằng $\overline{513*}$ \& số lớn gấp đôi số nhỏ.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{88.}, p. 21]
+	Bạn An làm phép tính trừ trong đó số bị trừ là số có 3 chữ số, số trừ là số gồm chính 3 chữ số ấy viết theo thứ tự ngược lại. An tính được hiệu bằng $188$. Hãy chứng tỏ rằng An đã tính sai.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{89.}, p. 21]
+	Tìm số tự nhiên có 3 chữ số, chia hết cho $45$, biết rằng hiệu giữa số đó \& số gồm chính 3 chữ số ấy viết theo thứ tự ngược lại bằng $297$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{90.}, p. 21]
+	Chứng minh rằng:
+	\begin{enumerate*}
+		\item[(a)] $10^{28}\ \vdots\ 72$;
+		\item[(b)] $8^8 + 2^{20}\ \vdots\ 17$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{91.}, p. 21]
+	\begin{enumerate*}
+		\item[(a)] Cho $A = 2 + 2^2 + 2^3 + \cdots + 2^{60} = \sum_{i=1}^{60}$. Chứng minh rằng $A$ chia hết cho $3,7$, \& $15$.
+		\item[(b)] Cho $B = 3 + 3^3 + 3^5 + \cdots + 3^{1991}$. Chứng minh rằng $B$ chia hết cho $13$ \& $41$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{92.}, p. 22]
+	Chứng minh rằng:
+	\begin{enumerate*}
+		\item[(a)] $2n + \underbrace{1\ldots 1}_{n\mbox{ \footnotesize chữ số}}\ \vdots\ 3$;
+		\item[(b)] $10^n + 18n - 1\ \vdots\ 27$;
+		\item[(c)] $10^n + 72n - 1\ \vdots\ 81$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{93.}, p. 22]
+	Chứng minh rằng:
+	\begin{enumerate*}
+		\item[(a)] Số gồm $81$ chữ số 1 thì chia hết cho $81$;
+		\item[(b)] Số gồm $27$ nhóm chữ số $10$ thì chia hết cho $27$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{94.}, p. 22]
+	2 số tự nhiên $a$ \& $4a$ có tổng các chữ số bằng nhau. Chứng minh rằng $a\ \vdots\ 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 95^\star.$, p. 22]
+	\begin{enumerate*}
+		\item[(a)] Tổng các chữ số của $3^{100}$ viết trong hệ thập phân có thể bằng $459$ hay không?
+		\item[(b)] Tổng các chữ số của $3^{1000}$ là $A$, tổng các chữ số của $A$ là $B$, tổng các chữ số của $B$ là $C$. Tính $C$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{96.}, p. 22]
+	Cho 2 số tự nhiên $a$ \& $b$ tùy ý có số dư trong phép chia cho $9$ theo thứ tự là $r_1$ \& $r_2$. Chứng minh rằng $r_1r_2$ \& $ab$ có cùng số dư trong phép chia cho $9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{97.}, p. 22]
+	1 số tự nhiên chia hết cho $4$ có 3 chữ số đều chẵn, khác nhau \& khác 0. Chứng minh rằng tồn tại cách đổi vị trí các chữ số để được 1 số mới chia hết cho $4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 98^\star.$, p. 22]
+	Tìm số $\overline{abcd}$, biết rằng số đó chia hết cho tích các số $\overline{ab}$ \& $\overline{cd}$, i.e., $\overline{abcd}\ \vdots\ \overline{ab}\cdot\overline{cd}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 99^\star.$, p. 22]
+	Tìm số tự nhiên có 5 chữ số, biết rằng số đó bằng $45$ lần tích các chữ số của nó.
+\end{baitoan}	
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{100.}, p. 22]
+	1 cửa hàng có 6 hòm hàng với khối lượng $316$kg, $327$kg, $336$kg, $338$kg, $349$kg, $351$kg. Cửa hàng đó đã bán $5$ hòm, trong đó khối lượng hàng bán buổi sáng gấp $4$ lần khối lượng hàng bán buổi chiều. Hỏi hòm còn lại là hòm nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{101.}, p. 22]
+	Từ 4 chữ số $1,2,3,4$, lập tất cả các số tự nhiên có 4 chữ số gồm cả $4$ chữ số ấy. Trong các số đó, có tồn tại 2 số nào mà 1 số chia hết cho số còn lại hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 102^\star.$, p. 22]
+	Chứng minh rằng trong tất cả các số tự nhiên khác nhau có $7$ chữ số lập bởi cả $7$ chữ số $1,2,3,4,5,6,7$, không có 2 số nào mà 1 số chia hết cho số còn lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 18, p. 23]
+	Tìm số nguyên tố $p$, sao cho $p + 2$ \& $p + 4$ cũng là các số nguyên tố.
+\end{baitoan}
+
+\begin{proof}[Hint]
+	Xét tính chia hết cho $3$ của $p$ (i.e., xét đồng dư\texttt{/}modulo $3$).
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 19, p. 23]
+	1 số nguyên tố $p$ chia cho $42$ có số dư $r$ là hợp số. Tìm số dư $r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{103.}, p. 24]
+	Ta biết rằng có $25$ số nguyên tố $< 100$. Tổng của $25$ số nguyên tố đó là số chẵn hay số lẻ?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{104.}, p. 24]
+	Tổng của 3 số nguyên tố bằng $1012$. Tìm số nhỏ nhất trong 3 số nguyên tố đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{105.}, p. 24]
+	Tìm 4 số nguyên tố liên tiếp, sao cho tổng của chúng là số nguyên tố.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{106.}, p. 24]
+	Tổng của 2 số nguyên tố có thể bằng $2003$ hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{107.}, p. 24]
+	Tìm 2 số tự nhiên, sao cho tổng \& tích của chúng đều là số nguyên tố.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{108.}, p. 24]
+	Các số sau là số nguyên tốt hay hợp số?
+	\begin{enumerate*}
+		\item[(a)] $A = \underbrace{1\ldots 1}_{2001's}$;
+		\item[(b)] $B = \underbrace{1\ldots 1}_{2000's}$;
+		\item[(c)] $C = 1010101$;
+		\item[(d)] $D = 1112111$;
+		\item[(e)] $E = 1! + 2! + \cdots + 100! = \sum_{i=1}^{100} i!$;
+		\item[(f)] $F = 3\cdot 5\cdot 7\cdot 9 - 28$;
+		\item[(g)] $G = 311141111$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{109.}, p. 24]
+	Tìm số nguyên tố có 3 chữ số, biết rằng nếu viết số đó theo thứ tự ngược lại thì ta được 1 số là lập phương của 1 số tự nhiên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{110.}, p. 24]
+	Tìm số tự nhiên có 4 chữ số, chữ số hàng nghìn bằng chữ số hàng đơn vị, chữ số hàng trăm bằng chữ số hàng chục \& số đó viết được dưới dạng tích của 3 số nguyên tố liên tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{111.}, p. 24]
+	Tìm số nguyên tố $p$, sao cho các số sau cũng là số nguyên tố:
+	\begin{enumerate*}
+		\item[(a)] $p + 2$ \& $p + 10$;
+		\item[(b)] $p + 10$ \& $p + 20$;
+		\item[(c)] $p + 2$, $p + 6$, $p + 8$, $p + 12$, $p + 14$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{112.}, p. 24]
+	Tìm số nguyên tố, biết rằng số đó bằng tổng của 2 số nguyên tố \& bằng hiệu của 2 số nguyên tố.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 113^\star.$, p. 24]
+	Cho 3 số nguyên tố $> 3$, trong đó số sau lớn hơn số trước là $d$ đơn vị. Chứng minh rằng $d\ \vdots\ 6$.
+\end{baitoan}
+
+\begin{dinhnghia}[2 số nguyên tố sinh đôi]
+	2 số nguyên tố gọi là \emph{sinh đôi} nếu chúng là 2 số nguyên tố lẻ liên tiếp.
+\end{dinhnghia}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{114.}, p. 24]
+	Chứng minh rằng 1 số tự nhiên $> 3$ nằm giữa 2 số nguyên tố sinh đôi thì chia hết cho $6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{115.}, p. 24]
+	Cho $p$ là số nguyên tố $> 3$. Biết $p + 2$ cũng là số nguyên tố. Chứng minh rằng $p + 1\ \vdots\ 6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{116.}, p. 25]
+	Cho $p$ \& $p + 4$ là các số nguyên tố ($p > 3$). Chứng minh rằng $p + 8$ là hợp số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{117.}, p. 25]
+	Cho $p$ \& $8p - 1$ là các số nguyên tố. Chứng minh rằng $8p + 1$ là hợp số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{118.}, p. 25, \textit{Ngày sinh của bạn}]
+	1 ngày đầu năm $2002$, Huy viết thư hỏi ngày sinh của Long \& nhận được thư trả lời: ``Mình sinh ngày $a$, tháng $b$, năm $1900 + c$ \& đến nay $d$ tuổi. Biết rằng $abcd = 59007$.'' Huy đã tính được ngày sinh của Long \& kịp viết thư mừng sinh nhật bạn. Hỏi Long sinh ngày nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{119.}, p. 25]
+	1 số nguyên tố chia cho $30$ có số dư là $r$. Tìm $r$ biết rằng $r$ không là số nguyên tố.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{120.}, p. 25]
+	Chứng minh rằng:
+	\begin{enumerate*}
+		\item[(a)] Số $17$ không viết được dưới dạng tổng của $3$ hợp số khác nhau.
+		\item[(b${}^\star$)] Mọi số lẻ $> 17$ đều viết được dưới dạng tổng của 3 hợp số khác nhau.
+	\end{enumerate*}
+\end{baitoan}
+``Bằng cách phân tích 1 số ra thừa số nguyên tố, ta có thể dễ dàng tìm được ước (ước số) của số đó.'' -- \cite[\S6, p. 25]{Binh_Toan_6_tap_1}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 20, p. 25]
+	Tìm số chia \& thương của 1 phép chia có số bị chia bằng $145$, số dư bằng $12$ biết rằng thương khác $1$ (số chia \& thương là các số tự nhiên).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 21^\star$, p. 26]
+	Hãy viết số $108$ dưới dạng tổng các số tự nhiên liên tiếp $> 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{121.}, p. 26]
+	Tìm $x,y\in\mathbb{N}$, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $(2x + 1)(y - 3) = 10$;
+		\item[(b)] $(3x - 2)(2y - 3) = 1$;
+		\item[(c)] $(x + 1)(2y - 1) = 12$;
+		\item[(d)] $x + 6 = y(x - 1)$;
+		\item[(e)] $x - 3 = y(x + 2)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{122.}, p. 26]
+	1 phép chia số tự nhiên có số bị chia bằng $3193$. Tìm số chia \& thương của phép chia đó, biết rằng số chia có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{123.}, p. 26]
+	Tìm số chia của 1 phép chia, biết rằng: Số bị chia bằng $236$, số dư bằng $15$, số chia là số tự nhiên có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{124.}, p. 27]
+	Tìm ước của $161$ trong $[50,150]$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{125.}, p. 27]
+	Tìm 2 số tự nhiên liên tiếp có tích bằng $600$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{126.}, p. 27]
+	Tìm 3 số tự nhiên liên tiếp có tích bằng $2730$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{127.}, p. 27]
+	Tìm 3 số lẻ liên tiếp có tích bằng $12075$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{128.}, p. 27]
+	1 tờ hóa đơn bị dây mực, chỗ dây mực biểu thị bởi dấu *. Hãy phục hồi lại các chữ số bị dây mực (dấu * thay cho 1 hoặc nhiều chữ số).
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|r|}
+			\hline
+			Giá mua 1 hộp bút & $3200$ đồng \\
+			\hline
+			Giá bán 1 hộp bút & $*00$ đồng \\
+			\hline
+			Số hộp bút đã bán & $*$ chiếc \\
+			\hline
+			\textit{Thành tiền} & $107300$ đồng \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{129.}, p. 27]
+	Tìm $n\in\mathbb{N}$, biết rằng: $\sum_{i=1}^n i = 820$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 130^\star.$, p. 27]
+	Hãy viết số $100$ dưới dạng tổng các số lẻ liên tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{131.}, p. 27, \textit{Số nhà của bạn}]
+	Tân \& Hùng gặp nhau trong hội nghị học sinh giỏi toán. Tân hỏi số nhà Hùng, Hùng trả lời: ``Nhà mình ở chính giữa đoạn phố, đoạn phố ấy có tổng các số nhà bằng $161$.'' Nghĩ 1 chút, Tân nói: ``Bạn ở số nhà $23$ chứ gì!'' Hỏi Tân đã tìm ra như thế nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{133.}, p. 27]
+	Tìm $n\in\mathbb{N}$, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $n + 4\ \vdots\ n + 1$;
+		\item[(b)] $n^2 + 4\ \vdots\ n + 2$;
+		\item[(c)] $13n\ \vdots\ n - 1$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 134^\star.$, p. 27]
+	Tìm số tự nhiên có 3 chữ số, biết rằng nó tăng gấp $n$ lần nếu cộng mỗi chữ số của nó với $n$ ($n$ là số tự nhiên, có thể gồm 1 hoặc nhiều chữ số).
+\end{baitoan}
 
 \subsection{Ước \& bội}
 
@@ -895,22 +1714,848 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 \subsection{Ước chung \& bội chung}
 
 \subsection{Ước chung lớn nhất}
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 22, p. 28]
+	Tìm $a\in\mathbb{N}$, biết rằng $264$ chia cho $a$ dư $24$, còn $363$ chia cho $a$ dư $43$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{135.}, p. 28]
+	Tìm $a\in\mathbb{N}$, biết rằng $398$ chia cho $a$ thì dư $38$, còn $450$ chia cho $a$ thì dư $18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{136.}, p. 28]
+	Tìm $a\in\mathbb{N}$, biết rằng $350$ chia cho $a$ thì dư $14$, còn $320$ chia cho $a$ thì dư $26$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{137.}, p. 28]
+	Có $100$ quyển vở \& $90$ bút chì được thưởng đều cho 1 số học sinh, còn lại $4$ quyển vở \& $18$ bút chì không đủ chia đều. Tính số học sinh được thưởng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{138.}, p. 29]
+	Phần thưởng cho học sinh của 1 lớp học gồm $128$ vở, $48$ bút chì, $192$ nhãn vở. Có thể chia được nhiều nhất thành bao nhiêu phần thưởng như nhau, mỗi phần thưởng gồm bao nhiêu vở, bút chì, nhãn vở?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{139.}, p. 29]
+	3 khối $6,7,8$ theo thứ tự có $300$ học sinh, $276$ học sinh, $252$ học sinh xếp hàng dọc để diễu hành sao cho số hàng dọc của mỗi khối như nhau. Có thể xếp nhiều nhất thành mấy hàng dọc để mỗi khối đều không có ai lẻ hàng? Khi đó ở mỗi khối có bao nhiêu hàng ngang?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{140.}, p. 29]
+	Người ta muốn chia $200$ bút bi, $240$ bút chì, $320$ tẩy thành 1 số phần thưởng như nhau. Hỏi có thể chia được nhiều nhất là bao nhiêu phần thưởng, mỗi phần thưởng có bao nhiêu bút bi, bút chì, tẩy?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{141.}, p. 29]
+	Tìm số chia \& thương của 1 phép chia số tự nhiên có số bị chia bằng $9578$ \& các số dư liên tiếp là $5,3,2$.
+\end{baitoan}
 
 \subsection{Bội chung nhỏ nhất}
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 24, p. 29]
+	Tìm số tự nhiên $a$ nhỏ nhất sao cho chia $a$ cho $3$, cho $5$, cho $7$ được số dư theo thứ tự là $2,3,4$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 25, p. 30]
+	1 số tự nhiên chia cho $3$ thì dư $1$, chia cho $4$ thì dư $2$, chia cho $5$ thì dư $3$, chia cho $6$ thì dư $4$, \& chia hết cho $13$.
+	\begin{enumerate*}
+		\item[(a)] Tìm số nhỏ nhất có tính chất trên.
+		\item[(b)] Tìm dạng chung của tất cả các số có tính chất trên.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{142.}, p. 30]
+	Tìm các bội chung của $40,60,126$ \& nhỏ hơn $6000$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{143.}, p. 30]
+	1 cuộc thi chạy tiếp sức theo vòng tròn gồm nhiều chặng. Biết rằng chu vi đường tròn là $330$m, mỗi chặng dài $75$m, địa điểm xuất phát \& kết thức cùng 1 chỗ. Hỏi cuộc thi có ít nhất mấy chặng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{144.}, p. 30]
+	3 ô tô cùng khởi hành 1 lúc từ 1 bến. Thời gian cả đi lẫn về của xe thứ nhất là $40$ phút, của xe thứ 2 là $50$ phút, của xe thứ 3 là $30$ phút. Khi trở về bến, mỗi xe đều nghỉ $10$ phút rồi tiếp tục chạy. Hỏi sau ít nhất bao lâu:
+	\begin{enumerate*}
+		\item[(a)] Xe thứ nhất \& xe thứ 2 cùng rời bến?
+		\item[(b)] Xe thứ 2 \& xe thứ 3 cùng rời bến?
+		\item[(c)] Cả 3 xe cùng rời bến?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{145.}, p. 30]
+	1 đơn vị bộ đội khi xếp hàng $20,25,30$ đều dư $15$, nhưng xếp hàng $41$ thì vừa đủ. Tính số người của đơn vị đó biết rằng số người chưa đến $1000$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{146.}, p. 30]
+	Tìm số tự nhiên có 3 chữ số, sao cho chia nó cho $17$, cho $25$ được các số dư theo thứ tự là $8$ \& $16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{147.}, p. 30]
+	Tìm số tự nhiên $n$ lớn nhất có 3 chữ số, sao cho $n$ chia cho $8$ thì dư $7$, chia cho $31$ thì dư $28$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{148.}, p. 31]
+	Tìm số tự nhiên $< 500$, sao cho chia nó cho $15$, cho $35$ được các số dư theo thứ tự là $8$ \& $13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{149.}, p. 31]
+	\begin{enumerate*}
+		\item[(a)] Tìm số tự nhiên lớn nhất có 3 chữ số, sao cho chia nó chia $2$, cho $3$, cho $4$, cho $5$, cho $6$ ta được các số dư theo thứ tự là $1,2,3,4,5$.
+		\item[(b)] Tìm dạng chung của các số tự nhiên $a$ chia cho $4$ thì dư $3$, chia cho $5$ thì dư $4$, chia cho $6$ thì dư $5$, chia hết cho $13$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{150.}, p. 31]
+	Tìm các số tự nhiên nhỏ nhất chia cho $8$ dư $6$, chia cho $12$ dư $10$, chia cho $15$ dư $13$ \& chia hết cho $23$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{151.}, p. 31]
+	Tìm số tự nhiên nhỏ nhất chia cho $8,10,15,20$ theo thứ tự dư $5,7,12,17$ \& chia hết cho $41$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{152.}, p. 31]
+	Tìm số tự nhiên nhỏ nhất chia cho $5$, cho $7$, cho $9$ có số dư theo thứ tự là $3,4,5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{153.}, p. 31]
+	Tìm số tự nhiên nhỏ nhất chia cho $3$, cho $4$, cho $5$ có số dư theo thứ tự là $1,3,1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{154.}, p. 31]
+	Trên đoạn đường dài $4800$m có các cột điện trồng cách nhau $60$m, nay trồng lại cách nhau $80$m. Hỏi có bao nhiêu cột không phải trồng lại, biết rằng ở cả 2 đầu đoạn đường đều có cột điện?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{155.}, p. 31]
+	3 con tàu cập bến theo lịch như sau: Tàu I cứ $15$ ngày thì cập bến, tàu II cứ $20$ ngày thì cập bến, tàu III cứ $12$ ngày thì cập bến. Lần đầu cả 3 tàu cùng cập bến vào ngày thứ 6. Hỏi sao đó ít nhất bao lâu, cả 3 tàu lại cùng cập bến vào ngày thứ 6?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{156.}, p. 31]
+	Nếu xếp 1 số sách vào từng túi $10$ cuốn thì vừa hết, vào từng túi $12$ cuốn thì thừa $2$ cuốn, vào từng túi $18$ cuốn thì thừa $8$ cuốn. Biết rằng số sách trong khoảng từ $715$ đến $1000$, tính số sách đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{157.}, p. 31]
+	2 lớp 6A, 6B cùng thu nhặt 1 số giấy vụn bằng nhau. Trong lớp 6A, 1 bạn thu được $26$kg, còn lại mỗi bạn thu $11$kg. Trong lớp 6B, 1 bạn thu được $25$kg, còn lại mỗi bạn thu $10$kg. Tính số học sinh mỗi lớp, biết rằng số giấy mỗi lớp thu được trong khoảng từ $200$kg đến $300$kg.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{158.}, p. 31]
+	1 thiết bị điện tử phát ra tiếng kêu ``bíp'' sau mỗi $60$ giây, 1 thiết bị điện tử khác phát ra tiếng kêu ``bíp'' sau mỗi $62$ giây. Cả 2 thiết bị này đều phát ra tiếng ``bíp'' lúc $10$ giờ sáng. Tính thời điểm để cả 2 cùng phát ra tiếng ``bíp'' tiếp theo.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{159.}, p. 31]
+	Có 2 chiếc đồng hồ (có kim giờ \& kim phút). Trong 1 ngày, chiếc thứ nhất chạy nhanh $2$ phút, chiếc thứ 2 chạy chậm $3$ phút. Cả 2 đồng hồ được lấy lại theo giờ chính xác. Hỏi sau ít nhất bao nhiêu lâu, cả 2 đồng hồ lại cùng chỉ giờ chính xác?
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
 \section{Số Nguyên}
 
 \subsection{Tập hợp các số nguyên}
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{160.}, p. 32]
+	Điền vào chỗ trống ($\ldots$) các từ ``nhỏ hơn'' hoặc ``lớn hơn'' cho đúng:
+	\begin{enumerate*}
+		\item[(a)] Mọi số nguyên dương đều $\ldots$ số 0;
+		\item[(b)] Mọi số nguyên âm đều $\ldots$ số 0;
+		\item[(c)] Mỗi số nguyên dương đều $\ldots$ mọi số nguyên âm;
+		\item[(d)] Trong 2 số nguyên dương, số nào có giá trị tuyệt đối lớn hơn thì số ấy $\ldots$
+		\item[(e)] Trong 2 số nguyên âm, số nào có giá trị tuyệt đối lớn hơn thì số ấy $\ldots$
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{163.}, p. 32]
+	Cho $a\in\mathbb{Z}$. Hãy điền vào chỗ trống các dấu $\ge,\le,>,<,=$ để các khẳng định sau là đúng:
+	\begin{enumerate*}
+		\item[(a)] $|a|\ldots a$, $\forall a$;
+		\item[(b)] $|a|\ldots 0$, $\forall a$;
+		\item[(c)] Nếu $a > 0$ thì $a\ldots|a|$;
+		\item[(d)] Nếu $a = 0$ thì $a\ldots|a|$;
+		\item[(e)] Nếu $a < 0$ thì $a\ldots|a|$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{164.}, p. 32]
+	Các khẳng định sau có đúng $\forall a,b\in\mathbb{Z}$ không? Cho ví dụ.
+	\begin{enumerate*}
+		\item[(a)] $|a| = |b|\Rightarrow a = b$;
+		\item[(b)] $a > b\Rightarrow|a| > |b|$.
+	\end{enumerate*}
+\end{baitoan}
 
 \subsection{Phép cộng \& phép trừ số nguyên}
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 26, p. 33]
+	Tìm $x\in\mathbb{Z}$, biết rằng $10 + 10 + 9 + 8 + \cdots + x$, trong đó vế phải là tổng các số nguyên liên tiếp viết theo thứ tự giảm dần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{166.}, p. 33]
+	Điền vào chỗ trống cho đúng:
+	\begin{enumerate*}
+		\item[(a)] Số đối của 1 số nguyên âm là 1 số $\ldots$
+		\item[(b)] 2 số nguyên đối nhau thì có giá trị tuyệt đối $\ldots$
+		\item[(c)] 2 số nguyên có giá trị tuyệt đối bằng nhau thì $\ldots$
+		\item[(d)] Số $\ldots$ thì nhỏ hơn số đối của nó;
+		\item[(e)] Nếu $a\ldots$ thì $-a > 0$;
+		\item[(f)] Nếu $a < 0$ thì $|a| = \ldots$
+		\item[(g)] Nếu $a < 0$ thì $a + |a| = \ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{168.}, p. 33]
+	Cho bảng vuông $3\times 3$ ô. Có thể điền được hay không 9 số nguyên vào 9 ô của bảng sao cho tổng các số ở 3 dòng lần lượt bằng $5,-3,2$ \& tổng các số ở 3 cột lần lượt bằng $-1,2,2$?
+\end{baitoan}	
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{169.}, p. 33]
+	\begin{enumerate*}
+		\item[(a)] Có 10 ô liên tiếp trong đó ô đầu tiên ghi số 6, ô thứ 8 ghi số $-4$. Hãy điền số vào các ô trống để tổng 3 số ở 3 ô liền nhau bằng 0.
+		\item[(b)] 1 bảng vuông $4\times 4$ ô có 2 ô ở góc trên ghi số $-3$ \& $2$. Hãy điền số vào các ô còn lại, sao cho tổng 2 số ở 2 ô liền nhau thì bằng nhau (2 ô liền nhau là 2 ô có 1 cạnh chung).
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{170.}, p. 33]
+	Tìm $x\in\mathbb{Z}$, biết rằng $x + (x + 1) + (x + 2) + \cdots + 19 + 20 = \sum_{i=x}^{20} i = 20$, trong đó vế trái là tổng các số nguyên liên tiếp viết theo thứ tự tăng dần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{171.}, p. 33]
+	Tìm các số nguyên $a$, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $a > -a$;
+		\item[(b)] $a = -a$;
+		\item[(c)] $a < -a$
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{172.}, p. 33]
+	Tìm $a,b,c\in\mathbb{Z}$ biết rằng: $a + b = 11$, $b + c = 3$, $c + a = 2$.
+\end{baitoan}
+Tổng quát hơn,
+\begin{baitoan}
+	Tìm $a,b,c\in\mathbb{Z}$ biết rằng: $a + b = A$, $b + c = B$, $c + a = C$, với $A,B,C\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{173.}, p. 33]
+	Tìm $a,b,c,d\in\mathbb{Z}$ biết rằng:
+	\begin{equation*}
+		\left\{\begin{split}
+			a + b + c + d &= 1,\\
+			a + c + d &= 2,\\
+			a + b + d &= 3,\\
+			a + b + c &= 4.
+		\end{split}\right.		
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{174.}, p. 33]
+	Cho
+	\begin{equation*}
+		\left\{\begin{split}
+			\sum_{i=1}^{50} x_i &= 0,\\
+			x_i + x_{i+1} &= 1,\ i = 1,\ldots,50.
+		\end{split}\right.		
+	\end{equation*}
+	Tính $x_{50}$.
+\end{baitoan}
 
 \subsection{Quy tắc dấu ngoặc}
 
 \subsection{Quy tắc chuyển vế}
 
 \subsection{Phép nhân \& phép chia hết 2 số nguyên}
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 27, p. 34]
+	Viết 9 số nguyên khác 0 vào 1 bảng vuông $3\times 3$. Biết rằng tích các số ở mỗi dòng đều là số âm. Chứng minh rằng luôn luôn tồn tại 1 cột mà tích các số trong cột ấy là số âm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 28, p. 34]
+	Thay các dấu * trong biểu thức $1*2*3$ bằng dấu các phép tính cộng, trừ, nhân \& thêm các dấu ngoặc để được kết quả là: số lớn nhất; số nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{175.}, p. 34]
+	Thực hiện các phép tính sau 1 cách nhanh chóng:
+	\begin{enumerate*}
+		\item[(a)] $(-14)\cdot(-125)\cdot3\cdot(-8)$;
+		\item[(b)] $(-127)\cdot 57 + (-127)\cdot 43$;
+		\item[(c)] $(-13)\cdot 34 - 87\cdot 34$;
+		\item[(d)] $(-25)\cdot 68 + (-34)\cdot(-250)$;
+		\item[(e)] $A = 1 - 2 + 3 - 4 + \cdots + 99 - 100 = \sum_{i=1}^{100} (-1)^{i+1} i$;
+		\item[(f)] $B = 1 + 3 - 5 - 7 + 9 + 11 - \ldots - 397 - 399$;
+		\item[(g)] $C = 1 - 2 - 3 + 4 + 5 - 6 - 7 + \cdots + 97 - 98 - 99 + 100$;
+		\item[(h)] $D = 2^{100} - 2^{99} - 2^{98} - \cdots 2^2 - 2 - 1 = 2^{100} - \sum_{i=0}^{99} 2^i$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{176.}, p. 34]
+	Thay các dấu * trong biểu thức $1*2*3*4$ bằng dấu các phép tính cộng, trừ, nhân \& thêm các dấu ngoặc để được kết quả là: số lớn nhất; số nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{178.}, p. 34]
+	Cho dãy số $a_1,\ldots,a_{100}$ trong đó $a_1 = 1$, $a_2 = -1$, $a_k = a_{k-2}\cdot a_{k-1}$ ($k\in\mathbb{N}$, $k\ge 3$). Tính $a_{100}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 29, p. 36]
+	Số $36$ chia cho $a\in\mathbb{Z}$ rồi trừ đi $a$. Lấy kết quả này chia cho $a$ rồi trừ đi $a$. Lại lấy kết quả này chia cho $a$ rồi trừ đi $a$. Cuối cùng ta được số $-a$. Tìm $a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{179.}, p. 36]
+	Tìm $x,y\in\mathbb{Z}$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] $(x + 2)(y - 3) = 5$;
+		\item[(b)] $(x + 1)(xy - 1) = 3$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{180.}, p. 36]
+	Tính tổng $A + B$ biết rằng $A$ là tổng các số nguyên âm lẻ có 2 chữ số, $B$ là tổng các số nguyên dương chẵn có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{181.}, p. 36]
+	Cho $A = 2 - 5 + 8 - 11 + 14 - 17 + \cdots + 98 - 101$.
+	\begin{enumerate*}
+		\item[(a)] Viết dạng tổng quát của số hạng thứ $n$ của $A$;
+		\item Tính giá trị của biểu thức $A$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{182.}, p. 36]
+	Cho $A = 1 + 2 - 3 - 4 + 5 + 6 - \cdots - 99 - 100$.
+	\begin{enumerate*}
+		\item[(a)] $A$ có chia hết cho $2$, cho $3$, cho $5$ hay không?
+		\item[(b)] $A$ có bao nhiêu ước nguyên, có bao nhiêu ước tự nhiên?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{183.}, p. 36]
+	Cho dãy số $1;-3;5;-7;9;-11;13;-15;17;-19$. Có thể tìm được hay không 5 số trong các số trên, sao cho đặt dấu ``$+$'' hoặc ``$-$''nối các số đó với nhau, ta được kết quả bằng:
+	\begin{enumerate*}
+		\item[(a)] $15$;
+		\item[(b)] $20$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{184.}, p. 36]
+	Thay các dấu * trong biểu thức $1*2*3*4*5*6*7*8*9$ bởi các dấu ``$+$'' hoặc ``$-$'' để giá trị của biểu thức bằng:
+	\begin{enumerate*}
+		\item[(a)] $-13$;
+		\item[(b)] $-4$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{185.}, p. 36]
+	Tìm $n\in\mathbb{Z}$, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $n + 5\ \vdots\ n - 2$;
+		\item[(b)] $2n + 1\ \vdots\ n - 5$;
+		\item[(c)] $n^2 + 3n - 13\ \vdots\ n + 3$;
+		\item[(d)] $n^2 + 3\ \vdots\ n - 1$.
+	\end{enumerate*}
+\end{baitoan}
+
+\subsection{Chuyên Đề}
+
+\subsubsection{Điền Chữ Số}
+``Các bài toán về điền chữ số không chỉ yêu cầu kỹ năng tính toán đúng mà còn đòi hỏi cả lập luận chính xác \& hợp lý.'' -- \cite[p. 38]{Binh_Toan_6_tap_1}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 30, p. 38]
+	Thay các chữ bởi các chữ số thích hợp: $\overline{abc} + \overline{acb} = \overline{bca}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 31, p. 38]
+	Tìm các chữ số $a,b,c$, biết rằng tổng $a + b + c$ bằng tổng của 4 số chẵn liên tiếp \& các chữ số $a,b,c$ thỏa mãn cả 2 phép trừ sau: $\overline{abc} - \overline{cba} = 99$; $\overline{bac} - \overline{abc} = 270$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 33, p. 38]
+	Thay các chữ $a,b,c$ bằng các chữ số khác nhau thích hợp trong phép nhân sau: $\overline{ab}\cdot\overline{cc}\cdot\overline{abc} = \overline{abcabc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 34, p. 38]
+	Tìm số tự nhiên có 3 chữ số, biết rằng trong 2 cách viết: viết thêm chữ số $5$ vào đằng sau số đó hoặc viết thêm chữ số $1$ vào đằng trước số đó thì cách viết thứ nhất cho số lớn gấp $5$ lần so với cách viết thứ 2.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 35, p. 38]
+	Điền các chữ số thích hợp vào các chữ trong phép nhân sau: $2\overline{abcdmn} = \overline{cdmnab}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 36, p. 38]
+	Điền các chữ số thích hợp vào các dấu * trong phép nhân sau: $**\cdot ** = ***$ biết rằng cả 2 thừa số đều chẵn \& tích là số có 3 chữ số như nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 37, p. 38]
+	Tìm các chữ số $a,b$, biết rằng: $900:(a + b) = \overline{ab}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 38^\star$, p. 38]
+	Chứng minh rằng không thể thay các chữ bằng các chữ số để có phép tính đúng:
+	\begin{enumerate*}
+		\item[(a)] $\mbox{\rm HỌC VUI} - \mbox{\rm VUI HỌC} = 1991$;
+		\item[(b)] $\mbox{\rm TOÁN} + \mbox{\rm LÍ} + \mbox{\rm SỬ} + \mbox{\rm VẼ} = 1992$.
+	\end{enumerate*}
+\end{baitoan}
+Thay các dấu $*$ \& các chữ bởi các chữ số thích hợp:
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{186.}, p. 42]
+	$\overline{ab} + \overline{bc} + \overline{ca} = \overline{abc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{187.}, p. 42]
+	\begin{enumerate*}
+		\item[(a)] $\overline{abc} + \overline{ab} + a = 874$;
+		\item[(b)] $\overline{abc} + \overline{ab} + a = 1037$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{188.}, p. 42]
+	\begin{enumerate*}
+		\item[(a)] $\overline{acc}\cdot b = \overline{dba}$ biết $a$ là chữ số lẻ;
+		\item[(b)] $\overline{ac}\cdot\overline{ac} = \overline{acc}$;
+		\item[(c)] $\overline{ab}\cdot\overline{ab} = \overline{acc}$;
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{189.}, p. 42]
+	\begin{enumerate*}
+		\item[(a)] $\overline{1bac}\cdot 2 = \overline{abc8}$;
+		\item[(b)] $\overline{ab} = 9b$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{190.}, p. 42]
+	$4\overline{abcdef} = \overline{fabcde}$ \& $\overline{abcde} + f = 15930$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{191.}, p. 42]
+	$\overline{abc} - \overline{ca} = \overline{ca} - \overline{ac}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{192.}, p. 42]
+	$\overline{abcd} + \overline{abc} = 3576$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{193.}, p. 42]
+	$\overline{abcd0} - \overline{abcd} = \overline{3462*}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{195.}, p. 42]
+	$\overline{ab}\cdot b = \overline{1ab}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{196.}, p. 42]
+	$\overline{260abc}:\overline{abc} = 626$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{198.}, p. 43]
+	\begin{enumerate*}
+		\item[(a)] $\overline{ab}\cdot\overline{cb} = \overline{ddd}$.
+		\item[(b)] $**\cdot* = ***$ biết tích là số có 3 chữ số như nhau.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{199.}, p. 43]
+	$6\overline{abcdef} = \overline{defabc}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{200.}, p. 43]
+	$20**:13 = **7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{202.}, p. 43]
+	$\overline{abc}:11 = a + b + c$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{203.}, p. 43]
+	$(\overline{ab} + \overline{cd})(\overline{ab} - \overline{cd}) = 2002$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{204.}, p. 43]
+	Tìm chữ số $a$ \& số tự nhiên $x$, sao cho: $(12 + 3x)^2 = \overline{1a96}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{205.}, p. 43]
+	Tìm số tự nhiên có 5 chữ số, biết rằng nếu viết thêm chữ số $7$ vào đằng trước số đó thì được 1 số lớn gấp $4$ lần so với số có được bằng cách viết thêm chữ số $7$ vào sau số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{206.}, p. 43]
+	Tìm số tự nhiên có 2 chữ số, biết rằng nếu viết thêm 1 chữ số $2$ vào bên phải \& 1 chữ số $2$ vào bên trái của nó thì số ấy tăng gấp $36$ lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{207.}, p. 43]
+	Tìm số tự nhiên có 2 chữ số, biết rằng nếu viết xen vào giữa 2 chữ số của nó chính số đó thì số đó tăng gấp $99$ lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{208.}, p. 43]
+	Tìm số tự nhiên có 4 chữ số, sao cho khi nhân số đó với $4$ ta được số gồm 4 chữ số ấy viết theo thứ tự ngược lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{209.}, p. 43]
+	Tìm số tự nhiên có 4 chữ số, sao cho nhân nó với $9$ ta được số gồm chính các chữ số của sô ấy viết theo thứ tự ngược lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{210.}, p. 44]
+	Tìm số tự nhiên có 5 chữ số, sao cho nhân nó với $9$ ta được số gồm chính các chữ số của số ấy viết theo thứ tự ngược lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{211.}, p. 44]
+	\begin{enumerate*}
+		\item[(a)] Tìm số tự nhiên có 3 chữ số, biết rằng nếu xóa chữ số hàng trăm thì số ấy giảm $9$ lần.
+		\item[(b)] Giải bài toán trên nếu không cho biết chữ số bị xóa thuộc hàng nào.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{212.}, p. 44]
+	Tìm $n\in\mathbb{N}$ có 3 chữ số khác nhau, biết rằng nếu xóa bất kỳ chữ số nào của nó ta cũng được 1 số là ước của $n$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{213.}, p. 44]
+	Tìm số tự nhiên có 4 chữ số, biết rằng nếu xóa chữ số hàng nhìn thì số ấy giảm $9$ lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{214.}, p. 44]
+	Tìm số tự nhiên có 4 chữ số, biết rằng chữ số hàng trăm bằng $0$ \& nếu xóa chữ số $0$ đó thì số ấy giảm $9$ lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{215.}, p. 44]
+	1 số tự nhiên tăng gấp $9$ lần nếu viết thêm 1 chữ số $0$ vào giữa các chữ số hàng chục \& hàng đơn vị của nó. Tìm số ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{216.}, p. 44]
+	Tìm $A\in\mathbb{N}$, biết rằng nếu xóa 1 hoặc nhiều chữ số tận cùng của nó thì được số $B$ mà $A = 130B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 217^\star.$, p. 44]
+	Tìm $x\in\mathbb{N}$ có chữ số tận cùng bằng $2$, biết rằng $x,2x,3x$ đều là các số có 3 chữ số \& 9 chữ số của 3 số đó đều khác nhau \& khác $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 218^\star.$, p. 44]
+	Tìm $x\in\mathbb{N}$ có 6 chữ số, biết rằng các tích $2x,3x,4x,5x,6x$ cũng là số có 6 chữ số gồm cả 6 chữ số ấy.
+	\begin{enumerate*}
+		\item[(a)] Cho biết 6 chữ số của số phải tìm là $1,2,4,5,7,8$.
+		\item[(b)] Giải bài toán nếu không cho điều kiện (a).
+	\end{enumerate*}
+\end{baitoan}
+
+\subsubsection{Dãy các số viết theo quy luật}
+
+\paragraph{Dãy cộng}
+
+\begin{dinhnghia}[Dãy cộng]
+	\emph{Dãy cộng} là dãy có dạng $\{a + n b\}_{n=0}^\infty = a, a + b, a + 2b, a + 3b,\ldots$, với $a,b\in\mathbb{N}$, $b\ne 0$.
+\end{dinhnghia}
+Trong các dãy số cộng, mỗi số hạng, kể từ số hạng thứ 2, đều lớn hơn số hạng đứng trước nó cùng 1 số đơn vị là $b$.
+
+\begin{vidu}
+	\begin{enumerate*}
+		\item[(a)] $a = 0$, $b = 1$, dãy $\{a + n b\}_{n=0}^\infty = \{n\}_{n=0}^\infty = \mathbb{N} = 0,1,2,3,\ldots$ là dãy các số tự nhiên.
+		\item[(b)] $a = 1$, $b = 2$, dãy $\{a + n b\}_{n=0}^\infty = \{1 + 2n\}_{n=0}^\infty = 1,3,5,7,\ldots$ là dãy các số tự nhiên lẻ.
+		\item[(c)] $a = 0$, $b = 2$, $\{a + n b\}_{n=0}^\infty = \{2n\}_{n=0}^\infty = 0,2,4,6,\ldots$ là dãy các số tự nhiên chẵn.
+		\item[(d)] Với $b\in\mathbb{N}^\star$, $b\ge 2$, $a\in\mathbb{N}$, $a < b$, dãy $\{a + n b\}_{n=0}^\infty$ là dãy các số tự nhiên chia cho $b$ dư $a$.
+	\end{enumerate*}
+\end{vidu}
+Tổng quát, nếu 1 dãy cộng có số hạng đầu là $a_1$ \& hiệu giữa 2 số hạng liên tiếp là $d$ thì số hạng thứ $n$ của dãy cộng đó (ký hiệu là $a_n$) bằng: $a_n = a_1 + (n - 1)d$, $\forall n\in\mathbb{N}^\star$.
+
+``Tổng quát, nếu 1 dãy cộng có $n$ số hạng, số hạng đầu là $a_1$, số hạng cuối là $a_n$ thì tổng của $n$ số hạng đó được tính như sau: $S = \frac{1}{2}n(a_1 + a_n)$\footnote{Quy tắc dân gian: dĩ đầu, cộng vĩ, chiết bán, nhân chi (lấy số đầu cộng với số cuối, chia đôi, nhân với số số hạng).}. Trường hợp đặc biệt, tổng của $n$ số tự nhiên liên tiếp bắt đầu từ 1 bằng: $\sum_{i=1}^n i = \frac{1}{2}n(n + 1)$.'' -- \cite[p. 45]{Binh_Toan_6_tap_1} (Cho $a_1 = 1$, $a_n = n$ trong công thức $S = \frac{1}{2}n(a_1 + a_n)$.)
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 39, p. 45]
+	Bạn Lâm đánh số trang 1 cuốn sách dày $284$ trang bằng dãy số chẵn $2,4,6,8,\ldots$.
+	\begin{enumerate*}
+		\item[(a)] Biết mỗi chữ số viết mất $1$ giây. Hỏi bạn Lâm cần bao nhiêu phút để đánh số trang cuốn sách?
+		\item[(b)] Chữ số thứ $300$ mà bạn Lâm viết là chữ số nào?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 40^\star$, p. 46]
+	Tìm $n\in\mathbb{N}$ lớn nhất để tích các số tự nhiên từ $1$ đến $1000$ chia hết cho $5^n$.
+\end{baitoan}
+
+\begin{luuy}
+	``Số thừa số $a$ khi phân tích $n! = \prod_{i=1}^n i = 1\cdot 2\cdot 3\cdots n$ ra thừa số nguyên tố là: $\sum_{i=1}^k \lfloor\frac{n}{a^i}\rfloor = \lfloor\frac{n}{a}\rfloor + \lfloor\frac{n}{a^2}\rfloor + \cdots + \lfloor\frac{n}{a^k}\rfloor$ với $k$ là số mũ lớn nhất sao cho $a^k\le n$. Ký hiệu $\lfloor\frac{n}{m}\rfloor$ là số tự nhiên lớn nhất không vượt quá $\frac{n}{m}$ (nếu $n\ \vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương đúng, nếu $n\not\vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương hụt, ta gọi $\lfloor\frac{n}{m}\rfloor$ là \emph{phần nguyên} của $\frac{n}{m}$).'' -- \cite[p. 46]{Binh_Toan_6_tap_1}
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 41, p. 46]
+	Có bao nhiêu số tự nhiên chia hết cho $13$ trong dãy $111,1111,\ldots,\underbrace{1\ldots 1}_{1993's}$.
+\end{baitoan}
+
+\paragraph{Các dãy khác}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 42, p. 47]
+	Tìm số hạng thứ $100$ của các dãy được viết theo quy luật:
+	\begin{enumerate*}
+		\item[(a)] $3,8,15,24,35,\ldots$;
+		\item[(b)] $3,24,63,120,195,\ldots$;
+		\item[(c)] $1,3,6,10,15,\ldots$;
+		\item[(d)] $2,5,10,17,26,\ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{219.}, p. 48]
+	Tìm chữ số thứ $1000$ khi viết liên tiếp liền nhau các số hạng của dãy số lẻ $1,3,5,7,\ldots$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{220.}, p. 48]
+	\begin{enumerate*}
+		\item[(a)] Tính tổng các số lẻ có 2 chữ số.
+		\item[(b)] Tính tổng các số chẵn có 2 chữ số.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{221.}, p. 48]
+	Có số hạng nào của dãy sau tận cùng bằng $2$ hay không? $1; 1 + 2; 1 + 2 + 3; 1 + 2 + 3 + 4;\ldots$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{222.}, p. 48]
+	\begin{enumerate*}
+		\item[(a)] Viết liên tiếp các số hạng của dãy số tự nhiên từ $1$ đến $100$ tạo thành 1 số $A$. Tính tổng các chữ số của $A$.
+		\item[(b)] Cũng hỏi như trên nếu viết từ $1$ đến $1000000$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{223.}, p. 48]
+	Khi phân tích ra thừa số nguyên tố, số $1000!$ chứa thừa số nguyên tố $7$ với số mũ bằng bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{224.}, p. 48]
+	Tích $A = 500!$ tận cùng bằng bao nhiêu chữ số $0$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{225.}, p. 48]
+	\begin{enumerate*}
+		\item[(a)] Tích $B = 38\cdot 39\cdot 40\cdots 74$ có bao nhiêu thừa số $2$ khi phân tích ra thừa số nguyên tố?
+		\item[(b)] Tích $C = 31\cdot 32\cdot 33\cdots 90$ có bao nhiêu thừa số $3$ khi phân tích ra thừa số nguyên tố?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{226.}, p. 48]
+	Có bao nhiêu số tự nhiên đồng thời là các số hạng của cả 2 dãy sau: $3,7,11,15,\ldots,407$ \& $2,9,16,23,\ldots,709$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{227.}, p. 48]
+	Trong dãy số $1,2,3,\ldots,1990$, có thể chọn được nhiều nhất bao nhiêu số để tổng 2 số bất kỳ được chọn chia hết cho $38$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{228.}, p. 48]
+	Chia dãy số tự nhiên kể từ $1$ thành từng nhóm (các số cùng nhóm được đặt trong dấu ngoặc) $(1),(2,3),(4,5,6),(7,8,9,10),(11,12,13,14,15),\ldots$
+	\begin{enumerate*}
+		\item[(a)] Tìm số hạng đầu tiên của nhóm thứ $100$.
+		\item[(b)] Tính tổng các số thuộc nhóm thứ $100$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{229.}, p. 48]
+	Cho $S_1 = 1 + 2, S_2 = 3 + 4 + 5, S_3 = 6 + 7 + 8 + 9, S_4 = 10 + 11 + 12 + 13 + 14,\ldots$. Tính $S_{100}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{230.}, p. 49]
+	Tính số hạng thứ $50$ của các dãy sau:
+	\begin{enumerate*}
+		\item[(a)] $1\cdot 6,2\cdot 7,3\cdot 8,\ldots$;
+		\item[(b)] $1\cdot 4,4\cdot 7,7\cdot 10,\ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{231.}, p. 49]
+	Cho $A = 1 + 3 + 3^2 + 3^3 + \cdots + 3^{20} = \sum_{i=0}^{20} 3^i$, $B = 3^{21}:2$. Tính $B - A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{232.}, p. 49]
+	Cho $A = 1 + 4 + 4^2 + 4^3 + \cdots + 4^{99}$, $B = 4^{100}$. Chứng minh rằng $A < \frac{B}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{233.}, p. 49]
+	Tính giá trị của biểu thức:
+	
+	\begin{enumerate*}
+		\item[(a)] $A = 9 + 99 + 999 + \cdots + \underbrace{9\ldots 9}_{50's}$;
+		\item[(b)] $B = 9 + 99 + 999 + \cdots + \underbrace{9\ldots 9}_{200's}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\subsubsection{Đếm số}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 43, p. 49]
+	Có bao nhiêu số $\overline{abcd}$ mà $\overline{ab} < \overline{cd}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 44, p. 49]
+	Có bao nhiêu số tự nhiên chia hết cho $4$ gồm 4 chữ số, chữ số tận cùng bằng $2$?
+\end{baitoan}
+
+\begin{luuy}
+	``Nếu việc chọn đối tượng $A$ có thể thực hiện bởi $m$ cách \& với mỗi cách chọn của $A$ có thể chọn đối tượng $B$ bởi $n$ cách thì việc chọn $A$ \& $B$ theo thứ tự đó có thể thực hiện bởi $mn$ cách chọn.'' -- \cite[p. 50]{Binh_Toan_6_tap_1} \emph{Quy tắc nhân trong phép đếm} \& khái niệm \emph{tổ hợp, chỉnh hợp} sẽ được học ở môn Tổ hợp, trong chương trình Toán 10.
+\end{luuy}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 45, p. 50]
+	Có bao nhiêu số tự nhiên có $4$ chữ số $\overline{abcd}$, trong đó $b - a = 1$, $d - c = 1$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 46, p. 50]
+	Có bao nhiêu số tự nhiên có 3 chữ số trong đó có đúng 1 chữ số $5$?
+\end{baitoan}
+``Trong nhiều trường hợp, để đếm các số có tính chất nào đó, ta lại đếm trước hết các số không có tính chất ấy.'' -- \cite[p. 51]{Binh_Toan_6_tap_1}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 47, p. 50]
+	Có bao nhiêu số chứa ít nhất 1 chữ số $1$ trong các số tự nhiên:
+	\begin{enumerate*}
+		\item[(a)] có 3 chữ số;
+		\item[(b)] từ $1$ đến $999$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 48, p. 51]
+	Viết $999$ số tự nhiên liên tiếp kể từ $1$. Hỏi:
+	\begin{enumerate*}
+		\item[(a)] Chữ số $2$ có mặt bao nhiêu lần?
+		\item[(b)] Chữ số $0$ có mặt bao nhiêu lần?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{234.}, p. 52]
+	Bạn Tâm đánh số trang của 1 cuốn vở có $110$ trang bằng cách viết dãy số tự nhiên $1,2,\ldots,110$. Bạn Tâm phải viết tất cả bao nhiêu chữ số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{235.}, p. 52]
+	1 cô nhân viên đánh máy liên tục dãy số chẵn bắt đầu từ $2$: $2,4,6,8,10,12,\ldots$. Cô phải đánh tất cả $2000$ chữ số. Tìm chữ số cuối cùng mà cô đã đánh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{236.}, p. 52]
+	Bạn Mai viết dãy số lẻ $1,3,5,\ldots,245$.
+	\begin{enumerate*}
+		\item[(a)] Bạn Mai phải viết tất cả bao nhiêu chữ số?
+		\item[(b)] Nếu mỗi chữ số viết mất 1 giây thì viết đến số $245$ mất bao nhiêu giây? Sau $5$ phút, bạn Mai viết đến chữ số nào?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{237.}, p. 52]
+	Bạn Hùng viết dãy số lẻ $1,3,5,7,\ldots$ để đánh số trang 1 cuốn sách. Tính xem chữ số $200$ mà bạn Hùng viết là chữ số nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{238.}, p. 52]
+	Để đánh số trang của 1 cuốn sách, người ta viết dãy số tự nhiên bắt đầu từ $1$ \& phải dùng tất cả $1998$ chữ số.
+	\begin{enumerate*}
+		\item[(a)] Hỏi cuốn sách có bao nhiêu trang?
+		\item[(b)] Chữ số thứ $1010$ là chữ số nào?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{239.}, p. 52]
+	Có bao nhiêu số tự nhiên chia hết cho $3$, có 4 chữ số \& tận cùng bằng $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{240.}, pp. 52--53]
+	Tuấn muốn đến nhà bạn, nhưng không nhớ số nhà, chỉ biết rằng số nhà của bạn là số chia hết cho $3$ \& có 2 chữ số. Biết số nhà cuối của dãy phố đó là $135$. Hỏi Tuấn phải gõ cửa nhiều nhất bao nhiêu số nhà? (các số nhà không đánh số $a,b,\ldots$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{241.}, p. 53]
+	Tìm số lượng các số tự nhiên có 4 chữ số mà:
+	\begin{enumerate*}
+		\item[(a)] Số tạo bởi 2 chữ số đầu (theo thứ tự ấy) cộng với số tạo bởi 2 chữ số cuối (theo thứ tự ấy) nhỏ hơn $100$.
+		\item[(b)] Số tạo bởi 2 chữ số đầu (theo thứ tự ấy) lớn hơn số tạo bởi 2 chữ số cuối (theo thứ tự ấy)?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{242.}, p. 53]
+	Trong các số tự nhiên từ $1$ đến $252$, xóa các số chia hết cho $2$ nhưng không chia hết cho $5$, rồi xóa các số chia hết cho $5$ nhưng không chia hết cho $2$. Còn lại bao nhiêu số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{243.}, p. 53]
+	Có bao nhiêu số tự nhiên có 3 chữ số mà:
+	\begin{enumerate*}
+		\item[(a)] Các chữ số đều chẵn?
+		\item[(b)] Chữ số hàng chục là chữ số lẻ?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{244.}, p. 53]
+	Có bao nhiêu số tự nhiên có 4 chữ số mà:
+	\begin{enumerate*}
+		\item[(a)] Mỗi chữ số đều chẵn?
+		\item[(b)] Tổng các chữ số là số chẵn?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{245.}, p. 53]
+	Có bao nhiêu biển số xe máy khác nhau, mỗi số xe lập bởi 2 chữ cái đứng đầu \& 3 chữ số đứng sau? (bảng chữ cái có $25$ chữ, không có biển số $000$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{246.}, p. 53]
+	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số:
+	\begin{enumerate*}
+		\item[(a)] Chứa đúng 1 chữ số $4$?
+		\item[(b)] Chứa đúng 2 chữ số $4$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{247.}, p. 53]
+	Có bao nhiêu số tự nhiên chia hết cho $5$, có 4 chữ số, có đúng 1 chữ số $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{248.}, p. 53]
+	Có bao nhiêu số tự nhiên có 3 chữ số, biết rằng cộng nó với số gồm 3 chữ số ấy viết theo thứ tự ngược lại thì được 1 số chia hết cho $5$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{249.}, p. 53]
+	Có bao nhiêu số chẵn có 3 chữ số, các chữ số khác nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{250.}, p. 53]
+	Có bao nhiêu số tự nhiên có 3 chữ số trong đó có ít nhất 2 chữ số như nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{251.}, p. 53]
+	Trong các số tự nhiên có 4 chữ số, có bao nhiêu số trong đó có đúng 3 chữ số như nhau?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{252.}, p. 53]
+	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số:
+	\begin{enumerate*}
+		\item[(a)] Chia hết cho $5$, có chứa chữ số $5$?
+		\item[(b)] Chia hết cho $4$, có chứa chữ số $4$?
+		\item[(c)] Chia hết cho $3$, không chứa chữ số $3$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{253.}, p. 54]
+	Viết liên tiếp các số tự nhiên từ $1$ đến $999$ ta được 1 số tự nhiên $A$.
+	\begin{enumerate*}
+		\item[(a)] Số $A$ có bao nhiêu chữ số?
+		\item[(b)] Tính tổng các chữ số của số $A$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 254^\star.$, p. 54]
+	Viết dãy số tự nhiên từ $1$ đến $999$.
+	\begin{enumerate*}
+		\item[(a)] Chữ số $1$ được viết bao nhiêu lần?
+		\item[(b)] Chữ số $0$ được viết bao nhiêu lần?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{255.}, p. 54]
+	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số chứa ít nhất 1 chữ số $4$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 256^\star.$, p. 54]
+	Trong các số tự nhiên từ $1$ đến $10000$:
+	\begin{enumerate*}
+		\item[(a)] Có bao nhiêu số chứa chữ số $0$?
+		\item[(b)] Số chứa chữ số $1$ hay số không chứa chữ số $1$ có nhiều hơn?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{257.}, p. 54]
+	Viết dãy số chẵn $100,102,\ldots,390$. Hỏi chữ số $2$ được viết bao nhiêu lần?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{258.}, p. 54]
+	Từ các chữ số $1,2,3,4,5,6,7$, lập tất cả các số tự nhiên có 7 chữ số trong đó mỗi chữ số trên đều có mặt. Chứng minh rằng tổng tất cả các số đó chia hết cho $9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{259.}, p. 54]
+	Cho 3 chữ số $a,b,c$ khác nhau \& khác $0$. Gọi $A$ là tập hợp các số tự nhiên có 3 chữ số lập bởi cả 3 chữ số trên.
+	\begin{enumerate*}
+		\item[(a)] Tập hợp $A$ có bao nhiêu phần tử?
+		\item[(b)] Tính tổng các phần tử của tập hợp $A$, biết rằng $a + b + c = 17$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{260.}, p. 54]
+	Từ các chữ số $1,2,3,4$, lập tất cả các số tự nhiên mà mỗi chữ số trên đều có mặt đúng 1 lần. Tìm tổng các số ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{261.}, p. 54]
+	Tìm tổng các số tự nhiên có 3 chữ số lập bởi các chữ số $2,3,0,7$ trong đó:
+	\begin{enumerate*}
+		\item[(a)] Các chữ số có thể giống nhau;
+		\item[(b)] Các chữ số đều khác nhau.
+	\end{enumerate*}
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -1006,13 +2651,6 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 \subsection{Xác suất thực nghiệm}
 
 \subsection{Hoạt động thực hành \& trải nghiệm}
-
-%------------------------------------------------------------------------------%
-
-%\selectlanguage{english}
-%\begin{thebibliography}{99}
-%	\bibitem[]{}
-%\end{thebibliography}
 
 %------------------------------------------------------------------------------%
 
