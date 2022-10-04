@@ -6,6 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[chapter]
@@ -480,6 +481,36 @@ At \textbf{1} you use the \texttt{cd} command to navigate to the \verb|python_wo
 %------------------------------------------------------------------------------%
 
 \section{Variables \& Simple Data Types}
+\textbf{Content.} \textit{Different kinds of data you can work with in your Python programs, how to use variables to represent data in your programs}.
+
+\subsection{What Really Happens When You Run \texttt{hello\_world.py}}
+``When you run the file \verb|hello_world.py|, the ending \texttt{.py} indicates that the file is a Python program. Your editor then runs the file through the \textit{Python interpreter}, which reads through the program \& determines what each word in the program means. E.g., when the interpreter sees the word \texttt{print} followed by parentheses, it prints to the screen whatever is inside the parentheses. As you write your programs, your editor highlights different parts of your program in different way. E.g., it recognizes that \texttt{print()} is the name of a function \& displays that word in 1 color. It recognizes that \texttt{"Hello Python world!"} is not Python code \& displays that phrase in a different color. This feature is called \textit{syntax highlighting} \& is quite useful as you start to write your own programs.'' -- \cite[p. 16]{Matthes2019}
+
+\subsubsection{Variables}
+``Every variable is connected to a \textit{value}, which is the information associated with that variable.'' ``Adding a variable makes a little more work for the Python interpreter.'' -- \cite[p. 16]{Matthes2019}
+
+``You can change the value of a variable in your program at any time, \& Python will always keep track of its current value.'' -- \cite[p. 17]{Matthes2019}
+
+\paragraph{Naming \& Using Variables.} ``When you're using variables in Python, you need to adhere to a few rules \& guidelines. Breaking some of these rules will cause errors; other guidelines just help you write code that's easier to read \& understand. Be sure to keep the following variable rules in mind:
+\begin{enumerate*}
+	\item[$\bullet$] Variable names can contain only letters, numbers, \& underscores. They can start with a letter or an underscore, but not with a number. E.g., you can call a variable \verb|message_1| but not \verb|1_message|.
+	\item[$\bullet$] Spaces are not allowed in variable names, but underscores can be used to separate words in variable names. E.g., \verb|greeting_message| works, but \texttt{greeting message} will cause errors.
+	\item[$\bullet$] Avoid using Python keywords \& function names as variable names; i.e., do not use words that Python has reserved for a particular programmatic purpose, such as the word \texttt{print}.
+	\item[$\bullet$] Variable names should be short but descriptive. E.g., \texttt{name} is better than \texttt{n}, \verb|student_name| is better than \verb|s_n|, \& \verb|name_length| is better than \verb|length_of_persons_name|.
+	\item[$\bullet$] Be careful when using the lowercase letter $l$ \& the uppercase letter $O$ because they could be confused with the numbers $1$ \& $0$.
+\end{enumerate*}
+
+It can take some practice to learn how to create good variable names, especially as your programs become more interesting \& complicated. As you write more programs \& start to read through other people's code, you'll get better at coming up with meaningful names.'' -- \cite[p. 17]{Matthes2019}
+
+\paragraph{Avoiding Name Errors When Using Variables.} ``Every programmer makes mistakes, \& most make mistakes every day. Although good programmers might create errors, they also know how to respond to those errors efficiently. Let's look at an error you're likely to make early on \& learn how to fix it.'' -- \cite[p. 17]{Matthes2019}
+
+``When an error occurs in your program, the Python interpreter does its best to help you figure out where the problem is. The interpreter provides a traceback when a program cannot run successfully. A \textit{traceback} is a record of where the interpreter ran into trouble when trying to execute your code.'' ``The Python interpreter doesn't spellcheck your code, but it does ensure that variable names are spelled consistently.'' ``Programming languages are strict, but they disregard good \& bad spelling. As a result, you don't need to consider English spelling \& grammar rules when you're trying to create variable names \& writing code. Many programming errors are simple, single-character typos in 1 line of a program. If you're spending a long time searching for 1 of these errors, know that you're in good company. Many experienced \& talented programmers spend hours hunting down these kinds of tiny errors. Try to laugh about it \& move on, knowing it will happen frequently throughout your programming life.'' -- \cite[p. 18]{Matthes2019}
+
+\paragraph{Variables Are Labels.} ``Variables are often described as boxes you can store values in. This idea can be helpful the 1st few times you use a variable, but it isn't an accurate way to describe how variables are represented internally in Python. It's much better to think of variables as labels that you can assign to values. You can also say that a variable references a certain value.
+
+This distinction probably won't matter much in your initial programs, but it's worth learning earlier rather than later. At some point, you'll see unexpected behavior from a variable, \& an accurate understanding of how variables work will help you identify what's happening in your code.'' -- \cite[pp. 18--19]{Matthes2019}
+
+\subsubsection{Strings}
 
 %------------------------------------------------------------------------------%
 
