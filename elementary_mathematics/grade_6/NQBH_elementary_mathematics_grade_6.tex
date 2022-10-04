@@ -33,9 +33,9 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Subsect.} ~\thesubsection}
+\lhead{\small Subsect.~\thesubsection}
 \rhead{\small \nouppercase{\leftmark}}
-\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
@@ -101,6 +101,8 @@ Xem \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/princ
 	\item $\prod$: tích, product, e.g., $\prod_{i=a}^b f(i) = f(a)f(a + 1)\cdots f(b - 1)f(b)$, $\forall a,b\in\mathbb{Z}$, $a\le b$.
 \end{itemize}
 
+%------------------------------------------------------------------------------%
+
 \subsection*{Viết Tắt -- Abbreviation}
 \begin{itemize}
 	\item \textbf{abbr.} (abbr., abbreviation): viết tắt, abbreviation, for short.
@@ -108,6 +110,8 @@ Xem \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/princ
 	\item \textbf{e.g.} stands for \textit{exempli gratia} in Latin: ví dụ là, chẳng hạn, for example, for instance.
 	\item \textbf{w.l.o.g.} (abbr., without loss of generality): không mất tính tổng quát.
 \end{itemize}
+
+%------------------------------------------------------------------------------%
 
 \subsection*{Quy Ước -- Convention}
 
@@ -141,29 +145,6 @@ Nên sử dụng cách nào tiện hơn trong 2 cách trên để cho 1 tập h�
 \subsubsection{Biểu đồ Venn -- Venn diagram}
 ``Người ta còn minh họa tập hợp bằng 1 vòng kín, mỗi phần tử của tập hợp được biểu diễn bởi 1 chấm bên trong vòng kín, còn phần tử không thuộc tập hợp đó được biểu diễn bởi 1 chấm bên ngoài vòng kín. Cách minh họa tập hợp này gọi là \textit{biểu đồ Venn}, do nhà toán học người Anh John Venn (1834--1923) đưa ra.'' -- \cite[p. 8]{SGK_Toan_6_Canh_Dieu_tap_1}
 
-\begin{baitoan}
-	Với $a,b$ là 2 số tự nhiên cho trước, viết mỗi tập hợp sau bằng cách liệt kê các phần tử của tập hợp đó:
-	\begin{align*}
-		A_1 &= \{x|x\mbox{ là số tự nhiên},\ a < x < b\},\ &&A_2 = \{x|x\mbox{ là số tự nhiên},\ a\le x < b\},\\
-		A_3 &= \{x|x\mbox{ là số tự nhiên},\ a < x\le b\},\ &&A_4 = \{x|x\mbox{ là số tự nhiên},\ a\le x\le b\},\\
-		B_1 &= \{x|x\mbox{ là số tự nhiên chẵn},\ a < x < b\},\ &&B_2 = \{x|x\mbox{ là số tự nhiên chẵn},\ a\le x < b\},\\
-		B_3 &= \{x|x\mbox{ là số tự nhiên chẵn},\ a < x\le b\},\ &&B_4 = \{x|x\mbox{ là số tự nhiên chẵn},\ a\le x\le b\},\\
-		C_1 &= \{x|x\mbox{ là số tự nhiên lẻ},\ a < x < b\},\ &&C_2 = \{x|x\mbox{ là số tự nhiên lẻ},\ a\le x < b\},\\ C_3 &= \{x|x\mbox{ là số tự nhiên lẻ},\ a < x\le b\},\ &&C_4 = \{x|x\mbox{ là số tự nhiên lẻ},\ a\le x\le b\}.
-	\end{align*}
-\end{baitoan}
-\textit{Hint.} So sánh $a,b$. Nếu $a > b$ thì các tập hợp trên đều là tập hợp rỗng $\emptyset$. Nếu $a\le b$, xét tiếp tính chẵn lẻ của $a,b$ cho các tập $B_i$, $i = 1,2,3,4$, \& $C_j$, $j = 1,2,3,4$.
-
-\begin{baitoan}
-	Viết các tập hợp sau bằng cách liệt kê các phần tử của tập hợp đó:
-	\begin{align*}
-		A_1 &= \{x|x\mbox{ là số tự nhiên},\ ax + b = c\},\ && A_2 = \{x|x\mbox{ là số tự nhiên},\ ax - b = c\},\\
-		A_3 &= \{x|x\mbox{ là số tự nhiên},\ a - bx = c\},\ && A_4 = \left\{x|x\mbox{ là số tự nhiên},\ \frac{x}{a} + b = c\right\},\\
-		A_5 &= \left\{x|x\mbox{ là số tự nhiên},\ \frac{a}{x} + b = c\right\},\ && A_6 = \left\{x|x\mbox{ là số tự nhiên},\ \frac{ax + b}{c} = d\right\},\\
-		A_7 &= \left\{x|x\mbox{ là số tự nhiên},\ \frac{a}{bx + c} = d\right\},\ && A_8 = \{x|x\mbox{ là số tự nhiên},\ f(x) = 0\}.
-	\end{align*}
-\end{baitoan}
-Tổng quát của dạng toán này là viết tập hợp $A = \{x|x\mbox{ là số tự nhiên},\ x \mbox{ thỏa mãn phương nào đại số }f(x) = 0\mbox{ nào đó}\}$. Nếu phương trình đại số đó vô nghiệm trên tập hợp các số tự nhiên thì $A = \emptyset$. Nếu phương trình đại số đó có các nghiệm $x_1,\ldots,x_n$ là các số tự nhiên, với $n$ là số tự nhiên khác 0, thì $A = \{x_1,\ldots,x_n\}$. Điểm cốt lõi ở đây là giải phương trình đại số đó trên tập các số tự nhiên.
-
 %------------------------------------------------------------------------------%
 
 \subsection{Tập Hợp Các Số Tự Nhiên -- Set of Naturals}
@@ -171,19 +152,17 @@ Tổng quát của dạng toán này là viết tập hợp $A = \{x|x\mbox{ là
 \subsubsection{Tập hợp các số tự nhiên -- Set of Naturals}
 Có thể đọc thêm \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_t%E1%BB%B1_nhi%C3%AAn}{Wikipedia\texttt{/}số tự nhiên} \& \href{https://en.wikipedia.org/wiki/Natural_number}{Wikipedia\texttt{/}natural number}.
 
-\paragraph{Tập hợp $\mathbb{N}$ \textit{\&} tập hợp $\mathbb{N}^\star$}
+\paragraph{Tập hợp $\mathbb{N}$ \textit{\&} tập hợp $\mathbb{N}^\star$.}
 \begin{dinhnghia}
 	\emph{Tập hợp các số tự nhiên} được ký hiệu là $\mathbb{N}\coloneqq\{0;1;2;3;\ldots\}$. \emph{Tập hợp các số tự nhiên khác 0} được ký hiệu là $N^\star\coloneqq\{1;2;3;4;\ldots\}$.
 \end{dinhnghia}
 Hiển nhiên $N^\star\subset\mathbb{N}$, i.e., $x\in\mathbb{N}^\star\Rightarrow x\in\mathbb{N}$ nhưng $x\in\mathbb{N}\not\Rightarrow x\in\mathbb{N}^\star$ vì $0\in\mathbb{N}$ nhưng $0\notin\mathbb{N}^\star$ (cũng là phản ví dụ duy nhất trong trường hợp này). Cụ thể hơn, $\mathbb{N} = \mathbb{N}^\star\cup\{0\}$ (i.e., tập hợp các số tự nhiên là hợp của tập hợp các số tự nhiên khác 0 \& số 0), hoặc $\mathbb{N}^\star = \mathbb{N}\backslash\{0\}$ (i.e., tập hợp các số tự nhiên khác 0 là tập hợp các số tự nhiên bỏ\texttt{/}loại đi số 0).
 
-\paragraph{Cách đọc \textit{\&} viết số tự nhiên}
-``Khi viết các số tự nhiên có từ 4 chữ số trở lên, người ta thường viết tách riêng từng nhóm 3 chữ số kể từ phải sang trái cho dễ đọc.'' -- \cite[p. 9]{SGK_Toan_6_Canh_Dieu_tap_1}
+\paragraph{Cách đọc \textit{\&} viết số tự nhiên.} ``Khi viết các số tự nhiên có từ 4 chữ số trở lên, người ta thường viết tách riêng từng nhóm 3 chữ số kể từ phải sang trái cho dễ đọc.'' -- \cite[p. 9]{SGK_Toan_6_Canh_Dieu_tap_1}
 
 \subsubsection{Biểu diễn số tự nhiên}
 
-\paragraph{Biểu diễn số tự nhiên trên tia số}
-``Các số tự nhiên được biểu diễn trên tia số. Mỗi số tự nhiên ứng với 1 điểm trên tia số.'' -- \cite[p. 10]{SGK_Toan_6_Canh_Dieu_tap_1}
+\paragraph{Biểu diễn số tự nhiên trên tia số.} ``Các số tự nhiên được biểu diễn trên tia số. Mỗi số tự nhiên ứng với 1 điểm trên tia số.'' -- \cite[p. 10]{SGK_Toan_6_Canh_Dieu_tap_1}
 
 \begin{cauhoi}
 	Tại sao cần\emph{\texttt{/}}phải biểu diễn số tự nhiên trên tia số?
@@ -193,7 +172,7 @@ Hiển nhiên $N^\star\subset\mathbb{N}$, i.e., $x\in\mathbb{N}^\star\Rightarrow
 	Làm việc trên hình vẽ để \textit{trực quan hơn, tiện hơn} trong nhiều mục đích khác, e.g., so sánh 2 số tự nhiên, so sánh 2 tập hợp con của $\mathbb{N}$, etc.
 \end{proof}
 
-\paragraph{Cấu tạo thập phân của số tự nhiên}
+\paragraph{Cấu tạo thập phân của số tự nhiên.}
 \begin{vidu}[Số tự nhiên có 2 \& 3 chữ số]
 	``Ký hiệu $\overline{ab}$ ($a\ne 0$) chỉ số tự nhiên có 2 chữ số, chữ số hàng chục là $a$, chữ số hàng đơn vị là $b$. Ký hiệu $\overline{abc}$ ($a\ne 0$) chỉ số tự nhiên có 3 chữ số, chữ số hàng trăm là $a$, chữ số hàng chục là $b$, chữ số hàng đơn vị là $c$.'' -- \cite[p. 10]{SGK_Toan_6_Canh_Dieu_tap_1}
 \end{vidu}
@@ -233,55 +212,7 @@ Chú ý, công thức \eqref{decimal representation} còn được viết cụ t
 	E.g., hệ nhị phân ($b = 2$), \textit{\&} hệ thập lục phân ($b = 16$) được xử dụng chủ yếu trong Tin học, hay chính xác hơn là Khoa học Máy tính (Computer Science). Hệ nhị phân được dùng để thiết kế ngôn ngữ máy tính.
 \end{luuy}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 6]
-	Tìm số tự nhiên có 5 chữ số, biết rằng nếu viết thêm chữ số 2 vào đằng sau số đó thì được số lớn gấp 3 lần số có được bằng cách viết thêm chữ số 2 vào đằng trước nó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, p. 7]
-	Tìm số tự nhiên nhỏ nhất có chữ số đầu tiên ở bên trái là 2, khi chuyển chữ số 2 này xuống cuối cùng thì số đó tăng gấp 3 lần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, p. 7]
-	Tìm số tự nhiên có 5 chữ số, biết rằng nếu viết thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp 3 lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{8.}, p. 8]
-	Tìm số tự nhiên có tận cùng bằng 3, biết rằng nếu xóa chữ số hàng đơn vị thì số đó giảm đi 1992 đơn vị.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{9.}, p. 8]
-	Tìm số tự nhiên có 6 chữ số, biết rằng chữ số hàng đơn vị là 4 \& nếu chuyển chữ số đó lên hàng đầu tiên thì số đó tăng gấp 4 lần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{10.}, p. 8]
-	Cho 4 chữ số $a,b,c,d$ khác nhau \& khác 0. Lập số tự nhiên lớn nhất \& số tự nhiên nhỏ nhất có 4 chữ số gồm cả 4 chữ số ấy. Tổng của 2 số này bằng 11330. Tìm tổng các chữ số $a + b + c + d$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{11.}, p. 8]
-	Cho 3 chữ số $a,b,c$ sao cho $0 < a < b < c$.
-	\begin{itemize}
-		\item[(a)] Viết tập hợp $A$ các số tự nhiên có 3 chữ số gồm cả 3 chữ số $a,b,c$.
-		\item[(b)] Biết tổng 2 số nhỏ nhất trong tập hợp $A$ bằng 488. Tìm 3 chữ số $a,b,c$ nói trên.
-	\end{itemize}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{12.}, p. 8]
-	Tìm 3 chữ số khác nhau \& khác 0, biết rằng nếu dùng cả 3 chữ số này lập thành các số tự nhiên có 3 chữ số thì 2 số lớn nhất có tổng bằng 1444.
-\end{baitoan}	
-
-\paragraph{Số La Mã}
-\textit{Cách ghi số La Mã}: I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, XXI, XXII, XXIII, XXIV, XXV, XXVI, XXVII, XXVIII, XXIX, XXX. \textit{Nguyên tắc.} Chữ số I, II, III khi nằm bên trái V, X có nghĩa là ``trừ ra'', \textit{\&} khi nằm bên phải V, X có nghĩa là ``cộng thêm''.
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{6.}, p. 8]
-	Với cả 2 chữ số I \& X, viết được bao nhiêu số La Mã? (mỗi chữ số có thể viết nhiều lần, nhưng không viết liên tiếp quá 3 lần).
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{7.}, p. 8]
-	\begin{itemize}
-		\item[(a)] Dùng 3 que diêm, xếp được các số La Mã nào?
-		\item[(b)] Để viết các số La Mã từ 4000 trở lên, e.g. số 19520, người ta viết XIXmDXX (chữ m biểu thị \emph{1 nghìn}, m là chữ đầu của từ \emph{mille}, tiếng Latin là 1 nghìn). Hãy viết các số sau bằng chữ số La Mã: 7203, 121512.
-	\end{itemize}
-\end{baitoan}
+\paragraph{Số La Mã.} \textit{Cách ghi số La Mã}: I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, XXI, XXII, XXIII, XXIV, XXV, XXVI, XXVII, XXVIII, XXIX, XXX. \textit{Nguyên tắc.} Chữ số I, II, III khi nằm bên trái V, X có nghĩa là ``trừ ra'', \textit{\&} khi nằm bên phải V, X có nghĩa là ``cộng thêm''.
 
 \subsubsection{So sánh các số tự nhiên}
 ``Trong 2 số tự nhiên $a,b\in\mathbb{N}$ khác nhau, có 1 số nhỏ hơn số kia. Nếu số $a$ nhỏ hơn số $b$ thì viết $a < b$ hay $b > a$.'' -- \cite[p. 12]{SGK_Toan_6_Canh_Dieu_tap_1}
@@ -390,18 +321,16 @@ Với số tự nhiên $a\in\mathbb{N}$ cho trước, viết $x\le a$ để ch�
 \subsubsection{Số La Mã}
 ``Đế quốc La Mã là 1 đế quốc hùng mạnh tồn tại từ thế kỷ III trước Công nguyên đến thế kỷ V sau Công nguyên, bao gồm những vùng lãnh thổ rộng lớn ở Địa Trung Hải, Bắc PHi \textit{\&} Tây Á.'' -- \cite[p. 14]{SGK_Toan_6_Canh_Dieu_tap_1}
 
-\paragraph{Hệ thống các chữ số \textit{\&} số đặc biệt}
-Có 7 chữ số La Mã cơ bản là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000. Có 6 số đặc biệt là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): IV = 4, IX = 9, XL = 40, XC = 90, CD = 400, CM = 900. I chỉ có thể đứng trước V hoặc X; X chỉ có thể đứng trước L hoặc C; C chỉ có thể đứng trước D hoặc M. Trong các chữ số La Mã, không có ký hiệu để chỉ số 0.
+\paragraph{Hệ thống các chữ số \textit{\&} số đặc biệt.} Có 7 chữ số La Mã cơ bản là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000. Có 6 số đặc biệt là (ký hiệu \textit{\&} giá trị tương ứng trong hệ thập phân): IV = 4, IX = 9, XL = 40, XC = 90, CD = 400, CM = 900. I chỉ có thể đứng trước V hoặc X; X chỉ có thể đứng trước L hoặc C; C chỉ có thể đứng trước D hoặc M. Trong các chữ số La Mã, không có ký hiệu để chỉ số 0.
 
-\paragraph{Cách ghi số La Mã}
+\paragraph{Cách ghi số La Mã.}
 \begin{itemize}
 	\item Trong 1 số La Mã tính từ trái sang phải, giá trị của các chữ số cơ bản \textit{\&} các số đặc biệt giảm dần.
 	\item Mỗi chữ số I, X, C, M không viết liền nhau quá 3 lần.
 	\item Mỗi chữ số V, L, D không viết liền nhau.
 \end{itemize}
 
-\paragraph{Cách tính giá trị tương ứng trong hệ thập phân của số La Mã}
-``Giá trị tương ứng trong hệ thập phân của số La Mã bằng tổng giá trị của các chữ số cơ bản \textit{\&} các số đặc biệt tính theo thứ tự từ trái sang phải.'' -- \cite[p. 14]{SGK_Toan_6_Canh_Dieu_tap_1}
+\paragraph{Cách tính giá trị tương ứng trong hệ thập phân của số La Mã.} ``Giá trị tương ứng trong hệ thập phân của số La Mã bằng tổng giá trị của các chữ số cơ bản \textit{\&} các số đặc biệt tính theo thứ tự từ trái sang phải.'' -- \cite[p. 14]{SGK_Toan_6_Canh_Dieu_tap_1}
 
 \begin{luuy}[Ứng dụng của số La Mã]
 	``Chữ số La Mã được sử dụng rộng rãi cho đến thế kỷ XIV thì không còn được sử dụng nhiều nữa vì hệ thống chữ số Ả Rập (được tạo thành bởi các chữ số từ 0 đến 9) tiện dụng hơn. Tuy nhiên, chúng vẫn còn được sử dụng trong việc đánh số trên mặt đồng hồ, thế kỷ, âm nhạc hay các sự kiện chính trị -- văn hóa -- thể thao lớn như Thế vận hội Olympic, \ldots'' \footnote{Nói tóm lại, sử dụng chữ số La Mã để thể hiện tính trang trọng \textit{\&} đôi khi màu mè\texttt{/}fancy.}
@@ -458,8 +387,7 @@ Do tính chất kết hợp nên giá trị của biểu thức $a + b + c$ có 
 	\end{align*}
 \end{itemize}
 
-\paragraph{Nhân 2 số có nhiều chữ số}
-Cho 2 số $a,b\in\mathbb{N}$. Nếu 1 trong chúng bằng 0 thì hiển nhiên tích $ab = 0$. Nếu cả 2 số $a,b$ đều khác 0, tức $a,b\in\mathbb{N}^\star$, thì để tính tích $ab$, trước tiên ta biểu diễn $a$ \textit{\&} $b$ dưới dạng thập phân \eqref{decimal representation}:
+\paragraph{Nhân 2 số có nhiều chữ số.} Cho 2 số $a,b\in\mathbb{N}$. Nếu 1 trong chúng bằng 0 thì hiển nhiên tích $ab = 0$. Nếu cả 2 số $a,b$ đều khác 0, tức $a,b\in\mathbb{N}^\star$, thì để tính tích $ab$, trước tiên ta biểu diễn $a$ \textit{\&} $b$ dưới dạng thập phân \eqref{decimal representation}:
 \begin{equation*}
 	\left\{\begin{split}		
 		&a = \overline{a_ma_{m-1}\ldots a_1a_0},\ b = \overline{b_nb_{n-1}\ldots b_1b_0}, \mbox{ với } m,n\in\mathbb{N},\\
@@ -472,7 +400,7 @@ sau đó sử dụng công thức \eqref{decimal representation expansion} để
 \end{align*}
 trong đó $\sum_{j=0}^n \left(\sum_{i=0}^m a_i10^i\right)b_j10^j$ chính là cách thường được sử dụng để tính tích 2 số nguyên dương: tính tích riêng thứ nhất, tính tích riêng thứ 2 \textit{\&} viết tích này lùi sang bên trái 1 cột so với tích riêng thứ nhất, tính tích riêng thứ 3 \textit{\&} viết tích này lùi sang bên trái 2 cột so với tích riêng thứ nhất, etc (xem ví dụ ở \cite[p. 18]{SGK_Toan_6_Canh_Dieu_tap_1}).
 
-\paragraph{Tính chất của phép nhân}
+\paragraph{Tính chất của phép nhân.}
 \begin{dinhly}[Các tính chất của phép nhân các số tự nhiên]
 	Phép nhân các số tự nhiên có các tính chất sau: $\forall a,b,c\in\mathbb{N}$,
 	\begin{itemize}
@@ -486,12 +414,11 @@ Do tính chất kết hợp nên giá trị của biểu thức $abc$ có thể 
 
 \subsubsection{Phép Chia $:$, \texttt{/}}
 
-\paragraph{Phép chia hết}
-Phép chia hết 1 số tự nhiên cho 1 số tự nhiên khác 0: \fbox{$a:b = q$} ($b\ne 0$), trong đó $a$ là \textit{số bị chia}, $b$ là \textit{số chia}, $q$ là \textit{thương}.
+\paragraph{Phép chia hết.} Phép chia hết 1 số tự nhiên cho 1 số tự nhiên khác 0: \fbox{$a:b = q$} ($b\ne 0$), trong đó $a$ là \textit{số bị chia}, $b$ là \textit{số chia}, $q$ là \textit{thương}.
 
 \noindent\textbf{Tính chất.} Nếu $a:b = q$ thì $a = bq$. Nếu $a:b = q$ \textit{\&} $q\ne 0$ thì $a:q = b$ (trường hợp $q = 0$ xảy ra khi \textit{\&} chỉ khi $a = 0$, $b\ne 0$, i.e., $b\in\mathbb{N}^\star$, \textit{\&} khi đó biểu thức $0:b = 0$ đúng, nhưng $0:0 = b\ne 0$ lại vô nghĩa!).
 
-\paragraph{Phép chia có dư}
+\paragraph{Phép chia có dư.}
 \begin{dinhly}
 	Cho 2 số tự nhiên $a\in\mathbb{N}$, $b\in\mathbb{N}^\star$. Khi đó luôn tìm được đúng 2 số tự nhiên $q$ \textit{\&} $r$ sao cho $a = bq + r$, trong đó $0\le r < b$.
 \end{dinhly}
@@ -586,305 +513,25 @@ Phần này dùng để tóm tắt kiến thức các phần \textbf{1.3} \texti
 
 Trong phạm vi số tự nhiên, phép trừ chỉ thực hiện được khi số bị trừ lớn hơn hoặc bằng số trừ (viết ngắn gọn: số bị  trừ $\ge$ số trừ), phép chia chỉ thực hiện được khi số bị chia chia hết cho số chia. Với mọi cặp số tự nhiên $a$ \& $b$ bất kỳ ($b\ne 0$), bao giờ cũng tồn tại duy nhất 2 số tự nhiên $q$ \& $r$ sao cho $a = bq + r$ với $0\le r < b$. Nếu $r = 0$, ta được phép chia hết, khi đó $q$ là thương. Nếu $r\ne 0$, ta được phép chia có dư, khi đó $q$ là thương \& $r$ là số dư trong phép chia $a$ cho $b$.'' -- \cite[p. 9]{Binh_Toan_6_tap_1}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 5^\star$, p. 9]
-	Tìm kết quả của phép nhân $A = \underbrace{3\ldots 3}_{50\mbox{ \footnotesize chữ số}}\cdot\underbrace{9\ldots 9}_{50\mbox{ \footnotesize chữ số}}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 6^\star$, p. 10]
-	Tổng của 2 số tự nhiên gấp $3$ hiệu của chúng. Tìm thương của 2 số tự nhiên ấy.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 7, p. 10]
-	Khi chia số tự nhiên $a$ cho $54$, ta được số dư là $38$. Chia số $a$ cho $18$, ta được  thương là $14$ \& còn dư. Tìm số $a$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 8^\star$, p. 10]
-	Chứng minh rằng $A$ là 1 lũy thừa của $2$, với $A = 4 + 2^2 + 2^3 + 2^4 + \cdots + 2^{20}$.
-\end{baitoan}
-Dùng ký hiệu tổng $\sum$, có thể viết gọn $A$ thành: $A = 4 + \sum_{i=2}^{20} 2^i$.
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{13.}, p. 11]
-	Có thể viết được hay không 9 số vào 1 bảng vuông $3\times 3$, sao cho: Tổng các số trong 3 dòng theo thứ tự bằng $352, 463, 541$; tổng các số trong 3 cột theo thứ tự bằng $335, 687, 234$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{14.}, p. 11]
-	Cho 9 số xếp vào 9 ô thành 1 hàng ngang, trong đó số đầu tiên là $4$, số cuối cùng là $8$, \& tổng 3 số ở 3 ô liền nhau bất kỳ bằng $17$. Hãy tìm 9 số đó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{15.}, p. 11]
-	Tìm số có $3$ chữ số, biết rằng chữ số hàng trăm gấp $4$ lần chữ số hàng đơn vị \& nếu viết số ấy theo thứ tự ngược lại thì nó giảm đi $594$ đơn vị.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{16.}, p. 11]
-	Thay các dấu * bởi các chữ số thích hợp: $**** - *** = **$ biết rằng số bị trừ, số trừ \& hiệu đều không đổi nếu đọc mỗi số từ phải sang trái.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{18.}, p. 11]
-	Hiệu của 2 số là $4$. Nếu tăng 1 số gấp $3$ lần, giữ nguyên số kia thì hiệu của chúng bằng $60$. Tìm 2 số đó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{19.}, p. 11]
-	Tìm 2 số, biết rằng tổng của chúng gấp $5$ lần hiệu của chúng, tích của chúng gấp $24$ lần hiệu của chúng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{20.}, p. 11]
-	Tìm 2 số, biết rằng tổng của chúng gấp $7$ lần hiệu của chúng, còn tích của chúng gấp $192$ lần hiệu của chúng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{21.}, p. 11]
-	Tích của 2 số là $6210$. Nếu giảm 1 thừa số đi $7$ đơn vị thì tích mới là $5265$. Tìm các thừa số của tích.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{22.}, p. 11]
-	Bạn Bảo làm 1 phép nhân, trong đó số nhân là $102$. Nhưng khi viết số nhân, bạn đã quên không viết chữ số $0$ nên tích bị giảm đi $21870$ đơn vị so với tích đúng. Tìm số bị nhân của phép nhân đó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{23.}, p. 11]
-	1 học sinh nhân $78$ với số nhân là số có 2 chữ số, trong đó chữ số hàng chục gấp $3$ lần chữ số hàng đơn vị. Do nhầm lẫn bạn đó viết đổi thứ tự 2 chữ số của số nhân, nên tích giảm đi $2808$ đơn vị so với tích đúng. Tìm số nhân đúng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{24.}, p. 12]
-	1 học sinh nhân 1 số với $463$. Vì bạn đó viết các chữ số tận cùng của các tích riêng ở cùng 1 cột nên tích bằng $30524$. Tìm số bị nhân.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{25.}, p. 12]
-	Hãy chứng tỏ rằng hiệu sau có thể viết được thành 1 tích của 2 thừa số bằng nhau: $11111111 - 2222$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{26.}, p. 12]
-	Chỉ ra 2 số khác nhau sao cho nếu nhân mỗi số với $7$ thì ta được kết quả là các số gồm toàn các chữ số $9$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 27^\star.$, p. 12]
-	Tìm kết quả của phép nhân sau: $\underbrace{3\ldots 3}_{50\mbox{ \footnotesize chữ số}}\cdot\underbrace{3\ldots 3}_{50\mbox{ \footnotesize chữ số}}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{28.}, p. 12]
-	Chứng minh rằng các số sau có thể viết được thành 1 tích của 2 số tự nhiên liên tiếp: $111222$, $444222$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{29.}, p. 12]
-	Tìm 2 số tự nhiên có thương bằng $35$, biết rằng nếu số bị chia tăng thêm $1056$ đơn vị thì thương bằng $57$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{30.}, p. 12]
-	Tìm số bị chia \& số chia, biết rằng: Thương bằng $6$, số dư bằng $49$, tổng của số bị chia, số chia \& số dư bằng $595$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{31.}, p. 12]
-	1 phép chia có thương bằng $4$, số dư bằng $25$. Tổng của số bị chia, số chia \& số dư bằng $210$. Tìm số bị chia \& số chia.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{32.}, p. 12]
-	Trong 1 năm, có ít nhất bao nhiêu ngày chủ nhật? Có nhiều nhất bao nhiêu ngày chủ nhật?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{33.}, p. 12]
-	Ngày 19\emph{\texttt{/}}8\emph{\texttt{/}}2002 vào ngày thứ 2. Tính xem ngày 19\emph{\texttt{/}}8\emph{\texttt{/}}1945 vào ngày nào trong tuần?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{34.}, p. 12]
-	Tìm thương của 1 phép nhân, biết rằng nếu thêm $15$ vào số bị chia \& thêm $5$ vào số chia thì thương \& số dư không đổi.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{35.}, p. 12]
-	Tìm thương của 1 phép chia, biết rằng nếu tăng số bị chia $90$ đơn vị, tăng số chia $6$ đơn vị thì thương \& số dư không đổi.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{36.}, p. 12]
-	Tìm thương của 1 phép chia, biết rằng nếu tăng số bị chia $73$ đơn vị, tăng số chia $4$ đơn vị thì thương không đổi, còn số dư tăng $5$ đơn vị.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{37.}, p. 12]
-	Xác định phép chia, biết rằng số bị chia, số chia, thương \& số dư là 4 số trong các số sau:
-	\begin{enumerate*}
-		\item[(a)] $3,4,16,64,256,772$.
-		\item[(b)] $2,3,9,27,81,243,567$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{38.}, pp. 12--13]
-	Khi chia 1 số tự nhiên gồm 3 chữ số như nhau cho 1 số tự nhiên gồm 3 chữ số như nhau, ta được thương là $2$ \& còn dư. Nếu xóa 1 chữ số ở số bị chia \& xóa 1 chữ số ở số chia thì thương của phép chia vẫn bằng $3$ nhưng số dư giảm hơn trước là $100$. Tìm số bị chia \& số chia lúc đầu.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{39.}, p. 13]
-	Trong 1 phép chia có dư, số bị chia gồm 4 chữ số như nhau, số chia gồm 3 chữ số như nhau, thương bằng $13$ \& còn dư. Nếu xóa 1 chữ số ở số bị chia, xóa 1 chữ số ở số chia thì thương không đổi, còn số dư giảm hơn trước là $100$ đơn vị. Tìm số bị chia \& số chia lúc đầu.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{40.}, p. 13]
-	Tính:\\
-	\begin{enumerate*}
-		\item[(a)] $4^{10}\cdot 8^{15}$;
-		\item[(b)] $4^{15}\cdot 5^{30}$;
-		\item[(c)] $27^{16}:9^{10}$;
-		\item[(d)] $A = \dfrac{72^3\times 54^2}{108^4}$;
-		\item[(e)] $B = \dfrac{3^{10}\cdot 11 + 3^{10}\cdot 5}{3^9\cdot 2^4}$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{41.}, p. 13]
-	Tính giá trị của các biểu thức:
-	\begin{itemize}
-		\item[(a)] $\dfrac{2^{10}\cdot 13 + 2^{10}\cdot 65}{2^8\cdot 104}$;
-		\item[(b)] $(1 + 2 + 3 + \cdots + 100)\cdot(1^2 + 2^2 + 3^2 + \cdots + 10^2)\cdot(65\cdot 111 - 13\cdot 15\cdot 37)$.
-	\end{itemize}
-\end{baitoan}
-Biểu thức câu (b) có thể viết gọn hơn như sau: $\left(\sum_{i=1}^{100} i\right)\left(\sum_{i=1}^{10} i^2\right)\cdot(65\cdot 111 - 13\cdot 15\cdot 37)$, hoặc gọn hơn nữa (vì 2 tổng $\sum$ có cùng chỉ số chạy $i$ nên được hiểu ngầm là rời nhau chứ không phải lồng vào nhau): $\left(\sum_{i=1}^{100} i\sum_{i=1}^{10} i^2\right)\cdot(65\cdot 111 - 13\cdot 15\cdot 37)$.
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{42.}, p. 13]
-	Tìm $x\in\mathbb{N}$, biết rằng:
-	\begin{enumerate*}
-		\item[(a)] $2^x\cdot 4 = 128$;
-		\item[(b)] $x^{15} = x$;
-		\item[(c)] $(2x + 1)^3 = 125$;
-		\item[(d)] $(x - 5)^4 = (x - 5)^6$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{43.}, p. 13]
-	Cho $A = 3 + 3^2 + 3^3 + \cdots + 3^{100} = \sum_{i=1}^{100} 3^i$. Tìm $n\in\mathbb{N}$, biết rằng $2A + 3 = 3^n$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{44.}, p. 13]
-	Tìm số tự nhiên có 3 chữ số, biết rằng bình phương của chữ số hàng chục bằng tích của 2 chữ số kia \& số tự nhiên đó trừ đi số gồm 3 chữ số ấy viết theo thứ tự ngược lại bằng $495$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{45.}, p. 13]
-	Tính nhanh:
-	\begin{enumerate*}
-		\item[(a)] $19\cdot 64 + 76\cdot 34$;
-		\item[(b)] $35\cdot 12 + 65\cdot 13$;
-		\item[(c)] $136\cdot 68 + 16\cdot 272$;
-		\item[(d)] $(2 + 4 + 6 + \cdots + 100)\cdot(36\cdot 333 - 108\cdot 111) = \left(\sum_{i=1}^{50} 2i\right)\cdot(36\cdot 333 - 108\cdot 111)$;		
-		\item[(e)] $19991999\cdot 1998 - 19981998\cdot 1999$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{46.}, pp. 13--14]
-	Không tính cụ thể các giá trị của $A$ \& $B$, hãy cho biết số nào lớn hơn \& lớn hơn bao nhiêu?
-	\begin{enumerate*}
-		\item[(a)] $A = 1998\cdot 1998$, $B = 1996\cdot 2000$.
-		\item[(b)] $A = 2000\cdot 2000$, $B = 1990\cdot 2010$.
-		\item[(c)] $A = 25\cdot 33 - 10$, $B = 31\cdot 26 + 10$.
-		\item[(d)] $A = 32\cdot 53 - 31$, $B = 53\cdot 31 + 32$.
-	\end{enumerate*}
-\end{baitoan}
-Bài toán trên có thể được tổng quát như sau:
-
-\begin{baitoan}
-	Cho $n,k\in\mathbb{N}^\star$. Không tính cụ thể các giá trị của $A_i$ \& $B_i$, $i = 1,2$, hãy cho biết số nào lớn hơn \& lớn hơn bao nhiêu?
-	\begin{enumerate*}
-		\item[(a)] $A_1 = n\cdot n = n^2$, $B_1 = (n - k)(n + k)$.
-		\item[(b)] $A_2 = n^3$, $B_2 = (n - k)n(n + k)$.
-	\end{enumerate*}	
-\end{baitoan}
-
-\begin{proof}[Giải]
-	\begin{itemize}
-		\item[(a)] Khai triển $B_1$ hoặc dùng \textit{hằng đẳng thức đáng nhớ} $(a + b)(a - b) = a^2 - b^2$, $\forall a,b\in\mathbb{R}$, ta có $B_1 = (n - k)(n + k) = n^2 + nk - kn - k^2 = n^2 - k^2 = A_1 - k^2 < A_1$ do $k\ge 1$. Vậy $A_1 > B_1$ \& lớn hơn 1 lượng bằng $k^2$.
-		\item[(b)] Nhận thấy $A_2 = nA_1$, $B_2 = nB_1$, nên $A_2 - B_2 = n(A_1 - B_1) = nk^2 > 0$.
-	\end{itemize}
-	Hoàn tất.
-\end{proof}
-Bài toán trên có thể được tổng quát hơn nữa như sau, ý tưởng giải vẫn là sử dụng \textit{nhiều lần} hằng đẳng thức $(a + b)(a - b) = a^2 - b^2$, $\forall a,b\in\mathbb{R}$, 1 cách thích hợp:
-
-\begin{baitoan}
-	Cho $m,n,k\in\mathbb{N}^\star$. Không tính cụ thể các giá trị của $A_i$ \& $B_i$, $i = 1,2$, hãy cho biết số nào lớn hơn \& lớn hơn bao nhiêu?
-	\begin{itemize}
-		\item[(a)] $A_1 = n^{2m}$, $B_1 = (n - mk)(n - (m - 1)k)\cdots(n - k)(n + k)\cdots(n + mk)$.
-		\item[(b)] $A_2 = n^{2m + 1}$, $B_2 = (n - mk)(n - (m - 1)k)\cdots(n - k)n(n + k)\cdots(n + mk)$.
-	\end{itemize}
-\end{baitoan}
-Khi $m = 1$, bài toán tổng quát này trở thành bài toán trước đó.
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{47.}, p. 14]
-	Tìm thương của phép chia sau mà không tính kết quả cụ thể của số bị chia \& số chia: $\dfrac{37\cdot 13 - 13}{24 + 37\cdot 12}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{48.}, p. 14]
-	Tính:
-	\begin{itemize}
-		\item[(a)] $A = \dfrac{101 + 100 + 99 + 98 + \cdots + 3 + 2 + 1}{101 - 100 + 99 - 98 + \cdots + 3 - 2 + 1} = \dfrac{\sum_{i=1}^{101} i}{\sum_{i=1}^{101} (-1)^{i+1}i}$;
-		\item[(b)] $B = \dfrac{3737\cdot 43 - 4343\cdot 37}{2 + 4 + 6 + \cdots + 100} = \dfrac{3737\cdot 43 - 4343\cdot 37}{\sum_{i=1}^{50} 2i}$.
-	\end{itemize}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{49.}, p. 14]
-	Vận dụng tính chất các phép tính để tìm các kết quả bằng cách nhanh chóng:
-	\begin{enumerate*}
-		\item[(a)] $1990\cdot 1992\cdot 1998$;
-		\item[(b)] $\dfrac{1374\cdot 57 + 687\cdot 86}{26\cdot 13 + 74\cdot 14}$;
-		\item[(c)] $\dfrac{124\cdot 237 + 152}{870 + 235\cdot 122}$;
-		\item[(d)] $\dfrac{423134\cdot 846267 - 423133}{846267\cdot 423133 + 423134}$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{50.}, p. 14]
-	Tìm $a\in\mathbb{N}$, biết rằng:
-	\begin{enumerate*}
-		\item[(a)] $697:\dfrac{15a + 364}{a} = 17$;
-		\item[(b)] $92\cdot 4 - 27 = \dfrac{a + 350}{a} + 315$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{51.}, p. 14]
-	Tìm $x\in\mathbb{N}$, biết rằng:
-	\begin{itemize}
-		\item[(a)] $\dfrac{720}{41 - (2x - 5)} = 2^3\cdot 5$;
-		\item[(b)] $(x + 1) + (x + 2) + (x + 3) + \cdots + (x + 100) = \sum_{i=1}^{100} (x + i) = 5750$.
-	\end{itemize}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{52.}, p. 14]
-	Hãy viết 5 dãy tính có kết quả bằng 100, với 6 chữ số 5 cùng với dấu các phép  tính (\& dấu ngoặc nếu cần).
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{53.}, p. 14]
-	\begin{enumerate*}
-		\item[(a)] Hãy viết dãy tính có kết quả bằng 100, với 5 chữ số như nhau cùng với dấu các phép tính (\& dấu ngoặc nếu cần).
-		\item[(b)] Cũng hỏi như trên với 6 chữ số như nhau.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{54.}, p. 14]
-	\begin{enumerate*}
-		\item[(a)] Hãy viết dãy tính có kết quả bằng $1,000,000$, với 5 chữ số như nhau cùng với dấu các phép tính (\& dấu ngoặc nếu cần).
-		\item[(b)] Cũng hỏi như trên với 6 chữ số như nhau.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{55.}, p. 14]
-	 Cho số $123456789$. Hãy đặt 1 số dấu ``$+$'' \& ``-'' vào giữa các chữ số để kết quả của phép tính bằng $100$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{56.}, p. 14]
-	Cho số $987654321$. Hãy đặt 1 số dấu ``$+$'' \& ``$-$'' vào giữa các chữ số để kết quả của phép tính bằng:
-	\begin{enumerate*}
-		\item[(a)] $100$;
-		\item[(b)] $99$.
-	\end{enumerate*}
-\end{baitoan}
-
 %------------------------------------------------------------------------------%
 
 \subsection{Quan Hệ Chia Hết. Tính Chất Chia Hết}
 
 \subsubsection{Quan hệ chia hết}
 
-\paragraph{Khái niệm về chia hết}
+\paragraph{Khái niệm về chia hết.}
 \begin{dinhnghia}[Chia hết]
 	Cho $a,b\in\mathbb{N}$, $b\ne 0$. Nếu có số tự nhiên $q$ sao cho $a = bq$ thì ta nói \emph{$a$ chia hết cho $b$}. Khi $a$ chia hết cho $b$, ta nói $a$ là \emph{bội} của $b$ \textit{\&} $b$ là \emph{ước} của $a$.
 \end{dinhnghia}
 Nếu số dư trong phép chia $a$ cho $b$ bằng 0 thì $a$ chia hết cho $b$, ký hiệu $a\ \vdots\ b$. Nếu số dư trong phép chia $a$ cho $b$ khác 0 thì $a$ không chia hết cho $b$, ký hiệu $a\not\vdots\ b$. Với $a\in\mathbb{N}^\star$, $a$ là ước của $a$, $a$ là bội của $a$, 0 là bội của $a$, $1$ là ước của $a$.
 
-\paragraph{Cách tìm bội \textit{\&} ước của 1 số}
-Để tìm các bội của $n\in\mathbb{N}^\star$, ta có thể lần lượt nhân $n$ với $0,1,2,3,\ldots$. Khi đó, các kết quả nhận được đều là bội của $n$. Ngắn gọn, tập hợp tất cả các bội của $n\in\mathbb{N}^\star$ là $\{kn;k\in\mathbb{N}\}$.
+\paragraph{Cách tìm bội \textit{\&} ước của 1 số.} Để tìm các bội của $n\in\mathbb{N}^\star$, ta có thể lần lượt nhân $n$ với $0,1,2,3,\ldots$. Khi đó, các kết quả nhận được đều là bội của $n$. Ngắn gọn, tập hợp tất cả các bội của $n\in\mathbb{N}^\star$ là $\{kn;k\in\mathbb{N}\}$.
 
 Để tìm các ước của $n\in\mathbb{N}$, $n > 1$ (tức $n\ge 2$) ta có thể lần lượt chia $n$ cho các số tự nhiên từ 1 đến $n$. Khi đó, các phép chia hết cho ta số chia là ước của $n$. Ngắn gọn, tập hợp tất cả các ước của $n\in\mathbb{N}$, $n\ge 2$ là $\{a\in\mathbb{N}^\star;a\le n,\ n\ \vdots\ a\}$.
 
 \subsubsection{Tính chất chia hết}
 
-\paragraph{Tính chất chia hết của 1 tổng}
+\paragraph{Tính chất chia hết của 1 tổng.}
 \begin{dinhly}
 	Nếu tất cả các số hạng của tổng đều chia hết cho cùng 1 số thì tổng chia hết cho số đó.
 \end{dinhly}
@@ -894,7 +541,7 @@ I.e., $(a\ \vdots\ m)\land(b\ \vdots\ m)\Rightarrow(a + b)\ \vdots\ m$. Khi đó
 	Cho $a,b,m\in\mathbb{N}$, $m\ne 0$. Nếu $a\ \vdots\ m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\ \vdots\ m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Khi đó $a + b = ma_1 + mb_1 = m(a_1 + b_1)$, \textit{\&} hiển nhiên $a_1 + b_1\in\mathbb{N}$, nên $(a + b)\ \vdots\ m$.
 \end{proof}
 
-\paragraph{Tính chất chia hết của 1 hiệu}
+\paragraph{Tính chất chia hết của 1 hiệu.}
 \begin{dinhly}
 	Nếu số bị trừ \textit{\&} số trừ đều chia hết cho cùng 1 số thì hiệu của chúng chia hết cho số đó.
 \end{dinhly}
@@ -904,7 +551,7 @@ I.e., với $a,b,m\in\mathbb{N}$, $a\ge b$, nếu $a\ \vdots\ m$ \textit{\&} $b\
 	Cho $a,b,m\in\mathbb{N}$, $a\ge b$, $m\ne 0$. Nếu $a\ \vdots\ m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\ \vdots\ m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Giả thiết $a\ge b$ cho ta $a_1\ge b_1$. Khi đó $a - b = ma_1 - mb_1 = m(a_1 - b_1)$, \textit{\&} hiển nhiên $a_1 - b_1\in\mathbb{N}$, nên $(a - b)\ \vdots\ m$.
 \end{proof}
 
-\paragraph{Tính chất chia hết của 1 tích}
+\paragraph{Tính chất chia hết của 1 tích.}
 \begin{dinhly}
 	Nếu 1 thừa số của tích chia hết cho 1 số thì tích chia hết cho số đó.
 \end{dinhly}
@@ -951,130 +598,6 @@ Nếu $a\ \vdots\ m$  thì $(ab)\ \vdots\ m$ với mọi $b\in\mathbb{N}$.
 	\end{hequa}
 	I.e., $(a\ \vdots\ b)\Rightarrow(a^n\ \vdots\ b^n)$, $\forall a,n\in\mathbb{N}$, $\forall b\in\mathbb{N}^\star$.
 \end{enumerate}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 9, p. 16]
-	Chứng minh rằng:
-	\begin{enumerate*}
-		\item[(a)] $\overline{ab} + \overline{ba}\ \vdots\ 11$;
-		\item[(b)] $\overline{ab} - \overline{ba}\ \vdots\ 9$ với $a > b$.
-	\end{enumerate*}
-\end{baitoan}
-Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của số nguyên ở Chương 2\texttt{/}Chap. 2.
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 10, p. 16]
-	Chứng minh rằng nếu $\overline{ab} + \overline{cd}\ \vdots\ 11$ thì $\overline{abcd}\ \vdots\ 11$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 11, p. 16]
-	Cho số $\overline{abc}\ \vdots\ 27$. Chứng minh rằng $\overline{bca}\ \vdots\ 27$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{57.}, p. 16]
-	Có thể chọn được 5 số trong dãy số sau để tổng của chúng bằng $70$ không?
-	\begin{enumerate*}
-		\item[(a)] $1,2,\ldots,30$;
-		\item[(b)] $1,3,5,\ldots,27,29$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{58.}, p. 16]
-	Cho 9 số: $1,3,5,7,9,11,13,15,17$. Có thể phân chia được hay không 9 số trên thành 2 nhóm sao cho:
-	\begin{enumerate*}
-		\item[(a)] Tổng các số thuộc nhóm I gấp đôi tổng các số thuộc nhóm II?
-		\item[(b)] Tổng các số thuộc nhóm I bằng tổng các số thuộc nhóm II?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{59.}, pp. 16--17]
-	\begin{enumerate*}
-		\item[(a)] Có 3 số tự nhiên nào mà tổng của chúng tận cùng bằng 4, tích của chúng tận cùng bằng 1 hay không?
-		\item[(b)] Có tồn tại hay không 4 số tự nhiên mà tổng của chúng \& tích của chúng đều là số lẻ?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{60.}, p. 17]
-	Chứng minh rằng không tồn tại $a,b,c\in\mathbb{N}$ mà $abc + a = 333$, $abc + b = 335$, $abc + c = 341$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{61.}, p. 17]
-	\begin{enumerate*}
-		\item[(a)] Chứng minh rằng nếu viết thêm vào đằng sau 1 số tự nhiên có 2 chữ số số gồm chính 2 chữ số ấy viết theo thứ tự ngược lại thì được 1 số chia hết cho $11$.
-		\item[(b)] Cũng chứng minh như trên đối với số tự nhiên có 3 chữ số.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{62.}, p. 17]
-	Chứng minh rằng nếu $\overline{ab} = 2\cdot\overline{cd}$ thì $\overline{abcd}\ \vdots\ 67$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{63.}, p. 17]
-	Chứng minh rằng:
-	\begin{enumerate*}
-		\item[(a)] $\overline{abcabc}$ chia hết cho $7,11$, \& $13$;
-		\item[(b)] $\overline{abcdef}$ chia hết cho $23$ \& $29$, biết rằng $\overline{abc} = 2\cdot\overline{def}$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{64.}, p. 17]
-	Chứng minh rằng nếu $\overline{ab} + \overline{cd} + \overline{ef}\ \vdots\ 11$ thì $\overline{abcdef}\ \vdots\ 11$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{65.}, p. 17]
-	\begin{enumerate*}
-		\item[(a)] Cho $\overline{abc} + \overline{def}\ \vdots\ 37$. Chứng minh rằng $\overline{abcdef}\ \vdots\ 37$.
-		\item[(b)] Cho $\overline{abc} - \overline{def}\ \vdots\ 7$. Chứng minh rằng $\overline{abcdef}\ \vdots\ 7$.
-		\item[(c)] Cho 8 số tự nhiên có 3 chữ số. Chứng minh rằng trong 8 số đó, tồn tại 2 số mà khi viết liên tiếp nhau thì tạo thành 1 số có 6 chữ số chia hết cho 7.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{66.}, p. 17]
-	Tìm chữ số $a$ biết rằng $\overline{20a20a20a}\ \vdots\ 7$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{67.}, p. 17]
-	Cho 3 chữ số khác nhau \& khác 0. Lập tất cả các số tự nhiên có 3 chữ số gồm cả 3 chữ số ấy. Chứng minh rằng tổng của chúng chia hết cho $6$ \& $37$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{68.}, p. 17]
-	Có 2 số tự nhiên $x,y$ nào mà $(x + y)(x - y) = 1002$ hay không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{69.}, p. 17]
-	Tìm số tự nhiên có 2 chữ số, sao cho nếu viết nó tiếp sau số $1999$ thì ta được 1 số chia hết cho $37$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{70.}, p. 17]
-	Cho $n\in\mathbb{N}$. Chứng minh rằng:
-	\begin{enumerate*}
-		\item[(a)] $(n + 10)(n + 15)\ \vdots\ 2$;
-		\item[(b)] $n(n + 1)(n + 2)$ chia hết cho $2$ \& cho $3$;
-		\item[(c)] $n(n + 1)(2n + 1)$ chia hết cho $2$ \& cho $3$. 
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{71.}, p. 17]
-	Tìm $a,b\in\mathbb{N}$, sao cho $a\ \vdots\ b$ \& $b\ \vdots\ a$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{72.}, p. 17]
-	1 học sinh viết các số tự nhiên từ $1$ đến $\overline{abc}$. Bạn đó phải viết tất cả $m$ chữ số. Biết rằng $m\ \vdots\ \overline{abc}$, tìm $\overline{abc}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{73.}, p. 18]
-	Cho 9 số tự nhiên viết theo thứ tự giảm dần từ 9 đến 1: $9\ 8\ 7\ 6\ 5\ 4\ 3\ 2\ 1$. Có thể đặt được hay không 1 số dấu ``$+$'' hoặc ``$-$'' vào giữa các số đó để kết quả của phép tính bằng:
-	\begin{enumerate*}
-		\item[(a)] $5$;
-		\item[(b)] $6$?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{74.}, p. 18]
-	Cho tổng $1 + 2 + 3 + \cdots + 9 = \sum_{i=1}^9 i$. Xóa 2 số bất kỳ rồi thay bằng hiệu của chúng \& cứ làm như vậy nhiều lần. Có cách nào làm cho kết quả cuối cùng bằng 0 được hay không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 75^\star$, p. 18]
-	Chứng minh rằng tổng các số ghi trên vé xổ số có 6 chữ số mà tổng 3 chữ số đầu bằng tổng 3 chữ số cuối thì chia hết cho $13$ (các chữ số đầu có thể bằng 0).
-\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -1154,6 +677,8 @@ Tham khảo \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_1}. Xét số tự nhiên $\ov
 \end{itemize}
 ``Áp dụng dấu hiệu chia hết cho 9, ta có thể kiểm tra (sơ bộ) kết quả phép nhân 2 số có nhiều chữ số là sai.'' -- \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_1}
 
+%------------------------------------------------------------------------------%
+
 \section*{Tóm Tắt Kiến Thức: Các Dấu Hiệu Chia Hết}
 ``Gọi $A = \overline{a_na_{n-1}\ldots a_2a_1a_0}$. Ta có:
 \begin{align*}
@@ -1164,179 +689,6 @@ Tham khảo \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_1}. Xét số tự nhiên $\ov
 	A\ \vdots\ 9&\Leftrightarrow a_n + a_{n-1} + \cdots + a_1 + a_0 = \sum_{i=0}^n a_i\ \vdots\ 9.
 \end{align*}
 '' -- \cite[\S4, p. 18]{Binh_Toan_6_tap_1}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 12, p. 18]
-	Tìm số tự nhiên có 4 chữ số, chia hết cho 5 \& cho 27 biết rằng 2 chữ số giữa của số đó là $97$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 13, p. 18]
-	2 số tự nhiên $a$ \& $2a$ đều có tổng các chữ số bằng $k$. Chứng minh rằng $a\ \vdots\ 9$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 14, p. 19]
-	Chứng minh rằng số gồm $27$ chữ số 1 thì chia hết cho $27$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 15, p. 19]
-	Cho số tự nhiên $\overline{ab}$ bằng 3 lần tích các chữ số của nó.
-	\begin{enumerate*}
-		\item[(a)] Chứng minh rằng $b\ \vdots\ a$.
-		\item[(b)] Giả sử $b = ka$ ($k\in\mathbb{N}$), chứng minh rằng $k$ là ước của $10$.
-		\item[(c)] Tìm các số $\overline{ab}$ nói trên.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 16^\star$, p. 20]
-	Tìm số tự nhiên có chữ số, biết rằng số đó chia hết cho tích các chữ số của nó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{76.}, p. 20]
-	Cho $A = 13! - 11!$.
-	\begin{enumerate*}
-		\item[(a)] $A$ có chia hết cho $2$ hay không?
-		\item[(b)] $A$ có chia hết cho $5$ hay không?
-		\item[(c)] $A$ có chia hết cho $155$ hay không?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{77.}, p. 21]
-	Tổng các số tự nhiên từ 1 đến 154, i.e., $\sum_{i=1}^{154} i$, có chia hết cho 2 hay không? Có chia hết cho 5 hay không?
-\end{baitoan}
-Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
-\begin{align*}
-	\boxed{1 + 2 + \cdots + n = \sum_{i=1}^n i = \frac{n(n + 1)}{2},\ \forall n\in\mathbb{N}^\star.}
-\end{align*}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{78.}, p. 21]
-	Cho $A = 11^9 + 11^8 + \cdots + 11 + 1 = \sum_{i=0}^9 11^i$. Chứng minh rằng $A\ \vdots\ 5$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{79.}, p. 21]
-	Chứng minh rằng $\forall n\in\mathbb{N}$, $n^2 + n + 6\not\vdots\ 5$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{80.}, p. 21]
-	Trong các số tự nhiên $< 1000$, có bao nhiêu số chia hết cho $2$ nhưng không chia hết cho $5$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{81.}, p. 21]
-	Tìm các số tự nhiên chia cho $4$ thì dư $1$, còn chia cho $25$ thì dư $3$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{82.}, p. 21]
-	Tìm các số tự nhiên chia cho $3$ thì dư $3$, chia cho $125$ thì dư $12$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{83.}, p. 21]
-	Có phép trừ 2 số tự nhiên nào mà số trừ gấp 3 lần hiệu \& số bị trừ bằng $1030$ hay không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{84.}, p. 21]
-	Điền các chữ số thích hợp vào dấu *, sao cho:
-	\begin{enumerate*}
-		\item[(a)] $\overline{521*}\ \vdots 8$;
-		\item[(b)] $\overline{2*8*7}\ \vdots\ 9$, biết rằng chữ số hàng chục lớn hơn chữ số hàng nghìn là $2$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{85.}, p. 21]
-	Tìm các chữ số $a,b$, sao cho:
-	\begin{enumerate*}
-		\item[(a)] $a - b =4$ \& $\overline{7a5b1}\ \vdots\ 3$.
-		\item[(b)] $a - b = 6$ \& $\overline{4a7} + \overline{1b5}\ \vdots\ 9$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{86.}, p. 21]
-	Tìm số tự nhiên có 3 chữ số, chia hết cho $5$ \& $9$, biết rằng chữ số hàng chục bằng trung bình cộng của 2 chữ số kia.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{87.}, p. 21]
-	Tìm 2 số tự nhiên chia hết cho $9$, biết rằng:
-	\begin{enumerate*}
-		\item[(a)] Tổng của chúng bằng $\overline{*657}$ \& hiệu của chúng bằng $\overline{5*91}$;
-		\item[(b)] Tổng của chúng bằng $\overline{513*}$ \& số lớn gấp đôi số nhỏ.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{88.}, p. 21]
-	Bạn An làm phép tính trừ trong đó số bị trừ là số có 3 chữ số, số trừ là số gồm chính 3 chữ số ấy viết theo thứ tự ngược lại. An tính được hiệu bằng $188$. Hãy chứng tỏ rằng An đã tính sai.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{89.}, p. 21]
-	Tìm số tự nhiên có 3 chữ số, chia hết cho $45$, biết rằng hiệu giữa số đó \& số gồm chính 3 chữ số ấy viết theo thứ tự ngược lại bằng $297$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{90.}, p. 21]
-	Chứng minh rằng:
-	\begin{enumerate*}
-		\item[(a)] $10^{28}\ \vdots\ 72$;
-		\item[(b)] $8^8 + 2^{20}\ \vdots\ 17$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{91.}, p. 21]
-	\begin{enumerate*}
-		\item[(a)] Cho $A = 2 + 2^2 + 2^3 + \cdots + 2^{60} = \sum_{i=1}^{60}$. Chứng minh rằng $A$ chia hết cho $3,7$, \& $15$.
-		\item[(b)] Cho $B = 3 + 3^3 + 3^5 + \cdots + 3^{1991}$. Chứng minh rằng $B$ chia hết cho $13$ \& $41$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{92.}, p. 22]
-	Chứng minh rằng:
-	\begin{enumerate*}
-		\item[(a)] $2n + \underbrace{1\ldots 1}_{n\mbox{ \footnotesize chữ số}}\ \vdots\ 3$;
-		\item[(b)] $10^n + 18n - 1\ \vdots\ 27$;
-		\item[(c)] $10^n + 72n - 1\ \vdots\ 81$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{93.}, p. 22]
-	Chứng minh rằng:
-	\begin{enumerate*}
-		\item[(a)] Số gồm $81$ chữ số 1 thì chia hết cho $81$;
-		\item[(b)] Số gồm $27$ nhóm chữ số $10$ thì chia hết cho $27$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{94.}, p. 22]
-	2 số tự nhiên $a$ \& $4a$ có tổng các chữ số bằng nhau. Chứng minh rằng $a\ \vdots\ 3$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 95^\star.$, p. 22]
-	\begin{enumerate*}
-		\item[(a)] Tổng các chữ số của $3^{100}$ viết trong hệ thập phân có thể bằng $459$ hay không?
-		\item[(b)] Tổng các chữ số của $3^{1000}$ là $A$, tổng các chữ số của $A$ là $B$, tổng các chữ số của $B$ là $C$. Tính $C$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{96.}, p. 22]
-	Cho 2 số tự nhiên $a$ \& $b$ tùy ý có số dư trong phép chia cho $9$ theo thứ tự là $r_1$ \& $r_2$. Chứng minh rằng $r_1r_2$ \& $ab$ có cùng số dư trong phép chia cho $9$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{97.}, p. 22]
-	1 số tự nhiên chia hết cho $4$ có 3 chữ số đều chẵn, khác nhau \& khác 0. Chứng minh rằng tồn tại cách đổi vị trí các chữ số để được 1 số mới chia hết cho $4$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 98^\star.$, p. 22]
-	Tìm số $\overline{abcd}$, biết rằng số đó chia hết cho tích các số $\overline{ab}$ \& $\overline{cd}$, i.e., $\overline{abcd}\ \vdots\ \overline{ab}\cdot\overline{cd}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 99^\star.$, p. 22]
-	Tìm số tự nhiên có 5 chữ số, biết rằng số đó bằng $45$ lần tích các chữ số của nó.
-\end{baitoan}	
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{100.}, p. 22]
-	1 cửa hàng có 6 hòm hàng với khối lượng $316$kg, $327$kg, $336$kg, $338$kg, $349$kg, $351$kg. Cửa hàng đó đã bán $5$ hòm, trong đó khối lượng hàng bán buổi sáng gấp $4$ lần khối lượng hàng bán buổi chiều. Hỏi hòm còn lại là hòm nào?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{101.}, p. 22]
-	Từ 4 chữ số $1,2,3,4$, lập tất cả các số tự nhiên có 4 chữ số gồm cả $4$ chữ số ấy. Trong các số đó, có tồn tại 2 số nào mà 1 số chia hết cho số còn lại hay không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 102^\star.$, p. 22]
-	Chứng minh rằng trong tất cả các số tự nhiên khác nhau có $7$ chữ số lập bởi cả $7$ chữ số $1,2,3,4,5,6,7$, không có 2 số nào mà 1 số chia hết cho số còn lại.
-\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -1382,199 +734,6 @@ Số 0 (có vô hạn ước) \textit{\&} số 1 (có duy nhất 1 ước là ch
 ``Ta nên chia mỗi số cho ước nguyên tố nhỏ nhất của nó. Cứ tiếp tục chia như thế cho đến khi được thương là 1.'' -- \cite[p. 45]{SGK_Toan_6_Canh_Dieu_tap_1}
 
 ``Thông thường, khi phân tích 1 số tự nhiên ra thừa số nguyên tố, các ước nguyên tố được viết theo thứ tự tăng dần. Ngoài cách làm như trên, ta cũng có thể phân tích 1 số ra thừa số nguyên tố bằng cách viết số đó thành tích của 2 thừa số 1 cách linh hoạt.'' ``Dù phân tích 1 số ra thừa số nguyên tố bằng cách nào thì cuối cùng ta cũng được cùng 1 kết quả.''\footnote{Điều này có nghĩa là dạng phân tích ra thừa số nguyên tố của 1 số tự nhiên là duy nhất, \textit{\&} điều này ứng với Định lý Phân tích số tự nhiên ra thừa số nguyên tố của Lý thuyết Số học. \texttt{[insert later]} Xem, e.g., sách Số Học của GS. Hà Huy Khoái.} -- \cite[p. 46]{SGK_Toan_6_Canh_Dieu_tap_1}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 18, p. 23]
-	Tìm số nguyên tố $p$, sao cho $p + 2$ \& $p + 4$ cũng là các số nguyên tố.
-\end{baitoan}
-
-\begin{proof}[Hint]
-	Xét tính chia hết cho $3$ của $p$ (i.e., xét đồng dư\texttt{/}modulo $3$).
-\end{proof}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 19, p. 23]
-	1 số nguyên tố $p$ chia cho $42$ có số dư $r$ là hợp số. Tìm số dư $r$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{103.}, p. 24]
-	Ta biết rằng có $25$ số nguyên tố $< 100$. Tổng của $25$ số nguyên tố đó là số chẵn hay số lẻ?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{104.}, p. 24]
-	Tổng của 3 số nguyên tố bằng $1012$. Tìm số nhỏ nhất trong 3 số nguyên tố đó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{105.}, p. 24]
-	Tìm 4 số nguyên tố liên tiếp, sao cho tổng của chúng là số nguyên tố.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{106.}, p. 24]
-	Tổng của 2 số nguyên tố có thể bằng $2003$ hay không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{107.}, p. 24]
-	Tìm 2 số tự nhiên, sao cho tổng \& tích của chúng đều là số nguyên tố.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{108.}, p. 24]
-	Các số sau là số nguyên tốt hay hợp số?
-	\begin{enumerate*}
-		\item[(a)] $A = \underbrace{1\ldots 1}_{2001's}$;
-		\item[(b)] $B = \underbrace{1\ldots 1}_{2000's}$;
-		\item[(c)] $C = 1010101$;
-		\item[(d)] $D = 1112111$;
-		\item[(e)] $E = 1! + 2! + \cdots + 100! = \sum_{i=1}^{100} i!$;
-		\item[(f)] $F = 3\cdot 5\cdot 7\cdot 9 - 28$;
-		\item[(g)] $G = 311141111$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{109.}, p. 24]
-	Tìm số nguyên tố có 3 chữ số, biết rằng nếu viết số đó theo thứ tự ngược lại thì ta được 1 số là lập phương của 1 số tự nhiên.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{110.}, p. 24]
-	Tìm số tự nhiên có 4 chữ số, chữ số hàng nghìn bằng chữ số hàng đơn vị, chữ số hàng trăm bằng chữ số hàng chục \& số đó viết được dưới dạng tích của 3 số nguyên tố liên tiếp.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{111.}, p. 24]
-	Tìm số nguyên tố $p$, sao cho các số sau cũng là số nguyên tố:
-	\begin{enumerate*}
-		\item[(a)] $p + 2$ \& $p + 10$;
-		\item[(b)] $p + 10$ \& $p + 20$;
-		\item[(c)] $p + 2$, $p + 6$, $p + 8$, $p + 12$, $p + 14$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{112.}, p. 24]
-	Tìm số nguyên tố, biết rằng số đó bằng tổng của 2 số nguyên tố \& bằng hiệu của 2 số nguyên tố.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 113^\star.$, p. 24]
-	Cho 3 số nguyên tố $> 3$, trong đó số sau lớn hơn số trước là $d$ đơn vị. Chứng minh rằng $d\ \vdots\ 6$.
-\end{baitoan}
-
-\begin{dinhnghia}[2 số nguyên tố sinh đôi]
-	2 số nguyên tố gọi là \emph{sinh đôi} nếu chúng là 2 số nguyên tố lẻ liên tiếp.
-\end{dinhnghia}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{114.}, p. 24]
-	Chứng minh rằng 1 số tự nhiên $> 3$ nằm giữa 2 số nguyên tố sinh đôi thì chia hết cho $6$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{115.}, p. 24]
-	Cho $p$ là số nguyên tố $> 3$. Biết $p + 2$ cũng là số nguyên tố. Chứng minh rằng $p + 1\ \vdots\ 6$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{116.}, p. 25]
-	Cho $p$ \& $p + 4$ là các số nguyên tố ($p > 3$). Chứng minh rằng $p + 8$ là hợp số.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{117.}, p. 25]
-	Cho $p$ \& $8p - 1$ là các số nguyên tố. Chứng minh rằng $8p + 1$ là hợp số.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{118.}, p. 25, \textit{Ngày sinh của bạn}]
-	1 ngày đầu năm $2002$, Huy viết thư hỏi ngày sinh của Long \& nhận được thư trả lời: ``Mình sinh ngày $a$, tháng $b$, năm $1900 + c$ \& đến nay $d$ tuổi. Biết rằng $abcd = 59007$.'' Huy đã tính được ngày sinh của Long \& kịp viết thư mừng sinh nhật bạn. Hỏi Long sinh ngày nào?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{119.}, p. 25]
-	1 số nguyên tố chia cho $30$ có số dư là $r$. Tìm $r$ biết rằng $r$ không là số nguyên tố.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{120.}, p. 25]
-	Chứng minh rằng:
-	\begin{enumerate*}
-		\item[(a)] Số $17$ không viết được dưới dạng tổng của $3$ hợp số khác nhau.
-		\item[(b${}^\star$)] Mọi số lẻ $> 17$ đều viết được dưới dạng tổng của 3 hợp số khác nhau.
-	\end{enumerate*}
-\end{baitoan}
-``Bằng cách phân tích 1 số ra thừa số nguyên tố, ta có thể dễ dàng tìm được ước (ước số) của số đó.'' -- \cite[\S6, p. 25]{Binh_Toan_6_tap_1}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 20, p. 25]
-	Tìm số chia \& thương của 1 phép chia có số bị chia bằng $145$, số dư bằng $12$ biết rằng thương khác $1$ (số chia \& thương là các số tự nhiên).
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 21^\star$, p. 26]
-	Hãy viết số $108$ dưới dạng tổng các số tự nhiên liên tiếp $> 0$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{121.}, p. 26]
-	Tìm $x,y\in\mathbb{N}$, sao cho:
-	\begin{enumerate*}
-		\item[(a)] $(2x + 1)(y - 3) = 10$;
-		\item[(b)] $(3x - 2)(2y - 3) = 1$;
-		\item[(c)] $(x + 1)(2y - 1) = 12$;
-		\item[(d)] $x + 6 = y(x - 1)$;
-		\item[(e)] $x - 3 = y(x + 2)$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{122.}, p. 26]
-	1 phép chia số tự nhiên có số bị chia bằng $3193$. Tìm số chia \& thương của phép chia đó, biết rằng số chia có 2 chữ số.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{123.}, p. 26]
-	Tìm số chia của 1 phép chia, biết rằng: Số bị chia bằng $236$, số dư bằng $15$, số chia là số tự nhiên có 2 chữ số.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{124.}, p. 27]
-	Tìm ước của $161$ trong $[50,150]$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{125.}, p. 27]
-	Tìm 2 số tự nhiên liên tiếp có tích bằng $600$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{126.}, p. 27]
-	Tìm 3 số tự nhiên liên tiếp có tích bằng $2730$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{127.}, p. 27]
-	Tìm 3 số lẻ liên tiếp có tích bằng $12075$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{128.}, p. 27]
-	1 tờ hóa đơn bị dây mực, chỗ dây mực biểu thị bởi dấu *. Hãy phục hồi lại các chữ số bị dây mực (dấu * thay cho 1 hoặc nhiều chữ số).
-	\begin{table}[H]
-		\centering
-		\begin{tabular}{|l|r|}
-			\hline
-			Giá mua 1 hộp bút & $3200$ đồng \\
-			\hline
-			Giá bán 1 hộp bút & $*00$ đồng \\
-			\hline
-			Số hộp bút đã bán & $*$ chiếc \\
-			\hline
-			\textit{Thành tiền} & $107300$ đồng \\
-			\hline
-		\end{tabular}
-	\end{table}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{129.}, p. 27]
-	Tìm $n\in\mathbb{N}$, biết rằng: $\sum_{i=1}^n i = 820$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 130^\star.$, p. 27]
-	Hãy viết số $100$ dưới dạng tổng các số lẻ liên tiếp.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{131.}, p. 27, \textit{Số nhà của bạn}]
-	Tân \& Hùng gặp nhau trong hội nghị học sinh giỏi toán. Tân hỏi số nhà Hùng, Hùng trả lời: ``Nhà mình ở chính giữa đoạn phố, đoạn phố ấy có tổng các số nhà bằng $161$.'' Nghĩ 1 chút, Tân nói: ``Bạn ở số nhà $23$ chứ gì!'' Hỏi Tân đã tìm ra như thế nào?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{133.}, p. 27]
-	Tìm $n\in\mathbb{N}$, sao cho:
-	\begin{enumerate*}
-		\item[(a)] $n + 4\ \vdots\ n + 1$;
-		\item[(b)] $n^2 + 4\ \vdots\ n + 2$;
-		\item[(c)] $13n\ \vdots\ n - 1$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 134^\star.$, p. 27]
-	Tìm số tự nhiên có 3 chữ số, biết rằng nó tăng gấp $n$ lần nếu cộng mỗi chữ số của nó với $n$ ($n$ là số tự nhiên, có thể gồm 1 hoặc nhiều chữ số).
-\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -1636,38 +795,6 @@ Tham khảo \cite[p. 52]{SGK_Toan_6_Canh_Dieu_tap_1}: Để tìm ước chung l�
 	Người ta thường dùng thuật toán Euclid đề tìm $\mbox{ƯCLN}$ của cặp số lớn.
 \end{luuy}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 22, p. 28]
-	Tìm $a\in\mathbb{N}$, biết rằng $264$ chia cho $a$ dư $24$, còn $363$ chia cho $a$ dư $43$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{135.}, p. 28]
-	Tìm $a\in\mathbb{N}$, biết rằng $398$ chia cho $a$ thì dư $38$, còn $450$ chia cho $a$ thì dư $18$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{136.}, p. 28]
-	Tìm $a\in\mathbb{N}$, biết rằng $350$ chia cho $a$ thì dư $14$, còn $320$ chia cho $a$ thì dư $26$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{137.}, p. 28]
-	Có $100$ quyển vở \& $90$ bút chì được thưởng đều cho 1 số học sinh, còn lại $4$ quyển vở \& $18$ bút chì không đủ chia đều. Tính số học sinh được thưởng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{138.}, p. 29]
-	Phần thưởng cho học sinh của 1 lớp học gồm $128$ vở, $48$ bút chì, $192$ nhãn vở. Có thể chia được nhiều nhất thành bao nhiêu phần thưởng như nhau, mỗi phần thưởng gồm bao nhiêu vở, bút chì, nhãn vở?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{139.}, p. 29]
-	3 khối $6,7,8$ theo thứ tự có $300$ học sinh, $276$ học sinh, $252$ học sinh xếp hàng dọc để diễu hành sao cho số hàng dọc của mỗi khối như nhau. Có thể xếp nhiều nhất thành mấy hàng dọc để mỗi khối đều không có ai lẻ hàng? Khi đó ở mỗi khối có bao nhiêu hàng ngang?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{140.}, p. 29]
-	Người ta muốn chia $200$ bút bi, $240$ bút chì, $320$ tẩy thành 1 số phần thưởng như nhau. Hỏi có thể chia được nhiều nhất là bao nhiêu phần thưởng, mỗi phần thưởng có bao nhiêu bút bi, bút chì, tẩy?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{141.}, p. 29]
-	Tìm số chia \& thương của 1 phép chia số tự nhiên có số bị chia bằng $9578$ \& các số dư liên tiếp là $5,3,2$.
-\end{baitoan}
-
 %------------------------------------------------------------------------------%
 
 \subsection{Bội Chung \textit{\&} Bội Chung Nhỏ Nhất}
@@ -1718,98 +845,6 @@ Hiển nhiên:
 \begin{dinhly}
 	Bội chung nhỏ nhất của 2 số nguyên tố cùng nhau bằng tích của 2 số đó.
 \end{dinhly}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 24, p. 29]
-	Tìm số tự nhiên $a$ nhỏ nhất sao cho chia $a$ cho $3$, cho $5$, cho $7$ được số dư theo thứ tự là $2,3,4$.	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 25, p. 30]
-	1 số tự nhiên chia cho $3$ thì dư $1$, chia cho $4$ thì dư $2$, chia cho $5$ thì dư $3$, chia cho $6$ thì dư $4$, \& chia hết cho $13$.
-	\begin{enumerate*}
-		\item[(a)] Tìm số nhỏ nhất có tính chất trên.
-		\item[(b)] Tìm dạng chung của tất cả các số có tính chất trên.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{142.}, p. 30]
-	Tìm các bội chung của $40,60,126$ \& nhỏ hơn $6000$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{143.}, p. 30]
-	1 cuộc thi chạy tiếp sức theo vòng tròn gồm nhiều chặng. Biết rằng chu vi đường tròn là $330$m, mỗi chặng dài $75$m, địa điểm xuất phát \& kết thức cùng 1 chỗ. Hỏi cuộc thi có ít nhất mấy chặng?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{144.}, p. 30]
-	3 ô tô cùng khởi hành 1 lúc từ 1 bến. Thời gian cả đi lẫn về của xe thứ nhất là $40$ phút, của xe thứ 2 là $50$ phút, của xe thứ 3 là $30$ phút. Khi trở về bến, mỗi xe đều nghỉ $10$ phút rồi tiếp tục chạy. Hỏi sau ít nhất bao lâu:
-	\begin{enumerate*}
-		\item[(a)] Xe thứ nhất \& xe thứ 2 cùng rời bến?
-		\item[(b)] Xe thứ 2 \& xe thứ 3 cùng rời bến?
-		\item[(c)] Cả 3 xe cùng rời bến?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{145.}, p. 30]
-	1 đơn vị bộ đội khi xếp hàng $20,25,30$ đều dư $15$, nhưng xếp hàng $41$ thì vừa đủ. Tính số người của đơn vị đó biết rằng số người chưa đến $1000$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{146.}, p. 30]
-	Tìm số tự nhiên có 3 chữ số, sao cho chia nó cho $17$, cho $25$ được các số dư theo thứ tự là $8$ \& $16$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{147.}, p. 30]
-	Tìm số tự nhiên $n$ lớn nhất có 3 chữ số, sao cho $n$ chia cho $8$ thì dư $7$, chia cho $31$ thì dư $28$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{148.}, p. 31]
-	Tìm số tự nhiên $< 500$, sao cho chia nó cho $15$, cho $35$ được các số dư theo thứ tự là $8$ \& $13$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{149.}, p. 31]
-	\begin{enumerate*}
-		\item[(a)] Tìm số tự nhiên lớn nhất có 3 chữ số, sao cho chia nó chia $2$, cho $3$, cho $4$, cho $5$, cho $6$ ta được các số dư theo thứ tự là $1,2,3,4,5$.
-		\item[(b)] Tìm dạng chung của các số tự nhiên $a$ chia cho $4$ thì dư $3$, chia cho $5$ thì dư $4$, chia cho $6$ thì dư $5$, chia hết cho $13$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{150.}, p. 31]
-	Tìm các số tự nhiên nhỏ nhất chia cho $8$ dư $6$, chia cho $12$ dư $10$, chia cho $15$ dư $13$ \& chia hết cho $23$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{151.}, p. 31]
-	Tìm số tự nhiên nhỏ nhất chia cho $8,10,15,20$ theo thứ tự dư $5,7,12,17$ \& chia hết cho $41$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{152.}, p. 31]
-	Tìm số tự nhiên nhỏ nhất chia cho $5$, cho $7$, cho $9$ có số dư theo thứ tự là $3,4,5$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{153.}, p. 31]
-	Tìm số tự nhiên nhỏ nhất chia cho $3$, cho $4$, cho $5$ có số dư theo thứ tự là $1,3,1$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{154.}, p. 31]
-	Trên đoạn đường dài $4800$m có các cột điện trồng cách nhau $60$m, nay trồng lại cách nhau $80$m. Hỏi có bao nhiêu cột không phải trồng lại, biết rằng ở cả 2 đầu đoạn đường đều có cột điện?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{155.}, p. 31]
-	3 con tàu cập bến theo lịch như sau: Tàu I cứ $15$ ngày thì cập bến, tàu II cứ $20$ ngày thì cập bến, tàu III cứ $12$ ngày thì cập bến. Lần đầu cả 3 tàu cùng cập bến vào ngày thứ 6. Hỏi sao đó ít nhất bao lâu, cả 3 tàu lại cùng cập bến vào ngày thứ 6?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{156.}, p. 31]
-	Nếu xếp 1 số sách vào từng túi $10$ cuốn thì vừa hết, vào từng túi $12$ cuốn thì thừa $2$ cuốn, vào từng túi $18$ cuốn thì thừa $8$ cuốn. Biết rằng số sách trong khoảng từ $715$ đến $1000$, tính số sách đó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{157.}, p. 31]
-	2 lớp 6A, 6B cùng thu nhặt 1 số giấy vụn bằng nhau. Trong lớp 6A, 1 bạn thu được $26$kg, còn lại mỗi bạn thu $11$kg. Trong lớp 6B, 1 bạn thu được $25$kg, còn lại mỗi bạn thu $10$kg. Tính số học sinh mỗi lớp, biết rằng số giấy mỗi lớp thu được trong khoảng từ $200$kg đến $300$kg.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{158.}, p. 31]
-	1 thiết bị điện tử phát ra tiếng kêu ``bíp'' sau mỗi $60$ giây, 1 thiết bị điện tử khác phát ra tiếng kêu ``bíp'' sau mỗi $62$ giây. Cả 2 thiết bị này đều phát ra tiếng ``bíp'' lúc $10$ giờ sáng. Tính thời điểm để cả 2 cùng phát ra tiếng ``bíp'' tiếp theo.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{159.}, p. 31]
-	Có 2 chiếc đồng hồ (có kim giờ \& kim phút). Trong 1 ngày, chiếc thứ nhất chạy nhanh $2$ phút, chiếc thứ 2 chạy chậm $3$ phút. Cả 2 đồng hồ được lấy lại theo giờ chính xác. Hỏi sau ít nhất bao nhiêu lâu, cả 2 đồng hồ lại cùng chỉ giờ chính xác?
-\end{baitoan}
 
 \subsubsection{Lịch Can Chi}
 ``1 số nước phương Đông, trong đó có Việt Nam, gọi tên năm âm lịch bằng cách ghép tên của 1 trong 10 can (theo thứ tự là \textit{Giáp, Ất, Bính, Đinh, Mậu, Kỷ, Canh, Tân, Nhâm, Quý}) với tên của 1 trong 12 chi (theo thứ tự là \textit{Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi}). Đầu tiên, \textit{Giáp} được ghép với \textit{Tý} thành năm \textit{Giáp Tý}. Cứ 10 năm, Giáp được lặp lại. Cứ 12 năm, Tý được lặp lại.'' -- \cite[p. 58]{SGK_Toan_6_Canh_Dieu_tap_1}. Vì $\operatorname{BCNN}(10,12) = 60$, cứ sau 60 năm thì năm có tên tương ứng được lặp lại.
@@ -1888,7 +923,7 @@ Tham khảo \cite[pp. 65--66]{SGK_Toan_6_Canh_Dieu_tap_1}. Ta có thể biểu d
 
 \subsubsection{So sánh các số nguyên}
 
-\paragraph{So sánh 2 số nguyên}
+\paragraph{So sánh 2 số nguyên.}
 \begin{tcolorbox}
 	Trên trục số nằm ngang, nếu điểm $a$ nằm bên trái điểm $b$ thì số nguyên $a$ nhỏ hơn số nguyên $b$. Trên trục số thẳng đứng, nếu điểm $a$ nằm phía dưới điểm $b$ thì số nguyên $a$ nhỏ hơn số nguyên $b$. Nếu $a$ nhỏ hơn $b$ thì ta viết là $a < b$ hoặc $b > a$.
 \end{tcolorbox}
@@ -1896,7 +931,7 @@ Tham khảo \cite[pp. 65--66]{SGK_Toan_6_Canh_Dieu_tap_1}. Ta có thể biểu d
 
 ``Số nguyên dương luôn lớn hơn 0. Số nguyên âm luôn nhỏ hơn 0.'' ``Nếu $a < b$ \textit{\&} $b < c$ thì $a < c$.'' (tính chất bắc cầu) -- \cite[p. 67]{SGK_Toan_6_Canh_Dieu_tap_1}
 
-\paragraph{Cách so sánh 2 số nguyên}
+\paragraph{Cách so sánh 2 số nguyên.}
 \begin{itemize}
 	\item \textit{So sánh 2 số nguyên khác dấu.} ``Số nguyên âm luôn nhỏ hơn số nguyên dương.'' -- \cite[p. 68]{SGK_Toan_6_Canh_Dieu_tap_1}
 	\item \textit{So sánh 2 số nguyên cùng dấu.} ``Để so sánh 2 sô nguyên âm, ta làm như sau:
@@ -1905,36 +940,6 @@ Tham khảo \cite[pp. 65--66]{SGK_Toan_6_Canh_Dieu_tap_1}. Ta có thể biểu d
 		\item Trong 2 số nguyên dương nhận được, số nào nhỏ hơn thì số nguyên âm ban đầu (tương ứng) sẽ lớn hơn.'' -- \cite[p. 69]{SGK_Toan_6_Canh_Dieu_tap_1}
 	\end{enumerate}
 \end{itemize}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{160.}, p. 32]
-	Điền vào chỗ trống ($\ldots$) các từ ``nhỏ hơn'' hoặc ``lớn hơn'' cho đúng:
-	\begin{enumerate*}
-		\item[(a)] Mọi số nguyên dương đều $\ldots$ số 0;
-		\item[(b)] Mọi số nguyên âm đều $\ldots$ số 0;
-		\item[(c)] Mỗi số nguyên dương đều $\ldots$ mọi số nguyên âm;
-		\item[(d)] Trong 2 số nguyên dương, số nào có giá trị tuyệt đối lớn hơn thì số ấy $\ldots$
-		\item[(e)] Trong 2 số nguyên âm, số nào có giá trị tuyệt đối lớn hơn thì số ấy $\ldots$
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{163.}, p. 32]
-	Cho $a\in\mathbb{Z}$. Hãy điền vào chỗ trống các dấu $\ge,\le,>,<,=$ để các khẳng định sau là đúng:
-	\begin{enumerate*}
-		\item[(a)] $|a|\ldots a$, $\forall a$;
-		\item[(b)] $|a|\ldots 0$, $\forall a$;
-		\item[(c)] Nếu $a > 0$ thì $a\ldots|a|$;
-		\item[(d)] Nếu $a = 0$ thì $a\ldots|a|$;
-		\item[(e)] Nếu $a < 0$ thì $a\ldots|a|$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{164.}, p. 32]
-	Các khẳng định sau có đúng $\forall a,b\in\mathbb{Z}$ không? Cho ví dụ.
-	\begin{enumerate*}
-		\item[(a)] $|a| = |b|\Rightarrow a = b$;
-		\item[(b)] $a > b\Rightarrow|a| > |b|$.
-	\end{enumerate*}
-\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -1946,15 +951,15 @@ Tham khảo \cite[pp. 65--66]{SGK_Toan_6_Canh_Dieu_tap_1}. Ta có thể biểu d
 \end{align*}
 '' -- \cite[p. 32]{Binh_Toan_6_tap_1}
 
+%------------------------------------------------------------------------------%
+
 \subsection{Phép Cộng Các Số Nguyên}
 
 \subsubsection{Phép cộng 2 số nguyên cùng dấu}
 
-\paragraph{Phép cộng 2 số nguyên dương}
-``Cộng 2 số nguyên dương chính là cộng 2 số tự nhiên khác 0.'' -- \cite[p. 70]{SGK_Toan_6_Canh_Dieu_tap_1}. Xem lại phần \textit{Phép Cộng, Trừ Các Số Tự Nhiên}.
+\paragraph{Phép cộng 2 số nguyên dương.} ``Cộng 2 số nguyên dương chính là cộng 2 số tự nhiên khác 0.'' -- \cite[p. 70]{SGK_Toan_6_Canh_Dieu_tap_1}. Xem lại phần \textit{Phép Cộng, Trừ Các Số Tự Nhiên}.
 
-\paragraph{Phép cộng 2 số nguyên âm}
-``Để cộng 2 số nguyên âm, ta làm như sau:
+\paragraph{Phép cộng 2 số nguyên âm.} ``Để cộng 2 số nguyên âm, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước mỗi số.
 	\item Tính tổng của 2 số nguyên dương nhận được ở Bước 1.
@@ -1983,77 +988,6 @@ Hiển nhiên: ``Tổng của 2 số nguyên dương là số nguyên dương. T
 	\end{itemize}
 \end{dinhly}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 26, p. 33]
-	Tìm $x\in\mathbb{Z}$, biết rằng $10 + 10 + 9 + 8 + \cdots + x$, trong đó vế phải là tổng các số nguyên liên tiếp viết theo thứ tự giảm dần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{166.}, p. 33]
-	Điền vào chỗ trống cho đúng:
-	\begin{enumerate*}
-		\item[(a)] Số đối của 1 số nguyên âm là 1 số $\ldots$
-		\item[(b)] 2 số nguyên đối nhau thì có giá trị tuyệt đối $\ldots$
-		\item[(c)] 2 số nguyên có giá trị tuyệt đối bằng nhau thì $\ldots$
-		\item[(d)] Số $\ldots$ thì nhỏ hơn số đối của nó;
-		\item[(e)] Nếu $a\ldots$ thì $-a > 0$;
-		\item[(f)] Nếu $a < 0$ thì $|a| = \ldots$
-		\item[(g)] Nếu $a < 0$ thì $a + |a| = \ldots$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{168.}, p. 33]
-	Cho bảng vuông $3\times 3$ ô. Có thể điền được hay không 9 số nguyên vào 9 ô của bảng sao cho tổng các số ở 3 dòng lần lượt bằng $5,-3,2$ \& tổng các số ở 3 cột lần lượt bằng $-1,2,2$?
-\end{baitoan}	
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{169.}, p. 33]
-	\begin{enumerate*}
-		\item[(a)] Có 10 ô liên tiếp trong đó ô đầu tiên ghi số 6, ô thứ 8 ghi số $-4$. Hãy điền số vào các ô trống để tổng 3 số ở 3 ô liền nhau bằng 0.
-		\item[(b)] 1 bảng vuông $4\times 4$ ô có 2 ô ở góc trên ghi số $-3$ \& $2$. Hãy điền số vào các ô còn lại, sao cho tổng 2 số ở 2 ô liền nhau thì bằng nhau (2 ô liền nhau là 2 ô có 1 cạnh chung).
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{170.}, p. 33]
-	Tìm $x\in\mathbb{Z}$, biết rằng $x + (x + 1) + (x + 2) + \cdots + 19 + 20 = \sum_{i=x}^{20} i = 20$, trong đó vế trái là tổng các số nguyên liên tiếp viết theo thứ tự tăng dần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{171.}, p. 33]
-	Tìm các số nguyên $a$, sao cho:
-	\begin{enumerate*}
-		\item[(a)] $a > -a$;
-		\item[(b)] $a = -a$;
-		\item[(c)] $a < -a$
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{172.}, p. 33]
-	Tìm $a,b,c\in\mathbb{Z}$ biết rằng: $a + b = 11$, $b + c = 3$, $c + a = 2$.
-\end{baitoan}
-Tổng quát hơn,
-\begin{baitoan}
-	Tìm $a,b,c\in\mathbb{Z}$ biết rằng: $a + b = A$, $b + c = B$, $c + a = C$, với $A,B,C\in\mathbb{Z}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{173.}, p. 33]
-	Tìm $a,b,c,d\in\mathbb{Z}$ biết rằng:
-	\begin{equation*}
-		\left\{\begin{split}
-			a + b + c + d &= 1,\\
-			a + c + d &= 2,\\
-			a + b + d &= 3,\\
-			a + b + c &= 4.
-		\end{split}\right.		
-	\end{equation*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{174.}, p. 33]
-	Cho
-	\begin{equation*}
-		\left\{\begin{split}
-			\sum_{i=1}^{50} x_i &= 0,\\
-			x_i + x_{i+1} &= 1,\ i = 1,\ldots,50.
-		\end{split}\right.		
-	\end{equation*}
-	Tính $x_{50}$.
-\end{baitoan}
 %------------------------------------------------------------------------------%
 
 \subsection{Phép Trừ Số Nguyên. Quy Tắc Dấu Ngoặc}
@@ -2087,11 +1021,9 @@ Tích của 2 số nguyên khác dấu là số nguyên âm.'' -- \cite[p. 80]{S
 
 \subsubsection{Phép nhân 2 số nguyên cùng dấu}
 
-\paragraph{Phép nhân 2 số nguyên dương}
-``Nhân 2 số nguyên dương chính là nhân 2 số tự nhiên khác 0.'' -- \cite[p. 81]{SGK_Toan_6_Canh_Dieu_tap_1}
+\paragraph{Phép nhân 2 số nguyên dương.} ``Nhân 2 số nguyên dương chính là nhân 2 số tự nhiên khác 0.'' -- \cite[p. 81]{SGK_Toan_6_Canh_Dieu_tap_1}
 
-\paragraph{Phép nhân 2 số nguyên âm}
-``Để nhân 2 số nguyên âm, ta làm như sau:
+\paragraph{Phép nhân 2 số nguyên âm.} ``Để nhân 2 số nguyên âm, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước mỗi số.
 	\item Tính tích của 2 số nguyên dương nhận được ở Bước 1, ta có tích cần tìm.
@@ -2102,36 +1034,6 @@ Tích của 2 số nguyên cùng dấu là số nguyên dương.'' -- \cite[p. 8
 ``Giống như phép nhân các số tự nhiên, phép nhân các số nguyên cũng có các tính chất: giao hoán, kết hợp, nhân với số 1, phân phối của phép nhân đối với phép cộng, phép trừ.'' -- \cite[p. 82]{SGK_Toan_6_Canh_Dieu_tap_1}
 
 Sự thừa hưởng tính chất này xuất phát từ sự kiện số nguyên chỉ thêm dấu $\pm$ vào số tự nhiên, nên các tính chất được mở rộng từ $\mathbb{N}$ ra\texttt{/}lên $\mathbb{Z}$ theo 1 cách tự nhiên \textit{\&} dễ dàng. Hiển nhiên, $a0 = 0a = 0$. $(ab = 0)\Rightarrow((a = 0)\lor(b = 0))$.
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 27, p. 34]
-	Viết 9 số nguyên khác 0 vào 1 bảng vuông $3\times 3$. Biết rằng tích các số ở mỗi dòng đều là số âm. Chứng minh rằng luôn luôn tồn tại 1 cột mà tích các số trong cột ấy là số âm.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 28, p. 34]
-	Thay các dấu * trong biểu thức $1*2*3$ bằng dấu các phép tính cộng, trừ, nhân \& thêm các dấu ngoặc để được kết quả là: số lớn nhất; số nhỏ nhất.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{175.}, p. 34]
-	Thực hiện các phép tính sau 1 cách nhanh chóng:
-	\begin{enumerate*}
-		\item[(a)] $(-14)\cdot(-125)\cdot3\cdot(-8)$;
-		\item[(b)] $(-127)\cdot 57 + (-127)\cdot 43$;
-		\item[(c)] $(-13)\cdot 34 - 87\cdot 34$;
-		\item[(d)] $(-25)\cdot 68 + (-34)\cdot(-250)$;
-		\item[(e)] $A = 1 - 2 + 3 - 4 + \cdots + 99 - 100 = \sum_{i=1}^{100} (-1)^{i+1} i$;
-		\item[(f)] $B = 1 + 3 - 5 - 7 + 9 + 11 - \ldots - 397 - 399$;
-		\item[(g)] $C = 1 - 2 - 3 + 4 + 5 - 6 - 7 + \cdots + 97 - 98 - 99 + 100$;
-		\item[(h)] $D = 2^{100} - 2^{99} - 2^{98} - \cdots 2^2 - 2 - 1 = 2^{100} - \sum_{i=0}^{99} 2^i$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{176.}, p. 34]
-	Thay các dấu * trong biểu thức $1*2*3*4$ bằng dấu các phép tính cộng, trừ, nhân \& thêm các dấu ngoặc để được kết quả là: số lớn nhất; số nhỏ nhất.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{178.}, p. 34]
-	Cho dãy số $a_1,\ldots,a_{100}$ trong đó $a_1 = 1$, $a_2 = -1$, $a_k = a_{k-2}\cdot a_{k-1}$ ($k\in\mathbb{N}$, $k\ge 3$). Tính $a_{100}$.
-\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -2148,11 +1050,9 @@ Sự thừa hưởng tính chất này xuất phát từ sự kiện số nguyê
 
 \subsubsection{Phép chia hết 2 số nguyên cùng dấu}
 
-\paragraph{Phép chia hết 2 số nguyên dương}
-Xem lại phần \textit{Phép Nhân, Phép Chia Các Số Tự Nhiên}.
+\paragraph{Phép chia hết 2 số nguyên dương.} Xem lại phần \textit{Phép Nhân, Phép Chia Các Số Tự Nhiên}.
 
-\paragraph{Phép chia hết 2 số nguyên âm}
-``Để chia 2 số nguyên âm, ta làm như sau:
+\paragraph{Phép chia hết 2 số nguyên âm.} ``Để chia 2 số nguyên âm, ta làm như sau:
 \begin{enumerate}
 	\item Bỏ dấu ``$-$'' trước mỗi số.
 	\item Tính thương của 2 số nguyên dương nhận được ở Bước 1, ta có thương cần tìm.'' -- \cite[p. 85]{SGK_Toan_6_Canh_Dieu_tap_1}
@@ -2172,583 +1072,6 @@ Xem lại phần \textit{Phép Nhân, Phép Chia Các Số Tự Nhiên}.
 \end{dinhnghia}
 Hiển nhiên: ``Nếu $a$ là bội của $b$ thì $-a$ cũng là bội của $b$. Nếu $b$ là ước của $a$ thì $-b$ cũng là ước của $a$.'' -- \cite[p. 86]{SGK_Toan_6_Canh_Dieu_tap_1}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 29, p. 36]
-	Số $36$ chia cho $a\in\mathbb{Z}$ rồi trừ đi $a$. Lấy kết quả này chia cho $a$ rồi trừ đi $a$. Lại lấy kết quả này chia cho $a$ rồi trừ đi $a$. Cuối cùng ta được số $-a$. Tìm $a$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{179.}, p. 36]
-	Tìm $x,y\in\mathbb{Z}$, biết rằng:
-	\begin{enumerate*}
-		\item[(a)] $(x + 2)(y - 3) = 5$;
-		\item[(b)] $(x + 1)(xy - 1) = 3$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{180.}, p. 36]
-	Tính tổng $A + B$ biết rằng $A$ là tổng các số nguyên âm lẻ có 2 chữ số, $B$ là tổng các số nguyên dương chẵn có 2 chữ số.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{181.}, p. 36]
-	Cho $A = 2 - 5 + 8 - 11 + 14 - 17 + \cdots + 98 - 101$.
-	\begin{enumerate*}
-		\item[(a)] Viết dạng tổng quát của số hạng thứ $n$ của $A$;
-		\item Tính giá trị của biểu thức $A$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{182.}, p. 36]
-	Cho $A = 1 + 2 - 3 - 4 + 5 + 6 - \cdots - 99 - 100$.
-	\begin{enumerate*}
-		\item[(a)] $A$ có chia hết cho $2$, cho $3$, cho $5$ hay không?
-		\item[(b)] $A$ có bao nhiêu ước nguyên, có bao nhiêu ước tự nhiên?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{183.}, p. 36]
-	Cho dãy số $1;-3;5;-7;9;-11;13;-15;17;-19$. Có thể tìm được hay không 5 số trong các số trên, sao cho đặt dấu ``$+$'' hoặc ``$-$''nối các số đó với nhau, ta được kết quả bằng:
-	\begin{enumerate*}
-		\item[(a)] $15$;
-		\item[(b)] $20$?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{184.}, p. 36]
-	Thay các dấu * trong biểu thức $1*2*3*4*5*6*7*8*9$ bởi các dấu ``$+$'' hoặc ``$-$'' để giá trị của biểu thức bằng:
-	\begin{enumerate*}
-		\item[(a)] $-13$;
-		\item[(b)] $-4$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{185.}, p. 36]
-	Tìm $n\in\mathbb{Z}$, sao cho:
-	\begin{enumerate*}
-		\item[(a)] $n + 5\ \vdots\ n - 2$;
-		\item[(b)] $2n + 1\ \vdots\ n - 5$;
-		\item[(c)] $n^2 + 3n - 13\ \vdots\ n + 3$;
-		\item[(d)] $n^2 + 3\ \vdots\ n - 1$.
-	\end{enumerate*}
-\end{baitoan}
-
-%------------------------------------------------------------------------------%
-
-\subsection{Chuyên Đề}
-
-\subsubsection{Điền Chữ Số}
-``Các bài toán về điền chữ số không chỉ yêu cầu kỹ năng tính toán đúng mà còn đòi hỏi cả lập luận chính xác \& hợp lý.'' -- \cite[p. 38]{Binh_Toan_6_tap_1}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 30, p. 38]
-	Thay các chữ bởi các chữ số thích hợp: $\overline{abc} + \overline{acb} = \overline{bca}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 31, p. 38]
-	Tìm các chữ số $a,b,c$, biết rằng tổng $a + b + c$ bằng tổng của 4 số chẵn liên tiếp \& các chữ số $a,b,c$ thỏa mãn cả 2 phép trừ sau: $\overline{abc} - \overline{cba} = 99$; $\overline{bac} - \overline{abc} = 270$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 33, p. 38]
-	Thay các chữ $a,b,c$ bằng các chữ số khác nhau thích hợp trong phép nhân sau: $\overline{ab}\cdot\overline{cc}\cdot\overline{abc} = \overline{abcabc}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 34, p. 38]
-	Tìm số tự nhiên có 3 chữ số, biết rằng trong 2 cách viết: viết thêm chữ số $5$ vào đằng sau số đó hoặc viết thêm chữ số $1$ vào đằng trước số đó thì cách viết thứ nhất cho số lớn gấp $5$ lần so với cách viết thứ 2.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 35, p. 38]
-	Điền các chữ số thích hợp vào các chữ trong phép nhân sau: $2\overline{abcdmn} = \overline{cdmnab}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 36, p. 38]
-	Điền các chữ số thích hợp vào các dấu * trong phép nhân sau: $**\cdot ** = ***$ biết rằng cả 2 thừa số đều chẵn \& tích là số có 3 chữ số như nhau.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 37, p. 38]
-	Tìm các chữ số $a,b$, biết rằng: $900:(a + b) = \overline{ab}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 38^\star$, p. 38]
-	Chứng minh rằng không thể thay các chữ bằng các chữ số để có phép tính đúng:
-	\begin{enumerate*}
-		\item[(a)] $\mbox{\rm HỌC VUI} - \mbox{\rm VUI HỌC} = 1991$;
-		\item[(b)] $\mbox{\rm TOÁN} + \mbox{\rm LÍ} + \mbox{\rm SỬ} + \mbox{\rm VẼ} = 1992$.
-	\end{enumerate*}
-\end{baitoan}
-Thay các dấu $*$ \& các chữ bởi các chữ số thích hợp:
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{186.}, p. 42]
-	$\overline{ab} + \overline{bc} + \overline{ca} = \overline{abc}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{187.}, p. 42]
-	\begin{enumerate*}
-		\item[(a)] $\overline{abc} + \overline{ab} + a = 874$;
-		\item[(b)] $\overline{abc} + \overline{ab} + a = 1037$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{188.}, p. 42]
-	\begin{enumerate*}
-		\item[(a)] $\overline{acc}\cdot b = \overline{dba}$ biết $a$ là chữ số lẻ;
-		\item[(b)] $\overline{ac}\cdot\overline{ac} = \overline{acc}$;
-		\item[(c)] $\overline{ab}\cdot\overline{ab} = \overline{acc}$;
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{189.}, p. 42]
-	\begin{enumerate*}
-		\item[(a)] $\overline{1bac}\cdot 2 = \overline{abc8}$;
-		\item[(b)] $\overline{ab} = 9b$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{190.}, p. 42]
-	$4\overline{abcdef} = \overline{fabcde}$ \& $\overline{abcde} + f = 15930$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{191.}, p. 42]
-	$\overline{abc} - \overline{ca} = \overline{ca} - \overline{ac}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{192.}, p. 42]
-	$\overline{abcd} + \overline{abc} = 3576$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{193.}, p. 42]
-	$\overline{abcd0} - \overline{abcd} = \overline{3462*}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{195.}, p. 42]
-	$\overline{ab}\cdot b = \overline{1ab}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{196.}, p. 42]
-	$\overline{260abc}:\overline{abc} = 626$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{198.}, p. 43]
-	\begin{enumerate*}
-		\item[(a)] $\overline{ab}\cdot\overline{cb} = \overline{ddd}$.
-		\item[(b)] $**\cdot* = ***$ biết tích là số có 3 chữ số như nhau.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{199.}, p. 43]
-	$6\overline{abcdef} = \overline{defabc}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{200.}, p. 43]
-	$20**:13 = **7$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{202.}, p. 43]
-	$\overline{abc}:11 = a + b + c$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{203.}, p. 43]
-	$(\overline{ab} + \overline{cd})(\overline{ab} - \overline{cd}) = 2002$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{204.}, p. 43]
-	Tìm chữ số $a$ \& số tự nhiên $x$, sao cho: $(12 + 3x)^2 = \overline{1a96}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{205.}, p. 43]
-	Tìm số tự nhiên có 5 chữ số, biết rằng nếu viết thêm chữ số $7$ vào đằng trước số đó thì được 1 số lớn gấp $4$ lần so với số có được bằng cách viết thêm chữ số $7$ vào sau số đó.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{206.}, p. 43]
-	Tìm số tự nhiên có 2 chữ số, biết rằng nếu viết thêm 1 chữ số $2$ vào bên phải \& 1 chữ số $2$ vào bên trái của nó thì số ấy tăng gấp $36$ lần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{207.}, p. 43]
-	Tìm số tự nhiên có 2 chữ số, biết rằng nếu viết xen vào giữa 2 chữ số của nó chính số đó thì số đó tăng gấp $99$ lần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{208.}, p. 43]
-	Tìm số tự nhiên có 4 chữ số, sao cho khi nhân số đó với $4$ ta được số gồm 4 chữ số ấy viết theo thứ tự ngược lại.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{209.}, p. 43]
-	Tìm số tự nhiên có 4 chữ số, sao cho nhân nó với $9$ ta được số gồm chính các chữ số của sô ấy viết theo thứ tự ngược lại.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{210.}, p. 44]
-	Tìm số tự nhiên có 5 chữ số, sao cho nhân nó với $9$ ta được số gồm chính các chữ số của số ấy viết theo thứ tự ngược lại.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{211.}, p. 44]
-	\begin{enumerate*}
-		\item[(a)] Tìm số tự nhiên có 3 chữ số, biết rằng nếu xóa chữ số hàng trăm thì số ấy giảm $9$ lần.
-		\item[(b)] Giải bài toán trên nếu không cho biết chữ số bị xóa thuộc hàng nào.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{212.}, p. 44]
-	Tìm $n\in\mathbb{N}$ có 3 chữ số khác nhau, biết rằng nếu xóa bất kỳ chữ số nào của nó ta cũng được 1 số là ước của $n$.	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{213.}, p. 44]
-	Tìm số tự nhiên có 4 chữ số, biết rằng nếu xóa chữ số hàng nhìn thì số ấy giảm $9$ lần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{214.}, p. 44]
-	Tìm số tự nhiên có 4 chữ số, biết rằng chữ số hàng trăm bằng $0$ \& nếu xóa chữ số $0$ đó thì số ấy giảm $9$ lần.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{215.}, p. 44]
-	1 số tự nhiên tăng gấp $9$ lần nếu viết thêm 1 chữ số $0$ vào giữa các chữ số hàng chục \& hàng đơn vị của nó. Tìm số ấy.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{216.}, p. 44]
-	Tìm $A\in\mathbb{N}$, biết rằng nếu xóa 1 hoặc nhiều chữ số tận cùng của nó thì được số $B$ mà $A = 130B$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 217^\star.$, p. 44]
-	Tìm $x\in\mathbb{N}$ có chữ số tận cùng bằng $2$, biết rằng $x,2x,3x$ đều là các số có 3 chữ số \& 9 chữ số của 3 số đó đều khác nhau \& khác $0$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 218^\star.$, p. 44]
-	Tìm $x\in\mathbb{N}$ có 6 chữ số, biết rằng các tích $2x,3x,4x,5x,6x$ cũng là số có 6 chữ số gồm cả 6 chữ số ấy.
-	\begin{enumerate*}
-		\item[(a)] Cho biết 6 chữ số của số phải tìm là $1,2,4,5,7,8$.
-		\item[(b)] Giải bài toán nếu không cho điều kiện (a).
-	\end{enumerate*}
-\end{baitoan}
-
-\subsubsection{Dãy các số viết theo quy luật}
-
-\paragraph{Dãy cộng}
-
-\begin{dinhnghia}[Dãy cộng]
-	\emph{Dãy cộng} là dãy có dạng $\{a + n b\}_{n=0}^\infty = a, a + b, a + 2b, a + 3b,\ldots$, với $a,b\in\mathbb{N}$, $b\ne 0$.
-\end{dinhnghia}
-Trong các dãy số cộng, mỗi số hạng, kể từ số hạng thứ 2, đều lớn hơn số hạng đứng trước nó cùng 1 số đơn vị là $b$.
-
-\begin{vidu}
-	\begin{enumerate*}
-		\item[(a)] $a = 0$, $b = 1$, dãy $\{a + n b\}_{n=0}^\infty = \{n\}_{n=0}^\infty = \mathbb{N} = 0,1,2,3,\ldots$ là dãy các số tự nhiên.
-		\item[(b)] $a = 1$, $b = 2$, dãy $\{a + n b\}_{n=0}^\infty = \{1 + 2n\}_{n=0}^\infty = 1,3,5,7,\ldots$ là dãy các số tự nhiên lẻ.
-		\item[(c)] $a = 0$, $b = 2$, $\{a + n b\}_{n=0}^\infty = \{2n\}_{n=0}^\infty = 0,2,4,6,\ldots$ là dãy các số tự nhiên chẵn.
-		\item[(d)] Với $b\in\mathbb{N}^\star$, $b\ge 2$, $a\in\mathbb{N}$, $a < b$, dãy $\{a + n b\}_{n=0}^\infty$ là dãy các số tự nhiên chia cho $b$ dư $a$.
-	\end{enumerate*}
-\end{vidu}
-Tổng quát, nếu 1 dãy cộng có số hạng đầu là $a_1$ \& hiệu giữa 2 số hạng liên tiếp là $d$ thì số hạng thứ $n$ của dãy cộng đó (ký hiệu là $a_n$) bằng: $a_n = a_1 + (n - 1)d$, $\forall n\in\mathbb{N}^\star$.
-
-``Tổng quát, nếu 1 dãy cộng có $n$ số hạng, số hạng đầu là $a_1$, số hạng cuối là $a_n$ thì tổng của $n$ số hạng đó được tính như sau: $S = \frac{1}{2}n(a_1 + a_n)$\footnote{Quy tắc dân gian: dĩ đầu, cộng vĩ, chiết bán, nhân chi (lấy số đầu cộng với số cuối, chia đôi, nhân với số số hạng).}. Trường hợp đặc biệt, tổng của $n$ số tự nhiên liên tiếp bắt đầu từ 1 bằng: $\sum_{i=1}^n i = \frac{1}{2}n(n + 1)$.'' -- \cite[p. 45]{Binh_Toan_6_tap_1} (Cho $a_1 = 1$, $a_n = n$ trong công thức $S = \frac{1}{2}n(a_1 + a_n)$.)
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 39, p. 45]
-	Bạn Lâm đánh số trang 1 cuốn sách dày $284$ trang bằng dãy số chẵn $2,4,6,8,\ldots$.
-	\begin{enumerate*}
-		\item[(a)] Biết mỗi chữ số viết mất $1$ giây. Hỏi bạn Lâm cần bao nhiêu phút để đánh số trang cuốn sách?
-		\item[(b)] Chữ số thứ $300$ mà bạn Lâm viết là chữ số nào?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ $\rm 40^\star$, p. 46]
-	Tìm $n\in\mathbb{N}$ lớn nhất để tích các số tự nhiên từ $1$ đến $1000$ chia hết cho $5^n$.
-\end{baitoan}
-
-\begin{luuy}
-	``Số thừa số $a$ khi phân tích $n! = \prod_{i=1}^n i = 1\cdot 2\cdot 3\cdots n$ ra thừa số nguyên tố là: $\sum_{i=1}^k \lfloor\frac{n}{a^i}\rfloor = \lfloor\frac{n}{a}\rfloor + \lfloor\frac{n}{a^2}\rfloor + \cdots + \lfloor\frac{n}{a^k}\rfloor$ với $k$ là số mũ lớn nhất sao cho $a^k\le n$. Ký hiệu $\lfloor\frac{n}{m}\rfloor$ là số tự nhiên lớn nhất không vượt quá $\frac{n}{m}$ (nếu $n\ \vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương đúng, nếu $n\not\vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương hụt, ta gọi $\lfloor\frac{n}{m}\rfloor$ là \emph{phần nguyên} của $\frac{n}{m}$).'' -- \cite[p. 46]{Binh_Toan_6_tap_1}
-\end{luuy}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 41, p. 46]
-	Có bao nhiêu số tự nhiên chia hết cho $13$ trong dãy $111,1111,\ldots,\underbrace{1\ldots 1}_{1993's}$.
-\end{baitoan}
-
-\paragraph{Các dãy khác}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 42, p. 47]
-	Tìm số hạng thứ $100$ của các dãy được viết theo quy luật:
-	\begin{enumerate*}
-		\item[(a)] $3,8,15,24,35,\ldots$;
-		\item[(b)] $3,24,63,120,195,\ldots$;
-		\item[(c)] $1,3,6,10,15,\ldots$;
-		\item[(d)] $2,5,10,17,26,\ldots$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{219.}, p. 48]
-	Tìm chữ số thứ $1000$ khi viết liên tiếp liền nhau các số hạng của dãy số lẻ $1,3,5,7,\ldots$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{220.}, p. 48]
-	\begin{enumerate*}
-		\item[(a)] Tính tổng các số lẻ có 2 chữ số.
-		\item[(b)] Tính tổng các số chẵn có 2 chữ số.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{221.}, p. 48]
-	Có số hạng nào của dãy sau tận cùng bằng $2$ hay không? $1; 1 + 2; 1 + 2 + 3; 1 + 2 + 3 + 4;\ldots$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{222.}, p. 48]
-	\begin{enumerate*}
-		\item[(a)] Viết liên tiếp các số hạng của dãy số tự nhiên từ $1$ đến $100$ tạo thành 1 số $A$. Tính tổng các chữ số của $A$.
-		\item[(b)] Cũng hỏi như trên nếu viết từ $1$ đến $1000000$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{223.}, p. 48]
-	Khi phân tích ra thừa số nguyên tố, số $1000!$ chứa thừa số nguyên tố $7$ với số mũ bằng bao nhiêu?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{224.}, p. 48]
-	Tích $A = 500!$ tận cùng bằng bao nhiêu chữ số $0$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{225.}, p. 48]
-	\begin{enumerate*}
-		\item[(a)] Tích $B = 38\cdot 39\cdot 40\cdots 74$ có bao nhiêu thừa số $2$ khi phân tích ra thừa số nguyên tố?
-		\item[(b)] Tích $C = 31\cdot 32\cdot 33\cdots 90$ có bao nhiêu thừa số $3$ khi phân tích ra thừa số nguyên tố?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{226.}, p. 48]
-	Có bao nhiêu số tự nhiên đồng thời là các số hạng của cả 2 dãy sau: $3,7,11,15,\ldots,407$ \& $2,9,16,23,\ldots,709$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{227.}, p. 48]
-	Trong dãy số $1,2,3,\ldots,1990$, có thể chọn được nhiều nhất bao nhiêu số để tổng 2 số bất kỳ được chọn chia hết cho $38$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{228.}, p. 48]
-	Chia dãy số tự nhiên kể từ $1$ thành từng nhóm (các số cùng nhóm được đặt trong dấu ngoặc) $(1),(2,3),(4,5,6),(7,8,9,10),(11,12,13,14,15),\ldots$
-	\begin{enumerate*}
-		\item[(a)] Tìm số hạng đầu tiên của nhóm thứ $100$.
-		\item[(b)] Tính tổng các số thuộc nhóm thứ $100$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{229.}, p. 48]
-	Cho $S_1 = 1 + 2, S_2 = 3 + 4 + 5, S_3 = 6 + 7 + 8 + 9, S_4 = 10 + 11 + 12 + 13 + 14,\ldots$. Tính $S_{100}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{230.}, p. 49]
-	Tính số hạng thứ $50$ của các dãy sau:
-	\begin{enumerate*}
-		\item[(a)] $1\cdot 6,2\cdot 7,3\cdot 8,\ldots$;
-		\item[(b)] $1\cdot 4,4\cdot 7,7\cdot 10,\ldots$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{231.}, p. 49]
-	Cho $A = 1 + 3 + 3^2 + 3^3 + \cdots + 3^{20} = \sum_{i=0}^{20} 3^i$, $B = 3^{21}:2$. Tính $B - A$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{232.}, p. 49]
-	Cho $A = 1 + 4 + 4^2 + 4^3 + \cdots + 4^{99}$, $B = 4^{100}$. Chứng minh rằng $A < \frac{B}{3}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{233.}, p. 49]
-	Tính giá trị của biểu thức:
-	
-	\begin{enumerate*}
-		\item[(a)] $A = 9 + 99 + 999 + \cdots + \underbrace{9\ldots 9}_{50's}$;
-		\item[(b)] $B = 9 + 99 + 999 + \cdots + \underbrace{9\ldots 9}_{200's}$.
-	\end{enumerate*}
-\end{baitoan}
-
-\subsubsection{Đếm số}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 43, p. 49]
-	Có bao nhiêu số $\overline{abcd}$ mà $\overline{ab} < \overline{cd}$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 44, p. 49]
-	Có bao nhiêu số tự nhiên chia hết cho $4$ gồm 4 chữ số, chữ số tận cùng bằng $2$?
-\end{baitoan}
-
-\begin{luuy}
-	``Nếu việc chọn đối tượng $A$ có thể thực hiện bởi $m$ cách \& với mỗi cách chọn của $A$ có thể chọn đối tượng $B$ bởi $n$ cách thì việc chọn $A$ \& $B$ theo thứ tự đó có thể thực hiện bởi $mn$ cách chọn.'' -- \cite[p. 50]{Binh_Toan_6_tap_1} \emph{Quy tắc nhân trong phép đếm} \& khái niệm \emph{tổ hợp, chỉnh hợp} sẽ được học ở môn Tổ hợp, trong chương trình Toán 10.
-\end{luuy}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 45, p. 50]
-	Có bao nhiêu số tự nhiên có $4$ chữ số $\overline{abcd}$, trong đó $b - a = 1$, $d - c = 1$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 46, p. 50]
-	Có bao nhiêu số tự nhiên có 3 chữ số trong đó có đúng 1 chữ số $5$?
-\end{baitoan}
-``Trong nhiều trường hợp, để đếm các số có tính chất nào đó, ta lại đếm trước hết các số không có tính chất ấy.'' -- \cite[p. 51]{Binh_Toan_6_tap_1}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 47, p. 50]
-	Có bao nhiêu số chứa ít nhất 1 chữ số $1$ trong các số tự nhiên:
-	\begin{enumerate*}
-		\item[(a)] có 3 chữ số;
-		\item[(b)] từ $1$ đến $999$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 48, p. 51]
-	Viết $999$ số tự nhiên liên tiếp kể từ $1$. Hỏi:
-	\begin{enumerate*}
-		\item[(a)] Chữ số $2$ có mặt bao nhiêu lần?
-		\item[(b)] Chữ số $0$ có mặt bao nhiêu lần?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{234.}, p. 52]
-	Bạn Tâm đánh số trang của 1 cuốn vở có $110$ trang bằng cách viết dãy số tự nhiên $1,2,\ldots,110$. Bạn Tâm phải viết tất cả bao nhiêu chữ số?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{235.}, p. 52]
-	1 cô nhân viên đánh máy liên tục dãy số chẵn bắt đầu từ $2$: $2,4,6,8,10,12,\ldots$. Cô phải đánh tất cả $2000$ chữ số. Tìm chữ số cuối cùng mà cô đã đánh.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{236.}, p. 52]
-	Bạn Mai viết dãy số lẻ $1,3,5,\ldots,245$.
-	\begin{enumerate*}
-		\item[(a)] Bạn Mai phải viết tất cả bao nhiêu chữ số?
-		\item[(b)] Nếu mỗi chữ số viết mất 1 giây thì viết đến số $245$ mất bao nhiêu giây? Sau $5$ phút, bạn Mai viết đến chữ số nào?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{237.}, p. 52]
-	Bạn Hùng viết dãy số lẻ $1,3,5,7,\ldots$ để đánh số trang 1 cuốn sách. Tính xem chữ số $200$ mà bạn Hùng viết là chữ số nào?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{238.}, p. 52]
-	Để đánh số trang của 1 cuốn sách, người ta viết dãy số tự nhiên bắt đầu từ $1$ \& phải dùng tất cả $1998$ chữ số.
-	\begin{enumerate*}
-		\item[(a)] Hỏi cuốn sách có bao nhiêu trang?
-		\item[(b)] Chữ số thứ $1010$ là chữ số nào?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{239.}, p. 52]
-	Có bao nhiêu số tự nhiên chia hết cho $3$, có 4 chữ số \& tận cùng bằng $5$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{240.}, pp. 52--53]
-	Tuấn muốn đến nhà bạn, nhưng không nhớ số nhà, chỉ biết rằng số nhà của bạn là số chia hết cho $3$ \& có 2 chữ số. Biết số nhà cuối của dãy phố đó là $135$. Hỏi Tuấn phải gõ cửa nhiều nhất bao nhiêu số nhà? (các số nhà không đánh số $a,b,\ldots$).
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{241.}, p. 53]
-	Tìm số lượng các số tự nhiên có 4 chữ số mà:
-	\begin{enumerate*}
-		\item[(a)] Số tạo bởi 2 chữ số đầu (theo thứ tự ấy) cộng với số tạo bởi 2 chữ số cuối (theo thứ tự ấy) nhỏ hơn $100$.
-		\item[(b)] Số tạo bởi 2 chữ số đầu (theo thứ tự ấy) lớn hơn số tạo bởi 2 chữ số cuối (theo thứ tự ấy)?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{242.}, p. 53]
-	Trong các số tự nhiên từ $1$ đến $252$, xóa các số chia hết cho $2$ nhưng không chia hết cho $5$, rồi xóa các số chia hết cho $5$ nhưng không chia hết cho $2$. Còn lại bao nhiêu số?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{243.}, p. 53]
-	Có bao nhiêu số tự nhiên có 3 chữ số mà:
-	\begin{enumerate*}
-		\item[(a)] Các chữ số đều chẵn?
-		\item[(b)] Chữ số hàng chục là chữ số lẻ?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{244.}, p. 53]
-	Có bao nhiêu số tự nhiên có 4 chữ số mà:
-	\begin{enumerate*}
-		\item[(a)] Mỗi chữ số đều chẵn?
-		\item[(b)] Tổng các chữ số là số chẵn?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{245.}, p. 53]
-	Có bao nhiêu biển số xe máy khác nhau, mỗi số xe lập bởi 2 chữ cái đứng đầu \& 3 chữ số đứng sau? (bảng chữ cái có $25$ chữ, không có biển số $000$).
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{246.}, p. 53]
-	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số:
-	\begin{enumerate*}
-		\item[(a)] Chứa đúng 1 chữ số $4$?
-		\item[(b)] Chứa đúng 2 chữ số $4$?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{247.}, p. 53]
-	Có bao nhiêu số tự nhiên chia hết cho $5$, có 4 chữ số, có đúng 1 chữ số $5$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{248.}, p. 53]
-	Có bao nhiêu số tự nhiên có 3 chữ số, biết rằng cộng nó với số gồm 3 chữ số ấy viết theo thứ tự ngược lại thì được 1 số chia hết cho $5$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{249.}, p. 53]
-	Có bao nhiêu số chẵn có 3 chữ số, các chữ số khác nhau?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{250.}, p. 53]
-	Có bao nhiêu số tự nhiên có 3 chữ số trong đó có ít nhất 2 chữ số như nhau?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{251.}, p. 53]
-	Trong các số tự nhiên có 4 chữ số, có bao nhiêu số trong đó có đúng 3 chữ số như nhau?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{252.}, p. 53]
-	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số:
-	\begin{enumerate*}
-		\item[(a)] Chia hết cho $5$, có chứa chữ số $5$?
-		\item[(b)] Chia hết cho $4$, có chứa chữ số $4$?
-		\item[(c)] Chia hết cho $3$, không chứa chữ số $3$?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{253.}, p. 54]
-	Viết liên tiếp các số tự nhiên từ $1$ đến $999$ ta được 1 số tự nhiên $A$.
-	\begin{enumerate*}
-		\item[(a)] Số $A$ có bao nhiêu chữ số?
-		\item[(b)] Tính tổng các chữ số của số $A$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 254^\star.$, p. 54]
-	Viết dãy số tự nhiên từ $1$ đến $999$.
-	\begin{enumerate*}
-		\item[(a)] Chữ số $1$ được viết bao nhiêu lần?
-		\item[(b)] Chữ số $0$ được viết bao nhiêu lần?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{255.}, p. 54]
-	Trong các số tự nhiên có 3 chữ số, có bao nhiêu số chứa ít nhất 1 chữ số $4$?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 256^\star.$, p. 54]
-	Trong các số tự nhiên từ $1$ đến $10000$:
-	\begin{enumerate*}
-		\item[(a)] Có bao nhiêu số chứa chữ số $0$?
-		\item[(b)] Số chứa chữ số $1$ hay số không chứa chữ số $1$ có nhiều hơn?
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{257.}, p. 54]
-	Viết dãy số chẵn $100,102,\ldots,390$. Hỏi chữ số $2$ được viết bao nhiêu lần?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{258.}, p. 54]
-	Từ các chữ số $1,2,3,4,5,6,7$, lập tất cả các số tự nhiên có 7 chữ số trong đó mỗi chữ số trên đều có mặt. Chứng minh rằng tổng tất cả các số đó chia hết cho $9$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{259.}, p. 54]
-	Cho 3 chữ số $a,b,c$ khác nhau \& khác $0$. Gọi $A$ là tập hợp các số tự nhiên có 3 chữ số lập bởi cả 3 chữ số trên.
-	\begin{enumerate*}
-		\item[(a)] Tập hợp $A$ có bao nhiêu phần tử?
-		\item[(b)] Tính tổng các phần tử của tập hợp $A$, biết rằng $a + b + c = 17$.
-	\end{enumerate*}
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{260.}, p. 54]
-	Từ các chữ số $1,2,3,4$, lập tất cả các số tự nhiên mà mỗi chữ số trên đều có mặt đúng 1 lần. Tìm tổng các số ấy.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{261.}, p. 54]
-	Tìm tổng các số tự nhiên có 3 chữ số lập bởi các chữ số $2,3,0,7$ trong đó:
-	\begin{enumerate*}
-		\item[(a)] Các chữ số có thể giống nhau;
-		\item[(b)] Các chữ số đều khác nhau.
-	\end{enumerate*}
-\end{baitoan}
-
 %------------------------------------------------------------------------------%
 
 \subsection{Hoạt Động Thực Hành \textit{\&} Trải Nghiệm: Đầu Tư Kinh Doanh}
@@ -2756,12 +1079,12 @@ Tham khảo \cite[pp. 89--92]{SGK_Toan_6_Canh_Dieu_tap_1}.
 
 \subsubsection{Một Số Kiến Thức về Tài Chính, Kinh Doanh}
 
-\paragraph{Tài chính}
+\paragraph{Tài chính.}
 \begin{dinhnghia}[Tài chính]
 	\emph{Tài chính} là tổng số tiền có được của 1 cá nhân, 1 tổ chức, 1 doanh nghiệp, hoặc 1 quốc gia. Tài chính của 1 cá nhân được gọi là \emph{tài chính cá nhân}.
 \end{dinhnghia}
 
-\paragraph{Kinh doanh}
+\paragraph{Kinh doanh.}
 \begin{dinhnghia}[Kinh doanh]
 	\emph{Kinh doanh} bao gồm những hoạt động mua \textit{\&} bán. Các yếu tố cơ bản trong kinh doanh là:
 	\begin{itemize}
@@ -2775,7 +1098,7 @@ Tham khảo \cite[pp. 89--92]{SGK_Toan_6_Canh_Dieu_tap_1}.
 	\end{itemize}
 \end{dinhnghia}
 
-\paragraph{Các cách để tăng lợi nhuận}
+\paragraph{Các cách để tăng lợi nhuận.}
 \begin{itemize}
 	\item \textit{Tăng doanh thu}. Có 2 cách để tăng doanh thu:
 	\begin{itemize}
@@ -2808,7 +1131,7 @@ Tham khảo \cite[pp. 89--92]{SGK_Toan_6_Canh_Dieu_tap_1}.
 
 \subsubsection{Tam giác đều}
 
-\paragraph{Nhận biết tam giác đều}
+\paragraph{Nhận biết tam giác đều.}
 \begin{dinhnghia}[Tam giác đều]
 	\emph{Tam giác đều} là tam giác có 3 cạnh bằng nhau.
 \end{dinhnghia}
@@ -2818,8 +1141,7 @@ Tam giác đều $ABC$ có 3 cạnh bằng nhau $AB = BC = CA$ \textit{\&} 3 gó
 	Trong hình học nói chung, tam giác nói riêng, các cạnh bằng nhau (hay các góc bằng nhau) thường được chỉ rõ bằng cùng 1 ký hiệu.
 \end{luuy}
 
-\paragraph{Vẽ tam giác đều}
-``Vẽ tam giác đều bằng thước \textit{\&} compa khi biết độ dài cạnh bằng $a$ cm:
+\paragraph{Vẽ tam giác đều.} ``Vẽ tam giác đều bằng thước \textit{\&} compa khi biết độ dài cạnh bằng $a$ cm:
 \begin{itemize}
 	\item Dùng thước vẽ đoạn thẳng $AB = a$ cm.
 	\item Lấy $A$ làm tâm, dùng compa vẽ 1 phần đường tròn có bán kính $AB$.
@@ -2829,11 +1151,9 @@ Tam giác đều $ABC$ có 3 cạnh bằng nhau $AB = BC = CA$ \textit{\&} 3 gó
 
 \subsubsection{Hình vuông}
 
-\paragraph{Nhận biết hình vuông}
-Hình vuông $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ là góc vuông.
+\paragraph{Nhận biết hình vuông.} Hình vuông $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ là góc vuông.
 
-\paragraph{Vẽ hình vuông}
-``Vẽ bằng eke hình vuông $ABCD$, biết độ dài cạnh bằng $a$ cm:
+\paragraph{Vẽ hình vuông.} ``Vẽ bằng eke hình vuông $ABCD$, biết độ dài cạnh bằng $a$ cm:
 \begin{enumerate}
 	\item Vẽ theo 1 cạnh góc vuông của eke đoạn thẳng $AB$ có độ dài bằng 7 cm.
 	\item Đặt đỉnh góc vuông của eke trùng với điểm $A$ \textit{\&} 1 cạnh eke nằm trên $AB$, vẽ theo cạnh kia của eke đoạn thẳng $AD$ có độ dài bằng $a$ cm.
@@ -2841,8 +1161,7 @@ Hình vuông $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đ�
 	\item Vẽ đoạn thẳng $CD$.'' -- \cite[p. 95]{SGK_Toan_6_Canh_Dieu_tap_1}
 \end{enumerate}
 
-\paragraph{Chu vi \textit{\&} diện tích của hình vuông}
-Chu vi của hình vuông có độ dài cạnh bằng $a$ là $C = 4a$. Diện tích của hình vuông có độ dài cạnh bằng $a$ là $S = aa = a^2$.
+\paragraph{Chu vi \textit{\&} diện tích của hình vuông.} Chu vi của hình vuông có độ dài cạnh bằng $a$ là $C = 4a$. Diện tích của hình vuông có độ dài cạnh bằng $a$ là $S = aa = a^2$.
 
 \subsubsection{Lục giác đều}
 Ghép 6 miếng phẳng hình tam giác đều có cạnh bằng nhau để tạo thành hình lục giác thì hình lục giác đó được gọi là \emph{hình lục giác đều}. Với hình lục giác đều $ABCDEF$ với tâm $O$: Các gam giác $OAB,OBC,OCD,ODE,OEF,OFA$ là tam giác đều nên các cạnh $AB,BC,CD,DE,EF,FA$ có độ dài bằng nhau. Các đường chéo chính $AD,BE,CF$ cắt nhau tại điểm $O$. Các đường chéo chính $AD,BE,CG$ có độ dài gấp đôi độ dài cạnh tam giác đều nên chúng bằng nhau. Mỗi góc ở đỉnh $A,B,C,D,E,F$ của lục giác đều $ABCDEF$ đều gấp đôi góc của 1 tam giác đều nên chúng bằng nhau. Viết dưới dạng ký hiệu: Lục giác đều $ABCDEF$ có: 6 cạnh bằng nhau: $AB = BC = CD = DE = EF = FA$; 3 đường chéo chính cắt nhau tại điểm $O$; 3 đường chéo chính bằng nhau: $AD = BE = CF$; 6 góc ở các đỉnh $A,B,C,D,E,F$ bằng nhau.
@@ -2853,11 +1172,9 @@ Ghép 6 miếng phẳng hình tam giác đều có cạnh bằng nhau để tạ
 
 \subsubsection{Hình chữ nhật}
 
-\paragraph{Nhận biết hình chữ nhật}
-Hình chữ nhật $ABCD$ có: 2 cạnh đối nhau bằng nhau: $AB = CD$, $AD = BC$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ đều là góc vuông.
+\paragraph{Nhận biết hình chữ nhật.} Hình chữ nhật $ABCD$ có: 2 cạnh đối nhau bằng nhau: $AB = CD$, $AD = BC$; 2 cạnh đối $AB$ \textit{\&} $CD$; $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo bằng nhau: $AC = BD$; 4 góc ở các đỉnh $A,B,C,D$ đều là góc vuông.
 
-\paragraph{Vẽ hình chữ nhật}
-Vẽ hình chữ nhật bằng eke khi biết độ dài 2 cạnh là $a$ cm \textit{\&} $b$ cm:
+\paragraph{Vẽ hình chữ nhật.} Vẽ hình chữ nhật bằng eke khi biết độ dài 2 cạnh là $a$ cm \textit{\&} $b$ cm:
 \begin{enumerate}
 	\item Vẽ theo 1 cạnh góc vuông của eke đoạn thẳng $AB$ có độ dài bằng $a$ cm.
 	\item Đặt đỉnh góc vuông của eke trùng với điểm $A$ \textit{\&} 1 cạnh eke nằm trên $AB$, vẽ theo cạnh kia của eke đoạn thẳng $AD$ có độ dài bằng $b$ cm.
@@ -2865,16 +1182,13 @@ Vẽ hình chữ nhật bằng eke khi biết độ dài 2 cạnh là $a$ cm \te
 	\item Vẽ đoạn thẳng $CD$.
 \end{enumerate}
 
-\paragraph{Chu vi \textit{\&} diện tích của hình chữ nhật}
-Chu vi của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $C = 2(a + b)$. Diện tích của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $S = ab$.
+\paragraph{Chu vi \textit{\&} diện tích của hình chữ nhật.} Chu vi của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $C = 2(a + b)$. Diện tích của hình chữ nhật có độ dài 2 cạnh là $a$ \textit{\&} $b$ là $S = ab$.
 
 \subsubsection{Hình thoi}
 
-\paragraph{Nhận biết hình thoi}
-Hình thoi $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$, $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo $AC$ \textit{\&} $BD$ vuông góc với nhau.
+\paragraph{Nhận biết hình thoi.} Hình thoi $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đối $AB$ \textit{\&} $CD$, $AD$ \textit{\&} $BC$ song song với nhau; 2 đường chéo $AC$ \textit{\&} $BD$ vuông góc với nhau.
 
-\paragraph{Vẽ hình thoi}
-``Vẽ hình thoi bằng thước \textit{\&} compa khi biết độ dài 1 cạnh bằng $a$ cm \textit{\&} độ dài 1 đường chéo bằng $b$ cm:
+\paragraph{Vẽ hình thoi.} ``Vẽ hình thoi bằng thước \textit{\&} compa khi biết độ dài 1 cạnh bằng $a$ cm \textit{\&} độ dài 1 đường chéo bằng $b$ cm:
 \begin{enumerate}
 	\item Dùng thước vẽ đoạn thẳng $AC = b$ cm.
 	\item Dùng compa vẽ 1 phần đường tròn tâm $A$ bán kính $a$ cm.
@@ -2882,8 +1196,7 @@ Hình thoi $ABCD$ có: 4 cạnh bằng nhau: $AB = BC = CD = DA$; 2 cạnh đố
 	\item Dùng thước vẽ các đoạn thẳng $AB,BC,CD,DA$.'' -- \cite[p. 100]{SGK_Toan_6_Canh_Dieu_tap_1}
 \end{enumerate}
 
-\paragraph{Chu vi \textit{\&} diện tích của hình thoi}
-Với hình thoi có độ dài cạnh là $a$ \textit{\&} độ dài 2 đường chéo là $m$ \textit{\&} $n$, ta có: Chu vi của hình thoi là $C = 4a$; diện tích của hình thoi là $S = \frac{1}{2}mn$.
+\paragraph{Chu vi \textit{\&} diện tích của hình thoi.} Với hình thoi có độ dài cạnh là $a$ \textit{\&} độ dài 2 đường chéo là $m$ \textit{\&} $n$, ta có: Chu vi của hình thoi là $C = 4a$; diện tích của hình thoi là $S = \frac{1}{2}mn$.
 
 %------------------------------------------------------------------------------%
 
@@ -2962,7 +1275,7 @@ Cho 1 hình \textit{\&} 1 đường thẳng $d$, nếu gấp hình đã cho theo
 
 \subsubsection{Thực hành phần mềm GeoGebra trong tính toán số học}
 
-\paragraph{Sử dụng trực tiếp lệnh trong CAS}
+\paragraph{Sử dụng trực tiếp lệnh trong CAS.}
 \begin{enumerate}
 	\item \textit{Tìm ước của số nguyên dương.} Cho $a\in\mathbb{N}^\star$. Để tìm ước của $a$, nhập lệnh: \texttt{DanhSachUocSo(a)} rồi bấm \texttt{Enter}.
 	\item \textit{Tìm ước chung lớn nhất của 2 số nguyên dương.} Cho $a,b\in\mathbb{N}^\star$. Để tìm ước chung lớn nhất của $a$ \textit{\&} $b$, nhập lệnh: \texttt{USCLN(a,b)} rồi bấm \texttt{Enter}.
@@ -2970,8 +1283,7 @@ Cho 1 hình \textit{\&} 1 đường thẳng $d$, nếu gấp hình đã cho theo
 	\item \textit{Tìm số dư của phép chia.} Cho $a,b\in\mathbb{N}^\star$. Để tìm số dư của phép chia $a$ cho $b$, nhập lệnh: \texttt{SoDu(a,b)} rồi bấm \texttt{Enter}.
 \end{enumerate}
 
-\paragraph{Tạo công cụ để tìm ƯCLN, BCNN của các số nguyên dương}
-Cho $a,b,c\in\mathbb{N}^\star$. Để tạo công cụ tìm $\mbox{ƯCLN}(a,b,c)$ \textit{\&} $\operatorname{BCNN}(a,b,c)$, xem \cite[pp. 120--121]{SGK_Toan_6_Canh_Dieu_tap_1}.
+\paragraph{Tạo công cụ để tìm ƯCLN, BCNN của các số nguyên dương.} Cho $a,b,c\in\mathbb{N}^\star$. Để tạo công cụ tìm $\mbox{ƯCLN}(a,b,c)$ \textit{\&} $\operatorname{BCNN}(a,b,c)$, xem \cite[pp. 120--121]{SGK_Toan_6_Canh_Dieu_tap_1}.
 
 \subsubsection{Sử dụng phần mềm GeoGebra để vẽ hình tam giác đều, hình vuông, hình lục giác đều}
 Xem \cite[pp. 122--124]{SGK_Toan_6_Canh_Dieu_tap_1}.
@@ -3090,6 +1402,8 @@ Từ định nghĩa: ``Xác suất thực nghiệm xuất hiện mặt $N$ (ho�
 
 Lý thuyết nằm sau những ví dụ này là \textit{Luật Số Lớn}\texttt{/}\textit{Law of Large Numbers} -- 1 trong những định lý quan trọng nhất của \textit{Lý thuyết xác suất \textit{\&} thống kê}, được chứng minh bởi nhà Toán học huyền thoại người Nga Kolmogorov.\footnote{NQBH: Kolmogorov còn có những cống hiến khác về nền tảng xác suất \textit{\&} thống kê trong việc nghiên cứu \textit{turbulence}\texttt{/}\textit{sự nhiễu loạn}. Turbulence vẫn còn là 1 vấn đề mở cực khó của cả Toán học \textit{\&} Vật lý. Đề tài PhD ở Đức của tôi là làm tối ưu hình dáng (shape optimization) \textit{\&} tối ưu topo (topology optimization) cho turbulence models. Và đương nhiên 3 năm chẳng thể nào đủ cho 1 đề tài khủng như vậy.}
 
+%------------------------------------------------------------------------------%
+
 \section{Phân Số \textit{\&} Số Thập Phân}
 \textbf{Nội dung.} phân số với tử \textit{\&} mẫu là số nguyên; các phép tính với phân số; số thập phân; các phép tinh với số thập phân; tỷ số, tỷ số phần trăm, làm tròn số.
 
@@ -3106,13 +1420,12 @@ Lý thuyết nằm sau những ví dụ này là \textit{Luật Số Lớn}\text
 
 \subsubsection{Phân số bằng nhau}
 
-\paragraph{Khái niệm 2 phân số bằng nhau}
+\paragraph{Khái niệm 2 phân số bằng nhau.}
 \begin{dinhnghia}[2 phân số bằng nhau]
 	2 phân số được gọi là \emph{bằng nhau} nếu chúng cùng biểu diễn một giá trị.
 \end{dinhnghia}
 
-\paragraph{Quy tắc bằng nhau của 2 phân số}
-Với mọi $a,b,c,d\in\mathbb{Z}$, $b\ne 0$, $d\ne 0$,
+\paragraph{Quy tắc bằng nhau của 2 phân số.} Với mọi $a,b,c,d\in\mathbb{Z}$, $b\ne 0$, $d\ne 0$,
 \begin{align*}
 	\boxed{\frac{a}{b} = \frac{c}{d}\Leftrightarrow b\ne 0, d\ne 0,\ ad = bc.}
 \end{align*}
@@ -3134,7 +1447,7 @@ Với $a,b\in\mathbb{Z}$, $b\ne 0$, luôn có: $\frac{a}{-b} = \frac{-a}{b} = -\
 
 \subsubsection{Tính chất cơ bản của phân số}
 
-\paragraph{Tính chất cơ bản}
+\paragraph{Tính chất cơ bản.}
 Nếu ta nhân cả tử \textit{\&} mẫu của 1 phân số với cùng 1 số nguyên khác 0 thì ta được 1 phân số bằng phân số đã cho, i.e.,
 \begin{align*}
 	\frac{a}{b} = \frac{am}{bm},\ \forall a\in\mathbb{Z},\ b,m\in\mathbb{Z}^\star.
@@ -3147,7 +1460,7 @@ trong đó giả thiết $n\in\mbox{ƯC}(a,b)$ để phân số $\dfrac{a:n}{b:n
 
 ``Mỗi phân số đều đưa được về 1 phân số bằng nó \textit{\&} có mẫu là số dương.'' -- \cite[p. 28]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{Rút gọn về phân số tối giản}
+\paragraph{Rút gọn về phân số tối giản.}
 \begin{dinhnghia}
 	\emph{Phân số tối giản} là phân số mà tử \textit{\&} mẫu chỉ có ước chung là 1 \textit{\&} $-1$.
 \end{dinhnghia}
@@ -3159,7 +1472,7 @@ Dựa vào tính chất cơ bản của phân số, để rút gọn phân số 
 	\item Chia cả tử \textit{\&} mẫu cho $\mbox{ƯCLN}$ vừa tìm được, ta có phân số  tối giản cần tìm.
 \end{enumerate}
 
-\paragraph{Quy đồng mẫu nhiều phân số}
+\paragraph{Quy đồng mẫu nhiều phân số.}
 \begin{cauhoi}
 	Tại sao cần\emph{\texttt{/}}phải quy đồng mẫu nhiều phân số?
 \end{cauhoi}
@@ -3187,11 +1500,9 @@ Dựa vào tính chất cơ bản của phân số, để rút gọn phân số 
 
 \subsubsection{So sánh các phân số}
 
-\paragraph{So sánh 2 phân số.}
-Trong 2 số nguyên khác nhau luôn có 1 số nhỏ hơn số kia. Cũng như số nguyên, trong 2 phân số khác nhau luôn có 1 phân số nhỏ hơn phân số kia. Nếu phân số $\frac{a}{b}$ nhỏ hơn phân số $\frac{c}{d}$ thì ta viết $\frac{a}{b} < \frac{c}{d}$ hay $\frac{c}{d} > \frac{a}{b}$. Phân số lớn hơn 0 được gọi là \emph{phân số dương}. Phân nhỏ nhỏ hơn 0 được gọi là \emph{phân số âm}. Tính chất bắc cầu: nếu $\frac{a}{b} < \frac{c}{d}$ \textit{\&} $\frac{c}{d} < \frac{e}{f}$ thì $\frac{a}{b} < \frac{e}{f}$.
+\paragraph{So sánh 2 phân số.} Trong 2 số nguyên khác nhau luôn có 1 số nhỏ hơn số kia. Cũng như số nguyên, trong 2 phân số khác nhau luôn có 1 phân số nhỏ hơn phân số kia. Nếu phân số $\frac{a}{b}$ nhỏ hơn phân số $\frac{c}{d}$ thì ta viết $\frac{a}{b} < \frac{c}{d}$ hay $\frac{c}{d} > \frac{a}{b}$. Phân số lớn hơn 0 được gọi là \emph{phân số dương}. Phân nhỏ nhỏ hơn 0 được gọi là \emph{phân số âm}. Tính chất bắc cầu: nếu $\frac{a}{b} < \frac{c}{d}$ \textit{\&} $\frac{c}{d} < \frac{e}{f}$ thì $\frac{a}{b} < \frac{e}{f}$.
 
-\paragraph{Cách so sánh 2 phân số}
-``Để so sánh 2 phân số không cùng mẫu, ta quy đồng mẫu 2 phân số đó (về cùng 1 mẫu dương) rồi so sánh các tử với nhau: Phân số nào có tử lớn hơn thì phân số đó lớn hơn.'' -- \cite[p. 31]{SGK_Toan_6_Canh_Dieu_tap_1}
+\paragraph{Cách so sánh 2 phân số.} ``Để so sánh 2 phân số không cùng mẫu, ta quy đồng mẫu 2 phân số đó (về cùng 1 mẫu dương) rồi so sánh các tử với nhau: Phân số nào có tử lớn hơn thì phân số đó lớn hơn.'' -- \cite[p. 31]{SGK_Toan_6_Canh_Dieu_tap_1}
 
 \subsubsection{Hỗn số dương}
 ``Viết 1 phân số lớn hơn 1 thành tổng của 1 số nguyên dương \textit{\&} 1 phân số nhỏ hơn 1 (với tử \textit{\&} mẫu dương) rồi viết chúng liền nhau thì được 1 \emph{hỗn số dương}.'' -- \cite[p. 32]{SGK_Toan_6_Canh_Dieu_tap_2}. Lưu ý điều này cũng đồng nghĩa với việc phân tích 1 phân số $\frac{a}{b} > 1$, $a,b\in\mathbb{N}^\star$, ra phần nguyên, ký hiệu là $\lfloor\frac{a}{b}\rfloor$ \textit{\&} phần lẻ, ký hiệu là $\left\{\frac{a}{b}\right\}$, i.e., $\frac{a}{b} = \lfloor\frac{a}{b}\rfloor + \left\{\frac{a}{b}\right\}$. Dễ thấy phần nguyên là thương của phép chia tử $a$ cho mẫu $b$, còn phần lẻ là phân số với tử là phần dư của phép chia $a$ cho $b$, \textit{\&} mẫu số vẫn là $b$. Cụ thể dưới dạng ký hiệu: $a = bq + r$, với $q\in\mathbb{N}^\star$ là thương, $r\in\{0,\ldots,b - 1\}$ là số dư, thì phân số $\frac{a}{b}$ được viết dưới dạng hỗn số là:
@@ -3205,28 +1516,24 @@ Trong 2 số nguyên khác nhau luôn có 1 số nhỏ hơn số kia. Cũng như
 
 \subsubsection{Phép cộng phân số}
 
-\paragraph{Quy tắc cộng 2 phân số}
-``Muốn cộng 2 phân số có cùng mẫu, ta cộng các tử \textit{\&} giữ nguyên mẫu:
+\paragraph{Quy tắc cộng 2 phân số.} ``Muốn cộng 2 phân số có cùng mẫu, ta cộng các tử \textit{\&} giữ nguyên mẫu:
 \begin{align*}
 	\frac{a}{m} + \frac{b}{m} = \frac{a + b}{m},\ \forall a,b,m\in\mathbb{Z},\ m\ne 0.
 \end{align*}
 Muốn cộng 2 phân số không cùng mẫu, ta quy đồng mẫu những phân số đó rồi cộng các tử \textit{\&} giữ nguyên mẫu chung.'' -- \cite[pp. 34--35]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{Tính chất của phép cộng phân số}
-``Giống như phép cộng số tự nhiên, phép cộng phân số cũng có các tính chất: giao hoán, kết hợp, cộng với số 0.'' -- \cite[pp. 35]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{Tính chất của phép cộng phân số.} ``Giống như phép cộng số tự nhiên, phép cộng phân số cũng có các tính chất: giao hoán, kết hợp, cộng với số 0.'' -- \cite[pp. 35]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \subsubsection{Phép trừ phân số}
 
-\paragraph{Số đối của 1 phân số}
-``Giống như số nguyên, mỗi phân số đều có số đối sao cho tổng của 2 số đó bằng 0.'' -- \cite[pp. 36]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{Số đối của 1 phân số.} ``Giống như số nguyên, mỗi phân số đều có số đối sao cho tổng của 2 số đó bằng 0.'' -- \cite[pp. 36]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \begin{dinhnghia}
 	\emph{Số đối} của phân số $\frac{a}{b}$ ký hiệu là $-\frac{a}{b}$. Ta có: $\frac{a}{b} + \left(-\frac{a}{b}\right) = 0$.
 \end{dinhnghia}
 Hiển nhiên: $-\frac{a}{b} = \frac{a}{-b} = \frac{-a}{b}$ với $a,b\in\mathbb{Z}$, $b\ne 0$. Số đối của $-\frac{a}{b}$ là $\frac{a}{b}$, i.e., $-\left(-\frac{a}{b}\right) = \frac{a}{b}$.
 
-\paragraph{Quy tắc trừ 2 phân số}
-``Muốn trừ 2 phân số có cùng mẫu, ta trừ tử của số bị trừ cho tử của số trừ \textit{\&} giữ nguyên mẫu:
+\paragraph{Quy tắc trừ 2 phân số.} ``Muốn trừ 2 phân số có cùng mẫu, ta trừ tử của số bị trừ cho tử của số trừ \textit{\&} giữ nguyên mẫu:
 \begin{align*}
 	\frac{a}{m} - \frac{b}{m} = \frac{a - b}{m},\ \forall a,b,m\in\mathbb{Z},\ m\ne 0.
 \end{align*}
@@ -3247,11 +1554,9 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 
 \subsubsection{Phép nhân phân số}
 
-\paragraph{Quy tắc nhân 2 phân số}
-``Muốn nhân 2 phân số, ta nhân các tử với nhau \textit{\&} nhân các mẫu với nhau: $\frac{a}{b}\cdot\frac{c}{d} = \frac{ac}{bd}$ với $b\ne 0$, $d\ne 0$.'' -- \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_2}. ``Muốn nhân 1 số nguyên với 1 phân số (hoặc nhân 1 phân số với 1 số nguyên), ta nhân số nguyên tới tử của phân số \textit{\&} giữ nguyên mẫu của phân số đó: $m\cdot\frac{a}{b} = \frac{ma}{b}$, $\frac{a}{b}\cdot n = \frac{an}{b}$ với $b\ne 0$.'' -- \cite[p. 41]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{Quy tắc nhân 2 phân số.} ``Muốn nhân 2 phân số, ta nhân các tử với nhau \textit{\&} nhân các mẫu với nhau: $\frac{a}{b}\cdot\frac{c}{d} = \frac{ac}{bd}$ với $b\ne 0$, $d\ne 0$.'' -- \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_2}. ``Muốn nhân 1 số nguyên với 1 phân số (hoặc nhân 1 phân số với 1 số nguyên), ta nhân số nguyên tới tử của phân số \textit{\&} giữ nguyên mẫu của phân số đó: $m\cdot\frac{a}{b} = \frac{ma}{b}$, $\frac{a}{b}\cdot n = \frac{an}{b}$ với $b\ne 0$.'' -- \cite[p. 41]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{Tính chất của phép nhân phân số}
-``Giống như phép nhân số tự nhiên, phép nhân phân số cũng có các tính chất: giao hoán, kết hợp, nhân với 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 41]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{Tính chất của phép nhân phân số.} ``Giống như phép nhân số tự nhiên, phép nhân phân số cũng có các tính chất: giao hoán, kết hợp, nhân với 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 41]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \subsubsection{Phép chia phân số}
  
@@ -3283,10 +1588,9 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 
 \subsubsection{So sánh các số thập phân}
 
-\paragraph{So sánh 2 số thập phân}
-``Cũng như số nguyên, trong 2 số thập phân khác nhau luôn có 1 số nhỏ hơn số kia. Nếu số thập phân $a$ nhỏ hơn số thập phân $b$ thì ta viết $a < b$ hay $b > a$. Số thập phân lớn hơn 0 được gọi là \emph{số thập phân dương}. Số thập phân nhỏ hơn 0 được gọi là \emph{số thập phân âm}. Tính chất bắc cầu: nếu $a < b$ \textit{\&} $b < c$ thì $a < c$.'' \cite[p. 45]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{So sánh 2 số thập phân.} ``Cũng như số nguyên, trong 2 số thập phân khác nhau luôn có 1 số nhỏ hơn số kia. Nếu số thập phân $a$ nhỏ hơn số thập phân $b$ thì ta viết $a < b$ hay $b > a$. Số thập phân lớn hơn 0 được gọi là \emph{số thập phân dương}. Số thập phân nhỏ hơn 0 được gọi là \emph{số thập phân âm}. Tính chất bắc cầu: nếu $a < b$ \textit{\&} $b < c$ thì $a < c$.'' \cite[p. 45]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{Cách so sánh 2 số thập phân}
+\paragraph{Cách so sánh 2 số thập phân.}
 \begin{itemize}
 	\item \textit{So sánh 2 số thập phân khác dấu.} ``Cũng tương tự như trong tập số nguyên, ta có: Số thập phân âm luôn nhỏ hơn số thập phân dương.'' Bởi vì: số thập phân âm $< 0 <$ số thập phân dương.
 	\item \textit{So sánh 2 số thập phân dương.} ``Để so sánh 2 số thập phân dương, ta làm như sau:
@@ -3317,15 +1621,13 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 	\item Viết dấu thập phân ở kết quả thẳng cột với các dấu thập phân đã viết ở trên.
 \end{enumerate}
 
-\paragraph{Cộng 2 số thập phân}
-``Quy tắc cộng 2 số thập phân (cùng dấu hoặc khác dấu) được thực hiện giống quy tắc cộng 2 số nguyên.'' ``Giống như phép cộng số nguyên, phép cộng số thập phân cũng có các tính chất: giao hoán, kết hợp, cộng với số 0, cộng với số đối.'' -- \cite[p. 49]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{Cộng 2 số thập phân.} ``Quy tắc cộng 2 số thập phân (cùng dấu hoặc khác dấu) được thực hiện giống quy tắc cộng 2 số nguyên.'' ``Giống như phép cộng số nguyên, phép cộng số thập phân cũng có các tính chất: giao hoán, kết hợp, cộng với số 0, cộng với số đối.'' -- \cite[p. 49]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \begin{luuy}
 	Với dạng toán ``Tính 1 cách hợp lý'', nên tự hiểu ngầm là nên\emph{\texttt{/}} phải sử dụng các tính chất như giao hoán \textit{\&} tính kết hợp: nhóm lại các số có phần thập phân mà khi công hoặc trừ chúng lại ta sẽ được lũy thừa của 10, để dễ tính toán.
 \end{luuy}
 
-\paragraph{Trừ 2 số thập phân}
-``Cũng như phép trừ số nguyên, để trừ 2 số thập phân ta cộng số bị trừ với số đối của số trừ.'' -- \cite[p. 50]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{Trừ 2 số thập phân.} ``Cũng như phép trừ số nguyên, để trừ 2 số thập phân ta cộng số bị trừ với số đối của số trừ.'' -- \cite[p. 50]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \subsubsection{Quy tắc dấu ngoặc}
 ``Quy tắc dấu ngoặc đối với số thập phân giống như quy tắc dấu ngoặc đối với số nguyên.'' -- \cite[p. 50]{SGK_Toan_6_Canh_Dieu_tap_2}
@@ -3336,8 +1638,7 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 
 \subsubsection{Phép nhân số thập phân}
 
-\paragraph{Nhân 2 số thập phân}
-``Để nhân 2 số thập phân dương, ta làm như sau:
+\paragraph{Nhân 2 số thập phân.} ``Để nhân 2 số thập phân dương, ta làm như sau:
 \begin{enumerate}
 	\item Viết thừa số này ở dưới thừa số kia như đối với phép nhân các số tự nhiên.
 	\item Thực hiện phép nhân như nhân các số tự nhiên.
@@ -3345,8 +1646,7 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 \end{enumerate}
 ``Quy tắc nhân 2 số thập phân (cùng dấu hoặc khác dấu) được thực hiện giống như quy tắc nhân 2 số nguyên.'' -- \cite[p. 52]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{Tính chất của phép nhân số thập phân}
-``Giống như phép nhân số nguyên, phép nhân số thập phân cũng có các tính chất: giao hoán, kết hợp, nhân với số 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 53]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{Tính chất của phép nhân số thập phân.} ``Giống như phép nhân số nguyên, phép nhân số thập phân cũng có các tính chất: giao hoán, kết hợp, nhân với số 1, phân phối của phép nhân đối với phép cộng \textit{\&} phép trừ.'' -- \cite[p. 53]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \subsubsection{Phép chia số thập phân}
 \textbf{Mẹo.} Cho $a,b$ là 2 số thập phân. Thì $\frac{a}{b} = \frac{a10^n}{b10^n}$, $\forall n\in\mathbb{N}$. Chọn $n\in\mathbb{N}$ sao cho mẫu $b$ mất dấu thập phân.
@@ -3387,13 +1687,13 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 
 \subsubsection{Tỷ số}
 
-\paragraph{Tỷ số của 2 số}
+\paragraph{Tỷ số của 2 số.}
 \begin{dinhnghia}
 	 \emph{Tỷ số} của $a$ \textit{\&} $b$, $b\ne 0$, là thương trong phép chia số $a$ cho số $b$, ký hiệu là $a:b$ hoặc $\frac{a}{b}$.
 \end{dinhnghia}
 ``Nếu tỷ số của $a$ \textit{\&} $b$ được viết ở dạng $\frac{a}{b}$ thì ta cũng gọi $a$ là \textit{tử số} \textit{\&} $b$ là \textit{mẫu số}.'' -- \cite[p. 61]{SGK_Toan_6_Canh_Dieu_tap_2}. ``Tỷ số của số $a$ \textit{\&} số $b$ phải được viết theo đúng thứ tự là $\frac{a}{b}$ hoặc $a:b$.
 
-\paragraph{Tỷ số của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo)}
+\paragraph{Tỷ số của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo).}
 \begin{dinhnghia}[Tỷ số của 2 đại lượng cùng loại \textit{\&} cùng đơn vị đo]
 	\emph{Tỷ số của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo)} là tỷ số giữa 2 số đo của 2 đại lượng đó.
 \end{dinhnghia}
@@ -3401,7 +1701,7 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 
 \subsubsection{Tỷ số phần trăm}
 
-\paragraph{Tỷ số phần trăm của 2 số}
+\paragraph{Tỷ số phần trăm của 2 số.}
 \begin{dinhnghia}
 	\emph{Tỷ số phần trăm} của $a$ \textit{\&} $b$ là $\frac{a}{b}\cdot 100\%$.
 \end{dinhnghia}
@@ -3417,7 +1717,7 @@ Muốn trừ 2 phân số không cùng mẫu, ta quy đồng mẫu những phân
 \end{itemize}
 ``Khi tỷ số $\frac{a\cdot 100}{b}$ không là số nguyên thì ta thường viết tỷ số đó ở dạng số thập phân có hữu hạn chữ số sau dấu thập phân (hoặc xấp xỉ bằng số thập phân có hữu hạn chữ số sau dấu thập phân). Cách viết về số thập phân như vậy thuận tiện hơn trong thực tiễn.'' ``Khi tính tỷ số phần trăm của $a$ \textit{\&} $b$ mà phải làm tròn số thập phân thì ta làm theo cách thứ 2 đã nêu ở trên: Nhân $a$ với 100 rồi chia cho $b$ \textit{\&} làm tròn số thập phân nhận được.'' -- \cite[p. 64]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{Tỷ số phần trăm của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo)}
+\paragraph{Tỷ số phần trăm của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo).}
 \begin{dinhnghia}[Tỷ số phần trăm của 2 đại lượng cùng loại \textit{\&} cùng đơn vị đo]
 	 \emph{Tỷ số phần trăm của 2 đại lượng (cùng loại \textit{\&} cùng đơn vị đo)} là tỷ số phần trăm của 2 số đo của 2 đại lượng đó.
 \end{dinhnghia}
@@ -3523,14 +1823,13 @@ Thật vậy, đoạn thẳng $AB$ có vô số điểm bởi vì: lấy $M_1$ l
 
 \subsubsection{2 Đoạn thẳng bằng nhau}
 
-\paragraph{Khái niệm đoạn thẳng}
+\paragraph{Khái niệm đoạn thẳng.}
 \begin{dinhnghia}[Đoạn thẳng]
 	\emph{Đoạn thẳng $AB$} là hình gồm điểm $A$, điểm $B$, \textit{\&} tất cả các điểm nằm giữa $A$ \textit{\&} $B$.
 \end{dinhnghia}
 ``Đoạn thẳng $AB$ cũng gọi là đoạn thẳng $BA$.'' -- \cite[p. 84]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{2 Đoạn thẳng bằng nhau}
-``Khi đoạn thẳng $AB$ bằng đoạn thẳng $CD$ thì ta ký hiệu $AB = CD$.'' -- \cite[p. 85]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{2 Đoạn thẳng bằng nhau.} ``Khi đoạn thẳng $AB$ bằng đoạn thẳng $CD$ thì ta ký hiệu $AB = CD$.'' -- \cite[p. 85]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \begin{cauhoi}
 	Khái niệm ``2 đường thẳng bằng nhau'' có nghĩa hay không?
@@ -3538,14 +1837,13 @@ Thật vậy, đoạn thẳng $AB$ có vô số điểm bởi vì: lấy $M_1$ l
 
 \subsubsection{Độ dài đoạn thẳng}
 
-\paragraph{Đo đoạn thẳng}
+\paragraph{Đo đoạn thẳng.}
 \begin{dinhly}
 	Mỗi đoạn thẳng có độ dài là 1 số dương. 2 đoạn thẳng bằng nhau thì có độ dài bằng nhau.
 \end{dinhly}
 ``Độ dài của đoạn thẳng $AB$ cũng được gọi là \textit{khoảng cách} giữa 2 điểm $A$ \textit{\&} $B$.'' -- \cite[p. 85]{SGK_Toan_6_Canh_Dieu_tap_2}
 
-\paragraph{So sánh 2 đoạn thẳng}
-``Ta có thể so sánh 2 đoạn thẳng bằng cách so sánh độ dài của chúng: Nếu độ dài đoạn thẳng $AB$ bằng độ dài đoạn thẳng $CD$ thì ta có $AB = CD$. Nếu độ dài đoạn thẳng $AB$ lớn hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ lớn hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB > CD$. Nếu độ dài đoạn thẳng $AB$ nhỏ hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ nhỏ hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB < CD$.'' -- \cite[p. 86]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{So sánh 2 đoạn thẳng.} ``Ta có thể so sánh 2 đoạn thẳng bằng cách so sánh độ dài của chúng: Nếu độ dài đoạn thẳng $AB$ bằng độ dài đoạn thẳng $CD$ thì ta có $AB = CD$. Nếu độ dài đoạn thẳng $AB$ lớn hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ lớn hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB > CD$. Nếu độ dài đoạn thẳng $AB$ nhỏ hơn độ dài đoạn thẳng $CD$ thì ta có đoạn thẳng $AB$ nhỏ hơn đoạn thẳng $CD$ \textit{\&} ký hiệu $AB < CD$.'' -- \cite[p. 86]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \subsubsection{Trung điểm của đoạn thẳng}
 
@@ -3601,8 +1899,7 @@ Khái niệm điểm nằm trong góc $xOy$ hay điểm trong của góc $xOy$.
 
 \subsubsection{Số đo của góc}
 
-\paragraph{Đo góc}
-``Thước đo góc có dạng nửa hình tròn \textit{\&} được chia đều thành 180 phần bằng nhau, mỗi phần ứng với $1^\circ$. Dùng thước đo góc để xác định số đo góc $xOy$:
+\paragraph{Đo góc.} ``Thước đo góc có dạng nửa hình tròn \textit{\&} được chia đều thành 180 phần bằng nhau, mỗi phần ứng với $1^\circ$. Dùng thước đo góc để xác định số đo góc $xOy$:
 \begin{enumerate}
 	\item Đặt thước đo góc sao cho tâm của thước trùng với đỉnh của góc. Vạch 0 của thước nằm trên cạnh $Ox$.
 	\item Xác định xem cạnh $Oy$ đi qua vạch chia độ nào thì đó chính là số đo của góc.'' -- \cite[p. 96]{SGK_Toan_6_Canh_Dieu_tap_2}
@@ -3617,8 +1914,7 @@ Khái niệm điểm nằm trong góc $xOy$ hay điểm trong của góc $xOy$.
 	``Trong 1 hình có nhiều góc, người ta thường vẽ thêm 1 hay nhiều vòng cung nhỏ nối 2 cạnh của góc đó để dễ thấy góc mà ta đang xét tới. Khi cần phân biệt các góc có chung 1 đỉnh, e.g., chung đỉnh $O$, ta dùng ký hiệu $\widehat{O}_1,\widehat{O}_2$.'' -- \cite[p. 98]{SGK_Toan_6_Canh_Dieu_tap_2}
 \end{luuy}
 
-\paragraph{So sánh 2 góc}
-``Ta có thể so sánh 2 góc dựa vào số đo của chúng: Nếu số đo của góc $xOy$ bằng số đo của góc $uPv$ thì góc $xOy$ bằng góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} = \widehat{uPv}$. Nếu số đo của góc $xOy$ lớn hơn số đo của góc $uPv$ thì góc $xOy$ lớn hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} > \widehat{uPv}$. Nếu số đo của góc $xOy$ nhỏ hơn số đo của góc $uPv$ thì góc $xOy$ nhỏ hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} < \widehat{uPv}$.'' -- \cite[p. 98]{SGK_Toan_6_Canh_Dieu_tap_2}
+\paragraph{So sánh 2 góc.} ``Ta có thể so sánh 2 góc dựa vào số đo của chúng: Nếu số đo của góc $xOy$ bằng số đo của góc $uPv$ thì góc $xOy$ bằng góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} = \widehat{uPv}$. Nếu số đo của góc $xOy$ lớn hơn số đo của góc $uPv$ thì góc $xOy$ lớn hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} > \widehat{uPv}$. Nếu số đo của góc $xOy$ nhỏ hơn số đo của góc $uPv$ thì góc $xOy$ nhỏ hơn góc $uPv$ \textit{\&} được ký hiệu là $\widehat{xOy} < \widehat{uPv}$.'' -- \cite[p. 98]{SGK_Toan_6_Canh_Dieu_tap_2}
 
 \subsubsection{Góc vuông, góc nhọn, góc tù, góc bẹt}
 
