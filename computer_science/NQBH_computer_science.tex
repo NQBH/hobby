@@ -488,12 +488,13 @@ At \textbf{1} you use the \texttt{cd} command to navigate to the \verb|python_wo
 \subsection{What Really Happens When You Run \texttt{hello\_world.py}}
 ``When you run the file \verb|hello_world.py|, the ending \texttt{.py} indicates that the file is a Python program. Your editor then runs the file through the \textit{Python interpreter}, which reads through the program \& determines what each word in the program means. E.g., when the interpreter sees the word \texttt{print} followed by parentheses, it prints to the screen whatever is inside the parentheses. As you write your programs, your editor highlights different parts of your program in different way. E.g., it recognizes that \texttt{print()} is the name of a function \& displays that word in 1 color. It recognizes that \texttt{"Hello Python world!"} is not Python code \& displays that phrase in a different color. This feature is called \textit{syntax highlighting} \& is quite useful as you start to write your own programs.'' -- \cite[p. 16]{Matthes2019}
 
-\subsubsection{Variables}
+\subsection{Variables}
 ``Every variable is connected to a \textit{value}, which is the information associated with that variable.'' ``Adding a variable makes a little more work for the Python interpreter.'' -- \cite[p. 16]{Matthes2019}
 
 ``You can change the value of a variable in your program at any time, \& Python will always keep track of its current value.'' -- \cite[p. 17]{Matthes2019}
 
-\paragraph{Naming \& Using Variables.} ``When you're using variables in Python, you need to adhere to a few rules \& guidelines. Breaking some of these rules will cause errors; other guidelines just help you write code that's easier to read \& understand. Be sure to keep the following variable rules in mind:
+\subsubsection{Naming \& Using Variables}
+``When you're using variables in Python, you need to adhere to a few rules \& guidelines. Breaking some of these rules will cause errors; other guidelines just help you write code that's easier to read \& understand. Be sure to keep the following variable rules in mind:
 \begin{enumerate*}
 	\item[$\bullet$] Variable names can contain only letters, numbers, \& underscores. They can start with a letter or an underscore, but not with a number. E.g., you can call a variable \verb|message_1| but not \verb|1_message|.
 	\item[$\bullet$] Spaces are not allowed in variable names, but underscores can be used to separate words in variable names. E.g., \verb|greeting_message| works, but \texttt{greeting message} will cause errors.
@@ -504,15 +505,17 @@ At \textbf{1} you use the \texttt{cd} command to navigate to the \verb|python_wo
 
 It can take some practice to learn how to create good variable names, especially as your programs become more interesting \& complicated. As you write more programs \& start to read through other people's code, you'll get better at coming up with meaningful names.'' -- \cite[p. 17]{Matthes2019}
 
-\paragraph{Avoiding Name Errors When Using Variables.} ``Every programmer makes mistakes, \& most make mistakes every day. Although good programmers might create errors, they also know how to respond to those errors efficiently. Let's look at an error you're likely to make early on \& learn how to fix it.'' -- \cite[p. 17]{Matthes2019}
+\subsubsection{Avoiding Name Errors When Using Variables}
+``Every programmer makes mistakes, \& most make mistakes every day. Although good programmers might create errors, they also know how to respond to those errors efficiently. Let's look at an error you're likely to make early on \& learn how to fix it.'' -- \cite[p. 17]{Matthes2019}
 
 ``When an error occurs in your program, the Python interpreter does its best to help you figure out where the problem is. The interpreter provides a traceback when a program cannot run successfully. A \textit{traceback} is a record of where the interpreter ran into trouble when trying to execute your code.'' ``The Python interpreter doesn't spellcheck your code, but it does ensure that variable names are spelled consistently.'' ``Programming languages are strict, but they disregard good \& bad spelling. As a result, you don't need to consider English spelling \& grammar rules when you're trying to create variable names \& writing code. Many programming errors are simple, single-character typos in 1 line of a program. If you're spending a long time searching for 1 of these errors, know that you're in good company. Many experienced \& talented programmers spend hours hunting down these kinds of tiny errors. Try to laugh about it \& move on, knowing it will happen frequently throughout your programming life.'' -- \cite[p. 18]{Matthes2019}
 
-\paragraph{Variables Are Labels.} ``Variables are often described as boxes you can store values in. This idea can be helpful the 1st few times you use a variable, but it isn't an accurate way to describe how variables are represented internally in Python. It's much better to think of variables as labels that you can assign to values. You can also say that a variable references a certain value.
+\subsubsection{Variables Are Labels}
+``Variables are often described as boxes you can store values in. This idea can be helpful the 1st few times you use a variable, but it isn't an accurate way to describe how variables are represented internally in Python. It's much better to think of variables as labels that you can assign to values. You can also say that a variable references a certain value.
 
 This distinction probably won't matter much in your initial programs, but it's worth learning earlier rather than later. At some point, you'll see unexpected behavior from a variable, \& an accurate understanding of how variables work will help you identify what's happening in your code.'' -- \cite[pp. 18--19]{Matthes2019}
 
-\subsubsection{Strings}
+\subsection{Strings}
 ``Because most programs define \& gather some sort of data, \& then do something useful with it, it helps to classify different types of data. The 1st data type we'll look at is the string. Strings are quite simple at 1st glance, but you can use them in many different ways. A \textit{string} is a series of characters. Anything inside quotes is considered a string in Python, \& you can use single or double quotes around your strings like this: \verb|"This is a string." 'This is also a string.'|. This flexibility allows you to use quotes \& apostrophes within your strings:
 \begin{verbatim}
 	'I told my friend, "Python is my favorite language!"'
@@ -521,7 +524,8 @@ This distinction probably won't matter much in your initial programs, but it's w
 \end{verbatim}
 '' -- \cite[p. 19]{Matthes2019}
 
-\paragraph{Changing Case in a String with Methods.} ``1 of the simplest tasks you can do with strings is change the case of the words in a string.'' -- \cite[p. 20]{Matthes2019}
+\subsubsection{Changing Case in a String with Methods}
+``1 of the simplest tasks you can do with strings is change the case of the words in a string.'' -- \cite[p. 20]{Matthes2019}
 \begin{verbatim}
 	name = "ada lovelace"
 	print(name.title())
@@ -543,7 +547,8 @@ This will display the following:
 \end{verbatim}
 The \texttt{lower()} method is particularly useful for storing data. Many times you won't want to trust the capitalization that your users provide, so you'll convert strings to lowercase before storing them. Then when you want to display the information, you'll use the case that makes the most sense for each string.'' -- \cite[p. 20]{Matthes2019}
 
-\paragraph{Using Variables in Strings.} ``In some situations, you'll want to use a variable's value inside a string. E.g., you might want 2 variables to represent a 1st name \& a last name respectively, \& then want to combine those values to display someone's full name:
+\subsubsection{Using Variables in Strings}
+``In some situations, you'll want to use a variable's value inside a string. E.g., you might want 2 variables to represent a 1st name \& a last name respectively, \& then want to combine those values to display someone's full name:
 \begin{verbatim}
 	first_name = "ada"
 	last_name = "lovelace"
@@ -573,7 +578,8 @@ This code displays the message \texttt{Hello, Ada Lovelace!} as well, but by ass
 	``F-strings were 1st introduced in Python 3.6. If you're using Python 3.5 or earlier, you'll need to use the \texttt{format()} method rather than this \texttt{f} syntax. To use \texttt{format()}, list the variables you want to use in the string inside the parentheses following \texttt{format}. Each variable is referred to by a set of braces; the braces will be filled by the values listed in parentheses in the order provided: \verb|full_name = "{} {}".format(first_name, last_name)|.'' -- \cite[p. 22]{Matthes2019}
 \end{remark}
 
-\paragraph{Adding Whitespace to Strings with Tabs or Newlines.} ``In programming, \textit{whitespace} refers to any nonprinting character, such as spaces, tabs, \& end-of-line symbols. You can use whitespace to organize your output so it's easier for users to read. To add a tab to your text, use the character combination \verb|\t| as shown:
+\subsubsection{Adding Whitespace to Strings with Tabs or Newlines}
+``In programming, \textit{whitespace} refers to any nonprinting character, such as spaces, tabs, \& end-of-line symbols. You can use whitespace to organize your output so it's easier for users to read. To add a tab to your text, use the character combination \verb|\t| as shown:
 \begin{verbatim}
 	>>> print("Python")
 	Python
@@ -598,7 +604,8 @@ You can also combine tabs \& newlines in a single string. The string \verb|"\n\t
 \end{verbatim}
 Newlines \& tabs will be very useful in the next 2 chapters when you start to produce many lines of output from just a few lines of code.'' -- \cite[p. 22]{Matthes2019}
 
-\paragraph{Stripping Whitespace.} ``Extra whitespace can be confusing in your programs. To programmers \verb|'python'| \& \verb|'python  '| look pretty much the same. But to a program, they are 2 different strings. Python detects the extra space in \verb|'python  '| \& considers it significant unless you tell it otherwise.
+\subsubsection{Stripping Whitespace}
+``Extra whitespace can be confusing in your programs. To programmers \verb|'python'| \& \verb|'python  '| look pretty much the same. But to a program, they are 2 different strings. Python detects the extra space in \verb|'python  '| \& considers it significant unless you tell it otherwise.
 
 It's important to think about whitespace, because often you'll want to compare 2 strings to determine whether they are the same. E.g., 1 important instance might involve checking people's usernames when they log in to a website. Extra whitespace can be confusing in much simpler situation as well. Fortunately, Python makes it easy to eliminate extraneous whitespace from data that people enter.
 
@@ -635,7 +642,8 @@ You can also strip whitespace from the left side of a string using the \texttt{l
 \end{verbatim}
 In this example, we start with a value that has whitespace at the beginning \& the end. We then remove the extra space from the right side, from the left side, \& from both sides. Experimenting with these stripping functions can help you become familiar with manipulating strings. In the real world, these stripping functions are used most often to clean up user input before it's stored in a program.'' -- \cite[pp. 22--23]{Matthes2019}
 
-\paragraph{Avoiding Syntax Errors with Strings.} ``1 kind of error that you might see with some regularity is a syntax error. A \textit{syntax error} occurs when Python doesn't recognize a section of your program as valid Python code. E.g., if you use an apostrophe within single quotes, you'll produce an error. This happens because Python interprets everything between the 1st single quote \& the apostrophe as a string. It then tries to interpret the rest of the text as Python code, which causes errors. Here's how to use single \& double quotes correctly. Save this program as \texttt{apostrophe.py} \& then run it:
+\subsubsection{Avoiding Syntax Errors with Strings}
+``1 kind of error that you might see with some regularity is a syntax error. A \textit{syntax error} occurs when Python doesn't recognize a section of your program as valid Python code. E.g., if you use an apostrophe within single quotes, you'll produce an error. This happens because Python interprets everything between the 1st single quote \& the apostrophe as a string. It then tries to interpret the rest of the text as Python code, which causes errors. Here's how to use single \& double quotes correctly. Save this program as \texttt{apostrophe.py} \& then run it:
 \begin{verbatim}
 	message = "One of Python's strengths is its diverse community."
 	print(message)
@@ -662,10 +670,11 @@ In the output you can see that the error occurs at \verb|^| right after the 2nd 
 	``Your editor's syntax highlighting feature should help you spot some syntax errors quickly as you write your programs. If you see Python code highlighted as if it's English or English highlighted as if it's Python code, you probably have a mismatched quotation mark somewhere in your file.'' -- \cite[p. 25]{Matthes2019}
 \end{remark}
 
-\subsubsection{Numbers}
+\subsection{Numbers}
 ``Numbers are used quite often in programming to keep score in games, represent data in visualizations, store information in web applications, \& so on. Python treats numbers in several different ways, depending on how they're being used.'' -- \cite[p. 25]{Matthes2019}
 
-\paragraph{Integers.} `You can add (\texttt{+}), subtract (\texttt{-}), multiply (\texttt{*}), \& divide (\texttt{/}) integers in Python.
+\subsubsection{Integers}
+``You can add (\texttt{+}), subtract (\texttt{-}), multiply (\texttt{*}), \& divide (\texttt{/}) integers in Python.
 \begin{verbatim}
 	>>> 2 + 3
 	5
@@ -694,7 +703,8 @@ Python supports the order of operations too, so you can use multiple operations 
 \end{verbatim}
 The spacing in these examples has no effect on how Python evaluates the expressions; it simply helps you more quickly spot the operations that have priority when you're reading through the code.'' -- \cite[p. 26]{Matthes2019}
 
-\paragraph{Floats.} ``Python calls any number with a decimal point a \textit{float}. This term is used in most programming languages, \& it refers to the fact that a decimal point can appear at any position in a number. Every programming language must be carefully designed to properly manage decimal numbers so numbers behave appropriately no matter where the decimal point appears.
+\subsubsection{Floats}
+``Python calls any number with a decimal point a \textit{float}. This term is used in most programming languages, \& it refers to the fact that a decimal point can appear at any position in a number. Every programming language must be carefully designed to properly manage decimal numbers so numbers behave appropriately no matter where the decimal point appears.
 
 For the most part, you can use decimals without worrying about how they behave. Simply enter the numbers you want to use, \& Python will most likely do what you expect:
 \begin{verbatim}
@@ -716,7 +726,8 @@ But be aware that you can sometimes get an arbitrary number of decimal places in
 \end{verbatim}
 This happens in all languages \& is of little concern. Python tries to find a way to represent the result as precisely as possible, which is sometimes difficult given how computers have to represent numbers internally. Just ignore the extra decimal places for now; you'll learn ways to deal with the extra places when you need to in the projects in Part II.'' -- \cite[pp. 26--27]{Matthes2019}
 
-\paragraph{Integers \& Floats.} ``When you divide any 2 numbers, even if they are integers that result in a whole number, you'll always get a float:
+\subsubsection{Integers \& Floats}
+``When you divide any 2 numbers, even if they are integers that result in a whole number, you'll always get a float:
 \begin{verbatim}
 	>>> 4/2
 	2.0
@@ -732,7 +743,8 @@ If you mix an integer \& a float in any other operation, you'll get a float as w
 \end{verbatim}
 Python defaults to a float in any operation that uses a float, even if the output is a whole number.'' -- \cite[p. 27]{Matthes2019}
 
-\paragraph{Underscores in Numbers.} ``When you're writing long numbers, you can group digits using underscores to make large numbers more readable:
+\subsubsection{Underscores in Numbers}
+``When you're writing long numbers, you can group digits using underscores to make large numbers more readable:
 \begin{verbatim}
 	>>> universe_age = 14_000_000_000
 \end{verbatim}
@@ -743,34 +755,414 @@ When you print a number that was defined using underscores, Python prints only t
 \end{verbatim}
 Python ignores the underscores when storing these kinds of values. Even if you don't group the digits in threes, the value will still be unaffected. To Python, \texttt{1000} is the same as \verb|1_000|, which is the same as \verb|10_00|. This feature works for integers \& floats, but it's only available in Python 3.6 \& later.'' -- \cite[p. 28]{Matthes2019}
 
-\paragraph{Multiple Assignment.} ``You can assign values to $> 1$ variable using just a single line. This can help shorten your programs \& make them easier to read; you'll use this technique most often when initializing a set of numbers. E.g., here's how you can initialize the variables $x,y,z$ to $0$:
+\subsubsection{Multiple Assignment}
+``You can assign values to $> 1$ variable using just a single line. This can help shorten your programs \& make them easier to read; you'll use this technique most often when initializing a set of numbers. E.g., here's how you can initialize the variables $x,y,z$ to $0$:
 \begin{verbatim}
 	>>> x, y, z = 0, 0, 0
 \end{verbatim}
 You need to separate the variable names with commas, \& do the same with the values, \& Python will assign each value to its respectively positioned variable. As long as the number of values matches the number of variables, Python will match them up correctly.'' -- \cite[p. 28]{Matthes2019}
 
-\paragraph{Constants.} ``A \textit{constant} is like a variable whose value stays the same throughout the life of a program. Python doesn't have built-in constant types, but Python programmers use all capital letters to indicate a variable should be treated as a constant \& never be changed: \verb|MAX_CONNECTIONS = 5000|. When you want to treat a variable as a constant in your code, make the name of the variable all capital letters.'' -- \cite[p. 28]{Matthes2019}
+\subsubsection{Constants}
+``A \textit{constant} is like a variable whose value stays the same throughout the life of a program. Python doesn't have built-in constant types, but Python programmers use all capital letters to indicate a variable should be treated as a constant \& never be changed: \verb|MAX_CONNECTIONS = 5000|. When you want to treat a variable as a constant in your code, make the name of the variable all capital letters.'' -- \cite[p. 28]{Matthes2019}
 
-\subsubsection{Comments}
+\subsection{Comments}
 ``Comments are an extremely useful feature in most programming languages. Everything you've written in your programs so far is Python code. As your programs become longer \& more complicated, you should add notes within your programs that describe your overall approach to the problem you're solving. A \textit{comment} allows you to write notes in English within your programs.'' -- \cite[p. 29]{Matthes2019}
 
-\paragraph{How Do You Write Comments?} ``In Python, the hash mark (\texttt{\#}) indicates a comment. Anything following a hash mark in your code is ignored by the Python interpreter. E.g.,
+\subsubsection{How Do You Write Comments?}
+``In Python, the hash mark (\texttt{\#}) indicates a comment. Anything following a hash mark in your code is ignored by the Python interpreter. E.g.,
 \begin{verbatim}
 	# Say hello to everyone.
 	print("Hello Python people!")
 \end{verbatim}
-Python ignores the 1st line \& executes the 2nd line. \verb|Hello Python people!|'' -- \cite[p. 29]{Matthes2019}
+Python ignores line 1 \& executes line 2. \verb|Hello Python people!|'' -- \cite[p. 29]{Matthes2019}
 
-\paragraph{What Kind of Comments Should You Write?} ``The main reason to write comments is to explain what your code is supposed to do \& how you are making it work. When you're in the middle of working on a project, you understand how all of the pieces fit together. But when you return to a project after some time away, you'll likely have forgotten some of the details. You can always study your code for a while \& figure out how segments were supposed to work, but writing good comments can save you time by summarizing your overall approach in clear English.
+\subsubsection{What Kind of Comments Should You Write?}
+``The main reason to write comments is to explain what your code is supposed to do \& how you are making it work. When you're in the middle of working on a project, you understand how all of the pieces fit together. But when you return to a project after some time away, you'll likely have forgotten some of the details. You can always study your code for a while \& figure out how segments were supposed to work, but writing good comments can save you time by summarizing your overall approach in clear English.
 
 If you want to become a professional programmer or collaborate with other programmers, you should write meaningful comments. Today, most software is written collaboratively, whether by a group of employees at 1 company or a group of people working together on an open source project. Skilled programmers expect to see comments in code, so it's best to start adding descriptive comments to your programs now. Writing clear, concise comments in your code is 1 of the most beneficial habits you can form as a new programmer.
 
 When you're determining whether to write a comment, ask yourself if you had to consider several approaches before coming up with a reasonable way to make something work; if so, write a comment about your solution. It's much easier to delete extra comments later on than it is to go back \& write comments for a sparsely commented program.'' -- \cite[pp. 29--30]{Matthes2019}
 
+\subsection{The Zen of Python}
+``Experienced Python programmers will encourage you to avoid complexity \& aim for simplicity whenever possible. The Python's community's philosophy is contained in ``The Zen of Python'' by Tim Peters. You can access this brief set of principles for writing good Python code by entering \texttt{import this} into your interpreter. I won't reproduce the entire ``Zen of Python'' here, but I'll share a few lines to help you understand why they should be important to you as a beginning Python programmer.
+\begin{verbatim}
+	>>> import this
+	The Zen of Python, by Tim Peters
+	Beautiful is better than ugly.
+\end{verbatim}
+Python programmers embrace the notion that code can be beautiful \& elegant. In programming, people solve problems. Programmers have always respected well-designed, efficient, \& even beautiful solutions to problems. As you learn more about Python \& use it to write more code, someone might look over your shoulder 1 day \& say, ``Wow, that's some beautiful code!''
+\begin{verbatim}
+	Simple is better than complex.
+\end{verbatim}
+If you have a choice between a simple \& a complex solution, \& both work, use the simple solution. Your code will be easier to maintain, \& it will be easier for you \& others to build on that code later on.
+\begin{verbatim}
+	Complex is better than complicated.
+\end{verbatim}
+Real life is messy, \& sometimes a simple solution to a problem is unattainable. In that case, use the simplest solution that works.
+\begin{verbatim}
+	Readability counts.
+\end{verbatim}
+Even when your code is complex, aim to make it readable. When you're working on a project that involves complex coding, focus on writing informative comments for that code.
+\begin{verbatim}
+	There should be one-- and preferably only one --obvious way to do it.
+\end{verbatim}
+If 2 Python programmers are asked to solve the same problem, they should come up with fairly compatible solutions. This is not to say there's no room for creativity in programming. On the contrary! But much of programming consists of using small, common approaches to simple situation within a larger, more creative project. The nuts \& bolts of your programs should make sense to other Python programmers.
+\begin{verbatim}
+	Now is better than never.
+\end{verbatim}
+You should spend the rest of your life learning all the intricacies of Python \& of programming in general, but then you'd never complete any projects. Don't try to write perfect code; write code that works, \& then decide whether to improve your code for that project or move on to something new.
+
+As you continue to the next chapter \& start digging into more involved topics, try to keep this philosophy of simplicity \& clarity in mind. Experienced programmers will respect your code more \& will be happy to give you feedback \& collaborate with you on interesting projects.'' -- \cite[pp. 30--31]{Matthes2019}
+\begin{verbatim}
+	>>> import this
+	The Zen of Python, by Tim Peters
+	
+	Beautiful is better than ugly.
+	Explicit is better than implicit.
+	Simple is better than complex.
+	Complex is better than complicated.
+	Flat is better than nested.
+	Sparse is better than dense.
+	Readability counts.
+	Special cases aren't special enough to break the rules.
+	Although practicality beats purity.
+	Errors should never pass silently.
+	Unless explicitly silenced.
+	In the face of ambiguity, refuse the temptation to guess.
+	There should be one-- and preferably only one --obvious way to do it.
+	Although that way may not be obvious at first unless you're Dutch.
+	Now is better than never.
+	Although never is often better than *right* now.
+	If the implementation is hard to explain, it's a bad idea.
+	If the implementation is easy to explain, it may be a good idea.
+	Namespaces are one honking great idea -- let's do more of those!
+\end{verbatim}
+
+\subsection{Summary}
+``In this chapter you learned to work with variables. You learned to use descriptive variable names \& how to resolve name errors \& syntax errors when they arise. You learned what strings are \& how to display strings using lowercase, uppercase, \& title case. You started using whitespace to organize output neatly, \& you learned to strip unneeded whitespace from different parts of a string. You started working with integers \& floats, \& learned some of the ways you can work with numerical data. You also learned to write explanatory comments to make your code easier for you \& others to read. Finally, you read about the philosophy of keeping your code as simple as possible, whenever possible.'' -- \cite[p. 32]{Matthes2019}
+
 %------------------------------------------------------------------------------%
 
 \section{Introducing Lists}
+``$\ldots$ learn what lists are \& how to start working with the elements in a list. Lists allow you to store sets of information in 1 place, whether you have just a few items or millions of items. Lists are 1 of Python's most powerful features readily accessible to new programmers, \& they tie together many important concepts in programming.'' -- \cite[p. 33]{Matthes2019}
 
+\subsection{What Is a List?}
+``A \textit{list} is a collection of items in a particular order. You can make a list that includes the letters of the alphabet, the digits from $0$--$9$, or the names of all the people in your family. You can put anything you want into a list, \& the items in your list don't have to be related in any particular way. Because a list usually contains $> 1$ element, it's a good idea to make the name of your list plural, such as \texttt{letters, digits}, or \texttt{names}.
+
+In Python, square brackets (\texttt{[]}) indicate a list, \& individual elements in the list are separated by commas. Here's a simple example of a list that contains a few kinds of bicycles:
+\begin{verbatim}
+	bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+	print(bicycles)
+\end{verbatim}
+If you ask Python to print a list, Python returns its representation of the list, including the square brackets:
+\begin{verbatim}
+	['trek', 'cannondale', 'redline', 'specialized']
+\end{verbatim}
+Because this isn't the output you want your users to see, let's learn how to access the individual items in a list.'' -- \cite[pp. 33--34]{Matthes2019}
+
+\subsubsection{Accessing Elements in a List}
+``Lists are ordered collections, so you can access any element in a list by telling Python the position, or \textit{index}, of the item desired. To access an element in a list, write the name of the list followed by the index of the item enclosed in square brackets. E.g., let's pull out the 1st bicycle in the list \texttt{bicycles}:
+\begin{verbatim}
+	bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+	print(bicycles[0])
+\end{verbatim}
+The syntax for this is shown at line 2. When we ask for a single item from a list, Python returns just that element without square brackets: \texttt{trek}. This is the result you want your users to see -- clean, neatly formatted output. You can also use the string methods from Chap. 2 on any element in this list. E.g., you can format the element \texttt{'trek'} more neatly by using the \texttt{title()} method:
+\begin{verbatim}
+	bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+	print(bicycles[0].title())
+\end{verbatim}
+This example produces the same output as the preceding example except \texttt{'Trek'} is capitalized.'' -- \cite[p. 34]{Matthes2019}
+
+\subsubsection{Index Positions Start at $0$, Not $1$}
+``Python considers the 1st item in a list to be at position $0$, not position $1$. This is true of most programming languages, \& the reason has to do with how the list operations are implemented at a lower level. If you're receiving unexpected results, determine whether you are making a simple off-by-1 error.
+
+The 2nd item in a list has an index of $1$. Using this counting system, you can get any element you want from a list by subtracting $1$ from its position in the list. E.g., to access the $i$th item in a list, you request the item at index $i - 1$. The following asks for the bicycles at index \texttt{1} \& index \texttt{3}:
+\begin{verbatim}
+	bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+	print(bicycles[1])
+	print(bicycles[3])
+\end{verbatim}
+This code returns the 2nd \& 4th bicycles in the list:
+\begin{verbatim}
+	cannondale
+	specialized
+\end{verbatim}
+Python has a special syntax for accessing the last element in a list. By asking for the item at index \texttt{-1}, Python always returns the last item in the list:
+\begin{verbatim}
+	bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+	print(bicycles[-1])
+\end{verbatim}
+This code returns the value \texttt{'specialized'}. This syntax is quite useful, because you'll often want to access the last items in a list without knowing exactly how long the list is. This convention extends to other negative index values as well. The index \texttt{-2} returns the 2nd item from the end of the list, the index \texttt{-3} returns the 3rd item from the end, \& so forth.'' -- \cite[p. 35]{Matthes2019}
+
+\subsubsection{Using Individual Values from a List}
+``You can use individual values from a list just as you would any other variable. E.g., you can use \texttt{f}-strings to create a message based on a value from a list. Let's try pulling the 1st bicycle from the list \& composing a message using that value.
+\begin{verbatim}
+	bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+	message = f"My first bicycle was a {bicycles[0].title()}."
+	print(message)
+\end{verbatim}
+At line 2, we build a sentence using the value at \texttt{bicycles[0]} \& assign it to the variable \texttt{message}. The output is a simple sentence about the 1st bicycle in the list: \verb|My first bicycle was a Trek.|'' -- \cite[pp. 35--36]{Matthes2019}
+
+\subsection{Changing, Adding, \& Removing Elements}
+``Most lists you create will be dynamic, meaning you'll build a list \& then add \& remove elements from it as your program runs its course. E.g., you might create a game in which a player has to shoot aliens out of the sky. You could store the initial set of aliens in a list \& then remove an alien from the list each time one is shot down. Each time a new alien appears on the screen, you add it to the list. Your list of aliens will increase \& decrease in length throughout the course of the game.'' -- \cite[p. 36]{Matthes2019}
+
+\subsubsection{Modifying Elements in a List}
+``The syntax for modifying an element is similar to the syntax for accessing an element in a list. To change an element, use the name of the list followed by the index of the element you want to change, \& then provide the new value you want that item to have. E.g., let's say we have a list of motorcycles, \& the 1st item in the list is \texttt{'honda'}. How would we change the value of this 1st item?
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	print(motorcycles)	
+	motorcycles[0] = 'ducati'
+	print(motorcycles)
+\end{verbatim}
+The code at line 1 defines the original list, with \texttt{'honda'} as the 1st element. The code at line 3 changes the value of the 1st item to \texttt{'ducati'}. The output shows that the 1st item has indeed been changed, \& the rest of the list stays the same:
+\begin{verbatim}
+	['honda', 'yamaha', 'suzuki']
+	['ducati', 'yamaha', 'suzuki']
+\end{verbatim}
+You can change the value of any item in a list, not just the 1st item.'' -- \cite[pp. 36--37]{Matthes2019}
+
+\subsubsection{Adding Elements to a List}
+``You might want to add a new element to a list for many reasons. E.g., you might want to make new aliens appear in a game, add new data to a visualization, or add new registered users to a website you've built. Python provides several ways to add new data to existing lists.'' -- \cite[p. 37]{Matthes2019}
+
+\paragraph{Appending Elements to the End of a List.} ``The simplest way to add a new element to a list is to \textit{append} the item to the list. When you append an item to a list, the new element is added to the end of the list. Using the same list we had in the previous example, we'll add the new element \texttt{'ducati'} to the end of the list:
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	print(motorcycles)
+	motorcycles.append('ducati')
+	print(motorcycles)
+\end{verbatim}
+The \texttt{append()} method at line 3 adds \texttt{'ducati'} to the end of the list without affecting any of the other elements in the list:
+\begin{verbatim}
+	['honda', 'yamaha', 'suzuki']
+	['honda', 'yamaha', 'suzuki', 'ducati']
+\end{verbatim}
+The \texttt{append()} method makes it easy to build lists dynamically. E.g., you can start with an empty list \& then add items to the list using a series of \texttt{append()} calls. Using an empty list, let's add the elements \texttt{'honda'}, \texttt{'yamaha'}, \& \texttt{'suzuki'} to the list:
+\begin{verbatim}
+	motorcycles = []
+	motorcycles.append('honda')
+	motorcycles.append('yamaha')
+	motorcycles.append('suzuki')
+	print(motorcycles)
+\end{verbatim}
+The resulting list looks exactly the same as the lists in the previous examples: \verb|['honda', 'yamaha', 'suzuki']|. Building lists this way is very common, because you often won't know the data your users want to store in a program until after the program is running. To put your users in control, start by defining an empty list that will hold the users' values. Then append each new value provided to the list you just created.'' -- \cite[pp. 37--38]{Matthes2019}
+
+\paragraph{Inserting Elements into a List.} ``You can add a new element at any position in your list by using the \texttt{insert()} method. You do this by specifying the index of the new element \& the value of the new item.
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	motorcycles.insert(0, 'ducati')
+	print(motorcycles)
+\end{verbatim}
+In this example, the code at line 2 inserts the value \texttt{'ducati'} at the beginning of the list. The \texttt{insert()} method opens a space at position \texttt{0} \& stores the value \texttt{'ducati'} at that location. This operation shifts every other value in the list 1 position to the right: \verb|['ducati', 'honda', 'yamaha', 'suzuki']|.'' -- \cite[p. 38]{Matthes2019}
+
+\subsubsection{Removing Elements from a List}
+``Often, you'll want to remove an item or a set of items from a list. E.g., when a player shoots down an alien from the sky, you'll most likely want to remove it from the list of active aliens. Or when a user decides to cancel their account on a web application you created, you'll want to remove that user from the list of active users. You can remove an item according to its position in the list or according to its value.'' -- \cite[pp. 38--39]{Matthes2019}
+
+\paragraph{Removing an Item Using the del Statement.} ``If you know the position of the item you want to remove from a list, you can use the \texttt{del} statement.
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	print(motorcycles)
+	del motorcycles[0]
+	print(motorcycles)
+\end{verbatim}
+The code at line 3 uses \texttt{del} to remove the 1st item, \texttt{'honda'}, from the list of motorcycles:
+\begin{verbatim}
+	['honda', 'yamaha', 'suzuki']
+	['yamaha', 'suzuki']
+\end{verbatim}
+You can remove an item from any position in a list using the \texttt{del} statement if you know its index. E.g., here's how to remove the 2nd item, \texttt{'yamaha'}, in the list:
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	print(motorcycles)
+	del motorcycles[1]
+	print(motorcycles)
+\end{verbatim}
+The 2nd motorcycle is deleted from the list:
+\begin{verbatim}
+	['honda', 'yamaha', 'suzuki']
+	['honda', 'suzuki']
+\end{verbatim}
+In both examples, you can no longer access the value that was removed from the list after the \texttt{del} statement is used.'' -- \cite[p. 39]{Matthes2019}
+
+\paragraph{Removing an Item Using the \texttt{pop()} Method.} ``Sometimes you'll want to use the value of an item after you remove it from a list. E.g., you might want t get the $x$ \& $y$ position of an alien that was just shot down, so you can draw an explosion at that position. In a web application, you might want to remove a user from a list of active members \& then add that user to a list of inactive members.
+
+The \texttt{pop()} method removes the last item in a list, but it lets you work with that item after removing it. The term \textit{pop} comes from thinking of a list as a stack of items \& popping 1 item off the top of the stack. In this analogy, the top of a stack corresponds to the end of a list.  Let's pop a motorcycle from the list of motorcycles:
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	print(motorcycles)
+	popped_motorcycle = motorcycles.pop()
+	print(motorcycles)
+	print(popped_motorcycle)
+\end{verbatim}
+We start by defining \& printing the list \texttt{motorcycles} at line 1. At line 2 we pop a value from the list \& store that value in the variable \verb|popped_motorcycle|. We print the list at line 3 to show that a value has been removed from the list. Then we print the popped value at line 4 to prove that we will have access to the value that was removed. The output shows that the value \texttt{'suzuki'} was removed from the end of the list \& is now assigned to the variable \verb|popped_motorcycle|:
+\begin{verbatim}
+	['honda', 'yamaha', 'suzuki']
+	['honda', 'yamaha']
+	suzuki
+\end{verbatim}
+How might this \texttt{pop()} method be useful? Imagine that the motorcycles in the list are stored in chronological order according to when we owned them. If this is the case, we can use the \texttt{pop()} method to print a statement about the last motorcycle we bought:
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	last_owned = motorcycles.pop()
+	print(f"The last motorcycle I owned was a {last_owned.title()}.")
+\end{verbatim}
+The output is a simple sentence about the most recent motorcycle we owned: \texttt{The last motorcycle I owned was a Suzuki.}'' -- \cite[pp. 39--40]{Matthes2019}
+
+\paragraph{Popping Items from any Position in a List.} ``You can use \texttt{pop()} to remove an item from any position in a list by including the index of the item you want to remove in parentheses.
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	first_owned = motorcycles.pop(0)
+	print(f"The first motorcycle I owned was a {first_owned.title()}.")
+\end{verbatim}
+We start by popping the 1st motorcycle in the list at line 2, \& then we print a message about that motorcycle at line 3. The output is a simple sentence describing the 1st motorcycle I ever owned: \texttt{The first motorcycle I owned was a Honda.}. Remember that each time you use \texttt{pop()}, the item you work with is no longer stored in the list.
+
+If you're unsure whether to use the \texttt{del} statement or the \texttt{pop()} method, here's a simple way to decide: when you want to delete an item from a list \& not use that item in any way, use the \texttt{del} statement; if you want to use an item as you remove it, use the \texttt{pop()} method.'' -- \cite[pp. 40--41]{Matthes2019}
+
+\paragraph{Removing an Item by Value.} ``Sometimes you don't know the position of the value you want to remove from a list. If you only know the value of the item you want to remove, you can use the \texttt{remove()} method. E.g., let's say we want to remove the value \texttt{'ducati'} from the list of motorcycles.
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+	print(motorcycles)
+	motorcycles.remove('ducati')
+	print(motorcycles)
+\end{verbatim}
+The code at line 3 tells Python to figure out where \texttt{'ducati'} appears in the list \& remove that element:
+\begin{verbatim}
+	['honda', 'yamaha', 'suzuki', 'ducati']
+	['honda', 'yamaha', 'suzuki']
+\end{verbatim}
+You can also use the \texttt{remove()} method to work with a value that's being removed from a list. Let's remove the value \texttt{'ducati'} \& print a reason for removing it from the list:
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+	print(motorcycles)
+	too_expensive = 'ducati'
+	motorcycles.remove(too_expensive)
+	print(motorcycles)
+	print(f"\nA {too_expensive.title()} is too expensive for me.")
+\end{verbatim}
+After defining the list at line 1, we assign the value \texttt{'ducati'} to a variable called \verb|too_expensive| line 3. We then use this variable to tell Python which value to remove from the list at line 4. At line 6 the value \texttt{'ducati'} has been removed from the list but is still accessible through the variable \verb|too_expensive|, allowing us to print a statement about why we removed \texttt{'ducati'} from the list of motorcycles:
+\begin{verbatim}
+	['honda', 'yamaha', 'suzuki', 'ducati']
+	['honda', 'yamaha', 'suzuki']
+	A Ducati is too expensive for me.
+\end{verbatim}
+
+\begin{remark}
+	The \texttt{remove()} method deletes only the 1st occurrence of the value you specify. If there's a possibility the value appears more than once in the list, you'll need to use a loop to make sure all occurrences of the value are removed.'' -- \cite[pp. 41--42]{Matthes2019}
+\end{remark}
+
+\subsection{Organizing a List}
+``Often, your lists will be created in an unpredictable order, because you can't always control the order in which your users provide their data. Although this is unavoidable in most circumstances, you'll frequently want to present your information in a particular order. Sometimes you'll want to preserve the original order of your list, \& other times you'll want to change the original order. Python provides a number of different ways to organize your lists, depending on the situation.'' -- \cite[p. 43]{Matthes2019}
+
+\subsubsection{Sorting a List Permanently with the \texttt{sort()} Method}
+Python's \texttt{sort()} method makes it relatively easy to sort a list. Imagine we have a list of cars \& want to change the order of the list to store them alphabetically. To keep the task simple, let's assume that all the values in the list are lowercase.
+\begin{verbatim}
+	cars = ['bmw', 'audi', 'toyota', 'subaru']
+	cars.sort()
+	print(cars)
+\end{verbatim}
+The \texttt{sort()} method, shown at line 2, changes the order of the list permanently. The cars are now in alphabetical order, \& we can never revert to the original order: \texttt{['audi', 'bmw', 'subaru', 'toyota']}. You can also sort this list in reverse alphabetical order by passing the argument \texttt{reverse=True} to the \texttt{sort()} method. The following example sorts the list of cars in reverse alphabetical order:
+\begin{verbatim}
+	cars = ['bmw', 'audi', 'toyota', 'subaru']
+	cars.sort(reverse=True)
+	print(cars)
+\end{verbatim}
+Again, the order of the list is permanently changed: \texttt{['toyota', 'subaru', 'bmw', 'audi']}.'' -- \cite[pp. 43--44]{Matthes2019}
+
+\subsubsection{Sorting a List Temporarily with the \texttt{sorted()} Function}
+``To maintain the original order of a list but present it in a sorted order, you can use the \texttt{sorted()} function. The \texttt{sorted()} function lets you display your list in a particular order but doesn't affect the actual order of the list. Let's try this function on the list of cars.
+\begin{verbatim}
+	cars = ['bmw', 'audi', 'toyota', 'subaru']
+	print("Here is the original list:")
+	print(cars)
+	print("\nHere is the sorted list:")
+	print(sorted(cars))
+	print("\nHere is the original list again:")
+	print(cars)
+\end{verbatim}
+We 1st print the list in its original order at line 2 \& then in alphabetical order at line 4. After the list is displayed in the new order, we show that the list is still stored in its original order at line 6.
+\begin{verbatim}
+	Here is the original list:
+	['bmw', 'audi', 'toyota', 'subaru']
+	Here is the sorted list:
+	['audi', 'bmw', 'subaru', 'toyota']
+	Here is the original list again:
+	['bmw', 'audi', 'toyota', 'subaru']
+\end{verbatim}
+Notice that the list still exists in its original order at line 5 after the \texttt{sorted()} function has been used. The \texttt{sorted()} function can also accept a \texttt{reverse=True} argument if you want to display a list in reverse alphabetical order.
+
+\begin{remark}
+	Sorting a list alphabetically is a bit more complicated when all the values are not in lowercase. There are several ways to interpret capital letters when determining a sort order, \& specifying the exact order can be more complex than we want to deal with at this time. However, most approaches to sorting will build directly on what you learned in this section.'' -- \cite[pp. 44--45]{Matthes2019}
+\end{remark}
+
+\subsubsection{Printing a List in Reverse Order}
+``To reverse the original order of a list, you can use the \texttt{reverse()} method. If we originally stored the list of cars in chronological order according to when we owned them, we could easily rearrange the list into reverse chronological order:
+\begin{verbatim}
+	cars = ['bmw', 'audi', 'toyota', 'subaru']
+	print(cars)
+	cars.reverse()
+	print(cars)
+\end{verbatim}
+Notice that \texttt{reverse()} doesn't sort backward alphabetically; it simply reverses the order of the list:
+\begin{verbatim}
+	['bmw', 'audi', 'toyota', 'subaru']
+	['subaru', 'toyota', 'audi', 'bmw']
+\end{verbatim}
+The \texttt{reverse()} method changes the order of a list permanently, but you can revert to the original order anytime by applying \texttt{reverse()} to the same list a 2nd time.'' -- \cite[p. 45]{Matthes2019}
+
+\subsubsection{Finding the Length of a List}
+``You can quickly find the length of a list by using the \texttt{len()} function. The list in this example has 4 items, so its length is $4$:
+\begin{verbatim}
+	>>> cars = ['bmw', 'audi', 'toyota', 'subaru']
+	>>> len(cars)
+	4
+\end{verbatim}
+You'll find \texttt{len()} useful when you need to identify the number of aliens that still need to be shot down in a game, determine the amount of data you have to manage in a visualization, or figure out the number of registered users on a website, among other tasks.
+
+\begin{remark}
+	Python counts the items in a list starting with 1, so you shouldn't run into any off-by-1 errors when determining the length of a list.'' -- \cite[p. 45]{Matthes2019}
+\end{remark}
+
+\subsection{Avoiding Index Errors When Working with Lists}
+``1 type of error is common to see when you're working with lists for the 1st time. Let's say you have a list with 3 items, \& yo ask for the 4th item:
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	print(motorcycles[3])
+\end{verbatim}
+This example results in an \textit{index error}:
+\begin{verbatim}
+	Traceback (most recent call last):
+	  File "motorcycles.py", line 2, in <module>
+	    print(motorcycles[3])
+	IndexError: list index out of range
+\end{verbatim}
+Python attempts to give you the item at index 3. But when it searches the list, no item in \texttt{motorcycles} has an index of 3. Because of the off-by-1 nature of indexing in lists, this error is typical. People think the 3rd item is item number 3, because they start counting at 1. But in Python the 3rd item is number 2, because it starts indexing at 0.
+
+An index error means Python can't find an item at the index you requested. If an index error occurs in your program, try adjusting the index you're asking for by 1. Then run the program again to see if the results are correct.
+
+Keep in mind that whenever you want to access the last item in a list you use the index \texttt{-1}. This will always work, even if your list has changed size since the last time you accessed it:
+\begin{verbatim}
+	motorcycles = ['honda', 'yamaha', 'suzuki']
+	print(motorcycles[-1])
+\end{verbatim}
+The index \texttt{-1} always returns the last item in a list, in this case the value \texttt{'suzuki'}. The only time this approach will cause an error is when you request the last item from an empty list:
+\begin{verbatim}
+	motorcycles = []
+	print(motorcycles[-1])
+\end{verbatim}
+No items are in \texttt{motorcycles}, so Python returns another index error:
+\begin{verbatim}
+	Traceback (most recent call last):
+	  File "motorcyles.py", line 3, in <module>
+	    print(motorcycles[-1])
+	IndexError: list index out of range
+\end{verbatim}
+
+\begin{remark}
+	If an index error occurs \& you can't figure out how to resolve it, try printing your list or just printing the length of your list. Your list might look much different than you thought it did, especially if it has been managed dynamically by your program. Seeing the actual list, or the exact number of items in your list, can help you sort out such logical errors.'' -- \cite[pp. 46--47]{Matthes2019}
+\end{remark}
+
+\subsection{Summary}
+``In this chapter you learned what lists are \& how to work with the individual items in a list. You learned how to define a list \& how to add \& remove elements. You learned to sort lists permanently \& temporarily for display purposes. You also learned how to find the length of a list \& how to avoid index errors when you're working with lists.'' -- \cite[p. 48]{Matthes2019}
+ 
 %------------------------------------------------------------------------------%
 
 \section{Working with Lists}
