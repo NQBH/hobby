@@ -39,6 +39,8 @@
 \begin{document}
 \maketitle
 \tableofcontents
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 %------------------------------------------------------------------------------%
 
@@ -661,6 +663,109 @@ In the output you can see that the error occurs at \verb|^| right after the 2nd 
 \end{remark}
 
 \subsubsection{Numbers}
+``Numbers are used quite often in programming to keep score in games, represent data in visualizations, store information in web applications, \& so on. Python treats numbers in several different ways, depending on how they're being used.'' -- \cite[p. 25]{Matthes2019}
+
+\paragraph{Integers.} `You can add (\texttt{+}), subtract (\texttt{-}), multiply (\texttt{*}), \& divide (\texttt{/}) integers in Python.
+\begin{verbatim}
+	>>> 2 + 3
+	5
+	>>> 3 - 2
+	1
+	>>> 2 * 3
+	6
+	>>> 3 / 2
+	1.5
+\end{verbatim}
+In a terminal session, Python simply returns the result of the operation.'' ``Python uses 2 multiplication symbols to represent exponents:
+\begin{verbatim}
+	>>> 3 ** 2
+	9
+	>>> 3 ** 3
+	27
+	>>> 10 ** 6
+	1000000
+\end{verbatim}
+Python supports the order of operations too, so you can use multiple operations in 1 expression. You can also use parentheses to modify the order of operations so Python can evaluate your expression in the order you specify. E.g.:
+\begin{verbatim}
+	>>> 2 + 3*4
+	14
+	>>> (2 + 3) * 4
+	20
+\end{verbatim}
+The spacing in these examples has no effect on how Python evaluates the expressions; it simply helps you more quickly spot the operations that have priority when you're reading through the code.'' -- \cite[p. 26]{Matthes2019}
+
+\paragraph{Floats.} ``Python calls any number with a decimal point a \textit{float}. This term is used in most programming languages, \& it refers to the fact that a decimal point can appear at any position in a number. Every programming language must be carefully designed to properly manage decimal numbers so numbers behave appropriately no matter where the decimal point appears.
+
+For the most part, you can use decimals without worrying about how they behave. Simply enter the numbers you want to use, \& Python will most likely do what you expect:
+\begin{verbatim}
+	>>> 0.1 + 0.1
+	0.2
+	>>> 0.2 + 0.2
+	0.4
+	>>> 2 * 0.1
+	0.2
+	>>> 2 * 0.2
+	0.4
+\end{verbatim}
+But be aware that you can sometimes get an arbitrary number of decimal places in your answer:
+\begin{verbatim}
+	>>> 0.2 + 0.1
+	0.30000000000000004
+	>>> 3 * 0.1
+	0.30000000000000004
+\end{verbatim}
+This happens in all languages \& is of little concern. Python tries to find a way to represent the result as precisely as possible, which is sometimes difficult given how computers have to represent numbers internally. Just ignore the extra decimal places for now; you'll learn ways to deal with the extra places when you need to in the projects in Part II.'' -- \cite[pp. 26--27]{Matthes2019}
+
+\paragraph{Integers \& Floats.} ``When you divide any 2 numbers, even if they are integers that result in a whole number, you'll always get a float:
+\begin{verbatim}
+	>>> 4/2
+	2.0
+\end{verbatim}
+If you mix an integer \& a float in any other operation, you'll get a float as well:
+\begin{verbatim}
+	>>> 1 + 2.0
+	3.0
+	>>> 2 * 3.0
+	6.0
+	>>> 3.0 ** 2
+	9.0
+\end{verbatim}
+Python defaults to a float in any operation that uses a float, even if the output is a whole number.'' -- \cite[p. 27]{Matthes2019}
+
+\paragraph{Underscores in Numbers.} ``When you're writing long numbers, you can group digits using underscores to make large numbers more readable:
+\begin{verbatim}
+	>>> universe_age = 14_000_000_000
+\end{verbatim}
+When you print a number that was defined using underscores, Python prints only the digits:
+\begin{verbatim}
+	>>> print(universe_age)
+	14000000000
+\end{verbatim}
+Python ignores the underscores when storing these kinds of values. Even if you don't group the digits in threes, the value will still be unaffected. To Python, \texttt{1000} is the same as \verb|1_000|, which is the same as \verb|10_00|. This feature works for integers \& floats, but it's only available in Python 3.6 \& later.'' -- \cite[p. 28]{Matthes2019}
+
+\paragraph{Multiple Assignment.} ``You can assign values to $> 1$ variable using just a single line. This can help shorten your programs \& make them easier to read; you'll use this technique most often when initializing a set of numbers. E.g., here's how you can initialize the variables $x,y,z$ to $0$:
+\begin{verbatim}
+	>>> x, y, z = 0, 0, 0
+\end{verbatim}
+You need to separate the variable names with commas, \& do the same with the values, \& Python will assign each value to its respectively positioned variable. As long as the number of values matches the number of variables, Python will match them up correctly.'' -- \cite[p. 28]{Matthes2019}
+
+\paragraph{Constants.} ``A \textit{constant} is like a variable whose value stays the same throughout the life of a program. Python doesn't have built-in constant types, but Python programmers use all capital letters to indicate a variable should be treated as a constant \& never be changed: \verb|MAX_CONNECTIONS = 5000|. When you want to treat a variable as a constant in your code, make the name of the variable all capital letters.'' -- \cite[p. 28]{Matthes2019}
+
+\subsubsection{Comments}
+``Comments are an extremely useful feature in most programming languages. Everything you've written in your programs so far is Python code. As your programs become longer \& more complicated, you should add notes within your programs that describe your overall approach to the problem you're solving. A \textit{comment} allows you to write notes in English within your programs.'' -- \cite[p. 29]{Matthes2019}
+
+\paragraph{How Do You Write Comments?} ``In Python, the hash mark (\texttt{\#}) indicates a comment. Anything following a hash mark in your code is ignored by the Python interpreter. E.g.,
+\begin{verbatim}
+	# Say hello to everyone.
+	print("Hello Python people!")
+\end{verbatim}
+Python ignores the 1st line \& executes the 2nd line. \verb|Hello Python people!|'' -- \cite[p. 29]{Matthes2019}
+
+\paragraph{What Kind of Comments Should You Write?} ``The main reason to write comments is to explain what your code is supposed to do \& how you are making it work. When you're in the middle of working on a project, you understand how all of the pieces fit together. But when you return to a project after some time away, you'll likely have forgotten some of the details. You can always study your code for a while \& figure out how segments were supposed to work, but writing good comments can save you time by summarizing your overall approach in clear English.
+
+If you want to become a professional programmer or collaborate with other programmers, you should write meaningful comments. Today, most software is written collaboratively, whether by a group of employees at 1 company or a group of people working together on an open source project. Skilled programmers expect to see comments in code, so it's best to start adding descriptive comments to your programs now. Writing clear, concise comments in your code is 1 of the most beneficial habits you can form as a new programmer.
+
+When you're determining whether to write a comment, ask yourself if you had to consider several approaches before coming up with a reasonable way to make something work; if so, write a comment about your solution. It's much easier to delete extra comments later on than it is to go back \& write comments for a sparsely commented program.'' -- \cite[pp. 29--30]{Matthes2019}
 
 %------------------------------------------------------------------------------%
 
