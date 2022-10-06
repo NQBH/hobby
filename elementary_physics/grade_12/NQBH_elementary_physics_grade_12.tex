@@ -364,7 +364,7 @@ Cả 2 phương trình \eqref{SGK_Vat_Ly_12_nang_cao (7.8)} \& \eqref{SGK_Vat_Ly
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.15]{con_lac_vat_ly}
-	\caption{Con lắc vật lý, $G$ là trọng tâm của con lắc, $d = QG$, \cite[Hình 7.3]{SGK_Vat_Ly_12_nang_cao}.}
+	\caption{Con lắc vật lý, $G$ là trọng tâm của con lắc, $d = QG$, \cite[Hình 7.3, p. 39]{SGK_Vat_Ly_12_nang_cao}.}
 	\label{fig:con_lac_vat_ly}
 \end{figure}
 Phương trình dao động của con lắc vật lý là: $\alpha = \alpha_0\cos(\omega t + \varphi)$ trong đó tần số góc $\omega$ cho bởi: $\omega = \sqrt{\frac{mgd}{I}}$ với $m$ là \textit{khối lượng} của vật rắn, $d$ là \textit{khoảng cách} $QG$, $I$ là \textit{momen quán tính} của vật rắn đối với trục quay. Chu kỳ $T$ của con lắc vật lý cho bởi:
@@ -386,6 +386,73 @@ Mọi dao động tự do của 1 hệ dao động đều có cùng 1 tần số
 %------------------------------------------------------------------------------%
 
 \subsection{Năng Lượng trong Dao Động Điều Hòa}
+``Khi 1 vật dao động, vị trí \& vận tốc của nó luôn luôn thay đổi theo thời gian, vì thế mà thế năng \& động năng của vật cũng luôn luôn biến đổi.'' -- \cite[p. 41]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Sự bảo toàn cơ năng}
+``Trong các con lắc mà ta đã xét ở chương này thì vật nặng chịu tác dụng của lực đàn hồi ($F = -kx$) hoặc trọng lực ($P = mg$). Các lực này là \textit{lực thế}. Ở \cite{SGK_Vat_Ly_10_nang_cao}, cơ năng (động năng $+$ thế năng) của 1 vật chuyển động trong trường lực thế được bảo toàn. Như vậy: \textit{Cơ năng của vật dao động được bảo toàn}. Ta sẽ xem xét chi tiết sự biến đổi từng thành phần của cơ năng, i.e., động năng \& thế năng, của vật nặng trong con lắc lò xo \& thử lại rằng cơ năng được bảo toàn.'' -- \cite[p. 41]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Biểu thức của thế năng}
+``Thế năng $W_{\rm t}$ của vật nặng dưới tác dụng của lực đàn hồi cũng chính là thế năng đàn hồi của lò xo. Xét vật nặng trong con lắc lò xo, vật dao động với tần số góc $\omega$ \& biên độ $A$, ly độ của vật là:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (8.1)}
+	x = A\cos(\omega t + \varphi).
+\end{align}
+Lực đàn hồi của lò xo tác dụng lên vật là $F = -kx$. Dưới tác dụng của lực này, thế năng của vật là: $W_{\rm t} = \frac{1}{2}kx^2$. Thay $x$ từ \eqref{SGK_Vat_Ly_12_nang_cao (8.1)}, ta có: $W_{\rm t} = \frac{1}{2}kA^2\cos^2(\omega t + \varphi)$ mà $\omega^2 = \frac{k}{m}$, i.e., $k = m\omega^2$, do đó:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (8.2)}
+	W_{\rm t} = \frac{1}{2}m\omega^2A^2\cos^2(\omega t + \varphi).
+\end{align}
+Đây là \textit{biểu thức của thế năng phụ thuộc vào thời gian}. Từ đây có thể khảo sát sự biến đổi của thế năng theo thời gian (xem Fig. \ref{fig:duong_bieu_dien_bien_doi_the_nang_theo_thoi_gian}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{duong_bieu_dien_bien_doi_the_nang_theo_thoi_gian}
+	\caption{Đường biểu diễn biến đổi thế năng theo thời gian ($\varphi = 0$), \cite[Hình 8.1, p. 41]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:duong_bieu_dien_bien_doi_the_nang_theo_thoi_gian}
+\end{figure}
+\textbf{Biến đổi của thế năng theo thời gian.} Dựa vào công thức \eqref{SGK_Vat_Ly_12_nang_cao (8.2)} \& dùng biến đổi lượng giác $\cos^2a = \frac{1 + \cos2a}{2}$, ta có:
+\begin{align*}
+	W_{\rm t} = \frac{1}{2}m\omega^2A^2\frac{1 + \cos2(\omega t + \varphi)}{2} = \frac{1}{4}m\omega^2A^2 + \frac{1}{4}m\omega^2A^2\cos2(\omega t + \varphi).
+\end{align*}
+Chọn gốc thời gian sao cho $\varphi = 0$, ta có đường biểu diễn của $W_{\rm t}(t)$ ở Fig. \ref{fig:duong_bieu_dien_bien_doi_the_nang_theo_thoi_gian}.'' -- \cite[p. 41]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Biểu thức của động năng}
+``Theo định nghĩa, động năng của vật nặng là: $W_{\mbox{\scriptsize\rm đ}} = \frac{1}{2}mv^2$. Vận tốc $v$ có thể tính được theo công thức \eqref{SGK_Vat_Ly_12_nang_cao (8.1)} của ly độ $x$: $v = x' = -\omega A\sin(\omega t + \varphi)$. Thay vào biểu thức trên của động năng, ta có:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (8.3)}
+	W_{\mbox{\scriptsize\rm đ}} = \frac{1}{2}m\omega^2A^2\sin^2(\omega t + \varphi).
+\end{align}
+Đây là \textit{biểu thức của động năng phụ thuộc vào thời gian}. Từ đây có thể khảo sát sự biến đổi của động năng theo thời gian (xem cột bên trái). Vì khối lượng của lò xo rất nhỏ so với khối lượng của vật nên có thể bỏ qua động năng của lò xo. Như thế, động năng của vật cũng là động năng của cả con lắc lò xo.
+
+\textbf{Biến đổi của động năng theo thời gian.} Dùng công thức $\sin^2a = \frac{1 - \cos2a}{2}$, ta có thể biến đổi \eqref{SGK_Vat_Ly_12_nang_cao (8.3)} như sau:
+\begin{align*}
+	W_{\mbox{\scriptsize\rm đ}} = \frac{1}{2}m\omega^2A^2\frac{1 - \cos2(\omega t + \varphi)}{2} = \frac{1}{4}m\omega^2A^2 - \frac{1}{4}m\omega^2A^2\cos2(\omega t + \varphi).
+\end{align*}
+Với $\varphi = 0$, ta có đồ thị ở Fig. \ref{fig:duong_bieu_dien_bien_doi_dong_nang_theo_thoi_gian}.'' -- \cite[p. 42]{SGK_Vat_Ly_12_nang_cao}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{duong_bieu_dien_bien_doi_dong_nang_theo_thoi_gian}
+	\caption{Đường biểu diễn biến đổi động năng theo thời gian, \cite[Hình 8.2, p. 42]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:duong_bieu_dien_bien_doi_dong_nang_theo_thoi_gian}
+\end{figure}
+
+\subsubsection{Biểu thức của cơ năng}
+``Cơ năng $W$ của vật nặng bằng tổng động năng \& thế năng của vật, đó cũng là cơ năng của con lắc lò xo: $W = W_{\mbox{\scriptsize\rm đ}} + W_{\rm t} = \frac{1}{2}m\omega^2A^2\left[\cos^2(\omega t + \varphi) + \sin^2(\omega t + \varphi)\right]$ suy ra:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (8.4)}
+	W = \frac{1}{2}m\omega^2A^2.
+\end{align}
+Từ \eqref{SGK_Vat_Ly_12_nang_cao (8.4)} ta thấy rằng, cơ năng $W$ không phụ thuộc thời gian. Vậy, \textit{cơ năng của vật nặng dao động, i.e., cơ năng của con lắc lò xo, được bảo toàn}. Chú ý rằng $k = m\omega^2$, ta có:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (8.5)}
+	W = \frac{1}{2}kA^2.
+\end{align}
+Cơ năng tỷ lệ với bình phương biên độ $A$ của dao động.
+
+\begin{luuy}
+	Sự bảo toàn cơ năng đã được thử lại cho trường hợp con lắc lò xo. Có thể thử lại cho dao động của các con lắc khác.'' -- \cite[pp. 42--43]{SGK_Vat_Ly_12_nang_cao}
+\end{luuy}
 
 %------------------------------------------------------------------------------%
 
