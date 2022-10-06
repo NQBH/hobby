@@ -43,6 +43,22 @@
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+
+\newcommand{\arc@arc}[2]{%
+	\sbox0{$\m@th#1#2$}%
+	\vbox{
+		\hbox{\resizebox{\wd0}{\height}{\arc@char}}
+		\nointerlineskip
+		\box0
+	}%
+}
+\makeatother
 
 \title{Some Topics in Elementary Physics\texttt{/}Grade 12}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -105,7 +121,7 @@
 	\begin{subfigure}{.33\textwidth}
 		\centering
 		\includegraphics[height=0.6\linewidth]{con_lac_lo_xo_thang_dung}
-		\caption{Con lắc lò xo thẳng đứng}
+		\caption{Con lắc lò xo thẳng đứng.}
 	\end{subfigure}%
 	\begin{subfigure}{.33\textwidth}
 		\centering
@@ -286,6 +302,86 @@ Gia tốc luôn luôn trái dấu với ly độ \& có độ lớn tỷ lệ v�
 %------------------------------------------------------------------------------%
 
 \subsection{Con Lắc Đơn. Con Lắc Vật Lý}
+
+\subsubsection{Con lắc đơn}
+``Con lắc đơn gồm 1 vật nặng có kích thước nhỏ, có khối lượng $m$, treo ở đầu 1 sợi dây mềm không dãn có độ dài $l$ \& có khối lượng không đáng kể. Vị trí cân bằng của con lắc đơn là vị trí mà dây treo thẳng đứng $QO$, vật nặng ở vị trí $O$ thấp nhất. Nếu đưa vật nặng ra khỏi vị trí cân bằng, ví dụ tới vị trí $A$ trên quỹ đạo tròn tâm $Q$ bán kính $l$ với $\arc{OA} = s_0$, rồi thả tự do thì vật nặng dao động trên cung tròn $\arc{AOB}$, qua lại quanh vị trí cân bằng $O$ (Fig. \ref{fig:con_lac_don_so_do}(a)).'' -- \cite[p. 36]{SGK_Vat_Ly_12_nang_cao}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{con_lac_don}
+		\caption{Con lắc đơn.}
+	\end{subfigure}%
+	\begin{subfigure}{.45\textwidth}
+		\centering
+		\includegraphics[width=0.2\linewidth]{so_do_con_lac_don}
+		\caption{Sơ đồ con lắc đơn.}
+	\end{subfigure}
+	\caption{Con lắc đơn \& sơ đồ, \cite[Hình 7.2, p. 36]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:con_lac_don_so_do}
+\end{figure}
+
+\subsubsection{Phương trình động lực học}
+``Vật nặng ở vị trí $M$ xác định bởi $\arc{OM} = s$ (Fig. \ref{fig:con_lac_don_so_do}(b)), $s$ được gọi là \textit{ly độ cong}. Dây treo ở $QM$ xác định bởi góc $\widehat{OQM} = \alpha$ được gọi là \textit{ly độ góc}. Chiều dương để tính $s$ \& $\alpha$ là chiều từ $O$ đến $A$. Hệ thức giữa $s$ \& $\alpha$ là: $s = l\alpha$. Các lực tác dụng lên vật là:
+\begin{enumerate*}
+	\item[$\bullet$] Trọng lực $\overrightarrow{P}$ có độ lớn $mg$ \& hướng thẳng đứng xuống dưới.
+	\item[$\bullet$] Phản lực $\overrightarrow{R}$ của dây hướng theo $MQ$.
+\end{enumerate*}
+Ta phân tích trọng lực $\overrightarrow{P}$ thành 2 phần: thành phần $\overrightarrow{P}_{\rm n}$ theo phương của dây treo $QM$ \& vuông góc với quỹ đạo tròn, thành phần $\overrightarrow{P}_{\rm t}$ theo phương tiếp tuyến với quỹ đạo. $\overrightarrow{P} = \overrightarrow{P}_{\rm n} + \overrightarrow{P}_{\rm t}$. Thành phần $\overrightarrow{P}_{\rm n}$ của trọng lực \& phản lực $\overrightarrow{R}$ của dây treo cùng tác dụng lên vật, nhưng vì chúng vuông góc với quỹ đạo nên không làm thay đổi tốc độ của vật. Hợp lực của chúng là lực hướng tâm giữ cho vật chuyển động trên quỹ đạo tròn. Thành phần $\overrightarrow{P}_{\rm t}$ của trọng lực luôn có khuynh hướng kéo vật về vị trí cân bằng $O$, giống như lực kéo về trong con lắc lò xo. Với những dao động nhỏ, i.e., ly độ góc $\alpha\ll 1$ rad, còn ly độ cong $s\ll l$, thì có thể coi gần đúng cung $\arc{OM}$ là đoạn thẳng. Fig. \ref{fig:con_lac_don_so_do} cho thấy lực $\overrightarrow{P}_{\rm t}$ có độ lớn $mg\sin\alpha$ \& luôn hướng về $O$, nên $P_{\rm t} = -mg\sin\alpha$. Ngoài ra, $\alpha\ll 1$ rad nên có thể coi gần đúng $\sin\alpha\approx\alpha$. Áp dụng định luật II Newton, ta có: $ms'' = -mg\sin\alpha\approx-mg\alpha = -mg\frac{s}{l}$. Từ đây, suy ra:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (7.3a)}
+	s'' + \frac{g}{l}s = 0.
+\end{align}
+Đó là \textit{phương trình động lực học của dao động của con lắc đơn} với ly độ cong $s$ nhỏ (so với $l$). Đặt
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (7.4)}
+	\omega = \sqrt{\frac{g}{l}},
+\end{align}
+ta lại có phương trình giống như phương trình \eqref{phuong trinh dong luc hoc 1} đối với dao động của con lắc lò xo: $s'' + \omega^2s = 0$.'' ``Nếu chọn ly độ góc $\alpha$ để xác định vị trí của vật nặng thì ta thay $s$ bằng $l\alpha$ trong \eqref{SGK_Vat_Ly_12_nang_cao (7.3a)} \& sẽ được: $\alpha'' + \frac{g}{l}\alpha = 0$ \& tiếp theo: $\alpha'' + \omega^2\alpha = 0$.'' -- \cite[pp. 36--37]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Nghiệm của phương trình $s'' + \omega^2s$}
+``Phương trình dao động của con lắc là:
+\begin{align}
+	\label{phuong trinh dao dong cua con lac}
+	s = A\cos(\omega t + \varphi).
+\end{align}
+Với cách kích thích đưa vật nặng về phía phải, ở ly độ cong $s_0$ rồi thả tự do \& gốc thời gian chọn vào lúc thả vật nặng, ta có điều kiện ban đầu: Khi $t = 0$ thì $s = s_0$ \& $v = s' = 0$. Vận dụng điều kiện ban đầu cho nghiệm \eqref{phuong trinh dao dong cua con lac}, ta có: $A\cos\varphi = s_0$ \& $-\omega A\sin\varphi = 0$ từ đó, suy ra: $\varphi = 0$ \& $A = s_0$. Vậy, nếu kích thích đưa vật nặng về phía phải, ở ly độ cong $s_0$ rồi thả tự do thì:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (7.8)}
+	s = s_0\cos\omega t.
+\end{align}
+Có thể chọn góc lệch $\alpha$ của dây treo làm thông số xác định vị trí (tọa độ góc), khi đó
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (7.9)}
+	\alpha = \alpha_0\cos\omega t.
+\end{align}
+Cả 2 phương trình \eqref{SGK_Vat_Ly_12_nang_cao (7.8)} \& \eqref{SGK_Vat_Ly_12_nang_cao (7.9)} đều mô tả cùng 1 chuyển động dao động của con lắc đơn. Đó là 1 dao động điều hòa. \textit{Dao động của con lắc đơn với góc lệch nhỏ là dao động điều hòa quanh vị trí cân bằng với tần số góc $\omega$ cho bởi \eqref{SGK_Vat_Ly_12_nang_cao (7.4)}}. Tần số gốc $\omega$ không phụ thuộc khối lượng $m$ của vật nặng. Chu kỳ $T$ của dao động nhỏ là: $T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{l}{q}}$.'' -- \cite[pp. 37--38]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Con lắc vật lý}
+``\textit{Con lắc vật lý} là 1 vật rắn quay được quanh 1 trục nằm ngang cố định không đi qua trọng tâm của vật. Trong Fig. \ref{fig:con_lac_vat_ly}, trục đi qua $Q$ \& vuông góc với mặt phẳng của hình vẽ. $G$ là trọng tâm của vật, $\alpha$ là góc lệch của $QG$ so với đường thẳng đứng. Chiều dương là chiều mũi tên.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{con_lac_vat_ly}
+	\caption{Con lắc vật lý, $G$ là trọng tâm của con lắc, $d = QG$, \cite[Hình 7.3]{SGK_Vat_Ly_12_nang_cao}.}
+	\label{fig:con_lac_vat_ly}
+\end{figure}
+Phương trình dao động của con lắc vật lý là: $\alpha = \alpha_0\cos(\omega t + \varphi)$ trong đó tần số góc $\omega$ cho bởi: $\omega = \sqrt{\frac{mgd}{I}}$ với $m$ là \textit{khối lượng} của vật rắn, $d$ là \textit{khoảng cách} $QG$, $I$ là \textit{momen quán tính} của vật rắn đối với trục quay. Chu kỳ $T$ của con lắc vật lý cho bởi:
+\begin{align}
+	\label{SGK_Vat_Ly_12_nang_cao (7.13)}
+	T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{I}{mgd}}.
+\end{align}
+\textit{Ứng dụng con lắc vật lý}: Dùng con lắc vật lý đo gia tốc trọng trường $g$. Đặt con lắc tại 1 vị trí, đo chu kỳ $T$ của con lắc dao động. Dùng công thức \eqref{SGK_Vat_Ly_12_nang_cao (7.13)} suy ra gia tốc $g$ của trọng trường tại vị trí đặt con lắc. Biết giá trị của $g$ tại các vị trí khác nhau trong 1 vùng, có thể suy ra phân bố khối lượng khoáng vật ở dưới mặt đất trong vùng đó (giúp cho việc tìm mỏ dầu, nguồn nước dưới đất, $\ldots$).'' ``Dưới tác dụng của trọng lực $\overrightarrow{P}$, con lắc vật lý dao động. Chọn góc lệch $\alpha$ của $QG$ so với đường thẳng đứng làm tọa độ góc. Lực tác dụng lên vật rắn là trọng lực $\overrightarrow{P}$ \& phản lực $\overrightarrow{R}$ đặt tại $Q$ do trục quay tác dụng lên vật rắn. Momen của lực đối với trục quay đi qua $Q$: $M(\overrightarrow{P}) = -Pd\sin\alpha = -mgd\sin\alpha$, $M(\overrightarrow{R}) = 0$. Phương trình động lực học: Tổng momen của lực $=$ Momen quán tính $\times$ Gia tốc góc. Ký hiệu $I$ là momen quán tính của vật rắn đối với trục đi qua $Q$, phương trình động lực học trở thành: $-mgd\sin\alpha = I\alpha''$ với dao động nhỏ thì $\sin\alpha\approx\alpha$, ta có: $\alpha'' + \frac{mgd}{I}\alpha = 0$. Đặt $\omega = \sqrt{\frac{mgd}{I}}$, ta có phương trình tương tự như $\alpha'' + \omega^2\alpha$: $\alpha'' + \omega^2\alpha = 0$ với nghiệm là: $\alpha = \alpha_0\cos(\omega t + \varphi)$. Từ đây, có thể thấy rằng con lắc vật lý dao động nhỏ với tần số góc cho bởi $\omega = \sqrt{\frac{mgd}{I}}$.'' -- \cite[pp. 38--39]{SGK_Vat_Ly_12_nang_cao}
+
+\subsubsection{Hệ dao động}
+``Nếu xét vật dao động cùng với vật tác dụng lực kéo về lên vật dao động thì ta có 1 hệ gọi là \textit{hệ dao động}. E.g.: vật nặng gắn vào lò xo có 1 đầu cố định (con lắc lò xo) là 1 hệ dao động, con lắc đơn (hoặc con lắc vật lý) cùng với Trái Đất là 1 hệ dao động. Như vậy, lực đàn hồi tác dụng lên vật nặng trong con lắc lò xo là nội lực của hệ, trọng lực tác dụng lên vật nặng trong con lắc đơn cũng là nội lực của hệ. Dao động của hệ xảy ra dưới tác dụng chỉ của nội lực thì gọi là \textit{dao động tự do} hoặc \textit{dao động riêng}. Từ đầu chương II tới đây ta mới chỉ xét dao động tự do.
+
+Mọi dao động tự do của 1 hệ dao động đều có cùng 1 tần số góc xác định, được gọi là \textit{tần số góc riêng} của vật hay hệ ấy. E.g., tần số góc riêng của con lắc lò xo là $\omega = \sqrt{\frac{k}{m}}$, của con lắc đơn \& Trái Đất là $\omega = \sqrt{\frac{g}{l}}$.'' ``Có thể coi con lắc đơn là trường hợp riêng của con lắc vật lý với $d = l$, $I = ml^2$. Từ công thức $\omega = \sqrt{\frac{mgd}{I}}$, suy ra công thức \eqref{SGK_Vat_Ly_12_nang_cao (7.4)} $\omega = \sqrt{\frac{g}{l}}$.''
+
+\begin{luuy}
+	``Con lắc lò xo, kể cả đầu cố định của lò xo, là 1 hệ dao động. Đầu cố định gắn với Trái Đất, cho nên thực ra có thể coi hệ dao động bao gồm cả Trái Đất. Lực hút của Trái Đất lên vật nặng luôn luôn bị cân bằng bởi phản lực của giá đỡ vật (trong con lắc nằm ngang) hoặc bởi lực đàn hồi do độ dãn ban đầu của lò xo (trong con lắc thẳng đứng). Vì vậy, không cần nói đến Trái Đất trong hệ.'' -- \cite[pp. 39--40]{SGK_Vat_Ly_12_nang_cao}
+\end{luuy}
 
 %------------------------------------------------------------------------------%
 
