@@ -1,0 +1,408 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\usepackage[version=4]{mhchem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Problems in Elementary Chemistry\texttt{/}Grade 8}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Hóa sơ cấp lớp 8. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}.} của tác giả viết cho Hóa Học lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/problem/NQBH_elementary_chemistry_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/problem/NQBH_elementary_chemistry_grade_8_problem.pdf}.}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Chất -- Nguyên Tử -- Phân Tử}
+
+\subsection{Nguyên Tử -- Nguyên Tố Hóa Học}
+
+\begin{baitoan}[\cite{An2011}, \textbf{1.}, p. 5]
+	Nguyên tử oxi có $8$ proton trong hạt nhân. Cho biết thành phần hạt nhân của $3$ nguyên tử X, Y, Z theo bảng sau: hạt nhân nguyên tử X có $8$ proton, $8$ neutron; hạt nhân nguyên tử Y có $8$ proton, $9$ neutron; nguyên tử Z có $8$ proton, $10$ neutron. Những nguyên tử này thuộc cùng nguyên tố nào? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{2.}, p. 5]
+	Hạt nhân nguyên tử \emph{Na} có $11$ proton, natri có nguyên tử khối là $23$. Sắt có nguyên tử khối bằng $56$, trong hạt nhân có $30$ neutron. Xác định tổng số hạt (proton, neutron, \& electron) tạo thành nguyên tử natri \& sắt.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{3.}, p. 5]
+	Nguyên tử nhôm có số proton là $13$. Trong nguyên tử nhôm, số hạt mang điện nhiều hơn số hạt không mang điện là $12$ hạt. Xác định nguyên tử khối của nhôm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{4.}, p. 6]
+	1 nguyên tử R có tổng số hạt mang điện \& không mang điện là $34$. Trong số đó hạt mang điện gấp $1.8(3)$ lần số hạt không mang điện. Xác định nguyên tử khối của R.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{5.}, p. 6]
+	Tổng số hạt proton, neutron, electron trong $2$ nguyên tử A \& B là $142$, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là $42$. Số hạt mang điện của nguyên tử B nhiều hơn của nguyên tử A là $12$. Xác định số proton của A \& B.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{6.}, p. 6]
+	1 nguyên tố gồm 2 đồng vị có số nguyên tử tỷ lệ với nhau là $27:23$. Hạt nhân của đồng vị thứ nhất chứa $35$ proton \& $44$ neutron. Hạt nhân của đồng vị thứ 2 chứa nhiều hơn $2$ neutron. Xác định nguyên tử khối trung bình của nguyên tố trên.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Đơn Chất \& Hợp Chất -- Phân Tử}
+
+\begin{baitoan}[\cite{An2011}, \textbf{7.}, p. 7]
+	Kết quả phân tích cho thấy trong phân tử khí \ce{CO2} có $27.3$\% \& $72.7$\% \ce{O} theo khối lượng. Biết nguyên tử khối của \ce{C} là $12.011$. Xác định nguyên tử khối của oxi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{8.}, p. 8]
+	Trong nguyên tử \ce{X} có số hạt mang điện nhiều hơn số hạt không mang điện là $14$. Hợp chất \ce{XY_n} có đặc điểm: \ce{X} chiếm $15.0468$\% về khối lượng, tổng số proton là $100$, tổng số neutron là $106$. Xác định số proton \& số neutron của \ce{X}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{9.}, p. 8]
+	Oxi có $3$ đồng vị: \ce{_8^16O,_8^17O,_8^18O}, còn carbon có $2$ đồng vị bền là \ce{_6^12C,_6^13C}. Hỏi có bao nhiêu loại phân tử khí carbonic.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{10.}, p. 8]
+	Hợp chất \ce{Ba(NO3)y} có phân tử khối là $261$, \ce{Ba} có nguyên tử khối là $137$ \& hóa trị II. Xác định hóa trị của nhóm \ce{NO3}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{11.}, p. 9]
+	1 hợp chất, phân tử gồm $2$ nguyên tử của nguyên tố Y liên kết với 1 nguyên tử oxi \& nặng hơn phân tử hydro $31$ lần. Xác định nguyên tử khối của Y.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{12.}, p. 9]
+	Cho biết công thức hóa học của nguyên tố X với nhóm \ce{(SO4)} hóa trị II \& hợp chất của nhóm nguyên tử Y với \ce{H} như sau: \ce{X2(SO4)3,H2Y}. Xác định công thức hóa học hợp chất của X \& Y.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{13.}, p. 9]
+	2 nguyên tử X kết hợp với 1 nguyên tử O tạo ra phân tử oxi. Trong phân tử, nguyên tố oxi chiếm $25.8$\% về khối lượng. Xác định nguyên tử khối của X.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Công Thức Hóa Học -- Hóa Trị}
+
+\begin{baitoan}[\cite{An2011}, \textbf{14.}, p. 9]
+	Nguyên tử khối của sắt là $56$, của oxi là $16$. Phân tử khối của oxit sắt này là $160$. Xác định công thức phân tử oxit sắt.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{15.}, p. 10]
+	Có hợp chất \ce{MX2} với đặc điểm như sau:
+	\begin{enumerate*}
+		\item[$\bullet$] Tổng số hạt proton, neutron, electron là $140$ trong đó số hạt không mang điện kém hơn số hạt mang điện là $44$.
+		\item[$\bullet$] Nguyên tử khối của M nhỏ hơn nguyên tử khối của X là $11$.
+		\item[$\bullet$] Tổng số hạt trong ion \ce{X-} nhiều hơn trong \ce{M^2+} là $19$.
+	\end{enumerate*}
+	Xác định công thức phân tử \ce{MX2}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{16.}, p. 10]
+	Muối crom sunfat có phân tử khối là $392$ \& có công thức \ce{Cr2(SO4)x}. Tìm hóa trị của crom. Cho biết hóa trị của nhóm \ce{SO4} là II.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{17.}, p. 10]
+	1 hợp chất X gồm $2$ nguyên tố \ce{C} \& \ce{S}, có phân tử khối nặng hơn khí oxi $2.375$ lần. Xác định công thức phân tử của \ce{X}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{18.}, p. 11]
+	1 oxit sắt có thành phần gồm $10.5$ phần khối lượng sắt \& $4$ phần khối lượng oxi. Xác định công thức hóa học của oxit sắt.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{19.}, p. 11]
+	Lưu huỳnh có nguyên tử khối bằng $32$. Trong nguyên tử lưu huỳnh số hạt mang điện gấp đôi số hạt không mang điện. Tính tổng số hạt (proton, neutron, \& electron) trong nguyên tử lưu huỳnh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{20.}, p. 11]
+	Biết rằng khối lượng 1 nguyên tử oxi nặng gấp $15.842$ lần \& khối lượng của nguyên tử carbon nặng gấp $11.906$ lần khối lượng nguyên tử hydro. Hỏi nếu chọn $\frac{1}{12}$ khối lượng nguyên tử carbon làm đơn vị thì \ce{H,O} có nguyên tử khối là bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{21.}, p. 11]
+	Nguyên tử X có tổng số hạt là $95$. Biết số hạt không mang điện bằng $0.5833$ số hạt mang điện. Xác định số proton của nguyên tử X.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{22.}, p. 11]
+	Cho biết tổng số hạt trong $1$ nguyên tử của nguyên tố X là $58$. Số hạt trong nhân lớn hơn số hạt ở vỏ là $20$ hạt. Xác định nguyên tử khối của X.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{23.}, p. 11]
+	Tổng số proton, neutron, electron trong nguyên tử của 1 nguyên tố là $34$. Xác định số proton của nguyên tử đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{24.}, p. 11]
+	Nguyên tử của nguyên tố hóa học X có tổng số hạt proton, neutron, electron bằng $180$, trong đó tổng số các hạt mang điện gấp $1.432$ lần số hạt neutron. Xác định số proton của nguyên tử X.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{25.}, p. 11]
+	Tính thành phần \% các đồng vị của carbon. Biết rằng carbon ở trạng thái tự nhiên có $2$ đồng vị \ce{_6^12C} \& \ce{_6^13C} có nguyên tử khối là $12.011$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{26.}, p. 11]
+	Đồng có 2 đồng vị \ce{_29^65Cu,_29^63Cu}. Nguyên tử khối trung bình của đồng là $63.54$. Tính thành phần \% của mỗi đồng vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{27.}, p. 11]
+	1 hợp chất có công thức phân tử là \ce{Na_x(SO4)y} \& có phân tử khối là $142$. Xác định công thức phân tử của hợp chất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{28.}, p. 12]
+	Oxit của 1 nguyên tố M hóa trị V trong đó nguyên tố X chiếm $43.67$\% về khối lượng. Xác định công thức phân tử của oxit.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{29.}, p. 12]
+	Các hạt cấu tạo nên hạt nhân của hầu hết các nguyên tử là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] proton \& electron;
+		\item[{\rm\sf B.}] neutron \& electron;
+		\item[{\rm\sf C.}] proton \& neutron;
+		\item[{\rm\sf D.}] neutron, proton, \& electron.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{30.}, p. 12]
+	Các hạt cấu tọa nên hầu hết các nguyên tử là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] neutron \& electron;
+		\item[{\rm\sf B.}] neutron \& proton;
+		\item[{\rm\sf C.}] proton \& electron;
+		\item[{\rm\sf D.}] neutron, proton, \& electron.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{31.}, p. 12]
+	Nguyên tố hóa học là những nguyên tử có cùng:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] số proton \& neutron;
+		\item[{\rm\sf B.}] số neutron;
+		\item[{\rm\sf C.}] số proton;
+		\item[{\rm\sf D.}] số electron.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{32.}, p. 12]
+	Công thức hóa học của nguyên tố R với hydro là \ce{H2R} \& M với oxit là \ce{M2O3}. Nếu R \& M kết hợp với nhau thì có công thức hóa học là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] \ce{M2R};
+		\item[{\rm\sf B.}] \ce{M3R2};
+		\item[{\rm\sf C.}] \ce{M2R3};
+		\item[{\rm\sf D.}] \ce{MR}.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{33.}, p. 12]
+	1 nguyên tử có $18$ electron. Số lớp electron của nguyên tử đó là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] $3$;
+		\item[{\rm\sf B.}] $4$;
+		\item[{\rm\sf C.}] $2$;
+		\item[{\rm\sf D.}] $5$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{34.}, p. 12]
+	Hạt nhân nguyên tử Y có $7$ proton. Số electron lớp ngoài cùng của nguyên tử Y là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] $4$;
+		\item[{\rm\sf B.}] $5$;
+		\item[{\rm\sf C.}] $3$;
+		\item[{\rm\sf D.}] $7$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{35.}, p. 12]
+	Phát biểu đúng là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] Nguyên tố hóa học tồn tại ở dạng hóa hợp.
+		\item[{\rm\sf B.}] Nguyên tố hóa học tồn tại ở dạng tự do.
+		\item[{\rm\sf C.}] Nguyên tố hóa học có thể tồn tại ở dạng tự do \& phần lớn ở dạng hóa hợp.
+		\item[{\rm\sf D.}] Số nguyên tố hóa học có nhiều hơn chất.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{36.}, p. 12]
+	Biết nguyên tố X có nguyên tử khối bằng $\frac{5}{2}$ nguyên tử khối của oxi. X có nguyên tử khối là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] $20$;
+		\item[{\rm\sf B.}] $40$;
+		\item[{\rm\sf C.}] $30$;
+		\item[{\rm\sf D.}] $50$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{37.}, p. 12]
+	Nguyên tử \ce{C} có khối lượng bằng $1.996\cdot 10^{-23}$g. Khối lượng tính bằng gam của nguyên tử \ce{Na} là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] $\approx3.82\cdot10^{-23}$g;
+		\item[{\rm\sf B.}] $\approx3.28\cdot10^{-23}$g;
+		\item[{\rm\sf C.}] $1.91\cdot10^{-23}$g;
+		\item[{\rm\sf D.}] $4.15\cdot10^{-23}$g.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{38.}, p. 12]
+	2 nguyên tử X kết hợp với $3$ nguyên tử oxi tạo ra phân tử oxit. Trong phân tử, oxi chiếm $30$\% về khối lượng. Nguyên tử khối của X là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] $23$;
+		\item[{\rm\sf B.}] $56$;
+		\item[{\rm\sf C.}] $52$;
+		\item[{\rm\sf D.}] $55$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{39.}, p. 13]
+	Hợp chất X gồm 2 nguyên tố C, H \& có phân tử khối nặng hơn khí \ce{H2} $15$ lần. Công thức hóa học của X là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] \ce{CH4};
+		\item[{\rm\sf B.}] \ce{C2H4};
+		\item[{\rm\sf C.}] \ce{C2H6};
+		\item[{\rm\sf D.}] \ce{C2H2}.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{40.}, p. 13]
+	Hạt nhân của 1 nguyên tử có số proton bằng số neutron \& có nguyên tử khối bằng $12$. Số electron lớp ngoài cùng của nguyên tử đó là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] $4$;
+		\item[{\rm\sf B.}] $3$;
+		\item[{\rm\sf C.}] $2$;
+		\item[{\rm\sf D.}] $5$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{41.}, p. 13]
+	Biết \ce{S} hóa trị IV, chọn công thức hóa học nào phù hợp với quy tắc hóa trị trong số các công thức sau đây:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] \ce{SO3};
+		\item[{\rm\sf B.}] \ce{SO2};
+		\item[{\rm\sf C.}] \ce{S2O3};
+		\item[{\rm\sf D.}] \ce{S2O}.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{42.}, p. 13]
+	1 hợp chất phân tử gồm 1 nguyên tử X liên kết với $3$ nguyên tử \ce{O}. Nguyên tố oxi chiếm $60$\% về khối lượng của hợp chất.
+	\begin{enumerate*}
+		\item[(a)] Tìm nguyên tử khối của X.
+		\item[(b)] Phân tử nặng bằng oxit của kim loại nào?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{43.}, p. 13]
+	Giải thích vì sao các nguyên tử liên kết được với nhau? Khả năng liên kết của nguyên tử phụ thuộc vào yếu tố nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{44.}, p. 13]
+	Trong phản ứng hóa học, nguyên tử hay phân tử được bảo toàn? Tại sao có sự biến đổi phân tử này thành phân tử khác?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{45.}, p. 13]
+	Giải thích vì sao các nguyên tử liên kết được với nhau? Khả năng liên kết của nguyên tử phụ thuộc vào yếu tố nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{46.}, p. 13]
+	1 oxit có công thức phân tử \ce{Mn2Ox}, có phân tử khối là $222$. Xác định hóa trị của \ce{Mn}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{47.}, p. 13]
+	
+\end{baitoan}
+
+
+%------------------------------------------------------------------------------%
+
+\section{Phản Ứng Hóa Học}
+
+\subsection{Định Luật Bảo Toàn Khối Lượng Các Chất}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Lập Phương Trình Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Công Thức Hóa Học -- Phương Trình Hóa Học}
+
+\subsection{Tính Theo Công Thức Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Tính Theo Phương Trình Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Oxi -- Không Khí}
+
+\subsection{Sự Oxi Hóa -- Oxit}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phản Ứng Hóa Hợp, Phản Ứng Phân Hủy}
+
+%------------------------------------------------------------------------------%
+
+\section{Hydro -- Nước}
+
+\subsection{Phản Ứng Oxi Hóa -- Khử}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Axit -- Bazơ -- Muối}
+
+%------------------------------------------------------------------------------%
+
+\section{Dung Dịch}
+
+\subsection{Dung Dịch \& Độ Tan của 1 Chất Trong Nước}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Pha Trộn Dung Dịch}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Chuyển Đổi Nồng Độ Dung Dịch}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Bài Hóa Liên Quan đến Nồng Độ Dung Dịch}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
