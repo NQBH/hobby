@@ -33,7 +33,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -97,9 +97,263 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 
 \noindent\textit{Phép chia 2 số hữu tỷ}: Ta lấy số hữu tỷ bị chia nhân với nghịch đảo số hữu tỷ chia rồi làm như phép nhân. Thương của phép chia $x\in\mathbb{Q}$ cho số hữu tỷ $y\in\mathbb{Q}^\star$ gọi là \textit{tỷ số} của 2 số $x$ \& $y$, ký hiệu là $\frac{x}{y}$ hay $x:y$.'' -- \cite[\S3, p. 10]{Trong_Toan_7_2022}
 
+\begin{baitoan}[\cite{Trong_Toan_7_2022}, \textbf{3.}, p. 13]
+	Cho số hữu tỷ $\frac{a}{b}$ với $a,b\in\mathbb{Z}$, $b > 0$. Chứng minh:
+	\begin{enumerate*}
+		\item[(a)] $\frac{a}{b} > 1\Leftrightarrow a > b$;
+		\item[(b)] $\frac{a}{b} < 1\Leftrightarrow a < b$;
+		\item[(c)] $((a < b)\land(a,c > 0))\Rightarrow\frac{a}{b} < \frac{a + c}{b + c}$;
+		\item[(d)] $((a > b)\land(c > 0))\Rightarrow\frac{a}{b} > \frac{a + c}{b + c}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, Ví dụ 1]
+	Cho phân số $\frac{a}{b}\ne 1$. Tìm phân số $\frac{c}{d}$ sao cho $\frac{a}{b} + \frac{c}{d} = \frac{a}{b}\cdot\frac{c}{d}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Lũy thừa của 1 số hữu tỷ}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, Ví dụ 2]
+	Cho $x\in\mathbb{Q}$. Khi nào thì:
+	\begin{enumerate*}
+		\item[(a)] $x^2 = x$;
+		\item[(b)] $x^2 > x$;
+		\item[(c)] $x^2 < x$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, Ví dụ 3]
+	Tìm $a,b,c\in\mathbb{Q}$ biết $ab = 2$, $bc = 3$, $ca = 54$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, Ví dụ 4]
+	Rút gọn $A = \sum_{i=0}^{50} 5^i = 1 + 5 + 5^2 + \cdots + 5^{50}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, Ví dụ 5]
+	Cho $B = \sum_{i=1}^{99} \left(\frac{1}{2}\right)^i = \frac{1}{2} + \left(\frac{1}{2}\right)^2 + \cdots + \left(\frac{1}{2}\right)^{99}$. Chứng minh $B < 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{21.}]
+	Chứng minh:
+	\begin{enumerate*}
+		\item[(a)] $7^6 + 7^5 - 7^4\ \vdots\ 55$;
+		\item[(b)] $16^5 + 2^{15}\ \vdots\ 33$;
+		\item[(c)] $81^7 - 27^9 - 9^{13}\ \vdots\ 405$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{22.}]
+	Điền vào chỗ trống $\ldots$ các từ ``bằng nhau'' hoặc ``đối nhau'' cho đúng:
+	\begin{enumerate*}
+		\item[(a)] Nếu $2$ số đối nhau thì bình phương của chúng $\ldots$
+		\item[(b)] Nếu $2$ số đối nhau thì lập phương của chúng $\ldots$
+		\item[(c)] Lũy thừa chẵn cung bậc của 2 số đối nhau thì $\ldots$
+		\item[(d)] Lũy thừa lẻ cùng bậc của 2 số đối nhau thì $\ldots$
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{23.} \& mở rộng]
+	Các đẳng thức sau có đúng với mọi $a,b\in\mathbb{Q}$ hay không?
+	\begin{enumerate*}
+		\item[(a)] $-a^3 = (-a)^3$;
+		\item[(b)] $-a^5 = (-a)^5$;
+		\item[(c)] $-a^2 = (-a)^2$;
+		\item[(d)] $-a^4 = (-a)^4$;
+		\item[(e)] $-a^{2n+1} = (-a)^{2n+1}$, $\forall n\in\mathbb{N}$;
+		\item[(f)] $a^{2n} = (-a)^{2n}$, $\forall n\in\mathbb{N}$;
+		\item[(g)] $(a - b)^2 = (b - a)^2$;
+		\item[(h)] $(a - b)^3 = -(b - a)^3$;
+		\item[(g)] $(a - b)^{2n} = (b - a)^{2n}$, $\forall n\in\mathbb{N}$;
+		\item[(h)] $(a - b)^{2n+1} = -(b - a)^{2n+1}$, $\forall n\in\mathbb{N}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{24.}]
+	Tính:
+	\begin{enumerate*}
+		\item[(a)] $\left(\frac{1}{2}\right)^{15}\cdot\left(\frac{1}{4}\right)^{20}$;
+		\item[(b)] $\left(\frac{1}{9}\right)^{25}:\left(\frac{1}{3}\right)^{30}$;
+		\item[(c)] $\left(\frac{1}{16}\right)^3:\left(\frac{1}{8}\right)^2$;
+		\item[(d)] $(x^3)^2:(x^2)^3$ với $x\ne 0$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{25.}]
+	Viết số $64$ dưới dạng $a^n$ với $a\in\mathbb{Z}$. Có bao nhiêu cách viết?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{26.}]
+	Rút gọn biểu thức: $A = \dfrac{4^5\cdot 9^4 - 2\cdot 6^9}{2^{10}\cdot 3^8 + 6^8\cdot 20}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{27.}]
+	Cho $S_n = \sum_{i=1}^{n-1} (-1)^{i-1}i = 1 - 2 + 3 - 4 + \cdots + (-1)^{n-1}n$ với $n\in\mathbb{N}^\star$. Tính $S_{35} + S_{60}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{28.}]
+	Cho $A = 1 - 5 + 9 - 13 + 17 - 21 + 25 - \cdots$ ($n$ số hạng, giá trị tuyệt đối của số sau lớn hơn giá trị tuyệt đối của số hạng trước $4$ đơn vị, các dấu $+$ \& $-$ xen kẽ).
+	\begin{enumerate*}
+		\item[(a)] Tính $A$ theo $n$.
+		\item[(b)] Viết số hạng thứ $n$ của biểu thức $A$ theo $n$ (chú ý dùng lũy thừa để biểu thị dấu của số hạng đó).
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{29.}]
+	Với giá trị nào của các chữ thì các biểu thức sau có giá trị là số $0$, số dương, số âm?
+	\begin{enumerate*}
+		\item[(a)] $P = \frac{a^2b}{c}$;
+		\item[(b)] $Q = \frac{x^3}{yz}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{30.}]
+	Cho $2$ số hữu tỷ $a$ \& $b$ trái dấu trong đó $|a| = b^5$. Xác định dấu của mỗi số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{31.}]
+	Viết các số sau dưới dạng lũy thừa của $2$: $16,64,1,\frac{1}{32},\frac{1}{8},0.5,0.25$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{32.}]
+	\begin{enumerate*}
+		\item[(a)] Viết các số sau thành lũy thừa với số mũ âm: $\frac{1}{1000000},0.00000002$.
+		\item[(b)] Viết các số sau dưới dạng số thập phân: $10^{-7}$, $2.5\cdot 10^{-6}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{33.}]
+	Tính xem $A$ gấp mấy lần $B$:
+	\begin{enumerate*}
+		\item[(a)] $A = 3.4\cdot 10^{-8}$, $B = 34\cdot 10^{-9}$;
+		\item[(b)] $A = 10^{-4} + 10^{-3} + 10^{-2}$, $B = 10^{-9}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{34.}]
+	So sánh:
+	\begin{enumerate*}
+		\item[(a)] $\left(-\frac{1}{16}\right)^{100}$ \& $\left(-\frac{1}{2}\right)^{500}$;
+		\item[(b)] $(-32)^9$ \& $(-18)^{13}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{35.}]
+	Sắp xếp $a,b,c\in\mathbb{Q}$ theo thứ tự từ nhỏ đến lớn: $a = 2^{100}$, $b = 3^{75}$, $c = 5^{50}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{36.}]
+	Trong các câu sau, câu nào đúng với mọi $a\in\mathbb{Q}$?
+	\begin{enumerate*}
+		\item[(a)] Nếu $a < 0$ thì $a^2 > 0$;
+		\item[(b)] Nếu $a^2 > 0$ thì $a > 0$;
+		\item[(c)] Nếu $a < 0$ thì $a^2 > a$;
+		\item[(d)] Nếu $a^2 > a$ thì $a > 0$;
+		\item[(e)] Nếu $a^2 > a$ thì $a < 0$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{37.}]
+	\begin{enumerate*}
+		\item[(a)] Cho $a^m = a^n$ ($a\in\mathbb{Q}$, $m,n\in\mathbb{N}$). Tìm $m,n$.
+		\item[(b)] Cho $a^m > a^n$ ($a\in\mathbb{Q}$, $a > 0$, $m,n\in\mathbb{N}$). So sánh $m$ \& $n$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{38.}]
+	Tìm $x\in\mathbb{Q}$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] $(2x - 1)^4 = 81$;
+		\item[(b)] $(x - 1)^5 = -32$;
+		\item[(c)] $(2x - 1)^6 = (2x - 1)^8$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{39.}]
+	Tìm $x\in\mathbb{N}$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] $5^x + 5^{x+2} = 650$;
+		\item[(b)] $3^{x-1} + 5\cdot 3^{x-1} = 162$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{40.}]
+	Tìm $x,y\in\mathbb{N}$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] $2^{x+1}\cdot 3^y = 12^x$;
+		\item[(b)] $10^x:5^y = 20^y$;
+		\item[(c)] $2^x = 4^{y-1}$ \& $27^y = 3^{x+8}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{41.}]
+	Tìm $a,b,c\in\mathbb{Q}$, biết rằng:
+	\begin{enumerate*}
+		\item[(a)] $ab = \frac{3}{5}$, $bc = \frac{4}{5}$, $ca = \frac{3}{4}$.
+		\item[(b)] $a(a + b + c) = -12$, $b(a + b + c) = 18$, $c(a + b + c) = 30$;
+		\item[(c)] $ab = c$, $bc = 4a$, $ac = 9b$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{42.}]
+	Cho $a,b,c,d,e\in\mathbb{N}$ thỏa mãn $a^b = b^c = c^d = d^e = e^a$. Chứng minh $a = b = c = d = e$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{43.}]
+	Cho $A = \prod_{i=2}^{100} \frac{1}{i^2} - 1 = \left(\frac{1}{2^2} - 1\right)\left(\frac{1}{3^2} - 1\right)\left(\frac{1}{4^2} - 1\right)\cdots\left(\frac{1}{100^2} - 1\right)$. So sánh $A$ với $-\frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{44.}]
+	Rút gọn $A = \sum_{i=1}^{100} (-1)^i2^i = 2^{100} - 2^{99} + 2^{98} - 2^{97} + \cdots + 2^2 - 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{45.}]
+	Rút gọn $B = \sum_{i=
+	}^{100} (-1)^i3^i = 3^{100} - 3^{99} + 3^{98} - 3^{97} + \cdots + 3^2 - 3 + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{46.}]
+	Cho $C = \sum_{i=1}^{99} \frac{1}{3^i} = \frac{1}{3} + \frac{1}{3^2} + \cdots + \frac{1}{3^{99}}$. Chứng minh $C < \frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{47.}]
+	Chứng minh $\frac{3}{1^2\cdot 2^2} + \frac{5}{2^2\cdot 3^2} + \frac{7}{3^2\cdot 4^2} + \cdots + \frac{19}{9^2\cdot 10^2} < 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{48.}]
+	Chứng minh $\sum_{i=1}^{100} \frac{i}{3^i} = \frac{1}{3} + \frac{2}{3^2} + \frac{3}{3^3} + \cdots + \frac{100}{3^{100}} < \frac{3}{4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{49.}]
+	Ta không có $2^m + 2^n = 2^{m+n}$, $\forall m,n\in\mathbb{N}^\star$. Nhưng có những số nguyên dương $m,n$ có tính chất trên. Tìm các số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{50.}]
+	Tìm $m,n\in\mathbb{N}^\star$ sao cho $2^m - 2^n = 256$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{51.}]
+	Cho 1 bảng vuông $3\times 3$ ô. Trong mỗi ô của bảng viết số $1$ hoặc số $-1$. Gọi $d_i$ là tích các số trên dòng $i$ ($i = 1,2,3$), $c_k$ là tích các số trên cột $k$ ($k = 1,2,3$).
+	\begin{enumerate*}
+		\item[(a)] Chứng minh rằng không thể xảy ra $d_1 + d_2 + d_3 + c_1 + c_2 + c_3 = 0$.
+		\item[(b)] Xét bài toán trên đối với bảng vuông $n\times n$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S3, \textbf{52.}]
+	Cho $n$ số $x_1,\ldots,x_n$, mỗi số bằng $1$ hoặc $-1$. Biết rằng tổng của $n$ tích $x_1x_2$, $x_2x_3$, $x_3x_4,\ldots,x_nx_1$ bằng $0$. Chứng minh $n\ \vdots\ 4$.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Số Thực}
+
+\begin{baitoan}
+	Chứng minh: $(x^2 + m^2)(x^2 + n^2) = 0\Leftrightarrow x^2 + m^2n^2 = 0$ \& $(x^2 + m^2)(x^2 + n^2)\ne 0\Leftrightarrow x^2 + m^2n^2\ne 0$, $\forall x,m,n\in\mathbb{R}$.
+\end{baitoan}
+\textit{Ý nghĩa}: Điều kiện để các công thức nhân chia lũy thừa cùng cơ số xác định.
 
 %------------------------------------------------------------------------------%
 
