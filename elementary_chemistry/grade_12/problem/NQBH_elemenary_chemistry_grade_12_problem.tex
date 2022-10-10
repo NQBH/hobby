@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,chemfig}
 \usepackage[inline]{enumitem}
 \usepackage[version=4]{mhchem}
 \allowdisplaybreaks
@@ -34,9 +34,9 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small \nouppercase{\leftmark}}
-\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
@@ -54,15 +54,123 @@
 
 %------------------------------------------------------------------------------%
 
+``Để giải 1 bài toán hóa cần phải làm các bước sau:
+\begin{enumerate*}
+	\item[\textbf{1.}] Viết phương trình hóa học theo dữ kiện đầu bài.
+	\item[\textbf{2.}] Đặt ẩn số cho mỗi phương trình hóa học đã viết.
+	\item[\textbf{3.}] Tìm mối liên quan giữa các ẩn số với dữ kiện đầu bài để thiết lập phương trình toán, sau đó giải phương trình hoặc hệ phương trình toán.'' -- \cite[p. 17]{An2008}
+\end{enumerate*}
+
 \section{Este -- Lipit}
 
 \subsection{Este}
+
+\begin{vidu}[\cite{An2008}, Ví dụ 1, p. 17]
+	``Đốt cháy $1$ este đơn chức, phương trình hóa học sẽ viết như sau:
+	
+	\emph{\ce{C_nH_{2n+1-2k}COOC_mH_{2m+1-2k'} + $\frac{3m + 3n + 1 - k - k'}{2}$O2 -> $(m + n + 1)$CO2 + $(m + n + 1 - k - k')$H2O}}. Sở dĩ phải dùng các chỉ số $m,n,k,k'$ vì không biết các acid, ancol tạo este là no hay không no. Các dữ liệu rất đa dạng có thể là phản ứng cháy, phản ứng este hóa, phản ứng xà phòng hóa, etc. $\ldots$ Phần này tạm phân loại có $7$ dạng dữ kiện khác nhau.
+\end{vidu}
+Bước 2: Đặt ẩn số cho mỗi phương trình hóa học, thông thường nên đặt ẩn số là số mol. E.g., $a$ mol, $b$ mol, etc. $\ldots$ cũng có trường hợp đặt ẩn số là số gam.
+
+\begin{vidu}[\cite{An2008}, Ví dụ 2, p. 17]
+	Đốt $8.6$g 1 este đơn chức thu được $8.96$l khí \emph{\ce{CO2}} (đktc) \& $5.4$g \emph{\ce{H2O}}. Thể tích \emph{\ce{O2}} cần $10.08$l (đktc). Tìm công thức este trên.
+\end{vidu}
+
+\begin{proof}[Giải]
+	Bước 1: \ce{C_nH_{2n+1-2k}COOC_mH_{2m+1-2k'} + $\frac{3m + 3n + 1 - k - k'}{2}$O2 -> $(m + n + 1)$CO2 + $(m + n + 1 - k - k')$H2O}. Bước 2: Gọi số mol este tham gia phản ứng là $a$ mol. Suy ra: $n_{\ce{O2}} = \frac{3m + 3n + 1 - k - k'}{2}a = \frac{V_{\ce{O2}}}{22.4} = \frac{10.08}{22.4} = 0.4$ mol, $n_{\ce{CO2}} = (m + n + 1)a = \frac{V_{\ce{CO2}}}{22.4} = \frac{8.96}{22.4} = 0.4$ mol, $n_{\ce{H2O}} = (m + n + 1 - k - k')a = \frac{m_{\ce{H2O}}}{M_{\ce{H2O}}} = \frac{5.4}{18} = 0.3$ mol. Các ẩn số là cặp $m + n$ \& $k + k'$. Giải hệ phương trình
+	\begin{equation*}
+		\left\{\begin{split}
+			(3m + 3n + 1 - k - k')a &= 0.9,\\
+			(m + n + 1)a &= 0.4,\\
+			(m + n + 1 - k - k')a &= 0.3,
+		\end{split}\right.
+	\end{equation*}
+	suy ra $m + n = 3$, $k + k' = 1$ tương ứng sẽ có các cặp nghiệm: $(m,n) = (3,0)$ hoặc $(m,n) = (2,1)$, \& $k = 0$, $k' = 1$. Este là \ce{HCOO-C3H5}, \ce{C2H3COOCH3}, \ce{CH3COOC2H3}.
+\end{proof}
 
 \subsubsection{Dựa vào tính chất hóa học để suy luận công thức este}
 
 \begin{baitoan}[\cite{An2008}, \textbf{1.}, p. 5]
 	Thủy phân chất X có công thức \ce{C8H14O5} thu được ancol etylic \& chất hữu cơ Y. Cho biết số mol X bằng số mol ancol etylic bằng $\frac{1}{2}$ số mol Y. Y được điều chế trực tiếp từ glucose bằng phản ứng lên men. Trùng ngưng Y thu được 1 polyme. Công thức cấu tạo của X, Y?
 \end{baitoan}
+
+\begin{baitoan}[\cite{An2008}, \textbf{2.}, pp. 5--6]
+	Thủy phân este A bằng dung dịch \emph{\ce{NaOH}} thu được muối B \& chất D. Biết:
+	\begin{enumerate*}
+		\item[$\bullet$] B tác dụng với dung dịch \emph{\ce{AgNO3}} trong \emph{\ce{NH3}} thu được \emph{\ce{Ag v}} \& dung dịch X. Cho dung dịch X tác dụng với dung dịch \emph{\ce{H2SO4}} loãng thu được khí \emph{\ce{CO2}}.
+		\item[$\bullet$] D có công thức \emph{\ce{(CH2O)_n}}: \emph{\ce{D ->[$+$H2][Ni,$t^\circ$] E ->[+HCl] F}}.
+		\item[$\bullet$] F có công thức \emph{\ce{(CH2Cl)_n}}.
+	\end{enumerate*}
+	Công thức cấu tạo của A, B, D, E, F là:
+	\begin{itemize}
+		\item[{\rm\sf A.}] A: \emph{\ce{HCOOCH=CH2}}, B: \emph{\ce{HCOONa}}, D: \emph{\ce{CH3CHO}}, E: \emph{\ce{C2H5OH}}, F: \emph{\ce{C2H5Cl}}.
+		\item[{\rm\sf B.}] A: \emph{\ce{HCOOCH2CHO}}, B: \emph{\ce{HCOONa}}, D: \emph{\ce{HOCH2CHO}}, E: \emph{\ce{HO(CH2)2OH}}, F: \emph{\ce{Cl(CH2)2Cl}}.
+		\item[{\rm\sf C.}] A: \emph{\ce{CH3COOCH=CH2}}, B: \emph{\ce{CH3COONa}}, D: \emph{\ce{CH3CHO}}, E: \emph{\ce{C2H5OH}}, F: \emph{\ce{C2H5Cl}}.
+		\item[{\rm\sf D.}] A: \emph{\ce{HCOOCH2CH3}}, B: \emph{\ce{HCOONa}}, D: \emph{\ce{CH3CH2OH}}, E: \emph{\ce{CH3CHO}}, F: \emph{\ce{C2H5Cl}}.
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2008}, \textbf{3.}, p. 6]
+	Hợp chất hữu cơ X có công thức \emph{\ce{C4H7O2Cl}} khi thủy phân trong môi trường kiềm được các sản phẩm trong đó có $2$ chất có khả năng tráng bạc. Công thức cấu tạo đúng của X là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] \emph{\ce{HCOO-CH2-CHCl-CH3}};
+		\item[{\rm\sf B.}] \emph{\ce{CH3COO-CH2Cl}};
+		\item[{\rm\sf C.}] \emph{\ce{C2H5COO-CH2-CH3}};
+		\item[{\rm\sf D.}] \emph{\ce{HCOOCHCl-CH2-CH3}}.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2008}, \textbf{4.}, p. 6]
+	Thủy phân este có công thức phân tử \emph{\ce{C4H8O2}} với xúc tác acid vô cơ loãng, thu được $2$ sản phẩm hữu cơ X, Y (chỉ chứa các nguyên tử \emph{\ce{C,H,O}}). Từ X có thể điều chế trực tiếp ra Y bằng 1 phản ứng duy nhất. Chất X là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] Acid acetic;
+		\item[{\rm\sf B.}] Ancol etylic;
+		\item[{\rm\sf C.}] Etyl axetat;
+		\item[{\rm\sf D.}] Axit fomic.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2008}, \textbf{5.}, p. 7]
+	Cho các chất metanol (A), nước (B), etanol (C), acid acetic (D), phenol (E). Độ linh động của nguyên tử \emph{\ce{H}} trong nhóm \emph{\ce{(-OH)}} của phân tử mỗi chất tăng dần theo thứ tự sau:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] A, B, C, D, E;
+		\item[{\rm\sf B.}] E, B, A, C, D;
+		\item[{\rm\sf C.}] B, A, C, D, E;
+		\item[{\rm\sf D.}] C, A, B, E, D.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2008}, \textbf{6.}, p. 7]
+	Có 2 hợp chất hữu cơ X, Y chứa các nguyên tố \emph{\ce{C,H,O}}, phân tử khối đều bằng $74$. Biết X tác dụng được với \emph{\ce{Na}}, cả X, Y đều tác dụng được với dung dịch \emph{\ce{NaOH}} \& dung dịch \emph{\ce{AgNO3}} tan trong \emph{\ce{NH3}}. Vậy X, Y có thể là:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] \emph{\ce{C4H9OH,HCOOC2H5}};
+		\item[{\rm\sf B.}] \emph{\ce{CH3COOCH3,HOC2H4CHO}};
+		\item[{\rm\sf C.}] \emph{\ce{OHC-COOH,C2H5COOH}};
+		\item[{\rm\sf D.}] \emph{\ce{OHC-COOH,HCOOC2H5}}.
+	\end{enumerate*}
+\end{baitoan}
+
+\paragraph{1 số vấn đề cần lưu ý.}
+\begin{enumerate}
+	\item ``Khi đầu bài cho este là este no đơn chức thì công thức tổng quát \ce{C_nH_{2n}O2}, $n\ge 2$: Khi đầu bài cho dữ kiện đốt cháy 1 este tìm thấy: $n_{\ce{CO2}} = n_{\ce{H2O}}$ thì este đó là este no đơn chức. $n_{\ce{CO2}} > n_{\ce{H2O}}$ thì este đó là este không no.
+	\item Khi đầu bài cho 2 chất hữu cơ đơn chức mạch hở tác dụng với \ce{NaOH} cho:
+	\begin{itemize}
+		\item 2 muối \& 1 ancol, có những khả năng 2 chất hữu cơ đó là: (\ce{RCOO{R'}} \& \ce{R_1COO{R'}}) hoặc (\ce{RCOO{R'}} \& \ce{R_1COOH}).
+		\item 1 muối \& 1 ancol, có những khả năng 2 chất hữu cơ đó là:
+		\begin{itemize}
+			\item 1 este \& 1 ancol có gốc hydrocarbon giống ancol trong este.
+			\item 1 este \& 1 acid có gốc hydrocarbon giống acid trong este.
+			\item 1 acid \& 1 ancol.
+		\end{itemize}
+		\item 1 muối \& 2 ancol, có những khả năng 2 chất hữu cơ đó là:(\ce{RCOO{R'}} \& \ce{RCOOR_1}) hoặc (\ce{RCOO{R'}} \& \ce{R_1OH}).
+		\item Khi cho muối của acid hữu cơ đung nóng với vôi tôi xút:
+		
+	\end{itemize}
+\end{enumerate}
+
+
+
+
 
 %------------------------------------------------------------------------------%
 
