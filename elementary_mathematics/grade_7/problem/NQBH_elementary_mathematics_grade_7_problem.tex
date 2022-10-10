@@ -46,7 +46,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp 7. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}.} của tác giả viết cho Toán lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/problem/NQBH_elementary_mathematics_grade_7_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/problem/NQBH_elementary_mathematics_grade_7_problem.pdf}.}.
+	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp 7. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}.} của tác giả viết cho Toán lớp 7. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/problem/NQBH_elementary_mathematics_grade_7_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/problem/NQBH_elementary_mathematics_grade_7_problem.pdf}.}.
 \end{abstract}
 \tableofcontents
 \newpage
@@ -56,7 +56,7 @@
 \section{Số Hữu Tỷ}
 
 \subsection{Tập Hợp Các Số Hữu Tỷ $\mathbb{Q}$}
-Với phân số $\frac{a}{b}$ tối giản, $a,\in\mathbb{Z}$, $b\ne 0$, $\mbox{ƯCLN}(a,b) = 1$ thì các phân số có dạng $\frac{na}{nb}$, $\forall n\in\mathbb{Z}^\star$, đều biểu diễn phân số $\frac{a}{b}$. Để so sánh 2 hay nhiều số hữu tỷ, chuyển chúng về cùng 1 trong 2 dạng: dạng phân số hoặc dạng biểu diễn thập phân, rồi so sánh chúng dựa vào các quy tắc đã học ở Toán 6.
+Với phân số $\frac{a}{b}$ tối giản, $a,\in\mathbb{Z}$, $b\ne 0$, $\mbox{ƯCLN}(a,b) = 1$ thì các phân số có dạng $\frac{na}{nb}$, $\forall n\in\mathbb{Z}^\star$, đều biểu diễn phân số $\frac{a}{b}$. Để so sánh 2 hay nhiều số hữu tỷ, chuyển chúng về cùng 1 trong 2 dạng: dạng phân số hoặc dạng biểu diễn thập phân, rồi so sánh chúng dựa vào các quy tắc đã học ở Toán 7.
 
 \begin{baitoan}[\cite{Trong_Toan_7_2022}, \textbf{10.}, p. 6]
 	So sánh 2 số hữu tỷ $\frac{a}{b}$ ($a,b\in\mathbb{Z}$, $b\ne 0$) với số $0$ khi $a,b$ cùng dấu \& khi $a,b$ khác dấu.
@@ -76,7 +76,7 @@ Với phân số $\frac{a}{b}$ tối giản, $a,\in\mathbb{Z}$, $b\ne 0$, $\mbox
 
 %------------------------------------------------------------------------------%
 
-\subsection{$\pm$ on $\mathbb{Q}$}
+\subsection{$\pm$ trên $\mathbb{Q}$}
 Tính tổng các phân số cùng mẫu số:
 \begin{align*}
 	\sum_{i=1}^{n} \frac{a_i}{b} = \frac{\sum_{i=1}^n a_i}{b},\mbox{ i.e., } \frac{a_1}{b} + \cdots + \frac{a_n}{b} = \frac{a_1 + \cdots + a_n}{b},\ \forall a_i,b\in\mathbb{Z},\,b\ne 0,\,\forall i = 1,\ldots,n.
@@ -86,9 +86,32 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 	\sum_{i=1}^{n} \frac{a_i}{b_i} = \frac{\sum_{i=1}^n a_i\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\mbox{i.e., }\frac{a_1}{b_1} + \cdots + \frac{a_n}{b_n} = \frac{a_1\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_1} + \cdots + a_n\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,\ldots,b_n)},&\\\forall a_i,b_i\in\mathbb{Z},\,b_i\ne 0,\,\forall i = 1,\ldots,n.&
 \end{align*}
 
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{2.}]
+	Tìm $2$ phân số có tử bằng $9$, biết rằng giá trị của mỗi phân số đó lớn hơn $\frac{-11}{13}$ \& nhỏ hơn $\frac{-11}{15}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{3.}]
+	Cho các số hữu tỷ $\frac{a}{b}$ \& $\frac{c}{d}$ với mẫu dương, trong đó $\frac{a}{b} < \frac{c}{d}$. Chứng minh:
+	\begin{enumerate*}
+		\item[(a)] $ab < bc$;
+		\item[(b)] $\frac{a}{b} < \frac{a + c}{b + d} < \frac{c}{d}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{4.}]
+	Ký hiệu $\lfloor x\rfloor$ là số nguyên lớn nhất không vượt quá $x$, được gọi là \emph{phần nguyên} của $x$, e.g., $\lfloor 1.5\rfloor = 1$, $\lfloor 5\rfloor = 5$, $\lfloor -2.5\rfloor = -3$.
+	\begin{enumerate*}
+		\item[(a)] Tính $\lfloor-\frac{1}{7}\rfloor,\lfloor 3.7\rfloor,\lfloor-4\rfloor,\lfloor-\frac{43}{10}\rfloor$.
+		\item[(b)] Cho $x = 3.7$. So sánh: $A = \lfloor x\rfloor + \lfloor x + \frac{1}{5}\rfloor + \lfloor x + \frac{2}{5}\rfloor + \lfloor x + \frac{3}{5}\rfloor$ $+ \lfloor x + \frac{4}{5}\rfloor$ \& $B = \lfloor 5x\rfloor$.
+		\item[(c)] Tính $ \lfloor\frac{100}{3}\rfloor + \lfloor\frac{100}{3^2}\rfloor + \lfloor\frac{100}{3^3}\rfloor + \lfloor\frac{100}{3^4}\rfloor$.
+		\item[(d)] Tính $ \lfloor\frac{50}{2}\rfloor + \lfloor\frac{50}{2^2}\rfloor + \lfloor\frac{50}{2^3}\rfloor + \lfloor\frac{50}{2^4}\rfloor + \lfloor\frac{50}{2^5}\rfloor$.
+		\item[(e)] Cho $x\in\mathbb{Q}$. So sánh $\lfloor x\rfloor$ với $x$, so sánh $\lfloor x\rfloor$ với $y$ trong đó $y\in\mathbb{Z}$, $y < x$.
+	\end{enumerate*}
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
-\subsection{$\cdot,:$ on $\mathbb{Q}$}
+\subsection{$\cdot,:$ trên $\mathbb{Q}$}
 ``\textit{Phép nhân 2 hay nhiều số hữu tỷ}:
 \begin{enumerate*}
 	\item[$\bullet$] Xác định dấu bằng cách đếm các thừa số âm, nếu chẵn thì kết quả dương, nếu lẻ thì kết quả âm.
@@ -109,6 +132,100 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, Ví dụ 1]
 	Cho phân số $\frac{a}{b}\ne 1$. Tìm phân số $\frac{c}{d}$ sao cho $\frac{a}{b} + \frac{c}{d} = \frac{a}{b}\cdot\frac{c}{d}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{5.}]
+	Thực hiện các phép tính:
+	\begin{enumerate*}
+		\item[(a)] $\frac{-2}{3} + \frac{3}{4} - \frac{-1}{6} + \frac{-2}{5}$;
+		\item[(b)] $\frac{-2}{3} + \frac{-1}{5} + \frac{3}{4} - \frac{5}{6} - \frac{-7}{10}$;
+		\item[(c)] $\frac{1}{2} - \frac{-2}{5} + \frac{1}{3} + \frac{5}{7} - \frac{-1}{6} + \frac{-4}{35} + \frac{1}{41}$;
+		\item[(d)] $\frac{1}{100\cdot 99} - \frac{1}{99\cdot 98} - \frac{1}{98\cdot 97} - \cdots - \frac{1}{3\cdot 2} - \frac{1}{2\cdot 1}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{6.}]
+	Cho các số hữu tỷ $x$ bằng $1.4089,0.1398,-0.4771,-1.2592$.
+	\begin{enumerate*}
+		\item[(a)] Viết các số đó dưới dạng tổng của 1 số nguyên $a$ \& 1 số thập phân $b$ không âm nhỏ hơn $1$.\footnote{Trong cách viết này, $a$ là phần nguyên của $x$, còn $b$ là phần lẻ của $x$. Ký hiệu phần lẻ của $x$ là $\{x\}$ thì $x = \lfloor x\rfloor + \{x\}$.}
+		\item[(b)] Tính tổng các số hữu tỷ trên bằng cách $2$ cách: tính thông thường, tính tổng các số được viết dưới dạng ở câu (a).
+		\item[(c)] So sánh $a$ \& $\lfloor x\rfloor$ trong từng trường hợp ở câu (a).
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{7.}]
+	Tìm $n\in\mathbb{Z}$ để phân số sau có giá trị là 1 số nguyên \& tính giá trị đó:
+	\begin{enumerate*}
+		\item[(a)] $A = \frac{3n + 9}{n - 4}$;
+		\item[(b)] $B = \frac{6n + 5}{2n - 1}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{8.}]
+	Tìm $x,y\in\mathbb{Z}$, biết: $\frac{5}{x} + \frac{y}{4} = \frac{1}{8}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{9.}]
+	Viết tất cả các số nguyên có giá trị tuyệt đối nhỏ hơn $20$ theo thứ tự tùy ý. Lấy mỗi số trừ đi số thứ tự của nó ta được 1 hiệu. Tổng của tất cả các hiệu đó bằng bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{10.}]
+	Tính:
+	\begin{enumerate*}
+		\item[(a)] $\dfrac{\left(\frac{3}{10} - \frac{4}{15} - \frac{7}{20}\right)\cdot\frac{5}{19}}{\left(\frac{1}{14} + \frac{1}{7} - \frac{-3}{35}\right)\cdot\frac{-4}{3}}$;
+		\item[(b)] $\dfrac{(1 + 2 + \cdots + 100)\left(\frac{1}{3} - \frac{1}{5} - \frac{1}{7} - \frac{1}{9}\right)\cdot(6.3\cdot 12 - 21\cdot 3.6)}{\frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{100}}$;
+		\item[(c)] $\dfrac{\frac{1}{9} - \frac{1}{7} - \frac{1}{11}}{\frac{4}{9} - \frac{4}{7} - \frac{4}{11}} + \dfrac{\frac{3}{5} - \frac{3}{25} - \frac{3}{125} - \frac{3}{625}}{\frac{4}{5} - \frac{4}{25} - \frac{4}{125} - \frac{4}{625}}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{11.}]
+	Tìm $x\in\mathbb{Q}$, biết:
+	\begin{enumerate*}
+		\item[(a)] $\frac{2}{3}x + 4 = -12$;
+		\item[(b)] $\frac{3}{4} + \frac{1}{4}:x = -3$;
+		\item[(c)] $|3x - 5| = 4$;
+		\item[(d)] $\frac{x + 1}{10} + \frac{x + 1}{11} + \frac{x + 1}{12} = \frac{x + 1}{13} + \frac{x + 1}{14}$;
+		\item[(e)] $\frac{x + 4}{2000} + \frac{x + 3}{2001} = \frac{x + 2}{2002} + \frac{x + 1}{2003}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{12.}]
+	Chứng minh $\sum_{i=1}^{99} \frac{i}{(i+1)!} = \frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \cdots + \frac{99}{100!} < 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{13.}]
+	Chứng minh $\sum_{i=1}^{99} \frac{i(i + 1) - 1}{(i+1)!} = \frac{1\cdot 2 - 1}{2!} + \frac{2\cdot 3 - 1}{3!} + \frac{3\cdot 4 - 1}{4!} + \cdots + \frac{99\cdot 100 - 1}{100!} < 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{14.}]
+	\begin{enumerate*}
+		\item[(a)] Người ta viết $7$ số hữu tỷ trên 1 vòng tròn. Tìm các số đó, biết rằng tích của $2$ số bất kỳ cạnh nhau bằng $16$.
+		\item[(b)] Cũng hỏi như trên đối với $n$ số.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{15.}]
+	Có tồn tại hay không $2$ số dương $a,b$ khác nhau sao cho $\frac{1}{a} - \frac{1}{b} = \frac{1}{a - b}$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{16.}]
+	Chứng minh: $\frac{1}{1\cdot 2} + \frac{1}{3\cdot 4} + \frac{1}{5\cdot 6} + \cdots + \frac{1}{49\cdot 50} = \frac{1}{26} + \frac{1}{27} + \frac{1}{28} + \cdots + \frac{1}{50}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{17.}]
+	Cho $A = \frac{1}{1\cdot 2} + \frac{1}{3\cdot 4} + \frac{1}{5\cdot 6} + \cdots + \frac{1}{99\cdot 100}$. Chứng minh $\frac{7}{12} < A < \frac{5}{6}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{18.}]
+	Tìm $a,b\in\mathbb{Q}$ sao cho: $a - b = 2(a + b) = a:b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{19.}]
+	Tìm $a,b\in\mathbb{Q}$ sao cho $a + b = ab = a:b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{20.}]
+	Tìm $x\in\mathbb{Q}$, sao cho tổng của số đó với số nghịch đảo của nó là 1 số nguyên.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -150,7 +267,7 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 	\begin{enumerate*}
 		\item[(a)] Nếu $2$ số đối nhau thì bình phương của chúng $\ldots$
 		\item[(b)] Nếu $2$ số đối nhau thì lập phương của chúng $\ldots$
-		\item[(c)] Lũy thừa chẵn cung bậc của 2 số đối nhau thì $\ldots$
+		\item[(c)] Lũy thừa chẵn cùng bậc của 2 số đối nhau thì $\ldots$
 		\item[(d)] Lũy thừa lẻ cùng bậc của 2 số đối nhau thì $\ldots$
 	\end{enumerate*}
 \end{baitoan}
@@ -166,8 +283,8 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 		\item[(f)] $a^{2n} = (-a)^{2n}$, $\forall n\in\mathbb{N}$;
 		\item[(g)] $(a - b)^2 = (b - a)^2$;
 		\item[(h)] $(a - b)^3 = -(b - a)^3$;
-		\item[(g)] $(a - b)^{2n} = (b - a)^{2n}$, $\forall n\in\mathbb{N}$;
-		\item[(h)] $(a - b)^{2n+1} = -(b - a)^{2n+1}$, $\forall n\in\mathbb{N}$.
+		\item[(i)] $(a - b)^{2n} = (b - a)^{2n}$, $\forall n\in\mathbb{N}$;
+		\item[(j)] $(a - b)^{2n+1} = -(b - a)^{2n+1}$, $\forall n\in\mathbb{N}$.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -357,6 +474,7 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 
 %------------------------------------------------------------------------------%
 
+\newpage
 \section{Hình Học Trực Quan}
 
 %------------------------------------------------------------------------------%
