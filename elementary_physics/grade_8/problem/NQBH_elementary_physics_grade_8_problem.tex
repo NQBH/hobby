@@ -1,0 +1,161 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Problems in Elementary Physics\texttt{/}Grade 8}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Vật Lý sơ cấp lớp 8. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/NQBH_elementary_physics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary physics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/NQBH_elementary_physics_grade_8.pdf}.} của tác giả viết cho Toán lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/problem/NQBH_elementary_physics_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary physics\texttt{/}grade 8\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/problem/NQBH_elementary_physics_grade_8_problem.pdf}.}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Cơ Học}
+
+\subsection{Chuyển Động Cơ Học}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.1}, p. 9]
+	1 ống bằng thép dài $25$\emph{m}. Khi 1 học sinh dùng 1 búa gõ vào 1 đầu ống thì 1 học sinh khác đặt tai ở đầu kia của ống nghe thấy $2$ tiếng gõ; tiếng nọ cách tiếng kia $0.055$\emph{s}.
+	\begin{enumerate*}
+		\item[(a)] Giải thích tại sao gõ $1$ tiếng mà lại nghe thấy $2$ tiếng.
+		\item[(b)] Tìm vận tốc âm thanh trong thép biết vận tốc âm thanh trong không khí là $333$\emph{m\texttt{/}s} \& âm truyền trong thép nhanh hơn trong không khí.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.2}, p. 9]
+	Để đo độ sâu của biển người ta dùng máy phát siêu âm theo nguyên tắc như sau: tia siêu âm được phát thẳng đứng từ máy phát đặt trên mặt biển khi gặp đáy biển sẽ dội lại máy thu đặt liền với máy phát. Căn cứ vào thời gian từ lúc phát siêu âm tới lúc thu được siêu âm người ta sẽ tìm được độ sâu của biển.
+	\begin{enumerate*}
+		\item[(a)] Tìm chiều sâu của hố Marian (Thái Bình Dương) biết rằng sau khi phát siêu âm đi $73.55$\emph{s} thì máy thu nhận được tia siêu âm trở lại. Cho biết vận tốc siêu âm trong nước biển là $300$\emph{m\texttt{/}s}.
+		\item[(b)] Giả sử tại khu vực này có 1 tàu bị nạn chìm xuống với vận tốc $0.5$\emph{m\texttt{/}s} thì bao nhiêu lâu sau tàu chìm tới đáy biển?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.3}, p. 9]
+	1 khán giả ngồi trong nhà nghe ca sĩ hát trực tiếp, còn 1 thính giả ở cách xa nhà hát 1 khoảng cách $l = 7500$\emph{km} nghe ca sĩ đó hát qua máy thu thanh (đặt sát tai). Cho biết micro đặt ngay cạnh ca sĩ, vận tốc của âm là $v = 340$\emph{m\texttt{/}s}, của sóng vô tuyến điện là $c = 3\cdot 10^8$\emph{m\texttt{/}s}.
+	\begin{enumerate*}
+		\item[(a)] Hỏi khán giả trong nhà hát phải ngồi cách ca sĩ bao nhiêu mét để nghe được đồng thời với thính giả ngoài nhà hát?
+		\item[(b)] Hỏi thính giả ngoài nhà hát phải ngồi cách ca sĩ bao nhiêu mét để nghe được đồng thời với 1 khán giả thứ 2 ngồi cách ca sĩ 1 khoảng cách $d = 30$\emph{m}?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.4}, p. 9]
+	1 khẩu pháo chống tăng bắn thẳng vào xe tăng. Pháo thủ thấy xe tăng tung lên sau $0.6$\emph{s} kể từ lúc bắn \& nghe thấy tiếng nổ sau $2.1$\emph{s} kể từ lúc bắn.
+	\begin{enumerate*}
+		\item[(a)] Tìm khoảng cách từ súng tới xe tăng, cho biết vận tốc của âm $330$\emph{m\texttt{/}s}.
+		\item[(b)] Tìm vận tốc của vỏ đạn.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.5}, p. 9]
+	Lúc 7:00 sáng, 1 mô tô đi từ Sài Gòn đến Biên Hòa cách nhau $30$\emph{km}. Lúc 7:20, mô tô còn cách Biên Hòa $10$\emph{km}.
+	\begin{enumerate*}
+		\item[(a)] Tính vận tốc của mô tô.
+		\item[(b)] Nếu mô tô đi liên tục không nghỉ thì sẽ đến Biên Hòa lúc mấy giờ?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.6}, p. 9]
+	1 người đi xe đạp xuống 1 cái dốc dài $100$\emph{m}. Trong $25$\emph{m} đầu, người ấy đi hết $10$\emph{s}; quãng đường còn lại đi mất $15$\emph{s}. Tính vận tốc trung bình ứng với từng đoạn dốc \& cả dốc.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.7}, p. 9]
+	1 ô tô vượt qua 1 đoạn đường dốc gồm $2$ đoạn: lên dốc \& xuống dốc. Biết thời gian lên dốc bằng $\frac{1}{2}$ thời gian xuống dốc, vận tốc trung bình khi xuống dốc gấp $2$ lần vận tốc trung bình khi lên dốc. Tính vận tốc trung bình trên cả đoạn đường dốc của ô tô. Biết vận tốc trung bình khi lên dốc là $30$\emph{km\texttt{/}h}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.8}, pp. 9--10]
+	Trên đoạn đường dốc gồm $3$ đoạn: lên dốc, đường bằng, \& xuống dốc. Khi lên dốc mất thời gian $30$\emph{ph}, trên đoạn đường bằng phẳng xe chuyển động đều với vận tốc $60$\emph{km\texttt{/}h} mất thời gian $10$\emph{ph}, đoạn xuống dốc mất thời gian $10$\emph{ph}. Biết vận tốc trung bình khi lên dốc bằng $\frac{1}{2}$ vận tốc trên đoạn đường bằng phẳng, vận tốc khi xuống dốc gấp $\frac{3}{2}$ vận tốc trên đoạn đường bằng. Tính chiều dài cả dốc trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.9}, p. 10]
+	1 người đi xe đạp, nửa đầu quãng đường có vận tốc $v_1 = 12$\emph{km\texttt{/}h}, nửa sau quãng đường có vận tốc $v_2$ không đổi. Biết vận tốc trung bình trên cả quãng đường là $v = 8$\emph{km\texttt{/}h}, tính $v_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.10}, p. 10]
+	1 chuyển động trong nửa đầu quãng đường, chuyển động có vận tốc không đổi $v_1$, trong nửa quãng đường còn lại có vận tốc $v_2$. Tính vận tốc trung bình của nó trên toàn bộ quãng đường. Chứng tỏ rằng vận tốc trung bình này không lớn hơn trung bình cộng của 2 vận tốc $v_1$ \& $v_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.11}, p. 10]
+	1 chuyển động trong nửa thời gian chuyển động với vận tốc $v_1$, quãng đường còn lại chuyển động với vận tốc $v_2$. Tính vận tốc trung bình của nó trên cả quãng đường. So sánh vận tốc trung bình trên cả quãng đường trong 2 bài toán trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.12}, p. 10]
+	1 ô tô chuyển động trên nửa đầu đoạn đường với vận tốc $60$\emph{km\texttt{/}h}. Phần còn lại, nó chuyển động với vận tốc $15$\emph{km\texttt{/}h} trong nửa thời gian đầu \& $45$\emph{km\texttt{/}h} trong nửa thời gian sau. Tìm vận tốc trung bình của ô tô trên cả đoạn đường.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.13}, p. 10]
+	1 người đi từ $A$ đến $B$. $\frac{1}{3}$ quãng đường đầu người đó đi với vận tốc $v_1$, $\frac{2}{3}$ thời gian còn lại đi với vận tốc $v_2$. Quãng đường cuối cùng đi với vận tốc $v_3$. Tính vận tốc trung bình của người đó trên cả quãng đường.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.14}, p. 10]
+	1 ca nô chạy giữa 2 bến sông cách nhau $90$\emph{km}. Vận tốc cano đối với nước là $25$\emph{km\texttt{/}h} \& vận tốc nước chảy là $1.39$\emph{m\texttt{/}s}.
+	\begin{enumerate*}
+		\item[(a)] Tìm thời gian ca nô đi ngược dòng từ bến nọ tới bến kia.
+		\item[(b)] Giả sử không nghỉ lại ở bến tới, tìm thời gian ca nô đi \& về.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Van2022}, \textbf{1.15}, p. 10]
+	1 chiếc thuyền khi xuôi dòng mất thời gian $t_1$, ngược dòng mất thời gian $t_2$. Hỏi nếu thuyền trôi theo dòng nước trên quãng đường trên sẽ mất thời gian bao nhiêu?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\newpage
+\section{Nhiệt Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Quang Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Điện Học}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
