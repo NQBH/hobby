@@ -33,9 +33,9 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small \nouppercase{\leftmark}}
-\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
@@ -46,34 +46,39 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp *. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.} của tác giả viết cho Toán lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/problem/NQBH_elementary_mathematics_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/problem/NQBH_elementary_mathematics_grade_8_problem.pdf}.}.
+	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Toán sơ cấp lớp 8. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.} của tác giả viết cho Toán lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/problem/NQBH_elementary_mathematics_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/problem/NQBH_elementary_mathematics_grade_8_problem.pdf}.}.
 \end{abstract}
 \tableofcontents
 \newpage
 
 %------------------------------------------------------------------------------%
 
+\subsection*{Ký Hiệu -- Notation}
+\begin{enumerate*}
+	\item[$\bullet$] Tổng hữu hạn\texttt{/}finite sum: $\sum_{i=a}^b f(i) = f(a) + f(a + 1) + \cdots + f(b)$, $\forall f$: hàm số, $\forall a,b\in\mathbb{Z}$, $a\le b$.
+	\item[$\bullet$] Tích hữu hạn\texttt{/}finite product: $\prod_{i=a}^b f(i) = f(a)f(a + 1)\cdots f(b)$, $\forall f$: hàm số, $\forall a,b\in\mathbb{Z}$, $a\le b$.
+\end{enumerate*}
+
 \section{Phép Nhân \& Phép Chia Các Đa Thức}
 
 \subsection{Nhân Đơn Thức với Đa Thức}
-
 \begin{baitoan}[Đơn thức nhân đơn thức]
 	Tính:
 	\begin{enumerate*}
-		\item[(a)] $ax^mbx^n$, $\forall a,b\in\mathbb{R}$, $\forall m,n\in\mathbb{N}$;
-		\item[(b)] $ax^mby^n$, $\forall a,b\in\mathbb{R}$, $\forall m,n\in\mathbb{N}$;
-		\item[(c)] $\prod_{i=1}^n a_ix^{m_i} = a_1x^{m_1}\cdots a_nx^{m_n}$, $\forall n\in\mathbb{N}^\star$, $a_i\in\mathbb{R}$, $m_i\in\mathbb{N}$, $\forall i = 1,\ldots,n$;
-		\item[(d)] $\prod_{i=1}^n a_ix_i^{m_i} = a_1x_1^{m_1}\cdots a_nx_n^{m_n}$, $\forall n\in\mathbb{N}^\star$, $a_i\in\mathbb{R}$, $m_i\in\mathbb{N}$, $\forall i = 1,\ldots,n$. Trong đó, $x,y,x_i$'s là các biến số của các đơn thức này.
+		\item[(a)] \emph{(Tích 2 đơn thức cùng biến)} $ax^mbx^n$, $\forall a,b\in\mathbb{R}$, $\forall m,n\in\mathbb{N}$.
+		\item[(b)] \emph{(Tích 2 đơn thức khác biến)} $ax^mby^n$, $\forall a,b\in\mathbb{R}$, $\forall m,n\in\mathbb{N}$.
+		\item[(c)] \emph{(Tích nhiều đơn thức cùng biến)} $\prod_{i=1}^n a_ix^{m_i} = a_1x^{m_1}\cdots a_nx^{m_n}$, $\forall n\in\mathbb{N}^\star$, $a_i\in\mathbb{R}$, $m_i\in\mathbb{N}$, $\forall i = 1,\ldots,n$.
+		\item[(d)] \emph{(Tích nhiều đơn thức khác biến)} $\prod_{i=1}^n a_ix_i^{m_i} = a_1x_1^{m_1}\cdots a_nx_n^{m_n}$, $\forall n\in\mathbb{N}^\star$, $a_i\in\mathbb{R}$, $m_i\in\mathbb{N}$, $\forall i = 1,\ldots,n$. Trong đó, $x,y,x_i$'s là các biến số của các đơn thức này.
 	\end{enumerate*}
 \end{baitoan}
 
 \begin{baitoan}[Đơn thức nhân đa thức]
 	Tính:
 	\begin{enumerate*}
-		\item[(a)] $ax^n(bx + c)$;
-		\item[(b)] $ax^n(bx^2 + cx + d)$;
-		\item[(c)] $ax^n(bx^3 + cx^2 + dx + e)$;
-		\item[(d)] $ax^m\sum_{i=0}^n a_ix^i = ax^m(a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0)$.
+		\item[(a)] \emph{(Đơn thức 1 biến nhân đa thức bậc nhất 1 biến)} $Cx^n(ax + b)$, $\forall C,a,b\in\mathbb{R}$, $\forall n\in\mathbb{N}$.
+		\item[(b)] \emph{(Đơn thức 1 biến nhân đa thức bậc 2 1 biến)} $Cx^n(ax^2 + bx + c)$.
+		\item[(c)] \emph{(Đơn thức 1 biến nhân đa thức bậc 3 1 biến)} $ax^n(bx^3 + cx^2 + dx + e)$.
+		\item[(d)] \emph{(Đơn thức 1 biến nhân đa thức bậc $n$ 1 biến)} $ax^m\sum_{i=0}^n a_ix^i = ax^m(a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0)$.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -88,8 +93,8 @@
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{1.}, p. 5]
 	Thực hiện phép tính:
 	\begin{enumerate*}
-		\item[(a)] $3x^n(6x^{n-3} + 1) - 2x^n(9x^{n-3} - 1)$;
-		\item[(b)] $5^{n+1} - 4\cdot 5^n$;
+		\item[(a)] $3x^n(6x^{n-3} + 1) - 2x^n(9x^{n-3} - 1)$.
+		\item[(b)] $5^{n+1} - 4\cdot 5^n$.
 		\item[(c)] $6^2\cdot 6^4 - 4^3(3^6 - 1)$.
 	\end{enumerate*}
 \end{baitoan}
@@ -97,9 +102,9 @@
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{2.}, p. 6]
 	Tìm $x$, biết:
 	\begin{enumerate*}
-		\item[(a)] $4(18 - 5x) - 12(3x - 7) = 15(2x - 16) - 6(x + 14)$;
-		\item[(b)] $5(3x + 5) - 4(2x - 3) =$ $5x + 3(2x + 12) + 1$;
-		\item[(c)] $2(5x - 8) - 3(4x - 5) = 4(3x - 4) + 11$;
+		\item[(a)] $4(18 - 5x) - 12(3x - 7) = 15(2x - 16) - 6(x + 14)$.
+		\item[(b)] $5(3x + 5) - 4(2x - 3) =$ $5x + 3(2x + 12) + 1$.
+		\item[(c)] $2(5x - 8) - 3(4x - 5) = 4(3x - 4) + 11$.
 		\item[(d)] $5x - 3\{4x - 2[4x - 3(5x - 2)]\} = 182$.
 	\end{enumerate*}
 \end{baitoan}
@@ -107,8 +112,8 @@
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{3.}, p. 6]
 	Tính giá trị của các biểu thức:
 	\begin{enumerate*}
-		\item[(a)] $A = x^3 - 30x^2 - 31x + 1$ tại $x = 31$;
-		\item[(b)] $B = x^5 - 15x^4 + 16x^3 - 29x^2 + 13x$ tại $x = 14$;
+		\item[(a)] $A = x^3 - 30x^2 - 31x + 1$ tại $x = 31$.
+		\item[(b)] $B = x^5 - 15x^4$ $+ 16x^3 - 29x^2 + 13x$ tại $x = 14$.
 		\item[(c)] $C = x^{14} - 10x^3 + 10x^2 - 10x^{11} + \cdots + 10x^2 - 10x + 10$ tại $x = 9$.
 	\end{enumerate*}
 \end{baitoan}
@@ -123,15 +128,16 @@
 %------------------------------------------------------------------------------%
 
 \subsection{Nhân Đa Thức với Đa Thức}
+
 \begin{baitoan}[Đa thức nhân đa thức]
 	Tính:
 	\begin{enumerate*}
-		\item[(a)] $(ax + b)(cx + d)$;
-		\item[(b)] $(ax^2 + bx + c)(dx + e)$;
-		\item[(c)] $(ax^3 + bx^2 + cx + d)(ex + f)$;
-		\item[(d)] $(ax^2 + bx + c)(dx^2 + ex + f)$;
-		\item[(e)] $(ax^3 + bx^2 + cx + d)(ex^2 + fx + g)$;
-		\item[(f)] $(ax^3 + bx^2 + cx + d)(ex^3 + fx^2 + gx + h)$;
+		\item[(a)] $(ax + b)(cx + d)$.
+		\item[(b)] $(ax^2 + bx + c)(dx + e)$.
+		\item[(c)] $(ax^3 + bx^2 + cx + d)(ex + f)$.
+		\item[(d)] $(ax^2 + bx + c)(dx^2 + ex + f)$.
+		\item[(e)] $(ax^3 + bx^2 + cx + d)(ex^2 + fx + g)$.
+		\item[(f)] $(ax^3 + bx^2 + cx + d)(ex^3 + fx^2 + gx + h)$.
 		\item[(g)] $\left(\sum_{i=0}^m a_ix^i\right)\left(\sum_{j=0}^n b_jx^j\right) = (a_mx^m + \cdots + a_1x + a_0)(b_nx^n + \cdots + b_1x + b_0)$.
 	\end{enumerate*}
 \end{baitoan}
@@ -139,7 +145,7 @@
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{5.}, p. 6]
 	Thực hiện phép tính:
 	\begin{enumerate*}
-		\item[(a)] $(x - 1)(x^5 + x^4 + x^3 + x^2 + x + 1)$;
+		\item[(a)] $(x - 1)(x^5 + x^4 + x^3 + x^2 + x + 1)$.
 		\item[(b)] $(x + 1)(x^6 - x^5 + x^4 - x^3 + x^2 - x + 1)$.
 	\end{enumerate*}
 \end{baitoan}
@@ -148,14 +154,68 @@
 \begin{baitoan}
 	Tính:
 	\begin{enumerate*}
-		\item[(a)] $(x - 1)\sum_{i=0}^n x^i = (x - 1)(x^n + x^{n-1} + \cdots + x + 1)$, $\forall n\in\mathbb{N}$;
+		\item[(a)] $(x - 1)\sum_{i=0}^n x^i = (x - 1)(x^n + x^{n-1} + \cdots + x + 1)$, $\forall n\in\mathbb{N}$.
 		\item[(b)] $(x + 1)\sum_{i=0}^n (-1)^ix^i$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{6.}, p. 6]
+	Tìm $x$, biết:
+	\begin{enumerate*}
+		\item[(a)] $(x + 2)(x + 3) - (x - 2)(x + 5) = 6$.
+		\item[(b)] $(3x + 2)(2x + 9) - (x + 2)(6x + 1)$ $= (x + 1) - (x - 6)$.
+		\item[(c)] $3(2x - 1)(3x - 1) - (2x - 3)(9x - 1) = 0$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{7.}, p. 6]
+	Cho $a + b + c = 0$. Chứng minh: $M = N = P$ với: $M = a(a + b)(a + c)$, $N = b(b + c)(b + a)$, $P = c(c + a)(c + b)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{8.}, p. 6]
+	Chứng minh các hằng đẳng thức:
+	\begin{enumerate*}
+		\item[(a)] $(x + a)(x + b) = x^2 + (a + b)x + ab$.
+		\item[(b)] $(x + a)(x + b)(x + c) = x^3 + (a + b + c)x^2 + (ab + bc + ca)x + abc$.
+		\item[(c)] $\prod_{i=1}^n x + a_i = (x + a_1)(x + a_2)\cdots(x + a_n)$, $\forall n\in\mathbb{N}^\star$, $\forall a_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{9.}, p. 6]
+	Cho $a + b + c = 2p$. Chứng minh hằng đẳng thức: $2bc + b^2 + c^2 - a^2 = 4p(p - a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{10.}, p. 7]
+	Xét các ví dụ: $53\cdot 57 = 3021$, $72\cdot 78 = 5616$. Xây dựng quy tắc nhân nhẩm 2 số có 2 chữ số, trong đó các chữ số hàng chục bằng nhau, còn các chữ số hàng đơn vị có tổng bằng $10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{11.}, p. 7]
+	Cho biểu thức $M = (x - a)(x - b) + (x - b)(x - c) + (x - c)(x - a) + x^2$. Tính $M$ theo $a,b,c$, biết $x = \frac{1}{2}(a + b + c)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{12.}, p. 7]
+	Cho dãy số $1,3,6,10,15,\ldots,\frac{n(n + 1)}{2},\ldots$. Chứng minh: tổng 2 số hạng liên tiếp của dãy bao giờ cũng là số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{13.}, p. 7]
+	Số $a$ gồm $31$ chữ số $1$, số $b$ gồm $38$ chữ số $1$. Chứng minh: $ab - 2\ \vdots\ 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{14.}, p. 7]
+	Số $3^{50} + 1$ có là tích của 2 số tự nhiên liên tiếp không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{15.}, p. 7]
+	\begin{enumerate*}
+		\item[(a)] Thực hiện phép tính: $A = (2^9 + 2^7 + 1)(2^{23} - 2^{21} + 2^{19} - 2^{17} + 2^{14} - 2^{10} + 2^9 - 2^7 + 1)$.
+		\item[(b)] Số $2^{32} + 1$ có là số nguyên tố không?
 	\end{enumerate*}
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
 
-\subsection{Những Hằng Đẳng Thức Đáng Nhớ}
+\subsection{Các Hằng Đẳng Thức Đáng Nhớ}
+
 \begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{23.}, p. 12]
 	Chứng minh các đẳng thức sau:
 	\begin{align*}
@@ -166,8 +226,8 @@
 \begin{baitoan}[\cite{SGK_Toan_8_tap_1}, \textbf{25.}, p. 12]
 	Tính
 	\begin{enumerate*}
-		\item[(a)] $(a + b + c)^2$;
-		\item[(b)] $(a + b - c)^2$;
+		\item[(a)] $(a + b + c)^2$.
+		\item[(b)] $(a + b - c)^2$.
 		\item[(c)] $a - b - c)^2$.
 	\end{enumerate*}
 \end{baitoan}
@@ -182,6 +242,94 @@ Tổng quát hơn,
 		a^3 + b^3 = (a + b)^3 - 3ab(a + b),\ a^3 - b^3 = (a - b)^3 + 3ab(a - b),\ \forall a,b\in\mathbb{R}.
 	\end{align*}
 	Áp dụng: Tính $a^3 + b^3$ biết $ab = m$ \& $a + b = n$ với $m,n\in\mathbb{R}$ cho trước. Tính $a^3 - b^3$ biết $ab = m$ \& $a - b = k$ với $m,k\in\mathbb{R}$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 3, p. 8]
+	Chứng minh số $3599$ viết được dưới dạng tích của 2 số tự nhiên khác $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 4, p. 8]
+	Chứng minh biểu thức sau viết được dưới dạng tổng các bình phương của 2 biểu thức: $x^2 + 2(x + 1)^2 + 3(x + 2)^2 + 4(x + 3)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 5, p. 8]
+	Cho $x + y + z = 0$, $xy + yz + zx = 0$. Chứng minh $x = y = z$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 6, p. 9]
+	\begin{enumerate*}
+		\item[(a)] Tính $A = -1^2 + 2^2 - 3^2 + 4^2 - \cdots - 99^2 + 100^2$.
+		\item[(b)] Tính $\sum_{i=1}^n (-1)^ii^2$ $= -1^2 + 2^2 - 3^2 + 4^2 - \cdots + (-1)^nn^2$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 7, p. 9]
+	Cho $x + y = a + b$, $x^2 + y^2 = a^2 + b^2$. Chứng minh: $x^3 + y^3 = a^3 + b^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 8, p. 10]
+	Cho $a + b = m$, $a - b = m$. Tính $ab$ \& $a^3 - b^3$ theo $m$ \& $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{16.}, p. 10]
+	Tính:
+	\begin{enumerate*}
+		\item[(a)] $\frac{63^2 - 47^2}{215^2 - 105^2}$.
+		\item[(b)] $\frac{437^2 - 363^2}{537^2 - 463^2}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{17.}, p. 11]
+	So sánh $A = 26^2 - 24^2$ \& $B = 27^2 - 25^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{18.}, p. 11]
+	Tìm $x$ thỏa $4(x + 1)^2 + (2x - 1)^2 - 8(x - 1)(x + 1) = 11$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{19.}, p. 11]
+	Rút gọn các biểu thức:
+	\begin{enumerate*}
+		\item[(a)] $2x(2x - 1)^2 - 3x(x + 3)(x - 3) - 4x(x + 1)^2$.
+		\item[(b)] $(a - b + c)^2  - (b - c)^2 + 2ab - 2ac$.
+		\item[(c)] $(3x + 1)^2 - 2(3x + 1)(3x + 5) + (3x + 5)^2$.
+		\item[(d)] $(3 + 1)(3^1 + 1)(3^4 + 1)(3^8 + 1)(3^{16} + 1)(3^{32} + 1)$.
+		\item[(e)] $(a + b - c)^2 + (a - b + c)^2 - 2(b - c)^2$.
+		\item[(f)] $(a + b + c)^2 + (a - b - c)^2 + (b - c - a)^2 + (c - a - b)^2$.
+		\item[(g)] $(a + b + c + d)^2 + (a + b - c - d)^2$ $+ (a + c - b - d)^2 + (a + d - b - c)^2$
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{20.}, p. 11]
+	Cho $x + y = 3$. Tính giá trị của biểu thức $A = x^2 + 2xy + y^2 - 4x - 4y + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{21.}, p. 11]
+	Cho $a^2 + b^2 + c^2 = m$. Tính giá trị của biểu thức sau theo $m$: $A = (2a + b - c)^2 + (2b + 2c - a)^2 + (2c + 2a - b)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{22.}, p. 11]
+	Viết các số sau đây dưới dạng tích của 2 số tự nhiên khác $1$:
+	\begin{enumerate*}
+		\item[(a)] $899$.
+		\item[(b)] $9991$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{23.}, p. 11]
+	Chứng minh hiệu sau đây là 1 số gồm toàn các chữ số như nhau: $7778^2 - 2223^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{24.}, p. 11]
+	Chứng minh các hằng đẳng thức:
+	\begin{enumerate*}
+		\item[(a)] $(a + b + c)^2 + a^2 + b^2 + c^2 = (a + b)^2 + (b + c)^2 + (c + a)^2$.
+		\item[(b)] $x^4 + y^4 + (x + y)^4 = 2(x^2 + xy + y^2)^2$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{25.}, p. 11]
+	
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -214,7 +362,7 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, Ví dụ 12, p. 16]
 	Phân tích các đa thức sau thành nhân tử:
 	\begin{enumerate*}
-		\item[(a)] $(a + b + c)^3 - a^3 - b^3 - c^3$;
+		\item[(a)] $(a + b + c)^3 - a^3 - b^3 - c^3$.
 		\item[(b)] $8(x + y + z)^3 - (x + y)^3 - (y + z)^3 - (z + x)^3$.
 	\end{enumerate*}
 \end{baitoan}
@@ -230,10 +378,10 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{60.}, p. 18]
 	Phân tích thành nhân tử:
 	\begin{enumerate*}
-		\item[(a)] $(ab - 1)^2 + (a + b)^2$;
-		\item[(b)] $x^3 + 2x^2 + 2x + 1$;
-		\item[(c)] $x^3 - 4x^2 + 12x - 27$;
-		\item[(d)] $x^4 - 2x^4 + 2x - 1$;
+		\item[(a)] $(ab - 1)^2 + (a + b)^2$.
+		\item[(b)] $x^3 + 2x^2 + 2x + 1$.
+		\item[(c)] $x^3 - 4x^2 + 12x - 27$.
+		\item[(d)] $x^4 - 2x^4 + 2x - 1$.
 		\item[(e)] $x^4 + 2x^3 + 2x^2 + 2x + 1$.
 	\end{enumerate*}
 \end{baitoan}
@@ -241,10 +389,10 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{61.}, p. 18]
 	Phân tích thành nhân tử:
 	\begin{enumerate*}
-		\item[(a)] $x^2 - 2x - 4y^2 - 4y$;
-		\item[(b)] $x^4 + 2x^2 - 4x - 4$;
-		\item[(c)] $x^2(1 - x^2) - 4 - 4x^2$;
-		\item[(d)] $(1 + 2x)(1 - 2x) - x(x + 2)(x - 2)$;
+		\item[(a)] $x^2 - 2x - 4y^2 - 4y$.
+		\item[(b)] $x^4 + 2x^2 - 4x - 4$.
+		\item[(c)] $x^2(1 - x^2) - 4 - 4x^2$.
+		\item[(d)] $(1 + 2x)(1 - 2x) - x(x + 2)(x - 2)$.
 		\item[(e)] $x^2 + y^2 - x^2y^2 + xy - x - y$.
 	\end{enumerate*}
 \end{baitoan}
@@ -260,8 +408,8 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{64.}, p. 18]
 	Phân tích thành nhân tử:
 	\begin{enumerate}
-		\item[(a)] $a(b^2 + c^2 + bc) + b(c^2 + a^2 + ac) + c(a^2 + b^2 + ab)$;
-		\item[(b)] $(a + b + c)(ab + bc + ca) - abc$;
+		\item[(a)] $a(b^2 + c^2 + bc) + b(c^2 + a^2 + ac) + c(a^2 + b^2 + ab)$.
+		\item[(b)] $(a + b + c)(ab + bc + ca) - abc$.
 		\item[(c)] $a(a + 2b)^3 - b(2a + b)^3$.
 	\end{enumerate}
 \end{baitoan}
@@ -269,11 +417,11 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{65.}, pp. 18--19]
 	Phân tích thành nhân tử:
 	\begin{enumerate}
-		\item[(a)] $ab(a + b) - bc(b + c) + ac(a - c)$;
-		\item[(b)] $a(b^2 + c^2) + b(c^2 + a^2) + c(a^2 + b^2) + 2abc$;
-		\item[(c)] $(a + b)(a^2 - b^2) + (b + c)(b^2 - c^2) + (c + a)(c^2 - a^2)$;
-		\item[(d)] $a^3(b - c) + b^3(c - a) + c^3(a - b)$;
-		\item[(d)] $a^3(b - c) + b^3(c - a) + c^3(a - b)$;
+		\item[(a)] $ab(a + b) - bc(b + c) + ac(a - c)$.
+		\item[(b)] $a(b^2 + c^2) + b(c^2 + a^2) + c(a^2 + b^2) + 2abc$.
+		\item[(c)] $(a + b)(a^2 - b^2) + (b + c)(b^2 - c^2) + (c + a)(c^2 - a^2)$.
+		\item[(d)] $a^3(b - c) + b^3(c - a) + c^3(a - b)$.
+		\item[(d)] $a^3(b - c) + b^3(c - a) + c^3(a - b)$.
 		\item[(e)] $a^3(c - b^2) + b^3(a - c^2) + c^3(b - a^2) + abc(abc - 1)$.
 	\end{enumerate}
 \end{baitoan}
@@ -281,10 +429,10 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{66.}, p. 19]
 	Phân tích thành nhân tử:
 	\begin{enumerate}
-		\item[(a)] $a(b + c)^2(b - c) + b(c + a)^2(c - a) + c(a + b)^2(a - b)$;
-		\item[(b)] $a(b - c)^3 + b(c - a)^3 + c(a - b)^3$;
-		\item[(c)] $a^2b^2(a - b) + b^2c^2(b - c) + c^2a^2(c - a)$;
-		\item[(d)] $a(b^2 + c^2) + b(c^2 + a^2) + c(a^2 + b^2) - 2abc - a^3 - b^3 - c^3$;
+		\item[(a)] $a(b + c)^2(b - c) + b(c + a)^2(c - a) + c(a + b)^2(a - b)$.
+		\item[(b)] $a(b - c)^3 + b(c - a)^3 + c(a - b)^3$.
+		\item[(c)] $a^2b^2(a - b) + b^2c^2(b - c) + c^2a^2(c - a)$.
+		\item[(d)] $a(b^2 + c^2) + b(c^2 + a^2) + c(a^2 + b^2) - 2abc - a^3 - b^3 - c^3$.
 		\item[(e)] $a^4(b - c) + b^4(c - a) + c^4(a - b)$.
 	\end{enumerate}
 \end{baitoan}
@@ -292,7 +440,7 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{67.}, p. 19]
 	Phân tích thành nhân tử:
 	\begin{enumerate*}
-		\item[(a)] $(a + b + c)^3 - (a + b - c)^3 - (b + c - a)^3 - (c + a - b)^3$;
+		\item[(a)] $(a + b + c)^3 - (a + b - c)^3 - (b + c - a)^3 - (c + a - b)^3$.
 		\item[(b)] $abc - (ab + bc + ca) + (a + b + c) - 1$.
 	\end{enumerate*}
 \end{baitoan}
@@ -322,7 +470,7 @@ Tổng quát hơn,
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{74.}, p. 19]
-	Xét hằng đẳng thức $(x + 1)^2 = x^2 + 2x + 1$. Lần lượt cho $x$ bằng $1,2,\ldots,n$ rồi cộng từng vế $n$ đẳng thức trên để tính giá trị của biểu thức $S_1 = 1 + 2 + \cdots + n$.
+	Xét hằng đẳng thức $(x + 1)^2 = x^2 + 2x + 1$. Lần lượt cho $x$ bằng $1,2,\ldots,n$ rồi cộng từng vế $n$ đẳng thức trên để tính giá trị của biểu thức $S_1 = \sum_{i=1}^n i = 1 + 2 + \cdots + n$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_8_tap_1}, \textbf{75.}, p. 19]
