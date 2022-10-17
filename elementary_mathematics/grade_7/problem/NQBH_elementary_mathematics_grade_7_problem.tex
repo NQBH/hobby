@@ -23,6 +23,7 @@
 \newtheorem{problem}{Problem}[section]
 \newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
 \newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{remark}{Remark}[section]
@@ -699,6 +700,84 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 	\end{enumerate*}
 \end{baitoan}
 
+\subsubsection{Viết phân số dưới dạng số thập phân hữu hạn hoặc vô hạn tuần hoàn}
+``\begin{enumerate*}
+	\item[\textbf{1.}] Nếu 1 phân số tối giản mà mẫu không có ước nguyên tố khác $2$ \& $5$ thì viết được dưới dạng số thập phân hữu hạn.
+	\item[\textbf{2.}] Nếu 1 phân số tối giản mà mẫu có ước nguyên tố khác $2$ \& $5$ thì không viết được dưới dạng số thập phân hữu hạn. Phân số đó viết thành số thập phân vô hạn, trong đó có những nhóm chữ số được lặp lại, nhóm chữ số đó được gọi là \textit{chu kỳ}, số thập phân vô hạn đó được gọi là \textit{tuần hoàn}. Số thập phân có nguồn gốc từ phân số nếu vô hạn thì phải tuần hoàn. E.g., khi chia $1$ cho $7$, ta được số thập phân vô hạn, số dư trong phép chia này chỉ có thể là $1,2,3,4,5,6$, nên nhiều nhất đến số dư thứ $7$, số dư phải lặp lại, do đó các nhóm chữ số ở thương cũng lặp lại, \& số thập phân vô hạn phải tuần hoàn. Ta có: $\frac{1}{7} = 0.142857142857\ldots$.
+	\item[\textbf{3.}] Để viết gọn số thập phân vô hạn tuần hoàn, người ta đặt chu kỳ trong dấu ngoặc. E.g., $\frac{7}{33} = 0.2121\ldots = 0.(21)$, $\frac{7}{22} = 0.31818\ldots = 0.3(18)$. Số $\frac{7}{33}$ cũng có thể viết dưới dạng $0.(2121)$ hoặc $0.2(12)$. So với cách viết $0.(21)$ có chu kỳ $21$ thì cách viết thứ 2 có chu kỳ lớn hơn, cách viết thứ 3 có chữ số thập phân liền trước chu kỳ \& chữ số cuối cùng của chu kỳ bằng nhau, ta không chọn những cách viết này.
+	\item[\textbf{4.}] Số thập phân vô hạn tuần hoàn gọi là \textit{đơn} nếu chu kỳ bắt đầu ngay sau dấu phẩy, ví dụ $0.(21)$; gọi là \textit{tạp} nếu chu kỳ không bắt đầu ngay sau dấu phẩy, phần thập phân đứng trước chu kỳ được gọi là \textit{phần bất thường}, e.g., $0.3(18)$ có chu kỳ là $18$ \& phần bất thường là $3$.'' -- \cite{Binh_Toan_7_tap_1}
+\end{enumerate*}
+
+\subsubsection{Viết số thập phân vô hạn tuần hoàn dưới dạng phân số}
+``Để viết các số thập phân vô hạn tuần hoàn $0.(21),0.3(18)$ dưới dạng phân số ta phải tính các tổng có vô số hạng: $0.212121\ldots = \frac{21}{10^2} + \frac{21}{10^4} + \frac{21}{10^6} + \cdots$, $0.31818\ldots = \frac{3}{10} + \frac{18}{10^3} + \frac{18}{10^5} + \cdots$ Các phép tính này sẽ được nghiên cứu ở Toán 11 khi học về tổng các số hạng của 1 cấp số nhân lùi vô hạn. Người ta đã chứng minh được các quy tắc sau: Muốn viết phần thập phân của số thập phân vô hạn tuần hoàn đơn dưới dạng phân số, ta lấy chu kỳ làm tử, còn mẫu là 1 số gồm các chữ số $9$, số chữ số $9$ bằng số chữ số của chu kỳ. E.g., $0.(6) = \frac{6}{9} = \frac{2}{3}$, $0.(21) = \frac{21}{99} = \frac{7}{33}$. Muốn viết phần thập phân của số thập phân vô hạn tuần hoàn tạp dưới dạng phân số, ta lấy số gồm phần bất thường \& chu kỳ trừ đi phần bất thường làm tử, còn mẫu là 1 số gồm các chữ số $9$ kèm theo các chữ số $0$, số chữ số $9$ bằng số chữ số của chu kỳ, số chữ số $0$ bằng số chữ số của phần bất thường. E.g., $5.1(6) = 5\frac{16 - 1}{90} = 5\frac{1}{6}$, $0.3(18) = \frac{318 - 3}{990} = \frac{315}{990} = \frac{7}{22}$. Ta có thể đưa ra 1 cách minh họa các quy tắc trên. Gọi $x = 0.2121\ldots$ thì: $100x - x = 21.2121\ldots - 0.2121\ldots\Leftrightarrow 99 x = 21\Leftrightarrow x = \frac{21}{99} = \frac{7}{33}$. Gọi $y = 0.3181818\ldots$ thì: $1000y - 10y = 318.1818\ldots - 3.1818\ldots\Leftrightarrow 990y = 318 - 3\Leftrightarrow y = \frac{318 - 3}{990} = \frac{315}{990} = \frac{7}{22}$. Tuy nhiên, các minh họa nói trên không phải là các cách chứng minh chặt chẽ vì ở đây ta đã áp dụng các quy tắc tính của số thập phân hữu hạn vào các số vô hạn mà chưa chứng minh rằng điều đó có được phép hay không.'' -- \cite{Binh_Toan_7_tap_1}
+
+\subsubsection{Điều kiện để phân số viết dưới dạng số thập phân vô hạn tuần hoàn đơn hay tạp}
+``Xét quy tắc viết số thập phân vô hạn tuần hoàn đơn dưới dạng phân số: $0.(21) = \frac{21}{99} = \frac{7}{33}$, tổng quát: $\overline{0.(a_1a_2\ldots a_n)} = \frac{\overline{a_1a_2\ldots a_n}}{\underbrace{99\ldots 9}_n}$. Mẫu $\underbrace{99\ldots 9}_n\not\vdots\ 2$, $\underbrace{99\ldots 9}_n\not\vdots\ 5$, nên đến khi phân số tối giản, mẫu không chứa thừa số nguyên tố $2$ \& $5$. Xét quy tắc viết số thập phân tuần hoàn tạp dưới dạng phân số $0.3(18) = \frac{318 - 3}{990} = \frac{315}{990} = \frac{7}{22}$, tổng quát:
+\begin{align*}
+	\overline{0.b_1b_2\ldots b_k(a_1a_2\ldots a_n)} = \frac{\overline{b_1b_2\ldots b_ka_1a_2\ldots a_n} - \overline{b_1b_2\ldots b_k}}{\underbrace{99\ldots 9}_n\underbrace{00\ldots 0}_k}, \mbox{ mẫu } \underbrace{99\ldots 9}_n\underbrace{00\ldots 0}_k
+\end{align*}
+tận cùng bằng $0$ mà tủ tận cùng khác $0$ (vì theo quy định viết chu kỳ ta có $b_k\ne a_n$) nên đến khi phân số tối giản, mẫu vẫn chứa thừa số $2$, hoặc $5$, hoặc cả $2$ \& $5$. Từ đó suy ra:
+
+\begin{menhde}
+	1 phân số tói giản mà mẫu có ước nguyên tố khác $2$ \& $5$ thì viết được thành số thập phân vô hạn tuần hoàn.
+\end{menhde}
+Đối với các phân số đó, nếu mẫu không có ước nguyên tố $2$ \& $5$ thì viết được thành số thập phân vô hạn tuần hoàn đơn, nếu mẫu có 1 trong các ước nguyên tố $2$ \& $5$ thì viết được thành số thập phân vô hạn tuần hoàn tạp.'' -- \cite{Binh_Toan_7_tap_1}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 22]
+	$\forall n\in\mathbb{N}^\star$, khi viết các phân số sau dưới dạng số thập phân, ta được số thập phân hữu hạn hay vô hạn? Nếu là số thập phân vô hạn thì số đó là số thập phân vô hạn tuần hoàn đơn hay tạp?
+	\begin{enumerate*}
+		\item[(a)] $\frac{3n^2 + 3n}{12n}$.
+		\item[(b)] $\frac{6n + 1}{12n}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{124}]
+	Viết các phân số sau dưới dạng số thập phân: $\frac{35}{56},\frac{10}{15},\frac{5}{11},\frac{2}{13},\frac{15}{82},\frac{13}{22},\frac{1}{60},\frac{5}{24}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{125}]
+	Viết các số thập phân vô hạn tuần hoàn sau dưới dạng phân số: $0.(27),0.(703),0.(571428)$, $2.01(6),0.1(63),2.41(3),0.88(63)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{126}]
+	Tìm các phân số tối giản có mẫu $\ne 1$, biết tích của tử \& mẫu bằng $1260$ \& phân số này có thể viết được dưới dạng số thập phân hữu hạn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{127}]
+	Cho số $x = 0.12345\ldots 998999$ trong đó ở bên phải dấu phẩy ta viết cá số từ $1$ đến $999$ liên tiếp nhau. Chữ số thứ $2003$ ở bên phải dấu phẩy là chữ số:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] $0$.
+		\item[{\rm\sf B.}] $3$.
+		\item[{\rm\sf C.}] $4$.
+		\item[{\rm\sf D.}] $7$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{128}]
+	Thay các chữ cái bởi các chữ số thích hợp:
+	\begin{enumerate*}
+		\item[(a)] $1:\overline{0.abc} = a + b + c$.
+		\item[(b)] $1:\overline{0.0abc} = a + b + c + d$.
+		\item[(c)] $\overline{0.x(y)} - \overline{0.y(x)} = 8\cdot0.0(1)$, biết $x + y = 9$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{130}]
+	Khi viết các phân số sau dưới dạng số thập phân, ta được số thập phân hữu hạn, hay vô hạn tuần hoàn đơn, hay vô hạn tuần hoàn tạp?
+	\begin{enumerate*}
+		\item[(a)] $\frac{35n + 3}{70}$, $n\in\mathbb{N}$.
+		\item[(b)] $\frac{10987654321}{(n + 1)(n + 2)(n + 3)}$, $n\in\mathbb{N}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{131}]
+	Cho $A = \frac{1}{1.00\ldots 01}$ (số chia có $99$ chữ số $0$ sau dấu phẩy). Tính $A$ với $300$ chữ số thập phân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{132}]
+	Cho $A$ là số lẻ không tận cùng bằng $5$. Chứng minh: tồn tại 1 bội của $A$ gồm toàn chữ số $9$.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Số Thực}
@@ -762,12 +841,75 @@ Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân
 
 %------------------------------------------------------------------------------%
 
-\newpage
 \section{Hình Học Trực Quan}
 
 %------------------------------------------------------------------------------%
 
-\section{Góc. Đường Thẳng Song Song}
+\section{Góc. Đường Thẳng Vuông Góc. Đường Thẳng Song Song}
+
+\subsection{2 Góc Đối Đỉnh}
+
+\begin{dinhnghia}[2 góc đối đỉnh]
+	\emph{2 góc đối đỉnh} là 2 góc mà mỗi cạnh của góc này là tia đối của 1 cạnh của góc kia.
+\end{dinhnghia}
+\textbf{Tính chất.} \textit{2 góc đối đỉnh thì bằng nhau}.
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, Ví dụ 1]
+	Cho 3 đường thẳng $AB,CD,EF$ cắt nhau tại $O$. Kể tên các cặp góc đối đỉnh nhỏ hơn  góc bẹt trên hình.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{1.}]
+	Cho 2 góc đối đỉnh $AOB$ \& $A'OB'$. Gọi $Ox$ là tia phân giác của $\widehat{AOB}$, $Ox'$ là tia đối của tia $Ox$. Chứng minh $Ox'$ là tia phân giác của $\widehat{A'OB'}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{2.}]
+	Chứng minh 2 tia phân giác của 2 góc đối đỉnh là 2 tia đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{3.}]
+	Qua điểm $O$, vẽ $5$ đường thẳng phân biệt.
+	\begin{enumerate*}
+		\item[(a)] Có bao nhiêu góc trong hình vẽ?
+		\item[(b)] Trong các góc ấy, có bao nhiêu cặp góc đối đỉnh nhỏ hơn góc bẹt?
+		\item[(c)] Xét các góc không có điểm trong chung, chứng tỏ tồn tại 1 góc $\ge36^\circ$, tồn tại 1 góc $\le36^\circ$.
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{2 Đường Thẳng Vuông Góc}
+
+\begin{dinhnghia}[2 đường thẳng vuông góc]
+	\emph{2 đường thẳng vuông góc} là 2 đường thẳng cắt nhau \& trong các góc tạo thành có 1 góc vuông.
+\end{dinhnghia}
+
+\begin{dinhnghia}[Đường trung trực]
+	\emph{Đường trung trực} của 1 đoạn thẳng là đường thẳng vuông góc với đoạn thẳng ấy tại trung điểm của nó.
+\end{dinhnghia}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, Ví dụ 2]
+	Chứng minh 2 tia phân giác của 2 góc kề bù vuông góc với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{4.}]
+	Cho 2 góc kề bù $AOC$ \& $COB$. Gọi $OM$ là tia phân giác của $\widehat{AOC}$. Kẻ tia $ON\bot OM$ (tia $ON$ nằm trong $\widehat{BOC}$). Tia $ON$ là tia phân giác của góc nào? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{5.}]
+	Ở miền trong góc tù $xOy$, vẽ các tia $Oz,Ot$ sao cho $Oz\bot Ox$, $Ot\bot Oy$. Chứng tỏ:
+	\begin{enumerate*}
+		\item[(a)] $\widehat{xOt} = \widehat{yOz}$.
+		\item[(b)] $\widehat{xOy} + \widehat{zOt} = 180^\circ$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S1, \textbf{6.}]
+	Ở miền ngoài góc tù $xOy$, vẽ các tia $Oz,Ot$ sao cho $Oz\bot Ox$, $Ot\bot Oy$. Gọi $Om,On$ là tia phân giác của các góc $xOy,zOt$. Chứng minh $Om,On$ là 2 tia đối nhau.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Dấu Hiệu Nhận Biết 2 Đường Thẳng Song Song}
 
 %------------------------------------------------------------------------------%
 
