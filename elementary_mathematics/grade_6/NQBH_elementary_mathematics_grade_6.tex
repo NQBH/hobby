@@ -38,6 +38,9 @@
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Some Topics in Elementary Mathematics\texttt{/}Grade 6}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -499,11 +502,11 @@ Trong phạm vi số tự nhiên, phép trừ chỉ thực hiện được khi s
 \begin{dinhnghia}[Chia hết]
 	Cho $a,b\in\mathbb{N}$, $b\ne 0$. Nếu có số tự nhiên $q$ sao cho $a = bq$ thì ta nói \emph{$a$ chia hết cho $b$}. Khi $a$ chia hết cho $b$, ta nói $a$ là \emph{bội} của $b$ \textit{\&} $b$ là \emph{ước} của $a$.
 \end{dinhnghia}
-Nếu số dư trong phép chia $a$ cho $b$ bằng 0 thì $a$ chia hết cho $b$, ký hiệu $a\ \vdots\ b$. Nếu số dư trong phép chia $a$ cho $b$ khác 0 thì $a$ không chia hết cho $b$, ký hiệu $a\not\vdots\ b$. Với $a\in\mathbb{N}^\star$, $a$ là ước của $a$, $a$ là bội của $a$, 0 là bội của $a$, $1$ là ước của $a$.
+Nếu số dư trong phép chia $a$ cho $b$ bằng 0 thì $a$ chia hết cho $b$, ký hiệu $a\divby b$. Nếu số dư trong phép chia $a$ cho $b$ khác 0 thì $a$ không chia hết cho $b$, ký hiệu $a\not\divby b$. Với $a\in\mathbb{N}^\star$, $a$ là ước của $a$, $a$ là bội của $a$, 0 là bội của $a$, $1$ là ước của $a$.
 
 \paragraph{Cách tìm bội \textit{\&} ước của 1 số.} Để tìm các bội của $n\in\mathbb{N}^\star$, ta có thể lần lượt nhân $n$ với $0,1,2,3,\ldots$. Khi đó, các kết quả nhận được đều là bội của $n$. Ngắn gọn, tập hợp tất cả các bội của $n\in\mathbb{N}^\star$ là $\{kn;k\in\mathbb{N}\}$.
 
-Để tìm các ước của $n\in\mathbb{N}$, $n > 1$ (tức $n\ge 2$) ta có thể lần lượt chia $n$ cho các số tự nhiên từ 1 đến $n$. Khi đó, các phép chia hết cho ta số chia là ước của $n$. Ngắn gọn, tập hợp tất cả các ước của $n\in\mathbb{N}$, $n\ge 2$ là $\{a\in\mathbb{N}^\star;a\le n,\ n\ \vdots\ a\}$.
+Để tìm các ước của $n\in\mathbb{N}$, $n > 1$ (tức $n\ge 2$) ta có thể lần lượt chia $n$ cho các số tự nhiên từ 1 đến $n$. Khi đó, các phép chia hết cho ta số chia là ước của $n$. Ngắn gọn, tập hợp tất cả các ước của $n\in\mathbb{N}$, $n\ge 2$ là $\{a\in\mathbb{N}^\star;a\le n,\ n\divby a\}$.
 
 \subsubsection{Tính chất chia hết}
 
@@ -511,68 +514,68 @@ Nếu số dư trong phép chia $a$ cho $b$ bằng 0 thì $a$ chia hết cho $b$
 \begin{dinhly}
 	Nếu tất cả các số hạng của tổng đều chia hết cho cùng 1 số thì tổng chia hết cho số đó.
 \end{dinhly}
-I.e., $(a\ \vdots\ m)\land(b\ \vdots\ m)\Rightarrow(a + b)\ \vdots\ m$. Khi đó, $(a + b):m = a:m + b:m$, hoặc dạng phân số: $\frac{a + b}{m} = \frac{a}{m} + \frac{b}{m}$.
+I.e., $(a\divby m)\land(b\divby m)\Rightarrow(a + b)\divby m$. Khi đó, $(a + b):m = a:m + b:m$, hoặc dạng phân số: $\frac{a + b}{m} = \frac{a}{m} + \frac{b}{m}$.
 
 \begin{proof}[Proof]
-	Cho $a,b,m\in\mathbb{N}$, $m\ne 0$. Nếu $a\ \vdots\ m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\ \vdots\ m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Khi đó $a + b = ma_1 + mb_1 = m(a_1 + b_1)$, \textit{\&} hiển nhiên $a_1 + b_1\in\mathbb{N}$, nên $(a + b)\ \vdots\ m$.
+	Cho $a,b,m\in\mathbb{N}$, $m\ne 0$. Nếu $a\divby m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\divby m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Khi đó $a + b = ma_1 + mb_1 = m(a_1 + b_1)$, \textit{\&} hiển nhiên $a_1 + b_1\in\mathbb{N}$, nên $(a + b)\divby m$.
 \end{proof}
 
 \paragraph{Tính chất chia hết của 1 hiệu.}
 \begin{dinhly}
 	Nếu số bị trừ \textit{\&} số trừ đều chia hết cho cùng 1 số thì hiệu của chúng chia hết cho số đó.
 \end{dinhly}
-I.e., với $a,b,m\in\mathbb{N}$, $a\ge b$, nếu $a\ \vdots\ m$ \textit{\&} $b\ \vdots\ m$ thì $(a - b)\ \vdots\ m$. Khi đó, ta có $(a - b):m = a:m - b:m$.
+I.e., với $a,b,m\in\mathbb{N}$, $a\ge b$, nếu $a\divby m$ \textit{\&} $b\divby m$ thì $(a - b)\divby m$. Khi đó, ta có $(a - b):m = a:m - b:m$.
 
 \begin{proof}[Proof]
-	Cho $a,b,m\in\mathbb{N}$, $a\ge b$, $m\ne 0$. Nếu $a\ \vdots\ m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\ \vdots\ m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Giả thiết $a\ge b$ cho ta $a_1\ge b_1$. Khi đó $a - b = ma_1 - mb_1 = m(a_1 - b_1)$, \textit{\&} hiển nhiên $a_1 - b_1\in\mathbb{N}$, nên $(a - b)\ \vdots\ m$.
+	Cho $a,b,m\in\mathbb{N}$, $a\ge b$, $m\ne 0$. Nếu $a\divby m$, tồn tại $a_1\in\mathbb{N}$ sao cho $a = ma_1$. Tương tự, nếu $b\divby m$, tồn tại $b_1\in\mathbb{N}$ sao cho $b = mb_1$. Giả thiết $a\ge b$ cho ta $a_1\ge b_1$. Khi đó $a - b = ma_1 - mb_1 = m(a_1 - b_1)$, \textit{\&} hiển nhiên $a_1 - b_1\in\mathbb{N}$, nên $(a - b)\divby m$.
 \end{proof}
 
 \paragraph{Tính chất chia hết của 1 tích.}
 \begin{dinhly}
 	Nếu 1 thừa số của tích chia hết cho 1 số thì tích chia hết cho số đó.
 \end{dinhly}
-Nếu $a\ \vdots\ m$  thì $(ab)\ \vdots\ m$ với mọi $b\in\mathbb{N}$.
+Nếu $a\divby m$  thì $(ab)\divby m$ với mọi $b\in\mathbb{N}$.
 
 \subsubsection{Tóm Tắt Kiến Thức: Tính Chất Chia Hết Trên $\mathbb{N}$}
 
 \noindent\textbf{Các tính chất chung.} (\cite[\S3, p. 15]{Binh_Toan_6_tap_1})
 \begin{enumerate}
-	\item Bất cứ số tự nhiên nào khác 0 cũng chia hết cho chính nó, i.e., $a\ \vdots\ a$, $\forall a\in\mathbb{N}^\star$.
+	\item Bất cứ số tự nhiên nào khác 0 cũng chia hết cho chính nó, i.e., $a\divby a$, $\forall a\in\mathbb{N}^\star$.
 	\item \textit{Tính chất bắc cầu}: Nếu $a$ chia hết cho $b$ \& $b$ chi hết cho $c$ thì $a$ chia hết cho $c$, i.e.,
 	\begin{align*}
-		((a\ \vdots\ b)\land(b\ \vdots\ c))\Rightarrow(a\ \vdots\ c),\ \forall a\in\mathbb{N},\ \forall b,c\in\mathbb{N}^\star.
+		((a\divby b)\land(b\divby c))\Rightarrow(a\divby c),\ \forall a\in\mathbb{N},\ \forall b,c\in\mathbb{N}^\star.
 	\end{align*}
-	\item Số 0 chia hết cho mọi số tự nhiên $b$ khác 0, i.e., $0\ \vdots\ b$, $\forall b\in\mathbb{N}^\star$.
-	\item Bất cứ số tự nhiên nào cũng chia hết cho 1, i.e., $a\ \vdots\ 1$, $\forall a\in\mathbb{N}$.
+	\item Số 0 chia hết cho mọi số tự nhiên $b$ khác 0, i.e., $0\divby b$, $\forall b\in\mathbb{N}^\star$.
+	\item Bất cứ số tự nhiên nào cũng chia hết cho 1, i.e., $a\divby 1$, $\forall a\in\mathbb{N}$.
 \end{enumerate}
 \noindent\textbf{Tính chất chia hết của tổng \& hiệu.}
 \begin{enumerate}
 	\item[5.] Nếu $a$ \& $b$ cùng chia hết cho $m$ thì $a + b$ chia hết cho $m$, $a - b$ chia hết cho $m$, i.e.,
 	\begin{align*}
-		((a\ \vdots\ m)\land(b\ \vdots\ m))\Rightarrow(a\pm b)\ \vdots\ m,\ \forall a,b\in\mathbb{N},\ \forall m\in\mathbb{N}^\star.
+		((a\divby m)\land(b\divby m))\Rightarrow(a\pm b)\divby m,\ \forall a,b\in\mathbb{N},\ \forall m\in\mathbb{N}^\star.
 	\end{align*}
 	
 	\begin{hequa}
 		Nếu tổng (hoặc hiệu) của 2 số chia hết cho $m$ \& 1 trong 2 số ấy chia hết cho $m$ thì số còn lại cũng chia hết cho $m$.
 	\end{hequa}
-	I.e., $(((a + b)\ \vdots\ m)\land(a\ \vdots\ m))\Rightarrow(b\ \vdots\ m)$, $\forall a,b\in\mathbb{N}$, $\forall m\in\mathbb{N}^\star$, \& $(((a - b)\ \vdots\ m)\land(a\ \vdots\ m))\Rightarrow(b\ \vdots\ m)$, $\forall a,b\in\mathbb{N}$, $\forall m\in\mathbb{N}^\star$, có thể ghi gộp chung 2 ý đó lại thành: $((((a + b)\ \vdots\ m)\lor((a - b)\ \vdots\ m))\land(a\ \vdots\ m))\Rightarrow(b\ \vdots\ m)$, $\forall a,b\in\mathbb{N}$, $\forall m\in\mathbb{N}^\star$
+	I.e., $(((a + b)\divby m)\land(a\divby m))\Rightarrow(b\divby m)$, $\forall a,b\in\mathbb{N}$, $\forall m\in\mathbb{N}^\star$, \& $(((a - b)\divby m)\land(a\divby m))\Rightarrow(b\divby m)$, $\forall a,b\in\mathbb{N}$, $\forall m\in\mathbb{N}^\star$, có thể ghi gộp chung 2 ý đó lại thành: $((((a + b)\divby m)\lor((a - b)\divby m))\land(a\divby m))\Rightarrow(b\divby m)$, $\forall a,b\in\mathbb{N}$, $\forall m\in\mathbb{N}^\star$
 	\item[6.] Nếu 1 trong 2 số $a,b$ chia hết cho $m$, số kia không chia hết cho $m$ thì $a + b$ không chia hết cho $m$, $a - b$ không chia hết cho $m$, i.e.,
 	\begin{align*}
-		((a\ \vdots\ m)\land(b\not\vdots\ m))\Rightarrow(a\pm b)\not\vdots\ m,\ \forall a,b\in\mathbb{N},\ \forall m\in\mathbb{N}^\star.
+		((a\divby m)\land(b\not\divby m))\Rightarrow(a\pm b)\not\divby m,\ \forall a,b\in\mathbb{N},\ \forall m\in\mathbb{N}^\star.
 	\end{align*}
 \end{enumerate}
 \noindent\textbf{Tính chất chia hết của tích.}
 \begin{enumerate}
-	\item[7.] Nếu 1 thừa số của tích chia hết cho $m$ thì tích chia hết cho $m$, i.e., $(a\ \vdots\ m)\Rightarrow(ab\ \vdots\ m)$, $\forall b\in\mathbb{N}$.
+	\item[7.] Nếu 1 thừa số của tích chia hết cho $m$ thì tích chia hết cho $m$, i.e., $(a\divby m)\Rightarrow(ab\divby m)$, $\forall b\in\mathbb{N}$.
 	\item[8.] Nếu $a$ chia hết cho $m$ \& $b$ chia hết cho $n$ thì $ab$ chia hết cho $mn$, i.e.,
 	\begin{align*}
-		((a\ \vdots\ m)\land(b\ \vdots\ n))\Rightarrow ab\ \vdots\ mn,\ \forall a,b\in\mathbb{N},\ \forall m,n\in\mathbb{N}^\star.
+		((a\divby m)\land(b\divby n))\Rightarrow ab\divby mn,\ \forall a,b\in\mathbb{N},\ \forall m,n\in\mathbb{N}^\star.
 	\end{align*}
 
 	\begin{hequa}
 		Nếu $a$ chia hết cho $b$ thì $a^n$ chia hết cho $b^n$.
 	\end{hequa}
-	I.e., $(a\ \vdots\ b)\Rightarrow(a^n\ \vdots\ b^n)$, $\forall a,n\in\mathbb{N}$, $\forall b\in\mathbb{N}^\star$.
+	I.e., $(a\divby b)\Rightarrow(a^n\divby b^n)$, $\forall a,n\in\mathbb{N}$, $\forall b\in\mathbb{N}^\star$.
 \end{enumerate}
 
 %------------------------------------------------------------------------------%
@@ -585,13 +588,13 @@ Các số chẵn thì chia hết cho 2 còn các số lẻ thì không chia hế
 \begin{dinhly}[Dấu hiệu chia hết cho 2]
 	Các số có chữ số tận cùng là 0, 2, 4, 6, 8 thì chia hết chia 2 \textit{\&} chỉ những số đó mới chia hết cho 2.
 \end{dinhly}
-I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ a_0\in\{0,2,4,6,8\})\Leftrightarrow a\ \vdots\ 2$.
+I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ a_0\in\{0,2,4,6,8\})\Leftrightarrow a\divby 2$.
 
 \subsubsection{Dấu hiệu chia hết cho 5}
 \begin{dinhly}[Dấu hiệu chia hết cho 5]
 	Các số có chữ số tận cùng là 0 hoặc 5 thì chia hết chia 5 \textit{\&} chỉ những số đó mới chia hết cho 5.
 \end{dinhly}
-I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ a_0\in\{0,5\})\Leftrightarrow a\ \vdots\ 5$.
+I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ a_0\in\{0,5\})\Leftrightarrow a\divby 5$.
 
 \begin{corollary}[Dấu hiệu chia hết cho cả 2 \textit{\&} 5]
 	Các số có chữ số tận cùng là 0 thì chia hết cho cả 2 \textit{\&} 5 \textit{\&} chỉ những số đó mới chia hết cho cả 2 \textit{\&} 5.
@@ -600,17 +603,17 @@ I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,
 \subsubsection{Giải thích dấu hiệu chia hết cho 2, cho 5}
 Tham khảo \cite[p. 37]{SGK_Toan_6_Canh_Dieu_tap_1}. Xét số tự nhiên $A$ có chữ số tận cùng là $a$. Khi đó $A$ có thể viết được dưới dạng: $A = 10B + a$, trong đó $B\in\mathbb{N}$ (trường hợp $B = 0$ thì $A = a$ \textit{\&} là số có 1 chữ số). Do đó, $A - 10 B = a$.
 \begin{itemize}
-	\item Nếu $a\in\{0;2;4;6;8\}$ thì $a\ \vdots\ 2$. Do $10B\ \vdots\ 2$ \textit{\&} $a\ \vdots\ 2 2$ nên tổng $(10B + a)\ \vdots\ 2$. Vậy $A\ \vdots\ 2$. Ngược lại, nếu $A\ \vdots\ 2$ thì hiệu $(A - 10B)\ \vdots\ 2$, tức là $a\ \vdots\ 2$ nên $a\in\{0;2;4;6;8\}$.
-	\item Nếu $a\in\{0;5\}$ thì $a\ \vdots\ 5$. Do $10B\ \vdots\ 5$ \textit{\&} $a\ \vdots\ 5$ nên tổng $(10B + a)\ \vdots\ 5$. Vậy $A\ \vdots\ 5$. Ngược lại, nếu $A\ \vdots\ 5$ thì hiệu $(A - 10B)\ \vdots\ 5$, tức là $a\ \vdots\ 5$ nên $a\in\{0;5\}$.
+	\item Nếu $a\in\{0;2;4;6;8\}$ thì $a\divby 2$. Do $10B\divby 2$ \textit{\&} $a\divby 2 2$ nên tổng $(10B + a)\divby 2$. Vậy $A\divby 2$. Ngược lại, nếu $A\divby 2$ thì hiệu $(A - 10B)\divby 2$, tức là $a\divby 2$ nên $a\in\{0;2;4;6;8\}$.
+	\item Nếu $a\in\{0;5\}$ thì $a\divby 5$. Do $10B\divby 5$ \textit{\&} $a\divby 5$ nên tổng $(10B + a)\divby 5$. Vậy $A\divby 5$. Ngược lại, nếu $A\divby 5$ thì hiệu $(A - 10B)\divby 5$, tức là $a\divby 5$ nên $a\in\{0;5\}$.
 \end{itemize}
 
 \subsubsection{Dấu hiệu chia hết cho 4}
-Tham khảo \cite[p. 37]{SGK_Toan_6_Canh_Dieu_tap_1}. Xét số tự nhiên $A$ có 3 chữ số trở lên\footnote{Giả thiết này sẽ làm thiếu những số có 1 hoặc 2 chữ số \textit{\&} chia hết cho 4.}. Gọi $C$ là số tại bởi 2 chữ số tận cùng của $A$. Khi đó $A$ có thể được viết dưới dạng: $A = 100B + C$, trong đó $B\in\mathbb{N}$ (trường hợp $B = 0$ thì $A = C$ \textit{\&} là số có 2 chữ số). Do đó, $A - 100B = C$. Nếu $C\ \vdots\ 4$ thì tổng $(100B + C)\ \vdots\ 4$, tức là $A\ \vdots\ 4$. Ngược lại, nếu $A\ \vdots\ 4$ thì hiệu $(A - 100B)\ \vdots\ 4$, tức là $C\ \vdots\ 4$. Vậy:
+Tham khảo \cite[p. 37]{SGK_Toan_6_Canh_Dieu_tap_1}. Xét số tự nhiên $A$ có 3 chữ số trở lên\footnote{Giả thiết này sẽ làm thiếu những số có 1 hoặc 2 chữ số \textit{\&} chia hết cho 4.}. Gọi $C$ là số tại bởi 2 chữ số tận cùng của $A$. Khi đó $A$ có thể được viết dưới dạng: $A = 100B + C$, trong đó $B\in\mathbb{N}$ (trường hợp $B = 0$ thì $A = C$ \textit{\&} là số có 2 chữ số). Do đó, $A - 100B = C$. Nếu $C\divby 4$ thì tổng $(100B + C)\divby 4$, tức là $A\divby 4$. Ngược lại, nếu $A\divby 4$ thì hiệu $(A - 100B)\divby 4$, tức là $C\divby 4$. Vậy:
 
 \begin{dinhly}
 	Các số có 2 chữ số tận cùng tạo thành 1 số chia hết cho 4 thì chia hết cho 4 \textit{\&} chỉ những số đó mới chia hết cho 4.
 \end{dinhly}
-I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ \overline{a_1a_0}\ \vdots\ 4)\Leftrightarrow a\ \vdots\ 4$. Chú ý công thức này bao gồm cả những số có 1 hoặc 2 chữ số \textit{\&} chia hết 4.
+I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,3,4,5,6,7,9\},\,\forall i = 1,\ldots,n,\ \overline{a_1a_0}\divby 4)\Leftrightarrow a\divby 4$. Chú ý công thức này bao gồm cả những số có 1 hoặc 2 chữ số \textit{\&} chia hết 4.
 
 %------------------------------------------------------------------------------%
 
@@ -627,7 +630,7 @@ I.e., $(a = \overline{a_na_{n-1}\ldots a_1a_0},\ n\in\mathbb{N},\ a_i\in\{0,1,2,
 	\begin{align*}
 		a = \sum_{i=0}^n a_i10^i\equiv\left(\sum_{i=0}^n a_i\right)(\operatorname{mod} 3).
 	\end{align*}
-	Vì vậy, $a\ \vdots\ 3$ khi \textit{\&} chỉ khi tổng các chữ số của $a$, i.e., $\sum_{i=0}^n a_i$, chia hết cho 3.
+	Vì vậy, $a\divby 3$ khi \textit{\&} chỉ khi tổng các chữ số của $a$, i.e., $\sum_{i=0}^n a_i$, chia hết cho 3.
 \end{proof}
 
 \subsubsection{Dấu hiệu chia hết cho 9}
@@ -642,14 +645,14 @@ Hoàn toàn tương tự dấu hiệu chia hết cho 3:
 	\begin{align*}
 		a = \sum_{i=0}^n a_i10^i\equiv\left(\sum_{i=0}^n a_i\right)(\operatorname{mod} 9).
 	\end{align*}
-	Vì vậy, $a\ \vdots\ 9$ khi \textit{\&} chỉ khi tổng các chữ số của $a$, i.e., $\sum_{i=0}^n a_i$, chia hết cho 9.
+	Vì vậy, $a\divby 9$ khi \textit{\&} chỉ khi tổng các chữ số của $a$, i.e., $\sum_{i=0}^n a_i$, chia hết cho 9.
 \end{proof}
 
 \subsubsection{Giải thích dấu hiệu chia hết cho 3, cho 9}
 Tham khảo \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_1}. Xét số tự nhiên $\overline{abc}$, $a\ne 0$ có 3 chữ số, ta viết được $\overline{abc} = 100a + 10b + c = (99a + 9b) + (a + b + c) = 9(11a + b) + (a + b + c)$. Tổng quát, ta có mọi số tự nhiên $A$ đều viết được dưới dạng tổng các chữ số của nó cộng với 1 số chia hết cho 9, i.e., $A = 9M + S$, trong đó $S$ là tổng các chữ số của số $A$.
 \begin{itemize}
-	\item Nếu $A\in\mathbb{N}$ có tổng các chữ số chia hết cho 3 thì $S$ chia hết cho 3. Do $9M\ \vdots\ 3$ \textit{\&} $S\ \vdots\ 3$ nên tổng $(9M + S)\ \vdots\ 3$. Vậy $A\ \vdots\ 3$. Ngược lại, nếu $A\ \vdots\ 3$ thì hiệu $(A - 9M)\ \vdots\ 3$, i.e., $S\ \vdots\ 3$. Vậy tổng các chữ số của $A$ chia hết cho 3.
-	\item Nếu $A\in\mathbb{N}$ có tổng các chữ số chia hết cho 9 thì $S$ chia hết cho 9. Do $9M\ \vdots\ 9$ \textit{\&} $S\ \vdots\ 9$ nên tổng $(9M + S)\ \vdots\ 9$. Vậy $A\ \vdots\ 9$. Ngược lại, nếu $A\ \vdots\ 9$  thì hiệu $(A - 9M)\ \vdots\ 9$, i.e., $S\ \vdots\ 9$. Vậy tổng các chữ số của $A$ chia hết cho 9.
+	\item Nếu $A\in\mathbb{N}$ có tổng các chữ số chia hết cho 3 thì $S$ chia hết cho 3. Do $9M\divby 3$ \textit{\&} $S\divby 3$ nên tổng $(9M + S)\divby 3$. Vậy $A\divby 3$. Ngược lại, nếu $A\divby 3$ thì hiệu $(A - 9M)\divby 3$, i.e., $S\divby 3$. Vậy tổng các chữ số của $A$ chia hết cho 3.
+	\item Nếu $A\in\mathbb{N}$ có tổng các chữ số chia hết cho 9 thì $S$ chia hết cho 9. Do $9M\divby 9$ \textit{\&} $S\divby 9$ nên tổng $(9M + S)\divby 9$. Vậy $A\divby 9$. Ngược lại, nếu $A\divby 9$  thì hiệu $(A - 9M)\divby 9$, i.e., $S\divby 9$. Vậy tổng các chữ số của $A$ chia hết cho 9.
 \end{itemize}
 ``Áp dụng dấu hiệu chia hết cho 9, ta có thể kiểm tra (sơ bộ) kết quả phép nhân 2 số có nhiều chữ số là sai.'' -- \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_1}
 
@@ -658,11 +661,11 @@ Tham khảo \cite[p. 40]{SGK_Toan_6_Canh_Dieu_tap_1}. Xét số tự nhiên $\ov
 \section*{Tóm Tắt Kiến Thức: Các Dấu Hiệu Chia Hết}
 ``Gọi $A = \overline{a_na_{n-1}\ldots a_2a_1a_0}$. Ta có:
 \begin{align*}
-	A\ \vdots\ 2&\Leftrightarrow a_0\ \vdots\ 2,\ A\ \vdots\ 5\Leftrightarrow a_0\ \vdots\ 5,\\
-	A\ \vdots\ 4&\Leftrightarrow\overline{a_1a_0}\ \vdots\ 4,\ A\ \vdots\ 25\Leftrightarrow\overline{a_1a_0}\ \vdots\ 25,\\
-	A\ \vdots\ 8&\Leftrightarrow\overline{a_2a_1a_0}\ \vdots\ 8,\ A\ \vdots\ 125\Leftrightarrow\overline{a_2a_1a_0}\ \vdots\ 125,\\
-	A\ \vdots\ 3&\Leftrightarrow a_n + a_{n-1} + \cdots + a_1 + a_0 = \sum_{i=0}^n a_i\ \vdots\ 3,\\
-	A\ \vdots\ 9&\Leftrightarrow a_n + a_{n-1} + \cdots + a_1 + a_0 = \sum_{i=0}^n a_i\ \vdots\ 9.
+	A\divby 2&\Leftrightarrow a_0\divby 2,\ A\divby 5\Leftrightarrow a_0\divby 5,\\
+	A\divby 4&\Leftrightarrow\overline{a_1a_0}\divby 4,\ A\divby 25\Leftrightarrow\overline{a_1a_0}\divby 25,\\
+	A\divby 8&\Leftrightarrow\overline{a_2a_1a_0}\divby 8,\ A\divby 125\Leftrightarrow\overline{a_2a_1a_0}\divby 125,\\
+	A\divby 3&\Leftrightarrow a_n + a_{n-1} + \cdots + a_1 + a_0 = \sum_{i=0}^n a_i\divby 3,\\
+	A\divby 9&\Leftrightarrow a_n + a_{n-1} + \cdots + a_1 + a_0 = \sum_{i=0}^n a_i\divby 9.
 \end{align*}
 '' -- \cite[\S4, p. 18]{Binh_Toan_6_tap_1}
 
@@ -747,7 +750,7 @@ Tương tự, ta có: $\mbox{ƯCLN}(a_1,\ldots,a_n)= d$, tồn tại $a_1',\ldot
 		\item Lấy tích của các lũy thừa đã chọn, ta nhận được ước chung lớn nhất cần tìm.
 	\end{enumerate}
 \end{tcolorbox}
-Nếu 2 số đã cho không có thừa số nguyên tố chung thì ƯCLN của chúng bằng 1. Nếu $a\ \vdots\ b$ thì $\mbox{ƯCLN}(a,b) = b$.
+Nếu 2 số đã cho không có thừa số nguyên tố chung thì ƯCLN của chúng bằng 1. Nếu $a\divby b$ thì $\mbox{ƯCLN}(a,b) = b$.
 
 \subsubsection{2 số nguyên tố cùng nhau}
 
@@ -1014,7 +1017,7 @@ Sự thừa hưởng tính chất này xuất phát từ sự kiện số nguyê
 %------------------------------------------------------------------------------%
 
 \subsection{Phép Chia Hết 2 Số Nguyên. Quan Hệ Chia Hết Trong Tập Hợp Số Nguyên}
-``Phép chia chỉ thực hiện được trong phạm vi số nguyên khi số bị chia chia hết cho số chia. Trong trường hợp $a\ \vdots\ b$, ta nói: $a$ là bội của $b$ \& $b$ là ước của $a$. Ước chung (hoặc bội chung) của 2 hay nhiều số là ước (hoặc bội) của tất cả các số đó.'' -- \cite[p. 32]{Binh_Toan_6_tap_1}
+``Phép chia chỉ thực hiện được trong phạm vi số nguyên khi số bị chia chia hết cho số chia. Trong trường hợp $a\divby b$, ta nói: $a$ là bội của $b$ \& $b$ là ước của $a$. Ước chung (hoặc bội chung) của 2 hay nhiều số là ước (hoặc bội) của tất cả các số đó.'' -- \cite[p. 32]{Binh_Toan_6_tap_1}
 
 \subsubsection{Phép chia hết 2 số nguyên khác dấu}
 ``Để chia 2 số nguyên khác dấu, ta làm như sau:
