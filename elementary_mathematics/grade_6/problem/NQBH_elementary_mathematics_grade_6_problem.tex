@@ -38,6 +38,9 @@
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Problems in Elementary Mathematics\texttt{/}Grade 6}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -284,7 +287,7 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 \end{baitoan}
 
 \begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{42.}, p. 10]
-	Cho $A = \{x\in\mathbb{N}|30 < x < 50,\ x\ \vdots\ 5\}$, $B = \{x\in\mathbb{N}|30 < x < 50,\ x\ \vdots\ 2\}$.
+	Cho $A = \{x\in\mathbb{N}|30 < x < 50,\ x\divby 5\}$, $B = \{x\in\mathbb{N}|30 < x < 50,\ x\divby 2\}$.
 	\begin{enumerate*}
 		\item[(a)] Viết các tập hợp $A,B$ bằng cách liệt kê các phần tử.
 		\item[(c)] Tìm các tập con của $A$.
@@ -296,7 +299,7 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 \end{baitoan}
 
 \begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{45.}, p. 10]
-	Cho $A = \{x\in\mathbb{N}|20\le x < 40,\ x\ \vdots\ 3\}$, $B = \{x\in\mathbb{N}|30\le x\le 40,\ x\ \vdots\ 5\}$, $C = \{x\in\mathbb{N}|30\le x\le 40,\ x\ \vdots\ 4\}$. Viết các tập hợp $A,B,C$ bằng cách liệt kê.
+	Cho $A = \{x\in\mathbb{N}|20\le x < 40,\ x\divby 3\}$, $B = \{x\in\mathbb{N}|30\le x\le 40,\ x\divby 5\}$, $C = \{x\in\mathbb{N}|30\le x\le 40,\ x\divby 4\}$. Viết các tập hợp $A,B,C$ bằng cách liệt kê.
 \end{baitoan}
 \noindent\textsc{Kiến thức cần nhớ.}
 \begin{tcolorbox}
@@ -921,7 +924,7 @@ Các bài tập SGK \cite[\textbf{1}--\textbf{4}, pp. 7--8]{SGK_Toan_6_Canh_Dieu
 \begin{tcolorbox}
 	``Số có chữ số tận cùng là $0,2,4,6,8$ thì chia hết cho $2$. Số có tổng các chữ số chia hết cho $3$ thì chia hết cho $3$. Số có chữ số tận cùng là $0$ hoặc $5$ thì chia hết cho $5$. Số có tổng các chữ số chia hết cho $9$ thì chia hết cho $9$.
 	
-	Ký hiệu: $a\ \vdots\ b$ đọc là $a$ chia hết cho $b$; $a\not\vdots\ b$ đọc là $a$ không chia hết cho $b$. Các số chia hết cho $9$ thì luôn chia hết cho $3$ nhưng các số chia hết cho $3$ thì có thể không chia hết cho $9$.'' -- \cite[p. 30]{Trong_Toan_6_2021}
+	Ký hiệu: $a\divby b$ đọc là $a$ chia hết cho $b$; $a\not\divby b$ đọc là $a$ không chia hết cho $b$. Các số chia hết cho $9$ thì luôn chia hết cho $3$ nhưng các số chia hết cho $3$ thì có thể không chia hết cho $9$.'' -- \cite[p. 30]{Trong_Toan_6_2021}
 \end{tcolorbox}
 
 \begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{10.}, p. 31]
@@ -1219,18 +1222,18 @@ Khi $m = 1$, bài toán tổng quát này trở thành bài toán trước đó.
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 9, p. 16]
 	Chứng minh rằng:
 	\begin{enumerate*}
-		\item[(a)] $\overline{ab} + \overline{ba}\ \vdots\ 11$;
-		\item[(b)] $\overline{ab} - \overline{ba}\ \vdots\ 9$ với $a > b$.
+		\item[(a)] $\overline{ab} + \overline{ba}\divby 11$;
+		\item[(b)] $\overline{ab} - \overline{ba}\divby 9$ với $a > b$.
 	\end{enumerate*}
 \end{baitoan}
 Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của số nguyên ở Chương 2\texttt{/}Chap. 2.
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 10, p. 16]
-	Chứng minh rằng nếu $\overline{ab} + \overline{cd}\ \vdots\ 11$ thì $\overline{abcd}\ \vdots\ 11$.
+	Chứng minh rằng nếu $\overline{ab} + \overline{cd}\divby 11$ thì $\overline{abcd}\divby 11$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 11, p. 16]
-	Cho số $\overline{abc}\ \vdots\ 27$. Chứng minh rằng $\overline{bca}\ \vdots\ 27$.
+	Cho số $\overline{abc}\divby 27$. Chứng minh rằng $\overline{bca}\divby 27$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{57.}, p. 16]
@@ -1268,7 +1271,7 @@ Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{62.}, p. 17]
-	Chứng minh rằng nếu $\overline{ab} = 2\cdot\overline{cd}$ thì $\overline{abcd}\ \vdots\ 67$.
+	Chứng minh rằng nếu $\overline{ab} = 2\cdot\overline{cd}$ thì $\overline{abcd}\divby 67$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{63.}, p. 17]
@@ -1280,19 +1283,19 @@ Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{64.}, p. 17]
-	Chứng minh rằng nếu $\overline{ab} + \overline{cd} + \overline{ef}\ \vdots\ 11$ thì $\overline{abcdef}\ \vdots\ 11$.
+	Chứng minh rằng nếu $\overline{ab} + \overline{cd} + \overline{ef}\divby 11$ thì $\overline{abcdef}\divby 11$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{65.}, p. 17]
 	\begin{enumerate*}
-		\item[(a)] Cho $\overline{abc} + \overline{def}\ \vdots\ 37$. Chứng minh rằng $\overline{abcdef}\ \vdots\ 37$.
-		\item[(b)] Cho $\overline{abc} - \overline{def}\ \vdots\ 7$. Chứng minh rằng $\overline{abcdef}\ \vdots\ 7$.
+		\item[(a)] Cho $\overline{abc} + \overline{def}\divby 37$. Chứng minh rằng $\overline{abcdef}\divby 37$.
+		\item[(b)] Cho $\overline{abc} - \overline{def}\divby 7$. Chứng minh rằng $\overline{abcdef}\divby 7$.
 		\item[(c)] Cho 8 số tự nhiên có 3 chữ số. Chứng minh rằng trong 8 số đó, tồn tại 2 số mà khi viết liên tiếp nhau thì tạo thành 1 số có 6 chữ số chia hết cho 7.
 	\end{enumerate*}
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{66.}, p. 17]
-	Tìm chữ số $a$ biết rằng $\overline{20a20a20a}\ \vdots\ 7$.
+	Tìm chữ số $a$ biết rằng $\overline{20a20a20a}\divby 7$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{67.}, p. 17]
@@ -1310,18 +1313,18 @@ Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{70.}, p. 17]
 	Cho $n\in\mathbb{N}$. Chứng minh rằng:
 	\begin{enumerate*}
-		\item[(a)] $(n + 10)(n + 15)\ \vdots\ 2$;
+		\item[(a)] $(n + 10)(n + 15)\divby 2$;
 		\item[(b)] $n(n + 1)(n + 2)$ chia hết cho $2$ \& cho $3$;
 		\item[(c)] $n(n + 1)(2n + 1)$ chia hết cho $2$ \& cho $3$. 
 	\end{enumerate*}
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{71.}, p. 17]
-	Tìm $a,b\in\mathbb{N}$, sao cho $a\ \vdots\ b$ \& $b\ \vdots\ a$.
+	Tìm $a,b\in\mathbb{N}$, sao cho $a\divby b$ \& $b\divby a$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{72.}, p. 17]
-	1 học sinh viết các số tự nhiên từ $1$ đến $\overline{abc}$. Bạn đó phải viết tất cả $m$ chữ số. Biết rằng $m\ \vdots\ \overline{abc}$, tìm $\overline{abc}$.
+	1 học sinh viết các số tự nhiên từ $1$ đến $\overline{abc}$. Bạn đó phải viết tất cả $m$ chữ số. Biết rằng $m\divby \overline{abc}$, tìm $\overline{abc}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{73.}, p. 18]
@@ -1346,7 +1349,7 @@ Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 13, p. 18]
-	2 số tự nhiên $a$ \& $2a$ đều có tổng các chữ số bằng $k$. Chứng minh rằng $a\ \vdots\ 9$.
+	2 số tự nhiên $a$ \& $2a$ đều có tổng các chữ số bằng $k$. Chứng minh rằng $a\divby 9$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 14, p. 19]
@@ -1356,7 +1359,7 @@ Giả thiết $a > b$ sẽ không cần thiết khi học phép chia hết của
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 15, p. 19]
 	Cho số tự nhiên $\overline{ab}$ bằng 3 lần tích các chữ số của nó.
 	\begin{enumerate*}
-		\item[(a)] Chứng minh rằng $b\ \vdots\ a$.
+		\item[(a)] Chứng minh rằng $b\divby a$.
 		\item[(b)] Giả sử $b = ka$ ($k\in\mathbb{N}$), chứng minh rằng $k$ là ước của $10$.
 		\item[(c)] Tìm các số $\overline{ab}$ nói trên.
 	\end{enumerate*}
@@ -1384,11 +1387,11 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \end{align*}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{78.}, p. 21]
-	Cho $A = 11^9 + 11^8 + \cdots + 11 + 1 = \sum_{i=0}^9 11^i$. Chứng minh rằng $A\ \vdots\ 5$.
+	Cho $A = 11^9 + 11^8 + \cdots + 11 + 1 = \sum_{i=0}^9 11^i$. Chứng minh rằng $A\divby 5$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{79.}, p. 21]
-	Chứng minh rằng $\forall n\in\mathbb{N}$, $n^2 + n + 6\not\vdots\ 5$.
+	Chứng minh rằng $\forall n\in\mathbb{N}$, $n^2 + n + 6\not\divby 5$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{80.}, p. 21]
@@ -1411,15 +1414,15 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 	Điền các chữ số thích hợp vào dấu *, sao cho:
 	\begin{enumerate*}
 		\item[(a)] $\overline{521*}\ \vdots 8$;
-		\item[(b)] $\overline{2*8*7}\ \vdots\ 9$, biết rằng chữ số hàng chục lớn hơn chữ số hàng nghìn là $2$.
+		\item[(b)] $\overline{2*8*7}\divby 9$, biết rằng chữ số hàng chục lớn hơn chữ số hàng nghìn là $2$.
 	\end{enumerate*}
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{85.}, p. 21]
 	Tìm các chữ số $a,b$, sao cho:
 	\begin{enumerate*}
-		\item[(a)] $a - b =4$ \& $\overline{7a5b1}\ \vdots\ 3$.
-		\item[(b)] $a - b = 6$ \& $\overline{4a7} + \overline{1b5}\ \vdots\ 9$.
+		\item[(a)] $a - b =4$ \& $\overline{7a5b1}\divby 3$.
+		\item[(b)] $a - b = 6$ \& $\overline{4a7} + \overline{1b5}\divby 9$.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -1446,8 +1449,8 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{90.}, p. 21]
 	Chứng minh rằng:
 	\begin{enumerate*}
-		\item[(a)] $10^{28}\ \vdots\ 72$;
-		\item[(b)] $8^8 + 2^{20}\ \vdots\ 17$.
+		\item[(a)] $10^{28}\divby 72$;
+		\item[(b)] $8^8 + 2^{20}\divby 17$.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -1461,9 +1464,9 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{92.}, p. 22]
 	Chứng minh rằng:
 	\begin{enumerate*}
-		\item[(a)] $2n + \underbrace{1\ldots 1}_{n\mbox{ \footnotesize chữ số}}\ \vdots\ 3$;
-		\item[(b)] $10^n + 18n - 1\ \vdots\ 27$;
-		\item[(c)] $10^n + 72n - 1\ \vdots\ 81$.
+		\item[(a)] $2n + \underbrace{1\ldots 1}_{n\mbox{ \footnotesize chữ số}}\divby 3$;
+		\item[(b)] $10^n + 18n - 1\divby 27$;
+		\item[(c)] $10^n + 72n - 1\divby 81$.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -1476,7 +1479,7 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{94.}, p. 22]
-	2 số tự nhiên $a$ \& $4a$ có tổng các chữ số bằng nhau. Chứng minh rằng $a\ \vdots\ 3$.
+	2 số tự nhiên $a$ \& $4a$ có tổng các chữ số bằng nhau. Chứng minh rằng $a\divby 3$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 95^\star.$, p. 22]
@@ -1495,7 +1498,7 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 98^\star.$, p. 22]
-	Tìm số $\overline{abcd}$, biết rằng số đó chia hết cho tích các số $\overline{ab}$ \& $\overline{cd}$, i.e., $\overline{abcd}\ \vdots\ \overline{ab}\cdot\overline{cd}$.
+	Tìm số $\overline{abcd}$, biết rằng số đó chia hết cho tích các số $\overline{ab}$ \& $\overline{cd}$, i.e., $\overline{abcd}\divby \overline{ab}\cdot\overline{cd}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 99^\star.$, p. 22]
@@ -1581,7 +1584,7 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, $\bf 113^\star.$, p. 24]
-	Cho 3 số nguyên tố $> 3$, trong đó số sau lớn hơn số trước là $d$ đơn vị. Chứng minh rằng $d\ \vdots\ 6$.
+	Cho 3 số nguyên tố $> 3$, trong đó số sau lớn hơn số trước là $d$ đơn vị. Chứng minh rằng $d\divby 6$.
 \end{baitoan}
 
 \begin{dinhnghia}[2 số nguyên tố sinh đôi]
@@ -1593,7 +1596,7 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{115.}, p. 24]
-	Cho $p$ là số nguyên tố $> 3$. Biết $p + 2$ cũng là số nguyên tố. Chứng minh rằng $p + 1\ \vdots\ 6$.
+	Cho $p$ là số nguyên tố $> 3$. Biết $p + 2$ cũng là số nguyên tố. Chứng minh rằng $p + 1\divby 6$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{116.}, p. 25]
@@ -1697,9 +1700,9 @@ Công thức tính tổng $n$ số tự nhiên $\ne 0$ đầu tiên:
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{133.}, p. 27]
 	Tìm $n\in\mathbb{N}$, sao cho:
 	\begin{enumerate*}
-		\item[(a)] $n + 4\ \vdots\ n + 1$;
-		\item[(b)] $n^2 + 4\ \vdots\ n + 2$;
-		\item[(c)] $13n\ \vdots\ n - 1$.
+		\item[(a)] $n + 4\divby n + 1$;
+		\item[(b)] $n^2 + 4\divby n + 2$;
+		\item[(c)] $13n\divby n - 1$.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -2033,10 +2036,10 @@ Tổng quát hơn,
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{185.}, p. 36]
 	Tìm $n\in\mathbb{Z}$, sao cho:
 	\begin{enumerate*}
-		\item[(a)] $n + 5\ \vdots\ n - 2$;
-		\item[(b)] $2n + 1\ \vdots\ n - 5$;
-		\item[(c)] $n^2 + 3n - 13\ \vdots\ n + 3$;
-		\item[(d)] $n^2 + 3\ \vdots\ n - 1$.
+		\item[(a)] $n + 5\divby n - 2$;
+		\item[(b)] $2n + 1\divby n - 5$;
+		\item[(c)] $n^2 + 3n - 13\divby n + 3$;
+		\item[(d)] $n^2 + 3\divby n - 1$.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -2256,7 +2259,7 @@ Tổng quát, nếu 1 dãy cộng có số hạng đầu là $a_1$ \& hiệu gi�
 \end{baitoan}
 
 \begin{luuy}
-	``Số thừa số $a$ khi phân tích $n! = \prod_{i=1}^n i = 1\cdot 2\cdot 3\cdots n$ ra thừa số nguyên tố là: $\sum_{i=1}^k \lfloor\frac{n}{a^i}\rfloor = \lfloor\frac{n}{a}\rfloor + \lfloor\frac{n}{a^2}\rfloor + \cdots + \lfloor\frac{n}{a^k}\rfloor$ với $k$ là số mũ lớn nhất sao cho $a^k\le n$. Ký hiệu $\lfloor\frac{n}{m}\rfloor$ là số tự nhiên lớn nhất không vượt quá $\frac{n}{m}$ (nếu $n\ \vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương đúng, nếu $n\not\vdots\ m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương hụt, ta gọi $\lfloor\frac{n}{m}\rfloor$ là \emph{phần nguyên} của $\frac{n}{m}$).'' -- \cite[p. 46]{Binh_Toan_6_tap_1}
+	``Số thừa số $a$ khi phân tích $n! = \prod_{i=1}^n i = 1\cdot 2\cdot 3\cdots n$ ra thừa số nguyên tố là: $\sum_{i=1}^k \lfloor\frac{n}{a^i}\rfloor = \lfloor\frac{n}{a}\rfloor + \lfloor\frac{n}{a^2}\rfloor + \cdots + \lfloor\frac{n}{a^k}\rfloor$ với $k$ là số mũ lớn nhất sao cho $a^k\le n$. Ký hiệu $\lfloor\frac{n}{m}\rfloor$ là số tự nhiên lớn nhất không vượt quá $\frac{n}{m}$ (nếu $n\divby m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương đúng, nếu $n\not\divby m$ thì $\lfloor\frac{n}{m}\rfloor$ là thương hụt, ta gọi $\lfloor\frac{n}{m}\rfloor$ là \emph{phần nguyên} của $\frac{n}{m}$).'' -- \cite[p. 46]{Binh_Toan_6_tap_1}
 \end{luuy}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 41, p. 46]
