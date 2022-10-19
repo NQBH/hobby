@@ -35,9 +35,9 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small \nouppercase{\leftmark}}
-\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
@@ -48,7 +48,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao cho Hóa học sơ cấp lớp 10. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/NQBH_elementary_chemistry_grade_10.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/NQBH_elementary_chemistry_grade_10.pdf}.} của tác giả viết cho Toán lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/problem/NQBH_elementary_chemistry_grade_10_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 6\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/problem/NQBH_elementary_chemistry_grade_10_problem.pdf}.}.
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, for Elementary Chemistry grade 10. This text is also a supplementary material for my lecture note on Elementary Chemistry grade 10, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/NQBH_elementary_chemistry_grade_10.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 10\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/NQBH_elementary_chemistry_grade_10.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/problem/NQBH_elementary_chemistry_grade_10_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 10\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/problem/NQBH_elementary_chemistry_grade_10_problem.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao cho Hóa học sơ cấp lớp 10. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/NQBH_elementary_chemistry_grade_10.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 10\texttt{/}lecture} của tác giả viết cho Hóa Học lớp 10. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_10/problem/NQBH_elementary_chemistry_grade_10_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 10\texttt{/}problem}.
 \end{abstract}
 \tableofcontents
 \newpage
@@ -57,17 +60,163 @@
 
 \section{Cấu Tạo Nguyên Tử}
 
+\subsection{Xác định phân tử khối của hợp chất khi biết các hợp chất được tạo bởi các nguyên tố có các đồng vị khác nhau}
+
+\begin{luuy}
+	``Phân tử khối của 1 hợp chất có thể có nhiều giá trị khi các nguyên tố cấu tạo nên hợp chất có nhiều đồng vị. Cho nên khi xác định phân tử khối phải chú ý đến số khối của các đồng vị tạo nên phân tử.'' -- \cite[p. 5]{An2012}
+\end{luuy}
+
+\begin{baitoan}[\cite{An2012}, \textbf{1.}, p. 5]
+	\begin{enumerate*}
+		\item[(a)] Thế nào là đồng vị? Cho ví dụ minh họa.
+		\item[(b)] Có các đồng vị: \emph{\ce{_8^16O,_8^17O,_8^18O}} \& \emph{\ce{_1^1H,_1^2H}}. Hỏi có thể tạo ra bao nhiêu phân tử \emph{\ce{HOH}} có thành phần đồng vị khác nhau.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{2.}, p. 5]
+	Có cách đồng vị sau: \emph{\ce{_1^1H,_1^2H,_1^3H,_17^35Cl,_17^37Cl}}. Hỏi có thể tạo ra bao nhiêu phân tử hydro clorua có thành phần đồng vị khác nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{3.}, p. 5]
+	Oxi có $3$ đồng vị \emph{\ce{_8^16O,_8^17O,_8^18O}}, còn carbon có $2$ đồng vị bền là \emph{\ce{_6^12C,_6^13C}}. Hỏi có thể tạo thành bao nhiêu phân tử khí carbonic có thành phần đồng vị khác nhau. Tính phân tử khối của chúng.
+\end{baitoan}
+
+\subsection{Các dạng bài toán liên quan đến các hạt tạo thành 1 nguyên tử}
+``Tổng số các hạt $=$ số các hạt proton ($P$) $+$ số các hạt neutron ($N$) $+$ số các hạt electron ($E$); $P = E$ nên: tổng số các hạt $= 2P + N$. Sử dụng bất đẳng thức của số neutron (đối với đồng vị bền có $Z < 83$): $P\le N\le 1.5P$ để lập $2$ bất đẳng thức từ đó tìm giới hạn của $P$.'' -- \cite[p. 6]{An2012}
+
+\begin{baitoan}[\cite{An2012}, \textbf{4.}, p. 6]
+	Tổng số hạt proton, neutron, electron trong nguyên tử của 1 nguyên tố là $13$.
+	\begin{enumerate*}
+		\item[(a)] Xác định nguyên tử khối của nguyên tố đó.
+		\item[(b)] Viết cấu hình electron nguyên tử của nguyên tố đó.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{5.}, p. 6]
+	Tổng số hạt proton, neutron, \& electron trong 1 nguyên tử A là $16$, trong nguyên tử B là $58$. Tìm số proton, neutron, \& số khối của các nguyên tử A, B. Giả sử sự chênh lệch giữa số khối với nguyên tử khối trung bình là không quá 1 đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{6.}, p. 8]
+	\begin{enumerate*}
+		\item[(a)] Nguyên tử của 1 nguyên tố có cấu tạo bởi $115$ hạt. Hạt mang điện nhiều hơn hạt không mang điện là $25$ hạt. Tìm $A,N$ của nguyên tử \& viết cấu hình electron của nguyên tử đó.
+		\item[(b)] Nguyên tử của nguyên tố X được cấu tạo bởi $36$ hạt, hạt mang điện gấp đôi hạt không mang điện. Tìm $A,N$ của nguyên tử \& viết cấu hình electron của nguyên tử nguyên tố đó.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{7.}, p. 8, TS ĐH Y Dược TPHCM 1998]
+	\begin{enumerate*}
+		\item[(a)] Tổng số hạt proton, neutron, \& electron 1 nguyên tử là $155$. Số hạt có mang điện nhiều hơn số hạt không mang điện là $33$ hạt. Tìm số proton, neutron, \& số khối $A$ của nguyên tử.
+		\item[(b)] Tổng số hạt proton, neutron, \& electron của nguyên tử 1 nguyên tố là $21$.
+		\item[\textbf{1.}] Xác định tên nguyên tố đó.
+		\item[\textbf{2.}] Viết cấu hình electron nguyên tử của nguyên tố đó.
+		\item[\textbf{3.}] Tính tổng số obitan nguyên tử của nguyên tố đó.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{8.}, p. 9]
+	Có hợp chất \emph{\ce{MX3}}. Cho biết: Tổng số hạt proton, neutron, \& electron là $196$, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là $60$. Nguyên tử khối của $\rm X$ lớn hơn $\rm M$ là $8$. Tổng 3 loại hạt trên trong ion \emph{\ce{X^-}} nhiều hơn trong ion \emph{\ce{M^3+}} là $16$. Tìm $Z,A$ của nguyên tử $\rm M$ \& $\rm X$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{9.}, p. 10]
+	1 hợp chất có công thức phân tử \emph{\ce{M2X}}. Tổng số các hạt trong hợp chất là $116$, trong đó số hạt mang điện nhiều hơn số hạt không mang điện là $36$. Nguyên tử khối của $\rm X$ lớn hơn $\rm M$ là $9$. Tổng số $3$ loại hạt trong \emph{\ce{X^2-}} nhiều hơn trong \emph{\ce{M^+}} là $17$. Xác định số khối của $\rm M,X$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{10.}, p. 10]
+	Hợp chất N được tạo thành từ cation \emph{\ce{X^+}} \& cation \emph{\ce{Y^2-}}. Mỗi ion đều do $5$ nguyên tử của 2 nguyên tố tạo nên. Tổng số proton trong \emph{\ce{X^+}} là $11$, còn tổng số electron trong \emph{\ce{Y^2-}} là $50$. Xác định công thức phân tử \& gọi tên N, biết rằng $2$ nguyên tố trong \emph{\ce{Y^2-}} thuộc cùng 1 nhóm \& thuộc 2 chu kỳ liên tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{11.}, p. 11]
+	\begin{enumerate*}
+		\item[(a)] Cho hỗn hợp gồm 2 muối sunfat của kim loại A hóa trị II \& sunfat của kim loại B hóa trị III. Biết tổng số proton, neutron, \& electron của nguyên tử A là $36$, của nguyên tử B là $40$. Xác định tên nguyên tố A \& B.
+		\item[(b)] 3 nguyên tố X, Y, Z có tổng số điện tích hạt nhân bằng $16$, hiệu điện tích hạt nhân X \& Y là $1$, tổng số e trong ion \emph{\ce{[X3Y]^-}} là $32$. Tìm tên 3 nguyên tố $X,Y,Z$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2012}, \textbf{12.}, p. 12]
+	\begin{enumerate*}
+		\item[(a)] $56$\emph{g} sắt chứa bao nhiêu hạt proton, bao nhiêu hạt neutron, bao nhiêu hạt electorn? Biết rằng 1 nguyên tử sắt gồm $26$ proton, $30$ neutron, \& $26$ electron. Trong $1$\emph{kg} sắt có bao nhiêu gam electron? Bao nhiêu \emph{kg} sắt chứa $1$\emph{kg} electron?
+		\item[(b)] Người ta ký hiệu 1 nguyên tử đã mất $n$ electron là \emph{\ce{M^{n+}}}, đã nhận thêm $n$ electron là \emph{\ce{X^{n-}}}. Viết theo ô lượng tử, cấu hình electron của các ion sau: \emph{\ce{_11Na+,_13Al^{3+},_17Cl^-,_12Mg^{2+},_14Si^{4+},_8O^2}}.
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Các bài toán về độ rỗng của nguyên tử, của vật chất \& khối lượng riêng hạt nhân nguyên tử khi biết kích thước nguyên tử, hạt nhân \& số khối}
+``Khối lượng riêng của 1 chất: $D = \frac{\mbox{khối lượng}}{\mbox{thể tích}} = \frac{m}{V}$. Thể tích nguyên tử: $V = \frac{4}{3}\pi r^3$, $r$ là bán kính của nguyên tử. Liên hệ giữa $D$ \& $V$ có công thức $D = \frac{m}{\frac{4}{3}\pi r^3}$.'' -- \cite[p. 13]{An2012}
+
+\begin{baitoan}[\cite{An2012}, \textbf{13.}, p. 13]
+	\begin{enumerate*}
+		\item[(a)] Tính bán kính nguyên tử gần đúng của \emph{\ce{Fe}} ở $20^\circ$ biết ở nhiệt độ đó khối lượng rieeng của \emph{\ce{Fe}} là $7.87$\emph{g\texttt{/}$\rm c^3$} với giả thiết trong tinh thể các nguyên tử \emph{\ce{Fe}} là những hình cầu chiếm $75$\% thể tích tinh thể, phần còn lại là khe rỗng giữa các quả cầu. Cho nguyên tử khối của \emph{\ce{Fe}} là $55.85$.
+		\item[(b)] Tính bán kính nguyên tử gần đúng của \emph{\ce{Au}} ở $\rm 20^\circ C$. Biết ở nhiệt độ đó $D_{\ce{Au}} = 19.32$\emph{g\texttt{/}$\rm cm^3$}. Giả thiết trong tinh thể các nguyên tử \emph{\ce{Au}} là những hình cầu chiếm $75$\% thể tích tinh thể. Biết nguyên tử khối của vàng là $196.97$.
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\newpage
+\subsection{Dạng bài toán tìm số khối, \% đồng vị \& nguyên tử khối trung bình}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Dựa vào cấu hình electron xác định nguyên tố là phi kim hay kim loại}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Dạng bài toán về các số lượng tử của vỏ nguyên tử}
+
 %------------------------------------------------------------------------------%
 
 \section{Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+
+\subsection{Xác định vị trí các nguyên tố hóa học trong bảng tuần hoàn \& tính chất hóa học của chúng khi biết điện tích hạt nhân}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Xác định công thức, tính chất hóa học đơn chất \& hợp chất của 1 nguyên tố khi biết vị trí của nó trong bảng tuần hoàn}
 
 %------------------------------------------------------------------------------%
 
 \section{Liên Kết Hóa Học}
 
+\subsection{Viết công thức cấu tạo \& công thức cấu tạo phẳng của phân tử}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Xác định 1 số liên kết hình thành trong hợp chất}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Trạng thái lai hóa của các nguyên tử trung tâm trong các phân tử \& ion}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Ảnh hưởng của liên kết hóa học đến nhiệt độ nóng chảy \& độ tan}
+
 %------------------------------------------------------------------------------%
 
 \section{Phản Ứng Oxi Hóa -- Khử}
+
+\subsection{Xét chiều hướng phản ứng. Xác định chất oxi hóa -- chất khử}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phản ứng có chất hóa học là tổ hợp của 2 chất khử}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phản ứng oxi hóa--khử có hệ số bằng chữ}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phản ứng có nguyên tố tăng hay giảm số oxi hóa ở nhiều mức}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phản ứng không xác định rõ môi trường}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Xác định các chất tạo thành sau phản ứng hóa học}
 
 %------------------------------------------------------------------------------%
 
@@ -75,11 +224,69 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Tốc Độ Phản Ứng Học}
+\section{Nhóm Oxi}
+
+\subsection{Bổ túc chuỗi phản ứng \& cân bằng phản ứng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Nhận biết \& điều chế các chất}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Xác định nguyên tố oxi -- lưu huỳnh \& các hợp chất của chúng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Tính pH \& nồng độ dung dịch \ce{H2SO4}}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Tính hiệu suất phản ứng}
+
+%------------------------------------------------------------------------------%
+
+\section{Tốc Độ Phản Ứng Hóa Học}
+
+\subsection{Ảnh hưởng của nồng độ các chất tham gia đến tốc độ phản ứng. Tính thành phần các chất}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Ảnh hưởng của nhiệt độ, áp suất đến tốc độ phản ứng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Ảnh hưởng của nồng độ các chất đến sự chuyển dịch cân bằng. Tính nồng độ các chất. Tính hằng số cân bằng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Ảnh hưởng của nhiệt độ, áp suất đến sự chuyển dịch cân bằng}
 
 %------------------------------------------------------------------------------%
 
 \section{Nguyên Tố Nhóm VIIA -- Halogen}
+
+\subsection{Bổ túc \& cân bằng các phương trình phản ứng}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Nhận biết \& tách các chất ra khỏi hỗn hợp}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Xác định tên nguyên tố halogen \& công thức phân tử muối halogenua}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Xác định khối lượng \& nồng độ các hợp chất của halogen}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Tính pH \& nồng độ dung dịch acid clohydride}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Tính hiệu suất phản ứng}
 
 %------------------------------------------------------------------------------%
 
