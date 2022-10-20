@@ -1,4 +1,4 @@
-\documentclass[oneside]{book}
+\documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
 \addbibresource{/home/hong/1_NQBH/reference/bib.bib}
 \usepackage[utf8]{vietnam}
@@ -39,7 +39,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small \nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -50,20 +50,16 @@
 \date{\today}
 
 \begin{document}
-\frontmatter
 \maketitle
+\begin{abstract}
+	Tóm tắt kiến thức Hóa học lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
+\end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
 \newpage
 
 %------------------------------------------------------------------------------%
-
-\mainmatter
-
-\chapter*{Preface}
-
-Tóm tắt kiến thức Hóa học lớp 10 theo chương trình giáo dục của Việt Nam \& một số chủ đề nâng cao.
 
 \section*{Notation, Abbreviation, Convention}
 \begin{itemize}
@@ -86,21 +82,19 @@ Tóm tắt kiến thức Hóa học lớp 10 theo chương trình giáo dục c�
 
 %------------------------------------------------------------------------------%
 
-\section{Nhập Môn Hóa Học}
-\textbf{Nội dung.} \textit{Đối tượng nghiên cứu của hóa học, vai trò của hóa học đối với đời sống, sản xuất, $\ldots$, phương pháp học tập \& nghiên cứu hóa học}.
+\subsection{Nhập Môn Hóa Học}
+\textsf{\textbf{Nội dung.} Đối tượng nghiên cứu của hóa học, vai trò của hóa học đối với đời sống, sản xuất, $\ldots$, phương pháp học tập \& nghiên cứu hóa học.}
 
-\subsection{Đối tượng nghiên cứu của hóa học}
+\subsubsection{Đối tượng nghiên cứu của hóa học}
 
 \begin{dinhnghia}[Hóa học]
 	``\emph{Hóa học} là ngành khoa học thuộc lĩnh vực khoa học tự nhiên, nghiên cứu về thành phần, cấu trúc, tính chất, \& sự biến đổi của chất cũng như ứng dụng của chúng.'' -- \cite[p. 7]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{dinhnghia}
 ``Khi đốt nến (được làm bằng paraffin), nếu chảy ra ở dạng lỏng, thấm vào bấc, cháy trong không khí, sinh ra khí carbon dioxide \& hơi nước.'' -- \cite[p. 7]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Vai trò của hóa học trong đời sống \& sản xuất}
-``Hóa học có vai trò quan trọng trong đời sống, sản xuất \& nghiên cứu khoa học.'' -- \cite[p. 8]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\paragraph{Vai trò của hóa học trong đời sống \& sản xuất.} ``Hóa học có vai trò quan trọng trong đời sống, sản xuất \& nghiên cứu khoa học.'' -- \cite[p. 8]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Phương pháp học tập Hóa học}
-``Phương pháp học tập hóa học nhằm phát triển năng lực hóa học, bao gồm:
+\paragraph{Phương pháp học tập Hóa học.} ``Phương pháp học tập hóa học nhằm phát triển năng lực hóa học, bao gồm:
 \begin{enumerate*}
 	\item[\textbf{1.}] Phương pháp tìm hiểu lý thuyết;
 	\item[\textbf{2.}] Phương pháp học tập thông qua thực hành thí nghiệm;
@@ -108,8 +102,7 @@ Tóm tắt kiến thức Hóa học lớp 10 theo chương trình giáo dục c�
 	\item[\textbf{4.}] Phương pháp học tập trải nghiệm.'' -- \cite[p. 9]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{enumerate*}
 
-\subsubsection{Phương pháp nghiên cứu Hóa học}
-``Khi nghiên cứu 1 vấn đề hóa học, chúng ta cần có phương pháp nghiên cứu. Không có phương pháp nào là chung cho mọi nghiên cứu. Tùy vào mục đích \& đối tượng nghiên cứu mà chúng ta lựa chọn phương pháp cho phù hợp.
+\paragraph{Phương pháp nghiên cứu Hóa học.} ``Khi nghiên cứu 1 vấn đề hóa học, chúng ta cần có phương pháp nghiên cứu. Không có phương pháp nào là chung cho mọi nghiên cứu. Tùy vào mục đích \& đối tượng nghiên cứu mà chúng ta lựa chọn phương pháp cho phù hợp.
 \begin{enumerate}
 	\item \textbf{Phương pháp nghiên cứu lý thuyết} là sử dụng những định luật, nguyên lý, quy tắc, cơ chế, mô hình, $\ldots$ cũng như các kết quả nghiên cứu đã có để tiếp tục làm rõ những vấn đề của lý thuyết hóa học.
 	\item \textbf{Phương pháp nghiên cứu thực nghiệm} là nghiên cứu những vấn đề dựa trên kết quả thí nghiệm, khảo sát, thu thập số liệu, phân tích, định lượng, $\ldots$
@@ -138,41 +131,40 @@ Tóm tắt kiến thức Hóa học lớp 10 theo chương trình giáo dục c�
 
 %------------------------------------------------------------------------------%
 
-\chapter{Cấu Tạo Nguyên Tử}
+\section{Cấu Tạo Nguyên Tử}
 
-\section{Thành Phần của Nguyên Tử}
-\textbf{Nội dung.} \textit{Thành phần của nguyên tử, so sánh khối lượng của electron với proton \& neutron, kích thước của hạt nhân với kích thước nguyên tử}.
+\subsection{Thành Phần của Nguyên Tử}
+\textsf{\textbf{Nội dung.} Thành phần của nguyên tử, so sánh khối lượng của electron với proton \& neutron, kích thước của hạt nhân với kích thước nguyên tử.}
 
-\subsection{Thành phần cấu tạo nguyên tử}
+\subsubsection{Thành phần cấu tạo nguyên tử}
 ``Từ thời cổ Hy Lạp, nhà triết học Democritous (460--370 BC) cho rằng mọi vật chất được tạo thành từ các phần tử rất nhỏ được gọi là ``atomos'', i.e., không thể phá hủy \& không thể chia nhỏ hơn được nữa. Đến giữa thế kỷ XIX, các nhà khoa học cho rằng: các chất đều được cấu tạo nên từ những hạt rất nhỏ, không thể phân chia được nữa, gọi là \textit{nguyên tử}. Vào cuối thế kỷ XIX, đầu thế kỷ XX, bằng những nghiên cứu thực nghiệm, các nhà khoa học đã chứng minh sự tồn tại của nguyên tử \& nguyên tử có cấu tạo phức tạp.'' -- \cite[p. 13]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{mo_hinh_nguyen_tu}
 	\caption{Mô hình nguyên tử, \cite[Hình 2.1, p. 13]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
 \end{figure}
 ``Nguyên tử gồm hạt nhân chứa proton, neutron \& vỏ nguyên tử chứa electron.'' -- \cite[p. 14]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Sự tìm ra Electron}
-``Năm 1897, nhà vật lý người Anh Joseph John Thomson (1856--1940) thực hiện thí nghiệm phóng điện trong 1 ống thủy tinh gần như chân không (gọi là \textit{ống tia âm cực}). Ông quan sát thấy màn huỳnh quang trong ống phát sáng do những tia phat phát ra từ cực âm (gọi là \textit{tia cực âm}) \& những tia này bị hút về cực dương của trường điện  (\cite[Hình 2.2: \textsf{Thí nghiệm của Thomson}, p. 13]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}), chứng tỏ chúng tích điện âm. Đó chính là chùm các hạt \textit{electron}.'' ``Trong nguyên tử tồn tại 1 loại hạt có khối lượng \& mang điện tích âm, được gọi là \textit{electron} (ký hiệu là $e$). Hạt electron có: Điện tích: $q_{\rm e} = -1.602\cdot 10^{-19}$ C (Coulomb)\footnote{See, e.g., \cite{SGK_Vat_Ly_11_co_ban, SGK_Vat_Ly_11_nang_cao}.}. Khối lượng: $m_{\rm e} = 9.11\cdot 10^{-28}$ g. Người ta chưa phát hiện được điện tích nào nhỏ hơn $1.602\cdot 10^{-19}$ C nên nó được dùng làm điện tích đơn vị, điện tích của electron được quy ước là $-1$.'' -- \cite[p. 14]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\subsubsection{Sự tìm ra Electron}
+``Năm 1897, nhà vật lý người Anh Joseph John Thomson (1856--1940) thực hiện thí nghiệm phóng điện trong 1 ống thủy tinh gần như chân không (gọi là \textit{ống tia âm cực}). Ông quan sát thấy màn huỳnh quang trong ống phát sáng do những tia phat phát ra từ cực âm (gọi là \textit{tia cực âm}) \& những tia này bị hút về cực dương của trường điện  (\cite[Hình 2.2: \textsf{Thí nghiệm của Thomson}, p. 13]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}), chứng tỏ chúng tích điện âm. Đó chính là chùm các hạt \textit{electron}.'' ``Trong nguyên tử tồn tại 1 loại hạt có khối lượng \& mang điện tích âm, được gọi là \textit{electron} (ký hiệu là $\rm e$). Hạt electron có: Điện tích: $q_{\rm e} = -1.602\cdot 10^{-19}$ C (Coulomb)\footnote{See, e.g., \cite{SGK_Vat_Ly_11_co_ban, SGK_Vat_Ly_11_nang_cao}.}. Khối lượng: $m_{\rm e} = 9.11\cdot 10^{-28}$ g. Người ta chưa phát hiện được điện tích nào nhỏ hơn $1.602\cdot 10^{-19}$ C nên nó được dùng làm điện tích đơn vị, điện tích của electron được quy ước là $-1$.'' -- \cite[p. 14]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsubsection{Thí nghiệm giọt dầu của Millikan}
-``Năm 1909, nhà vật lý thực nghiệm người Mỹ là R. A. Millikan đã tiến hành phun các giọt dầu vào 1 hộp trong suốt. Bên trong hộp chứa 2 tấm kim loại được nối vào nguồn điện 1 chiều với 1 đầu tích điện âm ($-$) \& 1 đầu tích điện dương ($+$). Trong hộp còn có thiết bị phát ra 1 chùm tia R\"ontgen (tia X) để ion hóa các giọt dầu (cấp cho nó 1 điện tích). Tia X có khả năng đánh bật các electron khỏi không khí giữa các tấm kim loại \& các electron sẽ bám vào các giọt dầu, làm chúng tích điện âm. Bằng cách thay đổi cường độ trường điện, Millikan có thể kiểm soát tốc độ rơi của các giọt dầu. Chuyển động của các giọt dầu trong thiết bị phụ thuộc vào điện tích của mỗi giọt \& vào trường điện. Millikan đã quan sát các giọt dầu bằng kính thiên văn. Millikan có thể làm cho các giọt dầu rơi chậm hơn, nhanh hơn, hoặc khiến chúng dừng lại khi thay đổi cường độ của trường điện. Từ những quan sát của mình, ông đã tính được điện tích \& khối lượng của electron.'' -- \cite[p. 15]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao} (xem mô hình \textsf{Thí nghiệm giọt dầu của Millikan}).
+\paragraph{Thí nghiệm giọt dầu của Millikan.} ``Năm 1909, nhà vật lý thực nghiệm người Mỹ là R. A. Millikan đã tiến hành phun các giọt dầu vào 1 hộp trong suốt. Bên trong hộp chứa 2 tấm kim loại được nối vào nguồn điện 1 chiều với 1 đầu tích điện âm ($-$) \& 1 đầu tích điện dương ($+$). Trong hộp còn có thiết bị phát ra 1 chùm tia R\"ontgen (tia X) để ion hóa các giọt dầu (cấp cho nó 1 điện tích). Tia X có khả năng đánh bật các electron khỏi không khí giữa các tấm kim loại \& các electron sẽ bám vào các giọt dầu, làm chúng tích điện âm. Bằng cách thay đổi cường độ trường điện, Millikan có thể kiểm soát tốc độ rơi của các giọt dầu. Chuyển động của các giọt dầu trong thiết bị phụ thuộc vào điện tích của mỗi giọt \& vào trường điện. Millikan đã quan sát các giọt dầu bằng kính thiên văn. Millikan có thể làm cho các giọt dầu rơi chậm hơn, nhanh hơn, hoặc khiến chúng dừng lại khi thay đổi cường độ của trường điện. Từ những quan sát của mình, ông đã tính được điện tích \& khối lượng của electron.'' -- \cite[p. 15]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao} (xem mô hình \textsf{Thí nghiệm giọt dầu của Millikan}).
 
-\subsection{Sự khám phá hạt nhân nguyên tử}
+\subsubsection{Sự khám phá hạt nhân nguyên tử}
 ``Năm 1911, nhà vật lý người New Zealand là Ernest Rutherford (1871--1937) đã tiến hành bắn phá 1 chùm hạt alpha (ký hiệu là $\alpha$, hạt nhân của nguyên tử helium, mang điện tích $+2$, có khối lượng gấp khoảng $7500$ lần khối lượng electron) lên 1 lá vàng siêu mỏng (\cite[Hình 2.3: \textsf{Thí nghiệm khám phá hạt nhân nguyên tử của Rutherford}, p. 16]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}) \& quan sát đường đi của chúng sau khi bắn phá bằng màn huỳnh quang (zinc sulfide, ZnS).'' -- \cite[p. 15]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Nguyên tử có cấu tạo rỗng, gồm hạt nhân ở trung tâm \& lớp vỏ là các electron chuyển động xung quanh hạt nhân. Nguyên tử trung hòa về điện: \textit{số đơn vị điện tích dương của hạt nhân bằng số đơn vị điện tích âm của các electron trong nguyên tử}.'' -- \cite[p. 16]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Cấu tạo hạt nhân nguyên tử}
+\subsubsection{Cấu tạo hạt nhân nguyên tử}
 ``Vào năm 1918, khi bắn phá hạt nhân nguyên tử nitrogen bằng các hạt $\alpha$ (thực hiện trong máy gia tốc hạt), Rutherford đã nhận thấy sự xuất hiện hạt nhân nguyên tử oxygen \& 1 loại hạt mang 1 đơn vị điện tích dương (${\rm e}_0$ hay $+1$), đó là \textit{proton} (ký hiệu là p). Năm 1932, khi dùng các hạt $\alpha$ để bắn phá hạt nhân nguyên tử beryllium, J. Chadwick nhận thấy sự xuất hiện của 1 loại hạt có khối lượng xấp xỉ hạt proton, nhưng không mang điện, ông gọi chúng là \textit{neutron} (ký hiệu là n).'' -- \cite[pp. 16--17]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}. ``Hạt nhân nguyên tử gồm 2 loại hạt là proton \& neutron. Proton mang điện tích dương ($+1$) \& neutron không mang điện. Proton \& neutron có khối lượng gần bằng nhau.'' -- \cite[p. 17]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Kích thước \& khối lượng nguyên tử}
+\subsubsection{Kích thước \& khối lượng nguyên tử}
 ``Nếu hình dung hạt nhân là 1 khối cầu có kích thước như viên bi thì nguyên tử sẽ là 1 khối cầu có kích thước bằng 1 sân bóng đá.'' -- \cite[p. 17]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}. ``Đơn vị nanomet (nm) hay angstrom ($\mathring{\rm A}$) thường được sử dụng để biểu thị kích thước nguyên tử. $\rm 1\ nm = 10^{-9}\ m$, $\rm 1\ \mathring{\rm A} = 10^{-10}\ m$, $\rm 1\ nm = 10\ \mathring{\rm A}$.'' ``Nếu xem nguyên tử như 1 quả cầu, trong đó các electron chuyển động rất nhanh xung quanh hạt nhân thì nguyên tử đó có đường kính khoảng $10^{-10}$ m \& đường kính hạt nhân khoảng $10^{-14}$ m. Như vậy, đường kính của nguyên tử lớn hơn đường kính của hạt nhân khoảng $10^4$ lần.'' -- \cite[p. 18]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Những hiểu biết của nhân loại về vũ trụ \& thế giới xung quanh ngày càng phát triển. Người Hy Lạp cổ đại lần đầu tiên đoán được sự tồn tại của các hạt gọi là \textit{nguyên tử}. Khoảng 1500 năm sau, người ta đã chứng minh được sự tồn tại của nguyên tử \& xem chúng là những hạt nhỏ nhất, tạo nên vật chất. Sau đó không lâu, người ta phát hiện ra nguyên tử được tạo thành từ 3 loại hạt cơ bản là proton, neutron, \& electron. Tuy nhiên, các hạt này vẫn chưa phải những hạt nhỏ nhất trong vũ trụ. Ngày nay các công trình nghiên cứu cho thấy proton \& neutron được tạo thành bởi các hạt nhỏ hơn, gọi là \textit{hạt quark}.'' -- \cite[p. 18]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\begin{table}[H]
+\begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
@@ -193,15 +185,15 @@ Tóm tắt kiến thức Hóa học lớp 10 theo chương trình giáo dục c�
 
 %------------------------------------------------------------------------------%
 
-\section{Nguyên Tố Hóa Học}
-\textbf{Nội dung.} \textit{Nguyên tố hóa học, số hiệu nguyên tử \& ký hiệu nguyên tử, đồng vị, nguyên tử khối, nguyên tử khối trung bình (theo amu) dựa vào khối lượng nguyên tử \& \% số nguyên tử của các đồng vị theo phổ khối lượng được cung cấp}.
+\subsection{Nguyên Tố Hóa Học}
+\textsf{\textbf{Nội dung.} Nguyên tố hóa học, số hiệu nguyên tử \& ký hiệu nguyên tử, đồng vị, nguyên tử khối, nguyên tử khối trung bình (theo amu) dựa vào khối lượng nguyên tử \& \% số nguyên tử của các đồng vị theo phổ khối lượng được cung cấp.}
 
-\subsection{Hạt nhân nguyên tử}
-``Số đơn vị điện tích hạt nhân (Z) $=$ số proton (P) $=$ số electron (E). Điện tích hạt nhân $=$ $+$Z.'' -- \cite[p. 20]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\subsubsection{Hạt nhân nguyên tử}
+``Số đơn vị điện tích hạt nhân (Z) $=$ số proton (P) $=$ số electron (E). Điện tích hạt nhân $= +$Z.'' -- \cite[p. 20]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Số khối (A) $=$ số proton (P) + số neutron (N).'' -- \cite[p. 21]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Nguyên tố hóa học}
+\subsubsection{Nguyên tố hóa học}
 ``\textit{Số hiệu nguyên tử} của 1 nguyên tố được quy ước bằng số đơn vị điện tích hạt nhân nguyên tử của nguyên tố đó. Số hiệu nguyên tử (ký hiệu là Z) cho biết: số proton trong hạt nhân nguyên tử, số electron trong nguyên tử.  
 
 \begin{dinhnghia}[Số hiệu nguyên tử]
@@ -214,14 +206,14 @@ Năm 1913, nhà vật lý người Anh là H. Moseley đã thực hiện thí ng
 \begin{dinhnghia}[Nguyên tố hóa học]
 	\emph{Nguyên tố hóa học} là tập hợp những nguyên tử có cùng điện tích hạt nhân.
 \end{dinhnghia}
-\textit{Số đơn vị điện tích hạt nhân nguyên tử} (còn được gọi là \textit{số hiệu nguyên tử}) của 1 nguyên tố hóa học \& số khối được xem là những đặc trưng cơ bản của nguyên tử. Để ký hiệu nguyên tử, người ta thường ghi các chỉ số đặc trưng ở bên trái ký hiệu nguyên tố với số khối A ở trên, số hiệu Z ở phía dưới. Ký hiệu nguyên tử được sử dụng để biểu thị nguyên tử của 1 nguyên tố hóa học. $\rm{}_Z^AX$ (A: số khối, Z: số hiệu nguyên tử, X: ký hiệu nguyên tố hóa học)'' -- \cite[p. 22]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+\textit{Số đơn vị điện tích hạt nhân nguyên tử} (còn được gọi là \textit{số hiệu nguyên tử}) của 1 nguyên tố hóa học \& số khối được xem là những đặc trưng cơ bản của nguyên tử. Để ký hiệu nguyên tử, người ta thường ghi các chỉ số đặc trưng ở bên trái ký hiệu nguyên tố với số khối A ở trên, số hiệu Z ở phía dưới. Ký hiệu nguyên tử được sử dụng để biểu thị nguyên tử của 1 nguyên tố hóa học. $\rm{}_Z^AX$ (A: số khối, Z: số hiệu nguyên tử, X: ký hiệu nguyên tố hóa học).'' -- \cite[p. 22]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Đồng vị}
+\subsubsection{Đồng vị}
 ``Các nguyên tử của cùng 1 nguyên tố hóa học có thể có số khối khác nhau. Sở dĩ như vậy vì hạt nhân của các nguyên tử đó có cùng số proton, nhưng có thể khác số neutron. Những nguyên tử này được gọi là \textit{đồng vị} của 1 nguyên tố hóa học. Trong tự nhiên, hầu hết các nguyên tố được tìm thấy dưới dạng hỗn hợp của các đồng vị. 1 nguyên tố hóa học dù ở dạng đơn chất hay hợp chất thì tỷ lệ giữa các đồng vị của nguyên tố này là không đổi. E.g., các quả chuối đều chứa nguyên tố potassium (K) trong thành phần dinh dưỡng của chúng. Chúng có thể khác nhau về kích thước, hình dáng, mùi vị cũng như được thu hoạch ở những vị trí địa lý khác nhau nhưng đều chứa $93.26$\% số nguyên tử $\rm{}_{19}^{39}K$, $6.73$\% số nguyên tử $\rm{}_{19}^{41}K$, \& $0.01$\% số nguyên tử $\rm{}_{19}^{40}K$ trong tổng số nguyên tử potassium có trong chúng. Ngoài những đồng vị bền, các nguyên tố hóa học còn có 1 số đồng bị không bền, gọi là \textit{đồng vị phóng xạ}, được sử dụng nhiều trong đời sống, y học, nghiên cứu khoa học, $\ldots$'' -- \cite[pp. 22--23]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Kim cương là 1 trong những dạng tồn tại của nguyên tố carbon trong tự nhiên. Nguyên tố này có 2 đồng bị bền với số khối lần lượt là 12 \& 13.'' ``Các đồng vị của 1 nguyên tố hóa học là những nguyên tử có cùng số proton (P), cùng số hiệu nguyên tử (Z), nhưng khác nhau về số neutron (N). Do đó, số khối (A) của chúng khác nhau.'' -- \cite[p. 23]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Nguyên tử khối \& nguyên tử khối trung bình}
+\subsubsection{Nguyên tử khối \& nguyên tử khối trung bình}
 
 \begin{dinhnghia}[Nguyên tử khối]
 	\emph{Nguyên tử khối} là khối lượng tương đối của nguyên tử.
@@ -248,10 +240,10 @@ Trong thể dục thể thao, có 1 số vận động viên sử dụng các lo
 
 %------------------------------------------------------------------------------%
 
-\section{Cấu Trúc Lớp Vỏ Electron của Nguyên Tử}
-\textbf{Nội dung.} \textit{So sánh mô hình của Rutherford--Bohr với mô hình hiện đại mô tả sự chuyển động của electron trong nguyên tử; orbital nguyên tử (AO), mô tả được hình dạng của AO (s, p), số lượng electron trong 1 AO; lớp, phân lớp electron \& mối quan hệ về số lượng phân lớp trong 1 lớp, số lượng AO trong 1 phân lớp; cấu hình electron nguyên tử theo lớp, phân lớp electron \& theo ô orbital khi biết số hiệu nguyên tử $\rm Z$, tính chất hóa học cơ bản (kim loại hay phi kim) của nguyên tố tương ứng}.
+\subsection{Cấu Trúc Lớp Vỏ Electron của Nguyên Tử}
+\textsf{\textbf{Nội dung.} So sánh mô hình của Rutherford--Bohr với mô hình hiện đại mô tả sự chuyển động của electron trong nguyên tử; orbital nguyên tử (AO), mô tả được hình dạng của AO (s, p), số lượng electron trong 1 AO; lớp, phân lớp electron \& mối quan hệ về số lượng phân lớp trong 1 lớp, số lượng AO trong 1 phân lớp; cấu hình electron nguyên tử theo lớp, phân lớp electron \& theo ô orbital khi biết số hiệu nguyên tử $\rm Z$, tính chất hóa học cơ bản (kim loại hay phi kim) của nguyên tố tương ứng.}
 
-\subsection{Sự chuyển động của electron trong nguyên tử}
+\subsubsection{Sự chuyển động của electron trong nguyên tử}
 ``Theo mô hình nguyên tử của Rutherford--Bohr, các electron chuyển động trên những quỹ đạo hình tròn hay bầu dục xác định xung quanh hạt nhân. Theo mô hình hiện đại, trong nguyên tử, các electron chuyển động rất nhanh xung quanh hạt nhân không theo 1 quỹ đạo xác định, tạo thành đám mây electron.'' -- \cite[p. 27]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Các electron chuyển động rất nhanh xung quanh hạt nhân với xác suất tìm thấy không giống nhau, tạo thành đám mây electron. Khu vực không gian xung quanh hạt nhân mà tại đó xác suất có mặt (xác suất tìm thấy) electron $\approx90\%$ gọi là \textit{orbital\footnote{\textbf{orbital} [a] [only before noun] connected with the movement in a regular pattern of 1 object around another; [n] (\textit{chemistry, physics}) a region around an atom or molecule in which an electron of a given energy \& momentum can be found.} nguyên tử}.'' ``Dựa trên sự khác nhau về hình dạng \& sự định hướng trong không gian của các orbital, người ta phân loại thành orbital s, orbital p, orbital d, \& orbital f.'' -- \cite[p. 27]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
@@ -261,14 +253,14 @@ Trong thể dục thể thao, có 1 số vận động viên sử dụng các lo
 \end{dinhnghia}
 ``1 số AO thường gặp: s, p, d, f. Các AO có hình dạng khác nhau: AO s có dạng hình cầu, AO p có dạng hình số 8 nổi, AO d \& f có hình dạng phức tạp.'' -- \cite[p. 28]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Lớp \& phân lớp electron}
+\subsubsection{Lớp \& phân lớp electron}
 ``Trong nguyên tử, các electron được sắp xếp thành từng lớp \& phân lớp theo năng lượng từ thấp đến cao.'' ``Trong nguyên tử, các electron được sắp xếp thành từng lớp (ký hiệu K, L, M, N, O, P, Q) từ gần đến xa hạt nhân, theo thứ tự từ lớp $n = 1$ đến $n = 7$. Các electron trên cùng 1 lớp có năng lượng gần bằng nhau.'' -- \cite[p. 28]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Trong 1 phân lớp, các orbital có cùng mức năng lượng, chỉ khác nhau về sự định hướng trong không gian. Số lượng \& hình dạng orbital phụ thuộc vào đặc điểm của mỗi phân lớp electron.'' ``Mỗi lớp electron phân chia thành các phân lớp, được ký hiệu bằng các chữ cái viết thường: s, p, d, f. Các electron thuộc các phân lớp s, p, d, \& f lần lượt có các số AO tương ứng 1, 3, 5, \& 7. Các electron trên cùng 1 phân lớp có năng lượng bằng nhau.'' -- \cite[p. 28]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-``Trong 1 phân lớp, các orbital có cùng mức năng lượng, chỉ khác nhau về sự định hướng trong không gian. Số lượng \& hình dạng orbital phụ thuộc vào đặc điểm của mỗi phân lớp electron.'' ``Mỗi lớp electron phân chia thành các phaa lớp, được ký hiệu bằng các chữ cái viết thường: s, p, d, f. Các electron thuộc các phân lớp s, p, d, \& f được gọi tương ứng là các electron s, p, d, \& f. Các phân lớp s, p, d, \& f lần lượt có các số AO tương ứng 1, 3, 5, \& 7. Các electron trên cùng 1 phân lớp có năng lượng bằng nhau. Với 4 lớp đầu (1, 2, 3, 4) số phân lớp trong mỗi lớp bằng số thứ tự của lớp đó.'' -- \cite[p. 28]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
+``Trong 1 phân lớp, các orbital có cùng mức năng lượng, chỉ khác nhau về sự định hướng trong không gian. Số lượng \& hình dạng orbital phụ thuộc vào đặc điểm của mỗi phân lớp electron.'' ``Mỗi lớp electron phân chia thành các phân lớp, được ký hiệu bằng các chữ cái viết thường: s, p, d, f. Các electron thuộc các phân lớp s, p, d, \& f được gọi tương ứng là các electron s, p, d, \& f. Các phân lớp s, p, d, \& f lần lượt có các số AO tương ứng 1, 3, 5, \& 7. Các electron trên cùng 1 phân lớp có năng lượng bằng nhau. Với 4 lớp đầu (1, 2, 3, 4) số phân lớp trong mỗi lớp bằng số thứ tự của lớp đó.'' -- \cite[p. 28]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Cấu hình electron nguyên tử}
+\subsubsection{Cấu hình electron nguyên tử}
 ``Trong nguyên tử, các electron trên mỗi orbital có 1 mức năng lượng xác định. Người ta gọi mức năng lượng này là \textit{mức năng lượng orbital nguyên tử} (\textit{mức năng lượng AO}). Các electron trên các orbital khác nhau của cùng 1 phân lớp có năng lượng như nhau. E.g., phân lớp 2p có 3 orbital $\rm 2p_x,2p_y,2p_z$; các electron của các orbital p trong phân lớp này tuy có sự định hướng trong không gian khác nhau nhưng chúng có cùng mức năng lượng AO.'' -- \cite[p. 29]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 \begin{nguyenly}[Nguyên lý vững bền]
@@ -281,7 +273,7 @@ Trong thể dục thể thao, có 1 số vận động viên sử dụng các lo
 \end{nguyenly}
 ``Dựa vào nguyên lý Pauli, ta dễ dàng xác định được số AO \& số electron tối đa trong mỗi phân lớp \& trong mỗi lớp theo Bảng \ref{tab:so AO & so electron toi da cua cac lop n = 1 den n = 4}.'' -- \cite[p. 30]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\begin{table}[H]
+\begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|l|l|p{4cm}|p{3.5cm}|}
 		\hline
@@ -306,7 +298,7 @@ Trong thể dục thể thao, có 1 số vận động viên sử dụng các lo
 \end{proof}
 ``Các phân lớp: $\rm s^2,p^6,d^{10},f^{14}$ chứa đủ số electron tối đa gọi là \textit{phân lớp bão hòa}. Các phân lớp $\rm s^1,p^3,d^5,f^7$ chứa 1 nửa số electron tối đa gọi là \textit{phân lớp nửa bão hòa}. Các phân lớp chưa đủ số electron tối đa gọi là \textit{phân lớp chưa bão hòa}.'' -- \cite[p. 31]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{su_phan_bo_electron_vao_cac_AO_trong_phan_lop_p}
 	\caption{Sự phân bố electron vào các AO trong phân lớp p, \cite[Hình 4.10, p. 31]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
@@ -317,17 +309,17 @@ Trong thể dục thể thao, có 1 số vận động viên sử dụng các lo
 \end{quytac}
 ``\textit{Cấu hình electron nguyên tử} biểu diễn sự phân bố electron trong vỏ nguyên tử trên các phân lớp thuộc các lớp khác nhau. Quy ước cách biểu diễn sự phân bố electron trên các phân lớp  thuộc các lớp như sau:
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{quy_uoc_cach_bieu_dien_su_phan_bo_electron_tren_cac_phan_lop_thuoc_cac_lop}
 	\caption{Quy ước cách biểu diễn sự phân bố electron trên các phân lớp thuộc các lớp, \cite[p. 32]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
 \end{figure}
 Cách viết cấu hình electron:
-\begin{enumerate}
-	\item Xác định số electron của nguyên tử.
-	\item Các electron được phân bố theo thứ tự các AO có mức năng lượng tăng dần, theo các nguyên tắc \& quy tắc phân bố electron trong nguyên tử.
-	\item Viết cấu hình electron theo thứ tự các phân lớp trong 1 lớp \& theo thứ tự của các lớp electron.''
-\end{enumerate}
+\begin{enumerate*}
+	\item[\textbf{1.}] Xác định số electron của nguyên tử.
+	\item[\textbf{2.}] Các electron được phân bố theo thứ tự các AO có mức năng lượng tăng dần, theo các nguyên tắc \& quy tắc phân bố electron trong nguyên tử.
+	\item[\textbf{3.}] Viết cấu hình electron theo thứ tự các phân lớp trong 1 lớp \& theo thứ tự của các lớp electron.''
+\end{enumerate*}
 
 \begin{vidu}
 	Ca ($\rm Z = 20$): Thứ tự mức năng lượng orbital: $\rm 1s^22s^22p^63s^23p^64s^2$. cấu hình electron: $\rm 1s^22s^22p^63s^23p^64s^2$ hoặc viết gọn là: $\rm[Ar]4s^2$, $\rm[Ar]$ là ký hiệu cấu hình electron nguyên tử của nguyên tố argon, là khí hiếm gần nhất đứng trước Ca. Cấu hình electron theo ô orbital: $\boxed{\uparrow\downarrow}\ \boxed{\uparrow\downarrow}\ \boxed{\uparrow\downarrow}\boxed{\uparrow\downarrow}\boxed{\uparrow\downarrow}\ \boxed{\uparrow\downarrow}\ \boxed{\uparrow\downarrow}\boxed{\uparrow\downarrow}\boxed{\uparrow\downarrow}\boxed{\uparrow\downarrow}$.'' -- \cite[p. 32]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
@@ -353,14 +345,14 @@ Xem \cite[Bảng 4.2: \textsf{Cấu hình electron nguyên tử của 1 số ngu
 
 %------------------------------------------------------------------------------%
 
-\chapter{Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+\section{Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
 
-\section{Cấu Tạo Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
-\textbf{Nội dung.} \textit{Lịch sử phát minh định luật tuần hoàn \& bảng tuần hoàn các nguyên tố hóa học, cấu tạo của bảng tuần hoàn các nguyên tố hóa học \& nêu được các khái niệm liên quan (ô, chu kỳ, nhóm), nguyên tắc sắp xếp của bảng tuần hoàn các nguyên tố hóa học (dựa theo cấu hình electron), phân loại nguyên tố (dựa theo cấu hình electron: nguyên tố s, p, d, f; dựa theo tính chất hóa học: kim loại, phi kim, khí hiếm).}
+\subsection{Cấu Tạo Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+\textsf{\textbf{Nội dung.} Lịch sử phát minh định luật tuần hoàn \& bảng tuần hoàn các nguyên tố hóa học, cấu tạo của bảng tuần hoàn các nguyên tố hóa học \& nêu được các khái niệm liên quan (ô, chu kỳ, nhóm), nguyên tắc sắp xếp của bảng tuần hoàn các nguyên tố hóa học (dựa theo cấu hình electron), phân loại nguyên tố (dựa theo cấu hình electron: nguyên tố s, p, d, f; dựa theo tính chất hóa học: kim loại, phi kim, khí hiếm).}
 
 ``Cách đây hàng nghìn năm, người ta chỉ biết đến 1 số nguyên tố như đồng (copper), bạc (silver), \& vàng (gold). Mãi đến năm 1700, cũng chỉ mới có 13 nguyên tố được xác định. Khi đó, các nhà hóa học nghi ngờ rằng vẫn còn nhiều nguyên tố bí ẩn khác chưa được khám phá. Bằng việc sử dụng các phương pháp khoa học hiện đại, chỉ trong 1 thập kỷ (1765--1775) đã có thêm 5 nguyên tố hóa học được xác định. Trong đó, có 3 khí không màu là hydrogen, nitrogen, \& oxygen. Tính đến năm 2016, tổng cộng đã có 118 nguyên tố hóa học được xác định trên bảng tuần hoàn các nguyên tố hóa học.'' -- \cite[p. 33]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Lịch sử phát minh định luật tuần hoàn \& bảng tuần hoàn các nguyên tố hóa học}
+\subsubsection{Lịch sử phát minh định luật tuần hoàn \& bảng tuần hoàn các nguyên tố hóa học}
 ``Năm 1869, nhà hóa học \& giáo viên người Nga, Dmitri Ivanovich Mendeleev đã công bố 1 \textit{Bảng tuần hoàn các nguyên tố hóa học}. Trong năm này, 1 nhà hóa học người Đức, L. Meyer cũng đã công bố 1 Bảng tuần hoàn tương tự. Tuy nhiên, Mendeleev là người công bố trước \& giải thích tốt hơn về sự hữu dụng của bảng tuần hoàn do ông đề nghị. 2 nhà khoa học đều sắp xếp các nguyên tố vào các hàng \& các cột theo chiều tăng dần khối lượng nguyên tử, bắt đầu ở hàng mới (Bảng của Mendeleev) hoặc cột mới (Bảng của Mayer) khi tính chất của nguyên tố lặp lại.'' -- \cite[pp. 33--34]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}. Xem \cite[Hình 5.1: \textsf{Bảng tuần hoàn các nguyên tố hóa học của Mendeleev (1869)}, p. 34]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.
 
 ``Năm 1871, Mendeleev đã phát biểu định luật tuần hoàn như sau: \textit{Tính chất của các nguyên tố, cũng như tính chất của các đơn chất \& hợp chất tạo nên từ các nguyên tố đó biến đổi tuần hoàn theo trọng lượng nguyên tử của chúng (trọng lượng nguyên tử được hiểu là khối lượng nguyên tử)}. Mendeleev đã dự đoán về các nguyên tố mới, gồm 10 nguyên tố, trong đó có 3 nguyên tố (sau này chính là các nguyên tố Sc, Ga, \& Ge) được ông miêu tả khá tỉ mỉ về tính chất vật lý của đơn chất \& 1 số hợp chất của chúng, 7 nguyên tố còn lại do vị trí của chúng trong bảng tuần hoàn không thuận lợi cho việc tiên đoán, nên ông chỉ mới ước lượng được khối lượng nguyên tử của chúng.
@@ -369,7 +361,7 @@ Bảng tuần hoàn các nguyên tố hóa học hiện nay được xây dựng
 
 ``Năm 1869, nhà hóa học Mendeleev đã công bố bảng tuần hoàn các nguyên tố hóa học, trong đó, các nguyên tố đã được sắp xếp theo thứ tự tăng dần khối lượng nguyên tử. Bảng tuần hoàn hiện đại ngày nay được xây dựng trên cơ sở mối liên hệ giữa số hiệu nguyên tử \& tính chất của nguyên tố, các nguyên tố được sắp xếp theo thứ tự tăng dần số hiệu nguyên tử.'' -- \cite[p. 38]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Bảng tuần hoàn các nguyên tố hóa học}
+\subsubsection{Bảng tuần hoàn các nguyên tố hóa học}
 
 \begin{figure}[h]
 	\centering
@@ -408,7 +400,7 @@ Bảng tuần hoàn các nguyên tố hóa học hiện nay được xây dựng
 ``\textbf{Nguyên tắc sắp xếp các nguyên tố trong bảng tuần hoàn.}
 \begin{enumerate*}
 	\item[$\bullet$] Các nguyên tố được xếp theo chiều tăng dần của điện tích hạt nhân nguyên tử.
-	\item[$\bullet$] Các nguyên tố có cùng số lớp electron trong nguyên tử được xếp cùn 1 chu kỳ.
+	\item[$\bullet$] Các nguyên tố có cùng số lớp electron trong nguyên tử được xếp cùng 1 chu kỳ.
 	\item[$\bullet$] Các nguyên tố có cùng số electron hóa trị trong nguyên tử được xếp cùng 1 nhóm, trừ nhóm VIIIB.'' -- \cite[p. 40]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{enumerate*}
 
@@ -417,7 +409,7 @@ Bảng tuần hoàn các nguyên tố hóa học hiện nay được xây dựng
 \end{vidu}
 ``Năm 1789, nhà khoa học A. Lavoisier người Pháp đã xếp 33 nguyên tố hóa học thành nhóm các chất khí, kim loại, phi kim, \& ``đất''. Năm 1829, nhà hóa học người Đức J. W. D\"obereiner đã nghiên cứu 1 hệ thống phân loại các nguyên tố hóa học.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{chlorine_bromine_iodine_lithium_sodium_potassium}
 	\caption{Chlorine, Bromine, Iodine, Lithium, Sodium, Potassium, \cite[p. 41]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
@@ -434,12 +426,12 @@ Bảng tuần hoàn các nguyên tố hóa học hiện nay được xây dựng
 
 %------------------------------------------------------------------------------%
 
-\section{Xu Hướng Biến Đổi 1 Số Tính Chất của Nguyên Tử Các Nguyên Tố, Thành Phần \& 1 Số Tính Chất của Hợp Chất Trong 1 Chu Kỳ \& Nhóm}
-\textbf{Nội dung.} \textit{Xu hướng biến đổi bán kính nguyên tử trong 1 chu kỳ, trong 1 nhóm (nhóm A); xu hướng biến đổi độ âm điện \& tính kim loại, phi kim của nguyên tử các nguyên tố trong 1 chu kỳ, trong 1 nhóm (nhóm A); xu hướng biến đổi thành phần \& tính chất acid}\texttt{/}\textit{base của các oxide \& các hydroxide theo chu kỳ; phương trình hóa học minh họa}.
+\subsection{Xu Hướng Biến Đổi 1 Số Tính Chất của Nguyên Tử Các Nguyên Tố, Thành Phần \& 1 Số Tính Chất của Hợp Chất Trong 1 Chu Kỳ \& Nhóm}
+\textsf{\textbf{Nội dung.} Xu hướng biến đổi bán kính nguyên tử trong 1 chu kỳ, trong 1 nhóm (nhóm A); xu hướng biến đổi độ âm điện \& tính kim loại, phi kim của nguyên tử các nguyên tố trong 1 chu kỳ, trong 1 nhóm (nhóm A); xu hướng biến đổi thành phần \& tính chất acid}\texttt{/}\textit{base của các oxide \& các hydroxide theo chu kỳ; phương trình hóa học minh họa.}
 
 ``\textit{Kim loại kiềm} là các kim loại thuộc nhóm IA, bao gồm: lithium (Li), sodium (Na), potassium (K), rubidium (Rb), caesium (Cs), francium (Fr). Chúng phản ứng được với nước \& giải phóng khí hydrogen.'' -- \cite[p. 43]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Bán kính nguyên tử}
+\subsubsection{Bán kính nguyên tử}
 Xem \cite[Hình 6.1: \textsf{Bán kính nguyên tử của 1 số nguyên tố được biểu diễn bằng pm ($\rm 1\ pm = 10^{-12}\ m$)}]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao} (\cite{Buthelezi_Dingrando_Hainen_Wistrom_Zike2013}).
 
 ``\textbf{Xu hướng biến đổi bán kính nguyên tử.} Bán kính nguyên tử của các nguyên tố nhóm A có xu hướng biến đổi tuần hoàn theo chiều tăng của điện tích hạt nhân:
@@ -448,10 +440,10 @@ Xem \cite[Hình 6.1: \textsf{Bán kính nguyên tử của 1 số nguyên tố �
 	\item[$\bullet$] \textit{Trong 1 nhóm}, theo chiều từ trên xuống dưới, số lớp electron tăng dần nên bán kính nguyên tử có xu hướng \textit{tăng}.'' -- \cite[p. 44]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{enumerate*}
 
-\subsection{Độ âm điện}
+\subsubsection{Độ âm điện}
 ``\textit{Độ âm điện} của 1 nguyên tử đặc trưng cho khả năng hút electron của nguyên tử đó khi tạo thành liên kết hóa học. Trong hóa học, có nhiều thang đo độ âm điện khác nhau do các nhà khoa học tính toán dựa trên những cơ sở khác nhau. Dưới đây giới thiệu bảng giá trị (Bảng \ref{tab:gia tri do am dien cua nguyen tu 1 so nguyen to nhom A theo Pauling}) độ âm điện của nhà hóa học L. C. Pauling (\cite{Buthelezi_Dingrando_Hainen_Wistrom_Zike2013}) đề xuất năm 1932.'' -- \cite[p. 44]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\begin{table}[H]
+\begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 		\hline
@@ -479,7 +471,7 @@ Xem \cite[Hình 6.1: \textsf{Bán kính nguyên tử của 1 số nguyên tố �
 	\item[$\bullet$] \textit{Trong 1 nhóm}, theo chiều tăng dần của điện tích hạt nhân, bán kính nguyên tử tăng nhanh, lực hút giữa hạt nhân với các electron lớp ngoài cùng giảm. Do đó, độ âm điện của nguyên tử các nguyên tố có xu hướng \textit{giảm dần}.'' -- \cite[p. 45]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{enumerate*}
 
-\subsection{Tính kim loại, tính phi kim}
+\subsubsection{Tính kim loại, tính phi kim}
 
 \begin{dinhnghia}[Tính kim loại, tính phi kim]
 	``\emph{Tính kim loại} là tính chất của 1 nguyên tố mà nguyên tử dễ nhường electron. \emph{Tính phi kim} là tính chất của 1 nguyên tố mà nguyên tử dễ nhận electron.'' -- \cite[p. 45]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
@@ -490,9 +482,9 @@ Xem \cite[Hình 6.1: \textsf{Bán kính nguyên tử của 1 số nguyên tố �
 	\item[$\bullet$] \textit{Trong 1 nhóm}, theo chiều tăng dần của điện tích hạt nhân, lực hút giữa hạt nhân với các electron lớp ngoài cùng giảm. Do đó, \textit{tính kim loại của các nguyên tố tăng dần, tính phi kim giảm dần}.'' -- \cite[p. 46]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{enumerate*}
 
-\subsection{Tính acid--base của oxide \& hydroxide}
+\subsubsection{Tính acid--base của oxide \& hydroxide}
 
-\begin{table}[H]
+\begin{table}[h]
 	\centering
 	\resizebox{\columnwidth}{!}{%
 	\begin{tabular}{|p{0.105\textwidth}|p{0.17\textwidth}|p{0.17\textwidth}|p{0.12\textwidth}|p{0.115\textwidth}|p{0.115\textwidth}|p{0.115\textwidth}|}
@@ -519,14 +511,14 @@ Xem \cite[Hình 6.1: \textsf{Bán kính nguyên tử của 1 số nguyên tố �
 
 %------------------------------------------------------------------------------%
 
-\section{Định Luật Tuần Hoàn -- Ý Nghĩa của Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
-\textbf{Nội dung.} \textit{Định luật tuần hoàn; ý nghĩa của bảng tuần hoàn các nguyên tố hóa học: mối liên hệ giữa vị trí (trong bảng tuần hoàn các nguyên tố hóa học) với tính chất \& ngược lại}.
+\subsection{Định Luật Tuần Hoàn -- Ý Nghĩa của Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+\textsf{\textbf{Nội dung.} Định luật tuần hoàn; ý nghĩa của bảng tuần hoàn các nguyên tố hóa học: mối liên hệ giữa vị trí (trong bảng tuần hoàn các nguyên tố hóa học) với tính chất \& ngược lại.}
 
 \begin{vidu}
 	``Fluorine được sử dụng làm chất oxi hóa cho nhiên liệu lỏng dùng trong tên lửa. Fluorine (F) là 1 nguyên tố hóa học có số hiệu nguyên tử bằng 9, thuộc chu kỳ 2, nhóm VIIA.'' -- \cite[p. 49]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{vidu}
 
-\subsection{Định luật tuần hoàn}
+\subsubsection{Định luật tuần hoàn}
 Xem \cite[Bảng 7.1: \textsf{Cấu hình electron lớp ngoài cùng của nguyên tử các nguyên tố nhóm A}, p. 49]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.
 
 ``Sự biến đổi tuần hoàn về cấu hình electron lớp ngoài cùng của nguyên tử các nguyên tố khi điện tích hạt nhân tăng dần chính là nguyên nhân của sự biến đổi tuần hoàn về tính chất của các nguyên tố, cũng như hợp chất của chúng.'' -- \cite[p. 50]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
@@ -535,7 +527,7 @@ Xem \cite[Bảng 7.1: \textsf{Cấu hình electron lớp ngoài cùng của nguy
 	``Tính chất của các nguyên tố \& đơn chất, cũng như thành phần \& tính chất của các hợp chất tạo nên từ các nguyên tố đó biến đổi tuần hoàn theo chiều tăng của điện tích hạt nhân nguyên tử.'' -- \cite[p. 50]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 \end{dinhluat}
 
-\subsection{Ý nghĩa của bảng tuần hoàn các nguyên tố hóa học}
+\subsubsection{Ý nghĩa của bảng tuần hoàn các nguyên tố hóa học}
 
 \begin{vidu}[Natri]
 	\begin{enumerate*}
@@ -553,31 +545,28 @@ Xem \cite[Bảng 7.1: \textsf{Cấu hình electron lớp ngoài cùng của nguy
 
 %------------------------------------------------------------------------------%
 
-\chapter{Liên Kết Hóa Học}
+\section{Liên Kết Hóa Học}
+\textsf{\textbf{Nội dung.} Quy tắc octet trong quá trình hình thành liên kết hóa học co các nguyên tố nhóm A.}
 
-\begin{quotation}
-	\textbf{Nội dung.} \textit{Quy tắc octet trong quá trình hình thành liên kết hóa học co các nguyên tố nhóm A}.
-\end{quotation}
-
-\section{Quy Tắc Octet}
+\subsection{Quy Tắc Octet}
 ``Khi liên kết với nhau, nguyên tử của các nguyên tố dường như đã cố gắng ``bắt chước'' cấu hình electron nguyên tử của các nguyên tố khí hiếm để bền vững hơn. Điều này đã được nhà hóa học người Mỹ Lewis (1875--1946) đề nghị khi nghiên cứu về sự hình thành phân tử từ các nguyên tử.'' -- \cite[p. 52]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Liên kết hóa học}
+\subsubsection{Liên kết hóa học}
 ``Phân tử được tạo nên từ các nguyên tử bằng các \textit{liên kết hóa học}.'' -- \cite[p. 53]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Quy tắc Octet}
+\subsubsection{Quy tắc Octet}
 ``Để đạt cấu hình electron bền vững của các khí hiếm gần nhất, nguyên tử của các nguyên tố có xu hướng nhường, hoặc nhận thêm, hoặc góp chung các electron hóa trị với các nguyên tử khác khi tham gia liên kết hóa học. E.g., liên kết giữa 2 nguyên tử nitrogen (N) trong phân tử nitrogen ($\rm N_2$) được tạo thành do mỗi nguyên tử nitrogen đã góp chung 3 electron hóa trị, tạo nên 3 cặp electron chung như \cite[Hình 8.2: \textsf{Sự hình thành liên kết trong phân tử nitrogen}, p. 53]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Nguyên tử sodium có 1 electron ở lớp ngoài cùng. Nếu mất đi 1 electron này, nguyên tử sodium sẽ đạt được cấu hình electron bền vững sau:
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{su_hinh_thanh_ion_Na}
 	\caption{Sự hình thành ion $\rm Na^+$, \cite[Hình 8.3, p. 53]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
 \end{figure}
 Phần tử thu được mang điện tích dương, gọi là \textit{ion sodium}, ký hiệu là $\rm Na^+$. Tương tự, nguyên tử fluorine có 7 electron ở lớp ngoài cùng. Khi nhận vào 1 electron, nguyên tử fluorine sẽ đạt được cấu hình electron bền vững sau:
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{su_hinh_thanh_ion_F}
 	\caption{Sự hình thành ion $\rm F^-$, \cite[Hình 8.3, p. 54]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
@@ -591,17 +580,17 @@ Không phải trong mọi trường hợp, nguyên tử của các nguyên tố 
 
 %------------------------------------------------------------------------------%
 
-\section{Liên Kết Ion}
-\textbf{Nội dung.} \textit{Sự hình thành liên kết ion (1 số ví dụ điển hình tuân theo quy tắc octet), cấu tạo tinh thể $\rm NaCl$, nguyên nhân các hợp chất ion thường ở trạng thái rắn trong điều kiện thường (dạng tinh thể ion), mô hình tinh thể $\rm NaCl$}.
+\subsection{Liên Kết Ion}
+\textsf{\textbf{Nội dung.} Sự hình thành liên kết ion (1 số ví dụ điển hình tuân theo quy tắc octet), cấu tạo tinh thể $\rm NaCl$, nguyên nhân các hợp chất ion thường ở trạng thái rắn trong điều kiện thường (dạng tinh thể ion), mô hình tinh thể $\rm NaCl$.}
 
 ``Hơn 50\% dược phẩm sử dụng trong y tế được sản xuất dưới dạng muối với mục đích thúc đẩy sự hấp thu các dược chất vào máu, tăng cường hiệu quả điều trị. Trong đó, thường gặp nhất là các muối hydrochloride, sodium hoặc sulfate. Muối thường là các hợp chất chứa liên kết ion.'' -- \cite[p. 55]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Ion \& sự hình thành liên kết ion}
+\subsubsection{Ion \& sự hình thành liên kết ion}
 ``Khi cho electron, nguyên tử trở thành \textit{ion dương} (\textit{cation}). Khi nhận electron, nguyên tử trở thành \textit{ion âm} (\textit{anion}). Giá trị điện tích trên cation hoặc anion bằng số electron mà nguyên tử đã nhường hoặc nhận.'' -- \cite[p. 55]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
 ``Khi cho sodium tác dụng với chlorine, ta thu được sodium chlorine (NaCl). Phản ứng giữa sodium \& chlorine có thể được minh họa bởi sơ đồ:
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{su_hinh_thanh_lien_ket_ion_trong_NaCl}
 	\caption{Minh họa sự hình thành liên kết ion trong phân tử NaCl, \cite[Hình 9.2, p. 56]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
@@ -613,10 +602,10 @@ Phương trình hóa học: $\rm 2Na + Cl_2\to 2NaCl$.
 \end{dinhnghia}
 Liên kết ion thường được hình thành khi kim loại điển hình tác dụng với phi kim điển hình.'' -- \cite[p. 56]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}
 
-\subsection{Tinh thể ion}
+\subsubsection{Tinh thể ion}
 ``NaCl là hợp chất ion phổ biến \& quen thuộc trong đời sống. Trong điều kiện thường, hợp chất này tồn tại dưới dạng tinh thể rắn, cứng, dễ tan trong nước \& có nhiệt độ nóng chảy khá cao ($801^\circ$C).
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.15]{tinh_the_NaCl}
 	\caption{Tinh thể NaCl thực tế \& mô hình ô mạng tinh thể NaCl, \cite[Hình 9.3, p. 56]{SGK_Hoa_Hoc_10_Chan_Troi_Sang_Tao}.}
@@ -635,47 +624,47 @@ Liên kết ion thường được hình thành khi kim loại điển hình tá
 
 %------------------------------------------------------------------------------%
 
-\section{Liên Kết Cộng Hóa Trị}
+\subsection{Liên Kết Cộng Hóa Trị}
 
 %------------------------------------------------------------------------------%
 
-\section{Liên Kết Hyđrogen \& Tương Tác van der Waals}
+\subsection{Liên Kết Hyđrogen \& Tương Tác van der Waals}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Phản Ứng Oxi Hóa -- Khử}
+\section{Phản Ứng Oxi Hóa -- Khử}
 
-\section{Phản Ứng Oxi Hóa -- Khử \& Ứng Dụng Trong Cuộc Sống}
-
-%------------------------------------------------------------------------------%
-
-\chapter{Năng Lượng Hóa Học}
-
-\section{Enthalpy Tạo Thành \& Biến Thiên Enthalpy của Phản Ứng Hóa Học}
+\subsection{Phản Ứng Oxi Hóa -- Khử \& Ứng Dụng Trong Cuộc Sống}
 
 %------------------------------------------------------------------------------%
 
-\section{Tính Biến Thiên Enthalpy của Phản Ứng Hóa Học}
+\section{Năng Lượng Hóa Học}
+
+\subsection{Enthalpy Tạo Thành \& Biến Thiên Enthalpy của Phản Ứng Hóa Học}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Tốc Độ Phản Ứng Hóa Học}
-
-\section{Phương Trình Tốc Độ Phản Ứng \& Hằng Số Tốc Độ Phản Ứng}
+\subsection{Tính Biến Thiên Enthalpy của Phản Ứng Hóa Học}
 
 %------------------------------------------------------------------------------%
 
-\section{Các Yếu Tố Ảnh Hưởng Đến Tốc Độ Phản Ứng Hóa Học}
+\section{Tốc Độ Phản Ứng Hóa Học}
+
+\subsection{Phương Trình Tốc Độ Phản Ứng \& Hằng Số Tốc Độ Phản Ứng}
 
 %------------------------------------------------------------------------------%
 
-\chapter{Nguyên Tố Nhóm VIIA -- Halogen}
-
-\section{Tính Chất Vật Lý \& Hóa Học Các Đơn Chất Nhóm VIIA}
+\subsection{Các Yếu Tố Ảnh Hưởng Đến Tốc Độ Phản Ứng Hóa Học}
 
 %------------------------------------------------------------------------------%
 
-\section{Hyđrogen Halide \& 1 Số Phản Ứng của Ion Halide} 
+\section{Nguyên Tố Nhóm VIIA -- Halogen}
+
+\subsection{Tính Chất Vật Lý \& Hóa Học Các Đơn Chất Nhóm VIIA}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Hyđrogen Halide \& 1 Số Phản Ứng của Ion Halide} 
 
 %------------------------------------------------------------------------------%
 
