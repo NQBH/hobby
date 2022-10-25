@@ -25,8 +25,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
-\rhead{\small \nouppercase{\leftmark}}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
@@ -476,10 +476,109 @@ Any way you want. I don't advise spending very much time thinking about it.'' --
 
 %------------------------------------------------------------------------------%
 
-\selectlanguage{english}
-\begin{thebibliography}{99}
-	\bibitem[]{}
-\end{thebibliography}
+\section{\href{https://www.quantamagazine.org/computer-scientist-donald-knuth-cant-stop-telling-stories-20200416}{Quanta Magazine\texttt{/}The Computer Scientist Who Can't Stop Telling Stories}}
+``For pioneering computer scientist Donald Knuth, \fbox{good coding is synonymous with beautiful expression}.'' \textsf{Donald Knuth has worked his whole life to tell stories with \& about computer programs.} ``Donald Knuth is a computer scientist who came of age with his field. During the nascent\footnote{\textbf{nascent} [a] (\textit{formal}) beginning to exist; not yet fully developed.} years of computer programming in the middle of the last century, a candy company ran a contest that summoned his talents as a 13-year-old. The contest asked kids to determine how many words could be made from the letters of the candy's name: Ziegler's Giant Bar. It was a well-defined problem with distinct pieces, just the kind he loved.
+
+``I had an obsessive-compulsive streak that drew me to digital, discrete problems. \& I loved poring over large collections of information,'' Knuth said.
+
+Knuth methodically\footnote{\textbf{methodical} [a] \textbf{1.} done in a careful \& logical way; \textbf{2.} (of a person) doing things in a careful \& logical way.} leafed through\footnote{\textbf{leaf through} [phrasal verb] \textbf{leaf through something} to quickly turn over the pages of a book, etc. without reading them or looking at them carefully.} his family's 2,000-page funk \& Wagnalls unabridged\footnote{\textbf{unabridged} [a] (of a novel, play, speech, etc.) complete, without being made shorter in any way, \textsc{opposite}: \textbf{abridged}.} dictionary in the basement. He even convinced his parents he was sick, winning himself 2 weeks away from school to work on the problem. After labeling index cards with headings such as ``Aa,'' ``Ab'' \& ``Ba'' based on the beginnings of possible words using letters from the candy's name, he went down the dictionary's columns noting words that qualified. He found that he could skip entire sections of the dictionary, such as pages for words starting with the letter ``C,'' or sections of the ``B'' words whose 2nd letter was ``U.''
+
+The contest officials had identified approximately 2,000 words they could expect, but Knuth found $> 4,700$. He was rewarded with a spot on television \& chocolate for his entire class. He would go on to win many more accolades\footnote{\textbf{accolade} [n] (\textit{formal}) praise or an award for an achievement that people admire.}, including the 1st \href{https://awards.acm.org/award_winners/knuth_1013846}{ACM Grace Murry Hopper Award}, the \href{https://www.nsf.gov/od/nms/recip_details.jsp?recip_id=198}{National Medal of Science} \& the \href{https://amturing.acm.org/award_winners/knuth_1013846.cfm}{A. M. Turing Award}.
+
+Knuth eventually merged his dual loves of discrete digital problems \& large collections of information in his magnum opus\footnote{\textbf{magnum opus} [n] [singular] (from Latin) a large \& important work of art, literature or music, especially one that people think is the best work ever produced by that artist, writer, etc.}, \href{https://www-cs-faculty.stanford.edu/~knuth/taocp.html}{\textit{The Art of Computer Programming}} -- a book series he began writing as a graduate student in 1962 \& has yet to complete. He published volume 1 in 1968, \& the current version is in its 42nd printing. Volume 2 followed in 1969 \& volume 3 in 1973. By then he was a computer science professor at Stanford University, but he worried that his work would prevent him from completing his books. So he took a leave of absence in 1990 \& then retired in 1993 to spend the rest of his life completing the 7-volume set. Now 82, he's hard at work on part B of volume 4, \& he anticipates that the book will have at least parts A through F. \textsf{Knuth is currently working on volume 4, part B, of \textit{The Art of Computer Programming}. He expects it to have at least 4 more parts, \& the whole set to have 3 more volumes.} \textit{The Art of Computer Programming} is more than a how-to manual. Just as Isaac Asimov \& Eric Temple Bell wove narratives \& characters into their science \& math stories, Knuth delights in telling stories of computer science. ``The best way to communicate from 1 human being to another is through story,'' he said. This passion for communication helped him play another starring role in the story of computer science beyond his magnum opus. When his publisher sent him galley proofs for the 2nd edition of Vol. 2 in the 1970s, Knuth was disturbed by the arrangement \& appearance of the numbers, symbols \& words on the pages. He flew to Los Angeles to see a machine that printed glossy magazines digitally, hoping it could provide aesthetic relief, but it was too expensive. Nonetheless, on that trip he began developing a computer language that would allow him to typeset mathematics digitally.
+\begin{quotation}
+	``I'm unable to resist a good story. I viewed myself not as a pioneer, but as a journalist.'' -- Donald Knuth
+\end{quotation}
+Back at Stanford, Knuth put aside \textit{The Art of Computer Programming} for nearly a decade to develop \href{https://www.tug.org/whatis.html}{\TeX} (pronounced ``tech''), a sophisticated, game-changing program that put digital typography on a desktop computer. He made it open source, much to the benefit of professional mathematicians, computer scientists, economists, engineers, linguists, statisticians, \& anyone else who lacked technical symbols on their keyboards but understood the placement of complicated formulas better than their publishers. In a world of often ephemeral\footnote{\textbf{ephemeral} [a] (\textit{formal}) lasting or used for only a short period of time, \textsc{synonym}: \textbf{short-lived}.} computer programs, \TeX\ has endured as the gold standard for making scientific papers more beautiful \& easier for experts to read \& understand.
+
+Knuth's interest in storytelling also led him to develop a philosophy of \href{https://www-cs-faculty.stanford.edu/~knuth/lp.html}{literate programming} -- a method for writing computer programs as literary essays. A literate program intersperses source code with elegant prose written in a familiar language, such as English. The source code delivers functionality \& efficiency, while the exposition addresses a human reader, rather than the computer's compiler. Anyone who later updates or debugs a literate program will avoid the often time-consuming \& costly problem of trying to understand the original programmer's algorithms, design decisions \& implementation strategies. Knuth is a computer scientist who understands that words matter.
+
+\textit{Quanta Magazine} spoke with Knuth in Feb at his home on the Stanford campus. The interview has been condensed \& edited for clarity.
+
+\begin{question}
+	Have you always been interested in writing?
+\end{question}
+Early on, I was advised that the read world would be too hard for me. I didn't expect to discover anything new, but I loved conveying my enjoyment of ideas in writing.
+
+In 6th grade, a couple fiends \& I started a 2-page paper on a ditto machine. We had jokes. In high school, every Monday night as the newspaper editor, I did an all-nighter to get the paper out. I saw my 1st line of type in college as the student paper copy editor. In my junior \& senior years, we started the engineering \& science review. E.g., I wrote, ``$\rm Th_5E_4 CH_3EmIC_2Al_2 Ca_3P_4Er$.'' Every word was a chemical formula. \textsf{Knuth has always told stories, with a science twist. In college, he penned a short story where each word was a chemical formula.}
+
+\begin{question}
+	\& that led to your magnum opus? Do you think of it as another story?
+\end{question}
+\textit{The Art of Computer Programming} is a manifesto\footnote{\textbf{manifesto} [n] (plural \textbf{manifestos}) a written public statement of policy \& aims, especially one made before an election by a political party or candidate.}. It describes the way I love to do math \& the way I wish I had been taught. Beginning on p. 1, I tell the story of algorithms. Most textbooks at the time didn't explore the human side of discoveries. They just said, ``This is how chemistry works,'' or ``This is how physics works.''
+
+I also tell a technical story. I say, ``Here's something that doesn't work, \& here's a way to solve that problem.'' Instead of presenting only facts, I add drama. Science is much easier to learn if you know the sequence of discoveries. Also, I'm unable to resist a good story. I viewed myself not as a pioneer, but as a journalist.
+
+\begin{question}
+	Beyond the story, then, what's \emph{The Art of Computer Programming} about?
+\end{question}
+After 2 years of writing my book, I realized that its novelty\footnote{\textbf{novelty} [n] (plural \textbf{novelties}) \textbf{1.} [uncountable] \textbf{novelty (of something)} the quality of being new, different, \& interesting; \textbf{2.} [countable] a thing, person or situation that is interesting because it is new, unusual or has not been known before.} was quantitative\footnote{\textbf{quantitative} [a] [usually before noun] connected with or measuring the amount or number of something rather than its quality.} determining how good a program is. I didn't just want to say 1 program was better than another. I wanted to say one is $13.8$\% better than another, \& explain how to compare them.
+
+Author A would talk about Algorithm a, \& author B would talk about his competing algorithm B. \& author A never wrote about algorithm B, \& author B never wrote about algorithm A. Also, authors A \& B used different computers. As a neutral journalist, I explained both from 1 point of view. Asking, ``How good is an algorithm really?'' is a fun problem. That's the analysis of algorithms.
+
+\begin{question}
+	Is ``the analysis of algorithms'' just a different way of saying ``the art of computer programming''?
+\end{question}
+I was at a Society for Industrial \& Applied Mathematics conference in 1967 when somebody asked what I did. In those days, computer science was partitioned into numerical analysis, artificial intelligence \& programming languages. That was it. I realized I needed a name for what I do.
+
+My book's novelty was its rigorous studies of how good the algorithms were. I decided that the next time I was asked this question, I would say, ``Analysis of algorithms.'' My definition was: ``If I'm interested in it, it's the analysis of algorithms. It wasn't a very good definition.
+
+Later, I decided to justify it. I decided it was the quantitative study of how good an algorithm is, which I divided into 2 parts. 1 part considered all possible algorithms for a certain problem. The other part considered 1 particular algorithm for a certain problem.
+\begin{quotation}
+	``I knew computer programming could make books look good again.''
+\end{quotation}
+Analysis of algorithms was going to be my life's work. I told my publisher to change the title of my book to \textit{The Analysis of Algorithms}. My publisher said, ``That will never sell.'' They made the right decision. Still, I was happy when, 40 years later, 5 or 6 books came out with the title \textit{Analysis of Algorithms}.
+
+\begin{question}
+	But for you, programming is also about more than functionality. When you designed \TeX\, e.g., you wanted to find \href{https://projecteuclid.org/download/pdf_1/euclid.bams/1183544082}{``the most pleasing curve''} that connects certain points. Were you trying to program beauty?
+\end{question}
+My program had to connect points in some way that reverse-engineered what a good calligrapher would do. The letter ``S'' comes to a point where the curvature changes from positive to negative. Then maybe it stays steady for a while. The letter's designers followed some logic to make lines into letter shapes. I wanted to capture not only the design's outcome, but the intelligence behind it. That's like writing a computer program.
+
+I talked to designers to understand what they were trying to achieve. The math was there to capture the design in a quantitative way. With mathematics, I put little dials on everything. I could say the letter ``A'' has got this point, that thickness, angles here, tapering there, a hump in the bottom \& a certain serif length.
+
+I never intended to replace designers. I only wanted to capture for future generations exactly what we were doing then. With \TeX, a design is reproducible.
+
+\begin{question}
+	Did you anticipate \TeX's global acceptance or its ability to endure?
+\end{question}
+\TeX\ was only supposed to be for my secretary \& myself. \href{https://www-cs-faculty.stanford.edu/~knuth/news98.html}{Phyllis [Astrid Benson Winkler]} was a wonderful secretary. She could read my handwriting \& make it beautiful. Printing technology was going down the tubes because the tried-\&-true methods were becoming too expensive. Nearly every piece of mathematics published in the 1970s looked atrocious\footnote{\textbf{atrocious} [a] \textbf{1.} very bad or unpleasant, \textsc{synonym}: \textbf{terrible}; \textbf{2.} very cruel \& making you feel shocked.}. In the \textit{American Mathematical Monthly}, the subscripts were in a different font from main-line text. I knew computer programming could make books look good again.
+
+I finished debugging a trial version of \TeX\ in Apr 1978. In May, I had 10 users. In Jun, I had 100 users. In Jul, I had 1,000. Each new group would say, ``You've gotta have this feature.'' 5 years later, I released what is essentially the \TeX\ we have now. That was designed for Americans. Then the Europeans started to use it. So in the 1980s, I made it work for world languages.
+
+\begin{question}
+	It sounds like discovery has always been part of your process. Does that remain true today?
+\end{question}
+I write an average of 5 new programs every week. \fbox{Poets have to write poems.} I have to write computer programs.
+
+The ultimate test of whether I understand something is if I can explain it to a computer. I can say something to you \& you'll nod your head, but I'm not sure that I explained it well. But the computer doesn't nod its head. It repeats back exactly what I tell it. In most of life, you can bluff\footnote{\textbf{bluff} [v] [intransitive, transitive] \textbf{bluff (something)} to try to make somebody believe that you will do something that you do not really intend to do, or that you know something that you do not really know; [n] \textbf{1.} [uncountable, countable] an attempt to trick somebody by making them believe that you will do something when you really have no intention of doing it, or that you know something when you do not, in fact, know it; \textbf{2.} [countable] a steep cliff or slope, especially by the sea or a river; \textbf{call somebody's bluff} [idiom] to tell somebody to do what they are threatening to do, because you believe that they will not be cruel or brave enough to do it; [a] (of people or their manner) very direct \& cheerful, with good intentions, although not always very polite.}, but not with computers. \textsf{``The best way to communicate from 1 human being to another is through story,'' Knuth said. This approach allowed him to analyze algorithms more rigorously \& neutrally.}
+
+\begin{question}
+	You spend your days writing, but you also have other interests. How do you approach each day?
+\end{question}
+Jack London wrote 1,000 words every day before talking to anybody. He was totally, ``Let me alone until I've got my thousand words!'' Then he would drink or proofread the rest of the day. No, my scheduling principle is to do the thing I hate most on my to-do list. By week's end, I'm very happy.
+
+\begin{question}
+	Really? How does doing what you hate make you happy?
+\end{question}
+It would be very easy for me to say, ``Oh, let me be a genius \& never clean the toilet.'' But even cleaning toilets is doable. [My wife] Jill \& I got uniforms that have a slot where the 409 cleaner fits. You go over there \& squirt \& feel good cleaning the toilet!
+
+\fbox{A person's success in life is determined by having a high minimum, not a high maximum.} If you can do something really well but there are other things at which you're failing, the latter will hold you back. But if almost everything you do is up there, then you've got a good life. \& so I try to learn how to get through things that others find unpleasant. \textsf{Knuth at his home in 2020. He retired in 1993 to complete his magnum opus, \textit{The Art of Computer Programming}.}
+
+\begin{question}
+	You also have many projects that have nothing to do with computer science, such as your musical composition, \href{https://www-cs-faculty.stanford.edu/~knuth/fant.html}{\textit{Fantasia Apocalyptica}}. You even built your house around a 2-story pipe organ. Is this variety also part what makes you happy?
+\end{question}
+I wrote a couple of books, including \href{https://www-cs-faculty.stanford.edu/~knuth/things.html}{\textit{Things a Computer Scientist Rarely Talks About}}, that are about theology\footnote{\textbf{theology} [n] (plural \textbf{theologies}) \textbf{1.} [uncountable] the study of religion \& beliefs; \textbf{2.} [countable] a set of religious beliefs.} -- things you cant' prove -- rather than mathematics or computer science. My life would not be complete if it was all about cut \& dried things. The mystical things I don't understand give me humility\footnote{\textbf{humility} [n] [uncountable] the quality of not thinking that you are better than other people; the quality of being humble.}. There are things beyond my understanding.
+
+In mathematics, I know when a theorem is correct. I like that. But I wouldn't have much of a life if everything were doable\footnote{\textbf{doable} [a] (\textit{informal}) \textbf{1.} [not usually before noun] able to be done; \textbf{2.} (BE) sexually attractive.}. This knowledge doesn't tear me apart. Rather, it ensures I don't get stuck in a rut.
+
+\begin{question}
+	Does it matter if you finish \emph{The Art of Computer Programming?}
+\end{question}
+Oh, I realize that computer science will keep living \& developing. 1 scenario is that everybody will stop working on the kinds of computers we have now. They'll all go to machine learning \& use quantum computers. Then I could come to the end of the story of non-quantum computers. I'm happier when I can say, ``This is the story's end.'' That's the easiest way to imagine that I'll finish. But I'm not answering your question.
+
+Do you know the story of Tristram Shandy? Laurence Sterne, in the late 1700s, wrote an autobiographical book, \textit{The Life \& Opinions of Tristram Shandy, Gentleman}, which he published in fascicles, or installments. It has about $100$ pages just on his 1st week of life. He wants the life story to be complete but, of course, he won't make it. Sterne wrote Tristram Shandy's story until he couldn't write anymore.
+
+I want to continue writing good content in the best way I know, \& cover things for which I have something original to say. I'll do as much of that as I can, instead of saying that I've got to finish by a certain deadline. I've been so fortunate riding waves \& being born at a time that was just right for my particular peculiarity\footnote{\textbf{peculiarity} [n] (plural \textbf{peculiarities}) \textbf{1.} [countable] \textbf{peculiarity (of somebody\texttt{/}something)} a feature that only belongs to 1 particular person, thing, place, etc.; \textbf{2.} [countable] \textbf{peculiarity (of somebody\texttt{/}something)} a strange or unusual feature or habit; \textbf{3.} [uncountable] \textbf{peculiarity (of somebody\texttt{/}something)} the quality of being strange or unusual.}. I've now achieved all of my life's goals except \textit{The Art of Computer Programming}. I'm in a situation where I'll continue telling whatever stories I find \& passing them on.'' -- Susan D'Agostino, Contributing Writer
 
 %------------------------------------------------------------------------------%
 
