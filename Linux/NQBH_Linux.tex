@@ -1,31 +1,32 @@
-\documentclass{article}
+\documentclass[oneside]{book}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
-\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[vietnamese,english]{babel}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
+\newtheorem{assumption}{Assumption}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{notation}{Notation}[chapter]
+\newtheorem{principle}{Principle}[chapter]
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{question}{Question}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small \textsc{Sect.} ~\thesection}
-\rhead{\small \nouppercase{\leftmark}}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
@@ -36,9 +37,6 @@
 
 \begin{document}
 \maketitle
-\begin{abstract}
-	Some notes on Unix\texttt{/}Linux.
-\end{abstract}
 \tableofcontents
 
 I have used the following Linux distributions: \textsc{Ubuntu, Kubuntu, SUSE, OpenSUSE}, where the 1st one is install in my personal notebooks\texttt{/}laptops, the 2nd one is install in my WIAS Dell XPS 15 (KDE provides a lot of good stuffs), while the other ones are install in computer servers at WIAS Berlin. Note that SUSE \& \textsc{OpenSUSE} are produced by Germans\footnote{In my own experiences, I believe that Germans \& Frenches prefer building their own facilities over using those provided by the rest of the world.}.
@@ -51,6 +49,255 @@ William Shotts. \textit{The Linux Command Line: A Complete Introduction} (2e) se
 \begin{question}
 	Which e-book readers should I use on Linux?
 \end{question}
+
+%------------------------------------------------------------------------------%
+
+\chapter{\cite{Shotts2019}. The Linux Command Line: A Complete Introduction. 2e}
+
+\textbf{About the Author.} ``William Shotts has been a software professional for $> 30$ years \& an avid Linux user for $> 20$ years. He has an extensive background in software development, including technical support, quality assurance, \& documentation. He is also the creator of \url{LinuxCommand.org}, a Linux education \& advocacy site featuring news, reviews, \& extensive support for using the Linux command line.'' -- \cite[p. 6]{Shotts2019}.
+
+\noindent\textbf{About the Technical Reviewer.} ``Jordi Guti\'errez Hermoso is a coder, mathematician, \& hacker-errant. He runs Debian GNU\texttt{/}Linux exclusively since 2022, both at home \& at work. Jordi has been involved with GNU Octave, a free numerical computing environment largely compatible with \textsc{Matlab}, \& with Mercurial, a distributed version control system. He enjoys pure \& applied mathematics, skating, swimming, \& knitting. Nowadays he thinks a lot about environmental mapping, greenhouse gas emissions, \& rhino conservation efforts.'' -- \cite[p. 7]{Shotts2019}
+
+%------------------------------------------------------------------------------%
+
+\section*{Introduction}
+``I want to tell you a story. No, not the story of how, in 1991, Linus Torvalds wrote the 1st version of the Linux kernel. You can read that story in lots of Linux books. Nor am I going to tell you the story of how, some years earlier, Richard Stallman began the GNU Project to create a free Unix-like operating system. That's an important story too, but most other Linux books have that one, as well.
+
+No, I want to tell you \fbox{the story of how you take back control of your computer}.
+
+When I began working with computers as a college student in the late 1970s, there was a revolution going on. The invention of the microprocessor\footnote{\textbf{microprocessor} [n] (\textit{computing}) a small unit of a computer that contains all the functions of the central processing unit.} had made it possible for ordinary people like you \& me to actually own a computer. It's hard for many people today to imagine what the world was like when only big business \& big government ran all the computers. Let's just say, you couldn't get much done.
+
+Today, the world is very different. Computers are everywhere, from tiny wristwatches to giant data centers to everything in between. In addition to ubiquitous\footnote{\textbf{ubiquitous} [a] present, appearing or found everywhere.} computers, we also have a ubiquitous network connecting them together. This has created a wondrous\footnote{\textbf{wondrous} [a] (\textit{literary}) strange, beautiful, \& impressive, \textsc{synonym}: \textbf{wonderful}.} new age of personal empowerment\footnote{\textbf{empowerment} [n] [uncountable] a positive feeling that you have some control over your life or the situation you are in.} \& \fbox{creative freedom}, but over the last couple of decades something else has been happening. A few giant corporations have been imposing their control over most of the world's computers \& deciding what you can \& cannot do with them. Fortunately, people from all over the world are doing something about it. They are fighting to maintain control of their computers by writing their own software. They are building Linux.
+
+Many people speak of ``freedom'' with regard to Linux, but I don't think most people know what this freedom really means. Freedom is the power to decide what your computer does, \& the only way to have this freedom is to know what your computer is doing. Freedom is a computer that is without secrets, one where everything can be known if you care enough to find out.'' -- \cite[pp. 30--31]{Shotts2019}
+
+\subsection*{Why Use the Command Line?}
+``Have you ever noticed in the movies when the ``superhacker'' -- you know, the guy who can break into the ultra-secure military computer in $< 30$ seconds -- sits down at the computer, he never touches a mouse? It's because filmmakers realize that we, as human beings, instinctively know the only way to really get anything done on a computer is by typing on a keyboard!
+
+Most computer users today are familiar only with the \textit{graphical user interface} (GUI) \& have been taught by vendors\footnote{\textbf{vendor} [n] \textbf{1.} a person or company that sells things, especially outside on the street; \textbf{2.} (\textit{formal}) a company that sells a particular product; \textbf{3.} (\textit{law}) a person who is selling something, especially a house.} \& pundits\footnote{\textbf{pandit} [n] (also \textbf{pundit}) \textbf{1.} a Hindu priest or wise man; \textbf{2.} (\textit{Indian English}) a teacher; \textbf{3.} (\textit{Indian English}) a musician with a lot of skill.} that the \textit{command line interface} (\textit{CLI}) is a terrifying thing of the past. This is unfortunate because a good command line interface is a marvelously\footnote{\textbf{marvellously} [adv] (US English \textbf{marvelously}) very; very well, \textsc{synonym}: \textbf{wonderfully}.} expressive way of communicating with a computer in much the same way the written word is for human beings. It's been said that ``graphical user interfaces make easy tasks easy, while command line interfaces make difficult tasks possible,'' \& this is still very true today.
+
+Since Linux is modeled after the Unix family of operating systems, it shares the same rich heritage of command line tools as Unix. Unix came into prominence\footnote{\textbf{prominence} [n] \textbf{1.} [uncountable, singular] the state of being important, well known or easy to notice; \textbf{2.} [countable, uncountable] (\textit{medical} or \textit{formal}) a thing that sticks out from something; the fact or state of sticking out from something.} during the early 1980s (although it was 1st developed a decade earlier), before the widespread adoption of the graphical user interface \&, as a result, developed an extensive command line interface instead. In fact, 1 of the strongest reasons early adopters of Linux chose it over, say, Windows NT was the powerful command line interface that made the ``difficult tasks possible.'' -- \cite[p. 31]{Shotts2019}
+
+\subsection*{What This Book Is About}
+``This book is a broad overview of ``living'' on the Linux command line. Unlike some books that concentrate on just a single program, such as the shell program \texttt{bash}, this book will try to convey how to get along with the command line interface in a larger sense. How does it all work? What can it do? What's the best way to use it?
+
+\textbf{This is not a book about Linux system administration.} While any serious discussion of the command line will invariably lead to system administration topics, this book touches on only a few administration issues. It will, however, prepare the reader for additional study by providing a solid foundation in the use of the command line, an essential tool for any serious system administration task.
+
+\textbf{This book is Linux-centric.} Many other books try to broaden their appeal by including other platforms such as generic Unix \& macOS. In doing so, they ``water down'' their content to feature only general topics. This book, on the other hand, covers only contemporary Linux distributions. 95\% of the content is useful for users of other Unix-like systems, but this book is highly targeted at the modern Linux command line user.'' -- \cite[p. 32]{Shotts2019}
+
+\subsection*{Who Should Read This Book}
+``This book is for new Linux users who have migrated from other platforms. Most likely you are a ``power user'' of some version of Microsoft Windows. Perhaps your boss has told you to administer a Linux server, or you're entering the exciting new world of single board computers (SBC) such as the Raspberry Pi. You may just be a desktop user who is tired of all the security problems \& wants too give Linux a try. That's fine. All are welcome here.
+
+That being said, there is no shortcut to Linux enlightenment. \fbox{Learning the command line is challenging \& takes real effort.} It's not that it's so hard, but rather it's so \textit{vast}. The average Linux system has literally \textit{thousands} of programs you can employ on the command line. Consider yourself warned; learning the command line is not a casual\footnote{\textbf{casual} [a] \textbf{1.} [usually before noun] without paying attention to detail; \textbf{2.} [usually before noun] not showing much care or thought; \textbf{3.} [usually before noun] (of a relationship) lasting only a short time \& without deep affection; \textbf{4.} [usually before noun] (BE) (of work) not permanent; not regular; \textbf{5.} not formal; \textbf{6.} [only before noun] happening by chance; doing something by chance.} endeavor\footnote{\textbf{endeavour} [n] (US \textbf{endeavor}) (\textit{formal}) \textbf{1.} [uncountable, countable] serious effort to achieve something; an attempt to do something, especially something new or difficult; \textbf{2.} [countable, usually plural] something that somebody does; [v] \textbf{endeavor to do something} (\textit{formal}) to try hard to do or achieve something, \textsc{synonym}: \textbf{strive}.}.
+
+On the other hand, learning the Linux command line is extremely rewarding. If you think you're a ``power user'' now, just wait. You don't know what real power is -- yet. \&, unlike many other computer skills, knowledge of the command line is long-lasting. The skills learned today will still be useful 10 years from now. \fbox{The command line has survived the test of time.}
+
+It is also assumed that you have no programming experience, but don't worry, we'll start you down that path as well.'' -- \cite[pp. 32--33]{Shotts2019}
+
+\subsection*{What's in This Book}
+``This material is presented in a carefully chosen sequence, muck like a tutor sitting next to you guiding you along. Many authors treat this material in a ``systematic'' fashion, exhaustively\footnote{\textbf{exhaustive} [a] including everything possible; very thorough or complete.} covering each topic in order. This makes sense from a writer's perspective but can be very confusing to new users.
+
+Another goal is to acquaint\footnote{\textbf{acquaint} [v] (\textit{formal}) \textbf{acquaint somebody\texttt{/}yourself with something} to make somebody\texttt{/}yourself familiar with or aware of something.} you with the Unix way of thinking, which is different from the Windows way of thinking. Along the way, we'll go on a few side trips to help you understand why certain things work the way they do \& how they got that way. Linux is not just a piece of software; it's also a small part of the larger Unix culture, which has its own language \& history. I might throw in a rant or 2, as well.
+
+This book is divided into 4 parts, each covering some aspect of the command line experience.
+\begin{itemize}
+	\item \textbf{Part 1, ``Learning the Shell,''} starts our exploration of the basic language of the command line including such things as the structure of commands, file system navigation, command line editing, \& finding help \& documentation for commands.
+	\item \textbf{Part 2, ``Configuration \& the Environment,''} covers editing configuration files that control the computer's operation from the command line.
+	\item \textbf{Part 3, ``Common Tasks \& Essential Tools,''} explores many of the ordinary tasks that are commonly performed from the command line. Unix-like operating systems, such as Linux, contain many ``classic'' command line programs that are used to perform powerful operations on data.
+	\item \textbf{Part 4, ``Writing Shell Scripts,''} introduces shell programming, an admittedly rudimentary but easy-to-learn technique for automating many common computing tasks. By learning shell programming, you will become familiar with concepts that can be applied to many other programming languages.'' -- \cite[pp. 33--34]{Shotts2019}
+\end{itemize}
+
+\subsection*{How to Read This Book}
+``Start at the beginning of the book \& follow it to the end. It isn't written as a reference work; it's really more like a story with a beginning, middle, \& end.'' -- \cite[p. 34]{Shotts2019}
+
+\subsection*{Prerequisites}
+``To use this book, all you will need is a working Linux installation. You can get this in 1 of 2 ways:
+\begin{itemize}
+	\item \textbf{Install Linux on a (not so new) computer.} It doesn't matter which distribution you choose, though most people today start out with either Ubuntu, Fedora, or OpenSUSE. If in doubt, try Ubuntu 1st. Installing a modern Linux distribution can be ridiculously easy or ridiculously difficult depending on your hardware. I suggest a desktop computer that is a couple of years gold \& has at least 2GB of RAM \& 6GB of free hard disk space. Avoid laptops \& wireless networks if at all possible, as these are often more difficult to get working.
+	\item \textbf{Use a ``live CD'' or USB flash drive.} 1 of the cool things you can do with many Linux distributions is run them directly from a CD-ROM or USB flash drive without installing them at all. Just go into your BIOS setup \& set your computer to boot from a CD-ROM drive or USB device \& reboot. Using this method is a great way to test a computer for Linux compatibility prior to installation. The disadvantage is that it may be slow compared to having Linux installed on your hard drive. Both Ubuntu \& Fedora (among others) have live versions.
+\end{itemize}
+Regardless of how you install Linux, you'll need to have occasional superuser (i.e., administrative) privileges to carry out the lessons in this book.
+
+After you have a working installation, start reading \& follow along with your own computer. Most of the material in this book is ``hands on,'' so sit down \& get typing!
+
+\textbf{Why I don't call it ``GNU\texttt{/}LINUX''.} In some quarters, it's politically correct to call the Linux operating system the ``GNU\texttt{/}Linux operating system.'' The problem with ``Linux'' is that there is no completely correct way to name it because it was written by many different people in a vast, distributed development effort. Technically speaking, Linux is the name of the operating system's kernel, nothing more. The kernel is very important, of course, since it makes the operating system go, but it's not enough to form a complete operating system.
+
+Enter Richard Stallman, the genius-philosopher who founded the Free Software movement, started the Free Software Foundation, formed the GNU Project, wrote the 1st version of the GNU C Compiler (\texttt{gcc}), created the GNU General Public License (the GPL), etc., etc., etc. He \textit{insists} that you call it ``GNU\texttt{/}Linux'' to properly reflect the contributions of the GNU Project. While the GNU Project predates the Linux kernel \& the project's contributions are extremely deserving of recognition, placing them in the name is unfair to everyone else who made significant contributions. Besides, I think ``Linux\texttt{/}GNU'' would be more technically accurate since the kernel boots 1st \& everything else runs on top of it.
+
+In popular usage, Linux refers to the kernel \& all the other free \& open source software found in the typical Linux distribution, i.e., the entire Linux ecosystem, not just the GNU components. The operating system marketplace seems to prefer 1-word names such as DOS, Windows, macOS, Solaris, Irix, \& AIX. I have chosen to use the popular format. If, however, you prefer to use ``GNU\texttt{/}Linux'' instead, perform a mental search-\&-replace while reading this book. I won't mind.'' -- \cite[pp. 34--36]{Shotts2019}
+
+\subsection*{What's New in the 2nd Edition}
+``While the basic structure \& content remain the same, this edition of \textit{The Linux Command Line} is peppered with various refinements, classifications, \& modernizations, many of which are based on reader feedback. In addition, 2 particular improvements stand out. 1st, the book now assumes \texttt{bash} version $4.x$,  which was not in wide use at the time of the original manuscript. This 4th major version of \texttt{bash} added several useful new features now covered in this edition. 2nd, Part 4, ``Shell Scripting,'' has been improved to provide better examples of good scripting practice. The scripts included in Part 4 have been revised to make them more robust, \& I also fixed a few bugs.'' ``This book is an ongoing project, like many open source software projects.'' -- \cite[p 36]{Shotts2019}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\huge Part I: Learning The Shell
+\end{center}
+
+%------------------------------------------------------------------------------%
+
+\section{What Is the Shell?}
+
+%------------------------------------------------------------------------------%
+
+\section{Navigation}
+
+%------------------------------------------------------------------------------%
+
+\section{Exploring the System}
+
+%------------------------------------------------------------------------------%
+
+\section{Manipulating Files \& Directories}
+
+%------------------------------------------------------------------------------%
+
+\section{Working with Commands}
+
+%------------------------------------------------------------------------------%
+
+\section{Redirection}
+
+%------------------------------------------------------------------------------%
+
+\section{Seeing the World as the Shell Sees It}
+
+%------------------------------------------------------------------------------%
+
+\section{Advanced Keyboard Tricks}
+
+%------------------------------------------------------------------------------%
+
+\section{Permissions}
+
+%------------------------------------------------------------------------------%
+
+\section{Processes}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\huge Part II: Configuration \& The Environment
+\end{center}
+
+\section{The Environment}
+
+%------------------------------------------------------------------------------%
+
+\section{A Gentle Introduction to vi}
+
+%------------------------------------------------------------------------------%
+
+\section{Customizing the Prompt}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\huge Part III: Common Tasks \& Essential Tools
+\end{center}
+
+%------------------------------------------------------------------------------%
+
+\section{Package Management}
+
+%------------------------------------------------------------------------------%
+
+\section{Storage Media}
+
+%------------------------------------------------------------------------------%
+
+\section{Networking}
+
+%------------------------------------------------------------------------------%
+
+\section{Searching for Files}
+
+%------------------------------------------------------------------------------%
+
+\section{Archiving \& Backup}
+
+%------------------------------------------------------------------------------%
+
+\section{Regular Expressions}
+
+%------------------------------------------------------------------------------%
+
+\section{Text Processing}
+
+%------------------------------------------------------------------------------%
+
+\section{Formatting Output}
+
+%------------------------------------------------------------------------------%
+
+\section{Printing}
+
+%------------------------------------------------------------------------------%
+
+\section{Compiling Programs}
+
+%------------------------------------------------------------------------------%
+
+\begin{center}
+	\huge Part IV: Writing Shell Scripts
+\end{center}
+
+%------------------------------------------------------------------------------%
+
+\section{Writing Your 1st Script}
+
+%------------------------------------------------------------------------------%
+
+\section{Starting a Project}
+
+%------------------------------------------------------------------------------%
+
+\section{Top-Down Design}
+
+%------------------------------------------------------------------------------%
+
+\section{Flow Control: Branching with \texttt{if}}
+
+%------------------------------------------------------------------------------%
+
+\section{Reading Keyboard Input}
+
+%------------------------------------------------------------------------------%
+
+\section{Flow Control: Looping with \texttt{while/until}}
+
+%------------------------------------------------------------------------------%
+
+\section{Troubleshooting}
+
+%------------------------------------------------------------------------------%
+
+\section{Flow Control: Branching with \texttt{case}}
+
+%------------------------------------------------------------------------------%
+
+\section{Positional Parameters}
+
+%------------------------------------------------------------------------------%
+
+\section{Flow Control: Looping with \texttt{for}}
+
+%------------------------------------------------------------------------------%
+
+\section{Strings \& Numbers}
+
+%------------------------------------------------------------------------------%
+
+\section{Arrays}
+
+%------------------------------------------------------------------------------%
+
+\section{Exotica}
+
+%------------------------------------------------------------------------------%
+
+\chapter{Miscellaneous}
 
 \section{Calibre}
 Official website: \url{https://calibre-ebook.com/}. See also, e.g., \href{https://en.wikipedia.org/wiki/Calibre_(software)}{Wikipedia\texttt{/}Calibre (software)}. Enable Dark Mode in Calibre:
