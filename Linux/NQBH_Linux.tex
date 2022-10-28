@@ -127,7 +127,7 @@ Enter Richard Stallman, the genius-philosopher who founded the Free Software mov
 In popular usage, Linux refers to the kernel \& all the other free \& open source software found in the typical Linux distribution, i.e., the entire Linux ecosystem, not just the GNU components. The operating system marketplace seems to prefer 1-word names such as DOS, Windows, macOS, Solaris, Irix, \& AIX. I have chosen to use the popular format. If, however, you prefer to use ``GNU\texttt{/}Linux'' instead, perform a mental search-\&-replace while reading this book. I won't mind.'' -- \cite[pp. 34--36]{Shotts2019}
 
 \subsection*{What's New in the 2nd Edition}
-``While the basic structure \& content remain the same, this edition of \textit{The Linux Command Line} is peppered with various refinements, classifications, \& modernizations, many of which are based on reader feedback. In addition, 2 particular improvements stand out. 1st, the book now assumes \texttt{bash} version $4.x$,  which was not in wide use at the time of the original manuscript. This 4th major version of \texttt{bash} added several useful new features now covered in this edition. 2nd, Part 4, ``Shell Scripting,'' has been improved to provide better examples of good scripting practice. The scripts included in Part 4 have been revised to make them more robust, \& I also fixed a few bugs.'' ``This book is an ongoing project, like many open source software projects.'' -- \cite[p 36]{Shotts2019}
+``While the basic structure \& content remain the same, this edition of \textit{The Linux Command Line} is peppered with various refinements, classifications, \& modernizations, many of which are based on reader feedback. In addition, 2 particular improvements stand out. 1st, the book now assumes \texttt{bash} version $4.x$,  which was not in wide use at the time of the original manuscript. This 4th major version of \texttt{bash} added several useful new features now covered in this edition. 2nd, Part 4, ``Shell Scripting,'' has been improved to provide better examples of good scripting practice. The scripts included in Part 4 have been revised to make them more robust, \& I also fixed a few bugs.'' ``This book is an ongoing project, like many open source software projects.'' -- \cite[p. 36]{Shotts2019}
 
 %------------------------------------------------------------------------------%
 
@@ -138,6 +138,67 @@ In popular usage, Linux refers to the kernel \& all the other free \& open sourc
 %------------------------------------------------------------------------------%
 
 \section{What Is the Shell?}
+``When we speak of the command line, we are really referring to the \textit{shell}. The shell is a program that takes keyboard commands \& passes them to the operating system to carry out. Almost all Linux distributions supply a shell program from the GNU Project called \texttt{bash}. The name is acronym for \textit{b}ourne-\textit{a}gain \textit{sh}ell, a reference to the fact that \texttt{bash} is an enhanced replacement for \texttt{sh}, the original Unix shell program written by Steve Bourne.'' -- \cite[p. 38]{Shotts2019}
+
+\subsection{Terminal Emulators}
+``When using a graphical user interface (GUI), we need another program called a \textit{terminal emulator} to interact with the shell. If we look through our desktop menus, we will probably find one. KDE uses konsole, \& GNOME uses gnome-terminal, though it's likely called simply Terminal on your menu. A number of other terminal emulators are available for Linux, but they all basically do the same thing: give us access to the shell. You will probably develop a preference for 1 or another terminal emulator based on the number of bells \& whistles it has.'' -- \cite[p. 38]{Shotts2019}
+
+\subsection{Making Your 1st Keystrokes}
+``Launch the terminal emulator. Once it comes up, we should see something like this: \verb|[me@linuxbox ~]$|. This is called a \textit{shell prompt}, \& it will appear whenever the shell is ready to accept input. While it might vary in appearance somewhat depending on the distribution, it will typically include your \texttt{username@machinename}, followed by the current working directory (more about that in a little bit) \& a dollar sign.
+
+If the last character of the prompt is a hash mark \texttt{\#} rather than a dollar sign, the terminal session has superuser privileges. This means either we are logged in as the root user or we selected a terminal emulator that provides superuser (administrative) privileges.'' -- \cite[p. 39]{Shotts2019}
+
+\subsection{Command History}
+``If we press the up arrow, we will see that the previous command entered reappears after the prompt. This is called \textit{command history}. Most Linux distributions remember the last $1,000$ commands by default. Press the down arrow \& the previous command disappears.'' -- \cite[p. 39]{Shotts2019}
+
+\subsection{Cursor Movement}
+``Recall the previous command by pressing the up arrow again. If we try the left \& right arrows, we'll see that we can position the cursor anywhere on the command line. This makes editing commands easy.
+
+\textbf{A few words about mice \& focus.} While the shell is all about the keyboard, you can also use a mouse with your terminal emulator. A mechanism built into the X Window System (the underlying engine that makes the GUI go) supports a quick copy-\&-paste technique. If you highlight some text by holding down the left mouse button \& dragging the mouse over it (or double-clicking a word), it is copied into a buffer maintained by X. Pressing the middle mouse button will cause the text to be pasted at the cursor location. Try it.
+
+Don't be tempted to use \textsc{ctrl-C} \& \textsc{ctrl-V} to perform copy \& paste inside a terminal window. They don't work. These control codes have different meanings to the shell \& were assigned many years before the release of Microsoft Windows.
+
+Your graphical desktop environment (most likely KDE or GNOME), in an effort to behave like Windows, probably has its focus policy set to ``click to focus.'' This means for a window to get focus (become active), you need to click on it. This is contrary to the traditional X behavior of ``focus follows mouse,'' which means that a window gets focus just by passing the mouse over it. The window will not come to the foreground until you click on it, but it will be able to receive input. Setting the focus policy to ``focus follows mouse'' will make the copy-\&-paste technique even more useful. Give it a try if you can (some desktop environments such as Ubuntu's Unity no longer support it). I think if you give it a chance, you will prefer it. You will find this setting in the configuration program for your window manager.'' -- \cite[p. 40]{Shotts2019}
+
+\subsection{Try Some Simple Commands}
+``Now that we have learned to enter text in the terminal emulator, let's try a few simple commands. Let's begin with the \texttt{date} command, which displays the current time \& date.
+\begin{verbatim}
+	[me@linuxbox ~]$ date
+	Fri Feb 2 15:09:41 EST 2018
+\end{verbatim}
+A related command is \texttt{cal}, which, by default, displays a calendar of the current month.
+\begin{verbatim}
+	[me@linuxbox ~]$ cal
+	February 2018
+	Su Mo Tu We Th Fr Sa
+	             1  2  3
+	 4  5  6  7  8  9 10
+	11 12 13 14 15 16 17
+	18 19 20 21 22 23 24
+	25 26 27 28
+\end{verbatim}
+\textbf{The console behind the curtain.} Even if we have no terminal emulator running, several terminal sessions continue to run behind the graphical desktop. We can access these sessions, called \textit{virtual consoles}, by pressing \textsc{ctrl-alt-F1} through \textsc{ctrl-alt-F6}  on most Linux distributions. When a session is accessed, it presents a login prompt into which we can enter our username \& password. To switch from 1 virtual console to another, press \texttt{alt-F1} through \textsc{alt-F6}. On most systems, we can return to the graphical desktop by pressing \texttt{alt-F7}.
+
+To see the current amount of free space on our disk drives, enter \texttt{df}.
+\begin{verbatim}
+	[me@linuxbox ~]$ df
+	tmpfs             783256     2288    780968   1% /run
+	/dev/nvme0n1p2 491039648 79254728 386768040  18% /
+	tmpfs            3916268   154944   3761324   4% /dev/shm
+	tmpfs               5120        4      5116   1% /run/lock
+	/dev/nvme0n1p1     94759     5329     89430   6% /boot/efi
+	tmpfs             783252      156    783096   1% /run/user/1000
+\end{verbatim}
+Likewise, to display the amount of free memory, enter the \texttt{free} command.'' -- \cite[pp. 41--42]{Shotts2019}
+\begin{verbatim}
+	[me@linuxbox ~]$ free
+	               total        used        free      shared  buff/cache   available
+	Mem:         7832540     6709784      217512      327756      905244      502532
+	Swap:              0           0           0
+\end{verbatim}
+
+\subsection{Ending a Terminal Session}
+``We can end a terminal session by closing the terminal emulator window, by entering the \texttt{exit} command at the shell prompt, or by pressing \texttt{ctrl-D}. \verb|[me@linuxbox ~]$ exit|.'' -- \cite[p. 42]{Shotts2019}
 
 %------------------------------------------------------------------------------%
 
