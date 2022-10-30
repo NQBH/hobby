@@ -6,6 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[chapter]
@@ -32,7 +33,7 @@
 \def\labelitemii{$\circ$}
 
 \title{Linux}
-\author{Nguyen Quan Ba Hong\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}}}
+\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
@@ -209,6 +210,97 @@ Likewise, to display the amount of free memory, enter the \texttt{free} command.
 ``Like Windows, a Unix-like operating system such as Linux organizes its files in what is called a \textit{hierarchical directory structure}. This means they are organized in a tree-like pattern of directories (sometimes called \textit{folders} in other systems), which may contain files \& other directories. The 1st directory in the file system is called the \textit{root directory}. The root directory contains files \& subdirectories, which contain more files \& subdirectories, \& so on.
 
 Note that unlike Windows, which has a separate file system tree for each storage device, Unix-like systems such as Linux always have a single file system tree, regardless of how many drives or storage devices are attached to the computer. Storage devices are attached (or more correctly, \textit{mounted}) at various points on the tree according to the whims of the \textit{system administrator}, the person (or people) responsible for the maintenance of the system.'' -- \cite[pp. 43--44]{Shotts2019}
+
+\subsection{The Current Working Directory}
+``Most of us are probably familiar with a graphical file manager that represents the file system tree. Notice that the tree is usually shown upended, i.e., with the root at the top \& the various branches descending below.
+
+However, the command line has no pictures, so to navigate the file system tree, we need to think of it in a different way.
+
+Imagine that the file system is a maze shaped like an upside-down tree \& we are able to stand in the middle of it. At any given time, we are inside a single directory, \& we can see the files contained in the directory \& the pathway to the directory above us (called the \textit{parent directory}) \& any subdirectories below us. The directory we are standing in is called the \textit{current working directory}. To display the current working directory, we use the \texttt{pwd} (print working directory) command.
+\begin{verbatim}
+	[me@linuxbox ~]$ pwd
+	/home/me
+\end{verbatim}
+When we 1st log in to our system (or start a terminal emulator session), our current working directory is set to our \textit{home directory}. Each user account is given its own home directory, \& it is the only place a regular user is allowed to write files.'' -- \cite[pp. 44--45]{Shotts2019}
+
+\subsection{Listing the Contents of a Directory}
+``To list the files \& directories in the current working directory, we use the \texttt{ls} command.
+\begin{verbatim}
+	[me@linuxbox ~]$ ls
+	Desktop Documents Music Pictures Public Templates Videos
+\end{verbatim}
+Actually, we can use the \texttt{ls} command to list the contents of any directory, not just the current working directory, \& there are many other fun things it can do as well. We'll spend more time with \texttt{ls} in Chap. 3.'' -- \cite[p. 45]{Shotts2019}
+
+\subsection{Changing the Current Working Directory}
+``To change our working directory (where we are standing in the tree-shaped maze), we use the \texttt{cd} command. To do this, type \texttt{cd} followed by the pathname of the desired working directory. A pathname is the route we take along the branches of the tree to get to the directory we want. We can specify pathnames in 1 of 2 different ways: as \textit{absolute pathnames} or as \textit{relative pathnames}. Let's deal with absolute pathnames 1st.'' -- \cite[p. 45]{Shotts2019}
+
+\subsection{Absolute Pathnames}
+``An absolute pathname beings with the root directory \& follows the tree branch by branch until the path to the desired directory or file is completed. E.g., there is a directory on your system in which most of the system's programs are installed. The directory's pathname is \texttt{/usr/bin}. I.e., from the root directory (represented by the leading slash in the pathname) there is a directory called \texttt{usr} that contains a directory called \texttt{bin}.
+\begin{verbatim}
+	[me@linuxbox ~]$ cd /usr/bin
+	[me@linuxbox bin]$ pwd
+	/usr/bin
+	[me@linuxbox bin]$ ls
+	...Listing of many, many files ...
+\end{verbatim}
+Now we can see that we have changed the current working directory to \texttt{/usr/bin} \& that it is full of files. Notice how the shell prompt has changed? As a convenience, it is usually set up to automatically display the name of the working directory.'' -- \cite[p. 46]{Shotts2019}
+
+\subsection{Relative Pathnames}
+``Where an absolute pathname starts from the root directory \& leads to its destination, a relative pathname starts from the working directory. To do this, it uses a couple of special notations to represent relative positions in the file system tree. These special notations are \texttt{.} (dot) \& \texttt{..} (dot dot).
+
+The \texttt{.} notation refers to the working directory, \& the \texttt{..} notation refers to the working directory's parent directory. Here is how it works. Let's change the working directory to \texttt{/usr/bin} again.
+\begin{verbatim}
+	[me@linuxbox ~]$ cd /usr/bin
+	[me@linuxbox bin]$ pwd
+	/usr/bin
+\end{verbatim}
+Now let's say that we wanted to change the working directory to the parent of \texttt{/usr/bin}, which is \texttt{/usr}. We could do that 2 different ways, either with an absolute pathname:
+\begin{verbatim}
+	[me@linuxbox bin]$ cd /usr
+	[me@linuxbox usr]$ pwd
+	/usr
+\end{verbatim}
+or with a relative pathname:
+\begin{verbatim}
+	[me@linuxbox bin]$ cd ..
+	[me@linuxbox usr]$ pwd
+	/usr
+\end{verbatim}
+2 different methods with identical results. Which one should use? \footnote{The one that requires the least typing!}
+
+Likewise, we can change the working directory from \texttt{/usr} to \texttt{/usr/bin} in 2 different ways, either using an absolute pathname:
+\begin{verbatim}
+	[me@linuxbox usr]$ cd /usr/bin
+	[me@linuxbox bin]$ pwd
+	/usr/bin
+\end{verbatim}
+or using a relative pathname:
+\begin{verbatim}
+	[me@linuxbox usr]$ cd ./bin
+	[me@linuxbox bin]$ pwd
+	/usr/bin
+\end{verbatim}
+Now, there is something important to point out here. In almost all cases, we can omit the \texttt{./} part because it is implied. Typing the following does the same thing:
+\begin{verbatim}
+	[me@linuxbox usr]$ cd bin
+\end{verbatim}
+In general, if we do not specify a pathname to something, the working directory will be assumed.
+
+\textbf{Important facts about filenames.} On Linux systems, files are named in a manner similar to that of other systems such as Windows, but there are some important differences.
+\begin{itemize}
+	\item Filenames that begin with a period character are hidden. This only means that \texttt{ls} will not list them unless you say \texttt{ls -a}. When you account was created, several hidden files were placed in your home directory to configure things for your account. In Chap. 11 we will take a closer look at some of these files to see how you can customize your environment. In addition, some applications place their configuration \& setting files in your home directory as hidden files.
+	\item Filenames \& commands in Linux, like Unix, are case sensitive. The filenames \texttt{File1} \& \texttt{file1} refer to different files.
+	\item Though Linux supports long filenames that may contain embedded spaces \& punctuation characters, limit the punctuation characters in the names of files you create to period, dash, \& underscore. \textit{Most important, do not embed spaces in filenames}. If you want to represent spaces between words in a filename, use underscore characters. You will thank yourself later.
+	\item Linux has no concept of a ``file extension'' like some other operating systems. You may name files any way you like. The contents or purpose of a file is determined by other means. Although Unix-like operating systems don't use file extensions to determine the contents\texttt{/}purpose of files, many application programs do.'' -- \cite[pp. 46--48]{Shotts2019}
+\end{itemize}
+
+\subsection{Some Helpful Shortcuts}
+Some useful ways to quickly change the current working directory. \textsc{cd} Shortcuts:
+\begin{enumerate*}
+	\item[$\bullet$] \texttt{cd}: Changes the working directory to your home directory.
+	\item[$\bullet$] \texttt{cd -}: Changes the working directory to the previous working directory.
+	\item[$\bullet$] \verb|cd ~user_name|: Changes the working directory to the home directory of \verb|user_name|. E.g., typing \verb|cd ~bob| will change the directory to the home directory of user ``bob''.
+\end{enumerate*}
 
 %------------------------------------------------------------------------------%
 
