@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
-\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -47,7 +47,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Hóa sơ cấp lớp 8. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}.} của tác giả viết cho Hóa Học lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/problem/NQBH_elementary_chemistry_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/problem/NQBH_elementary_chemistry_grade_8_problem.pdf}.}.
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, for Elementary Chemistry grade 8. This text is also a supplementary material for my lecture note on Elementary Chemistry grade 8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/problem/NQBH_elementary_chemistry_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/problem/NQBH_elementary_chemistry_grade_8_problem.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao cho Hóa Học Sơ Cấp lớp 8. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Hóa Học Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/problem/NQBH_elementary_chemistry_grade_8_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}problem}.
 \end{abstract}
 \tableofcontents
 \newpage
@@ -133,7 +136,7 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{An2011}, \textbf{16.}, p. 10]
-	Muối crom sunfat có phân tử khối là $392$ \& có công thức \ce{Cr2(SO4)x}. Tìm hóa trị của crom. Cho biết hóa trị của nhóm \ce{SO4} là II.
+	Muối crom sunfat có phân tử khối là $392$ \& có công thức \ce{Cr2(SO4)_x}. Tìm hóa trị của crom. Cho biết hóa trị của nhóm \ce{SO4} là II.
 \end{baitoan}
 
 \begin{baitoan}[\cite{An2011}, \textbf{17.}, p. 10]
@@ -942,6 +945,37 @@
 %------------------------------------------------------------------------------%
 
 \subsection{Tính Theo Phương Trình Hóa Học}
+``Trường hợp gặp bài toán cho lượng chất của cả 2 chất phản ứng \& yêu cầu tính lượng chất mới sinh ra. Trong số 2 chất phản ứng sẽ có 1 chất phản ứng hết, chất kia có thể phản ứng hết hoặc dư. Lượng chất mới sinh ra tính theo lượng chất nào phản ứng hết, do đó phải tìm xem trong 2 chất cho biết, chất nào phản ứng hết. E.g., phương trình \ce{A + B -> C + D}. Cách giải: Lập tỷ số:
+\begin{align*}
+	\frac{\mbox{số mol chất A (theo đề bài)}}{\mbox{số mol chất A (theo phương trình)}}\mbox{ \& }\frac{\mbox{số mol chất B (theo đề bài)}}{\mbox{số mol chất B (theo phương trình)}}.
+\end{align*}
+So sánh 2 tỷ số, tỷ số nào lớn hơn, chất đó dư, chất kia phản ứng hết. Tính toán (theo yêu cầu của đề bài) theo chất phản ứng hết.'' -- \cite[p. 40]{An2011}
+
+\begin{baitoan}[\cite{An2011}, \textbf{130.}, p. 40]
+	Cho $50$\emph{g} \emph{\ce{NaOH}} tác dụng với dung dịch chứa $36.5$\emph{g} \emph{\ce{HCl}}. Tính khối lượng mối tạo thành sau phản ứng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{131.}, p. 41]
+	Cho $12$\emph{g} \emph{\ce{NaOH}} vào dung dịch \emph{\ce{FeCl2}} thu được $0.1$ mol kết tủa \emph{\ce{Fe(OH)2}}. Tính khối lượng \emph{\ce{FeCl2}} đã tham gia phản ứng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{132.}, p. 41]
+	Cho $31.2$\emph{g} \emph{\ce{BaCl2}} vào dung dịch \emph{\ce{H2SO4}} chứa $9.8$\emph{g} thu được \emph{\ce{BaSO4}} kết tủa. Tính khối lượng kết tủa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{133.}, p. 41]
+	Cho $30$\emph{g} \emph{Fe} có lẫn tạp chất tác dụng với dung dịch \emph{HCl} lấy dư thu được $10.08$\emph{l} khí \emph{\ce{H2}} (đktc). Biết hiệu suất phản ứng là $100$\%. Tính \% tạp chất có trong \emph{Fe}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An2011}, \textbf{134.}, p. 42]
+	Để thu được sắt kim loại, người ta cho sắt (III) oxide tác dụng với carbon oxide (\emph{CO}).
+	\begin{enumerate*}
+		\item[(a)] Viết phương trình hóa học của phản ứng.
+		\item[(b)] Tính khối lượng sắt thu được khi cho $8.4$\emph{g} carbon oxide tác dụng hết với $16$\emph{g} sắt (III) oxide \& có $13.2$\emph{g} carbon dioxide sinh ra.
+	\end{enumerate*}
+\end{baitoan}
+
+
 
 %------------------------------------------------------------------------------%
 
