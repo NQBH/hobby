@@ -38,6 +38,8 @@
 
 \begin{document}
 \maketitle
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
 \tableofcontents
 
 I have used the following Linux distributions: \textsc{Ubuntu, Kubuntu, SUSE, OpenSUSE}, where the 1st one is install in my personal notebooks\texttt{/}laptops, the 2nd one is install in my WIAS Dell XPS 15 (KDE provides a lot of good stuffs), while the other ones are install in computer servers at WIAS Berlin. Note that SUSE \& \textsc{OpenSUSE} are produced by Germans\footnote{In my own experiences, I believe that Germans \& Frenches prefer building their own facilities over using those provided by the rest of the world.}.
@@ -149,10 +151,10 @@ In popular usage, Linux refers to the kernel \& all the other free \& open sourc
 
 If the last character of the prompt is a hash mark \texttt{\#} rather than a dollar sign, the terminal session has superuser privileges. This means either we are logged in as the root user or we selected a terminal emulator that provides superuser (administrative) privileges.'' -- \cite[p. 39]{Shotts2019}
 
-\subsection{Command History}
+\subsubsection{Command History}
 ``If we press the up arrow, we will see that the previous command entered reappears after the prompt. This is called \textit{command history}. Most Linux distributions remember the last $1,000$ commands by default. Press the down arrow \& the previous command disappears.'' -- \cite[p. 39]{Shotts2019}
 
-\subsection{Cursor Movement}
+\subsubsection{Cursor Movement}
 ``Recall the previous command by pressing the up arrow again. If we try the left \& right arrows, we'll see that we can position the cursor anywhere on the command line. This makes editing commands easy.
 
 \textbf{A few words about mice \& focus.} While the shell is all about the keyboard, you can also use a mouse with your terminal emulator. A mechanism built into the X Window System (the underlying engine that makes the GUI go) supports a quick copy-\&-paste technique. If you highlight some text by holding down the left mouse button \& dragging the mouse over it (or double-clicking a word), it is copied into a buffer maintained by X. Pressing the middle mouse button will cause the text to be pasted at the cursor location. Try it.
@@ -234,7 +236,7 @@ Actually, we can use the \texttt{ls} command to list the contents of any directo
 \subsection{Changing the Current Working Directory}
 ``To change our working directory (where we are standing in the tree-shaped maze), we use the \texttt{cd} command. To do this, type \texttt{cd} followed by the pathname of the desired working directory. A pathname is the route we take along the branches of the tree to get to the directory we want. We can specify pathnames in 1 of 2 different ways: as \textit{absolute pathnames} or as \textit{relative pathnames}. Let's deal with absolute pathnames 1st.'' -- \cite[p. 45]{Shotts2019}
 
-\subsection{Absolute Pathnames}
+\subsubsection{Absolute Pathnames}
 ``An absolute pathname beings with the root directory \& follows the tree branch by branch until the path to the desired directory or file is completed. E.g., there is a directory on your system in which most of the system's programs are installed. The directory's pathname is \texttt{/usr/bin}. I.e., from the root directory (represented by the leading slash in the pathname) there is a directory called \texttt{usr} that contains a directory called \texttt{bin}.
 \begin{verbatim}
 	[me@linuxbox ~]$ cd /usr/bin
@@ -245,7 +247,7 @@ Actually, we can use the \texttt{ls} command to list the contents of any directo
 \end{verbatim}
 Now we can see that we have changed the current working directory to \texttt{/usr/bin} \& that it is full of files. Notice how the shell prompt has changed? As a convenience, it is usually set up to automatically display the name of the working directory.'' -- \cite[p. 46]{Shotts2019}
 
-\subsection{Relative Pathnames}
+\subsubsection{Relative Pathnames}
 ``Where an absolute pathname starts from the root directory \& leads to its destination, a relative pathname starts from the working directory. To do this, it uses a couple of special notations to represent relative positions in the file system tree. These special notations are \texttt{.} (dot) \& \texttt{..} (dot dot).
 
 The \texttt{.} notation refers to the working directory, \& the \texttt{..} notation refers to the working directory's parent directory. Here is how it works. Let's change the working directory to \texttt{/usr/bin} again.
@@ -294,7 +296,7 @@ In general, if we do not specify a pathname to something, the working directory 
 	\item Linux has no concept of a ``file extension'' like some other operating systems. You may name files any way you like. The contents or purpose of a file is determined by other means. Although Unix-like operating systems don't use file extensions to determine the contents\texttt{/}purpose of files, many application programs do.'' -- \cite[pp. 46--48]{Shotts2019}
 \end{itemize}
 
-\subsection{Some Helpful Shortcuts}
+\subsubsection{Some Helpful Shortcuts}
 Some useful ways to quickly change the current working directory. \textsc{cd} Shortcuts:
 \begin{enumerate*}
 	\item[$\bullet$] \texttt{cd}: Changes the working directory to your home directory.
@@ -345,7 +347,7 @@ We can also change the format of the output to reveal more detail.
 \end{verbatim}
 By adding \texttt{-l} to the command, we changed the output to the long format.'' -- \cite[pp. 50--51]{Shotts2019}
 
-\subsection{Options \& Arguments}
+\subsubsection{Options \& Arguments}
 ``This brings us to a very important point about how most commands work. Commands are often followed by 1 or more \textit{options} that modify their behavior \&, further, by 1 or more \textit{arguments}, the items upon which the command acts. So, most commands look kind of like this: \texttt{\textbf{command} -options arguments}. Most commands use options, which consist of a single character preceded by a dash, e.g., \texttt{-l}. Many commands, however, including those from the GNU Project, also support \textit{long options}, consisting of a word preceded by 2 dashes. Also, many commands allow multiple short options to be strung together. In the following example, the \texttt{ls} command is given 2 options, which are the \texttt{l} option to produce long format output, \& the \texttt{t} option to sort the result by the file's modification time.
 \begin{verbatim}
 	[me@linuxbox ~]$ ls -lt
@@ -371,7 +373,7 @@ The \texttt{ls} command has a large number of possible options, the most common 
 	\item \texttt{-t}: Sort by modification in time.'' -- \cite[pp. 51--53]{Shotts2019}
 \end{itemize}
 
-\subsection{A Longer Look at Long Format}
+\subsubsection{A Longer Look at Long Format}
 As we aw earlier, the \texttt{-l} option causes \texttt{ls} to display its results in long format. This format contains a great deal of useful information. Here is the \texttt{Examples} directory from an Ubuntu system:
 \begin{verbatim}
 	-rw-r--r-- 1 root root 3576296 2017-04-03 11:05 Experience ubuntu.ogg
@@ -509,6 +511,365 @@ The directory listing at the beginning of this section (from the \texttt{/lib} d
 %------------------------------------------------------------------------------%
 
 \section{Manipulating Files \& Directories}
+``At this point, we are ready for some real work! This chapter will introduce 5 of the most frequently used Linux commands. The following commands are used for manipulating both files \& directories:
+\begin{enumerate*}
+	\item[$\bullet$] \texttt{cp}: Copy files \& directories.
+	\item[$\bullet$] \texttt{mv}: Move\texttt{/}rename files \& directories.
+	\item[$\bullet$] \texttt{mkdir}: Create directories.
+	\item \texttt{rm}: Remove files \& directories.
+	\item[$\bullet$] \texttt{ln}: Create hard \& symbolic links.
+\end{enumerate*}
+
+Now, to be frank, some of the tasks performed by these commands are more easily done with a graphical file manager. With a file manager, we can drag \& drop a file from 1 directory to another, cut \& paste files, delete files, \& so on. So why use these old command line programs?
+
+The answer is power \& flexibility. While it is easy to perform simple file manipulations with a graphical file manager, complicated tasks can be easier with the command line programs. E.g., how could we copy all the HTML files from 1 directory to another but copy only files that do not exist in the destination directory or are newer than the versions in the destination directory? It's pretty hard with a file manager but pretty easy with the command line. \verb|cp -u *.html destination|.'' -- \cite[pp. 64--65]{Shotts2019}
+
+\subsection{Wildcards}
+``Before we begin using our commands, we need to talk about a shell feature that makes these commands so powerful. Because the shell uses filenames so much, it provides special characters to help you rapidly specify groups of filenames. These special characters are called \textit{wildcards}. Using wildcards (which is also known as \textit{globbing}) allows you to select filenames based on patterns of characters. Table 4-1 lists the wildcards \& what they select. \textsf{Table 4-1: Wildscards. Wildcard : Meaning.}
+\begin{itemize}
+	\item \texttt{*}: Matches any characters.
+	\item \texttt{?}: Matches any single character.
+	\item \texttt{[characters]}: Matches any character that is a member of the set \texttt{characters}.
+	\item \texttt{[[:class:]]} Matches any character  that is a member of the specified \texttt{class}.
+\end{itemize}
+Table 4-2 lists the most commonly used character classes. \textsf{Table 4-2: Commonly Used Character Classes. Character class : Meaning}.
+\begin{itemize}
+	\item \texttt{[:alnum:]}: Matches any alphanumeric character.
+	\item \texttt{[:alpha:]}: Matches any alphabetic character.
+	\item \texttt{[:digit:]}: Matches any numeral.
+	\item \texttt{[:lower:]}: Matches any lowercase letter.
+	\item \texttt{[:upper:]}: Matches any uppercase letter.
+\end{itemize}
+Using wildcards makes it possible to construct sophisticated selection criteria for filenames. Table 4-3 provides some examples of patterns \& what they match. \textsf{Table 4-3: Wildcard Examples. Pattern : Matches.}
+\begin{itemize}
+	\item \texttt{*}: All files.
+	\item \texttt{g*}: Any file beginning with \texttt{g}:
+	\item \texttt{b*.txt}: Any file beginning with \texttt{b} followed by any characters \& ending with \texttt{.txt}.
+	\item \texttt{Data???}: Any file beginning with \texttt{Data} followed by exactly 3 characters.
+	\item \texttt{[abc]*}: Any file beginning with either an \texttt{a}, a \texttt{b}, or a \texttt{c}.
+	\item \texttt{BACKUP.[0-9][0-9][0-9]}: Any file beginning with \texttt{BACKUP.} followed by exactly 3 numerals.
+	\item \texttt{[[:upper:]]*}: Any file beginning with an uppercase letter.
+	\item \texttt{[![:digit:]]*}: Any file not beginning with a numeral.
+	\item \texttt{*[[:lower:]123]}: Any file ending with a lowercase letter or the numerals \texttt{1}, \texttt{2}, or \texttt{3}.
+\end{itemize}
+\textbf{Wildcards work in the GUI, too.} Wildcards are especially valuable not only because they are used so frequently on the command line but because they are also supported by some graphical file managers.
+\begin{itemize}
+	\item In Nautilus (the file manager for GNOME), you can select files using the Edit $\triangleright$ Select Pattern menu item. Just enter a file selection pattern with wildcards \& the files in the currently viewed directory will be highlighted for selection.
+	\item In some versions of Dolphin \& Konqueror (the file managers for KDE), you can enter wildcards directly on the location bar. E.g., if you want to see all the files starting with a lowercase \texttt{u} in the \texttt{/usr/bin} directory, enter \texttt{/usr/bin/u*} in the location bar \& it will display the result.
+\end{itemize}
+Many ideas originally found in the command line interface make their way into the graphical interface, too. It is 1 of the many things that make the Linux desktop so powerful.
+
+Wildcards can be used with any command that accepts filenames as arguments.
+
+\textbf{Character ranges.} If you coming from another Unix-like environment or have been reading some other books on this subject, you may have encountered the \texttt{[A-Z]} \& \texttt{[a-z]} character range notations. These are traditional Unix notations \& worked in older versions of Linux as well. They can still work, but you have to be careful with them because they will not produce the expected results unless properly configured. For now, you should avoid using them \& use character classes instead.'' -- \cite[pp. 65--67]{Shotts2019}
+
+\subsection{\texttt{mkdir} -- Create Directories}
+``The \texttt{mkdir} command is used to create directories. It works like this: \texttt{mkdir directory...}. Note that when 3 periods follow an argument in the description of a command (as in the preceding example), it means that the argument can be repeated. Thus, the following command \texttt{mkdir dir1} would create a single directory named \texttt{dir1}. This command \texttt{mkdir dir1 dir2 dir3} would create 3  directories named \texttt{dir1, dir2}, \& \texttt{dir3}.'' -- \cite[pp. 67--68]{Shotts2019}
+
+\subsection{\texttt{cp} -- Copy Files \& Directories}
+``The \texttt{cp} command copies files or directories. It can be used 2 different ways. The following: \texttt{cp item1 item2} copies the single file or directory \texttt{item1} to the file or directory \texttt{item2}. This command: \texttt{cp item... directory} copies multiple items (either files or directories) into a directory.'' -- \cite[p. 68]{Shotts2019}
+
+\subsubsection{Useful Options \& Examples}
+``Table 4-4 describes some of the commonly used options (the short option \& the equivalent long option) for \texttt{cp}. \textsf{Table 4-4: \texttt{cp} Options. Option : Meaning.}
+\begin{itemize}
+	\item \texttt{-a, --archive}: Copy the files \& directories \& all of their attributes, including ownerships \& permissions. Normally, copies take on the default attributes of the user performing the copy. We'll take a look at file permissions in Chap. 9.
+	\item \texttt{-i, --interactive}: Before overwriting an existing file, prompt the user for confirmation. If this option is not specified, \texttt{cp} will silently (meaning there will be no warning) overwrite files.
+	\item \texttt{-r, --recursive}: Recursively copy directories \& their contents. This option (or the \texttt{-a} option) is required when copying directories.
+	\item \texttt{-u, --update}: When copying files from 1 directory to another, only copy files that either don't exist or are newer than the existing corresponding files in the destination directory. This is useful when copying large numbers of files as it skips files that don't need to be copied.
+	\item \texttt{-v, --verbose}: Display informative messages as the copy is performed.
+\end{itemize}
+Table 4-5 provides some examples of these commonly used options. \textsf{Table 4-5: \texttt{cp} Examples: Command. Results.}
+\begin{itemize}
+	\item \texttt{cp file1 file2}: Copy \texttt{file1} to \texttt{file2}. If \texttt{file2} exists, it is overwritten with the contents of \texttt{file1}. If \texttt{file2} does not exist, it is created.
+	\item \texttt{cp -i file1 file2}: Same  as previous command, except that if \texttt{file2} exists, the user is prompted before it is overwritten.
+	\item \texttt{cp file1 file2 dir1}: Copy \texttt{file1} \& \texttt{file2} into directory \texttt{dir1}. The directory \texttt{dir1} must already exist.
+	\item \texttt{cp dir1/* dir2}: Using a wildcard, copy all the files in \texttt{dir1} into \texttt{dir2}. The directory \texttt{dir2} must already exist.
+	\item \texttt{cp -r dir1 dir2}: Copy the contents of directory \texttt{dir1} to directory \texttt{dir2}. If directory \texttt{dir2} does not exist, it is created \&, after the copy, will contain the same contents as directory \texttt{dir1}. If directory \texttt{dir2} does exist, then directory \texttt{dir1} (\& its contents) will be copied into \texttt{dir2}.'' -- \cite[pp. 68--70]{Shotts2019}
+\end{itemize}
+
+\subsection{\texttt{mv} -- Move \& Rename Files}
+``The \texttt{mv} command performs both file moving \& file renaming, depending on how it is used. In either case, the original filename no longer exists after the operation. \texttt{mv} is used in much the same way as \texttt{cp}, as shown here: \texttt{mv item1 item2} to move or rename the file or directory \texttt{item1} to \texttt{item2}. It's also used as follows: \texttt{mv item... directory} to move 1 or more items from 1 directory to another.'' -- \cite[p. 70]{Shotts2019}
+
+\subsubsection{Useful Options \& Examples}
+``\texttt{mv} shares many of the same options as \texttt{cp}, as described in Table 4-6. \textsf{Table 4-6: \texttt{mv} Options. Option : Meaning.}
+\begin{itemize}
+	\item \texttt{-i, --interactive}: Before overwriting an existing file, prompt the user for confirmation. If this option is not specified, \texttt{mv} will silently overwrite files.
+	\item \texttt{-u, --update}: When moving files from 1 directory to another, only move files that either don't exist or are newer than the existing corresponding files in the destination directory.
+	\item \texttt{-v, --verbose}: Display informative messages as the move is performed.
+\end{itemize}
+Table 4-7 provides some examples of using the \texttt{mv} command. \textsf{Table 4-7: \texttt{mv} Examples. Command : Results.}
+\begin{itemize}
+	\item \texttt{mv file1 file2}: Move \texttt{file1} to \texttt{file2}. If \texttt{file2} exists, it is overwritten with the contents of \texttt{file1}. If \texttt{file2} does not exist, it is created. In either case, \texttt{file1} ceases to exist.
+	\item \texttt{mv -i file1 file2}: Same as the previous command, except that if \texttt{file2} exists, the user is prompted before it is overwritten.
+	\item \texttt{mv file1 file2 dir1}: Move \texttt{file1} \& \texttt{file2} into directory \texttt{dir1}. The directory \texttt{dir1} must already exist.
+	\item \texttt{mv dir1 dir2}: If directory \texttt{dir2} does not exist, create directory \texttt{dir2} \& move the contents of directory \texttt{dir1} into \texttt{dir2} \& delete directory \texttt{dir1}. If directory \texttt{dir2} does exist, move directory \texttt{dir1} (\& its contents) into directory \texttt{dir2}.'' -- \cite[pp. 70--71]{Shotts2019}
+\end{itemize}
+
+\subsection{\texttt{rm} -- Remove Files \& Directories}
+``The \texttt{rm} command is used to remove (delete) files \& directories, as shown here: \texttt{rm item...} where \texttt{item} is 1 or more files or directories.'' -- \cite[pp. 71--7]{Shotts2019}
+
+\subsubsection{Useful Options \& Examples}
+``Table 4-8 describes some of the common options for \texttt{rm}. \textsf{Table 4-8: \texttt{rm} Options. Option : Meaning.}
+\begin{itemize}
+	\item \texttt{-i, --interactive}: Before deleting an existing file, prompt the user for confirmation. If this option is not specified, \texttt{rm} will silently delete files.
+	\item \texttt{-r, --recursive}: Recursively delete directories. This means that if a directory being deleted has subdirectories, delete them too. To delete a directory, this option must be specified.
+	\item \texttt{-f, --force}: Ignore nonexistent files \& do not prompt. This overrides the \texttt{--interactive} option.
+	\item \texttt{-v, --verbose}: Display information messages as the deletion is performed.
+\end{itemize}
+\textbf{Be careful with \texttt{rm}!} Unix-like operating systems such as Linux do not have an undelete command. Once you delete something with \texttt{rm}, it's gone. Linux assumes you're smart \& you know what you're doing.
+
+Be particularly careful with wildcards. Consider this classic example. Let's say you want to delete just the HTML files in a directory. To do this, you type the following: \texttt{rm *.html}. This is correct, but if you accidentally place a space between the \texttt{*} \& the \texttt{.html} like so: \texttt{rm * .html} the \texttt{rm} command will delete all the files in the directory \& then complain that there is no file called \texttt{.html}.
+
+Here is a useful tip: whenever you use wildcards with \texttt{rm} (besides carefully checking your typing!), test the wildcard 1st with \texttt{ls}. This will let you see the files that will be deleted. Then press the up arrow to recall the command \& replace \texttt{ls} with \texttt{rm}.
+
+Table 4-9 provides some examples of using the \texttt{rm} command. \textsf{Table 4-9: \texttt{rm} Examples. Command : Results.}
+\begin{itemize}
+	\item \texttt{rm file1}: Delete \texttt{file1} silently.
+	\item \texttt{rm -i file1}: Same as the previous command, except that the user is prompted for confirmation before the deletion is performed.
+	\item \texttt{rm -r file1 dir1}: Delete \texttt{file1} \& \texttt{dir1} \& its contents.
+	\item \texttt{rm -rf file1 dir1}: Same as the previous command, except that if either \texttt{file1} or \texttt{dir1} does not exist, \texttt{rm} will continue silently.'' -- \cite[pp. 71--73]{Shotts2019}
+\end{itemize}
+
+\subsection{\texttt{ln} -- Create Links}
+``The \texttt{ln} command is used to create either hard or symbolic links. It is used in 1 of 2 ways. The following creates a hard link: \texttt{ln file link}. The following creates a symbolic link: \texttt{ln -s item link} where \texttt{item} is either a file or a directory.'' -- \cite[p. 73]{Shotts2019}
+
+\subsubsection{Hard Links}
+``Hard links are the original Unix way of creating links, compared to symbolic links, which are more modern. By default, every file has a single hard link that gives the file its name. When we create a hard link, we create an additional directory entry for a file. Hard links have 2 important limitations.
+\begin{itemize}
+	\item A hard link cannot reference a file outside its own file system. This means a link cannot reference a file that is not on the same disk partition as the link itself.
+	\item A hard link may not reference a directory.
+\end{itemize}
+A hard link is indistinguishable from the file itself. Unlike a symbolic link, when you list a directory containing a hard link, you will see no special indication of the link. When a hard link is deleted, the link is removed, but the contents of the file itself continue to exist (i.e., its space is not deallocated) until all links to the file are deleted.
+
+It is important to be aware of hard links because you might encounter them from time to time, but modern practice prefers symbolic links, which we will cover next.'' -- \cite[pp. 73--74]{Shotts2019}
+
+\subsubsection{Symbolic Links}
+``Symbolic links were created to overcome the limitations of hard links. They work by creating a special type of file that contains a text pointer to the referenced file or directory. In this regard, they operate in much the same way as a Windows shortcut, though of course they predate the Windows feature by many years.
+
+A file pointed to by a symbolic link \& the symbolic link itself are largely indistinguishable from one another. E.g., if you write something to the symbolic link, the referenced file is written to. When you delete a symbolic link, however, only the \textit{link} is deleted, not the \textit{file} itself. If the file is deleted before the symbolic link, the link will continue to exist but will point to nothing. In this case, the link is said to be \textit{broken}. In many implementations, the \texttt{ls} command will display broken links in a distinguishing color, such as red, to reveal their presence. The concept of links can seem confusing, but hang in there. We're going to try all this stuff, \& it will, ideally, become clear.'' -- \cite[p. 74]{Shotts2019}
+
+\subsection{Building a Playground}
+``Because we are going to do some real file manipulation, let's build a safe place to ``play'' with our file manipulation commands. 1st we need a directory to work in. We'll create one in our home directory \& call it \texttt{playground}.'' -- \cite[p. 75]{Shotts2019}
+
+\subsubsection{Creating Directories}
+``The \texttt{mkdir} command is used to create a directory. To create our playground directory, we will 1st make sure we are in our home directory \& will then create the new directory.
+\begin{verbatim}
+	[me@linuxbox ~]$ cd
+	[me@linuxbox ~]$ mkdir playground
+\end{verbatim}
+To make our playground a little more interesting, let's crate a couple of directories inside it called \texttt{dir1} \& \texttt{dir2}. To do this, we will change our current working directory to \texttt{playground} \& execute another \texttt{mkdir}.
+\begin{verbatim}
+	[me@linuxbox ~]$ cd playground
+	[me@linuxbox playground]$ mkdir dir1 dir2
+\end{verbatim}
+Notice that the \texttt{mkdir} command will accept multiple arguments allowing us to create both directories with a single command.'' -- \cite[p. 75]{Shotts2019}
+
+\subsubsection{Copying Files}
+``Next, let's get some data into our playground. We'll do this by copying a file. Using the \texttt{cp} command, we'll copy the \texttt{passwd} file from the \texttt{/etc} directory to the current working directory.
+\begin{verbatim}
+	[me@linuxbox playground]$ cp /etc/passwd .
+\end{verbatim}
+Notice how we used shorthand for the current working directory, the single trailing period. So now if we perform an \texttt{ls}, we will see our file.
+\begin{verbatim}
+	[me@linuxbox playground]$ ls -l
+	total 12
+	drwxrwxr-x 2 me me 4096 2018-01-10 16:40 dir1
+	drwxrwxr-x 2 me me 4096 2018-01-10 16:40 dir2
+	-rw-r--r-- 1 me me 1650 2018-01-10 16:07 passwd
+\end{verbatim}
+Now, just for fun, let's repeat the copy using the \texttt{-v} option (verbose) to see what it does.
+\begin{verbatim}
+	[me@linuxbox playground]$ cp -v /etc/passwd .
+	`/etc/passwd' -> `./passwd'
+\end{verbatim}
+The \texttt{cp} command performed the copy again but this time displayed a concise message indicating what operation it was performing. Notice that \texttt{cp} overwrote the 1st copy without any warning. Again, this is a case of \texttt{cp} assuming that we know what we're doing. To get a warning, we'll include the \texttt{-i} (interactive) option.
+\begin{verbatim}
+	[me@linuxbox playground]$ cp -i /etc/passwd .
+	cp: overwrite `./passwd'?
+\end{verbatim}
+Responding to the prompt by entering a \texttt{y} will cause the file to be overwritten; any other character (e.g., \texttt{n}) will cause \texttt{cp} to leave the file alone.'' -- \cite[pp. 75--76]{Shotts2019}
+
+\subsubsection{Moving \& Renaming Files}
+``Now, the name \texttt{passwd} doesn't seem very playful \& this is a playground, so let's change it to something else.
+\begin{verbatim}
+	[me@linuxbox playground]$ mv passwd fun
+\end{verbatim}
+Let's pass the fun around a little by moving our renamed file to each of the directories \& back again. The following moves it 1st to the directory \texttt{dir1}:
+\begin{verbatim}
+	[me@linuxbox playground]$ mv fun dir1
+\end{verbatim}
+The following then moves it from \texttt{dir1} to \texttt{dir2}:
+\begin{verbatim}
+	[me@linuxbox playground]$ mv dir1/fun dir2
+\end{verbatim}
+Finally, this command brings it back to the current working directory:
+\begin{verbatim}
+	[me@linuxbox playground]$ mv dir2/fun .
+\end{verbatim}
+Next, let's see the effect of \texttt{mv} on directories. 1st we will move our data file into \texttt{dir1} again, like this:
+\begin{verbatim}
+	[me@linuxbox playground]$ mv fun dir1
+\end{verbatim}
+Then we move \texttt{dir1} into \texttt{dir2} \& confirm it with \texttt{ls}.
+\begin{verbatim}
+	[me@linuxbox playground]$ mv dir1 dir2
+	[me@linuxbox playground]$ ls -l dir2
+	total 4
+	drwxrwxr-x 2 me me 4096 2018-01-11 06:06 dir1
+	[me@linuxbox playground]$ ls -l dir2/dir1
+	total 4
+	-rw-r--r-- 1 me me 1650 2018-01-10 16:33 fun
+\end{verbatim}
+Note that because \texttt{dir2} already existed, \texttt{mv} moved \texttt{dir1} into \texttt{dir2}. If \texttt{dir2} had not existed, \texttt{mv} would have renamed \texttt{dir1} to \texttt{dir2}. Lastly, let's put everything back.
+\begin{verbatim}
+	[me@linuxbox playground]$ mv dir2/dir1 .
+	[me@linuxbox playground]$ mv dir1/fun .
+\end{verbatim}
+'' -- \cite[pp. 76--77]{Shotts2019}
+
+\subsubsection{Creating Hard Links}
+``Now we'll try some links. We'll 1st create some hard links to our data file, like so:
+\begin{verbatim}
+	[me@linuxbox playground]$ ln fun fun-hard
+	[me@linuxbox playground]$ ln fun dir1/fun-hard
+	[me@linuxbox playground]$ ln fun dir2/fun-hard
+\end{verbatim}
+So now we have 4 instances of the file \texttt{fun}. Let's take a look at our playground directory.
+\begin{verbatim}
+	[me@linuxbox playground]$ ls -l
+	total 16
+	drwxrwxr-x 2 me me 4096 2018-01-14 16:17 dir1
+	drwxrwxr-x 2 me me 4096 2018-01-14 16:17 dir2
+	-rw-r--r-- 4 me me 1650 2018-01-10 16:33 fun
+	-rw-r--r-- 4 me me 1650 2018-01-10 16:33 fun-hard
+\end{verbatim}
+1 thing we notice is that both the 2nd fields in the listings for \texttt{fun} \& \texttt{fun-hard} contain a \texttt{4}, which is the number of hard links that now exist for the file. Remember that a file will always have at least 1 link because the file's name is created by a link. So, how do we know that \texttt{fun} \& \texttt{fun-hard} are, in fact, the same file? In this case, \texttt{ls} is not very helpful. While we can see that \texttt{fun} \& \texttt{fun-hard} are both the same size (field \texttt{5}), our listing provides no way to be sure. To solve this problem, we're going to have a dig a little deeper.
+
+When thinking about hard links, it is helpful to imagine that files are made up of 2 parts.
+\begin{itemize}
+	\item The data part containing the file's contents.
+	\item The name part that holds the file's name.
+\end{itemize}
+When we create hard links, we are actually creating additional name parts that all refer to the same data part. The system assigns a chain of disk blocks to what is called an \textit{inode}, which is then associated with the name part. Each hard link therefore refers to a specific inode containing the file's contents.
+
+The \texttt{ls} command has a way to reveal this information. It is invoked with the \texttt{-i} option.
+\begin{verbatim}
+	[me@linuxbox playground]$ ls -li
+	total 16
+	12353539 drwxrwxr-x 2 me me 4096 2018-01-14 16:17 dir1
+	12353540 drwxrwxr-x 2 me me 4096 2018-01-14 16:17 dir2
+	12353538 -rw-r--r-- 4 me me 1650 2018-01-10 16:33 fun
+	12353538 -rw-r--r-- 4 me me 1650 2018-01-10 16:33 fun-hard
+\end{verbatim}
+In this version of the listing, the 1st field is the inode number \& as we can see, both \texttt{fun} \& \texttt{fun-hard} share the same inode number, which confirms they are the same file.'' -- \cite[pp. 77--78]{Shotts2019}
+
+\subsubsection{Creating Symbolic Links}
+``Symbolic links were created to overcome the 2 disadvantages of hard links:
+\begin{itemize}
+	\item Hard links cannot span physical devices.
+	\item Hard links cannot reference directories, only files.
+\end{itemize}
+Symbolic links are a special type of file that contains a text pointer to the target file or directory. Creating symbolic links is similar to creating hard links.
+\begin{verbatim}
+	[me@linuxbox playground]$ ln -s fun fun-sym
+	[me@linuxbox playground]$ ln -s ../fun dir1/fun-sym
+	[me@linuxbox playground]$ ln -s ../fun dir2/fun-sym
+\end{verbatim}
+The 1st example is pretty straightforward; we simply add the \texttt{-s} option to create a symbolic link rather than a hard link. But what about the next two? Remember that when we create a symbolic link, we are creating a text description of where the target file is relative to the symbolic link. It's easier to see if we look at the \texttt{ls} output, shown here:
+\begin{verbatim}
+	[me@linuxbox playground]$ ls -l dir1
+	total 4
+	-rw-r--r-- 4 me me 1650 2018-01-10 16:33 fun-hard
+	lrwxrwxrwx 1 me me    6 2018-01-15 15:17 fun-sym -> ../fun
+\end{verbatim}
+The listing for \texttt{fun-sym} in \texttt{dir1} shows that it is a symbolic link by the leading \texttt{l} in the 1st field \& that it points to \texttt{../fun}, which is correct. Relative to the location of \texttt{fun-sym}, \texttt{fun} is in the directory above it. Notice, too, that the length of the symbolic link file is 6, the number of characters in the string \texttt{../fun} rather than the length of the file to which it is pointing.
+
+When creating symbolic links, you can either use absolute pathnames, as shown here:
+\begin{verbatim}
+	[me@linuxbox playground]$ ln -s /home/me/playground/fun dir1/fun-sym
+\end{verbatim}
+or relative pathnames, as we did in our earlier example. In most cases, using relative pathnames is more desirable because it allows a directory tree containing symbolic links \& their referenced files to be renamed \&\texttt{/}or moved without breaking the links.
+
+In addition to regular files, symbolic links can also reference directories.
+\begin{verbatim}
+	[me@linuxbox playground]$ ln -s dir1 dir1-sym
+	[me@linuxbox playground]$ ls -l
+	total 16
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir1
+	lrwxrwxrwx 1 me me    4 2018-01-16 14:45 dir1-sym -> dir1
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir2
+	-rw-r--r-- 4 me me 1650 2018-01-10 16:33 fun
+	-rw-r--r-- 4 me me 1650 2018-01-10 16:33 fun-hard
+	lrwxrwxrwx 1 me me    3 2018-01-15 15:15 fun-sym -> fun
+\end{verbatim}
+Most Linux distributions configure \texttt{ls} to display broken links. The presence of a broken link is not in \& of itself dangerous, but it is rather messy. If we try to use a broken link, we will see this:
+\begin{verbatim}
+	[me@linuxbox playground]$ less fun-sym
+	fun-sym: No such file or directory
+\end{verbatim}
+Let's clean up a little. We'll delete the symbolic links here:
+\begin{verbatim}
+	[me@linuxbox playground]$ rm fun-sym dir1-sym
+	[me@linuxbox playground]$ ls -l
+	total 8
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir1
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir2
+\end{verbatim}
+1 thing to remember about symbolic links is that most file operations are carried out on the link's target, not the link itself. \texttt{rm} 
+'' -- \cite[pp. 79--80]{Shotts2019}
+
+\subsubsection{Removing Files \& Directories}
+``As we covered earlier, the \texttt{rm} command is used to delete files \& directories. We are going to use it to clean up our playground a little bit. 1st, let's delete 1 of our hard links.
+\begin{verbatim}
+	[me@linuxbox playground]$ rm fun-hard
+	[me@linuxbox playground]$ ls -l
+	total 12
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir1
+	lrwxrwxrwx 1 me me    4 2018-01-16 14:45 dir1-sym -> dir1
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir2
+	-rw-r--r-- 3 me me 1650 2018-01-10 16:33 fun
+	lrwxrwxrwx 1 me me    3 2018-01-15 15:15 fun-sym -> fun
+\end{verbatim}
+That worked as expected. The file \texttt{fun-hard} is gone, \& the link count shown for \texttt{fun} is reduced from 4 to 3, as indicated in the 2nd field of the directory listing. Next, we'll delete the file \texttt{fun}, \& just for enjoyment, we'll include the \texttt{-i} option to show what that does.
+\begin{verbatim}
+	[me@linuxbox playground]$ rm -i fun
+	rm: remove regular file `fun'?
+\end{verbatim}
+Enter \texttt{y} at the prompt \& the file is deleted. But let's look at the output of \texttt{ls} now. Notice what happened to \texttt{fun-sym?} Because it's a symbolic link pointing to a now-nonexistent file, the link is broken.
+\begin{verbatim}
+	[me@linuxbox playground]$ ls -l
+	total 8
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir1
+	lrwxrwxrwx 1 me me
+	4 2018-01-16 14:45 dir1-sym -> dir1
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir2
+	lrwxrwxrwx 1 me me
+	3 2018-01-15 15:15 fun-sym -> fun
+\end{verbatim}
+Most Linux distributions configure \texttt{ls} to display broken links. The presence of a broken link is not in \& of itself dangerous, but it is rather messy. If we try to use a broken link, we will see this:
+\begin{verbatim}
+	[me@linuxbox playground]$ less fun-sym
+	fun-sym: No such file or directory
+\end{verbatim}
+Let's clean up a little. We'll delete the symbolic links here:
+\begin{verbatim}
+	[me@linuxbox playground]$ rm fun-sym dir1-sym
+	[me@linuxbox playground]$ ls -l
+	total 8
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir1
+	drwxrwxr-x 2 me me 4096 2018-01-15 15:17 dir2
+\end{verbatim}
+1 thing to remember about symbolic links is that most file operations are carried out on the link's target, not the link itself. \texttt{rm} is an exception. When you delete a link, it is the link that is deleted, not the target.
+
+Finally, we will remove our playground. To do this, we will return to our home directory \& use \texttt{rm} with the recursive option (\texttt{-r}) to delete \texttt{playground} \& all of its contents, including its subdirectories.
+\begin{verbatim}
+	[me@linuxbox playground]$ cd
+	[me@linuxbox ~]$ rm -r playground
+\end{verbatim}
+\textbf{Creating symlinks with the GUI.} The file managers in both GNOME \& KDE provide an easy \& automatic method of creating symbolic links. With GNOME, holding the \textsc{ctrl-shift} keys while dragging a file will create a link rather than copying (or moving) the file. In KDE, a small menu appears whenever a file is dropped, offering a choice of copying, moving, or linking the file.'' -- \cite[pp. 80--82]{Shotts2019}
+
+\subsection{Summing Up}
+``We've covered a lot of ground here, \& it will take a while for it all to fully sink in. Perform the playground exercise over \& over until it makes sense. It is important to get hood understanding of basic file manipulation commands \& wildcards. Feel free to expand on the playground exercise by adding more files \& directories, using wildcards to specify files for various operations. The concept of links is a little confusing at 1st, but take the time to learn how they work. They can be a real lifesaver!'' -- \cite[p. 82]{Shotts2019}
 
 %------------------------------------------------------------------------------%
 
