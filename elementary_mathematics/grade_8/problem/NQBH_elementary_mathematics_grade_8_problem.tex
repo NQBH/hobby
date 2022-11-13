@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
-\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -737,6 +737,33 @@ Tổng quát hơn,
 %------------------------------------------------------------------------------%
 
 \subsection{Chia Đa Thức Cho Đơn Thức}
+``\textbf{1.} Chia đơn thức $A$ cho đơn thức $B$:
+\begin{enumerate*}
+	\item[$\bullet$] Chia hệ số của $A$ cho hệ số của $B$.
+	\item[$\bullet$] Chia lũy thừa của từng biến trong $A$ cho lũy thừa của cùng biến đó trong $B$.
+	\item[$\bullet$] Nhân các kết quả với nhau.
+\end{enumerate*}
+\textbf{2.} Chia đa thức $A$ cho đơn thức $B$: Ta chia mỗi hạng tử của $A$ \& $B$ rồi cộng các kết quả với nhau. \textbf{3.} Chia đa thức $A$ cho đa thức $B$: Cho $A$ \& $B$ là 2 đa thức tùy ý của cùng 1 biến, $B\ne 0$, khi đó tồn tại duy nhất 1 cặp đa thức $Q$ \& $R$ sao cho $A = BQ + R$, trong đó $R = 0$ hoặc bậc của $R$ nhỏ hơn bậc của $B$, i.e., $\deg R < \deg B$. $Q$ gọi là \textit{đa thức thương} \& $R$ gọi là \textit{đa thức dư} của phép chia $A$ cho $B$. Nếu $R = 0$ thì phép chia $A$ cho $B$ là \textit{phép chia hết}.
+
+\begin{dinhly}[B\'ezout]
+	Số dư trong phép chia đa thức $f(x)$ cho nhị thức bậc nhất $x - a$ đúng bằng $f(a)$.
+\end{dinhly}
+
+\begin{hequa}
+	Nếu $a$ là nghiệm của đa thức $f(x)$ thì $f(x)$ chia hết cho $(x - a)$.
+\end{hequa}
+Đặc biệt:
+\begin{enumerate*}
+	\item[$\bullet$] Nếu tổng các hệ số của đa thức $f(x)$ bằng $0$ thì $1$ là nghiệm \& $f(x)$ chia hết cho $(x - 1)$.
+	\item[$\bullet$] Nếu $f(x)$ có tổng các hệ số bậc chẵn bằng tổng các hệ số bậc lẻ thì $-1$ là nghiệm \& $f(x)$ chia hết cho $x - (-1)$, i.e., chia hết cho $x + 1$.
+\end{enumerate*}
+Áp dụng hệ quả của định lý B\'ezout vào việc phân tích đa thức thành nhân tử: Nếu đa thức $f(x)$ có nghiệm $x = a$ thì khi phân tích $f(x)$ thành nhân tử, tích sẽ chứa nhân tử $(x - a)$.
+
+\textit{Cách nhẩm nghiệm nguyên, nghiệm hữu tỷ của đa thức $f(x)$ với hệ số nguyên.}
+\begin{enumerate*}
+	\item[$\bullet$] Nếu $f(x)$ có nghiệm nguyên thì nghiệm đó phải là ước của hệ số tự do.
+	\item[$\bullet$] Nếu $f(x)$ có nghiệm hữu tỷ thì nghiệm đó có dạng $\frac{p}{q}$, $(p,q) = 1$ trong đó $p$ là ước của hệ số tự do, $q$ là ước dương của hệ số cao nhất.'' -- \cite[pp. 22--23]{Tuyen_Toan_8}
+\end{enumerate*}
 
 \begin{baitoan}[Đa thức chia đơn thức]
 	Tính:
@@ -744,8 +771,38 @@ Tổng quát hơn,
 		\item[(a)] \emph{(Đa thức 1 biến chia đơn thức 1 biến)} $\left(\sum_{i=0}^n a_ix^i\right):ax^m$\\$= (a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0):ax^m$, $\forall m,n\in\mathbb{N}$, $a,a_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$, $a\ne 0$.
 		\item[(b)] \emph{(Đa thức 2 biến chia đơn thức 2 biến)} $\left(\sum_{i,j=0}^{m,n} a_{ij}x^iy^j\right):ax^py^q = \left(\sum_{i=0}^m\sum_{j=0}^n a_{ij}x^iy^j\right):ax^py^q$, $\forall m,n,p,q\in\mathbb{N}$, $a,a_{ij}\in\mathbb{R}$, $\forall i = 1,\ldots,m$, $\forall j = 1,\ldots,n$.
 		\item[(c)] \emph{(Đa thức 3 biến chia đơn thức 3 biến)} $\left(\sum_{i,j,k=0}^{m,n,p} a_{ij}x^iy^jz^k\right):ax^ty^uz^v = \left(\sum_{i=0}^m\sum_{j=0}^n\sum_{k=0}^p a_{ijk}x^iy^jz^k\right):ax^ty^uz^v$.
-		\item[(d)] \emph{(Đa thức $n$ biến chia đơn thức $n$ biến)} ***
+		\item[(d)] \emph{(Đa thức $n$ biến chia đơn thức $n$ biến)}
 	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 9, p. 24]
+	Xác định các hệ số $a$ \& $b$ sao cho $x^4 + ax^3 + b$ chia hết cho $x^2 - 1$.
+\end{baitoan}
+Phương pháp xét giá trị riêng của các biến cũng là 1 phương pháp phân tích đa thức thành nhân tử.
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 10, p. 25]
+	Phân tích đa thức thành nhân tử $M = xy(x + y) + yz(y + z) + zx(z + x) + 2xyz$.
+\end{baitoan}
+``Phương pháp nhẩm nghiệm của đa thức để vận dụng hệ quả của định lý B\'ezout giúp ta định hướng nhanh chóng việc tách 1 hạng tử thành nhiều hạng tử 1 cách thích hợp.'' -- \cite[pp. 26]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 11, p. 26]
+	Phân tích đa thức thành nhân tử $A = x^3 - x^2 - 8x + 12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{85.}, p. 27]
+	Tìm $n\in\mathbb{N}$ để đơn thức $-7x^{n+1}y^6$ chia hết cho $4x^5y^n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{86.}, p. 27]
+	Chứng minh: Giá trị của biểu thức $A$ luôn luôn không âm với mọi giá trị khác $0$ của $x$ \& $y$: $A = (75x^5y^2 - 45x^4y^3):3x^3y^2 - \left(\frac{5}{2}x^2y^4 - 2xy^5\right):\frac{1}{2}xy^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{87.}, p. 27]
+	Tìm $x$ \& $y$ biết: $[(x - 2y)(x - 7y) - x^2 + 4y^2]:(x - 2y) = 18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{88.}, p. 27]
+	Tìm giá trị nhỏ nhất của thương: $(4x^5 + 2x^4 + 4x^3 - x - 1):(2x^3 + x - 1)$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
