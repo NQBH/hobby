@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Divisor \textit{\&} Multiplier -- Ước \textit{\&} Bội}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Cheatsheet}
+\textbf{\S12. Ước chung \& ước chung lớn nhất.} ƯC \& ƯCLN của 2 số: $((a\divby n)\land(b\divby n))\Leftrightarrow((a\in\operatorname{B}(n))\land(b\in\operatorname{B}(n)))\Leftrightarrow((n|a)\land(n|b))\Leftrightarrow((n\in\mbox{Ư}(a))\land(n\in\mbox{Ư}(b)))\Leftrightarrow n\in\mbox{ƯC}(a,b)$. $n = \max\mbox{ƯC}(a,b)\Leftrightarrow n = \mbox{ƯCLN}(a,b)$. $\mbox{ƯC}(a,b)\in\mbox{Ư}(\mbox{ƯCLN}(a,b))$, $\mbox{ƯC}(a,b)|\mbox{ƯCLN}(a,b)$, $\mbox{ƯCLN}(a,b)\divby \mbox{ƯC}(a,b)$, $\mbox{ƯCLN}(a,b)\in\operatorname{B}(\mbox{ƯC}(a,b))$. ƯC \& ƯCLN của 3 số: $((a\divby n)\land(b\divby n)\land(c\divby n))\Leftrightarrow((a\in\operatorname{B}(n))\land(b\in\operatorname{B}(n))\land(c\in\operatorname{B}(n))\Leftrightarrow((n|a)\land(n|b)\land(n|c))\Leftrightarrow((n\in\mbox{Ư}(a))\land(n\in\mbox{Ư}(b))\land(n\in\mbox{Ư}(c)))\Leftrightarrow n\in\mbox{ƯC}(a,b,c)$. $n = \max\mbox{ƯC}(a,b,c)\Leftrightarrow n = \mbox{ƯCLN}(a,b,c)$. $\mbox{ƯC}(a,b,c)\in\mbox{Ư}(\mbox{ƯCLN}(a,b,c))$, $\mbox{ƯC}(a,b,c)|\mbox{ƯCLN}(a,b,c)$, $\mbox{ƯCLN}(a,b,c)\divby \mbox{ƯC}(a,b,c)$, $\mbox{ƯCLN}(a,b,c)\in\operatorname{B}(\mbox{ƯC}(a,b,c))$. ƯC \& ƯCLN của $n$ số: $(a_i\divby m,\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i\in\operatorname{B}(m),\,\forall i = 1,\ldots,n)\Leftrightarrow(m|a_i,\,\forall i = 1,\ldots,n)\Leftrightarrow(m\in\mbox{Ư}(a_i),\,\forall i = 1,\ldots,n)\Leftrightarrow m\in\mbox{ƯC}(a_1,\ldots,a_n)$. $m = \max\mbox{ƯC}(a_1,\ldots,a_n)\Leftrightarrow m = \mbox{ƯCLN}(a_1,\ldots,a_n)$. $\mbox{ƯC}(a_1,\ldots,a_n)\in\mbox{Ư}(\mbox{ƯCLN}(a_1,\ldots,a_n))$, $\mbox{ƯC}(a_1,\ldots,a_n)|\mbox{ƯCLN}(a_1,\ldots,a_n)$, $\mbox{ƯCLN}(a_1,\ldots,a_n)\divby \mbox{ƯC}(a_1,\ldots,a_n)$, $\mbox{ƯCLN}(a_1,\ldots,a_n)\in\operatorname{B}(\mbox{ƯC}(a_1,\ldots,a_n))$. Tìm ƯCLN bằng cách phân tích các số ra thừa số nguyên tố: $a = \prod_{i=1}^n p_i^{a_i}$, $b = \prod_{i=1}^n p_i^{b_i}$, $\mbox{ƯCLN}(a,b) = \prod_{i=1}^n p_i^{\min\{a_i,b_i\}}$. $p,q$ nguyên tố cùng nhau $\Leftrightarrow\mbox{ƯCLN}(p,q) = 1\Leftrightarrow\mbox{BCNN}(p,q) = pq$. $\forall a,b\in\mathbb{N}$, $b\ne 0$, $\frac{a}{b}$ tối giản $\Leftrightarrow\mbox{ƯCLN}(a,b) = 1$. \textbf{\S13. Bội chung \& bội chung nhỏ nhất.} BC \& BCNN của 2 số: $((n\divby a)\land(n\divby b))\Leftrightarrow((n\in\operatorname{B}(a))\land(n\in\operatorname{B}(a)))\Leftrightarrow((a|n)\land(b|n))\Leftrightarrow\{a;b\}\subset\mbox{Ư}(n)\Leftrightarrow n\in\operatorname{BC}(a,b)$. $n = \min(\operatorname{BC}(a,b)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a,b)$. BC \& BCNN của 3 số: $((n\divby a)\land(n\divby b)\land(n\divby c))\Leftrightarrow((n\in\operatorname{B}(a))\land(n\in\operatorname{B}(a))\land(n\in\operatorname{B}(c)))\Leftrightarrow((a|n)\land(b|n)\land(c|n))\Leftrightarrow\{a;b;c\}\subset\mbox{Ư}(n)\Leftrightarrow n\in\operatorname{BC}(a,b,c)$. $n = \min(\operatorname{BC}(a,b,c)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a,b,c)$. BC \& BCNN của $n$ số: $(m\divby a_i,\,\forall i = 1,\ldots,n)\Leftrightarrow(m\in\operatorname{B}(a_i)\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i|m,\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i\in\mbox{Ư}(n))\Leftrightarrow m\in\operatorname{BC}(a_1,\ldots,a_n)$. $n = \min(\operatorname{BC}(a_1,\ldots,a_n)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a_1,\ldots,a_n)$. Tìm BCNN bằng cách phân tích các số ra thừa số nguyên tố: $a = \prod_{i=1}^n p_i^{a_i}$, $b = \prod_{i=1}^n p_i^{b_i}$, $\mbox{BCNN}(a,b) = \prod_{i=1}^n p_i^{\max\{a_i,b_i\}}$. $a\divby b\Leftrightarrow\operatorname{BCNN}(a,b) = a\Leftrightarrow\mbox{ƯCLN}(a,b) = b$. Tính tổng các phân số cùng mẫu số: $\sum_{i=1}^{n} \frac{a_i}{b} = \frac{\sum_{i=1}^n a_i}{b}$, i.e., $\frac{a_1}{b} + \cdots + \frac{a_n}{b} = \frac{a_1 + \cdots + a_n}{b}$, $\forall a_i,b\in\mathbb{Z}$, $b\ne 0$, $\forall i = 1,\ldots,n$. Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân số đó với mẫu số chung là BCNN của các mẫu số các phân số đó rồi cộng lại:
+\begin{align*}
+	\sum_{i=1}^{n} \frac{a_i}{b_i} = \frac{\sum_{i=1}^n a_i\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\ \frac{a_1}{b_1} + \cdots + \frac{a_n}{b_n} = \frac{a_1\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_1} + \cdots + a_n\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\forall a_i,b_i\in\mathbb{Z},\,b_i\ne 0,\,\forall i = 1,\ldots,n.
+\end{align*}
+
+\section{Problem}
+``Bằng cách phân tích 1 số ra thừa số nguyên tố, ta có thể dễ dàng tìm được ước (ước số) của số đó.'' -- \cite[\S8, p. 33]{Binh_Toan_6_tap_1}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 36, p. 33]
+	Tìm số chia \& thương của 1 phép chia có số bị chia bằng $145$, số dư bằng $12$ biết thương khác $1$ (số chia \& thương là các số tự nhiên).
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $b$, $q$ lần lượt là số chia \& thương: $145 = bq + 12$, $b > 12$, $q\ne 1$, hay $bq = 145 - 12 = 133 = 7\cdot 19$, suy ra $b\in\mbox{Ư}(133)$, mà $b > 12$, nên $b\in\{19;133\}$. Xét 2 trường hợp:
+	\begin{enumerate*}
+		\item[$\bullet$] Nếu $b = 19$, thì $q = 7$: nhận.
+		\item[$\bullet$] Nếu $b = 133$, thì $q = 1$: loại do mâu thuẫn với giả thiết $q\ne 1$.
+	\end{enumerate*}
+	Vậy số chia bằng $19$, thương bằng $7$.
+\end{proof}
+
+\begin{dangtoan}
+	Tìm số chia \& thương của 1 phép chia có số bị chia bằng $a$, số dư bằng $r$.
+\end{dangtoan}
+
+\textsc{Tổng quát.} Đẳng thức $a = bq + r$ gồm 4 số: số bị chia $a$, số chia $b$, thương $q$, \& số dư $r$.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 37, p. 33]
+	Tìm số tự nhiên có 2 chữ số khác nhau sao cho nếu xóa bất kỳ chữ số nào của nó thì số nhận được vẫn là ước của số ban đầu.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi số cần tìm là $\overline{ab}$, $a\ne b$, $\overline{ab}\divby a$, $\overline{ab}\divby b$. Có $\overline{ab}\divby a\Leftrightarrow 10a + b\divby a\Leftrightarrow b\divby a$. Đặt $b = ka$, $k\ne 1$ do $b\ne a$. Có $\overline{ab}\divby b\Leftrightarrow 10a + b\divby b\Leftrightarrow 10a\divby b\Rightarrow 10a\divby ka\Rightarrow 10\divby k\Rightarrow k\in\{2;5\}$. Xét 2 trường hợp:
+	\begin{enumerate*}
+		\item[$\bullet$] Nếu $k = 2$, $b= 2a$, $\overline{ab}\in\{12;24;36;48\}$.
+		\item[$\bullet$] Nếu $k = 5$, $b= 5a$, $\overline{ab} = 15$.
+	\end{enumerate*}
+	Đáp số: $12,24,36,48,15$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 38, p. 33]
+	1 tổ sản xuất được thưởng $840$ nghìn đồng. Số tiền thưởng chia đều cho số người trong tổ. Sau khi chia xong, tổ phát hiện đã bỏ sót không chia cho 1 người vắng mặt, do đó mỗi người được chia đã góp $2$ nghìn đồng \& kết quả là người vắng mặt cũng được nhận số tiền như những người có mặt. Tính số tiền mỗi người đã được thưởng (số tiền đó là 1 số tự nhiên với đơn vị nghìn đồng).
+\end{baitoan}
+\noindent\textsf{Phân tích.} Nếu gọi số người của tổ là $a\in\mathbb{N}^\star$ thì ban đầu mỗi người trong $a - 1$ người có mặt được nhận $\frac{840}{a - 1}$ nghìn đồng. Sau khi phát hiện 1 người vắng mặt (chưa được chia tiền thưởng), mỗi người trong $a - 1$ người đã được chia góp cho người vắng mặt $2$ nghìn đồng, nên tổng cộng người vắng mặt nhận được $2(a - 1)$ nghìn đồng, \& số tiền này cũng bằng với $a - 1$ người còn lại nên mỗi người nhận được $\frac{840}{a - 1} - 2 = 2(a - 1)$. Tổng cộng có $a$ người, nên tổng số tiền sẽ là $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1) = 840$. Ở đây có thể giải 1 trong 3 phương trình: $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1)$, $\left(\frac{840}{a - 1} - 2\right)a = 840$, hoặc $2a(a - 1) = 840$ để tìm $a$. Phương trình cuối có vẻ dễ giải nhất vì nó có dạng đơn giản nhất so với 2 phương trình còn lại.
+
+\begin{luuy}
+	Trong đa số trường hợp thì phương trình có dạng đa thức sẽ dễ giải hơn phương trình có chứa phân thức $\frac{A}{B}$ hoặc căn thức $\sqrt{A}$, với $A,B$ là các biểu thức chứa biến. Căn thức sẽ được học ở chương trình Toán 7, \cite{SGK_Toan_7_Canh_Dieu_tap_1}.
+\end{luuy}
+
+\begin{proof}[Giải]
+	Gọi số người của tổ là $a\in\mathbb{N}^\star$ thì số người có mặt là $a - 1$. Số tiền mỗi người được thưởng là $2(a - 1)$ nghìn đồng. Có $2a(a - 1) = 840\Leftrightarrow a(a - 1) = 420 = 21\cdot 20$$\Rightarrow a = 21$. Số người của tổ sản xuất là $21$ người. Mỗi người được thưởng $840:21 = 40$ nghìn đồng.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 39, p. 33]
+	Trong 1 buổi họp mặt của 2 câu lạc bộ A \& B, mỗi người bắt tay 1 lần với tất cả những người còn lại. Tính số người của mỗi câu lạc bộ, biết có tất cả $496$ cái bắt tay, trong đó có $241$ cái bắt tay của 2 người trong cùng 1 câu lạc bộ.
+\end{baitoan}
+\noindent\textsf{Phân tích.} 
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
