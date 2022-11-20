@@ -55,7 +55,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	
+	1 số bài tập về ước, ước chung, ước chung lớn nhất, bội, bội chung, bội chung nhỏ nhất.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -69,7 +69,7 @@
 	\sum_{i=1}^{n} \frac{a_i}{b_i} = \frac{\sum_{i=1}^n a_i\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\ \frac{a_1}{b_1} + \cdots + \frac{a_n}{b_n} = \frac{a_1\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_1} + \cdots + a_n\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\forall a_i,b_i\in\mathbb{Z},\,b_i\ne 0,\,\forall i = 1,\ldots,n.
 \end{align*}
 
-\section{Problem}
+\section{Ước \& Bội}
 ``Bằng cách phân tích 1 số ra thừa số nguyên tố, ta có thể dễ dàng tìm được ước (ước số) của số đó.'' -- \cite[\S8, p. 33]{Binh_Toan_6_tap_1}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 36, p. 33]
@@ -107,7 +107,7 @@
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 38, p. 33]
 	1 tổ sản xuất được thưởng $840$ nghìn đồng. Số tiền thưởng chia đều cho số người trong tổ. Sau khi chia xong, tổ phát hiện đã bỏ sót không chia cho 1 người vắng mặt, do đó mỗi người được chia đã góp $2$ nghìn đồng \& kết quả là người vắng mặt cũng được nhận số tiền như những người có mặt. Tính số tiền mỗi người đã được thưởng (số tiền đó là 1 số tự nhiên với đơn vị nghìn đồng).
 \end{baitoan}
-\noindent\textsf{Phân tích.} Nếu gọi số người của tổ là $a\in\mathbb{N}^\star$ thì ban đầu mỗi người trong $a - 1$ người có mặt được nhận $\frac{840}{a - 1}$ nghìn đồng. Sau khi phát hiện 1 người vắng mặt (chưa được chia tiền thưởng), mỗi người trong $a - 1$ người đã được chia góp cho người vắng mặt $2$ nghìn đồng, nên tổng cộng người vắng mặt nhận được $2(a - 1)$ nghìn đồng, \& số tiền này cũng bằng với $a - 1$ người còn lại nên mỗi người nhận được $\frac{840}{a - 1} - 2 = 2(a - 1)$. Tổng cộng có $a$ người, nên tổng số tiền sẽ là $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1) = 840$. Ở đây có thể giải 1 trong 3 phương trình: $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1)$, $\left(\frac{840}{a - 1} - 2\right)a = 840$, hoặc $2a(a - 1) = 840$ để tìm $a$. Phương trình cuối có vẻ dễ giải nhất vì nó có dạng đơn giản hơn so với 2 phương trình còn lại.
+\noindent\textit{Phân tích.} Nếu gọi số người của tổ là $a\in\mathbb{N}^\star$ thì ban đầu mỗi người trong $a - 1$ người có mặt được nhận $\frac{840}{a - 1}$ nghìn đồng. Sau khi phát hiện 1 người vắng mặt (chưa được chia tiền thưởng), mỗi người trong $a - 1$ người đã được chia góp cho người vắng mặt $2$ nghìn đồng, nên tổng cộng người vắng mặt nhận được $2(a - 1)$ nghìn đồng, \& số tiền này cũng bằng với $a - 1$ người còn lại nên mỗi người nhận được $\frac{840}{a - 1} - 2 = 2(a - 1)$. Tổng cộng có $a$ người, nên tổng số tiền sẽ là $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1) = 840$. Ở đây có thể giải 1 trong 3 phương trình: $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1)$, $\left(\frac{840}{a - 1} - 2\right)a = 840$, hoặc $2a(a - 1) = 840$ để tìm $a$. Phương trình cuối có vẻ dễ giải nhất vì nó có dạng đơn giản hơn so với 2 phương trình còn lại.
 
 \begin{luuy}
 	Trong đa số trường hợp thì phương trình có dạng đa thức sẽ dễ giải hơn phương trình có chứa phân thức $\frac{A}{B}$ hoặc căn thức $\sqrt{A}$, với $A,B$ là các biểu thức chứa biến. Căn thức sẽ được học ở Toán 7, \cite{SGK_Toan_7_Canh_Dieu_tap_1}.
@@ -120,7 +120,98 @@
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 39, p. 33]
 	Trong 1 buổi họp mặt của 2 câu lạc bộ A \& B, mỗi người bắt tay 1 lần với tất cả những người còn lại. Tính số người của mỗi câu lạc bộ, biết có tất cả $496$ cái bắt tay, trong đó có $241$ cái bắt tay của 2 người trong cùng 1 câu lạc bộ.
 \end{baitoan}
-\noindent\textsf{Phân tích.} 
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 40, p. 34]
+	Tìm 5 số tự nhiên khác nhau, biết khi nhân từng cặp 2 số thì tích nhỏ nhất bằng $28$, tích lớn nhất bằng $240$ \& 1 tích khác bằng $128$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 41${}^\star$, p. 34]
+	Viết số $108$ dưới dạng tổng các số tự nhiên liên tiếp lớn hơn $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{200.}, p. 35]
+	Tìm $x,y\in\mathbb{N}$ sao cho:
+	\begin{enumerate*}
+		\item[(a)] $(2x + 1)(y - 3) = 10$.
+		\item[(b)] $(3x - 2)(2y - 3) = 1$.
+		\item[(c)] $(x + 1)(2y - 1) = 12$.
+		\item[(d)] $x + 6 = y(x - 1)$.
+		\item[(e)] $x - 3 = y(x + 2)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{201.}, p. 35]
+	1 phép chia số tự nhiên có số bị chia bằng $3193$. Tìm số chia \& thương của phép chia đó, biết số chia có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{202.}, p. 35]
+	Tìm số chia của 1 phép chia, biết: Số bị chia bằng $236$, số dư bằng $15$, số chia là số tự nhiên có 2 chữ số.
+\end{baitoan}	
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{203.}, p. 35]
+	Tìm ước của $161$ trong khoảng từ $10$ đến $150$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{204.}, p. 35]
+	Tìm 2 số tự nhiên liên tiếp có tích bằng $600$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{205.}, p. 35]
+	Tìm 3 số tự nhiên liên tiếp có tích bằng $2730$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{206.}, p. 35]
+	Tìm 3 số lẻ liên tiếp có tích bằng $12075$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{207.}, p. 35]
+	Có 1 số số tự nhiên khác nhau được viết trên bảng. Tích của 2 số nhỏ nhất là $16$, tích của 2 số lớn nhất là $225$. Tính tổng của tất cả các số tự nhiên đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{208.}, p. 35]
+	Trên 1 tấm bia có các vòng tròn tính điểm là $18,23,28,33,38$. Muốn trúng thưởng, phải bắn 1 số phát tên để đạt đúng $100$ điểm. Hỏi phải bắn bao nhiêu phát tên \& vào những vòng nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{209.}, p. 35]
+	1 tờ hóa đơn bị dây mực, chỗ dây mực biểu thị bởi dấu $\star$. Phục hồi lại các chữ số bị dây mực (dấu $\star$ thay cho 1 hay nhiều chữ số). Giá mua 1 hộp bút: $3200$ đồng. Số hộp bút đã bán: $\star$ chiếc. Giá bán 1 hộp bút: $\star00$ đồng. Thành tiền: $107300$ đồng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{210.}, p. 36]
+	Tìm $n\in\mathbb{N}$, biết: $\sum_{i=1}^n i = 1 + 2 + 3 + \cdots + n = 820$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{211.}, p. 36]
+	Viết số $100$ dưới dạng tổng các số lẻ liên tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{212.}, p. 36]
+	Tân \& Hùng gặp nhau trong hội nghị học sinh giỏi Toán. Tân hỏi số nhà Hùng, Hùng trả lời: - Nhà mình ở chính giữa phố, đoạn phố ấy có tổng các số nhà bằng $161$. Nghĩ 1 chút, Tâm nói: - Bạn ở số nhà $23$ chứ gì! Hỏi Tân đã tìm ra như thế nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{213.}, p. 36]
+	Đặt 4 số tự nhiên khác nhau, khác $0$, nhỏ hơn $100$ vào các vị trí A, B, C, D ở \cite[Hình 6, p. 36]{Binh_Toan_6_tap_1} sao cho mũi tên đi từ 1 số đến ước của nó \& số ở vị trí A có giá trị lớn nhất trong các giá trị nó có thể nhận được.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{214.}, p. 36]
+	Tìm $n\in\mathbb{N}$, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $n + 4\divby n + 1$.
+		\item[(b)] $n^2 + 4\divby n + 2$.
+		\item[(c)] $13n\divby n - 1$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{215.}${}^\star$, p. 36]
+	Tìm số tự nhiên có 3 chữ số, biết nó tăng gấp $n$ lần nếu cộng mỗi chữ số của nó với $n$ ($n\in\mathbb{N}$, có thể gồm 1 hoặc nhiều chữ số).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{216.}, p. 36]
+	2 công ty A \& B năm trước có số nhân viên bằng nhau. Năm sau, công ty A tuyển thêm số nhân viên mới bằng 4 lần số nhân viên cũ, còn công ty B cho nghỉ việc 5 nhân viên, do đó số nhân viên công ty A là bội của số nhân viên công ty B. Hỏi năm trước mỗi công ty có nhiều nhất bao nhiêu nhân viên?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Ước Chung. Ước Chung Lớn Nhất}
 
 %------------------------------------------------------------------------------%
 
