@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Algebraic- \& Rational Fractions -- Phân Thức Đại Số \textit{\&} Phân Thức Đại Số Hữu Tỷ}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	Some Topics in Elementary Mathematics\texttt{/}grade 8\texttt{/}algebraic fraction.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Định Nghĩa \& Tính Chất Cơ Bản}
+
+\begin{definition}[Algebraic fraction]
+	``In \href{https://en.wikipedia.org/wiki/Algebra}{algebra}, an \emph{algebraic fraction} is a \href{https://en.wikipedia.org/wiki/Fraction_(mathematics)}{fraction} whose numerator \& denominator are \href{https://en.wikipedia.org/wiki/Algebraic_expression}{algebraic expressions}.'' -- \href{https://en.wikipedia.org/wiki/Algebraic_fraction}{Wikipedia\emph{\texttt{/}}algebraic fraction}
+\end{definition}
+``Algebraic fractions are subject to the same laws as \href{https://en.wikipedia.org/wiki/Arithmetic_fraction}{algebraic expressions}.'' -- \href{https://en.wikipedia.org/wiki/Algebraic_fraction}{Wikipedia\texttt{/}algebraic fraction}
+
+\begin{definition}[Rational fraction]
+	A \emph{rational fraction} is an algebraic fraction whose numerator \& denominator are both \href{https://en.wikipedia.org/wiki/Polynomial}{polynomials}.
+\end{definition}
+``\begin{enumerate*}
+	\item[\textbf{1.}] Phân thức đại số là 1 biểu thức có dạng $\frac{A}{B}$, trong đó $A,B$ là những đa thức \& $B\ne 0$. Đặc biệt: Mỗi đa thức cũng được coi như 1 phân thức với mẫu thức bằng 1.
+	\item[\textbf{2.}] $\frac{A}{B} = \frac{C}{D}$ nếu $AD = BC$, $B\ne 0$, $D\ne 0$.
+	\item[\textbf{3.}] Tính chất cơ bản của phân thức: $\frac{A}{B} = \frac{AM}{AM}$, $M$ là đa thức khác đa thức không 0; $\frac{A}{B} = \frac{A:N}{B:N}$, $N$ là 1 nhân tử chung của $A$ \& $B$. Đặc biệt với $N = -1$, $\frac{A}{B} = \frac{-A}{-B}$ (quy tắc đổi dấu).
+	\item[\textbf{4.}] Rút gọn phân thức: Phân tích tử \& mẫu thành nhân tử (nếu cần) để tìm nhân tử chung; Chia cả tử \& mẫu cho nhân tử chung (nếu có).
+	\item[\textbf{5.}] Quy đồng mẫu của nhiều phân thức: Phân tích các mẫu thành nhân tử rồi tìm mẫu thức chung; Tìm nhân tử phụ của mỗi mẫu thức; Nhân tử \& mẫu của mỗi phân thức với nhân tử phụ tương ứng.
+\end{enumerate*}
+
+\textit{Bổ sung}. Phân số $\frac{a}{b}$ là 1 trường hợp đặc biệt của phân thức $\frac{A}{B}$ khi $A,B$ là những đa thức bậc 0. Vì vậy tính chất cơ bản của phân số là 1 trường hợp đặc biệt của tính chất cơ bản của phân thức đại số.'' -- \cite[pp. 37--38]{Tuyen_Toan_8}
+
+%------------------------------------------------------------------------------%
+
+\section{Problems}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 16, p. 38]
+	Cho $\frac{xy}{x^2 + y^2} = \frac{5}{8}$, rút gọn phân thức $P = \frac{x^2 - 2xy + y^2}{x^2 + 2xy + y^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{151.}, p. 38]
+	So sánh:
+	\begin{enumerate*}
+		\item[(a)] $A = \frac{201 - 200}{201 + 200}$ \& $B = \frac{201^2 - 200^2}{201^2 + 200^2}$.
+		\item[(b)] $C = \frac{1999\cdot 4001 + 2000}{2000\cdot 4001 - 2001}$ \& $D = \frac{1501\cdot 1503 - 1500\cdot 1498}{6002}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{152.}, p. 39]
+	Chứng minh: $\forall n\in\mathbb{N}$,
+	\begin{enumerate*}
+		\item[(a)] Phân số $A = \frac{n^3 - 1}{n^5 + n + 1}$ không tối giản;
+		\item[(b)] Phân số $B = \frac{6n + 1}{8n + 1}$ tối giản;
+		\item[(c)] Phân số $C = \frac{10n^2 + 9n + 4}{20n^2 + 20n + 9}$ tối giản.
+	\end{enumerate*}
+	Có thể mở rộng từ $\mathbb{N}$ lên $\mathbb{Z}$ được không?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
