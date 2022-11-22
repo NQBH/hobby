@@ -39,7 +39,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -55,11 +55,129 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	1 số bài tập về ước, ước chung, ước chung lớn nhất, bội, bội chung, bội chung nhỏ nhất.
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about divisor, common divisor, greatest common divisor, multiplier, common multiplier, least common multiplier. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/divisor_multiplier/NQBH_divisor_multiplier.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}divisor \& multiplier}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/divisor_multiplier/NQBH_divisor_multiplier.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về ước, ước chung, ước chung lớn nhất, bội, bội chung, bội chung nhỏ nhất. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/divisor_multiplier/NQBH_divisor_multiplier.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}divisor \& multiplier}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Ước Chung \textit{\&} Ước Chung Lớn Nhất}
+
+\subsection{Ước chung \textit{\&} ước chung lớn nhất}
+
+\begin{dinhnghia}[Ước chung \textit{\&} ước chung lớn nhất của 2 số tự nhiên]
+	\label{def: ước chung 2 số}
+	Số tự nhiên $n$ được gọi là \emph{ước chung} của 2 số tự nhiên $a$ \textit{\&} $b$ nếu $n$ vừa là ước của $a$ vừa là ước của $b$. Số lớn nhất trong các ước chung của $a$ \textit{\&} $b$ được gọi là \emph{ước chung lớn nhất} của $a$ \textit{\&} $b$.
+\end{dinhnghia}
+\noindent\textbf{Quy ước.} Viết tắt ước chung là ƯC \textit{\&} ước chung lớn nhất là ƯCLN. Ta ký hiệu: Tập hợp các ước chung của $a$ \textit{\&} $b$ là $\mbox{ƯC}(a,b)$; ước chung lớn nhất của $a$ \textit{\&} $b$ là $\mbox{ƯCLN}(a,b)$. Ký hiệu chuẩn quốc tế của ước chung lớn nhất của 2 số $a,b\in\mathbb{N}$ là $\gcd(a,b)$, viết tắt của \textit{greatest common divisor}. Có 1 ký hiệu khác là $(a,b)$, nhưng không khuyến khích sử dụng do trùng với ký hiệu với 1 bộ 2 số có thứ tự (ordered couple\footnote{Tương tự, bộ 3 số có thứ tự có tên tiếng Anh là \textit{ordered triple} \& bộ $n$ số có thứ tự, $n\in\mathbb{N}$, $n\ge 3$, có tên tiếng Anh là \textit{ordered $n$-tuple}. See, e.g., \cite{Rudin1976}.}) hay 1 điểm (có 2 tọa độ là hoành độ \& tung độ) trong mặt phẳng Euclid $\mathbb{R}^2$ (không gian Euclid 2 chiều\texttt{/}2-dimensional Euclidean space).
+
+Ta có: $\mbox{ƯCLN}(a,b)= d$, tồn tại $a',b'\in\mathbb{N}$ sao cho $a = da'$, $b = db'$, $\mbox{ƯCLN}(a',b') = 1$.
+
+\begin{dinhnghia}[Ước chung \textit{\&} ước chung lớn nhất của nhiều số tự nhiên]
+	\label{def: ước chung nhiều số}
+	Với số tự nhiên $n\in\mathbb{N}^\star$, $n\ge 2$ cho trước, $d$ được gọi là \emph{ước chung} của $n$ số $a_1,\ldots,a_n$ nếu $d$ là ước của tất cả $n$ số đó. Số lớn nhất trong các ước chung của $n$ số đó được gọi là \emph{ước chung lớn nhất} của $n$ số đó.
+\end{dinhnghia}
+Hiển nhiên, Định nghĩa \ref{def: ước chung nhiều số} bao gồm Định nghĩa \ref{def: ước chung 2 số} khi $n = 2$, i.e., Định nghĩa \ref{def: ước chung nhiều số} là 1 tổng quát hóa\texttt{/}mở rộng hóa (generalization) của Định nghĩa \ref{def: ước chung 2 số}, hay Định nghĩa \ref{def: ước chung 2 số} là 1 trường hợp riêng (special case) của Định nghĩa \ref{def: ước chung nhiều số}.
+
+Tương tự, ta có: $\mbox{ƯCLN}(a_1,\ldots,a_n)= d$, tồn tại $a_1',\ldots,a_n'\in\mathbb{N}$ sao cho $a_i = da_i'$, $i = 1,\ldots, n$, $\mbox{ƯCLN}(a_1',\ldots,a_n') = 1$.
+
+\begin{dinhly}
+	Ước chung của 2 số là ước của ước chung lớn nhất của chúng.
+\end{dinhly}
+
+\subsection{Tìm ước chung lớn nhất bằng cách phân tích các số ra thừa số nguyên tố}
+\begin{tcolorbox}
+	\textbf{Tìm ước chung lớn nhất bằng cách phân  tích các số ra thừa số nguyên tố.}
+	\begin{enumerate}
+		\item Phân tích mỗi số ra thừa số nguyên tố.
+		\item Chọn ra các thừa số nguyên tố chung.
+		\item Với mỗi thừa số nguyên tố chung, ta chọn lũy thừa với số mũ nhỏ nhất.
+		\item Lấy tích của các lũy thừa đã chọn, ta nhận được ước chung lớn nhất cần tìm.
+	\end{enumerate}
+\end{tcolorbox}
+Nếu 2 số đã cho không có thừa số nguyên tố chung thì ƯCLN của chúng bằng 1. Nếu $a\divby b$ thì $\mbox{ƯCLN}(a,b) = b$.
+
+\subsection{2 số nguyên tố cùng nhau}
+
+\begin{dinhnghia}[2 số nguyên tố cùng nhau]
+	\emph{2 số nguyên tố cùng nhau} là 2 số có ước chung lớn nhất bằng 1.
+\end{dinhnghia}
+
+\begin{dinhnghia}[Phân số tối giản]
+	\emph{Phân số tối giản} là phân số có tử \textit{\&} mẫu là 2 số nguyên tố cùng nhau.
+\end{dinhnghia}
+
+\subsection{Tìm ước chung lớn nhất bằng thuật toán Euclid}
+Tham khảo \cite[p. 52]{SGK_Toan_6_Canh_Dieu_tap_1}: Để tìm ước chung lớn nhất bằng \textit{thuật toán Euclid}, ta làm như sau:
+\begin{enumerate}
+	\item Chia số lớn cho số nhỏ.
+	\item Nếu phép chia còn dư thì ta lấy số chia đem chia cho số dư. Ta cứ làm như vậy cho đến khi nhận được số dư bằng 0 thì dừng lại.
+	\item Số chia cuối cùng là ước chung lớn nhất phải tìm.
+\end{enumerate}
+
+\begin{luuy}
+	Người ta thường dùng thuật toán Euclid đề tìm $\mbox{ƯCLN}$ của cặp số lớn.
+\end{luuy}
+
+%------------------------------------------------------------------------------%
+
+\section{Bội Chung \textit{\&} Bội Chung Nhỏ Nhất}
+
+\subsection{Bội chung \textit{\&} bội chung nhỏ nhất}
+
+\begin{dinhnghia}[Bội chung \textit{\&} bội chung nhỏ nhất của 2 số]
+	Số tự nhiên $n\in\mathbb{N}$ được gọi là \emph{bội chung} của 2 số $a$ \textit{\&} $b$ nếu $n$ vừa là bội của $a$ vừa là bội của $b$. Số nhỏ nhất khác 0 trong các bội chung của $a$ \textit{\&} $b$ được gọi là \emph{bội chung nhỏ nhất} của $a$ \textit{\&} $b$.
+\end{dinhnghia}
+\noindent\textbf{Quy ước.} Viết tắt bội chung là BC \textit{\&} bội chung nhỏ nhất là BCNN. Ta ký hiệu: Tập hợp các bội chung của $a$ \textit{\&} $b$ là $\operatorname{BC}(a,b)$; bội chung nhỏ nhất của $a$ \textit{\&} $b$ là $\operatorname{BCNN}(a,b)$. Ký hiệu chuẩn quốc tế của bội chung nhỏ nhất của 2 số $a,b\in\mathbb{N}^\star$ là $\operatorname{lcm}(a,b)$, trong đó lcm là viết tắt của \textit{least common multiple}\texttt{/}\textit{lowest common multiple}. Có 1 ký hiệu khác cho bội chung nhỏ nhất của 3 số $a,b$ là $[a,b]$, nhưng không khuyến khích sử dụng ký hiệu này do trung với ký hiệu của đoạn đóng\texttt{/}closed interval của tập số thực: $[a,b]\coloneqq\{x\in\mathbb{R};a\le x\le b\}$.
+
+Ta có: $\mbox{BCNN}(a,b) = m$, tồn tại $a_1,b_1\in\mathbb{N}$ sao cho $m = aa_1 = bb_1$, $\mbox{ƯCLN}(a_1,b_1) = 1$.
+
+\begin{dinhnghia}[Bội chung \textit{\&} bội chung nhỏ nhất của nhiều số]
+	Số tự nhiên $m$ được gọi là \emph{bội chung} của $n$ số $a_1,\ldots,a_n\in\mathbb{N}^\star$, $n\in\mathbb{N}^\star$, $n\ge 2$, nếu $m$ là bội của tất cả $n$ số $a_i$, $i = 1,\ldots,n$. Số nhỏ nhất khác 0 trong các bội chung của $n$ số $a_i$, $i = 1,\ldots,n$, được gọi là \emph{bội chung nhỏ nhất} của $n$ số $a_i$, $i = 1,\ldots,n$.
+\end{dinhnghia}
+\noindent\textbf{Ký hiệu.} Tập hợp các bội chung của $a_i$, $i = 1,\ldots,n$, là $\operatorname{BC}(a_1,\ldots,a_n)$; bội chung nhỏ nhất của $n$ số $a_i$, $i = 1,\ldots,n$, là $\operatorname{BCNN}(a_1,\ldots,a_n)$.
+
+\begin{dinhly}
+	Bội chung của nhiều số là bội của bội chung nhỏ nhất của chúng.
+\end{dinhly}
+``Để tìm bội chung của nhiều số, ta có thể lấy bội chung nhỏ nhất của chúng lần lượt nhân với $0,1,2,\ldots$'' -- \cite[p. 55]{SGK_Toan_6_Canh_Dieu_tap_1}
+
+\subsection{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố}
+
+\begin{tcolorbox}
+	\textbf{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố.}
+	\begin{enumerate}
+		\item Phân tích mỗi số ra thừa số nguyên tố.
+		\item Chọn ra các thừa số nguyên tố chung \textit{\&} các thừa số nguyên tố riêng.
+		\item Với mỗi thừa số nguyên tố chung \textit{\&} riêng, ta chọn lũy thừa với số mũ lớn nhất.
+		\item Lấy tích của các lũy thừa đã chọn, ta nhận được bội chung nhỏ nhất cần tìm.
+	\end{enumerate}
+\end{tcolorbox}
+
+\subsection{Ứng dụng bội chung nhỏ nhất vào cộng, trừ các phân số không cùng mẫu}
+
+\begin{tcolorbox}
+	Để tính tổng 2 phân số $\frac{a}{b} + \frac{c}{d}$, $a,c\in\mathbb{N}$, $b,d\in\mathbb{N}^\star$, ta có thể làm như sau:
+	\begin{enumerate}
+		\item Chọn mẫu chung là BCNN của các mẫu.
+		\item Tìm thừa số phụ của mỗi mẫu (bằng cách chia mẫu chung cho từng mẫu).
+		\item Sau khi nhân tử \textit{\&} mẫu của mỗi phân số với thừa số phụ tương ứng, ta cộng 2 phân số có cùng mẫu.
+	\end{enumerate}
+\end{tcolorbox}
+Hiển nhiên:
+
+\begin{dinhly}
+	Bội chung nhỏ nhất của 2 số nguyên tố cùng nhau bằng tích của 2 số đó.
+\end{dinhly}
+
+\subsection{Lịch Can Chi}
+``1 số nước phương Đông, trong đó có Việt Nam, gọi tên năm âm lịch bằng cách ghép tên của 1 trong 10 can (theo thứ tự là \textit{Giáp, Ất, Bính, Đinh, Mậu, Kỷ, Canh, Tân, Nhâm, Quý}) với tên của 1 trong 12 chi (theo thứ tự là \textit{Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi}). Đầu tiên, \textit{Giáp} được ghép với \textit{Tý} thành năm \textit{Giáp Tý}. Cứ 10 năm, Giáp được lặp lại. Cứ 12 năm, Tý được lặp lại.'' -- \cite[p. 58]{SGK_Toan_6_Canh_Dieu_tap_1}. Vì $\operatorname{BCNN}(10,12) = 60$, cứ sau 60 năm thì năm có tên tương ứng được lặp lại.
 
 %------------------------------------------------------------------------------%
 
@@ -69,10 +187,16 @@
 	\sum_{i=1}^{n} \frac{a_i}{b_i} = \frac{\sum_{i=1}^n a_i\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\ \frac{a_1}{b_1} + \cdots + \frac{a_n}{b_n} = \frac{a_1\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_1} + \cdots + a_n\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\forall a_i,b_i\in\mathbb{Z},\,b_i\ne 0,\,\forall i = 1,\ldots,n.
 \end{align*}
 
-\section{Ước \& Bội}
+%------------------------------------------------------------------------------%
+
+\section{Problems}
+
+\subsection{Ước \& Bội}
 ``Nếu $a\divby b$, $a,b\in\mathbb{Z}$, thì ta nói $a$ là \textit{bội} của $b$, còn $b$ là \textit{ước} của $a$. Tập hợp các ước \& bội của $a\in\mathbb{Z}$ được ký hiệu lần lượt là $\mbox{Ư}(a)$ \& $\mbox{B}(a)$.'' -- \cite[\S3, p. 36]{Trong_Toan_6_2021}
  
-``Bằng cách phân tích 1 số ra thừa số nguyên tố, ta có thể dễ dàng tìm được ước (ước số) của số đó.'' -- \cite[\S8, p. 33]{Binh_Toan_6_tap_1}
+``Bằng cách phân tích 1 số ra thừa số nguyên tố, ta có thể dễ dàng tìm được ước (ước số) của số đó.'' -- \cite[p. 33]{Binh_Toan_6_tap_1}
+
+\textit{Bài tập dễ.} \cite[\textbf{1.}--\textbf{31.}, pp. 36--39]{Trong_Toan_6_2021}.
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 36, p. 33]
 	Tìm số chia \& thương của 1 phép chia có số bị chia bằng $145$, số dư bằng $12$ biết thương khác $1$ (số chia \& thương là các số tự nhiên).
@@ -213,7 +337,7 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Ước Chung. Ước Chung Lớn Nhất}
+\subsection{Ước Chung. Ước Chung Lớn Nhất}
 ``Ước chung lớn nhất của 2 hay nhiều số là số lớn nhất trong tập hợp các ước chung của các số đó. Ước chung lớn nhất của $a,b,c$ được ký hiệu là $\mbox{ƯCLN}(a,b,c)$ hoặc $(a,b,c)$. Ta có: $(a,b) = d\Leftrightarrow$ tồn tại $a',b'\in\mathbb{N}$ sao cho $a = da'$, $b = db'$, $(a',b') = 1$.'' -- \cite[\S9, p. 36]{Binh_Toan_6_tap_1}
 
 \textit{Cách bấm máy tính bỏ túi để tìm ƯCLN.}
