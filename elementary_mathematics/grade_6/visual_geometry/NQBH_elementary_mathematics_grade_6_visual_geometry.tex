@@ -1,0 +1,153 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Elementary Mathematics\texttt{/}Grade 6\texttt{/}Visual Geometry}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Chu Vi Tam Giác Đều, Lục Giác Đều, Hình Vuông, Hình Chữ Nhật}
+``Tam giác đều là tam giác có 3 cạnh bằng nhau. Lục giác đều là 1 hình có 6 cạnh bằng nhau \& 6 góc bằng nhau. Hình vuông là tứ giác có 4 cạnh bằng nhau \& 4 góc vuông. Chu vi của 1 hình là đường bao quanh hình đó.
+\begin{enumerate*}
+	\item[$\bullet$] Tam giác đều cạnh $a$ có chu vi $C = 3a$.
+	\item[$\bullet$] Lục giác đều cạnh $a$ có chu vi $C = 6a$.
+	\item[$\bullet$] Hình vuông cạnh $a$ có chu vi $C = 4a$.
+	\item[$\bullet$] Hình chữ nhật có các kích thước $a,b$ có chu vi $C = 2(a + b)$.'' -- \cite[p. 101]{Binh_Toan_6_tap_1}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 1, p. 101]
+	Cho 2 hình vuông A \& B có tổng các chu vi bằng $160$\emph{cm}. Ghép 2 hình đó lại sao cho 1 cạnh hình vuông nhỏ nằm hoàn toàn trên 1 cạnh của hình vuông lớn (\cite[Hình 18, p. 101]{Binh_Toan_6_tap_1}) thì hình ghép có chu vi bằng $140$\emph{cm}. Tính cạnh của mỗi hình vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 2, p. 101]
+	Tính chu vi 1 hình chữ nhật, biết bạn An đo 3 cạnh của hình được $34$\emph{cm}, còn bạn Bảo đo 3 cạnh của hình được $32$\emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 101]
+	Chia 1 hình chữ nhật thành $9$ hình chữ nhật nhỏ (\cite[Hình 19, p. 101]{Binh_Toan_6_tap_1}), chu vi của $5$ hình (tính bằng mét) được ghi trên hình. Tính chu vi hình chữ nhật ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{1.}, p. 102]
+	Cho \cite[Hình 20, p. 101]{Binh_Toan_6_tap_1}, trong đó hình thứ nhất là tam giác đều cạnh $1$, các hình sau gồm nhiều tam giác đều cạnh $1$.
+	\begin{enumerate*}
+		\item[(a)] Tính số tam giác đều cạnh $1$ ở hình thứ 5, ở hình thứ $n$.
+		\item[(b)] Tính số chấm tròn ở hình thứ 5, ở hình thứ $n$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{2.}, p. 102]
+	Trong mỗi hình ở \cite[Hình 21, p. 101]{Binh_Toan_6_tap_1}, các chấm tròn tạo thành những hình chữ nhật lớn dần. Tính số chấm tròn ở hình thứ 4, ở hình thứ $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{3.}, p. 102]
+	Cho hình chữ nhật $ABCD$ có $AB = a$, $BC = b$, chu vi $C$. Ở phía ngoài hình chữ nhật đó, vẽ các hình vuông $ABEG$ \& $BCHK$. Gọi $C_1,C_2$ theo thứ tự là chu vi các hình chữ nhật $CDGE$ \& $ADHK$.
+	\begin{enumerate*}
+		\item[(a)] Biểu thị $C_1,C_2$ theo $C,a,b$.
+		\item[(b)] Biết $C_1 = 80$\emph{cm}, $C_2 = 70$\emph{cm}. Tính $C,a,b$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{4.}, p. 102]
+	Cho hình \cite[Hình 22, p. 101]{Binh_Toan_6_tap_1} gồm nhiều tam giác đều cạnh $1$ ghép lại.
+	\begin{enumerate*}
+		\item[$\bullet$] Có bao nhiêu lục giác đều?
+		\item[$\bullet$] Có bao nhiêu tam giác đều?
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Diện Tích Hình Vuông, Hình Chữ Nhật}
+``Hình vuông với cạnh $a$ có diện tích $S = a^2$. Hình chữ nhật với các kích thước $a$ \& $b$ có diện tích $S = ab$.'' -- \cite[p. 102]{Binh_Toan_6_tap_1}. Công thức tính diện tích hình vuông là 1 trường hợp đặc biệt của công thức tính diện tích hình chữ nhật khi chiều dài bằng chiều rộng, i.e., $a = b$.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 4, p. 103]
+	Cho hình vuông $ABCD$. Ở phía ngoài hình vuông đó, vẽ hình chữ nhật $BCEG$ có chu vi $C_1$, diện tích $S_1$, vẽ hình chữ nhật $CDHK$ có chu vi $C_2$, diện tích $S_2$. Tính cạnh của hình vuông, biết $C_1 - C_2 = 24$\emph{m} \& $S-1 - S_2 = 240{\rm m}^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 5, p. 103]
+	Hình vuông $ABCD$ được chia thành 5 hình vuông \& 1 hình chữ nhật như Hình \cite[Hình 24a, p. 103]{Binh_Toan_6_tap_1}. Biết $S_1 = S_2$ \& $S_5 = 1{\rm cm}^2$. Tính diện tích mỗi hình.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 6, p. 103]
+	Hình chữ nhật $ABCD$ có $AB = 35$\emph{m}, $BC = 25$\emph{m} được chia thành 2 hình vuông, 2 hình chữ nhật \& 1 hình vuông nhỏ ở giữa (\cite[Hình 25, p. 103]{Binh_Toan_6_tap_1}). Tính diện tích của hình vuông nhỏ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{5.}, p. 104]
+	1 hình vuông được chia thành 5 hình chữ nhật như nhau bởi 4 đường thẳng song song với 1 cạnh. Biết diện tích mỗi hình chữ nhật là $80{\rm cm}^2$, tính chu vi mỗi hình chữ nhật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{6.}, p. 104]
+	Cho 2 hình vuông cạnh $5$\emph{cm} \& $3$\emph{cm} có 1 phần chồng lên nhau (\cite[Hình 27, p. 104]{Binh_Toan_6_tap_1}). Tính hiệu diện tích các phần không chồng lên nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{7.}, p. 104]
+	Cho 2 hình chữ nhật có hiệu chu vi bằng $8$\emph{cm}, hiệu diện tích bằng $12{\rm cm}^2$. Khi xếp 2 hình chữ nhật đó cắt nhau vuông góc như \cite[Hình 28, p. 104]{Binh_Toan_6_tap_1} thì phần 2 hình chồng lên nhau là 1 hình vuông. Tính diện tích hình vuông đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{8.}, p. 104]
+	1 vườn hình chữ nhật có chu vi $68$\emph{m} được chia thành 7 hình chữ nhật như nhau \cite[Hình 29, p. 104]{Binh_Toan_6_tap_1}. Tính chiều dài \& chiều rộng của vườn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{9.}, p. 104]
+	Tính diện tích của 1 hình chữ nhật có chu vi $80$\emph{m}, độ dài các cạnh là các số nguyên tố (đơn vị: mét).
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
