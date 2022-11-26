@@ -6,6 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx}
+\usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[chapter]
@@ -55,16 +56,16 @@ The fundamental principles of nonparametric shape optimization programs used to 
 This book explains the formulation \& solution of shape optimization problems for continua such as elastic bodies \& flow fields in detail from the basics, bearing in mind readers with an engineering background. A continuum refers to a domain over which a BVP of a PDE is defined. W.r.t. the PDE, considering a static elastic body or a steady flow field, elliptic PDEs are assumed. The theories shown in this book, however, can be applied to time-dependent IBVPs related to hyperbolic or parabolic PDEs, as well as to nonlinear problems. These results will be introduced on another occasion. Hence, the shape optimization problems dealt with in this book are described as follows. 1st describe a BVP of an elliptic PDE as a state determination problem \& then define the state determination problem so that when a function of the design variable expressing the density or domain variation is given, it has a unique solution. Using the design variable \& its solution, we define several cost functions by boundary integrals or domain integrals. Among these cost functions, one is set as the objective function \& the remaining as constraint functions in order to construct an optimum design problem. In this way, throughout this book, shape optimization problems will be constructed in the framework of function optimization problems. Their solutions will also be considered as solutions to the function optimization problems.
 
 Based on this sort of conception, this book uses a structure as described below.
-\begin{itemize}
-	\item Chap. 1 examines a simple optimization design problem of a 1D continuum \& looks at the process until optimum conditions are obtained. In this chapter, the \textit{Lagrange multiplier method} (\textit{adjoint variable method}) is used without proof.
-	\item After understanding the usage of the Lagrange multiplier method, optimization theories will be studied from the basics in Chap. 2. It is desired to have an understanding of the principle of the Lagrange multiplier method in this chapter.
-	\item After mastering optimization theories, in Chap. 3, algorithms for obtaining the optimal solutions will be considered. The theories \& algorithms shown here are the fundamentals of the academic field referred to as mathematical programming. However, these are applicable to optimization problems defined on finite-dimensional vector spaces. In order to tackle optimization problems defined on functional spaces constructed from sets of functions, which is the aim of this book, functions need to be treated as vectors. A theory systematizing its use is functional analysis.
-	\item In Chap. 4, the \textit{variational principle} in mechanics is used to exemplify the basic thinking \& results regarding the functional analysis.
-	\item After such preparations, Chap. 5 will look at BVPs of PDEs which are the platform of this book.
-	\item Chap. 6 will look at methods for performing numerical analyses of such problems. Numerical analysis is 1 of the academic fields which continues to develop, even now, \& has a variety of perspectives for study. In this book, because theories such as \textit{error estimation} are established, FEMs using the Galerkin method as a guiding principle will be looked at. Here, remarkable results from the functional analysis will be used to show the unique existence of solutions \& in error estimations.
-	\item With these results in mind, in Chap. 7, an optimum design problem with a level of abstraction, which can be used in the unification of shape optimization problems considered in this book, is defined, \& its solution \& algorithms are considered. The solutions \& algorithms have the same framework as those shown in Chap. 3. Here, however, vector spaces w.r.t. design variables are replaced by function spaces.
-	\item In Chaps. 8--9, the abstract optimum design problem is translated into topology optimization problems of density variation type \& shape optimization problems of domain variation type, respectively. In both chapters, the details of the theory are shown using the Poisson problem, for simplicity. We finally consider shape optimization problems for a linear elastic body \& a Stokes flow field, which are important in engineering, where a method to obtain the derivatives of cost functions will be looked at in detail.
-\end{itemize}
+\begin{enumerate*}
+	\item[$\bullet$] Chap. 1 examines a simple optimization design problem of a 1D continuum \& looks at the process until optimum conditions are obtained. In this chapter, the \textit{Lagrange multiplier method} (\textit{adjoint variable method}) is used without proof.
+	\item[$\bullet$] After understanding the usage of the Lagrange multiplier method, optimization theories will be studied from the basics in Chap. 2. It is desired to have an understanding of the principle of the Lagrange multiplier method in this chapter.
+	\item[$\bullet$] After mastering optimization theories, in Chap. 3, algorithms for obtaining the optimal solutions will be considered. The theories \& algorithms shown here are the fundamentals of the academic field referred to as mathematical programming. However, these are applicable to optimization problems defined on finite-dimensional vector spaces. In order to tackle optimization problems defined on functional spaces constructed from sets of functions, which is the aim of this book, functions need to be treated as vectors. A theory systematizing its use is functional analysis.
+	\item[$\bullet$] In Chap. 4, the \textit{variational principle} in mechanics is used to exemplify the basic thinking \& results regarding the functional analysis.
+	\item[$\bullet$] After such preparations, Chap. 5 will look at BVPs of PDEs which are the platform of this book.
+	\item[$\bullet$] Chap. 6 will look at methods for performing numerical analyses of such problems. Numerical analysis is 1 of the academic fields which continues to develop, even now, \& has a variety of perspectives for study. In this book, because theories such as \textit{error estimation} are established, FEMs using the Galerkin method as a guiding principle will be looked at. Here, remarkable results from the functional analysis will be used to show the unique existence of solutions \& in error estimations.
+	\item[$\bullet$] With these results in mind, in Chap. 7, an optimum design problem with a level of abstraction, which can be used in the unification of shape optimization problems considered in this book, is defined, \& its solution \& algorithms are considered. The solutions \& algorithms have the same framework as those shown in Chap. 3. Here, however, vector spaces w.r.t. design variables are replaced by function spaces.
+	\item[$\bullet$] In Chaps. 8--9, the abstract optimum design problem is translated into topology optimization problems of density variation type \& shape optimization problems of domain variation type, respectively. In both chapters, the details of the theory are shown using the Poisson problem, for simplicity. We finally consider shape optimization problems for a linear elastic body \& a Stokes flow field, which are important in engineering, where a method to obtain the derivatives of cost functions will be looked at in detail.
+\end{enumerate*}
 Based on the above synopsis, this book will build up theorems using results in mathematics. Therefore, we will be summarizing the key points in mathematical definitions \& theorems. This method of expression is advanced by the fact that the provable facts are clearly shown. If something that we want to investigate in the future is contained in the framework of mathematics, setting up a theory using theorems prepared by great mathematicians is thought to be an extremely effective method. Conversely, mathematics attempts to heighten the level of abstractness in order to understand may things in a unified fashion. This characteristic is also the reason that it can baffle readers with an engineering background. Hence, an attempt has been made to provide explanations using examples from dynamics with the aim of accurately denoting the provable facts using definitions \& theorems. Proofs have been added for the basic theories.''  -- \cite[pp. v--viii]{Azegami2020}
 
 %------------------------------------------------------------------------------%
@@ -108,7 +109,129 @@ Based on the above synopsis, this book will build up theorems using results in m
 
 In this way, theories relating to the calculation methods of shape derivatives have been developed consistently, but research relating to moving the shapes using shape derivatives has not always obtained favorable results. In reality, it is known that if the node coordinates on a boundary of a finite element model are chosen to be the design variable, \& the Fr\'echet derivatives w.r.t. the variation of the design variable are evaluated in order to move the nodes, a numerically unstable phenomenon in which the boundary becomes rippled such as shown in Fig. 9.1a appears [73]. \textsf{Fig. 9.1. Numerical examples w.r.t. the shape optimization problem of a linear elastic body (provided by Quint Corporation). (a) Rippling shape. (b) Optimal shape by $H^1$ gradient method.} Fig. 9.1a shows the result of a numerical analysis w.r.t. a mean compliance minimization problem (Problem 9.12.2) of a 3D linear elastic body. The boundary condition in the state determination problem constrains the displacement on the back edge, while a uniform downward facing nodal force (external force) on the horizontal central line of the front edge was assumed. The boundary condition in the shape variation problem restrains the variation in the normal direction on the front\texttt{/}back \& left\texttt{/}right edges, \& the variation on the horizontal central line on the front\texttt{/}back edge. Numerical analysis of a state determination problem uses the 1st-order finite elements. The calculation method of shape derivatives uses the formula of boundary integration form as shown later.
 
--- \cite[p. 427]{Azegami2020}
+In order to avoid rippling boundaries such as in this case, there is a method to define the boundary shape as a B-spline curve, Bezier curve, etc. \& choose its control variables as the design variables [30, 31]. There is also a method for giving the shape variation as the linear sum of the basic deformation modes \& choosing the undetermined multipliers in this case as the design variables (\textit{basis vector method}) [23, 65, 136, 166, 167]. All these methods have been highlighted \& used in actual optimal designs. However, all the methods used derivatives w.r.t. parametric design variables, such as those explained in the Preface \& differ from original shape derivatives.
+
+In this chapter, we will look at a method for evaluating the shape derivatives of cost functions after having constructed a shape optimization problem of a domain variation type in which a function expressing the domain variation defined on an appropriate function space is set to be the design variable based on the framework of the abstract optimal design problem show in Chap. 7. As a result, the shape gradient does not have enough regularity to create the following domain. This is thought to be 1 of the factors generating numerical instability. In this situation, even if such a shape derivative is used, if an appropriate gradient method is used, there is the possibility that a shape optimization problem can be solved without facing numerical instability. In this chapter, this method will be the focus of our discussion.
+
+Fig. 9.1b shows the results obtained via the algorithm shown in Sect. 9.10. Boundary conditions \& calculation method of the shape derivative are the same as in Fig. 9.1a. Numerical analysis of the state determination problem used 2nd-order tetrahedral finite elements. Moreover, in numerical analysis of the $H^1$ gradient method using the Robin condition shown later, the 1st-order tetrahedral finite elements were used. Moreover, the validity relating to the selection of a finite element such as this is shown in Sect. 9.11.
+
+The fundamental idea relating the gradient method on a function space was presented by Cea [34]. A primitive form of the gradient method can be found in Pironneau's monograph [134, p. 48 (17)]. In addition, a method called \textit{asymptotical regularization} was proposed by Tautenhahn [163]. In contrast, in the 1990s, the author [8] proposed a gradient method on a function space which was referred to as the \textit{traction method}, based on an engineering principle. After that, a generalization of the traction method was also introduced [14]. Furthermore, these methods have been applied in various engineering problems. Moreover, the interpretation of the traction method in mathematics was also attempted in an existing report [80]. Here the domain mapping was assumed to be an element of the set of all continuous functions of some class, \& the traction method was justified using the G\^ateaux derivative of a cost function w.r.t. the variation of the domain mapping. In this chapter, a gradient method uses the Fr\'echet derivative of a cost function by defining the variation of the domain mapping in an appropriate Hilbert space. Based on this gradient method, it is apparent that the traction method was indeed a concrete example of that computational procedure.
+
+Furthermore, a different method for constructing a shape optimization problem of domain variation type is proposed. As thought by Hadamard [60], since the next boundary shape can be determined by moving the boundary to the normal direction, 1 method is choosing the function that represents the amount of movement in the normal direction defined on the boundary as the design variable [118]. This method also uses the gradient method with the functionality of keeping the regularity equivalent to the gradient method shown in this chapter. However, if a FEM is used for numerical analysis of a state determination problem, after the boundary has been moved by the gradient method, we have to consider a method for moving the finite element mesh within the domain along with the new boundary. In addition, methods using level-set functions for design variables are also being researched [4, 169, 180]. In these methods, a level-set function which is a continuous function with scalar value defined on a fixed domain is used to define the boundary with a set of points in the domain where its value is zero. Using these methods, the topology of the domain can easily be changed through joining the holes together by varying the level-set function. However, since the level-set function is defined using Euler notation (see after Def. 9.1.3), a wider domain is required than the actual domain. Moreover, in order to extract a numerical model from the level set of zero, some processes are required. Furthermore, stronger conditions w.r.t. the regularity of the solution for the state determination problem are required for the aforementioned 2 methods than for the method shown in this chapter. The reason for this is that when calculating the Fr\'echet derivatives of cost functions, only the formula of boundary integral type can be applicable.
+
+This chapter is structured as follows.
+\begin{enumerate*}
+	\item[$\bullet$] In Sects. 9.1--9.4, the definitions \& formulae relating to functions \& functionals defined on a moving domain are summarized.
+	\item[$\bullet$] In Sect. 9.1, the definitions of admissible set of a design variable (function representing domain variation) \& shape derivatives of functions \& functionals are shown. There, attention will be given to the fact that there are 2 methods of defining the derivatives of functions defined on a moving domain w.r.t. domain variation. In this book, we shall refer to these notions of derivatives as ``shape derivative of a function'' \& ``partial shape derivative of a function''.
+	\item[$\bullet$] Using these definitions, the formulae for shape derivatives relating to the Jaboci matrix of the domain mapping will be obtained in Sect. 9.2.
+	\item[$\bullet$] Using the formulae, in Sect. 9.3, the propositions relating to shape derivatives of functions \& functionals are shown. Here also, we will focus on the fact that the formulae using the shape derivatives of functions \& partial shape derivatives of functions can be obtained.
+	\item[$\bullet$] Sect. 9.4 defines several rules for variations of functions w.r.t. domain variation using the shape derivative of a function \& the partial shape derivative of a function.
+	\item[$\bullet$] In Sects. 9.5--9.8, we will consider a shape optimization problem when Poisson problem is chosen to be the state determination problem \& present the process of computing the shape derivatives of cost functions.
+	\item[$\bullet$] In Sect. 9.5, a state determination problem will be defined using a Poisson problem using the variation rules for functions shown in Sect. 9.4.
+	\item[$\bullet$] The solution to this problem is used in Sect. 9.6 to define a general cost function which is then used to define a shape optimization problem.
+	\item[$\bullet$] The existence of a solution to the shape optimization problem of this is shown in Sec.t 9.7.
+	\item[$\bullet$] In Sect. 9.8, the methods for obtaining the Fr\'echet derivatives of cost functions shown in Sect. 7.5 are followed in order to show the methods to obtain shape derivatives \& 2nd-order derivatives of cost functions w.r.t. a domain variation. In this case, we focus on the fact that we can think of 2 methods: one using formulae based on the shape derivative of a function, \& another using formulae based on the partial shape derivative of a function. As a result, it becomes clear that whichever method is used, the shape gradients of the cost functions do not have enough regularity to be able to define the following domain.
+	
+	Even if the shape gradients have insufficient regularities, by applying the abstract gradient method or the abstract Newton method shown in Sect. 7.6 to the shape optimization problems, a gradient method \& Newton method with the functionality to regularize the shape derivatives of cost functions can be defined.
+	\item[$\bullet$] In Sect. 9.9, their abstract definitions \& several methods for specifying these are introduced.
+	\item[$\bullet$] In Sect. 9.10, algorithms will be considered. However, the basic structures are as per the algorithms shown in Sect. 3.7.
+	\item The error evaluation of the numerical solutions obtained using these algorithms is shown in Sect. 9.11. Here, the results from the error estimations of numerical analyses shown in Sect. 6.6 will be used.
+\end{enumerate*}
+
+Once we look at the range of solutions w.r.t. the shape optimization problem of a Poisson problem, the shape derivatives of cost functions w.r.t. a mean compliance minimization problem of a linear elastic body will be sought in Sect. 9.12. Furthermore, in Sect. 9.13, the mean flow resistance minimization problem of a Stokes flow field will be used as an example to obtain the shape derivatives of the cost functions. The conditions of optimality using these shape derivatives can be seen matching the conditions of optimality w.r.t. the mean compliance minimization problem for a 1D linear elastic body shown in Sect. 1.1 \& the mean flow resistance minimization problem for a 1D branched Stokes flow field shown in Sect. 1.3. Moreover, in Sects. 9.12.5 \& 9.13.5, numerical examples w.r.t. these simple problems will be shown.'' -- \cite[pp. 427--431]{Azegami2020}
+
+\subsection{Set of Domain Variations \& Definition of Shape Derivatives}
+``In order to construct a shape optimization problem of domain variation type, let us define the admissible set of design variables. Moreover, the Fr\'echet derivatives of functions \& functionals defined in a moving domain w.r.t. domain variation will be referred to as shape derivatives.'' -- \cite[p. 431]{Azegami2020}
+
+\subsubsection{Initial Domain}
+
+\subsubsection{Sets of Domain Variations}
+
+\subsubsection{Definitions of Shape Derivatives}
+
+\subsection{Shape Derivatives of Jacobi Determinants}
+
+\subsubsection{Shape Derivatives of Domain Jacobi Determinant \& Domain Jacobi Inverse Matrix}
+
+\subsubsection{Shape Derivatives of Boundary Jacobi Determinant \& the Normal}
+
+\subsection{Shape Derivatives of Functionals}
+
+\subsubsection{Formulae Using Shape Derivative of a Function}
+
+\subsubsection{Formula Using Partial Shape Derivative of a Function}
+
+\subsection{Variation Rules of Functions}
+
+\subsection{State Determination Problem}
+
+\subsection{Shape Optimization Problem of Domain Variation Type}
+
+\subsection{Existence of an Optimum Solution}
+
+\subsection{Derivatives of Cost Functions}
+
+\subsubsection{Shape Derivative of $f_i$ Using Formulae Based on Shape Derivative of a Function}
+
+\subsubsection{2nd-Order Shape Derivative of $f_i$ Using Formulae Based on Shape Derivative of a Function}
+
+\subsubsection{2nd-Order Shape Derivative of Cost Function Using Lagrange Multiplier Method}
+
+\subsubsection{Shape Derivative of $f_i$ Using Formulae Based on Partial Shape Derivative of a Function}
+
+\subsection{Descent Directions of Cost Functions}
+
+\subsubsection{$H^1$ Gradient Method}
+
+\subsubsection{$H^1$ Newton Method}
+
+\subsection{Solution to Shape Optimization Problem of Domain Variation Type}
+
+\subsubsection{Gradient Method for Constrained Problems}
+
+\subsubsection{Newton Method for Constrained Problems}
+
+\subsection{Error Estimation}
+
+\subsection{Shape Optimization Problem of Linear Elastic Body}
+
+\subsubsection{State Determination Problem}
+
+\subsubsection{Mean Compliance Minimization Problem}
+
+\subsubsection{Shape Derivatives of Cost Functions}
+
+\subsubsection{Relation with Optimal Design Problem of Stepped 1D Linear Elastic Body}
+
+\subsubsection{Numerical Example}
+
+\subsection{Shape Optimization Problem of Stokes Flow Field}
+
+\subsubsection{State Determination Problem}
+
+\subsubsection{Mean Compliance Minimization Problem}
+
+\subsubsection{Shape Derivatives of Cost Functions}
+
+\subsubsection{Relation with Optimal Design Problem of Stepped 1D Linear Elastic Body}
+
+\subsubsection{Numerical Example}
+
+\subsection{Shape Optimization Problem of Stoke Flow Field}
+
+\subsubsection{State Determination Problem}
+
+\subsubsection{Mean Flow Resistance Minimization Problem}
+
+\subsubsection{Shape Derivatives of Cost Functions}
+
+\subsubsection{Relationship with Optimal Design Problem of 1D Branched Stokes Flow Field}
+
+\subsubsection{Numerical Example}
+
+\subsection{Summary}
+
+\subsection{Practice Problems}
 
 %------------------------------------------------------------------------------%
 
