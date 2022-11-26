@@ -222,6 +222,40 @@ When $u$ is the solution to Problem 9.5.4, $\mathcal{L}_{\rm S}(\boldsymbol{\phi
 Following the notation in Sect. 9.3, $\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v)$ should be written as $\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,\nabla u,\partial_\nu u,v,\nabla v,\partial_\nu v)$. However, from now on, it will be written as $\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v)$.'' -- \cite[pp. 464--467]{Azegami2020}
 
 \subsection{Shape Optimization Problem of Domain Variation Type}
+``In Sect. 9.5, we saw how the state variable $\tilde{u} = u - u_{\rm D}\in\mathcal{S}$ is determined as the solution of a state determination problem when a design variable $\boldsymbol{\phi}\in\mathcal{D}$ is given. These variables are used to define a shape optimization problem. Here, the cost functions are set to \textbf{(9.6.1)}
+\begin{align*}
+	f_i(\boldsymbol{\phi},u) = \int_{\Omega(\boldsymbol{\phi})} \zeta_i(\boldsymbol{\phi},u,\nabla u)\,{\rm d}{\bf x} + \int_{\Gamma_{\eta i}(\boldsymbol{\phi})} \eta_{{\rm N}i}(\boldsymbol{\phi},u)\,{\rm d}\gamma - \int_{\Gamma_{\rm D}(\boldsymbol{\phi})} \eta_{{\rm D}i}(\boldsymbol{\phi},\partial_\nu u)\,{\rm d}\gamma - c_i,\ \forall i\in\{0,1,\ldots,m\},
+\end{align*}
+respectively. Here $c_i$, $i = 1,\ldots,m$ are constants \& have to be determined s.t. there exists some $(\boldsymbol{\phi},\tilde{u})\in\mathcal{D}\times\mathcal{S}$ which satisfies $f_i\le 0$, $\forall i\in\{0,1,\ldots,m\}$. Moreover, $\zeta_i,\eta_{{\rm N}i}$, \& $\eta_{{\rm D}i}$ are assumed to be given \& satisfy 2 types of hypotheses as follows. Those hypotheses will be needed to obtain an appropriate regularity in the solution of a adjoint problem (Problem 9.8.1) shown later. To calculate the 2nd-order shape derivatives of cost functions, additional hypotheses are required. However, details of these conditions will be omitted \& we shall only tacitly assume that they were already satisfied to carry out a 2nd-order differentiation of the costs.
+
+The following assumption is used when employing the formula based on the shape derivative of a function.
+
+\begin{hypothesis}[Cost Functions (Shape Derivative)]
+	W.r.t. the cost function $f_i$ ($i\in\{0,1,\ldots,m\}$) of (9.6.1), let $\zeta_i\in C^1(\mathbb{R}\times\mathbb{R}\times\mathbb{R}^d;\mathbb{R})$, $\eta_{{\rm N}i}\in C^1(\mathbb{R};\mathbb{R})$, $\eta_{{\rm D}i}\in C^1(\mathbb{R};\mathbb{R})$ be functions fixed with material satisfying [$\ldots$] Moreover, $(\cdot)_{\boldsymbol{\phi}'}(\boldsymbol{\phi},\cdot)[\boldsymbol{\varphi}]$ represents the shape derivatives of functions (Def. 9.1.1).
+\end{hypothesis}
+Moreover, if the formulae based on the partial shape derivative of a function are used, the following hypothesis will be used.
+
+\begin{hypothesis}[Cost Functions (Partial Shape Derivative)]
+	W.r.t. cost function $f_i$ ($i\in\{0,1,\ldots,m\}$) of (9.6.1), let $\zeta_i\in C^1(\mathbb{R}\times\mathbb{R}\times\mathbb{R}^d;\mathbb{R})$, $\eta_{{\rm N}i}\in C^1(\mathbb{R};\mathbb{R})$, $\eta_{{\rm D}i}\in C^1(\mathbb{R};\mathbb{R})$ be functions fixed in space satisfying [$\ldots$]. Moreover, $(\cdot)_{\boldsymbol{\phi}^\star}(\boldsymbol{\phi},\cdot)[\boldsymbol{\varphi}]$ represents the partial shape derivatives of functions (Def. 9.1.3).
+\end{hypothesis}
+These cost functions are used to define a shape optimization problem of domain variation type as follows.
+
+\begin{problem}[Shape Optimization of Domain Variation Type]
+	Let $\mathcal{D}$ \& $\mathcal{S}$ be defined as (9.1.3) \& (9.5.2), respectively. Also, let $f_0,\ldots,f_m$ is defined by (9.6.1). Find $\Omega(\boldsymbol{\phi})$ which satisfies
+	\begin{align*}
+		\min_{(\boldsymbol{\phi},u - u_{\rm D})\in\mathcal{D}\times\mathcal{S}} \{f_0(\boldsymbol{\phi},u)|f_1(\boldsymbol{\phi},u)\le 0,\ldots,f_m(\boldsymbol{\phi},u)\le 0,\mbox{ Problem 9.5.4}\}.
+	\end{align*}
+\end{problem}
+In what follows, we will look at the Fr\'echet derivatives of cost functions \& the KKT conditions w.r.t. a shape optimization problem (Problem 9.6.3) of domain variation type. In this respect, Lagrange functions based on several definitions will be used. Here, their relationships are summarized in order to avoid confusion. Let the Lagrange function w.r.t. the shape optimization problem (Problem 9.6.3) of domain variation type be \textbf{(9.6.2)}
+\begin{align*}
+	\mathcal{L}(\boldsymbol{\phi},u,v_0,v_1,\ldots,v_m,\lambda_1,\ldots,\lambda_m) = \mathcal{L}_0(\boldsymbol{\phi},u,v_0) + \sum_{i=1}^m \lambda_i\mathcal{L}_i(\boldsymbol{\phi},u,v_i),
+\end{align*}
+where $\boldsymbol{\lambda} = (\lambda_1,\ldots,\lambda_m)^\top\in\mathbb{R}^m$ is a Lagrange multiplier w.r.t. $f_i(\boldsymbol{\phi},u)\le 0$, $i = 1,\ldots,m$. Furthermore, if $f_i$ is a functional of $u$ for all $i\in\{0,1,\ldots,m\}$, \& in view of the fact that the state determination problem (Problem 9.5.4) is an equality constraint, the functional \textbf{(9.6.3)}
+\begin{align*}
+	\mathcal{L}_i(\boldsymbol{\phi},u,v_i) = f_i(\boldsymbol{\phi},u) + \mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v_i) =&\, \int_{\Omega(\boldsymbol{\phi})} \zeta_i(\boldsymbol{\phi},u,\nabla u) - \nabla u\cdot\nabla v_i + bv_i\,{\rm d}{\bf x} + \int_{\Gamma_{\eta i}(\boldsymbol{\phi})} \eta_{{\rm N}i}(\boldsymbol{\phi},u)\,{\rm d}\gamma + \int_{\Gamma_p(\boldsymbol{\phi})} p_{\rm N}v_i\,{\rm d}\gamma + \int_{\Gamma_{\rm D}(\boldsymbol{\phi})}\\
+	&+ \int_{\Gamma_{\rm D}(\boldsymbol{\phi})} (u - u_{\rm D})\partial_\nu v_i + v_i\partial_\nu u - \eta_{{\rm D}i}(\boldsymbol{\phi},\partial_\nu u)\,{\rm d}\gamma - c_i
+\end{align*}
+is called the \textit{Lagrange function} of $f_i(\boldsymbol{\phi},u)$. Here, $\mathcal{L}_{\rm S}$ is the Lagrange function of the state determination problem defined by (9.5.3). Moreover, $v_i$ is introduced as a Lagrange multiplier w.r.t. the state determination problem corresponding to $f_i$ \& $\tilde{v}_i = v_i - \eta_{{\rm D}i\partial_\nu u}$ is assumed to be an element of $\mathcal{S}$. Similarly to $u$, if a variation $\hat{v}_i$ of $\tilde{v}_i$ is to be considered, $\hat{v}_i$ is contained in $U$.'' -- \cite[pp. 467--469]{Azegami2020}
 
 \subsection{Existence of an Optimum Solution}
 
