@@ -38,20 +38,23 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{Elementary Mathematics\texttt{/}Grade 6\texttt{/}Visual Geometry}
+\title{Visual Geometry -- Hình Học Trực Quan}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
 \maketitle
 \begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about visual geometry. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/visual_geometry/NQBH_elementary_mathematics_grade_6_visual_geometry.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}visual geometry}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/visual_geometry/NQBH_elementary_mathematics_grade_6_visual_geometry.pdf}.}.
+	\vspace{2mm}
 	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về ước, ước chung, ước chung lớn nhất, bội, bội chung, bội chung nhỏ nhất. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/visual_geometry/NQBH_elementary_mathematics_grade_6_visual_geometry.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}visual geometry}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -112,7 +115,11 @@
 %------------------------------------------------------------------------------%
 
 \section{Diện Tích Hình Vuông, Hình Chữ Nhật}
-``Hình vuông với cạnh $a$ có diện tích $S = a^2$. Hình chữ nhật với các kích thước $a$ \& $b$ có diện tích $S = ab$.'' -- \cite[p. 102]{Binh_Toan_6_tap_1}. Công thức tính diện tích hình vuông là 1 trường hợp đặc biệt của công thức tính diện tích hình chữ nhật khi chiều dài bằng chiều rộng, i.e., $a = b$.
+``\begin{enumerate*}
+	\item[$\bullet$] Hình vuông với cạnh $a$ có diện tích $S = a^2$.
+	\item[$\bullet$] Hình chữ nhật với các kích thước $a$ \& $b$ có diện tích $S = ab$.'' -- \cite[p. 102]{Binh_Toan_6_tap_1}.
+\end{enumerate*}
+Công thức tính diện tích hình vuông là 1 trường hợp đặc biệt của công thức tính diện tích hình chữ nhật khi chiều dài bằng chiều rộng, i.e., $a = b$.
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 4, p. 103]
 	Cho hình vuông $ABCD$. Ở phía ngoài hình vuông đó, vẽ hình chữ nhật $BCEG$ có chu vi $C_1$, diện tích $S_1$, vẽ hình chữ nhật $CDHK$ có chu vi $C_2$, diện tích $S_2$. Tính cạnh của hình vuông, biết $C_1 - C_2 = 24$\emph{m} \& $S-1 - S_2 = 240{\rm m}^2$.
@@ -144,6 +151,219 @@
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{9.}, p. 104]
 	Tính diện tích của 1 hình chữ nhật có chu vi $80$\emph{m}, độ dài các cạnh là các số nguyên tố (đơn vị: mét).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{10.}, p. 104]
+	Có thể chia 1 hình vuông thành $n$ hình vuông (không nhất thiết bằng nhau) hay không với:
+	\begin{enumerate*}
+		\item[(a)] $n = 7$?
+		\item[(b)] $n = 8$?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{11.}, p. 104]
+	Cho 1 hình vuông $5\times 5$ gồm $25$ ô vuông. Cắt từ hình vuông đó được nhiều nhất bao nhiêu hình chữ L?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{12.}, p. 105]
+	Cho 5 hình chữ nhật như nhau xếp trong 1 hình vuông cạnh $30$\emph{cm} (\cite[Hình 31, p. 104]{Binh_Toan_6_tap_1}). Tính diện tích mỗi hình chữ nhật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{13.}, p. 105]
+	1 tấm bìa hình chữ nhật có chiều dài $9$\emph{m}, chiều rộng $4$\emph{m}. Có thể cắt tấm bìa thành 2 mảnh để ghép lại thành 1 hình vuông được không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{14.}, p. 105]
+	Có 5 miếng gỗ nhỏ hình vuông bằng nhau. Ghép 5 miếng gõ ấy thành 1 hình vuông lớn sao cho mỗi tấm chỉ được cưa nhiều nhất là 1 nhát.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{15.}, p. 105]
+	Cho 1 tấm bìa hình chữ nhật kích thước $9\times 12$, ở chính giữa bị khuyết 1 dải hình chữ nhật kích thước $1\times 8$ (\cite[Hình 32, p. 105]{Binh_Toan_6_tap_1}). Cắt tấm bìa này thành 2 mảnh để ghép lại thành 1 hình vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{16.}, p. 105]
+	Cho 1 tấm bìa hình chữ thập như \cite[Hình 33, p. 105]{Binh_Toan_6_tap_1}. Chia hình đó làm 3 mảnh để ghép lại thành 1 hình chữ nhật có chiều dài gấp đôi chiều rộng.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Diện Tích Hình Bình Hành, Hình Thoi}
+``\begin{enumerate*}
+	\item[$\bullet$] Hình bình hành với đáy $a$, chiều cao tương ứng $h$ có diện tích $S = ah$.
+	\item[$\bullet$] Hình thoi với đáy $a$, chiều cao tương ứng $h$ có diện tích $S = ah$.
+	\item[$\bullet$] Hình thoi với 2 đường chéo bằng $m$ \& $n$ có diện tích $S = \frac{1}{2}mn$.'' -- \cite[p. 105]{Binh_Toan_6_tap_1}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 7, p. 105]
+	1 hình bình hành có 2 cạnh bằng $10$\emph{cm} \& $15$\emph{cm}, 1 đường cao bằng $12$\emph{cm}. Tính đường cao còn lại.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{17.}, p. 105]
+	1 hình bình hành có diện tích $\rm72cm^2$. Tính đáy \& chiều cao tương ứng, biết đáy gấp đôi chiều cao.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{18.}, p. 105]
+	1 hình thoi có 2 đường chéo $30$\emph{cm} \& $40$\emph{cm}. Tính chiều cao của hình thoi, biết nếu 1 tam giác vuông có các cạnh góc vuông $3k$ \& $4k$ thì cạnh huyền bằng $5k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{19.}, p. 105]
+	Tìm 1 hình có các cạnh bằng nhau sao cho hình đó:
+	\begin{enumerate*}
+		\item[(a)] Chia được thành 4 hình có các cạnh bằng nhau;
+		\item[(b)] Chia được thành 6 hình có các cạnh bằng nhau;
+		\item[(C)] Chia được thành 8 hình có các cạnh bằng nhau;
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{20.}, p. 106]
+	Cho \cite[Hình 35, p. 105]{Binh_Toan_6_tap_1}, trong đó có 1 tam giác được tô màu.
+	\begin{enumerate*}
+		\item[(a)] Có bao nhiêu hình thoi chứa tam giác được tô màu?
+		\item[(b)] Có bao nhiêu hình bình hành khác hình thoi chứa tam giác được tô màu?
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Diện Tích Hình Tam Giác, Hình Thang}
+``\begin{enumerate*}
+	\item[$\bullet$] Hình tam giác với đáy $a$, chiều cao tương ứng $h$ có diện tích $S = \frac{1}{2}ah$.
+	\item[$\bullet$] Hình thang với đáy $a$ \& $b$, chiều cao $h$ có diện tích $S = \frac{1}{2}(a + b)h$.'' -- \cite[p. 106]{Binh_Toan_6_tap_1}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 8, p. 106]
+	Cho các hình vuông $ABCD$ \& $CEGH$ có cạnh $6$\emph{cm} \& $4$\emph{cm} \cite[Hình 36, p. 106]{Binh_Toan_6_tap_1}. Tính diện tích $\Delta BDG$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 9, p. 107]
+	Cho hình chữ nhật $ABCD$ có chiều dài $AB$ hơn chiều rộng $BC$ là $4$\emph{cm}. Hình chữ nhật được chia thành 1 hình vuông \& 4 hình thang (\cite[Hình 38, p. 107]{Binh_Toan_6_tap_1}). Tính cạnh của hình vuông, biết $S_1 + S_2 = 49{\rm cm}^2$; $S_3 + S_4 = 41{\rm cm}^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 10, p. 107]
+	Cho hình bình hành $ABCD$ có điểm $E$ thuộc cạnh $BC$, điểm $G$ thuộc cạnh $AB$ \& $AE = CG$. Gọi $H$ là chân đường vuông góc kẻ từ $D$ đến $AE$, $K$ là chân đường vuông góc kẻ từ $D$ đến $CG$. So sánh các độ dài $DH$ \& $DK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{21.}, p. 107]
+	Cho lục giác đều $ABCDEF$, điểm $M$ thuộc đường chéo $CG$. So sánh diện tích $\Delta AMC$ \& $\Delta DMC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{22.}, p. 107]
+	Hình thang cân trên \cite[Hình 41, p. 107]{Binh_Toan_6_tap_1} được tạo thành bởi $10$ que diêm. Đặt thêm $5$ que diêm nữa vào để có thêm $4$ hình thang cân nữa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{23.}, p. 108]
+	Cho \cite[Hình 42, p. 108]{Binh_Toan_6_tap_1}, $BM = MC$, $ME\parallel AD$. Biết diện tích $\Delta ABC$ bằng $60{\rm cm}^2$, tính diện tích $\Delta DEC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{24.}, p. 108]
+	Cho hình thang $ABCD$ (\cite[Hình 43, p. 108]{Binh_Toan_6_tap_1}).
+	\begin{enumerate*}
+		\item[(a)] Chứng tỏ: $S_1 + S_2 = S_3$.
+		\item[(b)] Cho $S_{ABCD} = 210{\rm m}^2$, $S_{CMD} = 150{\rm m}^2$. Tính $S_{ANB}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{25.}, p. 108]
+	Cho $\Delta ABC$ vuông tại $A$, $AB = 50$\emph{m}, $AC = 40$\emph{m}. 1 đường thẳng song song với $AC$, cắt $AB$ \& $BC$ theo thứ tự tại $D$ \& $E$, $AD = 10$\emph{m}. Tính $DE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{26.}, p. 108]
+	Cho $\Delta ABC$ vuông tại $A$, hình chữ nhật $ADIE$ (\cite[Hình 44, p. 108]{Binh_Toan_6_tap_1}). Tính diện tích hình chữ nhật, biết $CD = 10$\emph{m}, $BE = 30$\emph{m}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{27.}, p. 108]
+	Cho hình thang $ABCD$ có đáy $AB = 15$\emph{m}, đáy $CD = 30$\emph{m}, chiều cao $30$\emph{m}. 1 đường thẳng song song với 2 đáy, cắt $AD$ \& $BC$ theo thứ tự tại $E$ \& $F$, chiều cao của hình thang $CDEF$ bằng $10$\emph{m}.
+	\begin{enumerate*}
+		\item[(a)] Tính diện tích $\Delta ABF,\Delta CDF$.
+		\item[(b)] Tính diện tích 2 hình thang nhỏ.	
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{28.}, p. 108]
+	Cho 2 hình vuông có chung cạnh (\cite[Hình 45, p. 108]{Binh_Toan_6_tap_1}). Có bao nhiêu tam giác vuông có đỉnh trùng với đỉnh của các hình vuông?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{So Sánh Diện Tích \& So Sánh Độ Dài}
+``Xét các bài toán liên quan đến so sánh diện tích 2 tam giác \& so sánh 2 đáy, so sánh 2 đường cao. Cho 2 tam giác có đáy, chiều cao, diện tích lần lượt là $a_1,h_1,S_1$ \& $a_2,h_2,S_2$. Từ công thức $S = \frac{1}{2}ah$ suy ra:
+\begin{enumerate*}
+	\item[\textbf{1.}] Nếu $a_1 = a_2$ mà $h_1 = nh_2$ thì $S_1 = nS_2$.
+	\item[\textbf{2.}] Nếu $h_1 = h_2$ mà $a_1 = na_2$ thì $S_1 = nS_2$.
+	\item[\textbf{3.}] Nếu $S_1 = S_2$ mà $a_1 = na_2$ thì $h_2 = nh_1$.
+	\item[\textbf{3.}] Nếu $S_1 = S_2$ mà $h_1 = nh_2$ thì $a_2 = na_1$.'' -- \cite[p. 109]{Binh_Toan_6_tap_1}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 11, p. 109]
+	Cho $\Delta ABC$ có diện tích $S$, điểm $D$ trên cạnh $AB$, điểm $E$ trên cạnh $BC$, điểm $K$ trên cạnh $CA$ sao cho $AD = \frac{1}{3}AB$, $BE = \frac{1}{3}{BC}$, $CK = \frac{1}{3}CA$. Tính diện tích $\Delta DEK$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 12, p. 109]
+	Cho $\Delta ABC$ có diện tích $S$, $D$ là trung điểm của $AC$, điểm $E$ trên cạnh $AB$ sao cho $AE = 2EB$, $BD$ cắt $CE$ ở $K$. Tính diện tích $\Delta BKC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 13, p. 110]
+	Cho hình thang $ABCD$ có $BD$ là đường cao, đáy $CD = 2AB$, $AC$ cắt $BD$ ở $O$. Chứng minh: $OC = 2OA$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 14, p. 110]
+	Cho hình thang $ABCD$ đáy $AB$ \& $CD$, diện tích $S$, $CD = 3AB$, $AC$ cắt $BD$ tại $O$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh: $OC = 3OA$, $OD = 3OB$.
+		\item[(b)] Tính diện tích $\Delta AOB,\Delta BOC,\Delta COD$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 15, p. 111]
+	Cho $\Delta ABC$. Lấy các điểm $D,E,F$ theo thứ tự thuộc các cạnh $AB,BC,CA$ sao cho $AD = \frac{1}{3}AB$, $BE = \frac{1}{3}{BC}$, $CF = \frac{1}{3}CA$. Các đoạn thẳng $AE,BF,CD$ cắt nhau tạo thành 1 tam giác. Chứng minh diện tích tam giác này bằng $\frac{1}{7}$ diện tích $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{29.}, p. 111]
+	Cho $\Delta ABC$ diện tích $60{\rm cm}^2$, $D$ \& $E$ theo thứ tự là trung điểm của $AC$ \& $AB$, $BD$ cắt $CE$ tại $I$. Tính diện tích $\Delta BIC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{30.}, p. 111]
+	Cho $\Delta ABC$, $D$ là trung điểm của $AC$, $E$ là trung điểm của $BD$, $AE$ cắt $BC$ tại $K$. So sánh độ dài $KB$ \& $KC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{31.}, p. 111]
+	Cho $\Delta ABC$, $D$ là trung điểm của $BC$, $E$ là trung điểm của $AC$, $AD$ cắt $BE$ tại $G$. So sánh độ dài $AG$ \& $GD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{32.}, p. 111]
+	Cho $\Delta ABC$, điểm $D$ trên cạnh $AC$ sao cho $AD = \frac{1}{4}AC$, điểm $E$ trên cạnh $BC$ sao cho $BE = \frac{1}{3}BC$, $AE$ cắt $BD$ tại $I$. So sánh độ dài $AI$ \& $IE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{33.}, p. 111]
+	Cho $\Delta ABC$, $D$ là trung điểm của $BC$. Điểm $G$ trên $AD$ sao cho $AG = 2GD$, $BG$ cắt $AC$ tại $E$. Chứng minh $E$ là trung điểm của $AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{34.}, p. 111]
+	Cho $\Delta ABC$ có diện tích $S$, $D$ là trung điểm của $AB$, điểm $E$ trên cạnh $AC$ sao cho $AE = \frac{1}{3}EC$, $CD$ cắt $BE$ ở $I$. Tính diện tích $\Delta BIC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{35.}, p. 111]
+	Cho hình chữ nhật $ABCD$ diện tích $\rm60m^2$, điểm $E$ thuộc cạnh $CD$, điểm $G$ thuộc cạnh $BC$. Biết diện tích $\Delta ADE$ bằng $\rm15m^2$, diện tích $\Delta ABG$ bằng $\rm20m^2$, tính diện tích $\Delta CEG$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{36.}, p. 111]
+	Hình chữ nhật $ABCD$ có diện tích $\rm 72m^2$. $E$ là trung điểm của $AB$, $CE$ cắt $BD$ tại $I$. Tính diện tích $\Delta CBI$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{37.}, p. 111]
+	Cho hình thang $ABCD$, đáy $CD = 2AB$, diện tích $\rm 90m^2$. $AC$ cắt $BD$ tại $O$. Tính diện tích $\Delta AOB,\Delta BOC,\Delta COD,\Delta DOA$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{38.}, p. 111]
+	Cho hình chữ nhật $ABCD$, các đoạn thẳng $BD$ \& $CE$ cắt nhau tại $I$ như \cite[Hình 51, p. 112]{Binh_Toan_6_tap_1}. Biết diện tích $\Delta BIE$ \& $\Delta BIC$ bằng $\rm16cm^2$ \& $\rm20cm^2$. Tính diện tích tứ giác $ADIE$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{39.}, p. 111]
+	Cho tứ giác $ABCD$ có diện tích $\rm60m^2$. Chia các cạnh đối $AD$ \& $BC$ thành 3 phần bằng nhau $AE = EF = FD$, $BG = GH = HC$. Tính diện tích tứ giác $EFHG$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{40.}${}^\star$, p. 111]
+	Cho $\Delta ABC$ có diện tích $S$. Các điểm $D,E,F$ theo thứ tự nằm trên các cạnh $AB,BC,CA$ sao cho $AD = DB$, $BE =  \frac{1}{2}EC$, $CF = \frac{1}{2}FA$. Các đoạn thẳng  $AE,BF,CD$ cắt nhau tạo thành 1 tam giác. Tính diện tích tam giác đó.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
