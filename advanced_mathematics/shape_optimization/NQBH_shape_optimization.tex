@@ -14,6 +14,7 @@
 \newtheorem{corollary}{Corollary}[chapter]
 \newtheorem{definition}{Definition}[chapter]
 \newtheorem{example}{Example}[chapter]
+\newtheorem{hypothesis}{Hypothesis}[chapter]
 \newtheorem{lemma}{Lemma}[chapter]
 \newtheorem{notation}{Notation}[chapter]
 \newtheorem{principle}{Principle}[chapter]
@@ -164,6 +165,53 @@ Once we look at the range of solutions w.r.t. the shape optimization problem of 
 \subsection{Variation Rules of Functions}
 
 \subsection{State Determination Problem}
+``Since the definitions \& formulas of shape derivatives of functions \& functional have been obtained, let us use them to define a BVP of a PDE which would be a state determination problem. In this chapter, a Poisson problem will be considered 1st for ease.
+
+In a shape optimization problem of domain variation type, the domains of known functions \& the solution function vary along with each other. Let $b_0:D\to\mathbb{R}$, $p_{\rm N0}:D\to\mathbb{R}$, $u_{\rm D0}:D\to\mathbb{R}$ be known functions over the reference domain $\Omega_0$, which can then be recovered through a specified variation rule with the functions $b(\boldsymbol{\phi}):D\to\mathbb{R}$, $p_{\rm N}(\boldsymbol{\phi}):D\to\mathbb{R}$, $u_{\rm D}(\boldsymbol{\phi}):D\to\mathbb{R}$ defined over the perturbed domain $\Omega(\boldsymbol{\phi})$. We shall use their respective variation rules when we eventually deal with computing the shape derivative of an associated cost function.
+
+W.r.t. the solution function, since it is a function of $H^1$ class, the Calder\'on extension theorem (Theorem 4.4.4) can be used to view it as a function defined on $D$. Hence, we define the real Hilbert space (linear space of state variables in optimal design problem) containing the homogeneous solution (given by $\tilde{u} = u - u_{\rm D}$ with a known function $u_{\rm D}$ providing the Dirichlet condition) for the solution of a state determination problem by \textbf{(9.5.1)} $U(\boldsymbol{\phi}) = \{u\in H^1(D;\mathbb{R})|u = 0\mbox{ on }\Gamma_{\rm D}(\boldsymbol{\phi})\}$ w.r.t. $\boldsymbol{\phi}\in\mathcal{D}$. Furthermore, in order for the domain variation obtained from the gradient method shown later to be in $\mathcal{D}$ of (9.1.3), the admissible set of state variables for the homogeneous solution $\tilde{u}$ w.r.t. a state determination problem is taken to be \textbf{(9.5.2)} $\mathcal{S}(\boldsymbol{\phi}) = U(\boldsymbol{\phi})\cap W^{2,4}(D;\mathbb{R})$. The regularity which is needed in addition to the condition of $\mathcal{S}(\boldsymbol{\phi})$ will be specified when required.
+
+The following 2 types of hypotheses are set w.r.t. regularity of known functions. When the shape derivatives are sought using formulae based on the shape derivative of a function, the following hypothesis is used later.
+
+\begin{hypothesis}[Known Functions (Shape Derivative)]
+	W.r.t. the given known functions, in a neighborhood $B\subset Y$ of $\boldsymbol{\phi}\in\mathcal{D}^\circ$, we assume $b\in C_{\rm S'}^1(B;C^{0,1}(D;\mathbb{R}))$, $p_{\rm N}\in C_{\rm S'}^1(B;C^{1,1}(D;\mathbb{R}))$, $u_{\rm D}\in C_{\rm S'}^1(B;W^{2,4}(D;\mathbb{R}))$ \& denote their shape derivatives as $(\cdot)'(\boldsymbol{\phi})[\boldsymbol{\varphi}]$.
+\end{hypothesis}
+On the other hand, the following hypothesis is used when seeking the shape derivatives using the formulae based on the partial shape derivative of a function.
+
+\begin{hypothesis}[Known Functions (Partial Shape Derivative)]
+	W.r.t. the given known functions, in a neighborhood $B\subset Y$ of $\boldsymbol{\phi}\in\mathcal{D}^\circ$, we assume $b\in C_{\rm S^\star}^1(B;C^{0,1}(D;\mathbb{R}))$, $p_{\rm N}\in C_{\rm S^\star}^1(B;C^{1,1}(D;\mathbb{R}))$, $u_{\rm D}\in C_{\rm S'}^1(B;W^{2,2q_{\rm R}}(D;\mathbb{R}))$ where $q_{\rm R} > d$, \& denote their partial shape derivatives as $(\cdot)^\star(\boldsymbol{\phi})[\boldsymbol{\varphi}]$.
+\end{hypothesis}
+The following hypothesis is established w.r.t. regularity of the boundary.
+
+\begin{hypothesis}[Opening Angle of Corner Point]
+	Let $\Omega(\boldsymbol{\phi})$ be a 2D domain \& consider a corner point on the boundary. When $\Omega(\boldsymbol{\phi})$ is a 3D domain, we consider a plane which is perpendicular to the corner line on the boundary \& the corner line on the boundary in the plane. Let $\beta$ be the opening angle of the corner point between 2 boundaries that are a Dirichlet boundary or Neumann boundary,
+	\begin{enumerate*}
+		\item[(1)] if the boundaries are same of the type, assume $\beta < \frac{2\pi}{3}$,
+		\item[(2)] if the boundaries are of mixed type, assume $\beta < \frac{\pi}{3}$.
+	\end{enumerate*}
+\end{hypothesis}
+If Hypotheses 9.5.1 \& 9.5.3 hold, the fact that $u$ is in $\mathcal{S}$ is shown by Proposition 5.3.1. Using the hypotheses above, a Poisson problem of domain variation type will be defined as follows. Here, we write $\partial_\nu = \boldsymbol{\nu}\cdot\nabla$.
+
+\begin{problem}[Poisson Problem of Domain Variation Type]
+	Let $\boldsymbol{\phi}\in\mathcal{D}$ \& $b(\boldsymbol{\phi}),p_{\rm N}(\boldsymbol{\phi}),u_{\rm D}(\boldsymbol{\phi})$ be given. Find $u:\Omega(\boldsymbol{\phi})\to\mathbb{R}$ which satisfies
+	\begin{equation*}
+		\left\{\begin{split}
+			-\Delta u &= b(\boldsymbol{\phi}),&&\mbox{in }\Omega(\boldsymbol{\phi}),\\
+			\partial_\nu u &= p_{\rm N}(\boldsymbol{\phi}),&&\mbox{on }\Gamma_p(\boldsymbol{\phi}),\\
+			\partial_\nu u &= 0,&&\mbox{on }\Gamma_{\rm N}(\boldsymbol{\phi})\backslash\overline{\Gamma}_p(\boldsymbol{\phi}),\\
+			u &= u_{\rm D}(\boldsymbol{\phi}),&&\mbox{on }\Gamma_{\rm D}(\boldsymbol{\phi}).
+		\end{split}\right.
+	\end{equation*}
+\end{problem}
+Here \& in what follows, $b(\boldsymbol{\phi})$ or $u_{\rm D}(\boldsymbol{\phi})$ \& $U(\boldsymbol{\phi})$ or $\mathcal{S}(\boldsymbol{\phi})$, etc. will be written resp. as $b$ or $u_{\rm D}$ \& $U$ or $\mathcal{S}$, etc.
+
+Problem 9.5.4 will be used as an equality constraint in the shape optimization problem (Problem 9.6.3) of domain variation type shown later. In a later argument, an equality constraint will be replaced with stationary conditions for a Lagrange function. Here, as a preparation for this, we define the Lagrange function of Problem 9.5.4 as \textbf{(9.5.3)}
+\begin{align*}
+	\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v) = \int_{\Omega(\boldsymbol{\phi})} (-\nabla u\cdot\nabla v + bv)\,{\rm d}{\bf x} + \int_{\Gamma_p(\boldsymbol{\phi})} p_{\rm N}v\,{\rm d}\gamma + \int_{\Gamma_{\rm D}(\boldsymbol{\phi})} \left[(u - u_{\rm D})\partial_\nu v + v\partial_\nu u\right]\,{\rm d}\gamma,
+\end{align*}
+where $u$ is not necessarily the solution of Problem 9.5.4 \& $v$ is an element of $\mathcal{S}$ introduced as a Lagrange multiplier.
+
+'' -- \cite[pp. 464--]{Azegami2020}
 
 \subsection{Shape Optimization Problem of Domain Variation Type}
 
