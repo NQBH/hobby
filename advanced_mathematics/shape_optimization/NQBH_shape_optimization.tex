@@ -258,6 +258,25 @@ where $\boldsymbol{\lambda} = (\lambda_1,\ldots,\lambda_m)^\top\in\mathbb{R}^m$ 
 is called the \textit{Lagrange function} of $f_i(\boldsymbol{\phi},u)$. Here, $\mathcal{L}_{\rm S}$ is the Lagrange function of the state determination problem defined by (9.5.3). Moreover, $v_i$ is introduced as a Lagrange multiplier w.r.t. the state determination problem corresponding to $f_i$ \& $\tilde{v}_i = v_i - \eta_{{\rm D}i\partial_\nu u}$ is assumed to be an element of $\mathcal{S}$. Similarly to $u$, if a variation $\hat{v}_i$ of $\tilde{v}_i$ is to be considered, $\hat{v}_i$ is contained in $U$.'' -- \cite[pp. 467--469]{Azegami2020}
 
 \subsection{Existence of an Optimum Solution}
+``The existence of an optimum solution of Problem 9.6.3 can be confirmed in the same fashion as in Chap. 8. To use Theorem 7.4.4 in Chap. 7, we will show the compactness of \textbf{(9.7.1)} $\mathcal{F} = \{(\boldsymbol{\phi},u(\boldsymbol{\phi}))\in\mathcal{D}\times\mathcal{S}|\mbox{Problem 9.5.4}\}$ \& the continuity of $f_0$. Hereinafter, we let $\tilde{u} = u - u_{\rm D}\in U$.
+
+The compactness of $\mathcal{F}$ is presented in the following lemma [62, Lemma 2.5, p. 27, Lemma 2.15, p. 55, Lemma 2.20, p. 63].
+
+\begin{lemma}[Compactness of $\mathcal{F}$]
+	Suppose that Hypothesis 9.5.1 \& Hypothesis 9.5.3 are satisfied. Moreover, $\tilde{\Gamma}_0 = \Gamma_{p0}\cup\Gamma_{\eta00}\cup\Gamma_{\eta10}\cup\cdots\cup\Gamma_{\eta m0}$ is (not piecewise) $H^3\cap C^{1,1}$ class. W.r.t. an arbitrary Cauchy sequence $\boldsymbol{\phi}_n\to\boldsymbol{\phi}$ which is uniformly convergent in $\mathcal{D}$ \& their solutions $\tilde{u}_n = \tilde{u}(\boldsymbol{\phi}_n)\in U$ ($n\to\infty$) of Problem 9.5.4, the convergence $\tilde{u}_n\to\tilde{u}$ strongly in $U$ holds, \& $\tilde{u} = \tilde{u}(\boldsymbol{\phi})\in U$ solves Problem 9.5.4.
+\end{lemma}
+\textit{Proof.} See \cite[pp. 470--474]{Azegami2020}.
+
+We consider that the condition of $\tilde{u}(\boldsymbol{\phi})$ included in $\mathcal{S}$ is guaranteed in the setting of Problem 9.5.4 satisfying Hypotheses 9.5.1 \& 9.5.3. The latter assumption in Theorem 7.4.4 (continuity of $f_0$) means that $f_0$ is continuous on \textbf{(9.7.12)} $S = \{(\boldsymbol{\phi},\tilde{u}(\boldsymbol{\phi}))\in\mathcal{F}|f_i(\boldsymbol{\phi},u(\boldsymbol{\phi}))\le 0,\,\forall i = 1,\ldots,m\}$. $S$ depends on the problem setting. Then, we will confirm the continuity of $f_0$ by showing the continuity of $f_i$, $\forall i = 0,\ldots,m$, by the following lemma \& assuming that $S$ is not empty.
+
+\begin{lemma}[Continuity of $f_i$]
+	Let $f_i$ be defined as in (9.6.1) under Hypothesis 9.6.1. Let $u_n\to u$ strongly in $U$ be determined by Lemma 9.7.1 w.r.t. an arbitrary Cauchy sequence $\boldsymbol{\phi}_n\to\boldsymbol{\phi}$ in $X$ which is uniformly convergent in $\mathcal{D}$, \& satisfy $\|\partial_\nu u_n - \partial_\nu u\|_{L^2(\Gamma_{\rm D};\mathbb{R})}\to 0$ ($n\to\infty$) on $\Gamma_{\rm D}$. Then, $f_i$ is continuous w.r.t. $\boldsymbol{\phi}\in\mathcal{D}$.
+\end{lemma}
+\textit{Proof.} See \cite[pp. 474--476]{Azegami2020}.
+
+In Theorem 7.4.4 showing the existence of a solution in the abstract optimum design problem, the 1st assumption (compactness of $\mathcal{F}$) was confirmed by Lemma 9.7.1. The 2nd assumption (continuity of $f_0$) can be satisfied with the conditions for Lemma 9.7.2 \& the assumption that $S\ne\emptyset$. Then, under the conditions, it can be assured that there exists an optimum solution of Problem 9.6.3.
+
+Regarding the solution of Problem 9.6.3, let us recall the similar solution of Remark 8.4.3 in Chap. 8. In the definition of $\mathcal{D}$ shown in (9.1.3), a side constraint $\|\boldsymbol{\phi}\|_{H^2\cap C^{0,1}(D;\mathbb{R}^d)}\le\beta$ is added. When this condition becomes active, we have to deal this condition as an inequality condition. Depending on the setting of the problem, we may meet a situation s.t. a boundary converges to a shape with sharp corners which is not a Lipschitz boundary. In this case, a converged shape can be obtained by activating the side constraint. Moreover, regarding the selection of $X$ \& $\mathcal{D}$, the same situation as Remark 8.4.4 holds.'' -- \cite[pp. 470--477]{Azegami2020}
 
 \subsection{Derivatives of Cost Functions}
 
