@@ -209,9 +209,17 @@ Problem 9.5.4 will be used as an equality constraint in the shape optimization p
 \begin{align*}
 	\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v) = \int_{\Omega(\boldsymbol{\phi})} (-\nabla u\cdot\nabla v + bv)\,{\rm d}{\bf x} + \int_{\Gamma_p(\boldsymbol{\phi})} p_{\rm N}v\,{\rm d}\gamma + \int_{\Gamma_{\rm D}(\boldsymbol{\phi})} \left[(u - u_{\rm D})\partial_\nu v + v\partial_\nu u\right]\,{\rm d}\gamma,
 \end{align*}
-where $u$ is not necessarily the solution of Problem 9.5.4 \& $v$ is an element of $\mathcal{S}$ introduced as a Lagrange multiplier.
+where $u$ is not necessarily the solution of Problem 9.5.4 \& $v$ is an element of $\mathcal{S}$ introduced as a Lagrange multiplier. In (9.5.3), the 3rd term on the RHS was added in order to make the later discussion easier in a similar way to (8.2.4) in Chap. 8 defining the Lagrange function w.r.t. a $\theta$-type Poisson problem. Moreover, in a similar manner to (7.2.3) defining the Lagrange w.r.t. the abstract variation problem in Chap. 7, using $\tilde{u} = u - u_{\rm D}$, we write \textbf{(9.5.4)}
+\begin{align*}
+	\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v) = -a(\boldsymbol{\phi})(u,v) + l(\boldsymbol{\phi})(v) = -a(\boldsymbol{\phi})(\tilde{u},v) + \hat{l}(\boldsymbol{\phi})(v),
+\end{align*}
+where \textbf{(9.5.5)--(9.5.7)}
+\begin{align*}
+	a(\boldsymbol{\phi})(u,v) = \int_{\Omega(\boldsymbol{\phi})} \nabla u\cdot\nabla v\,{\rm d}{\bf x},\ l(\boldsymbol{\phi})(v) = \int_{\Omega(\boldsymbol{\phi})} bv\,{\rm d}{\bf x} + \int_{\Gamma_p(\boldsymbol{\phi})} p_{\rm N}v\,{\rm d}\gamma,\ \hat{l}(\boldsymbol{\phi})(v) = l(\boldsymbol{\phi})(v) + a(\boldsymbol{\phi})(u_{\rm D},v).
+\end{align*}
+When $u$ is the solution to Problem 9.5.4, $\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v) = 0$ holds for all $v\in U$. This equation is equivalent to the weak form of Problem 9.5.4.
 
-'' -- \cite[pp. 464--]{Azegami2020}
+Following the notation in Sect. 9.3, $\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v)$ should be written as $\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,\nabla u,\partial_\nu u,v,\nabla v,\partial_\nu v)$. However, from now on, it will be written as $\mathcal{L}_{\rm S}(\boldsymbol{\phi},u,v)$.'' -- \cite[pp. 464--467]{Azegami2020}
 
 \subsection{Shape Optimization Problem of Domain Variation Type}
 
