@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Quadrilateral -- Tứ Giác}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Quadrilateral -- Tứ Giác}
+
+\begin{dinhnghia}[Tứ giác, tứ giác lồi]
+	\emph{Tứ giác} $ABCD$ là hình gồm 4 đoạn thẳng $AB,BC,CD,DA$ trong đó bất kỳ 2 đoạn thẳng nào cũng không nằm trên 1 đường thẳng. \emph{Tứ giác lồi} là tứ giác luôn nằm trong 1 nửa mặt phẳng mà bờ là đường thẳng chứa bất kỳ cạnh nào của tứ giác.
+\end{dinhnghia}
+\textit{Quy ước.} Từ nay khi nói đến tứ giác mà không nói gì thêm, ta hiểu đó là tứ giác lồi.
+
+\begin{dinhly}
+	Tổng các góc của 1 tứ giác bằng $360^\circ$.
+\end{dinhly}
+Tứ giác $ABCD$ có $\widehat{A} + \widehat{B} + \widehat{C} + \widehat{D} = 360^\circ$.
+
+\begin{dinhly}
+	Tổng các góc ngoài ở 4 đỉnh của 1 tứ giác bằng $360^\star$.
+\end{dinhly}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 1, p. 95]
+	Cho tứ giác $ABCD$, $\widehat{B} = \widehat{D} = 90^\circ$. Vẽ đường phân giác của $\widehat{A}$ \& $\widehat{C}$. Cho biết 2 đường phân giác này không trùng nhau, chứng minh chúng song song với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{1.}, p. 96]
+	Cho tứ giác $ABCD$, phân giác của $\widehat{C}$ \& $\widehat{D}$ cắt nhau tại $O$. Chứng minh: $\widehat{COD} = \frac{1}{2}(\widehat{A} + \widehat{B})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{2.}, p. 96]
+	Cho tứ giác $ABCD$ không có 2 góc nào bằng nhau. Chứng minh tứ giác đó có ít nhất 1 góc nhọn, 1 góc tù.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{3.}, p. 96]
+	Cho tứ giác $ABCD$, $M$ là 1 điểm nằm trong tứ giác đó. Xác định vị trí của $M$ để tổng $MA + MB + MC + MD$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{4.}, p. 96]
+	Cho tứ giác $ABCD$. Chứng minh:
+	\begin{enumerate*}
+		\item[(a)] Tổng 2 cạnh đối nhỏ hơn tổng 2 đường chéo.
+		\item[(b)] Nếu $AD + AC < BD + BC$ thì $AD < BD$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{5.}, p. 96]
+	1 xưởng mộc có thừa rất nhiều miếng gỗ hình tứ giác có hình dạng \& kích thước như nhau. Đố dùng những miếng gỗ ấy ghép lại để lát sàn nhà (lát kín mặt phẳng, không có chỗ nào hổng mà không phải cưa đi 1 số góc, trừ những chỗ tiếp giáp 4 bức tường).
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Thang. Hình Thang Cân}
+
+\begin{dinhnghia}[Hình thang, hình thang vuông, hình thang cân]
+	\emph{Hình thang} là tứ giác có 2 cạnh đối song song. \emph{Hình thang vuông} là hình thang có 1 cạnh bên vuông góc với 2 đáy. \emph{Hình thang cân} là hình thang có 2 góc kề 1 đáy bằng nhau.
+\end{dinhnghia}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Trung Bình của Tam Giác \& của Hình Thang}
+
+%------------------------------------------------------------------------------%
+
+\section{Dựng Hình Bằng Thước \& Compa. Dựng Hình Thang}
+
+%------------------------------------------------------------------------------%
+
+\section{Đối Xứng Trục}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Bình Hành}
+
+%------------------------------------------------------------------------------%
+
+\section{Đối Xứng Tâm}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Chữ Nhật}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất về Khoảng Cách Giữa 2 Đường Thẳng Song Song}
+
+%------------------------------------------------------------------------------%
+
+\section{Hình Thoi \& Hình Vuông}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
