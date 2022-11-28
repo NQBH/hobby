@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Rational -- Số Hữu Tỷ $\mathbb{Q}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Problem}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 1, p. 3]
+	Tính $A = \frac{1}{2} - \frac{1}{3} - \frac{1}{6} - \frac{1}{2} - \frac{1}{3} - \frac{1}{6} - \frac{1}{2} - \frac{1}{3} - \frac{1}{6} - \cdots$ ($A$ có $300$ số hạng).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 2, p. 4]
+	Cho phân số $\frac{a}{b}\ne 1$.
+	\begin{enumerate*}
+		\item[(a)] Tìm phân số $x$ sao cho nhân $x$ với $\frac{a}{b}$ cũng bằng cộng $x$ với $\frac{a}{b}$.
+		\item[(b)] Tìm giá trị của $x$ trong câu (a) nếu $\frac{a}{b} = \frac{7}{5}$, nếu $\frac{a}{b} = \frac{8}{11}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 3, p. 4]
+	Tìm $x\in\mathbb{Q}$, $x < 0$ để $\frac{4}{x - 1}\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 4, p. 5]
+	Tân đạp xe từ trường về nhà với thời gian dự kiến. Nhưng Tân đã dùng $\frac{2}{3}$ thời gian dự kiến để đi $\frac{3}{4}$ quãng đường với vận tốc $v_1$, rồi đi quãng đường còn lại với vận tốc $v_2$ \& đã về nhà đúng thời điểm dự kiến. Tính tỷ số $v_1:v_2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Mở rộng Ví dụ 4, p. 5]
+	Tân đạp xe từ trường về nhà với thời gian dự kiến. Nhưng Tân đã dùng $a$ thời gian dự kiến để đi $b$ quãng đường với vận tốc $v_1$, $a,b > 0$, $a + b < 1$, rồi đi quãng đường còn lại với vận tốc $v_2$ \& đã về nhà đúng thời điểm dự kiến. Tính tỷ số $v_1:v_2$ theo $a,b$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
