@@ -1,0 +1,171 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Vector}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about vector. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 10, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_10/NQBH_elementary_mathematics_grade_10.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 10\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_10/NQBH_elementary_mathematics_grade_10.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_10/vector/NQBH_vector.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 10\texttt{/}vector}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_10/vector/NQBH_vector.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về ước, ước chung, ước chung lớn nhất, bội, bội chung, bội chung nhỏ nhất. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_10/NQBH_elementary_mathematics_grade_10.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 10\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 10. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_10/vector/NQBH_vector.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 10\texttt{/}vector}.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Vector \& Các Phép Toán Trên Vector}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 1, p. 59]
+	Cho đoạn thẳng $AB$ \& $I$ là trung điểm của $AB$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh $\overrightarrow{IA} + \overrightarrow{IB} = \vec{0}$.
+		\item[(b)] Chứng minh $\overrightarrow{MA} + \overrightarrow{MB} = 2\overrightarrow{MI}$ với mọi điểm $M$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 2, p. 59]
+	Cho $\Delta ABC$ \& điểm $M$ nằm giữa $B$ \& $C$. Chứng minh:
+	\begin{align*}
+		\overrightarrow{AM} = \frac{MB}{BC}\overrightarrow{AC} + \frac{MC}{BC}\overrightarrow{AB}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 3, p. 60]
+	Cho $\Delta ABC$. Chứng minh:
+	\begin{enumerate*}
+		\item[(a)] 3 đường trung tuyến đồng quy tại 1 điểm $G$.
+		\item[(b)] $\overrightarrow{GA} + \overrightarrow{GB} + \overrightarrow{GC} = \vec{0}$.
+		\item[(c)] $\overrightarrow{MA} + \overrightarrow{MB} + \overrightarrow{MC} = 3\overrightarrow{MG}$ với mọi điểm $M$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 4, p. 60]
+	Cho $\Delta ABC$ \& 1 điểm $M$ bất kỳ trong tam giác. Đặt $S_{MBC} = S_a$, $S_{MCA} = S_b$, $S_{MAB} = S_c$. Chứng minh: $S_a\overrightarrow{MA} + S_b\overrightarrow{MB} + S_c\overrightarrow{MC} = \vec{0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 5, p. 61]
+	Cho $\Delta ABC$. Đường tròn nội tiếp $(I)$ tiếp xúc với cạnh $BC$ tại $D$. Gọi $M$ là trung điểm của $BC$. Chứng minh: $a\overrightarrow{MD} + b\overrightarrow{MC} + c\overrightarrow{MB} = \vec{0}$ (với $a,b,c$ là độ dài các cạnh $BC,AC,AB$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 6, p. 61]
+	Cho $\Delta ABC$ \& điểm $P$ bất kỳ. Gọi $A_1,B_1,C_1$ lần lượt là trung điểm của $BC,CA,AB$. Trên các tia $PA_1,PB_1,PC_1$ lần lượt lấy các điểm $X,Y,Z$ sao cho $\frac{PX}{PA_1} = \frac{PY}{PB_1} = \frac{PZ}{PC_1} = k$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh: $AX,BY,CZ$ đồng quy tại $T$.
+		\item[(b)] Chứng minh: $P,T,G$ thẳng hàng \& $\frac{TG}{PG} = \left|\frac{3k}{2 + k}\right|$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 7, p. 62]
+	Đường đối trung trong tam giác là đường đối xứng với trung tuyến qua phân giác. Chứng minh: 3 đường đối trung đồng quy tại điểm $L$ thỏa mãn $a^2\overrightarrow{LA} + b^2\overrightarrow{LB} + c^2\overrightarrow{LC} = \vec{0}$. Điểm $L$ như vậy gọi là \emph{điểm Lemoine} của $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 8, p. 62]
+	Cho $\Delta ABC$ \& điểm $P$ bất kỳ. $PA,PB,PC$ cắt các cạnh $BC,CA,AB$ tương ứng tại các điểm $A_1,B_1,C_1$. Gọi $A_2,B_2,C_2$ lần lượt là trung điểm của $BC,CA,AB$. Gọi $A_3,B_3,C_3$ lần lượt là trung điểm của $AA_1,BB_1,CC_1$.
+	\begin{enumerate*}
+		\item[(a)] Chứng minh: $A_2A_3,B_2B_3,C_2C_3$ đồng quy.
+		\item[(b)] Lấy điểm $A_4$ thuộc $BC$ sao cho $QA_4$ song song với $PA$. Xác định các điểm $B_4$ \& $C_4$ tương tự $A_4$. Chứng minh: $Q$ là trọng tâm của $\Delta A_4B_4C_4$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 9, p. 64]
+	Cho $\Delta ABC$. Đường tròn nội tiếp $(I)$ tiếp xúc với $BC,CA,AB$ lần lượt tại $D,E,F$. Chứng minh: $a\overrightarrow{ID} + b\overrightarrow{IE} + c\overrightarrow{IF} = \vec{0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, Ví dụ 10, p. 64]
+	Cho $\Delta ABC$ có $\widehat{A} = 90^\circ$ \& các đường phân giác $BE$ \& $CF$. Đặt $\vec{u} = (AB + BC + CA)\overrightarrow{BC} + BC\overrightarrow{EF}$. Chứng minh: giá của $\vec{u}$ vuông góc với $BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.1}, p. 65]
+	Cho vector $\vec{u}$ có 2 phương khác nhau, chứng minh $\vec{u} = \vec{0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.2}, p. 65]
+	Cho $\Delta ABC$ có $M$ \& $N$ lần lượt là trung điểm của $AB$ \& $AC$. Lấy $P$ đối xứng với $M$ qua $N$. Chứng minh: $\overrightarrow{MP} = \overrightarrow{BC}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.3}, p. 65]
+	Cho $\Delta ABC$ có tâm đường tròn ngoại tiếp $O$, trực tâm $H$. Lấy $K$ đối xứng với $O$ qua $BC$. Chứng minh: $\overrightarrow{OK} = \overrightarrow{AH}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.4}, p. 65]
+	Cho 2 vector $\vec{a}$ \& $\vec{b}$ thỏa mãn $|\vec{a} + \vec{b}| = |\vec{a} - \vec{b}|$. Chứng minh: 2 vector $\vec{a}$ \& $\vec{b}$ có giá vuông góc.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.5}, p. 65]
+	Cho $\Delta ABC$ \& $\Delta DEF$ thỏa mãn $\overrightarrow{AD} + \overrightarrow{BE} + \overrightarrow{CF} = \vec{0}$. Chứng minh: $\Delta ABC$ \& $\Delta DEF$ có cùng trọng tâm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.6}, p. 65]
+	Cho 2 vector $\vec{a}$ \& $\vec{b}$ thỏa mãn $\vec{a}$ có giá vuông góc với giá của vector $\vec{a} + \vec{b}$. Chứng minh: $|\vec{a} + \vec{b}|^2 = |\vec{b}|^2 - |\vec{a}|^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.7}, p. 65]
+	Cho $\Delta ABC$ \& điểm $P$ thỏa mãn $|\overrightarrow{PB} + \overrightarrow{PA} - \overrightarrow{PC}| = |\overrightarrow{PB} + \overrightarrow{PC} - \overrightarrow{PA}|$, $|\overrightarrow{PC} + \overrightarrow{PB} - \overrightarrow{PA}| = |\overrightarrow{PC} + \overrightarrow{PA} - \overrightarrow{PB}|$. Chứng minh: $|\overrightarrow{PA} + \overrightarrow{PC} - \overrightarrow{PB}| = |\overrightarrow{PA} + \overrightarrow{PB} - \overrightarrow{PC}|$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.8}, p. 65]
+	Cho $\Delta ABC$ nội tiếp đường tròn $(O)$. Cho $(O),B,C$ cố định \& $A$ di chuyển trên đường tròn $(O)$. $BE,CF$ là 2 đường cao của $\Delta ABC$. Giả sử có vector $\vec{u}$ thỏa mãn $\frac{|\overrightarrow{EF} - \vec{u}|^2}{EF^2} + \frac{|\overrightarrow{OA} - \vec{u}|^2}{OA^2} = 1$. Chứng minh: Hiệu $\frac{1}{EF^2} - \frac{1}{|\vec{u}|^2}$ luôn không đổi khi $A$ thay đổi.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Hai_Hung_Thu_Tung2022_tap_1}, \textbf{8.9}, p. 65]
+	Cho $\Delta ABC$ có các phân giác trong $AD,BE,CF$. Gọi $X,Y,Z$ lần lượt là trung điểm của $EF,FD,DE$.
+	\begin{itemize}
+		\item[(a)] Chứng minh: $AX,BY,CZ$ đồng quy tại điểm $P$ thỏa mãn hệ thức: $a(b + c)\overrightarrow{PA} + b(c + a)\overrightarrow{PB} + c(a + b)\overrightarrow{PC} = \vec{0}$.
+		\item[(b)] Gọi $N$ là tâm đường tròn Euler của $\Delta ABC$. Dựng vector $\vec{u}$ thỏa mãn $\vec{u} = \frac{\overrightarrow{NA}}{a} + \frac{\overrightarrow{NB}}{b} + \frac{\overrightarrow{NC}}{c}$. Gọi $Q$ là trung điểm $ON$, trong đó $O$ là tâm đường tròn ngoại tiếp $\Delta ABC$. Chứng minh: $PQ$ song song hoặc trùng với giá của vector $\vec{u}$.
+	\end{itemize}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
