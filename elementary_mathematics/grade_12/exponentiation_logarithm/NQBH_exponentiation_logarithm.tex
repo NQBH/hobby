@@ -38,7 +38,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -158,6 +158,40 @@ Mở rộng hơn nữa bằng cách thay $\sqrt{\cdot},\sqrt[3]{\cdot}$ bởi $\
 	Rút gọn biểu thức
 	
 \end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình, Bất Phương Trình Mũ \& Logarithm -- Exponential \& Logarithmic Equation \& Inequation}
+\textit{1 số tính chất cơ bản của phương trình mũ \& logarithm}:
+\begin{enumerate*}
+	\item[$\bullet$] Phương trình $a^x = m$, $0 < a\ne 1$. Nếu $m\le 0$ thì phương trình vô nghiệm. Nếu $m > 0$ thì phương trình có nghiệm duy nhất là $x = \log_am$.
+	\item[$\bullet$] Phương trình $\log_ax = m$, $0 < a\ne 1$ luôn có nghiệm duy nhất là $x = a^m$.
+\end{enumerate*}
+
+\subsection{Phương trình có dạng $a^{f(x)} = b^{g(x)}$}
+``\textit{Cách giải chung}:
+\begin{enumerate*}
+	\item[$\bullet$] Nếu $a = b$ thì theo tính chất của hàm số mũ, ta có $f(x) = g(x)$, đưa bài toán về dạng đơn giản hơn -- \textit{phương pháp đưa về cùng cơ số}.
+	\item[$\bullet$] Nếu $a\ne b$ thì lấy logarith cơ số $a$ (hoặc $b$) 2 vế đưa về $f(x) = \log_ab\cdot g(x)$. Do $\log_ab$ cũng là 1 hằng số nên tính chất của phương trình này cũng tương tự trường hợp $a = b$.'' -- \cite[p. 71]{TL_chuyen_Toan_Giai_Tich_12}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Giai_Tich_12}, Ví dụ 1, p. 71]
+	Giải phương trình sau:
+	\begin{enumerate*}
+		\item[(a)] $(5^{x+2})^{x+1} + (5^x)^{x+3} = (2^{x+1})^{x+5} - 6(2^{x+6})^x$.
+		\item[(b)] $(10 + 6\sqrt{3})^{2\sin x} = \sqrt{(\sqrt{3} + 1)^{\sin 4x}}$.
+		\item[(c)] $\left(\frac{8}{3}\right)^{x^2 - x + 1}\left(\frac{3}{5}\right)^{2x^2 - 3x + 2}\left(\frac{5}{7}\right)^{3x^2 - 4x + 3}\left(\frac{7}{2}\right)^{4x^2 - 5x + 4} = 210^{(x - 1)^2}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TL_chuyen_Toan_Giai_Tich_12}, H1, p. 72]
+	\begin{enumerate*}
+		\item[(a)] Giải các phương trình sau: $2^x\cdot 3^x\cdot 4^{x^2} = 4\cdot 36^{\frac{x}{x + 1}}$.
+		\item[(b)] Với $a > 1$, giải phương trình $\left(\frac{a}{a^2 + 1}\right)^x\left(\frac{a^2 - 1}{a^2 - 1}\right)^{2x} = 6$.
+	\end{enumerate*}
+\end{baitoan}
+
+
 
 %------------------------------------------------------------------------------%
 
