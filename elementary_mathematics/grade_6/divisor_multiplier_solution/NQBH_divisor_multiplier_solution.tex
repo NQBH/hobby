@@ -259,11 +259,12 @@ Hiển nhiên:
 Xử lý hệ phương trình này sẽ tìm được $a,b$. Tuy nhiên, ở đây ta đã sử dụng \textit{tổ hợp} $C_n^2 = \frac{n(n - 1)}{2}$, đây là 1 khái niệm sẽ được học ở Toán 11 chương trình cũ \& Toán 10 chương trình cải cách 2022.
 
 \begin{proof}[Giải]
-	Gọi $a,b\in\mathbb{N}^\star$ lần lượt là số người của 2 câu lạc bộ $A,B$. 2 người trong 2 câu lạc bộ khác nhau bắt tay $496 - 241 = 255$ lần. $ab = 255 = 3\cdot 5\cdot 17$. Vì vai trò của 2 câu lạc bộ bình đẳng, w.l.o.g., giả sử $a < b$, thì $(a,b)\in\{(1,255),(3,85),(5,51),(15,17)\}$. Loại các trường hợp $b > 50$ vì khi đó số lần bắt tay của 2 người trong câu lạc bộ B lớn hơn $\frac{50\cdot 49}{2} = 1225 > 241$. Suy ra $a = 15$, $b = 17$. Số lần bắt tay trong câu lạc bộ A, B lần lượt bằng $\frac{a(a - 1)}{2} = \frac{15\cdot 14}{2} = 105$, $\frac{b(b - 1)}{2} = \frac{17\cdot 16}{2} = 136$.
+	Gọi $a,b\in\mathbb{N}^\star$ lần lượt là số người của 2 câu lạc bộ $A,B$. 2 người trong 2 câu lạc bộ khác nhau bắt tay $496 - 241 = 255$ lần. $ab = 255 = 3\cdot 5\cdot 17$. Vì vai trò của 2 câu lạc bộ bình đẳng, w.l.o.g., giả sử $a < b$, thì $(a,b)\in\{(1,255),(3,85),(5,51),(15,17)\}$. Loại các trường hợp $b > 50$ vì khi đó số lần bắt tay của 2 người trong câu lạc bộ B lớn hơn $\frac{50\cdot 49}{2} = 1225 > 241$. Suy ra $a = 15$, $b = 17$. Vậy số người trong 2 câu lạc bộ là $15$ \& $17$ (không kể thứ tự).
 \end{proof}
+Kiểm lại: Số lần bắt tay trong câu lạc bộ A, B lần lượt bằng $\frac{a(a - 1)}{2} = \frac{15\cdot 14}{2} = 105$, $\frac{b(b - 1)}{2} = \frac{17\cdot 16}{2} = 136$, cộng lại $105 + 136 = 241$. Tất cả số lần bắt tay của 2 câu lạc bộ bằng $\frac{a(a - 1)}{2} + \frac{b(b - 1)}{2} + ab = 241 + 15\cdot 17 = 496$, thỏa mãn giả thiết.
 
-\begin{proof}[Giải (Sử dụng kiến thức Toán 10)]
-	Gọi $a,b\in\mathbb{N}^\star$ lần lượt là số người của 2 câu lạc bộ $A,B$. Có tất cả $496$ cái bắt tay: $C_{a+b}^2 = 496$. Có $241$ cái bắt tay của 2 người trong cùng 1 câu lạc bộ: $C_a^2 + C_b^2 = 241$. Kết hợp 2 điều này cho ta hệ phương trình:
+\begin{proof}[Giải]
+	(Sử dụng kiến thức Toán 10) Gọi $a,b\in\mathbb{N}^\star$ lần lượt là số người của 2 câu lạc bộ $A,B$. Có tất cả $496$ cái bắt tay: $C_{a+b}^2 = 496$. Có $241$ cái bắt tay của 2 người trong cùng 1 câu lạc bộ: $C_a^2 + C_b^2 = 241$. Kết hợp 2 điều này cho ta hệ phương trình:
 	\begin{equation*}
 		\left\{\begin{split}
 			C_{a+b}^2 &= 496,\\
@@ -273,14 +274,10 @@ Xử lý hệ phương trình này sẽ tìm được $a,b$. Tuy nhiên, ở đ�
 			a(a - 1) + b(b - 1) &= 2\cdot 241.
 		\end{split}\right.
 	\end{equation*}
-	Có nhiều cách giải hệ phương trình này, e.g.:
-	\begin{itemize}
-		\item \textit{Cách 1} (Sử dụng dữ kiện $a,b\in\mathbb{N}^\star$): Phương trình thứ nhất trong hệ phương trình cho: $(a + b)(a + b - 1) = 31\cdot 32$, suy ra $a + b = 32$.
-		\item \textit{Cách 2}
-	\end{itemize}
+	Có nhiều cách giải hệ phương trình này, e.g.: Phương trình thứ nhất trong hệ phương trình cho: $(a + b)(a + b - 1) = 31\cdot 32$, suy ra $a + b = 32$. Trừ vế theo vế 2 phương trình trong hệ cho nhau, được: $(a + b)(a + b - 1) - a(a - 1) - b(b - 1) = (a + b)^2 - a - b - a^2 + a - b^2 + b = a^2 + 2ab + b^2 - a^2 - b^2 = 2ab = 2\cdot496 - 2\cdot241 = 510$, suy ra $ab = 255$. Vì $a + b = 32$, $ab = 255$, suy ra $a,b$ là 2 nghiệm của phương trình bậc 2: $x^2 - 32x + 255 = 0$, giải ra $(a,b) = \{(15,17),(17,15)\}$.
 \end{proof}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 40, p. 34]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 40${}^\star$, p. 34]
 	Tìm 5 số tự nhiên khác nhau, biết khi nhân từng cặp 2 số thì tích nhỏ nhất bằng $28$, tích lớn nhất bằng $240$ \& 1 tích khác bằng $128$.
 \end{baitoan}
 
