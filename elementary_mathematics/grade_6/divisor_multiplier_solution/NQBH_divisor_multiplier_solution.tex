@@ -281,9 +281,22 @@ Kiểm lại: Số lần bắt tay trong câu lạc bộ A, B lần lượt bằ
 	Tìm 5 số tự nhiên khác nhau, biết khi nhân từng cặp 2 số thì tích nhỏ nhất bằng $28$, tích lớn nhất bằng $240$ \& 1 tích khác bằng $128$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi $a_1,a_2,a_3,a_4,a_5$ là 5 số phải tìm, $1\le a_1 < a_2 < a_3 < a_4 < a_5$, $a_1a_2 = 28$, $a_4a_5 = 240$, $a_ma_n = 128$, với $1\le m < n\le 5$. Có $a_1a_2 = 28 = 1\cdot 29 = 2\cdot 14 = 4\cdot 7$ ($\star$), suy ra $a_2\ge 7$, do đó $a_4\ge 9$. Xét với $a_4\ge 9$, có $a_4a_5 = 240 = 10\cdot 24 = 12\cdot 20 = 15\cdot 16$ ($\star\star$). Suy ra $a_4\le 15$, do đó $a_2\le 13$. Do ($\star$) \& $a_2\le 13$ nên $a_2 = 7$, $a_1 = 4$. 5 số phải tìm là $4,7,a_3,a_4,a_5$, trong đó $a_5\le 24$ do ($\star\star$). Có $a_ma_n = 128 = 1\cdot 128 = 2\cdot 64 = 4\cdot 32 = 8\cdot 16$. Do $4 = a_1\le a_m < a_n\le a_5\le 24$ nên $a_m = 8$, $a_n = 16$. Từ điều này \& ($\star\star$) suy ra $a_5 = 16$, $a_4 = 15$, $a_3 = 8$. Vậy 5 số phải tìm: $4,7,8,15,16$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 41${}^\star$, p. 34]
 	Viết số $108$ dưới dạng tổng các số tự nhiên liên tiếp lớn hơn $0$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Giả sử tồn tại $n,k\in\mathbb{N}$, $k\ge 2$ sao cho $108 = \sum_{i=1}^k (n + i) = (n + 1) + (n + 2) + \cdots + (n + k) = \sum_{i=1}^k n + \sum_{i=1}^k i = kn + \frac{k(k + 1)}{2}\Rightarrow k(2n + k + 1) = 216 = 2^3\cdot 3^3$. Bài toán đưa đến việc tìm các ước của $216$. Ta đưa ra 2 nhận xét sau để giảm bớt số trường hợp phải xét:
+	\begin{enumerate*}
+		\item[(1)] $2n + k + 1 > k\ge 2$.
+		\item[(2)] Hiệu $(2n + k + 1) - k = 2n + 1$, là số lẻ nên trong 2 số $2n + k + 1$ \& $k$ có 1 số chẵn, 1 số lẻ.
+	\end{enumerate*}
+	Do đó ta chỉ cần tìm ước lẻ của $216$, đồng thời trong 2 số $2n + k + 1$ \& $k$, chọn $k$ là số nhỏ hơn. Ước lẻ của 216 lớn hơn 1 là $3,9,27$. Với $k = 3$ thì $2n + k + 1 = 72$, được $n = 34$, do đó $108 = 35 + 36 + 37$. Với $k = 9$ thì $2n + k + 1 = 24$, được $n = 7$, do đó $108 = 8 + 9 + \cdots + 16$. Với $2n + k + 1 = 27$ thì $k = 8$, được $n = 9$, do đó $108 = 10 + 11 + \cdots + 17$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{200.}, p. 35]
 	Tìm $x,y\in\mathbb{N}$ sao cho:
