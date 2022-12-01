@@ -1,0 +1,562 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Divisor \textit{\&} Multiplier -- Ước \textit{\&} Bội}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about divisor, common divisor, greatest common divisor, multiplier, common multiplier, least common multiplier. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/divisor_multiplier/NQBH_divisor_multiplier.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}divisor \& multiplier}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/divisor_multiplier/NQBH_divisor_multiplier.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về ước, ước chung, ước chung lớn nhất, bội, bội chung, bội chung nhỏ nhất. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/divisor_multiplier/NQBH_divisor_multiplier.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}divisor \& multiplier}.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Ước Chung \textit{\&} Ước Chung Lớn Nhất}
+
+\subsection{Ước chung \textit{\&} ước chung lớn nhất}
+
+\begin{dinhnghia}[Ước chung \textit{\&} ước chung lớn nhất của 2 số tự nhiên]
+	\label{def: ước chung 2 số}
+	Số tự nhiên $n$ được gọi là \emph{ước chung} của 2 số tự nhiên $a$ \textit{\&} $b$ nếu $n$ vừa là ước của $a$ vừa là ước của $b$. Số lớn nhất trong các ước chung của $a$ \textit{\&} $b$ được gọi là \emph{ước chung lớn nhất} của $a$ \textit{\&} $b$.
+\end{dinhnghia}
+\noindent\textbf{Quy ước.} Viết tắt ước chung là ƯC \textit{\&} ước chung lớn nhất là ƯCLN. Ta ký hiệu: Tập hợp các ước chung của $a$ \textit{\&} $b$ là $\mbox{ƯC}(a,b)$; ước chung lớn nhất của $a$ \textit{\&} $b$ là $\mbox{ƯCLN}(a,b)$. Ký hiệu chuẩn quốc tế của ước chung lớn nhất của 2 số $a,b\in\mathbb{N}$ là $\gcd(a,b)$, viết tắt của \textit{greatest common divisor}. Có 1 ký hiệu khác là $(a,b)$, nhưng không khuyến khích sử dụng do trùng với ký hiệu với 1 bộ 2 số có thứ tự (ordered couple\footnote{Tương tự, bộ 3 số có thứ tự có tên tiếng Anh là \textit{ordered triple} \& bộ $n$ số có thứ tự, $n\in\mathbb{N}$, $n\ge 3$, có tên tiếng Anh là \textit{ordered $n$-tuple}. See, e.g., \cite{Rudin1976}.}) hay 1 điểm (có 2 tọa độ là hoành độ \& tung độ) trong mặt phẳng Euclid $\mathbb{R}^2$ (không gian Euclid 2 chiều\texttt{/}2-dimensional Euclidean space).
+
+Ta có: $\mbox{ƯCLN}(a,b)= d$, tồn tại $a',b'\in\mathbb{N}$ sao cho $a = da'$, $b = db'$, $\mbox{ƯCLN}(a',b') = 1$.
+
+\begin{dinhnghia}[Ước chung \textit{\&} ước chung lớn nhất của nhiều số tự nhiên]
+	\label{def: ước chung nhiều số}
+	Với số tự nhiên $n\in\mathbb{N}^\star$, $n\ge 2$ cho trước, $d$ được gọi là \emph{ước chung} của $n$ số $a_1,\ldots,a_n$ nếu $d$ là ước của tất cả $n$ số đó. Số lớn nhất trong các ước chung của $n$ số đó được gọi là \emph{ước chung lớn nhất} của $n$ số đó.
+\end{dinhnghia}
+Hiển nhiên, Định nghĩa \ref{def: ước chung nhiều số} bao gồm Định nghĩa \ref{def: ước chung 2 số} khi $n = 2$, i.e., Định nghĩa \ref{def: ước chung nhiều số} là 1 tổng quát hóa\texttt{/}mở rộng hóa (generalization) của Định nghĩa \ref{def: ước chung 2 số}, hay Định nghĩa \ref{def: ước chung 2 số} là 1 trường hợp riêng (special case) của Định nghĩa \ref{def: ước chung nhiều số}.
+
+Tương tự, ta có: $\mbox{ƯCLN}(a_1,\ldots,a_n)= d$, tồn tại $a_1',\ldots,a_n'\in\mathbb{N}$ sao cho $a_i = da_i'$, $i = 1,\ldots, n$, $\mbox{ƯCLN}(a_1',\ldots,a_n') = 1$.
+
+\begin{dinhly}
+	Ước chung của 2 số là ước của ước chung lớn nhất của chúng.
+\end{dinhly}
+
+\subsection{Tìm ước chung lớn nhất bằng cách phân tích các số ra thừa số nguyên tố}
+\begin{tcolorbox}
+	\textbf{Tìm ước chung lớn nhất bằng cách phân  tích các số ra thừa số nguyên tố.}
+	\begin{enumerate}
+		\item Phân tích mỗi số ra thừa số nguyên tố.
+		\item Chọn ra các thừa số nguyên tố chung.
+		\item Với mỗi thừa số nguyên tố chung, ta chọn lũy thừa với số mũ nhỏ nhất.
+		\item Lấy tích của các lũy thừa đã chọn, ta nhận được ước chung lớn nhất cần tìm.
+	\end{enumerate}
+\end{tcolorbox}
+Nếu 2 số đã cho không có thừa số nguyên tố chung thì ƯCLN của chúng bằng 1. Nếu $a\divby b$ thì $\mbox{ƯCLN}(a,b) = b$.
+
+\subsection{2 số nguyên tố cùng nhau}
+
+\begin{dinhnghia}[2 số nguyên tố cùng nhau]
+	\emph{2 số nguyên tố cùng nhau} là 2 số có ước chung lớn nhất bằng 1.
+\end{dinhnghia}
+
+\begin{dinhnghia}[Phân số tối giản]
+	\emph{Phân số tối giản} là phân số có tử \textit{\&} mẫu là 2 số nguyên tố cùng nhau.
+\end{dinhnghia}
+
+\subsection{Tìm ước chung lớn nhất bằng thuật toán Euclid}
+Tham khảo \cite[p. 52]{SGK_Toan_6_Canh_Dieu_tap_1}: Để tìm ước chung lớn nhất bằng \textit{thuật toán Euclid}, ta làm như sau:
+\begin{enumerate}
+	\item Chia số lớn cho số nhỏ.
+	\item Nếu phép chia còn dư thì ta lấy số chia đem chia cho số dư. Ta cứ làm như vậy cho đến khi nhận được số dư bằng 0 thì dừng lại.
+	\item Số chia cuối cùng là ước chung lớn nhất phải tìm.
+\end{enumerate}
+
+\begin{luuy}
+	Người ta thường dùng thuật toán Euclid đề tìm $\mbox{ƯCLN}$ của cặp số lớn.
+\end{luuy}
+
+%------------------------------------------------------------------------------%
+
+\section{Bội Chung \textit{\&} Bội Chung Nhỏ Nhất}
+
+\subsection{Bội chung \textit{\&} bội chung nhỏ nhất}
+
+\begin{dinhnghia}[Bội chung \textit{\&} bội chung nhỏ nhất của 2 số]
+	Số tự nhiên $n\in\mathbb{N}$ được gọi là \emph{bội chung} của 2 số $a$ \textit{\&} $b$ nếu $n$ vừa là bội của $a$ vừa là bội của $b$. Số nhỏ nhất khác 0 trong các bội chung của $a$ \textit{\&} $b$ được gọi là \emph{bội chung nhỏ nhất} của $a$ \textit{\&} $b$.
+\end{dinhnghia}
+\noindent\textbf{Quy ước.} Viết tắt bội chung là BC \textit{\&} bội chung nhỏ nhất là BCNN. Ta ký hiệu: Tập hợp các bội chung của $a$ \textit{\&} $b$ là $\operatorname{BC}(a,b)$; bội chung nhỏ nhất của $a$ \textit{\&} $b$ là $\operatorname{BCNN}(a,b)$. Ký hiệu chuẩn quốc tế của bội chung nhỏ nhất của 2 số $a,b\in\mathbb{N}^\star$ là $\operatorname{lcm}(a,b)$, trong đó lcm là viết tắt của \textit{least common multiple}\texttt{/}\textit{lowest common multiple}. Có 1 ký hiệu khác cho bội chung nhỏ nhất của 3 số $a,b$ là $[a,b]$, nhưng không khuyến khích sử dụng ký hiệu này do trung với ký hiệu của đoạn đóng\texttt{/}closed interval của tập số thực: $[a,b]\coloneqq\{x\in\mathbb{R};a\le x\le b\}$.
+
+Ta có: $\mbox{BCNN}(a,b) = m$, tồn tại $a_1,b_1\in\mathbb{N}$ sao cho $m = aa_1 = bb_1$, $\mbox{ƯCLN}(a_1,b_1) = 1$.
+
+\begin{dinhnghia}[Bội chung \textit{\&} bội chung nhỏ nhất của nhiều số]
+	Số tự nhiên $m$ được gọi là \emph{bội chung} của $n$ số $a_1,\ldots,a_n\in\mathbb{N}^\star$, $n\in\mathbb{N}^\star$, $n\ge 2$, nếu $m$ là bội của tất cả $n$ số $a_i$, $i = 1,\ldots,n$. Số nhỏ nhất khác 0 trong các bội chung của $n$ số $a_i$, $i = 1,\ldots,n$, được gọi là \emph{bội chung nhỏ nhất} của $n$ số $a_i$, $i = 1,\ldots,n$.
+\end{dinhnghia}
+\noindent\textbf{Ký hiệu.} Tập hợp các bội chung của $a_i$, $i = 1,\ldots,n$, là $\operatorname{BC}(a_1,\ldots,a_n)$; bội chung nhỏ nhất của $n$ số $a_i$, $i = 1,\ldots,n$, là $\operatorname{BCNN}(a_1,\ldots,a_n)$.
+
+\begin{dinhly}
+	Bội chung của nhiều số là bội của bội chung nhỏ nhất của chúng.
+\end{dinhly}
+``Để tìm bội chung của nhiều số, ta có thể lấy bội chung nhỏ nhất của chúng lần lượt nhân với $0,1,2,\ldots$'' -- \cite[p. 55]{SGK_Toan_6_Canh_Dieu_tap_1}
+
+\subsection{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố}
+
+\begin{tcolorbox}
+	\textbf{Tìm bội chung nhỏ nhất bằng cách phân tích các số ra thừa số nguyên tố.}
+	\begin{enumerate}
+		\item Phân tích mỗi số ra thừa số nguyên tố.
+		\item Chọn ra các thừa số nguyên tố chung \textit{\&} các thừa số nguyên tố riêng.
+		\item Với mỗi thừa số nguyên tố chung \textit{\&} riêng, ta chọn lũy thừa với số mũ lớn nhất.
+		\item Lấy tích của các lũy thừa đã chọn, ta nhận được bội chung nhỏ nhất cần tìm.
+	\end{enumerate}
+\end{tcolorbox}
+
+\subsection{Ứng dụng bội chung nhỏ nhất vào cộng, trừ các phân số không cùng mẫu}
+
+\begin{tcolorbox}
+	Để tính tổng 2 phân số $\frac{a}{b} + \frac{c}{d}$, $a,c\in\mathbb{N}$, $b,d\in\mathbb{N}^\star$, ta có thể làm như sau:
+	\begin{enumerate}
+		\item Chọn mẫu chung là BCNN của các mẫu.
+		\item Tìm thừa số phụ của mỗi mẫu (bằng cách chia mẫu chung cho từng mẫu).
+		\item Sau khi nhân tử \textit{\&} mẫu của mỗi phân số với thừa số phụ tương ứng, ta cộng 2 phân số có cùng mẫu.
+	\end{enumerate}
+\end{tcolorbox}
+Hiển nhiên:
+
+\begin{dinhly}
+	Bội chung nhỏ nhất của 2 số nguyên tố cùng nhau bằng tích của 2 số đó.
+\end{dinhly}
+
+\subsection{Lịch Can Chi}
+``1 số nước phương Đông, trong đó có Việt Nam, gọi tên năm âm lịch bằng cách ghép tên của 1 trong 10 can (theo thứ tự là \textit{Giáp, Ất, Bính, Đinh, Mậu, Kỷ, Canh, Tân, Nhâm, Quý}) với tên của 1 trong 12 chi (theo thứ tự là \textit{Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi}). Đầu tiên, \textit{Giáp} được ghép với \textit{Tý} thành năm \textit{Giáp Tý}. Cứ 10 năm, Giáp được lặp lại. Cứ 12 năm, Tý được lặp lại.'' -- \cite[p. 58]{SGK_Toan_6_Canh_Dieu_tap_1}. Vì $\operatorname{BCNN}(10,12) = 60$, cứ sau 60 năm thì năm có tên tương ứng được lặp lại.
+
+%------------------------------------------------------------------------------%
+
+\section{Cheatsheet}
+\textbf{\S12. Ước chung \& ước chung lớn nhất.} ƯC \& ƯCLN của 2 số: $((a\divby n)\land(b\divby n))\Leftrightarrow((a\in\operatorname{B}(n))\land(b\in\operatorname{B}(n)))\Leftrightarrow((n|a)\land(n|b))\Leftrightarrow((n\in\mbox{Ư}(a))\land(n\in\mbox{Ư}(b)))\Leftrightarrow n\in\mbox{ƯC}(a,b)$. $n = \max\mbox{ƯC}(a,b)\Leftrightarrow n = \mbox{ƯCLN}(a,b)$. $\mbox{ƯC}(a,b)\in\mbox{Ư}(\mbox{ƯCLN}(a,b))$, $\mbox{ƯC}(a,b)|\mbox{ƯCLN}(a,b)$, $\mbox{ƯCLN}(a,b)\divby \mbox{ƯC}(a,b)$, $\mbox{ƯCLN}(a,b)\in\operatorname{B}(\mbox{ƯC}(a,b))$. ƯC \& ƯCLN của 3 số: $((a\divby n)\land(b\divby n)\land(c\divby n))\Leftrightarrow((a\in\operatorname{B}(n))\land(b\in\operatorname{B}(n))\land(c\in\operatorname{B}(n))\Leftrightarrow((n|a)\land(n|b)\land(n|c))\Leftrightarrow((n\in\mbox{Ư}(a))\land(n\in\mbox{Ư}(b))\land(n\in\mbox{Ư}(c)))\Leftrightarrow n\in\mbox{ƯC}(a,b,c)$. $n = \max\mbox{ƯC}(a,b,c)\Leftrightarrow n = \mbox{ƯCLN}(a,b,c)$. $\mbox{ƯC}(a,b,c)\in\mbox{Ư}(\mbox{ƯCLN}(a,b,c))$, $\mbox{ƯC}(a,b,c)|\mbox{ƯCLN}(a,b,c)$, $\mbox{ƯCLN}(a,b,c)\divby \mbox{ƯC}(a,b,c)$, $\mbox{ƯCLN}(a,b,c)\in\operatorname{B}(\mbox{ƯC}(a,b,c))$. ƯC \& ƯCLN của $n$ số: $(a_i\divby m,\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i\in\operatorname{B}(m),\,\forall i = 1,\ldots,n)\Leftrightarrow(m|a_i,\,\forall i = 1,\ldots,n)\Leftrightarrow(m\in\mbox{Ư}(a_i),\,\forall i = 1,\ldots,n)\Leftrightarrow m\in\mbox{ƯC}(a_1,\ldots,a_n)$. $m = \max\mbox{ƯC}(a_1,\ldots,a_n)\Leftrightarrow m = \mbox{ƯCLN}(a_1,\ldots,a_n)$. $\mbox{ƯC}(a_1,\ldots,a_n)\in\mbox{Ư}(\mbox{ƯCLN}(a_1,\ldots,a_n))$, $\mbox{ƯC}(a_1,\ldots,a_n)|\mbox{ƯCLN}(a_1,\ldots,a_n)$, $\mbox{ƯCLN}(a_1,\ldots,a_n)\divby \mbox{ƯC}(a_1,\ldots,a_n)$, $\mbox{ƯCLN}(a_1,\ldots,a_n)\in\operatorname{B}(\mbox{ƯC}(a_1,\ldots,a_n))$. Tìm ƯCLN bằng cách phân tích các số ra thừa số nguyên tố: $a = \prod_{i=1}^n p_i^{a_i}$, $b = \prod_{i=1}^n p_i^{b_i}$, $\mbox{ƯCLN}(a,b) = \prod_{i=1}^n p_i^{\min\{a_i,b_i\}}$. $p,q$ nguyên tố cùng nhau $\Leftrightarrow\mbox{ƯCLN}(p,q) = 1\Leftrightarrow\mbox{BCNN}(p,q) = pq$. $\forall a,b\in\mathbb{N}$, $b\ne 0$, $\frac{a}{b}$ tối giản $\Leftrightarrow\mbox{ƯCLN}(a,b) = 1$. \textbf{\S13. Bội chung \& bội chung nhỏ nhất.} BC \& BCNN của 2 số: $((n\divby a)\land(n\divby b))\Leftrightarrow((n\in\operatorname{B}(a))\land(n\in\operatorname{B}(a)))\Leftrightarrow((a|n)\land(b|n))\Leftrightarrow\{a;b\}\subset\mbox{Ư}(n)\Leftrightarrow n\in\operatorname{BC}(a,b)$. $n = \min(\operatorname{BC}(a,b)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a,b)$. BC \& BCNN của 3 số: $((n\divby a)\land(n\divby b)\land(n\divby c))\Leftrightarrow((n\in\operatorname{B}(a))\land(n\in\operatorname{B}(a))\land(n\in\operatorname{B}(c)))\Leftrightarrow((a|n)\land(b|n)\land(c|n))\Leftrightarrow\{a;b;c\}\subset\mbox{Ư}(n)\Leftrightarrow n\in\operatorname{BC}(a,b,c)$. $n = \min(\operatorname{BC}(a,b,c)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a,b,c)$. BC \& BCNN của $n$ số: $(m\divby a_i,\,\forall i = 1,\ldots,n)\Leftrightarrow(m\in\operatorname{B}(a_i)\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i|m,\,\forall i = 1,\ldots,n)\Leftrightarrow(a_i\in\mbox{Ư}(n))\Leftrightarrow m\in\operatorname{BC}(a_1,\ldots,a_n)$. $n = \min(\operatorname{BC}(a_1,\ldots,a_n)\backslash\{0\})\Leftrightarrow n = \operatorname{BCNN}(a_1,\ldots,a_n)$. Tìm BCNN bằng cách phân tích các số ra thừa số nguyên tố: $a = \prod_{i=1}^n p_i^{a_i}$, $b = \prod_{i=1}^n p_i^{b_i}$, $\mbox{BCNN}(a,b) = \prod_{i=1}^n p_i^{\max\{a_i,b_i\}}$. $a\divby b\Leftrightarrow\operatorname{BCNN}(a,b) = a\Leftrightarrow\mbox{ƯCLN}(a,b) = b$. Tính tổng các phân số cùng mẫu số: $\sum_{i=1}^{n} \frac{a_i}{b} = \frac{\sum_{i=1}^n a_i}{b}$, i.e., $\frac{a_1}{b} + \cdots + \frac{a_n}{b} = \frac{a_1 + \cdots + a_n}{b}$, $\forall a_i,b\in\mathbb{Z}$, $b\ne 0$, $\forall i = 1,\ldots,n$. Tính tổng các phân số khác mẫu số: Quy đồng mẫu số các phân số đó với mẫu số chung là BCNN của các mẫu số các phân số đó rồi cộng lại:
+\begin{align*}
+	\sum_{i=1}^{n} \frac{a_i}{b_i} = \frac{\sum_{i=1}^n a_i\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\ \frac{a_1}{b_1} + \cdots + \frac{a_n}{b_n} = \frac{a_1\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_1} + \cdots + a_n\frac{\operatorname{BCNN}(b_1,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,\ldots,b_n)},\forall a_i,b_i\in\mathbb{Z},\,b_i\ne 0,\,\forall i = 1,\ldots,n.
+\end{align*}
+
+%------------------------------------------------------------------------------%
+
+\section{Problems}
+
+\subsection{Ước \& Bội}
+``Nếu $a\divby b$, $a,b\in\mathbb{Z}$, thì ta nói $a$ là \textit{bội} của $b$, còn $b$ là \textit{ước} của $a$. Tập hợp các ước \& bội của $a\in\mathbb{Z}$ được ký hiệu lần lượt là $\mbox{Ư}(a)$ \& $\mbox{B}(a)$.'' -- \cite[\S3, p. 36]{Trong_Toan_6_2021}
+ 
+``Bằng cách phân tích 1 số ra thừa số nguyên tố, ta có thể dễ dàng tìm được ước (ước số) của số đó.'' -- \cite[p. 33]{Binh_Toan_6_tap_1}
+
+\textit{Bài tập dễ.} \cite[\textbf{1.}--\textbf{31.}, pp. 36--39]{Trong_Toan_6_2021}.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 36, p. 33]
+	Tìm số chia \& thương của 1 phép chia có số bị chia bằng $145$, số dư bằng $12$ biết thương khác $1$ (số chia \& thương là các số tự nhiên).
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $b$, $q$ lần lượt là số chia \& thương: $145 = bq + 12$, $b > 12$, $q\ne 1$, hay $bq = 145 - 12 = 133 = 7\cdot 19$, suy ra $b\in\mbox{Ư}(133)$, mà $b > 12$, nên $b\in\{19;133\}$. Xét 2 trường hợp:
+	\begin{enumerate*}
+		\item[$\bullet$] Nếu $b = 19$, thì $q = 7$: nhận.
+		\item[$\bullet$] Nếu $b = 133$, thì $q = 1$: loại do mâu thuẫn với giả thiết $q\ne 1$.
+	\end{enumerate*}
+	Vậy số chia bằng $19$, thương bằng $7$.
+\end{proof}
+
+\begin{dangtoan}
+	Tìm số chia \& thương của 1 phép chia có số bị chia bằng $a$, số dư bằng $r$.
+\end{dangtoan}
+
+\textsc{Tổng quát.} Đẳng thức $a = bq + r$ gồm 4 số: số bị chia $a$, số chia $b$, thương $q$, \& số dư $r$.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 37, p. 33]
+	Tìm số tự nhiên có 2 chữ số khác nhau sao cho nếu xóa bất kỳ chữ số nào của nó thì số nhận được vẫn là ước của số ban đầu.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi số cần tìm là $\overline{ab}$, $a\ne b$, $\overline{ab}\divby a$, $\overline{ab}\divby b$. Có $\overline{ab}\divby a\Leftrightarrow 10a + b\divby a\Leftrightarrow b\divby a$. Đặt $b = ka$, $k\ne 1$ do $b\ne a$. Có $\overline{ab}\divby b\Leftrightarrow 10a + b\divby b\Leftrightarrow 10a\divby b\Rightarrow 10a\divby ka\Rightarrow 10\divby k\Rightarrow k\in\{2;5\}$. Xét 2 trường hợp:
+	\begin{enumerate*}
+		\item[$\bullet$] Nếu $k = 2$, $b= 2a$, $\overline{ab}\in\{12;24;36;48\}$.
+		\item[$\bullet$] Nếu $k = 5$, $b= 5a$, $\overline{ab} = 15$.
+	\end{enumerate*}
+	Đáp số: $12,24,36,48,15$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 38, p. 33]
+	1 tổ sản xuất được thưởng $840$ nghìn đồng. Số tiền thưởng chia đều cho số người trong tổ. Sau khi chia xong, tổ phát hiện đã bỏ sót không chia cho 1 người vắng mặt, do đó mỗi người được chia đã góp $2$ nghìn đồng \& kết quả là người vắng mặt cũng được nhận số tiền như những người có mặt. Tính số tiền mỗi người đã được thưởng (số tiền đó là 1 số tự nhiên với đơn vị nghìn đồng).
+\end{baitoan}
+\noindent\textit{Phân tích.} Nếu gọi số người của tổ là $a\in\mathbb{N}^\star$ thì ban đầu mỗi người trong $a - 1$ người có mặt được nhận $\frac{840}{a - 1}$ nghìn đồng. Sau khi phát hiện 1 người vắng mặt (chưa được chia tiền thưởng), mỗi người trong $a - 1$ người đã được chia góp cho người vắng mặt $2$ nghìn đồng, nên tổng cộng người vắng mặt nhận được $2(a - 1)$ nghìn đồng, \& số tiền này cũng bằng với $a - 1$ người còn lại nên mỗi người nhận được $\frac{840}{a - 1} - 2 = 2(a - 1)$. Tổng cộng có $a$ người, nên tổng số tiền sẽ là $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1) = 840$. Ở đây có thể giải 1 trong 3 phương trình: $\left(\frac{840}{a - 1} - 2\right)a = 2a(a - 1)$, $\left(\frac{840}{a - 1} - 2\right)a = 840$, hoặc $2a(a - 1) = 840$ để tìm $a$. Phương trình cuối có vẻ dễ giải nhất vì nó có dạng đơn giản hơn so với 2 phương trình còn lại.
+
+\begin{luuy}
+	Trong đa số trường hợp thì phương trình có dạng đa thức sẽ dễ giải hơn phương trình có chứa phân thức $\frac{A}{B}$ hoặc căn thức $\sqrt{A}$, với $A,B$ là các biểu thức chứa biến. Căn thức sẽ được học ở Toán 7, \cite{SGK_Toan_7_Canh_Dieu_tap_1}.
+\end{luuy}
+
+\begin{proof}[Giải]
+	Gọi số người của tổ là $a\in\mathbb{N}^\star$ thì số người có mặt là $a - 1$. Số tiền mỗi người được thưởng là $2(a - 1)$ nghìn đồng. Có $2a(a - 1) = 840\Leftrightarrow a(a - 1) = 420 = 21\cdot 20$$\Rightarrow a = 21$. Số người của tổ sản xuất là $21$ người. Mỗi người được thưởng $840:21 = 40$ nghìn đồng.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 39, p. 33]
+	Trong 1 buổi họp mặt của 2 câu lạc bộ A \& B, mỗi người bắt tay 1 lần với tất cả những người còn lại. Tính số người của mỗi câu lạc bộ, biết có tất cả $496$ cái bắt tay, trong đó có $241$ cái bắt tay của 2 người trong cùng 1 câu lạc bộ.
+\end{baitoan}
+\noindent\textit{Phân tích.} Nếu gọi số người của 2 câu lạc bộ A \& B lần lượt là $a,b\in\mathbb{N}^\star$. Có tất cả $496$ cái bắt tay: $C_{a+b}^2 = 496$. Có $241$ cái bắt tay của 2 người trong cùng 1 câu lạc bộ: $C_a^2 + C_b^2 = 241$. Kết hợp 2 điều này cho ta hệ phương trình:
+\begin{equation*}
+	\left\{\begin{split}
+		C_{a+b}^2 &= 496,\\
+		C_a^2 + C_b^2 &= 241,
+	\end{split}\right.\Leftrightarrow\left\{\begin{split}
+		(a + b)(a + b - 1) &= 2\cdot 496,\\
+		a(a - 1) + b(b - 1) &= 2\cdot 241.
+	\end{split}\right.
+\end{equation*}
+Xử lý hệ phương trình này sẽ tìm được $a,b$. Tuy nhiên, ở đây ta đã sử dụng \textit{tổ hợp} $C_n^2 = \frac{n(n - 1)}{2}$, đây là 1 khái niệm sẽ được học ở Toán 11 chương trình cũ \& Toán 10 chương trình cải cách 2022.
+
+\begin{proof}[Giải]
+	Gọi $a,b\in\mathbb{N}^\star$ lần lượt là số người của 2 câu lạc bộ $A,B$. 2 người trong 2 câu lạc bộ khác nhau bắt tay $496 - 241 = 255$ lần. $ab = 255 = 3\cdot 5\cdot 17$. Vì vai trò của 2 câu lạc bộ bình đẳng, w.l.o.g., giả sử $a < b$, thì $(a,b)\in\{(1,255),(3,85),(5,51),(15,17)\}$. Loại các trường hợp $b > 50$ vì khi đó số lần bắt tay của 2 người trong câu lạc bộ B lớn hơn $\frac{50\cdot 49}{2} = 1225 > 241$. Suy ra $a = 15$, $b = 17$. Số lần bắt tay trong câu lạc bộ A, B lần lượt bằng $\frac{a(a - 1)}{2} = \frac{15\cdot 14}{2} = 105$, $\frac{b(b - 1)}{2} = \frac{17\cdot 16}{2} = 136$.
+\end{proof}
+
+\begin{proof}[Giải (Sử dụng kiến thức Toán 10)]
+	Gọi $a,b\in\mathbb{N}^\star$ lần lượt là số người của 2 câu lạc bộ $A,B$. Có tất cả $496$ cái bắt tay: $C_{a+b}^2 = 496$. Có $241$ cái bắt tay của 2 người trong cùng 1 câu lạc bộ: $C_a^2 + C_b^2 = 241$. Kết hợp 2 điều này cho ta hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			C_{a+b}^2 &= 496,\\
+			C_a^2 + C_b^2 &= 241,
+		\end{split}\right.\Leftrightarrow\left\{\begin{split}
+			(a + b)(a + b - 1) &= 2\cdot 496,\\
+			a(a - 1) + b(b - 1) &= 2\cdot 241.
+		\end{split}\right.
+	\end{equation*}
+	Có nhiều cách giải hệ phương trình này, e.g.:
+	\begin{itemize}
+		\item \textit{Cách 1} (Sử dụng dữ kiện $a,b\in\mathbb{N}^\star$): Phương trình thứ nhất trong hệ phương trình cho: $(a + b)(a + b - 1) = 31\cdot 32$, suy ra $a + b = 32$.
+		\item \textit{Cách 2}
+	\end{itemize}
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 40, p. 34]
+	Tìm 5 số tự nhiên khác nhau, biết khi nhân từng cặp 2 số thì tích nhỏ nhất bằng $28$, tích lớn nhất bằng $240$ \& 1 tích khác bằng $128$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 41${}^\star$, p. 34]
+	Viết số $108$ dưới dạng tổng các số tự nhiên liên tiếp lớn hơn $0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{200.}, p. 35]
+	Tìm $x,y\in\mathbb{N}$ sao cho:
+	\begin{enumerate*}
+		\item[(a)] $(2x + 1)(y - 3) = 10$.
+		\item[(b)] $(3x - 2)(2y - 3) = 1$.
+		\item[(c)] $(x + 1)(2y - 1) = 12$.
+		\item[(d)] $x + 6 = y(x - 1)$.
+		\item[(e)] $x - 3 = y(x + 2)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{201.}, p. 35]
+	1 phép chia số tự nhiên có số bị chia bằng $3193$. Tìm số chia \& thương của phép chia đó, biết số chia có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{202.}, p. 35]
+	Tìm số chia của 1 phép chia, biết: Số bị chia bằng $236$, số dư bằng $15$, số chia là số tự nhiên có 2 chữ số.
+\end{baitoan}	
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{203.}, p. 35]
+	Tìm ước của $161$ trong khoảng từ $10$ đến $150$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{204.}, p. 35]
+	Tìm 2 số tự nhiên liên tiếp có tích bằng $600$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{205.}, p. 35]
+	Tìm 3 số tự nhiên liên tiếp có tích bằng $2730$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{206.}, p. 35]
+	Tìm 3 số lẻ liên tiếp có tích bằng $12075$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{207.}, p. 35]
+	Có 1 số số tự nhiên khác nhau được viết trên bảng. Tích của 2 số nhỏ nhất là $16$, tích của 2 số lớn nhất là $225$. Tính tổng của tất cả các số tự nhiên đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{208.}, p. 35]
+	Trên 1 tấm bia có các vòng tròn tính điểm là $18,23,28,33,38$. Muốn trúng thưởng, phải bắn 1 số phát tên để đạt đúng $100$ điểm. Hỏi phải bắn bao nhiêu phát tên \& vào những vòng nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{209.}, p. 35]
+	1 tờ hóa đơn bị dây mực, chỗ dây mực biểu thị bởi dấu $\star$. Phục hồi lại các chữ số bị dây mực (dấu $\star$ thay cho 1 hay nhiều chữ số). Giá mua 1 hộp bút: $3200$ đồng. Số hộp bút đã bán: $\star$ chiếc. Giá bán 1 hộp bút: $\star00$ đồng. Thành tiền: $107300$ đồng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{210.}, p. 36]
+	Tìm $n\in\mathbb{N}$, biết: $\sum_{i=1}^n i = 1 + 2 + 3 + \cdots + n = 820$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{211.}, p. 36]
+	Viết số $100$ dưới dạng tổng các số lẻ liên tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{212.}, p. 36]
+	Tân \& Hùng gặp nhau trong hội nghị học sinh giỏi Toán. Tân hỏi số nhà Hùng, Hùng trả lời: - Nhà mình ở chính giữa phố, đoạn phố ấy có tổng các số nhà bằng $161$. Nghĩ 1 chút, Tân nói: - Bạn ở số nhà $23$ chứ gì! Hỏi Tân đã tìm ra như thế nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{213.}, p. 36]
+	Đặt 4 số tự nhiên khác nhau, khác $0$, nhỏ hơn $100$ vào các vị trí A, B, C, D ở \cite[Hình 6, p. 36]{Binh_Toan_6_tap_1} sao cho mũi tên đi từ 1 số đến ước của nó \& số ở vị trí A có giá trị lớn nhất trong các giá trị nó có thể nhận được.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{214.}, p. 36]
+	Tìm $n\in\mathbb{N}$, sao cho:
+	\begin{enumerate*}
+		\item[(a)] $n + 4\divby n + 1$.
+		\item[(b)] $n^2 + 4\divby n + 2$.
+		\item[(c)] $13n\divby n - 1$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{215.}${}^\star$, p. 36]
+	Tìm số tự nhiên có 3 chữ số, biết nó tăng gấp $n$ lần nếu cộng mỗi chữ số của nó với $n$ ($n\in\mathbb{N}$, có thể gồm 1 hoặc nhiều chữ số).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{216.}, p. 36]
+	2 công ty A \& B năm trước có số nhân viên bằng nhau. Năm sau, công ty A tuyển thêm số nhân viên mới bằng 4 lần số nhân viên cũ, còn công ty B cho nghỉ việc 5 nhân viên, do đó số nhân viên công ty A là bội của số nhân viên công ty B. Hỏi năm trước mỗi công ty có nhiều nhất bao nhiêu nhân viên?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Ước Chung. Ước Chung Lớn Nhất}
+``Ước chung lớn nhất của 2 hay nhiều số là số lớn nhất trong tập hợp các ước chung của các số đó. Ước chung lớn nhất của $a,b,c$ được ký hiệu là $\mbox{ƯCLN}(a,b,c)$ hoặc $(a,b,c)$. Ta có: $(a,b) = d\Leftrightarrow$ tồn tại $a',b'\in\mathbb{N}$ sao cho $a = da'$, $b = db'$, $(a',b') = 1$.'' -- \cite[\S9, p. 36]{Binh_Toan_6_tap_1}
+
+\textit{Cách bấm máy tính bỏ túi để tìm ƯCLN.}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 42, p. 36]
+	Tìm $a\in\mathbb{N}$ biết $264$ chia cho $a$ dư $24$, còn $363$ chia cho $a$ dư $43$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$264$ chia cho $a$ dư $24$ nên $a$ là ước của $264 - 24 = 240$ \& $a > 24$. $363$ chia cho $a$ dư $43$ nên $a$ là ước của $363 - 43 = 320$ \& $a > 43$. Do đó $a\in\mbox{ƯC}(240,320)$, đồng thời $a > 43$. $\mbox{ƯCLN}(240,320) = 80$, ước chung lớn hơn $43$ là $80$. Vậy $a = 80$.
+\end{proof}
+\cite[Ví dụ 43, p. 37]{Binh_Toan_6_tap_1}.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 44, p. 37]
+	Trên 1 hành tinh, các cư dân chia 1 ngày đêm thành $a$ giờ, chia 1 giờ thành $b$ phút, chia 1 phút thành $c$ giây ($a,b,c\in\mathbb{N}$). Biết 1 ngày đêm có $620$ phút, mỗi giờ có $899$ giây. Hỏi trên hành tinh đó, mỗi ngày đêm gồm bao nhiêu giây?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Theo đề bài $ab = 620$ \& $bc = 899$. Cần tìm $abc$. Ta có $b = \mbox{ƯC}(620,899)$, $620 = 2^2\cdot 5\cdot 31$, $899 = 29\cdot 31$, $\mbox{ƯCLN}(620,899) = 31$. Do $b > 1$ nên $b = 31$. Suy ra $c = 899:31 = 29$, $abc = 620\cdot 29 = 17980$. 1 ngày đêm trên hành tinh đó có $17980$ giây.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{217.}, p. 37]
+	Tìm $a\in\mathbb{N}$, biết $398$ chia cho $a$ thì dư $38$, còn $450$ chia cho $a$ thì dư $18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{218.}, p. 37]
+	Tìm $a\in\mathbb{N}$, biết $350$ chia cho $a$ thì dư $14$, còn $320$ chia cho $a$ thì dư $26$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{219.}, p. 37]
+	Có $100$ quyển vở \& $90$ bút chì được thưởng đều cho 1 số học sinh, còn lại $4$ quyển vở \& $18$ bút chì không đủ chia đều. Tính số học sinh được thưởng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{220.}, p. 37]
+	Phần thưởng cho học sinh của 1 lớp học gồm $128$ vở, $48$ bút chì, $192$ nhãn vở. Có thể chia được nhiều nhất thành bao nhiêu phần thưởng như nhau, mỗi phần thưởng gồm bao nhiêu vở, bút chì, nhãn vở?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{221.}, p. 37]
+	3 khối $6,7,8$ theo thứ tự có $300$ học sinh, $276$ học sinh, $252$ học sinh xếp hàng dọc để diễu hành sao cho số hàng dọc của mỗi khối như nhau. Có thể xếp nhiều nhất thành mấy hàng dọc để mỗi khối đều không có ai lẻ hàng? Khi đó ở mỗi khối có bao nhiêu hàng ngang?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{222.}, p. 37]
+	Người ta muốn chia $200$ bút bi, $240$ bút chì, $320$ tẩy thành 1 số phần thưởng như nhau. Hỏi có thể chia được nhiều nhất thành bao nhiêu phần thưởng, mỗi phần thưởng có bao nhiêu bút bi, bút chì, tẩy?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{223.}, p. 38]
+	Các số $1620$ \& $1410$ chia cho số tự nhiên $a$ có 3 chữ số cùng được số dư là $r$. Tìm $a$ \& $r$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{224.}, p. 38]
+	Tìm số chia \& thương của 1 phép chia số tự nhiên có số bị chia bằng $9578$ \& các số dư liên tiếp là $5,3,2$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Bội Chung. Bội Chung Nhỏ Nhất}
+``Bội chung nhỏ nhất của 2 hay nhiều số là số nhỏ nhất khác $0$ trong tập hợp các bội chung của các số đó. Bội chung nhỏ nhất của $a,b,c$ được ký hiệu là $\operatorname{BCNN}(a,b,c)$ hoặc $[a,b,c]$. Ta có: $[a,b] = m\Leftrightarrow$ tồn tại $x,y\in\mathbb{N}$ sao cho $m = ax$, $m = by$, $(x,y) = 1$.'' -- \cite[\S10, p. 38]{Binh_Toan_6_tap_1}
+
+\textit{Cách bấm máy tính bỏ túi để tìm BCNN.}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 45, p. 38]
+	Tìm số tự nhiên $a$ nhỏ nhất sao cho chia $a$ cho $3$, cho $5$, cho $7$ được số dư theo thứ tự là $2,3,4$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$a = 3m + 2\ (m\in\mathbb{N})\Rightarrow 2a = 6m + 4$, chia 3 dư 1. $a = 5n + 3\ (n\in\mathbb{N})\Rightarrow 2a = 10n + 6$, chia 5 dư 1. $a = 7p + 4\ (p\in\mathbb{N})\Rightarrow 2a = 14p + 8$, chia 7 dư 1. Do đó: $2a - 1\in\operatorname{BC}(3,5,7)$. Để $a$ nhỏ nhất thì $2a - 1 = \operatorname{BCNN}(3,5,7) = 105\Rightarrow a = 53$.
+\end{proof}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 46, p. 38]
+	1 số tự nhiên chia cho $3$ thì dư $1$, chia cho $4$ thì dư $2$, chia cho $5$ thì dư $3$, chia cho $6$ thì dư $4$, \& chia hết cho $13$.
+	\begin{enumerate*}
+		\item[(a)] Tìm số nhỏ nhất có tính chất trên.
+		\item[(b)] Tìm dạng chung của tất cả các số có tính chất trên.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	``\begin{enumerate*}
+		\item[(a)] Gọi $x$ là số phải tìm thì $x + 2$ chia hết cho $3,4,5,6$ nên $x + 2\in\operatorname{BC}(3,4,5,6)$. $\operatorname{BCNN}(3,4,5,6) = 60$, nên $x + 2 = 60n$, $n\in\mathbb{N}$, do đó $x = 60n - 2$ ($n\in\mathbb{N}^\star$). Ngoài ra $x$ phải là số nhỏ nhất có tính chất trên \& $x$ phải chia hết cho $13$. Lần lượt cho $n$ bằng $1,2,3,\ldots$ ta thấy đến $n = 10$ thì $x = 598\divby 13$. Số nhỏ nhất phải tìm là $598$.
+		\item[(b)] Số phải tìm phải thỏa mãn 2 điều kiện: $x + 2\divby 60$, $x\divby 13$. Suy ra $x + 182\divby 60$ \& $x + 182\divby 13$. Vì $\mbox{ƯCLN}(13,60) = 1$ nên $x + 182 = 780k$ hay $x = 780k - 182$, $k\in\mathbb{N}^\star$. Với $k = 1$, giá trị nhỏ nhất của $x$ bằng $598$ (đã chỉ ra ở (a)). (Trong cách biến đổi trên, ta lần lượt thêm các bội của $60$ vào $x + 2$, được $x + 62,x + 122,x + 182,\ldots$, số $182\divby 13$.)'' -- \cite[p. 38]{Binh_Toan_6_tap_1}
+	\end{enumerate*}
+\end{proof}
+
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 47, p. 39]
+	3 người mua 3 chiếc ô tô cùng loại với cùng 1 giá. Ông A đặt cọc $130$ triệu đồng, mỗi tháng trả $18$ triệu đồng thì trả xong. Ông B đặt cọc $100$ triệu đồng, mỗi tháng trả $24$ triệu đồng thì trả xong. Ông C đặt cọc $60$ triệu đồng, mỗi tháng trả $28$ triệu đồng thì trả xong. Tính giá mỗi chiếc ô tô, biết giá ô tô chưa đến $900$ triệu đồng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{225.}, p. 39]
+	Tìm các bội chung của $40,60,126$ \& nhỏ hơn $6000$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{226.}, p. 39]
+	1 cuộc thi chạy tiếp sức theo vòng tròn gồm nhiều chặng. Biết chu vi đường tròn là $330$\emph{m}, mỗi chặng dài $75$\emph{m}, địa điểm xuất phát \& kết thúc cùng 1 chỗ. Hỏi cuộc thi có ít nhất mấy chặng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{227.}, p. 39]
+	3 ô tô cùng khởi hành 1 lúc từ 1 bến. Thời gian cả đi lẫn về của xe thứ nhất là $40$ phút, của xe thứ 2 là $50$ phút, của xe thứ 3 là $30$ phút. Khi trở về bến, mỗi xe đều nghỉ $10$ phút rồi tiếp tục chạy. Hỏi sau ít nhất bao lâu:
+	\begin{enumerate*}
+		\item[(a)] Xe thứ nhất \& xe thứ 2 cùng rời bến?
+		\item[(b)] Xe thứ 2 \& xe thứ 3 cùng rời bến?
+		\item[(c)] Cả 3 xe cùng rời bến?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{228.}, p. 39]
+	1 đơn vị bộ đội khi xếp hàng $20,25,30$ đều dư $15$, nhưng xếp hàng $41$ thì vừa đủ. Tính số người của đơn vị đó biết số người chưa đến $1000$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{229.}, p. 39]
+	1 chiếc xe đạp xiếc có chu vi bánh xe lớn $21$\emph{dm}, chu vi bánh xe nhỏ $9$\emph{dm}. Hiện nay van của 2 bánh xe đều ở vị trí thấp nhất. Hỏi xe phải lăn bao nhiêu mét nữa thì 2 van của 2 bánh xe lại ở vị trí thấp nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{230.}, p. 39]
+	Tìm số tự nhiên $n$ có 3 chữ số sao cho $n + 6$ chia hết cho $7$, $n + 7$ chia hết cho $8$, $n + 8$ chia hết cho $9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{231.}, p. 39]
+	Tìm số tự nhiên có 3 chữ số, sao cho chia nó cho $17$, cho $25$ được các số dư theo thứ tự là $8$ \& $16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{232.}, p. 39]
+	Tìm $n\in\mathbb{N}$ lớn nhất có 3 chữ số, sao cho $n$ chia cho $8$ thì dư $7$, chia cho $31$ thì dư $28$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{233.}, p. 40]
+	Tìm số tự nhiên nhỏ hơn $500$, sao cho chia nó cho $15$, cho $35$ được các số dư theo thứ tự là $8$ \& $13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{234.}, p. 40]
+	\begin{enumerate*}
+		\item[(a)] Tìm số tự nhiên lớn nhất có 3 chữ số, sao cho chia nó cho $2$, cho $3$, cho $4$, cho $5$, cho $6$ ta được các số dư theo thứ tự là $1,2,3,4,5$.
+		\item[(b)] Tìm dạng chung của các số tự nhiên $a$ chia cho $4$ dư $3$, chia cho $5$ thì dư $4$, chia cho $6$ thì dư $5$, chia hết cho $13$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{235.}, p. 40]
+	Tìm số tự nhiên nhỏ nhất chia cho $8$ dư $6$, chia cho $12$ dư $10$, chia cho $15$ dư $13$ \& chia hết cho $13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{236.}, p. 40]
+	Tìm số tự nhiên nhỏ nhất chia cho $8,10,15,20$ theo thứ tự dư $5,7,12,17$ \& chia hết cho $41$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{237.}, p. 40]
+	Chị Mai xếp bánh (ít hơn $100$ chiếc) vào các đĩa. Nếu mỗi đĩa xếp $8$ bánh thì có $1$ đĩa chỉ có $3$ chiếc bánh. Nếu mỗi đĩa xếp $7$ chiếc bánh thì có $1$ đĩa chỉ có $5$ chiếc bánh. Nếu mỗi đĩa xếp $3$ chiếc bánh thì có $1$ đĩa chỉ có $1$ chiếc bánh. Tìm số bánh.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{238.}, p. 40]
+	7 người có 7 mảnh đất diện tích bằng nhau. Người thứ nhất trồng 1 cây cam. Người thứ 2 trồng $2$ cây cam. Người thứ 3 trồng $3$ cây cam. $\ldots$ Người thứ 7 trồng $7$ cây cam. Điều đặc biệt là ai cũng thấy các cây cam của mình có số quả bằng nhau. Ngoài ra số cam của mỗi người không chênh lệch nhiều nên sau khi người thứ 7 cho người thứ 2,3,4,5,6 mỗi người $1$ quả cam thì cả 7 người đều có số cam bằng nhau. Tính số cam trên cây của mỗi người lúc đầu, biết không có cây cam nào có hơn $200$ quả.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{239.}, p. 40]
+	Tìm số tự nhiên nhỏ nhất chia cho $5$, cho $7$, cho $9$ có số dư theo thứ tự là $3,4,5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{240.}, p. 40]
+	Tìm số tự nhiên nhỏ nhất chia cho $3$, cho $4$, cho $5$ có số dư theo thứ tự là $1,3,1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{241.}, p. 40]
+	Trên đoạn đường dài $4800$\emph{m} có các cột điện trồng cách nhau $60$\emph{m}, nay trồn lại cách nhau $80$\emph{m}. Hỏi có bao nhiêu cột không phải trồng lại, biết ở cả 2 đầu đoạn đường đều có cột điện?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{242.}, p. 40]
+	3 con tàu cập bến theo lịch như sau: Tàu I cứ $15$ ngày thì cập bến, tàu II cứ $20$ ngày thì cập bến, tàu III cứ $12$ ngày thì cập bến. Lần đầu cả 3 tàu cùng cập bến vào ngày thứ 6. Hỏi sau đó ít nhất bao lâu, cả 3 tàu lại cùng cập bến vào ngày thứ 6?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{243.}, p. 40]
+	Nếu xếp 1 số sách vào từng túi $10$ cuốn thì vừa hết, vào từng túi $12$ cuốn thì thừa $2$ cuốn, vào từng túi $18$ cuốn thì thừa $8$ cuốn. Biết số sách trong khoảng từ $715$ đến $1000$, tính số sách đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{244.}, p. 40]
+	2 lớp 6A, 6B cùng thu nhặt 1 số giấy vụn bằng nhau. Trong lớp 6A, 1 bạn thu được $26$\emph{kg}, còn lại mỗi bạn thu $11$\emph{kg}. Trong lớp 6B, 1 bạn thu được $25$\emph{kg}, còn lại mỗi bạn thu $10$\emph{kg}. Tính số học sinh mỗi lớp, biết số giấy mỗi lớp thu được trong khoảng từ $200$\emph{kg} đến $300$\emph{kg}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{245.}, p. 41]
+	1 thiết bị điện tử phát ra tiếng kêu ``bíp' sau mỗi $60$ giây, 1 thiết bị điện tử khác phát ra tiếng kêu ``bíp'' sau mỗi $62$ giây. Cả 2 thiết bị này đều phát ra tiếng ``bíp'' lúc $10:00$. Tính thời điểm để cả 2 cùng phát ra tiếng ``bíp'' tiếp theo.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{246.}, p. 41]
+	Có 2 chiếc đồng hồ (có kim giờ \& kim phút). Trong 1 ngày, chiếc thứ nhất chạy nhanh $2$ phút, chiếc thứ 2 chạy chậm $3$ phút. Cả 2 đồng hồ được lấy lại theo giờ chính xác. Hỏi sau ít nhất bao nhiêu lâu, cả 2 đồng hồ lại cùng chỉ giờ chính xác?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
