@@ -44,7 +44,7 @@
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
 
-\title{Algebraic- \& Rational Fractions -- Phân Thức Đại Số \textit{\&} Phân Thức Đại Số Hữu Tỷ}
+\title{Algebraic- \& Rational Fractions\\Phân Thức Đại Số \textit{\&} Phân Thức Đại Số Hữu Tỷ}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
@@ -70,7 +70,7 @@
 	A \emph{rational fraction} is an algebraic fraction whose numerator \& denominator are both \href{https://en.wikipedia.org/wiki/Polynomial}{polynomials}.
 \end{definition}
 ``\begin{enumerate*}
-	\item[\textbf{1.}] Phân thức đại số là 1 biểu thức có dạng $\frac{A}{B}$, trong đó $A,B$ là những đa thức \& $B\ne 0$. Đặc biệt: Mỗi đa thức cũng được coi như 1 phân thức với mẫu thức bằng 1.
+	\item[\textbf{1.}] \textit{Phân thức đại số} là 1 biểu thức có dạng $\frac{A}{B}$, trong đó $A,B$ là những đa thức \& $B\ne 0$. Đặc biệt: Mỗi đa thức cũng được coi như 1 phân thức với mẫu thức bằng 1.
 	\item[\textbf{2.}] $\frac{A}{B} = \frac{C}{D}$ nếu $AD = BC$, $B\ne 0$, $D\ne 0$.
 	\item[\textbf{3.}] Tính chất cơ bản của phân thức: $\frac{A}{B} = \frac{AM}{AM}$, $M$ là đa thức khác đa thức không 0; $\frac{A}{B} = \frac{A:N}{B:N}$, $N$ là 1 nhân tử chung của $A$ \& $B$. Đặc biệt với $N = -1$, $\frac{A}{B} = \frac{-A}{-B}$ (quy tắc đổi dấu).
 	\item[\textbf{4.}] Rút gọn phân thức: Phân tích tử \& mẫu thành nhân tử (nếu cần) để tìm nhân tử chung; Chia cả tử \& mẫu cho nhân tử chung (nếu có).
@@ -83,27 +83,199 @@
 
 \section{Problems}
 
+\subsection{Tính Chất Cơ Bản của Phân Thức. Rút Gọn Phân Thức}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, Ví dụ 5.1, p. 39]
+	Dùng định nghĩa 2 phân thức bằng nhau, chứng minh 2 phân thức sau bằng nhau: $\dfrac{a^2 - 2ab - 3b^2}{a^2 - 4ab + 3b^2}$ \& $\dfrac{a + b}{a - b}$ với $a\ne b$ \& $a\ne 3b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, Ví dụ 5.2, p. 39]
+	Dùng định nghĩa 2 phân thức bằng nhau, xét sự bằng nhau của 2 phân thức $\dfrac{(3x + 2)(x + 5)}{4(3x + 2)}$ \& $\dfrac{x + 5}{4}$ trong các trường hợp biến $x$ thuộc các tập hợp sau:
+	\begin{enumerate*}
+		\item[(a)] $x\in\mathbb{N}$;
+		\item[(b)] $x\in\mathbb{Z}$;
+		\item[(c)] $x\in\mathbb{Q}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, Ví dụ 5.3, p. 39]
+	So sánh $C = \dfrac{2013^2 - 2012^2}{2013^2 + 2012^2}$ với $D = \dfrac{2013 - 2012}{2013 + 2012}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, Ví dụ 5.4, p. 40]
+	Chứng minh: $\sum_{i=0}^{63} a^i = \prod_{i=0}^{5} (1 + a^{2^i})$, i.e., $1 + a + a^2 + \cdots + a^{63} = (1 + a)(1 + a^2)(1 + a^4)\cdots(1 + a^{32})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, Ví dụ 5.5, p. 40]
+	Rút gọn phân thức: $A = \dfrac{x^3 - 7x + 6}{x^3 + 5x^2 - 2x - 24}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, Ví dụ 5.6, p. 40]
+	Rút gọn phân thức: $B = \dfrac{a^{30} + a^{20} + a^{10} + 1}{a^{2042} + a^{2032} + a^{2022} + a^{2012} + a^{30} + a^{20} + a^{10} + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.1}, p. 41]
+	Dùng định nghĩa 2 phân thức bằng nhau, tìm đa thức $A$ trong các trường hợp sau:
+	\begin{enumerate*}
+		\item[(a)] $\dfrac{A}{3x - 2} = \dfrac{15x^2 + 10x}{9x^2 - 4}$;
+		\item[(b)] $\dfrac{3x^2 - 5x - 2}{A} = \dfrac{x - 2}{2x - 3}$;
+		\item[(c)] $\dfrac{x^2 - 4}{x^2 + x - 6} = \dfrac{x^2 + 4x + 4}{A}$;
+		\item[(d)] $\dfrac{2x + 1}{x^3 + x^2 - x + 2} = \dfrac{A}{x^3 + 1}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.2}, p. 41]
+	Biến đổi mỗi phân thức sau thành 1 phân thức bằng nó \& có tử thức là đa thức $B$ cho sau đây:
+	\begin{enumerate*}
+		\item[(a)] $\dfrac{2x - 5}{3x^2 + 4}$ \& $B = 2x^2 - 3x - 5$;
+		\item[(b)] $\dfrac{(x + 1)(x^2 + x - 6)}{(x^2 - 9)(x^2 + 3x + 2)}$ \& $B = x - 2$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.3}, p. 41]
+	Rút gọn biểu thức:
+	\begin{enumerate*}
+		\item[(a)] $\dfrac{2^{18}\cdot 54^3 + 15\cdot 4^{10}\cdot 9^4}{2\cdot 12^9 + 6^{10}\cdot 2^{10}}$;
+		\item[(b)] $\dfrac{4^{15}\cdot 27^6\cdot 42 - 3\cdot 72^{10}}{4^4\cdot 25\cdot 36^{10}  - 4^5\cdot 6^{19}\cdot 35}$;
+		\item[(c)] $\dfrac{880\cdot(15^2\cdot 3^{18} + 27^7)}{4^2\cdot 15^4\cdot 3^{16} - 2^4\cdot 9^{11}}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.4}, p. 41]
+	Rút gọn:
+	\begin{enumerate*}
+		\item[(a)] $M = \dfrac{4024\cdot 2014 - 2}{2011 + 2012\cdot 2013}$;
+		\item[(b)] $N = \dfrac{2012\cdot 2013 + 2014}{2010 - 2012\cdot 2015}$;
+		\item[(c)] $P = \dfrac{66666\cdot 87564 - 33333}{22222\cdot 87560 + 77777}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.5}, p. 41]
+	Rút gọn các phân thức sau:
+	\begin{enumerate*}
+		\item[(a)] $Q = \dfrac{x^2 + 2x - 8}{x^2 + x - 12}$;
+		\item[(b)] $R = \dfrac{3x^2 + 5xy - 2y^2}{3x^2 - 7xy + 2y^2}$;
+		\item[(c)] $S = \dfrac{x^6 - 14x^4 + 49x^2 - 36}{x^4 + 4x^3 - x^2 - 16x - 12}$;
+		\item[(d)] $T = \dfrac{x^6 - y^6}{x^6 + 2x^4y^2 + 2x^2y^4 + y^6}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.6}, pp. 41--42]
+	Rút gọn:
+	\begin{enumerate*}
+		\item[(a)] $A = \dfrac{a^4 - 5a^2 + 4}{a^4 - a^2 + 4a - 4}$;
+		\item[(b)] $B = \dfrac{a^3 - 3a + 2}{2a^3 - 7a^2 + 8a - 3}$;
+		\item[(c)] $C = \dfrac{a^2 - 2ab + b^2 - c^2}{a^2 + b^2 + c^2 - 2ab - 2bc + 2ca}$;
+		\item[(d)] $D = \dfrac{a^3 - 7a + 6}{a^2(a + 3)^3 - 4a(a + 3)^3 + 4(a + 3)^3}$;
+		\item[(e)] $E = \dfrac{a^3 + b^3 + c^3 - 3abc}{(a - b)^2 + (b - c)^2 + (c - a)^2}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.7}, p. 42]
+	Rút gọn các phân thức sau:
+	\begin{enumerate*}
+		\item[(a)] $A = \dfrac{xy^2 - xz^2 - y^3 + yz^2}{x^2(z - y) + y^2(x - z) + z^2(y - x)}$;
+		\item[(b)] $B = \dfrac{x^4(y^2 - z^2) + y^4(z^2 - x^2) + z^4(x^2 - y^2)}{x^2(y - z) + y^2(z - x) + z^2(x - y)}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.8}, p. 42]
+	Rút gọn các phân thức sau:
+	\begin{enumerate*}
+		\item[(a)] $A = \dfrac{(x + y + z)^2 - 3xy - 3yz - 3zx}{9xyz - 3x^3 - 3y^3 - 3z^3}$;
+		\item[(b)] $B = \dfrac{x^3 - y^3 + z^3 + 3xyz}{(x + y)^2 + (y + z)^2 + (z - x)^2}$;
+		\item[(c)] $C = \dfrac{(x - y)^3 + (y - z)^3 + (z - x)^3}{(x^2 - y^2)^3 + (y^2 - z^2)^3 + (z^2 - x^2)^3}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.9}, p. 42]
+	Rút gọn các phân thức sau với $n\in\mathbb{N}^\star$:
+	\begin{enumerate*}
+		\item[(a)] $\dfrac{(n + 2)!}{n!(n + 2)(n + 3)}$;
+		\item[(b)] $\dfrac{n!}{n! + (n - 1)!}$;
+		\item[(c)] $\dfrac{(n + 3)! - (n + 2)!}{(n + 2)! + (n + 3)!}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.10}, p. 42]
+	Chứng minh các phân số sau là tối giản $\forall n\in\mathbb{N}$:
+	\begin{enumerate*}
+		\item[(a)] $\dfrac{3n + 2}{4n + 3}$;
+		\item[(b)] $\dfrac{12n + 1}{2(10n + 1)}$;
+		\item[(c)] $\dfrac{2n + 3}{2n^2 + 4n + 1}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.11}, p. 42]
+	Chứng minh phân số $\dfrac{n^7 + 2n^2 + n + 2}{n^8 + n^2 + 2n + 2}$ không tối giản, $\forall n\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.12}, p. 42]
+	Viết gọn biểu thức sau dưới dạng 1 phân thức: $P = (x^4 - x^2 + 1)(x^8 - x^4 + 1)(x^{16} - x^8 + 1)(x^{32} + x^{16} + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.13}, p. 42]
+	Rút gọn phân thức:
+	\begin{enumerate*}
+		\item[(a)] $\dfrac{|x - 2| + |x - 1| + x}{2x^2 - 7x + 3}$ với $x < 1$;
+		\item[(b)] $\dfrac{|x - 4||x - 5|}{x^3 - 9x^2 + 20x}$ với $4 < x < 5$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.14}, p. 43]
+	Rút gọn các phân thức sau:
+	\begin{enumerate*}
+		\item[(a)] $T = \dfrac{(x + 2)(x + 3)(x + 4)(x + 5) + 1}{x^2 + 7x + 11}$;
+		\item[(b)] $U = \dfrac{x^3 - 53x + 88}{(x - 1)(x - 3)(x - 5)(x - 7) + 16}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.15}, p. 43]
+	Cho $\dfrac{a}{x} = \dfrac{b}{y} = \dfrac{c}{z}$ \& $x,y,z\ne 0$. Chứng minh: $\dfrac{x^2 + y^2 + z^2}{(ax + by + cz)^2} = \dfrac{1}{a^2 + b^2 + c^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.16}, p. 43]
+	Cho $ax + by + cz = 0$. Rút gọn phân thức: $V = \dfrac{ax^2 + by^2 + cz^2}{bc(y - z)^2 + ca(z - x)^2 + ab(x - y)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.17}, p. 43]
+	Cho $x + y + z = 0$. Chứng minh: $\dfrac{9(x^2 + y^2 + z^2)}{(x - y)^2 + (y - z)^2 + (z - x)^2} = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.18}, p. 43]
+	Chứng minh: $\dfrac{x^2 + y^2 - z^2 - 2zt + 2xy - t^2}{x + y - z - t} = \dfrac{x^2 - y^2 + z^2 - 2zt + 2xz - t^2}{x - y + z - t}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, \textbf{5.19}, p. 43]
+	Rút gọn: $X = \dfrac{(2^4 + 4)(6^4 + 4)(10^4 + 4)(14^4 + 4)}{(4^4 + 4)(8^4 + 4)(12^4 + 4)(16^4 + 4)}$.
+\end{baitoan}
+
+
 \begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 16, p. 38]
-	Cho $\frac{xy}{x^2 + y^2} = \frac{5}{8}$, rút gọn phân thức $P = \frac{x^2 - 2xy + y^2}{x^2 + 2xy + y^2}$.
+	Cho $\dfrac{xy}{x^2 + y^2} = \dfrac{5}{8}$, rút gọn phân thức $P = \dfrac{x^2 - 2xy + y^2}{x^2 + 2xy + y^2}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{151.}, p. 38]
 	So sánh:
 	\begin{enumerate*}
-		\item[(a)] $A = \frac{201 - 200}{201 + 200}$ \& $B = \frac{201^2 - 200^2}{201^2 + 200^2}$.
-		\item[(b)] $C = \frac{1999\cdot 4001 + 2000}{2000\cdot 4001 - 2001}$ \& $D = \frac{1501\cdot 1503 - 1500\cdot 1498}{6002}$.
+		\item[(a)] $A = \dfrac{201 - 200}{201 + 200}$ \& $B = \dfrac{201^2 - 200^2}{201^2 + 200^2}$.
+		\item[(b)] $C = \dfrac{1999\cdot 4001 + 2000}{2000\cdot 4001 - 2001}$ \& $D = \dfrac{1501\cdot 1503 - 1500\cdot 1498}{6002}$.
 	\end{enumerate*}
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{152.}, p. 39]
 	Chứng minh: $\forall n\in\mathbb{N}$,
 	\begin{enumerate*}
-		\item[(a)] Phân số $A = \frac{n^3 - 1}{n^5 + n + 1}$ không tối giản;
-		\item[(b)] Phân số $B = \frac{6n + 1}{8n + 1}$ tối giản;
-		\item[(c)] Phân số $C = \frac{10n^2 + 9n + 4}{20n^2 + 20n + 9}$ tối giản.
+		\item[(a)] Phân số $A = \dfrac{n^3 - 1}{n^5 + n + 1}$ không tối giản;
+		\item[(b)] Phân số $B = \dfrac{6n + 1}{8n + 1}$ tối giản;
+		\item[(c)] Phân số $C = \dfrac{10n^2 + 9n + 4}{20n^2 + 20n + 9}$ tối giản.
 	\end{enumerate*}
 	Có thể mở rộng từ $\mathbb{N}$ lên $\mathbb{Z}$ được không?
 \end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Các Phép Toán về Phân Thức Đại Số}
 
 %------------------------------------------------------------------------------%
 
