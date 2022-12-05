@@ -79,13 +79,12 @@
 		\item[$\bullet$] Nếu $a > b$ thì $x > y$.
 	\end{enumerate*}
 	Số hữu tỷ lớn hơn $0$ gọi là \textit{số hữu tỷ dương}. Số hữu tỷ nhỏ hơn $0$ gọi là \textit{số hữu tỷ âm}. Số $0$ không là số hữu tỷ dương, cũng không là số hữu tỷ âm.
+	\item[\textbf{5.}] Cho các số hữu tỷ $x = \frac{a}{b}$ \& $y = \frac{c}{d}$, $a,b,c,d\in\mathbb{Z}$, $b > 0$, $d > 0$. Luôn có:
+	\begin{enumerate*}
+		\item[$\bullet$] $x = y\Leftrightarrow ad = bc$, $x < y\Leftrightarrow ad < bc$, $x > y\Leftrightarrow ad > bc$.
+		\item[$\bullet$] $\frac{a}{b} < \frac{a + c}{b + d} < \frac{c}{d}$.
+	\end{enumerate*}'' -- \cite[pp. 4--5]{Tuyen_Toan_7}
 \end{enumerate*}
-
-Cho các số hữu tỷ $x = \frac{a}{b}$ \& $y = \frac{c}{d}$, $a,b,c,d\in\mathbb{Z}$, $b > 0$, $d > 0$. Luôn có:
-\begin{enumerate*}
-	\item[$\bullet$] $x = y\Leftrightarrow ad = bc$, $x < y\Leftrightarrow ad < bc$, $x > y\Leftrightarrow ad > bc$.
-	\item[$\bullet$] $\frac{a}{b} < \frac{a + c}{b + d} < \frac{c}{d}$.
-\end{enumerate*}'' -- \cite[pp. 4--5]{Tuyen_Toan_7}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 1, p. 5]
 	Cho $x = \frac{12}{b - 15}$ với $b\in\mathbb{Z}$. Xác định $b$ để:
@@ -425,6 +424,128 @@ Cho các số hữu tỷ $x = \frac{a}{b}$ \& $y = \frac{c}{d}$, $a,b,c,d\in\mat
 %------------------------------------------------------------------------------%
 
 \subsection{Lũy Thừa của 1 Số Hữu Tỷ}
+``\begin{enumerate*}
+	\item[\textbf{1.}] Lũy thừa với số mũ tự nhiên $x^n = \underbrace{x\cdot x\cdots x}_{\scriptsize n\mbox{ thừa số } x}$, $\forall x\in\mathbb{Q}$, $\forall n\in\mathbb{N}$, $n > 1$. Nếu $x = \frac{a}{b}$ thì $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$, $\forall a,b\in\mathbb{Z}$, $b\ne 0$. Quy ước: $x^0 = 1$, $\forall x\in\mathbb{Q}$, $x\ne 0$, $x^1 = x$, $\forall x\in\mathbb{Q}$.
+	\item[\textbf{2.}] $x^m\cdot x^n = x^{m + n}$, $x^m:x^n = \frac{x^m}{x^n} = x^{m-n}$, $(x^m)^n = x^{mn}$, $\forall x,y\in\mathbb{Q}$, $x\ne 0$, $\forall m,n\in\mathbb{N}^\star$, $m\ge n$; $\left(\frac{x}{y}\right)^n = \frac{x^n}{y^n}$, $y\ne 0$.
+	\item[\textbf{3.}] Lũy thừa với số mũ nguyên âm $x^{-n} = \frac{1}{x^n}$, $\forall x\in\mathbb{Q}$, $x\ne 0$, $\forall n\in\mathbb{N}^\star$.
+	\item[\textbf{4.}] So sánh 2 lũy thừa:
+	\begin{enumerate*}
+		\item[(a)] \textit{Cùng cơ số}: Với $m > n > 0$ thì:
+		\begin{enumerate*}
+			\item[$\bullet$] $x > 1\Rightarrow x^m > x^n$;
+			\item[$\bullet$] $x = 1\Rightarrow x^m = x^n$;
+			\item[$\bullet$] $0 < x < 1\Rightarrow x^m > x^n$.
+		\end{enumerate*}
+		\item[(b)] \textit{Cùng số mũ}: $\forall n\in\mathbb{N}^\star$:
+		\begin{enumerate*}
+			\item[$\bullet$] Với $x,y > 0$, nếu $x > y$ thì $x^n > y^n$;
+			\item[$\bullet$] $x > y\Leftrightarrow x^{2n + 1} > y^{2n + 1}$;
+			\item[$\bullet$] $(-x)^{2n} = x^{2n}$;
+			\item[$\bullet$] $(-x)^{2n + 1} = -x^{2n + 1}$.
+		\end{enumerate*} 
+	\end{enumerate*}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 6, p. 9]
+	Chứng minh: Không tồn tại 3 số hữu tỷ $x,y,z$ sao cho $xy = \frac{13}{15}$, $yz = \frac{11}{3}$, $zx = -\frac{3}{13}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 7, p. 9]
+	Tìm $x$ biết $(3^x)^2:3^3 = \frac{1}{243}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 8, p. 9]
+	Tìm $x$ biết: $(3x^2 - 51)^{2n} = (-24)^{2n}$, $n\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{21.}, p. 10]
+	Viết các số sau dưới dạng 1 lũy thừa với số mũ tự nhiên lớn hơn $1$:
+	\begin{enumerate*}
+		\item[(a)] $64$, $81$, $-216$;
+		\item[(b)] $-\frac{1}{27}$, $\frac{8}{729}$, $\frac{16}{625}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{22.}, p. 10]
+	Dùng lũy thừa với số mũ nguyên âm để viết gọn các số sau:
+	\begin{enumerate*}
+		\item[(a)] Đường kính của nguyên tử cỡ $0.000 000 001$\emph{m};
+		\item[(a)] Đường kính của hạt nhân nguyên tử cỡ $0.000 000 000 000 001$\emph{m};
+		\item[(c)] Khối lượng hạt nhân nguyên tử cỡ $0.\underbrace{000\ldots 00}_{\scriptsize 23\mbox{ chữ số } 0}1$ gam.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{23.}, p. 10]
+	Viết các biểu thức sau dưới dạng lũy thừa của 1 số nguyên:
+	\begin{enumerate*}
+		\item[(a)] $12^3:(3^{-4}\cdot 64)$;
+		\item[(b)] $\left(\frac{3}{7}\right)^5\cdot\left(\frac{7}{3}\right)^{-1}\cdot\left(\frac{5}{3}\right)^6:\left(\frac{343}{625}\right)^{-2}$;
+		\item[(c)] $5^4\cdot 125\cdot(2.5)^{-5}\cdot 0.04$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{24.}, p. 10]
+	Cho $A = (ax + by)^2$, $B = (a^2 + b^2)(x^2 + y^2)$. So sánh giá trị của 2 biểu thức $A$ \& $B$ biết: $a = 2$, $b = -1$, $x = \frac{8}{11}$, $y = \frac{-5}{11}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{25.}, p. 10]
+	So sánh $\left(\frac{1}{8}\right)^6$ với $\left(\frac{1}{32}\right)^4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{26.}, p. 10]
+	So sánh $4^{30}$ với $1000\cdot 32^{10}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{27.}, p. 10]
+	Tìm $x$ biết:
+	\begin{enumerate*}
+		\item[(a)] $5^x\cdot(5^3)^2 = 625$;
+		\item[(b)] $\left(\frac{12}{25}\right)^x = \left(\frac{3}{5}\right)^2 - \left(-\frac{3}{5}\right)^4$;
+		\item[(c)] $\left(-\frac{3}{4}\right)^{3x - 1} = \frac{256}{81}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{28.}, p. 10]
+	Tìm $x\in\mathbb{N}$ biết:
+	\begin{enumerate*}
+		\item[(a)] $8 < 2^x\le 2^9:2^5$;
+		\item[(b)] $27 < 81^3:3^x < 243$;
+		\item[(c)] $\left(\frac{2}{5}\right)^x > \left(\frac{5}{2}\right)^{-3}\cdot\left(-\frac{2}{5}\right)^2$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{29.}, p. 10]
+	Tìm $x$ biết:
+	\begin{enumerate*}
+		\item[(a)] $(5x + 1)^2 = \frac{36}{49}$;
+		\item[(b)] $\left(x - \frac{2}{9}\right)^3 = \left(\frac{2}{3}\right)^6$;
+		\item[(c)] $(8x - 1)^{2n + 1} = 5^{2n + 1}$, $n\in\mathbb{N}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{30.}, p. 10]
+	 Tìm $x,y$ biết:
+	 \begin{enumerate*}
+	 	\item[(a)] $x^2 + \left(y - \frac{1}{10}\right)^4 = 0$;
+	 	\item[(b)] $\left(\frac{1}{2}x - 5\right)^{20} + \left(y^2 - \frac{1}{4}\right)^{10}\le 0$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{31.}, p. 10]
+	Tìm $x\in\mathbb{Z}$ biết: $(x - 7)^{x + 1} - (x - 7)^{x + 11} = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{32.}, p. 10]
+	Tìm $x,y$ biết: $x(x - y) = \frac{3}{10}$, $y(x - y) = -\frac{3}{50}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{33.}, p. 11]
+	Tìm:
+	\begin{enumerate*}
+		\item[(a)] Giá trị nhỏ nhất (GTNN) của biểu thức $A = \left(2x + \frac{1}{3}\right)^2 - 1$;
+		\item[(b)] Giá trị lớn nhất (GTLN) của biểu thức $B = -\left(\frac{4}{9}x - \frac{2}{15}\right)^6 + 3$.
+	\end{enumerate*}
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 5, p. 8]
 	\begin{enumerate*}
@@ -669,6 +790,11 @@ Cho các số hữu tỷ $x = \frac{a}{b}$ \& $y = \frac{c}{d}$, $a,b,c,d\in\mat
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{52.}${}^\star$, p. 12]
 	Cho $n$ số $x_1,\ldots,x_n$, mỗi số bằng $1$ hoặc $-1$. Biết tổng của $n$ tích $x_1x_2$, $x_2x_3$, $x_3x_4,\ldots,x_nx_1$ bằng $0$. Chứng minh $n\ \vdots\ 4$.
 \end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Thứ Tự Thực Hiện Các Phép Tính. Quy Tắc Chuyển Vế}
+
 
 %------------------------------------------------------------------------------%
 
