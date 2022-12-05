@@ -57,7 +57,7 @@
 	\textsc{[en]} This text is a collection of problems, from easy to advanced, about rational. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 7, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/rational/NQBH_rational.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}rational $\mathbb{Q}$}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/rational/NQBH_rational.pdf}.}.
 	\vspace{2mm}
 	
-	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về phân thức đại số \& phân thức đại số hữu tỷ. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/rational/NQBH_rational.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}rational $\mathbb{Q}$}.
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về phân thức đại số \& phân thức đại số hữu tỷ. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 7. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/rational/NQBH_rational.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}rational $\mathbb{Q}$}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -85,6 +85,33 @@
 		\item[$\bullet$] $\frac{a}{b} < \frac{a + c}{b + d} < \frac{c}{d}$.
 	\end{enumerate*}'' -- \cite[\S1, pp. 4--5]{Tuyen_Toan_7}
 \end{enumerate*}
+
+Với phân số $\frac{a}{b}$ tối giản, $a,\in\mathbb{Z}$, $b\ne 0$, $\mbox{ƯCLN}(a,b) = 1$ thì các phân số có dạng $\frac{na}{nb}$, $\forall n\in\mathbb{Z}^\star$, đều biểu diễn phân số $\frac{a}{b}$. Để so sánh 2 hay nhiều số hữu tỷ, chuyển chúng về cùng 1 trong 2 dạng: dạng phân số hoặc dạng biểu diễn thập phân, rồi so sánh chúng dựa vào các quy tắc đã học ở Toán 6.
+
+\begin{baitoan}[\cite{Trong_Toan_7_2022}, \textbf{10.}, p. 6]
+	So sánh 2 số hữu tỷ $\frac{a}{b}$ ($a,b\in\mathbb{Z}$, $b\ne 0$) với số $0$ khi $a,b$ cùng dấu \& khi $a,b$ khác dấu.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$a = 0\Rightarrow\frac{a}{b} = 0$, $ab > 0\Rightarrow\frac{a}{b} > 0$, \& $ab < 0\Rightarrow\frac{a}{b} < 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{Trong_Toan_7_2022}, \textbf{11.}, p. 6]
+	Giả sử $x = \frac{a}{m},y = \frac{b}{m},\ (a,b,m\in\mathbb{Z},\,m > 0)$ \& $x < y$. Chứng minh $x < z < y$ với $z\coloneqq\frac{a + b}{2m}$ ($z$ là \emph{trung bình cộng} của $x$ \& $y$, i.e., $z = \frac{x + y}{2}$).
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	$x < y\Rightarrow x + x < x + y < y + y\Rightarrow x < \frac{x + y}{2} < y$, mà $\frac{x + y}{2} = \frac{1}{2}\left(\frac{a}{m} + \frac{b}{m}\right) = \frac{a + b}{2m} = z$, nên $x < z < y$.
+\end{proof}
+
+\begin{baitoan}[\cite{Trong_Toan_7_2022}, \textbf{12.}, p. 6]
+	Tìm $2013$ số hữu tỷ thỏa mãn 3 điều kiện sau:
+	\begin{enumerate*}
+		\item[(a)] Có cùng mẫu;
+		\item[(b)] Tử khác nhau;
+		\item[(c)] Nằm giữa 2 phân số $\frac{-1}{1007}$ \& $\frac{1}{1007}$.
+	\end{enumerate*}
+\end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 1, p. 5]
 	Cho $x = \frac{12}{b - 15}$ với $b\in\mathbb{Z}$. Xác định $b$ để:
@@ -160,7 +187,7 @@
 \end{enumerate*}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 3, p. 7]
-	Tính bằng cách hợp lý (nếu có thể):
+	Tính bằng cách hợp lý (nếu có thể):\\
 	\begin{enumerate*}
 		\item[(a)] $-\frac{5}{18} + \frac{32}{45} - \frac{9}{10}$;
 		\item[(b)] $\left(-\frac{1}{4} + \frac{7}{33} - \frac{5}{3}\right) - \left(-\frac{15}{12} + \frac{6}{11} - \frac{48}{49}\right)$.
