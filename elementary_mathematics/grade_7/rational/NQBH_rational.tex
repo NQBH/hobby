@@ -160,7 +160,7 @@
 \end{enumerate*}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 3, p. 7]
-	Thực hiện các phép tính bằng cách hợp lý (nếu có thể):
+	Tính bằng cách hợp lý (nếu có thể):
 	\begin{enumerate*}
 		\item[(a)] $-\frac{5}{18} + \frac{32}{45} - \frac{9}{10}$;
 		\item[(b)] $\left(-\frac{1}{4} + \frac{7}{33} - \frac{5}{3}\right) - \left(-\frac{15}{12} + \frac{6}{11} - \frac{48}{49}\right)$.
@@ -187,7 +187,7 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{10.}, p. 7]
-	Thực hiện các phép tính bằng cách hợp lý:\\
+	Tính bằng cách hợp lý:\\
 	\begin{enumerate*}
 		\item[(a)] $\frac{11}{125} - \frac{17}{18} - \frac{5}{7} + \frac{4}{9} + \frac{17}{14}$;
 		\item[(b)] $1 - \frac{1}{2} + 2 - \frac{2}{3} + 3 - \frac{3}{4} + 4 - \frac{1}{4} - 3 - \frac{1}{3} - 2 - \frac{1}{2} - 1$.
@@ -215,7 +215,7 @@
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{15.}, p. 8]
-	Thực hiện các phép tính sau bằng cách hợp lý nhất:
+	Tính sau bằng cách hợp lý nhất:
 	\begin{enumerate*}
 		\item[(a)] $\left(-\frac{40}{51}\cdot 0.32\cdot\frac{17}{20}\right):\frac{64}{75}$;
 		\item[(b)] $-\frac{10}{11}\cdot\frac{8}{9} + \frac{7}{18}\cdot\frac{10}{11}$;
@@ -471,7 +471,7 @@
 	\begin{enumerate*}
 		\item[(a)] Đường kính của nguyên tử cỡ $0.000 000 001$\emph{m};
 		\item[(a)] Đường kính của hạt nhân nguyên tử cỡ $0.000 000 000 000 001$\emph{m};
-		\item[(c)] Khối lượng hạt nhân nguyên tử cỡ $0.\underbrace{000\ldots 00}_{\scriptsize 23\mbox{ chữ số } 0}1$ gam.
+		\item[(c)] Khối lượng hạt nhân nguyên tử cỡ $0.\underbrace{000\ldots 00}_{\scriptsize 23\mbox{ số } 0}1$ gam.
 	\end{enumerate*}
 \end{baitoan}
 
@@ -848,6 +848,101 @@
 %------------------------------------------------------------------------------%
 
 \subsection{Biểu Diễn Thập Phân của Số Hữu Tỷ}
+``\begin{enumerate*}
+	\item[\textbf{1.}] Số thập phân hữu hạn \& số thập phân vô hạn tuần hoàn:
+	\begin{enumerate*}
+		\item[$\bullet$] Xét phép chia $47:20 = 2.35$. Số thập phân $2.35$ chỉ có 2 chữ số sau dấu phẩy được gọi là \textit{số thập phân hữu hạn}.
+		\item[$\bullet$] Xét phép chia $49:30 = 1.63333\ldots$. Trong phần thập phân của thương, chữ số $3$ xuất hiện liên tiếp mãi. Ta nói số thập phân $1.63333\ldots$ là \textit{số thập phân vô hạn tuần hoàn} có chu kỳ là $3$ \& viết gọn $1.63333\ldots = 1.6(3)$. Chu kỳ của 1 số thập phân vô hạn tuần hoàn có thể có 1 chữ số hoặc nhiều chữ số, có thể bắt đầu ngay sau dấu phẩy hoặc không bắt đầu ngay sau dấu phẩy.
+	\end{enumerate*}
+	\item[\textbf{2.}] \textit{Biểu diễn thập phân của số hữu tỷ}: Mỗi số hữu tỷ được biểu diễn bởi 1 số thập phân hữu hạn hoặc vô hạn tuần hoàn. Ngược lại, mỗi số thập phân hữu hạn hoặc vô hạn tuần hoàn biểu diễn 1 số hữu tỷ.
+	\begin{enumerate*}
+		\item[$\bullet$] Các phân số tối giản với mẫu dương mà mẫu không có ước nguyên tố khác $2$ \& $5$ thì viết được dưới dạng số thập phân hữu hạn.
+		\item[$\bullet$] Các phân số tối giản với mẫu dương mà mẫu có ước nguyên tố khác $2$ \& $5$ thì được viết dưới dạng số thập phân vô hạn tuần hoàn.
+	\end{enumerate*}
+	\item[\textbf{3.}] $\frac{1}{9} = 0.111\ldots = 0.(1)$, $\frac{1}{99} = 0.0101\ldots = 0.(01)$, $\frac{1}{999} = 0.001001\ldots = 0.(001)$. Ta thừa nhận kết quả sau: $0.(1) = \frac{1}{9}$, $0.(01) = \frac{1}{99}$, $0.(001) = \frac{1}{999}$.'' -- \cite[\S5, pp. 12--13]{Tuyen_Toan_7}
+\end{enumerate*}
+
+Tổng quát,
+\begin{align*}
+	0.(\underbrace{0\ldots 0}_{\scriptsize n\mbox{ số } 0}1) = \frac{1}{\underbrace{9\ldots 9}_{\scriptsize n + 1\mbox{ số } 9}},\ \forall n\in\mathbb{N}.
+\end{align*}
+
+\begin{proof}[Chứng minh]
+	$\forall n\in\mathbb{N}$, đặt $a_n = 0.(\underbrace{0\ldots 0}_{\scriptsize n\mbox{ số } 0}1)$. Có $10^{n+1}a_n = 1.(\underbrace{0\ldots 0}_{\scriptsize n\mbox{ số } 0}1) = 1 + 0.(\underbrace{0\ldots 0}_{\scriptsize n\mbox{ số } 0}1) = 1 + a_n\Leftrightarrow(10^{n+1} - 1)a_n = 1\Leftrightarrow a_n = \dfrac{1}{10^{n+1} - 1} = \dfrac{1}{1\underbrace{0\ldots 0}_{\scriptsize n + 1\mbox{ số } 0}}= \dfrac{1}{\underbrace{9\ldots 9}_{\scriptsize n + 1\mbox{ số } 9}}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 12, p. 13]
+	Viết các số thập phân sau dưới dạng phân số tối giản:
+	\begin{enumerate*}
+		\item[(a)] $0.555$;
+		\item[(b)] $0.555\ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{luuy}[Số thập phân vô hạn tuần hoàn đơn]
+	``Các số $0.555\ldots$, $4.272727\ldots$ là những số thập phân vô hạn tuần hoàn có chu kỳ ngay sau dấu phẩy gọi là \emph{số thập phân vô hạn tuần hoàn đơn}.'' -- \cite[p. 13]{Tuyen_Toan_7}
+\end{luuy}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 13, p. 13]
+	Viết số thập phân $0.25454\ldots$ dưới dạng phân số tối giản.
+\end{baitoan}
+
+\begin{luuy}[Số thập phân vô hạn tuần hoàn tạp]
+	Số $0.25454\ldots$ có chu kỳ không bắt đầu ngay sau dấu phẩy gọi là \emph{số thập phân vô hạn tuần hoàn tạp}. Để viết các số thập phân vô hạn tuần hoàn tạp dưới dạng phân số tối giản, trước hết phải đưa chúng về dạng vô hạn tuần hoàn đơn.'' -- \cite[p. 13]{Tuyen_Toan_7}
+\end{luuy}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 14, p. 13]
+	Tính: $1.(6)\cdot 2.(3):0.(7)$.
+\end{baitoan}
+\noindent\textit{Cách giải}: ``Trước hết viết các số thập phân vô hạn tuần hoàn dưới dạng phân số tối giản rồi làm các phép tính đối với phân số.'' -- \cite[p. 13]{Tuyen_Toan_7}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{41.}, p. 14]
+	Không làm phép chia, cho biết trong các phân số sau, phân số nào viết được dưới dạng số thập phân hữu hạn, phân số nào viết được dưới dạng số thập phân vô hạn tuần hoàn? $\frac{7}{32}$, $\frac{2}{35}$, $\frac{6}{75}$, $\frac{-35}{42}$, $\frac{3^2}{11^2 - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{42.}, p. 14]
+	Viết các số thập phân vô hạn tuần hoàn đơn dưới dạng phân số tối giản:
+	\begin{enumerate*}
+		\item[(a)] $0.333\ldots$;
+		\item[(b)] $0.454545\ldots$;
+		\item[(c)] $0.162162\ldots$;
+		\item[(d)] $5.272727\ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{43.}, p. 14]
+	Viết các số thập phân vô hạn tuần hoàn tạp dưới dạng phân số tối giản:
+	\begin{enumerate*}
+		\item[(a)] $0.7666\ldots$;
+		\item[(b)] $0.507575\ldots$;
+		\item[(c)] $1.2148148\ldots$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{44.}, p. 14]
+	Tính:\\
+	\begin{enumerate*}
+		\item[(a)] $0.2777\ldots 0.3555\ldots$;
+		\item[(b)] $1.5454\ldots - 0.8181\ldots - 0.75$;
+		\item[(c)] $1:10.2(6):0.41(6)\cdot 0.42(7)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{45.}, p. 14]
+	Cho $x$ \& $y$ là các số nguyên tố. Tìm $x$ \& $y$ để các phân số sau viết được dưới dạng số thập phân hữu hạn:
+	\begin{enumerate*}
+		\item[(a)] $P = \frac{x}{3\cdot 5\cdot y}$;
+		\item[(b)] $Q = \frac{15x}{14y}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{46.}, p. 14]
+	Tìm 1 phân số dương tối giản nhỏ hơn $1$, biết khi chia tử cho mẫu ta được 1 số thập phân vô hạn tuần hoàn đơn chu kỳ có $3$ chữ số \& phân số này bằng lập phương của 1 phân số khác.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Phần Nguyên, Phần Lẻ của 1 Số Hữu Tỷ}
 
 %------------------------------------------------------------------------------%
 
