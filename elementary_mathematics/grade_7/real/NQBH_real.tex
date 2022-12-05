@@ -23,7 +23,7 @@
 \newtheorem{notation}{Notation}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{baitoan}{Bài toán}
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
@@ -57,7 +57,7 @@
 	\textsc{[en]} This text is a collection of problems, from easy to advanced, about real. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 7, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}real $\mathbb{R}$}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}.}.
 	\vspace{2mm}
 	
-	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về phân thức đại số \& phân thức đại số thực. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 7. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}real $\mathbb{Q}$}.
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về phân thức đại số \& phân thức đại số thực. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 7. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}real $\mathbb{R}$}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -67,13 +67,64 @@
 
 \section{Problem}
 
-\begin{baitoan}
-	Chứng minh: $(x^2 + m^2)(x^2 + n^2) = 0\Leftrightarrow x^2 + m^2n^2 = 0$ \& $(x^2 + m^2)(x^2 + n^2)\ne 0\Leftrightarrow x^2 + m^2n^2\ne 0$, $\forall x,m,n\in\mathbb{R}$.
-\end{baitoan}
-\textit{Ý nghĩa}: Điều kiện để các công thức nhân chia lũy thừa cùng cơ số xác định.
+\subsection{Số Vô Tỷ. Căn Bậc 2 Số Học}
 
-\subsection{Số Vô Tỷ. Căn Bậc 2. Số Thực}
+\begin{dinhnghia}[Số vô tỷ]
+	``\emph{Số vô tỷ} là số viết được dưới dạng số thập phân vô hạn không tuần hoàn.
+\end{dinhnghia}
+
+\begin{dinhnghia}[Căn bậc 2 số học]
+	\emph{Căn bậc 2 số học} của số $a\ge 0$ là số $x\ge 0$ sao cho $x^2 = a$.
+\end{dinhnghia}
+Căn bậc 2 số học của số $a$ ký hiệu là $\sqrt{2}$. Căn bậc 2 số học của $0$ là số $0$, viết là $\sqrt{0} = 0$. Nếu số nguyên dương $a$ không phải là bình phương của bất kỳ số nguyên dương nào thì $\sqrt{a}$ là 1 số vô tỷ. Như vậy $\sqrt{2},\sqrt{3},\sqrt{5},\sqrt{6},\ldots$ đều là số vô tỷ. $\sqrt{2}$ là độ dài đường chéo của hình vuông có độ dài cạnh bằng $1$.'' -- \cite[Chap. 2, \S1, p. 19]{Tuyen_Toan_7}
+
 ``Mọi số hữu tỷ đều biểu diễn được dưới dạng số thập phân hữu hạn hoặc vô hạn tuần hoàn. Ngược lại, mỗi số thập phân hữu hạn hoặc vô hạn tuần hoàn đều biểu diễn 1 số hữu tỷ. Số vô tỷ là số viết được dưới dạng số thập phân vô hạn không tuần hoàn. Tập hợp các số thực $\mathbb{R}$ bao gồm tập hợp số hữu tỷ $\mathbb{Q}$ \& tập hợp số vô tỷ $\mathbb{I}$. Cho số $a$ không âm. Căn bậc 2 của $a$ là số $x$ mà $x^2 = a$. Căn bậc 2 không âm của $a$ ký hiệu là $\sqrt{a}$. Nếu $n\in\mathbb{N}$ không là số chính phương thì $\sqrt{n}$ là số vô tỷ.'' -- \cite[\S7]{Binh_Toan_7_tap_1}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 20, p. 19]
+	Tính độ dài mỗi cạnh của 1 sân hình vuông có diện tích lần lượt là $16{\rm m}^2$, $6.25{\rm m}^2$, $6{\rm m}^2$. Trong mỗi trường hợp, cho biết độ dài mỗi cạnh được biểu diễn bằng số hữu tỷ hay vô tỷ?\hfill\textsf{Ans:} (a) $4\in\mathbb{Q}$. (b) $2.5\in\mathbb{Q}$. (c) $\sqrt{6}\in\mathbb{R}\backslash\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 21, p. 19]
+	Cho $A = \frac{5}{\sqrt{x} - 3}$. Tìm số chính phương $x$ để biểu thức $A$ có giá trị nguyên.\\\mbox{}\hfill\textsf{Ans:} $4$, $16$, $64$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{69.}, p. 19]
+	Tính:
+	\begin{enumerate*}
+		\item[(a)] $\sqrt{(-5)^2} + \sqrt{5^2} - \sqrt{(-3)^2} - \sqrt{3^2}$;
+		\item[(b)] $\left[\sqrt{4^2} + \sqrt{(-4)^2}\right]\cdot\sqrt{\frac{1}{4^3}} - \sqrt{\frac{1}{3^4}}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{70.}, pp. 19--20]
+	Tìm $x > 0$ biết:
+	\begin{enumerate*}
+		\item[(a)] $4x^2 - 1 = 0$;
+		\item[(b)] $2x^2 + 0.82 = 1$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{71.}, p. 20]
+	Tìm $x\ge 0$ biết:
+	\begin{enumerate*}
+		\item[(a)] $7 - \sqrt{x} = 0$;
+		\item[(b)] $3\sqrt{x} + 1 = 40$;
+		\item[(c)] $\frac{5}{12}\sqrt{x} - \frac{1}{6} = \frac{1}{3}$;
+		\item[(d)] $\sqrt{x + 1} + 2 = 0$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{72.}, p. 20]
+	Cho $M = \sqrt{\sqrt{x} - 1}{2}$. Tìm số chính phương $x < 50$ để $M$ có giá trị nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{73.}, p. 20]
+	Cho $N = \sqrt{9}{\sqrt{x} - 5}$. Tìm số chính phương $x$ để $N$ có giá trị nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{74.}, p. 20]
+	Bên trong 1 hình vuông cạnh $5$ có $76$ điểm. Chứng minh: Tồn tại $4$ điểm trong các điểm đó thuộc 1 hình tròn có bán kính là $\frac{3}{4}$.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S7, Ví dụ 11]
 	Chứng minh:
@@ -126,7 +177,82 @@
 
 %------------------------------------------------------------------------------%
 
-\subsection{Giá Trị Tuyệt Đối của 1 Biểu Thức}
+\subsection{Tập Hợp $\mathbb{R}$ Các Số Thực}
+``\begin{enumerate*}
+	\item[\textbf{1.}] Số hữu tỷ \& số vô tỷ được gọi chung là \textit{số thực}. Tập hợp các số thực ký hiệu là $\mathbb{R}$. Mỗi số thực được biểu diễn bởi 1 điểm trên trục số. Ngược lại mỗi điểm trên trục số biểu diễn 1 số thực.
+	\item[\textbf{2.}] \textit{Số đối của 1 số thực}: Trên trục số, 2 số thực phân biệt có điểm biểu diễn nằm về 2 phía gốc $O$ \& cách đều điểm $O$ được gọi là \textit{2 số đối nhau}. Số đối của số thực $a$ ký hiệu là $-a$. Số đối của $0$ là $0$.
+	\item[\textbf{3.}] \textit{So sánh 2 số thực}: Có thể so sánh 2 số thực tương tự như so sánh 2 số hữu tỷ viết dưới dạng số thập phân.
+	\begin{enumerate*}
+		\item[$\bullet$] Số thực lớn hơn $0$ gọi là \textit{số thực dương}.
+		\item[$\bullet$] Số thực nhỏ hơn $0$ gọi là \textit{số thực âm}.
+		\item[$\bullet$] Nếu $a < b$ \& $b < c$ thì $a < c$.
+		\item[$\bullet$] Đặc biệt nếu $0 < a < b$ thì $\sqrt{a} < \sqrt{b}$.
+	\end{enumerate*}
+	\item[\textbf{4.}] Trong tập hợp các số thực cũng có các phép tính cộng, trừ, nhân, chia, lũy thừa với số mũ tự nhiên với các tính chất tương tự như các phép tính trong tập hợp các số hữu tỷ. Thứ tự thực hiện các phép tính, quy tắc chuyển vế, quy tắc dấu ngoặc trong tập hợp số thực cũng giống như trong tập hợp số hữu tỷ.'' -- \cite[Chap. 2, \S2, p. 20]{Tuyen_Toan_7}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 22, p. 20]
+	Không dùng bảng số hoặc máy tính, so sánh $\sqrt{50 + 2}$ \& $\sqrt{50} + \sqrt{2}$.
+\end{baitoan}
+\noindent\textit{Hint.} Tìm các số chính phương gần với các số đã cho dưới dấu căn để loại bỏ căn thức.
+
+\begin{proof}[Giải]
+	$\sqrt{50} + \sqrt{2} > \sqrt{49} + \sqrt{1} = 7 + 1 = 8 = \sqrt{64} > \sqrt{52} = \sqrt{50 + 2}$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_7}, Ví dụ 22, p. 20]
+	So sánh $\sqrt{a + b}$ \& $\sqrt{a} + \sqrt{b}$, với $a,b\ge 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{75.}, p. 21]
+	Tìm $x$ biết: $6\sqrt{x} + \sqrt{12.25} = 8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{76.}, p. 21]
+	So sánh:
+	\begin{enumerate*}
+		\item[(a)] $4\frac{8}{33}$ \& $3\sqrt{2}$;
+		\item[(b)] $5\sqrt{(-10)^2}$ \& $10\sqrt{(-5)^2}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{77.}, p. 21]
+	Không dùng bảng số hoặc máy tính, so sánh:
+	\begin{enumerate*}
+		\item[(a)] $\sqrt{26} + \sqrt{17}$ \& $9$.
+		\item[(b)] $\sqrt{8} - \sqrt{5}$ \& $1$;
+		\item[(c)] $\sqrt{63 - 27}$ \& $\sqrt{63} - \sqrt{27}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_7}, \textbf{77.}, p. 21]
+	So sánh $\sqrt{a - b}$ \& $\sqrt{a} - \sqrt{b}$ với $a\ge b\ge 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{78.}, p. 21]
+	So sánh $A$ \& $B$ biết: $A = \sqrt{225} - \frac{1}{\sqrt{5}} - 1$, $B = \sqrt{196} - \frac{1}{\sqrt{6}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{79.}, p. 21]
+	Cho $P = \frac{1}{2} + \sqrt{x}$, $Q = 7 - 2\sqrt{x - 1}$. Tìm:
+	\begin{enumerate*}
+		\item[(a)] Giá trị nhỏ nhất của $P$;
+		\item[(b)] Giá trị lớn nhất của $Q$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{80.}, p. 21]
+	Xét xem các số $x$ \& $y$ có thể là số vô tỷ không nếu biết:
+	\begin{enumerate*}
+		\item[(a)] $x + y$ \& $x - y$ đều là số hữu tỷ;
+		\item[(b)] $x + y$ \& $\frac{x}{y}$ đều là số hữu tỷ.
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Giá Trị Tuyệt Đối của  Số Thực \& Biểu Thức}
+
 \begin{dinhnghia}[Giá trị tuyệt đối]
 	``\emph{Giá trị tuyệt đối} của 1 số $a$, ký hiệu $|a|$, là số đo của khoảng cách từ điểm $a$ đến điểm gốc trên trục số.
 \end{dinhnghia}
