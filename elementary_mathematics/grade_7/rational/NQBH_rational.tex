@@ -943,6 +943,126 @@ Tổng quát,
 %------------------------------------------------------------------------------%
 
 \subsection{Phần Nguyên, Phần Lẻ của 1 Số Hữu Tỷ}
+``\begin{enumerate*}
+	\item[\textbf{1.}] \textit{Phần nguyên} của $x\in\mathbb{Q}$, ký hiệu $\lfloor x\rfloor$ là số nguyên lớn nhất không vượt quá $x$. Như vậy $\lfloor x\rfloor$ là 1 số nguyên sao cho: $\lfloor x\rfloor\le x < \lfloor x\rfloor + 1$. Khi $x\in\mathbb{Z}$ thì $\lfloor x\rfloor = x$. E.g., $\lfloor 8.9\rfloor = 8$, $\lfloor-3.2\rfloor = -4$, $\lfloor-2\rfloor = -2$.
+	\item[\textbf{2.}] \textit{Phần lẻ} của 1 số hữu tỷ $x\in\mathbb{Q}$, ký hiệu $\{x\}$ \& $\{x\} = x - \lfloor x\rfloor$. Như vậy $\{x\}$ là 1 số hữu tỷ sao cho $0\le\{x\} < 1$. Khi $x\in\mathbb{Z}$ thì $\{x\} = 0$. E.g., $\{8.9\} = 8.9 - \lfloor 8.9\rfloor = 8.9 - 8 = 0.9$, $\{-3.2\} = -3.2 - \lfloor-3.2\rfloor = -3.2 -(-4) = 0.8$, $\{-2\} = -2 - \lfloor-2\rfloor = -2 -(-2) = 0$.
+	\item[\textbf{3.}] Tính chất quan trọng để tìm phần nguyên của 1 số hữu tỷ: Nếu số hữu tỷ $x$ bị ``kẹp giữa'' 2 số nguyên liên tiếp thì $\lfloor x\rfloor$ bằng số nhỏ hơn trong 2 số đó. Nếu $a\le x < a + 1$, $a\in\mathbb{Z}$ thì $\lfloor x\rfloor = a$.
+	\item[\textbf{4.}] Với khái niệm phần nguyên, ta có thể trình bày nguyên lý Dirichlet 1 cách tổng quát như sau: Nếu nhốt $a$ con thỏ vào $b$ chiếc chuồng mà phép chia $\frac{a}{b}$ còn dư thì tồn tại 1 chuồng nhốt $\lfloor\frac{a}{b}\rfloor + 1$ con thỏ trở lên.'' -- \cite[\S6, pp. 14--15]{Tuyen_Toan_7}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 15, p. 15]
+	Tìm $\lfloor x\rfloor$ biết $x < 9 < x + 0.4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 16, p. 15]
+	Tìm $\lfloor x\rfloor$ biết $\lfloor\frac{x}{3}\rfloor = -5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 17, p. 15]
+	Tích $A = 1000! = \prod_{i=1}^{1000} = 1\cdot 2\cdot 3\cdots 1000$ có bao nhiêu thừa số $3$ khi phân tích ra thừa số nguyên tố?
+\end{baitoan}
+``Tổng quát, số thừa số nguyên tố $p$ khi phân tích $A = n! = \prod_{i=1}^n i = 1\cdot 2\cdot 3\cdots n$ ra thừa số nguyên tố là: $\sum_{i=1}^k \lfloor\frac{n}{p^i}\rfloor = \lfloor\frac{n}{p}\rfloor + \lfloor\frac{n}{p^2}\rfloor + \cdots \lfloor\frac{n}{p^k}\rfloor$ với $k$ là số mũ lớn nhất sao cho $p^k\le n$.'' -- \cite[p. 15]{Tuyen_Toan_7} 
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{47.}, p. 16]
+	Tìm phần nguyên, phần lẻ của $x\in\mathbb{Q}$ biết:
+	\begin{enumerate*}
+		\item[(a)] $x = -3$;
+		\item[(b)] $x = 6.1$;
+		\item[(c)] $x = -\frac{6}{5}$;
+		\item[(d)] $x = \frac{1}{8}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{48.}, p. 16]
+	Tìm $\lfloor x\rfloor$ của $x\in\mathbb{Q}$ biết:
+	\begin{enumerate*}
+		\item[(a)] $13 < x < 13.4$;
+		\item[(b)] $-9.2 < x < -9$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{49.}, p. 16]
+	So sánh phần nguyên của các số hữu tỷ sau:
+	\begin{enumerate*}
+		\item[(a)] $x = \frac{25}{8}$, $y  = \frac{24}{6}$, $z = \frac{23}{7}$;
+		\item[(b)] $x = -3\frac{1}{9}$, $y = -3\frac{8}{9}$, $z = -4$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{50.}, p. 16]
+	Cho $x\in\mathbb{Z}$, $y\in\mathbb{Q}$. So sánh $\{x\}$ \& $\{y\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{51.}, p. 16]
+	Tìm $\lfloor x\rfloor$ của $x\in\mathbb{Q}$ biết:
+	\begin{enumerate*}
+		\item[(a)] $x - 0.7 < 8 < x$;
+		\item[(b)] $x < -5 < x + \frac{1}{3}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{52.}, p. 16]
+	Tính:
+	\begin{enumerate*}
+		\item[(a)] $\lfloor\frac{12}{2}\rfloor + \lfloor\frac{13}{2}\rfloor$;
+		\item[(b)] $\lfloor\frac{12}{3}\rfloor + \lfloor\frac{13}{3}\rfloor + \lfloor\frac{14}{3}\rfloor$;
+		\item[(c)] $\lfloor\frac{-12}{3}\rfloor + \lfloor\frac{-13}{3}\rfloor + \lfloor\frac{-14}{3}\rfloor$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{53.}, p. 16]
+	Cho $A = \lfloor\frac{n}{2}\rfloor + \lfloor\frac{n + 1}{2}\rfloor$, $B = \lfloor\frac{n}{3}\rfloor + \lfloor\frac{n + 1}{3}\rfloor + \lfloor\frac{n + 2}{3}\rfloor$ với giá trị nào của $n\in\mathbb{Z}$ thì:
+	\begin{enumerate*}
+		\item[(a)] $A\divby 2$;
+		\item[(b)] $B\divby 3$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{54.}, p. 16]
+	Tìm $x$ biết:
+	\begin{enumerate*}
+		\item[(a)] $\lfloor 2x\rfloor = -1$;
+		\item[(b)] $\lfloor x + 0.4\rfloor = 3$;
+		\item[(c)] $\lfloor\frac{2}{3}x - 5\rfloor = 3$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{55.}, p. 16]
+	Chứng ming: $\lfloor x + y\rfloor = \lfloor x\rfloor + \lfloor y\rfloor$, $\forall x,y\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{56.}, p. 16]
+	Tìm $x$ biết:
+	\begin{enumerate*}
+		\item[(a)] $\lfloor 3x - 4\rfloor = x$;
+		\item[(b)] $\lfloor x + 8\rfloor = -3x$;
+		\item[(c)] $\lfloor 5x - 3\rfloor = 2x + 1$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{57.}, p. 16]
+	Tích $C = \prod_{i=201}^{600}$ có bao nhiêu thừa số $3$ khi phân tích ra thừa số nguyên tố?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{58.}, p. 16]
+	Số $300!$ có tận cùng bằng bao nhiêu chữ số $0$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{59.}, p. 16]
+	1 lớp học có $44$ học sinh làm bài kiểm tra Toán. Điểm số là 1 số tự nhiên từ $6$ đến $10$. Biết cả lớp có $6$ học sinh được điểm $10$. Chứng minh: Ít nhất cũng có $10$ học sinh có cùng 1 loại điểm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{60.}, p. 16]
+	1 tổ $11$ học sinh thảo luận về học tập. Có 1 học sinh phát biểu $4$ lần, các học sinh khác đều phát biểu nhưng số lần phát biểu ít hơn. Chứng minh: Ít nhất cũng có $4$ học sinh có số lần phát biểu như nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{61.}, p. 16]
+	Có $50$ quyển vở chia cho $11$ học sinh. Chứng minh:
+	\begin{enumerate*}
+		\item[(a)] Ít nhất cũng có 1 học sinh được $5$ quyển trở lên.
+		\item[(b)] Với mọi cách chia (kể cả trường hợp có học sinh không được quyển nào) bao giờ cũng có ít nhất $2$ học sinh được số quyển vở như nhau.
+	\end{enumerate*}
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
