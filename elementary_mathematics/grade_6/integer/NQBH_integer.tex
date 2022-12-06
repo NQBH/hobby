@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Integer -- Số Nguyên $\mathbb{Z}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about integer. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/integer/NQBH_integer.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}integer $\mathbb{Z}$}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/integer/NQBH_integer.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về số nguyên. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/integer/NQBH_integer.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}integer $\mathbb{Z}$}.
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Số Nguyên}
+``Tập hợp $\mathbb{Z}$ các số nguyên gồm các số tự nhiên \& các số $-1,-2,-3,\ldots$. $\mathbb{Z} = \{\ldots,-3,-2,-1,0,1,2,3,\ldots\}$. Ta xác định trên $\mathbb{Z}$ 1 thứ tự như sau: $a < b$ khi \& chỉ khi điểm $a$ ở bên trái điểm $b$ trên trục số ($a,b\in\mathbb{Z}$). Ta xác định trên $\mathbb{Z}$ 2 phép toán: phép cộng \& phép nhân. Phép cộng có 4 tính chất: giao hoán, kết hợp, cộng với số $0$, cộng với số đối. Phép nhân có 3 tính chất: giao hoán, kết hợp, nhân với số $1$. Giữa phép nhân \& phép cộng có quan hệ: phép nhân phân phối đối với phép cộng. Giữa thứ tự \& phép toán có quan hệ: $a < b\Rightarrow a + c < b + c$, $a < b\Rightarrow ac < bc$ với $c > 0$, $ac > bc$ với $c < 0$. Trừ đi 1 số là cộng với số đối của số trừ. Phép trừ 2 số nguyên bao giờ cũng thực hiện được\footnote{Phép trừ 2 số tự nhiên sẽ không thực hiện được (i.e., kết quả không phải là 1 số tự nhiên, hay không còn nằm trong $\mathbb{N}$) nếu số bị trừ nhỏ hơn số trừ.}. Phép chia chỉ thực hiện được trong phạm vi số nguyên khi số bị chia chia hết cho số chia. Trong trường hợp $a\divby b$, ta nói: $a$ là \textit{bội} của $b$ \& $b$ là \textit{ước} của $a$. \textit{Ước chung} (hoặc \textit{bội chung}) của 2 hay nhiều số là ước (hoặc bội) của tất cả các số đó.'' -- \cite[Chap. II, p. 41]{Binh_Toan_6_tap_1}
+
+%------------------------------------------------------------------------------%
+
+\subsection{Thứ Tự Trên $\mathbb{Z}$}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 48, p. 41]
+	Cho $a\in\mathbb{Z}$. Gọi khoảng cách từ điểm $a$ đến điểm gốc trên trục số là \emph{giá trị tuyệt đối} của số $a$ \& ký hiệu là $|a|$. Điền vào chỗ trống các dấu $\ge,\le,>,<,=$ để các khẳng định sau là đúng:
+	\begin{enumerate*}
+		\item[(a)] $|a|\ldots a$, $\forall a\in\mathbb{Z}$.
+		\item[(a)] $|a|\ldots 0$, $\forall a\in\mathbb{Z}$.
+		\item[(c)] Nếu $a > 0$ thì $a\ldots|a|$.
+		\item[(d)] Nếu $a = 0$ thì $a\ldots|a|$.
+		\item[(e)] Nếu $a < 0$ thì $a\ldots|a|$.
+	\end{enumerate*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
