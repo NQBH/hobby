@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Natural -- Số Tự Nhiên $\mathbb{N}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about natural. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/NQBH_natural.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}natural $\mathbb{N}$}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/NQBH_natural.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về số tự nhiên. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/NQBH_natural.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}natural $\mathbb{N}$}.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Tập Hợp $\mathbb{N}$ Các Số Tự Nhiên}
+``Tập hợp các số $0,1,2,3,\ldots$ gọi là tập hợp $\mathbb{N}$ các số tự nhiên. Ta xác định trên $\mathbb{N}$ 1 thứ tự như sau:
+\begin{enumerate*}
+	\item[(a)] $0$ là số tự nhiên nhỏ nhất;
+	\item[(b)] $a < b$ khi \& chỉ khi $a$ ở bên trái điểm $b$ trên tia số nằm ngang.
+\end{enumerate*}
+Để dễ dàng ghi \& đọc các số tự nhiên, người ta dùng hệ ghi số: Khi được 1 số đơn vị nhất định ở 1 hàng, ta thay nó bằng 1 đơn vị ở hàng liền trước nó. Hệ ghi số thường dùng nhất là \textit{hệ thập phân}. Trong hệ thập phân, người ta dùng 10 ký hiệu để ghi nó, đó là các chữ số $0,1,2,\ldots,9$ \& cứ 10 đơn vị ở 1 hàng thì làm thành 1 đơn vị ở hàng liền trước nó. Trong hệ thập phân, có: $\overline{ab} = 10a + b$, $\overline{abc} = 100a + 10b + c = 10^2a + 10b + c$, $\overline{a_na_{n-1}\ldots a_2a_1a_0} = \sum_{i=0}^n 10^ia_i = 10^na_n + 10^{n-1}a_{n-1} + \cdots + 10^2a_2 + 10a_1 + a_0$.'' -- \cite[p. 4]{Binh_Toan_6_tap_1}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 1, p. 4]
+	Viết các tập hợp sau rồi tìm số phần tử của mỗi tập hợp đó:
+	\begin{enumerate*}
+		\item[(a)] Tập hợp $A$ các số tự nhiên $x$ mà $8:x = 2$.
+		\item[(b)] Tập hợp $B$ các số tự nhiên $x$ mà $x + 3 < 5$.
+		\item[(c)] Tập hợp $C$ các số tự nhiên $x$ mà $x - 2 = x + 2$.
+		\item[(d)] Tập hợp $D$ các số tự nhiên $x$ mà $x:2 = x:4$.
+		\item[(e)] Tập hợp $E$ các số tự nhiên $x$ mà $x + 0 = x$.
+	\end{enumerate*}\\\mbox{}\hfill\textsf{Ans:} (a) $\{4\}$. (b) $\{0,1\}$. (c) $\emptyset$. (d) $\{0\}$. (e) $\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 2, p. 5]
+	Viết các tập hợp sau bằng cách liệt kê các phần tử của nó:
+	\begin{enumerate*}
+		\item[(a)] Tập hợp $A$ các số tự nhiên có 2 chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là $2$.
+		\item[(b)] Tập hợp $B$ các số tự nhiên có 3 chữ số mà tổng các chữ số bằng $3$.
+	\end{enumerate*}\hfill\textsf{Ans:} (a) $\{20,31,42,53,64,75,86,97\}$. (b) $\{300,201,210,102,111,120\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 5]
+	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm chữ số $2$ vào đằng sau số đó thì được số lớn gấp 3 lần số có được bằng cách viết thêm chữ số $2$ vào đằng trước số đó.\hfill\textsf{Ans:} $85714$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 5]
+	Tìm số tự nhiên nhỏ nhất có chữ số đầu tiên ở bên trái là $2$, khi chuyển chữ số $2$ này xuống cuối cùng thì số đó tăng gấp 3 lần.\hfill\textsf{Ans:} $285714$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Mở rộng Ví dụ 3, p. 6]
+	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm 1 chữ số vào đằng sau số đó thì được số lớn gấp 3 lần số có được nếu viết thêm chính chữ số ấy vào đằng trước số đó.\hfill\textsf{Ans:} $85714$.
+\end{baitoan}
+Bài tập phụ thuộc hình vẽ: \cite[\textbf{1.}, p. 6]{Binh_Toan_6_tap_1}.
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{2.}, p. 6]
+	Xác định các tập hợp sau bằng cách chỉ ra tính chất đặc trưng của các phần tử thuộc tập hợp đó:
+	\begin{enumerate*}
+		\item[(a)] $A = \{1,3,5,7,\ldots,49\}$;
+		\item[(b)] $B = \{11,22,33,44,\ldots,99\}$;\\
+		\item[(c)] $C = \{\mbox{tháng } 1,\mbox{tháng } 3,\mbox{tháng } 5,\mbox{tháng } 7,\mbox{tháng } 8,\mbox{tháng } 10,\mbox{tháng } 12\}$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{3.}, p. 6]
+	Tìm tập hợp các số tự nhiên $x$ sao cho:
+	\begin{enumerate*}
+		\item[(a)] $x + 3 = 4$;
+		\item[(b)] $8 - x = 5$;
+		\item[(c)] $x:2 = 0$;
+		\item[(d)] $0:x = 0$;
+		\item[(e)] $5x = 12$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{4.}, p. 6]
+	Tìm $a,b\in\mathbb{N}$ sao cho $12 < a < b < 16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{5.}, p. 6]
+	Viết các số tự nhiên có 4 chữ số trong đó có 2 chữ số $3$, 1 chữ số $2$, 1 chữ số $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{6.}, p. 6]
+	Với cả 2 chữ số I \& X, viết được bao nhiêu số La Mã? (Mỗi chữ số có thể viết nhiều lần, nhưng không viết liên tiếp quá 3 lần).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{7.}, pp. 6--7]
+	\begin{enumerate*}
+		\item[(a)] Dùng 3 que diêm, xếp được các số La Mã nào?
+		\item[(b)] Để viết các số La Mã từ 4000 trở lên, e.g. số 19520, người ta viết XIXmDXX (chữ m biểu thị \emph{1 nghìn}, m là chữ đầu của từ \emph{mille}, tiếng Latin là 1 nghìn). Hãy viết các số sau bằng chữ số La Mã: 7203, 121512.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{8.}, p. 7]
+	Tìm số tự nhiên có tận cùng bằng $3$, biết rằng nếu xóa chữ số hàng đơn vị thì số đó giảm đi $1992$ đơn vị.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{9.}, p. 7]
+	Tìm số tự nhiên có 6 chữ số, biết rằng chữ số hàng đơn vị là $4$ \& nếu chuyển chữ số đó lên hàng đầu tiên thì số đó tăng gấp 4 lần.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{10.}, p. 7]
+	Cho 4 chữ số $a,b,c,d$ khác nhau \& khác $0$. Lập số tự nhiên lớn nhất \& số tự nhiên nhỏ nhất có 4 chữ số gồm cả 4 chữ số ấy. Tổng của 2 số này bằng $11330$. Tìm tổng các chữ số $a + b + c + d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{11.}, p. 7]
+	Cho 3 chữ số $a,b,c$ sao cho $0 < a < b < c$.
+	\begin{enumerate*}
+		\item[(a)] Viết tập hợp $A$ các số tự nhiên có 3 chữ số gồm cả 3 chữ số $a,b,c$.
+		\item[(b)] Biết tổng 2 số nhỏ nhất trong tập hợp $A$ bằng $488$. Tìm 3 chữ số $a,b,c$ nói trên.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{12.}, p. 7]
+	Tìm 3 chữ số khác nhau \& khác $0$, biết rằng nếu dùng cả 3 chữ số này lập thành các số tự nhiên có 3 chữ số thì 2 số lớn nhất có tổng bằng $1444$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{$\pm,\cdot,:$ Trên $\mathbb{N}$}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
