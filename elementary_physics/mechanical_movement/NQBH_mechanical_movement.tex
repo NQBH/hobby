@@ -1,0 +1,173 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Mechanical Movement -- Chuyển Động Cơ Học}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Theory}
+
+\subsection{Chuyển Động Cơ Học -- Tính Chất Tương Đối của Chuyển Động \& Đứng Yên}
+
+\begin{dinhnghia}[Chuyển động cơ học, đứng yên]
+	``Sự thay đổi vị trí của 1 vật theo thời gian so với 1 vị trí khác được chọn làm mốc gọi là \emph{chuyển động cơ học}. Nếu 1 vật không thay đổi vị trí so với vật khác được chọn làm mốc thì vật đó được gọi là \emph{đứng yên} so với vật mốc.
+\end{dinhnghia}
+Tùy theo vật được \textit{chọn làm mốc} mà 1 vật có thể được coi là chuyển động hay đứng yên. Ta nói: \textit{chuyển động hay đứng yên có tính tương đối}. Ta có thể chọn bất kỳ 1 vật nào làm vật mốc. Thường người ta chọn Trái Đất \& những vật gắn với Trái Đất như nhà cửa, cây cối, cột cây số, cột điện, $\ldots$ làm vật mốc.
+
+\begin{dinhnghia}[Quỹ đạo của chuyển động]
+	Đường mà vật chuyển động vạch ra gọi là \emph{quỹ đạo của chuyển động}.
+\end{dinhnghia}
+Các dạng chuyển động cơ học thường gặp là chuyển động thẳng \& chuyển động cong.'' -- \cite[p. 5]{Thinh_Lua2021}
+
+\subsection{Chuyển Động Đều -- Vận Tốc của Chuyển Động}
+
+\begin{dinhnghia}[Chuyển động đều]
+	\emph{Chuyển động đều} là chuyển động mà vận tốc có độ lớn không thay đổi theo thời gian.
+\end{dinhnghia}
+Công thức tính vận tốc: $v = \frac{s}{t}$, trong đó: $v$: vận tốc, đơn vị m\texttt{/}s, km\texttt{/}h, $s$: quãng đường đi được, $t$: thời gian để đi hết quãng đường đó.
+
+\subsection{Chuyển Động Không Đều \& Vận Tốc Trung Bình}
+
+\begin{dinhnghia}[Chuyển động không đều]
+	\emph{Chuyển động không đều} là chuyển động mà vận tốc có độ lớn thay đổi theo thời gian.
+\end{dinhnghia}
+Công thức tính vận tốc trung bình của chuyển động không đều: $v_{\rm tb} = \frac{s}{t}$, trong đó: $s$: quãng đường đi được, $t$: thời gian để đi hết quãng đường đó.
+
+\begin{luuy}
+	Khi nói tới vận tốc trung bình, phải nói rõ trên quãng đường nào hoặc trong khoảng thời gian nào, vì vận tốc trung bình trên những quãng đường khác nhau có độ lớn khác nhau.'' -- \cite[p. 5]{Thinh_Lua2021}
+\end{luuy}
+
+%------------------------------------------------------------------------------%
+
+\section{Problem}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, Ví dụ 1, p. 11]
+	1 ô tô chuyển động đều với vận tốc $60$\emph{km\texttt{/}h} đuổi theo 1 xe khách cách nó $50$\emph{km}. Biết xe khách chuyển động đều với vận tốc $40$\emph{km\texttt{/}h}. Sau bao lâu thì ô tô đuổi kịp xe khách?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, Ví dụ 2, p. 13]
+	1 mô tô đi $\frac{1}{3}$ quãng đường đầu với vận tốc $60$\emph{km\texttt{/}h}, $\frac{1}{3}$ quãng đường tiếp theo với vận tốc $40$\emph{km\texttt{/}h} \& $\frac{1}{3}$ quãng đường còn lại với vận tốc $30$\emph{km\texttt{/}h}. Tính vận tốc trung bình của mô tô trên cả quãng đường.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.1}, p. 15]
+	2 hành khách cùng ngồi trong 1 toa tàu hỏa ở trong 1 sân ga. 1 người hìn qua cửa sổ bên phải quan sát 1 đoàn tàu bên cạnh \& nói đoàn tàu của mình đang chuyển động. Người kia nhìn qua cửa sổ bên trái quan sát nhà ga \& nói đoàn tàu của mình đang đứng yên. Hỏi ai đúng? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.2}, p. 15]
+	Chuyển động của xe đạp lúc xuống dốc không phanh:
+	\begin{enumerate*}
+		\item[{\rm\sf A.}] là chuyển động đều.
+		\item[{\rm\sf B.}] là chuyển động có độ lớn vận tốc lúc tăng, lúc giảm.
+		\item[{\rm\sf C.}] là chuyển động nhanh dần.
+		\item[{\rm\sf D.}] là chuyển động chậm dần.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.3}, p. 15]
+	2 ô tô xuất phát cùng 1 lúc từ 2 địa điểm A \& B cách nhau $100$\emph{km}, chuyển động đều \& cùng chiều từ A đến B. Vận tốc của ô tô đi từ A là $v_1 = 60$\emph{km\texttt{/}h} \& của ô tô đi từ B là $v_2 = 40$\emph{km\texttt{/}h} . 2 ô tô sẽ gặp nhau sau mấy giờ?
+\end{baitoan}
+Bài tập phụ thuộc vào hình hình vẽ: \cite[\textbf{1.4.}, p. 15, \textbf{1.7.}--\textbf{1.8}, p. 16]{Thinh_Lua2021}.
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.5}, p. 15]
+	Lúc 8:00, 1 ô tô đi từ địa điểm A đến địa điểm B với vận tốc $30$\emph{km\texttt{/}h}. Ô tô đến địa điểm B lúc 10:00 \& ở đó trả hàng mất $30$ phút rồi quay về A. Khi về, ô tô đi với vận tốc $40$\emph{km\texttt{/}h}. Vẽ đồ thị tọa độ--thời gian, đồ thị vận tốc--thời gian của ô tô. Coi chuyển động cả đi \& về của ô tô là chuyển động đều.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.6}, p. 16]
+	Lúc 7:00, 1 xe tải xuất phát từ thành phố A với vận tốc $40$\emph{km\texttt{/}h} để đi đến thành phố B. Quãng đường AB dài $100$\emph{km}. Cùng lúc đó, 1 xe con xuất phát từ thành phố C, qua A để đi đến thành phố B với vận tốc $75$\emph{km\texttt{/}h}. Quãng đường CB dài $150$\emph{km}.
+	\begin{enumerate*}
+		\item[(a)] Viết phương trình chuyển động của mỗi xe. Lấy gốc tọa độ là thành phố C, mốc thời gian là lúc các xe xuất phát.
+		\item[(b)] Xác định các thời điểm các xe đến B.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.9}, p. 16]
+	1 con rùa \& 1 con thỏ chạy đua tranh giải trên quãng đường AB dài $150$\emph{m}. Sau khi có tín hiệu xuất phát, rùa cắm đầu chạy liên tục. Thỏ coi thường rùa nên sau khi rùa đã chạy được đoạn đường $140.1$\emph{m} thì thỏ mới bắt đầu xuất phát với vận tốc bằng $15$ lần vận tốc của rùa. Coi chuyển động của rùa \& thỏ là chuyển động đều. Hỏi rùa hay thỏ thắng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.10}, p. 16]
+	1 người đi xe đạp từ địa điểm A đến địa điểm B. Nếu đi liên tục không nghỉ thì sau $2$\emph{h} sẽ đến B. Nhưng khi đi được $30$ phút, người ấy phải dừng lại sửa xe mất $15$ phút. Để đến B đúng thời gian dự định, quãng đường còn lại người ấy phải đi với vận tốc $14.4$\emph{km\texttt{/}h}. Tính độ dài của quãng đường AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.11}, p. 17]
+	1 người đi mô tô trên quãng đường dài $120$\emph{km} với vận tốc dự định $v_1$. Sau khi đi được $\frac{1}{4}$ quãng đường, người này muốn đến nơi sớm hơn dự định $30$ phút nên đã đi với vận tốc $v_2 = 36$\emph{km\texttt{/}h}. Tính vận tốc dự định $v_1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.12}, p. 17, TS PTNK ĐHQG TPHCM 2001]
+	Minh \& Nam đứng ở 2 điểm M, N cách nhau $750$\emph{m} trên 1 bãi sông. Khoảng cách từ M đến sông là $150$\emph{m}, từ N đến sông là $600$\emph{m}. Tính thời gian ngắn nhất để Minh chạy ra sông múc 1 thùng nước mang đến chỗ Nam. Cho biết đoạn sông thẳng, vận tốc chạy của Minh không đổi là $2$\emph{m\texttt{/}s}, bỏ qua thời gian múc nước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.13}, p. 17]
+	1 học sinh đi xe đạp từ nhà đến trường trên quãng đường $6$\emph{km} với dự định sẽ đến trường trước khi trống tập trung $15$ phút. Sau khi đi được $\frac{1}{4}$ quãng đường thì chợt nhớ mình quên 1 quyển vở nên vội quay trở về nhà để lấy \& đi ngay đến trường thì vừa kịp trống tập trung.
+	\begin{enumerate*}
+		\item[(a)] Tính vận tốc của em học sinh. Coi thời gian xuống xe, lên xe, \& đi lấy vở là không đáng kể.
+		\item[(b)] Để đến trường đúng thời gian dự định thì khi quay về \& đi lần thứ 2, em học sinh phải đi với vận tốc bao nhiêu?
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.14}, p. 17]
+	Dũng \& Hùng là 2 anh em cùng học ở 1 trường tiểu học. Vào lúc 7:00, bố từ nhà đi xe đạp đèo Hùng đến trường trước rồi quay lại đón Dũng. Để tranh thủ thời gian, cùng lúc đó Dũng cũng đi bộ đến trường \& gặp bố quay lại đón ở nơi cách nhà $\frac{1}{3}$ quãng đường từ nhà đến trường. Lúc đó đồng hồ chỉ 7:15. Coi vận tốc đi xe đạp của bố không đổi. Hỏi Dũng đến trường lúc mấy giờ?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.15}, p. 17]
+	1 người đi được $\frac{3}{8}$ chiều dài của 1 chiếc cầu AB thì nghe thấy từ đằng sau mình tiếng còi của 1 chiếc ô tô đang đi về phía cầu với vận tốc không đổi $60$\emph{km\texttt{/}h}. Nếu người ấy chạy ngược lại thì gặp ô tô ở A, còn nếu chạy về phía trước thì ô tô sẽ đuổi kịp người ấy ở B. Hỏi vận tốc của người ấy bằng bao nhiêu?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
