@@ -38,7 +38,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -164,6 +164,14 @@ Bài tập phụ thuộc vào hình hình vẽ: \cite[\textbf{1.4.}, p. 15, \tex
 
 \begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.15}, p. 17]
 	1 người đi được $\frac{3}{8}$ chiều dài của 1 chiếc cầu AB thì nghe thấy từ đằng sau mình tiếng còi của 1 chiếc ô tô đang đi về phía cầu với vận tốc không đổi $60$\emph{km\texttt{/}h}. Nếu người ấy chạy ngược lại thì gặp ô tô ở A, còn nếu chạy về phía trước thì ô tô sẽ đuổi kịp người ấy ở B. Hỏi vận tốc của người ấy bằng bao nhiêu?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Giả sử khi người đó đang ở C cách A 1 đoạn $s_1 = \frac{3}{8}s$ thì ô tô đến D cách A 1 đoạn $s_2$. Thời gian người ấy chạy từ C đến A là: $t_1 = \frac{s_1}{v_1} = \frac{3s}{8v_1}$ Thời gian ô tô chuyển động từ D đến A cũng là $t_1 = \frac{s_2}{v_2}$. Có phương trình $\frac{s_2}{v_2} = \frac{3s}{8v_1}\Rightarrow\frac{s_2}{60} = \frac{3s}{8v_1}$ (1). Thời gian người ấy chạy từ C đến B là: $t_2 = \frac{s - s_1}{v_1} = \frac{5s}{8v_1}$. Thời gian ô tô chuyển động từ D đến B cũng là: $t_2 = \frac{s_2 + s}{v_2}$. Có phương trình: $\frac{s_2 + s}{v_2} = \frac{5s}{8v_1}\Rightarrow\frac{s_2 + s}{60} = \frac{5s}{8v_1}\Rightarrow\frac{s_2}{60} = \frac{5s}{8v_1} - \frac{s}{60}$ (2). Từ (1) \& (2) suy ra $\frac{3s}{8v_1} = \frac{5s}{8v_1} - \frac{s}{60}\Rightarrow v_1 = 15$km\texttt{/}h.
+\end{proof}
+
+\begin{baitoan}[\cite{Thinh_Lua2021}, \textbf{1.16}, p. 17]
+	Lúc 7:00, 1 chiếc ô tô đi với vận tốc $30$\emph{km\texttt{/}h}, gặp 1 người đi mô tô ngược chiều. Lúc 7:30, ô tô đến địa điểm trả hàng. Sau khi trả hàng mất $1$\emph{h}, ô tô quay trở lại, đi với vận tốc $50$\emph{km\texttt{/}h} \& gặp lại mô tô lúc 10:00. Tính vận tốc của mô tô. Giải bài toán bằng đồ thị \& bằng tính toán.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
