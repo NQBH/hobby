@@ -43,6 +43,9 @@
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Polynomial -- Đa Thức}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -63,6 +66,74 @@
 %------------------------------------------------------------------------------%
 
 \section{Nhân Đa Thức}
+``\begin{enumerate*}
+	\item[\textbf{1.}] Muốn nhân 1 đơn thức với 1 đa thức, ta nhân đơn thức với từng hạng tử của đa thức rồi cộng các  tích với nhau.
+	\item[\textbf{2.}] Muốn nhân 1 đa thức với 1 đa thức, ta nhân mỗi hạng tử của đa thức này với từng hạng tử của đa thức kia rồi cộng các tích với nhau.
+	\item[\textbf{3.}] Quy tắc nhân 1 đơn thức với 1 đa thức còn được vận dụng theo chiều ngược lại: $AB + AC = A(B + C)$.
+	\item[\textbf{4.}] Nếu 2 đa thức $P(x),Q(x)$ luôn có giá trị bằng nhau với mọi giá trị của biến thì 2 đa thức đó gọi là \textit{2 đa thức đồng nhất}, ký hiệu $P(x)\equiv Q(x)$. 2 đa thức $P(x),Q(x)$ (viết dưới dạng thu gọn) là \textit{đồng nhất} khi \& chỉ khi hệ số của các lũy thừa cùng bậc bằng nhau. Đặc biệt, nếu $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ luôn bằng $0$ với mọi $x\in\mathbb{R}$ thì $a_0 = a_1 = \cdots = a_n = 0$, i.e., $a_i = 0$, $\forall i = 0,1,\ldots,n$.'' -- \cite[Chap. 1, \S1, p. 4]{Tuyen_Toan_8}
+\end{enumerate*}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 1, p. 4]
+	Cho $P = (x + 5)(ax^2 + bx + 25)$ \& $Q = x^3 + 125$.
+	\begin{enumerate*}
+		\item[(a)] Viết $P$ dưới dạng 1 đa thức thu gọn theo lũy thừa giảm dần của $x$.
+		\item[(b)] Với giá trị nào của $a,b$ thì $P = Q$, $\forall x\in\mathbb{R}$.
+	\end{enumerate*}	
+\end{baitoan}
+
+\begin{proof}[Giải]
+	\begin{enumerate*}
+		\item[(a)] $P = (x + 5)(ax^2 + bx + 25) = ax^3 + bx^2 + 25x + 5ax^2 + 5bx + 125 = ax^3 + (5a + b)x^2 + (5b + 25)x + 125$.
+		\item[(b)] $P = Q$, $\forall x\in\mathbb{R}\Leftrightarrow ax^3 + (5a + b)x^2 + (5b + 25)x + 125 = x^3 + 125$, $\forall x\in\mathbb{R}\Leftrightarrow(a = 1)\land(5a + b = 0)\land(5b + 25 = 0)\Leftrightarrow(a = 1)\land(b = -5)$.
+	\end{enumerate*}
+\end{proof}
+\noindent\textit{Nhận xét.} ``Phương pháp giải (b) dựa vào tính chất: 2 đa thức $P,Q$ (viết dưới dạng thu gọn) là đồng nhất khi \& chỉ khi mọi hệ số của các đơn thức đồng dạng chứa trong 2 đa thức đó phải bằng nhau.'' -- \cite[p. 5]{Tuyen_Toan_8}
+
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{1.}, p. 5]
+	Tính giá trị của các biểu thức sau bằng cách hợp lý:\\
+	\begin{enumerate*}
+		\item[(a)] $A = x^5 - 100x^4 + 100x^3 - 100x^2 + 100x - 9$ tại $x = 99$.
+		\item[(b)] $B = x^6 - 20x^5 - 20x^4 - 20x^3 - 20x^2 - 20x + 3$ tại $x  = 21$.
+		\item[(c)] $C = x^7 - 26x^6 + 27x^5 - 47x^4 - 77x^3 + 50x^2 + x - 24$ tại $x = 25$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{2.}, p. 5]
+	Cho $x,y\in\mathbb{Z}$. Chứng minh:
+	\begin{enumerate*}
+		\item[(a)] Nếu $A = 5x + y\divby19$ thì $B = 4x - 3y\divby19$.
+		\item[(b)] Nếu $C = 4x + 3y\divby13$ thì $D = 7x + 2y\divby13$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{3.}, p. 5]
+	Cho 4 số lẻ liên tiếp. Chứng minh hiệu của tích 2 số cuối với tích 2 số đầu chia hết cho $16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{4.}, pp. 5--6]
+	Cho 4 số nguyên liên tiếp.
+	\begin{enumerate*}
+		\item[(a)] Hỏi tích của số đầu với số cuối nhỏ hơn tích của 2 số ở giữa bao nhiêu đơn vị?
+		\item[(b)] Giả sử tích của số đầu với số thứ 3 nhỏ hơn tích của số thứ 2 \& số thứ 4 là $99$, tìm 4 số nguyên đó.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{5.}, p. 6]
+	Cho $b + c = 10$. Chứng minh đẳng thức $(10a + b)(10a + c) = 100a(a + 1) + bc$. Áp dụng để tính nhẩm: $62\cdot68$, $43\cdot47$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{6.}, p. 6]
+	Xác định các hệ số $a,b,c$ biết:
+	\begin{enumerate*}
+		\item[(a)] $(2x - 5)(3x + b) = ax^2 + x + c$.\\
+		\item[(b)] $(ax + b)(x^2 - x - 1) = ax^3 + cx^2 - 1$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{7.}, p. 6]
+	Cho $m\in\mathbb{N}^\star$, $m < 30$. Có bao nhiêu giá trị của $m$ để đa thức $x^2 + mx + 72$ là tích của 2 đa thức bậc nhất với hệ số nguyên?
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
