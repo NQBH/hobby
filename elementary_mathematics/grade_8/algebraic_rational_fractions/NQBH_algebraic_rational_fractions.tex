@@ -253,10 +253,13 @@
 	Rút gọn: $X = \dfrac{(2^4 + 4)(6^4 + 4)(10^4 + 4)(14^4 + 4)}{(4^4 + 4)(8^4 + 4)(12^4 + 4)(16^4 + 4)}$.
 \end{baitoan}
 
-
 \begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 16, p. 38]
 	Cho $\dfrac{xy}{x^2 + y^2} = \dfrac{5}{8}$, rút gọn phân thức $P = \dfrac{x^2 - 2xy + y^2}{x^2 + 2xy + y^2}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$\frac{xy}{x^2 + y^2} = \frac{5}{8}\Rightarrow x^2 + y^2 = \frac{8}{5}xy\Rightarrow P = \dfrac{\frac{8}{5}xy - 2xy}{\frac{8}{5}xy + xy} = \dfrac{\left(\frac{8}{5} - 2\right)xy}{\left(\frac{8}{5} + 2\right)xy} = \dfrac{\frac{8}{5} - 2}{\frac{8}{5} + 2} = -\frac{1}{9}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{151.}, p. 38]
 	So sánh:
@@ -265,6 +268,21 @@
 		\item[(b)] $C = \dfrac{1999\cdot 4001 + 2000}{2000\cdot 4001 - 2001}$ \& $D = \dfrac{1501\cdot 1503 - 1500\cdot 1498}{6002}$.
 	\end{enumerate*}
 \end{baitoan}
+
+\begin{proof}[Giải]
+	\begin{enumerate*}
+		\item[(a)] Có $A = \frac{201 - 200}{201 + 200} = \frac{(201 - 200)(201 + 200)}{(201 + 200)^2} = \frac{201^2 - 200^2}{201^2 + 2\cdot200\cdot201 + 200^2} < \frac{201^2 - 200^2}{201^2 + 200^2} = B$.
+		\item[(b)] Đặt $x\coloneqq2000$, $y\coloneqq1500$. $C = \frac{(x - 1)(2x + 1) + x}{x(2x + 1) - (x + 1)} = \frac{2x^2 - 1}{2x^2 - 1} = 1$. $D = \frac{(y + 1)(y + 3) - y(y - 2)}{4y + 2} = \frac{3(2y + 1)}{2(2y + 1)} = \frac{3}{2}$. Suy ra $C < D$.
+	\end{enumerate*}	
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_8}, \textbf{151.} (a), p. 38]
+	Biện luận theo các tham số $a,b\in\mathbb{R}$, $a\ne-b$, $(a,b)\ne(0,0)$ để so sánh $A = \dfrac{a - b}{a + b}$ \& $B = \dfrac{a^2 - b^2}{a^2 + b^2}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$A - B = \frac{a - b}{a + b} - \frac{a^2 - b^2}{a^2 + b^2} = \frac{(a - b)(a^2 + b^2) - (a + b)(a^2 - b^2)}{(a + b)(a^2 + b^2)} = $.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{152.}, p. 39]
 	Chứng minh: $\forall n\in\mathbb{N}$,
@@ -334,7 +352,6 @@
 \begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{160.}, p. 40]
 	Cho $x^3 + y^3 + z^3 = 3xyz$, rút gọn phân thức $P = \dfrac{xyz}{(x + y)(y + z)(z + x)}$.
 \end{baitoan}
-
 
 %------------------------------------------------------------------------------%
 
