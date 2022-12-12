@@ -455,6 +455,288 @@ Nhận xét: Mỗi dòng đều bắt đầu bằng 1 \& kết thúc bằng 1. M
 	Cho $x^2y - y^2x + x^2z - z^2x + y^2z + z^2y = 2xyz$. Chứng minh trong 3 số $x,y,z$ ít nhất cũng có 2 số bằng nhau hoặc đối nhau.
 \end{baitoan}
 
+\subsection{Phương Pháp Tách 1 Hạng Tử Thành Nhiều Hạng Tử}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 5, p. 17]
+	Phân tích đa thức thành nhân tử: $A = 4x^2 - 8x + 3$.
+\end{baitoan}
+
+\begin{proof}[1st Giải]
+	(Tách hạng tử cuối) $A = 4x^2 - 8x + 4 - 1 = (2x - 2)^2 - 1^2 = (2x - 2 - 1)(2x - 2 + 1) = (2x - 3)(2x - 1)$.
+\end{proof}
+
+\begin{proof}[2nd Giải]
+	(Tách hạng tử 2nd) $A = 4x^2 - 2x - 6x + 3 = 2x(2x - 1) - 3(2x - 1) = (2x - 1)(2x - 3)$.
+\end{proof}
+
+\begin{proof}[3rd Giải]
+	(Tách hạng tử 2nd) $A = 4x^2 - 6x - 2x + 3 = 2x(2x - 3) - (2x - 3) = (2x - 3)(2x - 1)$.
+\end{proof}
+
+\begin{proof}[4th Giải]
+	$A = 4x^2 - 9 - 8x + 12 = (2x - 3)(2x + 3) - 4(2x - 3) = (2x - 3)(2x + 3 - 4) = (2x - 3)(2x - 1)$.
+\end{proof}
+\noindent\textit{Nhận xét.} ``\textbf{1.} Ta nhận thấy với các phương pháp thông thường thì không thể phân tích $A$ thành nhân tử được vì $A$ không có nhân tử chung, không có dạng 1 hằng đẳng thức nào. Đa thức $A$ chỉ có 3 hạng tử nên cũng không thể dùng phương pháp nhóm hạng tử. Vì vậy ta đã tách 1 hạng tử thành 2 hạng tử để xuất hiện những nhóm hạng tử sao cho: $\bullet$ Hoặc có thể dùng hằng đẳng thức để phân tích tiếp; $\bullet$ Hoặc có thể đặt nhân tử chung. \textbf{2.} Trong cách giải 2nd, ta đã tách hạng tử thứ 2 là $-8x$ thành $-2x - 6x$. Ta thấy $(-2)(-6) = 12$. Trong khi đó tích các hệ số đầu \& cuối là $4\cdot3 = 12$. 2 tích này đúng bằng nhau. 1 cách tổng quát, để phân tích tam thức bậc 2 $ax^2 + bx + c$ thành nhân tử, ta tách hạng tử bậc nhất $bx$ thành $b_1x + b_2x$ sao cho $b_1b_2 = ac$ sau đó đặt nhân tử chung theo từng nhóm. \textbf{3.} Đối với các đa thức có bậc 3 trở lên thì tùy theo đặc điểm của các hệ số mà có cách tách riêng cho phù hợp.'' -- \cite[pp. 17--18]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, p. 18]
+	Phân tích đa thức thành nhân tử: $A = x^3 + 5x^2 + 3x - 9$.
+\end{baitoan}
+
+\begin{proof}[1st Giải]
+	$A = x^3 - x^2 + 6x^2 - 6x + 9x - 9 = x^2(x - 1) + 6x(x - 1) + 9(x - 1) = (x - 1)(x^2 + 6x + 9) = (x - 1)(x + 3)^2$.
+\end{proof}
+
+\begin{proof}[2nd Giải]
+	$A = x^3 + 3x^2 + 2x^2 + 6x - 3x - 9 = x^2(x + 3) + 2x(x + 3) - 3(x + 3) = (x + 3)(x^2 + 2x - 3) = (x + 3)(x - 1)(x + 3) = (x - 1)(x + 3)^2$.
+\end{proof}
+Trong đó có nhiều cách phân tích $B\coloneqq x^2 + 2x - 3$ thành nhân tử, e.g.: $\bullet$ $B = x^2 - x + 3x - 3 = x(x - 1) + 3(x - 1) = (x - 1)(x + 3)$. $\bullet$ $B = x^2 + 3x - x - 3 = x(x + 3) - (x + 3) = (x + 3)(x - 1)$. $\bullet$ $B = x^2 + 2x + 1 - 4 = (x + 1)^2 - 4 = (x + 1 - 2)(x + 1 + 2) = (x - 1)(x + 3)$.
+
+\begin{proof}[3rd Giải]
+	$A = x^3 + 6x^2 + 9x - x^2 - 6x - 9 = x(x^2 + 6x - 9) - (x^2 + 6x + 9) = (x - 1)(x^2 + 6x + 9) = (x - 1)(x + 3)^2$.
+\end{proof}
+
+\begin{proof}[4th Giải]
+	$A = x^3 + 2x^2 - 3x + 3x^2 + 6x - 9 = x(x^2 + 2x - 3) + 3(x^2 + 2x - 3) = (x + 3)(x^2 + 2x - 3) = (x + 3)(x + 3)(x - 1) = (x + 3)^2(x - 1)$, trong đó các cách phân tích $x^2 + 2x - 3$ thành nhân tử đã được trình bày ở 2nd Giải.
+\end{proof}
+
+\subsection{Phương Pháp Thêm Bớt Cùng Hạng Tử}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 6, p. 18]
+	Phân tích đa thức thành nhân tử $A = 4x^4 + y^4$.
+\end{baitoan}
+
+\begin{proof}[1st Giải]
+	$A = 4x^4 + 4x^2y^2 + y^4 - 4x^2y^2 = (2x^2 + y^2)^2 - (2xy)^2 = (2x^2 - 2xy + y^2 )(2x^2 + 2xy + y^2)$.
+\end{proof}
+\noindent\textit{Nhận xét.} ``Ta dễ dàng nhận thấy các phương pháp thông thường không dùng được. Ta tăng thêm các hạng tử của $A$ bằng cách thêm bớt cùng 1 hạng tử là $4x^2y^2$. Lúc này xuất hiện dạng khai triển của bình phương 1 tổng \& ta tiếp tục phân tích bằng cách áp dụng hằng đẳng thức. Như vậy mục đích của việc thêm bớt cùng 1 hạng tử là để xuất hiện những nhóm hạng tử sao cho có thể dùng hằng đẳng thức hoặc đặt nhân tử chung.'' -- \cite[p. 18]{Tuyen_Toan_8}
+
+\subsection{Phương Pháp Đổi Biến}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 7, p. 18]
+	Phân tích đa thức thành nhân tử $A = (x^2 - 3x - 1)^2 - 12(x^2 - 3x - 1) + 27$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Đặt $y\coloneqq x^2 - 3x - 1$ ta được $A = y^2 - 12y + 27 = (y - 3)(y - 9) = (x^2 - 3x - 1 - 3)(x^2 - 3x - 1 - 9) = (x^2 - 3x - 4)(x^2 - 3x - 10) = (x + 1)(x - 4)(x + 2)(x - 5)$.
+\end{proof}
+Trong đó có thể phân tích $B\coloneqq y^2 - 12y + 27$ thành nhân tử bằng nhiều cách, e.g.: $\bullet$ $B = y^2 - 12y + 36 - 9 = (y - 6)^2 - 3^2 = (y - 6 - 3)(y - 6 + 3) = (y - 9)(y - 3)$. $\bullet$ $B = y^2 - 3y - 9y + 27 = y(y - 3) - 9(y - 3) = (y - 3)(y - 9)$. $\bullet$ $B = y^2 - 9y - 3y + 27 = y(y - 9) - 3(y - 9) = (y - 9)(y - 3)$. $\bullet$ $B = y^2 - 3^2 - 12y + 36 = (y - 3)(y + 3) - 12(y - 3) = (y - 3)(y + 3 - 12) = (y - 3)(y - 9)$. $\bullet$ $B = y^2 - 9^2 - 12y + 108 = (y - 9)(y + 9) - 12(y - 9) = (y - 9)(y + 9 - 12) = (y - 9)(y - 3)$.
+
+\noindent\textit{Nhận xét.} ``Trong cách giải trên, nhờ cách đổi biến $y\coloneqq x^2 - 3x - 1$ ta đã đưa 1 đa thức bậc 4 đối với $x$ rất phức tạp trở thành 1 đa thức bậc 2 đối với $y$ rất đơn giản, nhờ đó phân tích thành nhân tử được dễ dàng.'' -- \cite[p. 19]{Tuyen_Toan_8}
+
+\subsection{Phương Pháp Đồng Nhất Hệ Số\texttt{/}Phương Pháp Hệ Số Bất Định}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 8, p. 18]
+	Phân tích đa thức $A = x^4 - 3x^3 + 6x^2 - 5x + 3$ thành tích của 2 tam thức bậc 2 với hệ số nguyên.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Sau khi phân tích thì $A$ có dạng $(x^2 + ax + 1)(x^2 + bx + 3)$ hoặc $(x^2 + ax - 1)(x^2 + bx - 3)$. Trường hợp 2 hạng tử bậc 2 của mỗi tam thức là $-x^2$ \& $-x^2$ thì ta chỉ cần đổi dấu cả 2 tam thức. Xét trường hợp  $A = (x^2 + ax + 1)(x^2 + bx + 3)$, i.e., $x^4 - 3x^3 + 6x^2 - 5x + 3 = x^4 + (a + b)x^3 + (ab + 4)x^2 + (3a + b)x + 3$. 2 đa thức trên đồng nhất với nhau nên ta có:
+	\begin{equation*}
+		\left\{\begin{split}
+			a + b &= -3,\\
+			ab + 4 &= 6,\\
+			3a + b &= -5.
+		\end{split}\right.
+	\end{equation*}
+	Suy ra\footnote{Thay vì giải hệ gồm 3 phương trình nhưng chỉ có 2 ẩn trên, ta chỉ cần giải\texttt{/}sử dụng máy tính bỏ túi để giải hệ gồm 2 phương trình đầu \& cuối:
+	\begin{equation*}
+		\left\{\begin{split}
+			a + b &= -3,\\
+			3a + b &= -5.
+		\end{split}\right.
+	\end{equation*}} $a = -1$, $b = -2$. Vậy $A = (x^2 - x + 1)(x^2 - 2x + 3)$.
+\end{proof}
+\noindent\textit{Nhận xét.} \textbf{1.} Nếu trường hợp 2 hệ số tự do là 1 \& 3 không thỏa mãn thì ta xét trường hợp 2 hệ số tự do là $-1$ \& $-3$ bằng cách tương tự như trên. \textbf{2.} Phương pháp giải như trên gọi là \textit{phương pháp đồng nhất hệ số} (hay \textit{phương pháp hệ số bất định}). Cơ sở phương pháp này là: 2 đa thức (viết dưới dạng thu gọn) là đồng nhất khi \& chỉ khi mọi hệ số của các đơn thức đồng dạng chứa trong 2 đa thức đó phải bằng nhau.'' -- \cite[p. 20]{Tuyen_Toan_8}
+
+Phân tích các đa thức sau thành nhân tử.
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{61.}, p. 20]
+	(a) $3x^2 - 11x + 6$; (b) $8x^2 + 10x - 3$; (c) $8x^2 - 2x - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{62.}, p. 20]
+	(a) $6x^2 + 7xy + 2y^2$; (b) $9x^2 - 9xy - 4y^2$; (c) $x^2 - y^2 + 10x - 6y + 16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{63.}, p. 20]
+	(a) $x^3 + x + 2$; (b) $x^3 - 2x - 1$; (c) $x^3 + 3x^2 - 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{64.}, p. 20]
+	(a) $x^3y^3 + x^2y^2 + 4$; (b) $x^3 + 3x^2y - 9xy^2 + 5y^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{65.}, p. 20]
+	(a) $x^4 + x^3 + 6x^2 + 5x + 5$; (b) $x^4 - 2x^3 - 12x^2 + 12x + 36$; (c) $x^8y^8 + x^4y^4 + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{66.}, p. 21]
+	(a) $x^5 - x^4 + x^3 - x^2 + x - 1$; (b) $x^5 + x^4 - x^3 + x^2 - x + 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{67.}, p. 21]
+	(a) $x^4 + y^4 + (x + y)^4$; (b) $2(x^2 + x + 1)^2 - (2x + 1)^2 - (x^2 + 2x)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{68.}, p. 21]
+	(a) $xy(x + y) + yz(y + z) + zx(z + x) + 3xyz$; (b) $xy(x + y) - yz(y + z) - zx(z - x)$; (c) $x(y^2 - z^2) + y(z^2 - x^2) + z(x^2 - y^2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{69.}, p. 21]
+	Chứng minh $a^5 - a\divby30$, $\forall a\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{70${}^\star$.}, p. 21]
+	Cho $x,y,z\in\mathbb{R}$, $x > y > z$. Chứng minh biểu thức $A = x^4(y - z) + y^4(z - x) + z^4(x - y)$ luôn dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{71.}, p. 21]
+	Cho $x,y,z$ là các số thực dương thỏa $(x + y)(y + z)(z + x) = 8xyz$. Chứng minh $x = y = z$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{72.}, p. 21]
+	(a) $x^4 + 5x^3 + 10x - 4$; (b) $x^3 + y^3 + z^3 - 3xyz$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{73.}, p. 21]
+	(a) $x^7 + x^2 + 1$; (b) $x^8 + x + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{74.}, p. 21]
+	(a) $x^5 + x^4 + 1$; (b) $x^{10} + x^5 + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{75.}, p. 21]
+	Cho $x\in\mathbb{Z}$. Chứng minh $x^{200} + x^{100} + 1\divby x^4 + x^2 + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{76.}, p. 21]
+	(a) $A = x^2 - 2xy + y^2 + 3x - 3y - 4$; (b) $B = (12x^2 - 12xy + 3y^2) - 10(2x - y) + 8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{77.}, p. 21]
+	(a) $A = (a - b)^3 + (b - c)^3 + (c - a)^3$; (b) $B = (a + b - 2c)^3 + (b + c - 2a)^3 + (c + a - 2b)^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{78.}, p. 21]
+	(a) Chứng minh: $(x + y + z)^3 - x^3 - y^3 - z^3 = 3(x + y)(y + z)(z + x)$. (b) Phân tích đa thức thành nhân tử: $A = (a + b + c)^3 + (a - b - c)^3 + (b - c - a)^3 + (c - a - b)^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{79.}, p. 21]
+	(a) $A = (x^2 - 2x)(x^2 - 2x - 1) - 6$; (b) $B = (x^2 + 4x - 3)^2 - 5x(x^2 + 4x - 3) + 6x^2$; (c) $C = (x^2 + x + 4)^2 + 8x(x^2 + x + 4) + 15x^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{80.}, p. 21]
+	$2(x^2 - 6x + 1)^2 + 5(x^2 -6x + 1)(x^2 + 1) + 2(x^2 + 1)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{81.}, p. 21]
+	Cho $M = 4(x - 2)(x - 1)(x + 4)(x + 8) + 25x^2$. Chứng minh $M$ không có giá trị âm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{82.}, p. 21]
+	Phân tích đa thức $A$ thành tích của 1 nhị thức bậc nhất với 1 đa thức bậc 3 với hệ số nguyên sao cho hệ số cao nhất của đa thức bậc 3 là $1$: $A = 3x^4 + 11x^3 - 7x^2 - 2x + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{83.}, p. 21]
+	Phân tích đa thức $B$ thành tích của 2 tam thức bậc 2 với hệ số nguyên: $B = x^4 - 6x^3 + 11x^2 - 6x + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{84.}, p. 21]
+	Phân tích đa thức $C$ thành tích của 2 tam thức bậc 2 với hệ số nguyên \& các hệ số cao nhất đều mang dấu dương: $C = x^4 - x^3 + 2x^2 - 11x - 5$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Chia Đa Thức}
+``\textbf{1.} Chia đơn thức $A$ cho đơn thức $B$: $\bullet$ Chia hệ số của $A$ cho hệ số của $B$; $\bullet$ Chia lũy thừa của từng biến trong $A$ cho lũy thừa của cùng biến đó trong $B$; Nhân các kết quả với nhau. \textbf{2.} Chia đa thức $A$ cho đơn thức $B$: Ta chia mỗi hạng tử của $A$ cho $B$ rồi cộng các kết quả với nhau. \textbf{3.} Chia đa thức $A$ cho đa thức $B$: Cho $A,B$ là 2 đa thức tùy ý của cùng 1 biến, $B\ne 0$, khi đó tồn tại duy nhất 1 cặp đa thức $Q,R$ sao cho $A = BQ + R$, trong đó $R = 0$ hoặc bậc của $R$ nhỏ hơn bậc của $B$. $Q$ gọi là \textit{đa thức thương} \& $R$ là \textit{đa thức dư} của phép chia $A$ cho $B$. Nếu $R = 0$ thì phép chia $A$ cho $B$ là \textit{phép chia hết}.
+
+\begin{dinhly}[Định lý B\'ezout]
+	Số dư trong phép chia đa thức $f(x)$ cho nhị thức bậc nhất $x - a$ đúng bằng $f(a)$.
+\end{dinhly}
+
+\begin{vidu}
+	Với $f(x) = x^3 - 6x + 5$. Số dư trong phép chia $f(x)$ cho $x - 2$ là $f(2) = 8 - 12 + 5 = 1$. Số dư trong phép chia $f(x)$ cho $x - 1$ là $f(1) = 1 - 6 + 5 = 9$, i.e., $f(x)\divby x - 1$.
+\end{vidu}
+
+\begin{hequa}
+	Nếu $a$ là nghiệm của đa thức $f(x)$ thì $f(x)\divby x - a$. Đặc biệt, nếu tổng các hệ số của đa thức $f(x)$ bằng $0$ thì $1$ là nghiệm \& $f(x)\divby x - 1$; nếu $f(x)$ có tổng các hệ số bậc chẵn bằng tổng các hệ số bậc lẻ thì $-1$ là nghiệm \& $f(x)\divby x -(-1)$, i.e., $f(x)\divby x + 1$.
+\end{hequa}
+\textbf{4.} \textit{Áp dụng hệ quả của định lý B\'ezout vào việc phân tích đa thức thành nhân tử.} Nếu đa thức $f(x)$ có nghiệm $x = a$ thì khi phân tích $f(x)$ thành nhân tử, tích sẽ chứa nhân tử $(x - a)$. \textbf{5.} \textit{Cách nhẩm nghiệm nguyên, nghiệm hữu tỷ của đa thức $f(x)$ với hệ số nguyên.} Nếu $f(x)$ có nghiệm nguyên thì nghiệm đó phải là ước của hệ số tự do. Nếu $f(x)$ có nghiệm hữu tỷ thì nghiệm đó có dạng $\frac{p}{q}$, $\mbox{ƯCLN}(p,q) = 1$ trong đó $p$ là ước của hệ số tự do, $q$ là ước dương của hệ số cao nhất.'' -- \cite[\S4, pp. 22--24]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 9, p. 24]
+	Xác định các hệ số $a,b$ sao cho $x^4 + ax^3 + b\divby x^2 - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 10, p. 25]
+	Phân tích đa thức thành nhân tử $M = xy(x + y) + yz(y + z) + zx(z + x) + 2xyz$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 11, p. 26]
+	Phân tích đa thức thành nhân tử $A = x^3 - x^2 - 8x + 12$.
+\end{baitoan}
+``Phương pháp nhẩm nghiệm của đa thức để vận dụng hệ quả của định lý B\'ezout giúp ta định hướng nhanh chóng việc tách 1 hạng tử thành nhiều hạng tử 1 cách thích hợp.'' -- \cite[p. 26]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{85.}, p. 27]
+	Tìm $n\in\mathbb{N}$ để đơn thức $-7x^{n+1}y^6\divby4x^5y^n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{86.}, p. 27]
+	Chứng minh giá trị của biểu thức $A$ luôn luôn không âm với mọi giá trị khác $0$ của $x,y$: $A = (75x^5y^2 - 45x^4y^3):3x^3y^2 - \left(\frac{5}{2}x^2y^4 - 2xy^5\right):\frac{1}{2}xy^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{87.}, p. 27]
+	Tìm $x,y\in\mathbb{R}$ thỏa: $[(x - 2y)(x - 7y) - x^2 + 4y^2]:(x - 2y) = 18$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{88.}, p. 27]
+	Tìm giá trị nhỏ nhất của thương: $(4x^5 + 2x^4 + 4x^3 - x - 1):(2x^3 + x - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{89.}, p. 27]
+	Tìm các giá trị nguyên của $x$ để thương có giá trị nguyên. (a) $(3x^3 + 13x^2 - 7x + 5):(3x - 2)$; (b) $(2x^5 + 4x^4 - 7x^3 - 44):(2x^2 - 7)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{90.}, p. 27]
+	Chứng minh không tồn tại $n\in\mathbb{N}$ để giá trị của biểu thức $n^6 - n^4 - 2n^2 + 9$ chia hết cho giá trị của biểu thức $n^4 + n^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{91.}, p. 27]
+	Không làm phép chia đa thức, tìm số dư trong phép chia đa thức $f(x)$ cho đa thức $g(x)$ trong các trường hợp sau: (a) $f(x) = x^{21} + x^{20} + x^{19}  + 101$, $g(x) = x + 1$. (b) $f(x) = 3x^3 + 4x^2 - 2x + 7$, $g(x) = x + 2$. (c) $f(x) = x^4 - 5x^3 + 2x - 10$, $g(x) = x - 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{92.}, p. 27]
+	Chứng minh $f(x) = (x^2 - 3x + 1)^{31} - (x^2 - 4x + 5)^{30} + 2\divby x - 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{93.}, p. 27]
+	Phân tích các đa thức sau thành nhân tử: (a) $x^3 - 9x^2 + 15x + 25$; (b) $x^3 - 4x^2 - 11x + 30$; (c) $2x^4 + x^3 - 22x^2 + 15x - 36$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{94.}, p. 27]
+	Phân tích các đa thức sau thành nhân tử: (a) $3x^3 + 5x^2 - 14x + 4$; (b) $2x^3 - x^2 - 3x - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{95.}, p. 28]
+	Tìm đa thức dư trong phép chia $(x^{54} + x^{45} + x^{36} + \cdots + x^9 + 1):(x^2 - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{96.}, p. 28]
+	Xác định đa thức $f(x)$ thỏa mãn cả 3 điều kiện sau: (a) Khi chia cho $x - 1$ dư $4$; (b) Khi chia cho $x + 2$ dư $1$; (c) Khi chia cho $(x - 1)(x + 2)$ thì được thương là $5x^2$ \& còn dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{97.}, p. 28]
+	Cho đa thức $A = ax^2 + bx + c$. Xác định hệ số $b$ biết khi chia $A$ cho $x - 1$, chia $A$ cho $x + 1$ đều có cùng 1 số dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{98.}, p. 28]
+	Chứng minh nếu $x^4 - 4x^3 + 5ax^2 - 4bx + c\divby x^3 + 3x^2 - 9x - 3$ thì $a + b + c = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{99.}, p. 28]
+	Đa thức $4x^3 + ax + b$ chia hết cho 2 đa thức $x - 2,x + 1$. Tính $2a - 3b$.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \printbibliography[heading=bibintoc]
