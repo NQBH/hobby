@@ -345,6 +345,115 @@ Nhận xét: Mỗi dòng đều bắt đầu bằng 1 \& kết thúc bằng 1. M
 %------------------------------------------------------------------------------%
 
 \section{Phân Tích Đa Thức Thành Nhân Tử}
+``\textbf{1.} Phân tích đa thức thành nhân tử là biến đổi đa thức đó thành 1 tích của những đa thức. \textbf{2.} Các phương pháp thông thường: $\bullet$ \textit{Phương pháp đặt nhân tử chung}: $AB + AC - AD = A(B + C - D)$. $\bullet$ \textit{Phương pháp dùng hằng đẳng thức}: $A^2\pm2AB + B^2 = (A\pm B)^2$, $A^3\pm3A^2B + 3AB^2\pm B^3 = (A\pm B)^3$, $A^2 - B^2 = (A - B)(A + B)$, $A^3 - B^3 = (A - B)(A^2 + AB + B^2)$, $A^3 + B^3 = (A + B)(A^2 - AB + B^2)$. $\bullet$ \textit{Phương pháp nhóm các hạng tử}: $AC - AD + BC - BD = A(C - D) + B(C - D) = (A + B)(C - D)$. \textbf{3.} Dạng tổng quát của các hằng đẳng thức hiệu 2 bình phương, hiệu 2 lập phương: $A^n - B^n = (A - B)\sum_{i=0}^{n-1} A^{n - 1 - i}B^i = (A - B)(A^{n-1} + A^{n-2}B + \cdots + AB^{n-2} + B^{n-1})$. \textbf{4.} Dạng tổng quát của hằng đẳng thức tổng 2 lập phương: $A^n + B^n = (A + B)\sum_{i=0}^{n-1} (-1)^iA^{n - 1 - i}B^i = (A - B)(A^{n-1} - A^{n-2}B + A^{n-3}B^2 - \cdots + AB^{n-2} + B^{n-1})$ với $n$ lẻ. \textbf{5.} Áp dụng vào tính chất chia hết: $A^n - B^n\divby A - B$, $\forall n\in\mathbb{N}$, $A\ne B$; $A^n + B^n\divby A + B$, $\forall n\in\mathbb{N}$, $n$ lẻ, $A\ne-B$; $A^{2k} - B^{2k}\divby A^2 - B^2$, $\forall k\in\mathbb{N}$, $A\ne B$.'' -- \cite[\S3, pp. 12--13]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 4, p. 13]
+	Cho $x,y\in\mathbb{R}$, $x\ne y$, thỏa mãn điều kiện $9x(x - y) - 10(y - x)^2 = 0$. Chứng minh $x = 10y$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$0 = 9x(x - y) - 10(y - x)^2 = 9x(x - y) - 10(x - y)^2 = (x - y)[9x - 10(x - y)] = (x - y)(-x + 10y)\Rightarrow(x = y)\lor(x = 10y)$, mà $x\ne y$, nên $x = 10y$.
+\end{proof}
+``Phân tích đa thức thành nhân tử có nhiều ứng dụng như để tính giá trị của biểu thức, chứng minh tính chia hết hoặc như trong ví dụ trên, để tìm mối quan hệ giữa các biến, $\ldots$'' -- \cite[p. 14]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{38.}, p. 14]
+	Phân tích các đa thức sau thành nhân tử: (a) $5x(x - 2y) + 2(2y - x)^2$; (b) $7x(y - 4)^2 - (4 - y)^3$; (c) $(4x - 8)(x^2 + 6) - (4x - 8)(x + 7) + 9(8 - 4x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{39.}, p. 14]
+	Chứng minh: (a) $43^2 + 43\cdot17\divby60$; (b) $27^5 - 3^{11}\divby80$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{40.}, p. 14]
+	Tìm 1 số biết 3 lần bình phương của nó đúng bằng 2 lần lập phương của số ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{41.}, p. 14]
+	Có các số nguyên $x,y,z$ nào thỏa mãn hệ phương trình sau không?
+	\begin{equation*}
+		\left\{\begin{split}
+			x^3 + xyz &= 957,\\
+			y^3 + xyz &= 795,\\
+			z^3 + xyz &= 579.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{42.}, p. 14]
+	Chứng minh số $\underbrace{11\ldots1}_n\underbrace{22\ldots2}_n$ là tích của 2 số nguyên liên tiếp.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{43.}, p. 15]
+	Phân tích các đa thức sau thành nhân tử: (a) $100x^2 - (x^2 + 25)^2$; (b) $(x - y + 5)^2 - 2(x - y + 5) + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{44.}, p. 15]
+	Phân tích đa thức thành nhân tử: $(x^2 + 4y^2 - 5)^2 - 16(x^2y^2 + 2xy + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{45.}, p. 15]
+	Cho $A = 4a^2b^2 - (a^2 + b^2 + c^2)$ trong đó $a,b,c$ là độ dài 3 cạnh của 1 tam giác. Chứng minh $A > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{46.}, p. 15]
+	Chứng minh: (a) $21^{10} - 1\divby200$; (b) $39^{20} + 39^{13}\divby40$; (c) $2^{60} + 5^{30}\divby41$; (d) $2005^{2007} + 2007^{2005}\divby2006$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{47.}, p. 15]
+	Cho $n$ là 1 số tự nhiên lẻ. Chứng minh $24^n + 1$ chia hết cho $25$ nhưng không chia hết cho $23$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{48.}, p. 15]
+	Cho $a$ là 1 số nguyên lẻ, $a > 1$. Chứng minh $(a - 1)^{\frac{1}{2}(a - 1)} - 1\divby a - 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{49.}, p. 15]
+	Phân tích các đa thức sau thành nhân tử: (a) $x^2 - xz - 9y^2 + 3yz$; (b) $x^3 - x^2 - 5x + 125$; (c) $x^3 + 2x^2 - 6x - 27$; (d) $12x^3 + 4x^2 - 27x - 9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{50.}, p. 15]
+	Phân tích các đa thức sau thành nhân tử: (a) $x^4 - 25x^2 + 20x - 4$; (b) $x^2(x^2 - 6) - x^2 + 9$; (c) $ab(x^2 + y^2) - xy(a^2 + b^2)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{51.}, p. 15]
+	Tìm $x,y\in\mathbb{R}$ sao cho $x - y = xy - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{52.}, p. 15]
+	Cho $x,y\in\mathbb{R}$, $x\ne y$ sao cho $x^2 - y = y^2 - x$. Tính giá trị của biểu thức $A = x^2 + 2xy + y^2 - 3x - 3y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{53.}, p. 16]
+	Cho $\frac{a - b}{b - c} = \frac{c - d}{d - a}$. Chứng minh hoặc $a = c$ hoặc $a + c = b + d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{54.}, p. 16]
+	Phân tích các đa thức sau thành nhân tử: (a) $4x^4 + 4x^3 - x^2 - x$; (b) $x^6 - x^4 - 9x^3 + 9x^2$; (c) $x^4 - 4x^3 + 8x^2 - 16x + 16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{55.}, p. 16]
+	Phân tích các đa thức sau thành nhân tử: (a) $(xy + 4)^2 - 4(x + y)^2$; (b) $(ab - xy)^2 - (bx - ay)^2$; (c) $(x^2 + 8x - 34)^2 - (3x^2 - 8x - 2)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{56.}, p. 16]
+	Phân tích các đa thức sau thành nhân tử: (a) $(a + b + c)^2 + (a - b + c)^2 - 4b^2$; (b) $a(b^2 - c^2) - b(c^2 - a^2) + c(a^2 - b^2)$; (c) $a^5 + b^5 - (a + b)^5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{57.}, p. 16]
+	Chứng minh: (a) $999^4 + 999$ có tận cùng bằng $3$ chữ số $0$; (b) $49^5 - 49\divby100$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{58.}, p. 16]
+	Chứng minh: (a) Lập phương của 1 số nguyên trừ đi số nguyên đó thì chia hết cho $6$; (b) Nếu tổng của 3 số nguyên chia hết cho $6$ thì tổng các lập phương của chúng chia hết cho $6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{59.}, p. 16]
+	Cho $a\ne\pm b$ \&  $a(a + b)(a + c) = b(b + c)(b + a)$. Chứng minh $a + b + c = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{60.}, p. 16]
+	Cho $x^2y - y^2x + x^2z - z^2x + y^2z + z^2y = 2xyz$. Chứng minh trong 3 số $x,y,z$ ít nhất cũng có 2 số bằng nhau hoặc đối nhau.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
