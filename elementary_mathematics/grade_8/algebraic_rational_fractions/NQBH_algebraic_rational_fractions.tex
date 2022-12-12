@@ -11,34 +11,30 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{notation}{Notation}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{vidu}{Ví dụ}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -62,7 +58,7 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Định Nghĩa \& Tính Chất Cơ Bản}
+\section*{Định Nghĩa \& Tính Chất Cơ Bản}
 
 \begin{definition}[Algebraic fraction]
 	``In \href{https://en.wikipedia.org/wiki/Algebra}{algebra}, an \emph{algebraic fraction} is a \href{https://en.wikipedia.org/wiki/Fraction_(mathematics)}{fraction} whose numerator \& denominator are \href{https://en.wikipedia.org/wiki/Algebraic_expression}{algebraic expressions}.'' -- \href{https://en.wikipedia.org/wiki/Algebraic_fraction}{Wikipedia\emph{\texttt{/}}algebraic fraction}
@@ -84,9 +80,7 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Problems}
-
-\subsection{Tính Chất Cơ Bản của Phân Thức. Rút Gọn Phân Thức}
+\section{Tính Chất Cơ Bản của Phân Thức. Rút Gọn Phân Thức}
 
 \begin{baitoan}[\cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}, Ví dụ 5.1, p. 39]
 	Dùng định nghĩa 2 phân thức bằng nhau, chứng minh 2 phân thức sau bằng nhau: $\dfrac{a^2 - 2ab - 3b^2}{a^2 - 4ab + 3b^2}$ \& $\dfrac{a + b}{a - b}$ với $a\ne b$ \& $a\ne 3b$.
@@ -355,8 +349,18 @@
 
 %------------------------------------------------------------------------------%
 
-\subsection{Các Phép Toán về Phân Thức Đại Số}
+\section{Các Phép Toán về Phân Thức Đại Số}
 
+\subsection{Phép Cộng \& Phép Trừ Các Phân Thức Đại Số}
+``\textbf{1.} (a) Muốn cộng 2 phân thức cũng mẫu, ta cộng các tử thức với nhau \& giữ nguyên mẫu thức. (b) Muốn cộng 2 phân thức có mẫu thức khác nhau, ta quy đồng mẫu thức rồi cộng các phân thức cùng mẫu vừa tìm được. \textbf{2.} Phép cộng các phân thức cũng có các tính chất giao hoán, kết hợp. \textbf{3.} 2 phân thức được gọi là \textit{đối nhau} nếu tổng của chúng bằng 0. $-\frac{A}{B} = \frac{-A}{B}$, $-\frac{-A}{B} = \frac{A}{B}$. \textbf{4.} $\frac{A}{B} - \frac{C}{D} = \frac{A}{B} + \left(-\frac{C}{D}\right)$. \textbf{5.} Từ cách tìm phân thức đối của 1 phân thức ta có quy tắc đổi dấu (thứ 2): Nếu đổi dấu của tử thức (hoặc mẫu thức) đồng thời đổi dấu đứng trước phân thức thì được 1 phân thức bằng phân thức đã cho. $\frac{A}{B} = -\frac{-A}{B} = -\frac{A}{-B}$.'' -- \cite[Chap. 2, \S2, p. 40]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 17, p. 41]
+	Thực hiện các phép tính: $A = \frac{x^2}{(x - y)(x - z)} + \frac{y^2}{(y - z)(y - x)} + \frac{z^2}{(z - x)(z - y)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 18, p. 41]
+	Thực hiện các phép tính: $B = \frac{x^2 - yz}{(x + y)(x + z)} + \frac{y^2 - zx}{(y + z)(y + x)} + \frac{z^2 - xy}{(z + x)(z + y)}$.
+\end{baitoan}
 %------------------------------------------------------------------------------%
 
 \printbibliography[heading=bibintoc]
