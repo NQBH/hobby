@@ -11,34 +11,30 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{notation}{Notation}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{vidu}{Ví dụ}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -176,6 +172,10 @@ Nhận xét: Mỗi dòng đều bắt đầu bằng 1 \& kết thúc bằng 1. M
 	\end{enumerate*}
 \end{proof}
 
+\begin{luuy}
+	``2 số có bình phương bằng nhau thì chúng đối nhau hoặc bằng nhau. Ngược lại, 2 số đối nhau hoặc bằng nhau thì có bình phương bằng nhau. $(a - b)^2 = (b - a)^2 = a^2 - 2ab + b^2$, $\forall a,b\in\mathbb{R}$.'' -- \cite[p. 8]{Tuyen_Toan_8}
+\end{luuy}
+
 \begin{baitoan}[Mở rộng \cite{Tuyen_Toan_8}, p. 7]
 	Cho $x + y = a$, $xy = b$, với $a,b\in\mathbb{R}$, $a^2\ge 4b$. Tính giá trị của các biểu thức sau theo $a,b$:
 	\begin{enumerate*}
@@ -195,7 +195,152 @@ Nhận xét: Mỗi dòng đều bắt đầu bằng 1 \& kết thúc bằng 1. M
 	Tìm giá trị nhỏ nhất của biểu thức: $A = (x + 3y - 5)^2 - 6xy + 26$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$A = x^2 + 9y^2 + 25 + 6xy - 10x - 30y - 6xy + 26 = (x^2 - 10x + 25) + (9y^2 - 30y + 25) + 1 = (x - 5)^2 + (3y - 5)^2 + 1\ge 1$, $\forall x,y\in\mathbb{R}\Rightarrow\min A = 1\Leftrightarrow(x = 5)\land\left(y = \frac{5}{3}\right)$.
+\end{proof}
 
+\begin{luuy}
+	\begin{enumerate*}
+		\item[(a)] ``Các hằng đẳng thức được vận dụng theo 2 chiều ngược nhau, e.g., $(a - b)^2 = a^2 - 2ab + b^2$ hoặc ngược lại $a^2 - 2ab + b^2 = (a - b)^2$.
+		\item[(b)] Bình phương của mọi số thực đều không âm: $x^2\ge 0$, $\forall x\in\mathbb{R}$, ``$=$'' xảy ra $\Leftrightarrow x = 0$; hay tương đương với $(a - b)^2\ge 0$, $\forall a,b\in\mathbb{R}$, ``$=$'' xảy ra $\Leftrightarrow a = b$.'' -- \cite[p. 9]{Tuyen_Toan_8}
+	\end{enumerate*}
+\end{luuy}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{8.}, p. 9]
+	Chứng minh các đẳng thức:
+	\begin{enumerate*}
+		\item[(a)] $(2 + 1)(2^2 + 1)(2^4 + 1)(2^8 + 1)(2^{16} + 1) = 2^{32} - 1$;
+		\item[(b)] $100^2 + 103^2 + 105^2 + 94^2 = 101^2 + 98^2 + 96^2 + 107^2$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{9.}, p. 9]
+	Tính giá trị của biểu thức bằng cách hợp lý:
+	\begin{enumerate*}
+		\item[(a)] $A = \frac{258^2 - 242^2}{254^2 - 246^2}$;
+		\item[(b)] $B = 263^2 + 74\cdot263 + 37^2$;
+		\item[(c)] $C = 136^2 - 92\cdot136 + 46^2$;
+		\item[(d)] $D = (50^2 + 48^2 + 46^2 + \cdots + 2^2) - (49^2 + 47^2 + 45^2 + \cdots + 1^2)$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{10.}, p. 9]
+	Cho biết $2(a^2 + b^2) = (a - b)^2$. Chứng minh $a$ \& $b$ đối nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{11.}, p. 9]
+	Cho $a,b,x,y\in\mathbb{R}\backslash\{0\}$. Biết $(a^2 + b^2)(x^2 + y^2) = (ax + by)^2$. Tìm hệ thức giữa 4 số $a,b,x,y$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{12.}, p. 9]
+	Cho $a^2 + b^2 + c^2 = ab + bc + ca$. Chứng minh $a = b = c$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{13.}, p. 9]
+	Chứng minh không có các số $x,y\in\mathbb{R}$ nào thỏa mãn mỗi đẳng thức sau: (a) $3x^2 + y^2 + 10x - 2xy + 26 = 0$; (b) $4x^2 + 3y^2 - 4x + 30y + 78 = 0$; (c) $3x^2 + 6y^2 - 12x - 20y + 40 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{14.}, p. 10]
+	Tìm $x\in\mathbb{R},n\in\mathbb{N}$ thỏa $x^2 + 2x + 4^n - 2^{n + 1} + 2 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{15.}, p. 10]
+	Chứng minh: (a) Biểu thức $A = x^2 + x + 1$ luôn luôn dương với mọi số thực $x$; (b) Biểu thức $B = x^2 - xy + y^2$ luôn luôn dương với mọi số thực $x,y$ không đồng thời bằng $0$; (c) Biểu thức $C = 4x - 10 - x^2$ luôn luôn âm với mọi số thực $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{16.}, p. 10]
+	Tìm giá trị nhỏ nhất của biểu thức: (a) $A = 25x^2 + 3y^2 - 10x + 11$; (b) $B = (x - 3)^2 + (x - 11)^2$; (c) $C = (x + 1)(x - 2)(x - 3)(x - 6)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{17.}, p. 10]
+	Tìm giá trị lớn nhất của biểu thức: (a) $A = 2x - x^2$; (b) $B = 19 - 6x - 9x^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{18.}, p. 10]
+	Chứng minh: (a) 2 số chẵn hơn kém nhau $4$ đơn vị thì hiệu các bình phương của chúng chia hết cho $16$; (b) 2 số lẻ hơn kém nhau $6$ đơn vị thì hiệu các bình phương của chúng chia hết cho $24$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{19.}, p. 10]
+	Cho $x > y > 0$ \& $x - y = 7$, $xy = 60$. Không tính $x,y$, tính: (a) $x^2 - y^2$; (b) $x^4 + y^4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{20.}, p. 10]
+	Cho $a + b + c = 2p$. Chứng minh: (a) $a^2 - b^2 - c^2 + 2abc = 4(p - b)(p - c)$; (b) $p^2 + (p - a)^2 + (p - b)^2 + (p - c)^2 = a^2 + b^2 + c^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{21.}, p. 10]
+	Cho $a = m^2 + n^2$, $b = m^2 - n^2$, $c = 2mn$. Chứng minh nếu $m > n > 0$ thì $a,b,c$ là độ dài 3 cạnh của 1 tam giác vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{22.}, p. 11]
+	Tính giá trị của biểu thức: $A = x^3 + 9x^2 + 27x + 27$ với $x = -103$; (b) $B = x^3 - 15x^2 + 75x$ với $x = 25$; (c) $C = (x + 1)(x - 1)(x^2 + x + 1)(x^2 - x + 1)$ với $x = -3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{23.}, p. 11]
+	Cho $x - y = 2$, tính giá trị của biểu thức: $A = 2(x^3 - y^3) - 3(x + y)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{24.}, p. 11]
+	Cho $x + y + z = 0$. Chứng minh $x^3 + y^3 + z^3 = 3xyz$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{25.}, p. 11]
+	Rút gọn biểu thức $A = (x - y - 1)^3 - (x - y + 1)^3 + 6(x - y)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{26.}, p. 11]
+	Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			(x + 2y)(x^2 - 2xy + 4y^2) &= 0,\\
+			(x - 2y)(x^2 + 2xy + 4y^2) &= 16.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{27.}, p. 11]
+	Chứng minh: (a) $742^3 - 692^3\divby200$; (b) $685^3 + 315^3\divby25000$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{28${}^\star$.}, p. 11]
+	Cho $a + b + c + d = 0$. Chứng minh $a^3 + b^3 + c^3 + d^3 = 3(b + c)(ad - bc)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{29.}, p. 11]
+	Cho $a + b + c = 0$. Chứng minh: (a) $(ab + bc + ca)^2 = a^2b^2 + b^2c^2 + c^2a^2$; (b) $a^4 + b^4 + c^4 = 2(ab + bc + ca)^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{30.}, p. 11]
+	Xác định các hệ số $a,b$ để đa thức $A = x^4 - 2x^3 + 3x^2 + ax + b$ là bình phương của 1 đa thức.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{31.}, p. 11]
+	Cho $a + b + c = 0$, $a^2 + b^2 + c^2 = 1$. Chứng minh $a^4 + b^4 + c^4 = \frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{32.}, pp. 11--12]
+	Cho $a,b,c$ là 3 số thực không đồng thời bằng $0$. Chứng minh có ít nhất 1 trong các biểu thức sau có giá trị dương: $x = (a - b + c)^2 + 8ab$, $y = (a - b +  c)^2 + 8bc$, $z = (a - b + c)^2 - 8ca$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{33.}, p. 12]
+	Tính tổng các hệ số của tất cả các hạng tử trong khai triển của nhị thức: (a) $(5x - 3)^6$; (b) $(3x - 4y)^{20}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{34.}, p. 12]
+	Đa thức $(x + y)^5$ được khai triển theo lũy thừa giảm của $x$. Biết hạng tử thứ 2 \& hạng tử thứ 3 có giá trị bằng nhau khi cho $x = a$, $y = b$ trong đó $a,b$ là các số thực dương \& $a - b = 1$. Tìm $a,b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{35.}, p. 12]
+	Tính: (a) $(x + 2)^2$; (b) $(x - 1)^6$; (c) $(x - 1)^5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{36.}, p. 12]
+	Tìm số dư của phép chia $38^{10}$ cho $13$ \& $38^9$ cho $13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{37.}, p. 12]
+	Chứng minh 2 chữ số tận cùng của $7^{43}$ là $43$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
