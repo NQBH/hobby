@@ -138,6 +138,64 @@
 %------------------------------------------------------------------------------%
 
 \section{Các Hằng Đẳng Thức Đáng Nhớ}
+``\textbf{1.} $(A + B)^2 = A^2 + 2AB + B^2$. \textbf{2.} $(A - B)^2 = A^2 - 2AB + B^2$. \textbf{3.} $(A - B)(A + B) = A^2 - B^2$. \textbf{4.} $(A + B)^3 = A^3 + 3A^2B + 3AB^2 + B^3 = A^3 + B^3 + 3AB(A + B)$. \textbf{5.} $(A - B)^3 = A^3 - 3A^2B + 3AB^2 - B^3 = A^3 - B^3 - 3AB(A + B)$. \textbf{6.} $(A + B)(A^2 - AB + B^2) = A^3 + B^3$. \textbf{7.} $(A - B)(A^2 + AB + B^2) = A^3 - B^3$. \textbf{8.} Bình phương của đa thức: $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$, $(a + b + c + d)^2 = a^2 + b^2 + c^2 + d^2 + 2ab + 2ac + 2ad + 2bc + 2bd + 2cd$, $\ldots$. \textbf{9.} Lũy thừa bậc $n$ của 1 nhị thức (nhị thức Newton):
+\begin{align*}
+	(a + b)^0 &= 1,\\
+	(a + b)^1 &= 1a + 1b,\\
+	(a + b)^2 &= 1a^2 + 2ab + 1b^2,\\
+	(a + b)^3 &= 1a^3 + 3a^2b + 3ab^2 + 1b^3,\\
+	(a + b)^4 &= 1a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + 1b^4,\\
+	(a + b)^5 &= 1a^5 + 5a^4b + 10a^3b^2 + + 10a^2b^3 + 5ab^4 + 1b^5.
+\end{align*}
+Ta thấy khi khai triển $(a + b)^n$ ta được 1 đa thức có $n + 1$ hạng tử, hạng tử dầu là $a^n$, hạng tử cuối là $b^n$, các hạng tử còn lại đều chứa các nhân tử $a$ \& $b$. Vì vậy $(a + b)^n = B(a) + b^n = B(b) + a^n$. \textbf{10.} Nếu viết riêng các hệ số ở vế phải ta được bảng sau (gọi là \textit{tam giác Pascal}):
+\begin{align*}
+	&1\\
+	&1\ \ 1\\
+	&1\ \ 2\ \ 1\\
+	&1\ \ 3\ \ 3\ \ 1\\
+	&1\ \ 4\ \ 6\ \ 4\ \ 1\\
+	&1\ \ 5\ \ 10\ \ 10\ \ 5\ \ 1\\
+	&\ldots
+\end{align*}
+Nhận xét: Mỗi dòng đều bắt đầu bằng 1 \& kết thúc bằng 1. Mỗi số trên 1 dòng kể từ dòng thứ 2 đều bằng số liền trên cộng với số bên trái của số liền trên.'' -- \cite[\S2, pp. 6--7]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 2, p. 7]
+	Cho $x + y = 9$, $xy = 14$. Tính giá trị của các biểu thức sau:
+	\begin{enumerate*}
+		\item[(a)] $x - y$;
+		\item[(b)] $x^2 + y^2$;
+		\item[(c)] $x^3 + y^3$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	\begin{enumerate*}
+		\item[(a)] $(x - y)^2 = (x + y)^2 - 4xy = 9^2 - 4\cdot14 = 25\Rightarrow x - y = \pm5$.
+		\item[(b)] $x^2 + y^2 = (x + y)^2 - 2xy = 9^2 - 2\cdot14 = 53$.
+		\item[(c)] $x^3 + y^3 = (x + y)^3 - 3xy(x + y) = 9^3 - 3\cdot14\cdot9 = 351$.
+	\end{enumerate*}
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_8}, p. 7]
+	Cho $x + y = a$, $xy = b$, với $a,b\in\mathbb{R}$, $a^2\ge 4b$. Tính giá trị của các biểu thức sau theo $a,b$:
+	\begin{enumerate*}
+		\item[(a)] $x - y$;
+		\item[(b)] $x^2 + y^2$;
+		\item[(c)] $x^2 - y^2$;
+		\item[(d)] $x^3 + y^3$;
+		\item[(e)] $x^3 - y^3$.
+	\end{enumerate*}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $(x - y)^2 = (x + y)^2 - 4xy = a^2 - 4\cdot b\Rightarrow x - y = \pm\sqrt{a^2 - 4b}$. (b) $x^2 + y^2 = (x + y)^2 - 2xy = a^2 - 2\cdot b$. (c) $x^2 - y^2 = (x - y)(x + y) = \pm a\sqrt{a^2 - 4b}$. (d) $x^3 + y^3 = (x + y)^3 - 3xy(x + y) = a^3 - 3ab$. (e) $x^3 - y^3 = (x - y)(x^2 + xy + y^2) = \pm\sqrt{a^2 - 4b}(a^2 - 2b + b) = \pm\sqrt{a^2 - 4b}(a^2 - b)$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 3, p. 8]
+	Tìm giá trị nhỏ nhất của biểu thức: $A = (x + 3y - 5)^2 - 6xy + 26$.
+\end{baitoan}
+
+
 
 %------------------------------------------------------------------------------%
 
