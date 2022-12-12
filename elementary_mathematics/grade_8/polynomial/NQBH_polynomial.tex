@@ -739,6 +739,115 @@ Phân tích các đa thức sau thành nhân tử.
 
 %------------------------------------------------------------------------------%
 
+\section{Số Chính Phương}
+``\textbf{1.} \textit{Số chính phương} là số bằng bình phương của 1 số tự nhiên. 20 số chính phương đầu tiên: $0,1,4,9,16,25,36,49,4,81,100$, $121,144,169,196,225,256,289,324,361,400$. \textbf{2.} 1 số tính chất của số chính phương: (a) Số chính phương không tận cùng bởi các chữ số $2,3,7,8$. (b) Khi phân tích 1 số chính phương ra thừa số nguyên tố ta được các thừa số là lũy thừa của số nguyên tố với số mũ chẵn, e.g., $3600 = 60^2 = 2^4\cdot3^2\cdot5^2$. Từ đó suy ra số chính phương $N$ chia hết cho 2 thì $N$ chia hết cho $2^2 = 4$; số chính phương $N$ chia hết cho $2^3 = 8$ thì $N$ chia hết cho $2^4 = 16$. Tổng quát, nếu số chính phương $N$ chia hết cho $p^{2k+1}$ thì $N$ chia hết cho $p^{2k+2}$ ($p$ là số nguyên tố, $k\in\mathbb{Z}$). (c) Số chính phương chia cho 3 chỉ có thể dư 0 hoặc dư 1. Thực vậy, xét các trường hợp: $(3k)^2 = 9k^2\divby3$, $(3k + 1)^2 = 9k^2 + 6k + 1$ chia cho 3 dư 1, $(3k + 2)^2 = 9k^2 + 12k + 4$ chia cho 3 dư 1. Tương tự, 1 số chính phương chia cho 4 chỉ có thể dư 0 hoặc dư 1, chia cho 5 dư 0 hoặc dư 1 hoặc dư 4. Số chính phương lẻ chia cho 4 hoặc chia cho 8 đều dư 1. (d) Giữa 2 số chính phương liên tiếp không có số chính phương nào. $n^2 < x^2 < (n + 1)^2\Rightarrow\overline{\exists}x\in\mathbb{Z}$ thỏa mãn $n^2 < x^2 < (n + 1)^2$. $n^2 < x^2 < (n + 2)^2\Rightarrow x^2 = (n + 1)^2$. (e) Nếu 2 số nguyên liên tiếp có tích là 1 số chính phương thì 1 trong 2 số nguyên đó là số 0. \textbf{3.} \textit{Nhận biết 1 số chính phương}: (a) Để chứng minh $N$ là 1 số chính phương ta có thể: $\bullet$ Biến đổi $N$ thành bình phương của 1 số tự nhiên (hoặc số nguyên). $\bullet$ Vận dụng tính chất: nếu $a,b\in\mathbb{N}$ nguyên tố cùng nhau có tích là 1 số chính phương thì mỗi số $a,b$ cũng là 1 số chính phương. (b) Để chứng minh $N$ không phải là số chính phương ta có thể: $\bullet$ Chứng minh $N$ có chữ số tận cùng là $2,3,7,8$ hoặc có \textit{1 số lẻ} chữ số 0 tận cùng. $\bullet$ Chứng minh $N$ chứa số nguyên tố với số mũ lẻ. $\bullet$ Xét số dư khi chia $N$ cho 3 hoặc cho 4 hoặc cho 5, hoặc cho 8, $\ldots$ E.g., nếu $N$ chia cho 3 có số dư là 2, hoặc $N$ chia cho 4, cho 5 có số dư là 2, 3 thì $N$ không phải là số chính phương. $\bullet$ Chứng minh $N$ nằm giữa 2 số chính phương liên tiếp.'' -- \cite[pp. 28--29]{Tuyen_Toan_8}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 12, p. 29]
+	Cho $A = \underbrace{11\ldots1}_{2n} - \underbrace{88\ldots8}_n + 1$. Chứng minh $A$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 13, p. 30]
+	Chứng minh: (a) Tổng của 3 số chính phương liên tiếp không phải là 1 số chính phương. (b) Tổng $S = \sum_{i=1}^{30} i^2 = 1^2 + 2^2 + 3^3 + \cdots + 30^2$ không phải là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{100.}, p. 31]
+	Có 2 số chính phương nào: (a) Có tổng bằng $4567$? (b) Có hiệu bằng $7654$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{101.}, p. 31]
+	Chứng minh tổng của $20$ số chính phương liên tiếp không thể là số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{102.}, p. 31]
+	Cho 5 số chính phương bất kỳ có chữ số hàng đơn vị đều bằng $6$ còn chữ số hàng chục thì khác nhau. Chứng minh tổng các chữ số hàng chục của 5 số chính phương đó cũng là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{103.}, p. 31]
+	Cho $a,b,c$ là các chữ số khác $0$. (a) Tính tổng $S$ của tất cả các số có 3 chữ số tạo thành bởi cả 3 chữ số $a,b,c$; (b) Chứng minh $S$ không phải là số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{104.}, p. 31]
+	Tìm 1 số chính phương có 4 chữ số biết 2 chữ số đầu giống nhau, 2 chữ số cuối giống nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{105.}, p. 31]
+	Chứng minh nếu $n + 1$ \& $2n + 1$ đều là số chính phương thì $n\divby24$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{106.}, pp. 31--32]
+	Tìm $n\in\mathbb{N}$ biết trong 3 mệnh đề sau có 2 mệnh đề đúng \& 1 mệnh đề sai: (a) $n$ có chữ số tận cùng là $2$. (b) $n + 20$ là 1 số chính phương. (c) $n - 69$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{107.}, p. 32]
+	Cho $N$ là tổng của 2 số chính phương. Chứng minh: (a) $2N$ cũng là tổng của 2 số chính phương; (b) $N^2$ cũng là tổng của 2 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{108.}, p. 32]
+	Cho $A,B,C,D$ là 4 số chính phương. Chứng minh $(A + B)(C + D)$ là tổng của 2 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{109.}, p. 32]
+	Cho $x,y,z\in\mathbb{Z}$ sao cho $x = y + z$. Chứng minh $2(xy + xz - yz)$ là tổng của 3 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{110.}, p. 32]
+	Cho $a,b,c,d\in\mathbb{Z}$ thỏa mãn điều kiện $a - b = c + d$. Chứng minh $a^2 + b^2 + c^2 + d^2$ luôn là tổng của 3 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{111.}, p. 32]
+	Cho 2 số chính phương liên tiếp. Chứng minh tổng của 2 số đó cộng với tích của chúng là 1 số chính phương lẻ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{112.}, p. 32]
+	Cho $a_n = \sum_{i=1}^n i = 1 + 2 + \cdots + n$. (a) Tính $a_{n+1}$; (b) Chứng minh $a_n + a_{n+1}$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{113.}, p. 32]
+	Cho $M$ là tích của 4 số nguyên liên tiếp. Chứng minh $M + 1$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{114.}, p. 32]
+	(a) Cho $a = \underbrace{11\ldots1}_n5$, $b = \underbrace{11\ldots1}_n9$. Chứng minh $ab + 4$ là 1 số chính phương. (b) Cho $a = \underbrace{11\ldots1}_n$, $b = 1\underbrace{00\ldots0}_{n-2}11$, $n\ge 2$. Chứng minh $ab + 4$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{115.}, p. 32]
+	Cho $M = \underbrace{11\ldots1}_n\underbrace{55\ldots5}_n + 1$. Chứng minh $M$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{116.}, p. 33]
+	Chứng minh các số sau là số chính phương. (a) $M_n = \underbrace{11\ldots1}_{2n} + \underbrace{44\ldots4}_n + 1$, $\forall n\in\mathbb{N}$; (b) $N = \underbrace{11\ldots1}_{2n} + \underbrace{11\ldots1}_{n+1} + \underbrace{66\ldots6}_n + 8$, $\forall n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{117.}, p. 33]
+	Cho $a,b,c\in\mathbb{Z}$ thỏa mãn điều kiện $ab + bc + ca = 1$. Chứng minh $(a^2 + 1)(b^2 + 1)(c^2 + 1)$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{118.}, p. 33]
+	Tìm tất cả $n\in\mathbb{N}$ sao cho $n^2 + 1234$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{119.}, p. 33]
+	Tìm tất cả $k\in\mathbb{N}$ để cho số $2^k + 2^4 + 2^7$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{120.}, p. 33]
+	Tìm tất cả $x\in\mathbb{N}$ sao cho $x^2 + 2x + 200$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{121.}, p. 33]
+	Tìm tất cả $x\in\mathbb{Z}$ sao cho $A = x(x - 1)(x - 7)(x - 8)$ là 1 số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, \textbf{122.}, p. 33]
+	Cho $A = p^4$ trong đó $p$ là 1 số nguyên tố. (a) Số $A$ có những ước dương nào? (b) Tìm các giá trị của $p$ để tổng các ước dương của $A$ là 1 số chính phương.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
 \printbibliography[heading=bibintoc]
 	
 \end{document}
