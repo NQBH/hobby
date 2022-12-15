@@ -12,34 +12,30 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{notation}{Notation}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{vidu}{Ví dụ}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -64,6 +60,41 @@
 \cite[pp. 38--]{An_Hoa_Hoc_nang_cao_11_2020}
 
 \section{Problem}
+
+\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_11_2021}, \textbf{40.}, p. 19]
+	(a) Cân bằng các phương trình hóa học của phản ứng giữa kim loại $M$ hóa trị $n$ với dung dịch \emph{\ce{HNO3}} thu được sản phẩm là muối nitrat, nước, \& 1 trong các chất \emph{\ce{NO,N2O,NH4NO3}}. (b) Cho 1 miếng \emph{Al} vào dung dịch chứa \emph{\ce{NaOH,NaNO3}}. Viết các phương trình hóa học dưới dạng phân tử \& dạng ion.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) \ce{3M + $4n$HNO3 -> 3M(NO3)_n + $n$NO + $2n$H2O}, \ce{8M + $10n$HNO3 -> 8M(NO3)_n + $n$N2O + $5n$H2O}, \ce{8M + $10n$HNO3 -> 8M(NO3)_n + $n$NH4NO3 + $3n$H2O}. (b) \ce{8Al + 5NaOH + 3NaNO3 + 2H2O -> 8NaAlO2 + 3NH3 ^}, \ce{8Al + 5OH- + 3NO3- + 2H2O -> 8AlO2- + 3NH3 ^}, \ce{2Al + 2NaOH} (nếu dư) \ce{+ 2H2O -> 2NaAlO2- + 3H2 ^}. \ce{2Al + 2OH- + 2H2O -> 2AlO2- + 3H2 ^}.
+\end{proof}
+
+\begin{luuy} 
+	\begin{itemize}
+		\item (a) Gốc \emph{\ce{NO3-}} trong môi trường acid có khả năng oxi hóa như \emph{\ce{HNO3}}. Gốc \emph{\ce{NO3^-}} trong môi trường trung tính không có khả năng oxi hóa. Gốc \emph{\ce{NO3-}} trong môi trường kiềm có thể bị \emph{Zn, Al} khử đến \emph{\ce{NH3}}.
+		\item[(b)] Cho \emph{Zn} vào  dung dịch chứa \emph{\ce{NaOH,NaNO3}}: \emph{\ce{4Zn + NaNO3 + 7NaOH + 6H2O -> 4Na2[(Zn(OH)4] + NH3 ^}, \ce{Zn + 2NaOH} (nếu dư) \ce{-> Na2ZnO2 + H2 ^}}.
+	\end{itemize}	 
+\end{luuy}
+
+\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_11_2021}, \textbf{58.}, p. 21, TS ĐHQG TPHCM 1999]
+	Cho hỗn hợp A gồm 3 kim loại X, Y, Z có hóa trị lần lượt là III, II, I \& tỷ lệ mol lần lượt là $1:2:3$, trong đó số mol của X bằng $x$ mol. Hòa tan hoàn toàn A bằng dung dịch có chứa $y$ gam \emph{\ce{HNO3}} (lấy dư $25$\%). Sau phản ứng thu được dung dịch B không chứa \emph{\ce{NH4NO3}} \& $V$\emph{l} hỗn hợp khí G (đktc) gồm \emph{\ce{NO2,NO}}. Lập biểu thức tính $y$ theo $x$ \& $V$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$n_{\rm X}:n_{\rm Y}:n_{\rm Z} = 1:2:3$, $n_{\rm X} = x$ mol, suy ra $n_{\rm Y} = 2x$ mol, $n_{\rm Z} = 3x$ mol. \ce{X + 6HNO3 -> X(NO3)3 + 3NO2 ^ + 3H2O}, \ce{Y + 4HNO3 -> Y(NO3)2 + 2NO2 ^ + 2H2O}, \ce{Z + 2HNO3 -> ZNO3 + NO2 ^ + H2O}, \ce{X + 4HNO3 -> X(NO3)2 + 2NO ^ + 4H2O}, \ce{3Y + 8HNO3 -> 3Y(NO3)2 + 2NO ^ + 4H2O}, \ce{3Z + 4HNO3 -> 3ZNO3 + NO ^ + 2H2O}.
+	
+	Có $\sum n_{\scriptsize\ce{HNO3}\mbox{pư}} = \sum n_{\scriptsize\rm N\mbox{ in muối}} + \sum n_{\scriptsize\ce{N}\mbox{ in }G} = 3n_{\rm X} + 2n_{\rm Y} + n_{\rm Z} + n_{\scriptsize\ce{N}\mbox{ in }\ce{NO2}} + n_{\scriptsize\ce{N}\mbox{ in }\ce{NO}} = 3x + 2\cdot2x + 3x + \frac{V}{22.4}\Rightarrow y = M_{\ce{HNO3}}\sum n_{\scriptsize\ce{HNO3}\mbox{pư}}\cdot125\% = 1.25\cdot63\left(10x + \frac{V}{22.4}\right) = 787.5x + \frac{225}{64}V$.
+\end{proof}
+
+\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_11_2021}, \textbf{59.}, p. 21]
+	Trộn \emph{\ce{CuO}} với oxit kim loại M hóa trị II theo tỷ lệ số mol tương ứng là $1:2$ được hỗn hợp B. Cho $4.8$\emph{g} hỗn hợp B vào 1 ống sứ, nung nóng rồi cho 1 dòng khí \emph{CO} đi qua đến khi phản ứng xảy ra hoàn toàn thu được chất rắn D. Hỗn hợp D tác dụng vừa đủ với $160$\emph{ml} dung dịch \emph{\ce{HNO3}} $1.25$\emph{M} thu được $V$\emph{l} khí \emph{NO} (đktc). Tính $V$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Đặt $x\coloneqq n_{\ce{CuO}}$, thì $n_{\ce{MO}} = 2x$. $80x + 2x(M + 16) = 4.8\Rightarrow x(M + 56) = 2.4$. $n_{\ce{HNO3}} = 0.16\cdot1.25 = 0.2$ mol. \ce{CuO + CO ->[$t^\circ$] Cu + CO2 ^}, \ce{MO + CO ->[$t^\circ$] M + CO2 ^}.
+\end{proof}
+
+%------------------------------------------------------------------------------%
 
 \subsection{Dựa vào cấu hình electron xác định số oxi hóa \& tính chất hóa học của nitơ, photpho \& các hợp chất của chúng}
 
