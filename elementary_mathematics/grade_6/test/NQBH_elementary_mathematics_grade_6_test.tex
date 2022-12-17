@@ -117,24 +117,44 @@
 \section{Test 2}
 
 \begin{baitoan}
-	Tìm ước chung của các số sau: (a) $18$ \& $24$; (b) $0$ \& $90$.
+	Tìm ước chung của các số sau: (a) $18$ \& $24$; (b) $60$ \& $90$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $18 = 2\cdot3^2$, $24 = 2^3\cdot3$, nên $\mbox{ƯCLN}(18,24) = 2\cdot3 = 6$. Suy ra $\mbox{ƯC}(18,24) = \mbox{Ư}(\mbox{ƯCLN}(18,24)) = \mbox{Ư}(6) = \{1;2;3;6\}$. (b) $60 = 2^2\cdot3\cdot5$, $90 = 2\cdot3^2\cdot5$, nên $\mbox{ƯCLN}(60,90) = 2\cdot3\cdot5 = 30$. Suy ra $\mbox{ƯC}(60,90) = \mbox{Ư}(\mbox{ƯCLN}(60,90)) = \mbox{Ư}(30) = \{1;2;3;5;6;10;15;30\}$.
+\end{proof}
 
 \begin{baitoan}
 	Tìm $x\in\mathbb{N}$ lớn nhất biết $120$ \& $216$ cùng chia hết cho $x$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Vì $120\divby x$, $216\divby x$, nên $x\in\mbox{ƯC}(120,216)$, mà $x$ lớn nhất nên $x = \mbox{ƯCLN}(120,216)$. Có $120 = 2^3\cdot3\cdot5$, $216 = 2^3\cdot3^3$, nên $\mbox{ƯCLN}(120,216) = 2^3\cdot3 = 24$. Vậy $x = 24$.
+\end{proof}
+
 \begin{baitoan}
 	Tìm các cặp số nguyên tố cùng nhau trong các cặp số dưới đây: (a) $8$ \& $12$; (b) $15$ \& $51$; (c) $9$ \& $13$; (d) $10$ \& $21$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $8 = 2^3$, $12 = 2^2\cdot3$, suy ra $\mbox{ƯCLN}(8,12) = 2^2 = 4$, nên $8$ \& $12$ không nguyên tố cùng nhau. (b) $15 = 3\cdot5$, $51 = 3\cdot17$, suy ra $\mbox{ƯCLN}(15,51) = 3$, nên $15$ \& $51$ không nguyên tố cùng nhau. (c) $9 = 3^2$, nên $\mbox{ƯCLN}(9,13) = 1$, suy ra $9$ \& $13$ nguyên tố cùng nhau. (d) $10 = 2\cdot5$, $21 = 3\cdot7$, nên $\mbox{ƯCLN}(10,21) = 1$, suy ra $10$ \& $21$ nguyên tố cùng nhau.
+\end{proof}
 
 \begin{baitoan}
 	Học sinh của đội văn nghệ khi xếp thành hàng $2$, hàng $3$, hàng $4$ hoặc hàng $8$ đều vừa đủ. Biết số học sinh của lớp đội văn nghệ từ $38$ đến $60$ em. Tính số học sinh đội văn nghệ.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi số học sinh của đội văn nghệ là $x\in\mathbb{N}^\star$. $x\divby2$, $x\divby3$, $x\divby4$, $x\divby8$, nên $x\in\mbox{BC}(2,3,4,8)\cap\mathbb{N}^\star$. Có $4 = 2^2$, $8 = 2^3$, nên $\mbox{BCNN}(2,3,4,8) = 2^3\cdot3 = 24$, suy ra $\mbox{BC}(2,3,4,8) = \mbox{B}(\mbox{BC}(2,3,4,8)) = \mbox{B}(24) = \{24n|n\in\mathbb{Z}\}$. Vậy $x$ có dạng $x = 24n$, với $n\in\mathbb{N}^\star$, mà $38\le x\le 60$, nên $38\le 24n\le60$, hay $1 < n < 3$, suy ra $n = 2$, suy ra $x = 24\cdot 2 = 48$. Vậy đội văn nghệ có $48$ học sinh.
+\end{proof}
+
 \begin{baitoan}
 	(a) Sắp xếp các số nguyên sau theo thứ tự tăng dần: $-1,7,-10,0,-20,5$. (b) Sắp xếp các số nguyên sau theo thứ tự giảm dần \& biểu diễn chúng trên cùng 1 trục số: $2,-4,4,0,-2,5$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Theo thứ tự tăng dần: $-20,-10,-1,0,5,7$. (b) Theo thứ tự giảm dần: $5,4,2,0,-2,-4$. (Tự vẽ hình biểu diễn chúng trên cùng 1 trục số.)
+\end{proof}
 
 \begin{baitoan}
 	Tính hợp lý: (a) $(-37) + 14 + 26 + 37$; (b) $(-2)\cdot36 + (-2)\cdot64 + (-100)$; (c) $(-16) + (-209) + (-14) + 209$; (d) $(-3)\cdot81 - (-19)(-3)$.
