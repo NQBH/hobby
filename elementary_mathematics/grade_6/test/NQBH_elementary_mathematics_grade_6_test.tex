@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Elementary Mathematics\texttt{/}Grade 6\texttt{/}Test}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Test 1}
+
+\begin{baitoan}
+	Tính hợp lý: (a) $45\cdot37 + 45\cdot63 - 100$; (b) $148\cdot9 - 3^2\cdot48$; (c) $307 - [(180\cdot4^0 - 160):2^2 + 9]:2$. (d) $12 + 3\{90:[39 - (2^3 - 5)^2]\}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $45\cdot37 + 45\cdot63 - 100 = 45\cdot(37 + 63) - 100 = 45\cdot100 - 100 = 100\cdot(45 - 1) = 100\cdot44 = 4400$. (b) $148\cdot9 - 3^2\cdot48 = 148\cdot9 - 9\cdot48 = 9\cdot(148 - 48) = 9\cdot100 = 900$. (c)  $307 - [(180\cdot4^0 - 160):2^2 + 9]:2 = 307 - [(180\cdot1 - 160):4 + 9]:2 = 307 - (20:4 + 9):2 = 307 - (5 + 9):2 = 307 - 14:2 = 307 - 7 = 300$. (d) $12 + 3\{90:[39 - (2^3 - 5)^2]\} = 12 + 3\cdot\{90:[39 - (8 - 5)^2] = 12 + 3\cdot[90:(39 - 3^2)] = 12 + 3\cdot[90:(39 - 9)] = 12 + 3\cdot(90:30) = 12 + 3\cdot3 = 12 + 9 = 21$.
+\end{proof}
+
+\begin{baitoan}
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x - 17 = -23$; (b) $2(x - 1) + 7 + (-3)$; (c) $4(x - 5)^3 - 7 = 101$; (d) $2^{x+1}\cdot3 + 15 = 39$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $x - 17 = -23\Leftrightarrow x = -23 + 17 = -6$. (b) $2(x - 1) + 7 + (-3)\Leftrightarrow 2(x - 1) = 7 + (-3) = 4\Leftrightarrow x - 1 = 4:2 = 2\Leftrightarrow x = 2 + 1 = 3$. (c) $4(x - 5)^3 - 7 = 101\Leftrightarrow 4(x - 5)^3 = 101 + 7 = 108\Leftrightarrow(x - 5)^3 = 108:4 = 27 = 3^3\Leftrightarrow x - 5 = 3\Leftrightarrow x = 5 + 3 = 8$.(d) $2^{x+1}\cdot3 + 15 = 39\Leftrightarrow3\cdot2^{x+1} = 39 - 15 = 24\Leftrightarrow2^{x+1} = 24:3 = 8 = 2^3\Leftrightarrow x + 1 = 3\Leftrightarrow x = 2$.
+\end{proof}
+
+\begin{baitoan}
+	Tìm $x\in\mathbb{Z}$ thỏa $56\divby x$, $70\divby x$, \& $10 < x < 20$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$56\divby x$, $70\divby x\Leftrightarrow x\in\mbox{ƯC}(56,70)$. Có $56 = 2^3\cdot7$, $70 = 2\cdot5\cdot7$, $\mbox{ƯCLN}(56,70) = 2\cdot7 = 14$, suy ra $x\in\mbox{ƯC}(56,70) = \mbox{Ư}(\mbox{ƯCLN}(56,70)) = \mbox{Ư}(14) = \{\pm1,\pm2,\pm7,\pm14\}$, kết hợp với $10 < x < 20$, suy ra $x = 14$.
+\end{proof}
+
+\begin{baitoan}
+	Cho $A = \sum_{i=0}^{19} 2^i = 2^0 + 2^1 + 2^2 + \cdots + 2^{19}$ \& $B = 2^{20}$. Chứng minh $A,B$ là 2 số tự nhiên liên tiếp.
+\end{baitoan}
+\noindent\textit{Hint.} Tính $2A$ rồi tính $2A - A$ để đơn giản chỉ còn số hạng đầu \& cuối.
+
+\begin{proof}[Giải]
+	Có $2A	= 2(2^0 + 2^1 + 2^2 + \cdots + 2^{19}) = 2^1 + 2^2 + 2^3 + \cdots + 2^{20}$.\footnote{Nếu quen với ký hiệu tổng $\sum$ có thể viết ngắn gọn: $2A = 2\sum_{i=0}^{19} 2^i = \sum_{i=1}^{20} 2^i$.}, nên $2A - A =  2^1 + 2^2 + 2^3 + \cdots + 2^{20} - (2^0 + 2^1 + 2^2 + \cdots + 2^{19}) = 2^1 + 2^2 + 2^3 + \cdots + 2^{20} - 2^0 - 2^1 - 2^2 + \cdots - 2^{19} = 2^{20} - 2^0$, hay $A = 2^{20} - 1$, \& $B = 2^{20}$, nên $A,B$ là 2 số tự nhiên liên tiếp.
+\end{proof}
+
+\begin{baitoan}
+	Tính: (a) $58\cdot57 + 58\cdot150 - 58\cdot125$; (b) $3^2\cdot5 - 2^2\cdot7 + 83\cdot2019^0$; (c) $-(-2019) + (-247) + (-53) - 2019$; (d) $13\cdot70 - 50[(19 - 3^2):2 + 2^3]$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $58\cdot57 + 58\cdot150 - 58\cdot125 = 58\cdot(57 + 150 - 125) = 58\cdot(207 - 125) = 58\cdot82 = 4756$. (b) $3^2\cdot5 - 2^2\cdot7 + 83\cdot2019^0 = 9\cdot5 - 4\cdot7 + 83\cdot1 = 45 - 28 + 83 = 17 + 83 = 100$. (c) $-(-2019) + (-247) + (-53) - 2019 = (2019 - 2019) - (247 + 53) = 0 - 300 = -300$. (d) $13\cdot70 - 50[(19 - 3^2):2 + 2^3] = 13\cdot70 - 50[(19 - 9):2 + 8] = 13\cdot70 - 50(10:2 + 8) = 13\cdot70 - 50(5 + 8) = 13\cdot70 - 50\cdot13 = 13(70 - 50) = 13\cdot20 = 260$.
+\end{proof}
+
+\begin{baitoan}
+	Tìm $x\in\mathbb{Z}$ thỏa: (a) $x - 36:18 = 12 - 15$; (b) $92 - (17 + x) = 72$; (c) $720:[41 - (2x + 5)] = 40$; (d) $(x + 2)^3 - 23 = 41$; (e) $70\divby x$, $84\divby x$, $140\divby x$, \& $x > 8$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $x - 36:18 = 12 - 15\Leftarrow x - 2 = -3\Leftrightarrow x = -3 + 2 = -1$. (b) $92 - (17 + x) = 72\Leftrightarrow 92 - 72 = 17 + x\Leftrightarrow x + 17 = 20\Leftrightarrow x = 20 - 17 = 3$. (c) $720:[41 - (2x + 5)] = 40\Leftrightarrow 41 - (2x + 5) = 720:40 = 8\Leftrightarrow 2x + 5 = 41 - 18 = 23\Leftrightarrow 2x = 23 - 5 = 18\Leftrightarrow x = 18:2 = 9$. (d) $(x + 2)^3 - 23 = 41\Leftrightarrow(x + 2)^3 = 41 + 23 = 64 = 4^3\Leftrightarrow x + 2 = 4\Leftrightarrow x = 4 - 2 = 2$. (e) Vì $70\divby x$, $84\divby x$, $140\divby x$, \& $x\in\mathbb{Z}$ nên $x\in\mbox{ƯC}(70,84,140)\cap\mathbb{Z}$. Có $70 = 2\cdot5\cdot7$, $84 = 2^2\cdot3\cdot7$, $140 = 2^2\cdot5\cdot7$, nên $\mbox{ƯCLN}(70,84,140) = 2\cdot7 = 14$, suy ra $x\in\mbox{ƯC}(70,84,140)\cap\mathbb{Z} = \mbox{Ư}(\mbox{ƯCLN}(70,84,140))\cap\mathbb{Z} = \mbox{Ư}(14)\cap\mathbb{Z} = \{\pm1,\pm2,\pm7,\pm14\}$, kết hợp với $x > 8$, suy ra $x = 14$.
+\end{proof}
+
+\begin{baitoan}
+	Chứng minh $2n + 1$ \& $3n + 1$ là 2 số nguyên tố cùng nhau.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $d = \mbox{ƯCLN}(2n + 1,3n + 1)$. Có $2n + 1\divby d$ \& $3n + 1\divby d$, suy ra $3(2n + 1) - 2(3n + 1) = 6n + 3 - (6n + 2) = 1\divby d\Rightarrow d = 1$, nên $\mbox{ƯCLN}(2n + 1,3n + 1) = 1$, theo định nghĩa, $2n + 1$ \& $3n + 1$ là 2 số nguyên tố cùng nhau.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\section{Test 2}
+
+\begin{baitoan}
+	Tìm ước chung của các số sau: (a) $18$ \& $24$; (b) $0$ \& $90$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tìm $x\in\mathbb{N}$ lớn nhất biết $120$ \& $216$ cùng chia hết cho $x$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tìm các cặp số nguyên tố cùng nhau trong các cặp số dưới đây: (a) $8$ \& $12$; (b) $15$ \& $51$; (c) $9$ \& $13$; (d) $10$ \& $21$.
+\end{baitoan}
+
+\begin{baitoan}
+	Học sinh của đội văn nghệ khi xếp thành hàng $2$, hàng $3$, hàng $4$ hoặc hàng $8$ đều vừa đủ. Biết số học sinh của lớp đội văn nghệ từ $38$ đến $60$ em. Tính số học sinh đội văn nghệ.
+\end{baitoan}
+
+\begin{baitoan}
+	(a) Sắp xếp các số nguyên sau theo thứ tự tăng dần: $-1,7,-10,0,-20,5$. (b) Sắp xếp các số nguyên sau theo thứ tự giảm dần \& biểu diễn chúng trên cùng 1 trục số: $2,-4,4,0,-2,5$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tính hợp lý: (a) $(-37) + 14 + 26 + 37$; (b) $(-2)\cdot36 + (-2)\cdot64 + (-100)$; (c) $(-16) + (-209) + (-14) + 209$; (d) $(-3)\cdot81 - (-19)(-3)$.
+\end{baitoan}
+
+\begin{baitoan}
+	Nhiệt độ của phòng ướp lạnh hiện tại là $-7^\circ$C. Nhiệt độ của phòng ướp lạnh là bao nhiêu nếu: (a) Tăng nhiệt độ lên $7^\circ$C? (b) Giảm đi $3^\circ$C.
+\end{baitoan}
+
+\begin{baitoan}
+	Trong 1 ngày, nhiệt độ Sapa lúc 5:00 là $-6^\circ$C, đến 10:00 tăng thêm $13^\circ$C \& lúc 12:00 giảm tiếp $3^\circ$C. Nhiệt độ Sapa lúc 12:00 là bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}
+	Tính: (a) $(-12)\cdot3$; (b) $25\cdot(-4)$; (c) $(-11)\cdot(-13)$; (d) $(-3)\cdot18 + (-3)\cdot82$.
+\end{baitoan}
+
+\begin{baitoan}
+	(a) Vẽ hình vuông có độ dài cạnh là $5$\emph{cm}. Tính chu vi hình vuông đó. (b) Tính cạnh của hình thoi biết chu vi hình thoi là $160$\emph{cm}. (c) 1 hình chữ nhật có chiều rộng $6$\emph{dm}, chiều dài gấp $3$ lần chiều rộng. Tính diện tích hình chữ nhật đó. (d) 1 hình thang cân có chu vi $46$\emph{cm} \& tổng độ dài 2 cạnh đáy là $28$\emph{cm}. Tính độ dài của mỗi cạnh bên của hình thang đó.
+\end{baitoan}
+
+\begin{baitoan}
+	Người ta muốn lát nền 1 lớp học có chiều rộng $6$\emph{m}, chiều dài $8$\emph{m} bằng các viên gạch hình chữ nhật có kích thước $\rm30cm\times40cm$. Biết mỗi viên gạch giá $12000$ đồng. Hỏi chi phí để lát kín sàn lớp học đó là bao nhiêu?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
