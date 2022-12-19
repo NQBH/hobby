@@ -1,3 +1,7 @@
+%-----------------------------------------------------------------------------%
+% English + Vietnamese
+%-----------------------------------------------------------------------------%
+
 \newtheorem{assumption}{Assumption}[section]
 \newtheorem{baitoan}{Bài toán}
 \newtheorem{cauhoi}{Câu hỏi}[section]
@@ -8,6 +12,7 @@
 \newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
 \newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{notation}{Notation}[section]
@@ -18,3 +23,22 @@
 \newtheorem{remark}{Remark}[section]
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{vidu}{Ví dụ}[section]
+
+%-----------------------------------------------------------------------------%
+% English only
+%-----------------------------------------------------------------------------%
+
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
