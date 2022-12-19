@@ -85,6 +85,31 @@ Some classes of functional equations can be solved by computer-assisted techniqu
 
 In \href{https://en.wikipedia.org/wiki/Dynamic_programming}{dynamic programming} a variety of successive approximation methods are used to solve \href{https://en.wikipedia.org/wiki/Bellman_equation}{Bellman's functional equation}, including methods based on \href{https://en.wikipedia.org/wiki/Fixed_point_iteration}{fixed point iterations}.'' -- \href{https://en.wikipedia.org/wiki/Functional_equation#Solution}{Wikipedia\texttt{/}functional equation\texttt{/}solution}
 
+\subsection{Pythagoras Equation}
+
+\begin{problem}
+	Solve the equation $x^2 + y^2 = z^2$ for $x,y,z\in\mathbf{Z}$.
+\end{problem}
+The general solution is given by $x = k(m^2 - n^2)$, $y = 2kmn$, $z = k(m^2 + n^2)$, where $k,m,n\in\mathbb{N}$.
+
+\begin{definition}[Functional equation]
+	``An equation in which unknowns are functions is called a \emph{functional equation}.
+\end{definition}
+We are asked to find all functions satisfying some given relation(s).'' -- \cite[p. 2]{Venkatachala2013}
+
+\section{Function Equation on $\mathbb{N}$}
+
+\section{Function Equation on $\mathbb{R}$}
+
+\begin{problem}[\cite{Venkatachala2013}, pp. 2--3]
+	Find all $f:\mathbb{R}\to\mathbb{R}$ such that $f(-x) = -f(x)$ \& $f(xy) = x^2f(y)$, $\forall x,y\in\mathbb{R}$.
+\end{problem}
+
+\begin{proof}[Solution]
+	We have $-f(xy) = f(-xy) = f((-x)y) = (-x)^2f(y) = x^2f(y) = f(xy)\Rightarrow f(xy) = 0$, $\forall x,y\in\mathbb{R}$. Taking $y = 1$, it implies $f(x) = 0$, $\forall x\in\mathbb{R}$. Thus the set of equations given has only 1 solution: $f(x) = 0$, $\forall x\in\mathbb{R}$.
+\end{proof}
+
+
 %------------------------------------------------------------------------------%
 
 \printbibliography[heading=bibintoc]
