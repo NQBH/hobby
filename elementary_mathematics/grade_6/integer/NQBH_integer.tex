@@ -21,6 +21,7 @@
 \newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{notation}{Notation}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
@@ -65,11 +66,44 @@
 
 \section{Thứ Tự Trên $\mathbb{Z}$}
 
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 38, p. 35]
+	Viết tập hợp 3 số nguyên liên tiếp trong đó có số $0$.
+\end{baitoan}
+\noindent\textit{Phân tích.} Có 3 vị trí cho số $0$: đầu, giữa, cuối.
+
+\begin{proof}[Giải]
+	Tập hợp 3 số số nguyên liên tiếp trong đó có số $0$: $\{0,1,2\},\{-1,0,1\},\{-2,-1,0\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 39, p. 36]
+	Cho 3 số nguyên khác nhau $a,b,0$. Biết $a$ là 1 số âm \& $a < b$. Sắp xếp các số đó theo thứ tự tăng dần.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Nếu $b$ là số nguyên âm thì $a < b < 0$. Nếu $b$ là số nguyên dương thì $a < 0 < b$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{184.}, p. 36]
+	Số nguyên âm lớn nhất có $3$ chữ số \& số nguyên âm nhỏ nhất có $2$ chữ số có phải là 2 số nguyên liền nhau không?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Số nguyên âm lớn nhất có $3$ chữ số: $-100$. Số nguyên âm nhỏ nhất có $2$ chữ số: $-99$. $-100,-99$ là 2 số nguyên liền nhau\texttt{/}liên tiếp.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{185.}, p. 36]
+	Tìm các giá trị thích hợp của $a,b$: (a) $\overline{a00} > -111$; (b) $-\overline{a99} > -600$; (c) $-\overline{cb3} < -\overline{cba}$; (d) $-\overline{cab} < -\overline{c85}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Có $\overline{a00} > 0 > -111$, $\forall a\in\{1,2,\ldots,9\}$. (b) $-\overline{a99} > -600\Leftrightarrow\overline{a99} < 600\Leftrightarrow a\in\{1,2,3,4,5\}$. (c) $-\overline{cb3} < -\overline{cba}\Leftrightarrow\overline{cb3} > \overline{cba}\Rightarrow 3 > a\Rightarrow a\in\{0,1,2\}$ (với $b\in\{0,1,\ldots,9\}$, $c\in\{1,2,\ldots,9\}$ tùy ý). (d) $-\overline{cab} < -\overline{c85}\Leftrightarrow\overline{cab} > \overline{c85}\Leftrightarrow\overline{ab}\in\{86,87,\ldots,99\}$ (với $c\in\{1,2,\ldots,9\}$ tùy ý).
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 48, p. 41]
 	Cho $a\in\mathbb{Z}$. Gọi khoảng cách từ điểm $a$ đến điểm gốc trên trục số là \emph{giá trị tuyệt đối} của số $a$ \& ký hiệu là $|a|$. Điền vào chỗ trống các dấu $\ge,\le,>,<,=$ để các khẳng định sau là đúng:
 	\begin{enumerate*}
 		\item[(a)] $|a|\ldots a$, $\forall a\in\mathbb{Z}$.
-		\item[(a)] $|a|\ldots 0$, $\forall a\in\mathbb{Z}$.
+		\item[(b)] $|a|\ldots 0$, $\forall a\in\mathbb{Z}$.
 		\item[(c)] Nếu $a > 0$ thì $a\ldots|a|$.
 		\item[(d)] Nếu $a = 0$ thì $a\ldots|a|$.
 		\item[(e)] Nếu $a < 0$ thì $a\ldots|a|$.
@@ -114,7 +148,57 @@
 
 %------------------------------------------------------------------------------%
 
-\section{$\pm$ Trêm $\mathbb{Z}$}
+\section{$\pm$ Trên $\mathbb{Z}$}
+``\textbf{1.} \textit{Cộng 2 số nguyên cùng dấu.} $\bullet$ Muốn cộng 2 số nguyên dương, ta cộng chúng như cộng 2 số tự nhiên. Muốn cộng 2 số nguyên âm, ta cộng 2 số đối của chúng rồi thêm dấu trừ $-$ đằng trước. $(+a) + (+b) = a + b$, $(-a) + (-b) = -(a + b)$, $\forall a,b\in\mathbb{N}^\star$. \textbf{2.} \textit{Cộng 2 số nguyên khác dấu.} $\bullet$ Tổng 2 số nguyên đối nhau thì bằng $0$: $a + (-a) = a - a = 0$, $\forall a\in\mathbb{Z}$. $\bullet$ Cộng 2 số nguyên khác dấu không đối nhau: Với 2 số nguyên dương $a,b$: $\circ$ $a > b\Rightarrow a + (-b) = a - b$. $\circ$ $a < b\Rightarrow a + (-b) = -(b - a)$. \textbf{3.} \textit{Tính chất của phép cộng 2 số nguyên.} Các tính chất của phép cộng trong $\mathbb{N}$ vẫn còn đúng trong $\mathbb{Z}$. Khi thực hiện cộng nhiều số nguyên ta có thể thay đổi tùy ý thứ tự các số hạng, nhóm các số hạng 1 cách tùy ý. \textbf{4.} \textit{Phép trừ 2 số nguyên.} Muốn lấy số nguyên $a$ trừ đi số nguyên $b$ ta cộng $a$ với số đối của $b$: $a - b = a + (-b)$, $\forall a,b\in\mathbb{Z}$. \textbf{5.} $a > b\Leftrightarrow a - b > 0$, $a < b\Leftrightarrow a - b < 0$, $\forall a,b\in\mathbb{Z}$.'' -- \cite[Chap. 2, \S2, p. 37]{Tuyen_Toan_6}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 40, p. 37]
+	Tính tổng $S = (-351) + (-74) + 51 + (-126) + 149$.
+\end{baitoan}
+
+\begin{proof}[1st Giải]
+	$S = [(-315) + (-74) + (-126)] + (51 + 149) = -551 + 200 = -351$.
+\end{proof}
+
+\begin{proof}[2nd Giải]
+	$S = [(-351) + 51] + [(-74) + (-126)] + 149 = (-300) + (-200) + 149 = -500 + 149 = -351$.
+\end{proof}
+
+\begin{nhanxet}
+	``Trong 1st Giải, để cộng nhiều số ta cộng số âm với số âm, số dương với số dương rồi cộng 2 kết quả với nhau. Cách này có ưu điểm là đỡ nhầm dấu. Trong 2nd Giải, ta kết hợp từng nhóm có tổng là 1 số tròn trăm. Cách giải này có ưu điểm là có thể nhẩm ra kết quả.'' -- \cite[p. 37]{Tuyen_Toan_6}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 41, p. 38]
+	Với $a,b\in\mathbb{Z}$, chứng minh $a - b$ \& $b - a$ là 2 số đối nhau.
+\end{baitoan}
+\noindent\textit{Phân tích.} Để chứng minh 2 số đối nhau ta chứng minh tổng của chúng bằng $0$.
+ 
+\begin{proof}[1st Giải]
+	Có $(a - b) + (b - a) = a - b + b - a = (a - a) + (b - b) = 0 + 0 = 0$.
+\end{proof}
+
+\begin{proof}[2nd Giải]
+	Có $(a - b) + (b - a) = [a + (-b)] + [b + (-a)] = [a + (-a)] + [b + (-b)] = 0 + 0 = 0$.
+\end{proof}
+
+\begin{nhanxet}
+	``Do $a - b$ \& $b - a$ là 2 số đối nhau nên nếu biết hiệu $a - b$ thì không cần làm phép trừ ta cũng tính được $b - a$ 1 cách nhanh chóng.'' -- \cite[p. 38]{Tuyen_Toan_6}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{186.}, p. 38]
+	Tính nhanh: (a) $-37 + 54 + (-70) + (-163) + 246$; (b) $-359 + 181 + (-123) + 350 + (-172)$; (c) $-69 + 53 + 46 + (-94) + (-14) + 78$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $-37 + 54 + (-70) + (-163) + 246 = (54 + 246) + [(-37) + (-163)] + (-70) = 300 + (-200) + (-70) = 100 - 70 = 30$.\\(b) \textit{Cách 1}: $-359 + 181 + (-123) + 350 + (-172) = (181 + 350) + [-359 + (-172)] + (-123) = 531 + (-531) + (-123) = 0 - 123 = -123$. \textit{Cách 2}: $-359 + 181 + (-123) + 350 + (-172) = (350 - 359) + (181 - 172) - 123 = -9 + 9 - 123 = 0 - 123 = 0$.\\(c) $-69 + 53 + 46 + (-94) + (-14) + 78 = [-69 + (-94) + (-14)] + (53 + 46 + 78) = -177 + 177 = 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{187.}, p. 38]
+	Tính tổng các số nguyên $x$ biết: $-17\le x\le18$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$x\in\mathbb{Z}\land(-17\le x\le18)\Leftrightarrow x\in\{-17,-16,\ldots,-1,0,1,\ldots,18\}$. Tổng của chúng bằng $(-17) + (-16) + \cdots + (-1) + 0 + 1 + \cdots + 16 + 17 + 18 = (-17 + 17) + (-16 + 16) + \cdots + (-1 + 1) + 0 + 18 = 0 + 0 + \cdots + 0 + 0 + 18 = 18$. 
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 49, p. 42]
 	Tìm $x\in\mathbb{Z}$, biết $10 = 10 + 9 + 8 + \cdots + x$, trong đó vế phải là tổng các số nguyên liên tiếp viết theo thứ tự giảm dần.
@@ -767,7 +851,7 @@ Bài tập phụ thuộc vào hình vẽ: \cite[\textbf{328.}--\textbf{331.}, p.
 	\end{enumerate*}
 \end{baitoan}
 
-\subsection{Đếm số}
+\section{Đếm số}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 43, p. 49]
 	Có bao nhiêu số $\overline{abcd}$ mà $\overline{ab} < \overline{cd}$?
