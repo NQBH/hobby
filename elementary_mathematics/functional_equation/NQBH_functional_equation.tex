@@ -110,11 +110,21 @@ We are asked to find all functions satisfying some given relation(s).'' -- \cite
 
 While solving a functional equation, we need to keep in mind the property of domain of the functions, their range \& also the given conditions on the functions. We shall see that various well known sets with nice structures form the domain \& range of functions: we use $\mathbb{N}$, the set of all natural numbers; $\mathbb{Z}$, the set of all integers; $\mathbb{Q}$, the set of all rational numbers; \& $\mathbb{R}$ the set of all real numbers. Occasionally, we may need $\mathbb{C}$, the est of all complex numbers \& $\mathbb{R}^n$, the Euclidean space of dimension $n$. We may also use $\mathbb{N}_0$, the set of all nonnegative integers; $\mathbb{Q}_0$, the set of all nonnegative rational numbers; $\mathbb{Q}^+$, the set of all positive rational numbers; $\mathbb{R}_0$, the set of all nonnegative real numbers; \& $\mathbb{R}^+$, the set of all positive real numbers. We shall also use a variety of conditions on the functions like monotonicity, boundedness, continuity, etc., which would help us in fixing the solutions of functional equations.
 
-The study of functional equations has a long history \& is associated with giants like D'Alembert, Euler, Cauchy, Gauss, Legendre, Darboux, Abel, \& Hilbert. D'Alembert arrived at the problem of solving the equation $f(x + y) + f(x - y) = g(x)h(y)$ for functions $f,g,h$ on $\mathbb{R}$ in his work on vibrating strings. Cauchy investigated equations of the form $f(x + y) = f(x) + f(y)$, $f(x + y) = f(x)f(y)$, $f(xy) = f(x) + f(y)$, $f(xy) = f(x)f(y)$, which made their appearances in the problems of measuring \textit{Areas} \& \textit{Normal Probability Distribution}. Thus the study of functional equations arose from practical considerations. The areas of Differential equations, Integral equations \& Difference equations which are very useful in solving many practical problems also fall in to the category of functional equations.'' -- \cite[pp. 3--4]{Venkatachala2013}
+The study of functional equations has a long history \& is associated with giants like D'Alembert, Euler, Cauchy, Gauss, Legendre, Darboux, Abel, \& Hilbert. D'Alembert arrived at the problem of solving the equation $f(x + y) + f(x - y) = g(x)h(y)$ for functions $f,g,h$ on $\mathbb{R}$ in his work on vibrating strings. Cauchy investigated equations of the form $f(x + y) = f(x) + f(y)$, $f(x + y) = f(x)f(y)$, $f(xy) = f(x) + f(y)$, $f(xy) = f(x)f(y)$, which made their appearances in the problems of measuring \textit{Areas} \& \textit{Normal Probability Distribution}. Thus the study of functional equations arose from practical considerations. The areas of Differential equations, Integral equations \& Difference equations which are very useful in solving many practical problems also fall in to the category of functional equations.'' [$\ldots$] ``Different methods can be employed for solving functional equations. The special structural properties of domain, range \& also the condition(s) on the functions which are sought will play a pivotal role in the method of solving a functional equation. Different equations need different approaches \& different perspective.'' -- \cite[pp. 3--4]{Venkatachala2013}
 
-\section{Function Equation on $\mathbb{N}$}
+``It is extremely instructive \& exhilarating to construct new solutions to the given problems. It is my experience over the years that use of elementary ideas while solving the given functional equation will go a long way in revealing the structure of that equation \& natural additional conditions to be imposed would manifest on their own. It is advisable to pursue the equation till there is no further go before looking for extra condition that has to be put on the function either as a property or as another equation.'' -- \cite[p. 5]{Venkatachala2013}
 
-\section{Function Equation on $\mathbb{R}$}
+%------------------------------------------------------------------------------%
+
+\section{Functional Equation on $\mathbb{N}$}
+
+\begin{problem}[\cite{Venkatachala2013}, pp. 7--8]
+	Find all functions $f:\mathbb{N}\to\mathbb{N}$ such that: (a) $f(2) = 2$; (b) $f(mn) = f(m)f(n)$, $\forall m,n\in\mathbb{N}$; (c) $f(m) < f(n)$ whenever $m < n$.
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+\section{Functional Equation on $\mathbb{R}$}
 
 \begin{problem}[\cite{Venkatachala2013}, pp. 2--3]
 	Find all $f:\mathbb{R}\to\mathbb{R}$ such that $f(-x) = -f(x)$ \& $f(xy) = x^2f(y)$, $\forall x,y\in\mathbb{R}$.
@@ -124,6 +134,33 @@ The study of functional equations has a long history \& is associated with giant
 	We have $-f(xy) = f(-xy) = f((-x)y) = (-x)^2f(y) = x^2f(y) = f(xy)\Rightarrow f(xy) = 0$, $\forall x,y\in\mathbb{R}$. Taking $y = 1$, it implies $f(x) = 0$, $\forall x\in\mathbb{R}$. Thus the set of equations given has only 1 solution: $f(x) = 0$, $\forall x\in\mathbb{R}$.
 \end{proof}
 
+\begin{problem}[\cite{Dung_cac_phuong_phap_giai_toan_qua_cac_ky_thi_olympic_2022}, p. 5]
+	Find all $f:\mathbb{R}\to\mathbb{R}$ such that $f(x) = f(x + y^2 + f(y))$, $\forall x,y\in\mathbb{R}$.
+\end{problem}
+
+\begin{problem}[\cite{Dung_cac_phuong_phap_giai_toan_qua_cac_ky_thi_olympic_2022}, p. 5]
+	Find all $f:\mathbb{R}\to\mathbb{R}$ such that $f(0)\ne0$ \& for all $n\ge2$, $n$ even, $f(x) = f(x + y^n + f(y))$, $\forall x,y\in\mathbb{R}$.
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
+\section{Cauchy's Equation}
+
+\begin{theorem}[\cite{Small2007}, Thm. 2.3, p. 34]
+	Let $f:\mathbb{R}\to\mathbb{R}$ be a continuous function satisfying Cauchy's equation $f(x + y) = f(x) + f(y)$, $\forall x,y\in\mathbb{R}$. Then there exists $a\in\mathbb{R}$ such that $f(x) = ax$, $\forall x\in\mathbb{R}$.
+\end{theorem}
+
+\begin{theorem}[\cite{Small2007}, Thm. 2.4, p. 34]
+	Let $f:\mathbb{R}\to\mathbb{R}$ satisfy Cauchy's equation. Suppose in addition that there exists some interval $[c,d]$ of real numbers, where $c < d$, such that $f$ is bounded below on $[c,d]$. In other words, there exists $A\in\mathbb{R}$ such that $f(x)\ge A$ for all $c\le x\le d$. Then there exists a real number $a$ such that $f(x) = ax$, $\forall x\in\mathbb{R}$.
+\end{theorem}
+
+\begin{proposition}[\cite{Small2007}, Prop. 2.6, p. 35]
+	Suppose $f:\mathbb{R}\to\mathbb{R}$ satisfies Cauchy's equation $f(x + y) = f(x) + f(y)$, $\forall x,y\in\mathbb{R}$, \& is also monotone increasing (decreasing, resp.) in the sense that $f(x)\le f(y)$ ($f(x)\ge f(y)$, resp.), $\forall x,y\in\mathbb{R}$, $x\le y$. Then $f(x) = ax$ for some $a\ge0$ ($a\le0$, resp.).
+\end{proposition}
+
+\begin{proposition}[\cite{Small2007}, Prop. 2.7, p. 36]
+	Suppose $f:\mathbb{R}\to\mathbb{R}$ satisfies the pair of equations $f(x + y) = f(x) + f(y)$, $f(xy) = f(x)f(y)$, $\forall x,y\in\mathbb{R}$. Then either $f(x) = 0$, $\forall x\in\mathbb{R}$ or $f(x) = x$, $\forall x\in\mathbb{R}$.
+\end{proposition}
 
 %------------------------------------------------------------------------------%
 
