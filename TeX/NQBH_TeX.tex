@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage[vietnamese,english]{babel}
 \usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
-\addbibresource{/home/hong/1_NQBH/reference/bib.bib}
+\addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
@@ -11,29 +11,20 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
 \newtheorem{definition}{Definition}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -429,6 +420,99 @@ The color of the separator ruler is set to blue. See the article about using col
 \columnbreak
 \end{verbatim}
 This command inserts a column breakpoint. In this case, the behaviour of the text is different from what you may expect. The column break is inserted, then the paragraphs before the breakpoint are evenly distributed to fill all available space. In the example, the 2nd paragraph is at the bottom of the column \& a blank space is inserted in between the 2nd \& the 1st paragraphs.''
+
+%------------------------------------------------------------------------------%
+
+\section{\href{https://www.overleaf.com/learn/latex/TikZ_package}{Overleaf\texttt{/}TikZ Package}}
+
+\subsection{Introduction}
+``\href{https://en.wikipedia.org/wiki/PGF/TikZ}{TikZ} is probably the most complex \& powerful tool to create graphic elements in \LaTeX. Starting with a simple example, this article introduces some basic concepts: drawing lines, dots, curves, circles, rectangles, etc. 1stly, load the \texttt{tikz} package by including \verb|\usepackage{tikz}| in the preamble of your document, then draw a graphic using the \texttt{tikzpicture} environment.
+\begin{verbatim}
+	\documentclass{article}
+	\usepackage{tikz}
+	\begin{document}
+		\begin{tikzpicture}
+			\draw[gray, thick] (-1,2) -- (2,-4);
+			\draw[gray, thick] (-1,-1) -- (2,2);
+			\filldraw[black] (0,0) circle (2pt) node[anchor=west]{Intersection point};
+		\end{tikzpicture}
+	\end{document}
+\end{verbatim}
+This example produces the following output:
+\begin{center}
+	\begin{tikzpicture}
+		\draw[gray, thick] (-1,2) -- (2,-4);
+		\draw[gray, thick] (-1,-1) -- (2,2);
+		\filldraw[black] (0,0) circle (2pt) node[anchor=west]{Intersection point};
+	\end{tikzpicture}
+\end{center}
+In this example 2 lines \& 1 point are drawn. To add a line the command \verb|\draw[gray, thick]| defines a graphic element whose \textit{color} is gray \& with a \texttt{thick} stroke. The line is actually defined by it's 2 endpoints, \texttt{(-1,2)} \& \texttt{(2,-4)}, joined by \texttt{--}.
+
+The \textit{point} is actually a \texttt{circle} drawn by \verb|\filldraw[black]|, this command will not only draw the circle but fill it using black. In this command the center point \texttt{(0,0)} \& the radius \texttt{(2pt)} are declared. Next to the point is a node, which is actually a box containing the text \texttt{Intersection point}, \& anchored at the \texttt{west} of the point. It's important to notice the semicolon \texttt{;} used at the end of each \texttt{draw} command.
+
+\begin{note}
+	The \texttt{tikzfigure} environment can be enclosed inside a figure or similar environment.''
+\end{note}
+
+\subsection{Basic Elements: Points, Lines, \& Paths}
+Provide some examples showing how to create some basic graphic elements which can be combined to create more elaborate figures.
+\begin{verbatim}
+	\documentclass{article}
+	\usepackage{tikz}
+	\begin{document}
+		\begin{tikzpicture}
+			
+			\draw (-2,0) -- (2,0);
+			\filldraw [gray] (0,0) circle (2pt);
+			\draw (-2,-2) .. controls (0,0) .. (2,-2);
+			\draw (-2,2) .. controls (-1,0) and (1,0) .. (2,2);
+			
+		\end{tikzpicture}
+	\end{document}
+\end{verbatim}
+This example produces the following output:
+\begin{center}
+	\begin{tikzpicture}
+		
+		\draw (-2,0) -- (2,0);
+		\filldraw [gray] (0,0) circle (2pt);
+		\draw (-2,-2) .. controls (0,0) .. (2,-2);
+		\draw (-2,2) .. controls (-1,0) and (1,0) .. (2,2);	
+	\end{tikzpicture}
+\end{center}
+There are 3 basic commands in this example:
+\begin{enumerate*}
+	\item[$\bullet$] \verb|\draw (-2,0) -- (2,0);|: This defines a line whose endpoints are \texttt{(-2,0)} \& \texttt{(2,0)}.
+	\item[$\bullet$] \verb|\filldraw [gray] (0,0) circle (2pt);|: The point is created as a very small \texttt{gray circle} centered at \texttt{(0,0)} \& whose radius is \texttt{(2pt)}. The \verb|\filldraw| command is used to draw elements \& fill them with a specific color.
+	\item[$\bullet$] \verb|\draw (-2,2) .. controls (-1,0) and (1,0) .. (2,2);|: Draw a \href{https://en.wikipedia.org/wiki/B%C3%A9zier_curve}{B\'ezier curve}. There are 4 points defining it: \texttt{(-2,2)} \& \texttt{(2,2)} are its endpoints, \texttt{(-1,0)} \& \texttt{(1,0)} are \href{https://en.wikipedia.org/wiki/Control_point_(mathematics)}{\textit{control points}} that determine ``how curved'' it is. You can think of these 2 points as ``attractor points''.''
+\end{enumerate*}
+
+\subsection{Basic Geometric Shapes: Circles, Ellipses, \& Polygons}
+``Geometric figures can be constructed from simpler elements so let's start with circles, ellipses, \& arcs.
+\begin{verbatim}
+	\documentclass{article}
+	\usepackage{tikz}
+	\begin{document}
+		\begin{tikzpicture}
+			\filldraw[color=red!60, fill=red!5, very thick](-1,0) circle (1.5);
+			\fill[blue!50] (2.5,0) ellipse (1.5 and 0.5);
+			\draw[ultra thick, ->] (6.5,0) arc (0:220:1);
+		\end{tikzpicture}
+	\end{document}
+\end{verbatim}
+This example produces the following output:
+\begin{center}
+	\begin{tikzpicture}
+		\filldraw[color=red!60, fill=red!5, very thick](-1,0) circle (1.5);
+		\fill[blue!50] (2.5,0) ellipse (1.5 and 0.5);
+		\draw[ultra thick, ->] (6.5,0) arc (0:220:1);
+	\end{tikzpicture}
+\end{center}
+\begin{enumerate*}
+	\item[$\bullet$] \verb|\filldraw[color=red!60, fill=red!5, very thick](-1,0) circle (1.5);|: This command was used in the previous section to draw a \textit{point}, but in this instance there are some additional parameters inside the brackets. These are explained below:
+\end{enumerate*}
+
+\subsection{Diagrams}
 
 %------------------------------------------------------------------------------%
 
