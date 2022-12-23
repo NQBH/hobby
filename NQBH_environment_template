@@ -7,6 +7,7 @@
 \newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
 \newtheorem{definition}{Definition}[section]
 \newtheorem{dinhly}{Định lý}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
