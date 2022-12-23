@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\usepackage[version=4]{mhchem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Atom, Chemical Element, \& Chemical Compound\\Nguyên Tử, Nguyên Tố Hóa Học, \& Hợp Chất Hóa Học}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about atom, chemical element, \& chemical compound. This text is also a supplementary material for my lecture note on Elementary Chemistry, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/chemical_reaction/NQBH_chemical_reaction.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}atom}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/atom/NQBH_atom.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về nguyên tử, nguyên tố hóa học, \& hợp chất hóa học. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Hóa Học Sơ Cấp. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}atom}.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Abbreviation, Convention, \& Notation -- Viết Tắt, Quy Ước, \& Ký Hiệu}
+
+\subsection{Notation -- Ký Hiệu}
+
+\begin{itemize}
+	\item $\%m_{A|A_xB_y}$: \% khối lượng của nguyên tố $A$ trong hợp chất $A_xB_y$, \& được tính bởi công thức $\%m_{A|A_xB_y}\coloneqq\frac{xM_A}{xM_A + yM_B}$.
+	\item $m_{A|A_xB_y}$: khối lượng của nguyên tố $A$ trong hợp chất $A_xB_y$, \& được tính bởi công thức $m_{A|A_xB_y}\coloneqq m_{A_xB_y}\cdot\%m_{A|A_xB_y} = m_{A_xB_y}\frac{xM_A}{xM_A + yM_B}$.
+	
+\end{itemize}
+
+
+\section{Công Thức Hóa Học}
+
+\begin{baitoan}[\cite{Tuan2022}, p. 70]
+	Tính khối lượng \emph{Fe} \& khối lượng oxi có trong $20$\emph{g} \emph{\ce{Fe2(SO4)3}}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$M_{\ce{Fe2(SO4)3}} = 2\cdot56 + 3(32 + 4\cdot16) = 400$ g\texttt{/}mol$\Rightarrow m_{\ce{Fe|Fe2(SO4)3}} = \%m_{\ce{Fe|Fe2(SO4)3}}\cdot m_{\ce{Fe2(SO4)3}} = \frac{2\cdot56}{2\cdot56 + 3(32 + 4\cdot16)}\cdot20 = 5.6$g$\Rightarrow m_{\ce{O|Fe2(SO4)3}} = m_{\ce{Fe2(SO4)3}}\cdot\%m_{\ce{O|Fe2(SO4)3}} = 20\cdot\frac{12\cdot16}{2\cdot56 + 3(32 + 4\cdot16)} = 9.6$g.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
