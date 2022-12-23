@@ -12,29 +12,30 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{dangtoan}{Dạng toán}
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{vidu}{Ví dụ}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -64,18 +65,26 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Abbreviation, Convention, \& Notation -- Viết Tắt, Quy Ước, \& Ký Hiệu}
+\section*{Abbreviation, Convention, \& Notation -- Viết Tắt, Quy Ước, \& Ký Hiệu}
 
-\subsection{Notation -- Ký Hiệu}
+\subsection*{Notation -- Ký Hiệu}
 
 \begin{itemize}
 	\item $\%m_{A|A_xB_y}$: \% khối lượng của nguyên tố $A$ trong hợp chất $A_xB_y$, \& được tính bởi công thức $\%m_{A|A_xB_y}\coloneqq\frac{xM_A}{xM_A + yM_B}$.
 	\item $m_{A|A_xB_y}$: khối lượng của nguyên tố $A$ trong hợp chất $A_xB_y$, \& được tính bởi công thức $m_{A|A_xB_y}\coloneqq m_{A_xB_y}\cdot\%m_{A|A_xB_y} = m_{A_xB_y}\frac{xM_A}{xM_A + yM_B}$.
-	
 \end{itemize}
 
+%------------------------------------------------------------------------------%
+
+\section{Atom -- Nguyên Tử}
+
+%------------------------------------------------------------------------------%
 
 \section{Công Thức Hóa Học}
+
+\begin{dangtoan}
+	Từ lượng chất tính lượng nguyên tố.
+\end{dangtoan}
 
 \begin{baitoan}[\cite{Tuan2022}, p. 70]
 	Tính khối lượng \emph{Fe} \& khối lượng oxi có trong $20$\emph{g} \emph{\ce{Fe2(SO4)3}}.
@@ -84,6 +93,52 @@
 \begin{proof}[Giải]
 	$M_{\ce{Fe2(SO4)3}} = 2\cdot56 + 3(32 + 4\cdot16) = 400$ g\texttt{/}mol$\Rightarrow m_{\ce{Fe|Fe2(SO4)3}} = \%m_{\ce{Fe|Fe2(SO4)3}}\cdot m_{\ce{Fe2(SO4)3}} = \frac{2\cdot56}{2\cdot56 + 3(32 + 4\cdot16)}\cdot20 = 5.6$g$\Rightarrow m_{\ce{O|Fe2(SO4)3}} = m_{\ce{Fe2(SO4)3}}\cdot\%m_{\ce{O|Fe2(SO4)3}} = 20\cdot\frac{12\cdot16}{2\cdot56 + 3(32 + 4\cdot16)} = 9.6$g.
 \end{proof}
+Dễ dàng tính được khối lượng S trong 20g \ce{Fe2(SO4)3} theo 2 cách: \textit{Cách 1.} Tính theo tỷ lệ \% khối lượng của S trong \ce{Fe2(SO4)3} tương tự lời giải trên: $m_{\ce{S|Fe2(SO4)3}} = m_{\ce{Fe2(SO4)3}}\cdot\%m_{\ce{S|Fe2(SO4)3}} = 20\cdot\frac{3\cdot32}{2\cdot56 + 3(32 + 4\cdot16)} = 4.8$g. \textit{Cách 2.} Sử dụng khối lượng của hợp chất bằng tổng khối lượng của các thành phần: $m_{\ce{S|Fe2(SO4)3}} = m_{\ce{Fe2(SO4)3}} - m_{\ce{Fe|Fe2(SO4)3}} - m_{\ce{O|Fe2(SO4)3}} = 20 - 5.6 - 9.6 = 4.8$g. Dễ thấy Cách 2 tiện hơn sau khi đã biết khối lượng của Fe \& O trong \ce{Fe2(SO4)3}.
+
+\begin{dangtoan}
+	Từ lượng nguyên tố tính lượng chất.
+\end{dangtoan}
+
+\begin{baitoan}[\cite{Tuan2022}, p. 71]
+	Cần bao nhiêu \emph{kg} ure \emph{\ce{(NH2)2CO}} để có $5.6$\emph{kg} đạm (nitơ)?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$m_{\ce{(NH2)2CO}} = \frac{m_{\ce{N|(NH2)2CO}}}{\%m_{\ce{N|(NH2)2CO}}} = \frac{5.6\cdot(2(14 + 2) + 12 + 16)}{2\cdot14} = 12$kg.
+\end{proof}
+
+\begin{dangtoan}
+	Từ lượng nguyên tố này tính lượng nguyên tố kia
+\end{dangtoan}
+
+\begin{baitoan}[\cite{Tuan2022}, p. 71]
+	Trong supephotphat kép thường có bao nhiêu kg canxi ứng với $49.6$\emph{kg} photpho?
+\end{baitoan}
+
+\begin{dangtoan}
+	Tính \% khối lượng các nguyên tố trong hợp chất.
+\end{dangtoan}
+
+\begin{baitoan}[\cite{Tuan2022}, p. 71]
+	Tính \% khối lượng các nguyên tố trong hợp chất sắt(III) sunfat.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	CTHH của sắt(III) sunfat: \ce{Fe2(SO4)3}$\Rightarrow\%m_{\ce{Fe}}:\%m_{\ce{S}}:\%m_{\ce{O}} = (2\cdot56):(3\cdot32):(12\cdot16) = 112:96:192 = 7:6:12 = 28\%:24\%:48\%$.
+\end{proof}
+
+\begin{dangtoan}
+	Tìm nguyên tố.
+\end{dangtoan}
+
+\begin{baitoan}[\cite{Tuan2022}, p. 71]
+	Nguyên tố X trong bảng tuần hoàn có oxit cao nhất dạng \emph{\ce{X2O5}}. Hợp chất khí với hydro của X chứa $8.82$\% khối lượng hydro. X là nguyên tố nào?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Nếu oxit cao nhất là \ce{X2O5} thì hợp chất kí với hydro là \ce{XH3}. $M_X = \frac{3}{8.82}\cdot91.18 = 31\Rightarrow$ X: P.
+\end{proof}
+
 
 %------------------------------------------------------------------------------%
 
