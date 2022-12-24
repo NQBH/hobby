@@ -266,12 +266,16 @@ Bài này là 1 trường hợp riêng của Bài toán \ref{prob: Mở rộng V
 ``\textbf{1.} \textit{Cộng 2 số nguyên cùng dấu.} $\bullet$ Muốn cộng 2 số nguyên dương, ta cộng chúng như cộng 2 số tự nhiên. Muốn cộng 2 số nguyên âm, ta cộng 2 số đối của chúng rồi thêm dấu trừ $-$ đằng trước. $(+a) + (+b) = a + b$, $(-a) + (-b) = -(a + b)$, $\forall a,b\in\mathbb{N}^\star$. \textbf{2.} \textit{Cộng 2 số nguyên khác dấu.} $\bullet$ Tổng 2 số nguyên đối nhau thì bằng $0$: $a + (-a) = a - a = 0$, $\forall a\in\mathbb{Z}$. $\bullet$ Cộng 2 số nguyên khác dấu không đối nhau: Với 2 số nguyên dương $a,b$: $\circ$ $a > b\Rightarrow a + (-b) = a - b$. $\circ$ $a < b\Rightarrow a + (-b) = -(b - a)$. \textbf{3.} \textit{Tính chất của phép cộng 2 số nguyên.} Các tính chất của phép cộng trong $\mathbb{N}$ vẫn còn đúng trong $\mathbb{Z}$. Khi thực hiện cộng nhiều số nguyên ta có thể thay đổi tùy ý thứ tự các số hạng, nhóm các số hạng 1 cách tùy ý. \textbf{4.} \textit{Phép trừ 2 số nguyên.} Muốn lấy số nguyên $a$ trừ đi số nguyên $b$ ta cộng $a$ với số đối của $b$: $a - b = a + (-b)$, $\forall a,b\in\mathbb{Z}$. \textbf{5.} $a > b\Leftrightarrow a - b > 0$, $a < b\Leftrightarrow a - b < 0$, $\forall a,b\in\mathbb{Z}$.'' -- \cite[Chap. II, \S2, p. 37]{Tuyen_Toan_6}
 
 \begin{luuy}
-	Khi gặp bài tính nhanh\emph{\texttt{/}}hợp lý, phải: (a) Tìm các số đối nhau để gom lại: $a + (-a) = (-a) + a = a - a = 0$, $\forall a\in\mathbb{Z}$. (b) Tìm \& nhóm các số sao cho khi cộng, trừ, nhân, chia chúng được các số tròn chục, tròn trăm, tròn nghìn, etc., i.e., làm xuất hiện các lũy thừa của $10$ là $10^n$ với $n\in\mathbb{N}^\star$.
+	Khi gặp bài tính nhanh\emph{\texttt{/}}hợp lý, phải: (a) Tìm các số đối nhau để gom lại: $a + (-a) = (-a) + a = a - a = 0$, $\forall a\in\mathbb{Z}$. (b) Tìm \& nhóm các số sao cho khi cộng, trừ, nhân, chia chúng được các số tròn chục, tròn trăm, tròn nghìn, etc., i.e., làm xuất hiện các lũy thừa của $10$ là $10^n$ với $n\in\mathbb{N}^\star$. (c) Nếu trong 1 tổng đại số không xuất hiện 2 trường hợp vừa nêu, i.e., không có các cặp số đối nhau \& cũng không có các nhóm số sao cho khi cộng, trừ, nhân, chia chúng được các số tròn chục, tròn trăm, tròn nghìn, etc., i.e., làm xuất hiện $10^n$, thì ta sẽ gom các nhóm số khác dấu nhưng có giá trị tuyệt đối gần bằng nhau, i.e., gom các số làm xuất hiện $a + b$ với $a,b$ trái dấu: $ab < 0$ \& $|a|\approx|b|$. (d) Nếu cả 3 trường hợp trên đều không xảy ra, thì gom 1 nhóm tất cả các số âm \& 1 nhóm tất cả các số dương lại để tính.
 \end{luuy}
 
 \begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{9.}, p. 59]
 	Tính hợp lý: (a) $152 + (-73) - (-18) - 127$; (b) $7 + 8 + (-9) + (-10)$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $152 + (-73) - (-18) - 127 = (152 + 18) - (73 + 127) = 170 - 200 = -30$. (b) $7 + 8 + (-9) + (-10) = (7 - 9) + (8 - 10) = -2 - 2 = -4$.
+\end{proof}
 
 \begin{baitoan}[\cite{Trong_Toan_6_2021}, \textbf{10.}, p. 59]
 	Tính giá trị của biểu thức $(-156) - x$ khi: (a) $x = -26$; (b) $x = 76$; (c) $x = (-28) - (-143)$.
@@ -797,6 +801,29 @@ Bài này là 1 trường hợp riêng của Bài toán \ref{prob: Mở rộng V
 	\end{enumerate*}
 \end{baitoan}
 
+\begin{luuy}
+	Bình phương của mọi số nguyên đều không âm, i.e., $x^2\ge0$, $\forall x\in\mathbb{Z}$. Dấu bằng\emph{\texttt{/}}đẳng thức xảy ra $\Leftrightarrow x = 0$.
+\end{luuy}
+
+\begin{proof}[Giải]
+	(a) $(x - 1)^2 = 0\Leftrightarrow x - 1 = 0\Leftrightarrow x = 1$. (b) \& (c):
+	\begin{equation*}
+		x(x - 1) = 0\Leftrightarrow\left[\begin{split}
+			x &= 0\\
+			x - 1 &= 0
+		\end{split}\right.\Leftrightarrow\left[\begin{split}
+			x &= 0\\
+			x &= 1
+		\end{split}\right.,\ (x + 1)(x - 2) = 0\Leftrightarrow\left[\begin{split}
+			x + 1 &= 0\\
+			x - 2 &= 0
+		\end{split}\right.\Leftrightarrow\left[\begin{split}
+			x &= -1\\
+			x &= 2
+		\end{split}\right..
+	\end{equation*}
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{264.}, p. 44]
 	Cho dãy số $a_1,a_2,\ldots,a_{100}$ trong đó $a_1 = 1$, $a_2 = -1$, $a_k = a_{k-2}a_{k-1}$, $k\in\mathbb{N}$, $k\ge 3$. Tính $a_{100}$.
 \end{baitoan}
@@ -881,6 +908,10 @@ Các ước nguyên của 1 số nguyên sẽ bao gồm các ước tự nhiên 
 	Số $36$ chia cho $a\in\mathbb{Z}$ rồi trừ đi $a$. Lấy kết quả này chia cho $a$ rồi trừ đi $a$. Lại lấy kết quả này chia cho $a$ rồi trừ đi $a$. Cuối cùng ta được số $-a$. Tìm $a$.\hfill{\sf Ans:} $3$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Có phương trình: $\left[\left(\frac{36}{a} - a\right):a - a\right]:a - a = -a\Leftrightarrow\left[\left(\frac{36}{a} - a\right):a - a\right]:a = 0\Rightarrow\left(\frac{36}{a} - a\right):a - a = 0\Rightarrow\left(\frac{36}{a} - a\right):a = a\Rightarrow\frac{36}{a} - a = a^2\Rightarrow\frac{36}{a} = a^2 + a = a(a + 1)\Rightarrow36 = a^2(a + 1)$. Do $a\in\mathbb{Z}$ nên $a^2\in\mbox{Ư}(36)$, nên $a^2\{1,4,9,36\}$ suy ra $a\in A\coloneqq\{\pm1,\pm2,\pm3,\pm4\}$. Từ phương trình cuối suy ra $a + 1 = \frac{36}{a^2}\in\{36,9,4,1\}$, \& tương ứng với $a\in B\coloneqq\{35,8,3,0\}$. Tổng hợp lại, $a\in A\cap B = \{3\}$. Vậy $a = 3$.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{266.}, p. 45]
 	Tìm $x,y\in\mathbb{Z}$ biết:
 	\begin{enumerate*}
@@ -888,6 +919,10 @@ Các ước nguyên của 1 số nguyên sẽ bao gồm các ước tự nhiên 
 		\item[(b)] $(x + 1)(xy - 1) = 3$.
 	\end{enumerate*}
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $x + 2\in\mbox{Ư}(5) = \{\pm1,\pm5\}\Rightarrow x\in\{-1,-3,3,-7\}$. Đáp số: $(x,y)\in\{(-1,8),(-3,-2),(3,4),(-7,2)\}$. (b) $(x,y)\in\{(-2,1),(2,1),(-4,0)\}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, \textbf{267.}, p. 45]
 	Tính tổng $A + B$ biết $A$ là tổng các số nguyên âm lẻ có 2 chữ số, $B$ là tổng các số nguyên dương chẵn có 2 chữ số.
@@ -1612,6 +1647,23 @@ Bài tập phụ thuộc vào hình vẽ: \cite[\textbf{328.}--\textbf{331.}, p.
 \begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{227.}, p. 44]
 	Tìm $x\in\mathbb{Z}$ thỏa: (a) $-4x + 5 = 41$; (b) $7x + 1 = \pm20$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $-4x + 5 = 41\Leftrightarrow -4x = 41 - 5 = -36\Leftrightarrow x = \frac{-36}{-4} = 9$. (b)
+	\begin{equation*}
+		7x + 1 = \pm20\Leftrightarrow\left[\begin{split}
+			7x + 1 &= 20,\\
+			7x + 1 &= -20,
+		\end{split}\right.\Leftrightarrow\left[\begin{split}
+		7x &= 20 - 1 = 19,\\
+		7x &= -20 - 1 = -21,
+	\end{split}\right.\Leftrightarrow\left[\begin{split}
+		x &= \frac{19}{7}\notin\mathbb{Z}\mbox{ (loại)},\\
+		x &= \frac{-21}{7} = -3,
+	\end{split}\right.
+	\end{equation*}
+	Vậy phương trình chỉ có nghiệm nguyên duy nhất $x = -3$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{228.}, p. 44]
 	Cho $A = \{6,7,8,9\}$, $B = \{-1,-2,-3,4,8\}$. (a) Có bao nhiêu hiệu dạng $a - b$ với $a\in A,b\in B$? (b) Có bao nhiêu hiệu chia hết cho $5$? (c) Có bao nhiệu hiệu là số nguyên âm?
