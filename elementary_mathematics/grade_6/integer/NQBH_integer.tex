@@ -1689,13 +1689,47 @@ Bài tập phụ thuộc vào hình vẽ: \cite[\textbf{328.}--\textbf{331.}, p.
 	Tìm 2 số nguyên mà tích của chúng bằng hiệu của chúng.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Gọi 2 số nguyên đó là $x,y$. Có $xy = x - y\Leftrightarrow xy - x + y = 0\Leftrightarrow xy - x + y - 1 = -1\Leftrightarrow x(y - 1) + (y - 1) = -1\Leftrightarrow(x + 1)(y - 1) = - 1$. Vì $x,y\in\mathbb{Z}$, suy ra
+	\begin{equation*}
+		\left[\begin{split}
+			&\left\{\begin{split}
+				x + 1 &= 1\\
+				y - 1 &= -1
+			\end{split}\right.\\
+			&\left\{\begin{split}
+				x + 1 &= -1\\
+				y - 1 &= 1
+			\end{split}\right.\\
+		\end{split}\right.\Leftrightarrow\left[\begin{split}
+		&\left\{\begin{split}
+			x &= 0\\
+			y &= 0
+		\end{split}\right.\\
+		&\left\{\begin{split}
+			x &= -2\\
+			y &= 2
+		\end{split}\right.\\
+	\end{split}\right.
+	\end{equation*}
+	Vậy $(x,y)\in\{(0,0),(-2,2)\}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{234.}, p. 44]
 	Máy cấp đông (làm lạnh nhanh) làm thay đổi nhiệt độ được $-2^\circ$C sau 1 phút. Khi bắt đầu chạy, nhiệt độ trong tủ đông là $+10^\circ$C. Hỏi sau mấy phút thì nhiệt độ trong tủ đông là $-4^\circ$C.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Nhiệt độ đã thay đổi: $-4 - 10 = -14^\circ$C. Thời gian để có sự thay đổi đó bằng $-14:(-2) = 7$ phút.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{235.}, p. 44]
 	1 công ty nhỏ trong quý I mỗi tháng thu nhập $-100$ triệu đồng. Trong quý II mỗi tháng được $-20$ triệu đồng. Sang quý III mỗi tháng thu nhập $+60$ triệu đồng. Cuối năm tổng kết lại, kết quả kinh doanh của công ty thu nhập được $+420$ triệu đồng. Hỏi mỗi tháng trong quý IV công ty thu nhập được bao nhiêu, biết thu nhập trong các tháng như nhau?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Gọi $x$ là số tiền thu nhập mỗi tháng trong quý IV. Suy ra quý IV thu nhập được $3x$ triệu đồng. Vì cả năm công ty thu nhập được $420$ triệu đồng nên có: $-100\cdot3 + (-20)\cdot3 + 60\cdot3 + 3x = 420\Leftrightarrow3x - 180 = 420\Leftrightarrow3x = 420 + 180 = 600\Leftrightarrow x = \frac{600}{3} = 200$. Vậy mỗi tháng của quý IV công ty đã thu nhập được $200$ triệu đồng.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
