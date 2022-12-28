@@ -290,10 +290,14 @@
 \section{Quy Đồng Mẫu Số Nhiều Phân Số. So Sánh Phân Số. Hỗn Số Dương}
 ``\textbf{1.} \textit{Quy tắc quy đồng mẫu nhiều phân số với mẫu dương}: \textit{Bước 1.} Tìm BCNN của các mẫu để làm mẫu chung. \textit{Bước 2.} Tìm thừa số phụ của mỗi mẫu. \textit{Bước 3.} Nhân tử \& mẫu của mỗi phân số với thừa số phụ tương ứng. \textbf{2.} \textit{So sánh 2 phân số}: Muốn so sánh 2 phân số không cùng mẫu ta viết chúng dưới dạng 2 phân số có cùng mẫu dương rồi so sánh các tử với nhau, phân số nào có tử lớn hơn thì phân số đó lớn hơn. \textbf{3.} \textit{Hỗn số dương}: 1 phân số lớn hơn 1 có thể viết dưới dạng 1 hỗn số. Đó là 1 số gồm phần nguyên kèm theo 1 phân số nhỏ hơn 1. \textbf{4.} Trong 2 phân số có tử \& mẫu đều dương, nếu 2 tử số bằng nhau, phân số nào có mẫu nhỏ hơn thì phân số đó sẽ lớn hơn \& ngược lại. \textbf{5.} Phân số có tử \& mẫu là 2 số nguyên cùng dấu thì lớn hơn 0 \& gọi là \textit{phân số dương}. Phân số có tử \& mẫu là 2 số nguyên khác dấu thì nhỏ hơn 0 \& gọi là \textit{phân số âm}.'' -- \cite[Chap. III, \S2, p. 48]{Tuyen_Toan_6}
 
+``Để so sánh 2 phân số có tử \& mẫu đều dương, ngoài cách quy đồng tử hoặc quy đồng mẫu, người ta thường dùng 1 phân số trung gian \& sử dụng tính chất bắc cầu của bất đẳng thức.
+
+Thường sử dụng các tính chất sau: (a) Trong 2 phân số cùng tử, phân số nào có mẫu nhỏ hơn thì phân số đó lớn hơn. (b) Trong 2 phân số nhỏ hơn 1, phân số nào có phần bù đến 1 nhỏ hơn thì phân số đó lớn hơn: $1 - \frac{a}{b} < 1 - \frac{c}{d}\Rightarrow\frac{a}{b} > \frac{c}{d}$. (c) Nếu $0 < a < 1$ \& $m < n$ thì $a^m > a^n$.'' -- \cite[Chap. 1, \S2, p. 8]{Binh_Toan_6_tap_2}
+
 \begin{baitoan}[Công thức hỗn số dương]
 	Chứng minh:
 	\begin{align*}
-		\frac{ac + b}{c} = a + \frac{b}{c} = a\frac{b}{c},\ \forall a,b,c\in\mathbb{Z},\,c\ne0.\ \ \frac{a}{b} = \frac{\lfloor\frac{a}{b}\rfloor b + \left\{\frac{a}{b}\right\}}{b} = \lfloor\frac{a}{b}\rfloor + \frac{\left\{\frac{a}{b}\right\}}{b} = \lfloor\frac{a}{b}\rfloor\frac{\left\{\frac{a}{b}\right\}}{b}.
+		\frac{ac + b}{c} = a + \frac{b}{c} = a\frac{b}{c},\ \forall a,b,c\in\mathbb{Z},\,c\ne0.\ \ \frac{a}{b} = \frac{\lfloor\frac{a}{b}\rfloor b + \left\{\frac{a}{b}\right\}}{b} = \left\lfloor\frac{a}{b}\right\rfloor + \frac{\left\{\frac{a}{b}\right\}}{b} = \left\lfloor\frac{a}{b}\right\rfloor\frac{\left\{\frac{a}{b}\right\}}{b}.
 	\end{align*}
 \end{baitoan}
 
@@ -311,6 +315,70 @@
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 53, p. 48]
 	Sắp xếp các phân số sau theo thứ tự tăng dần: $\frac{5}{8},\frac{9}{16},\frac{2}{-3},\frac{-7}{12}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, Ví dụ 5, p. 8]
+	So sánh $A = \frac{10^{15} + 1}{10^{16} + 1}$ \& $B = \frac{10^{16} + 1}{10^{17} + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, Ví dụ 6, p. 9]
+	1 phân số có tử \& mẫu đều là số nguyên dương. Nếu cộng tử \& mẫu của phân số đó với cùng $n\in\mathbb{N}^\star$ thì phân số thay đổi thế nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, Ví dụ 7, p. 9]
+	So sánh $\left(\frac{1}{32}\right)^7$ \& $\left(\frac{1}{16}\right)^9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, Ví dụ 8, p. 9]
+	Chứng minh $95^8$ là 1 số có $16$ chữ số khi viết kết quả của nó trong hệ thập phân.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, Ví dụ 9, p. 10]
+	Cho $a,b\in\mathbb{N}^\star$ thỏa $\frac{5}{7} < \frac{a}{b} < \frac{9}{11}$. Tìm $a + b$ khi $b$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{20.}, p. 10]
+	So sánh $a,b\in\mathbb{N}$ biết $\frac{1 + 2 + 3 + \cdots + a}{a} < \frac{1 + 2 + 3 + \cdots + b}{b}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{21.}, p. 10]
+	So sánh: (a) $\frac{18}{91}$ \& $\frac{23}{114}$; (b) $\frac{21}{52}$ \& $\frac{213}{523}$; (c) $\frac{1313}{9191}$ \& $\frac{1111}{7373}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{22.}, p. 10]
+	So sánh các phân số sau, với $n\in\mathbb{N}$: (a) $\frac{n}{n + 1}$ \& $\frac{n + 2}{n + 3}$; (b) $\frac{n + 1}{n + 4}$ \& $\frac{n}{n + 5}$; (c) $\frac{n}{2n + 1}$ \& $\frac{3n + 1}{6n + 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{23.}, p. 11]
+	So sánh $A$ \& $B$: (a) $A = \frac{20}{39} + \frac{22}{27} + \frac{18}{43}$, $B = \frac{14}{39} + \frac{22}{29} + \frac{18}{41}$; (b) $A = \frac{3}{8^3} + \frac{7}{8^4}$, $B = \frac{7}{8^3} + \frac{3}{8^4}$; (c) $A = \frac{10^7 + 5}{10^7 - 8}$, $B = \frac{10^8 + 6}{10^8 - 7}$; (d) $A = \frac{10^{1992} + 1}{10^{1991} + 1}$, $B = \frac{10^{1993} + 1}{10^{1992} + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{24.}, p. 11]
+	Tìm $x\in\mathbb{N}$ sao cho $\frac{4}{11} < \frac{x}{20} < \frac{5}{11}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{25.}, p. 11]
+	Tìm 2 phân số có các mẫu bằng $9$, các tử là 2 số tự nhiên liên tiếp sao cho phân số $\frac{4}{7}$ nằm giữa 2 phân số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{26.}, p. 11]
+	Tìm 2 phân số có các tử bằng $1$, các mẫu là 2 số tự nhiên liên tiếp sao cho phân số $\frac{13}{84}$ nằm giữa 2 phân số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{27.}, p. 11]
+	Tìm 2 phân số có mẫu bằng $21$ biết nó lớn hơn $\frac{5}{7}$ \& nhỏ hơn $\frac{5}{6}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{28.}, p. 11]
+	Tìm phân số $\frac{a}{b}$ sao cho $a$ là số tự nhiên nhỏ nhất thỏa mãn $\frac{4}{15} < \frac{a}{b} < \frac{1}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{29.}, p. 11]
+	Tìm phân số $\frac{a}{b}$ lớn nhất nhỏ hơn $1$ với $a,b$ là các số nguyên dương có 1 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{30.}, p. 11]
+	So sánh 2 phân số $\left(\frac{1}{243}\right)^9$ \& $\left(\frac{1}{83}\right)^{13}$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
