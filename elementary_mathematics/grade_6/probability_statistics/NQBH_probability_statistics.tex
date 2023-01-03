@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=99]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tip}{Tip}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Probability \& Statistics -- Xác Suất \& Thống Kê}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about probability \& statistics. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/integer/NQBH_integer.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}probability \& statistics}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/probability_statistics/NQBH_probability_statistics.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về xác suất \& thống kê. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/probability_statistics/NQBH_probability_statistics.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}probability \& statistics}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Thu Thập, Phân Loại Dữ Liệu Thống Kê}
+``\textbf{1.} Các thông tin thu thập được trong 1 cuộc điều tra gọi là \textit{dữ liệu}. Có dữ liệu là số, có dữ liệu không phải là số. Dữ liệu là số gọi là \textit{số liệu}. \textbf{2.} \textit{Tiêu chí điều tra} là cách thức để phân loại, sắp xếp, tổ chức số liệu điều tra. Với cùng 1 dữ liệu điều tra, dựa trên các tiêu chí khác nhau, ta có thể phân loại, sắp xếp dữ liệu theo những các khác nhau. \textbf{3.} Có những cách để thu thập dữ liệu như quan sát, làm thí nghiệm, lập phiếu hỏi, ghi chép qua sách báo, mạng Internet. \textbf{4.} Các dữ liệu thu thập được thường ghi lại trong \textit{bảng dữ liệu ban đầu}, sau đó trình bày dữ liệu chi tiết hơn trong \textit{bảng thống kê} bao gồm các hàng \& cột thể hiện danh sách các đối tượng thống kê cùng các dữ liệu của đối tượng đó.'' --  \cite[Chap. I, \S1, p. 98]{Tuyen_Toan_6}
+
+%------------------------------------------------------------------------------%
+
+\section{Biểu Đồ Cột, Biểu Đồ Cột Kép}
+``Từ các số liệu trong bảng thống kê ta có thể vẽ biểu đồ cột minh họa 1 cách trực quan mối quan hệ giữa các số liệu đó. Nếu 2 biểu đồ cột cùng có chung 1 dấu hiệu điều tra thì ta có thể ghép 2 biểu đồ này vào 1 biểu đồ mới gọi là \textit{biểu đồ cột kép}. Khi đó ta dễ dàng so sánh giá trị của dấu hiệu.'' --  \cite[Chap. I, \S2, p. 100]{Tuyen_Toan_6}
+
+%------------------------------------------------------------------------------%
+
+\section{1 Số Mô Hình Xác Suất Đơn Giản}
+``\textbf{1.} Tung ngẫu nhiên 1 đồng xu để xem kết quả sấp hay ngửa. Gieo xúc xắc xem mặt trên có mấy chấm. Các hoạt động đó được gọi là các \textit{mô hình xác suất}. Mỗi lần tung đồng xu hoặc gieo con xúc xắc gọi là 1 \textit{thí nghiệm ngẫu nhiên}. \textbf{2.} Khi thực hiện những thí nghiệm ngẫu nhiên trên 1 mô hình xác suất ta có thể liệt kê được tập hợp tất cả các khả năng có thể xảy ra nhưng không thể dự đoán trước được chính xác kết quả của mỗi lần thí nghiệm. Có thể xảy ra các khả năng: (a) Không thể xảy ra. (b) Có thể xảy ra. (c) Chắc chắn xảy ra.'' --  \cite[Chap. II, \S1, p. 103]{Tuyen_Toan_6}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 3, p. 103]
+	Gieo 1 con xúc xắc liên tiếp 2 lần \& quan sát số chấm xuất hiện ở mặt trên của xúc xắc qua 2 lần gieo. (a) Có bao nhiêu kết quả có thể xảy ra. Liệt kê $6$ trong số những kết quả đó; (b) Liệt kê các kết quả có thể xảy ra để tổng số chấm xuất hiện ở mặt trên của xúc xắc trong 2 lần gieo là $8$; (c) Trường hợp nào dưới đây là không thể xảy ra hoặc chắc chắn xảy ra: (i) Tổng số chấm xuất hiện là $13$. (ii) Tổng số chấm xuất hiện là số $x\in\mathbb{N}$ sao cho $2\le x\le12$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Xác Suất Thực Nghiệm}
+``\textbf{1.} Làm 1 thí nghiệm nhiều lần liên tiếp, e.g., $n$ lần. Khi ấy 1 sự kiện ngẫu nhiên nào đó có thể xảy ra, e.g., $k$ lần. Ta gọi phân số $\frac{k}{n}$ là \textit{xác suất thực nghiệm} của sự kiện ấy. Như vậy muốn tính xác suất của 1 sự kiện nào đó ta chia số lần xuất hiện của sự kiện ấy cho tổng số lần thực hiện thí nghiệm. \textbf{2.} Người ta biểu thị khả năng xảy ra của 1 sự kiện bằng 1 số có giá trị từ $0$ đến $1$ (i.e., $p\in[0,1]$), có thể viết số đó dưới dạng phân số hay \%. Số \% càng cao thì sự kiệ càng dễ xảy ra. \textbf{3.} Xác suất thực nghiệm được sử dụng để dự đoán khả năng xảy ra 1 sự kiện xảy ra trong tương lai là cao hay thấp để chuẩn bị phương án xử lý thích hợp.'' --  \cite[Chap. II, \S2, p. 104]{Tuyen_Toan_6}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
