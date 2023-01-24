@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Birth of A Theorem: A Mathematical Adventure}
+\author{C\'edric Villani}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section*{Preface}
+``I am often asked what it's like to be a mathematician -- what a mathematician's daily life is like, how a mathematician's work gets done. In the pages that follow I try to answer these questions.
+
+This book tells the story of a mathematical journey, a quest, from the moment when the decision is made to venture forth into the unknown until the moment when the article announcing a new result -- a new \textit{theorem} -- is accepted for publication in an international journal.
+
+Far from moving swiftly between these 2 points, in a straight line, the mathematician moves forward haltingly, along a long \& winding road. He meets with obstacles, suffers setbacks, sometimes loses his way. As we all do from time to time. 
+
+Apart from a few insignificant details, the story I have told here is in agreement with reality, or at least with reality as I experienced it. $\ldots$ C\'edric Villani, Paris, Dec 2011.'' -- \cite[p. 5]{Villani2015}
+
+\section{}
+``1 o'clock on a Sunday afternoon. Normally the laboratory would be deserted, were it not for 2 busy mathematicians in need of a quiet place to talk -- the office that I've occupied for  8 years now on the 3rd floor of a building on the campus of the \'Ecole Normale Sup\'erieure in Lyon.
+
+I'm seated in a comfortable armchair, insistently tapping my fingers on the large desk in front of me. My fingers are spread apart like the legs of a spider. Just as my piano teacher trained me to do, years ago.
+
+To my left, on a separate table, a computer workstation. To my right a cabinet containing several hundred works of mathematics \& physics. Behind me, neatly arranged on long shelves, thousands \& thousands of pages of articles, lawfully photocopied back in the days when scientific journals were  still printed on paper, \& a great many mathematical monographs, unlawfully photocopied back in the days when I didn't make enough money to buy all of the books I wanted. There are also a good 3 feet of rough drafts of my own work, meticulously achieved over many years, \& quite as many feet of handwritten notes, the legacy of hours \& hours spent listening to research talks. In front of me, Gaspard, my laptop computer, named in honor of Gaspard Monge, the great mathematician \& revolutionary. \& a stack of pages covered with mathematical symbols -- more notes from every 1 of the 8 corners of the world, assembled especially for this occasion.
+
+My partner, Cl\'ement Mouhot, stands to 1 side of the great whiteboard that takes up the entire wall in front of me, marker in hand, eyes sparkling.
+
+``So what's up? Your message was pretty vague.''
+
+``My old demon's back again -- regularity for the inhomogeneous Boltzmann.''
+
+``Conditional regularity? You mean, modulo minimal regularity bounds?''
+
+``No, unconditional.''
+
+``Completely? Not even in a perturbative framework? You really think it's possible?''
+
+``Yes, I do. I've been working on it again for a while now \& I've made pretty good progress. I have some ideas. But now I'm stuck. I broke the problem down using a series of scale models, but even the simplest one baffles me. I thought I'd gotten a handle on it with a maximum principle argument, but everything fell apart. I need to talk.''
+
+``Go on, I'm listening $\ldots$''
+
+I went on for a long time. About the result I have in mind, the attempts I've made so far, the various pieces I can't fit together, the logical puzzle that so far has defeated me. The Boltzmann equation remains intractable.
+
+Ah, the Boltzmann! The most beautiful equation in the world, as I once described it to a journalist. I fell under its spell when I was young -- when I was writing my doctoral thesis. Since then I've studied every aspect of it. It's all there in Boltzmann's equation: statistical physics, time's arrow, fluid mechanics, probability theory, information theory, Fourier analysis, \& more. Some people say that I understand the mathematical world of this equation better than anyone alive.
+
+7 years ago I initiated Cl\'ement into this mysterious world when he began his own thesis under my direction. He was eager to learn. Certainly he's the only person who has read everything I've written on Boltzmann's equation. Now Cl\'ement is a respected member of the profession, a mathematician in his own right, brilliant, eager to get on with his own research.
+
+7 years ago I helped him get started; today I'm the one who needs help. The problem I've chosen to work on is exceedingly difficult. I'll never solve it by myself. I've got to be able to explain what I've done so far to someone who knows the theory inside out.
+
+``Let's assume grazing collisions, okay? A model without cutoff. Then the equation behaves like a fractional diffusion, degenerate, of course, but a diffusion just the same, \& as soon as you've got bounds on density \& temperature you can apply a Moser-style iteration scheme, modified to take nonlocality into account.''
+
+``A Moser scheme? Hmmmmm $\ldots$ Hold on a moment, I need to write this down.''
+
+``Yes, a Moser-style scheme. The key is that the Boltzmann operator $\ldots$ true, the operator is bilinear, it's not local, but even so it's basically in divergence form -- that's what makes the Moser scheme work. You make a nonlinear function change, you raise the power $\ldots$ You need a little more than temperature, of course, there's a matrix of moments of order 2 that have to be controlled. But the positivity is the main thing.''
+
+``Sorry, I don't follow -- why isn't temperature enough?''
+
+I paused to explain why, at some length. We discussed. We argued. Before long the board was flooded with symbols. Cl\'ement was still unsure about the positivity. How can strict positivity be proved without any regularity bound? Is such a thing even imaginable?
+
+``It's not so shocking, when you think about it: collisions produce lower bounds; so does transport, in a confined system. So it makes sense. Unless we're completely missing something, the 2 effects ought to reinforce each other. Bernt tried a while ago, he gave up. A whole bunch of people have tried, but no one's had any luck so far. Still, it's plausible.''
+
+``You're sure that the transport is going to turn out to be positive without regularity? \& yet without collisions, you bring over the same density value, it doesn't become more positive--''
+
+``I know, but when you average the velocities, it strengthens the positivity -- a little like what happens with the averaging lemmas for kinetic equations. But here we're dealing with positivity, not regularity. No one's really looked at it from this angle before. Which reminds me $\ldots$ when was it? That's it! 2 years go, at Princeton, a Chinese postdoc asked me a somewhat similar question. You take a transport equation, in the torus, say. Assuming zero regularity, you want to show that the spatial density becomes strictly positive. Without regularity! He could do it for free transport, \& for something more general on small time scales, but for larger times he was stymied $\ldots$ I remember asking other people about it at the time, but no one had a convincing answer.''
+
+``Back up. How did he handle the simple free transport case?''
+
+``Free transport'' is a piece of jargon that refers to an ideal gas in which the particles do not interact. The model is too simplified to be at all realistic, but you can still learn a lot from it.
+
+``Not sure -- but it should be obvious from an explicit solution. Let's try to figure it out, right now $\ldots$''
+
+Each of us set about reconstructing the argument that this postdoc, Dong Li, must have developed. No big deal, more like a minor exercise in problem solving. But maybe it will help us resolve that great enigma, who knows? \& besides, it's a contest -- who can come up with the answer 1st? We scribbled away in silence for a few minutes. I won.
+
+``I think I've got it.''
+
+I got up \& went over to the board, just like in school when the teacher shows the class how to solve a problem.
+
+``You break down the solution in terms of the replicas of the torus $\ldots$ you change the variables in each piece $\ldots$ a Jacobian drops out, you use the Lipschitz regularity $\ldots$ \& finally you end up with convergence in $\frac{1}{t}$. Slow, but it looks about right.''
+
+``But then you don't have regularization $\ldots$ you get convergence by averaging $\ldots$ by averaging $\ldots$''
+
+Cl\'ement was thinking out loud, staring at my calculation. Suddenly his face lit up. In a state of great excitement, he jabbed at the board with his index finger: ``But then you'd have to check to see whether that helps with Landau damping!''
+
+I was at a loss for words. 3 seconds of silence. A vague feeling this could be important.
+
+Now it was my turn to ask Cl\'ement to explain. He didn't know what to say either. He hemmed \& hawed, shifting his weight from 1 foot to the other. Then he said that my solution reminded him of a conversation he'd had 3 years ago with a Chinese-born mathematician in the United States, Yan Guo, at Brown.
+
+``In Landau damping you want to have relaxation for a reversible equation--''
+
+``Yes, yes, I know. But doesn't interaction play a role? We're not dealing with the Vlasov here, it's just free transport!''
+
+``Okay, maybe you're right, interaction must play a role -- in which case $\ldots$ the convergence should be exponential. Do you think $\frac{1}{t}$ is optimal?''
+
+``Sounds right to me. What do you think?''
+
+``But what if the regularity was stronger? Wouldn't it be better if it was?''
+
+I groaned. Doubt mixed with concentration, interest with frustration.
+
+We stood in silence, staring at each other, wondering where to go from here. After a while conversation resumed. As fascinating as it is, the weird (\& possibly mythical) phenomenon of Landau damping has nothing to do with what we've set out to accomplish. A few more minutes passed \& we'd moved on to something else. We talked for a long time. 1 topic led to another. We took notes, we argued, we got annoyed with each other, we reached agreement about a few things, we prepared a plan of attack. When we left my office a few hours later, Landau damping was nevertheless on our long list of homework assignments.
+
+The \textit{Boltzmann equation},
+\begin{equation*}
+	\frac{\partial f}{\partial t} + {\bf v}\cdot\nabla_{\bf x}f = \int_{\mathbb{R}^3}\int_{\mathbb{S}^2} |{\bf v} - {\bf v}_\star|\left[f({\bf v}')f({\bf v}_\star') - f({\bf v})f({\bf v}_\star)\right]\,{\rm d}{\bf v}_\star\,{\rm d}\sigma,
+\end{equation*}
+discovered around 1870, models the evolution of a rarefied gas made of billions \& billions of particles that collide with one another. The statistical distribution of the positions \& velocities of these particles is represented by a function $f(t,{\bf x},{\bf v})$, which at time $t$ indicates the density of particles whose position is (roughly) $\bf x$ \& whose velocity is (roughly) $\bf v$.
+
+Ludwig Boltzmann was the 1st to express the statistical notion of entropy, or disorder, in a gas:
+\begin{equation*}
+	S = -\iint f\log f\,{\rm d}{\bf x}\,{\rm d}{\bf v}.
+\end{equation*}
+By means of this equation he was able to prove that, moving from an initial arbitrarily fixed state, entropy can only increase over time, never decrease. Left to its own devices, in other words, \textit{the gas spontaneously becomes more \& more disordered}. He also proved that this process is \textit{irreversible}.
+
+In stating the principle of entropy increase, Boltzmann reformulated a law that had been discovered a few decades earlier, the \textit{2nd law of thermodynamics}. But he did several things that enriched it immeasurably from the conceptual point of view. 1st, by providing a rigorous proof, he placed an experimentally observed regularity that had been elevated to the status of a natural law on a secure theoretical foundation; next, he introduced an extraordinarily fruitful mathematical interpretation of a mysterious phenomenon; finally, he reconciled microscopic physics -- unpredictable, chaotic, \& reversible -- with macroscopic physics -- predictable, stable, \& irreversible. These achievements earned Boltzmann a place of honor in the pantheon of theoretical physicists \& stimulated an enduring interest in his work among epistemologists \& philosophers of science.
+
+Additionally, Boltzmann defined the equilibrium state of a statistical system as the state of maximum entropy, thus founding a vast field of research known as \textit{equilibrium statistical physics}. In so doing, he demonstrated that \textit{the most disordered state is the most natural state of all}.
+
+The triumphant young Boltzmann turned into a tormented old man who took his own life, in 1906. His treatise on the theory of gases appears in retrospect to have been 1 of the most important scientific works of the 19th century. \& yet its predictions, though they have been repeatedly confirmed by experiment, still await a satisfactory mathematical explanation. 1 of the missing pieces of the puzzle is an understanding of the regularity of solutions to the Boltzmann equation. Despite this persistent uncertainty, or perhaps because of it, the Boltzmann equation is now the object of intensive theoretical investigation by an international community of mathematicians, physicists, \& engineers who gather by the hundreds at conferences on rarefied gas dynamics \& many other meetings every year.'' -- \cite[pp. 6--11]{Villani2015}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
