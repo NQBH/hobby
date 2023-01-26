@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{A Mathematician's Apology}
+\author{G. H. Hardy}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section*{Foreword}
+
+%------------------------------------------------------------------------------%
+
+\section*{Preface}
+``I am indebted for many valuable criticisms to Prof. C. D. Board \& Dr. C. P. Snow, each of whom read my original manuscript. I have incorporated the substance of nearly all of their suggestions in my text, \& have so removed a good many crudities \& obscurities.
+
+In 1 case I have dealt with them differently. My \S28 is based on a short article which I contributed to \textit{Eureka} (the journal of the Cambridge Archimedean Society) early in the year, \& I found it impossible to remodel what I had written so recently \& with so much care. Also, if I had tried to meet such important criticisms seriously, I should have had to expand this section so much as to destroy the whole balance of my essay. I have therefore left it unaltered, but have added a short statement of the chief points made by my critics in a note at the end. G. H. H. Jul 18, 1940'' -- \cite[p. 59]{Hardy1992}
+
+\begin{center}
+	\textbf{1}
+\end{center}
+``It is a melancholy experience for a professional mathematician to find himself writing about mathematics. The function of a mathematician is to do something, to prove new theorems, to add to mathematics, \& not to talk about what he or other mathematicians have done. Statesmen despise publicists, painters despise art-critics, \& physiologists, physicists, or mathematicians have usually similar feelings; there is no scorn more profound, or on the whole more justifiable, than that of the men who make for the \textit{men} who explain. Exposition, criticism, appreciation, is work for 2nd-rate minds.
+
+I can remember arguing this point once in 1 of the few serious conversations that I ever had with Housman. Housman, in his Leslie Stephen lecture \textit{The Name \& Nature of Poetry}, had denied very emphatically that he was a `critic'; but he had denied it in what seemed to me a singularly perverse way, \& had expressed an admiration for literary criticism which startled \& scandalized me.
+
+He had begun with a quotation from his inaugural lecture, delivered 22 years before--
+\begin{quotation}
+	Whether the faculty of literary criticism is the best gift that Heaven has in its treasuries, I cannot say; but Heaven seems to think so, for assuredly it is the gift most charily bestowed. Orators \& poets $\ldots$, if rare in comparison with blackberries, are commoner than returns of Halley's comet: literary critics are less common $\ldots$.
+\end{quotation}
+\& he had continued---
+\begin{quotation}
+	In these 22 years I have improved in some respects \& deteriorated in others, but I have not so much improved as to become a literary critic, nor so much deteriorated as to fancy that I have become one.
+\end{quotation}
+It had seemed to me deplorable that a great scholar \& a fine poet should write like this, \&, finding myself next to him in Hall a few weeks later, I plunged in \& said so. Did he really mean what he had said to be taken very seriously? Would the life of the best of critics really have seemed to him comparable with that of a scholar \& a poet? We argued these questions all through dinner, \& I think that finally he agreed with me. I must not seem to claim a dialectical triumph over a man who can no longer contradict me; but `Perhaps not entirely' was, in the end, his reply to the 1st question, \& `Probably no' to the 2nd.
+
+There may have been some doubt about Housman's feelings, \& I do not wish to claim him as on my side; but there is no doubt at all about the feelings of men of science, \& I share them fully. If then I find myself writing, not mathematics but `about' mathematics, it is a confession of weakness, for which I may rightly be scorned or pitied by younger \& more vigorous mathematicians. I write about mathematics because, like any other mathematician who has passed 60, I have no longer the freshness of mind, the energy, or the patience to carry on effectively with my proper job.'' -- \cite[pp. 61--63]{Hardy1992}
+
+\begin{center}
+	\textbf{2}
+\end{center}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
