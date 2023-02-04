@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Algebraic Expression -- Biểu Thức Đại Số}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsf{\textbf{Nội dung.} Biểu thức số, biểu thức đại số; đa thức 1 biến, nghiệm của đa thức 1 biến; phép cộng, phép trừ đa thức 1 biến; phép nhân đa thức 1 biến; phép chia đa thức 1 biến.}
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Biểu Thức Số. Biểu Thức Đại Số}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{6.}, p. 46]
+	Lãi suất ngân hành quy định cho kỳ hạn 1 năm là $r$\%\emph{\texttt{/}}năm. Viết biểu thức đại số biểu thị số tiền lãi \& tổng tiền gốc lẫn tiền lãi khi hết kỳ hạn 1 năm nếu gửi ngân hàng $A$ đồng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{7.}, p. 46]
+	Các nhà khoa học đã đưa ra cách ước tính chiều cao của trẻ em khi trưởng thành dựa trên chiều cao $b$ của bố \& chiều cao $m$ của mẹ ($b,m$ tính theo đơn vị cm) như sau: Chiều cao của con trai $= \frac{1}{2}\cdot1.08(b + m)$, Chiều cao của con gái $= \frac{1}{2}(0.923b + m)$. (a) Với chiều cao nào của bố, mẹ thì con trai cao hơn, bằng, thấp hơn con gái?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Đa Thức 1 Biến. Nghiệm của Đa Thức 1 Biến}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép $\pm$ Đa Thức 1 Biến}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Nhân Đa Thức 1 Biến}
+
+%------------------------------------------------------------------------------%
+
+\section{Phép Chia Đa Thức 1 Biến}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
