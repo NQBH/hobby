@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Triangle -- Tam Giác}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsf{\textbf{Nội dung.} Biểu thức số, biểu thức đại số; đa thức 1 biến, nghiệm của đa thức 1 biến; phép cộng, phép trừ đa thức 1 biến; phép nhân đa thức 1 biến; phép chia đa thức 1 biến.}
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Tổng Các Góc của 1 Tam Giác}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 67]
+	Tháp nghiêng Pisa ở Italy nghiêng $5^\circ$ so với phương thẳng đứng. Tính độ nghiêng của tháp đó so với phương nằm ngang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, \textbf{3.}, p. 68]
+	(a) Cho biết 1 góc nhọn của tam giác vuông bằng $\alpha^\circ$, $\alpha\in(0,90)$. Tính số đo góc còn lại. (b) Cho 1 tam giác vuông có 2 góc bằng nhau. Tính số đo mỗi góc.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, \textbf{4.}, p. 68]
+	Đ hay S? Không có $\Delta ABC$ nào mà $\widehat{A} = 3\widehat{B}$, $\widehat{B} = 3\widehat{C}$, \& $C = 14^\circ$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Quan Hệ Giữa Góc \& Cạnh Đối Diện. Bất Đẳng Thức Tam Giác}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, p. 75]
+	Cho $\Delta ABC$ có $AB = 2$\emph{cm}, $BC = 4$\emph{cm}. So sánh $AB$ \& $AC$.
+\end{baitoan}
+
+\begin{baitoan}
+	Đ hay sai? (a) Nếu 1 tam giác có 1 cạnh dài gấp đôi 1 cạnh khác, thì 2 cạnh đó lần lượt là cạnh dài nhất \& ngắn nhất của tam giác đó. (b) Nếu 1 tam giác có 1 cạnh dài hơn gấp đôi 1 cạnh khác, thì 2 cạnh đó lần lượt là cạnh dài nhất \& ngắn nhất của tam giác đó.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{2 Tam Giác Bằng Nhau}
+
+%------------------------------------------------------------------------------%
+
+\section{Trường Hợp Bằng Nhau Thứ 1 của Tam Giác: Cạnh - Cạnh - Cạnh}
+
+%------------------------------------------------------------------------------%
+
+\section{Trường Hợp Bằng Nhau Thứ 2 của Tam Giác: Cạnh - Góc - Cạnh}
+
+%------------------------------------------------------------------------------%
+
+\section{Trường Hợp Bằng Nhau Thứ 3 của Tam Giác: Góc - Cạnh - Góc}
+
+%------------------------------------------------------------------------------%
+
+\section{Tam Giác Cân}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Vuông Góc \& Đường Xiên}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Trung Trực của 1 Đoạn Thẳng}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất 3 Đường Trung Tuyến của Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất 3 Đường Phân Giác của Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất 3 Đường Trung Trực của Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\section{Tính Chất 3 Đường Cao của Tam Giác}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
