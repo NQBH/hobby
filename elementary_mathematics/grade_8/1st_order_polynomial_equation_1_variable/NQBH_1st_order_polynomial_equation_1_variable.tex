@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
+\DeclareMathOperator{\arccot}{arccot}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{menhde}{Mệnh đề}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{quytac}{Quy tắc}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{tiende}{Tiên đề}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Subsect.~\thesubsection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{1st-Order Polynomial Equation with 1 Variable\\Phương Trình Bậc Nhất 1 Ẩn}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Bậc Nhất 1 Ẩn \& Cách Giải}
+
+\begin{dinhnghia}[Phương trình bậc nhất 1 ẩn]
+	Phương trình dạng $ax + b = 0$, với $a,b\in\mathbb{R}$, $a\ne0$, là 2 số đã cho, được gọi là \emph{phương trình bậc nhất 1 ẩn}.
+\end{dinhnghia}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{2.}, p. 5]
+	Thử lại \& cho biết các khẳng định sau có đúng không? (a) $x^3 + 3x = 2x^2 - 3x + 1\Leftrightarrow x = -1$; (b) $(z - 2)(z^2 + 1) = 2z + 5\Leftrightarrow z = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{4.}, pp. 5--6]
+	Trong 1 cửa hàng bán thực phẩm, Tâm thấy cô bán hàng dùng 1 chiếc cân đĩa. 1 bên đĩa cô đặt 1 quả cân $500$\emph{g}, bên đĩa kia, cô đặt 2 gói hàng như nhau \& 3 quả cân nhỏ, mỗi quả $50$\emph{g} thì cân thăng bằng. Nếu khối lượng mỗi gói hàng là $x$ \emph{g} thì điều đó có thể được mô tả bởi phương trình nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{5.}, p. 6]
+	Chứng minh phương trình $2mx - 5 = -x + 6m - 2$ luôn luôn nhận $x = 3$ làm nghiệm, dù $m$ lấy bất cứ giá trị nào? Phương trình còn nghiệm nào khác $x = 3$ hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{6.}, p. 6]
+	Cho 2 phương trình $x^2 - 5x + 6 = 0$ (1); $x + (x - 2)(2x + 1) = 2$. (a) Chứng minh 2 phương trình có nghiệm chung là $x = 2$. (b) Chứng minh $x = 3$ là nghiệm của (1) nhưng không là nghiệm của (2). (c) 2 phương trình đã cho có tương đương với nhau không, vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{7.}, p. 6]
+	Tại sao có thể kết luận tập nghiệm của phương trình $\sqrt{x} + 1 = 2\sqrt{-x}$ là $\emptyset$?
+\end{baitoan}
+
+\begin{nhanxet}
+	1 phương trình đại số có chứa các biểu thức $\sqrt{x}$ \& $\sqrt{-x}$ chỉ có thể nhận $x = 0$ là nghiệm. Nếu $x = 0$ không là nghiệm của phương trình đó, thì phương trình đó vô nghiệm.
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{8.}, p. 6]
+	Chứng minh phương trình $x + |x| = 0$ nghiệm đúng với mọi $x\le0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{9.}, p. 6]
+	Cho phương trình $(m^2 + 5m + 4)x^2 = m + 4$, trong đó $m\in\mathbb{R}$. Chứng minh: (a) Khi $m = -4$, phương trình nghiệm đúng với mọi giá trị của ẩn. (b) Khi $m = -1$, phương trình vô nghiệm. (c) Khi $m = -2$ hoặc $m = -3$, phương trình cũng vô nghiệm. (d) Khi $m = 0$, phương trình nhận $x = \pm1$ là nghiệm.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Đưa Được Về Dạng $ax + b = 0$}
+Chỉ xét các phương trình $f(x) = g(x)$ mà \textit{2 vế của chúng là 2 biểu thức hữu tỷ của ẩn, không chứa ẩn ở mẫu} \& có thể đưa được về dạng $ax + b = 0$ hay $ax = -b$.
+
+\begin{baitoan}
+	Biện luận theo cách tham số $a,b,c,d\in\mathbb{R}$ cho trước để giải phương trình bậc nhất 1 ẩn $ax + b = cx + d$.
+\end{baitoan}
+
+\begin{baitoan}
+	Biện luận theo cách tham số $a,b,c,d,e,f,g,h,i,j\in\mathbb{R}$ cho trước để giải phương trình bậc nhất 1 ẩn:
+	\begin{align*}
+		\frac{ax + b}{c} + dx + e = \frac{fx + g}{h} + ix + j.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 3, p. 11]
+	Giải phương trình $\frac{(3x - 1)(x + 2)}{3} - \frac{2x^2 + 1}{2} = \frac{11}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_8_tap_2}, Ví dụ 3, p. 11]
+	Giải phương trình $\frac{(ax + b)(cx + d)}{e} + \frac{fx^2 + gx + h}{i} = jx + k$ với $a,b,c,d,e,f,g,h,i,j,k\in\mathbb{R}$ thỏa $\frac{ac}{e} + \frac{f}{i} = 0$.
+\end{baitoan}
+
+\begin{nhanxet}
+	Điều kiện $\frac{ac}{e} + \frac{f}{i} = 0$ nhằm mục đích triệt tiêu hệ số của $x^2$ để quy phương trình đã cho về phương trình bậc nhất 1 ẩn.
+\end{nhanxet}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Tích}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Chứa Ẩn Ở Mẫu}
+
+%------------------------------------------------------------------------------%
+
+\section{Giải Bài Toán Bằng Cách Lập Phương Trình}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
