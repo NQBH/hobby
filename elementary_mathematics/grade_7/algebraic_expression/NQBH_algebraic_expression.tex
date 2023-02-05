@@ -11,34 +11,35 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{vidu}{Ví dụ}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -56,7 +57,6 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
-\newpage
 
 %------------------------------------------------------------------------------%
 
@@ -97,6 +97,34 @@
 %------------------------------------------------------------------------------%
 
 \section{Phép $\pm$ Đa Thức 1 Biến}
+
+\begin{baitoan}
+	Tính: (a) $ax^k + bx^k$, $\forall a,b\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (b) $ax^k + bx^k + cx^k$, $\forall a,b,c\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (c) $\sum_{i=1}^n a_ix^k = a_1x^k + a_2x^k + \cdots + a_nx^k$, $\forall a_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$, $\forall k\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 55]
+	Tính tổng của 2 đa thức: $P(x) = 5x^3 + 2x^2 + 3x + 1$ \& $Q(x) = 2x^3 - 4x^2 + 2x + 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{1.}, p. 59]
+	Cho 2 đa thức: $R(x) = -8x^4 + 6x^3 + 2x^2 - 5x + 1$ \& $S(x) = x^4 - 8x^3 + 2x + 3$. Tính: (a) $R(x) + S(x)$; (b) $R(x) - S(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{2.}, p. 59]
+	Xác định bậc của 2 đa thức là tổng, hiệu của: $A(x) = -8x^5 + 6x^4 + 2x^2 - 5x + 1$ \& $B(x) = 8x^5 + 8x^3 + 2x - 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{3.}, p. 59]
+	Bác Ngọc gửi ngân hàng thứ nhất $90$ triệu đồng với kỳ hạn 1 năm, lãi suất $x$\%\emph{\texttt{/}}năm. Bác Ngọc gửi ngân hàng thứ 2 $80$ triệu đồng với kỳ hạn 1 năm, lãi suất $(x + 1.5)$\%\emph{\texttt{/}}năm. Hết kỳ hạn 1 năm, bác Ngọc có được cả gốc \& lãi là bao nhiêu: (a) Ở ngân hàng thứ 2? (b) Ở cả 2 ngân hàng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{4.}, p. 59]
+	Người ta rót nước từ 1 can đựng $10$ lít nước sang 1 bể rỗng có dạng hình lập phương với độ dài cạnh $20$\emph{cm}. Khi mực nước trong bể cao $h$ \emph{cm} thì thể tích nước trong can còn lại là bao nhiêu? Biết $1{\rm l} = 1{\rm dm}^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{5.}, p. 59]
+	Đ hay S? (a) Tổng của 2 đa thức bậc 4 luôn luôn là đa thức bậc 4. (b) Hiệu của 2 đa thức bậc 4 luôn luôn là đa thức bậc 4. (c) Tổng \& hiệu của 2 đa thức bậc $n\in\mathbb{N}$ luôn là đa thức bậc $n$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
