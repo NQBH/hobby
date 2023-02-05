@@ -11,34 +11,35 @@
 \allowdisplaybreaks
 \numberwithin{equation}{section}
 \newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
 \newtheorem{conjecture}{Conjecture}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
 \newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
 \newtheorem{dinhnghia}{Định nghĩa}[section]
 \newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
 \newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
 \newtheorem{principle}{Principle}[section]
 \newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
 \newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
 \newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
 \newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{vidu}{Ví dụ}[section]
 \usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
+\lhead{\small Sect.~\thesection}
 \rhead{\small\nouppercase{\leftmark}}
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
@@ -51,7 +52,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about 1st-order polynomial equation with 1 variable. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/1st_order_polynomial_equation_1_variable/NQBH_1st_order_polynomial_equation_1_variable.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}1st order polynomial equation with 1 variable}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/1st_order_polynomial_equation_1_variable/NQBH_1st_order_polynomial_equation_1_variable.pdf}.}.
+	\vspace{2mm}
 	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về phương trình bậc nhất 1 ẩn. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/1st_order_polynomial_equation_1_variable/NQBH_1st_order_polynomial_equation_1_variable.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}1st order polynomial equation with 1 variable}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -64,6 +68,10 @@
 \begin{dinhnghia}[Phương trình bậc nhất 1 ẩn]
 	Phương trình dạng $ax + b = 0$, với $a,b\in\mathbb{R}$, $a\ne0$, là 2 số đã cho, được gọi là \emph{phương trình bậc nhất 1 ẩn}.
 \end{dinhnghia}
+
+\begin{baitoan}
+	Biện luận theo các tham số $a,b\in\mathbb{R}$ để giải phương trình bậc nhất 1 ẩn $ax + b = 0$.
+\end{baitoan}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{2.}, p. 5]
 	Thử lại \& cho biết các khẳng định sau có đúng không? (a) $x^3 + 3x = 2x^2 - 3x + 1\Leftrightarrow x = -1$; (b) $(z - 2)(z^2 + 1) = 2z + 5\Leftrightarrow z = 3$.
@@ -97,6 +105,14 @@
 	Cho phương trình $(m^2 + 5m + 4)x^2 = m + 4$, trong đó $m\in\mathbb{R}$. Chứng minh: (a) Khi $m = -4$, phương trình nghiệm đúng với mọi giá trị của ẩn. (b) Khi $m = -1$, phương trình vô nghiệm. (c) Khi $m = -2$ hoặc $m = -3$, phương trình cũng vô nghiệm. (d) Khi $m = 0$, phương trình nhận $x = \pm1$ là nghiệm.
 \end{baitoan}
 
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{12}, p. 6]
+	Tìm giá trị của $m$ sao cho phương trình $2x + m = x - 1$ nhận $x = -2$ làm nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SBT_Toan_8_tap_2}, \textbf{12}, p. 6]
+	Tìm giá trị của $m$ sao cho phương trình $ax + m = bx + c$ nhận $x = x_0$ làm nghiệm với $a,b,c,x_0\in\mathbb{R}$ cho trước.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Phương Trình Đưa Được Về Dạng $ax + b = 0$}
@@ -125,9 +141,125 @@ Chỉ xét các phương trình $f(x) = g(x)$ mà \textit{2 vế của chúng l�
 	Điều kiện $\frac{ac}{e} + \frac{f}{i} = 0$ nhằm mục đích triệt tiêu hệ số của $x^2$ để quy phương trình đã cho về phương trình bậc nhất 1 ẩn.
 \end{nhanxet}
 
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{21.}, p. 8]
+	Tìm điều kiện của $x$ để giá trị của mỗi phân thức sau được xác định: (a) $A = \frac{3x + 2}{2(x - 1) - 3(2x + 1)}$; (b) $B = \frac{0.5(x + 3) - 2}{1.2(x + 0.7) - 4(0.6x + 0.9)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{22.}, p. 8]
+	Giải phương trình: (a) $\frac{5(x - 1) + 2}{6} - \frac{7x - 1}{4} = \frac{2(2x + 1)}{7} - 5$; (b) $\frac{3(x - 3)}{4} + \frac{4x - 10.5}{10} = \frac{3(x + 1)}{5} + 6$; (c) $\frac{2(3x + 1) + 1}{4} - 5 = \frac{2(3x - 1)}{5} - \frac{3x + 2}{10}$; (d) $\frac{x + 1}{3} + \frac{3(2x + 1)}{4} = \frac{2x + 3(x + 1)}{6} + \frac{7 + 12x}{12}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{23.}, p. 8]
+	Tìm giá trị của $k$ sao cho: (a) Phương trình $(2x + 1)(9x + 2k) - 5(x + 2) = 40$ có nghiệm $x = 2$, $x = x_0\in\mathbb{R}$ cho trước. (b) Phương trình $2(2x + 1) + 18 = 3(x + 2)(2x + k)$ có nghiệm $x = 1$, $x = x_0\in\mathbb{R}$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{24.}, p. 8]
+	Tìm các giá trị của $x$ sao cho 2 biểu thức $A$ \& $B$ cho sau đây có giá trị bằng nhau: (a) $A = (x - 3)(x + 4) - 2(3x - 2)$, $B = (x - 4)^2$; (b) $A = (x + 2)(x - 2) + 3x^2$, $B = (2x + 1)^2 + 2x$; (c) $A = (x - 1)(x^2 + x + 1) - 2x$, $B = x(x - 1)(x + 1)$; (d) $A = (x + 1)^3 - (x - 2)^3$, $B = (3x - 1)(3x + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{25.}, p. 9]
+	Giải phương trình: (a) $\frac{2x}{3} + \frac{2x - 1}{6} = 4 - \frac{x}{3}$; (b) $\frac{x - 1}{2} + \frac{x - 1}{4} = 1 - \frac{2(x - 1)}{3}$; (c) $\frac{2 - x}{2001} - 1 = \frac{1 - x}{2002} - \frac{x}{2003}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{3.1.}, p. 9]
+	Cho 2 phương trình: $\frac{7x}{8} - 5(x - 9) = \frac{1}{6}(20x + 1.5)$ (1), $2(a - 1)x - a(x - 1) = 2a + 3$ (2). (a) Chứng minh phương trình (1) có nghiệm duy nhất, tìm nghiệm đó; (b) Giải phương trình (2) khi $a = 2$; (c) Tìm giá trị của $a$ để phương trình (2) có 1 nghiệm bằng $\frac{1}{3}$ nghiệm của phương trình (1).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{3.2.}, p. 9]
+	Bằng cách đặt ẩn phụ, giải phương trình: (a) $\frac{6(16x + 3)}{7} - 8 = \frac{3(16x + 3)}{7} + 7$. Hint: Đặt $u = \frac{16x + 3}{7}$. (b) $(\sqrt{2} + 2)(x\sqrt{2} - 1) = 2x\sqrt{2} - \sqrt{2}$. Hint: Đặt $u = x\sqrt{2} - 1$. (c) $0.05\left(\frac{2x - 2}{2009} + \frac{2x}{2010} + \frac{2x + 2}{2011}\right) = 3.3 - \left(\frac{x - 1}{2009} + \frac{x}{2010} + \frac{x + 1}{2011}\right)$. Hint: Đặt $u = \frac{x - 1}{2009} + \frac{x}{2010} + \frac{x + 1}{2011}$.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Phương Trình Tích}
+
+\begin{baitoan}
+	Biện luận theo các tham số $a,b,c,d,e,f\in\mathbb{R}$ cho trước để giải phương trình: (a) $(ax + b)(cx + d) = 0$. (b) $(ax + b)(cx + d)(ex + f) = 0$.
+\end{baitoan}
+Tổng quát hơn:
+\begin{baitoan}[Phương trình tích các phương trình bậc nhất 1 ẩn]
+	Biện luận theo các tham số $a_i,b_i$, $i = 1,\ldots,n$ cho trước để giải phương trình: $\prod_{i=1}^n (a_ix + b_i) = (a_1x + b_1)(a_2x + b_2)\cdots(a_nx + b_n) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[Phương trình tích các phương trình bậc nhất 1 ẩn $x$ \& $y$]
+	Biện luận theo các tham số $a_i,b_i$, $i = 1,\ldots,n$, $c_j,d_j$, $j = 1,\ldots,m$, cho trước để giải phương trình: $\prod_{i=1}^n (a_ix + b_i)\prod_{j=1}^m (c_ix + d_i) = (a_1x + b_1)(a_2x + b_2)\cdots(a_nx + b_n)(c_1y + d_1)(c_2y + d_2)\cdots(c_my + d_m) = 0$.
+\end{baitoan}
+
+\begin{baitoan}
+	Giải phương trình $(x^2 - 1) + (x + 1)(x - 2) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 2, p. 16]
+	Giải phương trình $(x + 1)(x + 4) = (2 - x)(2 + x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3, p. 16]
+	Giải phương trình $(x - 1)(x^2 + 3x - 2) - (x^3 - 1) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ 3, p. 16]
+	Giải phương trình $2x^3 = x^2 + 2x - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?4, p. 17]
+	Giải phương trình $(x^3 + x^2) + (x^2 + x) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, \textbf{21.}, p. 17]
+	Giải phương trình: (a) $(3x - 2)(4x + 5) = 0$; (b) $2.3x - 6.9)(0.1x + 2) = 0$; (c) $(4x + 2)(x^2 + 1) = 0$; (d) $(2x + 7)(x - 5)(5x + 1) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, \textbf{22.}, p. 17]
+	Bằng cách phân tích vế trái thành nhân tử, giải các phương trình sau: (a) $2x(x - 3) + 5(x - 3) = 0$; (b) $(x^2 - 4) + (x - 2)(3 - 2x) = 0$; (c) $x^3 - 3x^2 + 3x - 1 = 0$; (d) $x(2x - 7) - 4x + 14 = 0$; (e) $(2x - 5)^2 - (x + 2)^2 = 0$; (f) $x^2 - x - (3x - 3) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, \textbf{23.}, p. 17]
+	Giải phương trình: (a) $x(2x - 9) = 3x(x - 5)$; (b) $0.5x(x - 3) = (x - 3)(1.5x - 1)$; (c) $3x - 15 = 2x(x - 5)$; (d) $\frac{3}{7}x - 1 = \frac{1}{7}x(3x - 7)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, \textbf{24.}, p. 17]
+	Giải phương trình: (a) $(x^2 - 2x + 1) - 4 = 0$; (b) $x^2 - x = -2x + 2$; (c) $4x^2 + 4x + 1 = x^2$; (d) $x^2 - 5x + 6 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, \textbf{25.}, p. 17]
+	Giải phương trình: (a) $2x^3 + 6x^2 = x^2 + 3x$; (b) $(3x - 1)(x^2 + 2) = (3x - 1)(7x - 10)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{26.}, pp. 9--10]
+	Giải phương trình: (a) $(4x - 10)(24 + 5x) = 0$; (b) $(3.5 - 7x)(0.1x + 2.3) = 0$; (c) $(3x - 2)\left(\frac{2(x + 3)}{7} - \frac{4x - 3}{5}\right) = 0$; (b) $(3.3 - 11x)\left(\frac{7x + 2}{5} + \frac{2(1 - 3x)}{3}\right) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{27.}, p. 10]
+	Giải phương trình: (a) $(\sqrt{3} - x\sqrt{5})(2x\sqrt{2} + 1) = 0$; (b) $(2x - \sqrt{7})(x\sqrt{10} + 3) = 0$; (c) $(2 - 3x\sqrt{5})(2.5x + \sqrt{2}) = 0$; (d) $(\sqrt{13} + 5x)(3.4 - 4x\sqrt{17}) = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{28.}, p. 10]
+	Giải phương trình: (a) $(x - 1)(5x + 3) = (3x - 8)(x - 1)$; (b) $3x(25x + 15) - 35(5x + 3) = 0$; (c) $(2 - 3x)(x + 11) = (3x - 2)(2 - 5x)$; (d) $(2x^2 + 1)(4x - 3) = (2x^2 + 1)(x - 12)$; (e) $(2x - 1)^2 + (2 - x)(2x - 1) = 0$; (f) $(x + 2)(3 - 4x) = x^2 + 4x + 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{29.}, p. 10]
+	Giải phương trình: (a) $(x - 1)(x^2 + 5x - 2) - (x^3 - 1) = 0$; (b) $x^2 + (x + 2)(11x - 7) = 4$; (c) $x^3 + 1 = x(x + 1)$; (d) $x^3 + x^2 + x + 1 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{30.}, p. 10]
+	Giải các phương trình bậc 2 sau bằng cách đưa về dạng phương trình tích: (a) $x^2 - 3x + 2 = 0$; (b) $-x^2 + 5x - 6 = 0$; (c) $4x^2 - 12x + 5 = 0$; (d) $2x^2 + 5x + 3 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{31.}, p. 10]
+	Giải các phương trình sau bằng cách đưa về dạng phương trình tích: (a) $(x - \sqrt{2}) + 3(x^2 - 2) = 0$; (b) $x^2 - 5 = (2x - \sqrt{5})(x + \sqrt{5})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{32.}, p. 10]
+	Cho phương trình $(3x + 2k - 5)(x - 3k + 1) = 0$, trong đó $k\in\mathbb{R}$. (a) Tìm các giá trị của $k$ sao cho 1 trong các nghiệm của phương trình là $x = 1$. (b) Với mỗi giá trị của $k$ tìm được ở câu (a), giải phương trình đã cho.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{33.}, p. 11]
+	Biết $x = -2$ là 1 trong các nghiệm của phương trình $x^3 + ax^2 - 4x - 4 = 0$. (a) Xác định giá trị của $a$. (b) Với $a$ vừa tìm được ở (a) tìm các nghiệm còn lại của phương trình bằng cách đưa phương trình đã cho về dạng phương trình tích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{34.}, p. 11]
+	Cho biểu thức 2 biến $f(x,y) = (2x - 3y + 7)(3x + 2y - 1)$. (a) Tìm các giá trị của $y$ sao cho phương trình (ẩn $x$) $f(x,y) = 0$, nhận $x = -3$ làm nghiệm. (b) Tìm các giá trị của $x$ sao cho phương trình (ẩn $y$) $f(x,y) = 0$ nhận $y = 2$ làm nghiệm.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
