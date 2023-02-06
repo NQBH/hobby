@@ -430,6 +430,72 @@ I.e., $\prod_{i=1}^n a_i = a_1a_2\cdots a_n\divby2\Leftrightarrow\exists i\in\{1
 %------------------------------------------------------------------------------%
 
 \section{Phép Chia Đa Thức 1 Biến}
+``\fbox{\bf 1} Chia đơn thức $A$ cho đơn thức $B$, $B\ne0$, khi số mũ của biến trong $A$ lớn hơn hoặc bằng số mũ của biến đó trong $B$ ta làm như sau: (a) Chia hệ số của $A$ cho hệ số của $B$. (b) Chia lũy thừa của biến trong $A$ cho lũy thừa của biến đó trong $B$. (c) Nhân các kết quả với nhau: $ax^m:bx^n = \frac{ax^m}{bx^n} = \frac{a}{b}x^{m-n}$, $m\ge n$. \fbox{\bf 2} Muốn chia đa thức $P$ cho đơn thức $Q$, $Q\ne0$, khi số mũ của mỗi biến ở đơn thức $P$ lớn hơn hoặc bằng số mũ của biến đó trong $Q$ ta chia mỗi đơn thức của $P$ cho đơn thức $Q$ rồi cộng các thương với nhau. \fbox{\bf 3} Để chia 1 đa thức cho 1 đa thức khác đa thức không (cả 2 đa thức đều đã thu gọn \& sắp xếp các đa thức theo số mũ giảm dần của biến), bậc của đa thức bị chia lớn hơn hoặc bằng bậc của đa thức chia ta làm như sau: \textit{Bước 1}: (a) Chia đơn thức bậc cao nhất của đa thức bị chia cho đơn thức bậc cao nhất của đa thức chia. (b) Nhân kết quả trên với đa thức chia \& đặt tích dưới đa thức bị chia sao cho 2 đơn thức có cùng số mũ của biến ở từng cột. (c) Lấy đa thức bị chia trừ đi tích đặt ở dưới để được đa thức mới (gọi là \textit{đa thức dư thứ nhất}. \textit{Bước 2}: Tiếp tục quá trình trên cho đến khi nhận được đa thức không hoặc đa thức có bậc nhỏ hơn bậc của đa thức chia. \fbox{\bf 4} Nhận xét: $\bullet$ Khi chia đa thức $A$ cho đa thức $B$ của cùng 1 biến, $B\ne0$, có 2 khả năng xảy ra: (a) Phép chia có đa thức dư là đa thức không. Ta nói đa thức $A$ \textit{chia hết cho} đa thức $B$. (b) Phép chia có đa thức dư là đa thức $R\ne0$ có bậc nhỏ hơn bậc của $B$ ($\deg R < \deg B$). Ta nói phép chia này là phép chia có dư. $\bullet$ Đối với 2 đa thức tùy ý $A,B$ của cùng 1 biến, $B\ne0$, tồn tại duy nhất 1 cặp đa thức $Q,R$ áo cho $A = BQ + R$ trong đó $R = 0$ hoặc bậc của $R$ nhỏ hơn bậc của $B$ ($\deg R < \deg B$). Như vậy đa thức $A$ chia hết cho đa thức $B\Leftrightarrow R = 0$.
+
+\begin{dinhly}[B\'ezout]
+	Số dư trong phép chia đa thức $f(x)$ cho nhị thức bậc nhất $x - a$ đúng bằng $f(a)$.
+\end{dinhly}
+
+\begin{hequa}
+	Nếu $a$ là nghiệm của đa thức $f(x)$ thì $f(x)$ chia hết cho $x - a$.
+\end{hequa}
+Đặc biệt: Nếu tổng các hệ số của đa thức $f(x)$ bằng 0 thì 1 là nghiệm \& $f(x)$ chia hết cho $x - 1$. Nếu $f(x)$ có tổng các hệ số bậc chẵn bằng tổng các hệ số bậc lẻ thì $-1$ là nghiệm \& $f(x)$ chia hết cho $x - (-1)$, i.e., $f(x)$ chia hết cho $x + 1$.'' -- \cite[Chap. III, \S5, pp. 44--45]{Tuyen_Toan_7}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 50, p. 45]
+	Tìm $n\in\mathbb{N}$ để cả 2 phép chia sau đồng thời là phép chia không còn dư: (a) $6x^5:3x^n$; (b) $15x^{n+2}:5x^4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 51, p. 45]
+	Cho các đa thức $A = 2x^4 + 3x^3 - 3x^2 + mx - 5$, $B = x^2 + 1$. Tìm giá trị của $m$ để $A$ chia hết cho $B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 52, p. 46]
+	Cho các đa thức $A = 6x^3 - 15x^2 - 4x + 13$, $B = 2x - 5$. Tìm các giá trị nguyên của $x$ để giá trị của $A$ chia hết cho giá trị của $B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{195.}, p. 46]
+	Tìm $n\in\mathbb{N}$ để cả 2 phép chia sau đồng thời là phép chia không còn dư: $15x^{n+2}:3x^3$ \& $-\frac{1}{5}x^{n+3}:\frac{3}{10}x^{2n}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{196.}, p. 46]
+	Tính: (a) $(x^3 + 2x + 3):(x + 1)$; (b) $(x^4 - 3x^3 + 3x - 1):(x^2 - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{197.}, p. 46]
+	Xác định các hệ số $a,b\in\mathbb{R}$ sao cho đa thức $x^4 + ax^3 + b$ chia hết cho đa thức $x^2 - 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{198.}, p. 46]
+	Tìm các giá trị nguyên của $x$ để thương có giá trị nguyên: (a) $(3x^3 + 13x^2 - 7x + 5):(3x - 2)$; (b) $(2x^5 + 4x^4 + 7x^3 - 49x - 44):(2x^2 - 7)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{199.}, p. 46]
+	Chứng minh không tồn tại $n\in\mathbb{N}$ để cho giá trị của biểu thức $n^6 - n^4 - 2n^2 + 9$ chia hết cho giá trị của biểu thức $n^4 + n^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{200.}, p. 47]
+	Không thực hiện phép chia đa thức, tìm số dư trong phép chia đa thức $f(x)$ cho đa thức $g(x)$ trong các trường hợp sau: (a) $f(x) = x^{21} + x^{20} + x^{19} + 101$, $g(x) = x + 1$; (b) $f(x) = 3x^3 + 4x^2 - 2x + 7$, $g(x) = x + 2$; (c) $f(x) = x^4 - 5x^3 + 2x - 10$, $g(x) = x - 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{201.}, p. 47]
+	Chứng minh $f(x) = (x^2 - 3x + 1)^{31} - (x^2 - 4x - 5)^{30} + 2$ chia hết cho $x - 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{202.}, p. 47]
+	Tìm đa thức dư trong phép chia $(x^{54} + x^{45} + x^{36} + \cdots + x^9 + 1):(x^2 - 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{203.}, p. 47]
+	Xác định đa thức $f(x)$ thỏa mãn cả 3 điều kiện sau: (a) Khi chia cho $x - 1$ dư $4$; (b) Khi chia cho $x + 2$ dư $1$; (c) Khi chia cho $(x - 1)(x + 2)$ thì được thương là $5x^2$ \& còn dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{204.}, p. 47]
+	Cho đa thức $A = ax^2 + bx + c$. Xác định hệ số $b$ biết khi chia $A$ cho $x - 1$ hoặc chia $A$ cho $x + 1$ đều có cùng 1 đa thức dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{205.}, p. 47]
+	Chứng minh nếu $x^4 - 4x^3 + 5ax^2 - 4bx + c$ chia hết cho $x^3 + 3x^2 - 9x - 3$ thì $a + b + c = 0$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
