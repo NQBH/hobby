@@ -57,10 +57,40 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
+\newpage
 
 %------------------------------------------------------------------------------%
 
-\section{Biểu Thức Số. Biểu Thức Đại Số}
+\section{Biểu Thức Số. Biểu Thức Đại Số -- Algebraic Expression}
+``In mathematics, an \textit{algebraic expression} is an \href{https://en.wikipedia.org/wiki/Expression_(mathematics)}{expression} built up from constant \href{https://en.wikipedia.org/wiki/Algebraic_number}{algebraic numbers}, \href{https://en.wikipedia.org/wiki/Variable_(mathematics)}{variables}, \& the \href{https://en.wikipedia.org/wiki/Algebraic_operation}{algebraic operations} (addition, subtraction, multiplication, division, \& exponentiation by an exponent that is a rational number).'' -- \href{https://en.wikipedia.org/wiki/Algebraic_expression}{Wikipedia\texttt{/}algebraic expression}
+
+``\fbox{\bf 1} Các số được nối với nhau bởi dấu của các phép tính tạo thành 1 biểu thức số. Đặc biệt mỗi số đều được coi là 1 biểu thức số. Khi thực hiện các phép tính trong 1 biểu thức số ta được 1 số. Số này gọi là \textit{giá trị} của biểu thức đã cho. \fbox{\bf 2} Biểu thức chỉ chứa chữ hoặc chứa cả số \& chữ gọi chung là \textit{biểu thức đại số}. Đặc biệt biểu thức số cũng được coi là biểu thức đại số. Trong 1 biểu thức đại số, các chữ (nếu có) dùng để thay thế hay đại diện cho những số nào đó được gọi là các \textit{biến số} (gọi tắt là các \textit{biến}). Khi thực hiện các phép tính trên các chữ ta có thể áp dụng những tính chất, quy tắc các phép tính như trên các số. \fbox{\bf 3} Để cho gọn: Ta không viết dấu nhân giữa các biến cũng như giữa số \& biến. Trong các biểu thức đại số như $\pm1x$, ta không viết thừa số 1. \fbox{\bf 4} Muốn tính giá trị của 1 biểu thức đại số tại những giá trị cho trước của biến ta thay giá trị đã cho của mỗi biến vào biểu thức rồi thực hiện các phép tính. \fbox{\bf 5} Quy ước đọc \& viết 1 biểu thức đại số có nhiều phép tính: Phép tính nào làm sau cùng thì đọc trước tiên. Phép tính nào làm trước tiên thì đọc sau.'' -- \cite[Chap. III, \S1, p. 37]{Tuyen_Toan_7}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|l|l|}
+		\hline
+		\textbf{Biểu thức} & \textbf{Thứ tự thực hiện các phép tính} & \textbf{Cách đọc}\\
+		\hline
+		$(x + y)^2$ & Tính tổng $\to$ Tính bình phương & Bình phương của tổng 2 số $x,y$\\
+		\hline
+		$(x - y)^2$ & Tính hiệu $\to$ Tính bình phương & Bình phương của hiệu 2 số $x,y$\\
+		\hline
+		$(x + y)^3$ & Tính tổng $\to$ Tính lập phương & Lập phương của tổng 2 số $x,y$ \\
+		\hline		
+		$(x - y)^3$ & Tính hiệu $\to$ Tính lập phương & Lập phương của hiệu 2 số $x,y$ \\
+		\hline
+		$x^2 + y^2$ & Tính bình phương của $x,y$ $\to$ Tính tổng & Tổng các bình phương của 2 số $x,y$\\
+		\hline
+		$x^2 - y^2$ & Tính bình phương của $x,y$ $\to$ Tính hiệu & Hiệu các bình phương của 2 số $x,y$\\
+		\hline
+		$x^3 + y^3$ & Tính lập phương của $x,y$ $\to$ Tính tổng & Tổng các lập phương của 2 số $x,y$\\
+		\hline
+		$x^3 - y^3$ & Tính lập phương của $x,y$ $\to$ Tính hiệu & Hiệu các lập phương của 2 số $x,y$\\
+		\hline
+		$(x + y)(x - y)$ & Tính tổng \& hiệu $\to$ Tính tích & Tích của tổng 2 số $x,y$ với hiệu của chúng\\
+		\hline
+	\end{tabular}
+\end{table}
 
 \begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{6.}, p. 46]
 	Lãi suất ngân hành quy định cho kỳ hạn 1 năm là $r$\%\emph{\texttt{/}}năm. Viết biểu thức đại số biểu thị số tiền lãi \& tổng tiền gốc lẫn tiền lãi khi hết kỳ hạn 1 năm nếu gửi ngân hàng $A$ đồng.
@@ -68,6 +98,69 @@
 
 \begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{7.}, p. 46]
 	Các nhà khoa học đã đưa ra cách ước tính chiều cao của trẻ em khi trưởng thành dựa trên chiều cao $b$ của bố \& chiều cao $m$ của mẹ ($b,m$ tính theo đơn vị cm) như sau: Chiều cao của con trai $= \frac{1}{2}\cdot1.08(b + m)$, Chiều cao của con gái $= \frac{1}{2}(0.923b + m)$. (a) Với chiều cao nào của bố, mẹ thì con trai cao hơn, bằng, thấp hơn con gái?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 42, p. 37]
+	Cho $y = 5x$, tính giá trị của biểu thức $A = \frac{4x + y}{6x - y}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_7}, Ví dụ 42, p. 37]
+	\label{mo rong Tuyen_Toan_7 vi du 42}
+	Cho $y = kx$, tính giá trị của biểu thức:
+	\begin{align*}
+		A &= \frac{ax + by}{cx + dy},\ B = \frac{ax^2 + bxy + cy^2}{dx^2 + exy + fy^2},\ C = \frac{a_1x^3 + a_2x^2y + a_3xy^2 + a_4y^3}{b_1x^3 + b_2x^2y + b_3xy^2 + b_4y^3},\\
+		D &= \frac{\sum_{i=0}^n a_ix^{n-i}y^i}{\sum_{i=0}^n b_ix^{n-i}y^i} = \frac{a_1x^n + a_2x^{n-1}y + \cdots + a_{n-1}xy^{n-1} + a_ny^n}{b_1x^n + b_2x^{n-1}y + \cdots + b_{n-1}xy^{n-1} + b_ny^n},
+	\end{align*}
+	với $a,b,c,d,e,f,a_i,b_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 43, p. 37]
+	Tính giá trị của biểu thức: $B = x^2 + 4xy - 3y^3$ với $|x| = 5$, $|y| = 1$.
+\end{baitoan}
+
+\begin{nhanxet}
+	``Biểu thức $B$ có chứa 2 biến $x,y$. Biến $x$ nhận 2 giá trị, biến $y$ nhận 2 giá trị do đó ta phải xét đủ 4 trường hợp các cặp giá trị của $x,y$ dẫn đến biểu thức $B$ có 4 giá trị khác nhau.'' -- \cite[p. 38]{Tuyen_Toan_7}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{150.}, p. 38]
+	Cho $A$ là tổng lập phương các số tự nhiên từ $1$ đến $n$ \& $B$ là bình phương của tổng các số tự nhiên từ $1$ đến $n$. Người ta đã chứng minh được $A = B$. Kiểm nghiệm lại bằng cách cho $n = 1,2,3,4,5,6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{151.}, p. 38]
+	Tính giá trị của các biểu thức sau với $x = \sqrt{2}$: (a) $(x + 1)(x^2 - 2)$; (b) $(x - 1)(x^2 + 1) + 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{152.}, p. 38]
+	Tính giá trị của biểu thức $M = \frac{2x^2 + 3x - 2}{x + 2}$ tại: (a) $x = -1$; (b) $|x| = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{153.}, p. 38]
+	Tính giá trị của biểu thức $N = \frac{6x^2 + x - 3}{2x - 1}$ với $|x| = \frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{154.}, p. 38]
+	Tính giá trị của biểu thức $P = 9x^2 - 7x|y| - \frac{1}{4}y^3$ tại $x = \frac{1}{3}$, $y = -6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{155.}, p. 38]
+	Tìm các giá trị của biến để: (a) Biểu thức $(x + 1)(y^2 - 6)$ có giá trị bằng $0$. (b) Biểu thức $x^2 - 12x + 7$ có giá trị lớn hơn $7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{156.}, p. 38]
+	Tính giá trị của biểu thức $Q = \frac{5x^2 + 3y^2}{10x^2 - 3y^2}$ với $\frac{x}{3} = \frac{y}{5}$.
+\end{baitoan}
+Bài toán này là 1 trường hợp nhỏ của Bài toán \ref{mo rong Tuyen_Toan_7 vi du 42}: $B = \frac{ax^2 + bxy + cy^2}{dx^2 + exy + fy^2}$ khi $k = \frac{5}{3}, a = 5, b = 0, c = 3, d = 10, e = 0, f = -3$.
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{157.}, p. 38]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z\ne0$, $x - y - z = 0$. Tính giá trị của biểu thức $M = \left(1 - \frac{z}{x}\right)\left(1 - \frac{x}{y}\right)\left(1 + \frac{y}{z}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{158.}, p. 38]
+	(a) Tìm GTNN của biểu thứcG: $A = (x + 2)^2 + \left(y - \frac{1}{5}\right)^2 - 10$. (b) Tìm GTLN của biểu thức: $B = \frac{4}{(2x - 3)^2 + 5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{159.}, p. 38]
+	Cho biểu thức $C = \frac{5 - x}{x - 2}$. Tìm giá trị nguyên của $x$ để: (a) $C$ có giá trị nguyên; (b) $C$ có giá trị nhỏ nhất.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
