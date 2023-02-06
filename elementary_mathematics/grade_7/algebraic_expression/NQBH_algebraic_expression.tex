@@ -114,7 +114,7 @@
 		A &= \frac{ax + by}{cx + dy},\ B = \frac{ax^2 + bxy + cy^2}{dx^2 + exy + fy^2},\ C = \frac{a_1x^3 + a_2x^2y + a_3xy^2 + a_4y^3}{b_1x^3 + b_2x^2y + b_3xy^2 + b_4y^3},\\
 		D &= \frac{\sum_{i=0}^n a_ix^{n-i}y^i}{\sum_{i=0}^n b_ix^{n-i}y^i} = \frac{a_1x^n + a_2x^{n-1}y + \cdots + a_{n-1}xy^{n-1} + a_ny^n}{b_1x^n + b_2x^{n-1}y + \cdots + b_{n-1}xy^{n-1} + b_ny^n},
 	\end{align*}
-	với $a,b,c,d,e,f,a_i,b_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$.
+	với $a,b,c,d,e,f,a_i,b_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 43, p. 37]
@@ -206,11 +206,11 @@ Bài toán này là 1 trường hợp nhỏ của Bài toán \ref{mo rong Tuyen_
 \begin{nhanxet}
 	``2 đa thức cùng biến bằng nhau $\Leftrightarrow$ các hệ số của lũy thừa cùng bậc bằng nhau.'' -- \cite[p. 40]{Tuyen_Toan_7}
 \end{nhanxet}
-I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $Q(x) = \sum_{i=0}^m b_ix^i = b_mx^m + b_{m-1}x^{m-1} + \cdots + b_1x + b_0$, $m,n\in\mathbb{N}$, $a_i,b_j\in\mathbb{R}$, $\forall i = 1,\ldots,n$, $\forall j = 1,\ldots,m$, thì
+I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $Q(x) = \sum_{i=0}^m b_ix^i = b_mx^m + b_{m-1}x^{m-1} + \cdots + b_1x + b_0$, $m,n\in\mathbb{N}$, $a_i,b_j\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, $\forall j = 1,\ldots,m$, thì
 \begin{equation*}
 	P(x) = Q(x),\ \forall x\in\mathbb{R}\Leftrightarrow\left\{\begin{split}
 		m &= n,\\
-		a_i &= b_i,\ \forall i = 1,\ldots,n.
+		a_i &= b_i,\ \forall i = 1,2,\ldots,n.
 	\end{split}\right.
 \end{equation*}
 
@@ -221,7 +221,7 @@ I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1
 \begin{nhanxet}
 	``Đa thức có tổng các hệ số bằng $0$ thì có 1 nghiệm là $1$. Nếu tổng các hệ số bậc chẵn bằng tổng các hệ số bậc lẻ thì đa thức có 1 nghiệm là $-1$'' -- \cite[p. 40]{Tuyen_Toan_7}
 \end{nhanxet}
-I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $n\in\mathbb{N}$, $a_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$, thì
+I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $n\in\mathbb{N}$, $a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, thì
 \begin{align*}
 	\sum_{i=0}^n a_i = 0&\Leftrightarrow P(1) = 0,\\
 	\sum_{i=0,\,i\divby 2}^n a_i = \sum_{i=0,\,i\not\,\divby 2}^n a_i&\Leftrightarrow P(-1) = 0.
@@ -303,9 +303,10 @@ Thật vậy, vì $P(1) = \sum_{i=0}^n a_i1^i = a_n1^n + a_{n-1}1^{n-1} + \cdots
 %------------------------------------------------------------------------------%
 
 \section{Phép $\pm$ Đa Thức 1 Biến}
+``\fbox{\bf 1} Để cộng 2 đa thức 1 biến theo hàng ngang ta thực hiện theo các bước sau: (a) Viết mỗi đa thức vào trong ngoặc \& nối với nhau bởi dấu cộng. (b) Bỏ dấu ngoặc rồi nhóm các hạng tử cùng bậc theo thứ tự giảm dần\texttt{/}tăng dần. (c) Thực hiện phép tính trong từng nhóm ta được tổng cần tìm. Ta cũng có thể cộng 2 đa thức 1 biến theo cột dọc bằng cách: (a) Thu gọn \& sắp xếp mỗi đa thức theo thứ tự giảm dần\texttt{/}tăng dần. (b) Đặt các đa thức theo cột dọc, các hạng tử cùng bậc thẳng cột với nhau. (c) Cộng từng cột ta được tổng cần tìm. \fbox{\bf 2} Để trừ 2 đa thức 1 biến theo hàng ngang ta thực hiện như sau: (a) Viết mỗi đa thức vào trong ngoặc \& nối với nhau bởi dấu trừ. (b) Bỏ dấu ngoặc rồi nhóm các hạng tử cùng bậc theo thứ tự bậc giảm dần\texttt{/}tăng dần. (c) Thực hiện phép tính trong từng nhóm ta được hiệu cần tìm. Ta cũng có thể trừ 2 đa thức theo cột dọc, tương tự như cộng 2 đa thức theo cột dọc. \fbox{\bf 3} Phép cộng đa thức cũng có tính chất như phép cộng các số thực.'' -- \cite[Chap. III, \S3, p. 42]{Tuyen_Toan_7}
 
 \begin{baitoan}
-	Tính: (a) $ax^k + bx^k$, $\forall a,b\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (b) $ax^k + bx^k + cx^k$, $\forall a,b,c\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (c) $\sum_{i=1}^n a_ix^k = a_1x^k + a_2x^k + \cdots + a_nx^k$, $\forall a_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$, $\forall k\in\mathbb{N}$.
+	Tính: (a) $ax^k + bx^k$, $\forall a,b\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (b) $ax^k + bx^k + cx^k$, $\forall a,b,c\in\mathbb{R}$, $\forall k\in\mathbb{N}$. (c) $\sum_{i=1}^n a_ix^k = a_1x^k + a_2x^k + \cdots + a_nx^k$, $\forall a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, $\forall k\in\mathbb{N}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, p. 55]
@@ -330,6 +331,47 @@ Thật vậy, vì $P(1) = \sum_{i=0}^n a_i1^i = a_n1^n + a_{n-1}1^{n-1} + \cdots
 
 \begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{5.}, p. 59]
 	Đ hay S? (a) Tổng của 2 đa thức bậc 4 luôn luôn là đa thức bậc 4. (b) Hiệu của 2 đa thức bậc 4 luôn luôn là đa thức bậc 4. (c) Tổng \& hiệu của 2 đa thức bậc $n\in\mathbb{N}$ luôn là đa thức bậc $n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 47, p. 42]
+	Cho các đa thức biến $x$: $A = 7x + 5a$, $B = 2x - 9a$, $C = x + 10a$, trong đó $a$ là hằng số, $a,x\in\mathbb{Z}$. Không cần thực hiện phép nhân, cho biết tích $ABC$ có giá trị là 1 số chẵn hay lẻ?
+\end{baitoan}
+
+\begin{nhanxet}
+	``Trong phép nhân các số nguyên, tích là 1 số lẻ thì tất cả các thừa số đều là số lẻ. Tích là số chẵn thì có ít nhất 1 thừa số là số chẵn.''
+\end{nhanxet}
+I.e., $\prod_{i=1}^n a_i = a_1a_2\cdots a_n\divby2\Leftrightarrow\exists i\in\{1,2,\ldots,n\}$ s.t. $a_i\divby2$ (ký hiệu $\exists$ là \textit{tồn tại}). $\prod_{i=1}^n a_i = a_1a_2\cdots a_n\not\,\divby2\Leftrightarrow a_i\not\,\divby2$, $\forall i = 1,2,\ldots,n$.
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{177.}, p. 42]
+	Cho đa thức $A = 7x^4 - 2x^3 + x - 9$, $B = -5x^4 + 2x^3 - 4x^2 - 6x - 1$. Tính tổng $A + B$ \& hiệu $A - B$ bằng 2 cách.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{178.}, p. 42]
+	Tính tổng $S = \overline{a1} + \overline{a17} + \overline{1a} - \overline{1a7}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{179.}, p. 42]
+	Chứng minh tổng của 4 số lẻ liên tiếp thì chia hết cho $8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{180.}, p. 42]
+	Cho đa thức $A = 16x^4 - 8x^3 + 7x^2 - 9$, $B = -15x^4 + 3x^3 - 5x^2 - 6$, $C = 5x^3 + 3x^2 + 18$. Chứng minh ít nhất 1 trong 3 đa thức này có giá trị dương với mọi $x\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{181.}, p. 42]
+	Cho đa thức $A = 2x^2 + |7x - 1| - (5 - x + 2x^2)$. (a) Thu gọn $A$. (b) Tìm $x\in\mathbb{R}$ để $A$ có giá trị bằng $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{182.}, p. 43]
+	Cho $f(x) + g(x) = 6x^4 - 3x^2 - 5$, $f(x) - g(x) = 4x^4 - 6x^3 + 7x^2 + 8x - 9$. Tìm các đa thức $f(x),g(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{183.}, p. 43]
+	Cho $f(x) = x^{2n} - x^{2n-1} + \cdots + x^2 - x + 1$, $g(x) = -x^{2n+1} + x^{2n} - x^{2n-1} + \cdots + x^2 - x + 1$, với $n\in\mathbb{N}$. Tính giá trị của hiệu $f(x) - g(x)$ tại $x = \frac{1}{10}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{184.}, p. 43]
+	Bên trong khu đất hình vuông cạnh $3x$ \emph{m} có khu vực chăn nuôi hình chữ nhật kích thước $x$ \emph{m} \& $5$\emph{m}. (a) Tính diện tích $S$ còn lại để làm vườn cây. (b) Tìm nghiệm của đa thức $S$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
