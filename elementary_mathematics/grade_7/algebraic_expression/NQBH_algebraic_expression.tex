@@ -44,6 +44,9 @@
 \renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
 \cfoot{\thepage}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Algebraic Expression -- Biểu Thức Đại Số}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -166,6 +169,7 @@ Bài toán này là 1 trường hợp nhỏ của Bài toán \ref{mo rong Tuyen_
 %------------------------------------------------------------------------------%
 
 \section{Đa Thức 1 Biến. Nghiệm của Đa Thức 1 Biến}
+``\fbox{\bf 1} \textit{Đơn thức 1 biến} là biểu thức đại số chỉ gồm 1 số hoặc 1 tích của 1 số thực với lũy thừa có số mũ nguyên dương của biến đó. Số thực gọi là \textit{hệ số}, số mũ của lũy thừa gọi là \textit{bậc} của đơn thức. E.g., đơn thức $-3x^4$ có hệ số là $-3$, bậc $4$. Số $5$ là đơn thức có hệ số là $5$, bậc $0$ (vì $5 = 5x^0$). Số $0$ cũng coi là 1 đơn thức nhưng nó không có bậc. \fbox{\bf 2} Với các đơn thức 1 biến ta có thể: Cộng\texttt{/}trừ 2 đơn thức cùng bậc bằng cách cộng\texttt{/}trừ các hệ số với nhau \& giữ nguyên lũy thừa của biến. Nhân 2 đơn thức tùy ý bằng cách nhân 2 hệ số với nhau \& nhân 2 lũy thừa của biến với nhau. \fbox{\bf 3} Đa thức 1 biến là tổng của những đơn thức của cùng 1 biến. Mỗi đơn thức trong tổng gọi là 1 \textit{hạng tử} của đa thức. Đặc biệt, số 0 cũng được coi là 1 đa thức, gọi là \textit{đa thức không}. Ta thường ký hiệu đa thức (1 biến) bằng 1 chữ cái in hoa. E.g., $A(x)$ là đa thức 1 biến $x$ còn $A(y)$ là đa thức 1 biến $y$. \fbox{\bf 4} Thu gọn đa thức (1 biến) là làm cho đa thức đó không còn 2 đơn thức nào có cùng bậc của biến. Sắp xếp đa thức (1 biến) theo số mũ giảm dần (hoặc tăng dần) của biến là sắp xếp các hạng tử trong dạng đã thu gọn của đa thức đó theo số mũ giảm dần (hoặc tăng dần). \fbox{\bf 5} Bậc của 1 đa thức 1 biến đã thu gọn (khác đa thức không) là số mũ cao nhất của biến trong đa thức đó. \textit{Chú ý}: Trong dạng thu gọn của đa thức, hệ số của lũy thừa với số mũ cao nhất của biến gọi là \textit{hệ số cao nhất} của đa thức. Hạng tử không chứa biến gọi là \textit{hạng tử tự do} của đa thức. \fbox{\bf 6} Nghiệm của đa thức 1 biến: Nếu tại $x = a$ mà đa thức $P(x)$ có giá trị bằng $0$ (i.e., $P(a) = 0$) thì $x = a$ là 1 nghiệm của đa thức. \fbox{\bf 7} 1 đa thức (khác đa thức không) có thể có 1 nghiệm, 2 nghiệm, $\ldots$ hoặc không có nghiệm nào (0 nghiệm). 1 đa thức bậc $n$ có không quá $n$ nghiệm. \fbox{\bf 8} Mỗi đa thức bậc nhất biến $x$ đều có thể viết dưới dạng $ax + b$ trong đó hệ số $a,b$ là các số cho trước (hằng số), $a\ne0$. Ta gọi đa thức $ax + b$ như thế là \textit{nhị thức bậc nhất}. Mỗi đa thức bậc 2 biến $x$ đều có thể viết dưới dạng $ax^2 + bx + c$ trong đó các hệ số $a,b,c\in\mathbb{R}$, $a\ne 0$\footnote{Vì nếu $a = 0$, $ax^2 + bx + c$ trở thành đa thức bậc nhất $bx + c$ chứ không còn là 1 đa thức bậc 2 nữa.}, là các số cho trước (hằng số thực). Ta gọi đa thức $ax^2 + bx + c$ như thế là \textit{tam thức bậc 2}.'' -- \cite[Chap. III, \S2, p. 39]{Tuyen_Toan_7}
 
 \begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{3.}, p. 52--53]
 	Cho 2 đa thức $P(y) = -12y^4 + 5y^4 + 13y^3 - 6y^3 + y -1 + 9$, $Q(y) = -20y^3 + 31y^3 + 6y - 8y + y - 7 + 11$. (a) Thu gọn mỗi đa thức trên rồi sắp xếp mỗi đa thức theo số mũ giảm dần của biến. (b) Tìm bậc, hệ số cao nhất \& hệ số tự do của mỗi đa thức đó.
@@ -185,6 +189,115 @@ Bài toán này là 1 trường hợp nhỏ của Bài toán \ref{mo rong Tuyen_
 
 \begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, \textbf{8.}, p. 53]
 	Pound là 1 đơn vị đo khối lượng truyền thống của Anh, Mỹ \& 1 số quốc gia khác. Công thức tính khối lượng $y$ \emph{kg} theo $x$ pound là $y = 0.45359237x$. (a) Tính giá trị của $y$ \emph{kg} khi $x = 100$ pound. (b) 1 hãng hàng không quốc tế quy định mỗi hành khác được mang 2 va li không tính cước; mỗi va li cân nặng không vượt quá $23$ \emph{kg}. Hỏi với va li cân nặng $50.99$ pound sau khi quy đổi sang kilogram \& được phép làm tròn đến hàng đơn vị thì có vượt quá quy định trên hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 44, p. 40]
+	Cho các đơn thức $A = -\frac{4}{9}ax^3$, $B = \frac{3}{8}ax^5$ trong đó $a\in\mathbb{R}$ là số đã biết (hằng số). Có giá trị nào của biến $x$ làm cho $A$ \& $B$ cùng có giá trị âm không?
+\end{baitoan}
+
+\begin{nhanxet}
+	``Trong đơn thức cũng như trong đa thức nói chung, ngoài chữ chỉ biến số có thể còn có những chữ khác đại diện cho những số đã biết mà ta gọi là \emph{hằng số}.'' -- \cite[p. 40]{Tuyen_Toan_7}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 45, p. 40]
+	Cho các đa thức $f(x) = ax^3 + 4x(x^2 - 1) + 8$, $g(x) = x^3 - 4x(bx + 1) + c - 3$ trong đó $a,b,c\in\mathbb{R}$ là những hằng số. (a) Thu gọn \& sắp xếp mỗi đa  thức trên theo số mũ giảm dần của biến. (b) Xác định các hệ số $a,b,c$ để $f(x) = g(x)$.
+\end{baitoan}
+
+\begin{nhanxet}
+	``2 đa thức cùng biến bằng nhau $\Leftrightarrow$ các hệ số của lũy thừa cùng bậc bằng nhau.'' -- \cite[p. 40]{Tuyen_Toan_7}
+\end{nhanxet}
+I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $Q(x) = \sum_{i=0}^m b_ix^i = b_mx^m + b_{m-1}x^{m-1} + \cdots + b_1x + b_0$, $m,n\in\mathbb{N}$, $a_i,b_j\in\mathbb{R}$, $\forall i = 1,\ldots,n$, $\forall j = 1,\ldots,m$, thì
+\begin{equation*}
+	P(x) = Q(x),\ \forall x\in\mathbb{R}\Leftrightarrow\left\{\begin{split}
+		m &= n,\\
+		a_i &= b_i,\ \forall i = 1,\ldots,n.
+	\end{split}\right.
+\end{equation*}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 46, p. 40]
+	Cho đa thức $f(x) = x^2 + 4x - 5$. (a) Số $-5$ có phải là nghiệm của $f(x)$ không? (b) Viết tập hợp $S$ tất cả ác nghiệm của $f(x)$.
+\end{baitoan}
+
+\begin{nhanxet}
+	``Đa thức có tổng các hệ số bằng $0$ thì có 1 nghiệm là $1$. Nếu tổng các hệ số bậc chẵn bằng tổng các hệ số bậc lẻ thì đa thức có 1 nghiệm là $-1$'' -- \cite[p. 40]{Tuyen_Toan_7}
+\end{nhanxet}
+I.e., với $P(x) = \sum_{i=0}^n a_ix^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$, $n\in\mathbb{N}$, $a_i\in\mathbb{R}$, $\forall i = 1,\ldots,n$, thì
+\begin{align*}
+	\sum_{i=0}^n a_i = 0&\Leftrightarrow P(1) = 0,\\
+	\sum_{i=0,\,i\divby 2}^n a_i = \sum_{i=0,\,i\not\,\divby 2}^n a_i&\Leftrightarrow P(-1) = 0.
+\end{align*}
+Thật vậy, vì $P(1) = \sum_{i=0}^n a_i1^i = a_n1^n + a_{n-1}1^{n-1} + \cdots + a_11 + a_0 = a_n + a_{n-1} + \cdots + a_1 + a_0 = \sum_{i=0}^n a_i$ \& $P(-1) = \sum_{i=0}^n a_i(-1)^i = a_n(-1)^n + a_{n-1}(-1)^{n-1} + \cdots + a_1(-1) + a_0 = \sum_{i=0,\,i\divby 2}^n a_i - \sum_{i=0,\,i\not\,\divby 2}^n a_i$.
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{160.}, p. 40]
+	Cho biểu thức $M = (4a + 1)x^3$ với $a\in\mathbb{R}$ là hằng số. Hỏi biểu thức $M$ có phải là đơn thức không? Nếu $M$ là đơn thức thì cho biết bậc của $M$ \& hệ số của nó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{161.}, p. 40]
+	Viết đơn thức $64x^6$ dưới dạng lũy thừa của 1 đơn thức.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{162.}, p. 40]
+	Cho 3 đơn thức $M = -5x$, $N = 11x$, $P = \frac{7}{5}x^2$. Chứng minh 3 đơn thức này không thể có cùng giá trị dương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{163.}, p. 41]
+	Cho đơn thức $A = 5m(x^2)^2$, $B = -\frac{2}{m}x^4$ trong đó $m$ là hằng số dương. (a) 2 đơn thức $A$ \& $B$ có cùng bậc không? (b) Tính hiệu $A - B$. (c) Tính giá trị nhỏ nhất của hiệu $A - B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{164.}, p. 41]
+	Viết các số tự nhiên sau dưới dạng 1 đa thức thu gọn: (a) $\overline{xxx}$; (b) $\overline{x1x2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{165.}, p. 41]
+	Cho đa thức $A(x) = x^8 - 101x^7 + 101x^6 - 101x^5 + \cdots + 101x^2 - 101x + 25$. Tính $A(100)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{166.}, p. 41]
+	Cho $f(x) = (8x^2 + 5x - 10)^{49}(3x^3 - 10x^2 + 6x + 1)^{50}$. Sau khi thu gọn thì tổng các hệ số của $f(x)$ là bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{167.}, p. 41]
+	Cho tam thức bậc 2 $f(x) = ax^2 + bx + c$ trong đó $7a + b = 0$. Hỏi $f(10)f(-3)$ có thể là số âm không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{168.}, p. 41]
+	Cho nhị thức bậc nhất $f(x) = ax + b$. Xác định các hệ số $a,b$. Biết $f(1) = 2$, $f(3) = 8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{169.}, p. 41]
+	Cho tam thức bậc 2 $f(x) = ax^2 + bx + c$. Xác định các hệ số $a,b,c$ biết $f(1) = 4$, $f(-1) = 8$, \& $a - c = -4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{170.}, p. 41]
+	Cho $f(x) = 2x^2 + ax + 4$ ($a\in\mathbb{R}$ là hằng số), $g(x) = x^2 - 5x - b$ ($b\in\mathbb{R}$ là hằng số). Tìm các hệ số $a,b$ sao cho $f(1) = g(2)$ \& $f(-1) = g(5)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{171.}, p. 41]
+	Tìm nghiệm của đa thức sau: (a) $(x - 3)(4 - 5x)$; (b) $x^2 - 2$; (c) $x^2 - \sqrt{3}$; (d) $x^2 + 2x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{172.}, p. 41]
+	Thu gọn rồi tìm nghiệm của đa thức sau: (a) $f(x) = x(1 - 2x) + (2x^2 - x + 4)$; (b) $g(x) = x(x - 5) - x(x + 2) + 7x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{173.}, p. 41]
+	Xác định hệ số $m$ để các đa thức sau nhận $1$ là nghiệm: (a) $mx^2 + 2x + 8$; (b) $7x^2 + mx - 1$; (c) $x^5 - 3x^2 + m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{174.}, p. 41]
+	Cho đa thức $f(x) = x^2 + mx + 2$. (a) Xác định $m$ để $f(x)$ nhận $-2$ là 1 nghiệm. (b) Tìm tập hợp các nghiệm của $f(x)$ ứng với giá trị vừa tìm được của $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{175.}, p. 41]
+	Cho các nhị thức bậc nhất $f(x) = ax + b$ \& $g(x) = bx + a$. Chứng minh nếu $x_0$ là nghiệm của $f(x)$ thì $\frac{1}{x_0}$ là nghiệm của $g(x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{176.}, p. 41]
+	Cho biết $(x - 1)f(x) = (x + 4)f(x + 8)$, $\forall x\in\mathbb{R}$. Chứng minh $f(x)$ có ít nhất 2 nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_7}, \textbf{176.}, p. 41]
+	Cho biết $(x + a)f(x + b) = (x + c)f(x + d)$, $\forall x\in\mathbb{R}$d, với $a,b,c,d\in\mathbb{R}$, khác nhau đôi một. Chứng minh $f(x)$ có ít nhất 2 nghiệm.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
