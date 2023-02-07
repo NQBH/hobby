@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Antiderivative \& Integration -- Nguyên Hàm \& Tích Phân}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about antiderivative \& integration. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 12, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_12/NQBH_elementary_mathematics_grade_12.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 12\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_12/NQBH_elementary_mathematics_grade_12.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_12/integration/NQBH_integration.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 12\texttt{/}integration}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_12/integration/NQBH_integration.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về nguyên hàm \& tích phân. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_12/NQBH_elementary_mathematics_grade_12.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 12\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 12. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_12/integration/NQBH_integration.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 12\texttt{/}integration}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Nguyên Hàm}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, 1, p. 93]
+	Tìm hàm số $F(x)$ sao cho $F'(x) = f(x)$ nếu: (a) $f(x) = 3x^2$, $\forall x\in\mathbb{R}$; (b) $f(x) = \frac{1}{\cos^2x}$, $\forall x\in\left(-\frac{\pi}{2};\frac{\pi}{2}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, Ví dụ 6, p. 97]
+	Tính: (a) $\int \left(2x^ + \frac{1}{\sqrt[3]{x^2}}\right)\,{\rm d}x$ trên khoảng $(0;+\infty)$; (b) $\int (3\cos x - 3^{x-1})\,{\rm d}x$ trên khoảng $(-\infty;+\infty)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, 6, p. 98]
+	(a) Cho $\int (x - 1)^{10}\,{\rm d}x$. Đặt $u = x - 1$, viết $(x - 1)^{10}\,{\rm d}x$ theo $u$ \& ${\rm d}u$. (b) Cho $\int\frac{\ln x}{x}\,{\rm d}x$. Đặt $x = e^t$, viết $\frac{\ln x}{x}\,{\rm d}x$ theo $t$ \& ${\rm d}t$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, Ví dụ 7, p. 98]
+	Tính: (a) $\int \sin(3x - 1)\,{\rm d}x$. (b) $\int \sin(ax + b)\,{\rm d}x$. (c) $\int \cos(ax + b)\,{\rm d}x$
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, Ví dụ 8, p. 99]
+	Tính $\int \frac{x}{(x + 1)^5}\,{\rm d}x$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_12_Giai_Tich_co_ban}, Ví dụ 8, p. 99]
+	Tính $\int \frac{x}{(x + 1)^n}\,{\rm d}x$ với $n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, Ví dụ 8, p. 100]
+	Tính: (a) $\int xe^x\,{\rm d}x$; (b) $\int x\cos x\,{\rm d}x$; (c) $\int \ln x\,{\rm d}x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, 8, p. 100]
+	Cho $P(x)$ là đa thức của $x$. Tính $\int P(x)e^x\,{\rm d}x$, $\int P(x)\cos x\,{\rm d}x$, $\int P(x)\ln x\,{\rm d}x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, \textbf{1.}, p. 100]
+	Trong các cặp hàm số dưới đây, hàm số nào là 1 nguyên hàm của hàm số còn lại? (a) $e^{-x}$ \& $-e^{-x}$; (b) $\sin2x$ \& $\sin^2x$; (c) $\left(1 - \frac{2}{x}\right)^2e^x$ \& $\left(1 - \frac{4}{x}\right)e^x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, \textbf{2.}, pp. 100--101]
+	Tìm nguyên hàm của các hàm số sau: (a) $f(x) = \frac{x + \sqrt{x} + 1}{\sqrt[3]{x}}$; (b) $f(x) = \frac{2^x - 1}{e^x}$; (c) $f(x) = \frac{1}{\sin^2x\cos^2x}$; (d) $f(x) = \sin5x\cos3x$; (e) $f(x) = \tan^2x$; (g) $f(x) = e^{3-2x}$; (h) $f(x) = \frac{1}{(1 + x)(1 - 2x)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, \textbf{3.}, p. 101]
+	Sử dụng phương pháp đổi biến số, tính: (a) $\int (1 - x)^9\,{\rm d}x$ (đặt $u = 1 - x$); (b) $\int x(1 + x^2)^{\frac{3}{2}}\,{\rm d}x$ (đặt $u = 1 + x^2$); (c) $\int \cos^3x\sin x\,{\rm d}x$ (đặt $t = \cos x$); (d) $\int \frac{{\rm d}x}{e^x + e^{-x} + 2}$ (đặt $u = e^x + 1$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_12_Giai_Tich_co_ban}, \textbf{4.}, p. 101]
+	Sử dụng phương pháp tính nguyên hàm từng phần, tính: (a) $\int x\ln(1 + x)\,{\rm d}x$; (b) $\int (x^2 + 2x - 1)e^x\,{\rm d}x$; (c) $\int x\sin(2x + 1)\,{\rm d}x$; (d) $\int (1 - x)\cos x\,{\rm d}x$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tích Phân}
+
+%------------------------------------------------------------------------------%
+
+\section{Ứng Dụng của Tích Phân Trong Hình Học}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
