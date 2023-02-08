@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Limit -- Giới Hạn}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about limit. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 11, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/limit/NQBH_limit.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}limit}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/limit/NQBH_limit.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về biểu thức đại số. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 11. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/limit/NQBH_limit.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}limit}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Giới Hạn của Dãy Số}
+
+\begin{dinhnghia}[Dãy số có giới hạn là 0]
+	Dãy số $(u_n)$ \emph{có giới hạn là $0$} khi $n$ dần tới dương vô cực, nếu $|u_n|$ có thể nhỏ hơn 1 số dương bé tùy ý, kể từ 1 số hạng nào đó trở đi. Ký hiệu: $\lim_{n\to+\infty} u_n = 0$ hay $u_n\to0$ khi $n\to+\infty$.
+\end{dinhnghia}
+Như vậy, $(u_n)$ có giới hạn là 0 khi $n\to+\infty$ nếu $u_n$ có thể gần 0 bao nhiêu cũng được, miễn là $n$ đủ lớn.
+
+\begin{dinhnghia}[Giới hạn của dãy số]
+	Dãy số $(v_n)$ có giới hạn là số $a$ (hay $v_n$ dần tới $a$) khi $n\to+\infty$, nếu $\lim_{n\to+\infty} (v_n - a) = 0$. Ký hiệu: $\lim_{n\to+\infty} v_n = a$ hay $v_n\to a$ khi $n\to+\infty$.
+\end{dinhnghia}
+
+\begin{baitoan}
+	Cho dãy số $(v_n)$ với $v_n = \frac{2n + 1}{n}$. Chứng minh $\lim_{n\to+\infty} v_n = 2$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Giới Hạn của Hàm Số}
+
+%------------------------------------------------------------------------------%
+
+\section{Hàm Số Liên Tục}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
