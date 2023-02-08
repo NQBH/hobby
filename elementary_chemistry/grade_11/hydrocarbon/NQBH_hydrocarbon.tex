@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,booktabs}
+\usepackage[version=4]{mhchem}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{baitoan}{Bài toán}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small \nouppercase{\leftmark}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Hydrocarbon}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao cho Hóa học sơ cấp lớp 11. Tài liệu này là phần bài tập bổ sung cho tài liệu chính \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/NQBH_elementary_chemistry_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/NQBH_elementary_chemistry_grade_11.pdf}.} của tác giả viết cho Toán lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/problem/NQBH_elementary_chemistry_grade_11_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 6\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_11/problem/NQBH_elementary_chemistry_grade_11_problem.pdf}.}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Ankan}
+
+\begin{baitoan}[\cite{SBT_Hoa_Hoc_11_co_ban}, \textbf{5.11}, p. 37]
+	Cho A là 1 ankan thể khí. Để đốt cháy hoàn toàn $1.2$\emph{l} A cần dùng vừa hết $6$\emph{l} oxi lấy ở cùng điều kiện. (a) Xác định CTPT chất A. (b) Cho chất A tác dụng với khí clo ở $25^\circ$ \& có ánh sáng. Hỏi có thể thu được mấy dẫn xuất monoclo của A? Cho biết tên của mỗi dẫn xuất đó. Dẫn xuất nào thu được nhiều hơn?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Hoa_Hoc_11_co_ban}, \textbf{5.12}, p. 37]
+	Để đốt cháy hoàn toàn $1.45$\emph{g} 1 ankan phải dùng vừa hết $3.64$\emph{l} \emph{\ce{O2}} (đktc). (a) Xác định CTPT của ankan đó. (b) Viết CTCT các đồng phân ứng với CTPT đó. Ghi tên tương ứng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Hoa_Hoc_11_co_ban}, \textbf{5.13}, p. 37]
+	Khi đốt cháy hoàn toàn $1.8$\emph{g} 1 ankan, người ta thấy trong sản phẩm tạo thành khối lượng \emph{\ce{CO2}} nhiều hơn khối lượng \emph{\ce{H2O}} là $2.8$\emph{g}. (a) Xác định CTPT của ankan mang đốt. (b) Viết CTCT \& tên tất cả các đồng phân ứng với CTPT đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Hoa_Hoc_11_co_ban}, \textbf{5.14}, p. 37]
+	Đốt cháy hoàn toàn $2.86$\emph{g} hỗn hợp gồm hexan \& octan người ta thu được $4.48$\emph{l} khí \emph{\ce{CO2}} (đktc). (a) Xác định \% về khối lượng của từng chất trong hỗn hợp ankan mang đốt.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Hoa_Hoc_11_co_ban}, \textbf{5.15}, p. 37]
+	1 loại xăng là hỗn hợp của các ankan \& có CTPT là \emph{\ce{C7H_{16}}} \& \emph{\ce{C8H_{18}}}. Để đốt cháy hoàn toàn $6.950$\emph{g} xăng đó phải dùng vừa hết $17.08$\emph{l} khí \emph{\ce{O2}} (đktc). Xác định \% về khối lượng của từng chất trong loại xăng đó. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Hoa_Hoc_11_co_ban}, \textbf{5.16}, p. 37]
+	Hỗn hợp M chứa 2 ankan kế tiếp nhau trong dãy đồng đẳng. Để đốt cháy hoàn toàn $22.2$\emph{g} M cần dùng vừa hết $54.88$\emph{l} \emph{\ce{O2}} (đktc). Xác định CTPT \& \% về khối lượng của từng chất trong hỗn hợp M.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Hoa_Hoc_11_co_ban}, \textbf{5.17}, p. 38]
+	Hỗn hợp X chứa ancol etylic \emph{\ce{C2H5OH}} \& 2 ankan kế tiếp nhau trong dãy đồng đẳng. Khi đốt cháy hoàn toàn $18.9$\emph{g} X, thu được $26.1$\emph{g \ce{H2O}} \& $26.88$\emph{l \ce{CO2}} (đktc). Xác định CTPT \& \% về khối lượng của từng ankan trong hỗn hợp X.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
