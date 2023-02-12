@@ -73,20 +73,54 @@
 ``\fbox{\bf 1} Phương trình ẩn $x$ có dạng $A(x) = B(x)$ trong đó $A(x)$ \& $B(x)$ là 2 biểu thức của cùng 1 biến $x$. Giá trị $x = x_0$ làm cho 2 vế của phương trình nhận cùng 1 giá trị gọi là 1 \textit{nghiệm} của phương trình. 1 phương trình có thể có 1, 2, 3, $\ldots$ nghiệm, nhưng cũng có thể không có nghiệm nào hoặc có vô số nghiệm. Tập hợp tất cả các nghiệm của 1 phương trình gọi là \textit{tập nghiệm} của phương trình đó, thường ký hiệu là $S$. \fbox{\bf 2} 2 phương trình tương đương là 2 phương trình có cùng 1 tập nghiệm. 2 phương trình cùng tương đương với 1 phương trình thứ 3 thì tương đương với nhau. \fbox{\bf 3} Quy tắc chuyển vế \& quy tắc nhân: (a) Nếu ta chuyển 1 hạng tử từ vế này sang vế kia \& đổi dấu của nó thì được 1 phương trình tương đương với phương trình đó. (b) Nếu ta nhân (hay chia) cả 2 vế của 1 phương trình với cùng \textit{1 số khác $0$} thì được 1 phương trình tương đương với phương trình đã cho. \fbox{\bf 4} Phương trình bậc nhất 1 ẩn là phương trình dạng $ax + b = 0$. Các bước giải (đối với phương trình mà 2 vế là 2 biểu thức hữu tỷ, không chứa ẩn ở mẫu): \textit{Bước 1.} Khử mẫu thức. \textit{Bước 2.} Bỏ dấu ngoặc \& chuyển các hạng tử chứa ẩn sang 1 vế, các hằng số sang vế kia. \textit{Bước 3.} Thu gọn về dạng $ax + b = 0$ hay $ax = -b$. \fbox{\bf 5} Quy tắc chuyển vế chỉ là 1 hệ quả của tính chất sau: Nếu ta cộng cùng 1 \textit{đa thức của ẩn} vào 2 vế của 1 phương trình thì được 1 phương trình mới tương đương với phương trình đã cho. \fbox{\bf 6} Trường hợp phương trình thu gọn có hệ số của ẩn bằng $0$: \textit{Dạng 1}: $0x = 0$. Phương trình có vô số nghiệm, $x\in\mathbb{R}$ hay $S = \mathbb{R}$. \textit{Dạng 2}: $0x = c$, $c\ne 0$. Phương trình vô nghiệm, $S = \emptyset$.'' -- \cite[Chap. III, \S1, pp. 53--54]{Tuyen_Toan_8}
 
 \begin{baitoan}
-	Biện luận theo các tham số $a,b\in\mathbb{R}$ để giải phương trình bậc nhất 1 ẩn $ax + b = 0$.
+	Biện luận theo các tham số $a,b\in\mathbb{R}$ để giải phương trình bậc nhất 1 ẩn $ax + b = 0$ $(\star)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Xét các trường hợp sau:
+	\begin{itemize}
+		\item Trường hợp 1: $a = 0$. Phương trình $ax + b = 0$ trở thành $0x + b = 0$ hay $b = 0$. Xét tiếp 2 trường hợp con:
+		\begin{itemize}
+			\item Trường hợp 1.1: $b = 0$. Phương trình $ax + b = 0$ trở thành $0 = 0$ đúng với mọi $x\in\mathbb{R}$, nên phương trình ($\star$) có vô số nghiệm thực với tập nghiệm $S = \mathbb{R}$.
+			\item Trường hợp 1.1: $b\ne0$. Phương trình $ax + b = 0$ trở thành $b = 0$, mâu thuẫn với $b\ne0$ nên phương trình ($\star$) vô nghiệm thực, i.e., $S = \emptyset$.
+		\end{itemize}
+		\item Trường hợp 2: $a\ne0$. $ax + b = 0\Leftrightarrow ax = -b\Leftrightarrow x = -\frac{b}{a}$. Phương trình ($\star$) có 1 nghiệm duy nhất $x = -\frac{b}{a}$, i.e., $S = \left\{-\frac{b}{a}\right\}$.
+	\end{itemize}
+	Giải \& biện luận hoàn tất.
+\end{proof}
+
+\begin{baitoan}
+	Viết chương trình Pascal, Python, C\emph{\texttt{/}}C++ để giải phương trình bậc nhất 1 ẩn $ax + b$ với $a,b\in\mathbb{R}$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{2.}, p. 5]
 	Thử lại \& cho biết các khẳng định sau có đúng không? (a) $x^3 + 3x = 2x^2 - 3x + 1\Leftrightarrow x = -1$; (b) $(z - 2)(z^2 + 1) = 2z + 5\Leftrightarrow z = 3$.
 \end{baitoan}
+Nhắc lại, 2 phương trình tương đương với nhau khi \& chỉ khi chúng có cùng tập nghiệm.
+
+\begin{proof}[Giải]
+	(a) Thay $x = -1$ vào phương trình thứ nhất: $(-1)^3 + 3(-1) = 2(-1)^2 - 3(-1) + 1\Leftrightarrow-4 = 6$, vô lý, suy ra 2 phương trình không tương đương. (b) Thay $z = 3$ vào phương trình thứ nhất: $(3 - 2)(3^2 + 1) = 2\cdot3 + 5\Leftrightarrow10 = 11$, vô lý, suy ra 2 phương trình không tương đương.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{4.}, pp. 5--6]
 	Trong 1 cửa hàng bán thực phẩm, Tâm thấy cô bán hàng dùng 1 chiếc cân đĩa. 1 bên đĩa cô đặt 1 quả cân $500$\emph{g}, bên đĩa kia, cô đặt 2 gói hàng như nhau \& 3 quả cân nhỏ, mỗi quả $50$\emph{g} thì cân thăng bằng. Nếu khối lượng mỗi gói hàng là $x$ \emph{g} thì điều đó có thể được mô tả bởi phương trình nào?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$500 = 2x + 3\cdot50\Leftrightarrow x = 175$ g.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{5.}, p. 6]
 	Chứng minh phương trình $2mx - 5 = -x + 6m - 2$ luôn luôn nhận $x = 3$ làm nghiệm, dù $m$ lấy bất cứ giá trị nào? Phương trình còn nghiệm nào khác $x = 3$ hay không?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Thay $x = 3$ vào phương trình, được: $2m3 - 5 = -3 + 6m - 2\Leftrightarrow6m - 5 = 6m - 5\Leftrightarrow0 = 0$ đúng $\forall m\in\mathbb{R}$. (b) Vì phương trình đã cho đúng $\forall m\in\mathbb{R}$ nên nói riêng, nó cũng đúng với $m = 0$. Khi $m = 0$, phương trình $2mx - 5 = -x + 6m - 2$ trở thành $-5 = -x - 2\Leftrightarrow x = 3$, nên $x = 3$ là nghiệm duy nhất của phương trình đã cho.
+\end{proof}
+
+\begin{luuy}
+	Phương trình bậc nhất 1 ẩn $ax + b = 0$, $\forall a,b\in\mathbb{R}$, $a\ne0$, có duy nhất 1 nghiệm $x = -\frac{b}{a}$.
+\end{luuy}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{6.}, p. 6]
 	Cho 2 phương trình $x^2 - 5x + 6 = 0$ (1); $x + (x - 2)(2x + 1) = 2$. (a) Chứng minh 2 phương trình có nghiệm chung là $x = 2$. (b) Chứng minh $x = 3$ là nghiệm của (1) nhưng không là nghiệm của (2). (c) 2 phương trình đã cho có tương đương với nhau không, vì sao?
@@ -95,6 +129,10 @@
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{7.}, p. 6]
 	Tại sao có thể kết luận tập nghiệm của phương trình $\sqrt{x} + 1 = 2\sqrt{-x}$ là $\emptyset$?
 \end{baitoan}
+Nhắc lại, $\sqrt{x}$ xác định $\Leftrightarrow x\ge 0$.
+\begin{proof}[Giải]
+	ĐKXĐ: $x\ge 0\land-x\ge 0\Leftrightarrow x\ge 0\land x\le0\Leftrightarrow x = 0$. Thay $x = 0$ vào phương trình, được: $\sqrt{0} + 1 = 2\sqrt{-0}\Leftrightarrow 1 = 0$, vô lý, nên phương trình vô nghiệm.
+\end{proof}
 
 \begin{nhanxet}
 	1 phương trình đại số có chứa các biểu thức $\sqrt{x}$ \& $\sqrt{-x}$ chỉ có thể nhận $x = 0$ là nghiệm. Nếu $x = 0$ không là nghiệm của phương trình đó, thì phương trình đó vô nghiệm.
@@ -601,7 +639,7 @@ Tổng quát hơn:
 \end{baitoan}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{III.2.}, p. 18]
-	(a) Cho 3 số $a,b,c$ đôi một phân biệt. Giải phương trình: $\frac{x}{(a - b)(a - c)} + \frac{x}{(b - a)(b - c)} + \frac{x}{(c - a)(c - b)} = 2$. (b) Cho soos $a$ \& 3 số $b,c,d$ khác $a$ \& thỏa mãn điều kiện $c + d = 2b$. Giải phương trình:
+	(a) Cho 3 số $a,b,c$ đôi một phân biệt. Giải phương trình: $\frac{x}{(a - b)(a - c)} + \frac{x}{(b - a)(b - c)} + \frac{x}{(c - a)(c - b)} = 2$. (b) Cho số $a$ \& 3 số $b,c,d$ khác $a$ \& thỏa mãn điều kiện $c + d = 2b$. Giải phương trình:
 	\begin{align*}
 		\frac{x}{(a - b)(a - c)} - \frac{2x}{(a - b)(a - d)} + \frac{3x}{(a - c)(a - d)} = \frac{4a}{(a - c)(a - d)}.
 	\end{align*}
