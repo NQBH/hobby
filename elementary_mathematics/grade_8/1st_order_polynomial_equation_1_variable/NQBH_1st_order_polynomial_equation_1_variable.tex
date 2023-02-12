@@ -60,6 +60,7 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
 \tableofcontents
+\newpage
 
 %------------------------------------------------------------------------------%
 
@@ -68,6 +69,8 @@
 \begin{dinhnghia}[Phương trình bậc nhất 1 ẩn]
 	Phương trình dạng $ax + b = 0$, với $a,b\in\mathbb{R}$, $a\ne0$, là 2 số đã cho, được gọi là \emph{phương trình bậc nhất 1 ẩn}.
 \end{dinhnghia}
+
+``\fbox{\bf 1} Phương trình ẩn $x$ có dạng $A(x) = B(x)$ trong đó $A(x)$ \& $B(x)$ là 2 biểu thức của cùng 1 biến $x$. Giá trị $x = x_0$ làm cho 2 vế của phương trình nhận cùng 1 giá trị gọi là 1 \textit{nghiệm} của phương trình. 1 phương trình có thể có 1, 2, 3, $\ldots$ nghiệm, nhưng cũng có thể không có nghiệm nào hoặc có vô số nghiệm. Tập hợp tất cả các nghiệm của 1 phương trình gọi là \textit{tập nghiệm} của phương trình đó, thường ký hiệu là $S$. \fbox{\bf 2} 2 phương trình tương đương là 2 phương trình có cùng 1 tập nghiệm. 2 phương trình cùng tương đương với 1 phương trình thứ 3 thì tương đương với nhau. \fbox{\bf 3} Quy tắc chuyển vế \& quy tắc nhân: (a) Nếu ta chuyển 1 hạng tử từ vế này sang vế kia \& đổi dấu của nó thì được 1 phương trình tương đương với phương trình đó. (b) Nếu ta nhân (hay chia) cả 2 vế của 1 phương trình với cùng \textit{1 số khác $0$} thì được 1 phương trình tương đương với phương trình đã cho. \fbox{\bf 4} Phương trình bậc nhất 1 ẩn là phương trình dạng $ax + b = 0$. Các bước giải (đối với phương trình mà 2 vế là 2 biểu thức hữu tỷ, không chứa ẩn ở mẫu): \textit{Bước 1.} Khử mẫu thức. \textit{Bước 2.} Bỏ dấu ngoặc \& chuyển các hạng tử chứa ẩn sang 1 vế, các hằng số sang vế kia. \textit{Bước 3.} Thu gọn về dạng $ax + b = 0$ hay $ax = -b$. \fbox{\bf 5} Quy tắc chuyển vế chỉ là 1 hệ quả của tính chất sau: Nếu ta cộng cùng 1 \textit{đa thức của ẩn} vào 2 vế của 1 phương trình thì được 1 phương trình mới tương đương với phương trình đã cho. \fbox{\bf 6} Trường hợp phương trình thu gọn có hệ số của ẩn bằng $0$: \textit{Dạng 1}: $0x = 0$. Phương trình có vô số nghiệm, $x\in\mathbb{R}$ hay $S = \mathbb{R}$. \textit{Dạng 2}: $0x = c$, $c\ne 0$. Phương trình vô nghiệm, $S = \emptyset$.'' -- \cite[Chap. III, \S1, pp. 53--54]{Tuyen_Toan_8}
 
 \begin{baitoan}
 	Biện luận theo các tham số $a,b\in\mathbb{R}$ để giải phương trình bậc nhất 1 ẩn $ax + b = 0$.
@@ -111,6 +114,17 @@
 
 \begin{baitoan}[Mở rộng \cite{SBT_Toan_8_tap_2}, \textbf{12}, p. 6]
 	Tìm giá trị của $m$ sao cho phương trình $ax + m = bx + c$ nhận $x = x_0$ làm nghiệm với $a,b,c,x_0\in\mathbb{R}$ cho trước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 23, p. 54]
+	Cho phương trình: $\frac{3(2x + 1)}{4} - \frac{5x + 3}{6} = \frac{2x - 1}{3} + \frac{m}{12}$, $m\in\mathbb{R}$. Tìm giá trị của $m$ để phương trình có nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_8}, Ví dụ 23, p. 55]
+	Giải \& biện luận phương trình sau với $m$ là hằng số:
+	\begin{align*}
+		\frac{m^2[(x + 2)^2 - (x - 2)^2]}{8} - 4x = (m - 1)^2 + 3(2m + 1).
+	\end{align*}
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -265,9 +279,124 @@ Tổng quát hơn:
 
 \section{Phương Trình Chứa Ẩn Ở Mẫu}
 
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{35.}, p. 11]
+	\emph{Đ\texttt{/}S?} (a) 2 phương trình tương đương với nhau thì phải có cùng ĐKXĐ. (b) 2 phương trình có cùng ĐKXĐ có thể không tương đương với nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{37.}, pp. 11--12]
+	\emph{Đ\texttt{/}S?} (a) Phương trình $\frac{4x - 8 + (4 - 2x)}{x^2 + 1} = 0$ chỉ có 1 nghiệm là $x = 2$. (b) Phương trình $\frac{(x + 2)(2x - 1) - x - 2}{x^2 - x + 1} = 0$ có tập nghiệm là $S = \{-2;1\}$. (c) Phương trình $\frac{x^2 + 2x + 1}{x + 1} = 0$ có nghiệm là $x = -1$. (d) Phương trình $\frac{x^2(x - 3)}{x} = 0$ có tập nghiệm là $S = \{0;3\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{38.}, p. 12]
+	Giải phương trình: (a) $\frac{1 - x}{x + 1} + 3 = \frac{2x + 3}{x + 1}$; (b) $\frac{(x + 2)^2}{2x - 3} - 1 = \frac{x^2 + 10}{2x - 3}$; (c) $\frac{5x - 2}{2 - 2x} + \frac{2x - 1}{2} = 1 - \frac{x^2 + x - 3}{1 - x}$; (d) $\frac{5 - 2x}{3} + \frac{(x - 1)(X + 1)}{3x - 1} = \frac{(x + 2)(1 - 3x)}{9x - 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{39.}, p. 12]
+	(a) Tìm $x$ sao cho giá trị của biểu thức $\frac{2x^2 - 3x - 2}{x^2 - 4}$ bằng $2$. (b) Tìm $x$ sao cho giá trị của 2 biểu thức $\frac{6x - 1}{3x + 2}$ \& $\frac{2x + 5}{x - 3}$ bằng nhau. (c) Tìm $y$ sao cho giá trị của 2 biểu thức $\frac{y + 5}{y - 1} - \frac{y + 1}{y - 3}$ \& $\frac{-8}{(y - 1)(y - 3)}$ bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{40.}, p. 12]
+	Giải phương trình: (a) $\frac{1 - 6x}{x - 2} + \frac{9x + 4}{x + 2} = \frac{x(3x - 2) + 1}{x^2 - 4}$; (b) $1 + \frac{x}{3 - x} = \frac{5x}{(x + 2)(3 - x)} + \frac{2}{x + 2}$; (c) $\frac{2}{x - 1} + \frac{2x + 3}{x^2 + x + 1} = \frac{(2x - 1)(2x + 1)}{x^3 - 1}$; (d) $\frac{x^3 - (x - 1)^3}{(4x + 3)(x - 5)} = \frac{7x - 1}{4x + 3} - \frac{x}{x - 5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{41.}, p. 13]
+	Giải phương trình: (a) $\frac{2x + 1}{x - 1} = \frac{5(x - 1)}{x + 1}$; (b) $\frac{x - 3}{x - 2} + \frac{x - 2}{x - 4} = - 1$; (c) $\frac{1}{x - 1} + \frac{2x^2 - 5}{x^3 - 1} = \frac{4}{x^2 + x + 1}$; (d) $\frac{13}{(x - 3)(2x + 7)} + \frac{1}{2x + 7} = \frac{6}{x^2 - 9}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{42.}, p. 13]
+	Cho phương trình ẩn $x$: $\frac{x + a}{a - x} + \frac{x - a}{a + x} = \frac{a(3a + 1)}{a^2 - x^2}$. (a) Giải phương trình với $a = -3$; (b) Giải phương trình với $a = 1$; (c) Giải phương trình với $a = 0$; (d) Tìm các giá trị của $a$ sao cho phương trình nhận $x = \frac{1}{2}$ làm nghiệm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{5.1.}, p. 13]
+	Giải các phương trình:
+	\begin{align*}
+		\frac{2}{x + \dfrac{1}{1 + \frac{x + 1}{x - 2}}} = \frac{6}{3x - 1},\ \frac{\frac{x + 1}{x - 1} - \frac{x - 1}{x + 1}}{1 + \frac{x + 1}{x - 1}} = \frac{x - 1}{2(x + 1)},\ \frac{5}{x} + \frac{4}{x + 1} = \frac{3}{x + 2} + \frac{2}{x + 3}.
+	\end{align*}
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Giải Bài Toán Bằng Cách Lập Phương Trình}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{43.}, p. 14]
+	Tổng của 2 số bằng $80$, hiệu của chúng bằng $14$. Tìm 2 số đó.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{44.}, p. 14]
+	Tổng của 2 số bằng $90$, số này gấp đôi số kia. Tìm 2 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{45.}, p. 14]
+	Hiệu của 2 số bằng $18$, tỷ số giữa chúng bằng $\frac{5}{8}$. Tìm 2 số đó biết: (a) 2 số đó là 2 số dương. (b) 2 số đó tùy ý.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{46.}, p. 14]
+	Hiệu của 2 số bằng $18$, tỷ số giữa chúng bằng $\frac{5}{8}$. Tìm 2 số đó biết: (a) 2 số đó là 2 số dương. (b) 2 số đó tùy ý.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{47.}, p. 14]
+	2 số nguyên dương có tỷ số giữa số thứ nhất \& số thứ 2 bằng $\frac{3}{5}$. Nếu lấy số thứ nhất chia cho $9$, số thứ 2 chia cho $6$ thì thương của phép chia số thứ nhất cho $9$ bé hơn thương của phép chia số thứ 2 cho $6$ là $3$ đơn vị. Tìm 2 số đó biết các phép chia nói trên đều là phép chia hết.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{48.}, p. 14]
+	Thùng thứu nhất chứa $60$ gói kẹo, thùng thứ 2 chứa $80$ gói kẹo. Người ta lấy ra từ thùng thứ 2 số gói kẹo nhiều gấp 3 lần số gói kẹo lấy ra từ thùng thứ nhất. Hỏi có bao nhiêu gói kẹo được lấy ra từ thùng thứ nhất biết số gói kẹo còn lại trong thùng thứ nhất nhiều gấp 2 lần số gói kẹo còn lại trong thùng thứ 2?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{49.}, p. 14]
+	1 ôtô đi từ Hà Nội đến Thanh Hóa với vận tốc $40$\emph{km\texttt{/}h}. Sau $2$ giờ nghỉ lại ở Thanh Hóa, ôtô lại từ Thanh Hóa về Hà Nội với vận tốc $30$\emph{km\texttt{/}h}. Tổng thời gian cả đi lẫn về là $10$ giờ $45$ phút (kể cả thời gian nghỉ lại ở Thanh Hóa). Tính quãng đường Hà Nội -- Thanh Hóa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{50.}, p. 14]
+	\emph{(Bài toán cổ Hy Lạp)} - Thưa Pythagore lỗi lạc, trường của người có bao nhiêu môn đệ? Nhà hiền triết trả lời: - Hiện nay, $\frac{1}{2}$ đang học Toán, $\frac{1}{4}$ đang học Nhạc, $\frac{1}{7}$ đang ngồi yên suy nghĩ. Ngoài ra còn có $3$ phụ nữ. Hỏi trường Đại học của Pythagore có bao nhiêu người?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{51.}, p. 15]
+	Trong 1 buổi lao động, lớp 8A gồm $40$ học sinh chia thành 2 tốp: tốp thứ nhất trồng cây \& tốp thứ 2 làm vệ sinh. Tốp trồng cây đông hơn tốp làm vệ sinh là $8$ người. Hỏi tốp trồng cây có bao nhiêu học sinh?	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{52.}, p. 15]
+	Ông của Bình hơn Bình $58$ tuổi. Nếu cộng tuổi của ba Bình \& 2 lần tuổi của Bình thì bằng tuổi của ông \& tổng số tuổi của cả 3 người bằng $130$. Tính tuổi của Bình.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{53.}, p. 15]
+	1 số tự nhiên lẻ có 2 chữ số \& chia hết cho $5$. Hiệu của số đó \& chữ số hàng chục của nó bằng $68$. Tìm số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{54.}, p. 15]
+	1 phân số có tử số bé hơn mẫu số là $11$. Nếu tăng tử số lên $3$ đơn vị \& giảm mẫu số đi $4$ đơn vị thì được 1 phân số bằng $\frac{3}{4}$. Tìm phân số ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{55.}, p. 15]
+	1 số thập phân có phần nguyên là số có 1 chữ số. Nếu viết thêm chữ số $2$ vào bên trái số đó, sau đó chuyển dấu phẩy sang trái 1 chữ số thì được số mới bằng $\frac{9}{10}$ số ban đầu. Tìm số thập phân ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{56.}, p. 15]
+	1 ôtô đi từ Hà Nội lúc $8$ giờ sáng, dự kiến đến Hải Phòng vào lúc 10:30 phút. Nhưng mỗi giờ ôtô đã đi chậm hơn so với dự kiến là $10$\emph{km} nên mãi đến 11:20 xe mới tới Hải Phòng. Tính quãng đường Hà Nội -- Hải Phòng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{57.}, p. 15]
+	1 tàu chở hàng từ ga Vinh về ga Hà Nội. Sau đó $1.5$ giờ, 1 tàu chở khách xuất phát từ ga Hà Nội đi Vinh với vận tốc lớn hơn vận tốc tàu chở hàng là $7$\emph{km\texttt{/}h}. Khi tàu khách đi được $4$ giờ thì nó còn cách tàu hàng là $25$\emph{km}. Tính vận tốc mỗi tàu biết 2 ga cách nhau $319$\emph{km}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{58.}, p. 15]
+	1 người đi xe đạp từ A đến B. Lúc đầu, trên đoạn đường đá, người đó đi với vận tốc $10$\emph{km\texttt{/}h}. Trên đoạn đường còn lại là đường nhựa, dài gấp rưỡi đoạn đường đá, người đó đi với vận tốc $15$\emph{km\texttt{/}h}. Sau $4$ giờ người đó đến B. Tính độ dài quãng đường $AB$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{59.}, p. 15]
+	Bánh trước của 1 máy kéo có chu vi là $2.5$\emph{m}, bánh sau có chu vi là $4$\emph{m}. Khi máy kéo đi từ A đến B, bánh trước quay nhiều hơn bánh sau $15$ vòng. Tính khoảng cách AB.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{60.}, p. 15]
+	1 miếng hợp kim đồng \& thiếc có khối lượng $12$\emph{kg}, chứa $45$\% đồng. Hỏi phải thêm vào đó bao nhiêu thiếc nguyên chất để được 1 hợp kim mới có chứa $40$\% đồng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, \textbf{61.}, pp. 15--16]
+	1 cửa hàng bán 1 máy vi tính với giá $6.5$ triệu đồng chưa kể thuế giá trị gia tăng (VAT). Anh Trọng mua chiếc máy vi tính đó cùng với 1 modem\footnote{``Modem là 1 thiết bị dùng để chuyển đổi các tín hiệu số do máy tính phát ra thành các tín hiệu thích hợp, truyền qua đường điện thoại, \& ngược lại. Với 1 máy tính cá nhân \& 1 modem, người ta có thể trao đổi thông tin giữa các tổ chức hay cá nhân qua mạng Internet. Khi mua 1 máy tính không có modem trong (i.e., modem được thiết kế \& cài đặt sẵn trong máy) mà muốn sử dụng Internet, người ta phải mua thêm 1 modem ngoài.} ngoài \& phải trả tổng cộng $7.546$ triệu đồng, trong đó đã tính cả $10$\% thuế VAT. Hỏi giá tiền 1 chiếc modem (không kể VAT) là bao nhiêu?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
 
 %------------------------------------------------------------------------------%
 
