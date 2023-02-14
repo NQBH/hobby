@@ -1,0 +1,234 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{Thermodynamics -- Nhiệt Học}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about algebraic expression. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/NQBH_elementary_physics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary physics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/NQBH_elementary_physics_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/algebraic_expression/NQBH_algebraic_expression.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary physics\texttt{/}grade 8\texttt{/}algebraic expression}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/algebraic_expression/NQBH_algebraic_expression.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về biểu thức đại số. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/NQBH_elementary_physics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary physics\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_physics/grade_8/algebraic_expression/NQBH_algebraic_expression.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary physics\texttt{/}grade 8\texttt{/}algebraic expression}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Cấu Tạo của Các Chất}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.1.}, p. 50]
+	Tại sao quả bóng bay dù được buộc chặt để lâu ngày vẫn bị xẹp? {\sf A.} Vì khi mới thổi, không khí từ miệng vào bóng còn nóng, sau đó lạnh dần nên co lại. {\sf B.} Vì cao su là chất đàn hồi nên sau khi bị thổi căng nó tự động co lại. {\sf C.} Vì không khí nhẹ nên có thể chui qua chỗ buộc ra ngoài. {\sf D.} Vì giữa các phân tử của chất làm vỏ bóng có khoảng cách nên các phân tử không khí có thể qua đó thoát ra ngoài.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.2.}, p. 50]
+	Khi đổ $50{\rm cm}^3$ rượu vào $50{\rm cm}^3$ nước, ta thu được 1 hỗn hợp rượu -- nước có thể tích: {\sf A.} $= 100{\rm cm}^3$. {\sf B.} $> 100{\rm cm}^3$. {\sf C.} $< 100{\rm cm}^3$. {\sf D.} $\le100{\rm cm}^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.3.}, p. 50]
+	Mô tả 1 hiện tượng chứng tỏ các chất được cấu tạo từ các hạt riêng biệt, giữa chúng có khoảng cách.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.4.}, p. 50]
+	Tại sao các chất trông đều có vẻ như liền 1 khối mặc dù chúng đều được cấu tạo từ các hạt riêng biệt?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.5.}, p. 50]
+	Lấy 1 cốc nước đầy \& 1 thìa con muối tinh. Cho muối dần dần vào nước cho đến khi hết thìa muối ta thấy nước vẫn không tràn ra ngoài. Giải thích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.6.}, p. 50]
+	Kích thước của $1$ phân tử hydro vào $\approx0.00000023$\emph{mm}. Tính độ dài của 1 chuỗi gồm $1$ triệu phân tử này đứng nối tiếp nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.7.}, p. 51]
+	Cách đây $\approx300$ năm, 1 nhà bác học người Ý đã làm thí nghiệm để kiểm tra xem có nén được nước hay không. Ông đổ đầy nước vào 1 bình cầu bằng bạc hàn thật kín rồi lấy búa nện thật mạnh lên bình cầu. Nếu nước nén được thì bình phải bẹp. Nhưng ông đã thu được kết quả bất ngờ. Sau khi nện búa thật mạnh, ông thấy nước thấm qua thành bình ra ngoài trong khi bình vẫn nguyên vẹn. Giải thích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.8.}, p. 51]
+	Khi dùng piston né khí trong 1 xi lanh (tiếng Pháp: \emph{cylindre}) kín thì: {\sf A.} kích thước mỗi phân tử khí giảm. {\sf B.} khoảng cách giữa các phân tử khí giảm. {\sf C.} khối lượng mỗi phân tử khí giảm. {\sf D.} số phân tử khí giảm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.9.}, p. 51]
+	Khi nhiệt độ của 1 miếng đồng tăng thì: {\sf A.} thể tích của mỗi nguyên tử đồng tăng. {\sf B.} khoảng cách giữa các nguyên tử đồng tăng. {\sf C.} số nguyên tử đồng tăng. {\sf D.} cả 3 đều sai.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.10.}, p. 51]
+	Biết khối lượng riêng của hơi nước bao giờ cũng nhỏ hơn khối lượng riêng của nước. Hỏi câu này sau đây so sánh các phân tử nước trong hơi nước \& các phân tử nước trong nước là đúng? {\sf A.} Các phân tử trong hơi nước có cùng kích thước với các phân tử trong nước, nhưng khoảng cách giữa các phân tử trong hơi nước lớn hơn. {\sf B.} Các phân tử trong hơi nước có kích thước \& khoảng cách lớn hơn các phân tử trong nước. {\sf C.} Các phân tử trong hơi nước có kích thước \& khoảng cách bằng các phân tử trong nước. {\sf D.} Các phân tử trong hơi nước có cùng kích thước với các phân tử trong nước, nhưng khoảng cách giữa các phân tử trong hơi nước nhỏ hơn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.11.}, p. 51]
+	Các nguyên tử trong 1 miếng sắt có tính chất nào sau đây: {\sf A.} Khi nhiệt độ tăng thì nở ra. {\sf B.} Khi nhiệt độ giảm thì co lại. {\sf C.} Đứng rất gần nhau. {\sf D.} Đứng rất xa nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.12.}, p. 51]
+	Tại sao khi muối dưa, muối có thể thấm vào lá dưa \& cọng dưa?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.13.}, p. 51]
+	Nếu bơm không khí vào 1 quả bóng bay thì dù có buộc chặt không khí vẫn thoát được ra ngoài, còn nếu bơm không khí vào 1 quả cầu bằng kim loại rồi hàn kín thì hầu như không khí không thể thoát được ra ngoài. Tại sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.14.}, p. 52]
+	Tại sao săm xe đạp sau khi được bơm căng, mặc dù đã vặn van thật chặt, nhưng để lâu ngày vẫn bị xẹp? {\sf A.} Vì lúc bơm, không khí vào săm còn nóng, sau đó không khí nguội dần, co lại, làm săm bị xẹp. {\sf B.} Vì săm xe làm bằng cao su là chất đàn hồi, nên sau khi giãn ra thì tự động co lại làm cho săm để lâu ngày bị xẹp. {\sf C.} Vì giữa các phân tử cao su dùng làm săm có khoảng cách nên các phân tử không khí có thể thoát ra ngoài làm săm xẹp dần. {\sf D.} Vì cao su dùng làm săm đẩy các phân tử không khí lại gần nhau nên săm bị xẹp.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Nguyên Tử, Phân Tử Chuyển Động\texttt{/}Đứng Yên?}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.1.}, p. 53]
+	Trong các hiện tượng sau, hiện tượng nào không phải do chuyển động không ngừng của các nguyên tử, phân tử gây ra? {\sf A.} Sự khuếch tán của đồng sunfat vào nước. {\sf B.} Quả bóng bay dù được buộc thật chặt vẫn xẹp dần theo thời gian. {\sf C.} Sự tạo thành gió. {\sf D.} Đường tan vào nước.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.2.}, p. 53]
+	Khi các nguyên tử, phân tử cấu tạo nên vật chuyển động nhanh lên thì đại lượng nào sau đây tăng lên? {\sf A.} Khối lượng của vật. {\sf B.} Trọng lượng của vật. {\sf C.} Cả khối lượng lẫn trọng lượng của vật. {\sf D.} Nhiệt độ của vật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.3.}, p. 53]
+	Tại sao đường tan vào nước nóng nhanh hơn tan vào nước lạnh?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.4.}, p. 53]
+	Mở lọ nước hoa trong lớp học. Sau vài giây cả lớp đều ngửi thấy mùi nước hoa. Giải thích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.5.}, p. 53]
+	Nhỏ 1 giọt mực vào 1 cốc nước. Dù không khuấy cũng chỉ sau 1 thời gian ngắn toàn bộ nước trong cốc đã có màu mực? Tại sao? Nếu tăng nhiệt độ của nước thì hiện tượng trên xảy ra nhanh lên hay chậm đi? Tại sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.6.}, p. 53]
+	Nhúng đầu 1 băng giấy hẹp vào dung dịch phenolphthalein rồi đặt vào 1 ống nghiệm. Đậy ống nghiệm bằng 1 tờ bìa cứng có dán 1 ít bông tẩm dung dịch amoniac. Khoảng nửa phút sau ta thấy đầu dưới của băng giấy ngả sang màu hồng mặc dù hơi amoniac nhẹ hơn không khí. Giải thích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.7.}, p. 53]
+	Nguyên tử, phân tử không có tính chất nào sau đây? {\sf A.} Chuyển động không ngừng. {\sf B.} Giữa chúng có khoảng cách. {\sf C.} Nở ra khi nhiệt độ tăng, co lại khi nhiệt độ giảm. {\sf D.} Chuyển động càng nhanh khi nhiệt độ càng cao.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.8.}, p. 54]
+	Trong thí nghiệm của Brown các hạt phấn hoa chuyển động hỗn độn không ngừng vì: {\sf A.} giữa chúng có khoảng cách. {\sf B.} chúng là các phân tử. {\sf C.} các phân tử nước chuyển động không ngừng, va chạm vào chúng từ mọi phía. {\sf D.} chúng là các thực thể sống.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.9.}, p. 54]
+	Hiện tượng khuếch tán giữa 2 chất lỏng xác định xảy ra nhanh hay chậm phụ thuộc vào: {\sf A.} nhiệt độ chất lỏng. {\sf B.} khối lượng chất lỏng. {\sf C.} trọng lượng chất lỏng. {\sf D.} thể  tích chất lỏng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.10.}, p. 54]
+	Tính chất nào sau đây không phải của phân tử chất khí? {\sf A.} Chuyển động không ngừng. {\sf B.} Chuyển động càng chậm thì nhiệt độ của khí càng thấp. {\sf C.} Chuyển động càng nhanh thì nhiệt độ của khí càng cao. {\sf D.} Chuyển động không hỗn độn.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.11.}, p. 54]
+	Đối với không khí trong 1 lớp học thì khi nhiệt độ tăng: {\sf A.} kích thước các phân tử không khí tăng. {\sf B.} vận tốc các phân tử không khí tăng. {\sf C.} khối lượng không khí trong phòng tăng. {\sf D.} thể tích không khí trong phòng tăng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.12.}, p. 54]
+	Vật rắn có hình dạng xác định vì phân tử cấu tạo nên vật rắn: {\sf A.} không chuyển động. {\sf B.} đứng sát nhau. {\sf C.} chuyển động với vận tốc nhỏ không đáng kể. {\sf D.} chuyển động quanh 1 vị trí xác định.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.13.}, pp. 54--55]
+	Khi tăng nhiệt độ của khí đựng trong 1 bình khí làm bằng inva (1 chất hầu như không nở vì nhiệt) thì: {\sf A.} khoảng cách giữa các phân tử khí tăng. {\sf B.} khoảng cách giữa các phân tử khí giảm. {\sf C.} vận tốc của các phân tử khí tăng. {\sf D.} vận tốc của các phân tử khí giảm.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.14.}, p. 55]
+	Hiện tượng khuếch tán xảy ra chỉ vì: {\sf A.} giữa các phân tử có khoảng cách. {\sf B.} các phân tử chuyển động không ngừng. {\sf C.} các phân tử chuyển động không ngừng \& giữa chúng có khoảng cách. {\sf D.} Cả 3 phương án trên đều đúng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.15.}, p. 55]
+	Bỏ 1 cục đường phèn vào trong 1 cốc đựng nước. Đường chìm xuống đáy cốc. 1 lúc sau, nếm nước ở trên vẫn thấy ngọt. Tại sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.16.}, p. 55]
+	Người ta mài thật nhẵn bề mặt của 1 miếng đồng \& 1 miếng nhôm rồi ép chặt chúng vào nhau. Sau 1 thời gian, quan sát thấy ở bề mặt của miếng nhôm có đồng, ở bề mặt của miếng đồng có nhôm. Giải thích.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.18.}, p. 55]
+	Tại sao đun nóng chất khí đựng trong 1 bình kín thì thể tích của chất khí có thể coi như không đổi, còn áp suất chất khí tác dụng lên thành bình lại tăng?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Nhiệt Năng}
+
+%------------------------------------------------------------------------------%
+
+\section{Dẫn Nhiệt}
+
+%------------------------------------------------------------------------------%
+
+\section{Đối Lưu -- Bức Xạ Nhiệt}
+
+%------------------------------------------------------------------------------%
+
+\section{Công Thức Tính Nhiệt Lượng}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Cân Bằng Nhiệt}
+
+%------------------------------------------------------------------------------%
+
+\section{Năng Suất Tỏa Nhiệt của Nhiên Liệu}
+
+%------------------------------------------------------------------------------%
+
+\section{Sự Bảo Toàn Năng Lượng Trong Các Hiện Tượng Cơ \& Nhiệt}
+
+%------------------------------------------------------------------------------%
+
+\section{Động Cơ Nhiệt}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
