@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz}
 \usepackage[inline]{enumitem}
 \allowdisplaybreaks
 \numberwithin{equation}{section}
@@ -574,6 +574,67 @@
 %------------------------------------------------------------------------------%
 
 \section{Sự Bảo Toàn Năng Lượng Trong Các Hiện Tượng Cơ \& Nhiệt}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.1.}, p. 74]
+	2 hòn bi thép A \& B giống hệt nhau được treo vào 2 sợi dây có chiều dài như nhau. Khi kéo bi A lên rồi cho rơi xuống va chạm vào bi B, người ta thấy bi B bị bắn lên ngang với độ cao của bi A trước khi thả. Hỏi khi đó bi A sẽ ở trạng thái nào? {\sf A.} Đứng yên ở vị trí ban đầu của B. {\sf B.} Chuyển động theo B nhưng không lên tới được độ cao của B. {\sf C.} Bật trở lại vị trí ban đầu. {\sf D.} Nóng lên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.2.}, p. 74]
+	Thí nghiệm của Jun cho thấy, công mà các quả nặng thực hiện làm quay các tấm kim loại đặt trong nước để làm nóng nước lên đúng bằng nhiệt lượng mà nước nhận được. Thí nghiệm này chứng tỏ điều gì? Trong các câu trả lời sau, câu nào sai? {\sf A.} Năng lượng được bảo toàn. {\sf B.} Nhiệt là 1 dạng của năng lượng. {\sf C.} Cơ năng có thể chuyển hóa hoàn toàn thành nhiệt năng. {\sf D.} Nhiệt năng có thể chuyển hóa hoàn toàn thành cơ năng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.3.}, pp. 74--75]
+	Khi kéo đi kéo lại sợi dây cuốn quanh 1 ống nhôm đựng nước nút kín, người ta thấy nước trong ống nóng lên rồi sôi, hơi nước đẩy nút bật ra cùng với 1 lớp hơi nước trắng do các hạt nước rất nhỏ tạo thành. Hỏi trong thí nghiệm trên đã có những sự chuyển hóa \& truyền năng lượng nào xảy ra trong các quá trình sau: (a) Kéo đi kéo lại sợi dây. (b) Nước nóng lên. (c) Hơi nước làm bật nút ra. (d) Hơi nước ngưng tụ thành các giọt nước nhỏ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.4.}, p. 75]
+	Tại sao khi cưa thép, người ta phải cho 1 dòng nước nhỏ chảy liên tục vào chỗ cưa? Ở đây đã có sự chuyển hóa \& truyền năng lượng nào xảy ra?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.5.}, p. 75]
+	Tại sao gạo lấy từ cối giã hoặc cối xay ra đều nóng?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.6.}, p. 75]
+	Cơ năng có thể biến đổi hoàn toàn thành nhiệt năng (e.g., trong thí nghiệm Jun), còn nhiệt năng lại không thể biến đổi hoàn toàn thành cơ năng (e.g., trong động cơ nhiệt). Điều này có chứng tỏ năng lượng không được bảo toàn không? Tại sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.7.}, p. 75]
+	1 người kéo 1 vật bằng kim loại lên dốc, làm cho vật vừa chuyển động vừa nóng lên. Nếu bỏ qua sự truyền năng lượng ra môi trường xung quanh thì công của người này đã hoàn toàn chuyển hóa thành: {\sf A.} động năng của vật. {\sf B.} động năng \& nhiệt năng của vật. {\sf C.} động năng \& thế năng của vật. {\sf D.} động năng, thế năng, \& nhiệt năng của vật.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.8.}, p. 75]
+	1 vật trượt từ đỉnh dốc A tới chân dốc B, tiếp tục chuyển động trên mặt đường nằm ngang tới C mới dừng lại. 
+	\begin{center}
+		\begin{tikzpicture}
+			\draw (-2,2)--(0,0)--(3,0);
+			\draw (-2,2) circle (0.05) node[above]{$A$};
+			\draw (0,0) circle (0.05) node[above]{$B$};
+			\draw (3,0) circle (0.05) node[above]{$C$};
+		\end{tikzpicture}
+	\end{center}
+	Câu nào sau đây nói về sự chuyển hóa năng lượng của vật là đúng? {\sf A.} Từ A đến B, chỉ có sự chuyển hóa từ động năng thành thế năng. {\sf B.} Từ A đến B, chỉ có sự chuyển hóa từ động năng thành thế năng \& nhiệt năng. {\sf C.} Từ B đến C, chỉ có sự chuyển hóa từ động năng thành nhiệt năng. {\sf D.} Từ B đến C, chỉ có sự chuyển hóa từ động năng thành thế năng \& nhiệt năng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.9.}, pp. 75--76]
+	Trường hợp nào sau đây không có sự chuyển hóa từ cơ năng sang nhiệt năng hoặc ngược lại? {\sf A.} 1 vật vừa rơi từ trên cao xuống vừa nóng lên. {\sf B.} Búa máy đập vào cọc bê tông làm cọc lún xuống \& nóng lên. {\sf C.} Miếng đồng thả vào nước đang sôi, nóng lên. {\sf D.} Động cơ xe máy đang chạy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.10.}, p. 76]
+	Nhúng 1 quả bóng bàn bị bẹp vào nước đang sôi, quả bóng phồng lên như cũ. Đã có những sự biến đổi năng lượng nào xảy ra trong hiện tượng trên?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.11.}, p. 76]
+	1 người dùng súng cao su bắn 1 hòn sỏi lên cao theo phương thẳng đứng. Nếu bỏ qua sự trao đổi năng lượng với không khí thì có những sự truyền \& biến đổi năng lượng nào xảy ra khi: (a) tay kéo căng sợi dây cao su; (b) tay buông ra, hòn sỏi bay lên; (c) vận tốc hòn sỏi giảm dần theo độ cao, tới độ cao cực đại thì vận tốc bằng $0$; (d) từ độ cao cực đại, hòn sỏi rơi xuống, vận tốc tăng dần; (e) hòn sỏi chạm mặt đường cứng nảy lên vài lần rồi năm yên trên mặt đường?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.12.}, p. 76]
+	2 miếng nhôm \& chì rơi từ cùng 1 độ cao xuống sàn nhà. Xác định tỷ số độ tăng nhiệt độ của 2 miếng kim loại đó khi chúng va chạm với sàn nhà nếu coi toàn bộ cơ năng của vật khi rơi đều dùng để làm nóng vật. Nhiệt dung riêng của nhôm là $880$\emph{J\texttt{/}kg$\cdot$K}, của chì là $130$\emph{J\texttt{/}kg$\cdot$K}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.13.}, p. 76]
+	1 vật bằng đồng có khối lượng $1.78$\emph{kg} rơi từ mặt hồ xuống đáy hồ sâu $5$\emph{m}. (a) Tính độ lớn của phần cơ năng đã biến đổi thành nhiệt năng trong sự rơi này. Khối lượng riêng của đồng là $8900$\emph{kg\texttt{/}$\rm m^3$}, của nước hồ là $1000$\emph{kg\texttt{/}$\rm m^3$}. (b) Nếu vật không truyền nhiệt cho nước hồ thì nhiệt độ của nó tăng thêm bao nhiêu độ? Nhiệt dung riêng của đồng là $380$\emph{J\texttt{/}kg$\cdot$K}.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
