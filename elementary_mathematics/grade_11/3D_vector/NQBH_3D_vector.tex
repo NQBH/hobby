@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
+\usepackage[inline]{enumitem}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{dangtoan}{Dạng toán}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{dinhly}{Định lý}[section]
+\newtheorem{dinhnghia}{Định nghĩa}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{ghichu}{Ghi chú}[section]
+\newtheorem{hequa}{Hệ quả}[section]
+\newtheorem{hypothesis}{Hypothesis}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{nhanxet}{Nhận xét}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{note}{Note}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{vidu}{Ví dụ}[section]
+\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Sect.~\thesection}
+\rhead{\small\nouppercase{\leftmark}}
+\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
+\cfoot{\thepage}
+\def\labelitemii{$\circ$}
+
+\title{3D Vector -- Vector Trong Không Gian}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about 3D vector. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 11, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/3D_vector/NQBH_3D_vector.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}3D vector}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/3D_vector/NQBH_3D_vector.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về biểu thức đại số. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/NQBH_elementary_mathematics_grade_11.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 11. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_11/3D_vector/NQBH_3D_vector.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 11\texttt{/}3D vector}.
+	
+	\textsf{\textbf{Nội dung.} Vector trong không gian, 2 đường thẳng vuông góc trong không gian, đường thẳng vuông góc với mặt phẳng, 2 mặt phẳng vuông góc, khoảng cách trong không gian.}
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Vector Trong Không Gian}
+
+%------------------------------------------------------------------------------%
+
+\section{2 Đường Thẳng Vuông Góc}
+
+%------------------------------------------------------------------------------%
+
+\section{Đường Thẳng Vuông Góc với Mặt Phẳng}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_co_ban}, 2., p. 104]
+	Cho tứ diện $ABCD$ có 2 mặt $ABC$ \& $BCD$ là 2 tam giác cân có chung cạnh đáy $BC$. Gọi $I$ là trung điểm của cạnh $BC$. (a) Chứng minh $BC\bot(ADI)$. (b) Gọi $AH$ là đường cao của $\Delta ADI$, chứng minh $AH\bot(BCD)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_11_hinh_hoc_co_ban}, 3., p. 104]
+	Cho hình chóp $S.ABCD$. có đáy là hình thoi $ABCD$ \& có $SA = SB = SC = SD$. Gọi $O$ là giao điểm của $AC,BD$. Chứng minh: (a) $SO\bot(ABCD)$; (b) $AC\bot(SBD)$ \& $BD\bot(SAC)$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{2 Mặt Phẳng Vuông Góc}
+
+%------------------------------------------------------------------------------%
+
+\section{Khoảng Cách}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
