@@ -5,39 +5,34 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
+\newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
@@ -50,10 +45,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	\textsc{[en]} This text is a collection of problems, from easy to advanced, about fraction. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/fraction/NQBH_fraction.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}fraction}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/fraction/NQBH_fraction.pdf}.}.
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about \textit{fraction}. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 6, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/fraction/NQBH_fraction.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}fraction}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/fraction/NQBH_fraction.pdf}.}.
 	\vspace{2mm}
 	
-	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về phân số. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/fraction/NQBH_fraction.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}fraction}.
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{phân số}. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/NQBH_elementary_mathematics_grade_6.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 6. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/fraction/NQBH_fraction.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 6\texttt{/}fraction}.
 	
 	\textsf{\textbf{Nội dung.} Phân số với tử \& mẫu là số nguyên; các phép tính với phân số; số thập phân; các phép tính với số thập phân; tỷ số, tỷ số phần trăm, làm tròn số.}
 \end{abstract}
@@ -75,6 +70,30 @@ We can also write negative fractions, which represent the opposite of a positive
 
 In mathematics the set of all numbers that can be expressed in the form $\frac{a}{b}$, where $a,b\in\mathbb{Z}$, $b\ne0$, is called the set of rational numbers \& is represented by the symbol $\mathbb{Q}$, which stands for \href{https://en.wikipedia.org/wiki/Quotient}{quotient}. A number is a rational number precisely when it can be written in that form (i.e., as a common fraction). However, the word \textit{fraction} can also be used to describe mathematical expressions that are not rational numbers. Examples of these usages include \href{https://en.wikipedia.org/wiki/Algebraic_fraction}{algebraic fractions} (quotients of algebraic expressions), \& expressions that contain \href{https://en.wikipedia.org/wiki/Irrational_number}{irrational numbers}, e.g., $\frac{\sqrt{2}}{2}$ (see \href{https://en.wikipedia.org/wiki/Square_root_of_2}{square root of 2}) \& $\frac{\pi}{4}$ (se \href{https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational}{proof that $\pi$ is irrational}).'' -- \href{https://en.wikipedia.org/wiki/Fraction}{Wikipedia\texttt{/}fraction}
  
+%------------------------------------------------------------------------------%
+
+\section{Phân Số với Tử \& Mẫu Là Số Nguyên}
+
+\subsection{Khái niệm phân số}
+
+\begin{dinhnghia}[Phân số]
+	``Kết quả của phép chia số nguyên $a$ cho số nguyên $b$ khác $0$ có thể viết dưới dạng $\frac{a}{b}$, gọi là \emph{phân số}. Ký hiệu: $\frac{a}{b}$, với $a,b\in\mathbb{Z}$, $b\ne0$.
+\end{dinhnghia}
+Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} (còn gọi tắt là \textit{tử}, $b$ là \textit{mẫu số} (còn gọi tắt là \textit{mẫu}).'' -- \cite[p. 25]{SGK_Toan_6_Canh_Dieu_tap_2}
+
+``Mọi số nguyên $a\in\mathbb{Z}$ có thể viết ở dạng phân số là $\frac{a}{1}$.'' -- \cite[p. 26]{SGK_Toan_6_Canh_Dieu_tap_2}
+
+\subsection{Phân số bằng nhau}
+
+\begin{dinhnghia}[2 phân số bằng nhau]
+	2 phân số được gọi là \emph{bằng nhau} nếu chúng cùng biểu diễn 1 giá trị.
+\end{dinhnghia}
+
+\begin{dinhly}
+	Xét 2 phân số $\frac{a}{b}$ \& $\frac{c}{d}$, với $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$.
+\end{dinhly}
+Với $a,b\in\mathbb{Z}$, $b\ne0$, luôn có: $\frac{a}{-b} = \frac{-a}{b}$ \& $\frac{-a}{-b} = \frac{a}{b}$.
+
 %------------------------------------------------------------------------------%
 
 \section{Phân Số. Tính chất Cơ Bản của Phân Số. Rút Gọn Phân Số}
