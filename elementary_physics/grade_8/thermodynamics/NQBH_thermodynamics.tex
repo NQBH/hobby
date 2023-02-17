@@ -1,48 +1,43 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=50]{biblatex}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage[version=4]{mhchem}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
+\newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{dangtoan}{Dạng toán}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{ghichu}{Ghi chú}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{hypothesis}{Hypothesis}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{note}{Note}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Thermodynamics -- Nhiệt Học}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -63,467 +58,675 @@
 
 \section{Cấu Tạo của Các Chất}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.1.}, p. 50]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.1., p. 50]
 	Tại sao quả bóng bay dù được buộc chặt để lâu ngày vẫn bị xẹp? {\sf A.} Vì khi mới thổi, không khí từ miệng vào bóng còn nóng, sau đó lạnh dần nên co lại. {\sf B.} Vì cao su là chất đàn hồi nên sau khi bị thổi căng nó tự động co lại. {\sf C.} Vì không khí nhẹ nên có thể chui qua chỗ buộc ra ngoài. {\sf D.} Vì giữa các phân tử của chất làm vỏ bóng có khoảng cách nên các phân tử không khí có thể qua đó thoát ra ngoài.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.2.}, p. 50]
-	Khi đổ $50{\rm cm}^3$ rượu vào $50{\rm cm}^3$ nước, ta thu được 1 hỗn hợp rượu -- nước có thể tích: {\sf A.} $= 100{\rm cm}^3$. {\sf B.} $> 100{\rm cm}^3$. {\sf C.} $< 100{\rm cm}^3$. {\sf D.} $\le100{\rm cm}^3$.
+\begin{proof}[Giải]
+	{\sf D.} Vì giữa các phân tử của chất làm vỏ bóng có khoảng cách nên phân tử không khí có thể qua đó thoát ra ngoài.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.2., p. 50]
+	Khi đổ $50{\rm cm}^3$ rượu vào $50{\rm cm}^3$ nước, ta thu được 1 hỗn hợp rượu--nước có thể tích: {\sf A.} $= 100{\rm cm}^3$. {\sf B.} $> 100{\rm cm}^3$. {\sf C.} $< 100{\rm cm}^3$. {\sf D.} $\le100{\rm cm}^3$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.3.}, p. 50]
+\begin{proof}[Giải]
+	{\sf C.} Vì giữa các phân tử nước \& phân tử rượu đều có khoảng cách. Khi đổ rượu vào nước thì các phân tử rượu xen lẫn vào các phân tử nước nên thể tích của hỗn hợp rượu nước giảm.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.3., p. 50]
 	Mô tả 1 hiện tượng chứng tỏ các chất được cấu tạo từ các hạt riêng biệt, giữa chúng có khoảng cách.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.4.}, p. 50]
+\begin{proof}[Giải]
+	Lấy 1 cốc nước đầy. Dùng thìa lấy 1 thìa muối tinh thả vào cốc nước mà cốc nước vẫn không tràn ra ngoài. Chứng tỏ giữa các phân tử có khoảng cách, nếm nước có vị mặn chứng tỏ nước được cấu tạo từ các hạt riêng biệt chứ không phải liền 1 khối.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.4., p. 50]
 	Tại sao các chất trông đều có vẻ như liền 1 khối mặc dù chúng đều được cấu tạo từ các hạt riêng biệt?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.5.}, p. 50]
+\begin{proof}[Giải]
+	Vì các hạt vật chất \& khoảng cách giữa chúng rất nhỏ.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.5., p. 50]
 	Lấy 1 cốc nước đầy \& 1 thìa con muối tinh. Cho muối dần dần vào nước cho đến khi hết thìa muối ta thấy nước vẫn không tràn ra ngoài. Giải thích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.6.}, p. 50]
+\begin{proof}[Giải]
+	Vì các phân tử muối xen vào khoảng giữa các phân tử nước.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.6., p. 50]
 	Kích thước của $1$ phân tử hydro vào $\approx0.00000023$\emph{mm}. Tính độ dài của 1 chuỗi gồm $1$ triệu phân tử này đứng nối tiếp nhau.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.7.}, p. 51]
+\begin{proof}[Giải]
+	Độ dài 1 chuỗi gồm 1 triệu phân tử: $\approx0.00000023\cdot10^6 = 0.23$mm.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.7., p. 51]
 	Cách đây $\approx300$ năm, 1 nhà bác học người Ý đã làm thí nghiệm để kiểm tra xem có nén được nước hay không. Ông đổ đầy nước vào 1 bình cầu bằng bạc hàn thật kín rồi lấy búa nện thật mạnh lên bình cầu. Nếu nước nén được thì bình phải bẹp. Nhưng ông đã thu được kết quả bất ngờ. Sau khi nện búa thật mạnh, ông thấy nước thấm qua thành bình ra ngoài trong khi bình vẫn nguyên vẹn. Giải thích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.8.}, p. 51]
-	Khi dùng piston né khí trong 1 xi lanh (tiếng Pháp: \emph{cylindre}) kín thì: {\sf A.} kích thước mỗi phân tử khí giảm. {\sf B.} khoảng cách giữa các phân tử khí giảm. {\sf C.} khối lượng mỗi phân tử khí giảm. {\sf D.} số phân tử khí giảm.
+\begin{proof}[Giải]
+	Vì giữa các phân tử bạc có khoảng cách, nên khi bị nén các phân tử nước có thể chui qua các khoảng cách này ra ngoài.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.8., p. 51]
+	Khi dùng piston né khí trong 1 xi lanh\footnote{Tiếng Pháp: \emph{cylindre}.} kín thì: {\sf A.} kích thước mỗi phân tử khí giảm. {\sf B.} khoảng cách giữa các phân tử khí giảm. {\sf C.} khối lượng mỗi phân tử khí giảm. {\sf D.} số phân tử khí giảm.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.9.}, p. 51]
-	Khi nhiệt độ của 1 miếng đồng tăng thì: {\sf A.} thể tích của mỗi nguyên tử đồng tăng. {\sf B.} khoảng cách giữa các nguyên tử đồng tăng. {\sf C.} số nguyên tử đồng tăng. {\sf D.} cả 3 đều sai.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.9., p. 51]
+	Khi nhiệt độ của 1 miếng đồng tăng thì: {\sf A.} thể tích của mỗi nguyên tử đồng tăng. {\sf B.} khoảng cách giữa các nguyên tử đồng tăng. {\sf C.} số nguyên tử đồng tăng. {\sf D.} cả 3 đều sai.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.10.}, p. 51]
-	Biết khối lượng riêng của hơi nước bao giờ cũng nhỏ hơn khối lượng riêng của nước. Hỏi câu này sau đây so sánh các phân tử nước trong hơi nước \& các phân tử nước trong nước là đúng? {\sf A.} Các phân tử trong hơi nước có cùng kích thước với các phân tử trong nước, nhưng khoảng cách giữa các phân tử trong hơi nước lớn hơn. {\sf B.} Các phân tử trong hơi nước có kích thước \& khoảng cách lớn hơn các phân tử trong nước. {\sf C.} Các phân tử trong hơi nước có kích thước \& khoảng cách bằng các phân tử trong nước. {\sf D.} Các phân tử trong hơi nước có cùng kích thước với các phân tử trong nước, nhưng khoảng cách giữa các phân tử trong hơi nước nhỏ hơn.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.10., p. 51]
+	Biết khối lượng riêng của hơi nước bao giờ cũng nhỏ hơn khối lượng riêng của nước. Hỏi câu này sau đây so sánh các phân tử nước trong hơi nước \& các phân tử nước trong nước là đúng? {\sf A.} Các phân tử trong hơi nước có cùng kích thước với các phân tử trong nước, nhưng khoảng cách giữa các phân tử trong hơi nước lớn hơn. {\sf B.} Các phân tử trong hơi nước có kích thước \& khoảng cách lớn hơn các phân tử trong nước. {\sf C.} Các phân tử trong hơi nước có kích thước \& khoảng cách bằng các phân tử trong nước. {\sf D.} Các phân tử trong hơi nước có cùng kích thước với các phân tử trong nước, nhưng khoảng cách giữa các phân tử trong hơi nước nhỏ hơn.\hfill{\sf Ans: A.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.11.}, p. 51]
-	Các nguyên tử trong 1 miếng sắt có tính chất nào sau đây: {\sf A.} Khi nhiệt độ tăng thì nở ra. {\sf B.} Khi nhiệt độ giảm thì co lại. {\sf C.} Đứng rất gần nhau. {\sf D.} Đứng rất xa nhau.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.11., p. 51]
+	Các nguyên tử trong 1 miếng sắt có tính chất nào sau đây: {\sf A.} Khi nhiệt độ tăng thì nở ra. {\sf B.} Khi nhiệt độ giảm thì co lại. {\sf C.} Đứng rất gần nhau. {\sf D.} Đứng rất xa nhau.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.12.}, p. 51]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.12., p. 51]
 	Tại sao khi muối dưa, muối có thể thấm vào lá dưa \& cọng dưa?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.13.}, p. 51]
+\begin{proof}[Giải]
+	Giữa các phân tử cấu tạo nên lá dưa \& cọng dưa có khoảng cách nên các phân tử muối có thể khuếch tán vào dưa.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.13., p. 51]
 	Nếu bơm không khí vào 1 quả bóng bay thì dù có buộc chặt không khí vẫn thoát được ra ngoài, còn nếu bơm không khí vào 1 quả cầu bằng kim loại rồi hàn kín thì hầu như không khí không thể thoát được ra ngoài. Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{19.14.}, p. 52]
-	Tại sao săm xe đạp sau khi được bơm căng, mặc dù đã vặn van thật chặt, nhưng để lâu ngày vẫn bị xẹp? {\sf A.} Vì lúc bơm, không khí vào săm còn nóng, sau đó không khí nguội dần, co lại, làm săm bị xẹp. {\sf B.} Vì săm xe làm bằng cao su là chất đàn hồi, nên sau khi giãn ra thì tự động co lại làm cho săm để lâu ngày bị xẹp. {\sf C.} Vì giữa các phân tử cao su dùng làm săm có khoảng cách nên các phân tử không khí có thể thoát ra ngoài làm săm xẹp dần. {\sf D.} Vì cao su dùng làm săm đẩy các phân tử không khí lại gần nhau nên săm bị xẹp.
+\begin{proof}[Giải]
+	Khoảng cách giữa các phân tử của vỏ bóng bay lớn nên các phân tử không khí trong bóng bay có thể lọt ra ngoài. Khoảng cách giữa các nguyên tử kim loại rất nhỏ nên các phân tử không khí trong quả cầu hầu như không thể lọt ra ngoài được.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 19.14., p. 52]
+	Tại sao săm xe đạp sau khi được bơm căng, mặc dù đã vặn van thật chặt, nhưng để lâu ngày vẫn bị xẹp? {\sf A.} Vì lúc bơm, không khí vào săm còn nóng, sau đó không khí nguội dần, co lại, làm săm bị xẹp. {\sf B.} Vì săm xe làm bằng cao su là chất đàn hồi, nên sau khi giãn ra thì tự động co lại làm cho săm để lâu ngày bị xẹp. {\sf C.} Vì giữa các phân tử cao su dùng làm săm có khoảng cách nên các phân tử không khí có thể thoát ra ngoài làm săm xẹp dần. {\sf D.} Vì cao su dùng làm săm đẩy các phân tử không khí lại gần nhau nên săm bị xẹp.\hfill{\sf Ans: C.}
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
 
 \section{Nguyên Tử, Phân Tử Chuyển Động\texttt{/}Đứng Yên?}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.1.}, p. 53]
-	Trong các hiện tượng sau, hiện tượng nào không phải do chuyển động không ngừng của các nguyên tử, phân tử gây ra? {\sf A.} Sự khuếch tán của đồng sunfat vào nước. {\sf B.} Quả bóng bay dù được buộc thật chặt vẫn xẹp dần theo thời gian. {\sf C.} Sự tạo thành gió. {\sf D.} Đường tan vào nước.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.1., p. 53]
+	Trong các hiện tượng sau, hiện tượng nào không phải do chuyển động không ngừng của các nguyên tử, phân tử gây ra? {\sf A.} Sự khuếch tán của đồng sunfat vào nước. {\sf B.} Quả bóng bay dù được buộc thật chặt vẫn xẹp dần theo thời gian. {\sf C.} Sự tạo thành gió. {\sf D.} Đường tan vào nước.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.2.}, p. 53]
-	Khi các nguyên tử, phân tử cấu tạo nên vật chuyển động nhanh lên thì đại lượng nào sau đây tăng lên? {\sf A.} Khối lượng của vật. {\sf B.} Trọng lượng của vật. {\sf C.} Cả khối lượng lẫn trọng lượng của vật. {\sf D.} Nhiệt độ của vật.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.2., p. 53]
+	Khi các nguyên tử, phân tử cấu tạo nên vật chuyển động nhanh lên thì đại lượng nào sau đây tăng lên? {\sf A.} Khối lượng của vật. {\sf B.} Trọng lượng của vật. {\sf C.} Cả khối lượng lẫn trọng lượng của vật. {\sf D.} Nhiệt độ của vật.\hfill{\sf Ans: D.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.3.}, p. 53]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.3., p. 53]
 	Tại sao đường tan vào nước nóng nhanh hơn tan vào nước lạnh?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.4.}, p. 53]
+\begin{proof}[Giải]
+	Do các phân tử chuyển động nhanh hơn.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.4., p. 53]
 	Mở lọ nước hoa trong lớp học. Sau vài giây cả lớp đều ngửi thấy mùi nước hoa. Giải thích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.5.}, p. 53]
+\begin{proof}[Giải]
+	Do các phân tử chuyển động không ngừng.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.5., p. 53]
 	Nhỏ 1 giọt mực vào 1 cốc nước. Dù không khuấy cũng chỉ sau 1 thời gian ngắn toàn bộ nước trong cốc đã có màu mực? Tại sao? Nếu tăng nhiệt độ của nước thì hiện tượng trên xảy ra nhanh lên hay chậm đi? Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.6.}, p. 53]
+\begin{proof}[Giải]
+	Nhỏ một giọt mực vào một cốc nước. Dù không khuấy cũng chỉ sau một thời gian ngắn toàn bộ nước trong cốc đã có màu mực do các phân tử chuyển động không ngừng, giữa chúng có khoảng cách. Nếu tăng nhiệt độ của nước thì hiện tượng trên xảy ra nhanh lên vì các phân tử chuyển động nhanh hơn trong nhiệt độ cao.	
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.6., p. 53]
 	Nhúng đầu 1 băng giấy hẹp vào dung dịch phenolphthalein rồi đặt vào 1 ống nghiệm. Đậy ống nghiệm bằng 1 tờ bìa cứng có dán 1 ít bông tẩm dung dịch amoniac. Khoảng nửa phút sau ta thấy đầu dưới của băng giấy ngả sang màu hồng mặc dù hơi amoniac nhẹ hơn không khí. Giải thích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.7.}, p. 53]
-	Nguyên tử, phân tử không có tính chất nào sau đây? {\sf A.} Chuyển động không ngừng. {\sf B.} Giữa chúng có khoảng cách. {\sf C.} Nở ra khi nhiệt độ tăng, co lại khi nhiệt độ giảm. {\sf D.} Chuyển động càng nhanh khi nhiệt độ càng cao.
+\begin{proof}[Giải]
+	Do hiện tượng khuếch tán, nên các phân tử phenolphtalein có thể đi lên miệng ống nghiệm \& tác dụng với amomiac \ce{NH3} tẩm ở bông.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.7., p. 53]
+	Nguyên tử, phân tử không có tính chất nào sau đây? {\sf A.} Chuyển động không ngừng. {\sf B.} Giữa chúng có khoảng cách. {\sf C.} Nở ra khi nhiệt độ tăng, co lại khi nhiệt độ giảm. {\sf D.} Chuyển động càng nhanh khi nhiệt độ càng cao.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.8.}, p. 54]
-	Trong thí nghiệm của Brown các hạt phấn hoa chuyển động hỗn độn không ngừng vì: {\sf A.} giữa chúng có khoảng cách. {\sf B.} chúng là các phân tử. {\sf C.} các phân tử nước chuyển động không ngừng, va chạm vào chúng từ mọi phía. {\sf D.} chúng là các thực thể sống.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.8., p. 54]
+	Trong thí nghiệm của Brown các hạt phấn hoa chuyển động hỗn độn không ngừng vì: {\sf A.} giữa chúng có khoảng cách. {\sf B.} chúng là các phân tử. {\sf C.} các phân tử nước chuyển động không ngừng, va chạm vào chúng từ mọi phía. {\sf D.} chúng là các thực thể sống.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.9.}, p. 54]
-	Hiện tượng khuếch tán giữa 2 chất lỏng xác định xảy ra nhanh hay chậm phụ thuộc vào: {\sf A.} nhiệt độ chất lỏng. {\sf B.} khối lượng chất lỏng. {\sf C.} trọng lượng chất lỏng. {\sf D.} thể  tích chất lỏng.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.9., p. 54]
+	Hiện tượng khuếch tán giữa 2 chất lỏng xác định xảy ra nhanh hay chậm phụ thuộc vào: {\sf A.} nhiệt độ chất lỏng. {\sf B.} khối lượng chất lỏng. {\sf C.} trọng lượng chất lỏng. {\sf D.} thể  tích chất lỏng.\hfill{\sf Ans: A.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.10.}, p. 54]
-	Tính chất nào sau đây không phải của phân tử chất khí? {\sf A.} Chuyển động không ngừng. {\sf B.} Chuyển động càng chậm thì nhiệt độ của khí càng thấp. {\sf C.} Chuyển động càng nhanh thì nhiệt độ của khí càng cao. {\sf D.} Chuyển động không hỗn độn.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.10., p. 54]
+	Tính chất nào sau đây không phải của phân tử chất khí? {\sf A.} Chuyển động không ngừng. {\sf B.} Chuyển động càng chậm thì nhiệt độ của khí càng thấp. {\sf C.} Chuyển động càng nhanh thì nhiệt độ của khí càng cao. {\sf D.} Chuyển động không hỗn độn.\hfill{\sf Ans: D.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.11.}, p. 54]
-	Đối với không khí trong 1 lớp học thì khi nhiệt độ tăng: {\sf A.} kích thước các phân tử không khí tăng. {\sf B.} vận tốc các phân tử không khí tăng. {\sf C.} khối lượng không khí trong phòng tăng. {\sf D.} thể tích không khí trong phòng tăng.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.11., p. 54]
+	Đối với không khí trong 1 lớp học thì khi nhiệt độ tăng: {\sf A.} kích thước các phân tử không khí tăng. {\sf B.} vận tốc các phân tử không khí tăng. {\sf C.} khối lượng không khí trong phòng tăng. {\sf D.} thể tích không khí trong phòng tăng.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.12.}, p. 54]
-	Vật rắn có hình dạng xác định vì phân tử cấu tạo nên vật rắn: {\sf A.} không chuyển động. {\sf B.} đứng sát nhau. {\sf C.} chuyển động với vận tốc nhỏ không đáng kể. {\sf D.} chuyển động quanh 1 vị trí xác định.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.12., p. 54]
+	Vật rắn có hình dạng xác định vì phân tử cấu tạo nên vật rắn: {\sf A.} không chuyển động. {\sf B.} đứng sát nhau. {\sf C.} chuyển động với vận tốc nhỏ không đáng kể. {\sf D.} chuyển động quanh 1 vị trí xác định.\hfill{\sf Ans: D.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.13.}, pp. 54--55]
-	Khi tăng nhiệt độ của khí đựng trong 1 bình khí làm bằng inva (1 chất hầu như không nở vì nhiệt) thì: {\sf A.} khoảng cách giữa các phân tử khí tăng. {\sf B.} khoảng cách giữa các phân tử khí giảm. {\sf C.} vận tốc của các phân tử khí tăng. {\sf D.} vận tốc của các phân tử khí giảm.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.13., pp. 54--55]
+	Khi tăng nhiệt độ của khí đựng trong 1 bình khí làm bằng inva (1 chất hầu như không nở vì nhiệt) thì: {\sf A.} khoảng cách giữa các phân tử khí tăng. {\sf B.} khoảng cách giữa các phân tử khí giảm. {\sf C.} vận tốc của các phân tử khí tăng. {\sf D.} vận tốc của các phân tử khí giảm.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.14.}, p. 55]
-	Hiện tượng khuếch tán xảy ra chỉ vì: {\sf A.} giữa các phân tử có khoảng cách. {\sf B.} các phân tử chuyển động không ngừng. {\sf C.} các phân tử chuyển động không ngừng \& giữa chúng có khoảng cách. {\sf D.} Cả 3 phương án trên đều đúng.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.14., p. 55]
+	Hiện tượng khuếch tán xảy ra chỉ vì: {\sf A.} giữa các phân tử có khoảng cách. {\sf B.} các phân tử chuyển động không ngừng. {\sf C.} các phân tử chuyển động không ngừng \& giữa chúng có khoảng cách. {\sf D.} Cả 3 phương án trên đều đúng.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.15.}, p. 55]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.15., p. 55]
 	Bỏ 1 cục đường phèn vào trong 1 cốc đựng nước. Đường chìm xuống đáy cốc. 1 lúc sau, nếm nước ở trên vẫn thấy ngọt. Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.16.}, p. 55]
+\begin{proof}[Giải]
+	Do các phân tử đường chuyển động hỗn độn về mọi phía \& giữa các phân tử nước có khoảng cách, nên một số phân tử đường có thể chuyển động lên gần mặt nước, vì vậy nếm nước ở trên vần thấy ngọt.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.16., p. 55]
 	Người ta mài thật nhẵn bề mặt của 1 miếng đồng \& 1 miếng nhôm rồi ép chặt chúng vào nhau. Sau 1 thời gian, quan sát thấy ở bề mặt của miếng nhôm có đồng, ở bề mặt của miếng đồng có nhôm. Giải thích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{20.18.}, p. 55]
+\begin{proof}[Giải]
+	Do các phân tử đồng \& nhôm khuếch tán vào nhau.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 20.18., p. 55]
 	Tại sao đun nóng chất khí đựng trong 1 bình kín thì thể tích của chất khí có thể coi như không đổi, còn áp suất chất khí tác dụng lên thành bình lại tăng?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Khi bị đun nóng các phân tử khí chuyển động nhanh lên, va chạm vào thành bình nhiều hơn \& mạnh hơn, nên áp suất chất khí tác dụng lên thành bình tăng.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
 \section{Nhiệt Năng}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.1.}, p. 57]
-	Khi chuyển động nhiệt của các phân tử cấu tạo nên vật nhanh lên thì đại lượng nào sau đây của vật không tăng? {\sf A.} Nhiệt độ. {\sf B.} Nhiệt năng. {\sf C.} Khối lượng. {\sf D.} Thể tích.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.1., p. 57]
+	Khi chuyển động nhiệt của các phân tử cấu tạo nên vật nhanh lên thì đại lượng nào sau đây của vật không tăng? {\sf A.} Nhiệt độ. {\sf B.} Nhiệt năng. {\sf C.} Khối lượng. {\sf D.} Thể tích.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.2.}, p. 57]
-	Nhỏ 1 giọt nước đang sôi vào 1 cốc đựng nước ấm thì nhiệt năng của giọt nước \& của nước trong cốc thay đổi như thế nào? {\sf A.} Nhiệt năng của giọt nước tăng, của nước trong cốc giảm. {\sf B.} Nhiệt năng của giọt nước giảm, của nước trong cốc tăng. {\sf C.} Nhiệt năng của giọt nước \& của nước trong cốc đều giảm. {\sf D.} Nhiệt năng của giọt nước \& của nước trong cốc đều tăng.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.2., p. 57]
+	Nhỏ 1 giọt nước đang sôi vào 1 cốc đựng nước ấm thì nhiệt năng của giọt nước \& của nước trong cốc thay đổi như thế nào? {\sf A.} Nhiệt năng của giọt nước tăng, của nước trong cốc giảm. {\sf B.} Nhiệt năng của giọt nước giảm, của nước trong cốc tăng. {\sf C.} Nhiệt năng của giọt nước \& của nước trong cốc đều giảm. {\sf D.} Nhiệt năng của giọt nước \& của nước trong cốc đều tăng.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.3.}, p. 57]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.3., p. 57]
 	1 viên đạn đang bay trên cao có những dạng năng lượng nào?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.4.}, p. 57]
+\begin{proof}[Giải]
+	Động năng, thế năng, nhiệt năng.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.4., p. 57]
 	Đun nóng 1 ống nghiệm nút kín có đựng nước. Nước trong ống nghiệm nóng dần, tới 1 lúc nào đó hơi nước trong ống làm bật nút lên. Trong thí nghiệm trên, khi nào thì có truyền nhiệt, khi nào thì có thực hiện công? 
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.5.}, p. 57]
+\begin{proof}[Giải]
+	Khi đun nước có sự truyền nhiệt; khi nút bật lên có sự thực hiện công.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.5., p. 57]
 	Khi để bầu nhiệt kế vào luồng khí phun mạnh ra từ 1 quả bóng thì mực thủy ngân trong nhiệt kế dâng lên hay tụt xuống? Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.6.}, p. 57]
+\begin{proof}[Giải]
+	Không khí phì ra từ quả bóng, một phần nhiệt năng của nó chuyển thành cơ năng nên nhiệt độ của nó giảm làm mực thủy ngân trong nhiệt kế tụt xuống.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.6., p. 57]
 	1 chai thủy tinh được đậy kín bằng 1 nút cao su nối với 1 bơm tay. Khi bơm không khí vào chai, ta thấy tới 1 lúc nào đó nút cao su bật ra, đồng thời trong chai xuất hiện sương mù do những giọt nước rất nhỏ tạo thành. Giải thích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.7.}, p. 58]
-	\emph{Đ\texttt{/}S?} {\sf A.} Nhiệt năng của 1 vật là 1 dạng năng lượng. {\sf B.} Nhiệt năng của 1 vật là tổng động năng \& thế năng của vật. {\sf C.} Nhiệt năng của 1 vật là năng lượng vật lúc nào cũng có. {\sf D.} Nhiệt năng của 1 vật là tổng động năng của các phân tử cấu tạo nên vật.
+\begin{proof}[Giải]
+	Không khí trong chai thực hiện công làm bật nút ra. Một phần nhiệt năng của không khí chuyển thành cơ năng nên nó lạnh đi làm cho hơi nước trong chai ngưng tụ tạo thành sương mù.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.7., p. 58]
+	\emph{Đ\texttt{/}S?} {\sf A.} Nhiệt năng của 1 vật là 1 dạng năng lượng. {\sf B.} Nhiệt năng của 1 vật là tổng động năng \& thế năng của vật. {\sf C.} Nhiệt năng của 1 vật là năng lượng vật lúc nào cũng có. {\sf D.} Nhiệt năng của 1 vật là tổng động năng của các phân tử cấu tạo nên vật.\hfill{\sf Ans. B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.8.}, p. 58]
-	Nhiệt lượng là: {\sf A.} 1 dạng năng lượng có đơn vị là jun. {\sf B.} đại lượng chỉ xuất hiện trong sự thực hiện công. {\sf C.} phần nhiệt năng mà vật nhận thêm hay mất bớt trong sự truyền nhiệt. {\sf D.} đại lượng tăng khi nhiệt độ của vật tăng, giảm khi nhiệt độ của vật giảm.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.8., p. 58]
+	Nhiệt lượng là: {\sf A.} 1 dạng năng lượng có đơn vị là jun. {\sf B.} đại lượng chỉ xuất hiện trong sự thực hiện công. {\sf C.} phần nhiệt năng mà vật nhận thêm hay mất bớt trong sự truyền nhiệt. {\sf D.} đại lượng tăng khi nhiệt độ của vật tăng, giảm khi nhiệt độ của vật giảm.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.9.}, p. 58]
-	Nhiệt năng của 1 vật: {\sf A.} chỉ có thể thay đổi bằng truyền nhiệt. {\sf B.} chỉ có thể thay đổi bằng thực hiện công. {\sf C.} chỉ có thể thay đổi bằng cả thực hiện công \& truyền nhiệt. {\sf D.} có thể thay đổi bằng thực hiện công hoặc truyền nhiệt, hoặc bằng cả thực hiện công \& truyền nhiệt.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.9., p. 58]
+	Nhiệt năng của 1 vật: {\sf A.} chỉ có thể thay đổi bằng truyền nhiệt. {\sf B.} chỉ có thể thay đổi bằng thực hiện công. {\sf C.} chỉ có thể thay đổi bằng cả thực hiện công \& truyền nhiệt. {\sf D.} có thể thay đổi bằng thực hiện công hoặc truyền nhiệt, hoặc bằng cả thực hiện công \& truyền nhiệt.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.10.}, p. 58]
-	Các nguyên tử, phân tử cấu tạo nên vật chuyển động càng nhanh thì: {\sf A.} động năng của vật càng lớn. {\sf B.} thế năng của vật càng lớn. {\sf C.} cơ năng của vật càng lớn. {\sf D.} nhiệt năng của vật càng lớn.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.10., p. 58]
+	Các nguyên tử, phân tử cấu tạo nên vật chuyển động càng nhanh thì: {\sf A.} động năng của vật càng lớn. {\sf B.} thế năng của vật càng lớn. {\sf C.} cơ năng của vật càng lớn. {\sf D.} nhiệt năng của vật càng lớn.\hfill{\sf Ans: A.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.11.}, p. 58]
-	Nhiệt năng của vật tăng khi: {\sf A.} vật truyền nhiệt cho vật khác. {\sf B.} vật thực hiện công lên vật khác. {\sf C.} chuyển động nhiệt của các phần tử cấu tạo nên vật nhanh lên. {\sf D.} chuyển động của vật nhanh lên.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.11., p. 58]
+	Nhiệt năng của vật tăng khi: {\sf A.} vật truyền nhiệt cho vật khác. {\sf B.} vật thực hiện công lên vật khác. {\sf C.} chuyển động nhiệt của các phần tử cấu tạo nên vật nhanh lên. {\sf D.} chuyển động của vật nhanh lên.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.12.}, pp. 58--59]
-	Đại lượng nào sau đây của vật rắn không thay đổi, khi chuyển động nhiệt của các phân tử cấu tạo nên vật thay đổi? {\sf A.} Nhiệt độ của vật. {\sf B.} Khối lượng của vật. {\sf C.} Nhiệt năng của vật. {\sf D.} Thể tích của vật.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.12., pp. 58--59]
+	Đại lượng nào sau đây của vật rắn không thay đổi, khi chuyển động nhiệt của các phân tử cấu tạo nên vật thay đổi? {\sf A.} Nhiệt độ của vật. {\sf B.} Khối lượng của vật. {\sf C.} Nhiệt năng của vật. {\sf D.} Thể tích của vật.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.13.}, p. 59]
-	Người ta có thể nhận ra sự thay đổi nhiệt năng của 1 vật rắn dựa vào sự thay đổi: {\sf A.} khối lượng của vật. {\sf B.} khối lượng riêng của vật. {\sf C.} nhiệt độ của vật. {\sf D.} vận tốc của các phần tử cấu tạo nên vật.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.13., p. 59]
+	Người ta có thể nhận ra sự thay đổi nhiệt năng của 1 vật rắn dựa vào sự thay đổi: {\sf A.} khối lượng của vật. {\sf B.} khối lượng riêng của vật. {\sf C.} nhiệt độ của vật. {\sf D.} vận tốc của các phần tử cấu tạo nên vật.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.14.}, p. 59]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.14., p. 59]
 	Ở giữa 1 ống thủy tinh được hàn kín 2 đầu có 1 giọt thủy ngân. Dùn đèn cồn hơ nóng nửa ống bên phải thì giọt thủy ngân dịch chuyển vế phía bên trái ống. Cho biết nhiệt năng của khí trong nửa ống bên phải đã thay đổi bằng những quá trình nào?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.15.}, p. 59]
+\begin{proof}[Giải]
+	Nhiệt năng của khí trong nửa ống bên phải đã thay đổi băng các quá trình: (a) Truyền nhiệt khi được đốt nóng. (b) Thực hiện công khi dãn nở đẩy giọt thủy ngân chuyển dời.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.15., p. 59]
 	Giải thích sự thay đổi nhiệt năng trong các trường hợp sau: (a) Khi đun nước, nước nóng lên. (b) Khi cưa, cả lưỡi cưa \& gỗ đều nóng lên. (c) Khi tiếp tục đun nước đang sôi, nhiệt độ của nước không tăng.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.16.}, p. 59]
+\begin{proof}[Giải]
+	(a) Truyền nhiệt. (b) Thực hiện công. (c) Nhiệt năng của nước không thay đổi vì nhiệt độ của nước không đổi. Nhiệt lượng do bếp cung cấp được dùng để biến nước thành hơi nước.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.16., p. 59]
 	Gạo đang nấu trong nồi \& gạo đang xát đều nóng lên. Hỏi về mặt thay đổi nhiệt năng thì có gì giống nhau, khác nhau trong 2 hiện tượng trên?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.17.}, p. 59]
+\begin{proof}[Giải]
+	Giống nhau: Nhiệt năng đều tăng. Khác nhau: Khi nấu nhiệt năng tăng do truyền nhiệt, khi xát nhiệt năng tăng do nhận công.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.17., p. 59]
 	So sánh 2 quá trình thực hiện công \& truyền nhiệt.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.18.}, p. 59]
+\begin{proof}[Giải]
+	Giống nhau: Đều có thể làm tăng hoặc giảm nhiệt năng. Khác nhau: Trong sự truyền nhiệt không có sự chuyển hóa năng lượng từ dạng này sang dạng khác; trong sự thực hiện công có sự chuyển hóa từ cơ năng sang nhiệt năng \& ngược lại.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.18., p. 59]
 	1 học sinh nói: ``1 giọt nước ở nhiệt độ $60^\circ{\rm C}$ có nhiệt năng lớn hơn nước trong 1 cốc nước ở nhiệt độ $30^\circ{\rm C}$''. \emph{Đ\texttt{/}S?} Tại sao? Phải nói thế nào mới đúng?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{21.19.}, p. 59]
+\begin{proof}[Giải]
+	S vì nhiệt năng của một vật không những phụ thuộc nhiệt độ mà còn phụ thuộc số phân tử cấu tạo nên vật đó, nghĩa là còn phụ thuộc khối lượng của vật.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 21.19., p. 59]
 	Ở giữa 1 ống thủy tinh được hàn kín có 1 giọt thủy ngân. Người ta quay lộn ngược ống nhiều lần. Hỏi nhiệt độ của giọt thủy ngân có tăng lên hay không? Tại sao?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Có tăng. Nhiệt độ của giọt thủy ngân tăng do thủy ngân ma sát với thủy tinh. Đó là sự tăng nhiệt năng do nhận được công.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
 \section{Dẫn Nhiệt}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.1.}, p. 60]
-	Trong các cách sắp xếp vật liệu dẫn nhiệt từ tốt đến kém sau, cách nào đúng? {\sf A.} Đồng, nước, thủy tinh, không khí. {\sf B.} Đồng, thủy tinh, nước, không khí. {\sf C.} Thủy tinh, đồng, nước, không khí. {\sf D.} Không khí, nước, thủy tinh, đồng.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.1., p. 60]
+	Trong các cách sắp xếp vật liệu dẫn nhiệt từ tốt đến kém sau, cách nào đúng? {\sf A.} Đồng, nước, thủy tinh, không khí. {\sf B.} Đồng, thủy tinh, nước, không khí. {\sf C.} Thủy tinh, đồng, nước, không khí. {\sf D.} Không khí, nước, thủy tinh, đồng.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.2.}, p. 60]
-	Trong sự dẫn nhiệt, nhiệt tự truyền: {\sf A.} từ vật có nhiệt năng lớn hơn sang vật có nhiệt năng nhỏ hơn. {\sf B.} từ vật có khối lượng lớn hơn sang vật có khối lượng nhỏ hơn. {\sf C.} từ vật có nhiệt độ cao hơn sang vật có nhiệt độ thấp hơn. {\sf D.} Cả 3 đều đúng.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.2., p. 60]
+	Trong sự dẫn nhiệt, nhiệt tự truyền: {\sf A.} từ vật có nhiệt năng lớn hơn sang vật có nhiệt năng nhỏ hơn. {\sf B.} từ vật có khối lượng lớn hơn sang vật có khối lượng nhỏ hơn. {\sf C.} từ vật có nhiệt độ cao hơn sang vật có nhiệt độ thấp hơn. {\sf D.} Cả 3 đều đúng.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.3.}, p. 60]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.3., p. 60]
 	Tại sao khi rót nước sôi vào cốc thủy tinh thì cốc dày dễ bị vỡ hơn cốc mỏng? Muốn cốc khỏi bị vỡ khi rót nước sôi vào thì làm thế nào?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.4.}, p. 60]
+\begin{proof}[Giải]
+	Rót nước sôi vào cốc dày thì lớp thủy tinh bên trong nóng lên trước, nở ra và làm vỡ cốc. Nếu cốc mỏng thì cốc nóng lên đều và không bị vỡ. Vì vậy, muốn cốc khỏi bị vỡ khi rót nước sôi vào thì người ta thường nhúng cốc thủy tinh vào nước ấm trước để cốc nóng đều và không bị vỡ.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.4., p. 60]
 	Đun nước bằng ấm nhôm \& bằng ấm đất trên cùng 1 bếp lửa thì nước trong ấm nào sẽ chóng sôi hơn?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.5.}, p. 60]
+\begin{proof}[Giải]
+	Ấm nhôm sẽ chóng sôi hơn do nhôm là chất dẫn nhiệt tốt hơn đất.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.5., p. 60]
 	Tại sao về mùa lạnh khi sờ vào miếng đồng ta cảm thấy lạnh hơn khi sờ vào miếng gỗ? Có phải vì nhiệt độ của đồng thấp hơn của gỗ không?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.6.}, p. 60]
+\begin{proof}[Giải]
+	Do đồng dẫn nhiệt tốt hơn nên ta thấy lạnh hơn khi sờ vào miếng gỗ. Không phải do nhiệt độ của đồng thấp hơn của gỗ.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.6., p. 60]
 	1 hòn bi chuyển động nhanh va chạm vào 1 hòn bi chuyển động chậm hơn sẽ truyền 1 phần động năng của nó cho hòn bi này \& chuyển động chậm đi trong khi hòn bi chuyển động chậm hơn sẽ chuyển động nhanh lên. Hiện tượng này tương tự như hiện tượng truyền nhiệt năng giữa các phân tử trong sự dẫn nhiệt. Dùng sự tương tự này để giải thích hiện tượng xảy ra khi thả 1 miếng đồng được nung nóng vào 1 cốc nước lạnh.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.7.}, p. 60]
-	Dẫn nhiệt là hình thức truyền nhiệt chủ yếu của: {\sf A.} chất rắn. {\sf B.} chất khí \& chất lỏng. {\sf C.} chất khí. {\sf D.} chất lỏng.
+\begin{proof}[Giải]
+	Khi thả miếng đồng được nung nóng vào nước thì các phân tử đồng sẽ truyền một phần động năng cho các phân tử nước. Kết quả là động năng của các phân tử đồng giảm, còn động năng của các phân tử nước tăng, do đó đồng lạnh đi còn nước nóng lên.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.7., p. 60]
+	Dẫn nhiệt là hình thức truyền nhiệt chủ yếu của: {\sf A.} chất rắn. {\sf B.} chất khí \& chất lỏng. {\sf C.} chất khí. {\sf D.} chất lỏng.\hfill{\sf Ans: A.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.8.}, pp. 60--61]
-	Bản chất của sự dẫn nhiệt là: {\sf A.} sự truyền nhiệt độ từ vật này đến vật khác. {\sf B.} sự truyền nhiệt năng từ vật này đến vật khác. {\sf C.} sự thực hiện công từ vật này lên vật khác. {\sf D.} sự truyền động năng của các nguyên tử, phân tử này sang các nguyên tử, phân tử khác.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.8., pp. 60--61]
+	Bản chất của sự dẫn nhiệt là: {\sf A.} sự truyền nhiệt độ từ vật này đến vật khác. {\sf B.} sự truyền nhiệt năng từ vật này đến vật khác. {\sf C.} sự thực hiện công từ vật này lên vật khác. {\sf D.} sự truyền động năng của các nguyên tử, phân tử này sang các nguyên tử, phân tử khác.\hfill{\sf Ans: D.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.9.}, p. 61]
-	Sự dẫn nhiệt chỉ có thể xảy ra giữa 2 vật rắn khi: {\sf A.} 2 vật có nhiệt năng khác nhau. {\sf B.} 2 vật có nhiệt năng khác nhau, tiếp xúc nhau. {\sf C.} 2 vật có nhiệt độ khác nhau. {\sf D.} 2 vật có nhiệt độ khác nhau, tiếp xúc nhau.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.9., p. 61]
+	Sự dẫn nhiệt chỉ có thể xảy ra giữa 2 vật rắn khi: {\sf A.} 2 vật có nhiệt năng khác nhau. {\sf B.} 2 vật có nhiệt năng khác nhau, tiếp xúc nhau. {\sf C.} 2 vật có nhiệt độ khác nhau. {\sf D.} 2 vật có nhiệt độ khác nhau, tiếp xúc nhau.\hfill{\sf Ans: D.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.10.}, p. 61]
-	Để giữ nước đá lâu chảy, người ta thường để nước đá vào các hộp xốp kín vì: {\sf A.} hộp xốp kín nên dẫn nhiệt kém. {\sf B.} trong xốp có các khoảng không khí nên dẫn nhiệt kém. {\sf C.} trong xốp có các khoảng chân không nên dẫn nhiệt kém. {\sf D.} Vì cả 3 lý do trên.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.10., p. 61]
+	Để giữ nước đá lâu chảy, người ta thường để nước đá vào các hộp xốp kín vì: {\sf A.} hộp xốp kín nên dẫn nhiệt kém. {\sf B.} trong xốp có các khoảng không khí nên dẫn nhiệt kém. {\sf C.} trong xốp có các khoảng chân không nên dẫn nhiệt kém. {\sf D.} Vì cả 3 lý do trên.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.11.}, p. 61]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.11., p. 61]
 	Về mùa hè ở 1 số nước châu Phi rất nóng, người ta thường mặc quần áo trùm kín cả người; còn ở nước ta về mùa hè người ta lại thường mặc quần áo ngắn. Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.12.}, p. 61]
+\begin{proof}[Giải]
+	Mùa hè ở nhiều nước Châu Phi nhiệt độ ngoài trời cao hơn nhiệt độ cơ thể do đó cần mặc áo trùm kín để hạn chế sự truyền nhiệt từ không khí vào cơ thể. Ở nước ta về mùa hè, khi nhiệt độ không khí còn thấp hơn nhiệt độ cơ thể, người ta thường mặc áo ngắn, mỏng để cơ thể dễ truyền nhiệt ra ngoài không khí.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.12., p. 61]
 	Tại sao vào mùa hè, không khí trong nhà mái tôn nóng hơn trong nhà mái tranh; còn về mùa đông, không khí trong nhà mái tôn lại lạnh hơn trong nhà mái tranh.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.13.}, p. 61]
+\begin{proof}[Giải]
+	Do mái tôn dẫn nhiệt tốt hơn mái tranh.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.13., p. 61]
 	Tại sao muốn giữ cho nước chè nóng lâu, người ta thường để ấm vào giỏ có chèn bông, trấu hoặc mùn cưa?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.14.}, p. 61]
+\begin{proof}[Giải]
+	Vì bông, trấu và mùn cưa là những chất dẫn nhiệt kém.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.14., p. 61]
 	Thiết kế 1 thí nghiệm dùng để so sánh độ dẫn nhiệt của cát \& của mùn cưa với các dụng cụ sau đây: cát, mùn cưa, 2 ống nghiệm, 2 nhiệt kế, 1 cốc đựng nước nóng.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{22.15.}, p. 61]
+\begin{proof}[Giải]
+	Cho cát, mùn cưa vào đầy mỗi ống nghiệm. Đặt mỗi ống nghiệm vào 1 cốc đựng nước nóng, 1 nhiệt kế đặt trong ống nghiệm. Quan sát số chỉ của nhiệt kế. Nếu nhiệt kế nào có cột chất lỏng dâng lên trước thì chất đó dẫn nhiệt tốt hơn.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 22.15., p. 61]
 	Có 2 ấm đun nước khối lượng bằng nhau, 1 làm bằng nhôm, 1 bằng đồng. (a) Nếu đun cùng 1 lượng nước bằng 2 ấm này trên những bếp tỏa nhiệt như nhau thì nước ở ấm nào sôi trước? Tại sao? (b) Nếu sau khi nước sôi, ta tắt lửa đi, thì nước ở ấm nào nguội nhanh hơn? Tại sao?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Nước trong ấm đồng sôi trước. Vì đồng dẫn nhiệt tốt hơn nhôm. (b) Nước ở ấm đồng nguội nhanh hơn. Vì đồng dẫn nhiệt tốt hơn nhôm.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
 \section{Đối Lưu -- Bức Xạ Nhiệt}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.1.}, p. 62]
-	Đối lưu là sự truyền nhiệt xảy ra trong chất nào? {\sf A.} Chỉ ở chất lỏng. {\sf B.} Chỉ ở chất khí. {\sf C.} Chỉ ở chất lỏng \& chất khí. {\sf D.} Ở các chất lỏng, chất khí, \& chất rắn.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.1., p. 62]
+	Đối lưu là sự truyền nhiệt xảy ra trong chất nào? {\sf A.} Chỉ ở chất lỏng. {\sf B.} Chỉ ở chất khí. {\sf C.} Chỉ ở chất lỏng \& chất khí. {\sf D.} Ở các chất lỏng, chất khí, \& chất rắn.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.2.}, p. 62]
-	Trong các sự truyền nhiệt dưới đây, sự truyền nhiệt nào không phải là bức xạ nhiệt? {\sf A.} Sự truyền nhiệt từ Mặt Trời tới Trái Đất. {\sf B.} Sự truyền nhiệt từ bếp lò tới người đứng gần bếp lò. {\sf C.} Sự truyền nhiệt từ đầu bị nung nóng sang đầu không bị nung nóng của 1 thanh đồng. {\sf D.} Sự truyền nhiệt từ dây tóc bóng đèn điện đang sáng ra khoảng không gian bên trong bóng đèn.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.2., p. 62]
+	Trong các sự truyền nhiệt dưới đây, sự truyền nhiệt nào không phải là bức xạ nhiệt? {\sf A.} Sự truyền nhiệt từ Mặt Trời tới Trái Đất. {\sf B.} Sự truyền nhiệt từ bếp lò tới người đứng gần bếp lò. {\sf C.} Sự truyền nhiệt từ đầu bị nung nóng sang đầu không bị nung nóng của 1 thanh đồng. {\sf D.} Sự truyền nhiệt từ dây tóc bóng đèn điện đang sáng ra khoảng không gian bên trong bóng đèn.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.3.}, p. 62]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.3., p. 62]
 	1 ống nghiệm đựng đầy nước. Hỏi khi đốt nóng ở miệng ống, ở giữa hay đáy ống thì tất cả nước trong ống sôi nhanh hơn? Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.4.}, p. 62]
+\begin{proof}[Giải]
+	Đốt ở đáy ống thì tất cả nước trong ống sôi nhanh hơn. Vì đốt ở đáy ống để tạo ra các dòng đối lưu.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.4., p. 62]
 	Mô tả \& giải thích hoạt động của đèn kéo quân.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.5.}, p. 62]
+\begin{proof}[Giải]
+	Khi đèn kéo quân được thắp lên, bên trong đèn xuất hiện các dòng đối lưu của không khí: Những dòng đối lưu này làm quay tán của đèn kéo quân.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.5., p. 62]
 	Đưa miếng đồng vào ngọn lửa đèn cồn thì miếng đồng nóng lên; tắt đèn cồn thì miếng đồng nguội đi. Hỏi sự truyền nhiệt khi miếng đồng nóng lên, khi miếng đồng nguội đi có được thực hiện bằng cùng 1 cách không?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.6.}, p. 62]
+\begin{proof}[Giải]
+	Không. Sự truyền nhiệt khi đưa miếng đồng vào ngọn lửa làm miếng đồng nóng lên là sự dẫn nhiệt. Miếng đồng nguội đi là do truyền nhiệt vào không khí bằng bức xạ nhiệt.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.6., p. 62]
 	Đun nước bằng ấm nhôm \& ấm đất trên cùng 1 bếp thì nước trong ấm nhôm sôi nhanh hơn vì nhôm dẫn nhiệt tốt hơn. Đun sôi xong, tắt bếp đi thì nước trong ấm nhôm cũng nguội nhanh hơn. Có phải vì nhôm dẫn nhiệt tốt hơn không? Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.7.}, p. 62]
+\begin{proof}[Giải]
+	Vì nhôm dẫn nhiệt tốt hơn đất, nên nhiệt từ nước trong ấm nhôm truyền ra ấm nhanh hơn.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.7., p. 62]
 	Cắt 1 hình chữ nhật nhỏ bằng giấy mỏng. Gấp đôi theo chiều dọc, rồi theo chiều ngang để xác định tâm của miếng giấy. Mở miếng giấy ra, đặt lên 1 chiếc kim thẳng đứng sao cho mũi kim đỡ đúng vào tâm miếng giấy. Tất cả đặt ở 1 nơi không có gió. Nhè nhẹ đưa tay lại gần miếng giấy. Thử tiên đoán xem hiện tượng gì sẽ xảy ra? Làm thí nghiệm kiểm tra \& giải thích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.8.}, p. 63]
-	Câu nào sau đây nói về bức xạ nhiệt là đúng? {\sf A.} Mọi vật đều có thể phát ra tia nhiệt. {\sf B.} Chỉ có những vật bề mặt xù xì \& màu sẫm mới có thể phát ra tia nhiệt. {\sf C.} Chỉ có những vật bề mặt bóng \& màu sáng mới có thể phát ra tia nhiệt. {\sf D.} Chỉ có Mặt Trời mới có thể phát ra tia nhiệt.
+\begin{proof}[Giải]
+	Miếng giấy sẽ quay do tác dụng của các dòng đối lưu.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.8., p. 63]
+	Câu nào sau đây nói về bức xạ nhiệt là đúng? {\sf A.} Mọi vật đều có thể phát ra tia nhiệt. {\sf B.} Chỉ có những vật bề mặt xù xì \& màu sẫm mới có thể phát ra tia nhiệt. {\sf C.} Chỉ có những vật bề mặt bóng \& màu sáng mới có thể phát ra tia nhiệt. {\sf D.} Chỉ có Mặt Trời mới có thể phát ra tia nhiệt.\hfill{\sf Ans: A.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.9.}, p. 63]
-	Câu nào dưới đây so sánh dẫn nhiệt \& đối lưu là đúng? {\sf A.} Dẫn nhiệt là quá trình truyền nhiệt, đối lưu không phải là quá trình truyền nhiệt. {\sf B.} Cả dẫn nhiệt \& đối lưu đều có thể xảy ra trong không khí. {\sf C.} Dẫn nhiệt xảy ra trong môi trường nào thì đối lưu cũng có thể xảy ra trong môi trường đó. {\sf D.} Trong nước, dẫn nhiệt xảy ra nhanh hơn đối lưu.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.9., p. 63]
+	Câu nào dưới đây so sánh dẫn nhiệt \& đối lưu là đúng? {\sf A.} Dẫn nhiệt là quá trình truyền nhiệt, đối lưu không phải là quá trình truyền nhiệt. {\sf B.} Cả dẫn nhiệt \& đối lưu đều có thể xảy ra trong không khí. {\sf C.} Dẫn nhiệt xảy ra trong môi trường nào thì đối lưu cũng có thể xảy ra trong môi trường đó. {\sf D.} Trong nước, dẫn nhiệt xảy ra nhanh hơn đối lưu.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.10.}, p. 63]
-	Câu nào dưới đây so sánh dẫn nhiệt \& bức xạ nhiệt là không đúng? {\sf A.} Dẫn nhiệt \& bức xạ nhiệt đều có thể xảy ra trong không khí \& trong chân không. {\sf B.} Dẫn nhiệt xảy ra khi các vật tiếp xúc nhau, bức xạ nhiệt có thể xảy ra khi các vật không tiếp xúc nhau. {\sf C.} Trong không khí bức xạ nhiệt xảy ra nhanh hơn dẫn nhiệt. {\sf D.} Trái Đất nhận được năng lượng từ Mặt Trời nhờ bức xạ nhiệt, không nhờ dẫn nhiệt.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.10., p. 63]
+	Câu nào dưới đây so sánh dẫn nhiệt \& bức xạ nhiệt là không đúng? {\sf A.} Dẫn nhiệt \& bức xạ nhiệt đều có thể xảy ra trong không khí \& trong chân không. {\sf B.} Dẫn nhiệt xảy ra khi các vật tiếp xúc nhau, bức xạ nhiệt có thể xảy ra khi các vật không tiếp xúc nhau. {\sf C.} Trong không khí bức xạ nhiệt xảy ra nhanh hơn dẫn nhiệt. {\sf D.} Trái Đất nhận được năng lượng từ Mặt Trời nhờ bức xạ nhiệt, không nhờ dẫn nhiệt.\hfill{\sf Ans: A.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.11.}, p. 63]
-	Ngăn đá của tủ lạnh thường đặt ở phía trên ngăn đựng thức ăn, để tận dụng sự truyền nhiệt bằng: {\sf A.} dẫn nhiệt. {\sf B.} bức xạ nhiệt. {\sf C.} đối lưu. {\sf D.} bức xạ nhiệt \& dẫn nhiệt.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.11., p. 63]
+	Ngăn đá của tủ lạnh thường đặt ở phía trên ngăn đựng thức ăn, để tận dụng sự truyền nhiệt bằng: {\sf A.} dẫn nhiệt. {\sf B.} bức xạ nhiệt. {\sf C.} đối lưu. {\sf D.} bức xạ nhiệt \& dẫn nhiệt.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.12.}, p. 63]
-	Khi hiện tượng đối lưu đang xảy ra trong chất lỏng thì: {\sf A.} trọng lượng riêng của cả khối chất lỏng đều tăng lên. {\sf B.} trọng lượng riêng của lớp chất lỏng ở trên nhỏ hơn của lớp ở dưới. {\sf C.} trọng lượng riêng của lớp chất lỏng ở trên lớn hơn của lớp ở dưới. {\sf D.} trọng lượng riêng của lớp chất lỏng ở trên bằng của lớp dưới.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.12., p. 63]
+	Khi hiện tượng đối lưu đang xảy ra trong chất lỏng thì: {\sf A.} trọng lượng riêng của cả khối chất lỏng đều tăng lên. {\sf B.} trọng lượng riêng của lớp chất lỏng ở trên nhỏ hơn của lớp ở dưới. {\sf C.} trọng lượng riêng của lớp chất lỏng ở trên lớn hơn của lớp ở dưới. {\sf D.} trọng lượng riêng của lớp chất lỏng ở trên bằng của lớp dưới.\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.13.}, pp. 63--64]
-	Trong chân không, 1 miếng đồng được nung nóng có thể truyền nhiệt cho 1 miếng đồng không được nung nóng: {\sf A.} chỉ bằng bức xạ nhiệt. {\sf B.} chỉ bằng bức xạ nhiệt \& dẫn nhiệt. {\sf C.} chỉ bằng bức xạ nhiệt \& đối lưu. {\sf D.} bằng cả bức xạ nhiệt, dẫn nhiệt, \& đối lưu.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.13., pp. 63--64]
+	Trong chân không, 1 miếng đồng được nung nóng có thể truyền nhiệt cho 1 miếng đồng không được nung nóng: {\sf A.} chỉ bằng bức xạ nhiệt. {\sf B.} chỉ bằng bức xạ nhiệt \& dẫn nhiệt. {\sf C.} chỉ bằng bức xạ nhiệt \& đối lưu. {\sf D.} bằng cả bức xạ nhiệt, dẫn nhiệt, \& đối lưu.\hfill{\sf Ans: A.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.14.}, p. 64]
-	Để tay bên trên 1 hòn gạch đã được nung nóng thấy nóng hơn để tay bên cạnh hòn gạch đó vì: {\sf A.} sự dẫn nhiệt từ hòn gạch tới tay để bên trên tốt hơn từ hòn gạch tới tay để bên cạnh. {\sf B.} sự bức xạ nhiệt từ hòn gạch tới tay để bên trên tốt hơn từ hòn gạch tới tay để bên cạnh. {\sf C.} sự đối lưu từ hòn gạch tới tay để bên trên tốt hơn từ hòn gạch tới tay để bên cạnh. {\sf D.} 
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.14., p. 64]
+	Để tay bên trên 1 hòn gạch đã được nung nóng thấy nóng hơn để tay bên cạnh hòn gạch đó vì: {\sf A.} sự dẫn nhiệt từ hòn gạch tới tay để bên trên tốt hơn từ hòn gạch tới tay để bên cạnh. {\sf B.} sự bức xạ nhiệt từ hòn gạch tới tay để bên trên tốt hơn từ hòn gạch tới tay để bên cạnh. {\sf C.} sự đối lưu từ hòn gạch tới tay để bên trên tốt hơn từ hòn gạch tới tay để bên cạnh. {\sf D.}\hfill{\sf Ans: C.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.15.}, p. 64]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.15., p. 64]
 	Tại sao trong ấm điện dùng để đun nước, dây đun được đặt ở dưới, gần sát đáy ấm, không được đặt ở trên?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.16.}, p. 64]
+\begin{proof}[Giải]
+	Để dễ dàng tạo ra sự truyền nhiệt bằng đối lưu.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.16., p. 64]
 	Tại sao các bể chứa xăng lại thường được quét 1 lớp nhũ màu trắng bạc?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{23.17.}, p. 64]
+\begin{proof}[Giải]
+	Lớp nhũ màu trắng phản xạ tốt các tia nhiệt, hấp thụ các tia nhiệt kém nên hạn chế được truyền nhiệt từ bên ngoài vào làm cho xăng đỡ nóng hơn, tránh cháy xăng làm nổ bình.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 23.17., p. 64]
 	Thả 1 con cá nhỏ vào 1 cái chai rồi dùng đèn cồn đun nước ở miệng chai. Chẳng bao lâu nước ở miệng chai bắt đầu sôi, hơi nước bốc lên ngùn ngụt, nhưng chú cá nhỏ vẫn tung tăng bơi ở đáy chai. Có điều cần chú ý là thí nghiệm này chỉ được tiến hành trong 1 thời gian ngắn, nếu không cá có thể biến thành cá luộc. Giải thích hiện tượng.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Vì nước dẫn nhiệt kém nên mặc dù nước ở miệng chai sôi nhưng ở đáy chai nước vẫn mát và cá có thể bơi ở đáy chai. Tuy nhiên nếu tiến hành thí nghiệm trong thời gian dài thì nước sẽ tản nhiệt xuống đáy chai và cá sẽ biến thành cá luộc.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
 \section{Công Thức Tính Nhiệt Lượng}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.2.}, p. 65]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.2., p. 65]
 	Để đun nóng $5$\emph{l} nước từ $20^\circ{\rm C}$ lên $40^\circ{\rm C}$, cần bao nhiêu nhiệt lượng?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.3.}, p. 65]
+\begin{proof}[Giải]
+	$Q = mc\Delta t = 5\cdot4200\cdot20 = 420000{\rm J} = 420$kJ. Vậy để đun nóng 5l nước từ $20^\circ{\rm C}$ lên $40^\circ{\rm C}$ cần $420$kJ.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.3., p. 65]
 	Người ta cung cấp cho $10$\emph{l} nước 1 nhiệt lượng là $840$\emph{kJ}. Hỏi nước nóng lên thêm bao nhiêu độ?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.4.}, p. 65]
+\begin{proof}[Giải]
+	$\Delta t = \frac{Q}{mc} = \frac{840000}{10\cdot4200} = 20^\circ$C. Vậy nước nóng lên thêm $20^\circ$C.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.4., p. 65]
 	1 ấm nhôm khối lượng $400$\emph{g} chứa $1$\emph{l} nước. Tính nhiệt lượng tối thiểu cần thiết để đun sôi nước, biết nhiệt độ ban đầu của ấm \& nước là $20^\circ{\rm C}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.5.}, p. 65]
+\begin{proof}[Giải]
+	$Q = Q_{\footnotesize\mbox{ấm}} + Q_{\footnotesize\mbox{nước}} = 0.4\cdot880\cdot80 + 1\cdot4200\cdot80 = 364160$J. Vậy nhiệt lượng tối thiểu cần thiết để đun sôi nước là $364160$J.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.5., p. 65]
 	Tính nhiệt dung riêng của 1 kim loại biết phải cung cấp cho $5$\emph{kg} kim loại này ở $20^\circ{\rm C}$ 1 nhiệt lượng $\approx59$\emph{kJ} để nó nóng lên đến $50^\circ{\rm C}$. Kim loại đó tên là gì?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.7.}, p. 65]
+\begin{proof}[Giải]
+	$C = \frac{Q}{m\Delta t} = \frac{59000}{5(50 - 20)} = 393.(3)$J\texttt{/}kg$\cdot$K. Kim loại đó là đồng.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.7., p. 65]
 	Đầu thép của 1 búa máy có khối lượng $12$\emph{kg} nóng lên thêm $20^\circ{\rm C}$ sau $1.5$ phút hoạt động. Biết chỉ có $40$\% cơ năng của búa máy chuyển thành nhiệt năng của đầu búa. Tính công \& công suất của búa. Lấy nhiệt dung riêng của thép là $460$\emph{J\texttt{/}kg$\cdot$K}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.8.}, p. 66]
-	Người ta cung cấp cùng 1 nhiệt lượng cho 3 cốc bằng thủy tinh giống nhau. Cốc 1 đựng rượu, cốc 2 đựng nước, cốc 3 đựng nước đá với khối lượng bằng nhau. So sánh độ tăng nhiệt độ của các cốc trên. Biết nước đá chưa tan. {\sf A.} $\Delta t_1 = \Delta t_2 = \Delta t_2$. {\sf B.} $\Delta t_1 > \Delta t_2 > \Delta t_3$. {\sf C.} $\Delta t_1 < \Delta t_2 < \Delta t_3$. {\sf D.} $\Delta t_2 < \Delta t_1 < \Delta t_3$.
+\begin{proof}[Giải]
+	Nhiệt lượng đầu búa nhận được: $Q = mc(t_2 - t_1) = 12\cdot460\cdot20 = 110400$J. Công của búa thực hiện trong $1.5$ phút $= 90$s: $A = \frac{Q}{40\%} = \frac{110400\cdot100}{40} = 276000$J. Công suất của búa: $\mathcal{P} = \frac{A}{t} = \frac{276000}{90} = 3066.(6)$W $\approx3$kW. Vậy $A = 276$kJ, $\mathcal{P}\approx3$kW.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.8., p. 66]
+	Người ta cung cấp cùng 1 nhiệt lượng cho 3 cốc bằng thủy tinh giống nhau. Cốc 1 đựng rượu, cốc 2 đựng nước, cốc 3 đựng nước đá với khối lượng bằng nhau. So sánh độ tăng nhiệt độ của các cốc trên. Biết nước đá chưa tan. {\sf A.} $\Delta t_1 = \Delta t_2 = \Delta t_2$. {\sf B.} $\Delta t_1 > \Delta t_2 > \Delta t_3$. {\sf C.} $\Delta t_1 < \Delta t_2 < \Delta t_3$. {\sf D.} $\Delta t_2 < \Delta t_1 < \Delta t_3$.\hfill{\sf Ans: B.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.9.}, p. 66]
-	Nhiệt dung riêng có cùng đơn vị với đại lượng nào sau đây? {\sf A.} Nhiệt năng. {\sf B.} Nhiệt độ. {\sf C.} Nhiệt lượng. {\sf D.} Cả 3 đều sai.
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.9., p. 66]
+	Nhiệt dung riêng có cùng đơn vị với đại lượng nào sau đây? {\sf A.} Nhiệt năng. {\sf B.} Nhiệt độ. {\sf C.} Nhiệt lượng. {\sf D.} Cả 3 đều sai.\hfill{\sf Ans: D.}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.10.}, p. 66]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.10., p. 66]
 	Khi cugn cấp nhiệt lượng $8400$\emph{kJ} cho $1$\emph{kg} của 1 chất, thì nhiệt độ của chất này tăng thêm $2^\circ{\rm C}$. Chất này là: {\sf A.} đồng. {\sf B.} rượu. {\sf C.} nước. {\sf D.} nước đá.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.12.}, p. 66]
+\begin{proof}[Giải]
+	$C = \frac{Q}{m\Delta t} = \frac{8400}{2} = 4200$J\texttt{/}kg$\cdot$K. {\sf C.}
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.12., p. 66]
 	Người ta phơi ra nắng 1 chậu chứa $5$\emph{l} nước. Sau 1 thời gian nhiệt độ của nước tăng từ $28^\circ{\rm C}$ lên $34^\circ{\rm C}$. Hỏi nước đã thu được bao nhiêu năng lượng từ Mặt Trời?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.13.}, p. 66]
+\begin{proof}[Giải]
+	$Q = mcAt = 5\cdot4200\cdot(34 - 28) = 126000$J $= 126$kJ. Vậy nước đã thu được $126$kJ năng lượng từ Mặt Trời.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.13., p. 66]
 	Tại sao khí hậu ở các vùng gần biển ôn hòa hơn (nhiệt độ ít thay đổi hơn) ở các vùng nằm sâu trong đất liền?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{24.14.}, p. 66]
+\begin{proof}[Giải]
+	Ban ngày, Mặt trời truyền cho mỗi đơn vị diện tích mặt biển và đất những nhiệt lượng bằng nhau. Do nhiệt dụng riêng của nước biển lớn hơn của đất nên ban ngày nước biển nóng lên chậm hơn và ít hơn đất liền. Ban đêm, cả mặt biển và đất liền đều tỏa nhiệt vào không gian nhưng mặt biển tỏa nhiệt chậm hơn và ít hơn đất liền. Vì vậy, nhiệt độ trong ngày ở các vùng gần biển ít thay đổi hơn ở các vùng nằm sâu trong đất liền.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 24.14., p. 66]
 	1 ấm đồng khối lượng $300$\emph{g} chứa $1$\emph{l} nước ở nhiệt độ $15^\circ{\rm C}$. Hỏi phải đun trong bao nhiêu lâu thì nước trong ấm bắt đầu sôi? Biêt trung bình mỗi giây bếp truyền cho ấm 1 nhiệt lượng là $500$\emph{J}. Bỏ qua sự hao phí về nhiệt tỏa ra môi trường xung quanh.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Nhiệt lượng cần truyền để đun sôi ấm nước: $Q = (m_{\footnotesize\mbox{đồng}}\cdot C_{\footnotesize\mbox{đồng}} + m_{\footnotesize\mbox{nước}}\cdot C_{\footnotesize\mbox{nước}})(t_2 - t_1) = (0.3\cdot380 + 1\cdot4200)\cdot(100 - 15) = 366690$J. Thời gian đun: $t = \frac{Q}{Q_{\rm 1s}} = \frac{366690}{500} = 733.38$s $= 12$ min $13.38$s $\approx12$ min $14$s.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
 \section{Phương Trình Cân Bằng Nhiệt}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.1.}, p. 67]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.1., p. 67]
 	Người ta thả 3 miếng đồng, nhôm, chì có cùng khối lượng vào 1 cốc nước nóng. So sánh nhiệt độ cuối cùng của 3 miếng kim loại đó. {\sf A.} Nhiệt độ của 3 miếng bằng nhau. {\sf B.} Nhiệt độ của miếng nhôm cao nhất, rồi đến miếng đồng, miếng chì. {\sf C.} Nhiệt độ của miếng chì cao nhất, rồi đến miếng đồng, miếng nhôm. {\sf D.} Nhiệt độ của miếng đồng cao nhất, rồi đến miếng nhôm, miếng chì.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.2.}, p. 67]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.2., p. 67]
 	Người ta thả 3 miếng đồng, nhôm, chì có cùng khối lượng \& cùng được nung nóng tới $100^\circ{\rm C}$ vào 1 cốc nước lạnh. So sánh nhiệt lượng do các miếng kim loại trên truyền cho nước. {\sf A.} Nhiệt lượng của 3 miếng truyền cho nước bằng nhau. {\sf B.} Nhiệt lượng của miếng nhôm truyền cho nước lớn nhất, rồi đến miếng đồng, miếng chì. {\sf C.} Nhiệt lượng của miếng chì truyền cho nước lớn nhất, rồi đến miếng đồng, miếng nhôm. {\sf D.} Nhiệt lượng của miếng đồng truyền cho nước lớn nhất, rồi đến miếng nhôm, miếng chì.s
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.3.}, p. 67]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.3., p. 67]
 	1 học sinh thả $300$\emph{g} chỉ ở $100^\circ{\rm C}$ vào $250$\emph{g} ở $58.5^\circ{\rm C}$ làm cho nước nóng lên tới $60^\circ{\rm C}$. (a) Hỏi nhiệt độ của chì ngay khi có cân bằng nhiệt? (b) Tính nhiệt lượng nước thu vào. (c) Tính nhiệt dung riêng của chì. (d) So sánh nhiệt dung riêng của chì tính được với nhiệt dung riêng của chì tra trong bảng \& giải thích tại sao có sự chênh lệch. Lấy nhiệt dung riêng của nước là $4190$\emph{J\texttt{/}kg$\cdot$K}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.4.}, p. 67]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.4., p. 67]
 	1 nhiệt lượng kế chứa $2$\emph{l} nước ở nhiệt độ $15^\circ$. Hỏi nước nóng lên tới bao nhiêu độ nếu bỏ vào nhiệt lượng kế 1 quả cân bằng đồng thau khối lượng $500$\emph{g} được nung nóng tới $100^\circ{\rm C}$. Lấy nhiệt dung riêng của đồng thau là $368$\emph{J\texttt{/}kg$\cdot$K}, của nước là $4186$\emph{J\texttt{/}kg$\cdot$K}. Bỏ qua nhiệt lượng truyền cho nhiệt lượng kế \& môi trường bên ngoài.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.5.}, pp. 67--68]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.5., pp. 67--68]
 	Người ta thả 1 miếng đồng khối lượng $600$\emph{g} ở nhiệt độ $100^\circ{\rm C}$ vào $2.5$\emph{kg} nước. Nhiệt độ khi có sự cân bằng nhiệt là $30^\circ$. Hỏi nước nóng lên thêm bao nhiêu độ, nếu bỏ qua sự trao đổi nhiệt với bình đựng nước \& môi trường bên ngoài?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.6.}, p. 68]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.6., p. 68]
 	Đổ $738$\emph{g} nước ở nhiệt độ $15^\circ{\rm C}$ vào 1 nhiệt lượng kế bằng đồng có khối lượng $100$\emph{g}, rồi thả vào đó 1 miếng đồng có khối lượng $200$\emph{g} ở nhiệt độ $100^\circ{\rm C}$. Nhiệt độ khi bắt đầu có cân bằng nhiệt là $17^\circ{\rm C}$. Tính nhiệt dung riêng của đồng, lấy nhiệt dung riêng của nước là $4186$\emph{J\texttt{/}kg$\cdot$K}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.7.}, p. 68]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.7., p. 68]
 	Muốn có $100$\emph{l} nước ở nhiệt độ $35^\circ{\rm C}$ thì phải đổ bao nhiêu \emph{l} nước đang sôi vào bao nhiêu \emph{l} nước ở nhiệt độ $15^\circ{\rm C}$? Lấy nhiệt dung riêng của nước là $4190$\emph{J\texttt{/}kg$\cdot$K}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.8.}, p. 68]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.8., p. 68]
 	Thả 1 miếng nhôm được nung nóng vào nước lạnh. Câu mô tả nào sau đây trái với nguyên lý truyền nhiệt? {\sf A.} Nhôm truyền nhiệt cho nước tới khi nhiệt độ của nhôm \& nước bằng nhau. {\sf B.} Nhiệt năng của nhôm giảm đi bao nhiêu thì nhiệt năng của nước tăng lên bấy nhiêu. {\sf C.} Nhiệt độ của nhôm giảm đi bao nhiêu thì nhiệt độ của nước tăng lên bấy nhiêu. {\sf D.} Nhiệt lượng do nhôm tỏa ra bằng nhiệt lượng do nước thu vào.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.9.}, p. 68]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.9., p. 68]
 	Câu nào sau đây nói về điều kiện truyền nhiệt giữa 2 vật là đúng? {\sf A.} Nhiệt không thể truyền từ vật có nhiệt năng nhỏ sang vật có nhiệt năng lớn hơn. {\sf B.} Nhiệt không thể truyền giữa 2 vật có nhiệt năng bằng nhau. {\sf C.} Nhiệt chỉ có thể truyền từ vật có nhiệt năng lớn sang vật có nhiệt năng nhỏ hơn. {\sf D.} Nhiệt không thể tự truyền được từ vật có nhiệt độ thấp sang vật có nhiệt độ cao hơn.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.10.}, p. 68]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.10., p. 68]
 	2 vật 1 \& 2 trao đổi nhiệt với nhau. Khi có cân bằng nhiệt thì nhiệt độ của vật 1 giảm bớt $\Delta t_1$, nhiệt độ của vật 2 tăng thêm $\Delta t_2$. Hỏi $\Delta t_1 = \Delta t_2$, trong trường hợp nào dưới đây? {\sf A.} Khi $m_1 = m_2$, $c_1 = c_2$, $t_1 = t_2$. {\sf B.} Khi $m_1  = \frac{3}{2}m_2$, $c_1 = \frac{2}{3}c_2$, $t_1 > t_2.$ {\sf C.} Khi $m_1 = m_2$, $c_1 = c_2$, $t_1 < t_2$. {\sf D.} Khi $m_1 = \frac{3}{2}m_2$, $c_1 = \frac{2}{3}c_2$, $t_1 < t_2$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.11.}, p. 69]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.11., p. 69]
 	2 vật 1 \& 2 có khối lượng $m_1 = 2m_2$ truyền nhiệt cho nhau. Khi có cân bằng nhiệt thì nhiệt độ của 2 vật thay đổi 1 lượng là $\Delta t_2 = 2\Delta t_1$. So sánh nhiệt dung riêng của các chất cấu tạo nên 2 vật. {\sf A.} $c_1 = 2c_2$. {\sf B.} $c_1 = \frac{1}{2}c_2$. {\sf C.} $c_1 = c_2$. {\sf D.} Chưa thể xác định được vì chưa biết $t_1 > t_2$ hay $t_1 < t_2$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.12.}, p. 69]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.12., p. 69]
 	2 quả cầu bằng đồng cùng khối lượng, được nung nóng đến cùng 1 nhiệt độ. Thả quả thứ nhất vào nước có nhiệt dung riêng $4200$\emph{J\texttt{/}kg$\cdot$K}, quả thứ 2 vào dầu có nhiệt dung riêng $2100$\emph{J\texttt{/}kg$\cdot$K}. Nước \& dầu có cùng khối lượng \& nhiệt độ ban đầu. Gọi $Q_{\rm n}$ là nhiệt lượng nước nhận được, $Q_{\rm d}$ là nhiệt lượng dầu nhận được. Khi dầu \& nước nóng đến cùng 1 nhiệt độ thì: {\sf A.} $Q_{\rm n} = Q_{\rm d}$. {\sf B.} $Q_{\rm n} = 2Q_{\rm d}$. {\sf C.} $Q_{\rm n} = \frac{1}{2}Q_{\rm d}$. {\sf D.} Chưa xác định được vì chưa biết nhiệt độ ban đầu của 2 quả cầu.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.13.--25.14}, p. 69]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.13.--25.14, p. 69]
 	Đổ 1 chất lỏng có khối lượng $m_1$, nhiệt dung riêng $c_1$ \& nhiệt độ $t_1$ vào 1 chất lỏng có khối lượng $m_2 = 2m_1$, nhiệt dung riêng $c_2 = \frac{1}{2}c_1$ \& nhiệt độ $t_2 > t_1$. (a) Nếu bỏ qua sự trao đổi nhiệt giữa 2 chất lỏng \& môi trường (cốc đựng, không khí, $\ldots$) thì khi có cân bằng nhiệt, nhiệt độ $t$ của 2 chất lỏng đó có giá trị là: {\sf A.} $t = \frac{t_2 - t_1}{2}$. {\sf B.} $t = \frac{t_2 + t_1}{2}$. {\sf C.} $t < t_1 < t_2$. {\sf D.} $t > t_2 > t_1$. (b) Nếu không bỏ qua sự trao đổi nhiệt giữa 2 chất lỏng \& môi trường (cốc đựng, không khí, $\ldots$) thì khi có cân bằng nhiệt, nhiệt độ $t$ của 2 chất lỏng trên có giá trị là: {\sf A.} $t > \frac{t_2 + t_1}{2}$. {\sf B.} $t < \frac{t_2 + t_1}{2}$. {\sf C.} $t = \frac{t_2 + t_1}{2}$. {\sf D.} $t = t_1 + t_2$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.15.}, p. 70]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.15., p. 70]
 	1 chiếc thìa bằng đồng \& 1 chiếc thìa bằng nhôm có khối lượng \& nhiệt độ ban đầu bằng nhau, được nhúng chìm vào cùng 1 cốc đựng nước nóng. Hỏi: (a) Nhiệt độ cuối cùng của 2 thìa có bằng nhau không? Tại sao? (b) Nhiệt lượng mà 2 thìa thu được từ nước có bằng nhau không? Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.16.}, p. 70]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.16., p. 70]
 	1 nhiệt lượng kế bằng đồng khối lượng $128$\emph{g} chứa $240$\emph{g} nước ở nhiệt độ $8.4^\circ{\rm C}$. Người ta thả vào nhiệt lượng kế 1 miếng hợp kim khối lượng $192$\emph{g} được làm nóng tới $100^\circ{\rm C}$. Nhiệt độ khi cân bằng nhiệt là $21.5^\circ{\rm C}$. Biết nhiệt dung riêng của đồng là $380$\emph{J\texttt{/}kg$\cdot$K}, của nước là $4200$\emph{J\texttt{/}kg$\cdot$K}. Tính nhiệt dung riêng của hợp kim. Hợp kim đó có phải là hợp kim của đồng \& sắt không? Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.17.}, p. 70]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.17., p. 70]
 	Người ta bỏ 1 miếng hợp kim chì \& kẽm khối lượng $50$\emph{g} ở nhiệt độ $136^\circ{\rm C}$ vào 1 nhiệt lượng kế chứa $50$\emph{g} nước ở $14^\circ{\rm C}$. Biết nhiệt độ khi có cân bằng nhiệt là $18^\circ{\rm C}$ \& muốn cho nhiệt lượng kế nóng thêm lên $1^\circ{\rm C}$ thì cần $65.1$\emph{J}; nhiệt dung riêng của kẽm là $210$\emph{J\texttt{/}kg$\cdot$K}, của chì là $130$\emph{J\texttt{/}kg$\cdot$K}, của nước là $4200$\emph{J\texttt{/}kg$\cdot$K}. Hỏi có bao nhiêu gam chì \& bao nhiêu gam kẽm trong hợp kim?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{25.18.}, p. 70]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 25.18., p. 70]
 	Người ta muốn có $16$\emph{l} nước ở nhiệt độ $40^\circ{\rm C}$. Hỏi phải pha bao nhiêu \emph{l} nước ở nhiệt độ $20^\circ{\rm C}$ với bao nhiêu \emph{l} nước đang sôi?
 \end{baitoan}
 
@@ -531,43 +734,43 @@
 
 \section{Năng Suất Tỏa Nhiệt của Nhiên Liệu}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.1.}, p. 71]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.1., p. 71]
 	\emph{Đ\texttt{/}S?} {\sf A.} Năng suất tỏa nhiệt của động cơ nhiệt. {\sf B.} Năng suất tỏa nhiệt của nguồn điện. {\sf C.} Năng suất tỏa nhiệt của nhiên liệu. {\sf D.} Năng suất tỏa nhiệt của 1 vật.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.3.}, p. 72]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.3., p. 72]
 	Người ta dùng bếp dầu hỏa để đun sôi $2$\emph{l} nước từ $20^\circ{\rm C}$ đựng trong 1 ấm nhôm có khối lượng $0.5$\emph{kg}. Tính lượng dầu hỏa cần thiết biết chỉ có $30$\% nhiệt lượng do dầu tỏa ra làm nóng nước \& ấm. Lấy nhiệt dung riêng của nước là $4200$\emph{J\texttt{/}kg$\cdot$K}, của nhôm là $880$\emph{J\texttt{/}kg$\cdot$K}, năng suất tỏa nhiệt của dầu hỏa là $44\cdot10^6$\emph{J\texttt{/}kg}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.4.}, p. 72]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.4., p. 72]
 	Dùng 1 bếp dầu hỏa để đun sôi $2$\emph{l} nước từ $15^\circ{\rm C}$ thì mất $10$ phút. Hỏi mỗi phút phải dùng bao nhiêu dầu hỏa? Biết chỉ có $20$\% nhiệt lượng do dầu hỏa tỏa ra làm nóng nước. Lấy nhiệt dung riêng của nước là $4190$\emph{J\texttt{/}kg$\cdot$K} \& năng suất tỏa nhiệt của dầu hỏa là $44\cdot10^6$\emph{J\texttt{/}kg}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.5.}, p. 72]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.5., p. 72]
 	Tính hiệu suất của 1 bếp dầu biết phải tốn $150$\emph{g} dầu mới đun sôi được $4.5$\emph{l} nước ở $20^\circ{\rm C}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.6.}, p. 72]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.6., p. 72]
 	1 bếp dùng khí đốt tự nhiên có hiệu suất $30$\%. Hỏi phải dùng bao nhiêu khí đốt để đun sôi $3$\emph{l} nước ở $30^\circ{\rm C}$? Biết năng suất tỏa nhiệt của khí đốt tự nhiên là $44\cdot10^6$\emph{J\texttt{/}kg}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.7.}, p. 72]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.7., p. 72]
 	Năng suất tỏa nhiệt của nhiên liệu cho biết: {\sf A.} phần nhiệt lượng chuyển thành công cơ học khi $1$\emph{kg} nhiên liệu bị đốt cháy hoàn toàn. {\sf B.} phần nhiệt lượng không được chuyển thành công cơ học khi $1$\emph{kg} nhiên liệu bị đốt cháy hoàn toàn. {\sf C.} nhiệt lượng tỏa ra khi $1$\emph{kg} nhiên liệu bị đốt cháy hoàn toàn. {\sf D.} tỷ số giữa phần nhiệt lượng chuyển thành công cơ học \& phần nhiệt lượng tỏa ra môi trường xung quanh khi $1$\emph{kg} nhiên liệu bị đốt cháy hoàn toàn.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.8.}, p. 72]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.8., p. 72]
 	Nếu năng suất tỏa nhiệt của củi khô là $10^7$\emph{J\texttt{/}kg} thì $1$ tạ củi khô khi cháy hết tỏa ra 1 nhiệt lượng là: {\sf A.} $10^6$\emph{kJ}. {\sf B.} $10^9$\emph{kJ}. {\sf C.} $10^{10}$\emph{kJ}. {\sf D.} $10^7$\emph{kJ}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.9.}, p. 72]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.9., p. 72]
 	Để đun sôi 1 lượng nước bằng bếp dầu có hiệu suất $30$\% phải dùng hết $1$\emph{l} dầu. Để đun sôi cũng lượng nước trên với bếp dầu có hiệu suất $20$\% thì phải dùng: {\sf A.} $2$\emph{l} dầu. {\sf B.} $\frac{2}{3}$\emph{l} dầu. {\sf C.} $1.5$\emph{l} dầu. {\sf D.} $3$\emph{l} dầu.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.10.}, p. 73]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.10., p. 73]
 	Khi dùng lò hiệu suất $H_1$ để làm chảy 1 lượng quặng, phải đốt hết $m_1$\emph{kg} nhiên liệu có năng suất tỏa nhiệt $q_1$. Nếu dùng lò có hiệu suất $H_2$ để làm chảy lượng quặng trên, phải đốt hết $m_2 = 3m_1$\emph{kg} nhiên liệu có năng suất tỏa nhiệt $q_2 = 0.5q_1$. Công thức xác định quan hệ giữa $H_1,H_2$ là: {\sf A.} $H_1 = H_2$. {\sf B.} $H_1 = 2H_2$. {\sf C.} $H_1 = 3H_2$. {\sf D.} $H_1 = 1.5H_2$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{26.11.}, p. 73]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 26.11., p. 73]
 	1 bếp dầu hỏa có hiệu suất $30$\%. (a) Tính nhiệt lượng có ích \& nhiệt lượng hao phí khi dùng hết $30$\emph{g} dầu. (b) Với lượng dầu trên có thể đun sôi được bao nhiêu \emph{kg} nước có nhiệt độ ban đầu là $30^\circ{\rm C}$? Năng suất tỏa nhiệt của dầu hỏa là $44\cdot10^6$\emph{J\texttt{/}kg}.
 \end{baitoan}
 
@@ -575,35 +778,35 @@
 
 \section{Sự Bảo Toàn Năng Lượng Trong Các Hiện Tượng Cơ \& Nhiệt}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.1.}, p. 74]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.1., p. 74]
 	2 hòn bi thép A \& B giống hệt nhau được treo vào 2 sợi dây có chiều dài như nhau. Khi kéo bi A lên rồi cho rơi xuống va chạm vào bi B, người ta thấy bi B bị bắn lên ngang với độ cao của bi A trước khi thả. Hỏi khi đó bi A sẽ ở trạng thái nào? {\sf A.} Đứng yên ở vị trí ban đầu của B. {\sf B.} Chuyển động theo B nhưng không lên tới được độ cao của B. {\sf C.} Bật trở lại vị trí ban đầu. {\sf D.} Nóng lên.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.2.}, p. 74]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.2., p. 74]
 	Thí nghiệm của Jun cho thấy, công mà các quả nặng thực hiện làm quay các tấm kim loại đặt trong nước để làm nóng nước lên đúng bằng nhiệt lượng mà nước nhận được. Thí nghiệm này chứng tỏ điều gì? Trong các câu trả lời sau, câu nào sai? {\sf A.} Năng lượng được bảo toàn. {\sf B.} Nhiệt là 1 dạng của năng lượng. {\sf C.} Cơ năng có thể chuyển hóa hoàn toàn thành nhiệt năng. {\sf D.} Nhiệt năng có thể chuyển hóa hoàn toàn thành cơ năng.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.3.}, pp. 74--75]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.3., pp. 74--75]
 	Khi kéo đi kéo lại sợi dây cuốn quanh 1 ống nhôm đựng nước nút kín, người ta thấy nước trong ống nóng lên rồi sôi, hơi nước đẩy nút bật ra cùng với 1 lớp hơi nước trắng do các hạt nước rất nhỏ tạo thành. Hỏi trong thí nghiệm trên đã có những sự chuyển hóa \& truyền năng lượng nào xảy ra trong các quá trình sau: (a) Kéo đi kéo lại sợi dây. (b) Nước nóng lên. (c) Hơi nước làm bật nút ra. (d) Hơi nước ngưng tụ thành các giọt nước nhỏ.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.4.}, p. 75]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.4., p. 75]
 	Tại sao khi cưa thép, người ta phải cho 1 dòng nước nhỏ chảy liên tục vào chỗ cưa? Ở đây đã có sự chuyển hóa \& truyền năng lượng nào xảy ra?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.5.}, p. 75]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.5., p. 75]
 	Tại sao gạo lấy từ cối giã hoặc cối xay ra đều nóng?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.6.}, p. 75]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.6., p. 75]
 	Cơ năng có thể biến đổi hoàn toàn thành nhiệt năng (e.g., trong thí nghiệm Jun), còn nhiệt năng lại không thể biến đổi hoàn toàn thành cơ năng (e.g., trong động cơ nhiệt). Điều này có chứng tỏ năng lượng không được bảo toàn không? Tại sao?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.7.}, p. 75]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.7., p. 75]
 	1 người kéo 1 vật bằng kim loại lên dốc, làm cho vật vừa chuyển động vừa nóng lên. Nếu bỏ qua sự truyền năng lượng ra môi trường xung quanh thì công của người này đã hoàn toàn chuyển hóa thành: {\sf A.} động năng của vật. {\sf B.} động năng \& nhiệt năng của vật. {\sf C.} động năng \& thế năng của vật. {\sf D.} động năng, thế năng, \& nhiệt năng của vật.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.8.}, p. 75]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.8., p. 75]
 	1 vật trượt từ đỉnh dốc A tới chân dốc B, tiếp tục chuyển động trên mặt đường nằm ngang tới C mới dừng lại. 
 	\begin{center}
 		\begin{tikzpicture}
@@ -616,23 +819,23 @@
 	Câu nào sau đây nói về sự chuyển hóa năng lượng của vật là đúng? {\sf A.} Từ A đến B, chỉ có sự chuyển hóa từ động năng thành thế năng. {\sf B.} Từ A đến B, chỉ có sự chuyển hóa từ động năng thành thế năng \& nhiệt năng. {\sf C.} Từ B đến C, chỉ có sự chuyển hóa từ động năng thành nhiệt năng. {\sf D.} Từ B đến C, chỉ có sự chuyển hóa từ động năng thành thế năng \& nhiệt năng.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.9.}, pp. 75--76]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.9., pp. 75--76]
 	Trường hợp nào sau đây không có sự chuyển hóa từ cơ năng sang nhiệt năng hoặc ngược lại? {\sf A.} 1 vật vừa rơi từ trên cao xuống vừa nóng lên. {\sf B.} Búa máy đập vào cọc bê tông làm cọc lún xuống \& nóng lên. {\sf C.} Miếng đồng thả vào nước đang sôi, nóng lên. {\sf D.} Động cơ xe máy đang chạy.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.10.}, p. 76]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.10., p. 76]
 	Nhúng 1 quả bóng bàn bị bẹp vào nước đang sôi, quả bóng phồng lên như cũ. Đã có những sự biến đổi năng lượng nào xảy ra trong hiện tượng trên?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.11.}, p. 76]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.11., p. 76]
 	1 người dùng súng cao su bắn 1 hòn sỏi lên cao theo phương thẳng đứng. Nếu bỏ qua sự trao đổi năng lượng với không khí thì có những sự truyền \& biến đổi năng lượng nào xảy ra khi: (a) tay kéo căng sợi dây cao su; (b) tay buông ra, hòn sỏi bay lên; (c) vận tốc hòn sỏi giảm dần theo độ cao, tới độ cao cực đại thì vận tốc bằng $0$; (d) từ độ cao cực đại, hòn sỏi rơi xuống, vận tốc tăng dần; (e) hòn sỏi chạm mặt đường cứng nảy lên vài lần rồi năm yên trên mặt đường?
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.12.}, p. 76]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.12., p. 76]
 	2 miếng nhôm \& chì rơi từ cùng 1 độ cao xuống sàn nhà. Xác định tỷ số độ tăng nhiệt độ của 2 miếng kim loại đó khi chúng va chạm với sàn nhà nếu coi toàn bộ cơ năng của vật khi rơi đều dùng để làm nóng vật. Nhiệt dung riêng của nhôm là $880$\emph{J\texttt{/}kg$\cdot$K}, của chì là $130$\emph{J\texttt{/}kg$\cdot$K}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{27.13.}, p. 76]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 27.13., p. 76]
 	1 vật bằng đồng có khối lượng $1.78$\emph{kg} rơi từ mặt hồ xuống đáy hồ sâu $5$\emph{m}. (a) Tính độ lớn của phần cơ năng đã biến đổi thành nhiệt năng trong sự rơi này. Khối lượng riêng của đồng là $8900$\emph{kg\texttt{/}$\rm m^3$}, của nước hồ là $1000$\emph{kg\texttt{/}$\rm m^3$}. (b) Nếu vật không truyền nhiệt cho nước hồ thì nhiệt độ của nó tăng thêm bao nhiêu độ? Nhiệt dung riêng của đồng là $380$\emph{J\texttt{/}kg$\cdot$K}.
 \end{baitoan}
 
@@ -640,47 +843,47 @@
 
 \section{Động Cơ Nhiệt}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.1.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.1., p. 77]
 	Động cơ nào sau đây không phải là động cơ nhiệt? {\sf A.} Động cơ của máy bay phản lực. {\sf B.} Động cơ của xe máy Honda. {\sf C.} Động cơ chạy máy phát điện của nhà máy thủy điện Sông Đà. {\sf D.} Động cơ chạy máy phát điện của nhà máy nhiệt điện.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.2.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.2., p. 77]
 	Câu nào đúng về hiệu suất của động cơ nhiệt? {\sf A.} Hiệu suất cho biết động cơ mạnh hay yếu. {\sf B.} Hiệu suất cho biết động cơ thực hiện công nhanh hay chậm. {\sf C.} Hiệu suất cho biết nhiệt lượng tỏa ra khi $1$\emph{kg} nhiên liệu bị đốt cháy hoàn toàn trong động cơ. {\sf D.} Hiệu suất cho biết có bao nhiêu \% nhiệt lượng do nhiên liệu bị đốt cháy tỏa ra được biến thành công có ích.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.3.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.3., p. 77]
 	1 ôtô chạy $100$\emph{km} với lực kéo không đổi là $700$\emph{N} thì tiêu thụ hết $6$\emph{l} xăng. Tính hiệu suất của động cơ ôtô đó. Biết năng suất tỏa nhiệt của xăng là $4.6\cdot10^7$\emph{J\texttt{/}kg}; khối lượng riêng của xăng là $700$\emph{kg\texttt{/}$\rm m^3$}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.4.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.4., p. 77]
 	1 máy bơm nước sau khi tiêu thụ hết $8$\emph{kg} dầu thì đưa được $700\rm m^3$ nước lên cao $8$\emph{m}. Tính hiệu suất của máy bơm đó. Biết năng suất tỏa nhiệt của dầu dùng cho máy bơm này là  $4.6\cdot10^7$\emph{J\texttt{/}kg}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.5.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.5., p. 77]
 	Với $2$\emph{l} xăng, 1 xe máy có công suất $1.6$\emph{kW} chuyển động với vận tốc $36$\emph{km\texttt{/}h} sẽ đi được bao nhiêu \emph{km}? Biết hiệu suất của động cơ là $25$\%, năng suất tỏa nhiệt của xăng là $4.6\cdot10^7$\emph{J\texttt{/}kg}, khối lượng riêng của xăng là $700$\emph{kg\texttt{/}$\rm m^3$}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.6.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.6., p. 77]
 	Động cơ của 1 máy bay có công suất $2\cdot10^6$\emph{W} \& hiệu suất $30$\%. Hỏi với $1$ tấn xăng, máy bay có thể bay được bao nhiêu lâu? Năng suất tỏa nhiệt của xăng là $4.6\cdot10^7$\emph{J\texttt{/}kg}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.7.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.7., p. 77]
 	Tính hiệu suất của động cơ 1 ôtô biết khi ôtô chuyển động với vận tốc $72$\emph{km\texttt{/}h} thì động cơ có công suất $20$\emph{kW} \& tiêu thụ $20$\emph{l} xăng để chạy $200$\emph{km}.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.8.}, p. 77]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.8., p. 77]
 	Gọi $H$ là hiệu suất động cơ nhiệt, $A$ là công động cơ thực hiện được, $Q$ là nhiệt lượng toàn phần do nhiên liệu bị đốt cháy tỏa ra, $Q_1$ là nhiệt lượng có ích, $Q_2$ là nhiệt lượng tỏa ra môi trường bên ngoài. Công thức tính hiệu suất: {\sf A.} $H = \frac{Q_1 - Q_2}{Q}$. {\sf B.} $H = \frac{Q_2 - Q_1}{Q}$. {\sf C.} $H = \frac{Q - Q_2}{Q}$. {\sf D.} $H = \frac{Q}{A}$. 
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.9.}, p. 78]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.9., p. 78]
 	Các kỳ của động cơ nổ 4 kỳ diễn ra theo thứ tự: {\sf A.} hút nhiên liệu, đốt nhiên liệu, nén nhiên liệu, thoát khí. {\sf B.} thoát khí, hút nhiên liệu, nén nhiên liệu, đốt nhiên liệu. {\sf C.} hút nhiên liệu, nén nhiên liệu, thoát khí, đốt nhiên liệu. {\sf D.} hút nhiên liệu, nén nhiên liệu, đốt nhiên liệu, thoát khí.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.10.}, p. 78]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.10., p. 78]
 	Từ công thức $H = \frac{A}{Q}$, ta có thể suy ra là đối với 1 xe ôtô chạy bằng động cơ nhiệt thì: {\sf A.} công mà động cơ sinh ra tỷ lệ với khối lượng nhiên liệu bị đốt cháy. {\sf B.} công suất của động cơ tỷ lệ với khối lượng nhiên liệu bị đốt cháy. {\sf C.} vận tốc của xe tỷ lệ với khối lượng nhiên liệu bị đốt cháy. {\sf D.} quãng đường xe đi được tỷ lệ với khối lượng nhiên liệu bị đốt cháy.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Vat_Ly_8}, \textbf{28.11.}, p. 78]
+\begin{baitoan}[\cite{SBT_Vat_Ly_8}, 28.11., p. 78]
 	Người ta dùng 1 máy hơi nước hiệu suất $10$\% để đưa nước lên độ cao $9$\emph{m}. Sau $5$\emph{h} máy bơm được $720\rm m^3$ nước. Tính: (a) công suất có ích của máy; (b) lượng than đá tiêu thụ. Biết năng suất tỏa nhiệt của than đá là $27\cdot10^6$\emph{J\texttt{/}kg}.
 \end{baitoan}
 
