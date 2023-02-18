@@ -1,48 +1,42 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
+\newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{dangtoan}{Dạng toán}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{ghichu}{Ghi chú}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{hypothesis}{Hypothesis}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{note}{Note}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Limit -- Giới Hạn}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -147,9 +141,103 @@ Bài tập phụ thuộc hình vẽ: \cite[\textbf{4.}, p. 121]{SGK_Toan_11_dai_
 
 \section{Giới Hạn của Hàm Số}
 
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 1, p. 153]
+	Cho hàm số $f(x) = \frac{2x^2 + x - 3}{x - 1}$. Dùng định nghĩa chứng minh $\lim_{x\to1} f(x) = 5$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Hàm số đã cho xác định trên $D_f = \mathbb{R}\backslash\{1\}$. Giả sử $(x_n)$ là dãy số bất kỳ, $x_n\ne1$, \& $x_n\to1$.
+	\begin{align*}
+		\lim_{n\to+\infty} f(x_n) = \frac{2x_n^2 + x_n - 3}{x_n - 1} \lim_{n\to+\infty} \frac{2(x_n - 1)\left(x_n + \frac{3}{2}\right)}{x_n - 1} = \lim_{n\to+\infty} 2\left(x_n + \frac{3}{2}\right) = 2\left(1 + \frac{3}{2}\right) = 5.
+	\end{align*}
+	Do đó, $\lim_{x\to1} f(x) = 5$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 2, p. 154]
+	Cho hàm số
+	\begin{equation*}
+		f(x) = \left\{\begin{split}
+			&x,&&\mbox{nếu }x\ge0,\\
+			&1 - x,&&\mbox{nếu }x < 0.
+		\end{split}\right.
+	\end{equation*}
+	Dùng định nghĩa chứng minh hàm số $f(x)$ không có giới hạn khi $x\to0$, i.e., $\bar\exists\lim_{x\to0} f(x)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Hàm số đã cho xác định trên $D_f = \mathbb{R}$. Lấy dãy số $(x_n)$ với $x_n = \frac{1}{n}$. Có $x_n\to0$ \& $\lim_{n\to+\infty} f(x_n) = \lim_{n\to+\infty} x_n = \lim_{n\to+\infty} \frac{1}{n} = 0$ (1). Lấy dãy số $(y_n)$ với $y_n = -\frac{1}{n}$. Có $y_n\to0$ \& $\lim_{n\to+\infty} f(y_n) = \lim_{n\to+\infty} (1 - y_n) = \lim_{n\to+\infty} \left(1 + \frac{1}{n}\right) = 1$ (2). Từ (1) \& (2) suy ra hàm số $f(x)$ không có giới hạn khi $x\to0$.
+\end{proof}
+
+\begin{nhanxet}
+	``Để dùng định nghĩa chứng minh hàm số $y = f(x)$ không có giới hạn khi $x\to x_0$, ta thường làm như sau: (a) Chọn 2 dãy số khác nhau $(a_n),(b_n)$ thỏa mãn: $a_n,b_n$ thuộc tập xác định $D_f$ của hàm số $y = f(x)$ \& khác $x_0$, $a_n\to x_0$, $b_n\to x_0$. (b) Chứng minh $\lim_{n\to+\infty} f(a_n)\ne\lim_{n\to+\infty} f(b_n)$ hoặc chứng minh 1 trong các giới hạn này không tồn tại. Trường hợp $x\to x_0^+$, $x\to x_0^-$, hay $x\to\pm\infty$ chứng minh tương tự.'' -- \cite[pp. 154--155]{SBT_Toan_11_dai_so_giai_tich_co_ban}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 3, p. 155]
+	Tính: (a) $\lim_{x\to-2} \left(\sqrt{x^2 + 5} - 1\right)$. (b) $\lim_{x\to3^-} \frac{x + 1}{x - 2}$. (c) $\lim_{x\to-\infty} (-x^3 + x^2 - x + 1)$. (d) $\lim_{x\to4} \frac{1 - x}{(x - 4)^2}$. (e) $\lim_{x\to3^-} \frac{2x - 1}{x - 3}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $-2\in D_f = \mathbb{R}$, $\lim_{x\to-2} \left(\sqrt{x^2 + 5} - 1\right) = \sqrt{(-2)^2 + 5} - 1 = 2$. (b) $3\in D_f = \mathbb{R}\backslash\{2\}$, $\lim_{x\to3^-} \frac{x + 1}{x - 2} = \frac{3 + 1}{3 - 2} = 4$. (c) $\lim_{x\to-\infty} (-x^3 + x^2 - x + 1) = \lim_{x\to-\infty} x^3\left(-1 + \frac{1}{x} - \frac{1}{x^2} + \frac{1}{x^3}\right) = +\infty$. (d) Chú ý $4\notin D_f = \mathbb{R}\backslash\{4\}$. Có $\lim_{x\to4} (1 - x) = -3 < 0$ (1), $\lim_{x\to4} (x - 4)^2 = 0$ \& $(x - 4)^2 > 0$, $\forall x\ne4$ (2). Áp dụng quy tắc về giới hạn vô cực đối với thương $\frac{f(x)}{g(x)}$, từ (1) \& (2) suy ra  $\lim_{x\to4} \frac{1 - x}{(x - 4)^2} = -\infty$. (e) $3\notin D_f = \mathbb{R}\backslash\{3\}$, có $\lim_{x\to3^-} (2x - 1) = 5 > 0$, $\lim_{x\to3^-} (x - 3) = 0$ \& $x - 3 < 0$, $\forall x < 3$. Suy ra $\lim_{x\to3^-} \frac{2x - 1}{x - 3} = -\infty$.
+\end{proof}
+Lời giải các ví dụ  trên đã dùng trực tiếp các định lý về giới hạn của tổng, hiệu, tích, thương, \& căn của các hàm số hoặc các quy tắc về giới hạn vô cực.
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 4, p. 156]
+	Tính: (a) $\lim_{x\to1} \frac{x^2 + 2x - 3}{2x^2 - x - 1}$. (b) $\lim_{x\to2} \frac{2 - x}{\sqrt{x + 7} - 3}$. (c) $\lim_{x\to+\infty} \frac{2x^3 + 3x - 4}{-x^3 - x^2 + 1}$. (d) $\lim_{x\to-\infty} \frac{\sqrt{x^2 - x} - \sqrt{4x^2 + 1}}{2x + 3}$. (e) $\lim_{x\to0^-} \frac{1}{x}\left(\frac{1}{x + 1} - 1\right)$. (f) $\lim_{x\to-\infty} \left(\sqrt{4x^2 - x} + 2x\right)$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\lim_{x\to1} \frac{x^2 + 2x - 3}{2x^2 - x - 1} = \lim_{x\to1} \frac{(x - 1)(x + 3)}{2(x - 1)\left(x + \frac{1}{2}\right)} = \lim_{x\to1} \frac{x + 3}{2x + 1} = \frac{4}{3}$. (b) $\lim_{x\to2} \frac{2 - x}{\sqrt{x + 7} - 3} = \lim_{x\to2} \frac{(2 - x)(\sqrt{x + 7} + 3)}{(\sqrt{x + 7} - 3)(\sqrt{x + 7} + 3)}$\\$= \lim_{x\to2} \frac{(2 - x)(\sqrt{x + 7} + 3)}{x - 2} = \lim_{x\to2} -(\sqrt{x + 7} + 3) = -6$. (c) $\ldots$ 
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 2.1., p. 158]
+	Dùng định nghĩa tìm các giới hạn: (a) $\lim_{x\to5} \frac{x + 3}{3 - x}$. (b) $\lim_{x\to+\infty} \frac{x^3 + 1}{x^2 + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 2.2., p. 158]
+	Cho hàm số
+	\begin{equation*}
+		f(x) = \left\{\begin{split}
+			&x^2,&&\mbox{nếu }x\ge0,\\
+			&x^2 - 1,&&\mbox{nếu }x < 0.
+		\end{split}\right.
+	\end{equation*}
+	(a) Vẽ đồ thị của hàm số $f(x)$. Từ đó dự đoán về giới hạn của $f(x)$ khi $x\to0$. (b) Dùng định nghĩa chứng minh dự đoán trên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 2.3, p. 158]	
+	(a) Chứng minh hàm số $y = \sin x$ không có giới hạn khi $x\to+\infty$. (b) Giải thích bằng đồ thị kết luận ở (a).
+\end{baitoan}
+\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 2.4--2.11.
+
 %------------------------------------------------------------------------------%
 
 \section{Hàm Số Liên Tục}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 1 , p. 161]
+	Xét tính liên tục của hàm số
+	\begin{equation*}
+		f(x) = \left\{\begin{split}
+			&\frac{x + 3}{x - 1},&&\mbox{nếu }x\ne-1,\\
+			&2,&&\mbox{nếu }x = 1,
+		\end{split}\right.
+	\end{equation*} 
+	tại điểm $x = -1$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$-1\in D_f = \mathbb{R}$. Có $f(-1) = 2$, $\lim_{x\to-1} \frac{x + 3}{x - 1} = \frac{-1 + 3}{-1 - 1} = -1\ne f(-1)$. Do đó, hàm số $f(x)$ không liên tục tại $x = -1$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 2 , p. 161]
+	Xét tính liên tục của hàm số
+	\begin{equation*}
+		f(x) = \left\{\begin{split}
+			&\frac{x^2 - 2x - 3}{x - 3},&&\mbox{nếu }x\ne3,\\
+			&5,&&\mbox{nếu }x = 3,
+		\end{split}\right.
+	\end{equation*} 
+	trên tập xác định của nó.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
