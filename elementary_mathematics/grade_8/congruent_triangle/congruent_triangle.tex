@@ -358,6 +358,57 @@ GT: $\Delta ABC,\Delta A'B'C'$, $\widehat{A} = \widehat{A'}$, $\widehat{B} = \wi
 
 \section{Các Trường Hợp Đồng Dạng của Tam Giác Vuông}
 
+\begin{dinhly}[2 tam giác vuông đồng dạng]
+	2 tam giác vuông đồng dạng với nhau nếu: (a) Tam giác vuông này có 1 góc nhọn bằng góc nhọn của tam giác vuông kia; hoặc (b) Tam giác vuông này có 2 cạnh góc vuông tỷ lệ với 2 cạnh góc vuông của tam giác vuông kia; hoặc (c) Nếu cạnh huyền \& 1 cạnh góc vuông của tam giác vuông này tỷ lệ với cạnh huyền \& cạnh góc vuông của tam giác vuông kia thì 2 tam giác vuông đó đồng dạng.
+\end{dinhly}
+GT: $\Delta ABC$, $\Delta A'B'C'$, $\widehat{A'} = \widehat{A} = 90^\circ$, $\frac{B'C'}{BC} = \frac{A'B'}{AB}$ (1). KL: $\Delta ABC\backsim\Delta A'B'C'$.
+
+\begin{proof}[Chứng minh]
+	Từ giả thiết (1), bình phương 2 vế, ta được: $\frac{B'C'^2}{BC^2} = \frac{A'B'^2}{AB^2}$. Theo tính chất của dãy tỷ số bằng nhau, ta có: $\frac{B'C'^2}{BC^2} = \frac{A'B'^2}{AB^2} = \frac{B'C'^2 - A'B'^2}{BC^2 - AB^2} = \frac{A'C'^2}{AC^2}$ (đẳng thức cuối suy ra từ định lý Pythagore). Lấy căn bậc 2, thu được: $\frac{B'C'}{BC} = \frac{A'B'}{AB} = \frac{A'C'}{AC}$. Vậy $\Delta A'B'C'\backsim\Delta ABC$ (c.c.c).
+\end{proof}
+
+\begin{dinhly}
+	\label{thm: heights of congruent triangles}
+	Tỷ số 2 đường cao tương ứng của 2 tam giác đồng dạng bằng tỷ số đồng dạng.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Cho $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k = \frac{AB}{A'B'}$, 2 đường cao tương ứng là $AH,A'H'$. Xét $\Delta ABH,\Delta A'B'H'$: $\widehat{B} = \widehat{B'}$ (vì $\Delta ABC\backsim\Delta A'B'C'$), $\widehat{AHB} = \widehat{A'H'B'} = 90^\circ$. Suy ra $\Delta ABH\backsim\Delta A'B'H'$ (g.g.g), suy ra $\frac{AH}{A'H'} = \frac{AB}{A'B'} = k$.
+\end{proof}
+
+\begin{dinhly}
+	Tỷ số diện tích của 2 tam giác đồng dạng bằng bình phương tỷ số đồng dạng.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	Cho $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k = \frac{AB}{A'B'}$, 2 đường cao tương ứng là $AH,A'H'$. Theo định lý \ref{thm: heights of congruent triangles}, $\frac{AH}{A'H'} = k$. Suy ra $\frac{S_{\Delta ABC}}{S_{\Delta A'B'C'}} = \frac{\frac{1}{2}AH\cdot BC}{\frac{1}{2}A'H'\cdot B'C'} = \frac{AH}{A'H'}\cdot\frac{BC}{B'C'} = k\cdot k = k^2$.
+\end{proof}
+46., p. 84.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 47., p. 84]
+	$\Delta ABC$ có độ dài các cạnh là $3$\emph{cm}, $4$\emph{cm}, $5$\emph{cm}. $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ \& có diện tích là $54{\rm cm}^2$. Tính độ dài các cạnh $\Delta A'B'C'$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 48., p. 84]
+	Bóng của 1 cột điện trên mặt đất có độ dài $4.5$\emph{m}. Cùng thời điểm đó, 1 thanh sắt cao $2.1$\emph{m} cắm vuông góc với mặt đất có bóng dài $0.6$\emph{m}. Tính chiều cao của cột điện.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 49., p. 84]
+	Cho $\Delta ABC$ vuông ở $A$ \& có đường cao $AH$, $AB = 12.45$\emph{cm}, $AC = 20.5$\emph{cm}. (a) Có bao nhiêu cặp tam giác đồng dạng với nhau (chỉ rõ từng cặp tam giác đồng dạng \& viết theo các đỉnh tương ứng). (b) Tính $BC,AH,BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 50., p. 84]
+	Bóng của 1 ống khói nhà máy trên mặt đất có độ dài là $36.9$\emph{m}. Cùng thời điểm đó, 1 thanh sắt cao $2.1$\emph{m} cắm vuông góc với mặt đất có bóng dài $1.62$\emph{m}. Tính chiều cao của ống khói.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 51., p. 84]
+	Chân đường cao $AH$ của tam giác vuông $ABC$ chia cạnh huyền $BC$ thành 2 đoạn thẳng có độ dài $25$\emph{cm} \& $36$\emph{cm}. Tính chu vi \& diện tích của tam giác vuông đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 52., p. 85]
+	Cho 1 tam giác vuông, trong đó cạnh huyền dài $20$\emph{cm} \& 1 cạnh góc vuông dài $12$\emph{cm}. Tính độ dài hình chiếu cạnh góc vuông kia trên cạnh huyền.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Ứng Dụng Thực Tế của Tam Giác Đồng Dạng}
