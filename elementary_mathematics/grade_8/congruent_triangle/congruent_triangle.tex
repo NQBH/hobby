@@ -69,6 +69,7 @@ Tỷ số của 2 đoạn thẳng $AB,CD$ được ký hiệu là $\frac{AB}{CD}
 \end{dinhnghia}
 
 \begin{dinhly}[Thales]
+	\label{thm: Thales}
 	Nếu 1 đường thẳng song song với 1 cạnh của  tam giác \& cắt 2 cạnh còn lại thì nó định ra trên 2 cạnh đó những đoạn thẳng tương ứng tỷ lệ.
 \end{dinhly}
 GT: $\Delta ABC$, $B'C'\parallel BC$, $B'\in AB$, $C'\in AC$. KL: $\frac{AB'}{AB} = \frac{AC'}{AC} = \frac{B'C'}{BC}$, $\frac{AB'}{B'B} = \frac{AC'}{C'C} = \frac{B'C'}{BC - B'C'}$, $\frac{B'B}{AB} = \frac{C'C}{AC} = \frac{BC - B'C'}{B'C'}$.
@@ -189,6 +190,57 @@ Cách chứng minh thứ 2 cho ta 1 kết quả tổng quát hơn khi $AD$ khôn
 %------------------------------------------------------------------------------%
 
 \section{Khái Niệm 2 Tam Giác Đồng Dạng}
+
+\begin{dinhnghia}[2 tam giác đồng dạng]
+	$\Delta A'B'C'$ gọi là \emph{đồng dạng} với $\Delta ABC$ nếu: $\widehat{A'} = \widehat{A}$, $\widehat{B'} = \widehat{B}$, $\widehat{C'} = \widehat{C}$, $\frac{A'B'}{AB} = \frac{B'C'}{BC} = \frac{C'A'}{CA}$.
+\end{dinhnghia}
+$\Delta A'B'C'$ đồng dạng với $\Delta ABC$ được ký hiệu là $\Delta A'B'C'\backsim\Delta ABC$ (viết theo thứ tự cặp đỉnh tương ứng). Tỷ số các cạnh tương ứng $\frac{A'B'}{AB} = \frac{B'C'}{BC} = \frac{C'A'}{CA} = k$ gọi là \textit{tỷ số đồng dạng}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?2., p. 70]
+	(a) Nếu $\Delta A'B'C'\backsim\Delta ABC$ thì $\Delta A'B'C'$ có đồng dạng với $\Delta ABC$ không? Tỷ số đồng dạng là bao nhiêu? (b) Nếu $\Delta A'B'C'\backsim\Delta ABC$ theo tỷ số $k$ thì $\Delta ABC\backsim\Delta A'B'C'$ theo tỷ số nào?
+\end{baitoan}
+
+\begin{dinhly}[Tính chất 2 tam giác đồng dạng]
+	(a) Mỗi tam giác đồng dạng với chính nó với tỷ số đồng dạng $k = 1$. (b) Nếu $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k$ thì $\Delta A'B'C'\backsim\Delta ABC$ với tỷ số đồng dạng $\frac{1}{k}$. (c) Nếu $\Delta ABC\backsim\Delta A'B'C'$ với tỷ số đồng dạng $k'$ \& $\Delta A'B'C'\backsim\Delta A"B"C"$ với tỷ số đồng dạng $k''$ thì $\Delta ABC\backsim\Delta A"B"C"$ với tỷ số đồng dạng $k = k'k"$.
+\end{dinhly}
+Do tính chất (b) ta nói $\Delta ABC$ \& $\Delta A'B'C'$ \textit{đồng dạng (với nhau)}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3., p. 70]
+	Cho $\Delta ABC$. Kẻ đường thẳng $a$ song song với cạnh $BC$ \& cắt 2 cạnh $AB,AC$ theo thứ tự tại $M,N$. $\Delta AMN$ \& $\Delta ABC$ có các góc \& các cạnh tương ứng như thế nào?
+\end{baitoan}
+
+\begin{dinhly}
+	Nếu 1 đường thẳng cắt 2 cạnh của tam giác \& song song với cạnh còn lại thì nó tạo thành 1 tam giác mới đồng dạng với tam giác đã cho.
+\end{dinhly}
+GT: $\Delta ABC$, $MN\parallel BC$, $M\in AB$, $N\in AC$. KL: $\Delta AMN\backsim\Delta ABC$. Định lý cũng đúng cho trường hợp đường thẳng $a$ cắt phần kéo dài 2 cạnh của tam giác \& song song với cạnh còn lại.
+
+\begin{proof}[Chứng minh]
+	Xét $\Delta ABC$ \& $MN\parallel BC$. $\Delta AMN$ \& $\Delta ABC$ cos: $\widehat{AMN} = \widehat{ABC}$, $\widehat{ANM} = \widehat{ACB}$ (các cặp góc đồng vị); $\widehat{BAC}$ là góc chung. Mặt khác, theo hệ quả \ref{col: Thales} của định lý Thales, $\Delta AMN$ \& $\Delta ABC$ có 3 cặp cạnh tương ứng tỷ lệ: $\frac{AM}{AB} = \frac{AN}{AC} = \frac{MN}{BC}$. Vậy $\Delta AMN\backsim\Delta ABC$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 23., p. 71]
+	\emph{Đ\texttt{/}S?} (a) 2 tam giác bằng nhau thì đồng dạng với nhau. (b) 2 tam giác đồng dạng với nhau thì bằng nhau.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 24., p. 72]
+	$\Delta A'B'C'\backsim\Delta A"B"C"$ theo tỷ số đồng dạng $k_1$, $\Delta A"B"C"\backsim\Delta ABC$ theo tỷ số đồng dạng $k_2$. Hỏi $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ theo tỷ số nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 25., p. 72]
+	Cho $\Delta ABC$. Vẽ 1 tam giác đồng dạng với $\Delta ABC$ theo tỷ số $\frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 26., p. 72]
+	Cho $\Delta ABC$, vẽ $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ theo tỷ số đồng dạng $k = \frac{2}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 27., p. 72]
+	Từ điểm $M$ thuộc cạnh $AB$ của $\Delta ABC$ với $AM = \frac{1}{2}MB$, kẻ các tia song song với $AC,BC$, chúng cắt $BC,AC$ lần lượt tại $L,N$. (a) Nêu tất cả các cặp tam giác đồng dạng. (b) Đối với mỗi cặp tam giác đồng dạng, viết các cặp góc bằng nhau \& tỷ số đồng dạng tương ứng.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 28., p. 72]
+	$\Delta A'B'C'\backsim\Delta ABC$ theo tỷ số đồng dạng $k = \frac{3}{5}$. (a) Tính tỷ số chu vi của 2 tam giác đã cho. (b) Tính tỷ số diện tích của 2 tam giác đã cho. (c) Cho biết hiệu chu vi của 2 tam giác trên là $40$\emph{dm}, tính chu vi của mỗi tam giác.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
