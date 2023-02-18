@@ -134,7 +134,7 @@ GT: $\Delta ABC$, $B'C'\parallel BC$, $B'\in AB$, $C'\in AC$. KL: $\frac{AB'}{AB
 GT: $\Delta ABC$, $AD$ là tia phân giác của $\widehat{BAC}$, $D\in BC$. KL: $\frac{DB}{DC} = \frac{AB}{AC}$. Định lý vẫn đúng đối với tia phân giác của  góc ngoài của tam giác.
 
 \begin{proof}[1st chứng minh]
-	Qua đỉnh $B$ vẽ đường thẳng song song với $AC$, cắt đường thẳng $AD$ tại điểm $E$. Có: $\widehat{BAE} = \widehat{CAE}$ (gt). $BE\parallel AC\Rightarrow\widehat{BEA} = \widehat{CAE}$ (so le trong). Suy ra $\widehat{BAE} = \widehat{BEA}$. Do đó $\Delta ABE$ cân tại $B$, suy ra $BE = AB$ (1). Áp dụng hệ quả \ref{col: Thales} của định lý Thales đối với $\Delta DAC$: $\frac{DB}{DC} = \frac{BE}{AC}$ (2). Từ (1) \& (2) suy ra $\frac{DB}{DC} = \frac{AB}{AC}$.
+	Qua đỉnh $B$ vẽ đường thẳng song song với $AC$, cắt đường thẳng $AD$ tại điểm $E$. Có: $\widehat{BAE} = \widehat{CAE}$ (giả thiết). $BE\parallel AC\Rightarrow\widehat{BEA} = \widehat{CAE}$ (so le trong). Suy ra $\widehat{BAE} = \widehat{BEA}$. Do đó $\Delta ABE$ cân tại $B$, suy ra $BE = AB$ (1). Áp dụng hệ quả \ref{col: Thales} của định lý Thales đối với $\Delta DAC$: $\frac{DB}{DC} = \frac{BE}{AC}$ (2). Từ (1) \& (2) suy ra $\frac{DB}{DC} = \frac{AB}{AC}$.
 \end{proof}
 Cách chứng minh sau dựa vào công thức lượng giác tính diện tích tam giác.
 \begin{proof}[2nd chứng minh]
@@ -270,6 +270,31 @@ GT: $\Delta ABC,\Delta A'B'C'$, $\frac{A'B'}{AB} = \frac{A'C'}{AC} = \frac{B'C'}
 %------------------------------------------------------------------------------%
 
 \section{Trường Hợp Đồng Dạng Thứ 2}
+
+\begin{dinhly}
+	Nếu 2 cạnh của tam giác này tỷ lệ với 2 cạnh của tam giác kia \& 2 góc tạo bởi các cặp cạnh đó bằng nhau, thì 2 tam giác đồng dạng.
+\end{dinhly}
+GT: $\Delta ABC,\Delta A'B'C'$, $\frac{A'B'}{AB} = \frac{A'C'}{AC}$ (1), $\widehat{A'} = \widehat{A}$. KL: $\Delta A'B'C'\backsim\Delta ABC$.
+
+\begin{proof}[Chứng minh]
+	Trên tia $AB$, đặt đoạn thẳng $AM = A'B'$. Qua $M$ kẻ đường thẳng $MN\parallel BC$, $N\in AC$. Ta có $\Delta AMN\backsim\Delta ABC$, do đó $\frac{AM}{AB} = \frac{AN}{AC}$. Vì $AM = A'B'$, nên suy ra $\frac{A'B'}{AB} = \frac{AN}{AC}$. Từ (1) \& (2), suy ra $AN = A'C'$. $\Delta AMN$ \& $\Delta A'B'C'$ có $AM = A'B'$ (cách dựng), $\widehat{A} = \widehat{A'}$ (giả thiết), \& $AN = A'C'$ (chứng minh ở trên), nên chúng bằng nhau (c.g.c). Từ $\Delta AMN = \Delta A'B'C'$ suy ra $\Delta A'B'C'\backsim\Delta ABC$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3, p. 77]
+	(a) Vẽ $\Delta ABC$ có $\widehat{BAC} = 50^\circ$, $AB = 5$\emph{cm}, $AC = 7.5$\emph{cm}. (b) Lấy trên các cạnh $AB,AC$ lần lượt 2 điểm $D,E$ sao cho $AD = 3$\emph{cm}, $AE = 2$\emph{cm}. $\Delta AED,\Delta ABC$ có đồng dạng với nhau không? Vì sao?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 32., p. 77]
+	Trên 1 cạnh của góc $xOy$, $\widehat{xOy}\ne180^\circ$, đặt các đoạn thẳng $OA = 5$\emph{cm}, $OB = 16$\emph{cm}. Trên cạnh thứ 2 của góc đó, đặt các đoạn thẳng $OC = 8$\emph{cm}, $OD = 10$\emph{cm}. (a) Chứng minh $\Delta OCB,\Delta OAD$ đồng dạng. (b) Gọi giao điểm của các cạnh $AD,BC$ là $I$, chứng minh $\Delta IAB,\Delta ICD$ có các góc bằng nhau từng đôi một.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 33., p. 77]
+	Chứng minh nếu $\Delta A'B'C'$ đồng dạng với $\Delta ABC$ theo tỷ số $k$, thì tỷ số của 2 đường trung tuyến tương ứng của 2 tam giác đó cũng bằng $k$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 34., p. 77]
+	Dựng $\Delta ABC$ biết $\widehat{A} = 60^\circ$, tỷ số $\frac{AB}{AC} = \frac{4}{5}$, \& đường cao $AH = 6$\emph{cm}.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
