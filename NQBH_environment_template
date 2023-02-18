@@ -28,6 +28,14 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{vidu}{Ví dụ}[section]
 
+\begin{proof}[Giải]
+	
+\end{proof}
+
+\begin{proof}[Chứng minh]
+	
+\end{proof}
+
 %-----------------------------------------------------------------------------%
 % English only
 %-----------------------------------------------------------------------------%
@@ -47,3 +55,4 @@
 \newtheorem{question}{Question}[section]
 \newtheorem{remark}{Remark}[section]
 \newtheorem{theorem}{Theorem}[section]
+
