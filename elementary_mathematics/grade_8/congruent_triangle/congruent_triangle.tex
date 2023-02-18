@@ -117,7 +117,7 @@ GT: $\Delta ABC$, $B'C'\parallel BC$, $B'\in AB$, $C'\in AC$. KL: $\frac{AB'}{AB
 \begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 11., p. 63]
 	$\Delta ABC$ có $BC = 15$\emph{cm}. Trên đường cao $AH$ lấy các điểm $I,K$ sao cho $AK = KI = IH$. Qua $I,K$ vẽ các đường $EF\parallel BC$, $MN\parallel BC$. (a) Tính độ dài các đoạn thẳng $MN,EF$. (b) Tính diện tích tứ giác $MNFE$ biết diện tích $\Delta ABC$ là $270{\rm cm}^2$.
 \end{baitoan}
-\textit{Bài tập phụ thuộc hình vẽ}: \cite[12.--13., p. 64]{SGK_Toan_8_tap_2}.
+\noindent\textit{Bài tập phụ thuộc hình vẽ}: \cite[12.--13., p. 64]{SGK_Toan_8_tap_2}.
 
 \begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 11., p. 64]
 	Cho 3 đoạn thẳng có độ dài là $m,n,p$ (cùng đơn vị đo). Dựng đoạn thẳng có độ dài $x$ sao cho: (a) $\frac{x}{m} = 2$; (b) $\frac{x}{n} = \frac{2}{3}$; (c) $\frac{m}{x} = \frac{n}{p}$.
@@ -130,6 +130,61 @@ GT: $\Delta ABC$, $B'C'\parallel BC$, $B'\in AB$, $C'\in AC$. KL: $\frac{AB'}{AB
 \begin{dinhly}
 	Trong tam giác, đường phân giác của 1 góc chia cạnh đối diện thành 2 đoạn thẳng tỷ lệ với 2 cạnh kề 2 đoạn ấy.
 \end{dinhly}
+GT: $\Delta ABC$, $AD$ là tia phân giác của $\widehat{BAC}$, $D\in BC$. KL: $\frac{DB}{DC} = \frac{AB}{AC}$. Định lý vẫn đúng đối với tia phân giác của  góc ngoài của tam giác.
+
+\begin{proof}[1st chứng minh]
+	Qua đỉnh $B$ vẽ đường thẳng song song với $AC$, cắt đường thẳng $AD$ tại điểm $E$. Có: $\widehat{BAE} = \widehat{CAE}$ (gt). $BE\parallel AC\Rightarrow\widehat{BEA} = \widehat{CAE}$ (so le trong). Suy ra $\widehat{BAE} = \widehat{BEA}$. Do đó $\Delta ABE$ cân tại $B$, suy ra $BE = AB$ (1). Áp dụng hệ quả \ref{col: Thales} của định lý Thales đối với $\Delta DAC$: $\frac{DB}{DC} = \frac{BE}{AC}$ (2). Từ (1)--(2) suy ra $\frac{DB}{DC} = \frac{AB}{AC}$.
+\end{proof}
+Cách chứng minh sau dựa vào công thức lượng giác tính diện tích tam giác.
+\begin{proof}[2nd chứng minh]
+	Gọi $AH$ là đường cao của $\Delta ABC$ ứng với cạnh $BC$, $H\in BC$. Có $\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}BD\cdot AH}{\frac{1}{2}CD\cdot AH} = \frac{DB}{DC}$. Cũng có:
+	\begin{align*}
+		\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}AD\cdot AB\sin\widehat{DAB}}{\frac{1}{2}AD\cdot AC\sin\widehat{DAC}} = \frac{\frac{1}{2}AD\cdot AB\sin\frac{\widehat{A}}{2}}{\frac{1}{2}AD\cdot AC\sin\frac{\widehat{A}}{2}} = \frac{AB}{AC}.
+	\end{align*}
+	Kết hợp 2 đẳng thức trên suy ra $\frac{DB}{DC} = \frac{AB}{AC}$.
+\end{proof}
+Cách chứng minh thứ 2 cho ta 1 kết quả tổng quát hơn khi $AD$ không phải là tia phân giác:
+
+\begin{baitoan}
+	Cho $\Delta ABC$, $D\in BC$. Chứng minh $\frac{DB}{DC} = \frac{AB\sin\widehat{DAB}}{AC\sin\widehat{DAC}}$.
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Gọi $AH$ là đường cao của $\Delta ABC$ ứng với cạnh $BC$, $H\in BC$. Có $\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}BD\cdot AH}{\frac{1}{2}CD\cdot AH} = \frac{DB}{DC}$. Cũng có:
+	\begin{align*}
+		\frac{S_{\Delta ABD}}{S_{\Delta ACD}} = \frac{\frac{1}{2}AD\cdot AB\sin\widehat{DAB}}{\frac{1}{2}AD\cdot AC\sin\widehat{DAC}} = \frac{AB\sin\widehat{DAB}}{AC\sin\widehat{DAC}}.
+	\end{align*}
+	Kết hợp 2 đẳng thức trên suy ra $\frac{DB}{DC} = \frac{AB\sin\widehat{DAB}}{AC\sin\widehat{DAC}}$.
+\end{proof}
+\noindent\textit{Bài tập phụ thuộc hình vẽ}: \cite[?2--?3, 15. p. 67]{SGK_Toan_8_tap_2}.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 16., p. 67]
+	$\Delta ABC$ có độ dài các cạnh $AB = m$, $AC = n$, \& $AD$ là đường phân giác. Chứng minh tỷ số diện tích của $\Delta ABD$ \& diện tích của $\Delta ACD$ bằng $\frac{m}{n}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 17., p. 68]
+	Cho $\Delta ABC$ với đường trung tuyến $AM$. Tia phân giác của góc $AMB$ cắt cạnh $AB$ ở $D$, tia phân giác của góc $AMC$ cắt cạnh $AC$ ở $E$. Chứng minh $DE\parallel BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 18., p. 68]
+	$\Delta ABC$ có $AB = 5$\emph{cm}, $AC = 6$\emph{cm}, \& $BC = 7$\emph{cm}. Tia phân giác của góc $BAC$ cắt cạnh $BC$ tại $E$. Tính các đoạn $EB,EC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 19., p. 68]
+	Cho hình thang $ABCD$, $AB\parallel CD$. Đường thẳng $a$ song song với $DC$, cắt các cạnh $AD,BC$ theo thứ tự tại $E,F$. Chứng minh: (a) $\frac{AE}{ED} = \frac{BF}{FC}$; (b) $\frac{AE}{AD} = \frac{BF}{BC}$; (c) $\frac{DE}{DA} = \frac{CF}{CB}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 20., p. 68]
+	Cho hình thang $ABCD$, $AB\parallel CD$. 2 đường chéo $AC,BD$ cắt nhau tại $O$. Đường thẳng $a$ qua $O$ \& song song với đáy của hình thang cắt các cạnh bên $AD,BC$ theo thứ tự tại $E,F$. Chứng minh $OE = OF$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 21., p. 68]
+	(a) Cho $\Delta ABC$ với đường trung tuyến $AM$ \& đường phân giác $AD$. Tính diện tích $\Delta ADM$ biết $AB = m$, $AC = n$, $n > m$, \& diện tích của $\Delta ABC$ là $S$. (b) Cho $n = 7$\emph{cm}, $m = 3$\emph{cm}, hỏi diện tích $\Delta ADM$ chiếm bao nhiêu \% diện tích $\Delta ABC$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 22., p. 68]
+	Cho $A,B,C,D,E,F,G$ thẳng hàng theo thứ tự đó \& $O$ nằm ngoài đường thằng chứa $7$ điểm đó sao cho $\widehat{OAB} = \widehat{OBC} = \widehat{OCD} = \widehat{ODE} = \widehat{OEF} = \widehat{OFG}$. Đặt $OA = a, OB = b, OC = c, OD = d, OE = e, OF = f, OG = g, AB = x, BC = y, CD = z, DE = t, EF = u, FG = v$. Thiết lập những tỷ lệ thức từ các kích thước đã cho.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
