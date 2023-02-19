@@ -239,6 +239,43 @@ Lời giải các ví dụ  trên đã dùng trực tiếp các định lý về
 	trên tập xác định của nó.
 \end{baitoan}
 
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 3 , p. 162]
+	Chứng minh phương trình sau có ít nhất 2 nghiệm: $2x^3 - 10x - 7 = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Xét hàm số $f(x) = 2x^3 - 10x - 7$. Hàm số này là hàm đa thức nên liên tục trên $\mathbb{R}$. Do đó $f(x)$ liên tục trên các đoạn $[-1;0]$ \& $[0;3]$ (1). Có $f(-1) = 1$, $f(0) = -7$, $f(3) = 17$, nên $f(-1)f(0) < 0$, $f(0)f(3) < 0$ (2). Từ (1) \& (2) suy ra phương trình $f(x) = 0$, i.e.,  $2x^3 - 10x - 7 = 0$ có ít nhất 2 nghiệm, 1 nghiệm thuộc khoảng $(-1;0)$, còn nghiệm kia thuộc khoảng $(0;3)$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, Ví dụ 4 , p. 163]
+	Chứng minh phương trình sau luôn có nghiệm với mọi giá trị của tham số $m$: $(1 - m^2)x^5 - 3x - 1 = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Xét hàm số $f(x) = 	(1 - m^2)x^5 - 3x - 1$. Vì $f(0) = -1 < 0$, $f(-1) = m^2 + 1 > 0$ nên $f(-1)f(0) < 0$, $\forall m\in\mathbb{R}$ (1). Vì $f(x)$ là hàm đa thức, liên tục trên $\mathbb{R}$, nên liên tục trên đoạn $[-1;0]$ (2). Từ (1) \& (2) suy ra phương trình $f(x) = 0$ có ít nhất 1 nghiệm trong khoảng $(-1;0)$, i.e., phương trình $(1 - m^2)x^5 - 3x - 1 = 0$ luôn có nghiệm\footnote{\& biết được thêm là có ít nhất 1 nghiệm trong khoảng $(-1;0)$.} $\forall m\in\mathbb{R}$.
+\end{proof}
+
+\begin{nhanxet}
+	``Để chứng minh phương trình $f(x) = 0$ có ít nhất 1 nghiệm, chỉ cần tìm được 2 số $a,b\in\mathbb{R}$ sao cho $f(a)f(b) < 0$ \& hàm số $f(x)$ liên tục trên đoạn $[a;b]$. Nếu phương trình chứa tham số, thì chọn $a,b\in\mathbb{R}$ sao cho: $f(a),f(b)$ không còn chứa tham số hay chứa tham số nhưng có dấu không đổi; hoặc $f(a)f(b)$ chứa tham số nhưng tích $f(a)f(b)$ luôn âm.'' -- \cite[p. 163]{SBT_Toan_11_dai_so_giai_tich_co_ban}
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 3.1., p. 163]
+	Cho hàm số $f(x) = \frac{(x - 1)|x|}{x}$. Vẽ đồ thị của hàm số này. Từ đồ thị dự đoán các khoảng trên đó hàm số liên tục \& chứng minh dự đoán đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 3.2., p. 163]
+	Cho ví dụ về 1 hàm số liên tục trên $(a;b]$ \& trên $(b;c)$ nhưng không liên tục trên $(a;c)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 3.3., p. 164]
+	Chứng minh nếu 1 hàm số liên tục trên $(a;b]$ \& trên $[b;c)$ thì nó liên tục trên $(a;c)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_11_dai_so_giai_tich_co_ban}, 3.4., p. 164]
+	Cho hàm số $y = f(x)$ xác định trên khoảng $(a;b)$ chứa điểm $x_0$. Chứng minh nếu $\lim_{x\to x_0} \frac{f(x) - f(x_0)}{x - x_0} = L$ thì hàm số $f(x)$ liên tục tại điểm $x_0$.
+\end{baitoan}
+\noindent\textit{Hint.} Đặt $g(x)\coloneqq\frac{f(x) - f(x_0)}{x - x_0} - L$ \& biểu diễn $f(x)$ qua $g(x)$.
+
 %------------------------------------------------------------------------------%
 
 \printbibliography[heading=bibintoc]
