@@ -1,39 +1,45 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
-\usepackage[vietnamese,english]{babel}
+\usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol,soul}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small \nouppercase{\leftmark}}
-\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Elementary STEM\textsf{/}Student}
-\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \textsf{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \textsf{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
@@ -49,8 +55,8 @@
 \section*{Initialization}
 
 \begin{itemize}
-	\item NQBH's STEM schedule: \href{https://github.com/NQBH/hobby/blob/master/schedule/NQBH_schedule.pdf}{GitHub\textsf{/}NQBH\textsf{/}hobby\textsf{/}schedule}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/schedule/NQBH_schedule.pdf}.}.
-	\item NQBH's STEM rule: \href{https://github.com/NQBH/hobby/blob/master/STEM/rule/NQBH_STEM_rule.pdf}{GitHub\textsf{/}NQBH\textsf{/}hobby\textsf{/}STEM\textsf{/}rule}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/STEM/rule/NQBH_STEM_rule.pdf}.}.
+	\item NQBH's STEM schedule: \href{https://github.com/NQBH/hobby/blob/master/schedule/NQBH_schedule.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}schedule}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/schedule/NQBH_schedule.pdf}.}.
+	\item NQBH's STEM rule: \href{https://github.com/NQBH/hobby/blob/master/STEM/rule/NQBH_STEM_rule.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}STEM\texttt{/}rule}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/STEM/rule/NQBH_STEM_rule.pdf}.}.
 	\begin{itemize}
 		\item[$\bullet$] Pay tuition fee each \textit{10-day period}. \textit{Reason}: Easy to divide by $10$ instead of 8--14 if 2--3 days\textsf{/}week.
 		\item[$\bullet$] Expel thieves immediately \& permanently.
@@ -61,7 +67,6 @@
 
 %------------------------------------------------------------------------------%
 
-\selectlanguage{vietnamese}
 \section{Elementary Mathematics}
 
 \subsection{Grade 6}
