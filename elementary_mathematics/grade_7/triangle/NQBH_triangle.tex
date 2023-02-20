@@ -1,49 +1,42 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=50]{biblatex}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
-\DeclareMathOperator{\arccot}{arccot}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
+\newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{dangtoan}{Dạng toán}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{ghichu}{Ghi chú}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{hypothesis}{Hypothesis}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{note}{Note}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
 
 \title{Triangle -- Tam Giác}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -81,11 +74,11 @@ $\Delta ABC$, $\widehat{ACx}$ là góc ngoài tại đỉnh $C$: $\widehat{ACx} 
 	Tháp nghiêng Pisa ở Italy nghiêng $5^\circ$ so với phương thẳng đứng. Tính độ nghiêng của tháp đó so với phương nằm ngang.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, \textbf{3.}, p. 68]
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 3., p. 68]
 	(a) Cho biết 1 góc nhọn của tam giác vuông bằng $\alpha^\circ$, $\alpha\in(0,90)$. Tính số đo góc còn lại. (b) Cho 1 tam giác vuông có 2 góc bằng nhau. Tính số đo mỗi góc.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, \textbf{4.}, p. 68]
+\begin{baitoan}[\cite{SBT_Toan_7_Canh_Dieu_tap_2}, 4., p. 68]
 	Đ hay S? Không có $\Delta ABC$ nào mà $\widehat{A} = 3\widehat{B}$, $\widehat{B} = 3\widehat{C}$, \& $C = 14^\circ$.
 \end{baitoan}
 
@@ -98,35 +91,35 @@ $\Delta ABC$, $\widehat{ACx}$ là góc ngoài tại đỉnh $C$: $\widehat{ACx} 
 	Cho $\Delta ABC$, các tia phân giác của góc $B$, góc $C$ cắt nhau tại $O$. Chứng minh: (a) $\widehat{BOC} = 90^\circ + \frac{\widehat{A}}{2}$; (b) Nếu $\widehat{BOC} = 135^\circ$ thì $\Delta ABC$ vuông tại $A$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{58.}, p. 66]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 58., p. 66]
 	Cho $\Delta ABC$ vuông tại $A$. Trên tia đối tia $CA$ lấy điểm $E$ khác $C$. Gọi $D$ là hình chiếu vuông góc của $E$ lên đường thẳng $BC$. Chứng minh: $\widehat{B} = \widehat{CED}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{59.}, p. 66]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 59., p. 66]
 	Cho $\Delta ABC$ vuông tại $A$, $\widehat{C} = 25^\circ$. Tia phân giác của góc $A$ cắt $BC$ tại $D$. Vẽ $AH\bot BC$. Tính $\widehat{HAD}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{60.}, p. 66]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 60., p. 66]
 	Cho $\Delta ABC$ vuông tại $A$. Tia phân giác của góc $C$ cắt $AB$ tại $D$. (a) Chứng minh góc $BDC$ là góc tù. (b) Giả sử $\widehat{BDC} = 105^\circ$, tính $\widehat{B}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{61.}, p. 66]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 61., p. 66]
 	Cho $\Delta ABC$ \& điểm $O$ nằm trong tam giác đó. So sánh góc $BOC$ \& $BAC$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{62.}, p. 66]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 62., p. 66]
 	Cho $\Delta ABC$ vuông tại $A$. Vẽ $AH\bot BC$. Vẽ các tia phân giác của góc $B$ \& góc $HAC$ cắt nhau tại $O$. Chứng minh $\Delta AOB$ là tam giác vuông.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{63.}, p. 66]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 63., p. 66]
 	Chứng minh với mỗi tam giác bao giờ cũng tồn tại 1 góc ngoài không lớn hơn $120^\circ$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{64.}, pp. 66--67]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 64., pp. 66--67]
 	Cho $\Delta ABC$ có $\widehat{B} > \widehat{C}$. Vẽ tia phân giác của góc $A$ cắt $BC$ tại $D$. (a) Chứng minh $\widehat{ADC} - \widehat{ADB} = \widehat{ABC} - \widehat{C}$. (b) Đường thẳng chứa tia phân giác ngoài tại đỉnh $A$ của $\Delta ABC$ cắt đường thẳng $BC$ tại $E$. Chứng minh $\widehat{AEB} = \frac{\widehat{ABC} - \widehat{C}}{2}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{65.}, p. 66]
+\begin{baitoan}[\cite{Tuyen_Toan_7}, 65., p. 66]
 	Trên lá cờ đỏ sao vàng của Việt Nam có ngôi sao $5$ cánh. Tính tổng các góc ở $5$ đỉnh của ngôi sao đó.
 \end{baitoan}
 
@@ -202,6 +195,60 @@ $\Delta ABC$, $\widehat{ACx}$ là góc ngoài tại đỉnh $C$: $\widehat{ACx} 
 %------------------------------------------------------------------------------%
 
 \section{Trường Hợp Bằng Nhau Thứ 3 của Tam Giác: Góc - Cạnh - Góc}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 1., p. 91]
+	Cho $\Delta ABC,\Delta A'B'C'$ thỏa mãn: $AB = A'B'$, $\widehat{A} = \widehat{A'}$, $\widehat{C} = \widehat{C'}$. $\Delta ABC,\Delta A'B'C'$ có bằng nhau không? Vì sao?
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Có $\widehat{B} = 180^\circ - \widehat{A} - \widehat{C} = 180^\circ - \widehat{A'} - \widehat{C'} = \widehat{B'}$. Vì $\widehat{A} = \widehat{A'}$, $\widehat{B} = \widehat{B'}$, $AB = A'B'$ nên $\Delta ABC = \Delta A'B'C'$ (g.c.g).
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Vì $\widehat{B} = 180^\circ - \widehat{A} - \widehat{C}$, $\widehat{B'} = 180^\circ - \widehat{A'} - \widehat{C'}$, mà $\widehat{A} = \widehat{A'}$, $\widehat{C} = \widehat{C'}$, nên $\widehat{B} = \widehat{B'}$. Xét $\Delta ABC$ \& $\Delta A'B'C'$: $\widehat{A} = \widehat{A'}$, $\widehat{B} = \widehat{B'}$, $AB = A'B'$. Suy ra $\Delta ABC = \Delta A'B'C'$ (g.c.g).
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 2., p. 92]
+	Cho tứ giác $ANBM$ có 2 đường chéo $AB,MN$ cắt nhau tại $O$, $AM = BN$, $\widehat{OAM} = \widehat{OBN}$. Chứng minh $OA = OB$, $OM = ON$, $\widehat{OMA} = \widehat{ONB}$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Vì $\widehat{M} = 180^\circ - \widehat{AOM} - \widehat{A}$, $\widehat{N} = 180^\circ - \widehat{BON} - \widehat{B}$, mà $\widehat{AOM} = \widehat{BON}$ (2 góc đối đỉnh), $\widehat{A} = \widehat{B}$, nên $\widehat{M} = \widehat{N}$. Xét $\Delta AOM$ \& $\Delta BON$: $AM = BN$, $\widehat{A} = \widehat{B}$, $\widehat{M} = \widehat{N}$. Suy ra $\Delta AOM = \Delta BON$, suy ra $OA = OB$, $OM = ON$, $\widehat{OMA} = \widehat{ONB}$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	$\widehat{A} = \widehat{B}\Rightarrow AM\parallel BN$ (2 góc so le trong). $AM\parallel BN\Rightarrow\widehat{M} = \widehat{N}$ (2 góc so le trong). Xét $\Delta AOM$ \& $\Delta BON$: $AM = BN$, $\widehat{A} = \widehat{B}$, $\widehat{M} = \widehat{N}$. Suy ra $\Delta AOM = \Delta BON$, suy ra $OA = OB$, $OM = ON$, $\widehat{OMA} = \widehat{ONB}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 3., p. 92]
+	Cho tứ giác $MNPQ$, $\widehat{MNQ} = \widehat{MPQ} = 90^\circ$, $\widehat{NQM} = \widehat{PMQ}$. Chứng minh $MN = PQ$, $MP = NQ$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{66}
+		\caption{\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Hình 66, p. 92.}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Xét $\Delta NMQ$ \& $\Delta PQM$: $\widehat{MNQ} = \widehat{MPQ} = 90^\circ$, $\widehat{NQM} = \widehat{PMQ}$, $MQ$ cạnh chung. Suy ra $\Delta NMQ = \Delta PQM$ (ch.g), suy ra $MN = PQ$, $MP = NQ$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 4., p. 92]
+	Cho hình sau có $\widehat{AHD} = \widehat{BKC} = 90^\circ$, $DH = CK$, $\widehat{DAB} = \widehat{CBA}$. Chứng minh $AD = BC$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.15]{67}
+		\caption{\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Hình 67, p. 92.}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 5., p. 92]
+	Cho $\Delta ABC$ có $\widehat{B} > \widehat{C}$. Tia phân giác góc $BAC$ cắt cạnh $BC$ tại điểm $D$. (a) Chứng minh $\widehat{ADB} < \widehat{ADC}$. (b) Kẻ tia $Dx$ nằm trong góc $ADC$ sao cho $\widehat{ADx} = \widehat{ADB}$. Giả sử tia $Dx$ cắt cạnh $AC$ tại điểm $E$. Chứng minh $\Delta ABD = \Delta AED$, $AB < AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, 6., p. 92]
+	Cho $\Delta ABC = \Delta MNP$. Tia phân giác của góc $BAC$ \& $NMP$ lần lượt cắt các cạnh $BC,NP$ tại $D,Q$. Chứng minh $AD = MQ$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
