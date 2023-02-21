@@ -77,11 +77,15 @@ In mathematics the set of all numbers that can be expressed in the form $\frac{a
 \subsection{Khái niệm phân số}
 
 \begin{dinhnghia}[Phân số]
-	``Kết quả của phép chia số nguyên $a$ cho số nguyên $b$ khác $0$ có thể viết dưới dạng $\frac{a}{b}$, gọi là \emph{phân số}. Ký hiệu: $\frac{a}{b}$, với $a,b\in\mathbb{Z}$, $b\ne0$.
+	Kết quả của phép chia số nguyên $a$ cho số nguyên $b$ khác $0$ có thể viết dưới dạng $\frac{a}{b}$, gọi là \emph{phân số}. Ký hiệu: $\frac{a}{b}$, với $a,b\in\mathbb{Z}$, $b\ne0$.
 \end{dinhnghia}
-Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} (còn gọi tắt là \textit{tử}, $b$ là \textit{mẫu số} (còn gọi tắt là \textit{mẫu}).'' -- \cite[p. 25]{SGK_Toan_6_Canh_Dieu_tap_2}
+Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} (còn gọi tắt là \textit{tử}, $b$ là \textit{mẫu số} (còn gọi tắt là \textit{mẫu}). Mọi số nguyên $a\in\mathbb{Z}$ có thể viết ở dạng phân số là $\frac{a}{1}$, i.e., $a = \frac{a}{1}$, $\forall a\in\mathbb{Z}$.
 
-``Mọi số nguyên $a\in\mathbb{Z}$ có thể viết ở dạng phân số là $\frac{a}{1}$.'' -- \cite[p. 26]{SGK_Toan_6_Canh_Dieu_tap_2}
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, p. 26]
+	Viết \& đọc phân số trong mỗi trường hợp sau: (a) Tử là $11$, mẫu là $-3$. (b) Tử là $-7$, mẫu là $-5$. (c) Tử là $-6$, mẫu là $17$. (d) Tử là $-12$, mẫu là $-37$.
+\end{baitoan}
+
+
 
 \subsection{Phân số bằng nhau}
 
@@ -93,6 +97,52 @@ Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} 
 	Xét 2 phân số $\frac{a}{b}$ \& $\frac{c}{d}$, với $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$.
 \end{dinhly}
 Với $a,b\in\mathbb{Z}$, $b\ne0$, luôn có: $\frac{a}{-b} = \frac{-a}{b}$ \& $\frac{-a}{-b} = \frac{a}{b}$.
+
+``Phân số có dạng $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$, có thể hiểu là phép chia số nguyên $a$ cho số nguyên $b$ khác $0$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$, $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Có $\frac{a}{b} = \frac{am}{bm}$, $\forall a,b,m\in\mathbb{Z}$, $bm\ne0$; $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b\in\mathbb{Z}$, $\forall n\in\mbox{ƯC}(a,b)$. \textit{Phân số tối giản} là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$.'' -- \cite[Chap. V, \S1, p. 29]{SBT_Toan_6_Canh_Dieu_tap_2}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, p. 29]
+	Viết tất cả các phân số $\frac{a}{b}$ biết $a,b$ được chọn trong các số: $-3,0,5$. Có tất cả bao nhiêu phân số?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Vì $b\ne0$ nên có 2 trường hợp: (1) $b = -3$, có 3 phân số: $\frac{-3}{-3},\frac{0}{-3},\frac{5}{-3}$. (2) $b = 5$, có $3$ phân số: $\frac{-3}{5},\frac{0}{5},\frac{5}{5}$. Viết được tất cả $6$ phân số.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{SBT_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, p. 29]
+	Viết tất cả các phân số $\frac{a}{b}$ biết $a,b$ được chọn trong các số: $a_1,a_2,\ldots,a_n$, với $n\in\mathbb{N}^\star$, phân biệt cho trước. Có tất cả bao nhiêu phân số?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Xét 2 trường hợp sau: (1) Nếu trong $n$ số $a_i$ đã cho có 1 số bằng $0$ (lúc nào cũng chỉ có tối đa 1 số bằng $0$ vì các số này phân biệt), i.e., có 1 chỉ số $i_0\in\{1,2,\ldots,n\}$ sao cho $a_{i_0} = 0$ \& $a_i\ne0$, $\forall i\ne i_0$.  Khi đó, có thể viết được các phân số $\frac{a}{b} = \frac{a_i}{a_j}$, $\forall i = 1,2,\ldots,n$, $\forall j\in\{1,2,\ldots,n\}$, $j\ne i_0$. Có tất cả $n(n - 1)$ phân số trong trường hợp này. (2) Nếu tất cả các số $a_i$ đã cho đều khác $0$, i.e., $\prod_{i=1}^n a_i = a_1a_2\ldots a_n\ne0$ thì có thể viết được các phân số $\frac{a}{b} = \frac{a_i}{a_j}$, $\forall i,j = 1,2,\ldots,n$. Có tất cả $n\cdot n = n^2$ phân số trong trường hợp này.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, Ví dụ 2, p. 29]
+	1 trường học có số học sinh giỏi chiếm $\frac{12}{35}$ số học sinh toàn trường, số học sinh khá chiếm $\frac{13}{25}$ số học sinh toàn trường. Số học sinh giỏi \& số học sinh khá của trường đó có bằng nhau không? Vì sao?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$12\cdot25\ne35\cdot13\Rightarrow\frac{12}{35}\ne\frac{13}{25}$, nên số học sinh giỏi \& số học sinh khá của trường đó không bằng nhau.
+\end{proof}
+
+\begin{luuy}
+	Có thể thay $\frac{12}{35},\frac{13}{25}$ trong bài toán trên bằng 2 phân số $\frac{a}{b},\frac{c}{d}$, $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Theo tính chất của 2 phân số bằng nhau: Nếu $ad = bc$ thì số học sinh giỏi \& số học sinh khá của trường đó bằng nhau. Ngược lại, nếu $ad\ne bc$ thì số học sinh giỏi \& số học sinh khá của trường đó không bằng nhau.
+\end{luuy}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, Ví dụ 3, p. 30]
+	Rút gọn về phân số tối giản: (a) $\frac{3510 - 135}{4680 - 180}$. (b) $\frac{2^4\cdot3^2}{6^2\cdot5}$. (c) $\frac{11\cdot2^n}{6^m}$ với $m,n\in\mathbb{N}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{3510 - 135}{4680 - 180} = \frac{3\cdot45\cdot(26 - 1)}{4\cdot45(26 - 1)} = \frac{3}{4}$. (b) $\frac{2^4\cdot3^2}{6^2\cdot5} = \frac{2^4\cdot3^2}{2^2\cdot3^2\cdot5} = \frac{2^2}{5} = \frac{4}{5}$. (c) Nếu $m > n$, $\frac{11\cdot2^n}{6^m} = \frac{11\cdot2^n}{2^m\cdot3^m} = \frac{11}{2^{m-n}\cdot3^n}$. Nếu $m = n$, $\frac{11\cdot2^n}{6^m} = \frac{11\cdot2^n}{2^m\cdot3^m} = \frac{11}{3^n}$. (c) Nếu $m < n$, $\frac{11\cdot2^n}{6^m} = \frac{11\cdot2^n}{2^m\cdot3^m} = \frac{11\cdot2^{n-m}}{3^n}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 3., p. 30]
+	Trong các cách viết sau, cách viết nào cho ta phân số? (a) $-\frac{9.4}{11.5}$. (b) $\frac{-8}{0}$. (c) $\frac{7}{1}$. (d) $\frac{n}{2}$, $n\in\mathbb{Z}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 4., p. 31]
+	Trong các cặp phân số sau, cặp phân số nào bằng nhau? Vì sao? $\frac{3}{7}$ \& $\frac{6}{-14}$, $\frac{12}{-4}$ \& $\frac{-9}{3}$, $\frac{-13}{9}$ \& $\frac{13}{-9}$, $-5$ \& $\frac{-10}{2}$, $\frac{2x}{6}$ \& $\frac{x}{3}$, $x\in\mathbb{Z}$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -149,71 +199,71 @@ Với $a,b\in\mathbb{Z}$, $b\ne0$, luôn có: $\frac{a}{-b} = \frac{-a}{b}$ \& $
 	Cho trước $a,b,n\in\mathbb{Z}$, $b\ne0$. Tìm phân số bằng phân số $\frac{a}{b}$, biết tổng của tử \& mẫu là $n$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{236.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 236., p. 47]
 	Trong các phân số sau, những phân số nào bằng nhau? $\frac{15}{60},\frac{-7}{5},\frac{6}{15},\frac{28}{-20},\frac{3}{12}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{237.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 237., p. 47]
 	Cho $A = \frac{3n - 5}{n + 4}$. Tìm $n\in\mathbb{Z}$ để $A\in\mathbb{Z}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{238.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 238., p. 47]
 	Tìm $n\in\mathbb{Z}$ để cho các phân số sau đồng thời có giá trị nguyên: $\frac{-12}{n},\frac{15}{n - 2},\frac{8}{n + 1}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{239.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 239., p. 47]
 	Tìm $x\in\mathbb{Z}$ biết: (a) $\frac{x - 1}{9} = \frac{8}{3}$; (b) $\frac{-x}{4} = \frac{-9}{x}$; (c) $\frac{x}{4} = \frac{18}{x + 1}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{240.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 240., p. 47]
 	Tìm $x,y\in\mathbb{Z}$ thỏa $\frac{x - 4}{y - 3} = \frac{4}{3}$ \& $x - y = 5$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{241.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 241., p. 47]
 	Viết dạng tổng quát các phân số bằng phân số $\frac{-12}{30}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{242.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 242., p. 47]
 	Rút gọn phân số: (a) $\frac{990}{2610}$; (b) $\frac{374}{506}$; (c) $\frac{3600 - 75}{8400 - 175}$; (d) $\dfrac{9^{14}\cdot25^5\cdot8^7}{18^{12}\cdot625^3\cdot24^3}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{243.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 243., p. 47]
 	Cho phân số $\frac{a}{b}$. Chứng minh: Nếu $\frac{a - x}{b - y} = \frac{a}{b}$ thì $\frac{x}{y} = \frac{a}{b}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{244.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 244., p. 47]
 	Cho phân số $A = \dfrac{1 + 3 + 5 + \cdots + 19}{21 + 23 + 25 + \cdots + 39}$. (a) Rút gọn $A$; (b) Xóa 1 số hạng ở tử \& xóa 1 số hạng ở mẫu để được 1 phân số mới vẫn bằng $A$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{245.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 245., p. 47]
 	Rút gọn phân số $A = \frac{71\cdot52 + 53}{530\cdot71 - 180}$ mà không cần thực hiện các phép tính ở tử.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{246.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 246., p. 47]
 	2 phân số sau có bằng nhau không? $\dfrac{\overline{abab}}{\overline{cdcd}},\dfrac{\overline{ababab}}{\overline{cdcdcd}}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{247.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 247., p. 47]
 	Chứng minh: (a) $\dfrac{1\cdot3\cdot5\cdots39}{21\cdot22\cdot23\cdots40} = \dfrac{1}{2^{20}}$; (b) $\dfrac{1\cdot3\cdot5\cdots(2n - 1)}{(n + 1)(n + 2)(n + 3)\cdots2n} = \dfrac{1}{2^n}$ với $n\in\mathbb{N}^\star$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{248.}, p. 47]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 248., p. 47]
 	Tìm phân số $\frac{a}{b}$ bằng phân số $\frac{60}{108}$ biết: (a) $\mbox{\rm ƯCLN}(a,b) = 15$; (b) $\operatorname{BCNN}(a,b) = 180$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{249.}, p. 48]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 249., p. 48]
 	Tìm phân số bằng phân số $\frac{200}{520}$ sao cho: (a) Tổng của tử \& mẫu là $306$; (b) Hiệu của tử \& mẫu là $184$; (c) Tích của tử \& mẫu là $2340$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{250.}, p. 48]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 250., p. 48]
 	Chứng minh: $\forall n\in\mathbb{Z}$, các phân số sau là các phân số tối giản: (a) $\frac{3n - 2}{4n - 3}$; (b) $\frac{4n + 1}{6n + 1}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{251.}, p. 48]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 251., p. 48]
 	Cho $\frac{a}{b}$ là 1 phân số chưa tối giản. Chứng minh các phân số sau chưa tối giản: (a) $\frac{a}{a - b}$; (b) $\frac{2a}{a - 2b}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Tuyen_Toan_6}, \textbf{252.}, p. 48]
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 252., p. 48]
 	1 mẫu Bắc Bộ bằng $\rm3600m^2$. Hỏi 1 mẫu Bắc Bộ bằng mấy phần của 1 hecta?
 \end{baitoan}
 
@@ -245,79 +295,79 @@ Với $a,b\in\mathbb{Z}$, $b\ne0$, luôn có: $\frac{a}{-b} = \frac{-a}{b}$ \& $
 	Tìm số tự nhiên lớn nhất có 3 chữ số sao cho số đó bằng mỗi tổng $a + b,c + d,e + f$ \& $\frac{a}{b} = \frac{35}{49},\frac{c}{d} = \frac{130}{143},\frac{e}{f} = \frac{7}{13}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{1.}, p. 6]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 1., p. 6]
 	Rút gọn phân số: (a) $\frac{199\ldots9}{99\ldots95}$ ($10$ chữ số $9$ ở tử, $10$ chữ số $9$ ở mẫu); (b) $\frac{121212}{424242}$; (c) $\frac{187187187}{221221221}$; (d) $\frac{3\cdot7\cdot13\cdot37\cdot39 - 10101}{505050 + 70707}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{2.}, p. 6]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 2., p. 6]
 	Chứng minh các phân số sau có giá trị lfa số tự nhiên: (a) $\frac{10^{2002} + 2}{3}$; (b) $\frac{10^{2003} + 8}{9}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{3.}, p. 6]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 3., p. 6]
 	Chứng mih các phân số sau bằng nhau: (a) $\frac{1717}{2929}$ \& $\frac{171717}{292929}$; (b) $\frac{3210 - 34}{4170 - 41}$ \& $\frac{6420 - 68}{8340 - 82}$; (c) $\frac{2106}{7320}$, $\frac{4212}{14640}$, \& $\frac{6318}{21960}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{4.}, p. 6]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 4., p. 6]
 	Tìm $x,y\in\mathbb{Z}$ thỏa: (a) $\frac{x}{3} = \frac{y}{5}$; (b) $\frac{x}{28} = \frac{y}{35}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{5.}, p. 6]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 5., p. 6]
 	Tìm các phân số $\frac{a}{b}$, $a\in\mathbb{N}$, $b\in\mathbb{N}^\star$, có giá trị bằng: (a) $\frac{36}{45}$ biết $\mbox{\rm BCNN}(a,b) = 300$; (b) $\frac{21}{35}$ biết $\mbox{\rm ƯCLN}(a,b) = 30$; (c) $\frac{15}{35}$ biết $\mbox{\rm ƯCLN}(a,b)\cdot\mbox{\rm BCNN}(a,b) = 3549$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{6.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 6., p. 7]
 	Chứng minh các phân số sau tối giản với mọi $n\in\mathbb{N}$. (a) $\frac{n + 1}{2n + 3}$; (b) $\frac{2n + 3}{4n + 8}$; (c) $\frac{3n + 2}{5n + 3}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{7.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 7., p. 7]
 	Cho phân số $A = \frac{63}{3n + 1}$, $n\in\mathbb{N}$. (a) Với giá trị nào của $n$ thì $A$ rút gọn được? (b) Với giá trị nào của $n$ thì $A\in\mathbb{N}$?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{8.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 8., p. 7]
 	Tìm các số tự nhiên $n$ để các phân số sau là phân số tối giản: (a) $\frac{2n + 3}{4n + 1}$; (b) $\frac{3n + 2}{7n + 1}$; (c) $\frac{2n + 7}{5n + 2}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{9.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 9., p. 7]
 	Có bao nhiêu số nguyên dương $n$ không vượt quá $1000$ để phân số $\frac{n + 12}{n^2 + 9n - 13}$ là phân số tối giản?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{10.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 10., p. 7]
 	Tìm $n\in\mathbb{N}$ để phân số $\frac{n + 3}{2n - 2}\in\mathbb{Z}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{11.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 11., p. 7]
 	Tìm các số nguyên $n$ sao cho các phân số sau có giá trị là số nguyên: (a) $\frac{12}{3n - 1}$; (b) $\frac{2n + 3}{7}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{12.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 12., p. 7]
 	Tìm $n\in\mathbb{N}$ để phân số $A = \frac{8n + 193}{4n + 3}$: (a) Có giá trị là số tự nhiên; (b) Là phân số tối giản; (c) Với giá trị nào của $n$ trong khoảng từ $150$ đến $170$ thì phân số $A$ rút gọn được?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{13.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 13., p. 7]
 	Tìm các phân số tối giản nhỏ hơn $1$ có tử \& mẫu đều dương, biết tích của tử \& mẫu của phân số bằng $120$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{14.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 14., p. 7]
 	Tìm $n\in\mathbb{N}$ nhỏ nhất để các phân số sau đều là phân số tối giản: $\frac{5}{n + 8},\frac{6}{n + 9},\frac{7}{n + 10},\ldots,\frac{17}{n + 20}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{15.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 15., p. 7]
 	Cho 3 phân số $\frac{15}{42},\frac{49}{56},\frac{36}{51}$. Biến đổi 3 phân số trên thành các phân số bằng chúng sao cho mẫu của phân số thứ nhất bằng tử của phân số thứ 2, mẫu của phân số thứ 2 bằng tử của phân số thứ 3.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{16.}, p. 7]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 16., p. 7]
 	Cho 3 phân số $\frac{5}{8},\frac{11}{20},\frac{4}{15}$. Tìm 3 phân số (có tử \& mẫu dương) theo thứ tự bằng 3 phân số trên sao cho hiệu của mẫu \& tử của mỗi phân số này đều bằng nhau \& hiệu đó có giá trị nhỏ nhất.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{17.}, p. 8]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 17., p. 8]
 	Tìm các phân số lớn hơn $\frac{1}{5}$ \& khác số tự nhiên biết nếu lấy mẫu nhân với 1 số, lấy tử cộng với số đó thì giá trị của phân số không đổi.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{18.}, p. 8]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 18., p. 8]
 	Cho phân số $A = \frac{23 + 22 + 21 + \cdots + 13}{11 + 10 + 9 + \cdots + 1}$. Nêu cách xóa 1 số hạng ở tử \& 1 số hạng ở mẫu của $A$ để được 1 phân số mới vẫn bằng phân số $A$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{19.}, p. 8, Bộ sử Hume]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 19., p. 8, Bộ sử Hume]
 	Người Anh có thói quen xếp bộ sử nước Anh của Hume (David Hume, nhà sử học Scotland) gồm 9 tập ở tủ sách đặc biệt gồm 2 ngăn: ngăn trên xếp 5 cuốn, ngăn dưới xếp 4 cuốn, ở gáy các cuốn sách đó ghi các số $1,2,3,\ldots,9$. Nếu chủ nhân xếp $\frac{13458}{6729}$ (phân số này có giá trị bằng $2$) thì chứng tỏ chủ nhân đã đọc 2 tập (riêng trường hợp mới đọc 1 tập thì xếp $\frac{12345}{6789}$). Nêu cách xếp 9 cuốn sách đó để chứng tỏ chủ nhân của bộ sách đã đọc $3,4,5,6,7,8,9$ tập.
 \end{baitoan}
 
@@ -373,47 +423,47 @@ Thường sử dụng các tính chất sau: (a) Trong 2 phân số cùng tử, 
 	Cho $a,b\in\mathbb{N}^\star$ thỏa $\frac{5}{7} < \frac{a}{b} < \frac{9}{11}$. Tìm $a + b$ khi $b$ nhỏ nhất.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{20.}, p. 10]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 20., p. 10]
 	So sánh $a,b\in\mathbb{N}$ biết $\frac{1 + 2 + 3 + \cdots + a}{a} < \frac{1 + 2 + 3 + \cdots + b}{b}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{21.}, p. 10]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 21., p. 10]
 	So sánh: (a) $\frac{18}{91}$ \& $\frac{23}{114}$; (b) $\frac{21}{52}$ \& $\frac{213}{523}$; (c) $\frac{1313}{9191}$ \& $\frac{1111}{7373}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{22.}, p. 10]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 22., p. 10]
 	So sánh các phân số sau, với $n\in\mathbb{N}$: (a) $\frac{n}{n + 1}$ \& $\frac{n + 2}{n + 3}$; (b) $\frac{n + 1}{n + 4}$ \& $\frac{n}{n + 5}$; (c) $\frac{n}{2n + 1}$ \& $\frac{3n + 1}{6n + 3}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{23.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 23., p. 11]
 	So sánh $A$ \& $B$: (a) $A = \frac{20}{39} + \frac{22}{27} + \frac{18}{43}$, $B = \frac{14}{39} + \frac{22}{29} + \frac{18}{41}$; (b) $A = \frac{3}{8^3} + \frac{7}{8^4}$, $B = \frac{7}{8^3} + \frac{3}{8^4}$; (c) $A = \frac{10^7 + 5}{10^7 - 8}$, $B = \frac{10^8 + 6}{10^8 - 7}$; (d) $A = \frac{10^{1992} + 1}{10^{1991} + 1}$, $B = \frac{10^{1993} + 1}{10^{1992} + 1}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{24.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 24., p. 11]
 	Tìm $x\in\mathbb{N}$ sao cho $\frac{4}{11} < \frac{x}{20} < \frac{5}{11}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{25.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 25., p. 11]
 	Tìm 2 phân số có các mẫu bằng $9$, các tử là 2 số tự nhiên liên tiếp sao cho phân số $\frac{4}{7}$ nằm giữa 2 phân số đó.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{26.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 26., p. 11]
 	Tìm 2 phân số có các tử bằng $1$, các mẫu là 2 số tự nhiên liên tiếp sao cho phân số $\frac{13}{84}$ nằm giữa 2 phân số đó.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{27.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 27., p. 11]
 	Tìm 2 phân số có mẫu bằng $21$ biết nó lớn hơn $\frac{5}{7}$ \& nhỏ hơn $\frac{5}{6}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{28.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 28., p. 11]
 	Tìm phân số $\frac{a}{b}$ sao cho $a$ là số tự nhiên nhỏ nhất thỏa mãn $\frac{4}{15} < \frac{a}{b} < \frac{1}{3}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{29.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 29., p. 11]
 	Tìm phân số $\frac{a}{b}$ lớn nhất nhỏ hơn $1$ với $a,b$ là các số nguyên dương có 1 chữ số.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, \textbf{30.}, p. 11]
+\begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 30., p. 11]
 	So sánh 2 phân số $\left(\frac{1}{243}\right)^9$ \& $\left(\frac{1}{83}\right)^{13}$.
 \end{baitoan}
 
