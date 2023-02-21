@@ -1,48 +1,49 @@
 \documentclass{article}
 \usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
-\usepackage[english,vietnamese]{babel}
+\usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools,multicol}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
-\def\labelitemii{$\circ$}
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 
 \title{Book}
-\author{\selectlanguage{vietnamese} Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
 \maketitle
-\selectlanguage{english}
 \begin{abstract}
 	A list of books planned to buy\texttt{/}download.
 \end{abstract}
 \tableofcontents
-\selectlanguage{vietnamese}
 \newpage
 
 %------------------------------------------------------------------------------%
@@ -57,7 +58,7 @@ Có rất nhiều sách liệt kê ở đây nhưng mình không mua. Đơn gi�
 
 \begin{enumerate}
 	\item \cite{Trong_Toan_6_2021}. Đặng Đức Trọng, Nguyễn Đức Tấn, Phạm Lê Quốc Thắng, Nguyễn Phúc Trường, Cao Hoàng Lợi. \textit{Bồi Dưỡng Năng Lực Tự Học Toán 6}.\hfill\textsf{[bought]}
-	\item \cite{Trong_Toan_7_2022}. Đặng Đức Trọng, Nguyễn Đức Tấn, Phạm Lê Quốc Thắng, Nguyễn Phúc Trường, Cao Hoàng Lợi, Nguyễn Thị Kiều Anh. \textit{Bồi Dưỡng Năng Lực Tự Học Toán 7}.\hfill\textsf{[bought]}
+	\item \cite{Trong_Toan_7_2022}. Đặng Đức Trọng, Nguyễn Đức Tấn, Phạm Lê Quốc Thắng, Nguyễn Phúc Trường, Cao Hoàng Lợi, Nguyễn Thị Kiều Anh. \textit{Bồi Dưỡng Năng Lực Tự Học Toán 7}.\\\mbox{}\hfill\textsf{[bought]}
 	\item \cite{Binh_Toan_6_tap_1, Binh_Toan_6_tap_2}. Vũ Hữu Bình. \textit{Nâng Cao \& Phát Triển Toán 6. Tập 1 $+$ 2}.\hfill\textsf{[bought]}
 	\item \cite{Binh_Toan_7_tap_1, Binh_Toan_7_tap_2}. Vũ Hữu Bình. \textit{Nâng Cao \& Phát Triển Toán 7. Tập 1 $+$ 2}.\hfill\textsf{[bought]}
 	\item Vũ Hữu Bình. \textit{Nâng Cao \& Phát Triển Toán 8. Tập 1 $+$ 2}.\hfill\textsf{[waiting new version ...]}
@@ -66,8 +67,8 @@ Có rất nhiều sách liệt kê ở đây nhưng mình không mua. Đơn gi�
 	\item Vũ Hữu Bình. \textit{Tài Liệu Chuyên Toán THCS Toán 6 -- Tập 2: Hình Học}.	
 	\item Vũ Hữu Bình. \textit{Tài Liệu Chuyên Toán THCS Toán 7 -- Tập 1: Đại Số}.
 	\item Vũ Hữu Bình. \textit{Tài Liệu Chuyên Toán THCS Toán 7 -- Tập 2: Hình Học}.
-	\item \cite{Binh_Nam_Ngoc_Son_Toan_8_Dai_So}. Vũ Hữu Bình, Trần Hữu Nam, Phạm Thị Bạch Ngọc, Nguyễn Tam Sơn. \textit{Tài Liệu Chuyên Toán THCS Toán 8 -- Tập 1: Đại Số}.\hfill\textsf{[bought]}
-	\item \cite{Binh_Nam_Ngoc_Son_Toan_8_Hinh_Hoc}. Vũ Hữu Bình, Văn Như Cương, Nguyễn Ngọc Đạm, Nguyễn Bá Đang, Trương Công Thành. \textit{Tài Liệu Chuyên Toán THCS Toán 8 -- Tập 2: Hình Học}.\hfill\textsf{[bought]}
+	\item Vũ Hữu Bình, Trần Hữu Nam, Phạm Thị Bạch Ngọc, Nguyễn Tam Sơn. \textit{Tài Liệu Chuyên Toán THCS Toán 8 -- Tập 1: Đại Số}.\hfill\textsf{[bought]}
+	\item Vũ Hữu Bình, Văn Như Cương, Nguyễn Ngọc Đạm, Nguyễn Bá Đang, Trương Công Thành. \textit{Tài Liệu Chuyên Toán THCS Toán 8 -- Tập 2: Hình Học}.\hfill\textsf{[bought]}
 	\item Vũ Hữu Bình, Phạm Thị Bạch ngọc, Đàm Văn Nhỉ. \textit{Tài Liệu Chuyên Toán THCS Toán 9 -- Tập 1: Đại Số}.\hfill\textsf{[bought]}
 	\item Vũ Hữu Bình, Nguyễn Ngọc Đạm, Nguyễn Bá Đang, Lê Quốc Hán, Hồ Quang Vinh. \textit{Tài Liệu Chuyên Toán THCS Toán 9 -- Tập 2: Hình Học}.\hfill\textsf{[bought]}
 	\item \cite{Binh_PTNN}. Vũ Hữu Bình. \textit{Phương Trình Nghiệm Nguyên \& Kinh Nghiệm Giải}.\hfill\textsf{[bought]}
