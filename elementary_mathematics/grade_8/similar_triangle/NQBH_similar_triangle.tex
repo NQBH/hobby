@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul,subcaption}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -45,10 +45,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	\textsc{[en]} This text is a collection of problems, from easy to advanced, about \textit{similar triangle}. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/similar_triangle/NQBH_similar_triangle.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}similar triangle}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/similar_triangle/NQBH_similar_triangle.pdf}.}.
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about \textit{similar triangles}. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/similar_triangle/NQBH_similar_triangle.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}similar triangles}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/similar_triangle/NQBH_similar_triangle.pdf}.}.
 	\vspace{2mm}
 	
-	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{tam giác đồng dạng}. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/similar_triangle/NQBH_similar_triangle.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}similar triangle}.
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{các tam giác đồng dạng}. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/similar_triangle/NQBH_similar_triangle.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}similar triangles}.
 	
 	\textsf{\textbf{Nội dung.} Định lý Thales, tam giác đồng dạng.}
 \end{abstract}
@@ -62,7 +62,7 @@
 \begin{dinhnghia}[Tỷ số của 2 đoạn thẳng]
 	\emph{Tỷ số của 2 đoạn thẳng} là tỷ số độ dài của chúng theo cùng 1 đơn vị đo.
 \end{dinhnghia}
-Tỷ số của 2 đoạn thẳng $AB,CD$ được ký hiệu là $\frac{AB}{CD}$. Tỷ số của 2 đoạn thẳng không phụ thuộc vào cách chọn đơn vị đo, e.g., $\frac{\rm2km}{\rm3km} = \frac{2\footnotesize\mbox{\st{km}}}{3\footnotesize\mbox{\st{km}}} = \frac{2}{3}$, $\frac{\rm3cm}{\rm4cm} = \frac{3\footnotesize\mbox{\st{cm}}}{4\footnotesize\mbox{\st{cm}}} = \frac{3}{4}$, $\frac{\rm4nm}{\rm5nm} = \frac{4\footnotesize\mbox{\st{nm}}}{4\footnotesize\mbox{\st{nm}}} = \frac{3}{4}$ (dễ hiểu: 2 đơn vị trên tử \& mẫu sẽ triệt tiêu lẫn nhau).
+Tỷ số của 2 đoạn thẳng $AB,CD$ được ký hiệu là $\frac{AB}{CD}$. Tỷ số của 2 đoạn thẳng không phụ thuộc vào cách chọn đơn vị đo, e.g., $\frac{\rm2km}{\rm3km} = \frac{2\footnotesize\mbox{\st{km}}}{3\footnotesize\mbox{\st{km}}} = \frac{2}{3}$, $\frac{\rm3cm}{\rm4cm} = \frac{3\footnotesize\mbox{\st{cm}}}{4\footnotesize\mbox{\st{cm}}} = \frac{3}{4}$, $\frac{\rm4nm}{\rm5nm} = \frac{4\footnotesize\mbox{\st{nm}}}{4\footnotesize\mbox{\st{nm}}} = \frac{3}{4}$ (1 cách dễ hiểu: 2 đơn vị trên tử \& mẫu sẽ triệt tiêu lẫn nhau).
 
 \begin{dinhnghia}[2 đoạn thẳng tỷ lệ]
 	2 đoạn thẳng $AB,CD$ gọi là \emph{tỷ lệ} với 2 đoạn thẳng $A'B',C'D'$ nếu có tỷ lệ thức: $\frac{AB}{CD} = \frac{A'B'}{C'D'}$ hay $\frac{AB}{A'B'} = \frac{CD}{C'D'}$.
@@ -75,44 +75,152 @@ Tỷ số của 2 đoạn thẳng $AB,CD$ được ký hiệu là $\frac{AB}{CD}
 GT: $\Delta ABC$, $B'C'\parallel BC$, $B'\in AB$, $C'\in AC$. KL: $\frac{AB'}{AB} = \frac{AC'}{AC} = \frac{B'C'}{BC}$, $\frac{AB'}{B'B} = \frac{AC'}{C'C} = \frac{B'C'}{BC - B'C'}$, $\frac{B'B}{AB} = \frac{C'C}{AC} = \frac{BC - B'C'}{B'C'}$.
 
 \begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?4, p. 58]
-	(a) Cho $\Delta ABC$. Đường thẳng $al\parallel BC$ cắt 2 cạnh $AB,AC$ lần lượt tại $D,E$. Biết $AD = \sqrt{3}$, $BD = 5$, $CE = 10$. Tính $AE$. (b) Cho $\Delta ABC$ vuông tại $A$. Trên $BC,AC$ lần lượt lấy $D,E$ sao cho $DE\parallel AB$. Biết $CD = 5$, $BD = 3.5$, $CE = 4$. Tính $AC,AB$.
+	(a) Cho $\Delta DEF$. Đường thẳng $MN\parallel EF$ cắt 2 cạnh $DE,DF$ lần lượt tại $M,N$. Biết $DM = 6.5$, $DN = 4$, $NF = 2$. Tính $EF$. (b) Cho $\Delta ABC$. Đường thẳng $al\parallel BC$ cắt 2 cạnh $AB,AC$ lần lượt tại $D,E$. Biết $AD = \sqrt{3}$, $BD = 5$, $CE = 10$. Tính $AE$. (c) Cho $\Delta ABC$ vuông tại $A$. Trên $BC,AC$ lần lượt lấy $D,E$ sao cho $DE\parallel AB$. Biết $CD = 5$, $BD = 3.5$, $CE = 4$. Tính $AC,AB$.
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.7\linewidth]{SGK_Toan_8_4}
+		\end{subfigure}%
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.8\linewidth]{SGK_Toan_8_5a}
+		\end{subfigure}%
+		\begin{subfigure}{.3\textwidth}
+			\centering
+			\includegraphics[width=.5\linewidth]{SGK_Toan_8_5b}
+		\end{subfigure}
+	\end{figure}
 \end{baitoan}
 
-\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 3, p. 59]
+\begin{proof}[Giải]
+	(a) Vì $MN\parallel EF$, theo định lý Thales: $\frac{DM}{ME} = \frac{DN}{NF}\Leftrightarrow\frac{6.5}{ME} = \frac{4}{2}\Rightarrow ME = \frac{2\cdot6.5}{4} = 3.25$. (b) Vì $DE\parallel BC$, theo định lý Thales: $\frac{AD}{DB} = \frac{AE}{EC}\Leftrightarrow\frac{\sqrt{3}}{5} = \frac{AE}{10}\Rightarrow AE = \frac{10\sqrt{3}}{5} = 2\sqrt{3}$. (c) Vì $DE\parallel AB$, theo định lý Thales: $\frac{CD}{CB} = \frac{CE}{CA} = \frac{DE}{AB}\Leftrightarrow\frac{5}{5 + 3.5} = \frac{4}{AC} = \frac{\sqrt{5^2 - 4^2}}{AB}$, suy ra $AC = \frac{8.5\cdot4}{5} = 6.8$ \& $AB = \frac{8.5\cdot3}{5} = 5.1$.
+\end{proof}
+
+\begin{nhanxet}
+	Ở (c), có thể tính được độ dài cạnh $AB$ bằng cách sử dụng định lý Pythagore cho $\Delta ABC$ vuông tại $A$, thay vì định lý Thales, sau khi đã biết được $AC = 6.8$ như sau: $AB = \sqrt{BC^2 - AC^2} = \sqrt{8.5^2 - 6.8^2} = 5.1$.
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 1., p. 58]
+	Viết tỷ số của các cặp đoạn thẳng có độ dài sau: (a) $AB = 5$\emph{cm} \& $CD = 15$\emph{cm}; (b) $EF = 48$\emph{cm} \& $GH = 16$\emph{dm}; (c) $PQ = 1.2$\emph{m} \& $MN = 24$\emph{cm}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{AB}{CD} = \frac{5}{15} = \frac{1}{3}$. (b) $\frac{EF}{GH} = \frac{48}{160} = \frac{3}{10}$. (c) $\frac{PQ}{MN} = \frac{120}{24} = 5$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 2., p. 59]
+	Cho biết $\frac{AB}{CD} = \frac{3}{4}$, $CD = 12$\emph{cm}. Tính $AB$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$AB = \frac{3}{4}CD = \frac{3}{4}\cdot12 = 9$cm.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 3., p. 59]
 	(a) Cho biết độ dài của $AB$ gấp $5$ lần độ dài của $CD$ \& độ dài của $A'B'$ gấp $12$ lần độ dài của $CD$. Tính tỷ số của 2 đoạn thẳng $AB,A'B'$. (b) Cho biết độ dài của $AB$ gấp $a$ lần độ dài của $CD$ \& độ dài của $A'B'$ gấp $b$ lần độ dài của $CD$ với $a,b\in\mathbb{R}$, $a,b > 0$. Tính tỷ số của 2 đoạn thẳng $AB,A'B'$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 4, p. 59]
+\begin{proof}[Giải]
+	(a) $AB = 5CD$, $A'B' = 12CD\Rightarrow\frac{AB}{A'B'} = \frac{5CD}{12CD} = \frac{5}{12}$. (b) Tương tự, $AB = aCD$, $A'B' = bCD\Rightarrow\frac{AB}{A'B'} = \frac{aCD}{bCD} = \frac{a}{b}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 4., p. 59]
 	Cho $\Delta ABC$, $B'\in AB$, $C'\in AC$. Cho biết $\frac{AB'}{AB} = \frac{AC'}{AC}$. Chứng minh: (a) $\frac{AB'}{B'B} = \frac{AC'}{C'C}$. (b) $\frac{BB'}{AB} = \frac{CC'}{AC}$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 1., p. 82]
-	Viết tỷ số của các cặp đoạn thẳng sau: (a) $AB = 125$\emph{cm}, $CD = 625$\emph{cm}; (b) $EF = 45$\emph{cm}, $E'F' = 13.5$\emph{dm}; (c) $MN = 555$\emph{cm}, $M'N' = 999$\emph{cm}; (d) $PQ = 10101$\emph{cm}, $P'Q' = 303,03$\emph{m}.	
+\begin{proof}[Giải]
+	(a) $\frac{AB'}{AB} = \frac{AC'}{AC}\Leftrightarrow\frac{AB}{AB'} = \frac{AC}{AC'}\Leftrightarrow\frac{AB}{AB'} - 1 = \frac{AC}{AC'} - 1\Leftrightarrow\frac{AB - AB'}{AB'} = \frac{AC - AC'}{AC'}\Leftrightarrow\frac{BB'}{AB'} = \frac{CC'}{AC'}\Leftrightarrow\frac{AB'}{BB'} = \frac{AC'}{CC'}$. (b) $\frac{AB'}{AB} = \frac{AC'}{AC}\Leftrightarrow1 - \frac{AB'}{AB} = 1 - \frac{AC'}{AC}\Leftrightarrow\frac{AB - AB'}{AB} = \frac{AC - AC'}{AC}\Leftrightarrow\frac{BB'}{AB} = \frac{CC'}{AC}$.
+\end{proof}
+
+\begin{nhanxet}
+	Ở (a), ta có thể áp dụng trực tiếp tính chất sau của tỷ lệ thức: $\frac{a}{b} = \frac{c}{d}\ne1\Leftrightarrow\frac{a}{b - a} = \frac{c}{d - c}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$, $a\ne b$, $c\ne d$, cho $a = AB'$, $b = AB$, $c = AC'$, $d = AC$. Tương tự, ở (b), ta có thể áp dụng tính chất sau của tỷ lệ thức: $\frac{a}{b} = \frac{c}{d}\Leftrightarrow\frac{b - a}{b} = \frac{d - c}{d}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$ cho $a = AB'$, $b = AB$, $c = AC'$, $d = AC$. Chứng minh các tính chất này hoàn toàn tương tự như trong lời giải trên:
+	\begin{itemize}
+		\item $\frac{a}{b} = \frac{c}{d}\ne1\Leftrightarrow\frac{b}{a} = \frac{d}{c}\ne1\Leftrightarrow\frac{b}{a} - 1 = \frac{d}{c} - 1\ne0\Leftrightarrow\frac{b - a}{a} = \frac{d - c}{c}\ne0\Leftrightarrow\frac{a}{b - a} = \frac{c}{d - c}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$, $a\ne b$, $c\ne d$. Chú ý ở bước biến đổi tương đương cuối cùng: vì các phân số khác $0$ nên mới có thể nghịch đảo chúng trong phép biến đổi đại số tương đương này.
+		\item $\frac{a}{b} = \frac{c}{d}\Leftrightarrow1 - \frac{a}{b} = 1 - \frac{c}{d}\Leftrightarrow\frac{b - a}{b} = \frac{d - c}{d}$, $\forall a,b,c,d\in\mathbb{R}$, $bd\ne0$. Chú ý đẳng thức này vẫn đúng nếu $a = b$, $c = d$, i.e., $\frac{a}{b} = \frac{c}{d} = 1$, trong khi tính chất thứ nhất chỉ đúng cho $a\ne b$, $c\ne d$, i.e., $\frac{a}{b}\ne1$, $\frac{c}{d}\ne1$. Điểm khác biệt này là bởi vì không có bất kỳ phép nghịch đảo phân số nào được thực hiện trong các phép biến đổi đại số tương đương cho tính chất thứ 2.
+	\end{itemize} 
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 5., p. 59]
+	Tìm $x$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{SGK_Toan_8_7}
+	\end{figure}
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Vì $MN\parallel BC$, theo định lý Thales: $\frac{AM}{MB} = \frac{AN}{NC}\Leftrightarrow\frac{4}{x} = \frac{5}{8.5 - 5}\Leftrightarrow x = \frac{4\cdot3.5}{5} = 2.8$. (b) Vì $PQ\parallel EF$, theo định lý Thales: $\frac{DP}{PE} = \frac{DQ}{QF}\Leftrightarrow\frac{x}{10.5} = \frac{9}{24 - 9}\Leftrightarrow x = \frac{10.5\cdot9}{15} = 6.3$.
+\end{proof}
+
+\begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 1., p. 82]
+	Viết tỷ số của các cặp đoạn thẳng sau: (a) $AB = 125$\emph{cm}, $CD = 625$\emph{cm}; (b) $EF = 45$\emph{cm}, $E'F' = 13.5$\emph{dm}; (c) $MN = 555$\emph{cm}, $M'N' = 999$\emph{cm}; (d) $PQ = 10101$\emph{cm}, $P'Q' = 303.03$\emph{m}.	
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{AB}{CD} = \frac{125}{625} = \frac{1}{5}$. (b) $\frac{EF}{E'F'} = \frac{45}{135} = \frac{1}{3}$. (c) $\frac{MN}{M'N'} = \frac{555}{999} = \frac{5}{9}$. (d) $\frac{PQ}{P'Q'} = \frac{10101}{30303} = \frac{1}{3}$.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 2., p. 82]
 	Đoạn thẳng $AB$ gấp $5$ lần đoạn thẳng $CD$; đoạn thẳng $A'B'$ gấp $7$ lần đoạn thẳng $CD$. (a) Tính tỷ số của 2 đoạn thẳng $AB,A'B'$. (b) Cho biết đoạn thẳng $MN = 505$\emph{cm} \& đoạn thẳng $M'N' = 707$\emph{cm}, hỏi 2 đoạn thẳng $AB,A'B'$ có tỷ lệ với 2 đoạn thẳng $MN,M'N'$ không?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$AB = 5CD$, $A'B' = 7CD$. (a) $\frac{AB}{A'B'} = \frac{5CD}{7CD} = \frac{5}{7}$. (b) $\frac{MN}{M'N'} = \frac{505}{707} = \frac{5\cdot101}{7\cdot101} = \frac{5}{7}$, nên $\frac{AB}{A'B'} = \frac{MN}{M'N'}$, suy ra $AB,A'B'$ tỷ lệ với $MN,M'N'$.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 3., p. 82]
 	(a) Cho $\Delta ABC$, $M,N$ lần lượt nằm trên $AB,AC$ sao cho $MN\parallel BC$. Biết $AM = 17$, $BM = 10$, $CN = 9$. Tính $AN$. (b) Cho $\Delta PQR$, $E,F$ lần lượt nằm trên $PQ,PR$ sao cho $EF\parallel QR$. Biết $PE = 16$, $PF = 20$, $RF = 15$. Tính $PQ$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Áp dụng định lý Thales: $MN\parallel BC\Rightarrow\frac{AM}{MB} = \frac{AN}{NC}\Leftrightarrow\frac{17}{10} = \frac{x}{9}\Leftrightarrow x = \frac{17\cdot9}{10} = 15.3$cm. (b) Áp dụng định lý Thales: $EF\parallel QR\Rightarrow\frac{EP}{PQ} = \frac{PF}{PR}\Leftrightarrow\frac{16}{x} = \frac{20}{20 + 15}\Leftrightarrow x = \frac{16\cdot35}{20} = 28$cm.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 4., p. 83]
 	Cho hình thang $ABCD$ có $AB\parallel CD$ \& $AB < CD$. Đường thẳng song song với đáy $AB$ cắt các cạnh bên $AD,BC$ theo thứ tự tại $M,N$. Chứng minh: (a) $\frac{MA}{AD} = \frac{NB}{BC}$; (b) $\frac{MA}{MD} = \frac{NB}{NC}$; (c) $\frac{MD}{DA} = \frac{NC}{CB}$.
 \end{baitoan}
 
+\begin{proof}[Chứng minh]
+	(a) $MN\parallel AB\parallel CD$ (gt). Kéo dài $DA$ \& $CB$ cắt nhau tại $E$, áp dụng định lý Thales vào $\Delta EMN,\Delta ECD$: $\frac{EA}{MA} = \frac{EB}{NB}\Leftrightarrow\frac{EA}{EB} = \frac{MA}{NB}$ \& $\frac{EA}{AD} = \frac{EB}{BC}\Leftrightarrow\frac{EA}{EB} = \frac{AD}{BC}$. Kết hợp 2 điều này suy ra $\frac{MA}{NB} = \frac{AD}{BC}$ hay $\frac{MA}{AD} = \frac{NB}{BC}$. (b) Áp dụng tính chất của tỷ lệ thức: $\frac{MA}{AD} = \frac{NB}{BC}\Leftrightarrow\frac{MA}{AD - MA} = \frac{NB}{BC - NB}\Leftrightarrow\frac{MA}{MD} = \frac{NB}{NC}$. (c) $\frac{MA}{MD} = \frac{NB}{NC}\Leftrightarrow\frac{MD}{MA} = \frac{NC}{NB}\Leftrightarrow\frac{MD}{MA + MD} = \frac{NC}{NB + NC}\Leftrightarrow\frac{MD}{AD} = \frac{NC}{BC}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 5., p. 83]
+	\label{SBT_Toan_8_tap_2 5. p. 83}
 	Cho $\Delta ABC$. Từ điểm $D$ trên cạnh $BC$, kẻ các đường thẳng song song với các cạnh $AB,AC$, chúng cắt các cạnh $AB,AC$ theo thứ tự tại $E,F$. Chứng minh: $\frac{AE}{AB} + \frac{AF}{AC} = 1$.
 \end{baitoan}
+
+\begin{proof}[Chứng minh]
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{SBT_Toan_8_43}
+	\end{figure}
+	Xét $\Delta ABC$, vì $DE\parallel AC$ (gt), áp dụng định Thales: $\frac{AE}{AB} = \frac{CD}{CB}$. Mặt khác, vì $DF\parallel AB$ (gt), áp dụng định Thales: $\frac{AF}{AC} = \frac{BD}{BC}$. Cộng 2 đẳng thức trên, vế theo vế: $\frac{AE}{AB} + \frac{AF}{AC} = \frac{CD}{CB} + \frac{BD}{BC} = \frac{CD + BD}{BC} = \frac{BC}{BC} = 1$.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 1.1., p. 83]
 	2 đoạn thẳng $AB = 35$\emph{cm}, $CD = 105$\emph{cm} tỷ lệ với 2 đoạn thẳng $A'B' = 75$\emph{cm} \& $C'D'$. Tính $C'D'$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$\frac{AB}{CD} = \frac{A'B'}{C'D'}\Leftrightarrow\frac{35}{105} = \frac{75}{C'D'}\Leftrightarrow C'D' = \frac{105\cdot75}{35} = 225$cm.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_8_tap_2}, 1.2., p. 83]
 	$\Delta ABC$ vuông tại $A$ có đường cao là $AD$, $D\in BC$. Từ $D$, kẻ $DE\bot AB$, $E\in AB$, \& $DF\bot AC$, $F\in AC$. Hỏi khi độ dài các cạnh $AB,AC$ thay đổi thì tổng $\frac{AE}{AB} + \frac{AF}{AC}$ có thay đổi không? Vì sao?
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{SBT_Toan_8_bs7}
+	\end{figure}
+	$DE\bot AB$ \& $CA\bot AB\Rightarrow DE\parallel AC$. Theo định lý Thales: $\frac{AE}{AB} = \frac{CD}{CB}$. Tương tự, $DF\bot AC$ \& $AB\bot AC\Rightarrow DF\parallel AB$. Theo định lý Thales: $\frac{AF}{AC} = \frac{BD}{BC}$. Cộng 2 đẳng thức trên, vế theo vế: $\frac{AE}{AB} + \frac{AF}{AC} = \frac{CD}{CB} + \frac{BD}{BC} = \frac{CD + BD}{BC} = \frac{BC}{BC} = 1$. Vậy khi độ dài các cạnh $AB,AC$ thay đổi thì tổng $\frac{AE}{AB} + \frac{AF}{AC}$ không thay đổi vì luôn có giá trị bằng $1$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Bài toán này là 1 trường hợp đặc biệt của Bài toán \ref{SBT_Toan_8_tap_2 5. p. 83} khi $D$ là chân đường cao ứng với $BC$. Theo kết quả Bài toán \ref{SBT_Toan_8_tap_2 5. p. 83}: $\frac{AE}{AB} + \frac{AF}{AC} = 1$ nên không đổi khi độ dài các cạnh $AB,AC$ thay đổi.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
