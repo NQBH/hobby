@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Elementary Geometry}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about \textit{<topic>}. This text is also a supplementary material for my lecture note on Elementary <Subject> grade <grade>, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_<subject>/grade_<grade>/NQBH_elementary_<subject>_grade_<grade>.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary <subject>\texttt{/}grade <grade>\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_<subject>/grade_<grade>/NQBH_elementary_<subject>_grade_<grade>.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_<subject>/grade_<grade>/<topic_name>/NQBH_<topic_name>.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary <subject>\texttt{/}grade <grade>\texttt{/}<topic>}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_<subject>/grade_<grade>/<topic_name>/NQBH_<topic_name>.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{<topic vi>}. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_<subject>/grade_<grade>/NQBH_elementary_<subject>_grade_<grade>.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary <subject>\texttt{/}grade <grade>\texttt{/}lecture} của tác giả viết cho <Subject> Sơ Cấp lớp <grade>. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_<subject>/grade_<grade>/<topic_name>/NQBH_<topic_name>.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary <subject>\texttt{/}grade <grade>\texttt{/}<topic>}.
+	
+	\textsf{\textbf{Nội dung.} Hình học sơ cấp.}
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Wikipedia's}
+
+\subsection{\href{https://en.wikipedia.org/wiki/Congruence_(geometry)}{Wikipedia\texttt{/}Congruence (Geometry)}}
+``In geometry, 2 figures or objects are \textit{congruent} if they have the same \href{https://en.wikipedia.org/wiki/Shape}{shape} \& size, or if one has the same \href{https://en.wikipedia.org/wiki/Shape}{shape} \& size as the \href{https://en.wikipedia.org/wiki/Mirror_image}{mirror image} of the other.
+
+More formally, 2 sets of points are called \textit{congruent} if, \& only if, one can be transformed into the other by an \href{https://en.wikipedia.org/wiki/Isometry}{isometry}, i.e., a combination of \href{https://en.wikipedia.org/wiki/Rigid_motion}{rigid motions}, namely a \href{https://en.wikipedia.org/wiki/Translation_(geometry)}{translation}, a \href{https://en.wikipedia.org/wiki/Rotation}{rotation}, \& a \href{https://en.wikipedia.org/wiki/Reflection_(mathematics)}{reflection}. I.e., either object can be repositioned \& reflected (but not resized) so as to coincide precisely with the other object. Therefore 2 distinct plane figures on a piece of paper are congruent if they can be cut out \& then matched up completely. Turning the paper over is permitted.
+
+In elementary geometry the word \textit{congruent} is often used as follows. The word \textit{equal} is often used in place of \textit{congruent} for these objects. 2 \href{https://en.wikipedia.org/wiki/Line_segment}{line segments} are congruent if they have the same length. 2 \href{https://en.wikipedia.org/wiki/Angle}{angles} are congruent if they have the same measure. 2 \href{https://en.wikipedia.org/wiki/Circle}{circles} are congruent if they have the same diameter. In this sense, \textit{2 plane figures are congruent} implies that their corresponding characteristics are ``congruent'' or ``equal'' including not just their corresponding sides \& angles, but also their corresponding diagonals, perimeters, \& areas.
+
+The related concept of \href{https://en.wikipedia.org/wiki/Similarity_(geometry)}{similarity} applies if the objects have the same shape but do not necessarily have the same size. (Most definitions consider congruence to be a form of similarity, although a minority require that the objects have different sizes in order to qualify as similar.)'' -- \href{https://en.wikipedia.org/wiki/Congruence_(geometry)}{Wikipedia\texttt{/}congruence (geometry)}
+
+%------------------------------------------------------------------------------%
+
+\subsubsection{Determining congruence of polygons}
+``For 2 polygons to be congruent, they must have an equal number of sides (\& hence an equal number -- the same number - of vertices). 2 polygons with $n$ sides are congruent iff they each have numerically identical sequences (even if clockwise for 1 polygon \& counterclockwise for the other) side-angle-side-angle-$\ldots$ for $n$ sides \& $n$ angles.
+
+Congruence of polygons can be established graphically as follows:
+\begin{enumerate}
+	\item Match \& label the corresponding vertices of the 2 figures.
+	\item Draw a vector from 1 of the vertices of the 1 of the figures to the corresponding vertex of the other figure. \textit{Translate} the 1st figure by this vector so that these 2 vertices match.
+	\item \textit{Rotate} the translated figure about the matched vertex until 1 pair of \href{https://en.wikipedia.org/wiki/Corresponding_sides}{corresponding sides} matches.
+	\item \textit{Reflect} the rotated figure about this matched side until the figures match.
+\end{enumerate}
+If at any time the step cannot be completed, the polygons are not congruent.'' -- \href{https://en.wikipedia.org/wiki/Congruence_(geometry)#Determining_congruence_of_polygons}{Wikipedia\texttt{/}congruence (geometry)\texttt{/}determining congruence of polygons}
+
+\subsubsection{Congruence of triangles}
+``See also: \href{https://en.wikipedia.org/wiki/Solution_of_triangles}{Wikipedia\texttt{/}solution of triangles}. 2 \href{https://en.wikipedia.org/wiki/Triangle}{triangles} are congruent if their corresponding \href{https://en.wikipedia.org/wiki/Edge_(geometry)}{sides} are equal in length, \& their corresponding \href{https://en.wikipedia.org/wiki/Angle}{angles} are equal in measure.
+
+Symbolically, we write the congruency \& incongruency of 2 triangles $\Delta ABC$ \& $\Delta A'B'C'$ as follows: $\Delta ABC\cong\Delta A'B'C'$, $\Delta ABC\not\cong\Delta A'B'C'$. In many cases it is sufficient to establish the equality of 3 corresponding parts \& use 1 of the following results to deduce the congruence of the 2 triangles.
+
+\paragraph{Determining congruence.} Sufficient evidence for congruence between 2 triangles in \href{https://en.wikipedia.org/wiki/Euclidean_space}{Euclidean space} can be shown through the following comparisons:
+\begin{itemize}
+	\item \textbf{SAS} (side-angle-side): If 2 pairs of sides of 2 triangles are equal in length, \& the included angles are equal in measurement, then the triangles are congruent.
+	\item \textbf{SSS} (side-side-side): If 3 pairs of sides of 2 triangles are equal in length, then the triangles are congruent.
+	\item \textbf{ASA} (angle-side-angle): If 2 pairs of angle of 2 triangles are equal in measurement, \& the included sides are equal in length, then the triangles are congruent.
+\end{itemize}
+\texttt{inserting ...}
+
+'' -- \href{https://en.wikipedia.org/wiki/Congruence_(geometry)#Congruence_of_triangles}{Wikipedia\texttt{/}congruence (geometry)\texttt{/}congruence of triangles}
+
+\subsubsection{Definition of congruence in analytic geometry}
+
+\subsubsection{Congruent conic sections}
+
+\subsubsection{Congruent polyhedra}
+
+\subsubsection{Congruent triangles on a sphere}
+
+%------------------------------------------------------------------------------%
+
+\subsection{\href{https://en.wikipedia.org/wiki/Similarity_(geometry)}{Wikipedia\texttt{/}Similarity (Geometry)}}
+``In \href{https://en.wikipedia.org/wiki/Euclidean_geometry}{Euclidean geometry}, 2 objects are \textit{similar} if they have the same \href{https://en.wikipedia.org/wiki/Shape}{shape}, or if one has the same shape as the mirror image of the other. More precisely, one can be obtained from the other by uniformly \href{https://en.wikipedia.org/wiki/Scaling_(geometry)}{scaling} (enlarging or reducing), possibly with additional \href{https://en.wikipedia.org/wiki/Translation_(geometry)}{translation}, \href{https://en.wikipedia.org/wiki/Rotation_(mathematics)}{rotation}, \& \href{https://en.wikipedia.org/wiki/Reflection_(mathematics)}{reflection}. I.e., either object can be rescaled, repositioned, \& reflected, so as to coincide precisely with the other object. If 2 objects are similar, each is \href{https://en.wikipedia.org/wiki/Congruence_(geometry)}{congruent} to the result of a particular uniform scaling of the other.
+
+E.g., all \href{https://en.wikipedia.org/wiki/Circle}{circles} are similar to each other, all \href{https://en.wikipedia.org/wiki/Square}{squares} are similar to each other, \& all \href{https://en.wikipedia.org/wiki/Equilateral_triangle}{equilateral triangles} are similar to each other. On the other hand, \href{https://en.wikipedia.org/wiki/Ellipse}{ellipses} are not all similar to each other, \href{https://en.wikipedia.org/wiki/Rectangle}{rectangles} are not all similar to each other, \& \href{https://en.wikipedia.org/wiki/Isosceles_triangle}{isosceles triangles} are not all similar to each other. This is because 2 ellipses can have different width to height ratio, 2 rectangle can also have a different length to breadth ratio, \& 2 isosceles triangle can have different base angles.
+
+If 2 angles of a triangle have measures equal to the measures of 2 angles of another triangle, then the triangles are similar. Corresponding sides of similar polygons are in proportion, \& corresponding angles of similar polygons have the same measure.
+
+2 \href{https://en.wikipedia.org/wiki/Congruence_(geometry)}{congruent} shapes are similar, with a scale factor of 1. However, some school textbooks specifically exclude congruent triangles from their definition of similar triangles by insisting that the sizes must be different if the triangles are to qualify as similar.'' -- \href{https://en.wikipedia.org/wiki/Similarity_(geometry)}{Wikipedia\texttt{/}similarity (geometry)}
+
+\subsubsection{Similar triangles}
+
+\subsubsection{Other similar polygons}
+
+\subsubsection{Similar curves}
+
+\subsubsection{In Euclidean space}
+
+\subsubsection{Area ratio \& volume ratio}
+
+\subsubsection{Similarity with a center}
+
+\subsubsection{In general metric spaces}
+
+\subsubsection{Topology}
+
+\subsubsection{Self-similarity}
+
+\subsubsection{Psychology}
+
+%------------------------------------------------------------------------------%
+
+\section{Some Topics in Geometry \& Beyond}
+
+\begin{itemize}
+	\item \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/congruent_triangle/NQBH_congruent_triangle.pdf}{Congruent Triangles -- Các Tam Giác Bằng Nhau}.
+	\item \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/similar_triangle/NQBH_similar_triangle.pdf}{Similar Triangles -- Các Tam Giác Đồng Dạng}.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
