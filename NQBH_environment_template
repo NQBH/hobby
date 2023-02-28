@@ -17,6 +17,7 @@
 \newtheorem{hypothesis}{Hypothesis}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{luuy}{Lưu ý}[section]
+\newtheorem{menhde}{Mệnh đề}
 \newtheorem{nhanxet}{Nhận xét}[section]
 \newtheorem{notation}{Notation}[section]
 \newtheorem{note}{Note}[section]
