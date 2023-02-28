@@ -77,15 +77,35 @@ In mathematics the set of all numbers that can be expressed in the form $\frac{a
 \subsection{Khái niệm phân số}
 
 \begin{dinhnghia}[Phân số]
+	\label{def: fraction}
 	Kết quả của phép chia số nguyên $a$ cho số nguyên $b$ khác $0$ có thể viết dưới dạng $\frac{a}{b}$, gọi là \emph{phân số}. Ký hiệu: $\frac{a}{b}$, với $a,b\in\mathbb{Z}$, $b\ne0$.
 \end{dinhnghia}
 Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} (còn gọi tắt là \textit{tử}, $b$ là \textit{mẫu số} (còn gọi tắt là \textit{mẫu}). Mọi số nguyên $a\in\mathbb{Z}$ có thể viết ở dạng phân số là $\frac{a}{1}$, i.e., $a = \frac{a}{1}$, $\forall a\in\mathbb{Z}$.
 
-\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, p. 26]
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, 1, p. 26]
 	Viết \& đọc phân số trong mỗi trường hợp sau: (a) Tử là $11$, mẫu là $-3$. (b) Tử là $-7$, mẫu là $-5$. (c) Tử là $-6$, mẫu là $17$. (d) Tử là $-12$, mẫu là $-37$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Viết: $\frac{11}{-3}$, đọc: mười một phần âm ba. (b) Viết: $\frac{-7}{-5}$, đọc: âm bảy phần âm năm. (c) Viết: $\frac{-6}{17}$, đọc: âm sáu phần mười bảy. (d) Viết: $\frac{-12}{-37}$, đọc: âm mười hai phần âm ba mươi bảy.
+\end{proof}
 
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 2, p. 26]
+	Cách viết nào sau đây cho ta phân số: (a) $\frac{4}{-9}$; (b) $\frac{0.25}{9}$; (c) $\frac{-9}{0}$?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{4}{-9}$ là phân số. (b) $\frac{0.25}{9}$ không là phân số theo \ref{def: fraction} vì $0.25\notin\mathbb{Z}$. (c) $\frac{-9}{0}$ không là phân số, thậm chí không có nghĩa (về mặt toán học) vì là phép chia cho $0$.
+\end{proof}
+Mọi số nguyên $a$ đều có thể viết ở dạng phân số là $\frac{a}{1}$, i.e., $a = \frac{a}{1}$, $\forall a\in\mathbb{Z}$.
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 2, p. 26]
+	Viết mỗi số nguyên sau dưới dạng phân số: $19,-7,0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$19 = \frac{19}{1}$, $-7 = \frac{-7}{1}$, $0 = \frac{0}{1}$.
+\end{proof}
 
 \subsection{Phân số bằng nhau}
 
@@ -98,7 +118,126 @@ Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} 
 \end{dinhly}
 Với $a,b\in\mathbb{Z}$, $b\ne0$, luôn có: $\frac{a}{-b} = \frac{-a}{b}$ \& $\frac{-a}{-b} = \frac{a}{b}$.
 
-``Phân số có dạng $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$, có thể hiểu là phép chia số nguyên $a$ cho số nguyên $b$ khác $0$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$, $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Có $\frac{a}{b} = \frac{am}{bm}$, $\forall a,b,m\in\mathbb{Z}$, $bm\ne0$; $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b\in\mathbb{Z}$, $\forall n\in\mbox{ƯC}(a,b)$. \textit{Phân số tối giản} là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$.'' -- \cite[Chap. V, \S1, p. 29]{SBT_Toan_6_Canh_Dieu_tap_2}
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 3, 3, p. 27]
+	Các cặp phân số sau có bằng nhau không? Vì sao? (a) $\frac{3}{-7}$ \& $\frac{3}{7}$; (b) $\frac{2}{5}$ \& $\frac{4}{10}$; (c) $\frac{4}{8}$ \& $\frac{-1}{-2}$; (d) $\frac{1}{-6}$ \& $\frac{-3}{-18}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Vì $3\cdot7 = (-7)\cdot(-3) = 21$ nên $\frac{3}{-7} = \frac{3}{7}$. (b) Vì $2\cdot(-10)\ne5\cdot4$ ($-20\ne20$) nên $\frac{2}{5}\ne\frac{4}{10}$ne. (c) Vì $4\cdot(-2) = 8\cdot(-1) = -8$ nên $\frac{4}{8} = \frac{-1}{-2}$. (d) Vì $1\cdot(-18)\ne(-6)\cdot(-3)$ ($-18\ne18$) nên $\frac{1}{-6}\ne\frac{-3}{-18}$.
+\end{proof}
+
+\subsection{Tính chất cơ bản của phân số}
+
+\subsubsection{Tính chất cơ bản}
+
+\begin{dinhly}
+	Nếu ta nhân cả tử \& mẫu của 1 phân số với cùng 1 số nguyên khác $0$ thì ta được 1 phân số bằng phân số đã cho. Nếu ta chia cả tử \& mẫu của 1 phân số cho cùng 1 ước chung của chúng thì ta được 1 phân số bằng phân số đã cho.
+\end{dinhly}
+$\frac{a}{b} = \frac{am}{an}$, $\forall a,b,m\in\mathbb{Z}$, $bm\ne0$ (i.e., $b\ne0$ \& $m\ne0$). $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b\in\mathbb{Z}$, $\forall n\in\mbox{ƯC}(a,b)$. Mỗi phân số đều đưa được về 1 phân số bằng nó \& có mẫu là số dương.
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 4, p. 28]
+	Viết mỗi phân số sau thành phân số bằng nó \& có mẫu là số dương: (a) $\frac{3}{-5}$; (b) $\frac{-2}{-9}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Theo tính chất cơ bản của phân số: (a) $\frac{3}{-5} = \frac{3\cdot(-1)}{(-5)\cdot(-1)} = \frac{-3}{5}$. (b) $\frac{-2}{-9} = \frac{(-2)\cdot(-1)}{(-9)\cdot(-1)} = \frac{2}{9}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 4, p. 28]
+	Viết phân số sau thành phân số bằng nó \& có mẫu là số dương: $\frac{a}{-b}$, $a\in\mathbb{Z}$, $b\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Vì $b\in\mathbb{N}^\star$ nên $b > 0$. Theo tính chất cơ bản của phân số: $\frac{a}{-b} = \frac{a\cdot(-1)}{(-b)\cdot(-1)} = \frac{-a}{b}$.
+\end{proof}
+Nếu bỏ đi điều kiện $b\in\mathbb{N}^\star$ trong bài toán trên, ta được mở rộng sau:
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_6_Canh_Dieu_tap_2}, 4, p. 28]
+	Viết phân số sau thành phân số bằng nó \& có mẫu là số dương: $\frac{a}{-b}$, $a\in\mathbb{Z}$, $b\in\mathbb{Z}^\star\coloneqq\mathbb{Z}\backslash\{0\}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Nếu $b < 0$, phân số $\frac{a}{-b}$ đã có mẫu số dương $-b > 0$ nên không cần làm gì thêm. Nếu $b > 0$, theo bài toán trên: $\frac{a}{-b} = \frac{a\cdot(-1)}{(-b)\cdot(-1)} = \frac{-a}{b}$. Có thể viết gom 2 trường hợp này lại thành\footnote{Suy ra trực tiếp từ đẳng thức: $|x| = x\operatorname{sign}x$, $\forall x\in\mathbb{R}$. Giá trị tuyệt đối của 1 số thực bằng số đó nhân với hàm dấu của nó.}: $\frac{a}{-b} = \frac{a\operatorname{sign}b}{|b|}$ với $\operatorname{sign}b$ là hàm dấu\footnote{Hàm dấu của 1 số thực $x\in\mathbb{R}$ được xác định như sau:
+	\begin{equation*}
+		\operatorname{sign}x = \left\{\begin{split}
+			&1,&&\mbox{nếu } x > 0,\\
+			&0,&&\mbox{nếu } x = 0,\\
+			-&1,&&\mbox{nếu } x < 0.
+		\end{split}\right.
+	\end{equation*}} của $b$.
+\end{proof}
+
+\subsubsection{Rút gọn về phân số tối giản}
+
+\begin{dinhnghia}[Phân số tối giản]
+	\emph{Phân số tối giản} là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$.
+\end{dinhnghia}
+$\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$ là phân số tối giản $\Leftrightarrow\mbox{ƯC}(a,b) = \{\pm1\}\Leftrightarrow\mbox{ƯCLN}(a,b) = 1$.
+
+Dựa vào tính chất cơ bản của phân số, để rút gọn phân số với tử \& mẫu là số nguyên về phân số tối giản ta thường làm như sau: \textit{Bước 1}: Tìm ƯCLN của tử \& mẫu sau khi đã bỏ đi dấu ``$-$'' (nếu có). \textit{Bước 2}: Chia cả tử \& mẫu cho ƯCLN vừa tìm được, ta có phân số tối giản cần tìm.
+\begin{align*}
+	\frac{a}{b} = \frac{a:\mbox{ƯCLN}(a,b)}{b:\mbox{ƯCLN}(a,b)} = \frac{a:\mbox{ƯCLN}(a,b)\operatorname{sign}b}{|b|:\mbox{ƯCLN}(a,b)},\ \forall a,b\in\mathbb{Z},\,b\ne0.
+\end{align*}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 5, p. 28]
+	Rút gọn mỗi phân số sau về phân số tối giản: (a) $\frac{12}{-15}$; (b) $\frac{-24}{36}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\mbox{ƯCLN}(12,15) = 3$, $\frac{12}{-15} = \frac{12:3}{-15:3} = \frac{4}{-5}$. (b) $\mbox{ƯCLN}(24,36) = 12$, $\frac{-24}{36} = \frac{-24:12}{36:12} = \frac{-2}{3}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 6, p. 29]
+	(a) Rút gọn phân số $\frac{-2}{-6}$ về phân số tối giản. (b) Viết tất cả các phân số bằng phân số $\frac{-2}{-6}$ mà mẫu là số  tự nhiên có 1 chữ số.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\mbox{ƯCLN}(2,6) = 2$, $\frac{-2}{-6} = \frac{2}{6} = \frac{2:2}{6:2} = \frac{1}{3}$. (b) $\frac{-2}{-6} = \frac{1}{3}$, $\frac{1}{3} = \frac{1\cdot2}{3\cdot2} = \frac{2}{6}$, $\frac{1}{3} = \frac{1\cdot3}{3\cdot3} = \frac{3}{9}$. Vậy phân số $\frac{-2}{-6}$ bằng các phân số có mẫu là số tự nhiên có 1 chữ số: $\frac{1}{3},\frac{2}{6},\frac{3}{9}$.
+\end{proof}
+
+\subsubsection{Quy đồng mẫu nhiều phân số}
+Dựa vào tính chất cơ bản của phân số ta có thể quy đồng mẫu nhiều phân số có tử \& mẫu là số nguyên. Để quy đồng mẫu nhiều phân số, ta thường làm như sau: \textit{Bước 1}: Viết các phân số đã cho về phân số có mẫu dương. Tìm BCNN của các mẫu dương đó để làm mẫu chung. \textit{Bước 2}: Tìm thừa số phụ của mỗi mẫu (bằng cách chia mẫu chung cho từng mẫu). \textit{Bước 3}: Nhân tử \& mẫu của mỗi phân số ở \textit{Bước 1} với thừa số phụ tương ứng.
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 7, p. 29]
+	Quy đồng mẫu những phân số sau: (a) $\frac{-1}{2}$, $\frac{3}{-5}$; (b) $\frac{3}{-20},\frac{-7}{20},\frac{-11}{-30}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{3}{-5} = \frac{-3}{5}$, $\operatorname{BCNN}(2,5) = 10$, $10:2 = 5$, $10:5 = 2$. Vậy $\frac{-1}{2} = \frac{-1\cdot5}{2\cdot5} = \frac{-5}{10}$, $\frac{3}{-5} = \frac{-3}{5} = \frac{(-3)\cdot2}{5\cdot2} = \frac{-6}{10}$. (b) $\frac{3}{-20} = \frac{-3}{20}$, $\frac{-11}{-30} = \frac{11}{30}$, $\operatorname{BCNN}(20,15,30) = 60$, $60:20 = 3$, $60:15 = 4$, $60:30 = 2$. Vậy $\frac{3}{-20} = \frac{-3}{20} = \frac{-3\cdot3}{20\cdot3} = \frac{-9}{60}$, $\frac{-7}{15} = \frac{-7\cdot4}{15\cdot4} = \frac{-28}{60}$, $\frac{-11}{-30} = \frac{11}{30} = \frac{11\cdot2}{30\cdot2} = \frac{22}{60}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 5, p. 30]
+	Quy đồng mẫu những phân số sau: $\frac{-3}{8},\frac{2}{-3},\frac{3}{72}$.
+\end{baitoan}
+\noindent\textsf{\textbf{Tóm tắt kiến thức.}} ``Phân số có dạng $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$, có thể hiểu là phép chia số nguyên $a$ cho số nguyên $b$ khác $0$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$, $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Có $\frac{a}{b} = \frac{am}{bm}$, $\forall a,b,m\in\mathbb{Z}$, $bm\ne0$; $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b\in\mathbb{Z}$, $\forall n\in\mbox{ƯC}(a,b)$. \textit{Phân số tối giản} là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$.'' -- \cite[Chap. V, \S1, p. 29]{SBT_Toan_6_Canh_Dieu_tap_2}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 1., p. 30]
+	Viết \& đọc phân số trong mỗi trường hợp sau: (a) Tử số là $-43$, mẫu số là $19$; (b) Tử số là $-123$, mẫu số là $-63$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 2., p. 30]
+	Các cặp phân số sau có bằng nhau không? Vì sao? (a) $\frac{-2}{9},\frac{6}{-27}$;  (b) $\frac{-1}{-5},\frac{4}{25}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 3., p. 30]
+	Tìm $x\in\mathbb{Z}$ biết: (a) $\frac{-28}{35} = \frac{16}{x}$; (b) $\frac{x + 7}{15} = \frac{-24}{36}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 4., p. 30]
+	Rút gọn mỗi phân số sau về phân số tối giản: $\frac{14}{21},\frac{-36}{48},\frac{28}{-52},\frac{-54}{-90}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 5., p. 30]
+	(a) Rút gọn phân số $\frac{-21}{39}$ về phân số tối giản. (b) Viết tất cả các phân số bằng $\frac{-21}{39}$ mà mẫu là số tự nhiên có 2 chữ số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 6., p. 30]
+	Quy đồng mẫu những phân số sau: (a) $\frac{-5}{14},\frac{1}{-21}$; (b) $\frac{17}{60},\frac{-5}{18},\frac{-64}{90}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 7., p. 30]
+	Trong các phân số sau, tìm phân số không bằng phân số nào trong các phân số còn lại: $\frac{6}{25},\frac{-4}{50},\frac{-27}{54},\frac{-18}{-75},\frac{28}{-56}$.
+\end{baitoan}
 
 \begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, p. 29]
 	Viết tất cả các phân số $\frac{a}{b}$ biết $a,b$ được chọn trong các số: $-3,0,5$. Có tất cả bao nhiêu phân số?
