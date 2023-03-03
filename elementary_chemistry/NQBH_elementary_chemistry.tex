@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
+\usepackage[version=4]{mhchem}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+
+\title{Elementary Chemistry}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about \textit{hydrogen \& air}. This text is also a supplementary material for my lecture note on Elementary Chemistry grade 8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/hydrogen/NQBH_hydrogen.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}hydrogen}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/hydrogen/NQBH_hydrogen.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{oxi \& không khí}. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Hóa Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/hydrogen/NQBH_hydrogen.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}hydrogen}.
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{\href{https://en.wikipedia.org/wiki/Hydrogen}{Wikipedia\texttt{/}Hydrogen}}
+``\textit{Hydrogen} is the \href{https://en.wikipedia.org/wiki/Chemical_element}{chemical element} with the \href{https://en.wikipedia.org/wiki/Symbol_(chemistry)}{symbol} H \& \href{https://en.wikipedia.org/wiki/Atomic_number}{atomic number} 1. Hydrogen is the lightest element. At \href{https://en.wikipedia.org/wiki/Standard_temperature_and_pressure}{standard conditions} hydrogen is a \href{https://en.wikipedia.org/wiki/Gas}{gas} of \href{https://en.wikipedia.org/wiki/Diatomic_molecule}{diatomic moleculse} having the \href{https://en.wikipedia.org/wiki/Chemical_formula}{formula} \ce{H2}. It is \href{https://en.wikipedia.org/wiki/Transparency_(optics)}{colorless}, \href{https://en.wikipedia.org/wiki/Sense_of_smell}{odorless}, \href{https://en.wikipedia.org/wiki/Taste}{tasteless}, non-toxic, \& highly \href{https://en.wikipedia.org/wiki/Combustible}{combustible}. Hydrogen is the \href{https://en.wikipedia.org/wiki/Abundance_of_the_chemical_elements}{most abundant} chemical substance in the \href{https://en.wikipedia.org/wiki/Universe}{universe}, constituting roughly $75$\% of all \href{https://en.wikipedia.org/wiki/Baryon}{normal} \href{https://en.wikipedia.org/wiki/Matter}{matter}. \href{https://en.wikipedia.org/wiki/Star}{Stars} such as the \href{https://en.wikipedia.org/wiki/Sun}{Sun} are mainly composed of hydrogen in the \href{https://en.wikipedia.org/wiki/Plasma_state}{plasma state}. Most of the hydrogen on Earth exists in \href{https://en.wikipedia.org/wiki/Molecular_geometry}{molecular forms} such as \href{https://en.wikipedia.org/wiki/Water}{water} \& \href{https://en.wikipedia.org/wiki/Organic_compound}{organic compounds}. For the most common \href{https://en.wikipedia.org/wiki/Isotope}{isotope} of hydrogen (symbol \ce{^1H}) each \href{https://en.wikipedia.org/wiki/Atom}{atom} has 1 \href{https://en.wikipedia.org/wiki/Proton}{proton}, 1 \href{https://en.wikipedia.org/wiki/Electron}{electron}, \& no \href{https://en.wikipedia.org/wiki/Neutron}{neutrons}.
+
+In the early \href{https://en.wikipedia.org/wiki/Universe}{universe}, the formation of protons, the nuclei of hydrogen, occurred during the 1st second after the \href{https://en.wikipedia.org/wiki/Big_Bang}{Big Bang}. The emergence of neutral hydrogen atoms throughout the universe occurred about 370000 years later during the \href{https://en.wikipedia.org/wiki/Recombination_(cosmology)}{recombination epoch}, when the \href{https://en.wikipedia.org/wiki/Plasma_(physics)}{plasma} had cooled enough for \href{https://en.wikipedia.org/wiki/Electrons}{electrons} to remain bound to protons.
+
+Hydrogen is \href{https://en.wikipedia.org/wiki/Nonmetallic}{nonmetallic} (except it becomes \href{https://en.wikipedia.org/wiki/Metallic_hydrogen}{metallic} at extremely high pressures) \& readily forms a single \href{https://en.wikipedia.org/wiki/Covalent_bond}{covalent bond} with most nonmetallic elements, forming compounds such as water \& nearly all \href{https://en.wikipedia.org/wiki/Organic_compound}{organic compounds}. Hydrogen plays a particularly important role in \href{https://en.wikipedia.org/wiki/Acid%E2%80%93base_reaction}{acid--base reactions} because these reactions usually involve the exchange of protons between soluble molecules. In \href{https://en.wikipedia.org/wiki/Ionic_compound}{ionic compounds}, hydrogen can take the form of a negative charge (i.e., \href{https://en.wikipedia.org/wiki/Anion}{anion}) where it is known as a \href{https://en.wikipedia.org/wiki/Hydride}{hydride}, or as a positively charged (i.e., \href{https://en.wikipedia.org/wiki/Cation}{cation}) \href{https://en.wikipedia.org/wiki/Chemical_species}{species} denoted by the symbol \ce{H^+}. The \ce{H^+} cation is simply a \href{https://en.wikipedia.org/wiki/Proton}{proton} (symbol p) but its behavior in \href{https://en.wikipedia.org/wiki/Aqueous_solution}{aqueous solutions} \& in \href{https://en.wikipedia.org/wiki/Ionic_compound}{ionic compounds} involves \href{https://en.wikipedia.org/wiki/Electric-field_screening}{screeing} of its \href{https://en.wikipedia.org/wiki/Electric_charge}{electric charge} by nearby \href{https://en.wikipedia.org/wiki/Chemical_polarity}{polar} molecules or anions. Because hydrogen is the only neutral atom for which the \href{https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation}{Schr\"odinger equation} can be solved analytically, the study of its energetics \& chemical bonding has played a key role in the development of \href{https://en.wikipedia.org/wiki/Quantum_mechanics}{quantum mechanics}.
+
+Hydrogen gas was 1st artificially produced in the early 16th century by the reaction of acids on metals. In 1766--1781, \href{https://en.wikipedia.org/wiki/Henry_Cavendish}{Henry Cavendish} was the 1st to recognize that hydrogen gas was a discrete substance, \& that it produces water when burned, the property for which it was later named: in Greek, hydrogen means ``water-former''.
+
+\href{https://en.wikipedia.org/wiki/Hydrogen_production}{Industrial production} is mainly from \href{https://en.wikipedia.org/wiki/Steam_reforming}{steam reforming} of \href{https://en.wikipedia.org/wiki/Natural_gas}{natural gas}, oil reforming, or \href{https://en.wikipedia.org/wiki/Coal_gasification}{coal gasification}. A small percentage is also produced using more energy-intensive methods such as the \href{https://en.wikipedia.org/wiki/Electrolysis_of_water}{electrolysis of water}. Most hydrogen is used near the site of its production, the 2 largest uses being \href{https://en.wikipedia.org/wiki/Fossil_fuel}{fossil fuel} processing (e.g., \href{https://en.wikipedia.org/wiki/Hydrocracking}{hydrocracking}) \& \href{https://en.wikipedia.org/wiki/Ammonia}{ammonia} production, mostly for the fertilizer market. It can be burned to produce heat or combined with oxygen in \href{https://en.wikipedia.org/wiki/Fuel_cells}{fuel cells} to generate electricity directly, with water being the only emissions at the point of usage. Hydrogen atoms (but not gaseous molecules) are problematic in \href{https://en.wikipedia.org/wiki/Metallurgy}{metallurgy} because they can \href{https://en.wikipedia.org/wiki/Hydrogen_embrittlement}{embrittle} many metals.'' -- \href{https://en.wikipedia.org/wiki/Hydrogen}{Wikipedia\texttt{/}hydrogen}
+
+\subsection{Properties}
+
+\subsection{History}
+
+\subsection{Cosmic Prevalence \& Distribution}
+
+\subsection{Production}
+
+\subsection{Applications}
+
+\subsection{Biological Reactions}
+
+\subsection{Safety \& Precautions}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
