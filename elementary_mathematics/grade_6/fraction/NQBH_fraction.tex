@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,xfrac}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -22,6 +22,7 @@
 \newtheorem{hypothesis}{Hypothesis}
 \newtheorem{lemma}{Lemma}
 \newtheorem{luuy}{Lưu ý}
+\newtheorem{menhde}{Mệnh đề}
 \newtheorem{nhanxet}{Nhận xét}
 \newtheorem{notation}{Notation}
 \newtheorem{note}{Note}
@@ -38,7 +39,7 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 
-\title{Fraction -- Phân Số}
+\title{Fraction -- Phân Số $\mathbb{Q}$}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
@@ -55,21 +56,6 @@
 \tableofcontents
 \newpage
 
-%------------------------------------------------------------------------------%
-
-\section{\href{https://en.wikipedia.org/wiki/Fraction}{Wikipedia\texttt{/}Fraction}}
-``A \textit{fraction} (from Latin: \textit{fractus}, ``broken'') represents a part of a whole or, more generally, any number of equal parts. When spoken in everyday English, a fraction describes how many parts of a certain size there are, e.g., one-half $\frac{1}{2}$, eight-fifths $\frac{8}{5}$, three-quarters $\frac{3}{4}$. A \textit{common, vulgar}, or \textit{simple} fraction (e.g., $\frac{1}{2},\frac{17}{3}$) consists of a \textit{numerator}, displayed above a line (or before a slash like 1\texttt{/}2), \& a nonzero \textit{denominator}, displayed below (or after) that line. Numerators \& denominators are also used in fractions that are not \textit{common}, including compound fractions, complex fractions, \& mixed numerals.
-
-In positive common fractions, the numerator \& denominator are \href{https://en.wikipedia.org/wiki/Natural_number}{natural numbers}, i.e., $\frac{a}{b} > 0$, with $a,b\in\mathbb{N}$, $b\ne0$. The numerator represents a number of equal parts, \& the denominator indicates how many of those parts make up a unit or a whole. The denominator cannot be zero, because zero parts can never make up a whole. E.g., in the fraction $\frac{3}{4}$, the numerator 3 indicates that the fraction represents 3 equal parts, \& the denominator 4 indicates that 4 parts make up a whole.
-
-A common fraction is a numeral which represents a \href{https://en.wikipedia.org/wiki/Rational_number}{rational number} $r\in\mathbb{Q}$. That same number can also be represented as a \href{https://en.wikipedia.org/wiki/Decimal}{decimal}, a percent, or with a negative \href{https://en.wikipedia.org/wiki/Exponentiation}{exponent}. E.g., $0.01$, 1\%, \& $10^{-2}$ are all equal to the fraction $\frac{1}{100}$. An \href{https://en.wikipedia.org/wiki/Integer}{integer} can be thought of as having an implicit denominator of 1 (e.g., $7 = \frac{7}{1}$).
-
-Other uses for fractions are to represent \href{https://en.wikipedia.org/wiki/Ratio}{ratios} \& \href{https://en.wikipedia.org/wiki/Division_(mathematics)}{division}. Thus the fraction $\frac{3}{4}$ can also be used to represent the ratio 3:4 (the ratio of the part to the whole), \& the division $3\div4$ (3 divided by 4). The nonzero denominator rule, which applies when representing a division as a fraction, is an example of the rule that \href{https://en.wikipedia.org/wiki/Division_by_zero}{division by zero} is undefined.
-
-We can also write negative fractions, which represent the opposite of a positive fraction. E.g., if $\frac{1}{2}$ represents a half-dollar profit, then $-\frac{1}{2}$ represents a half-dollar loss. Because of the rules of division of signed numbers (which states in part that negative divided by positive is negative), $-\frac{1}{2},\frac{-1}{2}$, \& $\frac{1}{-2}$ all represent the same fraction -- negative one-half. \& because a negative divided by a negative produces a positive, $\frac{-1}{-2}$ represents positive one-half.
-
-In mathematics the set of all numbers that can be expressed in the form $\frac{a}{b}$, where $a,b\in\mathbb{Z}$, $b\ne0$, is called the set of rational numbers \& is represented by the symbol $\mathbb{Q}$, which stands for \href{https://en.wikipedia.org/wiki/Quotient}{quotient}. A number is a rational number precisely when it can be written in that form (i.e., as a common fraction). However, the word \textit{fraction} can also be used to describe mathematical expressions that are not rational numbers. Examples of these usages include \href{https://en.wikipedia.org/wiki/Algebraic_fraction}{algebraic fractions} (quotients of algebraic expressions), \& expressions that contain \href{https://en.wikipedia.org/wiki/Irrational_number}{irrational numbers}, e.g., $\frac{\sqrt{2}}{2}$ (see \href{https://en.wikipedia.org/wiki/Square_root_of_2}{square root of 2}) \& $\frac{\pi}{4}$ (se \href{https://en.wikipedia.org/wiki/Proof_that_%CF%80_is_irrational}{proof that $\pi$ is irrational}).'' -- \href{https://en.wikipedia.org/wiki/Fraction}{Wikipedia\texttt{/}fraction}
- 
 %------------------------------------------------------------------------------%
 
 \section{Phân Số với Tử \& Mẫu Là Số Nguyên}
@@ -95,7 +81,7 @@ Phân số $\frac{a}{b}$ đọc là: $a$ phần $b$, $a$ là \textit{tử số} 
 \end{baitoan}
 
 \begin{proof}[Giải]
-	(a) $\frac{4}{-9}$ là phân số. (b) $\frac{0.25}{9}$ không là phân số theo \ref{def: fraction} vì $0.25\notin\mathbb{Z}$. (c) $\frac{-9}{0}$ không là phân số, thậm chí không có nghĩa (về mặt toán học) vì là phép chia cho $0$.
+	(a) $\frac{4}{-9}$ là phân số. (b) $\frac{0.25}{9}$ không là phân số theo \ref{def: fraction} vì $0.25\notin\mathbb{Z}$. (c) $\frac{-9}{0}$ không là phân số, thậm chí không có nghĩa (về mặt toán học) vì phép chia cho $0$ không có nghĩa.
 \end{proof}
 Mọi số nguyên $a$ đều có thể viết ở dạng phân số là $\frac{a}{1}$, i.e., $a = \frac{a}{1}$, $\forall a\in\mathbb{Z}$.
 
@@ -439,7 +425,7 @@ Dựa vào tính chất cơ bản của phân số ta có thể quy đồng mẫ
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 2., p. 6]
-	Chứng minh các phân số sau có giá trị lfa số tự nhiên: (a) $\frac{10^{2002} + 2}{3}$; (b) $\frac{10^{2003} + 8}{9}$.
+	Chứng minh các phân số sau có giá trị là số tự nhiên: (a) $\frac{10^{2002} + 2}{3}$; (b) $\frac{10^{2003} + 8}{9}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 3., p. 6]
@@ -525,6 +511,23 @@ Trong 2 số nguyên $a,b\in\mathbb{Z}$ khác nhau ($a\ne b$), luôn có 1 số 
 \begin{align*}
 	\left(\frac{a}{b} < \frac{c}{d}\right)\land\left(\frac{c}{d} < \frac{e}{f}\right)\Rightarrow\frac{a}{b} < \frac{e}{f},\ \forall a,b,c,d,e,f\in\mathbb{Z},\,bd\ne0.
 \end{align*}
+Cách so sánh 2 phân số: \textit{Bước 1}: Quy đồng mẫu 2 phân số đã cho (về cùng 1 mẫu dương). \textit{Bước 2}: So sánh tử của các phân số: Phân số nào có tử lớn hơn thì lớn hơn.
+
+\begin{menhde}
+	Để so sánh 2 phân số không cùng mẫu, ta quy đồng mẫu 2 phân số đó (về cùng 1 mẫu dương) rồi so sánh các tử với nhau: Phân số nào có tử lớn hơn thì phân số đó lớn hơn.
+\end{menhde}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_2}, Ví dụ 1, 1, p. 32]
+	 So sánh: (a) $\frac{5}{-9}$ \& $\frac{2}{-9}$; (b) $\frac{5}{-6}$ \& $\frac{-6}{7}$; (c) $\frac{7}{-11}$ \& $\frac{8}{-11}$; (d) $\frac{-5}{3}$ \& $\frac{5}{-4}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{5}{-9} = \frac{-5}{9}$, $\frac{2}{-9} = \frac{-2}{9}$. Vì $-5 < -2$ nên $\frac{-5}{9} < \frac{-2}{9}$. Vậy $\frac{5}{-9} < \frac{2}{-9}$. (b) 
+\end{proof}
+
+
+
+
 ``\textbf{1.} \textit{Quy tắc quy đồng mẫu nhiều phân số với mẫu dương}: \textit{Bước 1.} Tìm BCNN của các mẫu để làm mẫu chung. \textit{Bước 2.} Tìm thừa số phụ của mỗi mẫu. \textit{Bước 3.} Nhân tử \& mẫu của mỗi phân số với thừa số phụ tương ứng. \textbf{2.} \textit{So sánh 2 phân số}: Muốn so sánh 2 phân số không cùng mẫu ta viết chúng dưới dạng 2 phân số có cùng mẫu dương rồi so sánh các tử với nhau, phân số nào có tử lớn hơn thì phân số đó lớn hơn. \textbf{3.} \textit{Hỗn số dương}: 1 phân số lớn hơn 1 có thể viết dưới dạng 1 hỗn số. Đó là 1 số gồm phần nguyên kèm theo 1 phân số nhỏ hơn 1. \textbf{4.} Trong 2 phân số có tử \& mẫu đều dương, nếu 2 tử số bằng nhau, phân số nào có mẫu nhỏ hơn thì phân số đó sẽ lớn hơn \& ngược lại. \textbf{5.} Phân số có tử \& mẫu là 2 số nguyên cùng dấu thì lớn hơn 0 \& gọi là \textit{phân số dương}. Phân số có tử \& mẫu là 2 số nguyên khác dấu thì nhỏ hơn 0 \& gọi là \textit{phân số âm}.'' -- \cite[Chap. III, \S2, p. 48]{Tuyen_Toan_6}
 
 ``Để so sánh 2 phân số có tử \& mẫu đều dương, ngoài cách quy đồng tử hoặc quy đồng mẫu, người ta thường dùng 1 phân số trung gian \& sử dụng tính chất bắc cầu của bất đẳng thức.
@@ -629,6 +632,72 @@ Thường sử dụng các tính chất sau: (a) Trong 2 phân số cùng tử, 
 %------------------------------------------------------------------------------%
 
 \section{$\pm$ Phân Số}
+
+\subsection{Quy tắc cộng phân số}
+
+\begin{menhde}[Cộng các phân số cùng mẫu]
+	Muốn cộng 2 hay nhiều phân số có cùng mẫu, ta cộng các tử \& giữ nguyên các mẫu:
+	\begin{align*}
+		\frac{a}{m} + \frac{b}{m} &= \frac{a + b}{m},\ \forall a,b,m\in\mathbb{Z},\,b\ne0,\\
+		\sum_{i=1}^n \frac{a_i}{b} = \frac{a_1}{b} + \frac{a_2}{b} + \cdots + \frac{a_n}{b} &= \frac{a_1 + a_2 + \cdots + a_n}{b} = \frac{\sum_{i=1}^n a_i}{b},\ \forall a_i,b\in\mathbb{Z},\ \forall i = 1,2,\ldots,n,\,b\ne0.
+	\end{align*}
+\end{menhde}
+
+\begin{vidu}
+	(a) $\frac{1}{5} + \frac{3}{5} = \frac{1 + 3}{5} = \frac{4}{5}$. (b) $\frac{-1}{5} + \frac{3}{5} = \frac{-1 + 3}{5} = \frac{2}{5}$. (c) $\frac{2}{-3} + \frac{-7}{-3} = \frac{2 + (-7)}{-3} = \frac{-5}{-3} = \frac{5}{3}$.
+\end{vidu}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 1, p. 34]
+	Tính: $\frac{11}{-9} + \frac{5}{-6}$.
+\end{baitoan}
+\noindent\textit{Hint.} Trước hết, chuyển các mẫu âm của các phân số này thành mẫu dương bằng quy tắc $\frac{a}{-b} = \frac{-a}{b} = -\frac{a}{b}$, rồi quy đồng mẫu số để 2 phân số có cùng mẫu, rồi cộng 2 phân số theo quy tắc cộng 2 phân số có cùng mẫu.
+
+\begin{proof}[Giải]
+	Quy đồng mẫu 2 phân số trước hết, chuyển các phân số về mẫu dương: $\frac{11}{-9} = \frac{-11}{9}$, $\frac{5}{-6} = \frac{-5}{6}$, $\operatorname{BCNN}(9,6) = 18$, $18:9 = 2$, $18:6 = 3$. $\frac{11}{-9} = \frac{-11\cdot2}{9\cdot2} = \frac{-22}{18}$, $\frac{5}{-6} = \frac{-5\cdot3}{6\cdot3} = \frac{-15}{18}$. Suy ra $\frac{11}{-9} + \frac{5}{-6} = \frac{-22}{18} + \frac{-15}{18} = \frac{-22 + (-15)}{18} = \frac{-37}{18}$. Vậy $\frac{11}{-9} + \frac{5}{-6} = \frac{-37}{18}$.
+\end{proof}
+
+\begin{luuy}
+	Khi tính toán với các phân số, luôn chuyển các mẫu âm thành các mẫu dương bằng cách sử dụng công thức: $\frac{a}{-b} = \frac{-a}{b} = -\frac{a}{b}$, $\forall a,b\in\mathbb{Z}$, $b\ne0$.
+\end{luuy}
+
+\begin{menhde}[Cộng các phân số khác mẫu]
+	Muốn cộng 2 hay nhiều phân số không cùng mẫu, ta quy đồng mẫu những phân số đó rồi cộng các tử \& giữ nguyên mẫu chung.
+	\begin{align*}
+		\frac{a}{b} + \frac{c}{d} &= \frac{a\cdot\frac{\operatorname{BCNN}(b,d)}{b}}{\operatorname{BCNN}(b,d)} + \frac{c\cdot\frac{\operatorname{BCNN}(b,d)}{d}}{\operatorname{BCNN}(b,d)} = \frac{a\cdot\frac{\operatorname{BCNN}(b,d)}{b} + c\cdot\frac{\operatorname{BCNN}(b,d)}{d}}{\operatorname{BCNN}(b,d)},\ \forall a,b,c,d\in\mathbb{Z},\,bd\ne0,\\
+		\sum_{i=1}^n \frac{a_i}{b_i} &= \sum_{i=1}^n \frac{a_i\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)} = \frac{\sum_{i=1}^n a_i\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_i}}{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)},\ \forall a_i,b_i\in\mathbb{Z},\,b_i\ne0,\ \forall i = 1,2,\ldots,n.
+	\end{align*}
+\end{menhde}
+Công thức này nhìn lướt qua có vẻ phức tạp nhưng thực ra dễ hiểu bằng cách chú ý ở phân số $\frac{a}{b}$, ta đã nhân cả tử \& mẫu cho \textit{thừa số phụ} $\frac{\operatorname{BCNN}(b,d)}{b}$, còn ở phân số $\frac{c}{d}$, ta đã nhân cả tử \& mẫu cho \textit{thừa số phụ} $\frac{\operatorname{BCNN}(b,d)}{d}$. Không dùng ký hiệu tổng $\sigma$, công thức thứ 2 có thể viết cụ thể hơn như sau:
+\begin{align*}
+	\frac{a_1}{b_1} + \frac{a_2}{b_2} + \cdots + \frac{a_n}{b_n} &= \frac{a_1\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_1}}{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)} + \frac{a_2\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_2}}{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)} + \cdots + \frac{a_n\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}\\
+	&= \frac{a_1\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_1} + a_2\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_2} + \cdots + a_n\cdot\frac{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)}{b_n}}{\operatorname{BCNN}(b_1,b_2,\ldots,b_n)},\ \forall a_i,b_i\in\mathbb{Z},\,b_i\ne0,\ \forall i = 1,2,\ldots,n.
+\end{align*}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, 1, p. 35]
+	Tính: (a) $\frac{2}{3} + \frac{2}{-3}$; (b) $\frac{-5}{6} + \frac{-3}{8}$; (c) $\frac{-3}{7} + \frac{2}{7}$; (d) $\frac{-4}{9} + \frac{2}{-3}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{2}{3} + \frac{2}{-3} = \frac{2}{3} + \frac{-2}{3} = \frac{2 + (-2)}{3} = \frac{0}{3} = 0$. (b) $\frac{-5}{6} + \frac{-3}{8} = \frac{-5\cdot4}{6\cdot4} + \frac{-3\cdot3}{8\cdot3} = \frac{-20}{24} + \frac{-9}{24} = \frac{-20 - 9}{24} = \frac{-29}{24}$. (c) $\frac{-3}{7} + \frac{2}{7} = \frac{-3 + 2}{7} = \frac{-1}{7}$. (d) $\frac{-4}{9} + \frac{2}{-3} = \frac{-4}{9} + \frac{-2}{3} = \frac{-4}{9} + \frac{-2\cdot3}{3\cdot3} = \frac{-4}{9} + \frac{-6}{9} = \frac{-4 - 6}{9} = \frac{-10}{9}$.
+\end{proof}
+
+\subsection{Tính chất của phép cộng phân số}
+Giống như phép cộng số tự nhiên, phép cộng phân số cũng có các tính chất: giao hoán, kết hợp, cộng với số 0:
+\begin{itemize}
+	\item \textit{Giao hoán}: $\frac{a}{b} + \frac{c}{d} = \frac{c}{d} + \frac{a}{b}$, $\forall a,b,c,d\in\mathbb{Z}$, $bd\ne0$. (Chú ý $bd\ne0\Leftrightarrow b\ne0$ \& $d\ne0$.)
+	\item \textit{Kết hợp}: $\left(\frac{a}{b} + \frac{c}{d}\right) + \frac{e}{f} = \frac{a}{b} + \left(\frac{c}{d} + \frac{e}{f}\right)$, $\forall a,b,c,d,e,f\in\mathbb{Z}$, $bdf\ne0$. (Chú ý $bdf\ne0\Leftrightarrow b\ne0$ \& $d\ne0$ \& $f\ne0$.)
+	\item \textit{Cộng với số $0$}: $\frac{a}{b} + 0 = \frac{a}{b}$, $\forall a,b\in\mathbb{Z}$, $b\ne0$.
+\end{itemize}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 2, 2, p. 35]
+	Tính hợp lý: (a) $\frac{3}{13} + \frac{-3}{7} + \frac{10}{13} + \frac{-4}{7}$. (b) $\frac{-5}{9} + \frac{4}{11} + \frac{7}{11}$. (c) $\frac{-2}{5} + \frac{3}{8} + \frac{-3}{5} + \frac{13}{8}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\frac{3}{13} + \frac{-3}{7} + \frac{10}{13} + \frac{-4}{7} = \frac{3}{13} + \frac{10}{13} + \frac{-3}{7} + \frac{-4}{7} = \left(\frac{3}{13} + \frac{10}{13}\right) + \left(\frac{-3}{7} + \frac{-4}{7}\right) = \frac{3 + 10}{13} + \frac{-3 + (-4)}{7} = 1 + (-1) = 0$. (b) $\frac{-5}{9} + \frac{4}{11} + \frac{7}{11} = \frac{-5}{9} + \left(\frac{4}{11} + \frac{7}{11}\right) = \frac{-5}{9} + \frac{4 + 7}{11} = \frac{-5}{9} + \frac{11}{11} = \frac{-5}{9} + 1 = \frac{-5}{9} + \frac{9}{9} = \frac{-5 + 9}{9} = \frac{4}{9}$. (c) $\frac{-2}{5} + \frac{3}{8} + \frac{-3}{5} + \frac{13}{8} = \frac{-2}{5} + \frac{-3}{5} + \frac{3}{8} + \frac{13}{8} = \left(\frac{-2}{5} + \frac{-3}{5}\right) + \left(\frac{3}{8} + \frac{13}{8}\right) = \frac{-2 + (-3)}{5} + \frac{3 + 13}{8} = \frac{-5}{5} + \frac{16}{8} = -1 + 2 = 1$.
+\end{proof}
+
+\subsection{$-$ Phân Số}
 
 %------------------------------------------------------------------------------%
 
