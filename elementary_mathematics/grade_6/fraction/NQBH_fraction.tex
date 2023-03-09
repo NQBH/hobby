@@ -54,13 +54,20 @@
 	\textsf{\textbf{Nội dung.} Phân số với tử \& mẫu là số nguyên; các phép tính với phân số; số thập phân; các phép tính với số thập phân; tỷ số, tỷ số phần trăm, làm tròn số.}
 \end{abstract}
 \tableofcontents
-\newpage
 
 %------------------------------------------------------------------------------%
 
 \section{Phân Số với Tử \& Mẫu Là Số Nguyên}
 
 \subsection{Khái niệm phân số}
+
+\begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, p. 25]
+	1 tòa nhà chung cư có 3 tầng hầm được ký hiệu theo thứ tự từ trên xuống là B1, B2, B3. Độ cao của 3 tầng hầm bằng nhau. Biết độ cao của mặt sàn tầng hầm B3 so với mặt đất là $-10$\emph{m}. Tính độ cao của mặt sàn tầng hầm B1 so với mặt đất.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Độ cao của mặt sàn tầng hầm B1 so với mặt đất bằng $-10:3 = \frac{10}{3}$m.
+\end{proof}
 
 \begin{dinhnghia}[Phân số]
 	\label{def: fraction}
@@ -93,14 +100,24 @@ Mọi số nguyên $a$ đều có thể viết ở dạng phân số là $\frac{
 	$19 = \frac{19}{1}$, $-7 = \frac{-7}{1}$, $0 = \frac{0}{1}$.
 \end{proof}
 
+\begin{luuy}[$0\in\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}$]
+	$0$ là 1 số nguyên nên $0$ có thể viết được dưới dạng phân số là $\frac{0}{1}$.
+\end{luuy}
+
 \subsection{Phân số bằng nhau}
 
 \begin{dinhnghia}[2 phân số bằng nhau]
 	2 phân số được gọi là \emph{bằng nhau} nếu chúng cùng biểu diễn 1 giá trị.
 \end{dinhnghia}
 
-\begin{dinhly}
+\begin{dinhly}[Quy tắc bằng nhau của 2 phân số]
 	Xét 2 phân số $\frac{a}{b}$ \& $\frac{c}{d}$, với $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$.
+	\begin{equation*}
+		\boxed{\frac{a}{b} = \frac{c}{d}\Leftrightarrow\left\{\begin{split}
+			bd&\ne0,\\
+			ad &= bc.
+		\end{split}\right.}
+	\end{equation*}
 \end{dinhly}
 Với $a,b\in\mathbb{Z}$, $b\ne0$, luôn có: $\frac{a}{-b} = \frac{-a}{b}$ \& $\frac{-a}{-b} = \frac{a}{b}$.
 
@@ -109,17 +126,26 @@ Với $a,b\in\mathbb{Z}$, $b\ne0$, luôn có: $\frac{a}{-b} = \frac{-a}{b}$ \& $
 \end{baitoan}
 
 \begin{proof}[Giải]
-	(a) Vì $3\cdot7 = (-7)\cdot(-3) = 21$ nên $\frac{3}{-7} = \frac{3}{7}$. (b) Vì $2\cdot(-10)\ne5\cdot4$ ($-20\ne20$) nên $\frac{2}{5}\ne\frac{4}{10}$ne. (c) Vì $4\cdot(-2) = 8\cdot(-1) = -8$ nên $\frac{4}{8} = \frac{-1}{-2}$. (d) Vì $1\cdot(-18)\ne(-6)\cdot(-3)$ ($-18\ne18$) nên $\frac{1}{-6}\ne\frac{-3}{-18}$.
+	(a) Vì $3\cdot7 = (-7)\cdot(-3) = 21$ nên $\frac{3}{-7} = \frac{3}{7}$. (b) Vì $2\cdot(-10)\ne5\cdot4$ (vì $-20\ne20$) nên $\frac{2}{5}\ne\frac{4}{10}$. (c) Vì $4\cdot(-2) = 8\cdot(-1) = -8$ nên $\frac{4}{8} = \frac{-1}{-2}$. (d) Vì $1\cdot(-18)\ne(-6)\cdot(-3)$ (vì $-18\ne18$) nên $\frac{1}{-6}\ne\frac{-3}{-18}$.
 \end{proof}
 
 \subsection{Tính chất cơ bản của phân số}
 
 \subsubsection{Tính chất cơ bản}
 
-\begin{dinhly}
+\begin{dinhly}[Tính chất cơ bản của phân số]
 	Nếu ta nhân cả tử \& mẫu của 1 phân số với cùng 1 số nguyên khác $0$ thì ta được 1 phân số bằng phân số đã cho. Nếu ta chia cả tử \& mẫu của 1 phân số cho cùng 1 ước chung của chúng thì ta được 1 phân số bằng phân số đã cho.
+	\begin{align*}
+		\boxed{\frac{a}{b} = \frac{am}{an},\ \forall a,b,m\in\mathbb{Z},\,bm\ne0,\ \frac{a}{b} = \frac{a:n}{b:n},\ \forall a,b\in\mathbb{Z},\,b\ne0,\ \forall n\in\mbox{\rm ƯC}(a,b).}
+	\end{align*}
 \end{dinhly}
-$\frac{a}{b} = \frac{am}{an}$, $\forall a,b,m\in\mathbb{Z}$, $bm\ne0$ (i.e., $b\ne0$ \& $m\ne0$). $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b\in\mathbb{Z}$, $\forall n\in\mbox{ƯC}(a,b)$. Mỗi phân số đều đưa được về 1 phân số bằng nó \& có mẫu là số dương.
+Mỗi phân số đều đưa được về 1 phân số bằng nó \& có mẫu là số dương.
+\begin{equation*}
+	\frac{a}{b} = \frac{a\operatorname{sign}b}{|b|} = \left\{\begin{split}
+		&\frac{a}{b},&&\mbox{nếu } b > 0,\\
+		&\frac{-a}{-b},&&\mbox{nếu } b < 0.
+	\end{split}\right.
+\end{equation*}
 
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 4, p. 28]
 	Viết mỗi phân số sau thành phân số bằng nó \& có mẫu là số dương: (a) $\frac{3}{-5}$; (b) $\frac{-2}{-9}$.
@@ -158,7 +184,7 @@ Nếu bỏ đi điều kiện $b\in\mathbb{N}^\star$ trong bài toán trên, ta 
 \begin{dinhnghia}[Phân số tối giản]
 	\emph{Phân số tối giản} là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$.
 \end{dinhnghia}
-$\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$ là phân số tối giản $\Leftrightarrow\mbox{ƯC}(a,b) = \{\pm1\}\Leftrightarrow\mbox{ƯCLN}(a,b) = 1$.
+$\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$ là phân số tối giản $\Leftrightarrow\mbox{ƯC}(a,b) = \{\pm1\}\Leftrightarrow\mbox{ƯCLN}(a,b) = 1\Leftrightarrow|\mbox{ƯC}(a,b)\cap\mathbb{N}| = 1\Leftrightarrow|\mbox{ƯC}(a,b)\cap\mathbb{Z}| = 2$.
 
 Dựa vào tính chất cơ bản của phân số, để rút gọn phân số với tử \& mẫu là số nguyên về phân số tối giản ta thường làm như sau: \textit{Bước 1}: Tìm ƯCLN của tử \& mẫu sau khi đã bỏ đi dấu ``$-$'' (nếu có). \textit{Bước 2}: Chia cả tử \& mẫu cho ƯCLN vừa tìm được, ta có phân số tối giản cần tìm.
 \begin{align*}
@@ -174,7 +200,7 @@ Dựa vào tính chất cơ bản của phân số, để rút gọn phân số 
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, Ví dụ 6, p. 29]
-	(a) Rút gọn phân số $\frac{-2}{-6}$ về phân số tối giản. (b) Viết tất cả các phân số bằng phân số $\frac{-2}{-6}$ mà mẫu là số  tự nhiên có 1 chữ số.
+	(a) Rút gọn phân số $\frac{-2}{-6}$ về phân số tối giản. (b) Viết tất cả các phân số bằng phân số $\frac{-2}{-6}$ mà mẫu là số tự nhiên có 1 chữ số.
 \end{baitoan}
 
 \begin{proof}[Giải]
@@ -189,41 +215,87 @@ Dựa vào tính chất cơ bản của phân số ta có thể quy đồng mẫ
 \end{baitoan}
 
 \begin{proof}[Giải]
-	(a) $\frac{3}{-5} = \frac{-3}{5}$, $\operatorname{BCNN}(2,5) = 10$, $10:2 = 5$, $10:5 = 2$. Vậy $\frac{-1}{2} = \frac{-1\cdot5}{2\cdot5} = \frac{-5}{10}$, $\frac{3}{-5} = \frac{-3}{5} = \frac{(-3)\cdot2}{5\cdot2} = \frac{-6}{10}$. (b) $\frac{3}{-20} = \frac{-3}{20}$, $\frac{-11}{-30} = \frac{11}{30}$, $\operatorname{BCNN}(20,15,30) = 60$, $60:20 = 3$, $60:15 = 4$, $60:30 = 2$. Vậy $\frac{3}{-20} = \frac{-3}{20} = \frac{-3\cdot3}{20\cdot3} = \frac{-9}{60}$, $\frac{-7}{15} = \frac{-7\cdot4}{15\cdot4} = \frac{-28}{60}$, $\frac{-11}{-30} = \frac{11}{30} = \frac{11\cdot2}{30\cdot2} = \frac{22}{60}$.
+	(a) $\frac{3}{-5} = \frac{-3}{5}$, $\operatorname{BCNN}(2,5) = 10$, $10:2 = 5$, $10:5 = 2$. Quy đồng: $\frac{-1}{2} = \frac{-1\cdot5}{2\cdot5} = \frac{-5}{10}$, $\frac{3}{-5} = \frac{-3}{5} = \frac{(-3)\cdot2}{5\cdot2} = \frac{-6}{10}$. (b) $\frac{3}{-20} = \frac{-3}{20}$, $\frac{-11}{-30} = \frac{11}{30}$, $\operatorname{BCNN}(20,15,30) = 60$, $60:20 = 3$, $60:15 = 4$, $60:30 = 2$. Vậy $\frac{3}{-20} = \frac{-3}{20} = \frac{-3\cdot3}{20\cdot3} = \frac{-9}{60}$, $\frac{-7}{15} = \frac{-7\cdot4}{15\cdot4} = \frac{-28}{60}$, $\frac{-11}{-30} = \frac{11}{30} = \frac{11\cdot2}{30\cdot2} = \frac{22}{60}$.
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 5, p. 30]
 	Quy đồng mẫu những phân số sau: $\frac{-3}{8},\frac{2}{-3},\frac{3}{72}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$\frac{2}{-3} = \frac{-2}{3}$, $\operatorname{BCNN}(8,3,72) = 72$ (vì $72\divby8$ \& $72\divby 3$), $72:8 = 9$, $72:3 = 24$. Quy đồng: $\frac{-3}{8} = \frac{-3\cdot9}{8\cdot9} = \frac{-27}{72}$, $\frac{-2}{3} = \frac{-2\cdot24}{3\cdot24} = \frac{-48}{72}$, $\frac{3}{72}$ (không cần quy đồng vì mẫu đã là mẫu chung). Vậy $\frac{-3}{8} = \frac{-27}{72}$, $\frac{2}{-3} = \frac{-48}{72}$, $\frac{3}{72}$.
+\end{proof}
 \noindent\textsf{\textbf{Tóm tắt kiến thức.}} ``Phân số có dạng $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$, có thể hiểu là phép chia số nguyên $a$ cho số nguyên $b$ khác $0$. Nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. Ngược lại, nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$, $a,b,c,d\in\mathbb{Z}$, $bd\ne0$. Có $\frac{a}{b} = \frac{am}{bm}$, $\forall a,b,m\in\mathbb{Z}$, $bm\ne0$; $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b\in\mathbb{Z}$, $\forall n\in\mbox{ƯC}(a,b)$. \textit{Phân số tối giản} là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$.'' -- \cite[Chap. V, \S1, p. 29]{SBT_Toan_6_Canh_Dieu_tap_2}
 
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 1., p. 30]
 	Viết \& đọc phân số trong mỗi trường hợp sau: (a) Tử số là $-43$, mẫu số là $19$; (b) Tử số là $-123$, mẫu số là $-63$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Viết: $\frac{-43}{19}$, đọc: âm bốn mươi ba phần mười chín. (b) Viết: $\frac{-123}{-63}$, đọc: âm một trăm hai mươi ba phần âm sáu mươi ba. (\textit{Chú ý}: Bài toán này chỉ yêu cầu viết \& đọc, không yêu cầu \textit{chuyển về mẫu dương} hay \textit{rút gọn phân số}).
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 2., p. 30]
 	Các cặp phân số sau có bằng nhau không? Vì sao? (a) $\frac{-2}{9},\frac{6}{-27}$;  (b) $\frac{-1}{-5},\frac{4}{25}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Vì $-2\cdot(-27) = 9\cdot6 = 54$ nên $\frac{-2}{9} = \frac{6}{-27}$. (b) Vì $-1\cdot25\ne-5\cdot4$ (vì $-25\ne-20$) nên $\frac{-1}{-5}\ne\frac{4}{25}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 3., p. 30]
-	Tìm $x\in\mathbb{Z}$ biết: (a) $\frac{-28}{35} = \frac{16}{x}$; (b) $\frac{x + 7}{15} = \frac{-24}{36}$.	
+	Tìm $x\in\mathbb{Z}$ biết: (a) $\frac{-28}{35} = \frac{16}{x}$; (b) $\frac{x + 7}{15} = \frac{-24}{36}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a)$\frac{-28}{35} = \frac{16}{x}\Leftrightarrow x\ne0$ \& $-28x = 35\cdot16\Leftrightarrow x\ne0$ \& $x = \frac{35\cdot16}{-28} = -20$ (thỏa mãn $x\ne0$ nên nhận). Vậy $x = -20$. (b) $\frac{x + 7}{15} = \frac{-24}{36}\Leftrightarrow36(x + 7) = 15\cdot(-24)\Leftrightarrow x + 7 = \frac{15\cdot(-24)}{36} = -10\Leftrightarrow x = -10 - 7 = -17$. Vậy $x = -17$.
+\end{proof}
+
+\begin{luuy}
+	Ở (a), vì $x$ nằm ở dưới mẫu nên ta phải kèm theo điều kiện $x\ne0$ để phân số $\frac{16}{x}$ xác định. Sau khi biến đổi tương đương để giải ra $x$, ta phải kiểm tra lại xem $x$ thỏa mãn điều kiện ban đầu để (các) phân số xác định hay không. Điều này quan trọng với các bài toán chứa phân thức có mẫu thức chứa biến số $x$, e.g., xét bài toán sau:
+	
+	\begin{vidu}
+		Tìm $x$ thỏa $\frac{1}{2} = \frac{0}{x}$.
+	\end{vidu}
+	Nếu không đặt điều kiện $x\ne0$ mà tiến hành giải trực tiếp kiểu: $\frac{1}{2} = \frac{0}{x}\Rightarrow 1x = 0\cdot2 = 0\Rightarrow x = 0$. Nhưng khi thay $x = 0$ vào phương trình ban đầu: $\frac{1}{2} = \frac{0}{0}$, vô nghĩa vì phân số $\frac{0}{0}$ không xác định (hay không có nghĩa, không được định nghĩa), nên bỏ đi điều kiện $x\ne0$ khiến lời giải này sai hoàn toàn. Lời giải đúng sẽ là:
+	
+	\begin{proof}[Giải]
+		$\frac{1}{2} = \frac{0}{x}\Leftrightarrow x\ne0$ \& $1x = 0\cdot2 = 0\Leftrightarrow x\ne0$ \& $x = 0$ (loại vì $x\ne 0$ \& $x = 0$ không thể này xảy ra cùng 1 lúc). Vậy phương trình $\frac{1}{2} = \frac{0}{x}$ vô nghiệm.
+	\end{proof}
+	Tuy nhiên, ở (b), 2 phân số $\frac{x + 7}{15},\frac{-24}{36}$ trong phương trình có mẫu lần lượt là $15\ne0$, $36\ne0$ đã khác $0$ rồi nên không cần điều kiện xác định như (a) nữa, mà có thể biến đổi tương đương trực tiếp luôn. Đây là điểm khác biệt giữa 2 phương trình. Cẩn thận với các bài toán có phân thức có chứa biến $x$ ở mẫu thức sẽ học kỹ ở chương trình Toán 7 \& 8.\footnote{See, e.g., \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/algebraic_expression/NQBH_algebraic_expression.pdf}{GitHub\texttt{/}NQBH\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}algebraic expressions} (biểu thức đại số) \& \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/algebraic_rational_fractions/NQBH_algebraic_rational_fractions.pdf}{GitHub\texttt{/}NQBH\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}algebraic fractions} (phân thức hữu tỷ).}
+\end{luuy}
 
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 4., p. 30]
 	Rút gọn mỗi phân số sau về phân số tối giản: $\frac{14}{21},\frac{-36}{48},\frac{28}{-52},\frac{-54}{-90}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$\mbox{ƯCLN}(14,21) = 7$, $\frac{14}{21} = \frac{14:7}{21:7} = \frac{2}{3}$. $\mbox{ƯCLN}(36,48) = 12$, $\frac{-36}{48} = \frac{-36:12}{48:12} = \frac{-3}{4}$. $\mbox{ƯCLN}(28,52) = 4$, $\frac{28}{-52} = \frac{28:4}{-52:4} = \frac{7}{-13}$. $\mbox{ƯCLN}(54,90) = 18$, $\frac{-54}{-90} = \frac{54}{90} = \frac{54:18}{90:18} = \frac{3}{5}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 5., p. 30]
 	(a) Rút gọn phân số $\frac{-21}{39}$ về phân số tối giản. (b) Viết tất cả các phân số bằng $\frac{-21}{39}$ mà mẫu là số tự nhiên có 2 chữ số.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\mbox{ƯCLN}(21,39) = 3$, $\frac{-21}{39} = \frac{-21:3}{39:3} = \frac{-7}{13}$. (b) Theo tính chất cơ bản của phân số $\frac{-7}{13} = \frac{-7n}{13n}$, $\forall n\in\mathbb{Z}$, $n\ne0$. Để $13n$ là số tự nhiên có 2 chữ số thì $n\in\mathbb{Z}$ phải thỏa $10 < 13n < 99$ hay $\frac{10}{13} < n < \frac{99}{13}$ mà $0< \frac{10}{13} < 1$ \& $7 < \frac{99}{13} < 8$, suy ra $n\in\{1,2,3,4,5,6,7\}$. Vậy tập hợp tất cả các phân số bằng $\frac{-21}{39}$ mà mẫu là số tự nhiên có 2 chữ số là: $\left\{\frac{-7n}{13n}|n = 1,2,3,4,5,6,7\right\} = \left\{\frac{-7}{13},\frac{-14}{26},\frac{-21}{39},\frac{-28}{52},\frac{-35}{65},\frac{-42}{78},\frac{-49}{91}\right\}$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 6., p. 30]
 	Quy đồng mẫu những phân số sau: (a) $\frac{-5}{14},\frac{1}{-21}$; (b) $\frac{17}{60},\frac{-5}{18},\frac{-64}{90}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $\frac{1}{-21} = \frac{-1}{21}$, $\operatorname{BCNN}(14,21) = 42$, $42:14 = 3$, $42:21 = 2$. Quy đồng: $\frac{-5}{14} = \frac{-5\cdot3}{14\cdot3} = \frac{-15}{42}$, $\frac{1}{-21} = \frac{-1\cdot2}{21\cdot2} = \frac{-2}{42}$. (b) $\operatorname{BCNN}(60,18,90) = 180$, $180:60 = 3$, $180:18 = 10$, $180:90 = 2$. Quy đồng: $\frac{17}{60} = \frac{17\cdot3}{60\cdot3} = \frac{51}{180}$, $\frac{-5}{18} = \frac{-5\cdot10}{18\cdot10} = \frac{-50}{180}$, $\frac{-64}{90} = \frac{-64\cdot2}{90\cdot2} = \frac{-128}{180}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_6_Canh_Dieu_tap_2}, 7., p. 30]
 	Trong các phân số sau, tìm phân số không bằng phân số nào trong các phân số còn lại: $\frac{6}{25},\frac{-4}{50},\frac{-27}{54},\frac{-18}{-75},\frac{28}{-56}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Phân số $\frac{6}{25}$ tối giản. $\mbox{ƯCLN}(4,50) = 2$, $\frac{-4}{50} = \frac{-4:2}{50:2} = \frac{-2}{25}$. $\mbox{ƯCLN}(27,54) = 27$ (vì $54\divby27$), $\frac{-27}{54} = \frac{-27:27}{54:27} = \frac{-1}{2}$. $\mbox{ƯCLN}(18,75) = 3$, $\frac{-18}{-75} = \frac{18}{75} = \frac{18:3}{75:3} = \frac{6}{25}$ bằng phân số đầu tiên. $\mbox{ƯCLN}(28,56) = 28$ (vì $56\divby28$), $\frac{28}{-56} = \frac{-28}{56} = \frac{-28:28}{56:28} = \frac{-1}{2}$ nên bằng với phân số thứ 3: $\frac{28}{-56} = \frac{-27}{54}= \frac{-1}{2}$. Vậy phân số $\frac{-4}{50}$ là phân số không bằng phân số nào trong các phân số còn lại.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, Ví dụ 1, p. 29]
 	Viết tất cả các phân số $\frac{a}{b}$ biết $a,b$ được chọn trong các số: $-3,0,5$. Có tất cả bao nhiêu phân số?
@@ -268,11 +340,7 @@ Dựa vào tính chất cơ bản của phân số ta có thể quy đồng mẫ
 \begin{baitoan}[\cite{SBT_Toan_6_Canh_Dieu_tap_2}, 4., p. 31]
 	Trong các cặp phân số sau, cặp phân số nào bằng nhau? Vì sao? $\frac{3}{7}$ \& $\frac{6}{-14}$, $\frac{12}{-4}$ \& $\frac{-9}{3}$, $\frac{-13}{9}$ \& $\frac{13}{-9}$, $-5$ \& $\frac{-10}{2}$, $\frac{2x}{6}$ \& $\frac{x}{3}$, $x\in\mathbb{Z}$.
 \end{baitoan}
-
-%------------------------------------------------------------------------------%
-
-\section{Tính chất Cơ Bản của Phân Số}
-``\textbf{1.} Ta gọi $\frac{a}{b}$ với $a,b\in\mathbb{Z}$, $b\ne0$ là 1 \textit{phân số}, $a$ là \textit{tử}, $b$ là \textit{mẫu} của phân số. Ta có thể viết thương của phép chia $a\in\mathbb{Z}$ cho $b\in\mathbb{Z}$, $b\ne 0$ dưới dạng $\frac{a}{b}$ \& cũng gọi $\frac{a}{b}$ là phân số. $a\in\mathbb{Z}$ có thể viết dưới dạng phân số $\frac{a}{1}$. \textbf{2.} \textit{2 phân số bằng nhau.} Cho $a,b,c,d\in\mathbb{Z}$, $b\ne0$, $d\ne 0$. Nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$, ngược lại nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. \textbf{3.} \textit{2 tính chất cơ bản của phân số}: $\frac{a}{b} = \frac{am}{bm}$, $\forall a,b,m\in\mathbb{Z}$, $b\ne0$, $m\ne0$. $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b,n\in\mathbb{Z}$, $b\ne0$, $n\in\mbox{ƯC}(a,b)$. \textbf{4.} \textit{Rút gọn phân số}: Muốn rút gọn 1 phân số, ta chia cả tử \& mẫu của phân số đó cho 1 ước chung khác $\pm1$ của chúng. Phân số tối giản là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$, i.e., $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$, $\mbox{ƯCLN}(a,b) = 1$. \textbf{5.} Nếu đổi dấu cả tử \& mẫu của 1 phân số thì được 1 phân số mới bằng phân số đã cho. $\frac{a}{b} = \frac{-a}{-b}$, $\frac{-a}{b} = \frac{a}{-b}$, $\forall a,b\in\mathbb{Z}$, $b\ne0$. \textbf{6.} Nếu $\frac{a}{b}$ là phân số tối giản thì mọi phân số bằng nó đều có dạng $\frac{am}{bm}$ với $m\in\mathbb{Z}$ \& $m\ne0$.'' -- \cite[Chap. 3, \S1, p. 45]{Tuyen_Toan_6}
+\noindent``\textbf{1.} Ta gọi $\frac{a}{b}$ với $a,b\in\mathbb{Z}$, $b\ne0$ là 1 \textit{phân số}, $a$ là \textit{tử}, $b$ là \textit{mẫu} của phân số. Ta có thể viết thương của phép chia $a\in\mathbb{Z}$ cho $b\in\mathbb{Z}$, $b\ne 0$ dưới dạng $\frac{a}{b}$ \& cũng gọi $\frac{a}{b}$ là phân số. $a\in\mathbb{Z}$ có thể viết dưới dạng phân số $\frac{a}{1}$. \textbf{2.} \textit{2 phân số bằng nhau.} Cho $a,b,c,d\in\mathbb{Z}$, $b\ne0$, $d\ne 0$. Nếu $ad = bc$ thì $\frac{a}{b} = \frac{c}{d}$, ngược lại nếu $\frac{a}{b} = \frac{c}{d}$ thì $ad = bc$. \textbf{3.} \textit{2 tính chất cơ bản của phân số}: $\frac{a}{b} = \frac{am}{bm}$, $\forall a,b,m\in\mathbb{Z}$, $b\ne0$, $m\ne0$. $\frac{a}{b} = \frac{a:n}{b:n}$, $\forall a,b,n\in\mathbb{Z}$, $b\ne0$, $n\in\mbox{ƯC}(a,b)$. \textbf{4.} \textit{Rút gọn phân số}: Muốn rút gọn 1 phân số, ta chia cả tử \& mẫu của phân số đó cho 1 ước chung khác $\pm1$ của chúng. Phân số tối giản là phân số mà tử \& mẫu chỉ có ước chung là $\pm1$, i.e., $\frac{a}{b}$, $a,b\in\mathbb{Z}$, $b\ne0$, $\mbox{ƯCLN}(a,b) = 1$. \textbf{5.} Nếu đổi dấu cả tử \& mẫu của 1 phân số thì được 1 phân số mới bằng phân số đã cho. $\frac{a}{b} = \frac{-a}{-b}$, $\frac{-a}{b} = \frac{a}{-b}$, $\forall a,b\in\mathbb{Z}$, $b\ne0$. \textbf{6.} Nếu $\frac{a}{b}$ là phân số tối giản thì mọi phân số bằng nó đều có dạng $\frac{am}{bm}$ với $m\in\mathbb{Z}$ \& $m\ne0$.'' -- \cite[Chap. 3, \S1, p. 45]{Tuyen_Toan_6}
 
 ``Số có dạng $\frac{a}{b}$ trong đó $a,b\in\mathbb{Z}$, $b\ne0$ được gọi là \textit{phân số}. Số nguyên $n\in\mathbb{Z}$ được đồng nhất với phân số $\frac{n}{1}$. Tính chất cơ bản của phân số: $\frac{a}{b} = \frac{am}{bm} = \frac{a:n}{b:n}$ với $m\in\mathbb{Z}$, $m\ne0$, $n\in\mbox{ƯC}(a,b)$. Nếu $\mbox{ƯCLN}(|a|,|b|) = 1$ thì $\frac{a}{b}$ là phân số tối giản. Nếu $\frac{m}{n}$ là dạng tối giản của phân số $\frac{a}{b}$ thì tồn tại số nguyên $k\in\mathbb{Z}$ sao cho $a = mk$, $b = nk$.'' -- \cite[Chap. III, \S1, p. 4]{Binh_Toan_6_tap_2}
 
@@ -495,14 +563,6 @@ Dựa vào tính chất cơ bản của phân số ta có thể quy đồng mẫ
 \begin{baitoan}[\cite{Binh_Toan_6_tap_2}, 19., p. 8, Bộ sử Hume]
 	Người Anh có thói quen xếp bộ sử nước Anh của Hume (David Hume, nhà sử học Scotland) gồm 9 tập ở tủ sách đặc biệt gồm 2 ngăn: ngăn trên xếp 5 cuốn, ngăn dưới xếp 4 cuốn, ở gáy các cuốn sách đó ghi các số $1,2,3,\ldots,9$. Nếu chủ nhân xếp $\frac{13458}{6729}$ (phân số này có giá trị bằng $2$) thì chứng tỏ chủ nhân đã đọc 2 tập (riêng trường hợp mới đọc 1 tập thì xếp $\frac{12345}{6789}$). Nêu cách xếp 9 cuốn sách đó để chứng tỏ chủ nhân của bộ sách đã đọc $3,4,5,6,7,8,9$ tập.
 \end{baitoan}
-
-%------------------------------------------------------------------------------%
-
-\section{Rút Gọn Phân Số}
-
-%------------------------------------------------------------------------------%
-
-\section{Quy Đồng Mẫu Số Nhiều Phân Số}
 
 %------------------------------------------------------------------------------%
 
@@ -914,7 +974,7 @@ Giống như phép nhân số tự nhiên, phép nhân phân số cũng có các
 \end{proof}
 
 \begin{menhde}[Phép chia số nguyên với phân số]
-	Muốn chia 1 số nguyên với 1 phân số (hoặc chia 1 phân số với 1 số nguyên)\footnote{Chú ý 2 điều này không tương đương với nhau do phép chia phân số không có tính chất giao hoán như phép nhân phân số, i.e., $\frac{a}{b}:\frac{c}{d} = \frac{ad}{bc}\ne\frac{c}{d}:\frac{a}{b} = \frac{bc}{ad}$.}:
+	Muốn chia 1 số nguyên với 1 phân số (hoặc chia 1 phân số với 1 số nguyên)\footnote{Chú ý 2 điều này không tương đương với nhau do phép chia phân số không có tính chất giao hoán như phép nhân phân số, i.e., 1 cách tổng quát, có: $\frac{a}{b}:\frac{c}{d} = \frac{ad}{bc}\ne\frac{c}{d}:\frac{a}{b} = \frac{bc}{ad}$.}:
 	\begin{align*}
 		a:\frac{c}{d} = a\cdot\frac{d}{c} = \frac{ad}{c},\ \forall a,c,d\in\mathbb{Z},\,cd\ne0,\\
 		\frac{a}{b}:c = \frac{a}{b}\cdot\frac{1}{c} = \frac{a}{bc},\ \forall a,b,c\in\mathbb{Z},\,bc\ne0.
