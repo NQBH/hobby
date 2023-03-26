@@ -22,6 +22,7 @@
 \newtheorem{hypothesis}{Hypothesis}
 \newtheorem{lemma}{Lemma}
 \newtheorem{luuy}{Lưu ý}
+\newtheorem{menhde}{Mệnh đề}
 \newtheorem{nhanxet}{Nhận xét}
 \newtheorem{notation}{Notation}
 \newtheorem{note}{Note}
@@ -38,7 +39,7 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 
-\title{1st-Order Inequation with 1 Variable -- Bất Phương Trình Bậc Nhất 1 Ẩn}
+\title{1st-Order Inequation with 1 Variable -- Bất Phương Trình Bậc Nhất 1 Ẩn $ax + b >,<,\ge,\le0$}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
@@ -72,12 +73,9 @@ Nếu số $a$ không nhỏ hơn số $b$, thì phải có hoặc $a > b$, hoặ
 
 \subsection{Liên Hệ Giữa Thứ Tự \& Phép Cộng}
 
-\begin{dinhly}
-	Khi cộng cùng 1 số vào cả 2 vế của 1 bất đẳng thức ta được bất đẳng thức mới cùng chiều với bất đẳng thức đã cho.
-	\begin{align*}
-		a < b\Leftrightarrow a + c < b + c,\ a\le b\Leftrightarrow a + c\le b + c,\ a > b\Leftrightarrow a + c > b + c,\ a\ge b\Leftrightarrow a + c\ge b + c,\ \forall a,b,c,d\in\mathbb{R}.
-	\end{align*}
-\end{dinhly}
+\begin{menhde}
+	Khi cộng\emph{\texttt{/}}trừ cùng 1 số vào cả 2 vế của 1 bất đẳng thức ta được bất đẳng thức mới cùng chiều với bất đẳng thức đã cho: $a < b\Leftrightarrow a + c < b + c,\ a\le b\Leftrightarrow a + c\le b + c,\ a > b\Leftrightarrow a + c > b + c,\ a\ge b\Leftrightarrow a + c\ge b + c,\ \forall a,b,c,d\in\mathbb{R}$.
+\end{menhde}
 Có thể áp dụng tính chất trên để so sánh 2 số, hoặc chứng minh bất đẳng thức.
 
 \begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3, p. 36]
@@ -104,7 +102,70 @@ Có thể áp dụng tính chất trên để so sánh 2 số, hoặc chứng mi
 
 \section{Liên Hệ Giữa Thứ Tự \& Phép Nhân}
 
-\subsection{Liên hệ giữa thứ tự \& phép nhân với số dương}
+\subsection{Liên hệ giữa thứ tự \& phép nhân với số dương \& số âm}
+
+\begin{menhde}
+	Khi nhân\emph{\texttt{/}}chia cả 2 vế của bất đẳng thức với cùng 1 số dương ta được bất đẳng thức mới cùng chiều với bất đẳng thức đã cho: $a < b\Leftrightarrow ac < bc$, $a\le b\Leftrightarrow ac\le bc$, $a > b\Leftrightarrow ac > bc$, $a\ge b\Leftrightarrow ac\ge bc$, $\forall a,b,c\in\mathbb{R}$, $c > 0$. Ngược lại, khi nhân\emph{\texttt{/}}chia cả 2 vế của bất đẳng thức với cùng 1 số âm ta được bất đẳng thức mới ngược chiều với bất đẳng thức đã cho: $a < b\Leftrightarrow ac > bc$, $a\le b\Leftrightarrow ac\ge bc$, $a > b\Leftrightarrow ac < bc$, $a\ge b\Leftrightarrow ac\le bc$, $\forall a,b,c\in\mathbb{R}$, $c < 0$.
+\end{menhde}
+
+\begin{proof}[Chứng minh]
+	Dễ thấy nhờ xét dấu\footnote{$\operatorname{sign}(ac - bc) = \operatorname{sign}(c(a - b)) = \operatorname{sign}(c)\operatorname{sign}(a - b)$, $\forall a,b,c\in\mathbb{R}$.} của tích $ac - bc = c(a - b)$ theo dấu của $c$ \& dấu của $a - b$. 
+\end{proof}
+
+\subsection{Tính chất bắc cầu của thứ tự}
+
+\begin{menhde}[Tính chất bắc cầu]
+	($a < b$ \& $b < c$) $\Rightarrow a < c$, ($a > b$ \& $b > c$) $\Rightarrow a > c$, ($a\le b$ \& $b\le c$) $\Rightarrow a\le c$, ($a\ge b$ \& $b\ge c$) $\Rightarrow a\ge c$ $\forall a,b,c\in\mathbb{R}$.
+\end{menhde}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, Ví dụ, p. 39]
+	Cho $a > b$. Chứng minh $a + 2 > b + 1$.
+\end{baitoan}
+
+\begin{proof}[1st chứng minh]
+	Cộng 2 vào 2 vế của bất đẳng thức $a > b$, được: $a + 2 > b + 2$ (1). Cộng $b$ vào 2 vế của bất đẳng thức $2 > -1$, được: $b + 2 > b - 1$ (2). Từ (1) \& (2), theo tính chất bắc cầu, suy ra $a + 2 > b - 1$.
+\end{proof}
+
+\begin{proof}[2nd chứng minh]
+	$a > b\Rightarrow a - b > 0$. Có $a + 2 - (b + 1) = a + 2 - b - 1 = a - b + 1\ge0 + 1 = 1 > 0$, suy ra $a + 2 > b - 1$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 6., p. 39]
+	Cho $a < b$, so sánh: (a) $2a$ \& $2b$. (b) $2a$ \& $a + b$. (c) $-a$ \& $-b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 7., p. 40]
+	Số $a\in\mathbb{R}$ là số âm hay dương nếu: (a) $12a < 15a$? (b) $4a < 3a$? (c) $-3a > -5a$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 8., p. 40]
+	Cho $a < b$. Chứng minh: (a) $2a - 3 < 2b - 3$. (b) $2a - 3 < 2b + 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 9., p. 40]
+	Cho $\Delta ABC$. \emph{Đ\texttt{/}S?} (a) $\widehat{A} + \widehat{B} + \widehat{C} > 180^\circ$. (b) $\widehat{A} + \widehat{B} < 180^\circ$. (c) $\widehat{B} + \widehat{C}\le180^\circ$. (d) $\widehat{A} + \widehat{B}\ge180^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 11., p. 40]
+	Cho $a < b$. Chứng minh: (a) $3a + 1 < 3b + 1$. (b) $-2a - 5 > -2b - 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 13., p. 40]
+	So sánh $a,b$ nếu: (a) $a + 5 < b + 5$. (b) $-3a > -3b$. (c) $5a - 6\ge5b - 6$. (d) $-2a + 3\le-2b + 3$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 14., p. 40]
+	Cho $a < b$. So sánh: (a) $2a + 1$ với $2b + 1$. (b) $2a + 1$ với $2b + 3$.
+\end{baitoan}
+Bất đẳng thức giữa \textit{trung bình cộng} $\frac{a + b}{2}$ \& \textit{trung bình nhân} $\sqrt{ab}$:
+
+\begin{dinhly}[Bất đẳng thức Cauchy\texttt{/}AM--GM cho 2 số]
+	 $\frac{a + b}{2}\ge\sqrt{ab}$, $\forall a,b\in\mathbb{R}$, $a\ge0$, $b\ge0$. Đẳng thức xảy ra khi \& chỉ khi $a = b$.
+\end{dinhly}
+
+\begin{proof}[Chứng minh]
+	$\frac{a + b}{2} - \sqrt{ab} = \frac{a = b - 2\sqrt{ab}}{2} = \frac{(\sqrt{a} - \sqrt{b})^2}{2}\ge0$, $\forall a,b\in\mathbb{R}$, $a\ge0$, $b\ge0$. ``$=$'' $\Leftrightarrow\sqrt{a} - \sqrt{b} = 0\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
