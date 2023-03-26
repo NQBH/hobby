@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,soul}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{1st-Order Inequation with 1 Variable -- Bất Phương Trình Bậc Nhất 1 Ẩn}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about \textit{1st-order inequation with 1 variable}. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/1st_order_inequation_1_variable/NQBH_1st_order_inequation_1_variable.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}1st order inequation with 1 variable}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/1st_order_inequation_1_variable/NQBH_1st_order_inequation_1_variable.pdf}.}.
+	\vspace{2mm}
+	
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{bất phương trình bậc nhất 1 ẩn}. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/NQBH_elementary_mathematics_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_8/1st_order_inequation_1_variable/NQBH_1st_order_inequation_1_variable.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 8\texttt{/}1st order inequation with 1 variable}.
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Hệ Giữa Thứ Tự \& Phép Cộng}
+
+\subsection{Thứ tự trên tập số thực $\mathbb{R}$}
+Trên tập hợp số thực $\mathbb{R}$, khi so sánh 2 số $a,b\in\mathbb{R}$, xảy ra 1 trong 3 trường hợp sau: Số $a$ \textit{bằng} số $b$, ký hiệu $a = b$. Số $a$ \textit{nhỏ hơn} số $b$, ký hiệu $a < b$. Số $a$ \textit{lớn hơn} số $b$, ký hiệu $a > b$. Khi biểu diễn số thực trên trục số vẽ theo phương nằm ngang (hoặc thẳng đứng), điểm biểu diễn số nhỏ hơn ở bên trái (ở bên dưới) điểm biểu diễn số lớn hơn. Chính điều đó cho ta hình dung về thứ tự trên tập số thực $\mathbb{R}$.
+
+Nếu số $a$ không nhỏ hơn số $b$, thì phải có hoặc $a > b$, hoặc $a = b$. Khi đó, ta nói gọn là $a$ \textit{lớn hơn hoặc bằng} $b$, ký hiệu $a\ge b$, e.g., $x^2\ge0$, $\forall x\in\mathbb{R}$; nếu $c\in\mathbb{R}$ là số không âm thì ta viết $c\ge0$. Nếu số $a$ không lớn hơn số $b$, thì phải có hoặc $a < b$, hoặc $a = b$. Khi đó, ta nói gọn là $a$ \textit{nhỏ hơn hoặc bằng} $b$, ký hiệu $a\le b$, e.g., $-x^2\le0$, $\forall x\in\mathbb{R}$; nếu số $y\in\mathbb{R}$ không lớn hơn $3$ thì ta viết $y\le3$.
+
+\subsection{Bất đẳng thức}
+
+\begin{dinhnghia}[Bất đẳng thức]
+	Các hệ thức dạng $a < b$, $a > b$, $a\le b$, $a\ge b$h được gọi là \emph{bất đẳng thức} \& gọi $a$ là \emph{vế trái}, $b$ là \emph{vế phải} của bất đẳng thức.
+\end{dinhnghia}
+
+\subsection{Liên Hệ Giữa Thứ Tự \& Phép Cộng}
+
+\begin{dinhly}
+	Khi cộng cùng 1 số vào cả 2 vế của 1 bất đẳng thức ta được bất đẳng thức mới cùng chiều với bất đẳng thức đã cho.
+	\begin{align*}
+		a < b\Leftrightarrow a + c < b + c,\ a\le b\Leftrightarrow a + c\le b + c,\ a > b\Leftrightarrow a + c > b + c,\ a\ge b\Leftrightarrow a + c\ge b + c,\ \forall a,b,c,d\in\mathbb{R}.
+	\end{align*}
+\end{dinhly}
+Có thể áp dụng tính chất trên để so sánh 2 số, hoặc chứng minh bất đẳng thức.
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, ?3, p. 36]
+	So sánh $\sqrt{2} + 2$ \& $5$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$2 < 9\Rightarrow\sqrt{2} < \sqrt{9} = 3\Rightarrow\sqrt{2} + 2 < 3 + 2 = 5$. Vậy $\sqrt{2} + 2 < 5$.
+\end{proof}
+
+\begin{luuy}
+	Tính chất của thứ tự cũng chính là tính chất của bất đẳng thức.
+\end{luuy}
+
+\begin{baitoan}[Tổng các bình phương thì không âm]
+	Chứng minh: (a) $x^2 + a\ge a$, $\forall x,a\in\mathbb{R}$. (b) $\sum_{i=1}^n (a_ix + b_i)^2 = (a_1x + b_1)^2 + (a_2x + b_2)^2 + \cdots + (a_nx + b_n)^2\ge0$, $\forall x,a_i,b_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$. (c) $\sum_{i=1}^n (a_ix + b_iy + c_i)^2 = (a_1x + b_1y + c_1)^2 + (a_2x + b_2y + c_2)^2 + \cdots + (a_nx + b_ny + c_n)^2\ge0$, $\forall x,y,a_i,b_i,c_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$. (d) $\sum_{i=1}^m\left(\sum_{j=1}^n a_{ij}x_j + a_i\right)^2 = (a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n + a_1)^2 + (a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n + a_2)^2 + \cdots + (a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n + a_m)^2\ge0$, $\forall a_{ij},a_i,x_j\in\mathbb{R}$, $\forall i = 1,2,\ldots,m$, $\forall j = 1,2,\ldots,n$. (e) 1 cách tổng quát, tổng các bình phương của các hàm nhiều biến thì không âm: $\sum_{i=1}^m (f_i(x_1,x_2,\ldots,x_m))^2\ge0$, $\forall x_i\in\mathbb{R}$, $\forall i = 1,\ldots,m$, với mọi hàm $m$ biến $f_i$, $\forall i = 1,2,\ldots,n$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_8_tap_2}, 4., p. 37]
+	1 biển báo giao thông với nền trắng, số $20$ màu đen, viền đỏ cho biết vận tốc tối đa mà các phương tiện giao thông được đi trên quãng đường có biển quy định là $20$\emph{km\texttt{/}h}. Nếu 1 ôtô đi trên đường đó có vận tốc là $a$\emph{km\texttt{/}h} thì $a$ phải thỏa mãn điều kiện nào trong các điều kiện sau: $a > 20$, $a < 20$, $a\le20$, $a\ge20$?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Hệ Giữa Thứ Tự \& Phép Nhân}
+
+\subsection{Liên hệ giữa thứ tự \& phép nhân với số dương}
+
+%------------------------------------------------------------------------------%
+
+\section{Bất Phương Trình 1 Ẩn}
+
+%------------------------------------------------------------------------------%
+
+\section{Bất Phương Trình Bậc Nhất 1 Ẩn}
+
+%------------------------------------------------------------------------------%
+
+\section{Phương Trình Chứa Dấu Giá Trị Tuyệt Đối}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
