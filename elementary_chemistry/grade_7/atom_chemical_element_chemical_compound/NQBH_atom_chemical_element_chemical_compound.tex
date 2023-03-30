@@ -1,49 +1,39 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
-\DeclareMathOperator{\arccot}{arccot}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz,tipa}
 \usepackage[version=4]{mhchem}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
+\newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
 \newtheorem{dangtoan}{Dạng toán}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{ghichu}{Ghi chú}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{hypothesis}{Hypothesis}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{note}{Note}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
 
 \title{Atom, Chemical Element, \& Chemical Compound\\Nguyên Tử, Nguyên Tố Hóa Học, \& Hợp Chất Hóa Học}
@@ -77,10 +67,108 @@
 %------------------------------------------------------------------------------%
 
 \section{Atom -- Nguyên Tử}
+\textsf{\textbf{Nội dung.} Mô hình nguyên tử của Rutherford--Bohr -- mô hình sắp xếp electron trong lớp vỏ nguyên tử, khối lượng của 1 nguyên tử theo đơn vị quốc tế amu (đơn vị khối lượng nguyên tử).}
+\begin{quotation}
+	\textbf{atom} [n] \texttt{/}\textipa{'\ae t@m}\texttt{/}: the smallest particle of a chemical element that can exist.
+	
+	E.g., the splitting of the atom; 2 atoms of hydrogen with 1 atom of oxygen to form a molecule of water; The scientist Ernest Rutherford was the first person to split the atom; positively charged atoms.
+\end{quotation}
+Khoảng năm 440 BC, nhà triết học Hy Lạp, Democritus cho rằng nếu chia nhỏ nhiều lần 1 đồng tiền vàng cho đến khi ``không thể phân chia được nữa'', thì sẽ được 1 hạt gọi là \textit{nguyên tử}. (``Nguyên tử'' trong tiếng Hy Lạp là \textit{atomos}, nghĩa là ``không chia nhỏ hơn được nữa'').
+
+\textbf{Kích thước nguyên tử.} Có thể coi nguyên tử như những quả cầu cực nhỏ. Đường kính của nguyên tử nhỏ hơn đường kính của sợi tóc $\approx100000$--$500000$ lần, mà đường kính của sợi tóc là $0.1$mm. Vì thế, không thể quan sát nguyên tử bằng mắt hoặc các kính hiển vi thông thường.
+
+\subsection{Khái niệm nguyên tử}
+Các nhà khoa học hiện nay đã tìm thấy hàng chục triệu chất khác nhau. Tuy nhiên, khi phân tích các chất đó, người ta thấy mọi chất đều được cấu tạo từ những \textit{hạt cực kỳ nhỏ bé, không mang điện}. Những hạt đó được gọi là \textit{nguyên tử}.
+
+\begin{vidu}[\cite{SGK_KHTN_7_Canh_Dieu}, p. 10]
+	Đồng tiền vàng được cấu tạo từ các nguyên tử \emph{vàng (gold)}. Khí oxygen \emph{\ce{O2}} được cấu tạo từ các\footnote{Khí oxygen gồm rất nhiều phân tử oxygen \ce{O2}, \& mỗi phân tử  oxygen \ce{O2}được cấu tạo từ 2 nguyên tử oxygen O.} nguyên tử oxygen. Kim cương, than chì đều được cấu tạo từ các nguyên tử carbon \emph{C}. Nước được tạo nên từ các nguyên tử hydrogen \emph{H} \& oxygen \emph{O} (phân tử nước có công thức hóa học là \emph{\ce{H2O}}). Đường ăn, có công thức phân tử là \emph{\ce{C12H22O11}} được tạo nên tử các nguyên tử carbon \emph{C}, oxygen \emph{O}, \& hydrogen \emph{H}.
+\end{vidu}
+
+\begin{baitoan}[\cite{SGK_KHTN_7_Canh_Dieu}, 1, p. 10]
+	Kể tên vài chất có chứa nguyên tử oxygen.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Khí oxygen \ce{O2}, khí carbonic \ce{CO2}, nước \ce{H2O}, đường \ce{C12H22O11}, oxide kim loại \ce{M_xO_y} với M là kim loại, e.g., \ce{FeO,Fe2O3}, \ce{Fe3O4,Cu2O,CuO,MgO}, $\ldots$.
+\end{proof}
+
+\subsection{Cấu tạo nguyên tử}
+Nguyên tử được coi như 1 quả cầu, gồm vỏ nguyên tử \& hạt nhân nguyên tử.
+\begin{enumerate}
+	\item \textbf{Vỏ nguyên tử.} Vỏ nguyên tử được tạo bởi 1 hay nhiều electron chuyển động xung quanh hạt nhân. Electron ký hiệu là e, mang điện tích âm \& có giá trị bằng 1 điện tích nguyên tố\footnote{1 điện tích nguyên tố $= 1.605\cdot10^{-19}$C, với C là viết tắt của Coulomb.}, được viết đơn giản là $-1$.
+	\item \textbf{Hạt nhân nguyên tử.} Hạt nhân nằm ở tâm \& có kích thước rất nhỏ so với kích thước của nguyên tử. Hạt nhân nguyên tử được tạo bởi các proton \& neutron.
+	\begin{enumerate}
+		\item Proton ký hiệu là p, mang điện tích dương \& có giá trị bằng 1 điện tích nguyên tố, được viết là $+1$. Điện tích của proton bằng điện tích của electron về độ lớn nhưng khác dấu.
+		\item Neutron ký hiệu là n, không mang điện.
+	\end{enumerate}
+\end{enumerate}
+Kích thước của hạt nhân rất nhỏ so với kích thước của nguyên tử. Nếu coi hạt nhân là quả bóng có đường kính là $10$cm thì nguyên tử sẽ là quả cầu khổng lồ với đường kính là 1 km (lớn gấp 10000 lần kích thước của hạt nhân nguyên tử).
+
+Điện tích của hạt nhân nguyên tử bằng tổng điện tích của các proton. Số đơn vị điện tích hạt nhân bằng số proton. Trong nguyên tử, số electron bằng số proton.
+
+\begin{vidu}[\cite{SGK_KHTN_7_Canh_Dieu}, p. 11]
+	(a) Nguyên tử nitrogen (nitơ) \emph{N} có $7$ proton nên nitrogen có $7$ electron, có điện tích hạt nhân là $+7$, số đơn vị điện tích hạt nhân là $7$. (b) Nguyên tử helium gồm hạt nhân có $2$ proton, $2$ neutron, \& vỏ nguyên tử có $2$ electron.
+\end{vidu}
+
+\begin{baitoan}[\cite{SGK_KHTN_7_Canh_Dieu}, 3, p. 11]
+	Trong các hạt cấu tạo nên nguyên tử: (a) Hạt nào mang điện tích âm? (b) Hạt nào mang điện tích dương? (c) Hạt nào không mang điện?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_KHTN_7_Canh_Dieu}, 1., p. 11]
+	Quan sát mô hình cấu tạo nguyên tử lithium \& hoàn thành thông tin chú thích các thành phần trong cấu tạo nguyên tử lithium.
+\end{baitoan}
+	
+\begin{baitoan}[\cite{SGK_KHTN_7_Canh_Dieu}, 2., p. 11]
+	Hoàn thành thông tin:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textbf{Nguyên tử} & \textbf{Số proton} & \textbf{Số neutron} & \textbf{Số electron} & \textbf{Điện tích hạt nhân} \\
+			\hline
+			Hydrogen & 1 & 0 &  &  \\
+			\hline
+			Carbon &  & 6 & 6 &  \\
+			\hline
+			Phosphorus & 15 & 16 &  &  \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_KHTN_7_Canh_Dieu}, 3., p. 12]
+	Aluminium \emph{Al} là kim loại có nhiều ứng dụng trong thực tiễn, được dùng làm dây dẫn điện, chế tạo các thiết bị, máy móc trong công nghiệp \& nhiều đồ dùng sinh hoạt. Cho biết tổng số hạt trong hạt nhân nguyên tử aluminium là $27$, số đơn vị điện tích hạt nhân là $13$. Nêu cách tính số hạt mỗi loại trong nguyên tử aluminium \& cho biết điện tích hạt nhân của aluminium.
+\end{baitoan}
+
+\begin{vidu}[Điện tích của nguyên tử helium]
+	Nguyên tử helium \emph{He} có $2$ proton, mỗi proton có điện tích $+1$, tổng số điện tích (dương): $+2$; có $2$ electron, mỗi electron có điện tích $-1$, tổng số điện tích (âm): $-2$. Tổng điện tích trong nguyên tử helium bằng $(+2) + (-2) = 0$. Ta nói nguyên tử helium \emph{He} \emph{không mang điện} hay \emph{trung hòa về điện}.
+\end{vidu}
+
+\begin{baitoan}[\cite{SGK_KHTN_7_Canh_Dieu}, p. 12]
+	Cho biết nguyên tử sulfur (lưu huỳnh) có $16$ electron. Hỏi nguyên tử sulfur có bao nhiêu proton? Chứng minh nguyên tử sulfur trung hòa về điện.
+\end{baitoan}
+
+\subsection{Sự chuyển động của electron trong nguyên tử}
 
 %------------------------------------------------------------------------------%
 
-\section{Công Thức Hóa Học}
+\section{Chemical Element -- Nguyên Tố Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Chemical Periodic Table -- Sơ Lược về Bảng Tuần Hoàn Các Nguyên Tố Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Phân Tử, Đơn Chất, Hợp Chất}
+
+%------------------------------------------------------------------------------%
+
+\section{Giới Thiệu về Liên Kết Hóa Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Hóa Trị, Công Thức Hóa Học}
 
 \begin{dangtoan}
 	Từ lượng chất tính lượng nguyên tố.
