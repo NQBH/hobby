@@ -1,49 +1,39 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
-\DeclareMathOperator{\arccot}{arccot}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz,tipa}
 \usepackage[version=4]{mhchem}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
+\newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
-\newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
-\def\labelitemii{$\circ$}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 
 \title{Chemical Reaction -- Phản Ứng Hóa Học}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
@@ -52,10 +42,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	\textsc{[en]} This text is a collection of problems, from easy to advanced, about chemical reaction. This text is also a supplementary material for my lecture note on Elementary Chemistry grade 7--8, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/chemical_reaction/NQBH_chemical_reaction.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}chemical reaction}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/chemical_reaction/NQBH_chemical_reaction.pdf}.}.
+	\textsc{[en]} This text is a collection of problems, from easy to advanced, about \textit{chemical reaction}. This text is also a supplementary material for my lecture note on Elementary Chemistry, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/chemical_reaction/NQBH_chemical_reaction.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}chemical reaction}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/chemical_reaction/NQBH_chemical_reaction.pdf}.}.
 	\vspace{2mm}
 	
-	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về phản ứng hóa học. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Hóa Học Sơ Cấp lớp 8. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}chemical reaction}.
+	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{phản ứng hóa học}. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/NQBH_elementary_chemistry_grade_8.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}lecture} của tác giả viết cho Hóa Học Sơ Cấp. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_8/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 8\texttt{/}chemical reaction}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -64,935 +54,91 @@
 
 %------------------------------------------------------------------------------%
 
-\section*{Theory}
-``{\bf 1.} \textbf{Phân biệt hiện tượng vật lý \& hiện tượng hóa học}: 	$\bullet$ \textit{Hiện tượng vật lý}: Khi chất đổi về thể hay hình dạng. Không có chất mới nào sinh ra. $\bullet$ \textit{Hiện tượng hóa học}: Khi có sự biến đổi từ chất này thành chất khác. Hiện tượng trong đó có sinh ra chất mới. {\bf 2.} \textit{Phản ứng hóa học} là quá trình làm biến đổi chất này thành chất khác. Trong phản ứng hóa học, liên kết giữa các nguyên tử thay đổi. Các phản ứng hóa học có thể xảy ra: $A + B\to C + D$, $A + B\to C$, $A\to C + D$. {\bf 3.} \textbf{$2$ định luật hóa học cơ bản.} $\bullet$ \textit{Định luật thành phần không đổi}: 1 hợp chất, dù điều chế bằng bất kỳ cách nào, cũng luôn có thành phần không đổi về khối lượng. Ứng dụng: Dựa vào tỷ lệ khối lượng giữa các nguyên tố cấu tạo nên 1 chất là không đổi $\to$ tỷ số nguyên tử không đổi $\to$ lập công thức hóa học của chất đó. $\bullet$ \textit{Định luật bảo toàn khối lượng}: Các chất tham gia $\to$ Các chất tạo thành. Tổng khối lượng chất tham gia $=$ Tổng khối lượng chất tạo thành. Ứng dụng: Tính khối lượng của các chất tham gia phản ứng hay chất tạo thành sau phản ứng. {\bf 4.} Phương trình hóa học cho biết công thức hóa học các chất phản ứng \& chất mới sinh ra trong phản ứng hóa học, cho biết tỷ lệ số phân tử chất phản ứng \& chất mới sinh ra trong phản ứng hóa học. Lưu ý khi lập phương trình hóa học:
-	
-		$\bullet$ Viết đúng công thức hóa học của các chất phản ứng \& chất mới sinh ra.
-		$\bullet$ Chọn hệ số phân tử sao cho số nguyên tử của mỗi nguyên tố ở 2 vế đều bằng nhau. Cách làm:
-		
-			$\circ$ Nên bắt đầu từ những nguyên tố mà số nguyên tử có nhiều \& không bằng nhau.
-			$\circ$ Trường hợp số nguyên tử của 1 nguyên tố ở vế này là số chẵn \& ở vế kia là số lẻ thì trước hết phải đặt hệ số $2$ cho chất mà số nguyên tử là số lẻ, rồi tiếp tục đặt hệ số cho phân tử chứa số nguyên tử chẵn ở vế còn lại sao cho số nguyên tử của nguyên tố này ở 2 vế bằng nhau.
-		
-	
-	Trong quá trình cân bằng không được thay đổi các chỉ số nguyên tử trong các công thức hóa học.
-	{\bf 5.} \textit{Tính hiệu suất phản ứng}: Thực tế do 1 số nguyên nhân chất tham gia phản ứng không tác dụng hết, i.e., hiệu suất $< 100$\%, Người ta có thể tính hiệu suất phản ứng như sau:
-	
-		(a)Dựa vào 1 trong các chất tham gia phản ứng: Công thức tính: $H\% = \frac{\mbox{lượng thực tế đã phản ứng}}{\mbox{lượng tổng số đã lấy}}\cdot100\%$.
-		(b)Dựa vào 1 trong các chất tạo thành: Công thức tính: $H\% = \frac{\mbox{lượng thực tế thu được}}{\mbox{lượng thu theo lý thuyết (theo phương trình phản ứng)}}\cdot100\%$.
-		(c)Bài toán hiệu suất còn mở rộng ra: Cho hiệu suất phản ứng rồi tính lượng chất tham gia hoặc tạo thành.'' -- \cite[Chap. 2, pp. 44--46]{An_400_BT_Hoa_Hoc_8_2020}
-	
+\section{Biến Đổi Vật Lý \& Biến Đổi Hóa Học}
+\textsf{\textbf{Nội dung.} Biến đổi vật lý, biến đổi hóa học.}
 
-
-\section{Sự Biến Đổi Chất}
-``
-	{\bf 1.} \textit{Sự biến đổi vật lý} (còn gọi là \textit{hiện tượng vật lý}) là sự biến đổi về hình dạng hay về trạng thái của chất (chất không thay đổi). E.g.: Nghiền đường kính thành bột mịn (sự biến đổi về hình dạng). Đun nước, nước lỏng chuyển thành hơi nước. Làm lạnh, hơi nước lại ngưng tụ thành nước lỏng, làm lạnh tiếp đến $0^\circ$C, nước lỏng lại chuyển thành nước rắn, i.e., nước đá (sự biến đổi về trạng thái).
-	{\bf 2.} \textit{Sự biến đổi hóa học} (còn gọi là \textit{hiện tượng hóa học}) là sự biến đổi chất này thành chất khác. E.g.: Rượu (mùi thơm, vị cay) lên men thành giấm (mùi giấm, vị chua). Đốt cháy tờ giấy, giấy biến thành tro \& khí carbon dioxide \ce{CO2} (còn gọi là khí carbonic).'' -- \cite[Chap. 2, p. 32]{Truong_BTNC_Hoa_Hoc_8_2022}
-
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.1.}, p. 33]
-	Quan sát hiện tượng:
-	
-		(a)Lưu huỳnh cháy tạo thành khí sunfurơ \emph{\ce{SO2}}.
-		(b)Nước đá tan thành nước lỏng.
-		(c)Sắt bị gỉ chuyển thành 1 chất màu đỏ.
-		(d)Thủy tinh nóng chảy.
-	
-	Cho biết đâu là hiện tượng vật lý, đâu là hiện tượng hóa học.\hfill\textsf{Ans:} Vật lý: (b), (d). Hóa học: (a), (c).
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, p. 12]
+	Các hiện tượng sau mô tả hiện tượng chất bị biến đổi thành chất khác hay chỉ mô tả sự thay đổi về tính chất vật lý (trạng thái, kích thước, hình dạng, $\ldots$)? (a) Xẻ mẩu giấy vụn. (b) Hòa tan đường vào nước. (c) Đinh sắt bị uốn cong. (d) Đốt mẩu giấy vụn. (e) Đun đường. (f) Đinh sắt bị gỉ.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.2.}, p. 33]
-	Xét các hiện tượng sau đây \& chỉ rõ đâu là hiện tượng vật lý, đâu là hiện tượng hóa học.
-	
-		(a)Cồn để trong lọ không kín bị bay hơi.
-		(b)Khi đốt đèn cồn, cồn cháy biến đổi thành khí carbonic \& hơi nước.
-		(c)Dây tóc trong bóng đèn điện nóng \& sáng lên khi dòng điện chạy qua.
-		(d)Nhựa đường được đung nóng, chảy lỏng.
-	\\\mbox{}\hfill\textsf{Ans:} Vật lý: (a), (c), (d). Hóa học: (b).
+\subsection{Sự biến đổi chất}
+
+\subsubsection{Sự biến đổi vật lý}
+
+\begin{dinhnghia}[Biến đổi vật lý]
+	\emph{Biến đổi vật lý} là hiện tượng chất có sự biến đổi về trạng thái, kích thước, $\ldots$ nhưng vẫn giữ nguyên là chất ban đầu.
+\end{dinhnghia}
+
+\begin{vidu}
+	Nước hoa khuếch tán trong không khí, hòa tan đường vào nước, làm đá trong tủ lạnh, $\ldots$ là các biến đổi vật lý.
+\end{vidu}
+
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 1, p. 13]
+	Kể thêm vài hiện tượng xảy ra trong thực tế có sự biến đổi vật lý.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.3.}, p. 33]
-	Những việc làm nào sau đây là sự biến đổi vật lý, sự biến đổi hóa học?
-	
-		(a)Giũa 1 đinh sắt thành mạt sắt. Ngâm mạt sắt trong ống nghiệm đựng acid hydrochloric, thu được sắt clorua \& khí hydro.
-		(b)Cho 1 ít đường vào ống nghiệm đựng nước, khuấy cho đường tan hết ta được nước đường. Đun sôi nước đường trên ngọn lửa đèn cồn, nước bay hơi hết, tiếp tục đung ta được chất rắn màu đen \& có chất khí thoát ra, khí này làm đục nước vôi trong.
-	
+\subsubsection{Sự biến đổi hóa học}
+
+\begin{dinhnghia}[Biến đổi hóa học]
+	\emph{Biến đổi hóa học} là hiện tượng chất có sự biến đổi tạo ra chất khác.
+\end{dinhnghia}
+
+\begin{vidu}
+	Quá trình tiêu hóa thức ăn, trứng để lâu ngày bị thối, nung đá vôi tạo thành vôi sống, $\ldots$ là các biến đổi hóa học.
+\end{vidu}
+
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 2, p. 14]
+	Kể thêm vài hiện tượng xảy ra trong thực tế có sự biến đổi hóa học.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.4.}, p. 33]
-	Xét các thí nghiệm sau với chất rắn natri hiđrocacbonat \emph{\ce{NaHCO3}} (còn gọi là \emph{thuốc muối}) như sau:
-	
-		(a)Hòa tan 1 ít bột \emph{\ce{NaHCO3}} vào nước được dung dịch trong suốt.
-		(b)Hòa tan 1 ít bột \emph{\ce{NaHCO3}} vào nước chanh hoặc giấm thấy sủi bọt.
-		(c)Đun nóng 1 ít bột \emph{\ce{NaHCO3}} trong ống nghiệm, màu trắng không đổi nhưng thoát ra 1 chất khí có thể làm đục nước vôi trong.
-	
-	Cho biết trong những thí nghiệm trên, đâu là sự biến đổi vật lý, đâu là sự biến đổi hóa học? Giải thích.
+\subsection{Phân biệt sự biến đổi vật lý \& sự biến đổi hóa học}
+
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, p. 14]
+	Gắn cây nến (có thành phần chính là paraffin) trên đĩa sứ, đốt nến cháy trong khoảng $1$ phút. Mô tả các hiện tượng xảy ra trong quá trình nến cháy, chỉ ra giai đoạn diễn ra sự biến đổi vật lý, giai đoạn diễn ra sự biến đổi hóa học. Biết nến cháy trong không khí chủ yếu tạo ra khí carbon dioxide \& hơi nước.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.5.}, p. 34]
-	Nến được làm bằng parafin. Khi đốt nến, lúc đầu paràin chảy lỏng \& thấm vào bấc, sau đó chuyển thành hơi parafin, hơi cháy biến thành khí carbon dioxide \& hơi nước. Cho biết sự biến đổi vật lý \& sự biến đổi hóa học trong việc đốt nến.
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 3, p. 14]
+	Quá trình nào diễn ra sự biến đổi vật lý, quá trình nào diễn ra sự biến đổi hóa học? (a) Quả táo khi vẫn còn tươi $\to$ Quả táo để lâu ngày bị hỏng. (b) Vỏ lon nước ngọt $\to$ Vỏ lon nước ngọt bị bóp méo. (c) Bánh mì trước khi nướng $\to$ Bánh mì bị nướng cháy. (d) Hạt gạo $\to$ Bột gạo.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.6.}, p. 34]
-	Đập nhỏ đá vôi rồi xếp vào lò nung ở nhiệt độ khoảng $1000^\circ$ ta được vôi sống \& có khí carbon dioxide thoát ra từ miệng lò. Cho vôi sống vào nước ta được vôi tôi. Đâu là sự biến đổi vật lý? Sự biến đổi hóa học?
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 4, p. 14]
+	Nêu những điểm khác nhau giữa sự biến đổi vật lý \& sự biến đổi hóa học.
 \end{baitoan}
 
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.7.}, p. 34]
-	Khi quan sát 1 hiện tượng, dựa vào đâu ta có thể dự đoán được đó là hiện tượng hóa học?
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 3, p. 15]
+	Trường hợp nào diễn ra sự biến đổi vật lý, trường hợp nào diễn ra sự biến đổi hóa học? (a) Khi có dòng điện đi qua, dây tóc bóng đèn (làm bằng kim loại tungsten) nóng \& sáng lên. (b) Hiện tượng băng tan. (c) Thức ăn bị ôi thiu. (d) Đốt cháy khí methane \emph{\ce{CH4}} thu được khí carbon dioxide \emph{\ce{CO2}} \& hơi nước \emph{\ce{H2O}}.
 \end{baitoan}
+Động Phong Nha (Động nước) là động tiêu biểu nhất của hệ thống hang động thuộc quần thể danh thắng Phong Nha--Kẻ Bàng. Đặc trưng của nơi đây là có nhiều thạch nhũ với các hình dáng đẹp, độc đáo. Hiện tượng thạch nhũ được tạo thành chủ yếu là do sự biến đổi hóa học. Ở các vùng núi đá vôi (thành phần chủ yếu là \ce{CaCO3}), khi trời mưa, nước mưa kết hợp với \ce{CO2} trong không khí tạo thành môi trường acid, làm tan được đá vôi (\ce{CaCO3} chuyển hóa thành \ce{Ca(HCO3)2}). Khi nước có chứa \ce{Ca(HCO3)2} chảy qua các khe đá vào trong các hang động (ở đây có sự thay đổi về nhiệt độ \& áp suất), \ce{Ca(HCO3)2} chuyển thành \ce{CaCO3} rắn, không tan. Lớp \ce{CaCO3} dần dần tích lại ngày càng nhiều, qua hàng triệu triệu năm tạo thành thạch nhũ với những hình thù đa dạng, đẹp mắt.
 
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{75.}, p. 46]
-	Xét các hiện tượng sau đây, hiện tượng nào là hiện tượng vật lý, hiện tượng hóa học?
-	
-		(a)Cho vôi sống (\ce{CaO}) hòa tan vào nước.
-		(b)Đinh sắt để trong không khí bị gỉ.
-		(c)Cồn để trong lọ không kín bị bay hơi.
-		(d)Dây tóc trong bóng đèn điện nóng \& sáng lên khi dòng điện chạy qua.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{76.}, p. 46]
-	Khi chiên mỡ có sự biến đổi như sau: trước hết 1 phần mỡ bị chảy lỏng \& nếu tiếp tục đun quá lửa mỡ sẽ khét. Trong 2 giai đoạn trên, giai đoạn nào có sự biến đổi hóa học? Giải thích.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{77.}, p. 46]
-	Trong phòng thí nghiệm có 1 em học sinh làm $2$ thí nghiệm sau:
-	
-		(a)Đốt cháy 1 băng magie cháy thành ngọn lửa sáng.
-		(b)Đun đường trong 1 ống thử, mới đầu đường nóng chảy, sau đó ngả màu nâu, rồi đen đi.
-	
-	Giải thích xem thí nghiệm trên có sự biến đổi hóa học không? Vì sao?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{78.}, p. 47]
-	
-		(a)Về mùa hè thức ăn thường bị thiu, ôi. Đó có phải là sự biến đổi hóa học không?
-		(b)Trong các hiện tượng sau, hiện tượng nào là hiện tượng hóa học: trứng bị thối, mực hòa tan vào nước, tẩy màu vải xanh thành trắng?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{79.}, p. 47]
-
-	(a)Khi đánh diêm có lửa bắt cháy. Hiện tượng đó là hiện tượng gì?
-	(b)Rượu để hở lâu ngày trong không khí thường bị chua. Có thể xem hiện tượng trên là sự biến đổi hóa học không? Vì sao?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{80.}, p. 47]
-	Các hiện tượng sau đây thuộc về hiện tượng vật lý hay hóa học?
-	
-		(a)Sự tạo thành 1 lớp mỏng màu xanh trên mâm đồng.
-		(b)Sự tạo thành chất bột màu xám khi nung nóng bột sắt với lưu huỳnh.
-		(c)1 lá đồng bị nung nóng, trên mặt đồng có phủ 1 lớp màu đen.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{81.}, p. 47]
-	
-		(a)Khi quan sát 1 hiện tượng, dựa vào đâu có thể dự đoán được nó là hiện tượng hóa học, trong đó có phản ứng hóa học xảy r?
-		(b)1 học sinh làm 3 thí nghiệm với chất rắn bicacbonat natri \emph{\ce{NaHCO3}} (thuốc muối trị đầy hơi màu trắng).
-		
-			$\bullet$ 1st thí nghiệm: Hòa tan 1 ít thuốc muối rắn trên vào nước được dung dịch trong suốt.
-			$\bullet$ 2nd thí nghiệm: Hòa tan 1 ít thuốc muối rắn trên vào nước chanh hoặc giấm thấy sủi bọt mạnh.
-			$\bullet$ 3rd thí nghiệm: Đun nóng 1 ít chất rắn trên trong ống nghiệm, màu trắng không đổi nhưng thoát ra 1 chất khí làm đục nước vôi trong.
-		
-		Trong những thí nghiệm trên, thí nghiệm nào là sự biến đổi hóa học? Giải thích.
-	
-\end{baitoan}
+\noindent\fbox{%
+	\parbox{\textwidth}{%
+		\noindent\textsf{\textbf{Kiến thức cốt lõi.}} \fbox{\bf 1} \textit{Biến đổi vật lý} là hiện tượng chất có sự biến đổi về trạng thái, kích thước, $\ldots$ nhưng vẫn giữ nguyên là chất ban đầu. \fbox{\bf 2} \textit{Biến đổi hóa học} là hiện tượng chất có sự biến đổi tạo ra chất khác.
+	}%
+}
 
 %------------------------------------------------------------------------------%
 
+\section{Phản Ứng Hóa Học \& Năng Lượng của Phản Ứng Hóa Học}
 
 %------------------------------------------------------------------------------%
 
-\section{Phản Ứng Hóa Học}
-``
-	{\bf 1.} \textit{Phản ứng hóa học} là quá trình làm biến đổi chất này (\textit{chất tham gia} hay \textit{chất phản ứng}) thành chất khác (\textit{sản phẩm} hay \textit{chất tạo thành}).
-	{\bf 2.} Trong phản ứng hóa học chỉ có liên kết giữa các nguyên tử thay đổi làm cho phân tử của chất này biến đổi thành phân tử của chất khác.
-	{\bf 3.} \textit{Điều kiện xảy ra phản ứng}: Các chất tham gia phản ứng phải tiếp xúc với nhau. Phần lớn các trường hợp cần đun nóng. 1 số trường hợp cần chất xúc tác.
-	{\bf 4.} \textit{Dấu hiệu nhận biết có phản ứng xảy ra}: Có ít nhất 1 trong các dấu hiệu sau: Có chất kết tủa (chất không tan). Có chất khí thoát ra (sủi bọt). Có sự thay đổi màu sắc. Có sự tỏa nhiệt hoặc phát sáng.
-	{\bf 5.} \textit{Tốc độ của phản ứng hóa học}: Phản ứng hóa học của những chất khác nhau xảy ra với tốc độ khác nhau. E.g., sự gỉ của sắt trong không khí ẩm là phản ứng hóa học của sắt với oxi \& hơi nước xảy ra rất chậm. Sự nổ của hỗn hợp khí hydro \& oxi là phản ứng hóa học của hydro với oxi tạo ra nước, xảy ra rất nhanh (tức thời).
-	{\bf 6.} \textit{Những yếu tố ảnh hưởng đến tốc độ của phản ứng}:
-	
-		(a)\textit{Nhiệt độ}: Tốc độ của phản ứng hóa học tăng khi tăng nhiệt độ \& giảm khi giảm nhiệt độ. Đối với nhiều phản ứng hóa học, khi nhiệt độ tăng thêm $10^\circ$C thì tốc độ phản ứng tăng khoảng $2$ lần.
-		(b)\textit{Kích thước hạt}: Kích thước của các hạt chất rắn càng nhỏ (i.e., diện tích tiếp xúc càng lớn) thì tốc độ phản ứng hóa học càng tăng. Ngược lại, kích thước của các hạt chất rắn càng lớn (diện tích tiếp xúc càng nhỏ) thì tốc độ phản ứng càng giảm.
-		(c)\textit{Độ đậm đặc của dung dịch các chất tham gia phản ứng}: Dung dịch các chất phản ứng càng đậm đặc, tốc độ phản ứng càng tăng \& ngược lại, dung dịch càng loãng thì tốc độ phản ứng càng giảm.'' -- \cite[p. 34]{Truong_BTNC_Hoa_Hoc_8_2022}
-		
-
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.8.}, p. 35]
-	Ghi lại phương trình chữ của phản ứng hóa học trong các hiện tượng mô tả dưới đây:
-	
-		(a)Đốt lưu huỳnh ngoài không khí, lưu huỳnh hóa hợp với khí oxi tạo ra khí sunfurơ \emph{\ce{SO2}} có mùi hắc.
-		(b)Ở nhiệt độ cao, nước bị phân hủy sinh ra khí hydro \& khí oxi.
-		(c)Khi nung, đá vôi \emph{\ce{CaCO3}} bị phân hủy sinh ra vôi sống \emph{\ce{CaO}} \& khí carbonic \emph{\ce{CO2}}.
-		(d)Vôi tôi \emph{\ce{Ca(OH)2}} tác dụng với khí \emph{\ce{CO2}} tạo ra \emph{\ce{CaCO3}} \& \emph{\ce{H2O}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.9.}, pp. 35--36]
-	Trong phản ứng hóa học, cho biết:
-	
-		(a)Hạt vi mô nào được bảo toàn, hạt nào còn có thể bị chia nhỏ ra?
-		(b)Vì sao có sự biến đổi phân tử này thành phân tử khác?
-		(c)Nguyên tử có thể bị chia nhỏ hay không?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.10.}, p. 36]
-	Trong phản ứng hóa học, phân tử \emph{\ce{HgO}} có thể bị chia thành những nguyên tử gì?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.11.}, p. 36]
-	Giải thích vì sao có sự biến đổi chất này thành chất khác trong phản ứng hóa học.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.12.}, p. 36]
-	1 trong những điều kiện để phản ứng hóa học xảy ra là các chất tham gia phản ứng phải được tiếp xúc với nhau, sự tiếp xúc càng nhiều thì phản ứng càng dễ. Giải thích vì sao khi đưa than vào lò đốt, người ta phải đập nhỏ than.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.13.}, p. 36]
-	Sắt để trong không khí ẩm dễ bị gỉ. Giải thích vì sao người ta có thể phòng chống giả bằng cách bôi dầu, mỡ trên bề mặt các đồ dùng bằng sắt.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.14.}, p. 36]
-	Kim loại nhôm tác dụng với acid hydrochloric sinh ra khí hydro. Chọn phương án A hay B trong mỗi trường hợp sau để thu được $V{\rm cm}^3$ khí hydro 1 cách nhanh nhất.
-	
-		(a)A: $1$\emph{g} nhôm tác dụng với acid hydrochloric lạnh. B: $1$\emph{g} nhôm tác dụng với acid hydrochloric nóng.
-		(b)A: $1$\emph{g} nhôm tác dụng với acid hydrochloric lạnh. B: $1$\emph{g} bột nhôm tác dụng với acid hydrochloric lạnh.
-		(c)A: $1$\emph{g} nhôm tác dụng với acid hydrochloric đặc. B: $1$\emph{g} nhôm tác dụng với acid hydrochloric loãng.
-		(d)A: $2$\emph{g} nhôm tác dụng với acid hydrochloric loãng. B: $1$\emph{g} nhôm tác dụng với acid hydrochloric loãng.
-		\item[(e)] A: $2$\emph{g} nhôm tác dụng với acid hydrochloric nóng. B: $1$\emph{g} nhôm tác dụng với acid hydrochloric lạnh.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.15.}, pp. 36--37]
-	Cho 1 lá sắt nhỏ tác dụng với dung dịch acid hydrochloric, nhận thấy nhiệt độ của quá trình phản ứng tăng dần. Thể tích khí hydro thu được tương ứng với thời gian đo được như sau:
-	
-	\begin{table}[H]
-		\centering
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
-			\hline
-			Thể tích ($\rm cm^3$) & $3$ & $10$ & $50$ & $78$ & $85$ & $89$ & $90$ & $90$ \\
-			\hline
-			Thời gian (phút) & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ \\
-			\hline
-		\end{tabular}
-	\end{table}
-	
-		(a)Thể tích khí hydro thu được trong quá trình thí nghiệm thay đổi như thế nào?
-		(b)Vẽ đồ thị biểu diễn thể tích khí hydro thu được theo thời gian thí nghiệm (thể tích khí trên trục tung, thời gian trên trục hoành). Chú thích rõ trên mỗi trục.
-		(c)Chúng ta biết tốc độ của phản ứng hóa học xảy ra chậm dần theo thời gian. Nhưng ở đây, phản ứng hóa học lại xảy ra nhanh từ phút thứ $2$ đến phút thứ $3$. Giải thích sự tăng tốc độ này của phản ứng hóa học.
-		(d)Độ dốc của đồ thị xảy ra như thế nào kể từ phút thứ $7$ trở đi?
-		\item[(e)] Phản ứng hóa học kết thúc sau thời gian bao lâu?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, p. 45]
-	Lập phương trình hóa học của phản ứng có sơ đồ sau: \emph{\ce{Al + O2 -> Al2O3}}.\hfill\textsf{Ans:} $4,3,2$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, p. 45]
-	Lập phương trình hóa học của phản ứng có sơ đồ sau: \emph{\ce{Al + H2SO4 -> Al2(SO4)3 + H2}}.\\\mbox{}\hfill\textsf{Ans:} $2,3,1,3$.
-\end{baitoan}
+\section{Định Luật Bảo Toàn Khối Lượng. Phương Trình Hóa Học}
 
 %------------------------------------------------------------------------------%
 
-\section{Định Luật Bảo Toàn Khối Lượng}
-``
-	{\bf 1.} \textit{Định luật bảo toàn khối lượng}: ``Trong 1 phản ứng hóa học, tổng khối lượng của các chất sản phẩm bằng tổng khối lượng của các chất tham gia phản ứng.''
-	{\bf 2.} Giải thích định luật: Trong 1 phản ứng hóa học, số nguyên tử của các nguyên tố được bảo toàn nên khối lượng được bảo toàn.
-	{\bf 3.} Áp dụng: Trong 1 phản ứng có $n$ chất, nếu biết khối lượng của $n - 1$ chất thì tính được khối lượng của chất còn lại.'' -- \cite[p. 37]{Truong_BTNC_Hoa_Hoc_8_2022}
-
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.16}, p. 37]
-	Nêu ý nghĩa của định luật bảo toàn khối lượng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.17}, p. 37]
-	Giải thích vì sao:
-	
-		(a)Khi nung nóng canxi cacbonat \emph{\ce{CaCO3}} thì thấy khối lượng giảm đi.
-		(b)Khi nung nóng 1 miếng đồng thì thấy khối lượng tăng lên.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.18}, p. 37]
-	Lưu huỳnh cháy theo phản ứng hóa học sau: lưu huỳnh $+$ khí oxi $\to$ khí sunfurơ. Cho biết khối lượng lưu huỳnh là $48$\emph{g}, khối lượng khí sunfurơ thu được là $96$\emph{g}. Tính khối lượng oxi đã tham gia phản ứng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.19}, p. 37]
-	Khi phân hủy $2.17$\emph{g} thủy ngân oxide, người ta thu được $0.16$\emph{g} oxi. Tính khối lượng thủy ngân thu được trong thí nghiệm này, biết ngoài oxi \& thủy ngân không có chất nào khác được tạo thành.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.20}, p. 37]
-	Khi nung canxi cacbonat (đá vôi) người ta thu được canxi oxit (vôi sống) \& khí cacbonic.
-	
-		(a)Tính khối lượng khí cacbonic sinh ra khi nung $5$ tấn canxi cacbonat \& được $2.8$ tấn canxi oxit.
-		(b)Nếu thu được $112$\emph{kg} canxi oxit \& $88$\emph{kg} cacbonit thì trong trường hợp này, khối lượng canxi cacbbonat tham gia phản ứng là bao nhiêu?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.21}, p. 37]
-	Khi nung nóng malachit (quặng đồng), chất này bị phân hủy thành đồng(II) oxide, hơi nước, \& khí cacbonic.
-	
-		(a)Nếu khối lượng malachit  mang nung là $2.22$\emph{g}, thu được $1.6$\emph{g} đồng(II) oxide \& $0.18$\emph{g} nước thì khối lượng khí cacbonic phải thu được là bao nhiêu?
-		(b)Nếu thu được $8$\emph{g} đồng(II) oxide, $0.9$\emph{g} nước \& $2.2$\emph{g} khí cacbonic thì khối lượng malachit mang nung là bao nhiêu?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.22}, p. 37]
-	1 lưỡi dao để ngoài trời, sau 1 thời gian sẽ bị gỉ. Cho biết khối lượng của lưỡi dao bị gỉ có bằng khối lượng của lưỡi dao trước khi gỉ không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.23}, p. 37]
-	Có 1 viên đá vôi nhỏ, 1 ống nghiệm đựng acid hydrochloric \& 1 cân nhỏ có độ chính xác cao. Làm thế nào có thể xác định được khối lượng khí cacbonic thoát ra khi cho viên đá vôi vào ống nghiệm đựng acid?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.24}, p. 38]
-	1 bình cầu trong có đựng bột magie được khóa chặt lại \& đem cân để xác định khối lượng. Sau đó đun nóng bình cầu 1 thời gian rồi để nguội \& đem cân lại.
-	
-		(a)Hỏi khối lượng của bình cầu nói trên có thay đổi hay không? Tại sao?
-		(b)Mở khóa ra \& cân lại thì liệu khối lượng bình cầu có khác không?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{82.}, p. 25]
-	Cho hỗn hợp 2 muối \ce{A2SO4} \& \ce{BSO4} có khối lượng $44.2$g tác dụng vừa đủ với dung dịch \ce{BaCl2} thì cho $69.9$g kết tủa \ce{BaSO4}. Tính khối lượng 2 muối tan.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{83.}, p. 25]
-	Đốt cháy $1.5$g kim loại \ce{Mg} trong không khí thu được $2.5$g hợp chất magie oxit \ce{MgO}. Xác định khối lượng oxi đã phản ứng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{84.}, p. 25]
-	Cho $m$g kim loại natri vào $50$g nước thấy thoát ra $0.05$g khí hydro \& thu được $51.1$g dung dịch natri hydroxide.
-	
-		(a)Viết phương trình hóa học của phản ứng.
-		(b)Tính giá trị của $m$.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{85.}, p. 26]
-	Cho $5.6$g kim loại \ce{Fe} hòa tan hoàn  toàn vào $18.4$g dung dịch acid \ce{Hcl}. Sau phản ứng thu được dung dịch muối \ce{FeCl2} \& giải phóng $0.2$g khí hydro.
-	
-		(a)Viết phương trình hóa học của phản ứng.
-		(b)Xác định khối lượng dung dịch muối \ce{FeCl2} thu được.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{86.}, p. 26]
-	Xác định công thức phân tử hợp chất A, biết rằng khi đốt cháy $1$ mol chất A cần $6.5$ mol \ce{O2} thu được $4$ mol \ce{CO2} \& $5$ mol \ce{H2O}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{87.}, p. 26]
-	Đốt nóng hỗn hợp gồm $1.4$g \ce{Fe} \& $1.6$g \ce{S} trong bình kín không có không khí thu được sắt (II) sunfua \ce{FeS}. Tính khối lượng \ce{FeS} thu được sau phản ứng, biết lượng \ce{S} dùng dư $0.8$g.
-\end{baitoan}
+\section{Mol \& Tỷ Khối của Chất Khí}
 
 %------------------------------------------------------------------------------%
 
-\section{Phương Trình Hóa Học}
-``Phương trình hóa học dùng để biểu diễn ngắn gọn phản ứng hóa học.'' -- \cite[p. 39]{Truong_BTNC_Hoa_Hoc_8_2022}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, p. 39]
-	Lập phương trình hóa học dùng để biểu diễn phản ứng phân hủy chất kali clorat thành kali clorua \& khí oxi, phân tử gồm 2 nguyên tử.\hfill\textsf{Ans:} \emph{\ce{2KClO3 -> 2KCl + 3O2 ^}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.25}, p. 40]
-	Nêu ý nghĩa của phương trình hóa học.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.26}, p. 40]
-	Lập phương trình hóa học biểu diễn các phản ứng hóa học sau:
-	
-		(a)Hydro $+$ oxi $\to$ nước;
-		(b)Kali $+$ clo $\to$ kali lorua;
-		(c)Sắt $+$ oxi $\to$ sắt(III) oxide;
-		(d)Hydro $+$ đồng(II) oxit $\to$ đồng $+$ nước.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.27}, p. 40]
-	Ghi lại bằng sơ đồ các phản ứng hóa học xảy ra trong các hiện tượng sau:
-	
-		(a)Khi rượt etylic cháy là nó tác dụng với oxi trong không khí tạo thành khí cacbonic \& hơi nước.
-		(b)Khi đốt photpho, chất này hóa hợp với oxi tạo thành 1 chất rắn có tên là anhiđrit photphoric.
-		(c)Khí metan \emph{\ce{CH4}} cháy, tác dụng với oxi tạo thành khí cacbonnic \& hơi nước.
-	
-	Sau đó hoàn thành các phương trình hóa học.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.28}, p. 40]
-	Hoàn thành phương trình hóa học biểu diễn cho những phản ứng hóa học sau:
-	
-		(a)\emph{\ce{N2 + H2 -> NH3}};
-		(b)\emph{\ce{Fe + Cl2 -> FeCl3}};
-		(c)\emph{\ce{SO2 + O2 -> SO3}};
-		(d)\emph{\ce{Mg + CO2 -> MgO + C}};
-		(d)\emph{\ce{Ca(OH)2 + CO2 -> CaCO3 v + H2O}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.29}, p. 40]
-	Hydro \& oxi tác dụng với nhau tạo thành nước. Phương trình hóa học nào dưới đây đã được viết đúng?
-	
-		{\sf A.} \emph{\ce{2H + O -> H2O}};
-		{\sf B.} \emph{\ce{H2 + O -> H2O}};
-		{\sf C.} \emph{\ce{H2 + O2 -> 2H2O}};
-		{\sf D.} \emph{\ce{2H2 + O2 -> 2H2O}}.
-	
-\end{baitoan}
-``1 số phương pháp đơn giản cân bằng số nguyên tử của mỗi nguyên tố trong sơ đồ phản ứng để lập phương trình hóa học của phản ứng.
-
-	{\bf 1.} \textit{Phương pháp dùng hệ số phân số.} Đặt hệ số là số nguyên \& phân số vào công thức của các chất trong sơ đồ phản ứng sao cho số nguyên tử của mỗi nguyên tố ở 2 vế đều bằng nhau, sau đó khử mẫu số của phân số đi.
-	{\bf 2.} \textit{Phương pháp chẵn--lẻ.} Nếu số nguyên tử của 1 nguyên tố trong 1 số công thức hóa học là số chẵn, còn ở công thức khác lại là số lẻ thì cần đặt số 2 trước công thức có số nguyên tử là số lẻ, sau đó tìm tiếp các hệ số còn lại.'' -- \cite[p. 41]{Truong_BTNC_Hoa_Hoc_8_2022}
-
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, p. 41]
-	Cân bằng phương trình: \emph{\ce{P + O2 -> P2O5}}.
-\end{baitoan}
-
-\begin{proof}[Giải]
-	Đặt hệ số $2$ \& $\frac{5}{2}$ vào công thức P \& \ce{O2} ở VT để cho số nguyên tử P \& số nguyên tử O ở 2 vế bằng nhau: \ce{2P + \frac{5}{2}O2 -> P2O5}. Nhân các hệ số với mẫu số của phân số để khử mẫu số của phân số: \ce{4P + 5O2 -> 2P2O5}.
-\end{proof}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, p. 41]
-	Cân bằng phương trình: \emph{\ce{FeS2 + O2 -> Fe2O3 + SO2}}.
-\end{baitoan}
-
-\begin{proof}[Giải]
-	Số nguyên tử O trong \ce{O2} \& \ce{SO2} là số chẵn còn trong \ce{Fe2O3} là số lẻ nên cần đặt hệ số 2 trước công thức \ce{Fe2O3}: \ce{FeS2 + O2 -> 2Fe2O3 + SO2}. Tiếp theo để cân bằng số nguyên tử Fe cần đặt hệ số 4 trước công thức \ce{FeS2}. \ce{4FeS2 + O2 -> 2Fe2O3 + SO2}. Tiếp theo để cân bằng số nguyên tử S cần đặt hệ số 8 trước công thức \ce{SO2}. \ce{4FeS2 + O2 -> 2Fe2O3 + 8SO2}. Cuối cùng để cân bằng số nguyên tử O cần đặt hệ số 11 trước công thức \ce{O2}. \ce{4FeS2 + 11O2 -> 2Fe2O3 + 8SO2}.
-\end{proof}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.30}, p. 42]
-	Lập phương trình hóa học của các phản ứng sau:
-	
-		(a)\emph{\ce{Al + H2SO4 -> Al2(SO4)3 + H2}};
-		(b)\emph{\ce{Na + H2O -> NaOH + H2}};
-		(c)\emph{\ce{NH3 + O2 -> NO + H2O}};
-		(d)\emph{\ce{KMnO4 + HCl -> KCl + MnCl2 + Cl2 + H2O}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.31}, p. 42]
-	Khi dùng diêm để lấy lửa, xảy ra các giai đoạn sau:
-	
-		(a)Quẹt đầu que diêm vào vỏ bao diêm, sự ma sát này làm đầu que diêm nóng lên.
-		(b)Nhiệt độ tăng làm cho chất \emph{\ce{KClO3}} phân hủy ra oxi đốt cháy photpho đỏ làm cho que diêm cháy (\emph{\ce{KClO3}} \& photpho đỏ là 2 chất chính để chế tạo thuốc ở đầu que diêm).
-	
-	Chỉ ra đâu là hiện tượng vật lý, đâu là hiện tượng hóa học?
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.32}, p. 42]
-	Đốt cháy A trong khí oxi, sinh ra khí cacbonic \& nước. Cho biết nguyên tố hóa học nào bắt buộc phải có trong thành phần của chất A? Nguyên tố hóa học nào có thể có hoặc không có trong thành phần của chất A? Giải thích.
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.33}, p. 43]
-	Cho $32$\emph{g} oxi tác dụng với hydro thu được $\rm36cm^3$ nước lỏng. 
-	
-		(a)Tính khối lượng nước thu được, biết khối lượng riêng của nước là $1$\emph{g\texttt{/}$\rm cm^3$}.
-		(b)Khối lượng khí hydro tham gia phản ứng là bao nhiêu?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.34}, p. 43]
-	
-		(a)Hỗn hợp có $16$\emph{g} bột \emph{S} \& $28$\emph{g} bột \emph{Fe}. Đốt nóng hỗn hợp thu được chất duy nhất là \emph{FeS}. Tính khối lượng \& sản phẩm.
-		(b)Nếu hỗn hợp có $8$\emph{g} bột \emph{S} \& $28$\emph{g} bột \emph{Fe}. Cho biết: Khối lượng \emph{FeS} thu được? Chất nào còn dư sau phản ứng \& dư bao nhiêu gam?
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{Truong_BTNC_Hoa_Hoc_8_2022}, \textbf{II.35}, p. 43]
-	Hợp chất nhôm sunfua có thành phần $64$\%\emph{S} \& $36$\%\emph{Al}.
-	
-		(a)Tìm công thức hóa học của hợp chất nhôm sunfua.
-		(b)Viết phương trình hóa học tạo thành nhôm sunfua từ 2 chất ban đầu là \emph{Al} \& \emph{S}.
-		(c)Cho $5.4$\emph{g Al} tác dụng với $10$\emph{g S}. Tính khối lượng hợp chất được sinh ra \& khối lượng chất còn dư sau phản ứng (nếu có).
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{88.}, p. 27]
-	Cân bằng các phản ứng hóa học sau: \emph{\ce{Al + O2 ->[$t^\circ$] Al2O3}, \ce{CO + O2 ->[$t^\circ$] CO2}, \ce{Fe + HCl -> FeCl2 + H2}, \ce{Al(OH)3 ->[$t^\circ$] Al2O3 + H2O}}. 
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{89.}, p. 27]
-	Cho sơ đồ các phản ứng sau:
-	
-		(a)\emph{\ce{N2O5 + H2O -> HNO3}};
-		(b)\emph{\ce{CaO + HCL -> CaCl2 + H2O}}.
-	
-	Lập phương trình hóa học \& cho biết tỷ lệ số phân tử của các chất trong mỗi phản ứng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{90.}, p. 27]
-	Cân bằng các phản ứng hóa học sau: \emph{\ce{Fe + O2 ->[$t^\circ$] Fe3O4}, \ce{CaCO3 + HCl -> CaCl2 + CO2 + H2O}, \ce{Na2CO3 + BaCl2 -> BaSO3 v + NaCl}, \ce{Fe3O4 + HCl -> FeCl2 + FeCl3 + H2O}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{91.}, p. 28]
-	Cân bằng các phản ứng hóa học sau: \emph{\ce{Na + H2O -> NaOH + H2}, \ce{Al + H2SO4 -> Al2(SO4)3 + H2}, \ce{Fe + AgNO3 -> Fe(NO3)3 + Ag}, \ce{Al + Fe2O3 ->[$t^\circ$] Al2O3 + Fe}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{92.}, p. 28]
-	Cho sơ đồ các phản ứng sau:
-	
-		(a)\emph{\ce{K + S -> K2S}};
-		(b)\emph{\ce{Fe + Cl2 ->[$t^\circ$] FeCl3}};
-		(c)\emph{\ce{Ca(OH)2 + CO2 -> CaCO3 + H2O}};
-		(d)\emph{\ce{FeS2 + O2 ->[$t^\circ$] Fe2O3 + SO2}}.
-	
-	Lập phương trình hóa học của các phản ứng trên.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{93.}, p. 29]
-	Hoàn thành các phương trình phản ứng sau:
-	
-		(a)\emph{\ce{Fe2O3 +} ? \ce{-> Fe + CO2}};
-		(b)\emph{\ce{NaOH +} ? \ce{-> Fe(OH)2 + NaCl}};
-		(c)\emph{\ce{CH4 +} ? \ce{-> CO2 + H2O}};
-		(d)\emph{? \ce{+ O2 -> MgO}};
-		\item[(e)] \emph{? \ce{+ CuCl2 -> FeCl2 + Cu}};
-		\item[(f)] \emph{\ce{Fe +} ? \ce{-> FeSO4 + H2 ^}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{94.}, p. 29]
-	Cân bằng các phản ứng hóa học sau: \emph{\ce{CaO + HNO3 -> Ca(NO3)2 + H2O}, \ce{P + O2 -> P2O5}, \ce{KMnO4 ->[$t^\circ$] K2MnO4 + MnO2 + O2 ^}, \ce{KClO3 ->[$t^\circ$] KCl + O2 ^}, \ce{N_xO_y + Cu -> CuO + N2}, \ce{Fe_xO_y + HCl -> FeCl_{2y/x} + H2O}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{95.}, p. 30]
-	Hoàn thành các phương trình phản ứng sau: \emph{\ce{Al + Cl2 ->} ?, \ce{K + H2O ->} ? \ce{+ H2 ^}, \ce{Zn +} ? \ce{-> ZnCl2 + } ?, \ce{Ca(OH)2 +} ? \ce{-> Ca3(PO4)2 + H2O}, \ce{AgNO3 +} ? \ce{-> AgCl v + Cu(NO3)2}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{96.}, p. 30]
-	Trong các mệnh đề sau, mệnh đề nào phản ánh bản chất của định luật bảo toàn khối lượng:
-	
-		{\bf 1.} Trong các phản ứng hóa học nguyên tử được bảo toàn, không tự nhiên sinh ra \& cũng không tự nhiên mất đi.
-		{\bf 2.} Tổng khối lượng các sản phẩm bằng tổng khối lượng của các chất phản ứng.
-		{\bf 3.} Trong phản ứng hóa học, nguyên tử không bị phân chia.
-		{\bf 4.} Số phần tử các sản phẩm bằng số phần các chất phản ứng.
-	
-	
-	
-		{\sf A.} 1 \& 4;
-		{\sf B.} 1 \& 3;
-		{\sf C.} 3 \& 4;
-		{\sf D.} 1.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{97.}, pp. 30--31]
-	Trong các cách phát biểu về định luật bảo toàn khối lượng như sau. Cách phát biểu nào đúng:
-	
-		{\sf A.} Tổng sản phẩm các chất bằng tổng chất tham gia.
-		{\sf B.} Trong 1 phản ứng, tổng số phân tử chất tham gia bằng tổng số phân tử chất tạo thành.
-		{\sf C.} Trong 1 phản ứng hóa học, tổng khối lượng của các sản phẩm bằng tổng khối lượng của các chất phản ứng.
-		{\sf D.} Trong phản ứng hóa học, khối lượng các nguyên tử không đổi.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{98.}, p. 31]
-	Cho $m$g kim loại nhôm tan hoàn toàn trong $3.65$g acid hydrochloric \ce{HCl}, sau phản ứng thu được $4.45$g muối nhôm clorua (\ce{AlCl3}) \& giải phóng $0.1$g khí \ce{H2}. Khối lượng kim loại nhôm ($m$) đã phản ứng là:
-	
-		{\sf A.} $1.8$g;
-		{\sf B.} $0.9$g;
-		{\sf C.} $1.2$g;
-		{\sf D.} $0.45$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{99.}, p. 31]
-	Nung hỗn hợp gồm $3$g \ce{C} \& $10$g \ce{CuO} trong bình kín, sau phản ứng thu được $a$g \ce{Cu} \& giải phóng $2.75$g khí \ce{CO2}. Giá trị của $a$ là:
-	
-		{\sf A.} $10.25$g;
-		{\sf B.} $10.5$g;
-		{\sf C.} $5.75$g;
-		{\sf D.} $9.75$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{100.}, p. 31]
-	Hòa tan hoàn toàn $6.2$g \ce{Na2O} vào nước thu được $8$g \ce{NaOH}. Khối lượng nước tham gia phản ứng là:
-	
-		{\sf A.} $0.9$g;
-		{\sf B.} $1.8$g;
-		{\sf C.} $2$g;
-		{\sf D.} $1.6$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{101.}, p. 31]
-	Đốt cháy hoàn toàn $2.1$g khí \ce{C3H6} trong $a$g oxi, sau phản ứng thu được $9.3$g khí \ce{CO2} \& \ce{H2O}. Giá trị của $a$ là:
-	
-		{\sf A.} $7.2$;
-		{\sf B.} $3.6$;
-		{\sf C.} $2.7$;
-		{\sf D.} $7.6$.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{102.}, p. 31]
-	Hòa tan hoàn toàn $20$g hỗn hợp $2$ muối \ce{A2CO3} \& \ce{BCO3} vào $14.6$g \ce{HCl} thu được dung dịch X \& $12.4$g \ce{CO2} \& \ce{H2O}. Tổng khối lượng muối tạo thành trong dung dịch X là:
-	
-		{\sf A.} $11.2$g;
-		{\sf B.} $20.2$g;
-		{\sf C.} $22.2$g;
-		{\sf D.} $25.3$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{103.}, p. 31]
-	Khi cho $80$kg đất đèn có thành phần chính là canxi cacbua\emph{\texttt{/}}calci carbide hóa hợp $36$kg nước thu được $74$g calci hydroxide \& $26$g khí axetilen được  thể hiện ở phản ứng sau: calci carbide $+$ nước $\to$ calci hydroxide $+$ khí axetilen. Tỷ lệ \% calci carbide nguyên chất có trong đất đèn là:
-	
-		{\sf A.} $80$\%;
-		{\sf B.} $85$\%;
-		{\sf C.} $75$\%;
-		{\sf D.} $90$\%.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{104.}, p. 31]
-	Khi nung đá vôi $90$\% khối lượng calci carbonat \ce{CaCO3} thu được $5.6$ tấn calci oxide \ce{CaO} \& $4.4$ tấn khí carbonic. Khối lượng đá vôi đem nung là:
-	
-		{\sf A.} $12.111$ tấn;
-		{\sf B.} $11.111$ tấn;
-		{\sf C.} $10.55$ tấn;
-		{\sf D.} $13.112$ tấn.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{105.}, p. 31]
-	Khi nung miếng kim loại sắt trong không khí thấy khối lượng:
-	
-		{\sf A.} giảm ít;
-		{\sf B.} tăng lên;
-		{\sf C.} không tăng, không giảm;
-		{\sf D.} giảm nhiều.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{106.}, p. 32]
-	Cho $4.8$g magiê tác dụng vừa đủ với $200$g dung dịch acid hydrochloric thu được dung dịch magiee clorua \& thoát ra $0.4$g khí hydro. Khối lượng dung dịch magiê clorua thu được là:
-	
-		{\sf A.} $200.4$g;
-		{\sf B.} $210$g;
-		{\sf C.} $204.4$g;
-		{\sf D.} $240.4$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{107.}, p. 32]
-	Cho $5.4$g nhôm tác dụng với $4.8$g khí oxi tạo thành nhôm oxit (\ce{Al2O3}). Khối lượng nhôm oxit thu được là:
-	
-		{\sf A.} $9.8$g;
-		{\sf B.} $11.5$g;
-		{\sf C.} $10.2$g;
-		{\sf D.} $20.4$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{108.}, p. 32]
-	Cho $8.4$g bột sắt cháy hết trong $3.2$g oxi tạo ra oxit sắt từ \ce{Fe3O4}. Khối lượng oxit sắt từ thu được là:
-	
-		{\sf A.} $11.6$g;
-		{\sf B.} $10.6$g;
-		{\sf C.} $16.1$g;
-		{\sf D.} $12.4$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{109.}, p. 32]
-	Biết đồng oxit \ce{CuO} bị khử là $400$g, khối lượng khí hydro đã dùng là $10$g khối lượng nước tạo ra là $90$g. Khối lượng đồng sinh ra là:
-	
-		{\sf A.} $230$g;
-		{\sf B.} $320$g;
-		{\sf C.} $390$g;
-		{\sf D.} $310$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{110.}, p. 32]
-	Cho biết khối lượng khí hydro đã dùng là $5$g, khối lượng \ce{Cu} sinh ra là $160$g, khối lượng nước tạo ra là $45$g. Khối lượng đồng oxit bị khử là:
-	
-		{\sf A.} $200$g;
-		{\sf B.} $195$g;
-		{\sf C.} $165$g;
-		{\sf D.} $205$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{111.}, p. 32]
-	Cho $2.7$g kim loại nhôm phản ứng với dung dịch acid sulfuric \ce{H2SO4} vừa đủ thì thu được $17.1$g muối nhôm sunfat \ce{Al2(SO4)3}, \& $0.3$g khí \ce{H2}. Khối lượng \ce{H2SO4} đã dùng là:
-	
-		{\sf A.} $17.4$g;
-		{\sf B.} $14.7$g;
-		{\sf C.} $16.9$g;
-		{\sf D.} $34.8$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{112.}, p. 32]
-	Đốt cháy $a$g chất X cần dùng $6.4$g \ce{O2} \& thu được $4.4$g \ce{CO2} \& $3.6$g \ce{H2O}. Giá trị của $a$ là:
-	
-		{\sf A.} $0.8$;
-		{\sf B.} $3.2$;
-		{\sf C.} $1.6$;
-		{\sf D.} $1.8$.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{113.}, p. 32]
-	Cho $19.1$g hỗn hợp X gồm $2$ muối \ce{Na2SO4} \& \ce{MgSO4} tác dụng vừa đủ với $31.2$g \ce{BaCl2} thu được $34.95$g kết tủa \ce{BaSO4} \& $2$ muối tan (\ce{NaCl,MgCl2}). Khối lượng 2 muối tan sau phản ứng là:
-	
-		{\sf A.} $15.35$g;
-		{\sf B.} $13.53$g;
-		{\sf C.} $15.57$g;
-		{\sf D.} $17.75$g.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{114.}, p. 32]
-	Chọn phương trình hóa học đã cân bằng đúng:
-	
-		{\sf A.} \emph{\ce{NH4NO3 ->[$t^\circ$] N2 + O2 + 2H2O}};
-		{\sf B.} \emph{\ce{2NH4NO3 ->[$t^\circ$] 2N2 + O2 + 4H2O}};
-		{\sf C.} \emph{\ce{2NH4NO3 ->[$t^\circ$] 2N2 + 2O2 + 4H2O}};
-		{\sf D.} \emph{\ce{2NH4NO3 ->[$t^\circ$] N2 + O2 + 4H2O}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{115.}, pp. 32--33]
-	Chọn phương trình hóa học đã cân bằng đúng:\\
-	
-		{\sf A.} \emph{\ce{(NH4)2Cr2O7 ->[$t^\circ$] 2N2 + Cr2O3 + 4H2O}};
-		{\sf B.} \emph{\ce{2(NH4)2Cr2O7 ->[$t^\circ$] 2N2 + 2Cr2O3 + 2H2O}};
-		{\sf C.} \emph{\ce{(NH4)2Cr2O7 ->[$t^\circ$] N2 + Cr2O3 + 4H2O}};
-		{\sf D.} \emph{\ce{(NH4)2Cr2O7 ->[$t^\circ$] N2 + Cr2O3 + 2H2O}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{116.}, p. 33]
-	Chọn phương trình hóa học đã cân bằng đúng:
-	
-		{\sf A.} \emph{\ce{NaHCO3 ->[$t^\circ$] Na2CO3 + CO2 + H2O}};
-		{\sf B.} \emph{\ce{2NaHCO3 ->[$t^\circ$] Na2CO3 + CO2 + H2O}};
-		{\sf C.} \emph{\ce{2NaHCO3 ->[$t^\circ$] Na2CO3 + 2CO2 + H2O}};
-		{\sf D.} \emph{\ce{2NaHCO3 ->[$t^\circ$] Na2CO3 + CO2 + 2H2O}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{117.}, p. 33]
-	Chọn phương trình hóa học đã cân bằng đúng:
-	
-		{\sf A.} \emph{\ce{(NH4)2CO3 ->[$t^\circ$] NH3 + CO2 + H2O}};
-		{\sf B.} \emph{\ce{(NH4)2CO3 ->[$t^\circ$] 2NH3 + CO2 + 2H2O}};
-		{\sf C.} \emph{\ce{(NH4)2CO3 ->[$t^\circ$] 2NH3 + 2CO2 + H2O}};
-		{\sf D.} \emph{\ce{(NH4)2CO3 ->[$t^\circ$] 2NH3 + CO2 + H2O}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{118.}, p. 33]
-	Chọn phương trình hóa học đã cân bằng đúng:
-	
-		{\sf A.} \emph{\ce{Cu(NO3)2 ->[$t^\circ$] CuO + NO2 + O2}};
-		{\sf B.} \emph{\ce{2Cu(NO3)2 ->[$t^\circ$] 2CuO + 4NO2 + O2}};
-		{\sf C.} \emph{\ce{2Cu(NO3)2 ->[$t^\circ$] 2CuO + NO2 + O2}};
-		{\sf D.} \emph{\ce{2Cu(NO3)2 ->[$t^\circ$] 2CuO + 2NO2 + O2}}.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{119.}, p. 33]
-	Cho sơ đồ phản ứng sau: \emph{\ce{Fe(OH)_y + H2SO4 -> Fe_x(SO4)_y + H2O}}. Chọn $x,y$ bằng các chỉ số thích hợp để lập được phương trình hóa học trên ($x\ne y$).
-	
-		{\sf A.} $x = 1$, $y = 2$;
-		{\sf B.} $x = 2$, $y = 3$;
-		{\sf C.} $x = 3$, $y = 1$;
-		{\sf D.} $x = 2$, $y = 4$.
-	
-\end{baitoan}
-
-\begin{baitoan}[\cite{An2011}, \textbf{120.}, p. 33]
-	Cho sơ đồ phản ứng sau: \emph{\ce{Al(OH)_y + H2SO4 -> Al_x(SO4)_y + H2O}}. Chọn $x,y$ bằng các chỉ số thích hợp để lập được phương trình hóa học trên ($x\ne y$).
-	
-		{\sf A.} $x = 2$, $y = 1$;
-		{\sf B.} $x = 3$, $y = 4$;
-		{\sf C.} $x = 2$, $y = 3$;
-		{\sf D.} $x = 4$, $y = 3$.
-	
-\end{baitoan}
+\section{Tính Theo Phương Trình Hóa Học}
 
 %------------------------------------------------------------------------------%
 
-\section{Mol \& Tính Toán Hóa Học}
+\section{Nồng Độ Dung Dịch}
 
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, p]
-	Tìm công thức hóa học (CTHH) của hợp chất khi phân tích được kết quả sau: Hydro chiếm 1 phần về khối lượng, oxi chiếm 8 phần về khối lượng.
-\end{baitoan}
+%------------------------------------------------------------------------------%
 
-\begin{proof}[1st Giải]
-	Giả sử CTPT của hợp chất là \ce{H_xO_y}. Có tỷ lệ khối lượng: $\frac{m_{\rm H}}{m_{\rm O}} = \frac{x}{16y} = \frac{1}{8}\Rightarrow\frac{x}{y} = \frac{2}{1}\Rightarrow$ (do $x,y\in\mathbb{N}^\star$ \& nguyên tố cùng nhau) $x = 2\land y = 1$. CTHH: \ce{H2O}.
-\end{proof}
-
-\begin{proof}[2nd Giải]
-	Giả sử khối lượng chất đem phân tích là $a$g. $m_{\rm H}$ chiếm $\frac{a}{9}$, $n_{\rm H} = \frac{m_{\rm H}}{M_{\rm H}} = \frac{a}{9}$. $m_{\rm O}$ chiếm $\frac{8a}{9}$, $n_{\rm O} = \frac{m_{\rm O}}{M_{\rm O}} = \frac{8a}{9\cdot16} = \frac{a}{18}$. Suy ra $\frac{n_{\rm H}}{n_{\rm O}} = \frac{a}{9}:\frac{a}{18} = 2$. CTHH: \ce{H2O}.
-\end{proof}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, p. 64]
-	Tìm công thức hóa học của 1 oxit của sắt biết phân tử khối là $160$, tỷ số khối lượng: $\frac{m_{\ce{Fe}}}{m_{\rm O}} = \frac{7}{3}$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, p. 65]
-	Xác định công thức oxit của lưu huỳnh biết phân tử khối của oxit là $80$ \& thành phần \% của nguyên tố lưu huỳnh là $40$\%.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, p. 65]
-	Tìm công thức của hợp chất \emph{\ce{C_xH_yO_zN_t}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, p. 66]
-	Hợp chất A chứa 3 nguyên tố \emph{Ca,C,O} với tỷ lệ canxi chiếm $40$\%, \emph{C}: $12$\%, \emph{O}: $48$\% về khối lượng. Tìm công thức phân tử của $A$.
-\end{baitoan}
-
-\subsection{Mol}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{115.}, p. 67]
-	(a) $0.5$ mol \emph{NaCl} (natri clorua) là bao nhiêu phân tử \emph{NaCl}? (b) Tính khối lượng của $0.5$\emph{mol} \emph{Na}. (c) Tính khối lượng của $0.2$\emph{mol} \emph{NaOH}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{116.}, p. 67]
-	(a) Trong $8.4$\emph{g} sắt có bao nhiêu mol sắt? (b) Tính thể tích của $8$\emph{g} khí oxi \emph{\ce{O2}}. (c) Tính khối lượng của $67.2$\emph{l} khí nitơ \emph{\ce{N2}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{117.}, p. 67]
-	Trong $4.05$\emph{g} nhôm. Tính: (a) Số mol nhôm. (b) Số nguyên tử nhôm.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{118.}, p. 67]
-	1 mol nguyên tử gồm bao nhiêu nguyên tử? 1 mol phân tử gồm bao nhiêu phân tử? 1 mol nước gồm bao nhiêu phân tử nước, có khối lượng bao nhiêu gam?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{119.}, p. 67]
-	Tính: (a) Trong $40$\emph{g} \emph{NaOH} có bao nhiêu phân tử \emph{NaOH}? (b) Khối lượng của $12\cdot10^{23}$ nguyên tử nhôm. (c) Trong $28$\emph{g} sắt có bao nhiêu nguyên tử \emph{Fe}?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{120.}, p. 67]
-	(a) $2.5$\emph{mol H} là bao nhiêu nguyên tử \emph{H}? (b) $9\cdot10^{23}$ nguyên tử canxi là bao nhiêu mol canxi? (c) $0.3$\emph{mol} nước là bao nhiêu phân tử \emph{\ce{H2O}}? (d) $4.5\cdot10^{23}$ phân tử \emph{\ce{H2O}} là bao nhiêu \emph{mol \ce{H2O}}?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{121.}, p. 67]
-	Giải thích vì sao $1$\emph{mol} các chất ở trạng thái rắn, lỏng, khí tuy có số phân tử như nhau nhưng lại có thể tích không bằng nhau.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{122.}, p. 67]
-	(a) Tính khối lượng của $0.5$\emph{mol} sắt. (b) Cho biết khối lượng của $6\cdot10^{23}$ phân tử của mỗi chất sau: \emph{\ce{CO2,Al2O3,C6H12O6,H2SO4,HCl}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{123.}, p. 67]
-	(a) Trong $112$\emph{g} canxi có bao nhiêu mol canxi? (b) Tính khối lượng của $0.5$\emph{mol} axit clohydric \emph{HCl}. (c) Trong $49$\emph{g} axit sunfuric có bao nhiêu mol \emph{\ce{H2SO4}}?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{124.}, p. 68]
-	(a) Tìm khối lượng của $18\cdot10^{23}$ phân tử \emph{\ce{CO2}}. (b) Tìm số mol \emph{\ce{H2O}} có khối lượng $39.6$\emph{g}. (c) Tìm số mol của $12\cdot10^{23}$ nguyên tử \emph{Fe}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{125.}, p. 68]
-	Tính số hạt vi mô (nguyên tử, phân tử) của: $0.25 $\emph{mol \ce{O2}, $27$g \ce{H2O}, $28$g N, $0.5$mol C, $50$g \ce{CaCO3}, $5.85$g NaCl}.
-\end{baitoan}
-
-\subsection{Sự Chuyển Đổi Giữa Khối Lượng, Thể Tích, \& Lượng Chất. Tỷ Khối của Chất Khí}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{126.}, p. 68]
-	(a) Tìm sơ đồ biến đổi giữa khối lượng \& thể tích chất khí. (b) Tính thể tích của $1$\emph{mol} khí hydro \& $1$\emph{mol} khí carbonic ở điều kiện tiêu chuẩn, biết $D_{\ce{H2}} = 0.09$, $D_{\ce{CO2}} = 1.965$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{127.}, p. 68]
-	Tính thể tích khí (đktc) của: (a) $0.5$\emph{mol} khí \emph{\ce{O2}}. (b) $0.75$\emph{mol} khí \emph{\ce{CO2}}. (c) $32$\emph{g} khí \emph{\ce{SO2}}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{128.}, p. 68]
-	Cho biết $16$\emph{g} khí oxi: (a) Có bao nhiêu mol khí oxi? (b) Có bao nhiêu phân tử oxi? (c) Có thể tích là bao nhiêu lít (đktc)?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{129.}, p. 68]
-	1 hỗn hợp khí A gồm $0.2$\emph{mol} khí \emph{\ce{SO2}}, $0.5$\emph{mol} khí \emph{CO}, $0.35$\emph{mol} khí \emph{\ce{N2}}. (a) Tính thể tích của hỗn hợp khí A (đktc). (b) Tính khối lượng của hỗn hợp khí A.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{130.}, p. 68]
-	Tính khối lượng \& thể tích của: (a) $2.5$\emph{mol} nhôm biết $D = 2.7$\emph{g\texttt{/}$\rm cm^3$}. (b) $2.4$\emph{mol} khí clo (\emph{\ce{Cl2}}).
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{131.}, p. 68]
-	(a) Tính thể tích của hỗn hợp gồm $14$\emph{g} nitơ \& $4$\emph{g} khí \emph{NO}. (b) Tính số mol nước \emph{\ce{H2O}} có trong $0.8$\emph{l} nước. Biết $D = 1$\emph{g\texttt{/}$\rm cm^3$}.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{132.}, pp. 68--69]
-	(a) Tính số mol, số phân tử natri hiđroxit \emph{NaOH} có trong $0.05$\emph{l NaOH} biết $D = 1.2$\emph{g\texttt{/}$\rm cm^3$}. (b) Có những khí sau: \emph{\ce{O3,O2,N2,CO2,SO3,C4H10,CH4}}. Những khí trên nặng hay nhẹ hơn khí hydro bao nhiêu lần? Những khí trên nặng hay nhẹ hơn không khí bao nhiêu lần?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{133.}, p. 69]
-	(a) Tìm khối lượng mol của những chất khí có tỷ khối đối với khí hydro là: $17,22,16,8.5$. (b) Tìm khối lượng mol của những chất khí có tỷ khối đối với không khí là: $2.2,0.59,1.17$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{134.}, p. 69]
-	Để thu các khí hydro, khí cacbonic, khí clo, khí nitơ trong phòng thí nghiệm, 1 học sinh đã thu những khí trên vào bình được đặt như sau: thu khí clo: bình ngửa lên, thu khí cacbonic: bình úp xuống, thu khí nitơ: bình úp xuống, thu khí hydro: bình ngửa lên. Học này thu các khí như vậy đúng hay sai?
-\end{baitoan}
-
-\subsection{Tính Theo Công Thức Hóa Học}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{135.}, p. 69]
-	(a) Có bao nhiêu gam sắt trong $30$\emph{g} pirit sắt \emph{\ce{FeS2}}? Trong $40$\emph{g} sắt(III) oxit \emph{\ce{Fe2O3}}? (b) Tính thành phần \% về khối lượng của nguyên tố oxi có trong khí \emph{\ce{CO2}}, magie oxit \emph{MgO}, \& nhôm oxit \emph{\ce{Al2O3}}. Ở chất nào có nhiều oxi hơn cả?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{136.}, p. 69]
-	(a) Xác định thành phần \% của các nguyên tố trong hợp chất canxi hiđroxit. (b) Có bao nhiêu gam oxi trong: (1) $63$\emph{g} axit nitric \emph{\ce{HNO3}}? (2) $27$\emph{g} \emph{\ce{H2O}}? (3) $2170$\emph{g} thủy ngân(II) oxit \emph{HgO}?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{137.}, p. 69]
-	Ở 1 nông trường, người ta dùng muối đồng ngậm nước \emph{\ce{CuSO4.5H2O}} để bón ruộng. Người ta bón $25$\emph{kg} muối trên $1$\emph{ha} đất. Lượng \emph{Cu} được đưa vào đất là bao nhiêu (với lượng phân bón trên)? Biết muối đó chứa $5$\% tạp chất.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{138.}, p. 70]
-	Trong nông nghiệp người ta có thể dùng đồng(II) sunfat như 1 loại phân bón vi lượng để bón ruộng, làm tăng năng suất cây trồng. Nếu dùng $8$\emph{g} chất này thì có thể đưa vào đất bao nhiêu gam nguyên tố đồng?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{139.}, p. 70]
-	Oxit của 1 nguyên tố có hóa trị II chứa $20$\% oxi (về khối lượng). Nguyên tố đó tên gì?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{140.}, p. 70]
-	Oxit của 1 nguyên tố hóa trị IV chứa $13.4$\% khối lượng oxi. Cho biết tên nguyên tố.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{141.}, p. 70]
-	Để tăng năng suất cho cây trồng, 1 bác nông dân đến cửa hàng phân bón để mua phân đạm. Cửa hàng có các loại phân đạm sau: \emph{\ce{NH4NO3}} (đạm 2 lá), \emph{\ce{(NH2)2CO}} (urê), \emph{\ce{(NH4)2SO4}} (đạm 1 lá). Nếu bác nông dân mua $500$\emph{kg} phân đạm thì nên mua loại phân đạm nào có lợi nhất? Tại sao?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{142.}, p. 70]
-	Từ tỷ số khối lượng giữa các nguyên tố hydro \& oxi là $\frac{1}{8}$, lập tỷ số nguyên tử các nguyên tố cấu tạo nên phân tử nước. Tỷ lệ có phù hợp với CTHH của nước không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{143.}, p. 70]
-	Tìm CTHH của những hợp chất theo kết quả sau: (a) Lưu huỳnh chiếm $24$ phần về khối lượng, oxi chiếm $36$ phần về khối lượng. (b) Cacbon chiếm $48$ phần về khối lượng, hydro chiếm $10$ phần về khối lượng. (c) Kali chiếm $78$ phần về khối lượng, oxi chiếm $16$ phần về khối lượng.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{144.}, p. 70]
-	Tìm công thức hóa học của những hợp chất sau: (a) 1 hợp chất khí đốt có thành phần các nguyên tố là: $82.76$\%\emph{C}, $17.24$\%\emph{H} \& tỷ khối đối với không khí là $2$. (b) Trong nước mía ép có khoảng $15$\% về khối lượng 1 loại đường có thành phần các nguyên tố là: $42.11$\%, $6.43$\%, $51.46$\%, \& có phân tử khối là $342$.
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{145.}, p. 70]
-	Cho biết tỷ số khối lượng của các nguyên tố \emph{C,S} trong hợp chất cacbon đisunfua là $\frac{m_{\rm C}}{m_{\rm S}} = \frac{3}{16}$. Tính tỷ lệ số nguyên tử \emph{C,S} trong cacbon đisunfua. Tỷ lệ này có phù hợp với CTHH của hợp chất là \emph{\ce{CS2}} không?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{146.}, p. 71]
-	1 oxit của nitơ, có phân tử khối lfa $108$, biết $\frac{m_{\rm N}}{m_{\rm O}} = \frac{7}{20}$. CTHH của oxit?
-\end{baitoan}
-
-\begin{baitoan}[\cite{An_400_BT_Hoa_Hoc_8_2020}, \textbf{147.}, p. 71]
-	1 hợp chất tạo bởi 2 nguyên tố là \emph{P,O}, trong đó oxi chiếm $43.64$\% về khối lượng, biết phân tử khối của hợp chất đó là $110$. CTHH của hợp chất?
-\end{baitoan}
-
-\subsection{Tính Theo Phương Trình Hóa Học}
-``Công thức liên hệ giữa 3 đại lượng (khối lượng, số mol, khối lượng mol) $m = nM$, $n = \frac{m}{M}$, $n = \frac{V}{22.4}$, trong đó: $m$ là \textit{khối lượng} (tính bằng gam của 1 lượng nguyên tố hay 1 lượng chất nào đó), $n$ là \textit{số mol}, $M$ là \textit{khối lượng mol} (nguyên tử, phân tử, $\ldots$).
-
-'' -- \cite[p. 71]{An_400_BT_Hoa_Hoc_8_2020}
+\section{Tốc Độ Phản Ứng \& Chất Xúc Tác}
 
 %------------------------------------------------------------------------------%
 
