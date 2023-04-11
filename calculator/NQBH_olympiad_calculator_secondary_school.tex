@@ -57,6 +57,82 @@
 
 \section{Tính Giá Trị Biểu Thức}
 
+\begin{baitoan}[Giải Toán Trên MTCT Khu Vực 2003--2004]
+	Tính kết quả đúng của tích $M = 2222255555\cdot2222266666$.
+\end{baitoan}
+\noindent\textsf{Phân tích}: Khi nhập biểu thức vào máy tính cầm tay, máy tính cho kết quả tràn màn hình: $M = 2222255555\cdot2222266666 = 4.938444443\cdot10^{18}$ nên cần tách riêng từng phần ra để tính.
+
+\begin{proof}[1st giải]
+	Đặt $A = 22222$, $B = 55555$, $C = 66666$, $M = (10^5A + B)(10^5A + C) = 10^{10}A^2 + 10^5AB + 10^5AC + BC$. Tính trên MTCT: $A^2 = 22222^2 = 493817284$, $AB = 22222\cdot55555 = 1234543210$, $AC = 22222\cdot66666 = 1481451852$, $BC = 3703629630$. Tính trên giấy:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			$10^{10}A^2$ & 4 & 9 & 3 & 8 & 1 & 7 & 2 & 8 & 4 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+			\hline
+			$10^5AB$ &  &  &  &  & 1 & 2 & 3 & 4 & 5 & 4 & 3 & 2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+			\hline
+			$10^5AC$ &  &  &  &  & 1 & 4 & 8 & 1 & 4 & 5 & 1 & 8 & 5 & 2 & 0 & 0 & 0 & 0 & 0 \\
+			\hline
+			$BC$ &  &  &  &  &  &  &  &  &  & 3 & 7 & 0 & 3 & 6 & 2 & 9 & 6 & 3 & 0 \\
+			\hline
+			$M$ & 4 & 9 & 3 & 8 & 4 & 4 & 4 & 4 & 4 & 3 & 2 & 0 & 9 & 8 & 2 & 9 & 6 & 3 & 0 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Vậy $M = 4938444443209829630$.
+\end{proof}
+Trong lời giải thứ nhất, có thể gom $10^5AB + 10^5AC = 10^5A(B + C)$ như sau (2 lời giải gần như giống hệt nhau chỉ khác là lời giải 2 ngắn hơn 1 dòng trong bảng tính trên giấy nháp):
+
+\begin{proof}[2nd giải]
+	Đặt $A = 22222$, $B = 55555$, $C = 66666$, $M = (10^5A + B)(10^5A + C) = 10^{10}A^2 + 10^5A(B + C) + BC$. Tính trên MTCT: $A^2 = 22222^2 = 493817284$, $A(B + C) = 22222\cdot(55555 + 66666) = 2715995062$, $BC = 3703629630$. Tính trên giấy:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			$10^{10}A^2$ & 4 & 9 & 3 & 8 & 1 & 7 & 2 & 8 & 4 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+			\hline
+			$10^5(AB + AC)$ &  &  &  &  & 2 & 7 & 1 & 5 & 9 & 9 & 5 & 0 & 6 & 2 & 0 & 0 & 0 & 0 & 0 \\
+			\hline
+			$BC$ &  &  &  &  &  &  &  &  &  & 3 & 7 & 0 & 3 & 6 & 2 & 9 & 6 & 3 & 0 \\
+			\hline
+			$M$ & 4 & 9 & 3 & 8 & 4 & 4 & 4 & 4 & 4 & 3 & 2 & 0 & 9 & 8 & 2 & 9 & 6 & 3 & 0 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\noindent Vậy $M = 4938444443209829630$.
+\end{proof}
+
+\begin{nhanxet}[Ý tưởng giải quyết với công cụ máy tính cầm tay]
+	``Nếu tính trực tiếp trên MTCT thì kết quả vượt quá độ rộng hiển thị của màn hình MTCT, do đó để có kết quả chính xác ta tách các chữ số thành các bộ phận của $k$ chữ số ($k$ tùy thuộc vào từng loại máy tính cụ thể, thông thường thì $k$ bằng $\frac{1}{2}$ độ rộng hiển thị các chữ số trên màn hình MTCT), bắt đầu từ bên phải \& thực hiện tính toán. Sau đó kết hợp tính trên máy tính điện tử \& trên giấy nháp để được kết quả chính xác cuối cùng. Có thể đặt các biến cho các nhóm chữ số để thuận tiện trong biến đổi đại số (như ở 2 cách giải trên).
+\end{nhanxet}
+
+\begin{baitoan}[Mở rộng]
+	Nêu cách tính kết quả đúng của tích $M = \overline{\underbrace{aa\ldots a}_n\underbrace{bb\ldots b}_n}\cdot\overline{\underbrace{aa\ldots a}_n\underbrace{cc\ldots c}_n}$ với $a,b,c\in\mathbb{N}$, $an\ne0$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tính chính xác $1023456^3$.
+\end{baitoan}
+
+\begin{baitoan}[Giải Toán Trên MTCT Khu Vực 2003--2004]
+	Tính kết quả đúng của tích: $M = 20032003\cdot20042004$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tính kết quả đúng: (a) $M = 3344355664\cdot3333377777$. (b) $N = 123456^3$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tính kết quả đúng: (a) $A = 2001^3 + 2002^3 + 2004^3 + 2005^3 + 2006^3 + 2007^3 + 2008^3 + 2009^3$. (b) $B = 13032006\cdot13032007$.
+\end{baitoan}
+
+\begin{baitoan}
+	Tính tổng: $S = \sum_{i=1}^n i\cdot i!$. Áp dụng với $n = 16$.
+\end{baitoan}
+
+
+
 %------------------------------------------------------------------------------%
 
 \section{Tìm Thương \& Số Dư Khi Chia 2 Số Tự Nhiên}
