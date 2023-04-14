@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz,tipa}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,diagbox,tikz,tipa}
 \usepackage[version=4]{mhchem}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
@@ -283,6 +283,10 @@ Khi hòa chất rắn vào nước, có chất tan nhiều, có chất tan ít, 
 \begin{thinghiem}[\cite{SGK_Hoa_Hoc_8}, Thí nghiệm, p. 136]
 	Cho dần dần \& liên tục đường vào cốc nước, khuấy nhẹ. Ở giai đoạn đầu, ta được dung dịch đường, dung dịch này vẫn có thể hòa tan thêm đường. Ta có \emph{dung dịch đường chưa bão hòa}. Ở giai đoạn sau ta được 1 dung dịch đường không thể hòa tan thêm đường. Ta có \emph{dung dịch đường bão hòa}.
 \end{thinghiem}
+
+\begin{thinghiem}[\cite{SGK_KHTN_8_Canh_Dieu}, p. 36]
+	Cho dần muối ăn vào cốc chứa \emph{200 mL} nước, khuấy đều cho đến khi muối ăn không thể hòa tan thêm được nữa, tách bỏ chất rắn không tan, ta thu được \emph{dung dịch bão hòa}.
+\end{thinghiem}
 Trong thực tế, dung môi thường là nước ở thể lỏng, chất tan có thể ở thể rắn, lỏng hoặc khí.
 
 \begin{dinhnghia}[Dung dịch chưa bão hòa, dung dịch bão hòa]
@@ -332,13 +336,21 @@ Xem thêm bảng tính tan của acid, base, muối.
 \end{dinhnghia}
 Hiển nhiên, độ tan của chất không tan trong nước là $S = \frac{\rm0\ g}{\rm100\ g} = 0$. Các chất khác nhau có độ tan khác nhau.
 
-\begin{vidu}[Độ tan của muối ăn]
-	Cho dần muối ăn vào cốc chứa 200 mL nước, khuấy đều cho đến khi muối ăn không thể hòa tan thêm được nữa, tách bỏ chất rắn không tan, ta thu được dung dịch bão hòa. Lượng muối ăn hòa tan trong $100$ gam nước tạo thành dung dịch bão hòa ở $20^\circ$\emph{C} là $35.9$ gam. Người ta nói \emph{độ tan của muối ăn} là $35.9$ gam trong $100$ gam nước ở $20^\circ$\emph{C}.
-\end{vidu}
-
 \begin{vidu}[\cite{SGK_Hoa_Hoc_8}, p. 140]
 	Ở $25^\circ$\emph{C}, độ tan của đường trong nước là \emph{204 g\texttt{/}100 g \ce{H2O}}, độ tan của \emph{NaCl} trong nước là \emph{36 g\texttt{/}100 g \ce{H2O}}, \& độ tan của \emph{\ce{AgNO3}} là \emph{222 g\texttt{/}100 g \ce{H2O}}.
 \end{vidu}
+
+\begin{vidu}[\cite{SGK_KHTN_8_Canh_Dieu}, p. 36]
+	Lượng muối ăn hòa tan tối đa trong \emph{100 g} nước tạo thành dung dịch bão hòa ở $20^\circ$\emph{C} là \emph{35.9 g}. Người ta nói độ tan của muối ăn là \emph{35.9 g} trong \emph{100 g nước} ở $20^\circ$\emph{C}.
+\end{vidu}
+
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 1., p. 36]
+	Dung dịch bão hòa là gì?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 2., p. 36]
+	Tính khối lượng sodium chloride cần hòa tan trong \emph{200 g} nước ở $20^\circ$\emph{C} để thu được dung dịch muối ăn bão hòa.
+\end{baitoan}
 
 \subsubsection{Những yếu tố ảnh hưởng đến độ tan}
 (a) \textit{Độ tan của chất rắn} trong nước phụ thuộc vào \textit{nhiệt độ} $T$ (${}^\circ$). Trong nhiều trường hợp, khi tăng nhiệt độ thì độ tan của chất rắn cũng tăng theo. Số ít trường hợp, khi tăng nhiệt độ thì độ tan lại giảm.
@@ -381,7 +393,7 @@ Muốn quá trình hòa tan xảy ra nhanh hơn, ta thực hiện các biện ph
 Khi tăng nhiệt độ, độ tan của hầu hết các chất rắn như đường, muối ăn, $\ldots$ đều tăng. Có 1 số chất khi tăng nhiệt độ, độ tan lại giảm.
 
 \begin{vidu}[Độ tan của \ce{C12H22O11}]
-	Độ tan của đường ăn trong nước ở $30^\circ$ là \emph{216.7 g} trong khi ở $60^\circ$ là \emph{288.8 g}.
+	Độ tan của đường ăn trong nước ở $30^\circ$\emph{C} là \emph{216.7 g} trong khi ở $60^\circ$\emph{C} là \emph{288.8 g}.
 \end{vidu}
 
 \begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 2, p. 37]
@@ -418,20 +430,28 @@ Công thức tính nồng độ \% của dung dịch là: \fbox{$C\% = \frac{m_{
 	Hòa tan \emph{15 g NaCl} (natri clorua\emph{\texttt{/}}sodium chloride) vào \emph{45 g} nước. Tính nồng độ \% của dung dịch.
 \end{baitoan}
 
-\begin{proof}[Giải]
+\begin{proof}[1st giải]
 	Khối lượng của dung dịch NaCl: $m_{\rm dd} = m_{\rm NaCl} + m_{\ce{H2O}} = 15 + 45 = 60$ g. Nồng độ \% của dung dịch NaCl: $C\% = \frac{m_{\rm NaCl}}{m_{\rm dd}}\cdot100\% = \frac{15}{60}\cdot100\% = 25\%$.
 \end{proof}
 
+\begin{proof}[2nd giải]
+	Nồng độ \% của dung dịch NaCl: $C\% = \frac{m_{\rm NaCl}}{m_{\rm dd}}\cdot100\% = = \frac{m_{\rm NaCl}}{m_{\rm NaCl} + m_{\ce{H2O}}}\cdot100\% = \frac{15}{15 + 45}\cdot100\% = \frac{15}{60}\cdot100\% = 25\%$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, Ví dụ 1, p. 38]
-	Hòa tan \emph{20 g} đường ăn trong \emph{60 g} nước thu được dung dịch đường. Tính $C$\% của dung dịch đường đó.
+	Hòa tan \emph{20 g} đường ăn trong \emph{60 g} nước thu được dung dịch đường. Tính $C$\emph{\%} của dung dịch đường đó.
 \end{baitoan}
 
-\begin{proof}[Giải]
-	Khối lượng dung dịch đường: $m_{\rm dd} = m_{\tiny\mbox{đường}} + m_{\tiny\mbox{nước}} = 20 + 60 = 80$ g. Nồng độ \% của dung dịch: $C\% = \frac{20\cdot100}{80} = 25$\%.
+\begin{proof}[1st giải]
+	Khối lượng dung dịch đường: $m_{\rm dd} = m_{\tiny\mbox{đường}} + m_{\tiny\mbox{nước}} = 20 + 60 = 80$ g. Nồng độ \% của dung dịch: $C\% = \frac{m_{\tiny\mbox{đường}}}{m_{\rm dd}}\cdot100\% = \frac{20}{80}\cdot100\% = 25\%$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Nồng độ \% của dung dịch: $C\% = \frac{m_{\tiny\mbox{đường}}}{m_{\rm dd}}\cdot100\% = \frac{m_{\tiny\mbox{đường}}}{m_{\tiny\mbox{đường}} + m_{\tiny\mbox{nước}}}\cdot100\% = \frac{20}{20 + 60} \cdot100\% = \frac{20}{80}\cdot100\% = 25\%$.
 \end{proof}
 Nếu biết được nồng độ \% của dung dịch thì ta có thể xác định được khối lượng chất tan \& khối lượng dung dịch theo các biểu thức sau:
 \begin{align*}
-	\boxed{m_{\rm ct} = \frac{m_{\rm dd}C\%}{100},\ m_{\rm dd} = \frac{m_{\rm ct}\cdot100}{C\%} = \frac{100m_{\rm ct}}{C\%},\ m_{\rm dm} = m_{\rm dd} - m_{\rm ct} = \frac{100m_{\rm ct}}{C\%} - \frac{m_{\rm dd}C\%}{100}.}
+	\boxed{m_{\rm ct} = m_{\rm dd}C\%,\ m_{\rm dd} = \frac{m_{\rm ct}}{C\%} = \frac{m_{\rm ct}}{C\%},\ m_{\rm dm} = m_{\rm dd} - m_{\rm ct} = \frac{m_{\rm ct}}{C\%} - m_{\rm dd}C\%.}
 \end{align*}
 
 \begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, Thí dụ 2, p. 143]
@@ -439,7 +459,7 @@ Nếu biết được nồng độ \% của dung dịch thì ta có thể xác �
 \end{baitoan}
 
 \begin{proof}[Giải]
-	Khối lượng \ce{H2SO4} có trong 150 g dung dịch 14\%: $m_{\ce{H2SO4}} = \frac{m_{\rm dd}C\%}{100} = \frac{150\cdot14}{100} = 21$ g.
+	Khối lượng \ce{H2SO4} có trong 150 g dung dịch 14\%: $m_{\ce{H2SO4}} = m_{\rm dd}C\% = 150\cdot14\% = \frac{150\cdot14}{100} = 21$ g.
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, Thí dụ 3, p. 144]
@@ -447,7 +467,7 @@ Nếu biết được nồng độ \% của dung dịch thì ta có thể xác �
 \end{baitoan}
 
 \begin{proof}[Giải]
-	(a) Khối lượng dung dịch đường pha chế được: $m_{\rm dd} = m_{\rm dd} = \frac{m_{\tiny\mbox{đường}}\cdot100}{C\%} = \frac{50\cdot100}{25} = 200$ g. (b) Khối lượng nước cần dùng cho sự pha chế: $m_{\ce{H2O}} = m_{\rm dd} - m_{\tiny\mbox{đường}} = 200 - 50 = 150$ g.
+	(a) Khối lượng dung dịch đường pha chế được: $m_{\rm dd} = m_{\rm dd} = \frac{m_{\tiny\mbox{đường}}}{C\%} = = \frac{50}{25\%} = \frac{50\cdot100}{25} = 200$ g. (b) Khối lượng nước cần dùng cho sự pha chế: $m_{\ce{H2O}} = m_{\rm dd} - m_{\tiny\mbox{đường}} = 200 - 50 = 150$ g.
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, Ví dụ 2, p. 38]
@@ -455,7 +475,7 @@ Nếu biết được nồng độ \% của dung dịch thì ta có thể xác �
 \end{baitoan}
 
 \begin{proof}[Giải]
-	Khối lượng chất tan cần dùng là: $m_{\tiny\mbox{muối}} = \frac{m_{\rm dd}\cdot C\%}{100} = \frac{300\cdot10}{100} = 30$ g. Khối lượng nước cần dùng là: $m_{\tiny\mbox{nước}} = m_{\rm dd} - m_{\tiny\mbox{muối}} = 300 - 30 = 270$ g.
+	Khối lượng chất tan cần dùng là: $m_{\tiny\mbox{muối}} = m_{\rm dd}\cdot C\% = 300\cdot10\% = 30$ g. Khối lượng nước cần dùng là: $m_{\tiny\mbox{nước}} = m_{\rm dd} - m_{\tiny\mbox{muối}} = 300 - 30 = 270$ g.
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_KHTN_8_Canh_Dieu}, 1, p. 38]
@@ -477,7 +497,7 @@ Nếu biết được nồng độ \% của dung dịch thì ta có thể xác �
 \end{baitoan}
 
 \begin{proof}[Giải]
-	Khối lượng hydrogen peroxide có trong 20 g dung dịch nước oxy già 3\%: $m_{\ce{H2O2}} = \frac{m_{\rm dd}\cdot C\%}{100\%} = \frac{20\cdot3}{100} = 0.6$ g.
+	Khối lượng hydrogen peroxide có trong 20 g dung dịch nước oxy già 3\%: $m_{\ce{H2O2}} = m_{\rm dd}\cdot C\% = 20\cdot3\% = \frac{20\cdot3}{100} = 0.6$ g.
 \end{proof}
 
 \subsubsection{Nồng độ mol của dung dịch}
@@ -563,12 +583,33 @@ Có nhiều cách khác nhau để biểu thị nồng độ dung dịch. Để 
 \end{vidu}
 Có thể pha chế: (a) 1 dung dịch có nồng độ xác định để làm thí nghiệm. (b)  Pha chế dung dịch nước muối 0.9\% (có thể dùng thay nước muối sinh lý trong 1 số trường hợp).
 
+\subsubsection{Cách pha chế 1 dung dịch theo nồng độ cho trước}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, Bài tập 1, p. 147]
+	Từ muối \emph{\ce{CuSO4}}, nước cất, \& những dụng cụ cần thiết, tính toán \& giới thiệu cách pha chế: (a) \emph{50 g} dung dịch \emph{\ce{CuSO4}} có nồng độ \emph{10\%}. (b) \emph{50 mL} dung dịch \emph{\ce{CuSO4}} có nồng độ \emph{1M}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) \textit{Tính toán}: Khối lượng chất tan: $m_{\ce{CuSO4}} = m_{\rm dd}C\% = 50\cdot10\% = \frac{50\cdot10}{100} = 5$ g. Khối lượng dung môi (nước): $m_{\rm dm} = m_{\rm dd} - m_{\ce{CuSO4}} = 50 - 5 = 45$ g. \textit{Cách pha chế}: Cân lấy 5 g \ce{CuSO4} khan (màu trắng) cho vào cốc có dung tích 100 mL. Cân lấy 45 g (hoặc đong lấy 45 mL\footnote{Vì khối lượng riêng của nước cất: $D_{\ce{H2O}} = \frac{m_{\ce{H2O}}}{V_{\ce{H2O}}}\approx997$kg\texttt{/}$\rm m^3$.}) nước cất, rồi đổ dần dần vào cốc \& khuấy nhẹ. Được 50 g dung dịch \ce{CuSO4} 10\%. (b) Số mol chất tan: $n_{\ce{CuSO4}} = C_{\rm M}V = \frac{1\cdot50}{1000} = 0.05$ mol. Khối lượng của 0.05 mol \ce{CuSO4}: $m_{\ce{CuSO4}} = n_{\ce{CuSO4}}M_{\ce{CuSO4}} = 0.05\cdot160 = 8$ g. \textit{Cách pha chế}: Cân lấy 8 g \ce{CuSO4} cho vào cốc thủy tinh có dung tích 100 mL. Đổ dần dần nước cất vào cốc \& khuấy nhẹ cho đủ 50 mL dung dịch. Ta được 50 mL dung dịch \ce{CuSO4} 1M.
+\end{proof}
+
+\subsubsection{Cách pha loãng 1 dung dịch theo nồng độ cho trước}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, Bài tập 2, p. 148]
+	Có nước cất \& những dụng cụ cần thiết, tính toán \& giới thiệu các cách pha chế: (a) \emph{100 mL} dung dịch \emph{\ce{MgSO4} 0.4M} từ dung dịch \emph{\ce{MgSO4} 2M}. (b) \emph{150 g} dung dịch \emph{NaCl 2.5\%} từ dung dịch \emph{NaCl 10\%}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) \textit{Tính toán}: Số mol chất tan có trong 100 mL dung dịch \ce{MgSO4} 0.4M: $n_{\ce{MgSO4}} = C_{\rm M}V = \frac{0.4\cdot100}{1000} = 0.04$ mol.  Thể tích dung dịch \ce{MgSO4} 2M trong đó có chứa 0.04 mol \ce{MgSO4}: $V = \frac{n_{\ce{MgSO4}}}{C_{\rm M}} = \frac{0.04}{2} = 0.02$ L $= 20$ mL. \textit{Cách pha chế}: Đong lấy 20 mL dung dịch \ce{MgSO4} 2M cho vào cốc chia độ có dung tích 200 mL. Thêm từ từ nước cất vào cốc đến vạch 100 mL \& khuấy đều, ta được 100 mL dung dịch \ce{MgSO4} 0.4M. (b) \textit{Tính toán}: Khối lượng NaCl có trong 150 g dung dịch NaCl 2.5\%: $m_{\rm NaCl} = m_{\rm dd}C\% = 150\cdot2.5\% = \frac{150\cdot2.5}{100} = 3.75$ g. Khối lượng dung dịch NaCl ban đầu có chứa 3.75 g NaCl: $m_{\rm dd1} = \frac{m_{\rm NaCl}}{C\%} = \frac{3.75\cdot100}{10} = 37.5$ g. Khối lượng nước cần dùng để pha chế: $m_{\ce{H2O}} = m_{\rm dd2} - m_{\rm dd1} = 150 - 37.5 = 112.5$ g. \textit{Cách pha chế}: Cân lấy 37.5 g dung dịch NaCl 10\% ban đầu, sau đó đổ vào cốc hoặc bình tam giác có dung tích vào khoảng 200 mL. Cân lấy 112.5 g nước cất hoặc đong 112.5 mL nước cất, sau đó đổ vào cốc đựng dung dịch NaCl nói trên. Khuấy đều, ta được 150 g dung dịch NaCl 2.5\%.
+\end{proof}
+
 \noindent\fbox{%
 	\parbox{\textwidth}{%
 		\noindent\textsf{\textbf{Kiến thức cốt lõi.}} \fbox{\bf 1} \textit{Dung dịch} là hỗn hợp lỏng đồng nhất của chất tan \& dung môi. \fbox{\bf 2} Ở nhiệt độ \& áp suất nhất định: \textit{Dung dịch chưa bão hòa} là dung dịch có thể hòa tan thêm chất tan. \textit{Dung dịch bão hòa} là dung dịch không thể hòa tan thêm chất tan. \fbox{\bf 3} \textit{Độ tan} (ký hiệu là $S$) của 1 chất trong nước là số gam chất đó hòa tan trong $100$ gam nước để tạo thành dung dịch bão hòa ở 1 nhiệt độ, áp suất xác định: $S = \frac{m_{\rm ct}}{m_{\tiny\mbox{nước}}}\cdot100$ ($S$: độ tan, $m_{\rm ct}$: khối lượng chất tan, $m_{\tiny\mbox{nước}}$: khối lượng nước). Nói chung, độ tan của chất rắn sẽ tăng nếu tăng nhiệt độ. Độ tan của chất khí sẽ tăng nếu giảm nhiệt độ \& tăng áp suất. \fbox{\bf 4} \textit{Nồng độ phần \%} (ký hiệu là $C$\%) của 1 dung dịch là số gam chất tan có trong $100$ gam dung dịch: $C\% = \frac{m_{\rm ct}\cdot100\%}{m_{\rm dd}}$ ($C$\%: nồng độ \%, $m_{\rm ct}$: khối lượng chất tan, $m_{\rm dd}$: khối lượng dung dịch). \fbox{\bf 5} \textit{Nồng độ mol} (ký hiệu là $C_{\rm M}$) của 1 dung dịch là số mol chất tan có trong 1 lít dung dịch. $C_{\rm M} = \frac{n_{\rm ct}}{V_{\rm dd}}$ mol\texttt{/}L ($C_{\rm M}$: nồng độ mol, $n_{\rm ct}$: số mol chất tan, $V_{\rm dd}$: thể tích dung dịch). \fbox{\bf 6} Muốn chất rắn tan nhanh trong nước, ta thực hiện 1, 2, hoặc cả 3 biện pháp: Khuấy dung dịch, đun nóng dung dịch, nghiền nhỏ chất rắn. 
 	}%
 }
 
+\newpage
 \subsection{Problems}
 
 \subsubsection{Dung dịch}
@@ -620,7 +661,7 @@ Có thể pha chế: (a) 1 dung dịch có nồng độ xác định để làm 
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 4., p. 142]
-	Dựa vào đồ thị về độ tan của các chất rắn trong nước \ref{fig:nhiet_do_do_tan_chat_ran}, cho biết độ tan của các muối \emph{\ce{NaNO3, KBr, KNO3, NH4Cl, NaCl, Na2SO4}} ở nhiệt độ $10^\circ$\emph{C} \& $60^\circ$C.
+	Dựa vào đồ thị về độ tan của các chất rắn trong nước \ref{fig:nhiet_do_do_tan_chat_ran}, cho biết độ tan của các muối \emph{\ce{NaNO3, KBr, KNO3, NH4Cl, NaCl, Na2SO4}} ở nhiệt độ $10^\circ$\emph{C} \& $60^\circ$\emph{C}.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 5., p. 142]
@@ -665,6 +706,18 @@ Có thể pha chế: (a) 1 dung dịch có nồng độ xác định để làm 
 
 \begin{baitoan}[\cite{SBT_Hoa_Hoc_8}, 41.7, p. 57]
 	Có bao nhiêu \emph{g \ce{NaNO3}} sẽ tách ra khỏi \emph{200 g} dung dịch bão hòa \emph{\ce{NaNO3}} ở $50^\circ$\emph{C}, nếu dung dịch này được làm lạnh đến $20^\circ$\emph{C}? Biết \emph{$S_{\ce{NaNO3}(50^\circ C)} = 114$ g, $S_{\ce{NaNO3}(20^\circ C)} = 88$ g}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_8}, 322., p. 109]
+	(a) Khi hòa tan rượu vào nước \& khi hòa tan sữa vào nước, trường hợp nào tạo ra dung dịch? Căn cứ vào đặc tính quan trọng nào để nhận ra dung dịch? (b) Ở $20^\circ$\emph{C 500 mL \ce{H2O}} hòa tan tối đa \emph{0.02 g \ce{O2}}. Ở $20^\circ$\emph{C 250 mL \ce{H2O}} hòa tan tối đa \emph{0.0045 g \ce{N2}}. Hỏi độ tan của \emph{\ce{O2, N2}} trong nước ở $20^\circ$\emph{C}? Biết $D_{\ce{H2O}} = 1$ \emph{g\texttt{/}mL}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_8}, 323., p. 109]
+	(a) Ở $25^\circ$\emph{C} độ tan của \emph{NaCl} là \emph{36 g}. Hỏi phải hòa tan bao nhiêu \emph{g NaCl} vào \emph{150 mL} nước để được dung dịch bão hòa ở nhiệt độ đó. (b) Ở nhiệt độ $20^\circ$\emph{C} độ tan của \emph{KCl} là \emph{34 g}. Muốn có \emph{330 g} dung dịch \emph{KCl} bão hòa ở nhiệt độ $20^\circ$\emph{C} thì cần bao nhiêu \emph{g KCl}? Cần bao nhiêu \emph{g} nước?
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_8}, 323., p. 109]
+	
 \end{baitoan}
 
 \subsubsection{Nồng độ dung dịch}
@@ -737,6 +790,80 @@ Có thể pha chế: (a) 1 dung dịch có nồng độ xác định để làm 
 
 \begin{baitoan}[\cite{SBT_Hoa_Hoc_8}, 42.7, p. 58]
 	Trình bày phương pháp thực nghiệm để xác định nồng độ \% \& nồng độ mol của 1 mẫu dung dịch \emph{\ce{CuSO4}} có sẵn trong phòng thí nghiệm.
+\end{baitoan}
+
+\subsubsection{Pha chế dung dịch}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 1., p. 149]
+	Làm bay hơi \emph{60 g} nước từ dung dịch có nồng độ \emph{15\%}, được dung dịch mới có nồng độ \emph{18\%}. Xác định khối lượng của dung dịch ban đầu.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 2., p. 149]
+	Đun nhẹ \emph{20 g} dung dịch \emph{\ce{CuSO4}} cho đến khi nước bay hơi hết, người ta thu được chất rắn màu trắng là \emph{\ce{CuSO4}} khan. Chấy này có khối lượng là \emph{3.6 g}. Xác định nồng độ \% của dung dịch \emph{\ce{CuSO4}}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 3., p. 149]
+	Cân lấy \emph{10.6 g \ce{Na2CO3}} cho vào cốc chia độ có dung tích \emph{500 mL}. Rót từ từ nước cất vào cốc cho đến vạch \emph{200 mL}. Khuấy nhẹ cho \emph{\ce{Na2CO3}} tan hết, ta được dung dịch \emph{\ce{Na2CO3}}. Biết \emph{1 mL} dung dịch này cho khối lượng là \emph{1.05 g}. Xác định nồng độ \% \& nồng độ mol của dung dịch vừa pha chế được.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, $4^\star$., p. 149]
+	Điền các giá trị chưa biết vào những ô để trống trong bảng, bằng cách thực hiện các tính toán theo mỗi cột:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			\backslashbox{Đại lượng}{Dung dịch}& NaCl & \ce{Ca(OH)2} & \ce{BaCl2} & KOH & \ce{CuSO4} \\
+			\hline
+			$m_{\rm ct}$ & 30 g & 0.148 g &  &  & 3 g \\
+			\hline
+			$m_{\ce{H2O}}$ & 170 g &  &  &  &  \\
+			\hline
+			$m_{\rm dd}$ &  &  & 150 g &  &  \\
+			\hline
+			$V_{\rm dd}$ &  & 200 mL &  & 300 mL &  \\
+			\hline
+			$D_{\rm dd}$ (g\texttt{/}mL) & 1.1 & 1 & 1.2 & 1.04 & 1.15 \\
+			\hline
+			$C$\% &  &  & 20\% &  & 15\% \\
+			\hline
+			$C_{\rm M}$ &  &  &  & 2.5M &  \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, $5^\star$., p. 149]
+	Tìm độ tan của 1 muối trong nước bằng phương pháp thực nghiệm, người ta có được những kết quả sau: (a) Nhiệt độ của dung dịch muối bão hòa là $20^\circ$\emph{C}. (b) Chén sứ nung có khối lượng \emph{60.26 g}. (c) Chén sứ đựng dung dịch muối có khối lượng \emph{86.26 g}. (d) Khối lượng chén nung \& muối kết tinh sau khi làm bay hết hơi nước là \emph{66.26 g}. Xác định độ tan của muối ở nhiệt độ $20^\circ$\emph{C}.
+\end{baitoan}
+
+\subsubsection{Miscellaneous}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 1., p. 151]
+	Các ký hiệu sau cho ta biết những điều gì? (a) $S_{\ce{KNO3}(\rm20^\circ C)} = 31.6$ \emph{g}, $S_{\ce{KNO3}(\rm100^\circ C)} = 246$ \emph{g}, $S_{\ce{CuSO4}(\rm20^\circ C)} = 20.7$ \emph{g}, $S_{\ce{CuSO4}(\rm100^\circ C)} = 75.4$ \emph{g}. (b) $S_{\ce{CO2}(\rm20^\circ C,1 atm)} = 1.73$ \emph{g}, $S_{\ce{CO2}(\rm60^\circ C,1 atm)} = 0.07$ \emph{g}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 2., p. 151]
+	1 người đã pha loãng acid bằng cách rót từ từ \emph{20 g} dung dịch \emph{\ce{H2SO4} 50\%} vào nước \& sau đó thu được \emph{50 g} dung dịch \emph{\ce{H2SO4}}. (a) Tính nồng độ \% của dung dịch \emph{\ce{H2SO4}} sau khi pha loãng. (b) Tính nồng độ mol của dung dịch \emph{\ce{H2SO4}} sau khi pha loãng, biết dung dịch này có khối lượng riêng là \emph{1.1 g\texttt{/}$\rm cm^3$}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 3., p. 151]
+	Biết $S_{\ce{K2SO4}(\rm20^\circ C)} = 11.1$ \emph{g}. Tính nồng độ \% của dung dịch \emph{\ce{K2SO4}} bão hòa ở nhiệt độ này.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, $4^\star$., p. 151]
+	Trong \emph{800 mL} của 1 dung dịch có chứa \emph{8 g NaOH}. (a) Tính nồng độ mol của dung dịch này. (b) Phải thêm bao nhiêu milliliter nước vào \emph{200 mL} dung dịch này để được dung dịch \emph{NaOH 0.1M}?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 5., p. 151]
+	Trình bày cách pha chế: (a) \emph{400 g} dung dịch \emph{\ce{CuSO4} 4\%}. (b) \emph{300 mL} dung dịch \emph{NaCl 3M}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, 6., p. 151]
+	Trình bày cách pha chế: (a) \emph{150 g} dung dịch \emph{\ce{CuSO4} 2\%} từ dung dịch \emph{\ce{CuSO4} 20\%}. (b) \emph{250 mL} dung dịch \emph{NaOH 0.5M} từ dung dịch \emph{NaOH 2M}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Hoa_Hoc_8}, p. 152]
+	Tính toán \& pha chế các dung dịch sau: (a) \emph{50 g} dung dịch đường có nồng độ \emph{15\%}. (b) \emph{100 mL} dung dịch sodium chloride có nồng độ \emph{0.2M}. (c) \emph{50 g} dung dịch đường 5\% từ dung dịch đường có nồng độ \emph{15\%} ở trên. (d) \emph{50 mL} dung dịch sodium chloride có nồng độ \emph{0.1M} từ dung dịch sodium chloride có nồng độ \emph{0.2M} ở trên.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SBT_Hoa_Hoc_8}, 43.1, p. 59]
