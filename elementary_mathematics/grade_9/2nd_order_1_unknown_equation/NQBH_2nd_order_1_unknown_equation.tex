@@ -38,7 +38,7 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 
-\title{2nd-Order 1-Unknown Equation\\Phương Trình Bậc 2 với 1 Ẩn $y = ax^2 + bx + c$, $a\ne0$}
+\title{2nd-Order 1-Unknown Equation\\Phương Trình Bậc 2 1 Ẩn $y = ax^2 + bx + c$, $a\ne0$}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
@@ -70,7 +70,31 @@
 \section{Đồ Thị của Hàm Số $y = ax^2$, $a\ne0$}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 12.1, p. 65]
-	Trong mặt phẳng tọa độ $(Oxy)$ cho đường thẳng $(d):y = -1$ \& điểm $F(0,1)$. Tìm tập hợp tất cả những điểm $I$ sao cho khoảng cách từ $I$ đến $(d)$ bằng $IF$.
+	Trong mặt phẳng tọa độ $(Oxy)$ cho đường thẳng $(d)$: $y = -1$ \& điểm $F(0,1)$. Tìm tập hợp tất cả những điểm $I$ sao cho khoảng cách từ $I$ đến $(d)$ bằng $IF$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Giả sử điểm $I(x,y)$. Khi đó khoảng cách từ $I$ đến $(d)$ bằng $|y + 1|$ \& $IF = \sqrt{x^2 + (y - 1)^2}$, nên $d_{I,(d)} = IF\Leftrightarrow|y + 1| = \sqrt{x^2 + (y - 1)^2}\Leftrightarrow(y + 1)^2 = x^2 + (y - 1)^2\Leftrightarrow y = \frac{1}{4}x^2$. Suy ra tập hợp tất cả những điểm $I$ sao cho khoảng cách từ $I$ đến $(d)$ bằng $IF$ là đường parabol $(P_1)$: $y = \frac{1}{4}x^2$, i.e., $\{I\in\mathbb{R}^2|d_{I,(d)} = IF\} = \{(x,y)\in\mathbb{R}^2|y = \frac{1}{4}x^2\}$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 12.1, p. 65]
+	Trong mặt phẳng tọa độ $(Oxy)$ cho đường thẳng $(d)$: $y = ax + b$ \& điểm $F(c,d)$. Tìm tập hợp tất cả những điểm $I$ sao cho khoảng cách từ $I$ đến $(d)$ bằng $IF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 12.2, p. 66]
+	Xác định điểm $M$ thuộc parabol $(P)$: $y = x^2$ sao cho độ dài đoạn $IM$ là nhỏ nhất, trong đó $I(0,1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 12.3, p. 66]
+	Trong mặt phẳng $(Oxy)$, giả sử điểm $A$ chạy trên parabol $(P)$: $y = x^2$. Tìm tập hợp trung điểm $I$ của đoạn thẳng $OA$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 12.4, p. 66]
+	Trong mặt phẳng $(Oxy)$, giả sử 2 điểm $A,B$ chạy trên parabol $(P)$: $y = x^2$ sao cho $A,B\ne O(0,0)$ \& $OA\bot OB$. Giả sử $I$ là trung điểm của đoạn thẳng $AB$. (a) Chứng minh tọa độ của điểm $I$ thỏa mãn phương trình $y = 2x^2 + 1$. (b) Chứng minh đường thẳng $(AB)$ luôn đi qua 1 điểm cố định. (c) Xác định tọa độ của các điểm $A,B$ sao cho độ dài $AB$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 12.5, p. 67]
+	Trên parabol $(P)$: $y = x^2$ ta lấy 2 điểm $A(-1,1)$ \& $B(3,9)$. Xác định điểm $C$ thuộc cung nhỏ $AB$ của $(P)$ sao cho diện tích $\Delta ABC$ lớn nhất.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
