@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=20]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,diagbox,tikz,tipa}
+\usepackage[version=4]{mhchem}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{thinghiem}{Thí nghiệm}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+
+\title{Inorganic Compound -- Hợp Chất Vô Cơ}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsf{[en]} This text is a collection of problems, from easy to advanced, about \textit{inorganic compound}, which is also a supplementary material for my lecture note on Elementary Chemistry, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/NQBH_elementary_chemistry_grade_9.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/NQBH_elementary_chemistry_grade_9.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/inorganic_compound/NQBH_inorganic_compound.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}inorganic compound}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/inorganic_compound/NQBH_inorganic_compound.pdf}.}.
+	
+	\textsf{\textbf{Keyword.} Inorganic compound.}
+	\vspace{2mm}
+	
+	\textsf{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{phản ứng hóa học}, cũng là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/NQBH_elementary_chemistry_grade_9.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}lecture} của tác giả viết cho Hóa Học Sơ Cấp. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}inorganic compound}.
+	
+	\textsf{\textbf{Từ khóa.} Hợp chất vô cơ.}
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{\href{https://en.wikipedia.org/wiki/Inorganic_compound}{Wikipedia\texttt{/}Inorganic Compound}}
+``In chemistry, an \textit{inorganic compound} is typically a \href{https://en.wikipedia.org/wiki/Chemical_compound}{chemical compound} that lacks \href{https://en.wikipedia.org/wiki/Carbon%E2%90%93hydrogen_bond}{carbon--hydrogen bonds}, i.e., a compound that is not an \href{https://en.wikipedia.org/wiki/Organic_compound}{organic compound}. The study of inorganic compounds is a subfield of chemistry known as \href{https://en.wikipedia.org/wiki/Inorganic_chemistry}{\textit{inorganic chemistry}}.
+
+Inorganic compounds comprise most of the \href{https://en.wikipedia.org/wiki/Earth%27s_crust}{Earth's crust}, although the compositions of the deep \href{https://en.wikipedia.org/wiki/Mantle_(geology)}{mantle} remain active areas of investigation.
+
+Some simple \href{https://en.wikipedia.org/wiki/Carbon}{carbon} compounds are often considered inorganic. Examples include the allotropes of carbon (\href{https://en.wikipedia.org/wiki/Graphite}{graphite}, \href{https://en.wikipedia.org/wiki/Diamond}{diamond}, \href{https://en.wikipedia.org/wiki/Buckminsterfullerene}{buckminsterfullerene}, etc.), \href{https://en.wikipedia.org/wiki/Carbon_monoxide}{carbon monoxide}, \href{https://en.wikipedia.org/wiki/Carbon_dioxide}{carbon dioxide}, \href{https://en.wikipedia.org/wiki/Carbide}{carbides}, \& the following \href{https://en.wikipedia.org/wiki/Salt_(chemistry)}{salts} of inorganic \href{https://en.wikipedia.org/wiki/Anion}{annions}: \href{https://en.wikipedia.org/wiki/Carbonate}{carbonates}, \href{https://en.wikipedia.org/wiki/Cyanide}{cyanides}, \href{https://en.wikipedia.org/wiki/Cyanate}{cyanates}, \& \href{https://en.wikipedia.org/wiki/Thiocyanate}{thiocyanates}. Many of these are normal parts of mostly organic systems, including \href{https://en.wikipedia.org/wiki/Organism}{organisms}; describing a chemical as inorganic does not necessarily mean that it does not occur within \href{https://en.wikipedia.org/wiki/Life}{living} things.'' -- \href{https://en.wikipedia.org/wiki/Inorganic_compound}{Wikipedia\texttt{/}inorganic compound}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
