@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+
+\title{Infinite Jest}
+\author{David Foster Wallace}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Quotes}
+
+\begin{enumerate}
+	\item ``Everybody is identical in their secret unspoken belief that way deep down they are different from everyone else.''
+	\item ``I do things like get in a taxi \& say, ``The library, \& step on it.''''
+	\item ``The truth will set you free. But not until it is finished with you.''
+	\item ``You will become way less concerned with what other people think of you when you realize how seldom they do.''
+	\item ``Mario, what do you get when you cross an insomniac, \& unwilling agnostic \& a dyslexic?''
+	
+	``I give.''
+	
+	``You get someone who stays up all night torturing himself mentally over the question of whether or not there's a dog.''
+	\item ``It's weird to feel like you miss someone you're not even sure you know.''
+	\item ``Try to learn to let what is unfair teach you.''
+	\item ``What passes for hip cynical transcendence of sentiment is really some kind of fear of being really human, since to be really human [$\ldots$] is probably to be unavoidably sentimental \& naive \& goo-prone \& generally pathetic.''
+	\item ``It did what all ads are supposed to do: create an anxiety relievable by purchase.''
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
