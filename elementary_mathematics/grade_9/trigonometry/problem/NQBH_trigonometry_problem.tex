@@ -1,0 +1,152 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Trigonometry -- Bài Tập Lượng Giác}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Hệ Thức về Cạnh \& Đường Cao Trong Tam Giác Vuông}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 1, p. 5]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$. Biết $AB:AC = 3:4$ \& $AB + AC = 21$ \emph{cm}. (a) Tính các cạnh của $\Delta ABC$. (b) Tính độ dài các đoạn $AH,BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 1, p. 5]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$. Biết $AB:AC = m:n$ \& $AB + AC = p$ \emph{cm}. (a) Tính các cạnh của $\Delta ABC$. (b) Tính độ dài các đoạn $AH,BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 2, p. 6]
+	Cho hình thang $ABCD$ có $\widehat{A} = \widehat{D} = 90^\circ$, $\widehat{B} = 60^\circ$, $CD = 30$ \emph{cm}, $CA\bot CB$. Tính diện tích của hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 3, p. 7]
+	Cho $\Delta ABC$ nhọn, đường cao $CK$, $H$ là trực tâm. Gọi $M$ là 1 điểm trên $CK$ sao cho $\widehat{AMB} = 90^\circ$. $S,S_1,S_2$ theo thứ tự là diện tích các $\Delta AMB,\Delta ABC,\Delta ABH$. Chứng minh $S = \sqrt{S_1S_2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.1., p. 7]
+	Cho $\Delta ABC$ vuông cân tại $A$ \& điểm $M$ nằm giữa $B$ \& $C$ Gọi $D,E$ lần lượt là hình chiếu của điểm $M$ lên $AB,AC$. Chứng minh $MB^2 + MC^2 = 2MA^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.2., p. 7]
+	Cho hình chữ nhật $ABCD$ \& điểm $O$ nằm trong hình chữ nhật đó. Chứng minh $OA^2 + OC^2 = OB^2 + CD^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.3., p. 8]
+	Cho hình chữ nhật $ABCD$ có $AD = 6$ \emph{cm}, $CD = 8$ \emph{cm}. Đường thẳng kẻ từ $D$ vuông góc với $AC$ tại $E$, cắt cạnh $AB$ tại $F$. Tính độ dài các đoạn thẳng $DE,DF,AE,CE,AF,BF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.4., p. 8]
+	Cho $\Delta ABC$ có $AB = 3$  \emph{cm}, $BC = 4$ \emph{cm}, $AC = 5$ \emph{cm}. Đường cao, đường phân giác, đường trung tuyến của tam giác kẻ từ đỉnh $B$ chia tam giác thành $4$ gam giác không có điểm trong chung. Tính diện tích của mỗi tam giác đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.5., p. 8]
+	Trong 1 tam giác vuông tỷ số giữa đường cao \& đường trung tuyến kẻ từ đỉnh góc vuông bằng $40:41$. Tính độ dài các cạnh góc vuông của tam giác đó, biết cạnh huyền bằng $\sqrt{41}$ \emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.6., p. 8]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$. Kẻ $HE\bot AB$, $HF\bot AC$. Gọi $O$ là giao điểm của $AH$ \& $EF$. Chứng minh $HB\cdot HC = 4OE\cdot OF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.7., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.8., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.9., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.10., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.11., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.12., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.13., p. 9]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.14., p. 9]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.15., p. 9]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.16., p. 9]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tỷ Số Lượng Giác của Góc Nhọn}
+
+%------------------------------------------------------------------------------%
+
+\section{Hệ Thức về Cạnh \& Góc Trong Tam Giác Vuông}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+	\end{document}
