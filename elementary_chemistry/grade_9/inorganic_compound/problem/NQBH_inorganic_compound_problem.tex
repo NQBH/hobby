@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=20]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,diagbox,tikz,tipa}
+\usepackage[version=4]{mhchem}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{thinghiem}{Thí nghiệm}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+
+\title{Problem: Inorganic Compound -- Bài Tập Hợp Chất Vô Cơ}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsf{[en]} This text is a collection of problems, from easy to advanced, about \textit{inorganic compound}, which is also a supplementary material for my lecture note on Elementary Chemistry, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/NQBH_elementary_chemistry_grade_9.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/NQBH_elementary_chemistry_grade_9.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/inorganic_compound/NQBH_inorganic_compound.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}inorganic compound}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/inorganic_compound/NQBH_inorganic_compound.pdf}.}.
+	
+	\textsf{\textbf{Keyword.} Inorganic compound.}
+	\vspace{2mm}
+	
+	\textsf{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về \textit{phản ứng hóa học}, cũng là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/NQBH_elementary_chemistry_grade_9.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}lecture} của tác giả viết cho Hóa Học Sơ Cấp. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_chemistry/grade_9/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary chemistry\texttt{/}grade 9\texttt{/}inorganic compound}.
+	
+	\textsf{\textbf{Từ khóa.} Hợp chất vô cơ.}
+\end{abstract}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{\href{https://en.wikipedia.org/wiki/Inorganic_compound}{Wikipedia\texttt{/}Inorganic Compound}}
+``In chemistry, an \textit{inorganic compound} is typically a \href{https://en.wikipedia.org/wiki/Chemical_compound}{chemical compound} that lacks \href{https://en.wikipedia.org/wiki/Carbon%E2%90%93hydrogen_bond}{carbon--hydrogen bonds}, i.e., a compound that is not an \href{https://en.wikipedia.org/wiki/Organic_compound}{organic compound}. The study of inorganic compounds is a subfield of chemistry known as \href{https://en.wikipedia.org/wiki/Inorganic_chemistry}{\textit{inorganic chemistry}}.
+
+Inorganic compounds comprise most of the \href{https://en.wikipedia.org/wiki/Earth%27s_crust}{Earth's crust}, although the compositions of the deep \href{https://en.wikipedia.org/wiki/Mantle_(geology)}{mantle} remain active areas of investigation.
+
+Some simple \href{https://en.wikipedia.org/wiki/Carbon}{carbon} compounds are often considered inorganic. Examples include the allotropes of carbon (\href{https://en.wikipedia.org/wiki/Graphite}{graphite}, \href{https://en.wikipedia.org/wiki/Diamond}{diamond}, \href{https://en.wikipedia.org/wiki/Buckminsterfullerene}{buckminsterfullerene}, etc.), \href{https://en.wikipedia.org/wiki/Carbon_monoxide}{carbon monoxide}, \href{https://en.wikipedia.org/wiki/Carbon_dioxide}{carbon dioxide}, \href{https://en.wikipedia.org/wiki/Carbide}{carbides}, \& the following \href{https://en.wikipedia.org/wiki/Salt_(chemistry)}{salts} of inorganic \href{https://en.wikipedia.org/wiki/Anion}{annions}: \href{https://en.wikipedia.org/wiki/Carbonate}{carbonates}, \href{https://en.wikipedia.org/wiki/Cyanide}{cyanides}, \href{https://en.wikipedia.org/wiki/Cyanate}{cyanates}, \& \href{https://en.wikipedia.org/wiki/Thiocyanate}{thiocyanates}. Many of these are normal parts of mostly organic systems, including \href{https://en.wikipedia.org/wiki/Organism}{organisms}; describing a chemical as inorganic does not necessarily mean that it does not occur within \href{https://en.wikipedia.org/wiki/Life}{living} things.'' -- \href{https://en.wikipedia.org/wiki/Inorganic_compound}{Wikipedia\texttt{/}inorganic compound}
+
+%------------------------------------------------------------------------------%
+
+\section{Oxide}
+
+\subsection{Phân loại \& tính chất hóa học của oxide}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 1., p. 5]
+	Nêu các base \& acid tương ứng của các oxide: \emph{\ce{SO2,SO3,N2O5,CaO,K2O,CuO,Mn2O7}}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 2., p. 5]
+	Trong các oxide: \emph{CaO, \ce{Al2O3,NO,N2O5,CO2,SO2,MgO,CO,Fe2O3}}, oxide nào là oxide tạo muối.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 3., p. 5]
+	Cho các oxide: \emph{\ce{Na2O,Fe2O3,Fe3O4,SO3,CaO}}. Viết phương trình phản ứng (nếu có) khi cho các oxide này lần lượt tác dụng với nước, dung dịch \emph{NaOH}, dung dịch \emph{HCl}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 4., p. 6]
+	(a) Cho các chất sau: \emph{\ce{CaCl2} (khan), \ce{P2O5,H2SO4} (đặc), \ce{Ba(OH)2} (rắn)}, chất nào được dùng để làm khô khí \emph{\ce{CO2}}? Giải thích bằng PTHH. (b) Có 4 oxide riêng biệt: \emph{\ce{Na2O,Al2O3,Fe2O3,MgO}}. Làm thế nào để có thể nhận biết được mỗi oxide bằng phương pháp hóa học với điều kiện chỉ được dùng thêm $2$ chất? 
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 5., p. 6]
+	(a) Cho $a$ \emph{g Na} tác dụng với $p$ \emph{g} nước thu được dung dịch \emph{NaOH} nồng độ $x$\%. Cho $b$ \emph{g \ce{Na2O}} tác dụng với $p$ \emph{g} nước cũng thu được dung dịch \emph{NaOH} nồng độ $x$\%. Lập biểu thức tính $p$ theo $a,b$. (b) Khử hoàn toàn \emph{3.2 g} hỗn hợp \emph{CuO, \ce{Fe2O3}} bằng \emph{\ce{H2}} tạo ra \emph{0.9 g \ce{H2O}}. Tính khối lượng hỗn hợp kim loại thu được.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 6., p. 7]
+	(a) Cho \emph{2.24 L \ce{CO2}} (đktc) tác dụng hoàn toàn với \emph{25 g} dung dịch \emph{NaOH 20\%}. Tính khối lượng muối tạo thành. (b) Làm thế nào để nhận ra sự có mặt của mỗi khí trong hỗn hợp gồm \emph{\ce{CO,CO2,SO3}} bằng phương pháp hóa học. Viết các PTHH (nếu có).
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 7., pp. 8--9]
+	(a) Nung $m$ \emph{g} hỗn hợp chất rắn A gồm \emph{\ce{Fe2O3}} \& \emph{FeO} với lượng thiếu khí \emph{CO} thu được hỗn hợp chất rắn B có khối lượng \emph{47.84 g} \& \emph{5.6 L \ce{CO2}}. Tính $m$. (b) Cho \emph{11.6 g} hỗn hợp \emph{\ce{Fe2O3}} \& \emph{FeO} có tỷ lệ số mol là $1:1$ vào \emph{300 mL} dung dịch \emph{HCl 2M} được dung dịch A. Tính nồng độ mol của các chất trong dung dịch sau phản ứng (thể tích dung dịch thay đổi không đáng kể).
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 8., p. 9]
+	(a) Nung nóng kim loại M trong không khí đến khối lượng không đổi thu được chất rắn N. Khối lượng của M bằng $\frac{7}{10}$ khối lượng của N. Tìm CTPT của N. (b) Cho 1 oxide base tác dụng với dung dịch \emph{\ce{H2SO4} 24.5\%} thu được dung dịch 1 muối có nồng độ \emph{32.2\%}. Tìm CTPT của oxide base.
+\end{baitoan}
+
+\begin{baitoan}[\cite{An_350_BT_Hoa_Hoc_9}, 9., p. 11]
+	(a) Dẫn $V$ \emph{L} khí \emph{\ce{CO2}} (đktc) qua \emph{250 mL} dung dịch \emph{\ce{Ca(OH)2} 1M} thấy có \emph{12.5 g} kết tủa. Tính $V$. (b) Dùng khí \emph{\ce{H2}} để khử $a$ \emph{g} oxide sắt. Sản phẩm hơi tạo ra cho qua $100$ \emph{g} acid \emph{\ce{H2SO4} 98\%} thì nồng độ acid giảm đi \emph{3.405\%}. Chất rắn thu được sau phản ứng trên cho tác dụng hết với dung dịch \emph{HCl} thấy thoát ra \emph{3.36 L} \emph{\ce{H2}} (đktc). Xác định CTPT oxide sắt.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Acid}
+
+%------------------------------------------------------------------------------%
+
+\section{Base}
+
+%------------------------------------------------------------------------------%
+
+\section{Salt -- Muối}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
