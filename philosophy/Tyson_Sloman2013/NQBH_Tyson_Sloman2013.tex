@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{algorithm,algpseudocode,amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\numberwithin{equation}{section}
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{notation}{Notation}[section]
+\newtheorem{principle}{Principle}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{question}{Question}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{theorem}{Theorem}[section]
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+
+\title{Undisputed Truth}
+\author{Mike Tyson, Larry Sloman}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Quotes}
+See \cite{Tyson_Sloman2013}.
+\begin{enumerate}
+	\item ``Fear is the greatest obstacle to learning. But fear is your best friend. Fear is like fire. If you learn to control it, you let it work for you. If you don't learn to control it, it'll destroy you \& everything around you. Like a snowball on a hill, you can pick it up \& throw it or do anything you want with it before it starts rolling down, but once it rolls down \& gets so big, it'll crush you to death. So one must never allow fear to develop \& built up without having control over it, because it you don't you won't be able to achieve your objective or save your life.''
+	\item ``Man is not mean to be humble, he's meant to be humbled.''
+	\item ``a man who was friendly with everyone was an enemy to himself.''
+	\item ``You think you know the difference between a hero \& a coward, Mike? Well, there is no difference between a hero \& a coward in what they feel. It's what they do that makes them different. The hero \& the coward feel exactly the same but you have to have the discipline to do what a hero does \& to keep yourself from doing what the coward does.''
+	\item ``The ability to apply the discipline, the ability to do what needs to be done no matter how he feels inside, in my opinion, is the definition of a true professional.''
+	\item ``Your mind is not your friend, Mike. I hope you know that. You have to fight with your mind, control it, put it in its place. You have to control your emotions. Fatigue in the ring is 90\% psychological. It's just the excuse of a man who wants to quit.''
+	\item ``The boxing's the easy part. When you get into the ring to fight, that's the vacation. But when you get in the gym, you have to do things over \& over till you're sore \& deep in your mind you say, `I don't want to do this anymore,' I push that out of my mind.''
+	\item ``My style was impetuous, my defenses were impregnable, \& I was ferocious.''
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
