@@ -1,6 +1,7 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
@@ -20,14 +21,7 @@
 \newtheorem{question}{Question}[section]
 \newtheorem{remark}{Remark}[section]
 \newtheorem{theorem}{Theorem}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
 
 \title{In Sheep's Clothing: Understanding \& Dealing with Manipulative People}
@@ -37,7 +31,38 @@
 \begin{document}
 \maketitle
 \tableofcontents
-\vspace{5mm}
+
+%------------------------------------------------------------------------------%
+
+\section*{Quotes}
+See \cite{Simon2010, Simon2022}.
+\begin{itemize}
+	\item ``Playing the victim role: Manipulator portrays him- or herself as a victim of circumstances or of someone else's behavior in order to gain pity, sympathy or evoke compassion \& thereby get something from another. Caring \& conscientious people cannot stand to see anyone suffering \& the manipulator often finds it easy to play on sympathy to get cooperation.''
+	\item ``If you're dealing with a person who rarely gives you a straight answer to a straight question, is always making excuses for doing hurtful things, tries to make you feel guilty, or uses any of the other tactics to throw you on the defensive \& get their way, you can assume you're dealing with a person who -- no matter what else he may be -- is covertly aggressive.''
+	\item ``\& past behavior is the single most reliable predictor of future behavior.''
+	\item ``It's my experience that how a person used power is the most reliable test of their character.''
+	\item ``It's hard to think clearly when someone has you emotionally unnerved, so you're less likely to recognize the tactics for what they really are.''
+	\item ``Even though a person may begin life as a prisoner of what natural endowments he was given \& the circumstances under which he was raised, he cannot remain a ``victim'' of his environment forever. Eventually, every person must come to terms with him or herself. To know oneself, to fairly judge one's strengths \& weaknesses, \& to attain true mastery over one's most basic instincts \& inclinations are among life's greatest challenges. But ultimately, anyone's rise to a life of integrity \& merit can only come as the result of a full self-awakening.''
+	\item ``The covert-aggressive's dislike of appearing overtly aggressive is as practical as it is face-saving. Manipulators know that if they're aboveboard in their aggression, they'll encounter resistance. Having learned that 1 of the best ways to ``overcome'' an obstacle is to ``go around'' it, they're adept at fighting unscrupulously yet surreptitiously.''
+	\item ``ACCEPT NO EXCUSES. Don't buy into any of the many reasons (rationalizations) someone may offer for aggressive, covertly aggressive behavior, or any other inappropriate behavior. If someone's behavior is wrong or harmful, the rationale they offer is totally irrelevant. The ends never justify the means. So, no matter how much an ``explanation'' for a problem behavior seems to make sense, don't accept it.''
+	\item ``What our intuition tells us a manipulator is really like challenges everything we've been taught to believe about human nature. We've been inundated with a psychology that has us viewing people with problems, at least to some degree, as afraid, insecure or ``hung-up.'' So, while our gut tells us we're dealing with a ruthless conniver, our head tells us they must be really frightened, wounded, or self-doubting ``underneath.'' What's more, most of us generally hate to think of ourselves as callous \& insensitive people. We hesitate to make harsh or negative judgments about others. We want to give them the benefit of the doubt \& believe they don't really harbor the malevolent intentions we suspect. We're more apt to doubt \& blame ourselves for daring to believe what our gut tells us about our manipulator's character.''
+	\item ``Fighting openly \& fairly for our legitimate needs is often necessary \& constructive. When we fight for what we truly need while respecting the rights \& needs of others \& taking care not to needlessly injure them, our behavior is best labeled assertive, \& assertive behavior is 1 of the most healthy \& necessary human behaviors. It's wonderful when we learn to assert ourselves in the pursuit of personal needs, overcome unhealthy dependency \& become self-sufficient \& capable. But when we fight unnecessarily, or with little concern about how others are being affected, our behavior is most appropriately labeled aggressive.''
+	\item ``JUDGE ACTIONS, NOT INTENTIONS. Never try to ``mind-read'' or 2nd-guess why somebody is doing something, especially when they're doing something hurtful. There's no way for you to really know, \& in the end, it's irrelevant. Getting caught up in what might be going on in an aggressor's mind is a good way to get sidetracked from the really pertinent issue. Judge the behavior itself. If what a person does is harmful in some way, pay attention to \& deal with that issue.''
+	\item ``That is, whenever we persist at fighting a battle we can't possibly win, a sense of powerlessness \& hopelessness ensues that eventually results in depression. The ``losing battle'' manipulation victims often fight is trying to make the manipulator change. They get caught in the trap of constantly trying to figure out just what to say or do to get their manipulator to behave differently. They invest considerable energy trying to make something happen that they haven't the power to make happen. Fighting this losing battle inevitably breeds anger, frustration, a sense of helplessness, \& eventually, depression. Once depressed, manipulation victims don't have the presence of mind or the energy it takes to stand up for themselves.''
+	\item ``Manipulators often know us better than we know ourselves. They know what buttons to push, when to do so \& how hard to press. Our lack of self-awareness can easily set us up to be exploited.''
+	\item ``To guard against victimization, you must: be free of potentially harmful misconceptions about human nature \& behavior; know how to correctly assess the character of others; have high self-awareness, especially regarding those aspects of your own character that might increase your vulnerability to manipulation; recognize \& correctly label the tactics of manipulation \& respond to them appropriately; \& avoid fighting losing battles.''
+	\item ``The malignant impact of over-generalizing Freud's observations about a small group of overly inhibited individuals into a broad set of assumption about the causes of psychological ill-health in everyone cannot be overstated. But these theories have so permeated our thinking about human nature, \& especially our theories of personality, that when most of us try to analyze someone's character, we automatically start thinking in terms of what fears might be ``hanging them up,'' what kinds of ``defenses'' they use \& what kinds of psychologically ``threatening'' situations they may be trying to ``avoid.''''
+	\item ``Therapists whose training overly indoctrinated them in the theory of neurosis may ``frame'' the problems presented them incorrectly. They may, e.g., assume that a person who all their life has aggressively pursued independence, resisted allegiance to others, \& taken what they could from relationships without feeling obliged to give something back must necessarily be ``compensating'' for a ``fear'' of intimacy. In other words, they will view a hardened, abusive fighter as a terrified runner, thus misperceiving the core reality of the situation.''
+	\item ``Some children who have been labeled as having attention deficits are children who over-utilize selective attention as a manipulative device \& a primary means of avoiding responsibility. These children show an incredible capacity to focus \& maintain attention on any task or situation they find pleasurably stimulating, interesting, or in some other way, desirable. Yet, whenever they're asked to hear something they don't really want to hear or do something they'd rather not do, they will redirect their attention to almost anything else. This is especially true when an authority figure is giving them instruction or a directive. All they have to do is hear an admonition coming \& they start fighting against it through inattention.''
+	\item ``The covert-aggressive's dislike of appearing overtly aggressive is as practical as it is face-saving. Manipulators know that if they're aboveboard in their aggression, they'll encounter resistance. Having learned that 1 of the best ways to ``overcome'' an obstacle is to ``go around'' it, they're adept at fighting unscrupulously yet surreptitiously.''
+	\item ``Even though we may begin life prisoners of our natural endowments \& the circumstances under which we were raised, we cannot remain ``victims'' of our environmental influences forever. Eventually, we must all come to honest terms with ourselves. To know ourselves deeply, to fairly judge our strengths \& weaknesses, to achieve true mastery over our basic instincts \& innate tendencies, \& to overcome both the inadequacies \& traumatic influences of the environment that helped shape us are among life's great challenges. \& ultimately, our rise to a life of integrity \& merit can only come as the result of a full self-awaking. We must come to know ourselves as well as others, without prejudice, deceit or denial, \& we must honestly face \& reckon will all aspects of our character. Only then can we freely take on the burden o disciplining \& improving ourselves for our own sake as well as for the sake of others. Making the free choice to take up this particular burden or ``cross'' is the true definition of love. \& our willingness \& commitment to carry this cross even unto our death are what open the door for us to a higher plane of existence.''
+	\item ``moderately neurotic individuals are the backbone of our society.''
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+
+\section*{Reviews}
+
 \begin{quotation}
 	``[After reading \textit{In Sheep's Clothing}] I am beginning to reclaim my life, find my self-respect \& confidence.'' -- Marc, Virginia
 	
@@ -505,6 +530,12 @@ It's impossible to deal effectively with anybody when you start out in a 1-down 
 ``Anyone wanting to reliably avoid victimization needs to identify the people in their life with aggressive \& covertly aggressive personality traits. Now, it's not necessary to perform a sophisticated clinical analysis in order to get a feel for someone's basic character. In the parable from which the title of this book is taken, Jesus says ``by their fruits you shall know them'' (or, ``if it walks \& talks like a duck, $\ldots$'') The manner by which they habitually interact with others defines aggressive \& covert-aggressive personalities. So, if you're dealing with a person who always pushes to have their way, who always has to ``win,'' always wants the upper hand, won't take ``no'' for an answer, etc., you can safely assume that you're dealing with a predominantly aggressive personality. If you're dealing with a person who rarely gives you a straight answer to a straight question, is always making excuses for doing hurtful things, tries to make you feel guilty, or uses any of the other tactics to throw you on the defensive \& get their way, you can assume you're dealing with a person who -- no matter what else he may be -- is covertly aggressive.'' -- \cite[pp. 114--115]{Simon2010}
 
 \subsection{Knowing Yourself Better}
+``Any manipulator's real leverage is in knowing the character of his victim well enough to know how that person will likely respond to the tactics he uses. He may know the victim will give him the benefit of the doubt, buy his excuses, be hesitant to ascribe evil intention, etc. He may know how conscientious the individual is \& how effective shame \& guilt will be in getting him or her to back down. Manipulators generally take the time to scope out the characteristics \& weaknesses of their victims.
+
+If manipulators gain leverage by what they know about you, it only stands to reason that the more you know about yourself \& the more you work to overcome your own vulnerabilities, the more leverage you gain in your dealings with them. When examining your own character, here are some important things to look for:
+\begin{enumerate}
+	\item \textbf{Naivet\'e.} You may be 1 of those individuals who finds it too hard to accept the notion that there really are people as cunning, devious, \& ruthless as your gut tells you the manipulator in your life is.
+\end{enumerate}
 
 \subsection{Knowing What To Expect \& What To Do}
 
