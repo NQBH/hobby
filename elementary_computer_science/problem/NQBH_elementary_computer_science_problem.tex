@@ -1,42 +1,38 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
-\newtheorem{baitoan}{Bài toán}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Subsect.~\thesubsection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
@@ -52,7 +48,6 @@
 	1 bộ sưu tập các bài toán chọn lọc từ cơ bản đến nâng cao cho Tin học sơ cấp. Phiên bản mới nhất của tài liệu này được lưu trữ ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/problem/NQBH_elementary_computer_science_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}problem}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/problem/NQBH_elementary_computer_science_problem.pdf}.}.
 \end{abstract}
 \tableofcontents
-\newpage
 
 %------------------------------------------------------------------------------%
 
@@ -77,13 +72,7 @@
 \end{itemize}
 
 \begin{baitoan}[Triangle]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của:
-	\begin{enumerate*}
-		\item[(a)] 1 tam giác;
-		\item[(b)] 1 tam giác nhọn;
-		\item[(c)] 1 tam giác vuông;
-		\item[(d)] 1 tam giác tù.
-	\end{enumerate*}
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của: (a) 1 tam giác. (b) 1 tam giác nhọn. (c) 1 tam giác vuông. (d) 1 tam giác tù.
 \end{baitoan}
 
 \begin{itemize}
@@ -95,11 +84,31 @@
 \end{baitoan}
 
 \begin{baitoan}[Fibonacci sequence]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xuất ra màn hình, với $n\in\mathbb{N}$ được nhập từ bàn phím.:
-	\begin{enumerate*}
-		\item[(a)] Số Fibonacci thứ $n$ 
-		\item[(b)] $n$ số Fibonacci đầu tiên.
-	\end{enumerate*}
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xuất ra màn hình, với $n\in\mathbb{N}$ được nhập từ bàn phím: (a) Số Fibonacci thứ $n$. (b) $n$ số Fibonacci đầu tiên.
+\end{baitoan}
+
+\begin{baitoan}[Program to print out 1st $n$ square roots]
+	Viết chương trình \textsc{Pascal, C-C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}[Số chính phương]
+	Viết chương trình \textsc{Pascal, C-C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
+\end{baitoan}
+
+\begin{baitoan}[Program to print out 1st $n$ cube roots]
+	Viết chương trình \textsc{Pascal, C-C++, Python} xuất ra căn bậc 3 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết chương trình \textsc{Pascal, C-C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là lập phương của 1 số tự nhiên hay không.
+\end{baitoan}
+
+\begin{baitoan}[Program to print out 1st $n$ $n$th roots]
+	Viết chương trình \textsc{Pascal, C-C++, Python} xuất ra căn bậc $n$ của $m$ số tự nhiên đầu tiên với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết chương trình \textsc{Pascal, C-C++, Python} để kiểm tra 1 số $m$ được nhập từ bàn phím có phải là lũy thừa bậc $n$ của 1 số tự nhiên hay không với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
