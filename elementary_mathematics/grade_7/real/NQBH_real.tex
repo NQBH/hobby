@@ -1,47 +1,38 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear]{biblatex}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,mathtools,float,graphicx,algpseudocode,algorithm,tcolorbox,tikz,tkz-tab,subcaption}
-\DeclareMathOperator{\arccot}{arccot}
-\usepackage[inline]{enumitem}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
 \allowdisplaybreaks
-\numberwithin{equation}{section}
-\newtheorem{assumption}{Assumption}[section]
-\newtheorem{nhanxet}{Nhận xét}[section]
-\newtheorem{conjecture}{Conjecture}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{hequa}{Hệ quả}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{dinhnghia}{Định nghĩa}[section]
-\newtheorem{example}{Example}[section]
-\newtheorem{vidu}{Ví dụ}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{notation}{Notation}[section]
-\newtheorem{principle}{Principle}[section]
-\newtheorem{problem}{Problem}[section]
+\newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{menhde}{Mệnh đề}[section]
-\newtheorem{question}{Question}[section]
-\newtheorem{cauhoi}{Câu hỏi}[section]
-\newtheorem{quytac}{Quy tắc}
-\newtheorem{remark}{Remark}[section]
-\newtheorem{luuy}{Lưu ý}[section]
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{tiende}{Tiên đề}[section]
-\newtheorem{dinhly}{Định lý}[section]
-\usepackage[left=0.5in,right=0.5in,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\small Sect.~\thesection}
-\rhead{\small\nouppercase{\leftmark}}
-\renewcommand{\subsectionmark}[1]{\markboth{#1}{}}
-\cfoot{\thepage}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 \def\labelitemii{$\circ$}
 \DeclareRobustCommand{\divby}{%
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
@@ -54,10 +45,10 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	\textsc{[en]} This text is a collection of problems, from easy to advanced, about real. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 7, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}real $\mathbb{R}$}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}.}.
+	\textsf{[en]} This text is a collection of problems, from easy to advanced, about real. This text is also a supplementary material for my lecture note on Elementary Mathematics grade 7, which is stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}.}. The latest version of this text has been stored \& downloadable at the following link: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}real $\mathbb{R}$}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}.}.
 	\vspace{2mm}
 	
-	\textsc{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về số thực. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 7. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}real $\mathbb{R}$}.
+	\textsf{[vi]} Tài liệu này là 1 bộ sưu tập các bài tập chọn lọc từ cơ bản đến nâng cao về số thực. Tài liệu này là phần bài tập bổ sung cho tài liệu chính -- bài giảng \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/NQBH_elementary_mathematics_grade_7.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}lecture} của tác giả viết cho Toán Sơ Cấp lớp 7. Phiên bản mới nhất của tài liệu này được lưu trữ \& có thể tải xuống ở link sau: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_7/real/NQBH_real.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 7\texttt{/}real $\mathbb{R}$}.
 \end{abstract}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
@@ -90,28 +81,28 @@ Căn bậc 2 số học của số $a$ ký hiệu là $\sqrt{2}$. Căn bậc 2 s
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{69.}, p. 19]
 	Tính:
-	\begin{enumerate*}
-		\item[(a)] $\sqrt{(-5)^2} + \sqrt{5^2} - \sqrt{(-3)^2} - \sqrt{3^2}$;
-		\item[(b)] $\left[\sqrt{4^2} + \sqrt{(-4)^2}\right]\cdot\sqrt{\frac{1}{4^3}} - \sqrt{\frac{1}{3^4}}$.
-	\end{enumerate*}\\\mbox{}\hfill{\sf Ans:} (a) $4$. (b) $\frac{8}{9}$.
+	
+		(a) $\sqrt{(-5)^2} + \sqrt{5^2} - \sqrt{(-3)^2} - \sqrt{3^2}$;
+		(b) $\left[\sqrt{4^2} + \sqrt{(-4)^2}\right]\cdot\sqrt{\frac{1}{4^3}} - \sqrt{\frac{1}{3^4}}$.
+	\\\mbox{}\hfill{\sf Ans:} (a) $4$. (b) $\frac{8}{9}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{70.}, pp. 19--20]
 	Tìm $x\in\mathbb{R}$ biết:
-	\begin{enumerate*}
-		\item[(a)] $4x^2 - 1 = 0$;
-		\item[(b)] $2x^2 + 0.82 = 1$.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $\pm\frac{1}{2}$. (b) $\pm0.3$.
+	
+		(a) $4x^2 - 1 = 0$;
+		(b) $2x^2 + 0.82 = 1$.
+	\hfill{\sf Ans:} (a) $\pm\frac{1}{2}$. (b) $\pm0.3$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{71.}, p. 20]
 	Tìm $x\ge 0$ biết:
-	\begin{enumerate*}
-		\item[(a)] $7 - \sqrt{x} = 0$;
-		\item[(b)] $3\sqrt{x} + 1 = 40$;
-		\item[(c)] $\frac{5}{12}\sqrt{x} - \frac{1}{6} = \frac{1}{3}$;
-		\item[(d)] $\sqrt{x + 1} + 2 = 0$.
-	\end{enumerate*}\\\mbox{}\hfill{\sf Ans:} (a) $49$. (b) $169$. (c) $1.44$. (d) $\overline{\exists}$.
+	
+		(a) $7 - \sqrt{x} = 0$;
+		(b) $3\sqrt{x} + 1 = 40$;
+		(c) $\frac{5}{12}\sqrt{x} - \frac{1}{6} = \frac{1}{3}$;
+		(d) $\sqrt{x + 1} + 2 = 0$.
+	\\\mbox{}\hfill{\sf Ans:} (a) $49$. (b) $169$. (c) $1.44$. (d) $\overline{\exists}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{72.}, p. 20]
@@ -128,20 +119,20 @@ Căn bậc 2 số học của số $a$ ký hiệu là $\sqrt{2}$. Căn bậc 2 s
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S7, Ví dụ 11]
 	Chứng minh:
-	\begin{enumerate*}
-		\item[(a)] $\sqrt{15}$ là số vô tỷ.
-		\item[(b)] Nếu số tự nhiên $a$ không phải là số chính phương thì $\sqrt{a}$ là số vô tỷ.
-	\end{enumerate*}
+	
+		(a) $\sqrt{15}$ là số vô tỷ.
+		(b) Nếu số tự nhiên $a$ không phải là số chính phương thì $\sqrt{a}$ là số vô tỷ.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S7, \textbf{69.}]
 	Tìm $x$ biết:
-	\begin{enumerate*}
-		\item[(a)] $x^2 = 81$.
-		\item[(b)] $(x - 1)^2 = \frac{9}{16}$.
-		\item[(c)] $x - 2\sqrt{x} = 0$.
-		\item[(d)] $x = \sqrt{x}$.
-	\end{enumerate*}
+	
+		(a) $x^2 = 81$.
+		(b) $(x - 1)^2 = \frac{9}{16}$.
+		(c) $x - 2\sqrt{x} = 0$.
+		(d) $x = \sqrt{x}$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S7, \textbf{70.}]
@@ -154,17 +145,17 @@ Căn bậc 2 số học của số $a$ ký hiệu là $\sqrt{2}$. Căn bậc 2 s
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S7, \textbf{72.}]
 	Chứng minh:
-	\begin{enumerate*}
-		\item[(a)] $\sqrt{2}$ là số vô tỷ.
-		\item[(b)] $5 - \sqrt{2}$ là số vô tỷ.
-	\end{enumerate*}
+	
+		(a) $\sqrt{2}$ là số vô tỷ.
+		(b) $5 - \sqrt{2}$ là số vô tỷ.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S7, \textbf{73.}]
-	\begin{enumerate*}
-		\item[(a)] Có 2 số vô tỷ nào mà tích là 1 số hữu tỷ hay không?
-		\item[(b)] Có 2 số vô tỷ dương nào mà tổng là 1 số hữu tỷ hay không?
-	\end{enumerate*}
+	
+		(a) Có 2 số vô tỷ nào mà tích là 1 số hữu tỷ hay không?
+		(b) Có 2 số vô tỷ dương nào mà tổng là 1 số hữu tỷ hay không?
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S7, \textbf{74.}]
@@ -178,18 +169,18 @@ Căn bậc 2 số học của số $a$ ký hiệu là $\sqrt{2}$. Căn bậc 2 s
 %------------------------------------------------------------------------------%
 
 \subsection{Tập Hợp $\mathbb{R}$ Các Số Thực}
-``\begin{enumerate*}
-	\item[\textbf{1.}] Số hữu tỷ \& số vô tỷ được gọi chung là \textit{số thực}. Tập hợp các số thực ký hiệu là $\mathbb{R}$. Mỗi số thực được biểu diễn bởi 1 điểm trên trục số. Ngược lại mỗi điểm trên trục số biểu diễn 1 số thực.
-	\item[\textbf{2.}] \textit{Số đối của 1 số thực}: Trên trục số, 2 số thực phân biệt có điểm biểu diễn nằm về 2 phía gốc $O$ \& cách đều điểm $O$ được gọi là \textit{2 số đối nhau}. Số đối của số thực $a$ ký hiệu là $-a$. Số đối của $0$ là $0$.
-	\item[\textbf{3.}] \textit{So sánh 2 số thực}: Có thể so sánh 2 số thực tương tự như so sánh 2 số hữu tỷ viết dưới dạng số thập phân.
-	\begin{enumerate*}
-		\item[$\bullet$] Số thực lớn hơn $0$ gọi là \textit{số thực dương}.
-		\item[$\bullet$] Số thực nhỏ hơn $0$ gọi là \textit{số thực âm}.
-		\item[$\bullet$] Nếu $a < b$ \& $b < c$ thì $a < c$.
-		\item[$\bullet$] Đặc biệt nếu $0 < a < b$ thì $\sqrt{a} < \sqrt{b}$.
-	\end{enumerate*}
-	\item[\textbf{4.}] Trong tập hợp các số thực cũng có các phép tính cộng, trừ, nhân, chia, lũy thừa với số mũ tự nhiên với các tính chất tương tự như các phép tính trong tập hợp các số hữu tỷ. Thứ tự thực hiện các phép tính, quy tắc chuyển vế, quy tắc dấu ngoặc trong tập hợp số thực cũng giống như trong tập hợp số hữu tỷ.'' -- \cite[Chap. 2, \S2, p. 20]{Tuyen_Toan_7}
-\end{enumerate*}
+``
+	\fbox{\bf 1} Số hữu tỷ \& số vô tỷ được gọi chung là \textit{số thực}. Tập hợp các số thực ký hiệu là $\mathbb{R}$. Mỗi số thực được biểu diễn bởi 1 điểm trên trục số. Ngược lại mỗi điểm trên trục số biểu diễn 1 số thực.
+	\fbox{\bf 2} \textit{Số đối của 1 số thực}: Trên trục số, 2 số thực phân biệt có điểm biểu diễn nằm về 2 phía gốc $O$ \& cách đều điểm $O$ được gọi là \textit{2 số đối nhau}. Số đối của số thực $a$ ký hiệu là $-a$. Số đối của $0$ là $0$.
+	\fbox{\bf 3} \textit{So sánh 2 số thực}: Có thể so sánh 2 số thực tương tự như so sánh 2 số hữu tỷ viết dưới dạng số thập phân.
+	
+		$\bullet$ Số thực lớn hơn $0$ gọi là \textit{số thực dương}.
+		$\bullet$ Số thực nhỏ hơn $0$ gọi là \textit{số thực âm}.
+		$\bullet$ Nếu $a < b$ \& $b < c$ thì $a < c$.
+		$\bullet$ Đặc biệt nếu $0 < a < b$ thì $\sqrt{a} < \sqrt{b}$.
+	
+	\fbox{\bf 4} Trong tập hợp các số thực cũng có các phép tính cộng, trừ, nhân, chia, lũy thừa với số mũ tự nhiên với các tính chất tương tự như các phép tính trong tập hợp các số hữu tỷ. Thứ tự thực hiện các phép tính, quy tắc chuyển vế, quy tắc dấu ngoặc trong tập hợp số thực cũng giống như trong tập hợp số hữu tỷ.'' -- \cite[Chap. 2, \S2, p. 20]{Tuyen_Toan_7}
+
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 22, p. 20]
 	Không dùng bảng số hoặc máy tính, so sánh $\sqrt{50 + 2}$ \& $\sqrt{50} + \sqrt{2}$.
@@ -214,19 +205,19 @@ Căn bậc 2 số học của số $a$ ký hiệu là $\sqrt{2}$. Căn bậc 2 s
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{76.}, p. 21]
 	So sánh:
-	\begin{enumerate*}
-		\item[(a)] $4\frac{8}{33}$ \& $3\sqrt{2}$;
-		\item[(b)] $5\sqrt{(-10)^2}$ \& $10\sqrt{(-5)^2}$.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $4\frac{8}{33} < 3\sqrt{2}$. (b) `$=$'.
+	
+		(a) $4\frac{8}{33}$ \& $3\sqrt{2}$;
+		(b) $5\sqrt{(-10)^2}$ \& $10\sqrt{(-5)^2}$.
+	\hfill{\sf Ans:} (a) $4\frac{8}{33} < 3\sqrt{2}$. (b) `$=$'.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{77.}, p. 21]
 	Không dùng bảng số hoặc máy tính, so sánh:
-	\begin{enumerate*}
-		\item[(a)] $\sqrt{26} + \sqrt{17}$ \& $9$.
-		\item[(b)] $\sqrt{8} - \sqrt{5}$ \& $1$;
-		\item[(c)] $\sqrt{63 - 27}$ \& $\sqrt{63} - \sqrt{27}$.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $\sqrt{26} + \sqrt{17} > 9$. (b) $\sqrt{8} - \sqrt{5} > 1$. (c) $\sqrt{63 - 27} > \sqrt{63} - \sqrt{27}$.
+	
+		(a) $\sqrt{26} + \sqrt{17}$ \& $9$.
+		(b) $\sqrt{8} - \sqrt{5}$ \& $1$;
+		(c) $\sqrt{63 - 27}$ \& $\sqrt{63} - \sqrt{27}$.
+	\hfill{\sf Ans:} (a) $\sqrt{26} + \sqrt{17} > 9$. (b) $\sqrt{8} - \sqrt{5} > 1$. (c) $\sqrt{63 - 27} > \sqrt{63} - \sqrt{27}$.
 \end{baitoan}
 
 \begin{baitoan}[Mở rộng \cite{Tuyen_Toan_7}, \textbf{77.}, p. 21]
@@ -243,32 +234,32 @@ Căn bậc 2 số học của số $a$ ký hiệu là $\sqrt{2}$. Căn bậc 2 s
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{79.}, p. 21]
 	Cho $P = \frac{1}{2} + \sqrt{x}$, $Q = 7 - 2\sqrt{x - 1}$. Tìm:
-	\begin{enumerate*}
-		\item[(a)] Giá trị nhỏ nhất của $P$;
-		\item[(b)] Giá trị lớn nhất của $Q$.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $\min P = \frac{1}{2}\Leftrightarrow x = 0$. (b) $\max Q = 7\Leftrightarrow x = 1$.
+	
+		(a) Giá trị nhỏ nhất của $P$;
+		(b) Giá trị lớn nhất của $Q$.
+	\hfill{\sf Ans:} (a) $\min P = \frac{1}{2}\Leftrightarrow x = 0$. (b) $\max Q = 7\Leftrightarrow x = 1$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{80.}, p. 21]
 	Xét xem các số $x$ \& $y$ có thể là số vô tỷ không nếu biết:
-	\begin{enumerate*}
-		\item[(a)] $x + y$ \& $x - y$ đều là số hữu tỷ;
-		\item[(b)] $x + y$ \& $\frac{x}{y}$ đều là số hữu tỷ.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $x,y\in\mathbb{Q}$. (b) Có thể, e.g., $\{x,y\} = \{\pm\sqrt{2}\}$.
+	
+		(a) $x + y$ \& $x - y$ đều là số hữu tỷ;
+		(b) $x + y$ \& $\frac{x}{y}$ đều là số hữu tỷ.
+	\hfill{\sf Ans:} (a) $x,y\in\mathbb{Q}$. (b) Có thể, e.g., $\{x,y\} = \{\pm\sqrt{2}\}$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
 
 \subsection{Giá Trị Tuyệt Đối của  Số Thực \& Biểu Thức}
-``\begin{enumerate*}
-	\item[\textbf{1.}] \textit{Giá trị tuyệt đối} của $x\in\mathbb{R}$, ký hiệu $|x|$, là khoảng cách từ điểm $x$ đến gốc $O$ trên trục số.
-	\item[\textbf{2.}] $\forall x\in\mathbb{R}$:
-	\begin{enumerate*}
-		\item[$\bullet$] Giá trị tuyệt đối của 1 số thì không âm: $|x|\ge 0$ (dấu ``$=$'' xảy ra khi \& chỉ khi $x = 0$).
-		\item[$\bullet$] Giá trị tuyệt đối của 1 số thì lớn hơn hoặc bằng số đó: $|x|\ge x$ (dấu ``$=$'' xảy ra khi \& chỉ khi $x\ge 0$).
-		\item[$\bullet$] Giá trị tuyệt đối của 2 số đối nhau thì bằng nhau: $|x| = |-x|$.
-	\end{enumerate*}
-\end{enumerate*}
+``
+	\fbox{\bf 1} \textit{Giá trị tuyệt đối} của $x\in\mathbb{R}$, ký hiệu $|x|$, là khoảng cách từ điểm $x$ đến gốc $O$ trên trục số.
+	\fbox{\bf 2} $\forall x\in\mathbb{R}$:
+	
+		$\bullet$ Giá trị tuyệt đối của 1 số thì không âm: $|x|\ge 0$ (dấu ``$=$'' xảy ra khi \& chỉ khi $x = 0$).
+		$\bullet$ Giá trị tuyệt đối của 1 số thì lớn hơn hoặc bằng số đó: $|x|\ge x$ (dấu ``$=$'' xảy ra khi \& chỉ khi $x\ge 0$).
+		$\bullet$ Giá trị tuyệt đối của 2 số đối nhau thì bằng nhau: $|x| = |-x|$.
+	
+
 Với $m > 0$ thì: $|x| < m\Leftrightarrow -m < x < m$ \& $|x| > m\Leftrightarrow((x > m)\lor(x < - m))$.'' -- \cite[Chap. 2, \S3, pp. 21--22]{Tuyen_Toan_7}
 
 \begin{dinhnghia}[Giá trị tuyệt đối]
@@ -282,10 +273,10 @@ Ta thường sử dụng định nghĩa trên dưới dạng:
 	\end{split}\right.
 \end{equation*}
 \textbf{Tính chất.}
-\begin{enumerate*}
-	\item[$\bullet$] Nếu $a = 0$ thì $|a| = 0$, nếu $a\ne 0$ thì $|a| > 0$. Ta có: \textit{Giá trị tuyệt đối của 1 số thì không âm}: $|a|\ge 0$, $\forall a\in\mathbb{R}$.
-	\item[$\bullet$] Nếu $a\ge 0$ thì $|a| = a$, nếu $a < 0$ thì $|a| > a$. Ta có: \textit{Giá trị tuyệt đối của 1 số thì lớn hơn hoặc bằng số đó}: $|a|\ge a$, $\forall a\in\mathbb{R}$.
-\end{enumerate*}
+
+	$\bullet$ Nếu $a = 0$ thì $|a| = 0$, nếu $a\ne 0$ thì $|a| > 0$. Ta có: \textit{Giá trị tuyệt đối của 1 số thì không âm}: $|a|\ge 0$, $\forall a\in\mathbb{R}$.
+	$\bullet$ Nếu $a\ge 0$ thì $|a| = a$, nếu $a < 0$ thì $|a| > a$. Ta có: \textit{Giá trị tuyệt đối của 1 số thì lớn hơn hoặc bằng số đó}: $|a|\ge a$, $\forall a\in\mathbb{R}$.
+
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 24, p. 22]
 	Cho $A = |\sqrt{2} - \sqrt{3}| - |-\sqrt{7}| + |\sqrt{7} - \sqrt{3}|$, $B = |\sqrt{5} - \sqrt{7}| - |\sqrt{7} - \sqrt{6}|$. So sánh $A$ \& $B$.\hfill{\sf Ans:} $A = -\sqrt{2} < 0 < \sqrt{6} - \sqrt{5} = B$.
@@ -302,19 +293,19 @@ Ta thường sử dụng định nghĩa trên dưới dạng:
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{81.}, p. 22]
 	Tính:
-	\begin{enumerate*}
-		\item[(a)] $|-2.15| - |-3.75| + \left|\frac{4}{3} + \frac{4}{15}\right|$;
-		\item[(b)] $|-\sqrt{42} - \sqrt{53}| - |\sqrt{53} - \sqrt{61}|$\\$+ |\sqrt{61} - \sqrt{42}| - |-\sqrt{53}|$;
-		\item[(c)] $|-150| - |100|:|-4| + |37|\cdot|-3|$.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $0$. (b) $\sqrt{53}$. (c) $236$.
+	
+		(a) $|-2.15| - |-3.75| + \left|\frac{4}{3} + \frac{4}{15}\right|$;
+		(b) $|-\sqrt{42} - \sqrt{53}| - |\sqrt{53} - \sqrt{61}|$\\$+ |\sqrt{61} - \sqrt{42}| - |-\sqrt{53}|$;
+		(c) $|-150| - |100|:|-4| + |37|\cdot|-3|$.
+	\hfill{\sf Ans:} (a) $0$. (b) $\sqrt{53}$. (c) $236$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{82.}, p. 22]
 	Tìm $x$ biết:
-	\begin{enumerate*}
-		\item[(a)] $\left|5x - \frac{3}{4}\right| + \frac{7}{4} = 3$;
-		\item[(b)] $9 - |x - \sqrt{10}| = 10$.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $\frac{2}{5}$, $-\frac{1}{10}$. (b) $\overline{\exists}$.
+	
+		(a) $\left|5x - \frac{3}{4}\right| + \frac{7}{4} = 3$;
+		(b) $9 - |x - \sqrt{10}| = 10$.
+	\hfill{\sf Ans:} (a) $\frac{2}{5}$, $-\frac{1}{10}$. (b) $\overline{\exists}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{83.}, p. 22]
@@ -335,26 +326,26 @@ Ta thường sử dụng định nghĩa trên dưới dạng:
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{86.}, p. 23]
 	Tìm $x$ thỏa mãn các bất đẳng thức sau:
-	\begin{enumerate*}
-		\item[(a)] $\left|x - \frac{5}{3}\right| < \frac{1}{3}$;
-		\item[(b)] $\left|x + \frac{11}{2}\right| > |-5.5|$.
-	\end{enumerate*}\\\mbox{}\hfill{\sf Ans:} (a) $\frac{4}{3} < x < 2$. (b) $x > 0\lor x < -11$.
+	
+		(a) $\left|x - \frac{5}{3}\right| < \frac{1}{3}$;
+		(b) $\left|x + \frac{11}{2}\right| > |-5.5|$.
+	\\\mbox{}\hfill{\sf Ans:} (a) $\frac{4}{3} < x < 2$. (b) $x > 0\lor x < -11$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{87.}, p. 23]
 	Tìm giá trị nhỏ nhất của biểu thức:
-	\begin{enumerate*}
-		\item[(a)] $M = \left|x + \frac{15}{19}\right|$;
-		\item[(b)] $N = \left|x - \frac{4}{7}\right| - \frac{1}{2}$.
-	\end{enumerate*}\\\mbox{}\hfill{\sf Ans:} (a) $\min M = 0\Leftrightarrow x = -\frac{15}{19}$. (b) $\min N = -\frac{1}{2}\Leftrightarrow x = \frac{4}{7}$.
+	
+		(a) $M = \left|x + \frac{15}{19}\right|$;
+		(b) $N = \left|x - \frac{4}{7}\right| - \frac{1}{2}$.
+	\\\mbox{}\hfill{\sf Ans:} (a) $\min M = 0\Leftrightarrow x = -\frac{15}{19}$. (b) $\min N = -\frac{1}{2}\Leftrightarrow x = \frac{4}{7}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{88.}, p. 23]
 	Tìm giá trị lớn nhất của biểu thức:
-	\begin{enumerate*}
-		\item[(a)] $P = -\left|\frac{5}{3} - x\right|$;
-		\item[(b)] $Q = 9 - \left|x - \frac{1}{10}\right|$.
-	\end{enumerate*}\\\mbox{}\hfill{\sf Ans:} (a) $\max P = 0\Leftrightarrow x = \frac{5}{3}$. (b) $\max Q = 9\Leftrightarrow x = \frac{1}{10}$.
+	
+		(a) $P = -\left|\frac{5}{3} - x\right|$;
+		(b) $Q = 9 - \left|x - \frac{1}{10}\right|$.
+	\\\mbox{}\hfill{\sf Ans:} (a) $\max P = 0\Leftrightarrow x = \frac{5}{3}$. (b) $\max Q = 9\Leftrightarrow x = \frac{1}{10}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{89.}, p. 23]
@@ -419,105 +410,105 @@ Ta thường sử dụng định nghĩa trên dưới dạng:
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{70.}, p. 22]
 	Tìm tất cả các số $a$ thỏa mãn 1 trong các điều kiện sau:
-	\begin{enumerate*}
-		\item[(a)] $a = |a|$;
-		\item[(b)] $a < |a|$;
-		\item[(c)] $a > |a|$;
-		\item[(d)] $|a| = -a$;
-		\item[(e)] $a\le|a|$.
-	\end{enumerate*}
+	
+		(a) $a = |a|$;
+		(b) $a < |a|$;
+		(c) $a > |a|$;
+		(d) $|a| = -a$;
+		(e) $a\le|a|$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{71.}, p. 22]
 	Bổ sung các điều kiện để các khẳng định sau là đúng:
-	\begin{enumerate*}
-		\item[(a)] $|a| = |b|\Rightarrow a = b$;
-		\item[(b)] $a > b\Rightarrow|a| > |b|$.
-	\end{enumerate*}
+	
+		(a) $|a| = |b|\Rightarrow a = b$;
+		(b) $a > b\Rightarrow|a| > |b|$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{72.}, p. 22]
 	Cho $|x| = |y|$, $x < 0$, $y > 0$. Trong các khẳng định sau, khẳng định nào sai?
-	\begin{enumerate*}
-		\item[(a)] $x^2y > 0$;
-		\item[(b)] $x + y = 0$;
-		\item[(c)] $xy < 0$;
-		\item[(d)] $\frac{1}{x} - \frac{1}{y} = 0$;
-		\item[(e)] $\frac{x}{y} + 1 = 0$.
-	\end{enumerate*}
+	
+		(a) $x^2y > 0$;
+		(b) $x + y = 0$;
+		(c) $xy < 0$;
+		(d) $\frac{1}{x} - \frac{1}{y} = 0$;
+		(e) $\frac{x}{y} + 1 = 0$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{73.}, p. 22]
 	Tìm giá trị của các biểu thức:
-	\begin{enumerate*}
-		\item[(a)] $A = 6x^3 - 3x^2 + 2|x| + 4$ với $x = -\frac{2}{3}$;
-		\item[(b)] $B = 2|x| - 3|y|$ với $x = \frac{1}{2}$, $y = -3$;
-		\item[(c)] $C = 2|x - 2| - 3|1 - x|$ với $x = 4$;
-		\item[(d)] $D = \frac{5x^2 - 7x + 1}{3x - 1}$ với $|x| = \frac{1}{2}$.
-	\end{enumerate*}
+	
+		(a) $A = 6x^3 - 3x^2 + 2|x| + 4$ với $x = -\frac{2}{3}$;
+		(b) $B = 2|x| - 3|y|$ với $x = \frac{1}{2}$, $y = -3$;
+		(c) $C = 2|x - 2| - 3|1 - x|$ với $x = 4$;
+		(d) $D = \frac{5x^2 - 7x + 1}{3x - 1}$ với $|x| = \frac{1}{2}$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{74.}, p. 22]
 	Rút gọn các biểu thức:
-	\begin{enumerate*}
-		\item[(a)] $|a| - a$;
-		\item[(b)] $|a|a$;
-		\item[(c)] $|a|:a$.
-	\end{enumerate*}
+	
+		(a) $|a| - a$;
+		(b) $|a|a$;
+		(c) $|a|:a$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{75.}, p. 22]
 	Tìm $x$ trong các đẳng thức:
-	\begin{enumerate*}
-		\item[(a)] $|2x - 3| = 5$;
-		\item[(b)] $|2x - 1| = |2x + 3|$;
-		\item[(c)] $|x - 1| + 3x = 1$;
-		\item[(d)] $|5x - 3| - x = 7$.
-	\end{enumerate*}
+	
+		(a) $|2x - 3| = 5$;
+		(b) $|2x - 1| = |2x + 3|$;
+		(c) $|x - 1| + 3x = 1$;
+		(d) $|5x - 3| - x = 7$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{76.}, p. 23]
 	Tìm các số $a$ \& $b$ thỏa mãn 1 trong các điều kiện sau:
-	\begin{enumerate*}
-		\item[(a)] $a + b = |a| + |b|$:
-		\item[(b)] $a + b = |b| - |a|$.
-	\end{enumerate*}
+	
+		(a) $a + b = |a| + |b|$:
+		(b) $a + b = |b| - |a|$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{77.}, p. 23]
 	Có bao nhiêu cặp số nguyên $(x;y)$ thỏa mãn 1 trong các điều kiện sau:
-	\begin{enumerate*}
-		\item[(a)] $|x| + |y| = 20$;
-		\item[(b)] $|x| + |y| < 20$.
-	\end{enumerate*}
+	
+		(a) $|x| + |y| = 20$;
+		(b) $|x| + |y| < 20$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{78.}, p. 23]
 	Điền vào chỗ chấm các dấu $\ge,\le,=$ để các khẳng định sau đúng với mọi $a,b$. Phát biểu mỗi khẳng định đó thành 1 tính chất \& chỉ rõ khi nào xảy ra dấu đẳng thức?
-	\begin{enumerate*}
-		\item[(a)] $|a + b|\ldots|a| + |b|$;
-		\item[(b)] $|a - b|\ldots|a| - |b|$ với $|a|\ge|b|$;
-		\item[(c)] $|ab|\ldots|a||b|$;
-		\item[(d)] $\left|\frac{a}{b}\right|\ldots\frac{|a|}{|b|}$.
-	\end{enumerate*}
+	
+		(a) $|a + b|\ldots|a| + |b|$;
+		(b) $|a - b|\ldots|a| - |b|$ với $|a|\ge|b|$;
+		(c) $|ab|\ldots|a||b|$;
+		(d) $\left|\frac{a}{b}\right|\ldots\frac{|a|}{|b|}$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{79.}, p. 23]
 	Tìm giá trị nhỏ nhất của các biểu thức:
-	\begin{enumerate*}
-		\item[(a)] $A = 2|3x - 2| - 1$;
-		\item[(b)] $B = 5|1 - 4x| - 1$;
-		\item[(c)] $C = x^2 + 3|y - 2| - 1$;
-		\item[(d)] $D = x + |x|$.
-	\end{enumerate*}
+	
+		(a) $A = 2|3x - 2| - 1$;
+		(b) $B = 5|1 - 4x| - 1$;
+		(c) $C = x^2 + 3|y - 2| - 1$;
+		(d) $D = x + |x|$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{80.}, p. 23]
 	Tìm giá trị lớn nhất của các biểu thức:
-	\begin{enumerate*}
-		\item[(a)] $A = 5 - |2x - 1|$;
-		\item[(b)] $B = \frac{1}{|x - 2| + 3}$.
-	\end{enumerate*}
+	
+		(a) $A = 5 - |2x - 1|$;
+		(b) $B = \frac{1}{|x - 2| + 3}$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{81.}, p. 23]
@@ -527,14 +518,14 @@ Ta thường sử dụng định nghĩa trên dưới dạng:
 %------------------------------------------------------------------------------%
 
 \subsection{Làm Tròn Số \& Ước Lượng Kết Quả}
-``\begin{enumerate*}
-	\item[\textbf{1.}] Trong thực tiễn ta thường làm tròn số để thuận tiện trong việc ghi nhớ, đo đạc hay tính toán. Làm tròn số thập phân vô hạn cũng thực hiện tương tự như làm tròn số thập phân hữu hạn. Cần chú ý:
-	\begin{enumerate*}
-		\item[$\bullet$] Ta phải viết số định làm tròn dưới dạng số thập phân trước khi làm tròn.
-		\item[$\bullet$] Khi làm tròn số ta không quan tâm đến dấu của nó.
-	\end{enumerate*}
-	\item[\textbf{2.}] Làm tròn số căn cứ vào độ chính xác cho trước. Khi làm tròn đến 1 hàng nào đó, kết quả làm tròn có độ chính xác bằng $\frac{1}{2}$ đơn vị của hàng làm tròn.
-\end{enumerate*}
+``
+	\fbox{\bf 1} Trong thực tiễn ta thường làm tròn số để thuận tiện trong việc ghi nhớ, đo đạc hay tính toán. Làm tròn số thập phân vô hạn cũng thực hiện tương tự như làm tròn số thập phân hữu hạn. Cần chú ý:
+	
+		$\bullet$ Ta phải viết số định làm tròn dưới dạng số thập phân trước khi làm tròn.
+		$\bullet$ Khi làm tròn số ta không quan tâm đến dấu của nó.
+	
+	\fbox{\bf 2} Làm tròn số căn cứ vào độ chính xác cho trước. Khi làm tròn đến 1 hàng nào đó, kết quả làm tròn có độ chính xác bằng $\frac{1}{2}$ đơn vị của hàng làm tròn.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -546,42 +537,42 @@ Ta thường sử dụng định nghĩa trên dưới dạng:
 	\end{tabular}
 \end{table}
 Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác nhau:
-\begin{enumerate*}
-	\item[$\bullet$] Làm tròn số đến 1 hàng nào đó.
-	\item[$\bullet$] Làm tròn số với độ chính xác nào đó.
-\end{enumerate*}
+
+	$\bullet$ Làm tròn số đến 1 hàng nào đó.
+	$\bullet$ Làm tròn số với độ chính xác nào đó.
+
 \textbf{3.} \textit{Ước lượng kết quả các phép tính}: Khi ta không quan tâm đến tính chính xác của kết quả tính toán mà chỉ cần tìm 1 số gần sát với kết quả chính xác thì ta tìm cách ước lượng kết quả. Ta áp dụng quy tắc làm tròn số để ước lượng kết quả.'' -- \cite[Chap. 2, \S4, pp. 23--24]{Tuyen_Toan_7}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 27, p. 24]
 	Làm tròn:
-	\begin{enumerate*}
-		\item[(a)] Số $348.62$ đến hàng chục;
-		\item[(b)] Số $-67.(506)$ đến hàng phần mười \& hàng phần trăm.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $350$. (b) $-67.5$, $-67.51$.
+	
+		(a) Số $348.62$ đến hàng chục;
+		(b) Số $-67.(506)$ đến hàng phần mười \& hàng phần trăm.
+	\hfill{\sf Ans:} (a) $350$. (b) $-67.5$, $-67.51$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 28, p. 24]
 	Làm tròn:
-	\begin{enumerate*}
-		\item[(a)] Số $924578$ với độ chính xác $500$;
-		\item[(b)] Số $56.9827$ với độ chính xác $0.5$ \& độ chính xác $0.005$.
-	\end{enumerate*}\hfill{\sf Ans:} (a) $925000$. (b) $57$, $56.98$.
+	
+		(a) Số $924578$ với độ chính xác $500$;
+		(b) Số $56.9827$ với độ chính xác $0.5$ \& độ chính xác $0.005$.
+	\hfill{\sf Ans:} (a) $925000$. (b) $57$, $56.98$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 29, p. 24]
 	1 khu đất hình chữ nhật có kích thước $7.56$\emph{m} \& $5.173$\emph{m}. Tính diện tích khu đất đó bằng 2 cách.
-	\begin{enumerate*}
-		\item[$\bullet$] Cách 1: Làm tròn số trước rồi mới thực hiện các phép tính sau (làm tròn đến hàng đơn vị).
-		\item[$\bullet$] Cách 2: Thực hiện các phép tính trước rồi làm tròn kết quả sau (làm tròn đến hàng đơn vị).
-	\end{enumerate*}\hfill{\sf Ans:} $\approx\rm 8\cdot 5 = 40m^2$, $\rm39.10788\approx 39m^2$.
+	
+		$\bullet$ Cách 1: Làm tròn số trước rồi mới thực hiện các phép tính sau (làm tròn đến hàng đơn vị).
+		$\bullet$ Cách 2: Thực hiện các phép tính trước rồi làm tròn kết quả sau (làm tròn đến hàng đơn vị).
+	\hfill{\sf Ans:} $\approx\rm 8\cdot 5 = 40m^2$, $\rm39.10788\approx 39m^2$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{91.}, p. 24]
 	Đầu năm $2021$ dân số nước ta nếu làm tròn đến hàng triệu thì được $98000000$ người. Hỏi dân số lúc đó:
-	\begin{enumerate*}
-		\item[(a)] Nhiều nhất là tới bao nhiêu người?
-		\item[(b)] Ít nhất là có bao nhiêu người? 
-	\end{enumerate*}\hfill{\sf Ans:} (a) $98499999$, $97500000$.
+	
+		(a) Nhiều nhất là tới bao nhiêu người?
+		(b) Ít nhất là có bao nhiêu người? 
+	\hfill{\sf Ans:} (a) $98499999$, $97500000$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{92.}, p. 24]
@@ -610,32 +601,32 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{98.}, p. 25]
 	Để tính số năm tăng gấp đôi tổng sản phẩm quốc nội (GDP) của 1 quốc gia ta có thể dùng công thức $n = \frac{72}{g}$, trong đó: $g$\% là \emph{tốc độ tăng trưởng GDP} trong giai đoạn đang xét; $n$ là số năm để tăng gấp đôi GDP. Hỏi:
-	\begin{enumerate*}
-		\item[(a)] Nếu tốc độ tăng trưởng GDP trong giai đoạn hiện nay của Việt Nam khoảng $7.1$\% thì sau bao nhiêu năm nữa GDP của nước ta tăng gấp đôi (làm tròn đến hàng đơn vị)?
-		\item[(b)] Nếu muốn sau $7$ năm, GDP tăng gấp đôi thì tốc độ tăng trưởng hằng năm là bao nhiêu \% (làm tròn đến hàng phần mười)?
-	\end{enumerate*}\hfill{\sf Ans:} (a) $10$. (b) $10.3$\%.
+	
+		(a) Nếu tốc độ tăng trưởng GDP trong giai đoạn hiện nay của Việt Nam khoảng $7.1$\% thì sau bao nhiêu năm nữa GDP của nước ta tăng gấp đôi (làm tròn đến hàng đơn vị)?
+		(b) Nếu muốn sau $7$ năm, GDP tăng gấp đôi thì tốc độ tăng trưởng hằng năm là bao nhiêu \% (làm tròn đến hàng phần mười)?
+	\hfill{\sf Ans:} (a) $10$. (b) $10.3$\%.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
 
 \subsection{Tỷ Lệ Thức}
-``\begin{enumerate*}
-	\item[\textbf{1.}] \textit{Tỷ lệ thức} là đẳng thức của 2 tỷ số. Dạng tổng quát: $\frac{a}{b} = \frac{c}{d}$ hoặc $a:b = c:d$. Các số hạng $a$ \& $d$ gọi là \textit{ngoại tỷ}, $b$ \& $c$ gọi là \textit{trung tỷ}.
-	\item[\textbf{2.}] Tính chất:
-	\begin{enumerate*}
-		\item[$\bullet$] \textit{Tính chất cơ bản}: Trong 1 tỷ lệ thức, tích các ngoại tỷ bằng tích các trung tỷ. $\frac{a}{b} = \frac{c}{d}\Rightarrow ad = bc$. Đảo lại, nếu $ad = bc$ \& $abcd\ne 0$ thì $\frac{a}{b} = \frac{c}{d}$.
-		\item[$\bullet$] \textit{Tính chất hoán vị}: Từ tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$, với $abcd\ne 0$, ta có thể suy ra 3 tỷ lệ thức khác bằng cách:
-		\begin{enumerate*}
-			\item[$\circ$] Đổi chỗ các ngoại tỷ cho nhau;
-			\item[$\circ$] Đổi chỗ các trung tỷ cho nhau;
-			\item[$\circ$] Đổi chỗ các ngoại tỷ đồng thời đổi chỗ các trung tỷ cho nhau.
-		\end{enumerate*}
+``
+	\fbox{\bf 1} \textit{Tỷ lệ thức} là đẳng thức của 2 tỷ số. Dạng tổng quát: $\frac{a}{b} = \frac{c}{d}$ hoặc $a:b = c:d$. Các số hạng $a$ \& $d$ gọi là \textit{ngoại tỷ}, $b$ \& $c$ gọi là \textit{trung tỷ}.
+	\fbox{\bf 2} Tính chất:
+	
+		$\bullet$ \textit{Tính chất cơ bản}: Trong 1 tỷ lệ thức, tích các ngoại tỷ bằng tích các trung tỷ. $\frac{a}{b} = \frac{c}{d}\Rightarrow ad = bc$. Đảo lại, nếu $ad = bc$ \& $abcd\ne 0$ thì $\frac{a}{b} = \frac{c}{d}$.
+		$\bullet$ \textit{Tính chất hoán vị}: Từ tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$, với $abcd\ne 0$, ta có thể suy ra 3 tỷ lệ thức khác bằng cách:
+		
+			$\circ$ Đổi chỗ các ngoại tỷ cho nhau;
+			$\circ$ Đổi chỗ các trung tỷ cho nhau;
+			$\circ$ Đổi chỗ các ngoại tỷ đồng thời đổi chỗ các trung tỷ cho nhau.
+		
 		$((ad = bc)\land(abcd\ne 0))\Leftrightarrow\frac{a}{b} = \frac{c}{d}\Leftrightarrow\frac{d}{b} = \frac{c}{a}\Leftrightarrow\frac{a}{c} = \frac{b}{d}\Leftrightarrow\frac{d}{c} = \frac{b}{a}$.
-		\item[$\bullet$] Tính chất của dãy tỷ số bằng nhau: Nếu $\frac{a}{b} = \frac{c}{d} = \frac{e}{f} = k$ thì $\frac{a\pm c\pm e}{b\pm d\pm f} = k$ (giả thiết các tỷ số đều có nghĩa).
-	\end{enumerate*}
-	\item[\textbf{3.}] \textit{Chú ý}: Các số $x,y,z$ tỷ lệ với các số $a,b,c$ được viết là $\frac{x}{a} = \frac{y}{b} = \frac{z}{c}$. Ta còn viết $x:y:z = a:b:c$.
-	\item[\textbf{4.}] \textit{Tính chất tổng hoặc hiệu tỷ lệ}: $\frac{a}{b} = \frac{c}{d}\Leftrightarrow\frac{a\pm b}{b} = \frac{c\pm d}{d}\Leftrightarrow\frac{a\pm b}{a} = \frac{c\pm d}{d}$.'' -- \cite[Chap. 2, \S5, pp. 25--26]{Tuyen_Toan_7}
-\end{enumerate*}
+		$\bullet$ Tính chất của dãy tỷ số bằng nhau: Nếu $\frac{a}{b} = \frac{c}{d} = \frac{e}{f} = k$ thì $\frac{a\pm c\pm e}{b\pm d\pm f} = k$ (giả thiết các tỷ số đều có nghĩa).
+	
+	\fbox{\bf 3} \textit{Chú ý}: Các số $x,y,z$ tỷ lệ với các số $a,b,c$ được viết là $\frac{x}{a} = \frac{y}{b} = \frac{z}{c}$. Ta còn viết $x:y:z = a:b:c$.
+	\fbox{\bf 4} \textit{Tính chất tổng hoặc hiệu tỷ lệ}: $\frac{a}{b} = \frac{c}{d}\Leftrightarrow\frac{a\pm b}{b} = \frac{c\pm d}{d}\Leftrightarrow\frac{a\pm b}{a} = \frac{c\pm d}{d}$.'' -- \cite[Chap. 2, \S5, pp. 25--26]{Tuyen_Toan_7}
+
 
 ``Tỷ lệ thức là 1 đẳng thức của 2 tỷ lệ. Trong tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$ (hoặc $a:b = c:d$) các số hạng $a$ \& $d$ được gọi là \textit{ngoại tỷ}, các số hạng $b$ \& $c$ được gọi là \textit{trung tỷ}. Khi viết tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$, ta luôn giả thiết $b\ne 0$, $d\ne 0$. Từ tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$ ta suy ra $ad = bc$. Đảo lại, nếu $ad = bc$ (cả $4$ số $a,b,c,d$ khác $0$\footnote{I.e., $a^2 + b^2 + c^2 + d^2\ne 0$.}) thì ta có các tỷ lệ thức: $\frac{a}{b} = \frac{c}{d},\frac{a}{c} = \frac{b}{d},\frac{d}{d} = \frac{c}{a},\frac{d}{c} = \frac{b}{a}$. Như vậy trong tỷ lệ thức, ta có thể hoán vị các ngoại tỷ với nhau, hoán vị các trung tỷ với nhau, hoán vị cả ngoại tỷ với nhau \& trung tỷ với nhau. Từ đẳng thức $ad = bc$, ta lập được 4 tỷ lệ thức với các số hạng là $a,b,c,d$ (với quy ước 2 tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$ \& $\frac{c}{d} = \frac{a}{b}$ chỉ kể là 1 tỷ lệ thức).'' -- \cite[\S6, p. 23]{Binh_Toan_7_tap_1}
 
@@ -657,11 +648,11 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{100.}, p. 27]
 	Tìm $x$ trong mỗi tỷ lệ thức sau:
-	\begin{enumerate*}
-		\item[(a)] $\frac{x - 3}{x + 5} = \frac{5}{7}$;
-		\item[(b)] $\frac{x + 4}{20} = \frac{5}{x + 4}$;
-		\item[(c)] $\frac{x + 1}{x^2} = \frac{1}{x}$.
-	\end{enumerate*}\\\mbox{}\hfill{\sf Ans:} (a) $23$. (b) $6$, $-14$. (c) $\overline{\exists}$.
+	
+		(a) $\frac{x - 3}{x + 5} = \frac{5}{7}$;
+		(b) $\frac{x + 4}{20} = \frac{5}{x + 4}$;
+		(c) $\frac{x + 1}{x^2} = \frac{1}{x}$.
+	\\\mbox{}\hfill{\sf Ans:} (a) $23$. (b) $6$, $-14$. (c) $\overline{\exists}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{101.}, p. 27]
@@ -678,19 +669,19 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{104.}, p. 27]
 	Tìm các số $x,y,z$ biết:
-	\begin{enumerate*}
-		\item[(a)] $\frac{x}{4} = \frac{y}{3} = \frac{z}{9}$ \& $x - 3y + 4z = 62$;
-		\item[(b)] $\frac{x}{y} = \frac{9}{7}$, $\frac{y}{z} = \frac{7}{3}$, \& $x - y + z = -15$;
-		\item[(c)] $\frac{x}{y} = \frac{7}{20}$, $\frac{y}{z} = \frac{5}{8}$, \& $2x + 5y - 2z = 100$.
-	\end{enumerate*}\\\mbox{}\hfill{\sf Ans:} (a) $(x,y,z) = (8,6,18)$. (b) $(x,y,z) = (-27,-21,-9)$. (c) $(x,y,z) = (14,40,64)$.
+	
+		(a) $\frac{x}{4} = \frac{y}{3} = \frac{z}{9}$ \& $x - 3y + 4z = 62$;
+		(b) $\frac{x}{y} = \frac{9}{7}$, $\frac{y}{z} = \frac{7}{3}$, \& $x - y + z = -15$;
+		(c) $\frac{x}{y} = \frac{7}{20}$, $\frac{y}{z} = \frac{5}{8}$, \& $2x + 5y - 2z = 100$.
+	\\\mbox{}\hfill{\sf Ans:} (a) $(x,y,z) = (8,6,18)$. (b) $(x,y,z) = (-27,-21,-9)$. (c) $(x,y,z) = (14,40,64)$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{105.}, p. 27]
 	Tìm các số $x,y,z$ biết:
-	\begin{enumerate*}
-		\item[(a)] $5x = 8y = 20z$ \& $x - y - z = 3$;
-		\item[(b)] $\frac{6}{11}x = \frac{9}{2}y = \frac{18}{5}z$ \& $-x + y + z = -120$.
-	\end{enumerate*}\hfill{\sf Ans:} $(x,y,z) = (165,20,25)$.
+	
+		(a) $5x = 8y = 20z$ \& $x - y - z = 3$;
+		(b) $\frac{6}{11}x = \frac{9}{2}y = \frac{18}{5}z$ \& $-x + y + z = -120$.
+	\hfill{\sf Ans:} $(x,y,z) = (165,20,25)$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{106.}, p. 27]
@@ -731,17 +722,17 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 26, p.24]
 	Cho 3 số $6,8,24$.
-	\begin{enumerate*}
-		\item[(a)] Tìm số $x$, sao cho $x$ cùng với 3 số trên lập thành 1 tỷ lệ thức.
-		\item[(b)] Có thể lập được tất cả bao nhiêu tỷ lệ thức?
-	\end{enumerate*}
+	
+		(a) Tìm số $x$, sao cho $x$ cùng với 3 số trên lập thành 1 tỷ lệ thức.
+		(b) Có thể lập được tất cả bao nhiêu tỷ lệ thức?
+	
 \end{baitoan}
 
 \begin{proof}[Giải]
-	\begin{enumerate*}
-		\item[(a)] Trong 3 số $6,8,24$, có  cách chọn ra tích của 2 trong 3 số ấy. Với mỗi tích, có 1 cách lập đẳng thức với tích của số còn lại \& số $x$. Có: $6\cdot8 = 24x\Leftrightarrow x = 2$, $6\cdot24 = 8x\Leftrightarrow x = 18$, $8\cdot24 = 6x\Leftrightarrow x = 32$.
-		\item[(b)] Với tích $6\cdot 8 = 24\cdot 2$, lập được 4 tỷ lệ thức: $\frac{6}{24} = \frac{2}{8}$, $\frac{6}{2} = \frac{24}{8}$, $\frac{8}{24} = \frac{2}{6}$, $\frac{8}{2} = \frac{24}{6}$. Tương tự với các tích $6\cdot24 = 8\cdot 18$ \& $8\cdot24 = 6\cdot32$. Tất cả có $4\cdot3 = 12$ tỷ lệ thức.
-	\end{enumerate*}
+	
+		(a) Trong 3 số $6,8,24$, có  cách chọn ra tích của 2 trong 3 số ấy. Với mỗi tích, có 1 cách lập đẳng thức với tích của số còn lại \& số $x$. Có: $6\cdot8 = 24x\Leftrightarrow x = 2$, $6\cdot24 = 8x\Leftrightarrow x = 18$, $8\cdot24 = 6x\Leftrightarrow x = 32$.
+		(b) Với tích $6\cdot 8 = 24\cdot 2$, lập được 4 tỷ lệ thức: $\frac{6}{24} = \frac{2}{8}$, $\frac{6}{2} = \frac{24}{8}$, $\frac{8}{24} = \frac{2}{6}$, $\frac{8}{2} = \frac{24}{6}$. Tương tự với các tích $6\cdot24 = 8\cdot 18$ \& $8\cdot24 = 6\cdot32$. Tất cả có $4\cdot3 = 12$ tỷ lệ thức.
+	
 \end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, Ví dụ 7]
@@ -758,12 +749,12 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, \textbf{53.}]
 	Tìm $x\in\mathbb{Q}$ trong tỷ lệ thức:
-	\begin{enumerate*}
-		\item[(a)] $0.4:x = x:0.9$.
-		\item[(b)] $13\frac{1}{3}:1\frac{1}{3} = 26:(2x - 1)$.
-		\item[(c)] $0.2:1\frac{1}{5} = \frac{2}{3}:(6x + 7)$.
-		\item[(d)] $\frac{37 - x}{x + 13} = \frac{3}{7}$.
-	\end{enumerate*}
+	
+		(a) $0.4:x = x:0.9$.
+		(b) $13\frac{1}{3}:1\frac{1}{3} = 26:(2x - 1)$.
+		(c) $0.2:1\frac{1}{5} = \frac{2}{3}:(6x + 7)$.
+		(d) $\frac{37 - x}{x + 13} = \frac{3}{7}$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, \textbf{54.}]
@@ -772,19 +763,19 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, \textbf{55.}]
 	Cho tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$. Chứng minh các tỷ lệ thức sau (giả thiết các tỷ lệ thức đều có nghĩa):
-	\begin{enumerate*}
-		\item[(a)] $\frac{2a + 3b}{2a - 3b} = \frac{2c + 3d}{2c - 3d}$.
-		\item[(b)] $\frac{ab}{cd} = \frac{a^2 - b^2}{c^2 - d^2}$.
-		\item[(c)] $\left(\frac{a + b}{c + d}\right)^2 = \frac{a^2 + b^2}{c^2 + d^2}$.
-	\end{enumerate*}
+	
+		(a) $\frac{2a + 3b}{2a - 3b} = \frac{2c + 3d}{2c - 3d}$.
+		(b) $\frac{ab}{cd} = \frac{a^2 - b^2}{c^2 - d^2}$.
+		(c) $\left(\frac{a + b}{c + d}\right)^2 = \frac{a^2 + b^2}{c^2 + d^2}$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, \textbf{56.}]
 	Chứng minh: ta có tỷ lệ thức $\frac{a}{b} = \frac{c}{d}$ nếu có 1 trong các đẳng thức sau (giả thiết các tỷ lệ thức đều có nghĩa):
-	\begin{enumerate*}
-		\item[(a)] $\frac{a + b}{a - b} = \frac{c + d}{c - d}$.
-		\item[(b)] $(a + b + c + d)(a - b - c + d) = (a - b + c - d)(a + b - c - d)$.
-	\end{enumerate*}
+	
+		(a) $\frac{a + b}{a - b} = \frac{c + d}{c - d}$.
+		(b) $(a + b + c + d)(a - b - c + d) = (a - b + c - d)(a + b - c - d)$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, \textbf{57.}]
@@ -797,11 +788,11 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, \textbf{59.}]
 	Có thể lập được 1 tỷ lệ thức từ 4 trong các số sau không (mỗi số chỉ chọn 1 lần)? Nếu có thì lập được bao nhiêu tỷ lệ thức?
-	\begin{enumerate*}
-		\item[(a)] $3,4,5,6,7$.
-		\item[(b)] $1,2,4,8,16$.
-		\item[(c)] $1,3,9,27,81,243$.
-	\end{enumerate*}
+	
+		(a) $3,4,5,6,7$.
+		(b) $1,2,4,8,16$.
+		(c) $1,3,9,27,81,243$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S4, \textbf{60.}]
@@ -811,10 +802,10 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 %------------------------------------------------------------------------------%
 
 \subsection{Chứng Minh Tỷ Lệ Thức}
-``\begin{enumerate*}
-	\item[\textbf{1.}] Học về tỷ lệ thức có nhiều lợi ích. Từ 1 tỷ lệ thức ta có thể chuyển thành 1 đẳng thức giữa 2 tích. Trong 1 tỷ lệ thức, nếu biết 3 số hạng thì có thể tìm được số hạng thứ 4. Khi học về đại lượng tỷ lệ thuận, tỷ lệ nghịch ta sẽ thấy tỷ lệ thức là 1 phương tiện quan trọng giúp ta giải toán. Trong hình học, để học được định lý Thales, tam giác đồng dạng thì không thể thiếu kiến thức về tỷ lệ thức.
-	\item[\textbf{2.}] Có nhiều phương pháp chứng minh tỷ lệ thức.'' -- \cite[Chap. 2, \S6, p. 28]{Tuyen_Toan_7}
-\end{enumerate*}
+``
+	\fbox{\bf 1} Học về tỷ lệ thức có nhiều lợi ích. Từ 1 tỷ lệ thức ta có thể chuyển thành 1 đẳng thức giữa 2 tích. Trong 1 tỷ lệ thức, nếu biết 3 số hạng thì có thể tìm được số hạng thứ 4. Khi học về đại lượng tỷ lệ thuận, tỷ lệ nghịch ta sẽ thấy tỷ lệ thức là 1 phương tiện quan trọng giúp ta giải toán. Trong hình học, để học được định lý Thales, tam giác đồng dạng thì không thể thiếu kiến thức về tỷ lệ thức.
+	\fbox{\bf 2} Có nhiều phương pháp chứng minh tỷ lệ thức.'' -- \cite[Chap. 2, \S6, p. 28]{Tuyen_Toan_7}
+
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 33, p. 28]
 	Cho tỷ lệ thức $\frac{a}{b} = \frac{c}{d}\ne 1$ với $a,b,c,d\ne 0$. Chứng minh $\frac{a - b}{a} = \frac{c - d}{c}$.
@@ -834,10 +825,10 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{117.}, p. 30]
 	Cho tỷ lệ thức $\frac{a}{b} = \frac{c}{d}\ne\pm 1$ \& $c\ne 0$. Chứng minh:
-	\begin{enumerate*}
-		\item[(a)] $\left(\frac{a - b}{c - d}\right)^2 = \frac{ab}{cd}$;
-		\item[(b)] $\left(\frac{a + b}{c + d}\right)^3 = \frac{a^3 - b^3}{c^3 - d^3}$.
-	\end{enumerate*}
+	
+		(a) $\left(\frac{a - b}{c - d}\right)^2 = \frac{ab}{cd}$;
+		(b) $\left(\frac{a + b}{c + d}\right)^3 = \frac{a^3 - b^3}{c^3 - d^3}$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{118.}, p. 30]
@@ -887,14 +878,14 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S5, \textbf{61.}]
 	Tìm các số $x,y,z$ biết:
-	\begin{enumerate*}
-		\item[(a)] $\frac{x}{10} = \frac{y}{10} = \frac{z}{21}$ \& $5x + y - 2z = 28$.
-		\item[(b)] $3x = 2y$, $7y = 5z$, $x - y + z = 32$.
-		\item[(c)] $\frac{x}{3} = \frac{y}{4}$, $\frac{y}{3} = \frac{z}{5}$, $2x - 3y + z = 6$.
-		\item[(d)] $\frac{2x}{3} = \frac{3y}{4} = \frac{4z}{5}$ \& $x + y + z = 49$.
-		\item[(e)] $\frac{x - 1}{2} = \frac{y - 2}{3} = \frac{z - 3}{4}$ \& $2x + 3y - z = 50$.
-		\item[(f)] $\frac{x}{2} = \frac{y}{3} = \frac{z}{5}$ \& $xyz = 810$.
-	\end{enumerate*}
+	
+		(a) $\frac{x}{10} = \frac{y}{10} = \frac{z}{21}$ \& $5x + y - 2z = 28$.
+		(b) $3x = 2y$, $7y = 5z$, $x - y + z = 32$.
+		(c) $\frac{x}{3} = \frac{y}{4}$, $\frac{y}{3} = \frac{z}{5}$, $2x - 3y + z = 6$.
+		(d) $\frac{2x}{3} = \frac{3y}{4} = \frac{4z}{5}$ \& $x + y + z = 49$.
+		(e) $\frac{x - 1}{2} = \frac{y - 2}{3} = \frac{z - 3}{4}$ \& $2x + 3y - z = 50$.
+		(f) $\frac{x}{2} = \frac{y}{3} = \frac{z}{5}$ \& $xyz = 810$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \S5, \textbf{62.}]
@@ -924,16 +915,16 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 %------------------------------------------------------------------------------%
 
 \subsection{Đại Lượng Tỷ Lệ Thuận}
-``\begin{enumerate*}
-	\item[\textbf{1.}] Nếu đại lượng $y$ liên hệ với đại lượng $x$ theo công thức $y = kx$ (với $k$ là 1 hằng số khác $0$) thì ta nói $y$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k$. Nếu $y$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k$ thì $x$ tỷ lệ thuận với $y$ theo hệ số tỷ lệ $\frac{1}{k}$.
-	\item[\textbf{2.}] Nếu 2 đại lượng tỷ lệ thuận với nhau thì:
-	\begin{enumerate*}
-		\item[$\bullet$] Tỷ số 2 giá trị tương ứng của chúng luôn không đổi.
-		\item[$\bullet$] Tỷ số 2 giá trị bất kỳ của đại lượng này bằng tỷ số 2 giá trị tương ứng của đại lượng kia. $\frac{y_1}{x_1} = \frac{y_2}{x_2} = \frac{y_3}{x_3} = \cdots = k$, i.e., $\frac{x_i}{y_i} = k$, $\forall i\in\mathbb{N}^\star$. $\frac{x_1}{x_2} = \frac{y_1}{y_2}$, $\frac{x_1}{x_3} = \frac{y_1}{y_3}$, $\frac{x_2}{x_3} = \frac{y_2}{y_3}$ $\ldots$, i.e., $\frac{x_i}{y_j} = \frac{x_j}{y_i}$, $\forall i,j\in\mathbb{N}^\star$.
-		\end{enumerate*}
-	\item[\textbf{3.}] Chia số $M$ cho trước thành những phần $x,y,z$ tỷ lệ thuận với các số $a,b,c$ có nghĩa là tìm $x,y,z$, biết $\frac{x}{a} = \frac{y}{b} = \frac{z}{c}$ \& $x + y + z = M$. \textit{Cách giải}: dựa vào tính chất của dãy tỷ số bằng nhau.
-	\item[\textbf{4.}] Nếu $z$ tỷ lệ thuận với $y$ theo hệ số tỷ lệ $k_1$, $y$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k_2$ thì $z$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k_1k_2$.'' -- \cite[Chap. 2, \S7, pp. 30--31]{Tuyen_Toan_7}
-\end{enumerate*}
+``
+	\fbox{\bf 1} Nếu đại lượng $y$ liên hệ với đại lượng $x$ theo công thức $y = kx$ (với $k$ là 1 hằng số khác $0$) thì ta nói $y$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k$. Nếu $y$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k$ thì $x$ tỷ lệ thuận với $y$ theo hệ số tỷ lệ $\frac{1}{k}$.
+	\fbox{\bf 2} Nếu 2 đại lượng tỷ lệ thuận với nhau thì:
+	
+		$\bullet$ Tỷ số 2 giá trị tương ứng của chúng luôn không đổi.
+		$\bullet$ Tỷ số 2 giá trị bất kỳ của đại lượng này bằng tỷ số 2 giá trị tương ứng của đại lượng kia. $\frac{y_1}{x_1} = \frac{y_2}{x_2} = \frac{y_3}{x_3} = \cdots = k$, i.e., $\frac{x_i}{y_i} = k$, $\forall i\in\mathbb{N}^\star$. $\frac{x_1}{x_2} = \frac{y_1}{y_2}$, $\frac{x_1}{x_3} = \frac{y_1}{y_3}$, $\frac{x_2}{x_3} = \frac{y_2}{y_3}$ $\ldots$, i.e., $\frac{x_i}{y_j} = \frac{x_j}{y_i}$, $\forall i,j\in\mathbb{N}^\star$.
+		
+	\fbox{\bf 3} Chia số $M$ cho trước thành những phần $x,y,z$ tỷ lệ thuận với các số $a,b,c$ có nghĩa là tìm $x,y,z$, biết $\frac{x}{a} = \frac{y}{b} = \frac{z}{c}$ \& $x + y + z = M$. \textit{Cách giải}: dựa vào tính chất của dãy tỷ số bằng nhau.
+	\fbox{\bf 4} Nếu $z$ tỷ lệ thuận với $y$ theo hệ số tỷ lệ $k_1$, $y$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k_2$ thì $z$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $k_1k_2$.'' -- \cite[Chap. 2, \S7, pp. 30--31]{Tuyen_Toan_7}
+
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 35, p. 31]
 	Cho $y$ tỷ lệ thuận với $x$ với hệ số tỷ lệ là 1 số âm. Biết tổng các bình phương 2 giá trị của $y$ là $18$, tổng các bình phương 2 giá trị tương ứng của $x$ là $2$. Viết công thức liên hệ giữa $y$ \& $x$.
@@ -1016,16 +1007,16 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 %------------------------------------------------------------------------------%
 
 \subsection{Đại Lượng Tỷ Lệ Nghịch}
-``\begin{enumerate*}
-	\item[\textbf{1.}] Nếu đại lượng $y$ liên hệ với đại lượng $x$ theo công thức $y = \frac{a}{x}$ hay $xy = a$ (với $a$ là hằng số khác $0$) thì ta nói $y$ tỷ lệ nghịch với $x$ theo hệ số tỷ lệ $a$. Nếu $y$ tỷ lệ nghịch với $x$ theo hệ số tỷ lệ $a$ thì $x$ cũng tỷ lệ nghịch với $y$ theo hệ số tỷ lệ $a$.
-	\item[\textbf{2.}] Nếu 2 đại lượng tỷ lệ nghịch với nhau thì:
-	\begin{enumerate*}
-		\item[$\bullet$] Tích 2 giá trị tương ứng của chúng luôn không đổi (bằng hệ số tỷ lệ).
-		\item[$\bullet$] Tỷ số 2 giá trị của đại lượng này bằng nghịch đảo của tỷ số 2 giá trị tương ứng của đại lượng kia. $x_1y_1 = x_2y_2 = x_3y_3 = \cdots = a$, i.e., $x_iy_i = \cdots = a$, $\forall i\in\mathbb{N}^\star$ hay $\frac{x_1}{\frac{1}{y_1}} = \frac{x_2}{\frac{1}{y_2}} = \frac{x_3}{\frac{1}{y_3}} = \cdots = a$, i.e., $\frac{x_i}{\frac{1}{y_i}} = a$, $\forall i\in\mathbb{N}^\star$. $\frac{x_1}{x_2} = \frac{y_2}{y_1}$, $\frac{x_1}{x_3} = \frac{y_3}{y_1}$, $\frac{x_2}{x_3} = \frac{y_3}{y_2}$, $\ldots$, i.e., $\frac{x_i}{x_j} = \frac{y_j}{y_i}$, $\forall i,j\in\mathbb{N}^\star$.
-	\end{enumerate*}
-	\item[\textbf{3.}] Chia số $M$ cho trước thành những phần $x,y,z$ tỷ lệ nghịch với các số $a,b,c$ có nghĩa là tìm $x,y,z$ biết $ax = by = cz$ hoặc $\frac{x}{\frac{1}{a}} = \frac{y}{\frac{1}{b}} = \frac{z}{\frac{1}{c}}$ với $x + y + z = M$.
-	\item[\textbf{4.}] Nếu $z$ tỷ lệ nghịch với $y$ theo hệ số tỷ lệ $a_1$, $y$ tỷ lệ nghịch với $x$ theo hệ số tỷ lệ là $a_2$ thì $z$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $\frac{a_1}{a_2}$.\footnote{Tương tự như quy tắc dấu: `âm' của `âm' thành `dương' ($--$ thành $+$), `tỷ lệ nghịch' của `tỷ lệ nghịch' thành `tỷ lệ thuận'. Trong khi đó: `dương' của `dương' vẫn là `dương' ($++$ vẫn là $+$), `tỷ lệ thuận' của `tỷ lệ thuận' vẫn là `tỷ lệ thuận'.}'' -- \cite[Chap. 2, \S8, p. 33]{Tuyen_Toan_7}
-\end{enumerate*}
+``
+	\fbox{\bf 1} Nếu đại lượng $y$ liên hệ với đại lượng $x$ theo công thức $y = \frac{a}{x}$ hay $xy = a$ (với $a$ là hằng số khác $0$) thì ta nói $y$ tỷ lệ nghịch với $x$ theo hệ số tỷ lệ $a$. Nếu $y$ tỷ lệ nghịch với $x$ theo hệ số tỷ lệ $a$ thì $x$ cũng tỷ lệ nghịch với $y$ theo hệ số tỷ lệ $a$.
+	\fbox{\bf 2} Nếu 2 đại lượng tỷ lệ nghịch với nhau thì:
+	
+		$\bullet$ Tích 2 giá trị tương ứng của chúng luôn không đổi (bằng hệ số tỷ lệ).
+		$\bullet$ Tỷ số 2 giá trị của đại lượng này bằng nghịch đảo của tỷ số 2 giá trị tương ứng của đại lượng kia. $x_1y_1 = x_2y_2 = x_3y_3 = \cdots = a$, i.e., $x_iy_i = \cdots = a$, $\forall i\in\mathbb{N}^\star$ hay $\frac{x_1}{\frac{1}{y_1}} = \frac{x_2}{\frac{1}{y_2}} = \frac{x_3}{\frac{1}{y_3}} = \cdots = a$, i.e., $\frac{x_i}{\frac{1}{y_i}} = a$, $\forall i\in\mathbb{N}^\star$. $\frac{x_1}{x_2} = \frac{y_2}{y_1}$, $\frac{x_1}{x_3} = \frac{y_3}{y_1}$, $\frac{x_2}{x_3} = \frac{y_3}{y_2}$, $\ldots$, i.e., $\frac{x_i}{x_j} = \frac{y_j}{y_i}$, $\forall i,j\in\mathbb{N}^\star$.
+	
+	\fbox{\bf 3} Chia số $M$ cho trước thành những phần $x,y,z$ tỷ lệ nghịch với các số $a,b,c$ có nghĩa là tìm $x,y,z$ biết $ax = by = cz$ hoặc $\frac{x}{\frac{1}{a}} = \frac{y}{\frac{1}{b}} = \frac{z}{\frac{1}{c}}$ với $x + y + z = M$.
+	\fbox{\bf 4} Nếu $z$ tỷ lệ nghịch với $y$ theo hệ số tỷ lệ $a_1$, $y$ tỷ lệ nghịch với $x$ theo hệ số tỷ lệ là $a_2$ thì $z$ tỷ lệ thuận với $x$ theo hệ số tỷ lệ $\frac{a_1}{a_2}$.\footnote{Tương tự như quy tắc dấu: `âm' của `âm' thành `dương' ($--$ thành $+$), `tỷ lệ nghịch' của `tỷ lệ nghịch' thành `tỷ lệ thuận'. Trong khi đó: `dương' của `dương' vẫn là `dương' ($++$ vẫn là $+$), `tỷ lệ thuận' của `tỷ lệ thuận' vẫn là `tỷ lệ thuận'.}'' -- \cite[Chap. 2, \S8, p. 33]{Tuyen_Toan_7}
+
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, Ví dụ 38, p. 33]
 	2 ô tô cùng khởi hành từ $A$ đến $B$. Vận tốc của ô tô I là $50$\emph{km\texttt{/}h}, vận tốc của ô tô II là $60$\emph{km\texttt{/}h}. Ô tô I đi đến $B$ sau ô tô II là $36$ phút. Tính quãng đường $AB$.
@@ -1067,10 +1058,10 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \subsection{Chia Tỷ Lệ}
 ``Trong các bài toán về chia 1 số thành các phần tỷ lệ thuận hoặc tỷ lệ nghịch với các số cho trước, cần chú ý:
-\begin{enumerate*}
-	\item[\textbf{1.}] $x,y,z$ tỷ lệ thuận với $a,b,c\Leftrightarrow x:y:z = a:b:c\Leftrightarrow\frac{x}{a} = \frac{y}{b} = \frac{z}{c}$.
-	\item[\textbf{2.}] $x,y,z$ tỷ lệ nghịch với $m,n,p\Leftrightarrow x:y:z = \frac{1}{m}:\frac{1}{n}:\frac{1}{p}$.'' -- \cite{Binh_Toan_7_tap_1}
-\end{enumerate*}
+
+	\fbox{\bf 1} $x,y,z$ tỷ lệ thuận với $a,b,c\Leftrightarrow x:y:z = a:b:c\Leftrightarrow\frac{x}{a} = \frac{y}{b} = \frac{z}{c}$.
+	\fbox{\bf 2} $x,y,z$ tỷ lệ nghịch với $m,n,p\Leftrightarrow x:y:z = \frac{1}{m}:\frac{1}{n}:\frac{1}{p}$.'' -- \cite{Binh_Toan_7_tap_1}
+
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, Ví dụ 16]
 	2 xe ô tô cùng khởi hành 1 lúc từ 2 địa điểm A \& B. Xe thứ nhất đi quãng đường AB hết $\rm4h15ph$, xe thứ 2 đi quãng đường BA hết $\rm3h45ph$. Đến chỗ gặp nhau, xe thứ 2 đi được quãng đường dài hơn quãng đường xe thứ nhất đã đi là $20$\emph{km}. Tính quãng đường AB.
@@ -1093,10 +1084,10 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{106.}]
-	\begin{enumerate*}
-		\item[(a)] Tính thời gian từ lúc 2 kim đồng hồ gặp nhau lần trước đến lúc chúng gặp nhau lần tiếp theo.
-		\item[(b)] Trong 1 ngày, 2 kim đồng hồ tạo với nhau góc vuông bao nhiêu lần?
-	\end{enumerate*}
+	
+		(a) Tính thời gian từ lúc 2 kim đồng hồ gặp nhau lần trước đến lúc chúng gặp nhau lần tiếp theo.
+		(b) Trong 1 ngày, 2 kim đồng hồ tạo với nhau góc vuông bao nhiêu lần?
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Binh_Toan_7_tap_1}, \textbf{107.}]
@@ -1186,10 +1177,10 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{141.}, p. 36]
 	So sánh:
-	\begin{enumerate*}
-		\item[(a)] $5 + \sqrt{99}$ \& $\sqrt{21} + \sqrt{93}$;
-		\item[(b)] $\sqrt{54} + \sqrt{230}$ \& $22$.
-	\end{enumerate*}
+	
+		(a) $5 + \sqrt{99}$ \& $\sqrt{21} + \sqrt{93}$;
+		(b) $\sqrt{54} + \sqrt{230}$ \& $22$.
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{142.}, p. 36]
@@ -1218,10 +1209,10 @@ Như vậy 1 đề toán về làm tròn số có thể hỏi theo 2 cách khác
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{148.}, p. 36]
 	1 xe ô tô khởi hành từ $A$, dự định chạy với vận tốc $60$\emph{km\texttt{/}h} thì sẽ tới $B$ lúc 11:00. Sau khi chạy được nửa quãng đường vì đường hẹp \& xấu nên vận tốc ô tô giảm xuống còn $40$\emph{km\texttt{/}h} do đó đến 11:00 xe vẫn còn cách $B$ là $40$\emph{km}.
-	\begin{enumerate*}
-		\item[(a)] Tính khoảng cách $AB$;
-		\item[(b)] Xe khởi hành lúc mấy giờ?
-	\end{enumerate*}
+	
+		(a) Tính khoảng cách $AB$;
+		(b) Xe khởi hành lúc mấy giờ?
+	
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_7}, \textbf{149.}, p. 36]
