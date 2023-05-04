@@ -50,18 +50,19 @@
 	\textsf{\textbf{Keyword.} Square root, cube root, $n$th root.}
 	\vspace{2mm}
 	
-	\textsf{[vi]} Tài liệu này là 1 bộ sưu tập các bài toán, từ cơ bản đến nâng cao, về \textit{căn bậc 2, căn bậc 3, \& căn bậc $n$}, cũng là phần bổ sung cho bài giảng: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}square- \& cube roots}.
+	\textsf{[vi]} Tài liệu này là 1 bộ sưu tập các bài toán, từ cơ bản đến nâng cao, về \textit{căn bậc 2, căn bậc 3, \& căn bậc $n$}.
 	
 	\textsf{\textbf{Từ khóa.} Căn bậc 2, căn bậc 3, căn bậc $n$, số hữu tỷ, số vô tỷ, căn thức.}
 	
-	Full set -- Trọn bộ:
 	\begin{itemize}
 		\item Lecture note -- Bài giảng: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}square- \& cube roots}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}.}.
-		\item Cheatsheet -- Bảng công thức: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}cheatsheet: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}.}.
+		\item Cheatsheet -- Công thức: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}cheatsheet: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}.}.
 		\item Problem -- Bài tập: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/problem/NQBH_square_root_cube_root_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}problem: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/problem/NQBH_square_root_cube_root_problem.pdf}.}.
 		\item Solution -- Lời giải: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/solution/NQBH_square_root_cube_root_solution.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}solution: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/solution/NQBH_square_root_cube_root_solution.pdf}.}.
 	\end{itemize}
 \end{abstract}
+
+
 \tableofcontents
 \newpage
 
@@ -72,6 +73,20 @@
 \begin{baitoan}[Program to print out 1st $n$ square roots]
 	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Pascal:
+	\begin{verbatim}
+		program square_root;
+		var num, sqrt_num: real;		
+		begin
+		    write('Enter a number num = ');
+		    readln(num);
+		    sqrt_num := Sqrt(num);
+		    writeln('sqrt of ', num,' = ', sqrt_num)
+		end.
+	\end{verbatim}
+\end{proof}
 
 \begin{baitoan}[Số chính phương]
 	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
