@@ -1,0 +1,945 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Solution: Square-, Cube-, \textit{\&} $n$th Roots\\Lời Giải: Căn Bậc 2, Căn Bậc 3, \textit{\&} Căn Bậc $n$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsf{[en]} This text is a collection of problems, from basic to advanced, on \textit{square-, cube-, \& $n$th roots}.
+	
+	\textsf{\textbf{Keyword.} Square root, cube root, $n$th root.}
+	\vspace{2mm}
+	
+	\textsf{[vi]} Tài liệu này là 1 bộ sưu tập các bài toán, từ cơ bản đến nâng cao, về \textit{căn bậc 2, căn bậc 3, \& căn bậc $n$}, cũng là phần bổ sung cho bài giảng: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}square- \& cube roots}.
+	
+	\textsf{\textbf{Từ khóa.} Căn bậc 2, căn bậc 3, căn bậc $n$, số hữu tỷ, số vô tỷ, căn thức.}
+	
+	Full set -- Trọn bộ:
+	\begin{itemize}
+		\item Lecture note -- Bài giảng: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}square- \& cube roots}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}.}.
+		\item Cheatsheet -- Bảng công thức: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}cheatsheet: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}.}.
+		\item Problem -- Bài tập: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/problem/NQBH_square_root_cube_root_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}problem: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/problem/NQBH_square_root_cube_root_problem.pdf}.}.
+		\item Solution -- Lời giải: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/solution/NQBH_square_root_cube_root_solution.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}solution: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/solution/NQBH_square_root_cube_root_solution.pdf}.}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Square Root \& Irrationals -- Căn Bậc 2 \& Số Vô Tỷ}
+
+\begin{baitoan}[Program to print out 1st $n$ square roots]
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}[Số chính phương]
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 1, p. 5]
+	Cho số thực $x\ge0$. So sánh $\sqrt{x}$ với $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 2, p. 5]
+	Chứng minh tổng của 1 số hữu tỷ với 1 số vô tỷ là 1 số vô tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 3, p. 5]
+	Xét xem các số $a,b$ có thể là số vô tỷ hay không, nếu: (a) $a + b$ \& $a - b$ là các số hữu tỷ. (b) $a - b$ \& $ab$ là các số hữu tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 4, p. 5]
+	Chứng minh: Nếu số tự nhiên $a$ không là số chính phương thì $\sqrt{a}$ là số vô tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 2., p. 6]
+	Chứng minh các số sau là số vô tỷ: (a) $\sqrt{1 + \sqrt{2}}$. (b) $m + \frac{\sqrt{3}}{n}$ với $m,n\in\mathbb{Q}$, $n\ne0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 3., p. 6]
+	Xét xem các số $a,b$ có thể là số vô tỷ hay không nếu: (a) $ab$ \& $\frac{a}{b}$ là các số hữu tỷ. (b) $a + b$ \& $\frac{a}{b}$ là các số hữu tỷ ($a + b\ne0$). (c) $a + b$, $a^2$, \& $b^2$ là các số hữu tỷ ($a + b\ne0$).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 4., p. 6]
+	So sánh 2 số: (a) $2\sqrt{3}$ \& $3\sqrt{2}$. (b) $6\sqrt{5}$ \& $5\sqrt{6}$. (c) $\sqrt{24} + \sqrt{45}$ \& $12$. (d) $\sqrt{37} - \sqrt{15}$ \& $2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 5., p. 6]
+	(a) Cho 1 ví dụ để chứng tỏ khẳng định $\sqrt{a}\le a$ với mọi số $a$ không âm là sai. (b) Cho $a > 0$. Với giá trị nào của $a$ thì $\sqrt{a} ? a$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, $\rm6^\star$., pp. 6--7]
+	(a) Chỉ ra 1 số thực $x$ mà $x - \frac{1}{x}$ là số nguyên ($x\ne\pm1$). (b) Chứng minh nếu $x - \frac{1}{x}$ là số nguyên \& $x\ne\pm1$ thì $x$ \& $x + \frac{1}{x}$ là số vô tỷ. Khi đó $\left(x + \frac{1}{x}\right)^{2n}$ \& $\left(x + \frac{1}{x}\right)^{2n+1}$ là số hữu tỷ hay số vô tỷ?
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Căn Thức Bậc 2 \& Hằng Đẳng Thức $\sqrt{A^2} = |A|$}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 2, p. 5]
+	Cho $a,b,c\in\mathbb{Q}$, $abc\ne0$ \& $a = b + c$. Chứng minh $\sqrt{\dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2}}\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 1., p. 6]
+	Tính $A = \sqrt{\dfrac{8^{10} - 4^{10}}{4^{11} - 8^4}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 2., p. 6]
+	Cho $A = \underbrace{99\ldots9}_{10's}4\underbrace{00\ldots0}_{10's}9$. Tính $\sqrt{A}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 3., p. 6]
+	Không dùng máy tính hoặc bảng số, so sánh: (a) $\sqrt{8} + \sqrt{15}$ \& $\sqrt{65} - 1$. (b) $\dfrac{13 - 2\sqrt{3}}{6}$ \& $\sqrt{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 4., p. 6]
+	Tìm ĐKXĐ của các biểu thức: (a) $\sqrt{2 - x^2}$. (b) $\dfrac{x}{\sqrt{5x^2 - 3}}$. (c) $\sqrt{-4x^2 + 4x - 1}$. (d) $\dfrac{1}{\sqrt{x^2 + x - 2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 5., p. 6]
+	Cho $a,b,c\in\mathbb{Q}$ khác nhau đôi một. Chứng minh $A = \sqrt{\dfrac{1}{(a - b)^2} + \dfrac{1}{(b - c)^2} + \dfrac{1}{(c - a)^2}}\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 6., p. 6]
+	Cho $a,b,c\in\mathbb{Q}$ thỏa mãn điều kiện $ab + bc + ca = 1$. Chứng minh $\sqrt{(a^2 + 1)(b^2 + 1)(c^2 + 1)}\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 7., p. 6--7]
+	(a) Tìm giá trị lớn nhất của biểu thức $A = \sqrt{-x^2 + x + \frac{3}{4}}$. (b) Tìm giá trị nhỏ nhất của biểu thức $B = \sqrt{4x^4 - 4x^2(x + 1) + (x + 1)^2 + 9}$. (c) Tìm giá trị nhỏ nhất của biểu thức $C = \sqrt{25x^2 - 20x + 4} + \sqrt{25x^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 8., p. 7]
+	Cho $x < 0$, rút gọn biểu thức $A = |2x - \sqrt{(5x - 1)^2}|$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 9., p. 7]
+	Cho biểu thức $A = 4x - \sqrt{9x^2 - 12x + 4}$. (a) Rút gọn $A$. (b) Tính giá trị của $A$ với $x = \frac{2}{7}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 10., p. 7]
+	Cho biểu thức $A = 5x + \sqrt{x^2 + 6x + 9}$. (a) Rút gọn $A$. (b) Tìm $x$ để $B = -9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 11., p. 7]
+	Tìm $x\in\mathbb{R}$ biết $\sqrt{4x^2 - 4x + 1}\le5 - x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 12., p. 7]
+	Giải phương trình: (a) $\sqrt{x^2 + 2x + 1} = \sqrt{x + 1}$. (b) $\sqrt{x^2 - 9} + \sqrt{x^2 - 6x + 9} = 0$. (c) $\sqrt{x^2 - 4} - x^2 + 4 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 13., p. 7]
+	Giải phương trình: (a) $\sqrt{x^2 - 4x + 5} + \sqrt{x^2 - 4x + 8} + \sqrt{x^2 - 4x + 9} = 3 + \sqrt{5}$. (b) $\sqrt{2 - x^2 + 2x} + \sqrt{-x^2 - 6x - 8} = 1 + \sqrt{3}$. (c) $\sqrt{9x^2 - 6x + 2} + \sqrt{45x^2 - 30x + 9} = \sqrt{6x - 9x^2 + 8}$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 5, p. 7]
+	Cho biểu thức $A = \sqrt{x - \sqrt{x^2 - 4x + 4}}$. (a) Tìm điều kiện xác định của biểu thức $A$. (b) Rút gọn biểu thức $A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 6, p. 8]
+	Tìm điều kiện xác định của các biểu thức: (a) $A = \dfrac{1}{\sqrt{x^2 - 2x - 1}}$. (b) $B = \dfrac{1}{\sqrt{x - \sqrt{2x + 1}}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 7, p. 8]
+	Tìm các giá trị của $x$ sao cho $\sqrt{x + 1} < x + 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 7., p. 9]
+	Tìm điều kiện xác định của các biểu thức: (a) $3 - \sqrt{1 - 16x^2}$. (b) $\dfrac{1}{1 - \sqrt{x^2 - 3}}$. (c) $\sqrt{8x - x^2 - 15}$. (d) $\dfrac{2}{\sqrt{x^2 - x + 1}}$. (e) $A = \frac{1}{\sqrt{x - \sqrt{2x - 1}}}$. (f) $B = \dfrac{\sqrt{16 - x^2}}{\sqrt{2x + 1}} + \sqrt{x^2 - 8x + 14}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 8., p. 9]
+	Cho biểu thức $A = \sqrt{x^2 - 6x + 9} - \sqrt{x^2 + 6x + 9}$. (a) Rút gọn biểu thức $A$. (b) Tìm các giá trị của $x$ để $A = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 9., p. 9]
+	Tìm các giá trị của $x$ sao cho: (a) $\sqrt{x^2 - 3}\le x^2 - 3$. (b) $\sqrt{x^2 - 6x + 9} > x - 6$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 10., p. 9]
+	Cho $a + b + c = 0$ \& $abc\ne0$. Chứng minh hằng đẳng thức: $\sqrt{\dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2}} = \left|\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c}\right|$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Hệ Giữa Phép Nhân, Phép Chia \& Phép Khai Phương}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 3, p. 9]
+	Rút gọn biểu thức $A = \sqrt{4 + \sqrt{7}} - \sqrt{4 - \sqrt{7}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 4, p. 10]
+	Tìm giá trị lớn nhất của biểu thức $A = \sqrt{x - 5} + \sqrt{13 - x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 14., p. 11]
+	Rút gọn biểu thức $A = \dfrac{\sqrt{\sqrt{7} - \sqrt{3}} - \sqrt{\sqrt{7} + \sqrt{3}}}{\sqrt{\sqrt{7} - 2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 15., p. 11]
+	Cho 2 số có tổng bằng $\sqrt{19}$ \& có hiệu bằng $\sqrt{7}$. Tính tích của 2 số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 16., p. 11]
+	Tính $\sqrt{A}$ biết: (a) $A = 13 - 2\sqrt{42}$. (b) $A = 46 + 6\sqrt{5}$. (c) $A = 12 - 3\sqrt{15}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 17., p. 12]
+	Rút gọn biểu thức: (a) $A = \sqrt{6 + 2\sqrt{2}\sqrt{3 - \sqrt{4 + 2\sqrt{3}}}}$. (b) $B = \sqrt{5} - \sqrt{3 - \sqrt{29 - 12\sqrt{5}}}$. (c) $C = \sqrt{3 - \sqrt{5}}(\sqrt{10} - \sqrt{2})(3 + \sqrt{5})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 18., p. 12]
+	Rút gọn biểu thức $A = \sqrt{x + 2\sqrt{x - 1}} + \sqrt{x - 2\sqrt{x - 1}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 19., p. 12]
+	Cho $a > 0$, so sánh $\sqrt{a + 1} + \sqrt{a + 3}$ với $2\sqrt{a + 2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 20., p. 12]
+	Cho $a,b,x,y > 0$. Chứng minh $\sqrt{ax} + \sqrt{by}\le\sqrt{(a + b)(x + y)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 21., p. 12]
+	(a) Tìm giá trị lớn nhất của biểu thức $A = \sqrt{x + 1} - \sqrt{x - 8}$. (b) Tìm giá trị nhỏ nhất của biểu thức $B = \sqrt{x - 1} + \sqrt{5 - x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 22., p. 12]
+	Rút gọn biểu thức:
+	\begin{align*}
+		A = \frac{\sqrt{1 + \sqrt{1 - x^2}}\left[\sqrt{(1 + x)^3} - \sqrt{(1 - x)^3}\right]}{2 + \sqrt{1 - x^2}}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 23., p. 12]
+	Tìm $x,y$ biết $x + y + 12 = 4\sqrt{x} + 6\sqrt{y - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 24., p. 12]
+	Tìm $x,y,z$ biết $\sqrt{x - a} + \sqrt{y - b} + \sqrt{z - c} = \frac{1}{2}(x + y + z)$, trong đó $a + b + c = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 25., p. 12]
+	Giải phương trình $\sqrt{x + 3 - 4\sqrt{x - 1}} + \sqrt{x + 8 + 6\sqrt{x - 1}} = 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 26., p. 12]
+	Giải phương trình $\sqrt{x^2 - 5x + 6} + \sqrt{x + 1} = \sqrt{x - 2} + \sqrt{x^2 - 2x - 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 27., p. 12]
+	Chứng minh bất đẳng thức $\sqrt{n + a} + \sqrt{n - a} < 2\sqrt{n}$ vpwos $0 < |a|\le n$. Áp dụng (không dùng máy tính hoặc bảng số): Chứng minh: $\sqrt{101} - \sqrt{99} > 0.1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 28., p. 13]
+	Chứng minh: $2(\sqrt{n + 1} - \sqrt{n}) < \dfrac{1}{\sqrt{n}} < 2(\sqrt{n} - \sqrt{n - 1})$, $\forall n\in\mathbb{N}^\star$. Áp dụng: Cho $S = \sum_{i=1}^{100} \frac{1}{\sqrt{i}} = 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \cdots + \frac{1}{\sqrt{100}}$. Chứng minh $18 < S < 19$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 29., p. 13]
+	Chứng minh: $\dfrac{1}{2\sqrt{n + 1}} < \sqrt{n + 1} - \sqrt{n}$, $\forall n\in\mathbb{N}^\star$. Áp dụng: Chứng minh: $S = \sum_{i=1}^{2500} \frac{1}{\sqrt{i}} = 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \cdots + \frac{1}{\sqrt{2500}} < 100$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 30., p. 13]
+	Cho $x,y,z > 0$. Chứng minh $x + y + z\ge\sqrt{xy} + \sqrt{yz} + \sqrt{zx}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 31., p. 13]
+	Cho $A = \sqrt{x + 3} + \sqrt{5 - x}$. Chứng minh $A\le4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 32., p. 13]
+	Cho $B = \dfrac{x^3}{1 + y} + \dfrac{y^3}{1 + x}$ trong đó $x,y$ là các số thực dương thỏa mãn điều kiện $xy = 1$. Chứng minh $B\ge1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 33., p. 13]
+	Cho $x,y,z > 0$ thỏa mãn điều kiện $\dfrac{1}{x + 1} + \dfrac{1}{y + 1} + \dfrac{1}{z + 1} = 2$. Chứng minh $xyz\le\frac{1}{8}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 34., p. 13]
+	Tìm các số dương $x,y,z$ sao cho $x + y + z = 3$ \& $x^4 + y^4 + z^4 = 3xyz$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 35., p. 13]
+	Cho $\sqrt{x} + 2\sqrt{y} = 10$. Chứng minh: $x + y\ge20$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 36., p. 13]
+	Cho $x,y,z\ge0$ thỏa mãn điều kiện $x + y + z = 1$. Chứng minh: $\sqrt{x + y} + \sqrt{y + z} + \sqrt{z + x}\le\sqrt{6}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 8, p. 10]
+	Rút gọn biểu thức $A = \sqrt{x + \sqrt{2x - 1}} - \sqrt{ x - \sqrt{2x - 1}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 9, p. 11]
+	Chứng minh số $\sqrt{2} + \sqrt{3} + \sqrt{5}$ là số vô tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 11., pp. 11--12]
+	Rút gọn biểu thức: (a) $\sqrt{11 - 2\sqrt{10}}$. (b) $\sqrt{9 - 2\sqrt{14}}$. (c) $\sqrt{4 + 2\sqrt{3}} - \sqrt{4 - 2\sqrt{3}}$. (d) $\sqrt{9 - 4\sqrt{5}} - \sqrt{9 + 4\sqrt{5}}$. (e) $\sqrt{4 - \sqrt{7}} - \sqrt{4 + \sqrt{7}}$. (f) $\dfrac{\sqrt{3} + \sqrt{11 + 6\sqrt{2}}- \sqrt{5 + 2\sqrt{6}}}{\sqrt{2} + \sqrt{6 + 2\sqrt{5}} - \sqrt{7 + 2\sqrt{10}}}$. (g) $\sqrt{5\sqrt{3} + 5\sqrt{48 - 10\sqrt{7+ 4\sqrt{3}}}}$. (h) $\sqrt{4 + \sqrt{10 + 2\sqrt{5}}} + \sqrt{4 - \sqrt{10 + 2\sqrt{5}}}$. (i) $\sqrt{94 - 42\sqrt{5}} - \sqrt{94 + 42\sqrt{5}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 12., p. 12]
+	Tính: (a) $(4 + \sqrt{15})(\sqrt{10} - \sqrt{6})\sqrt{4 - \sqrt{15}}$. (b) $\sqrt{3 - \sqrt{5}}(\sqrt{10} - \sqrt{2})(3 + \sqrt{5})$.\\(c) $\dfrac{\sqrt{\sqrt{5} + 2} + \sqrt{\sqrt{5} - 2}}{\sqrt{\sqrt{5} + 1}} - \sqrt{3 - 2\sqrt{2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 13., p. 12]
+	Chứng minh các hằng đẳng thức sau với $b\ge0$, $a\ge\sqrt{b}$: (a) $\sqrt{a + \sqrt{b}}\pm\sqrt{a - \sqrt{b}} = \sqrt{2(a\pm\sqrt{a^2 - b})}$. (b) $\sqrt{a\pm\sqrt{b}} = \sqrt{\dfrac{a + \sqrt{a^2 - b}}{2}}\pm\sqrt{\dfrac{a - \sqrt{a^2 - b}}{2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 14., p. 12]
+	Rút gọn biểu thức $A = \sqrt{x + 2\sqrt{2x - 4}} + \sqrt{x - 2\sqrt{2x - 4}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 15., p. 12]
+	Cho biểu thức $A = \dfrac{x + \sqrt{x^2 - 2x}}{x - \sqrt{x^2 - 2x}} - \dfrac{x - \sqrt{x^2 - 2x}}{x + \sqrt{x^2 - 2x}}$. (a) Tìm điều kiện xác định của biểu thức $A$. (b) Rút gọn biểu thức $A$. (c) Tìm giá trị của $x$ để $A < 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 16., p. 12]
+	Lập 1 phương trình bậc 2 với các hệ số nguyên, trong đó: (a) $2 + \sqrt{3}$ là 1 nghiệm của phương trình. (b) $6 - 4\sqrt{2}$ là 1 nghiệm của phương trình.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 17., p. 13]
+	Chứng minh các số sau là số vô tỷ: (a) $\sqrt{3} - \sqrt{2}$. (b) $2\sqrt{2} + \sqrt{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 18., p. 13]
+	Có tồn tại các số hữu tỷ dương $a,b$ hay không nếu: (a) $\sqrt{a} + \sqrt{b} = \sqrt{2}$. (b) $\sqrt{a} + \sqrt{b} = \sqrt{\sqrt{2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 19., p. 13]
+	Cho 3 số $x,y,\sqrt{x} + \sqrt{y}$ là các số hữu tỷ. Chứng minh mỗi số $\sqrt{x},\sqrt{y}$ đều là số hữu tỷ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 20., p. 13]
+	Cho $a,b,c,d$ là các số dương. Chứng minh tồn tại 1 số dương trong 2 số $2a + b - 2\sqrt{cd}$ \& $2c + d - 2\sqrt{ab}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, $21^\star$., p. 13]
+	(a) Rút gọn biểu thức $A = \sqrt{1 + \frac{1}{a^2} + \frac{1}{(a + 1)^2}}$ với $a > 0$. (b) Tính giá trị của tổng $B = \sum_{i=1}^{99} \sqrt{1 + \frac{1}{i^2} + \frac{1}{(i + 1)^2}} = \sqrt{1 + \frac{1}{1^2} + \frac{1}{2^2}} + \sqrt{1 + \frac{1}{2^2} + \frac{1}{3^2}} + \sqrt{1 + \frac{1}{3^2} + \frac{1}{4^2}} + \cdots + \sqrt{1 + \frac{1}{99^2} + \frac{1}{100^2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, $22^\star$., p. 13]
+	(a) Nêu 1 cách tính nhẩm $997^2$. (b) Tính tổng các chữ số của $A$ biết $\sqrt{A} = 99\ldots96$ (có $100$ chữ số $9$).
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Biến Đổi Đơn Giản Biểu Thức Chứa Căn Thức Bậc 2}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 10, p. 14]
+	Rút gọn biểu thức $A = \sqrt{5} - \sqrt{3 - \sqrt{29 - 12\sqrt{5}}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 11, p. 14]
+	Tính giá trị của biểu thức
+	\begin{align*}
+		M = \sum_{i=1}^{24} \frac{1}{(i + 1)\sqrt{i} + i\sqrt{i + 1}} = \frac{1}{2\sqrt{1} + 1\sqrt{2}} + \frac{1}{3\sqrt{2} + 2\sqrt{3}} + \frac{1}{4\sqrt{3} + 3\sqrt{4}} + \cdots + \frac{1}{25\sqrt{24} + 24\sqrt{25}}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 23., p. 15]
+	Rút gọn biểu thức $A = \sqrt{1 - a} + \sqrt{a(a - 1)} + a\sqrt{\frac{a - 1}{a}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 24., p. 15]
+	Chứng minh các hằng đẳng thức: (a) $\sqrt{10 + \sqrt{60} - \sqrt{24} - \sqrt{40}} = \sqrt{3} + \sqrt{5} - \sqrt{2}$. (b) $\sqrt{6 + \sqrt{24} + \sqrt{12} + \sqrt{8}} - \sqrt{3} = \sqrt{2} + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 25., p. 15]
+	Cho $A = \sqrt{10 + \sqrt{24} + \sqrt{40} + \sqrt{60}}$. Biểu diễn $A$ dưới dạng tổng của 3 căn thức.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 26., p. 15]
+	Rút gọn biểu thức $A = \dfrac{x + 3 + 2\sqrt{x^2 - 9}}{2x - 6 + \sqrt{x^2 - 9}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 27., p. 15]
+	Rút gọn biểu thức $B = \dfrac{x^2 + 5x + 6 + x\sqrt{9 - x^2}}{3x - x^2 + (x + 2)\sqrt{9 - x^2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 28., p. 15]
+	Rút gọn biểu thức:
+	\begin{align*}
+		A &= \sum_{i=1}^{n-1} \frac{1}{\sqrt{i} + \sqrt{i + 1}} = \frac{1}{\sqrt{1} + \sqrt{2}} + \frac{1}{\sqrt{2} + \sqrt{3}} + \frac{1}{\sqrt{3} + \sqrt{4}} + \cdots + \frac{1}{\sqrt{n - 1} + \sqrt{n}},\\
+		B &= \sum_{i=1}^{24} \frac{1}{\sqrt{i} - \sqrt{i + 1}} = \frac{1}{\sqrt{1} - \sqrt{2}} - \frac{1}{\sqrt{2} - \sqrt{3}} + \frac{1}{\sqrt{3} - \sqrt{4}} - \cdots - \frac{1}{\sqrt{24} - \sqrt{25}}.
+	\end{align*}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Rút Gọn Biểu Thức Có Chứa Căn Thức Bậc 2}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 5, p. 14]
+	Cho $A = \sqrt{11 + \sqrt{96}}$ \& $B = \dfrac{2\sqrt{2}}{1 + \sqrt{2} - \sqrt{3}}$. Không dùng máy tính hoặc bảng số, so sánh $A$ \& $B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 6, p. 15]
+	Cho biểu thức $A = \left(\dfrac{1}{\sqrt{x} - \sqrt{x - 1}} - \dfrac{x - 3}{\sqrt{x - 1} - \sqrt{2}}\right)\left(\dfrac{2}{\sqrt{2} - \sqrt{x}} - \dfrac{\sqrt{x} + \sqrt{2}}{\sqrt{2x} - x}\right)$.\\(a) Rút gọn $A$. (b) Tính giá trị của $A$ với $x = 3 - 2\sqrt{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 37., pp. 15--16]
+	Không dùng máy tính hoặc bảng số, so sánh các số sau: (a) $-3\sqrt{11}$ \& $-7\sqrt{2}$. (b) $\frac{7}{2}\sqrt{\frac{1}{12}}$ \& $\frac{9}{4}\sqrt{\frac{1}{5}}$. (c) $\sqrt{\frac{4}{27}}$ \& $\sqrt{\frac{3}{26}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 38., p. 16]
+	Không dùng máy tính hoặc bảng số, chứng minh $4\sqrt{5} - 3\sqrt{2} < 5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 39., p. 16]
+	Cho $A = \sqrt{x^2 + 1} - x - \dfrac{1}{\sqrt{x^2 + 1} - x}$ trong đó $x\in\mathbb{R}$. Xác định $x\in\mathbb{R}$ để giá trị của $A$ là 1 số tự nhiên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 40., p. 16]
+	Trục căn thức ở mẫu của các biểu thức sau: (a) $A = \dfrac{1}{\sqrt{a} + \sqrt{b} + \sqrt{2c}}$ trong đó $a,b,c > 0$ thỏa mãn điều kiện $c$ là trung bình nhân của $a$ \& $b$. (b) $B = \dfrac{1}{\sqrt{a} + \sqrt{b} + \sqrt{c} + \sqrt{d}}$ trong đó $a,b,c,d > 0$ thỏa mãn điều kiện $ab = cd$ \& $a + b\ne c + d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 41., p. 16]
+	Tìm $x,y\in\mathbb{N}$ sao cho $x > y > 0$ thỏa mãn điều kiện $\sqrt{x} + \sqrt{y} = \sqrt{931}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 42., p. 16]
+	Chứng minh: $\dfrac{2\sqrt{mn}}{\sqrt{m} + \sqrt{n} + \sqrt{m + n}} = \sqrt{m} + \sqrt{n} - \sqrt{m + n}$. Áp dụng tính $\dfrac{2\sqrt{10}}{\sqrt{2} + \sqrt{5} + \sqrt{7}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 43., p. 16]
+	Chứng minh: $\dfrac{1}{(n + 1)\sqrt{n} + n\sqrt{n + 1}} = \dfrac{1}{\sqrt{n}} - \dfrac{1}{\sqrt{n + 1}}$, $\forall n\in\mathbb{N}^\star$. Áp dụng tính tổng: $S = \sum_{i=1}^{399} \dfrac{1}{(i + 1)\sqrt{i} + i\sqrt{i + 1}} = \dfrac{1}{2\sqrt{1} + 1\sqrt{2}} + \dfrac{1}{3\sqrt{2} + 2\sqrt{3}} + \cdots + \dfrac{1}{400\sqrt{399} + 399\sqrt{400}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 44., p. 16]
+	Tìm $n\in\mathbb{N}$ nhỏ nhất sao cho $\sqrt{n + 1} - \sqrt{n} < 0.05$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 45., p. 17]
+	Cho $A = \sum_{i=1}^{120} \dfrac{1}{\sqrt{i} + \sqrt{i + 1}} = \dfrac{1}{\sqrt{1} + \sqrt{2}} + \dfrac{1}{\sqrt{2} + \sqrt{3}} + \cdots + \dfrac{1}{\sqrt{120} + \sqrt{121}}$, $B = \sum_{i=1}^{35} \dfrac{1}{\sqrt{i}} = \dfrac{1}{\sqrt{1}} + \dfrac{1}{\sqrt{2}} + \cdots + \dfrac{1}{\sqrt{35}}$. Chứng minh $A < B$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 46., p. 17]
+	Cho $x,y,z > 0$ \& khác nhau đôi một. Chứng minh giá trị của biểu thức
+	\begin{align*}
+		A = \dfrac{x}{(\sqrt{x} - \sqrt{y})(\sqrt{x} - \sqrt{z})} + \dfrac{y}{(\sqrt{y} - \sqrt{z})(\sqrt{y} - \sqrt{z})} + \dfrac{z}{(\sqrt{z} - \sqrt{x})(\sqrt{z} - \sqrt{y})}
+	\end{align*}
+	không phụ thuộc vào giá trị của các biến.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 47., p. 17]
+	Cho biểu thức $A = \dfrac{1}{\sqrt{x} + 2} - \dfrac{5}{x - \sqrt{x} - 6} - \dfrac{\sqrt{x} - 2}{3 - \sqrt{x}}$. (a) Rút gọn $A$. (b) Tìm giá trị lớn nhất của $A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 48., p. 17]
+	Cho $A = \left(\dfrac{\sqrt{x} + \sqrt{y}}{1 - \sqrt{xy}} + \dfrac{\sqrt{x} - \sqrt{y}}{1 -+ \sqrt{xy}}\right):\left(1 + \dfrac{x + y + 2xy}{1 - xy}\right)$. (a) Rút gọn $A$. (b) Tính giá trị của $P$ với $x = \dfrac{2}{2 + \sqrt{3}}$. (c) Tìm giá trị lớn nhất của $A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 49., p. 17]
+	Cho $A = \dfrac{\sqrt{x}}{\sqrt{xy} + \sqrt{x} + 2} + \dfrac{\sqrt{y}}{\sqrt{yz} + \sqrt{y} + 1} + \dfrac{2\sqrt{z}}{\sqrt{zx} + 2\sqrt{z} + 2}$. Biết $xyz = 4$, tính $\sqrt{P}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 12, p. 15]
+	Tính: $A = \left(\sqrt{\dfrac{1 + a}{1 - a}} + \sqrt{\dfrac{1 - a}{1 + a}}\right):\left(\sqrt{\dfrac{1 + a}{1 - a}} - \sqrt{\dfrac{1 - a}{1 + a}}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 13, p. 16]
+	Rút gọn biểu thức $A = \dfrac{2 + \sqrt{3}}{\sqrt{2} + \sqrt{2 + \sqrt{3}}} + \dfrac{2 - \sqrt{3}}{\sqrt{2} - \sqrt{2 - \sqrt{3}}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 14, p. 16]
+	Cho $A = \dfrac{\sqrt{a} + 6}{\sqrt{a} + 1}$. (a) Tìm các số nguyên $a$ để $A$ là số nguyên. (b) Chứng minh với $a = \frac{4}{9}$ thì $A$ là số nguyên. (c) Tìm các số hữu tỷ $a$ để $A$ là số nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 29., p. 18]
+	Rút gọn biểu thức: (a) $A = \dfrac{1 + \sqrt{5}}{\sqrt{2} + \sqrt{3 + \sqrt{5}}} + \dfrac{1 - \sqrt{5}}{\sqrt{2} - \sqrt{3 - \sqrt{5}}}$.\\(b) $B = \left(\dfrac{1 - a\sqrt{a}}{1 - \sqrt{a}} + \sqrt{a}\right)\left(\dfrac{1 - \sqrt{a}}{1 - a}\right)^2$. (c) $C = \dfrac{\sqrt{x} - \sqrt{y}}{xy\sqrt{xy}}:\left[\left(\dfrac{1}{x} + \dfrac{1}{y}\right)\dfrac{1}{x + y+ 2\sqrt{xy}} + \dfrac{2}{(\sqrt{x} + \sqrt{y})^3}\left(\dfrac{1}{\sqrt{x}} + \dfrac{1}{\sqrt{y}}\right)\right]$ với $x = 2 - \sqrt{3}$ \& $y = 2 + \sqrt{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 30., p. 18]
+	Rút gọn biểu thức $A = \dfrac{1 - \sqrt{x - 1}}{\sqrt{x - 2\sqrt{x - 1}}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 31., p. 18]
+	Rút gọn biểu thức $A = \dfrac{\sqrt{x + \sqrt{x^2 - y^2}} - \sqrt{x - \sqrt{x^2 - y^2}}}{\sqrt{2(x - y)}}$ với $x > y > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 32., p. 18]
+	Rút gọn biểu thức $A = \left(\dfrac{1}{\sqrt{x - 1}} + \dfrac{1}{\sqrt{x + 1}}\right):\left(\dfrac{1}{\sqrt{x - 1}} - \dfrac{1}{\sqrt{x + 1}}\right)$ với $x = \dfrac{a^2 + b^2}{2ab}$ \& $b > a > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 33., p. 18]
+	Rút gọn biểu thức $B = \dfrac{2a\sqrt{1 + x^2}}{\sqrt{1 + x^2} - x}$ với $x = \dfrac{1}{2}\left(\sqrt{\dfrac{1 - a}{a}} - \sqrt{\dfrac{a}{1 - a}}\right)$ \& $0 < a < 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 34., p. 18]
+	Rút gọn biểu thức $A = a + b - \sqrt{\dfrac{(a^2 + 1)(b^2 + 1)}{c^2 + 1}}$ với $a,b,c > 0$ \& $ab + bc + ca = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 35., p. 18]
+	Rút gọn biểu thức $A = \dfrac{\sqrt{x + 2\sqrt{x - 1}} + \sqrt{x - 2\sqrt{x - 1}}}{\sqrt{x + \sqrt{2x - 1}} + \sqrt{x - \sqrt{2x - 1}}}\cdot\sqrt{2x - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 36., p. 18]
+	Chứng minh hằng đẳng thức sau với $x\ge2$
+	\begin{align*}
+		\sqrt{\sqrt{x} + \sqrt{\frac{x^2 - 4}{x}}} + \sqrt{\sqrt{x} - \sqrt{\frac{x^2 - 4}{x}}} = \sqrt{\frac{2x + 4}{\sqrt{x}}}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 37., p. 18]
+	Cho $a = \dfrac{-1 + \sqrt{2}}{2}$, $b = \dfrac{-1 - \sqrt{2}}{2}$. Tính $a^7 + b^7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 38., p. 19]
+	Cho biết $\sqrt{x^2 - 6x + 13} - \sqrt{x^2 - 6x + 10} = 1$. Tính $\sqrt{x^2 - 6x + 13} + \sqrt{x^2 - 6x + 10}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 39., p. 19]
+	Cho biểu thức $A = \dfrac{\sqrt{a} + 2}{\sqrt{a} - 2}$. (a) Tìm các số nguyên $a$ để $A$ là số nguyên. (b) Tìm các số hữu tỷ $a$ để $A$ là số nguyên.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 40., p. 19]
+	Cho $a = \sqrt{2} - 1$. (a) Viết $a^2,a^3$ dưới dạng $\sqrt{m} - \sqrt{m - 1}$ trong đó $m$ là số tự nhiên. (b) Chứng minh với mọi số nguyên dương $n$, số $a^n$ viết được dưới dạng trên.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Cube Root, $n$th Root -- Căn Bậc 3, Căn Bậc $n$}
+
+\begin{baitoan}[Program to print out 1st $n$ cube roots]
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc 3 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là lập phương của 1 số tự nhiên hay không.
+\end{baitoan}
+
+\begin{baitoan}[Program to print out 1st $n$ $n$th roots]
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc $n$ của $m$ số tự nhiên đầu tiên với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $m$ được nhập từ bàn phím có phải là lũy thừa bậc $n$ của 1 số tự nhiên hay không với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 7, p. 19]
+	Tính $x = \sqrt[3]{17\sqrt{5} + 38} - \sqrt[3]{17\sqrt{5} - 38}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 8, p. 20]
+	Giải \& biện luận phương trình $(x - a)^n = a^2 - 2a + 1$ với $n\in\mathbb{N}^\star$, $a$ là tham số.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 50., p. 21]
+	Tính: (a) $\sqrt[3]{8\sqrt{5} - 16}\sqrt[3]{8\sqrt{5} + 16}$. (b) $\sqrt[3]{7 - 5\sqrt{2}} + \sqrt[6]{8}$. (c) $\sqrt[3]{4}\sqrt[3]{1 - \sqrt{3}}\sqrt[6]{4 + 2\sqrt{3}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 51., p. 21]
+	(a) Tính $\dfrac{2}{\sqrt[3]{3} - 1} - \dfrac{4}{\sqrt[3]{9} - \sqrt[3]{3} + 1}$. (b) Cho $x = \dfrac{2}{2\sqrt[3]{2} + 2 + \sqrt[3]{4}}$, $y = \dfrac{6}{2\sqrt[3]{2} - 2 + \sqrt[3]{4}}$. Tính giá trị của biểu thức $P = \dfrac{xy}{x + y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 52., p. 21]
+	Cho $x = \dfrac{\sqrt[3]{8 - 3\sqrt{5}} + \sqrt[3]{64 - 12\sqrt{20}}}{\sqrt[3]{57}}\sqrt[3]{8 + 3\sqrt{5}}$, $y = \dfrac{\sqrt[3]{9} - \sqrt{2}}{\sqrt[3]{3} + \sqrt[4]{2}} + \dfrac{\sqrt{2} - 9\sqrt[3]{9}}{\sqrt[4]{2} - \sqrt[3]{81}}$. Tính $xy$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 53., p. 22]
+	Tính: (a) $x = \sqrt[3]{5 + 2\sqrt{13}} + \sqrt[3]{5 - 2\sqrt{13}}$. (b) $x = \sqrt[3]{\sqrt{5} + 2} - \sqrt[3]{\sqrt{5} - 2}$. (c) $x = \sqrt[3]{182 + \sqrt{33125}} + \sqrt[3]{182 - \sqrt{33125}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 54., p. 22]
+	Cho $A = \sqrt[3]{60 + \sqrt[3]{60 + \sqrt[3]{60 + \cdots + \sqrt[3]{60}}}}$. Chứng minh $3 < A < 3$. Tìm $\lfloor A\rfloor$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 55., p. 22]
+	Cho $A = \sqrt{20 + \sqrt{20 + \sqrt{20 + \cdots + \sqrt{20}}}}$, $B = \sqrt[3]{24 + \sqrt[3]{24 + \sqrt[3]{24 + \cdots + \sqrt[3]{24}}}}$. Chứng minh $7 < A + B < 8$. Tìm $\lfloor A + B\rfloor$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 56., p. 22]
+	So sánh $a = \sqrt[3]{5\sqrt{2}}$ \& $b = \sqrt{5\sqrt[3]{2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 57., p. 22]
+	Cho $ax^3 = by^3 = cz^3$ \& $\dfrac{1}{x} + \dfrac{1}{y} + \dfrac{1}{z} = 1$. Chứng minh $\sqrt[3]{ax^2 + by^2 + cz^2} = \sqrt[3]{a} + \sqrt[3]{b} + \sqrt[3]{c}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 58., p. 22]
+	Giải phương trình: (a) $x^3 + x^2 + x = -\frac{1}{3}$. (b) $x^3 + 2x^2 - 4x = -\frac{8}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 59., p. 22]
+	Giải phương trình: (a) $\sqrt[3]{x + 2} + \sqrt[3]{x - 2} = \sqrt[3]{5x}$. (b) $2\sqrt[3]{(x + 2)^2} - \sqrt[3]{(x - 2)^2} = \sqrt[3]{x^2 - 4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 60., p. 22]
+	Giải phương trình: $\sqrt[3]{x - 5} + \sqrt[3]{2x - 1} - \sqrt[3]{3x + 2} = -2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 61., p. 22]
+	Giải phương trình: $\sqrt[n]{(x - 2)^2} + 4\sqrt[n]{x^2 - 4} = 5\sqrt[n]{(x + 2)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 62., p. 22]
+	Cho $A = (a + b)(b + c)(c + a)$ trong đó $a,b,c$ là các số thực dương thỏa mãn điều kiện $abc = 1$. Chứng minh $A + 1\ge3(a + b + c)$.
+\end{baitoan}
+
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 15, p. 20]
+	Chứng tỏ số $m = \sqrt[3]{\sqrt{5} + 2} - \sqrt[3]{\sqrt{5} - 2}$ là 1 nghiệm của phương trình $x^3 + 3x - 4 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, Ví dụ 16, p. 20]
+	Tính giá trị của biểu thức $A = \sqrt[3]{7 + 5\sqrt{2}} + \sqrt[3]{7 - 5\sqrt{2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 41., p. 20]
+	Tính: (a) $\dfrac{\sqrt[3]{4} + \sqrt[3]{2} + 2}{\sqrt[3]{4} + \sqrt[3]{2} + 1}$. (b) $\sqrt{3 + \sqrt{3} + \sqrt[3]{10 + 6\sqrt{3}}}$. (c) $\dfrac{4 + 2\sqrt{3}}{\sqrt[3]{10 + 6\sqrt{3}}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 42., p. 21]
+	Số $m = \sqrt[3]{4 + \sqrt{80}} - \sqrt[3]{4 - \sqrt{80}}$ có phải là nghiệm của phương trình $x^3 + 12x - 8 = 0$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 43., p. 21]
+	Lập 1 phương trình bậc 3 với các hệ số nguyên, trong đó: (a) $\sqrt[3]{2} + \sqrt[3]{4}$ là 1 nghiệm của phương trình. (b) $\sqrt[3]{9} - \sqrt[3]{3}$ là 1 nghiệm của phương trình.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 44., p. 21]
+	Tính: (a) $A = \sqrt[3]{6\sqrt{3} + 10} - \sqrt[3]{6\sqrt{3} - 10}$. (b) $B = \sqrt[3]{5 + 2\sqrt{13}} + \sqrt[3]{5 - 2\sqrt{13}}$. (c) $C = \sqrt[3]{45 + 29\sqrt{2}} + \sqrt[3]{45 - 29\sqrt{2}}$. (d) $D = \sqrt[3]{2 + 10\sqrt{\frac{1}{27}}} + \sqrt[3]{2 - 10\sqrt{\frac{1}{27}}}$. (e) $E = \sqrt[3]{4 + \frac{5}{3}\sqrt{\frac{31}{3}}} + \sqrt[3]{4 - \frac{5}{3}\sqrt{\frac{31}{3}}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 45., p. 21]
+	Tìm $x$biết: (a) $\sqrt[3]{2 + x} + \sqrt[3]{2 - x} = 1$. (b) $2x^3 = (x - 1)^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 46., p. 21]
+	Cho $am^3 = bn^3 = cp^3$ \& $\frac{1}{m} + \frac{1}{n} + \frac{1}{p} = 1$. Chứng minh: $\sqrt[3]{a} + \sqrt[3]{b} + \sqrt[3]{c} = \sqrt[3]{am^2 + bn^2 + cp^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Binh_Toan_9_tap_1}, 47., p. 21]
+	 Tính: (a) $\sqrt[3]{2 - \sqrt{5}}(\sqrt[6]{9 + 4\sqrt{5}} + \sqrt[3]{2 + \sqrt{5}})$. (b) $\sqrt[4]{17 + 12\sqrt{2}} - \sqrt{2}$. (c) $\sqrt[4]{56 - 24\sqrt{5}}$. (d) $1 + \sqrt[4]{28 - 16\sqrt{3}}$. (e) $\dfrac{2}{\sqrt{4 - 3\sqrt[4]{5} + 2\sqrt{5} - \sqrt[4]{125}}}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 15, pp. 29--30]
+	Cho biểu thức $A = \left(\dfrac{1}{1 - \sqrt{x}} - \dfrac{1}{\sqrt{x}}\right):\left(\dfrac{2x + \sqrt{x} - 1}{1 - x} + \dfrac{2x\sqrt{x} + x - \sqrt{x}}{1 + x\sqrt{x}}\right)$. (a) Rút gọn $A$. (b) Tính giá trị của $A$ với $x = 7 - 4\sqrt{3}$. (c) Tìm giá trị lớn nhất của $a$ để $P > a$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 80., p. 31]
+	Chứng minh: $\sqrt{\dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{(a + b)^2}} = \left|\dfrac{1}{a} + \dfrac{1}{b} - \dfrac{1}{a + b}\right|$, $\forall a,b\in\mathbb{R}$, $ab(a + b)\ne0$. Áp dụng tính $A = \sqrt{1 + 999^2 + \dfrac{999^2}{1000^2}} + \dfrac{999}{1000}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 81., p. 31]
+	Rút gọn biểu thức $A = (4 + \sqrt{15})(\sqrt{10} - \sqrt{6})\sqrt{4 - \sqrt{15}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 82., p. 31]
+	Không dùng máy tính hoặc bảng số, chứng minh: $\sqrt{14} - \sqrt{13} < 2\sqrt{3} - \sqrt{11}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 83., p. 31]
+	Giải phương trình: $\dfrac{1}{\sqrt{x + 3} + \sqrt{x + 2}} + \dfrac{1}{\sqrt{x + 2} + \sqrt{x + 1}} + \dfrac{1}{\sqrt{x + 1} + \sqrt{x}} = 1$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 84., p. 31]
+	Tìm $x,y,z$ biết $x + y + z + 35 = 2(2\sqrt{x + 1} + 3\sqrt{y + 2} +4\sqrt{z + 3})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 85., p. 31]
+	Cho $a > 0$, $b > 0$ \& $\frac{1}{a} + \frac{1}{b} = 1$. Chứng minh: $\sqrt{a + b} = \sqrt{a - 1} + \sqrt{b - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 86., p. 31]
+	Chứng minh: $A = \sqrt{8 + 2\sqrt{10 + 2\sqrt{5}}} + \sqrt{8 - 2\sqrt{10 + 2\sqrt{5}}} = \sqrt{2} + \sqrt{10}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 87., p. 31]
+	Chứng minh:
+	\begin{align*}
+		\frac{1}{4} < \dfrac{2 - \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots + \sqrt{2}}}}}{2 - \sqrt{2 + \sqrt{2 + \sqrt{2 + \cdots + \sqrt{2}}}}} < \frac{3}{10},
+	\end{align*}
+	(ở tử có $n$ dấu căn, ở mẫu có $n - 1$ dấu căn).
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 88., p. 31]
+	Giải phương trình: $\sqrt{x + 2 - 3\sqrt{2x - 5}} + \sqrt{x - 2 + 3\sqrt{2x - 5}} = 2\sqrt{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 89., p. 31]
+	Giải phương trình: $\sqrt[3]{(65 + x)^2} + 4\sqrt[3]{(65 - x)^2} = 5\sqrt[3]{65^2 - x^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 90., p. 32]
+	Giải phương trình ẩn $x$: $\dfrac{(a - x)\sqrt[4]{x - b} + (x - b)\sqrt[4]{a - x}}{\sqrt[4]{a - x} + \sqrt[4]{x - b}} = \frac{a - b}{2}$ với $a > b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 91., p. 32]
+	Cho biểu thức $A = \sum_{i=1}^{199} \dfrac{1}{\sqrt{i(200 - i)}} = \dfrac{1}{\sqrt{1\cdot199}} + \dfrac{1}{\sqrt{2\cdot198}} + \cdots + \dfrac{1}{\sqrt{199\cdot1}}$. Chứng minh $A > 1.99$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 92., p. 32]
+	Cho $n$ số dương $a_1,a_2,\ldots,a_n$. Chứng minh:
+	\begin{align*}
+		\left(\sum_{i=1}^n a_i\right)\left(\sum_{i=1}^n \frac{1}{a_i}\right) = (a_1 + a_2 + \cdots + a_n)\left(\frac{1}{a_1} + \frac{1}{a_2} + \cdots + \frac{1}{a_n}\right)\ge n^2.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 93., p. 32]
+	Cho các số thực dương $a,b,c,d$ thỏa mãn điều kiện $abcd = 1$. Chứng minh: $a^2 + b^2 + c^2 + d^2+ a(b + c) + b(c + d) + c(d + a) + d(a + b)\ge12$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 94., p. 32]
+	Giải phương trình: $\sqrt{\dfrac{x^2 + x + 1}{x}} + \sqrt{\dfrac{x}{x^2 + x + 1}} = \frac{7}{4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 95., p. 32]
+	Giải phương trình: $\sqrt{x + x^2} + \sqrt{x - x^2} = x + 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 96., p. 32]
+	Cho $A = \dfrac{x^2 - \sqrt{x}}{x + \sqrt{x} + 1} - \dfrac{x^2 + \sqrt{x}}{x - \sqrt{x} + 1}$ với $0\le x\le 1$. Rút gọn biểu thức $B = 1 - \sqrt{A + x + 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 97., p. 32]
+	Cho biểu thức $A = \dfrac{x\sqrt{x} - 3}{x - 2\sqrt{x} - 3} - \dfrac{2(\sqrt{x} - 3)}{\sqrt{x} + 1} + \dfrac{\sqrt{x} + 3}{3 - \sqrt{x}}$. (a) Rút gọn $A$. (b) Tính giá trị của $A$ với $x = 14 - 6\sqrt{5}$. (c) Tìm GTNN của $A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.1, p. 5]
+	Rút gọn biểu thức $A = \sqrt{(7 + 4\sqrt{3})(a - 1)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.2, p. 6]
+	Cho biểu thức $A = \sqrt{a + 2\sqrt{a - 1}} + \sqrt{a - 2\sqrt{a - 1}}$. (a) Tìm điều kiện xác định của $A$. (b) Rút gọn biểu thức $A$ với $1\le a < 2$. (c) Rút gọn biểu thức $A$ với $a\ge2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.3, p. 6]
+	Đơn giản biểu thức $A = \left(\sqrt{8 + 2\sqrt{7}} + 2\sqrt{8 - 2\sqrt{7}}\right)(\sqrt{63} + 1)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.4, p. 6]
+	Tính tổng $A = \dfrac{1}{\sqrt{1} + \sqrt{2}} + \dfrac{1}{\sqrt{2} + \sqrt{3}} + \dfrac{1}{\sqrt{3} + \sqrt{4}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.5, p. 6]
+	Tính $A = \dfrac{\sqrt{7 - 2\sqrt{10}}(7 + 2\sqrt{10})(74 - 22\sqrt{10})}{\sqrt{125} - 4\sqrt{50} + 5\sqrt{20} + \sqrt{8}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.6, p. 7]
+	Cho $a = \sqrt{3 + \sqrt{5 + 2\sqrt{3}}} + \sqrt{3 - \sqrt{5 + 2\sqrt{3}}}$. Chứng minh: $a^2 - 2a - 2 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.7, p. 7]
+	Cho $a = \sqrt{4 + \sqrt{10 + 2\sqrt{5}}} + \sqrt{4 - \sqrt{10 + 2\sqrt{5}}}$. Tính
+	\begin{align*}
+		A = \dfrac{a^4 - 4a^3 + a^2 + 6a + 4}{a^2 - 2a + 12}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.8, p. 7]
+	Cho $f(x) = \dfrac{1 + \sqrt{1 + x}}{x + 1} + \dfrac{1 + \sqrt{1 - x}}{x - 1}$ \& $a = \dfrac{\sqrt{3}}{2}$. Tính $f(a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 1.9, p. 8]
+	Giả thiết $x,y,z > 0$ \& $xy + yz + zx = a$. Chứng minh
+	\begin{align*}
+		x\sqrt{\frac{(a + y^2)(a + z^2)}{a + x^2}} + y\sqrt{\frac{(a + z^2)(a + x^2)}{a + y^2}} + z\sqrt{\frac{(a + x^2)(a + y^2)}{a + z^2}} = 2a.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.1, p. 8]
+	Biểu diễn $\sqrt{\dfrac{3 + \sqrt{5}}{2}}$ thành $a + b\sqrt{5}$ với $a,b\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.2, p. 8]
+	Đơn giản biểu thức $A = 3\sqrt{2} + 2\sqrt{3} - \sqrt{18} + \sqrt{28 - 16\sqrt{3}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.3, p. 8]
+	Chứng minh $\sqrt{10 + 2\sqrt{24}} - \sqrt{10 - 2\sqrt{24}} = 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.4, p. 8]
+	Tính $A = \sqrt{2 + \sqrt{3}}\cdot\sqrt{2 + \sqrt{2 + \sqrt{3}}}\cdot\sqrt{2 - \sqrt{2 + \sqrt{3}}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.5, p. 9]
+	Tính tích $ab$ với
+	\begin{align*}
+		a = \sqrt{2 + \sqrt{2}}\sqrt{3 + \sqrt{7 + \sqrt{2}}},\ b = \sqrt{3 + \sqrt{6 + \sqrt{7 + \sqrt{2}}}}\sqrt{3 - \sqrt{6 + \sqrt{7 + \sqrt{2}}}}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.6, p. 9]
+	Chứng minh $\dfrac{4}{\sqrt{5} - 1} + \dfrac{3}{\sqrt{5} - 2} + \dfrac{16}{\sqrt{5} - 3} = -5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.7, p. 9]
+	Chứng minh $\left(\dfrac{2}{\sqrt{6} - 1} + \dfrac{3}{\sqrt{6} - 2} + \dfrac{3}{\sqrt{6} - 3}\right)\dfrac{5}{9\sqrt{6} + 4} = \frac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.8, p. 9]
+	Cho $f(x) = \dfrac{x + \sqrt{5}}{\sqrt{x} + \sqrt{x + \sqrt{5}}} + \dfrac{x - \sqrt{5}}{\sqrt{x} - \sqrt{x - \sqrt{5}}}$. Tính $f(3)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 1.9, p. 9]
+	Cho $f(x) = \dfrac{\sqrt{x + 1} + \sqrt{x - 1}}{\sqrt{x + 1} - \sqrt{x - 1}}$ \& $a = \dfrac{4}{\sqrt{3} + \frac{1}{\sqrt{3}}}$. Tính $f(a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.1, p. 10]
+	Chứng minh với $ab\ne0$: $\dfrac{\sqrt[3]{a^5b^7}}{\sqrt[3]{a^2b}} - \dfrac{\sqrt[3]{a^4b^8}}{\sqrt[3]{ab^2}} = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.2, p. 10]
+	Chứng minh với $abc\ne0$: $\dfrac{\sqrt[3]{a^4b^5c^7}}{\sqrt[3]{ab^2c}} = abc^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.3, p. 10]
+	Với $a\ge2 + \sqrt{2}$ \&
+	\begin{align*}
+		u = \sqrt[3]{\left(a + \frac{2}{a}\right)^3 - 3a^2 - \frac{12}{a^2} + 3\left(a + \frac{2}{a}\right) - 13},\ v = \sqrt{a^2 + \frac{4}{a^2} - 8\left(a + \frac{2}{a}\right) + 20}.
+	\end{align*}
+	Chứng minh $u - v = 3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.4, p. 11]
+	Đơn giản biểu thức $A = \sqrt[3]{8(7 + 5\sqrt{2})} + \sqrt[3]{216(7 - 5\sqrt{2})} + 4\sqrt{2} - 7$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.5, p. 11]
+	Chứng minh $\sqrt[3]{2 + \sqrt{5}} + \sqrt[3]{2 - \sqrt{5}} = 1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.6, p. 11]
+	Chứng minh nếu $a = \sqrt[3]{\sqrt{5} + 2} - \sqrt[3]{\sqrt{5} - 2}$ thì $a^3 + 3a = 4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.7, p. 11]
+	Chứng minh:
+	\begin{align*}
+		\dfrac{\sqrt{\left(\dfrac{9 - 2\sqrt{3}}{\sqrt{3} - \sqrt[3]{2}} + 3\sqrt[3]{2}\right)\sqrt{3}}}{3 + \sqrt[6]{108}} = \sqrt[3]{\sqrt{5} + 2} - \sqrt[3]{\sqrt{5} - 2}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.8, p. 12]
+	Chứng minh nếu $\sqrt[3]{(a + 1)^2} + \sqrt[3]{a^2 - 1} + \sqrt[3]{(a - 1)^2} = 1$ thì $\sqrt[3]{a + 1} - \sqrt[3]{a - 1} = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.9, p. 12]
+	Đơn giản biểu thức $A = \dfrac{x + 1}{2\sqrt[3]{\sqrt{3} - \sqrt{2}}\sqrt[6]{5 + 2\sqrt{6}} + x + \frac{1}{x}}$ với $x\notin\{-1,0\}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.10, p. 12]
+	Cho $a = \sqrt{2} + \sqrt{7 - \sqrt[3]{61 + 46\sqrt{5}}} + 1$. (a) Chứng minh $a^4 - 14a^2 + 9 = 0$. (b) Giả sử $f(x) = x^5 + 2x^4 - 14x^3 - 28x^2 + 9x + 19$. Tính $f(a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.11, p. 13]
+	Cho $a,b,c > 0$. Giả sử $m,n,p$ là những số nguyên dương lớn hơn $1$ sao cho $bc = \sqrt[m]{a}$, $ca = \sqrt[n]{b}$, \& $ab = \sqrt[p]{c}$. Chứng minh trong 3 số $a,b,c$ phải có ít nhất 1 số bằng $1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.12, p. 13]
+	Cho $a = \dfrac{\sqrt[3]{7 + 5\sqrt{2}}}{\sqrt{4 + 2\sqrt{3}} - \sqrt{3}}$. (a) Xác định đa thức với hệ số nguyên bậc dương nhỏ nhất nhận số $a$ làm nghiệm. (b) Giả sử đa thức $f(x) = 3x^6 - 4x^5 - 7x^4 + 6x^3 + 6x^2 + x - 53\sqrt{2}$. Tính $f(a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.13, p. 14]
+	Cho $a = \dfrac{7- 4\sqrt{3}}{\sqrt[3]{26 - 15\sqrt{3}}} - \sqrt[3]{26 + 15\sqrt{3}}$. (a) Xác định đa thức với hệ số nguyên bậc dương nhỏ nhất nhận số $a$ làm nghiệm. (b) Giả sử đa thức $f(x) = \dfrac{x^6 + x^4 + 4x^2}{40(x^4 + 4x^2 - 144)}$. Tính $f(a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, Ví dụ 2.14, p. 14]
+	Cho $a = \sqrt[3]{38 + 17\sqrt{5}} + \sqrt[3]{38 - 17\sqrt{5}}$. Giả sử ta có đa thức $f(x) = (x^3 + 3x + 1935)^{2012}$. Tính $f(a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 2.1., p. 14]
+	Biểu diễn $\sqrt[3]{2 + \sqrt{5}}$ thành $a + b\sqrt{5}$ với $a,b\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 2.2., p. 14]
+	Cho $a = \sqrt[3]{\sqrt{5} + 2} + \sqrt[3]{1 - \sqrt{11}}$. Chứng minh $a^9 - 6a^6 + 282a^3 = 8$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 2.3., p. 15]
+	Cho $a = (\sqrt[3]{1 + 2\sqrt{6}} - \sqrt[6]{5 + 4\sqrt{6}})\sqrt[3]{2\sqrt{6} - 1} + 1$. (a) Xác định đa thức với hệ số nguyên bậc dương nhỏ nhất nhận $a$ làm nghiệm. (b) Giả sử $f(x) = \sum_{i=1}^{2012} ix^i + 2012$. Tính $f(a)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 2.4., p. 15]
+	Chứng minh:
+	\begin{align*}
+		\frac{a + 2\sqrt{ab} + 9b}{\sqrt{a} + 3\sqrt{b} - 2\sqrt[4]{ab}} - 2\sqrt{b} = \left(\sqrt[4]{a} + \sqrt[4]{b}\right)^2,\ \forall a,b\in\mathbb{R},\,a,b > 0.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 2.5., p. 15]
+	Chứng minh:
+	\begin{align*}
+		\left(\sqrt[3]{a^4} + b^2\sqrt[3]{a^2} + b^4\right)\frac{\sqrt[3]{a^8} - b^6 + b^4\sqrt[3]{a^2} - a^2b^2}{a^2b^2 + b^2 - a^2b^8 - b^4} = a^2b^2,\ \forall a,b\in\mathbb{R},\,ab\ne0,\,a\ne b^3.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 2.6., p. 15]
+	Cho $a,b > 0$. Đơn giản biểu thức
+	\begin{align*}
+		A = \frac{\sqrt{a^3 + 2a^2b} + \sqrt{a^4 + 2a^3b} - \sqrt{a^3} - a^2b}{\sqrt{\left(2a + b - \sqrt{a^2 + 2ab}\right)\left(\sqrt[3]{a^2} - \sqrt[6]{a^5} + a\right)}}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_dai_so}, 2.7., p. 15]
+	Giả sử $u^3\ge v^2$, $u,v\in\mathbb{Q}^+$. Xác định $u,v$ để
+	\begin{align*}
+		\sqrt{\frac{u - 8\sqrt[6]{u^3v^2} + 4\sqrt[3]{v^2}}{\sqrt{u} - 2\sqrt[3]{v} + 2\sqrt[12]{u^3v^2}} + 3\sqrt[3]{v}} + \sqrt[6]{v} = 1.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $a,b,c,A,B\in\mathbb{Z}$, $c\ge0$ thỏa mãn đẳng thức $(a + b\sqrt{c})^2 = A + B\sqrt{c}$. (a) Tìm mối quan hệ của $a,b,c,A,B$. Biểu diễn $(A,B)$ theo $(a,b,c)$. (b)${}^\star$ Biểu diễn $(a,b)$ theo $(c,A,B)$.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $a,b,c,A,B\in\mathbb{Z}$, $c\ge0$ thỏa mãn đẳng thức $(a + b\sqrt{c})^3 = A + B\sqrt{c}$. (a) Tìm mối quan hệ của $a,b,c,A,B$. Biểu diễn $(A,B)$ theo $(a,b,c)$. (b)${}^\star$ Biểu diễn $(a,b)$ theo $(c,A,B)$.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $a,b,c,A,B\in\mathbb{Z}$, $c\ge0$ thỏa mãn đẳng thức $(a + b\sqrt[3]{c})^3 = A + B\sqrt[3]{c} + C\sqrt[3]{c^2}$. (a) Tìm mối quan hệ của $a,b,c,A,B,C$. Biểu diễn $(A,B,C)$ theo $(a,b,c)$. (b)${}^\star$ Biểu diễn $(a,b)$ theo $(c,A,B,C)$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
