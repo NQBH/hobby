@@ -88,28 +88,62 @@
 \end{baitoan}
 
 \begin{baitoan}[Program to print out 1st $n$ square roots]
-	Viết chương trình \textsc{Pascal, C-C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}[Số chính phương]
-	Viết chương trình \textsc{Pascal, C-C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
 \end{baitoan}
 
 \begin{baitoan}[Program to print out 1st $n$ cube roots]
-	Viết chương trình \textsc{Pascal, C-C++, Python} xuất ra căn bậc 3 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc 3 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}
-	Viết chương trình \textsc{Pascal, C-C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là lập phương của 1 số tự nhiên hay không.
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là lập phương của 1 số tự nhiên hay không.
 \end{baitoan}
 
 \begin{baitoan}[Program to print out 1st $n$ $n$th roots]
-	Viết chương trình \textsc{Pascal, C-C++, Python} xuất ra căn bậc $n$ của $m$ số tự nhiên đầu tiên với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc $n$ của $m$ số tự nhiên đầu tiên với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}
-	Viết chương trình \textsc{Pascal, C-C++, Python} để kiểm tra 1 số $m$ được nhập từ bàn phím có phải là lũy thừa bậc $n$ của 1 số tự nhiên hay không với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $m$ được nhập từ bàn phím có phải là lũy thừa bậc $n$ của 1 số tự nhiên hay không với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Number Theory -- Số Học}
+
+%------------------------------------------------------------------------------%
+
+\section{Algebraic Expression -- Biểu Thức Đại Số}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 1., p. 15, Vũng Tàu 2020]
+	Cho $a,b,c\in\mathbb{N}^\star$. \emph{Yêu cầu:} Tính giá trị của biểu thức $S = \dfrac{a^2 + b^2 + c^2}{abc} + \sqrt{abc}$. \emph{Dữ liệu vào:} File \verb|ROOT.INP| chứa 3 số nguyên dương $a,b,c$. Mỗi số trên 1 dòng. \emph{Kết quả:} Ghi vào File \verb|ROOT.OUT| kết quả $S$ tính được (làm tròn lấy 2 chữ số sau phần thập phân).
+\end{baitoan}
+Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}root.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.INP}{root.INP}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.OUT}{root.OUT}.
+
+\begin{luuy}
+	Tương tự, ta có thể tính hầu như bất kỳ hàm số $f(a,b,c)$ 3 biến $a,b,c$ với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python. Tổng quát hơn, ta có thể tính bất kỳ hàm số nhiều biến $f(x_1,x_2,\ldots,x_n)$ với $x_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}^\star$ là các biến, với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python.
+\end{luuy}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 2., p. 19, Bắc Giang 2020]
+	Nhà An có 1 trang trại rộng lớn. Do sở thích của An nên bố An chỉ nuôi gà \& chó. 1 hôm bố An đố con gái nhà mình nuôi bao nhiêu gà, bao nhiêu chó? Bố An cho biết nhà có tổng số gà \& chó là $x$ con. Do số lượng nhiều \& khó đếm từng loại nên An chỉ đếm được tổng số chân của gà \& chó là $y$ chân. Giúp An trả lời câu đố của bố. \emph{Dữ liệu vào:} đọc từ file văn bản \verb|TOANCO.INP| gồm 2 số nguyên dương $x,y$ trên 1 dòng. 2 số cách nhau 1 khoảng trống ($x\le10^5$, $y\le4\cdot10^5$). \emph{Kết quả:} ghi ra file văn bản \verb|TOANCO.OUT| gồm 2 số tương ứng là số gà \& số chó tìm được. 2 số cách nhau 1 khoảng trống. Giả sử bài toán luôn có nghiệm.
+\end{baitoan}
+
+
+%------------------------------------------------------------------------------%
+
+\section{Resources}
+\cite{VietSTEM2021, VietSTEM2022, TLGK_chuyen_Tin_quyen_1, TLGK_chuyen_Tin_quyen_2, TLGK_chuyen_Tin_quyen_3}.
+
+\section{Notes on Python Commands}
+
+\begin{enumerate}
+	\item Để sử dụng các hàm toán học trong Python, cần import thư viện \texttt{math} vào chương trình: \texttt{from math import *}
+	\item Để mở file dữ liệu vào \texttt{prob.INP} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.OUT} để thay đổi dữ liệu trong file: \texttt{file = open("prob.INP")} \& \texttt{file2 = open("prob.OUT", "w")}.
+\end{enumerate}
 
 %------------------------------------------------------------------------------%
 
