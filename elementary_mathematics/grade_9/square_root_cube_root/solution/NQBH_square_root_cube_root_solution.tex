@@ -73,20 +73,17 @@
 \begin{baitoan}[Program to print out 1st $n$ square roots]
 	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
-
-\begin{proof}[Giải]
-	Pascal:
-	\begin{verbatim}
-		program square_root;
-		var num, sqrt_num: real;		
-		begin
-		    write('Enter a number num = ');
-		    readln(num);
-		    sqrt_num := Sqrt(num);
-		    writeln('sqrt of ', num,' = ', sqrt_num)
-		end.
-	\end{verbatim}
-\end{proof}
+Pascal:
+\begin{verbatim}
+	program square_root;
+	var num, sqrt_num: real;		
+	begin
+	    write('Enter a number num = ');
+	    readln(num);
+	    sqrt_num := Sqrt(num);
+	    writeln('sqrt of ', num,' = ', sqrt_num)
+	end.
+\end{verbatim}
 
 \begin{baitoan}[Số chính phương]
 	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
@@ -166,6 +163,32 @@
 	Để chứng minh 1 số là số hữu tỷ ta biểu diễn số đó thành 1 biểu thức gồm các phép tính cộng, trừ, nhân, chia (cho 1 số khác $0$) của các số hữu tỷ.
 \end{nhanxet}
 
+\begin{baitoan}
+	(a) Cho $a,b,c\in\mathbb{R}$, $abc\ne0$, khi nào thì $\left(\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c}\right)^2 = \dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2}$? (b) Cho $a,b,c,d\in\mathbb{R}$, $abcd\ne0$, khi nào thì $\left(\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c} + \dfrac{1}{d}\right)^2 = \dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2} + \dfrac{1}{d^2}$? (c) Cho $a,b,c,d,e\in\mathbb{R}$, $abcde\ne0$, khi nào thì $\left(\dfrac{1}{a} + \dfrac{1}{b} + \dfrac{1}{c} + \dfrac{1}{d} + \dfrac{1}{e}\right)^2 = \dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2} + \dfrac{1}{d^2} + \dfrac{1}{e^2}$? (d) Cho $n\in\mathbb{N}^\star$, $a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, $\prod_{i=1}^n a_i = a_1a_2\ldots a_n\ne0$, khi nào thì xảy ra đẳng thức sau?
+	\begin{align*}
+		\left(\sum_{i=1}^n \dfrac{1}{a_i}\right)^2 = \sum_{i=1}^n \dfrac{1}{a_i^2}\mbox{, i.e., } \left(\frac{1}{a_1} + \frac{1}{a_2} + \cdots + \frac{1}{a_n}\right)^2 = \frac{1}{a_1^2} + \frac{1}{a_2^2} + \cdots + \frac{1}{a_n^2}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $a,b,c,d\in\mathbb{Q}$, $abcd\ne0$ \& $ab + ac + ad + bc + bd + cd = 0$. Chứng minh $A = \sqrt{\dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2} + \dfrac{1}{d^2}}\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $a,b,c,d,e\in\mathbb{Q}$, $abcde\ne0$ \& $abc + abd + abe + acd + ace + ade + bcd + bce + bde + cde = 0$. Chứng minh $A = \sqrt{\dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2} + \dfrac{1}{d^2} + \dfrac{1}{e^2}}\in\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $n\in\mathbb{N}^\star$, $a_i\in\mathbb{Q}$, $\forall i = 1,2,\ldots,n$, $\prod_{i=1}^n a_i = a_1a_2\ldots a_n\ne0$, \& $\sum_{\rm cyc} a_1a_2\ldots a_{n-2} = 0$. Chứng minh:
+	\begin{align*}
+		A = \sqrt{\sum_{i=1}^n \frac{1}{a_i^2}} = \sqrt{\frac{1}{a_1^2} + \frac{1}{a_2^2} + \cdots + \frac{1}{a_n^2}}\in\mathbb{Q}.
+	\end{align*}
+\end{baitoan}
+
+\begin{luuy}[Cyclic sum]
+	Ký hiệu $\sum_{\rm cyc}$ được gọi là tổng cyclic. Xem định nghĩa \& ví dụ tại, e.g., \href{https://artofproblemsolving.com/wiki/index.php/Cyclic_sum}{AoPS\emph{\texttt{/}}cyclic sum}\footnote{\textsc{url}: \url{https://artofproblemsolving.com/wiki/index.php/Cyclic_sum}.}.
+\end{luuy}
+
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 1., p. 6]
 	Tính $A = \sqrt{\dfrac{8^{10} - 4^{10}}{4^{11} - 8^4}}$.
 \end{baitoan}
@@ -201,7 +224,7 @@
 \end{baitoan}
 
 \begin{proof}[Giải]
-	(a) $\sqrt{2 - x^2}$ xác định $\Leftrightarrow2 - x^2\ge0\Leftrightarrow x^2\le2\Leftrightarrow|x|\le\sqrt{2}\Leftrightarrow-\sqrt{2}\le x\le\sqrt{2}$. ĐKXĐ: $-\sqrt{2}\le x\le\sqrt{2}$. TXĐ: $D = [-\sqrt{2},\sqrt{2}]$. (b) $\dfrac{x}{\sqrt{5x^2 - 3}}$ xác định $\Leftrightarrow 5x^2 - 3 > 0\Leftrightarrow x^2 > \frac{3}{5}\Leftrightarrow|x| > \sqrt{\frac{3}{5}}\Leftrightarrow x > \sqrt{\frac{3}{5}}$ hoặc $x < -\sqrt{\frac{3}{5}}$. ĐKXĐ: $x > \sqrt{\frac{3}{5}}$ hoặc $x < -\sqrt{\frac{3}{5}}$. TXĐ: $D = \left(-\infty,-\sqrt{\frac{3}{5}}\right)\cup\left(\sqrt{\frac{3}{5}},\infty\right)$. (c) $\sqrt{-4x^2 + 4x - 1}$ xác định $\Leftrightarrow-4x^2 + 4x - 1\ge0\Leftrightarrow-(2x - 1)^2\ge0\Leftrightarrow(2x - 1)^2\le0\Leftrightarrow2x - 1 = 0\Leftrightarrow x = \frac{1}{2}$. ĐKXĐ: $x = \frac{1}{2}$. TXĐ: $D = \left\{\frac{1}{2}\right\}$. (d) $\dfrac{1}{\sqrt{x^2 + x - 2}}$ xác định $\Leftrightarrow x^2 + x - 2 > 0\Leftrightarrow(x - 1)(x + 2) > 0\Leftrightarrow x > 1$ hoặc $x < -2$. ĐKXĐ: $x > 1$ hoặc $x < -2$. TXĐ: $D = (-\infty,-2)\cup(1,\infty)$.
+	(a) $\sqrt{2 - x^2}$ xác định $\Leftrightarrow2 - x^2\ge0\Leftrightarrow x^2\le2\Leftrightarrow|x|\le\sqrt{2}\Leftrightarrow-\sqrt{2}\le x\le\sqrt{2}$. ĐKXĐ: $-\sqrt{2}\le x\le\sqrt{2}$. TXĐ: $D = [-\sqrt{2},\sqrt{2}]$. (b) $\frac{x}{\sqrt{5x^2 - 3}}$ xác định $\Leftrightarrow 5x^2 - 3 > 0\Leftrightarrow x^2 > \frac{3}{5}\Leftrightarrow|x| > \sqrt{\frac{3}{5}}\Leftrightarrow x > \sqrt{\frac{3}{5}}$ hoặc $x < -\sqrt{\frac{3}{5}}$. ĐKXĐ: $x > \sqrt{\frac{3}{5}}$ hoặc $x < -\sqrt{\frac{3}{5}}$. TXĐ: $D = \left(-\infty,-\sqrt{\frac{3}{5}}\right)\cup\left(\sqrt{\frac{3}{5}},\infty\right)$. (c) $\sqrt{-4x^2 + 4x - 1}$ xác định $\Leftrightarrow-4x^2 + 4x - 1\ge0\Leftrightarrow-(2x - 1)^2\ge0\Leftrightarrow(2x - 1)^2\le0\Leftrightarrow2x - 1 = 0\Leftrightarrow x = \frac{1}{2}$. ĐKXĐ: $x = \frac{1}{2}$. TXĐ: $D = \left\{\frac{1}{2}\right\}$. (d) $\frac{1}{\sqrt{x^2 + x - 2}}$ xác định $\Leftrightarrow x^2 + x - 2 > 0\Leftrightarrow(x - 1)(x + 2) > 0\Leftrightarrow x > 1$ hoặc $x < -2$. ĐKXĐ: $x > 1$ hoặc $x < -2$. TXĐ: $D = (-\infty,-2)\cup(1,\infty)$.
 \end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 5., p. 6]
@@ -217,8 +240,12 @@
 \end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 6., p. 6]
-	Cho $a,b,c\in\mathbb{Q}$ thỏa mãn điều kiện $ab + bc + ca = 1$. Chứng minh $\sqrt{(a^2 + 1)(b^2 + 1)(c^2 + 1)}\in\mathbb{Q}$.
+	Cho $a,b,c\in\mathbb{Q}$ thỏa mãn $ab + bc + ca = 1$. Chứng minh $A = \sqrt{(a^2 + 1)(b^2 + 1)(c^2 + 1)}\in\mathbb{Q}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$a^2 + 1 = a^2 + ab + bc + ca = (a + b)(a + c)$, $b^2 + 1 = b^2 + ab + bc + ca = (b + c)(b + a)$, $c^2 + 1 = c^2 + ab + bc + ca = (c + a)(c + b)$, nên $A = \sqrt{(a + b)(a + c)(b + c)(b + a)(c + a)(c + b)} = \sqrt{(a + b)^2(b + c)^2(c + a)^2} = |(a + b)(b + c)(c + a)|$. Có: $a,b,c\in\mathbb{Q}\Rightarrow A = |(a + b)(b + c)(c + a)|\in\mathbb{Q}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 7., p. 6--7]
 	(a) Tìm giá trị lớn nhất của biểu thức $A = \sqrt{-x^2 + x + \frac{3}{4}}$. (b) Tìm giá trị nhỏ nhất của biểu thức $B = \sqrt{4x^4 - 4x^2(x + 1) + (x + 1)^2 + 9}$. (c) Tìm giá trị nhỏ nhất của biểu thức $C = \sqrt{25x^2 - 20x + 4} + \sqrt{25x^2}$.
