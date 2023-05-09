@@ -1,6 +1,6 @@
 from math import *
-file_in = open("root.INP")
-file_out = open("root.OUT", "w")
+file_in = open("root.inp")
+file_out = open("root.out", "w")
 a = file_in.readline()
 b = file_in.readline()
 c = file_in.readline()
