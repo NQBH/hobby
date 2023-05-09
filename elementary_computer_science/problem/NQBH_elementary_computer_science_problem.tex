@@ -120,18 +120,85 @@
 \section{Algebraic Expression -- Biểu Thức Đại Số}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 1., p. 15, Vũng Tàu 2020]
-	Cho $a,b,c\in\mathbb{N}^\star$. \emph{Yêu cầu:} Tính giá trị của biểu thức $S = \dfrac{a^2 + b^2 + c^2}{abc} + \sqrt{abc}$. \emph{Dữ liệu vào:} File \verb|ROOT.INP| chứa 3 số nguyên dương $a,b,c$. Mỗi số trên 1 dòng. \emph{Kết quả:} Ghi vào File \verb|ROOT.OUT| kết quả $S$ tính được (làm tròn lấy 2 chữ số sau phần thập phân).
+	Cho $a,b,c\in\mathbb{N}^\star$. \emph{Yêu cầu:} Tính giá trị của biểu thức $S = \dfrac{a^2 + b^2 + c^2}{abc} + \sqrt{abc}$.
+	\begin{itemize}
+		\item \emph{Dữ liệu vào:} File \verb|root.inp| chứa 3 số nguyên dương $a,b,c$. Mỗi số trên 1 dòng.
+		\item \emph{Kết quả:} Ghi vào File \verb|root.out| kết quả $S$ tính được (làm tròn lấy 2 chữ số sau phần thập phân). E.g.,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\texttt{root.inp} & \texttt{root.out} \\
+				\hline
+				2 & 4.25 \\
+				1 &  \\
+				2 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
 \end{baitoan}
-Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}root.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.INP}{root.INP}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.OUT}{root.OUT}.
+Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}root.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.inp}{root.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.out}{root.out}.
+\begin{verbatim}
+	from math import *
+	file_in = open("root.inp")
+	file_out = open("root.out", "w")
+	a = file_in.readline()
+	b = file_in.readline()
+	c = file_in.readline()
+	a = int(a)
+	b = int(b)
+	c = int(c)
+	S = (a**a + b**b + c**c)/(a*b*c) + sqrt(a*b*c)
+	S = str(round(S,2))
+	file_out.write(S)
+	file_in.close()
+	file_out.close()
+\end{verbatim}
 
 \begin{luuy}
 	Tương tự, ta có thể tính hầu như bất kỳ hàm số $f(a,b,c)$ 3 biến $a,b,c$ với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python. Tổng quát hơn, ta có thể tính bất kỳ hàm số nhiều biến $f(x_1,x_2,\ldots,x_n)$ với $x_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}^\star$ là các biến, với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python.
 \end{luuy}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 2., p. 19, Bắc Giang 2020]
-	Nhà An có 1 trang trại rộng lớn. Do sở thích của An nên bố An chỉ nuôi gà \& chó. 1 hôm bố An đố con gái nhà mình nuôi bao nhiêu gà, bao nhiêu chó? Bố An cho biết nhà có tổng số gà \& chó là $x$ con. Do số lượng nhiều \& khó đếm từng loại nên An chỉ đếm được tổng số chân của gà \& chó là $y$ chân. Giúp An trả lời câu đố của bố. \emph{Dữ liệu vào:} đọc từ file văn bản \verb|TOANCO.INP| gồm 2 số nguyên dương $x,y$ trên 1 dòng. 2 số cách nhau 1 khoảng trống ($x\le10^5$, $y\le4\cdot10^5$). \emph{Kết quả:} ghi ra file văn bản \verb|TOANCO.OUT| gồm 2 số tương ứng là số gà \& số chó tìm được. 2 số cách nhau 1 khoảng trống. Giả sử bài toán luôn có nghiệm.
+	Nhà An có 1 trang trại rộng lớn. Do sở thích của An nên bố An chỉ nuôi gà \& chó. 1 hôm bố An đố con gái nhà mình nuôi bao nhiêu gà, bao nhiêu chó? Bố An cho biết nhà có tổng số gà \& chó là $x$ con. Do số lượng nhiều \& khó đếm từng loại nên An chỉ đếm được tổng số chân của gà \& chó là $y$ chân. Giúp An trả lời câu đố.
+	\begin{itemize}
+		\item \emph{Dữ liệu vào:} đọc từ file văn bản \verb|toanco.inp| gồm 2 số nguyên dương $x,y$ trên 1 dòng. 2 số cách nhau 1 khoảng trống ($x\le10^5$, $y\le4\cdot10^5$).
+		\item \emph{Kết quả:} ghi ra file văn bản \verb|toanco.out| gồm 2 số tương ứng là số gà \& số chó tìm được. 2 số cách nhau 1 khoảng trống. Giả sử bài toán luôn có nghiệm.
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\texttt{toanco.inp} & \texttt{toanco.out} \\
+				\hline
+				36 100 & 22 14 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}toanco.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.inp}{toanco.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.out}{toanco.out}.
+\begin{verbatim}
+	file_in = open("toanco.inp")
+	file_out = open("toanco.out", "w")
+	s = file_in.readline()
+	s = s.split()
+	x = int(s[0])
+	y = int(s[1])
+	a = int(2*x - y/2)
+	b = int(y/2 - x)
+	file_out.write(str(a) + " " + str(b))
+	file_in.close()
+	file_out.close()
+\end{verbatim}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 3., p. 20, Yên Bái 2020]
+	Viết chương trình nhập vào $2$ số nguyên $a,b\in\mathbb{Z}$, $0 < a < b$. (a) Tìm \& tính tổng các số nguyên tố của dãy số từ $a$ đến $b$. (b) Xuất ra màn hình các số chia hết cho $5$ của dãy số từ $a$ đến $b$. (c) \emph{(Bội của $n\in\mathbb{N}^\star$)} Xuất ra màn hình các số chia hết cho $n$ của dãy số từ $a$ đến $b$ với $n\in\mathbb{N}^\star$ được nhập từ bàn phím. E.g., nhập $a = 6$, $b = 22$. Kết quả tổng các số nguyên tố trong dãy số từ $6$ đến $22$: $7 + 11 + 13 + 17 + 19 = 67$. Các số chia hết cho $5$ của dãy số từ $6$ đến $22$: $10,15,20$.
 \end{baitoan}
 
+\begin{baitoan}[\cite{VietSTEM2021}, 4., p. 22, Hải Dương 2020]
+	\emph{Số mạnh mẽ} là số khi nó chia hết cho 1 số nguyên tố thì cũng chia hết cho cả bình phương của số nguyên tố đó, i.e., $a\in\mathbb{N}^\star$ là số mạnh mẽ $\Leftrightarrow$ ($a\divby p\Rightarrow a\divby p^2$, $\forall p$: prime). E.g., $25$ là số mạnh mẽ, vì nó chia hết cho số nguyên tố $5$ \& chia hết cho cả $5^2 = 25$. Viết chương trình liệt kê các số mạnh mẽ không vượt quá $1000$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
@@ -144,6 +211,34 @@ Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_comput
 	\item Để sử dụng các hàm toán học trong Python, cần import thư viện \texttt{math} vào chương trình: \texttt{from math import *}
 	\item Để mở file dữ liệu vào \texttt{prob.INP} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.OUT} để thay đổi dữ liệu trong file: \texttt{file = open("prob.INP")} \& \texttt{file2 = open("prob.OUT", "w")}.
 \end{enumerate}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{Olympic30-4_2010_Tin_Hoc}, 1., p. 5, Connect]
+	Cho $n$ số nguyên dương $a_1,a_2,\ldots,a_n$, $n\in\mathbb{N}$, $1 < n\le100$, $0 < a_i\le10^9$, $\forall i = 1,2,\ldots,n$. Từ các số nguyên này người ta tạo ra 1 số nguyên mới bằng cách kết nối tất cả các số đã cho viết liên tiếp nhau. E.g., với $n = 4$ \& các số $12,34,567,890$ ta có thể tạo ra các số mới như sau: $1234567890$, $3456789012$, $8905673412$, $\ldots$ Dễ thấy có $4! = 24$ cách tạo mới như vậy. Trong trường hợp này, số lớn nhất có thể tạo thành là $8905673412$.
+	\begin{itemize}
+		\item \emph{Yêu cầu:} Cho $n$ \& các số $a_1,a_2,\ldots,a_n$. Xác định số lớn nhất có thể kết nối được theo quy tắc trên.
+		\item \emph{Dữ liệu vào:} Cho trong file văn bản \verb|connect.inp| gồm $n + 1$ dòng. Dòng đầu tiên ghi số nguyên $n$. Trong các dòng còn lại, dòng thứ $i + 1$ ghi số $a_i$.
+		\item \emph{Dữ liệu ra:} Ghi vào file văn bản \verb|connect.out| số lớn nhất được kết nối thành từ các số ban đầu. E.g.,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\texttt{connect.inp} & \texttt{connect.out} \\
+				\hline
+				4 & 8905673412 \\
+				12 &  \\
+				34 &  \\
+				567 &  \\
+				890 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
 
 %------------------------------------------------------------------------------%
 
