@@ -1,8 +1,10 @@
 from math import *
 a = int(input("Enter an integer a: "))
 b = int(input("Enter an integer b: "))
+n = int(input("Enter an positive integer n: "))
 sum = 0
-s = ""
+s5 = ""
+sn = ""
 # Function: Check prime 
 def is_prime(x):
 	if x == 1:
@@ -14,6 +16,8 @@ def is_prime(x):
 
 for i in range (a, b + 1):
 	if is_prime(i): sum += i
-	if i % 5 == 0: s += str(i) + ", "
+	if i % 5 == 0: s5 += str(i) + ", "
+	if i % n == 0: sn += str(i) + ", "
 print(sum)
-print(s[:len(s) - 2])
+print(s5[:len(s5) - 2])
+print(sn[:len(sn) - 2])
