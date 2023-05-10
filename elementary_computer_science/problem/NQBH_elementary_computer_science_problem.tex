@@ -51,7 +51,14 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Basic Problems}
+\section{Notes on Python Commands}
+
+\begin{enumerate}
+	\item Để sử dụng các hàm toán học trong Python, cần import thư viện \texttt{math} vào chương trình: \texttt{from math import *}
+	\item Để mở file dữ liệu vào \texttt{prob.INP} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.OUT} để thay đổi dữ liệu trong file: \texttt{file = open("prob.inp")} \& \texttt{file2 = open("prob.out", "w")}.
+\end{enumerate}
+
+\section{Problems in Elementary Mathematics}
 
 \begin{baitoan}[Even vs. odd]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
@@ -110,10 +117,6 @@
 \begin{baitoan}
 	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $m$ được nhập từ bàn phím có phải là lũy thừa bậc $n$ của 1 số tự nhiên hay không với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
-
-%------------------------------------------------------------------------------%
-
-\section{Number Theory -- Số Học}
 
 %------------------------------------------------------------------------------%
 
@@ -192,6 +195,31 @@ Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_comput
 	file_out.close()
 \end{verbatim}
 
+\begin{baitoan}[\cite{VietSTEM2021}, 4., p. 26, Quãng Ngãi 2020, Lãi suất-- Interest rate]
+	1 người gửi tiền vào ngân hàng có kỳ hạn là $c$ tháng với lãi suất mỗi tháng là $k$\emph{\%}, số tiền gửi ban đầu là $A$ (đơn vị triệu đồng). 
+	\begin{itemize}
+		\item {\sf Yêu cầu:} Tính số tiền người đó nhận được sau $t$ tháng. Biết tiền lãi mỗi tháng được cộng dồn vào tiền gốc, nếu nhận tiền trước kỳ hạn thì số tiền được tính với lãi suất không kỳ hạn là $h$\emph{\%} của số tiền ban đầu $A$ nhân với số tháng đã gửi. Trong trường hợp rút tiền sau kỳ hạn thì số tháng sau kỳ hạn sẽ được tính với lãi suất không kỳ hạn là $h$\emph{\%} so với số tiền thu được đã qua kỳ hạn.
+		\item {\sf Dữ liệu vào:} Tệp văn bản \verb|bl2.inp| ghi $5$ số kỳ hạn $c$ (nếu $c = 0$ là gửi không kỳ hạn), thời gian gửi $t$, số tiền ban đầu $A$, lãi suất có kỳ hạn $k$, lãi suất không kỳ hạn $h$, các số cách nhau 1 ký tự trắng.
+		\item {\sf Dữ liệu ra:} Tệp văn bản \verb|bl2.out| ghi $1$ số là số tiền nhận được (làm tròn đến $1$ số lẻ sau dấu chấm thập phân). E.g.,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{bl2.inp} & \texttt{bl2.out} \\
+				\hline
+				12 13 100 1.0 0.2 & 112.9 \\
+				\hline
+				0 10 100 1.0 0.2 & 102.0 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Number Theory -- Số Học}
+
 \begin{baitoan}[\cite{VietSTEM2021}, 3., p. 20, Yên Bái 2020, Tổng nguyên tố]
 	Viết chương trình nhập vào $2$ số nguyên $a,b\in\mathbb{Z}$, $0 < a < b$. (a) Tìm \& tính tổng các số nguyên tố của dãy số từ $a$ đến $b$. (b) Xuất ra màn hình các số chia hết cho $5$ của dãy số từ $a$ đến $b$. (c) \emph{(Bội của $n\in\mathbb{N}^\star$)} Xuất ra màn hình các số chia hết cho $n$ của dãy số từ $a$ đến $b$ với $n\in\mathbb{N}^\star$ được nhập từ bàn phím. E.g., nhập $a = 6$, $b = 22$. Kết quả tổng các số nguyên tố trong dãy số từ $6$ đến $22$: $7 + 11 + 13 + 17 + 19 = 67$. Các số chia hết cho $5$ của dãy số từ $6$ đến $22$: $10,15,20$.
 \end{baitoan}
@@ -269,21 +297,77 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 \begin{nhanxet}[Mở rộng từ dãy hữu hạn sang chuỗi]
 	Bài toán trên có thể mở rộng ra cho chuỗi (series) số nguyên $(a_n)_{i=1}^\infty\subset\mathbb{Z}$, chuỗi số thực $(a_n)_{i=1}^\infty\subset\mathbb{R}$, \& chuỗi số phức $(a_n)_{i=1}^\infty\subset\mathbb{C}$. Đương nhiên, 1 chương trình máy tính chỉ có thể lặp (e.g., \texttt{for, while}) hữu hạn lần chứ không thể lặp vô hạn lần (infinite loop error) nên ta chỉ có thể tính tổng riêng $S_m$ của chuỗi $S$, e.g.,
 	\begin{align*}
-		S_m\coloneqq\sum_{i=1}^m a_i\to S\coloneqq\sum_{i=1}^\infty a_i\mbox{ as } n\to\infty,\mbox{ i.e. } \lim_{m\to\infty} S_m = S\mbox{ if } S\in\overline{\mathbb{R}}.
+		S_m\coloneqq\sum_{i=1}^m a_i\to S\coloneqq\sum_{i=1}^\infty a_i\mbox{ as } n\to\infty,\mbox{ i.e. } \lim_{m\to\infty} S_m = S\mbox{ if } S\in\overline{\mathbb{R}},
 	\end{align*}
+	trong đó $\overline{\mathbb{R}}\coloneqq\mathbb{R}\cup\{\pm\infty\}$ ký hiệu tập số thực mở rộng bao gồm tập số thực, âm- \& dương vô cực.
 \end{nhanxet}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 5., p. 26, Nghệ An 2019, Nguyên tố -- Prime, Goldbach conjecture]
+	Minh đố An: Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho.
+	\begin{itemize}
+		\item {\sf Yêu cầu:} Viết chương trình \textsc{Pascal, Python, C\texttt{/}C++} giúp An trả lời câu hỏi của Minh.
+		\item {\sf Dữ liệu vào:} Tệp văn bản \verb|prime.inp|: Dòng đầu tiên chứa $n\in\mathbb{N}^\star$ tương ứng số test. $n$ dòng tiếp theo, mỗi dòng chứa 1 số $k$, i.e., $k_i$, $i = 1,2,\ldots,n$.
+		\item {\sf Dữ liệu ra:} Tệp văn bản \verb|prime.out| gồm $n$ dòng tương ứng $n$ kết quả. Mỗi kết quả hiển thị tổng 2 số nguyên tố bằng số $k$ nhập vào. E.g.,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{prime.inp} & \texttt{prime.out} \\
+				\hline
+				2 & $8 = 5 + 3$ \\
+				8 & $24 = 19 + 5$ \\
+				24 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 6., p. 27, Tây Ninh 2019, Số hoàn hảo -- Perfect number]
+	\emph{Số hoàn hảo} là 1 số tự nhiên mà tổng tất cả các ước tự nhiên thực sự của nó bằng chính nó. Trong đó ước thực sự của 1 số là các ước dương không bằng số đó. Lập trình nhập vào 1 số tự nhiên có $2$ chữ số bất kỳ. In ra màn hình thông báo số vừa nhập có phải là số hoàn hảo hay không? Nếu là số hoàn hảo thì in tất cả các ước của số đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 7., p. 27, Đồng Nai 2020, Số may mắn -- Lucky number]
+	Để động viên thành tích học tập xuất sắc của các em học sinh lớp 6-3 trong năm học 2019--2020, thầy giáo chủ nhiệm đã chuẩn bị các món quà được đánh số từ $1$ đến $n$. Sau đó thầy giáo sẽ cho các em lên bốc thăm để nhận món quà may mắn của mình. Đầu tiên thầy giáo sẽ ghi tất cả số nguyên lẻ từ $1$ đến $n$, sau đó sẽ ghi tất cả các số nguyên chẵn từ $2$ đến $n$ (theo thứ tự tăng dần) để tạo thành 1 dãy số phần thưởng. Mỗi bạn sẽ bốc thăm 1 số $k$ ứng với con số của món quà mình đạt được.
+	\begin{itemize}
+		\item {\sf Yêu cầu:} In số của món quà học sinh đạt được.
+		\item {\sf Dữ liệu vào:} Dòng duy nhất ghi số nguyên $n$ \& $k$, $1\le k\le n\le1000$.
+		\item {\sf Dữ liệu ra:} In số của món quà học sinh đạt được:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|lucky_number.inp| & \verb|lucky_number.out| \\
+				\hline
+				10 6 & 2 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 8., p. 27, Ninh Bình 2019, Ước chung lớn nhất ƯCLN -- greatest common divisor gcd]
+	Nhập vào $3$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} của $3$ số này. E.g., nhập vào $3$ số: $4,6,12$ thì kết quả \emph{ƯCLN} là $2$.
+\end{baitoan}
+
+\begin{baitoan}[Bội chung nhỏ nhất BCNN -- least common multiplier lcd]
+	Nhập vào $n\in\mathbb{N}^\star$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} \& \emph{BCNN} của $n$ số này.
+\end{baitoan}
+
+
+
+%------------------------------------------------------------------------------%
+
+\section{Problems in Elementary Physics}
+
+%------------------------------------------------------------------------------%
+
+\section{Problems in Elementary Chemistry}
 
 %------------------------------------------------------------------------------%
 
 \section{Resources}
 \cite{VietSTEM2021, VietSTEM2022, TLGK_chuyen_Tin_quyen_1, TLGK_chuyen_Tin_quyen_2, TLGK_chuyen_Tin_quyen_3}.
-
-\section{Notes on Python Commands}
-
-\begin{enumerate}
-	\item Để sử dụng các hàm toán học trong Python, cần import thư viện \texttt{math} vào chương trình: \texttt{from math import *}
-	\item Để mở file dữ liệu vào \texttt{prob.INP} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.OUT} để thay đổi dữ liệu trong file: \texttt{file = open("prob.inp")} \& \texttt{file2 = open("prob.out", "w")}.
-\end{enumerate}
 
 %------------------------------------------------------------------------------%
 
