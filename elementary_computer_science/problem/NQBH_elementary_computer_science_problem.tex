@@ -421,6 +421,154 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 
 \section{Algorithm -- Thuật Toán}
 
+\subsection{Recursion algorithm -- Thuật toán đệ quy}
+Đệ quy (recursion) là phương pháp dùng trong các chương trình máy tính trong đó có 1 hàm tự gọi chính nó.
+
+\begin{baitoan}[\cite{VietSTEM2021}, p. 91, Giai thừa -- Factorial $n!$]
+	Tính $n! = \prod_{i=1}^n i = 1\cdot2\cdots(n - 1)n$.
+	\begin{itemize}
+		\item {\sf Input:} Dòng đầu là số lượng test. Mỗi dòng tiếp theo gồm 1 số $n\in\mathbb{N}$.
+		\item {\sf Output:} Với mỗi test, in ra $n!$ theo mẫu:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{factorial.inp} & \texttt{factorial.out} \\
+				\hline
+				2 & $3! = 6$ \\
+				3 & $4! = 24$ \\
+				4 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 1., p. 92, Hàm $f91$ của McCarthy -- McCarthy's $f91$ function]
+	McCarthy là 1 nhà khoa học máy tính nổi tiếng, ông đã định nghĩa hàm đệ quy $f91:\mathbb{Z}\to\mathbb{Z}$ như sau:
+	\begin{equation*}
+		f91(n) = \left\{\begin{split}
+			&f91(f91(n + 11)),&&\mbox{if } n\le100,\\
+			&n -1,&&\mbox{if } n\ge101.
+		\end{split}\right.
+	\end{equation*}
+	Viết 1 chương trình tính toán hàm McCarthy's f91.
+	\begin{itemize}
+		\item {\sf Input:} File input chứa 1 dãy các số nguyên dương, mỗi số không quá $1000$. Mỗi số trên 1 dòng.
+		\item {\sf Output:} Hiện ra theo định dạng trong ví dụ sau:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|McCarthy_f91_function.inp| & \verb|McCarthy_f91_function.out| \\
+				\hline
+				500 & f91(500) = 490 \\
+				91 & f91(91) = 91 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+See, e.g., \href{https://en.wikipedia.org/wiki/McCarthy_91_function}{Wikipedia\texttt{/}McCarthy 91 function}.
+
+\begin{baitoan}[\cite{VietSTEM2021}, 2., p. 93, Chỉnh hợp -- Arrangement $A_n^k$]
+	Tìm tất cả các chỉnh hợp chập $k$ của $n$ phần tử từ $1$ đến $n$, $0 < k\le n < 10$.
+	\begin{itemize}
+		\item {\sf Input:} File input chứa 1 dòng gồm $n,k\in\mathbb{N}$.
+		\item {\sf Output:} In ra số chỉnh hợp tìm được \& liệt kê các chỉnh hợp, giữa các test là 1 dòng trắng, e.g.,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|l|l|}
+				\hline
+				\texttt{arrangement.inp} & \texttt{arrangement.out} & \texttt{arrangement.inp} & \texttt{arrangement.out} \\
+				\hline
+				1 3 & 3 & 2 3 & 6 \\
+				& 11 &  & 1 2 \\
+				& 13 &  & 1 3 \\
+				& 33 &  & 2 1 \\
+				&  &  & 2 3 \\
+				&  &  & 3 1 \\
+				&  &  & 3 2 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 3., p. 93, Hoán vị -- Permutation $P_n = n!$]
+	Viết chương trình in ra tất cả các hoán vị của $n\in\mathbb{N}^\star$ được nhập từ bàn phím, e.g.,
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|l|}
+			\hline
+			\texttt{permutation.inp} & \texttt{permutation.out} \\
+			\hline
+			2 & 1 2 \\
+			& 2 1 \\
+			\hline
+			3 & 1 2 3 \\
+			& 1 3 2 \\
+			& 2 1 3 \\
+			& 2 3 1 \\
+			& 3 2 1 \\
+			& 3 1 2 \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 5., p. 94, Tổ hợp -- Combinatoric $C_n^k$]
+	Tìm tất cả các tổ hợp chập $k$ của $n$ phần tử từ $1$ đến $n$, $0 < k\le n < 10$.
+	\begin{itemize}
+		\item {\sf Input:} File input có dòng đầu gồm 1 số tự nhiên \texttt{ntest} là số lượng test của file \verb|combinatoric.inp|. Mỗi test 1 dòng gồm $2$ số $n,k\in\mathbb{Z}$. 
+		\item {\sf Output:} Với mỗi test, in ra số tổ hợp tìm được \& liệt kê các tổ hợp, giữa các test là 1 dòng trắng. E.g.,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{combinatoric.inp} & \texttt{combinatoric.out} \\
+				\hline
+				2 & 3 \\
+				1 3 & 1 \\
+				2 3 & 2 \\
+				& 3 \\
+				& \\
+				& 3 \\
+				& 1 2 \\
+				& 1 3 \\
+				& 2 3 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 4., pp. 93--94, Trò chơi số học -- Number theory game]
+	1 trò chơi phổ biến của trẻ em với bảng $n\times n$ ô $2\le n\le5$. Trong mỗi ô chứa 1 số có $1$ chữ số từ $1$ tới $9$. Với 1 số số cho trước, điền các số còn lại vào ô sao cho tổng các hàng ngang bằng nhau \& bằng tổng các hàng dọc.
+	\begin{itemize}
+		\item {\sf Input:} \verb|number_theory_game.inp|: Số đầu tiên là 1 số nguyên \texttt{ntest} là số lượng test của bài, mỗi test gồm có: Dòng đầu tiên là số $n$. Tiếp theo là ma trận $n\times n$ trong đó số $0$ là ô trắng cần điền.		
+		\item {\sf Output:} \verb|number_theory_game.out|: Với mỗi test, nếu có thể tìm ra đáp án thỏa mãn quy luật của bảng thì in ra ma trận $n\times n$ 1 cách điền bất kỳ. Nếu không có kết quả nào in ra 1 chuỗi: \texttt{"cannot find."}. Giữa các test cách nhau 1 dòng trắng. E.g.,
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|number_theory_game.inp| & \verb|number_theory_game.out| \\
+				\hline
+				1 & 1 4 5 \\
+				3 & 6 3 1 \\
+				1 0 5 & 3 3 4 \\
+				0 3 0 & \\
+				3 0 4 & \\
+				\hline
+			\end{tabular}
+		\end{table}		
+	\end{itemize}
+\end{baitoan}
+	
+%------------------------------------------------------------------------------%
+
+\subsection{Search algorithm -- Thuật toán tìm kiếm}
+
 %------------------------------------------------------------------------------%
 
 \section{Problem in Elementary Physics -- Bài Toán Tin Học Trong Vật Lý Sơ Cấp}
