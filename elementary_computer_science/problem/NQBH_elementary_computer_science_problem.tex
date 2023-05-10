@@ -55,10 +55,10 @@
 
 \begin{enumerate}
 	\item Để sử dụng các hàm toán học trong Python, cần import thư viện \texttt{math} vào chương trình: \texttt{from math import *}
-	\item Để mở file dữ liệu vào \texttt{prob.INP} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.OUT} để thay đổi dữ liệu trong file: \texttt{file = open("prob.inp")} \& \texttt{file2 = open("prob.out", "w")}.
+	\item Để mở file dữ liệu vào \texttt{prob.inp} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.out} để thay đổi dữ liệu trong file: \texttt{file = open("prob.inp")} \& \texttt{file2 = open("prob.out", "w")}.
 \end{enumerate}
 
-\section{Problems in Elementary Mathematics}
+\section{Problems in Elementary Mathematics  -- Bài Toán Tin Học Trong Toán Học Sơ Cấp}
 
 \begin{baitoan}[Even vs. odd]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
@@ -354,20 +354,36 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 	Nhập vào $n\in\mathbb{N}^\star$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} \& \emph{BCNN} của $n$ số này.
 \end{baitoan}
 
+%------------------------------------------------------------------------------%
 
+\section{Character \& String -- Xâu \& Chuỗi}
+
+\begin{baitoan}[\cite{VietSTEM2021}, 1., p. 28, Tây Ninh 2019, Số đảo ngược -- Reversed number]
+	Tìm số đảo ngược $y$ của 1 số $x\in\mathbb{Z}$ biết $y$ gồm các chữ số của $x$ \& viết theo thứ tự ngược lại. Xuất ra kết quả là số $y\mod19$. {\sf Dữ liệu:} $x\in\mathbb{N}^\star$. {\sf Kết quả:} $y\mod19$ với $y$ là số đảo ngược của $x$.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|l|c|}
+			\hline
+			\verb|reversed_number.inp| & \verb|reversed_number.out| & Giải thích \\
+			\hline
+			123 & 17 & Đảo ngược của 123 là 321 \& $321\mod19 = 17$ \\
+			\hline
+		\end{tabular}
+	\end{table}
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
-\section{Problems in Elementary Physics}
+\section{Problem in Elementary Physics -- Bài Toán Tin Học Trong Vật Lý Sơ Cấp}
 
 %------------------------------------------------------------------------------%
 
-\section{Problems in Elementary Chemistry}
+\section{Problem in Elementary Chemistry -- Bài Toán Tin Học Trong Hóa Học Sơ Cấp}
 
 %------------------------------------------------------------------------------%
 
 \section{Resources}
-\cite{VietSTEM2021, VietSTEM2022, TLGK_chuyen_Tin_quyen_1, TLGK_chuyen_Tin_quyen_2, TLGK_chuyen_Tin_quyen_3}.
+\cite{TLGK_chuyen_Tin_quyen_1, TLGK_chuyen_Tin_quyen_2, TLGK_chuyen_Tin_quyen_3, Knuth1997, VietSTEM2021, VietSTEM2022}.
 
 %------------------------------------------------------------------------------%
 
