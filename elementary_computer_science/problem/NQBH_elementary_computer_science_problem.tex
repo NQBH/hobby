@@ -687,6 +687,64 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 
 %------------------------------------------------------------------------------%
 
+\section{Google Kickstart Round A 2020}
+Watch \href{https://www.youtube.com/watch?v=uGrBHohIgQY}{YouTube\texttt{/}William Lin\texttt{/}Winning Google Kickstart Round A 2020}.
+
+\begin{problem}[Google Kickstart Round A 2020, Allocation]
+	There are $n$ houses for sale. The $i$th house costs $a_i$ dollars to buy. You have a budget of $b$ dollars to spend. What is the maximum number of houses you can buy?
+	\begin{itemize}
+		\item {\sf Input:} The 1st line of the input gives the number of test cases, $t$. $t$ test cases follow. Each test case begins with a single line containing the 2 integers $n,b$. The 2nd line contains $n$ integers. The $i$th integer is $a_i$, the cost of the $i$th house.
+		\item {\sf Output:} For each test case, output 1 line containing \verb|Case #x: y|, where \texttt{x} is the test case number (starting from $1$) \& \texttt{y} is the maximum number of houses you can buy.
+		\item {\sf Limits:} Time limit: \emph{15 s\texttt{/}test set}. Memory limit: \emph{1GB}. $1\le t\le100$, $1\le b\le10^5$, $1\le a_i\le1000$, $\forall i = 1,2,\ldots,n$. Test set 1: $1\le n\le100$. Test set 2: $1\le n\le10^5$.
+		\item {\sf Sample:}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{allocation.inp} & \texttt{allocation.out} \\
+				\hline
+				3 & Case \#1: 2 \\
+				4 100 & Case \#2: 3 \\
+				20 90 40 90 & Case \#3: 0 \\
+				4 50 & \\
+				30 30 10 10 & \\
+				3 300 & \\
+				999 999 999 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{problem}
+
+\begin{problem}[Google Kickstart Round A 2020, Plates]
+	Dr. Patel has $n$ stacks of plates. Each stack contains $k$ plates. Each plate has a positive beauty value, describing how beautiful it looks. Dr. Patel would like to take exactly $p$ plates to use for dinner tonight. If he would like to take a plate in a stack, he must also take all of the plates above it in that stack as well. Help Dr. Patel pick the $p$ plates that would maximize the total sum of beauty values.
+	\begin{itemize}
+		\item {\sf Input:} The 1st line of the input gives the number of test cases, $t$. $t$ test cases follow. Each test case begins with a line containing the 3 integers $n,k,p$. Then, $n$ lines follow. The $i$th line contains $k$ integers, describing the beauty values of each stack of plates from top to bottom.
+		\item {\sf Output:} For each test case, output 1 line containing \verb|Case #x: y|, where \texttt{x} is the test case number (starting from $1$) \& \texttt{y} is the maximum total sum of beauty values that Dr. Patel could pick.
+		\item {\sf Limits:} Time limit: \emph{20 s\texttt{/}test set}. Memory limit: \emph{1GB}. $\le t\le100$, $1\le k\le30$, $1\le p\le nk$. The beauty values are between $1$ \& $100$, inclusive. Test set 1: $1\le n\le 3$. Test set 2: $1\le n\le50$.
+		\item {\sf Sample:}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{plate.inp} & \texttt{plate.out} \\
+				\hline
+				2 & Case \#1: 250 \\
+				2 4 5 & Case \#2: 180 \\
+				10 10 100 30 & \\
+				80 50 10 50 & \\
+				3 2 3 & \\
+				80 80 & \\
+				15 50 & \\
+				20 10 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{problem}
+
+%------------------------------------------------------------------------------%
+
 \section{Resources}
 \cite{TLGK_chuyen_Tin_quyen_1, TLGK_chuyen_Tin_quyen_2, TLGK_chuyen_Tin_quyen_3, Knuth1997, VietSTEM2021, VietSTEM2022}.
 
