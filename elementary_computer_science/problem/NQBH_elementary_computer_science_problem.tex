@@ -261,7 +261,7 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 	\end{itemize}
 \end{baitoan}
 
-\begin{baitoan}[\cite{VietSTEM2021}, 1., p. 25, Hải Dương 2020, Số hạnh phúc \& số buồn bã-- Happy- \& sad numbers]
+\begin{baitoan}[\cite{VietSTEM2021}, 1., p. 25, Hải Dương 2020, Số hạnh phúc \& số buồn bã -- Happy- \& sad numbers]
 	Với 1 số nguyên dương bất kỳ, thay thế số đó bằng tổng bình phương các chữ số của nó \& cứ lặp lại quá trình đó sẽ có các trường hợp sau xảy ra: Kết thúc bằng $1$ -- ta gọi số đó là \emph{số hạnh phúc\texttt{/}happy number}. Kết thúc bằng $0$ -- ta gọi số đó là \emph{số buồn bã\texttt{/}sad number}. Lặp lại vô hạn lần -- số đó không hạnh phúc cũng không buồn bã. E.g., số $44$: lần 1: $4^2 + 4^2 = 32$, lần 2: $3^2 + 2^2 = 13$, lần 3: $1^2 + 3^2 = 10$, lần 4: $1^2 + 0^2 = 1$, nên $44$ là số hạnh phúc. Viết chương trình để kiểm tra xem ngày sinh của 1 người bất kỳ có phải là số hạnh phúc không?
 \end{baitoan}
 
@@ -306,15 +306,15 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 	Các tổng $S,S_{\rm sqr},S_{\rm cb},S_{{\rm pwr},n},S_{\rm sqrt},S_{\rm cbrt},S_{{\rm rt},n},S_{\rm rcpc}$ (i.e., các tổng không có liên quan đến tính chẵn lẻ) vẫn có thể áp dụng cho các dãy số thực thay vì chỉ cho dãy số nguyên, i.e., áp dụng cho $(a_i)_{i=1}^n\subset\mathbb{R}$, $a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, thay vì chỉ cho $(a_i)_{i=1}^n\subset\mathbb{R}$, $a_i\in\mathbb{Z}$, $\forall i = 1,2,\ldots,n$, thậm chí có thể áp dụng cho các dãy số phức $(a_i)_{i=1}^n\subset\mathbb{C}$, $a_i\in\mathbb{C}$, $\forall i = 1,2,\ldots,n$.
 \end{nhanxet}
 
-\begin{nhanxet}[Mở rộng từ dãy hữu hạn sang chuỗi]
-	Bài toán trên có thể mở rộng ra cho chuỗi (series) số nguyên $(a_n)_{i=1}^\infty\subset\mathbb{Z}$, chuỗi số thực $(a_n)_{i=1}^\infty\subset\mathbb{R}$, \& chuỗi số phức $(a_n)_{i=1}^\infty\subset\mathbb{C}$. Đương nhiên, 1 chương trình máy tính chỉ có thể lặp (e.g., \texttt{for, while}) hữu hạn lần chứ không thể lặp vô hạn lần (infinite loop error) nên ta chỉ có thể tính tổng riêng $S_m$ của chuỗi $S$, e.g.,
+\begin{nhanxet}[Mở rộng từ dãy hữu hạn dãy vô hạn \& chuỗi]
+	Bài toán trên có thể mở rộng từ dãy hữu hạn (finite sequence) ra dãy vô hạn (infinite sequence) các số nguyên $(a_n)_{i=1}^\infty\subset\mathbb{Z}$, dãy vô hạn các số thực $(a_n)_{i=1}^\infty\subset\mathbb{R}$, \& dãy vô hạn các số phức $(a_n)_{i=1}^\infty\subset\mathbb{C}$, cũng như các chuỗi (series) ``xác định'' (i.e., có giới hạn để có thể tính được) $S\coloneqq\sum_{i=1}^\infty a_i\in\overline{\mathbb{R}}$. Đương nhiên, 1 chương trình máy tính chỉ có thể lặp (e.g., \texttt{for, while} loops) hữu hạn lần chứ không thể lặp vô hạn lần (infinite loop error) nên ta chỉ có thể tính tổng riêng $S_m$ của 1 chuỗi $S$ xác định để xấp xỉ chuỗi $S$ tới 1 độ chính xác (tolerance) nào đó (tolerance thường có dạng $10^{-N}$ với $N\in\mathbb{N}^\star$ thích hợp), e.g.,
 	\begin{align*}
 		S_m\coloneqq\sum_{i=1}^m a_i\to S\coloneqq\sum_{i=1}^\infty a_i\mbox{ as } n\to\infty,\mbox{ i.e. } \lim_{m\to\infty} S_m = S\mbox{ if } S\in\overline{\mathbb{R}},
 	\end{align*}
 	trong đó $\overline{\mathbb{R}}\coloneqq\mathbb{R}\cup\{\pm\infty\}$ ký hiệu tập số thực mở rộng bao gồm tập số thực, âm- \& dương vô cực.
 \end{nhanxet}
 
-\begin{baitoan}[\cite{VietSTEM2021}, 5., p. 26, Nghệ An 2019, Nguyên tố -- Prime, Goldbach conjecture]
+\begin{baitoan}[\cite{VietSTEM2021}, 5., p. 26, Nghệ An 2019, Giả thuyết Goldbach cho số nguyên tố -- Goldbach conjecture for primes]
 	Minh đố An: Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} Viết chương trình \textsc{Pascal, Python, C\texttt{/}C++} giúp An trả lời câu hỏi của Minh.
