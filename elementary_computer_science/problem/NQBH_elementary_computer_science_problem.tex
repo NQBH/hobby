@@ -51,52 +51,19 @@
 
 %------------------------------------------------------------------------------%
 
-\section{Notes on Commands}
-
-\subsection{Notes on C\texttt{/}C++ commands}
-
-\subsection{Notes on Pascal commands}
-
-\subsection{Notes on Python commands}
-
-\begin{enumerate}
-	\item Để sử dụng các hàm toán học trong Python, cần import thư viện \texttt{math} vào chương trình: \texttt{from math import *}
-	\item Để mở file dữ liệu vào \texttt{prob.inp} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.out} để thay đổi dữ liệu trong file: \texttt{file = open("prob.inp")} \& \texttt{file2 = open("prob.out", "w")}.
-	\item Sắp xếp trong Python có thể thực hiện 1 cách đơn giản nhờ phương thức \texttt{sort()} hoặc \texttt{sorted()}. Cú pháp:
-	\begin{verbatim}
-		list.sort(reverse = True|False, key = myFunc)
-		list.sorted(reverse = True|False, key = myFunc)
-	\end{verbatim}
-	\item Trong Python, để lấy giá trị ngẫu nhiên, sử dụng phương thức \texttt{ranint(a, b)} với \texttt{a, b} là giới hạn của giá trị cần lấy ngẫu nhiên.
-\end{enumerate}
-
 \section{Problems in Elementary Mathematics  -- Bài Toán Tin Học Trong Toán Học Sơ Cấp}
 
 \begin{baitoan}[Even vs. odd]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
 \end{baitoan}
 
-\begin{itemize}
-	\item Pascal script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/even_odd.pas}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Pascal\texttt{/}even vs. odd}.
-	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/even_odd.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}even vs. odd}.
-\end{itemize}
-
 \begin{baitoan}[Divisible by]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để kiểm tra liệu $a\divby b$ hay không, với $a,b\in\mathbb{Z}$ được nhập từ bàn phím.
 \end{baitoan}
 
-\begin{itemize}
-	\item Pascal script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/divisible_by.pas}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Pascal\texttt{/}divisible by}.
-	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/divisible_by.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}divisible by}.
-\end{itemize}
-
 \begin{baitoan}[Triangle]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của: (a) 1 tam giác. (b) 1 tam giác nhọn. (c) 1 tam giác vuông. (d) 1 tam giác tù.
 \end{baitoan}
-
-\begin{itemize}
-	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}triangle}.
-\end{itemize}
 
 \begin{baitoan}[Polynomial equation]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để giải phương trình bậc nhất, bậc 2, bậc 3, \& bậc 4 với các hệ số thực được nhập từ bàn phím.
@@ -153,27 +120,6 @@
 		\end{table}
 	\end{itemize}
 \end{baitoan}
-Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}root.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.inp}{root.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.out}{root.out}.
-\begin{verbatim}
-	from math import *
-	file_in = open("root.inp")
-	file_out = open("root.out", "w")
-	a = file_in.readline()
-	b = file_in.readline()
-	c = file_in.readline()
-	a = int(a)
-	b = int(b)
-	c = int(c)
-	S = (a**a + b**b + c**c)/(a*b*c) + sqrt(a*b*c)
-	S = str(round(S,2))
-	file_out.write(S)
-	file_in.close()
-	file_out.close()
-\end{verbatim}
-
-\begin{luuy}
-	Tương tự, ta có thể tính hầu như bất kỳ hàm số $f(a,b,c)$ 3 biến $a,b,c$ với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python. Tổng quát hơn, ta có thể tính bất kỳ hàm số nhiều biến $f(x_1,x_2,\ldots,x_n)$ với $x_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}^\star$ là các biến, với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python.
-\end{luuy}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 2., p. 19, Bắc Giang 2020]
 	Nhà An có 1 trang trại rộng lớn. Do sở thích của An nên bố An chỉ nuôi gà \& chó. 1 hôm bố An đố con gái nhà mình nuôi bao nhiêu gà, bao nhiêu chó? Bố An cho biết nhà có tổng số gà \& chó là $x$ con. Do số lượng nhiều \& khó đếm từng loại nên An chỉ đếm được tổng số chân của gà \& chó là $y$ chân. Giúp An trả lời câu đố.
@@ -192,20 +138,6 @@ Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_comput
 		\end{table}
 	\end{itemize}
 \end{baitoan}
-Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}toanco.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.inp}{toanco.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.out}{toanco.out}.
-\begin{verbatim}
-	file_in = open("toanco.inp")
-	file_out = open("toanco.out", "w")
-	s = file_in.readline()
-	s = s.split()
-	x = int(s[0])
-	y = int(s[1])
-	a = int(2*x - y/2)
-	b = int(y/2 - x)
-	file_out.write(str(a) + " " + str(b))
-	file_in.close()
-	file_out.close()
-\end{verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 4., p. 26, Quãng Ngãi 2020, Lãi suất-- Interest rate]
 	1 người gửi tiền vào ngân hàng có kỳ hạn là $c$ tháng với lãi suất mỗi tháng là $k$\emph{\%}, số tiền gửi ban đầu là $A$ (đơn vị triệu đồng). 
@@ -277,7 +209,7 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 	\end{itemize}
 \end{baitoan}
 
-\begin{proof}[Giải]
+\begin{proof}[Hint]
 	Công thức toán học tính các tổng:
 	\begin{align*}
 		S&\coloneqq\sum_{i=1}^m a_i = a_1 + a_2 + \cdots + a_m,\ S_{\rm even}\coloneqq\sum_{i=1,\,2\mid a_i}^m a_i,\ S_{\rm odd}\coloneqq\sum_{i=1,\,2\nmid a_i}^m a_i,\\
@@ -297,22 +229,6 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 	\end{align*}
 	Dựa vào các công thức này, sử dụng vòng lặp \texttt{for} hoặc \texttt{while} để tính các tổng này.
 \end{proof}
-
-\begin{nhanxet}
-	Nếu chỉ tính tổng $S_{\rm odd}$ các số lẻ của dãy $(a_i)_{i=1}^n\subset\mathbb{Z}$ thì ta có bài toán \emph{\cite[3., p. 25, Tây Ninh 2019]{VietSTEM2021}}.
-\end{nhanxet}
-
-\begin{nhanxet}[Mở rộng $\mathbb{Z}$ ra $\mathbb{R},\mathbb{C}$]
-	Các tổng $S,S_{\rm sqr},S_{\rm cb},S_{{\rm pwr},n},S_{\rm sqrt},S_{\rm cbrt},S_{{\rm rt},n},S_{\rm rcpc}$ (i.e., các tổng không có liên quan đến tính chẵn lẻ) vẫn có thể áp dụng cho các dãy số thực thay vì chỉ cho dãy số nguyên, i.e., áp dụng cho $(a_i)_{i=1}^n\subset\mathbb{R}$, $a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, thay vì chỉ cho $(a_i)_{i=1}^n\subset\mathbb{R}$, $a_i\in\mathbb{Z}$, $\forall i = 1,2,\ldots,n$, thậm chí có thể áp dụng cho các dãy số phức $(a_i)_{i=1}^n\subset\mathbb{C}$, $a_i\in\mathbb{C}$, $\forall i = 1,2,\ldots,n$.
-\end{nhanxet}
-
-\begin{nhanxet}[Mở rộng từ dãy hữu hạn dãy vô hạn \& chuỗi]
-	Bài toán trên có thể mở rộng từ dãy hữu hạn (finite sequence) ra dãy vô hạn (infinite sequence) các số nguyên $(a_n)_{i=1}^\infty\subset\mathbb{Z}$, dãy vô hạn các số thực $(a_n)_{i=1}^\infty\subset\mathbb{R}$, \& dãy vô hạn các số phức $(a_n)_{i=1}^\infty\subset\mathbb{C}$, cũng như các chuỗi (series) ``xác định'' (i.e., có giới hạn để có thể tính được) $S\coloneqq\sum_{i=1}^\infty a_i\in\overline{\mathbb{R}}$. Đương nhiên, 1 chương trình máy tính chỉ có thể lặp (e.g., \texttt{for, while} loops) hữu hạn lần chứ không thể lặp vô hạn lần (infinite loop error) nên ta chỉ có thể tính tổng riêng $S_m$ của 1 chuỗi $S$ xác định để xấp xỉ chuỗi $S$ tới 1 độ chính xác (tolerance) nào đó (tolerance thường có dạng $10^{-N}$ với $N\in\mathbb{N}^\star$ thích hợp), e.g.,
-	\begin{align*}
-		S_m\coloneqq\sum_{i=1}^m a_i\to S\coloneqq\sum_{i=1}^\infty a_i\mbox{ as } n\to\infty,\mbox{ i.e. } \lim_{m\to\infty} S_m = S\mbox{ if } S\in\overline{\mathbb{R}},
-	\end{align*}
-	trong đó $\overline{\mathbb{R}}\coloneqq\mathbb{R}\cup\{\pm\infty\}$ ký hiệu tập số thực mở rộng bao gồm tập số thực, âm- \& dương vô cực.
-\end{nhanxet}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 5., p. 26, Nghệ An 2019, Giả thuyết Goldbach cho số nguyên tố -- Goldbach conjecture for primes]
 	Minh đố An: Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho.
