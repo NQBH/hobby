@@ -413,11 +413,34 @@ The sum of the $n$ 1st square numbers is
 
 '' -- \href{https://en.wikipedia.org/wiki/Square_number#Properties}{Wikipedia\texttt{/}square number\texttt{/}properties}
 
+\subsubsection{Square-free integer}
+
+\begin{definition}[Square-free integer]
+	In mathematics, a \emph{square-free integer} (or \emph{squarefree integer}) is an integer which is divisible by no \href{https://en.wikipedia.org/wiki/Square_number}{square number} other than $1$, i.e., its \href{https://en.wikipedia.org/wiki/Prime_factorization}{prime factorization} has exactly $1$ factor for each prime that appears in it.
+\end{definition}
+
+\begin{example}
+	$10 = 2\cdot5$ is square-free, but $18 = 2\cdot3^2$ is not, because $18\divby3^2$.
+\end{example}
+
+\begin{example}
+	The smallest positive square-free numbers are \emph{1, 2, 3, 5, 6, 7, 10, 11, 13, 14, 15, 17, 19, 21, 22, 23, 26, 29, 30, 31, 33, 34, 35, 37, 38, 39}, $\ldots$ (sequence \href{https://oeis.org/A005117}{A005117} in the \href{https://en.wikipedia.org/wiki/On-Line_Encyclopedia_of_Integer_Sequences}{OEIS}).
+\end{example}
+``Every positive integer $n\in\mathbb{N}^\star$ can be factored in a unique way as $n = \prod_{i=1}^k q_i^k$, where the $q_i$ different from one are square-free integers that are \href{https://en.wikipedia.org/wiki/Pairwise_coprime}{pairwise coprime}. This is called the \textit{square-free factorization} of $n$.
+
+To construct the square-free factorization, let $n = \prod_{j=1}^h p_j^{e_j}$ be the \href{https://en.wikipedia.org/wiki/Prime_factorization}{prime factorization} of $n$, where the $p_j$ are distinct \href{https://en.wikipedia.org/wiki/Prime_number}{prime numbers}. Then the factors of the square-free factorization are defined as $q_i = \prod_{j:e_j = i} p_j$.
+
+An integer is square-free iff $q_i = 1$ for all $i > 1$. An integer greater than 1 is the $k$th power of another integer iff $k$ is a divisor of all $i$ such that $q_i\ne1$.
+
+The use of the square-free factorization of integers is limited by the fact that its computation is as difficult as the computation of the prime factorization. More precisely every known algorithm for computing a square-free factorization computes also the prime factorization. This is a notable difference with the case of polynomials for which the same definitions can be given, but, in this case, the \href{https://en.wikipedia.org/wiki/Square-free_factorization}{square-free factorization} is not only easier to compute than the complete factorization, but it is the 1st step of all standard factorization algorithms.'' -- \href{https://en.wikipedia.org/wiki/Square-free_integer#Square-free_factorization}{Wikipedia\texttt{/}square-free integer\texttt{/}square-free factorization}
+
 \subsubsection{Figurate number}
 
 \subsubsection{Cube number}
 
 \subsubsection{Triangular number}
+
+\subsubsection{Powerful number}
 
 %------------------------------------------------------------------------------%
 
