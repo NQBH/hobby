@@ -53,6 +53,33 @@
 
 %------------------------------------------------------------------------------%
 
+\section{Algorithm \& Analysis of Algorithm --  Thuật Toán \& Phân Tích Thuật Toán}
+See, e.g, \cite[Chuyên đề 1, pp. 5--12]{TLGK_chuyen_Tin_quyen_1}.
+
+\subsection{Algorithm -- Thuật Toán}
+
+\begin{definition}
+	``In mathemmatics \& computer science, an \emph{algorithm} is a finite sequence of \href{https://en.wikipedia.org/wiki/Mathematical_proof#Nature_and_purpose}{rigorous} instructions, typically used to solve a class of specific \href{https://en.wikipedia.org/wiki/Computational_problem}{computational problems} or to perform a \href{https://en.wikipedia.org/wiki/Computation}{computation}.
+\end{definition}
+Algorithms are used as specifications for performing \href{https://en.wikipedia.org/wiki/Calculation}{calculations} \& \href{https://en.wikipedia.org/wiki/Data_processing}{data processing}. More advanced algorithms can use \href{https://en.wikipedia.org/wiki/Conditional_(computer_programming)}{conditionals} to divert the code execution through various routes (referred to as \href{https://en.wikipedia.org/wiki/Automated_decision-making}{automated decision-making}) \& deduce valid \href{https://en.wikipedia.org/wiki/Inference}{inferences} (referred to as \href{https://en.wikipedia.org/wiki/Automated_reasoning}{automated reasoning}), achieving \href{https://en.wikipedia.org/wiki/Automation}{automation} eventually. Using human characteristics as descriptors of machines in metaphorical ways as already practiced by \href{https://en.wikipedia.org/wiki/Alan_Turing}{Alan Turing} with terms e.g., ``memory'', ``search'', \& ``stimulus''.
+
+In contrast, a \href{https://en.wikipedia.org/wiki/Heuristic_(computer_science)}{heurtistic} is an approach to problem solving that may not be fully specified or may not guarantee correct or optimal results, especially in problem domains where there is no well-defined correct or optimal result.
+
+As an \href{https://en.wikipedia.org/wiki/Effective_method}{effective method}, an algorithm can be expressed within a finite amount of space \& time, \& in a well-defined formal language for calculating a function. Starting from an initial state \& initial input (perhaps \href{https://en.wikipedia.org/wiki/Empty_string}{empty}), the instructions describe a computation that, when \href{https://en.wikipedia.org/wiki/Execution_(computing)}{executed}, proceeds through a finite number of well-defined successive states, eventually producing ``output'' \& terminating at a final ending state. The transition from 1 state to the next is not necessarily \href{https://en.wikipedia.org/wiki/Deterministic}{deterministic}; some algorithms, known as \href{https://en.wikipedia.org/wiki/Randomized_algorithm}{randomized algorithms}, incorporate random input.'' -- \href{https://en.wikipedia.org/wiki/Algorithm}{Wikipedia\texttt{/}algorithm}
+
+\subsection{Analysis of Algorithm -- Phân Tích Thuật Toán}
+
+\begin{definition}
+	``In computer science, the \emph{analysis of algorithms} is the process of finding the \href{https://en.wikipedia.org/wiki/Computational_complexity}{computational complexity} of algorithms -- the amount of time, storage, or other resources needed to execute them.
+\end{definition}
+Usually, this involves determining a function that relates the size of an algorithm's input to the number of steps it takes (its \href{https://en.wikipedia.org/wiki/Time_complexity}{time complexity}) or the number of storage locations it uses (its \href{https://en.wikipedia.org/wiki/Space_complexity}{space complexity}). An algorithm is said to be efficient when this function's values are small, or grow slowly compared to a growth in the size of the input. Different inputs of the same size may cause the algorithm to have different behavior, so \href{https://en.wikipedia.org/wiki/Best,_worst_and_average_case}{best, worst, \& average case} descriptions might all be of practical interest. When not otherwise specified, the function describing the performance of an algorithm is usually an \href{https://en.wikipedia.org/wiki/Upper_bound}{upper bound}, determined from the worst case inputs to the algorithm.
+
+The term ``analysis of algorithms'' was coined by \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donald Knuth}. Algorithm analysis is an important part of a broader \href{https://en.wikipedia.org/wiki/Computational_complexity_theory}{computational complexity theory}, which provides theoretical estimates for the resources needed by any algorithm which solves a given \href{https://en.wikipedia.org/wiki/Computational_problem}{computational problem}. These estimates provide an insight into reasonable directions of search for \href{https://en.wikipedia.org/wiki/Algorithmic_efficiency}{efficient algorithms}.
+
+'' -- \href{https://en.wikipedia.org/wiki/Analysis_of_algorithms}{Wikipedia\texttt{/}analysis of algorithms}
+
+%------------------------------------------------------------------------------%
+
 \section{Competitive Programming CP}
 
 %------------------------------------------------------------------------------%
@@ -98,6 +125,10 @@ where the latter form is based on the \textit{geometric progression formula}.
 \begin{example}
 	$12 = 2^2\cdot3\Rightarrow\sigma(12) = \frac{2^3 - 1}{2 - 1}\cdot\frac{3^2 - 1}{3 - 1} = 28$.
 \end{example}
+
+\begin{baitoan}[$\sigma(n)$]
+	Với $n\in\mathbb{Z}$ được nhập từ bàn phím, viết chương trình {\sf Pascal, Python, C\texttt{/}C++} xuất ra giá trị của hàm $\sigma(n)$ tổng tất cả các ước số của $n$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
