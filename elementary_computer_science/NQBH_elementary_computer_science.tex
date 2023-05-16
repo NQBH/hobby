@@ -58,7 +58,11 @@ See, e.g, \cite[Chuyên đề 1, pp. 5--12]{TLGK_chuyen_Tin_quyen_1}.
 
 \subsection{Algorithm -- Thuật Toán}
 
-\begin{definition}
+\begin{dinhnghia}[Thuật toán]
+	\emph{Thuật toán} là dãy hữu hạn các bước, mỗi bước mô tả chính xác các phép toán hoặc hành động cần thực hiện, để giải quyết 1 vấn đề.
+\end{dinhnghia}
+
+\begin{definition}[Algorithm]
 	``In mathemmatics \& computer science, an \emph{algorithm} is a finite sequence of \href{https://en.wikipedia.org/wiki/Mathematical_proof#Nature_and_purpose}{rigorous} instructions, typically used to solve a class of specific \href{https://en.wikipedia.org/wiki/Computational_problem}{computational problems} or to perform a \href{https://en.wikipedia.org/wiki/Computation}{computation}.
 \end{definition}
 Algorithms are used as specifications for performing \href{https://en.wikipedia.org/wiki/Calculation}{calculations} \& \href{https://en.wikipedia.org/wiki/Data_processing}{data processing}. More advanced algorithms can use \href{https://en.wikipedia.org/wiki/Conditional_(computer_programming)}{conditionals} to divert the code execution through various routes (referred to as \href{https://en.wikipedia.org/wiki/Automated_decision-making}{automated decision-making}) \& deduce valid \href{https://en.wikipedia.org/wiki/Inference}{inferences} (referred to as \href{https://en.wikipedia.org/wiki/Automated_reasoning}{automated reasoning}), achieving \href{https://en.wikipedia.org/wiki/Automation}{automation} eventually. Using human characteristics as descriptors of machines in metaphorical ways as already practiced by \href{https://en.wikipedia.org/wiki/Alan_Turing}{Alan Turing} with terms e.g., ``memory'', ``search'', \& ``stimulus''.
@@ -76,7 +80,149 @@ Usually, this involves determining a function that relates the size of an algori
 
 The term ``analysis of algorithms'' was coined by \href{https://en.wikipedia.org/wiki/Donald_Knuth}{Donald Knuth}. Algorithm analysis is an important part of a broader \href{https://en.wikipedia.org/wiki/Computational_complexity_theory}{computational complexity theory}, which provides theoretical estimates for the resources needed by any algorithm which solves a given \href{https://en.wikipedia.org/wiki/Computational_problem}{computational problem}. These estimates provide an insight into reasonable directions of search for \href{https://en.wikipedia.org/wiki/Algorithmic_efficiency}{efficient algorithms}.
 
-'' -- \href{https://en.wikipedia.org/wiki/Analysis_of_algorithms}{Wikipedia\texttt{/}analysis of algorithms}
+In theoretical analysis of algorithms it is common to estimate their complexity in the asymptotic sense, i.e., to estimate the complexity function for arbitrarily large input. \href{https://en.wikipedia.org/wiki/Big_O_notation}{Big O notation}, \href{https://en.wikipedia.org/wiki/Big-omega_notation}{Big-omega notation} \& \href{https://en.wikipedia.org/wiki/Big-theta_notation}{Big-theta notation} are used to this end. E.g., \href{https://en.wikipedia.org/wiki/Binary_search}{binary search} is said to run in a number of steps proportional to the logarithm of the size $n$ of the sorted list being searched, or in $O(\log n)$, colloquially ``in \href{https://en.wikipedia.org/wiki/Logarithmic_time}{logarithmic time}''. Usually \href{https://en.wikipedia.org/wiki/Asymptotic_analysis}{asymptotic} estimates are used because different \href{https://en.wikipedia.org/wiki/Implementation}{implementations} of the same algorithm may differ in efficiency. However the efficiencies of any 2 ``reasonable'' implementations of a given algorithm are related by a constant multiplicative factor called a \textit{hidden constant}.
+
+Exact (not asymptotic) measures of efficiency can sometimes be computed but they usually require certain assumptions concerning the particular implementation of the algorithm, called \href{https://en.wikipedia.org/wiki/Model_of_computation}{model of computation}. A model of computation may be defined in terms of an \href{https://en.wikipedia.org/wiki/Abstract_machine}{abstract computer}, e.g., \href{https://en.wikipedia.org/wiki/Turing_machine}{Turing machine}, \&\texttt{/}or by postulating that certain operations are executed in unit time. E.g., if the sorted list to which we apply binary search has $n$ elements, \& we can guarantee that each lookup of an element in the list can be done in unit time, then at most $\log_2n + 1$ time units are needed to return an answer.'' -- \href{https://en.wikipedia.org/wiki/Analysis_of_algorithms}{Wikipedia\texttt{/}analysis of algorithms}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, Ví dụ 1, p. 9]
+	Phân tích thời gian thực hiện của chương trình sau:
+	\begin{verbatim}
+		var i, j, n, s1, s2: longint;
+		begin
+		    readln(n);
+		    s1 := 0;
+		    for i := 1 to n do
+		        s1 := s1 + i;
+		    s2 := 0;
+		    for j := 1 to n do
+		        s2 := s2 + j*j;
+		    writeln('1 + 2 + ... + ', n, '=', s1);
+		    writeln('1^2 + 2^2 + ... + ', n, '^2 = ', s2);
+		end.
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, Ví dụ 2, p. 10]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		c := 0;
+		for i := 1 to 2*n do
+		    c := c + 1;
+		for i := 1 to n do
+		    for j := 1 to n do
+		        c := c + 1;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, Ví dụ 3, p. 10]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		for i := 1 to n do
+		    for j := 1 to i do
+		        c := c + 1;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.1., p. 11]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		for i := 1 to n do
+		    if i mod 2 = 0 then c := c + 1;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.2., p. 11]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		for i := 1 to n do
+		    if i mod 2 = 0 then c1 := c1 + 1
+		    else c2 := c2 + 1;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.3., p. 11]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		for i := 1 to n do
+		    if i mod 2 = 0 then
+		        for j := 1 to n do c := c + 1
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.4., p. 11]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		a := 0;
+		b := 0;
+		c := 0;
+		for i := 1 to n do
+		begin
+		    a := a + 1;
+		    b := b + i;
+		    c := c + i*i;
+		end;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.5., p. 11]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		i := n;
+		d := 0;
+		while i > 0 do
+		begin
+		    i := i - 1;
+		    d := d + i;
+		end;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.6., p. 12]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		i := 0;
+		d := 0;
+		repeat
+		    i := i + 1;
+		    if i mod 3 = 0 then d := d + i;
+		until i > n;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.7., p. 12]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		d := 0;
+		for i := 1 to n - 1 do
+		    for j := i + 1 to n do d := d + 1;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.8., p. 12]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		d := 0;
+		for i := 1 to n - 2 do
+		    for j := i + 1 to n - 1 do
+		        for k := j + 1 to n do d := d + 1;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.9., p. 12]
+	Phân tích thời gian thực hiện của đoạn chương trình sau:
+	\begin{verbatim}
+		d := 0;
+		while n > 0 do
+		begin
+		    n := n div 2;
+		    d := d + 1;
+		end;
+	\end{verbatim}
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLGK_chuyen_Tin_quyen_1}, 1.10., p. 12]
+	Cho 1 dãy số gồm $n\in\mathbb{N}^\star$ số nguyên dương, xác định xem có tồn tại 1 dãy con liên tiếp có tổng bằng $k$ hay không? (a) Đưa ra thuật toán có thời gian thực hiện $O(n^3)$. (b) Đưa ra thuật toán có thời gian thực hiện $O(n^2)$. (c) Đưa ra thuật toán có thời gian thực hiện $O(n)$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
