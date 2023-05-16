@@ -1,6 +1,6 @@
 program collection;
 uses crt;
-var n: integer;
+var a,b,n: integer;
 
 function is_prime(n: longint): boolean;
 var k: longint;
@@ -52,12 +52,30 @@ begin
 		if prime[i] = 0 then writeln(i);
 end;
 
+function gcd(a,b: longint): longint;
+var tmp: longint;
 begin
-	write('Enter the value of integer n = ');
-	readln(n);
+	while b > 0 do
+	begin
+		a := a mod b;
+		tmp := a; a := b; b := tmp;
+	end;
+	exit(a)
+end;
+
+function lcm(a,b: longint): longint;
+begin
+	exit(round(a*b/gcd(a,b)))
+end;
+
+begin
+	write('Enter the value of integer n = '); readln(n);
 	writeln(is_prime(n),' ', is_prime_modified(n));
 	list_prime(n);
 	writeln;
 	Eratosthene(n);
-	writeln
+	writeln;
+	write('Enter the value of integer a = '); readln(a);
+	write('Enter the value of integer b = '); readln(b);
+	writeln('gcd(',a,',',b,') = ',gcd(a,b), ', lcm(',a,',',b,') = ', lcm(a,b))
 end.
