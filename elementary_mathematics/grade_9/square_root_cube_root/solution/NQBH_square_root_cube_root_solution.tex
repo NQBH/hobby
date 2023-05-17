@@ -126,42 +126,129 @@
 \begin{proof}[1st giải]
 	(a) $1 < 2\Leftrightarrow\sqrt{1} = 1 < \sqrt{2}\Leftrightarrow1 + 1 < \sqrt{2} + 1\Leftrightarrow 2 < 1 + \sqrt{2}$. Vậy $2 < 1 + \sqrt{2}$. (b) $4 > 3\Leftrightarrow\sqrt{4} = 2 > \sqrt{3}\Leftrightarrow2 - 1 > \sqrt{3} - 1\Leftrightarrow1 > \sqrt{3} - 1$. Vậy $1 > \sqrt{3} - 1$. (c) $31 > 25\Leftrightarrow\sqrt{31} > \sqrt{25} = 5\Leftrightarrow2\sqrt{31} > 2\cdot5 = 10$. Vậy $2\sqrt{31} > 10$. (d) $11 < 16\Leftrightarrow\sqrt{11} < \sqrt{16} = 4\Leftrightarrow-3\sqrt{11} > -3\cdot4 = -12$. Vậy $-3\sqrt{11} > -12$.
 \end{proof}
-Có thể bình phương 2 vế của 2 biểu thức cần so sánh như sau:
+Có thể bình phương 2 vế của 2 biểu thức cần so sánh như sau (đương nhiên sẽ tốn công hơn nhưng bù lại tự nhiên hơn Cách 1 đã được ``tỉa gọt'', i.e., giấu các bước suy luận lòng vòng ngoài nháp để trình bày lời giải `chỉ 1 dòng biến đổi tương đương'):
 \begin{proof}[2nd giải]
-	(a) $(\sqrt{2} + 1)^2 = (\sqrt{2})^2 + 2\sqrt{2} + 1 = 3 + 2\sqrt{2} > 3 + 2\sqrt{1} = 3 + 2 = 5 > 4 = 2^2\Rightarrow\sqrt{2} + 1 > 2$. (b) $(\sqrt{3} - 1)^2 = (\sqrt{3})^2 - 2\sqrt{3} + 1^2 = 4 - 2\sqrt{3}$.
+	(a) $(\sqrt{2} + 1)^2 = (\sqrt{2})^2 + 2\sqrt{2} + 1 = 3 + 2\sqrt{2} > 3 + 2\sqrt{1} = 3 + 2 = 5 > 4 = 2^2\Rightarrow\sqrt{2} + 1 > 2$. (b) $(\sqrt{3} - 1)^2 = (\sqrt{3})^2 - 2\sqrt{3} + 1^2 = 4 - 2\sqrt{3} < 4 - \sqrt{3}\cdot\sqrt{3} = 4 - 3 = 1$, trong đó đã sử dụng $-2 < -\sqrt{3}$. Vậy $1 > \sqrt{3} - 1$. (c) $(2\sqrt{31})^2 = 2^2(\sqrt{31})^2 = 4\cdot31 = 124 > 100 = 10^2\Rightarrow2\sqrt{31} > 10$. Vậy $2\sqrt{31} > 10$. (d) $(3\sqrt{11})^2 = 3^2(\sqrt{11})^2 = 9\cdot11 = 99 < 144 = 12^2\Rightarrow3\sqrt{11} < 12\Leftrightarrow-3\sqrt{11} > -12$. Vậy $-3\sqrt{11} > -12$.
 \end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 6., p. 6]
 	\emph{Đ\texttt{/}S?} (a) Căn bậc 2 của $0.36$ là $0.6$. (b) Căn bậc 2 của $0.36$ là $0.06$. (c) $\sqrt{0.36} = 0.6$. (d) Căn bậc 2 của $0.36$ là $0.6$ \& $-0.6$. (e) $\sqrt{0.36} = \pm0.6$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) S: Căn bậc 2 của 0.36 là $\pm0.6$ (chứ không phải mỗi 0.6). (b) S: Căn bậc 2 của 0.36 là 0.6 (chứ không phải 0.06). (c) Đ: $\sqrt{0.36} = 0.6$. (d) Đ: Căn bậc 2 của $0.36$ là $0.6$ \& $-0.6$. (e) S: $\sqrt{0.36} = 0.6$ vì $-\sqrt{0.36} = -0.6$ \& $\pm\sqrt{0.36} = \pm0.6$ mới đúng.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 7., p. 6]
 	Trong các số $\sqrt{(-5)^2},\sqrt{5^2},-\sqrt{5^2},-\sqrt{(-5)^2}$, số nào là căn bậc 2 số học của $25$?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Có $\sqrt{(-5)^2} = \sqrt{25} = 5$, $\sqrt{5^2} = \sqrt{25} = 5$, $-\sqrt{5^2} = -\sqrt{25} = -5$, $-\sqrt{(-5)^2} = -\sqrt{25} = -5$, mà căn bậc 2 số học của 25 là 5 nên suy ra $\sqrt{(\pm5)^2}$ là căn bậc 2 số học của 25.
+\end{proof}
+
+\begin{luuy}
+	Cả 4 số $\sqrt{(-5)^2},\sqrt{5^2},-\sqrt{5^2},-\sqrt{(-5)^2}$ đều là căn bậc 2 của $5^2 = 25$, trong đó $\sqrt{(\pm5)^2} = \sqrt{25} = 5 > 0$ là căn bậc 2 số học của $5^2 = 25$.
+\end{luuy}
 
 \begin{baitoan}[Mở rộng \cite{SBT_Toan_9_tap_1}, 7., p. 6]
 	Trong các số $\sqrt{(-a)^2},\sqrt{a^2},-\sqrt{a^2},-\sqrt{(-a)^2}$, số nào là căn bậc 2 số học của $a^2$ với $a\in\mathbb{R}$ bất kỳ?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Có $\sqrt{(-a)^2} = \sqrt{a^2} = |a|$, $\sqrt{a^2} = \sqrt{a^2} = |a|$, $-\sqrt{a^2} = -\sqrt{a^2} = -|a|$, $-\sqrt{(-a)^2} = -\sqrt{a^2} = -|a|$, mà căn bậc 2 số học của $a^2$ là $a$ nên suy ra $\sqrt{(\pm a)^2}$ là căn bậc 2 số học của $a^2$.
+\end{proof}
+
+\begin{luuy}
+	Cả 4 số $\sqrt{(-a)^2},\sqrt{a^2},-\sqrt{a^2},-\sqrt{(-a)^2}$ đều là căn bậc 2 của $a^2$, trong đó $\sqrt{(\pm a)^2} = \sqrt{a^2} = |a|\ge0$ là căn bậc 2 số học của $a^2$, $\forall a\in\mathbb{R}$.
+\end{luuy}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 8., p. 6]
 	Chứng minh: $\sqrt{1^3 + 2^3} = 1 + 2$, $\sqrt{1^3 + 2^3 + 3^3} = 1 + 2 + 3$, $\sqrt{1^3 + 2^3 + 3^3 + 4^3} = 1 + 2 + 3 + 4$. Viết tiếp 1 số đẳng thức tương tự. 
 \end{baitoan}
-Công thức tính tổng lập phương của $n$ số nguyên dương đầu tiên:
-\begin{align*}
-	\sum_{i=1}^n i^3 = 1^3 + 2^3 + \cdots + n^3 = \left(\sum_{i=1}^n i\right)^2 = (1 + 2 + \cdots + n)^3 = \left(\frac{n(n + 1)}{2}\right)^2 = \frac{n^2(n + 1)^2}{4},\ \forall n\in\mathbb{N}^\star.
-\end{align*}
+
+\begin{proof}[Chứng minh]
+	$\sqrt{1^3 + 2^3} = \sqrt{1 + 8} = \sqrt{9} = 3 = 1 + 2$, $\sqrt{1^3 + 2^3 + 3^3} = \sqrt{1 + 8 + 27} = \sqrt{36} = 6 = 1 + 2 + 3$, $\sqrt{1^3 + 2^3 + 3^3 + 4^3} = \sqrt{1 + 8 + 27 + 64} = \sqrt{100} = 10 = 1 + 2 + 3 + 4$. Ta có các đẳng thức:
+	\begin{align*}
+		\sqrt{1^3} &= 1,\\
+		\sqrt{1^3 + 2^3} &= 1 + 2,\\
+		\sqrt{1^3 + 2^3 + 3^3} &= 1 + 2 + 3,\\
+		\sqrt{1^3 + 2^3 + 3^3 + 4^3} &= 1 + 2 + 3 + 4,\\
+		\sqrt{1^3 + 2^3 + 3^3 + 4^3 + 5^3} &= 1 + 2 + 3 + 4 + 5,\\
+		\sqrt{1^3 + 2^3 + 3^3 + 4^3 + 5^3 + 6^3} &= 1 + 2 + 3 + 4 + 5 + 6,\\
+		\sqrt{1^3 + 2^3 + 3^3 + 4^3 + 5^3 + 6^3 + 7^3} &= 1 + 2 + 3 + 4 + 5 + 6 + 7,\\
+		\sqrt{1^3 + 2^3 + 3^3 + 4^3 + 5^3 + 6^3 + 7^3 + 8^3} &= 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8,\\
+		\sqrt{1^3 + 2^3 + 3^3 + 4^3 + 5^3 + 6^3 + 7^3 + 8^3 + 9^3} &= 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9,\\
+		\sqrt{1^3 + 2^3 + 3^3 + 4^3 + 5^3 + 6^3 + 7^3 + 8^3 + 9^3 + 10^3} &= 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10.
+	\end{align*}
+	Dự đoán đẳng thức tổng quát:
+	\begin{align*}
+		\sqrt{\sum_{i=1}^n i^3} = \sqrt{1^3 + 2^3 + \cdots + n^3} = \sum_{i=1}^n i = 1 + 2 + \cdots + n = \frac{n(n + 1)}{2},\ \forall n\in\mathbb{N}^\star.
+	\end{align*}
+	Đẳng thức này đúng \& có thể được chứng minh bằng phương pháp quy nạp toán học.
+\end{proof}
+
+\begin{luuy}
+	Công thức tính tổng lập phương của $n$ số nguyên dương đầu tiên:
+	\begin{align}
+		\label{sum of 1st n cubes}
+		\sum_{i=1}^n i^3 = 1^3 + 2^3 + \cdots + n^3 = \left(\sum_{i=1}^n i\right)^2 = (1 + 2 + \cdots + n)^2 = \left(\frac{n(n + 1)}{2}\right)^2 = \frac{n^2(n + 1)^2}{4},\ \forall n\in\mathbb{N}^\star.
+	\end{align}
+\end{luuy}
+Ta có thể kiểm nghiệm công thức trên bằng máy tính:
+
+\begin{baitoan}
+	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} tính: (a) tổng $n$ số nguyên dương đầu tiên. (b) tổng bình phương của $n$ số nguyên dương đầu tiên. (c) tổng lập phương của $n$ số nguyên dương đầu tiên. (d) Từ câu (a) \& (c), kiểm tra đẳng thức \eqref{sum of 1st n cubes}. (e) tổng lũy thừa bậc $m\in\mathbb{R}$ của $n$ số nguyên dương đầu tiên\footnote{Lũy thừa bậc thực của 1 số thực, i.e., $a^b$ với $a,b\in\mathbb{R}$, $a^2 + b^2\ne0$, sẽ được học ở chương trình Toán Giải tích 11.}.
+\end{baitoan}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 9., p. 6]
+	\label{SBT Toan 9 tap 1 9 p. 6}
 	Cho $a,b\in\mathbb{R}$, $a,b\ge0$. Chứng minh: (a) $a < b\Rightarrow\sqrt{a} < \sqrt{b}$. (b) $\sqrt{a} < \sqrt{b}\Rightarrow a < b$. 
 \end{baitoan}
 
+\begin{proof}[Chứng minh]
+	(a) Vì $a,b\ge0$ \& $a < b$ nên $\sqrt{a} + \sqrt{b} > \sqrt{a} + \sqrt{a} = 2\sqrt{a}\ge0$ ($\star$). Có $a < b\Rightarrow0 > a - b = (\sqrt{a})^2 - (\sqrt{b})^2 = (\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b})$ ($\star\star$). Từ ($\star$) \& ($\star\star$), suy ra $\sqrt{a} - \sqrt{b} < 0$ hay  $\sqrt{a} < \sqrt{b}$. (b) $\sqrt{a} < \sqrt{b}\Leftrightarrow\sqrt{a} - \sqrt{b} < 0$, kết hợp điều này \& ($\star$), suy ra $(\sqrt{a} + \sqrt{b})(\sqrt{a} - \sqrt{b}) < 0\Leftrightarrow a - b < 0\Leftrightarrow a < b$.
+\end{proof}
+
+\begin{luuy}
+	Từ chứng minh trên, ta thấy
+	$a - b$ \& $\sqrt{a} - \sqrt{b}$ luôn cùng dấu:
+	\begin{equation*}
+		(a - b)(\sqrt{a} - \sqrt{b}) = \left\{\begin{split}
+			&= 0,&&\mbox{if } a = b,\\
+			&> 0,&&\mbox{if } a\ne b,\\
+		\end{split}\right.,\ \forall a,b\in\mathbb{R},\,a,b\ge0.
+	\end{equation*}
+	Chặt chẽ \& ngắn gọn hơn về công thức toán học, đẳng thức trên tương đương với đẳng thức:
+	\begin{align*}
+		\operatorname{sign}(a - b) = \operatorname{sign}(\sqrt{a} - \sqrt{b}),\ \forall a,b\in\mathbb{R},\,a,b\ge0,
+	\end{align*}
+	trong đó $\operatorname{sign}:\mathbb{R}\to\{0,\pm1\}$, $x\mapsto\operatorname{sign}x$ là \emph{hàm dấu} xác định trên tập số thực $\mathbb{R}$ bởi công thức:
+	\begin{equation*}
+		\operatorname{sign}x = \left\{\begin{split}
+			&1,&&\mbox{if } x > 0,\\
+			&0,&&\mbox{if } x = 0,\\
+			-&1,&&\mbox{if } x < 0.\\
+		\end{split}\right.
+	\end{equation*}
+\end{luuy}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 10., p. 6]
+	\label{SBT Toan 9 tap 1 10 p. 6}
 	Cho $m \in\mathbb{R}$, $m > 0$. Chứng minh: (a) $m > 1\Rightarrow\sqrt{m} > 1$. (b) $m < 1\Rightarrow\sqrt{m} < 1$.
 \end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Áp dụng Bài toán \ref{SBT Toan 9 tap 1 9 p. 6} (a) lần lượt với $(a,b) = (1,m)$ \& $(a,b) = (m,1)$, ta được: (a) $m > 1\Rightarrow\sqrt{m} > \sqrt{1} = 1$. (b) $m < 1\Rightarrow\sqrt{m} < \sqrt{1} = 1$.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 11., p. 6]
 	Cho $m \in\mathbb{R}$, $m > 0$. Chứng minh: (a) $m > 1\Rightarrow m > \sqrt{m} > 1$. (b) $m < 1\Rightarrow m < \sqrt{m} < 1$.
 \end{baitoan}
+
+\begin{proof}[Chứng minh]
+	(a) Theo Bài toán \ref{SBT Toan 9 tap 1 10 p. 6} (a): $m > 1\Rightarrow\sqrt{m} > 1$. Nhân cả 2 vế của bất đẳng thức cuối với $\sqrt{m} > 0$, ta được $m > \sqrt{m}$. (b) Theo Bài toán \ref{SBT Toan 9 tap 1 10 p. 6} (b): $m < 1\Rightarrow\sqrt{m} < 1$. Nhân cả 2 vế của bất đẳng thức cuối với $\sqrt{m} > 0$, ta được $\sqrt{m}\cdot\sqrt{m} = m < \sqrt{m}$.
+\end{proof}
 
 \begin{baitoan}[Program to print out 1st $n$ square roots]
 	Với $n\in\mathbb{N}^\star$ được nhập từ bàn phím, viết chương trình {\sf Pascal, C\texttt{/}C++, Python} xuất ra: (a) Căn bậc 2 của $n$. (b) Căn bậc 2 của $n$ số nguyên dương đầu tiên. 
