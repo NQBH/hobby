@@ -224,6 +224,45 @@ Exact (not asymptotic) measures of efficiency can sometimes be computed but they
 	Cho 1 dãy số gồm $n\in\mathbb{N}^\star$ số nguyên dương, xác định xem có tồn tại 1 dãy con liên tiếp có tổng bằng $k$ hay không? (a) Đưa ra thuật toán có thời gian thực hiện $O(n^3)$. (b) Đưa ra thuật toán có thời gian thực hiện $O(n^2)$. (c) Đưa ra thuật toán có thời gian thực hiện $O(n)$.
 \end{baitoan}
 
+\subsection{Chỉnh hợp lặp}
+``Xét tập hợp hữu hạn gồm $n$ phần tử $A = \{a_1,a_2,\ldots,a_n\}$. 1 chỉnh  hợp lặp chập $k$ của $n$ phần tử là 1 bộ có thứ tự gồm $k$ phần tử của $A$, các phần tử có thể lặp lại. 1 chỉnh hợp lặp chập $k$ của $n$ có thể xem như 1 phần tử của tích Descartes $A^k$. Theo nguyên lý nhân, số tất cả các chỉnh hợp lặp chập $k$ của $n$ sẽ là $n^k$, i.e., $\overline{A}_n^k = n^k$, $\forall n,k\in\mathbb{N}^\star$.'' -- \cite[Sect. 4.7, p. 20]{TLGK_chuyen_Tin_quyen_1}
+
+\begin{luuy}
+	Đối với chỉnh hợp lặp, $k$ có thể lớn hơn $n$ chứ không nhất thiết chịu ràng buộc $1\le k\le n$ như chỉnh hợp không lặp.
+\end{luuy}
+
+\begin{baitoan}[Chỉnh hợp lặp $\overline{A}_n^k$]
+	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để tính số tất cả các chỉnh hợp lặp chập $k$ của $n$.
+\end{baitoan}
+
+\subsection{Chỉnh hợp không lặp}
+``1 chỉnh hợp không lặp chập $k$ của $n$ phần tử, $n,k\in\mathbb{N}^\star$, $1\le k\le n$, là 1 bộ có thứ tự gồm $k$ thành phần lấy từ $n$ phần tử của tập đã cho. Các thành phần không được lặp lại. Để xây dựng 1 chỉnh hợp không lặp, ta xây dựng dần từng thành phần đầu tiên. Thành phần này có $n$ khả năng lựa chọn. Mỗi thành phần tiếp theo, số khả năng lựa chọn giảm đi 1 so với thành phần đứng trước, do đó, theo nguyên lý nhân, số chỉnh hợp không lặp chập $k$ của $n$ sẽ là $\prod_{i=n-k+1}^n i = n(n - 1)\cdots(n - k + 1)$.'' -- \cite[Sect. 4.8, pp. 20--21]{TLGK_chuyen_Tin_quyen_1}
+\begin{align*}
+	A_n^k = \prod_{i=n-k+1}^n i = n(n - 1)\cdots(n - k + 1) = \frac{n!}{(n - k)!},\ \forall n,k\in\mathbb{N}^\star,\,1\le k\le n.
+\end{align*}
+
+\begin{baitoan}[Chỉnh hợp không lặp $A_n^k$]
+	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để tính số tất cả các chỉnh hợp không lặp chập $k$ của $n$.
+\end{baitoan}
+
+\subsection{Hoán vị}
+``1 hoán vị của $n\in\mathbb{N}^\star$ phần tử là 1 cách xếp thứ tự các phần tử đó. 1 hoán vị của $n$ phần tử được xem như 1 trường hợp riêng của chỉnh hợp không lặp khi $k = n$. Do đó số hoán vị của $n$ phần tử là $n!$.'' -- \cite[Sect. 4.9, p. 21]{TLGK_chuyen_Tin_quyen_1}
+
+\begin{baitoan}[Hoán vị]
+	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để tính số tất cả các hoán vị của $n$ phần tử.
+\end{baitoan}
+
+\subsection{Tổ hợp}
+``1 tổ hợp chập $k$ của $n$ phần tử, $n,k\in\mathbb{N}^\star$, $1\le k\le n$, là 1 bộ không kể thứ tự gồm $k$ thành phần khác nhau lấy từ $n$ phần tử của tập đã cho.
+\begin{align*}
+	C_n^k = \frac{A_n^k}{n!} = \prod_{i=n-k+1}^n i = n(n - 1)\cdots(n - k + 1) = \frac{n!}{(n - k)!},\ \forall n,k\in\mathbb{N}^\star,\,1\le k\le n.
+\end{align*}
+1 số tính chất: $C_n^k =  C_n^{n-k}$, $C_n^0 = C_n^n = 1$, $C_n^k = C_{n-1}^{k-1} + C_{n-1}^k$ với $0 < k < n$.'' -- \cite[Sect. 4.10, p. 21]{TLGK_chuyen_Tin_quyen_1}
+
+\begin{baitoan}[Tổ hợp không lặp $C_n^k$]
+	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để tính số tất cả các tổ hợp chập $k$ của $n$.
+\end{baitoan}
+
 %------------------------------------------------------------------------------%
 
 \section{Competitive Programming CP}
