@@ -228,7 +228,7 @@ Exact (not asymptotic) measures of efficiency can sometimes be computed but they
 ``Xét tập hợp hữu hạn gồm $n$ phần tử $A = \{a_1,a_2,\ldots,a_n\}$. 1 chỉnh  hợp lặp chập $k$ của $n$ phần tử là 1 bộ có thứ tự gồm $k$ phần tử của $A$, các phần tử có thể lặp lại. 1 chỉnh hợp lặp chập $k$ của $n$ có thể xem như 1 phần tử của tích Descartes $A^k$. Theo nguyên lý nhân, số tất cả các chỉnh hợp lặp chập $k$ của $n$ sẽ là $n^k$, i.e., $\overline{A}_n^k = n^k$, $\forall n,k\in\mathbb{N}^\star$.'' -- \cite[Sect. 4.7, p. 20]{TLGK_chuyen_Tin_quyen_1}
 
 \begin{luuy}
-	Đối với chỉnh hợp lặp, $k$ có thể lớn hơn $n$ chứ không nhất thiết chịu ràng buộc $1\le k\le n$ như chỉnh hợp không lặp.
+	Đối với chỉnh hợp lặp, $k$ có thể lớn hơn $n$, i.e., $k > n$, chứ không nhất thiết chịu ràng buộc $1\le k\le n$ như chỉnh hợp không lặp.
 \end{luuy}
 
 \begin{baitoan}[Chỉnh hợp lặp $\overline{A}_n^k$]
@@ -262,6 +262,25 @@ Exact (not asymptotic) measures of efficiency can sometimes be computed but they
 \begin{baitoan}[Tổ hợp không lặp $C_n^k$]
 	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để tính số tất cả các tổ hợp chập $k$ của $n$.
 \end{baitoan}
+
+\subsection{Fibonacci sequence -- Dãy Fibonacci}
+Số Fibonacci được xác định bởi công thức:
+\begin{equation*}
+	\left\{\begin{split}
+		F_0 &= 0,\ F_1 = 1,\\
+		F_n &= F_{n-1} + F_{n-2},\ \forall n\in\mathbb{N},\,n\ge2.
+	\end{split}\right.
+\end{equation*}
+Công thức tổng quát:
+\begin{align*}
+	F_n = \frac{1}{\sqrt{5}}\left[\left(\frac{1 + \sqrt{5}}{2}\right)^n - \left(\frac{1 - \sqrt{5}}{2}\right)^n\right],\ \forall n\in\mathbb{N}.
+\end{align*}
+
+\subsection{Catalann number -- Số Catalan}
+Số Catalan được xác định bởi công thức sau:
+\begin{align*}
+	C_n\coloneqq\frac{1}{n + 1}C_{2n}^n = \frac{(2n)!}{(n + 1)!n!},\ \forall n\ge0.
+\end{align*}
 
 %------------------------------------------------------------------------------%
 
