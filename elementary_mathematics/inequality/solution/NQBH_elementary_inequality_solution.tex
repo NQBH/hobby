@@ -55,14 +55,14 @@
 The general structure of a problem on inequality is given by:
 
 \begin{problem}
-	Let $x_i$, $\forall i = 1,2,\ldots,n$ satisfy the condition $C(x_1,x_2,\ldots,x_n) = 0$. Prove that: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Find the minimum \& maximum of $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
+	Let $x_i$, $\forall i = 1,2,\ldots,n$ satisfy the condition $C(x_1,x_2,\ldots,x_n) = 0$ \& $C_1(x_1,x_2,\ldots,x_n)\ge0$. Prove that: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Find the minimum \& maximum of $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
 \end{problem}
 Cấu trúc tổng quát của 1 bài toán bất đẳng thức:
 
 \begin{baitoan}
-	Cho các biến $x_i$, $\forall i = 1,2,\ldots,n$ thỏa mãn điều kiện $C(x_1,x_2,\ldots,x_n) = 0$. Chứng minh: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Tìm GTNN \& GTLN của biểu thức $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
+	Cho các biến $x_i$, $\forall i = 1,2,\ldots,n$ thỏa mãn điều kiện $C(x_1,x_2,\ldots,x_n) = 0$. Chứng minh: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Tìm {\rm GTNN} \& {\rm GTLN} của biểu thức $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
 \end{baitoan}
-Để nghiên cứu các bài toán bất đẳng thức \& cực trị 1 cách có hệ thống, ta sẽ nghiên cứu 1 số dạng thường gặp của các \textit{biểu thức cần tìm cực trị} $A,B$ \& đặc biệt là \textit{biểu thức điều kiện} $C$.
+Để nghiên cứu các bài toán bất đẳng thức \& cực trị 1 cách có hệ thống, ta sẽ nghiên cứu 1 số dạng thường gặp của các \textit{biểu thức cần tìm cực trị} $A,B$ \& đặc biệt là các \textit{đẳng thức điều kiện} $C$ \& \textit{bất đẳng thức điều kiện} $C_1$.
 
 %------------------------------------------------------------------------------%
 
@@ -133,10 +133,10 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 
 %------------------------------------------------------------------------------%
 
-\section{Miscellaneous}
+\section{Áp Dụng Bất Đẳng Thức Cauchy--Schwarz Để Tìm Cực Trị}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 9, p. 23]
-	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$. Tìm GTNN của biểu thức $A = \sqrt{x} + \sqrt{y}$.
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$. Tìm {\rm GTNN} của biểu thức $A = \sqrt{x} + \sqrt{y}$.
 \end{baitoan}
 
 \begin{proof}[1st proof]
@@ -156,41 +156,126 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 \end{nhanxet}
 
 \begin{luuy}
-	TXĐ của $A$ chỉ là $D_A\coloneqq\{(x,y)\in\mathbb{R}^2|x,y\ge0\}$, nhưng để điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$ có nghĩa thì cần thêm $x\ne0$, $y\ne0$, nên ta cần xét $A$ trên tập hợp $D\coloneqq\{(x,y)\in\mathbb{R}^2|x,y > 0,\,\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\}\subset D_A$. Hơn nữa, nếu viết GTNN của biểu thức $A = A(x,y)$ trên tập $D = \{(x,y)\in\mathbb{R}^2|x > 0,y > 0\}$ 1 cách chính xác về mặt toán học thì nên viết tường minh là $\min_{x,y\in\mathbb{R},\,x,y > 0} A(x,y)$ hoặc $\min_{(x,y)\in D} A(x,y)$ hoặc $\min_{x,y\in\mathbb{R},\,x,y > 0} A$ như trong 2nd proof thay vì chỉ đơn giản là $\min A$ như trong 1st proof.
+	TXĐ của $A$ chỉ là $D_A\coloneqq\{(x,y)\in\mathbb{R}^2|x,y\ge0\}$, nhưng để điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$ có nghĩa thì cần thêm $x\ne0$, $y\ne0$, nên ta cần xét $A$ trên tập hợp $D\coloneqq\{(x,y)\in\mathbb{R}^2|x,y > 0,\,\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\}\subset D_A$. Hơn nữa, nếu viết {\rm GTNN} của biểu thức $A = A(x,y)$ trên tập $D = \{(x,y)\in\mathbb{R}^2|x > 0,y > 0\}$ 1 cách chính xác về mặt toán học thì nên viết tường minh là $\min_{x,y\in\mathbb{R},\,x,y > 0} A(x,y)$ hoặc $\min_{(x,y)\in D} A(x,y)$ hoặc $\min_{x,y\in\mathbb{R},\,x,y > 0} A$ như trong 2nd proof thay vì chỉ đơn giản là $\min A$ như trong 1st proof.
 \end{luuy}
 Ta có thể mở rộng \& tổng quát bài toán trên như sau:
 
 \begin{baitoan}
-	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = m > 0$, $m\in\mathbb{R}$ cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = m > 0$, $m\in\mathbb{R}$ cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
 \end{baitoan}
 
 \begin{baitoan}
-	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} = m > 0$, $a,b,m\in\mathbb{R}$ cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} = m > 0$, $a,b,m\in\mathbb{R}$ cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
 \end{baitoan}
 
 \begin{baitoan}
-	Cho $x,y\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} + \frac{c}{z} = m > 0$, $a,b,c,m\in\mathbb{R}$ cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+	Cho $x,y\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} + \frac{c}{z} = m > 0$, $a,b,c,m\in\mathbb{R}$ cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
 \end{baitoan}
 
 \begin{baitoan}
-	Cho $n\in\mathbb{N}^\star$, $x_i\in\mathbb{R}$, $x_i > 0$, $\forall i = 1,2,\ldots,n$, thỏa mãn điều kiện $\sum_{i=1}^n \frac{a_i}{x_i} = m > 0$, $a_i,m\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+	Cho $n\in\mathbb{N}^\star$, $x_i\in\mathbb{R}$, $x_i > 0$, $\forall i = 1,2,\ldots,n$, thỏa mãn điều kiện $\sum_{i=1}^n \frac{a_i}{x_i} = m > 0$, $a_i,m\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, cho trước. Có thể tìm {\rm GTNN} \& {\rm GTLN} của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
-	Tìm GTLN \& GTNN của biểu thức $A = \sqrt{3x - 5} + \sqrt{7 - 3x}$.
+	Tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \sqrt{3x - 5} + \sqrt{7 - 3x}$.
 \end{baitoan}
 
 \begin{proof}[Giải]
-	ĐKXĐ: $\frac{5}{3}\le x\le\frac{7}{3}$. $A^2 = 3x - 5 + 7 - 3x + 2\sqrt{3x - 5}\cdot\sqrt{7 - 3x}\le2 + (3x - 5 + 7 - 3x) = 4\Rightarrow A\le2$ ($A\ge0$ vì $\sqrt{3x - 5}\ge0$, $\sqrt{7 - 3x}\ge0$). ``$=$'' $\Leftrightarrow 3x - 5 = 7 - 3x\Leftrightarrow x = 2$. Vậy $\max A = 2\Leftrightarrow x = 2$.
+	ĐKXĐ: $\frac{5}{3}\le x\le\frac{7}{3}$. $A^2 = 3x - 5 + 7 - 3x + 2\sqrt{3x - 5}\sqrt{7 - 3x}\le2 + (3x - 5 + 7 - 3x) = 4\Rightarrow A\le2$ ($A\ge0$ vì $\sqrt{3x - 5}\ge0$, $\sqrt{7 - 3x}\ge0$). ``$=$'' $\Leftrightarrow 3x - 5 = 7 - 3x\Leftrightarrow x = 2$. Mặt khác, $A^2 = 2 + 2\sqrt{3x - 5}\sqrt{7 - 3x}\ge2$. ``$=$'' $\Leftrightarrow(3x - 5)(7 - 3x) = 0\Leftrightarrow x\in\{\frac{5}{3},\frac{7}{3}\}$. Vậy $\max A = 2\Leftrightarrow x = 2$ \& $\min A = \sqrt{2}\Leftrightarrow x\in\{\frac{5}{3},\frac{7}{3}\}$.
 \end{proof}
 
 \begin{baitoan}[Mở rộng \cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
-	Biện luận theo các tham số $a,b,c,d\in\mathbb{R}$ để tìm GTLN \& GTNN của biểu thức $A = \sqrt{ax + b} + \sqrt{cx + d}$.
+	Biện luận theo các tham số $a,b,c,d\in\mathbb{R}$ để tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \sqrt{ax + b} + \sqrt{cx + d}$.
 \end{baitoan}
 
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 11, p. 25]
+	Tìm {\rm GTLN} \& {\rm GTNN} của biểu thức $A = \dfrac{\sqrt{x - 9}}{5x}$.
+\end{baitoan}
 
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 12, p. 25]
+	Tìm {\rm GTNN} của biểu thức $A = \dfrac{3x^4 + 16}{x^3}$. $A$ có {\rm GTLN} không?
+\end{baitoan}
 
-\newpage
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 13, p. 26]
+	Cho $0 < x < 2$, tìm {\rm GTNN} của biểu thức $A = \dfrac{9x}{2 - x} + \dfrac{2}{x}$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 14, p. 27]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z = 2$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2}{y + z} + \dfrac{y^2}{z + x} + \dfrac{z^2}{x + y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 63., p. 28]
+	Cho $a,x,y\in\mathbb{R}$, $a,x,y > 0$, $x + y = 2a$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{1}{x} + \dfrac{1}{y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 64., p. 28]
+	Tìm {\rm GTLN} của biểu thức $A = \sqrt{x - 5} + \sqrt{23 - x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 65., p. 28]
+	Cho $x + y = 15$, tìm {\rm GTNN}, {\rm GTLN} của biểu thức $A = \sqrt{x - 4} + \sqrt{y - 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 66., p. 28]
+	Tìm {\rm GTNN} của biểu thức $A = \dfrac{2x^2 - 6x + 5}{2x}$ với $x\in\mathbb{R}$, $x > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 67., p. 28]
+	Cho $a,b,x\in\mathbb{R}$, $a,b,x > 0$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{(x + a)(x + b)}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 68., p. 28]
+	Cho $x\in\mathbb{R}$, $x\ge0$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2 + 2x + 17}{2(x + 1)}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 69., p. 28]
+	Tìm {\rm GTNN} của biểu thức $A = \dfrac{x + 6\sqrt{x} + 36}{\sqrt{x} + 3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 70., p. 28]
+	Cho $x\in\mathbb{R}$, $x > 0$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^3 + 2000}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 71., p. 28]
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ \& $x + y\ge6$. Tìm {\rm GTNN} của biểu thức: $A = 5x + 3y + \dfrac{12}{x} + \dfrac{16}{y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 72., p. 29]
+	Cho $x,y\in\mathbb{R}$, $x > y$ \& $xy = 5$, tìm {\rm GTNN} của biểu thức $A = \dfrac{x^2 + 1.2xy + y^2}{x - y}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 73., p. 29]
+	Cho $x\in\mathbb{R}$, $x > 1$, tìm {\rm GTLN} của biểu thức $A = 4x + \dfrac{25}{x - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 74., p. 29]
+	Cho $x\in\mathbb{R}$, $0 < x < 1$, tìm {\rm GTNN} của biểu thức $A = \dfrac{3}{1 - x} + \dfrac{4}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 75., p. 29]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z\ge0$ thỏa mãn điều kiện $x + y + z = a$. (a) Tìm {\rm GTLN} của biểu thức $A = xy + yz + zx$. (b) Tìm {\rm GTNN} của biểu thức $B = x^2 + y^2 + z^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 76., p. 29]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z\ge12$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{x}{\sqrt{y}} + \dfrac{y}{\sqrt{z}} + \dfrac{z}{\sqrt{x}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 77., p. 29]
+	Cho $x,y,z\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $x + y + z = a$. Tìm {\rm GTNN} của biểu thức $A = \left(1 + \dfrac{a}{x}\right)\left(1 + \dfrac{a}{y}\right)\left(1 + \dfrac{a}{z}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 78., p. 29]
+	Cho $a,b,c\in\mathbb{R}$, $a,b,c > 0$ thỏa mãn điều kiện $a + b + c = 1$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{(1 + a)(1 + b)(1 + c)}{(1 - a)(1 - b)(1 - c)}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Uncategorized}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 79., p. 29]
+	Cho $x,y\in\mathbb{R}$ thỏa mãn điều kiện $x + y = 1$ \& $x > 0$. Tìm {\rm GTLN} của biểu thức $B = x^2y^3$.
+\end{baitoan}
+
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.1, p. 5]
 	Chứng minh: $4ab\le(a + b)^2\le2(a^2 + b^2)$, hay có thể viết dưới dạng $\frac{a^2 + b^2}{2}\ge\left(\frac{a + b}{2}\right)^2$, $ab\le\frac{(a + b)^2}{4}$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
@@ -259,9 +344,9 @@ Ta có thể mở rộng \& tổng quát bài toán trên như sau:
 	Chứng minh: $a^4 + b^4\ge ab(a^2 + b^2)$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
 
+%------------------------------------------------------------------------------%
 
-
-
+\section{Miscellaneous}
 
 %------------------------------------------------------------------------------%
 
