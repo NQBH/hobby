@@ -51,6 +51,21 @@
 
 %------------------------------------------------------------------------------%
 
+\section{Introduction}
+The general structure of a problem on inequality is given by:
+
+\begin{problem}
+	Let $x_i$, $\forall i = 1,2,\ldots,n$ satisfy the condition $C(x_1,x_2,\ldots,x_n) = 0$. Prove that: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Find the minimum \& maximum of $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
+\end{problem}
+Cấu trúc tổng quát của 1 bài toán bất đẳng thức:
+
+\begin{baitoan}
+	Cho các biến $x_i$, $\forall i = 1,2,\ldots,n$ thỏa mãn điều kiện $C(x_1,x_2,\ldots,x_n) = 0$. Chứng minh: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Tìm GTNN \& GTLN của biểu thức $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
+\end{baitoan}
+Để nghiên cứu các bài toán bất đẳng thức \& cực trị 1 cách có hệ thống, ta sẽ nghiên cứu 1 số dạng thường gặp của các \textit{biểu thức cần tìm cực trị} $A,B$ \& đặc biệt là \textit{biểu thức điều kiện} $C$.
+
+%------------------------------------------------------------------------------%
+
 \section{Cauchy-Schwarz Inequality -- Bất Đẳng Thức Cauchy-Schwarz}
 The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrightarrow x = 0$. $x^2 > 0\Leftrightarrow x\ne0$.
 
@@ -78,13 +93,13 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 	Đặt $x\coloneqq\sqrt{a}$, $y\coloneqq\sqrt{b}$, $x,y\in\mathbb{R}$, $x,y\ge0$. Có $a + b - 2\sqrt{ab} = a + b - 2\sqrt{a}\sqrt{b} = x^2 + y^2 - 2xy = (x - y)^2\ge0\Rightarrow a + b\ge2\sqrt{ab}$. ``$=$'' $\Leftrightarrow x = y\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
 \end{proof}
 
-\begin{baitoan}
-	Với $m,n,p$ nào thì bất đẳng thức $ma + nb\ge p\sqrt{ab}$ luôn đúng: (a) $\forall a,b\in\mathbb{R}$, $a,b\ge0$. (b) $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
-\end{baitoan}
-
 \begin{luuy}
 	Ở 3rd proof, ta đã sử dụng tính chất giao hoán của phép nhân \& phép khai phương: \fbox{$\sqrt{ab} = \sqrt{a}\sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b\ge0$}.
 \end{luuy}
+
+\begin{baitoan}
+	Với $m,n,p$ nào thì bất đẳng thức $ma + nb\ge p\sqrt{ab}$ luôn đúng: (a) $\forall a,b\in\mathbb{R}$, $a,b\ge0$. (b) $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
 
 \begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 3 số không âm]
 	Chứng minh:
@@ -107,9 +122,9 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 \end{baitoan}
 
 \begin{baitoan}
-	Với bộ $(m,m_1,m_2,\ldots,m_n)$ nào thì bất đẳng thức:
+	Cho $n\in\mathbb{N}^\star$. Với bộ $(m,m_1,m_2,\ldots,m_n)$ nào thì bất đẳng thức:
 	\begin{align*}
-		\sum_{i=1}^n m_ia_i\ge m\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } m_1a_1 + m_2a_2 + \cdots + m_na_n\ge m\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,
+		\sum_{i=1}^n m_ia_i\ge m\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } m_1a_1 + m_2a_2 + \cdots + m_na_n\ge m\sqrt[n]{a_1a_2\cdots a_n},
 	\end{align*}
 	đúng với: (a) $\forall a_i\in\mathbb{R}$, $a_i\ge0$, $\forall i = 1,2,\ldots,n$. (b) $\forall a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
 	Đẳng thức xảy ra khi nào?
@@ -120,6 +135,56 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 
 \section{Miscellaneous}
 
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 9, p. 23]
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$. Tìm GTNN của biểu thức $A = \sqrt{x} + \sqrt{y}$.
+\end{baitoan}
+
+\begin{proof}[1st proof]
+	Vì $x,y > 0$ nên $\frac{1}{x},\frac{1}{y},\sqrt{x},\sqrt{y} > 0$. Áp dụng bất đẳng thức Cauchy cho 2 số dương $\frac{1}{x},\frac{1}{y}$, được: $\sqrt{\frac{1}{x}\cdot\frac{1}{y}}\le\frac{1}{2}\left(\frac{1}{x} + \frac{1}{y}\right) = \frac{1}{2}\cdot\frac{1}{2} = \frac{1}{4}\Rightarrow\frac{1}{\sqrt{xy}}\le\frac{1}{4}\Rightarrow\sqrt{xy}\ge4$. Áp dụng bất đẳng thức Cauchy cho 2 số dương $\sqrt{x},\sqrt{y}$, được: $A = \sqrt{x} + \sqrt{y}\ge2\sqrt{\sqrt{x}\sqrt{y}} = 2\sqrt{\sqrt{xy}}\ge2\sqrt{4} = 4$. ``$=$'' $\Leftrightarrow x = y$ \& $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\Leftrightarrow x = y = 4$. Vậy $\min A = 4\Leftrightarrow x = y = 4$.
+\end{proof}
+
+\begin{proof}[2nd proof]
+	Áp dụng bất đẳng thức Cauchy lần lượt cho $(\sqrt{x},\sqrt{y})$ \& $\left(\frac{1}{x},\frac{1}{y}\right)$, được:
+	\begin{align*}
+		A = \sqrt{x} + \sqrt{y}\ge2\sqrt{\sqrt{x}\sqrt{y}} = 2\sqrt{\dfrac{1}{\dfrac{1}{\sqrt{x}}\cdot\dfrac{1}{\sqrt{y}}}}\ge2\sqrt{\frac{1}{\dfrac{1}{2}\left(\dfrac{1}{x} + \dfrac{1}{y}\right)}} = 2\sqrt{\dfrac{1}{\dfrac{1}{2}\cdot\dfrac{1}{2}}} = 4.
+	\end{align*}
+	``$=$'' $\Leftrightarrow \sqrt{x} = \sqrt{y}$ \& $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\Leftrightarrow x = y$ \& $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\Leftrightarrow x = y = 4$. Vậy $\min_{x,y\in\mathbb{R},\,x,y > 0} A = 4\Leftrightarrow x = y = 4$.
+\end{proof}
+
+\begin{nhanxet}
+	``Trong thí dụ trên ta đã vận dụng bất đẳng thức Cauchy--Schwarz theo 2 chiều ngược nhau. Lần thứ nhất ta đã ``làm trội'' $\sqrt{\frac{1}{x}\cdot\frac{1}{y}}$ bằng cách vận dụng $\sqrt{ab}\le\frac{a + b}{2}$ để dùng điều kiện tổng $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$, từ đó được $\sqrt{xy}\ge4$. Lần thứ 2 ta đã ``làm giảm'' tổng $\sqrt{x} + \sqrt{y}$ bằng cách vận dụng bất đẳng thức Cauchy--Schwarz theo chiều $a + b\ge2\sqrt{ab}$ để dùng kết quả $\sqrt{xy}\ge4$. Không phải lúc nào ta cũng có thể dùng trực tiếp bất đẳng thức Cauchy--Schwarz đối với các số trong đề bài.'' -- \emph{\cite[p. 24]{Tuyen_Toan_9}}
+\end{nhanxet}
+
+\begin{luuy}
+	TXĐ của $A$ chỉ là $D_A\coloneqq\{(x,y)\in\mathbb{R}^2|x,y\ge0\}$, nhưng để điều kiện $\frac{1}{x} + \frac{1}{y} = \frac{1}{2}$ có nghĩa thì cần thêm $x\ne0$, $y\ne0$, nên ta cần xét $A$ trên tập hợp $D\coloneqq\{(x,y)\in\mathbb{R}^2|x,y > 0,\,\frac{1}{x} + \frac{1}{y} = \frac{1}{2}\}\subset D_A$. Hơn nữa, nếu viết GTNN của biểu thức $A = A(x,y)$ trên tập $D = \{(x,y)\in\mathbb{R}^2|x > 0,y > 0\}$ 1 cách chính xác về mặt toán học thì nên viết tường minh là $\min_{x,y\in\mathbb{R},\,x,y > 0} A(x,y)$ hoặc $\min_{(x,y)\in D} A(x,y)$ hoặc $\min_{x,y\in\mathbb{R},\,x,y > 0} A$ như trong 2nd proof thay vì chỉ đơn giản là $\min A$ như trong 1st proof.
+\end{luuy}
+Ta có thể mở rộng \& tổng quát bài toán trên như sau:
+
+\begin{baitoan}
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{1}{x} + \frac{1}{y} = m > 0$, $m\in\mathbb{R}$ cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $x,y\in\mathbb{R}$, $x,y > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} = m > 0$, $a,b,m\in\mathbb{R}$ cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $x,y\in\mathbb{R}$, $x,y,z > 0$ thỏa mãn điều kiện $\frac{a}{x} + \frac{b}{y} + \frac{c}{z} = m > 0$, $a,b,c,m\in\mathbb{R}$ cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $n\in\mathbb{N}^\star$, $x_i\in\mathbb{R}$, $x_i > 0$, $\forall i = 1,2,\ldots,n$, thỏa mãn điều kiện $\sum_{i=1}^n \frac{a_i}{x_i} = m > 0$, $a_i,m\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$, cho trước. Có thể tìm GTNN \& GTLN của các biểu thức nào? Liệt kê \& chứng minh nhiều nhất có thể.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
+	Tìm GTLN \& GTNN của biểu thức $A = \sqrt{3x - 5} + \sqrt{7 - 3x}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{Tuyen_Toan_9}, Ví dụ 10, p. 24]
+	Biện luậnt theo các tham số $a,b,c,d\in\mathbb{R}$ để tìm GTLN \& GTNN của biểu thức $A = \sqrt{ax + b} + \sqrt{cx + d}$.
+\end{baitoan}
+
+\newpage
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.1, p. 5]
 	Chứng minh: $4ab\le(a + b)^2\le2(a^2 + b^2)$, hay có thể viết dưới dạng $\frac{a^2 + b^2}{2}\ge\left(\frac{a + b}{2}\right)^2$, $ab\le\frac{(a + b)^2}{4}$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
