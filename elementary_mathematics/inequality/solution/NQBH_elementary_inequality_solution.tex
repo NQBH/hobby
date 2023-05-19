@@ -55,19 +55,31 @@
 The general structure of a problem on inequality is given by:
 
 \begin{problem}
-	Let $x_i$, $\forall i = 1,2,\ldots,n$ satisfy the condition $C(x_1,x_2,\ldots,x_n) = 0$ \& $C_1(x_1,x_2,\ldots,x_n)\ge0$. Prove that: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Find the minimum \& maximum of $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
+	Let $x_i$, $\forall i = 1,2,\ldots,n$ satisfy the condition $C(x_1,x_2,\ldots,x_n) = 0$ \& $C^\star(x_1,x_2,\ldots,x_n)\ge0$. Prove that: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Find the minimum \& maximum of $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
 \end{problem}
 Cấu trúc tổng quát của 1 bài toán bất đẳng thức:
 
 \begin{baitoan}
 	Cho các biến $x_i$, $\forall i = 1,2,\ldots,n$ thỏa mãn điều kiện $C(x_1,x_2,\ldots,x_n) = 0$. Chứng minh: (a) $A(x_1,x_2,\ldots,x_n)\le0$. (b) $B(x_1,x_2,\ldots,x_n)\ge0$. (c) Tìm {\rm GTNN} \& {\rm GTLN} của biểu thức $A(x_1,x_2,\ldots,x_n)$ \& $B(x_1,x_2,\ldots,x_n)$.
 \end{baitoan}
-Để nghiên cứu các bài toán bất đẳng thức \& cực trị 1 cách có hệ thống, ta sẽ nghiên cứu 1 số dạng thường gặp của các \textit{biểu thức cần tìm cực trị} $A,B$ \& đặc biệt là các \textit{đẳng thức điều kiện} $C$ \& \textit{bất đẳng thức điều kiện} $C_1$.
+Để nghiên cứu các bài toán bất đẳng thức \& cực trị 1 cách có hệ thống, ta sẽ nghiên cứu 1 số dạng thường gặp của các \textit{biểu thức cần tìm cực trị} $A,B$ \& đặc biệt là các \textit{đẳng thức điều kiện} $C(x_1,x_2,\ldots,x_n) = 0$ \& \textit{bất đẳng thức điều kiện} $C^\star(x_1,x_2,\ldots,x_n)\ge0$.
 
 %------------------------------------------------------------------------------%
 
 \section{Cauchy-Schwarz Inequality -- Bất Đẳng Thức Cauchy-Schwarz}
 The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrightarrow x = 0$. $x^2 > 0\Leftrightarrow x\ne0$.
+
+\begin{baitoan}
+	Chứng minh:
+	\begin{align}
+		\label{1}
+		4ab\le2(|ab| + ab)\le(a + b)^2\le(|a| + |b|)^2\le2(a^2 + b^2),\ \forall a,b\in\mathbb{R}.
+	\end{align}
+\end{baitoan}
+
+\begin{baitoan}
+	Bất đẳng thức $(a + b)^2\ge4|ab|$ đúng khi nào?
+\end{baitoan}
 
 \begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 2 số không âm]
 	Chứng minh:
@@ -268,13 +280,30 @@ Ta có thể mở rộng \& tổng quát bài toán trên như sau:
 	Cho $a,b,c\in\mathbb{R}$, $a,b,c > 0$ thỏa mãn điều kiện $a + b + c = 1$. Tìm {\rm GTNN} của biểu thức $A = \dfrac{(1 + a)(1 + b)(1 + c)}{(1 - a)(1 - b)(1 - c)}$.
 \end{baitoan}
 
-%------------------------------------------------------------------------------%
-
-\section{Uncategorized}
-
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 79., p. 29]
 	Cho $x,y\in\mathbb{R}$ thỏa mãn điều kiện $x + y = 1$ \& $x > 0$. Tìm {\rm GTLN} của biểu thức $B = x^2y^3$.
 \end{baitoan}
+
+\begin{baitoan}[\cite{Dung_Can_Anh_BDT_8_9}, Ví dụ 1.5.1, p. 73, TS PTNK ĐHQG Tp HCM 2006]
+	Cho $x,y\in\mathbb{R}$ thỏa mãn $x + y = 2$. Chứng minh $xy(x^2 + y^2)\le2$.
+\end{baitoan}
+
+\begin{proof}[1st chứng minh]
+	Sử dụng bất đẳng thức $ab\le\frac{1}{4}(a + b)^2$ ở \eqref{1}, có: $xy(x^2 + y^2) = \frac{1}{2}(2xy)(x^2 + y^2)\le\frac{1}{8}[2xy + (x^2 + y^2)]^2 = \frac{1}{8}(x + y)^4 = 2$. ``$=$'' $\Leftrightarrow x + y = 2$ \& $2xy = x^2 + y^2\Leftrightarrow x + y = 2$ \& $(x - y)^2 = 0\Leftrightarrow x = y = 1$.
+\end{proof}
+
+\begin{proof}[2nd chứng minh]
+	Sử dụng \textit{kỹ thuật đồng bậc}, cần chứng minh $8xy(x^2 + y^2)\le(x + y)^4$ (cả 2 vế đều là bậc 4). Bất đẳng thức này đúng vì $8xy(x^2 + y^2)\le(x + y)^4\Leftrightarrow8xy(x^2 + y^2)\le x^4 + 4x^3y + 6x^2y^2 + 4xy^3 + y^4\Leftrightarrow x^4 - 4x^3y + 6x^2y^2 - 4xy^3 + y^4\ge0\Leftrightarrow(x - y)^4\ge0$ hiển nhiên đúng $\forall x,y\in\mathbb{R}$. ``$=$'' $\Leftrightarrow x = y$ \& $x + y = 2\Leftrightarrow x = y = 1$.
+\end{proof}
+Ta có thể mở rộng bài toán trên như sau:
+
+\begin{baitoan}
+	Cho $x,y,m\in\mathbb{R}$ thỏa mãn $x + y = m$. Biện luận theo tham số $m$ để tìm {\rm GTLN} \& {\rm GTNN} của: (a) $A = xy(x^2 + y^2)$. (b) $B = xy(x^3 + y^3)$. (c) $B = xy(x^4 + y^4)$. (d${}^\star$) $x^ay^a(x^b + y^b)$ với $a,b\in\mathbb{Z}$. 
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Uncategorized}
 
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.1, p. 5]
 	Chứng minh: $4ab\le(a + b)^2\le2(a^2 + b^2)$, hay có thể viết dưới dạng $\frac{a^2 + b^2}{2}\ge\left(\frac{a + b}{2}\right)^2$, $ab\le\frac{(a + b)^2}{4}$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
