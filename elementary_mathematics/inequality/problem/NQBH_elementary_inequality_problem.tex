@@ -62,29 +62,9 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 	Đẳng thức xảy ra khi nào?
 \end{baitoan}
 
-\begin{proof}[1st proof]
-	$a + b - 2\sqrt{ab} = (\sqrt{a} - \sqrt{b})^2\ge0\Rightarrow a + b\ge2\sqrt{ab}$, $\forall a,b\in\mathbb{R}$, $a,b\ge 0$. ``$=$'' $\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
-\end{proof}
-
-\begin{proof}[2nd proof]
-	$(a + b)^2 - (2\sqrt{ab})^2 = a^2 + 2ab + b^2 - 4ab = a^2 - 2ab + b^2 = (a - b)^2\ge0\Rightarrow(a + b)^2\ge(2\sqrt{ab})^2\Rightarrow a + b\ge2\sqrt{ab}$ (vì $a,b\ge0$ nên $a + b\ge0$ \& $2\sqrt{ab}\ge0$). ``$=$'' $\Leftrightarrow a = b$.
-\end{proof}
-
-\begin{luuy}
-	Ở 2nd proof, ta đã vận dụng tính chất cơ bản của căn bậc 2: \fbox{$0\le a\le b\Leftrightarrow\sqrt{a}\le\sqrt{b}$, $\forall a,b\in\mathbb{R}$}. Phiên bản chặt\emph{\texttt{/}}ngặt (strict) là: \fbox{$0\le a < b\Leftrightarrow\sqrt{a} < \sqrt{b}$, $\forall a,b\in\mathbb{R}$}. Ý nghĩa hình học của 2 tính chất này: Hình vuông nào có cạnh lớn hơn thì có diện tích lớn hơn \& ngược lại, hình vuông nào có diện tích lớn hơn thì có cạnh lớn hơn.
-\end{luuy}
-
-\begin{proof}[3rd proof]
-	Đặt $x\coloneqq\sqrt{a}$, $y\coloneqq\sqrt{b}$, $x,y\in\mathbb{R}$, $x,y\ge0$. Có $a + b - 2\sqrt{ab} = a + b - 2\sqrt{a}\sqrt{b} = x^2 + y^2 - 2xy = (x - y)^2\ge0\Rightarrow a + b\ge2\sqrt{ab}$. ``$=$'' $\Leftrightarrow x = y\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
-\end{proof}
-
 \begin{baitoan}
 	Với $m,n,p$ nào thì bất đẳng thức $ma + nb\ge p\sqrt{ab}$ luôn đúng: (a) $\forall a,b\in\mathbb{R}$, $a,b\ge0$. (b) $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
-
-\begin{luuy}
-	Ở 3rd proof, ta đã sử dụng tính chất giao hoán của phép nhân \& phép khai phương: \fbox{$\sqrt{ab} = \sqrt{a}\sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b\ge0$}.
-\end{luuy}
 
 \begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 3 số không âm]
 	Chứng minh:
@@ -124,25 +104,13 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 	Chứng minh: $4ab\le(a + b)^2\le2(a^2 + b^2)$, hay có thể viết dưới dạng $\frac{a^2 + b^2}{2}\ge\left(\frac{a + b}{2}\right)^2$, $ab\le\frac{(a + b)^2}{4}$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
 
-\begin{proof}[Hint]
-	$(a + b)^2 - 4ab = (a - b)^2\ge 0$, $2(a^2 + b^2) - (a + b)^2 = (a - b)^2\ge 0$, $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow a = b$.
-\end{proof}
-
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.2, p. 5]
 	Chứng minh: $3(ab + bc + ca)\le(a + b + c)^2\le3(a^2 + b^2 + c^2)$, hay có thể viết dưới dạng $ab + bc + ca\le\frac{1}{3}(a + b + c)^2$, $\forall a,b,c\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
 
-\begin{proof}[Hint]
-	$(a + b + c)^2 - 3(ab + bc + ca) = \frac{1}{2}\left[(a - b)^2 + (b - c)^2 + (c - a)^2\right]\ge 0$, $3(a^2 + b^2 + c^2) - (a + b + c)^2 = (a - b)^2 + (b - c)^2 + (c - a)^2\ge 0$, $\forall a,b,c\in\mathbb{R}$. ``$=$'' $\Leftrightarrow a = b = c$.
-\end{proof}
-
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.3, p. 6]
 	Chứng minh: $\frac{1}{a} + \frac{1}{b}\ge\frac{4}{a + b}$, hay có thể viết dưới dạng $\frac{1}{a + b}\le\frac{1}{4}\left(\frac{1}{a} + \frac{1}{b}\right)$, $\forall a,b > 0$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
-
-\begin{proof}[Hint]
-	$\frac{1}{a} + \frac{1}{b} - \frac{4}{a + b} = \frac{(a - b)^2}{ab(a + b)}\ge 0$, $\forall a,b > 0$. ``$=$'' $\Leftrightarrow a = b > 0$.
-\end{proof}
 
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.4, p. 6]
 	Chứng minh: $\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\ge\frac{9}{a + b + c}$, hay có thể viết dưới dạng $\frac{1}{a + b + c}\le\frac{1}{9}\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right)$, $\forall a,b,c > 0$. Đẳng thức xảy ra khi nào?
@@ -180,17 +148,9 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 	Chứng minh: $a^3 + b^3\ge ab(a + b)$, $\forall a,b\in\mathbb{R}$, $a + b\ge 0$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
 
-\begin{proof}[Hint]
-	$a^3 + b^3 - ab(a + b) = (a + b)(a - b)^2\ge 0$, $\forall a,b\in\mathbb{R}$, $a + b\ge 0$. ``$=$'' $\Leftrightarrow a = \pm b$.
-\end{proof}
-
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Mở rộng Bổ đề 1.6, p. 7]
 	Chứng minh: $a^4 + b^4\ge ab(a^2 + b^2)$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
-
-
-
-
 
 %------------------------------------------------------------------------------%
 
