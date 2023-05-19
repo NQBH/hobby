@@ -48,11 +48,77 @@
 	A problem set for elementary inequality.
 \end{abstract}
 \tableofcontents
-\newpage
 
 %------------------------------------------------------------------------------%
 
-\section{Easy Problems}
+\section{Cauchy-Schwarz Inequality -- Bất Đẳng Thức Cauchy-Schwarz}
+The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrightarrow x = 0$. $x^2 > 0\Leftrightarrow x\ne0$.
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 2 số không âm]
+	Chứng minh:
+	\begin{align*}
+		\boxed{a + b\ge2\sqrt{ab},\ \forall a,b\in\mathbb{R},\,a,b\ge 0.}
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{proof}[1st proof]
+	$a + b - 2\sqrt{ab} = (\sqrt{a} - \sqrt{b})^2\ge0\Rightarrow a + b\ge2\sqrt{ab}$, $\forall a,b\in\mathbb{R}$, $a,b\ge 0$. ``$=$'' $\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
+\end{proof}
+
+\begin{proof}[2nd proof]
+	$(a + b)^2 - (2\sqrt{ab})^2 = a^2 + 2ab + b^2 - 4ab = a^2 - 2ab + b^2 = (a - b)^2\ge0\Rightarrow(a + b)^2\ge(2\sqrt{ab})^2\Rightarrow a + b\ge2\sqrt{ab}$ (vì $a,b\ge0$ nên $a + b\ge0$ \& $2\sqrt{ab}\ge0$). ``$=$'' $\Leftrightarrow a = b$.
+\end{proof}
+
+\begin{luuy}
+	Ở 2nd proof, ta đã vận dụng tính chất cơ bản của căn bậc 2: \fbox{$0\le a\le b\Leftrightarrow\sqrt{a}\le\sqrt{b}$, $\forall a,b\in\mathbb{R}$}. Phiên bản chặt\emph{\texttt{/}}ngặt (strict) là: \fbox{$0\le a < b\Leftrightarrow\sqrt{a} < \sqrt{b}$, $\forall a,b\in\mathbb{R}$}. Ý nghĩa hình học của 2 tính chất này: Hình vuông nào có cạnh lớn hơn thì có diện tích lớn hơn \& ngược lại, hình vuông nào có diện tích lớn hơn thì có cạnh lớn hơn.
+\end{luuy}
+
+\begin{proof}[3rd proof]
+	Đặt $x\coloneqq\sqrt{a}$, $y\coloneqq\sqrt{b}$, $x,y\in\mathbb{R}$, $x,y\ge0$. Có $a + b - 2\sqrt{ab} = a + b - 2\sqrt{a}\sqrt{b} = x^2 + y^2 - 2xy = (x - y)^2\ge0\Rightarrow a + b\ge2\sqrt{ab}$. ``$=$'' $\Leftrightarrow x = y\Leftrightarrow\sqrt{a} = \sqrt{b}\Leftrightarrow a = b$.
+\end{proof}
+
+\begin{baitoan}
+	Với $m,n,p$ nào thì bất đẳng thức $ma + nb\ge p\sqrt{ab}$ luôn đúng: (a) $\forall a,b\in\mathbb{R}$, $a,b\ge0$. (b) $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{luuy}
+	Ở 3rd proof, ta đã sử dụng tính chất giao hoán của phép nhân \& phép khai phương: \fbox{$\sqrt{ab} = \sqrt{a}\sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b\ge0$}.
+\end{luuy}
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho 3 số không âm]
+	Chứng minh:
+	\begin{align*}
+		\boxed{a + b + c\ge3\sqrt[3]{abc},\ \forall a,b,c\in\mathbb{R},\,a,b,c\ge 0.}
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Với $m,n,p,q$ nào thì bất đẳng thức $ma + nb + pc\ge q\sqrt[3]{abc}$ luôn đúng: (a) $\forall a,b,c\in\mathbb{R}$, $a,b,c\ge0$. (b) $\forall a,b,c\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}[Bất đẳng thức Cauchy--Schwarz cho $n$ số không âm]
+	Chứng minh:
+	\begin{align*}
+		\sum_{i=1}^n a_i\ge n\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } a_1 + a_2 + \cdots + a_n\ge\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,\ \forall a_i\in\mathbb{R},\,a_i\ge0,\,\forall i = 1,2,\ldots,n.
+	\end{align*}
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+\begin{baitoan}
+	Với bộ $(m,m_1,m_2,\ldots,m_n)$ nào thì bất đẳng thức:
+	\begin{align*}
+		\sum_{i=1}^n m_ia_i\ge m\sqrt[n]{\prod_{i=1}^n a_i},\mbox{ i.e., } m_1a_1 + m_2a_2 + \cdots + m_na_n\ge m\sqrt[n]{a_1a_2\cdots a_n},\ \forall n\in\mathbb{N}^\star,
+	\end{align*}
+	đúng với: (a) $\forall a_i\in\mathbb{R}$, $a_i\ge0$, $\forall i = 1,2,\ldots,n$. (b) $\forall a_i\in\mathbb{R}$, $\forall i = 1,2,\ldots,n$.
+	Đẳng thức xảy ra khi nào?
+\end{baitoan}
+
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
 
 \begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.1, p. 5]
 	Chứng minh: $4ab\le(a + b)^2\le2(a^2 + b^2)$, hay có thể viết dưới dạng $\frac{a^2 + b^2}{2}\ge\left(\frac{a + b}{2}\right)^2$, $ab\le\frac{(a + b)^2}{4}$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
@@ -122,13 +188,7 @@
 	Chứng minh: $a^4 + b^4\ge ab(a^2 + b^2)$, $\forall a,b\in\mathbb{R}$. Đẳng thức xảy ra khi nào?
 \end{baitoan}
 
-\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.7, p. 7]
-	Chứng minh: $a + b\ge2\sqrt{ab}$, $\forall a,b\ge 0$. Đẳng thức xảy ra khi nào?
-\end{baitoan}
 
-\begin{baitoan}[\cite{Son_Nghiep_Trung_Can2021}, Bổ đề 1.8, p. 7]
-	Chứng minh: $a + b + c\ge3\sqrt[3]{abc}$, $\forall a,b,c\ge 0$. Đẳng thức xảy ra khi nào?
-\end{baitoan}
 
 
 
