@@ -69,6 +69,8 @@ Cấu trúc tổng quát của 1 bài toán bất đẳng thức:
 \section{Cauchy-Schwarz Inequality -- Bất Đẳng Thức Cauchy-Schwarz}
 The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrightarrow x = 0$. $x^2 > 0\Leftrightarrow x\ne0$.
 
+\textit{Ý nghĩa hình học}: Diện tích hình vuông thì không âm. Diện tích của hình vuông bằng 0 $\Leftrightarrow$ hình vuông đó suy biến thành 1 điểm. Cụ thể, công thức tính diện tích hình vuông cạnh $a$: $S = a^2$. Khi đó $S = a^2\ge0$, $\forall a\ge0$ \& $S = 0\Leftrightarrow a = 0$.
+
 \begin{baitoan}
 	Chứng minh:
 	\begin{align}
@@ -76,6 +78,18 @@ The most basic inequality: $x^2\ge0$, $\forall x\in\mathbb{R}$. $x^2 = 0\Leftrig
 		4ab\le2(|ab| + ab)\le(a + b)^2\le(|a| + |b|)^2\le2(a^2 + b^2),\ \forall a,b\in\mathbb{R}.
 	\end{align}
 \end{baitoan}
+
+\begin{proof}[1st chứng minh]
+	(a) $4ab\le2(|ab| + ab)\Leftrightarrow2ab\le2|ab|\Leftrightarrow ab\le|ab|$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow ab\ge0$. (b) $2(|ab| + ab)\le(a + b)^2\Leftrightarrow2|ab| + 2ab\le a^2 + 2ab + b^2\Leftrightarrow2|ab|\le a^2 + b^2\Leftrightarrow(|a| - |b|)^2\ge0$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow|a| = |b|$. (c) $(a + b)^2\le(|a| + |b|)^2\Leftrightarrow a^2 + 2ab + b^2\le|a|^2 + 2|a||b| + |b|^2\Leftrightarrow ab\le|ab|$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow ab\ge0$. (d) $(|a| + |b|)^2\le2(a^2 + b^2)\Leftrightarrow|a|^2 + 2|a||b| + |b|^2\le2a^2 + 2b^2\Leftrightarrow(|a| - |b|)^2\ge0$ luôn đúng $\forall a,b\in\mathbb{R}$. ``$=$'' $\Leftrightarrow|a| = |b|$.
+\end{proof}
+
+\begin{proof}[2nd chứng minh]
+	(d) Áp dụng bất đẳng thức Cauchy cho 2 số $a^2$ \& $b^2$: $a^2 + b^2\ge2\sqrt{a^2b^2} = 2|ab|$, 
+\end{proof}
+
+\begin{luuy}
+	Trị tuyệt đối của 1 số thực không nhỏ hơn số thực đó, i.e., $|x|\ge x$, $\forall x\in\mathbb{R}$. $|x| = x\Leftrightarrow x\ge0$.
+\end{luuy}
 
 \begin{baitoan}
 	Bất đẳng thức $(a + b)^2\ge4|ab|$ đúng khi nào?
