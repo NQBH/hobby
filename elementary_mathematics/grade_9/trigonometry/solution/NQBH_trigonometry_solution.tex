@@ -1,0 +1,346 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem \& Solution: Trigonometry -- Bài Tập Lượng Giác \& Lời Giải}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Hệ Thức về Cạnh \& Đường Cao Trong Tam Giác Vuông}
+Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọn thì có thể tính được các góc \& các cạnh còn lại của tam giác đó.
+
+\begin{baitoan}
+	Xét $\Delta ABC$ vuông tại $A$, cạnh huyền $BC = a$, 2 cạnh góc vuông $AC = b$, $AB = c$. Gọi $AH = h$ là đường cao ứng với cạnh huyền $BC$\footnote{$AB,AC$ là đường cao ứng với nhau.} \& $CH = b'$, $BH = c'$ lần lượt là hình chiếu của $AC, AB$ trên cạnh huyền $BC$. Chứng minh: (a) $b^2 = ab'$, $c^2 = ac'$. (b) Định lý Pythagore $a^2 = b^2 + c^2$. (c) $h^2 = b'c'$. (d) $bc = ah$. (e) $\frac{1}{h^2} = \frac{1}{b^2} + \frac{1}{c^2}$.
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	(a) $\Delta AHC\backsim\Delta BAC$ (g.g) vì 2 tam giác vuông này có chung $\widehat{C}$, nên $\frac{CH}{AC} = \frac{AC}{BC}\Rightarrow AC^2 = BC\cdot CH\Leftrightarrow b^2 = ab'$. Tương tự, $\Delta BHA\backsim\Delta BAC$ (g.g)  vì 2 tam giác vuông này có chung $\widehat{B}$, nên $\frac{BH}{AB} = \frac{AB}{BC}\Leftrightarrow AB^2 = BC\cdot BH\Leftrightarrow c^2 = ac'$. (b) Theo (a), $b^2 + c^2 = ab' + ac' = a(b' + c') = a\cdot a = a^2$. (c) Vì $\Delta AHC\backsim\Delta BAC$ \& $\Delta BHA\backsim\Delta BAC$ nên $\Delta AHC\backsim\Delta BHA$, suy ra $\frac{AH}{CH} = \frac{BH}{AH}\Rightarrow AH^2 = BH\cdot CH\Leftrightarrow h^2 = b'c'$. (d) Tính diện tích $\Delta ABC$ theo 2 cách: $S_{\Delta ABC} = \frac{1}{2}AH\cdot BC = \frac{1}{2}AB\cdot AC\Leftrightarrow AH\cdot BC = AB\cdot AC\Leftrightarrow ah = bc$. (e) $ah = bc\Leftrightarrow a^2h^2 = b^2c^2\Leftrightarrow(b^2 + c^2)h^2 = b^2c^2\Leftrightarrow\dfrac{1}{h^2} = \dfrac{b^2 + c^2}{b^2c^2} = \dfrac{1}{b^2} + \dfrac{1}{c^2}$.
+\end{proof}
+
+\begin{luuy}
+	Các hệ thức trên có thể được suy ra trực tiếp từ các tỷ số đồng dạng của bộ 3 tam giác đồng dạng: $\Delta BHA\backsim\Delta AHC\backsim\Delta BAC$. Thật vậy, $\Delta AHC\backsim\Delta BAC\Leftrightarrow\frac{AH}{AB} = \frac{HC}{AC} = \frac{AC}{BC}\Leftrightarrow\frac{h}{c} = \frac{b'}{b} = \frac{b}{a}\Rightarrow bh = b'c$, $b^2 = ab'$, \& $ah = bc$. $\Delta BHA\backsim\Delta BAC\Leftrightarrow\frac{HB}{AB} = \frac{AH}{AC} = \frac{AB}{BC}\Leftrightarrow\frac{c'}{c} = \frac{h}{b} = \frac{c}{a}\Rightarrow bc' = hc$, $ah = bc$, \& $c^2 = ac'$. $\Delta AHC\backsim\Delta BHA\Leftrightarrow\frac{AH}{BH} = \frac{CH}{AH} = \frac{AC}{AB}\Leftrightarrow\frac{h}{c'} = \frac{b'}{h} = \frac{b}{c}\Rightarrow h^2 = b'c'$, $bh = b'c$, \& $ch = bc'$. Hơn nữa, $\widehat{BAH} = \widehat{C}$ \& $\widehat{CAH}= \widehat{B}$.
+\end{luuy}
+
+\begin{dinhly}[Hệ thức giữa cạnh góc vuông \& hình chiếu của nó trên cạnh huyền]
+	Trong 1 tam giác vuông, bình phương mỗi cạnh góc vuông bằng tích của cạnh huyền \& hình chiếu của cạnh góc vuông đó trên cạnh huyền. $b^2 = ab'$, $c^2 = ac'$
+\end{dinhly}
+3 hệ thức về đường cao trong tam giác vuông:
+
+\begin{dinhly}3
+	Trong 1 tam giác vuông, bình phương đường cao ứng với cạnh huyền bằng tích 2 hình chiếu của 2 cạnh góc vuông trên cạnh huyền. $h^2 = b'c'$.
+\end{dinhly}
+
+\begin{dinhly}
+	Trong 1 tam giác vuông, tích 2 cạnh góc vuông bằng tích của cạnh huyền \& đường cao tương ứng. $bc = ah$.
+\end{dinhly}
+
+\begin{dinhly}
+	Trong 1 tam giác vuông, nghịch đảo của bình phương đường cao ứng với cạnh huyền bằng tổng nghịch đảo của bình phương 2 cạnh góc vuông. $\frac{1}{h^2} = \frac{1}{b^2} + \frac{1}{c^2}$.
+\end{dinhly}
+
+\begin{baitoan}
+	Cho $\Delta ABC$ có độ dài 2 cạnh góc vuông là $b$ \& $c$. Tính độ dài đường cao $h$ xuất phát từ đỉnh góc vuông theo $b,c$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Có $\frac{1}{h^2} = \frac{1}{b^2} + \frac{1}{c^2}\Rightarrow h^2 = \frac{b^2c^2}{b^2 + c^2}$.
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 1, p. 103]
+	Cho hình thang $ABCD$ có $\widehat{B} = \widehat{C} = 90^\circ$, 2 đường chéo vuông góc với nhau tại $H$. Biết $AB = 3\sqrt{5}$ \emph{cm}, $HA = 3$ \emph{cm}. Chứng minh: (a) $HA:HB:HC:HD = 1:2:4:8$. (b) $\dfrac{1}{AB^2} - \dfrac{1}{CD^2} = \dfrac{1}{HB^2} - \dfrac{1}{HC^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 1., p. 105]
+	Cho hình thang $ABCD$, $AB\parallel CD$, 2 đường chéo vuông góc với nhau. Biết $AC = 16$ \emph{cm}, $BD = 12$ \emph{cm}. Tính chiều cao của hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 2., p. 105]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$, đường phân giác $AD$. Biết $BH = 63$ \emph{cm}, $CH = 112$ \emph{cm}, tính $HD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 3., p. 105]
+	Cho $\Delta ABC$ vuông tại $A$. 2 đường trung tuyến $AD,BE$ vuông góc với nhau tại $G$. Biết $AB = \sqrt{6}$ \emph{cm}. Tính cạnh huyền $BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 4., p. 105]
+	Gọi $a,b,c$ là các cạnh của 1 tam giác vuông, $h$ là đường cao ứng với cạnh huyền $a$. Chứng minh tam giác có các cạnh $a + h,b + c$, \& $h$ cũng là 1 tam giác vuông.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 5., p. 105]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$. Gọi $I,K$ thứ tự là hình chiếu của $H$ trên $AB,AC$. Đặt $c = AB$, $b = AC$. (a) Tính $AI,AK$ theo $b,c$. (b) Chứng minh $\dfrac{BI}{CK} = \dfrac{c^3}{b^3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 6., p. 105]
+	Cho $\Delta ABC$, $AB = 1$, $\widehat{A} = 105^\circ$, $\widehat{B} = 60^\circ$. Trên cạnh $BC$ lấy điểm $E$ sao cho $BE = 1$. Vẽ $ED\parallel AB$, $D\in AC$. Chứng minh: $\dfrac{1}{AC^2} + \dfrac{1}{AD^2} = \dfrac{4}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 7., p. 105]
+	Cho hình chữ nhật $ABCD$, $AB = 2BC$. Trên cạnh $BC$ lấy điểm $E$. Tia $AE$ cắt đường thẳng $CD$ tại $F$. Chứng minh: $\dfrac{1}{AB^2} = \dfrac{1}{AE^2} + \dfrac{1}{4AF^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 8., p. 105]
+	Cho 3 đoạn thẳng có độ dài $a,b,c$. Dựng đoạn thẳng $x$ sao cho $\dfrac{1}{x^2} = \dfrac{1}{a^2} + \dfrac{1}{b^2} + \dfrac{1}{c^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 9., p. 105]
+	Cho hình thoi $ABCD$ có $\widehat{A} = 120^\circ$. 1 đường thẳng $d$ không cắt các cạnh của hình thoi. Chứng minh: tổng các bình phương hình chiếu của $4$ cạnh với $2$ lần bình phương hình chiếu của đường chéo $AC$ trên đường thẳng $d$ không phụ thuộc vào vị trí của đường thẳng $d$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 10., p. 106]
+	Cho $\Delta ABC$ vuông tại $A$. Từ 1 điểm $O$ ở trong tam giác ta vẽ $OD\bot BC$, $OE\bot CA$, $OF\bot AB$. Xác định vị trí của $O$ để $OD^2 + OE^2 + OF^2$ nhỏ nhất.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 1, p. 5]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$. Biết $AB:AC = 3:4$ \& $AB + AC = 21$ \emph{cm}. (a) Tính các cạnh của $\Delta ABC$. (b) Tính độ dài các đoạn $AH,BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 1, p. 5]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$. Biết $AB:AC = m:n$ \& $AB + AC = p$ \emph{cm}. (a) Tính các cạnh của $\Delta ABC$. (b) Tính độ dài các đoạn $AH,BH,CH$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 2, p. 6]
+	Cho hình thang $ABCD$ có $\widehat{A} = \widehat{D} = 90^\circ$, $\widehat{B} = 60^\circ$, $CD = 30$ \emph{cm}, $CA\bot CB$. Tính diện tích của hình thang.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, Ví dụ 3, p. 7]
+	Cho $\Delta ABC$ nhọn, đường cao $CK$, $H$ là trực tâm. Gọi $M$ là 1 điểm trên $CK$ sao cho $\widehat{AMB} = 90^\circ$. $S,S_1,S_2$ theo thứ tự là diện tích các $\Delta AMB,\Delta ABC,\Delta ABH$. Chứng minh $S = \sqrt{S_1S_2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.1., p. 7]
+	Cho $\Delta ABC$ vuông cân tại $A$ \& điểm $M$ nằm giữa $B$ \& $C$ Gọi $D,E$ lần lượt là hình chiếu của điểm $M$ lên $AB,AC$. Chứng minh $MB^2 + MC^2 = 2MA^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.2., p. 7]
+	Cho hình chữ nhật $ABCD$ \& điểm $O$ nằm trong hình chữ nhật đó. Chứng minh $OA^2 + OC^2 = OB^2 + CD^2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.3., p. 8]
+	Cho hình chữ nhật $ABCD$ có $AD = 6$ \emph{cm}, $CD = 8$ \emph{cm}. Đường thẳng kẻ từ $D$ vuông góc với $AC$ tại $E$, cắt cạnh $AB$ tại $F$. Tính độ dài các đoạn thẳng $DE,DF,AE,CE,AF,BF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.4., p. 8]
+	Cho $\Delta ABC$ có $AB = 3$  \emph{cm}, $BC = 4$ \emph{cm}, $AC = 5$ \emph{cm}. Đường cao, đường phân giác, đường trung tuyến của tam giác kẻ từ đỉnh $B$ chia tam giác thành $4$ gam giác không có điểm trong chung. Tính diện tích của mỗi tam giác đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.5., p. 8]
+	Trong 1 tam giác vuông tỷ số giữa đường cao \& đường trung tuyến kẻ từ đỉnh góc vuông bằng $40:41$. Tính độ dài các cạnh góc vuông của tam giác đó, biết cạnh huyền bằng $\sqrt{41}$ \emph{cm}.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.6., p. 8]
+	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$. Kẻ $HE\bot AB$, $HF\bot AC$. Gọi $O$ là giao điểm của $AH$ \& $EF$. Chứng minh $HB\cdot HC = 4OE\cdot OF$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.7., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.8., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.9., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.10., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.11., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.12., p. 8]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.13., p. 9]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.14., p. 9]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.15., p. 9]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.16., p. 9]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Tỷ Số Lượng Giác của Góc Nhọn}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 2, p. 107]
+	Cho $\cot\alpha = \dfrac{a^2 - b^2}{2ab}$ trong đó $\alpha$ là góc nhọn, $a > b > 0$. Tính $\cos\alpha$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 11., p. 108, định lý sin]
+	Cho $\Delta ABC$ nhọn, $BC = a$, $CA = b$, $AB = c$. Chứng minh: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C}$. Đẳng thức này còn đúng với tam giác vuông \& tam giác tù hay không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 12., p. 108]
+	Chứng minh: (a) $1 + \tan^2\alpha = \dfrac{1}{\cos^2\alpha}$. (b) $1 + \cot^2\alpha = \dfrac{1}{\sin^2\alpha}$. (c) $\cot^2\alpha - \cos^2\alpha = \cot^2\alpha\cdot\cos^2\alpha$. (d) $\dfrac{1 + \cos\alpha}{\sin\alpha} = \dfrac{\sin\alpha}{1 - \cos\alpha}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 13., p. 108]
+	Rút gọn biểu thức: (a) $A = \dfrac{1 + 2\sin\alpha\cdot\cos\alpha}{\cos^2\alpha - \sin^2\alpha}$. (b) $B = (1 + \tan^2\alpha)(1 - \sin^2\alpha) - (1 + \cot^2\alpha)(1 - \cos^2\alpha)$. (c) $C = \sin^6\alpha + \cos^6\alpha + 3\sin^2\alpha\cos^2\alpha$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 14., p. 108]
+	Tính giá trị của biểu thức $A = 5\cos^2\alpha + 2\sin^2\alpha$ biết $\sin\alpha = \frac{2}{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 15., p. 108]
+	Không dùng máy tính hoặc bảng số, tính: (a) $A = \cos^2 20^\circ + \cos^2 30^\circ + \cos^2 40^\circ + \cos^2 50^\circ + \cos^2 60^\circ + \cos^2 70^\circ$. (b) $B = \sin^2 5^\circ + \sin^2 25^\circ + \sin^2 45^\circ + \sin^2 65^\circ + \sin^2 85^\circ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 16., p. 108]
+	Cho $0^\circ < \alpha < 90^\circ$. Chứng minh: $\sin\alpha < \tan\alpha$, $\cos\alpha < \cot\alpha$. Áp dụng: (a) Sắp xếp các số sau theo thứ tự tăng dần: $\sin 65^\circ,\cos 65^\circ,\tan 65^\circ$. (b) Xác định $\alpha$ thỏa mãn điều kiện: $\tan\alpha > \sin\alpha > \cos\alpha$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 17., p. 108]
+	Cho $\Delta ABC$ vuông tại $A$. Biết $\sin B = \frac{1}{4}$, tính $\tan C$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 18., p. 108]
+	Cho biết $\sin\alpha + \cos\alpha = \frac{7}{5}$, $0^\circ < \alpha < 90^\circ$, tính $\tan\alpha$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 19., p. 109]
+	$\Delta ABC$, đường trung tuyến $AM$. Chứng minh nếu $\cot B = 3\cot C$ thì $AM = AC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 20., p. 109]
+	Cho $\Delta ABC$, trực tâm $H$ là trung điểm của đường cao $AD$. Chứng minh $\tan B\tan C = 2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 21., p. 109]
+	Cho $\Delta ABC$ nhọn, 2 đường cao $BD,CE$. Chứng minh: (a) $S_{\Delta ADE} = S_{\Delta ABC}\cos^2A$. (b) $S_{BCDE} = S_{\Delta ABC}\sin^2A$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 22., p. 109]
+	Cho $\Delta ABC$ nhọn. Từ 1 điểm $M$ nằm trong tam giác vẽ $MD\bot BC$, $ME\bot AC$, $MF\bot AB$. Chứng minh $\max\{MA,MB,MC\}\ge2\min\{MD,ME,MF\}$, trong đó $\max\{MA,MB,MC\}$ là đoạn thẳng lớn nhất trong các đoạn thẳng $MA,MB,MC$ \& $\min\{MD,ME,MF\}$ là đoạn thẳng nhỏ nhất trong các đoạn thẳng $MD,ME,MF$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Hệ Thức về Cạnh \& Góc Trong Tam Giác Vuông}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 3, p. 109]
+	Tứ giác $ABCD$ có 2 đường chéo cắt nhau tại $O$. Cho biết $\widehat{AOD} = 70^\circ$, $AC = 5.3$ \emph{cm}, $BD = 4$ \emph{cm}. Tính diện tích tứ giác $ABCD$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 23., p. 110]
+	Chứng minh: (a) Diện tích của 1 tam giác bằng nửa tích của 2 cạnh nhân với sin của góc nhọn tạo bởi các đường thẳng chứa 2 cạnh ấy. (b) Diện tích hình bình hành bằng tích của 2 cạnh kề nhân với sin của góc nhọn tạo bởi các đường thẳng chứa 2 cạnh ấy.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 24., p. 110]
+	Cho hình bình hành $ABCD$, $BD\bot BC$. Biết $AB = a$, $\widehat{A} = \alpha$, tính diện tích hình bình hành đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 25., p. 110]
+	Cho $\Delta ABC$, $\widehat{A} = 120^\circ$, $\widehat{B} = 35^\circ$, $AB = 12.25$ \emph{dm}. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 26., p. 110]
+	Cho $\Delta ABC$ nhọn, $\widehat{A} = 75^\circ$, $AB = 30$ \emph{mm}, $BC = 35$ \emph{mm}. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 27., p. 110]
+	Cho $\Delta ABC$ cân tại $A$, đường cao $BH$. Biết $BH = h$, $\widehat{C} = \alpha$. Giải $\Delta ABC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 28., p. 110]
+	Hình bình hành $ABCD$ có $\widehat{A} = 120^\circ$, $AB = a$, $BC = b$. Các đường phân giác của 4 góc cắt nhau tạo thành tứ giác $MNPQ$. Tính diện tích tứ giác $MNPQ$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 29., p. 110]
+	Cho $\Delta ABC$, các đường phân giác $AD$, đường cao $BH$, đường trung tuyến $CE$ đồng quy tại điểm $O$. Chứng minh $AC\cos A = BC\cos C$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 4, p. 111]
+	Cho $\Delta ABC$ vuông tại $A$. Gọi $M,N$ lần lượt là 2 điểm trên cạnh $AB,AC$ sao cho $AM = \frac{1}{3}AB$, $AN = \frac{1}{3}AC$. Biết độ dài $BN = \sin\alpha$, $CM = \cos\alpha$ với $0^\circ < \alpha < 90^\circ$. Tính cạnh huyền $BC$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 30., p. 112]
+	Cho $\Delta ABC$ nhọn, $BC = a$, $AC = b$, $CA = b$ trong đó $b - c = \frac{a}{k}$, $k > 1$. Gọi $h_a,h_b,h_c$ lần lượt là các đường cao hạ từ $A,B,C$. Chứng minh: (a) $\sin A = k(\sin B - \sin C)$. (b) $\frac{1}{h_a} = k\left(\frac{1}{h_b} - \frac{1}{h_c}\right)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 31., p. 112]
+	Giải $\Delta ABC$ biết $AB = 14$, $BC = 15$, $CA = 13$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 32., p. 112]
+	Cho hình hộp chữ nhật $ABCD.A'B'C'D'$. Biết $\widehat{DC'D'} = 45^\circ$, $\widehat{BC'B'} = 60^\circ$. Tính $\widehat{BC'D}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 33., p. 112]
+	Cho $\Delta ABC$, $AB = AC = 1$, $\widehat{A} = 2\alpha$, $0^\circ < \alpha < 45^\circ$. Vẽ các đường cao $AD,BE$. (a) Các tỷ số lượng giác $\sin\alpha,\cos\alpha,\sin2\alpha,\cos2\alpha$ được biểu diễn bởi các đoạn thẳng nào? (b) Chứng minh $\Delta ADC\backsim\Delta BEC$, từ đó suy ra các hệ thức sau: $\sin2\alpha = 2\sin\alpha\cos\alpha$, $\cos2\alpha = 1 - 2\sin^2\alpha = 2\cos^2\alpha - 1 = \cos^2\alpha - \sin^2\alpha$. (c) Chứng minh: $\tan2\alpha = \dfrac{2\tan\alpha}{1 - \tan^2\alpha}$, $\cot2\alpha = \dfrac{\cot^2\alpha - 1}{2\cot\alpha}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 34., p. 112]
+	Cho $\alpha = 22^\circ30'$, tính $\sin\alpha,\cos\alpha,\tan\alpha,\cot\alpha$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_9}, 35., p. 112]
+	Cho $\Delta ABC$, đường phân giác $AD$. Biết $AB = c$, $AC = b$, $\widehat{A} = 2\alpha$, $\alpha < 45^\circ$. Chứng minh $AD = \dfrac{2bc\cos\alpha}{b + c}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+	
+\end{document}
