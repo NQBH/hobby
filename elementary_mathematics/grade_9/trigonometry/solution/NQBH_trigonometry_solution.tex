@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,caption,float,graphicx,mathtools,subcaption}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -59,20 +59,20 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 \end{baitoan}
 
 \begin{proof}[Chứng minh]
-	(a) $\Delta AHC\backsim\Delta BAC$ (g.g) vì 2 tam giác vuông này có chung $\widehat{C}$, nên $\frac{CH}{AC} = \frac{AC}{BC}\Rightarrow AC^2 = BC\cdot CH\Leftrightarrow b^2 = ab'$. Tương tự, $\Delta BHA\backsim\Delta BAC$ (g.g)  vì 2 tam giác vuông này có chung $\widehat{B}$, nên $\frac{BH}{AB} = \frac{AB}{BC}\Leftrightarrow AB^2 = BC\cdot BH\Leftrightarrow c^2 = ac'$. (b) Theo (a), $b^2 + c^2 = ab' + ac' = a(b' + c') = a\cdot a = a^2$. (c) Vì $\Delta AHC\backsim\Delta BAC$ \& $\Delta BHA\backsim\Delta BAC$ nên $\Delta AHC\backsim\Delta BHA$, suy ra $\frac{AH}{CH} = \frac{BH}{AH}\Rightarrow AH^2 = BH\cdot CH\Leftrightarrow h^2 = b'c'$. (d) Tính diện tích $\Delta ABC$ theo 2 cách: $S_{\Delta ABC} = \frac{1}{2}AH\cdot BC = \frac{1}{2}AB\cdot AC\Leftrightarrow AH\cdot BC = AB\cdot AC\Leftrightarrow ah = bc$. (e) $ah = bc\Leftrightarrow a^2h^2 = b^2c^2\Leftrightarrow(b^2 + c^2)h^2 = b^2c^2\Leftrightarrow\dfrac{1}{h^2} = \dfrac{b^2 + c^2}{b^2c^2} = \dfrac{1}{b^2} + \dfrac{1}{c^2}$.
+	(a) $\Delta AHC\backsim\Delta BAC$ (g.g) vì 2 tam giác vuông này có chung $\widehat{C}$, nên $\frac{CH}{AC} = \frac{AC}{BC}\Rightarrow AC^2 = BC\cdot CH\Leftrightarrow b^2 = ab'$. Tương tự, $\Delta BHA\backsim\Delta BAC$ (g.g)  vì 2 tam giác vuông này có chung $\widehat{B}$, nên $\frac{BH}{AB} = \frac{AB}{BC}\Leftrightarrow AB^2 = BC\cdot BH\Leftrightarrow c^2 = ac'$. (b) Theo (a), $b^2 + c^2 = ab' + ac' = a(b' + c') = a\cdot a = a^2$. (c) Vì $\Delta AHC\backsim\Delta BAC$ \& $\Delta BHA\backsim\Delta BAC$ nên $\Delta AHC\backsim\Delta BHA$, suy ra $\frac{AH}{CH} = \frac{BH}{AH}\Rightarrow AH^2 = BH\cdot CH\Leftrightarrow h^2 = b'c'$. (d) Tính diện tích $\Delta ABC$ theo 2 cách: $S_{\Delta ABC} = \frac{1}{2}AH\cdot BC = \frac{1}{2}AB\cdot AC\Leftrightarrow AH\cdot BC = AB\cdot AC\Leftrightarrow ah = bc$. (e) $ah = bc\Leftrightarrow a^2h^2 = b^2c^2\Leftrightarrow(b^2 + c^2)h^2 = b^2c^2\Leftrightarrow\frac{1}{h^2} = \frac{b^2 + c^2}{b^2c^2} = \frac{1}{b^2} + \frac{1}{c^2}$.
 \end{proof}
 
 \begin{luuy}
-	Các hệ thức trên có thể được suy ra trực tiếp từ các tỷ số đồng dạng của bộ 3 tam giác đồng dạng: $\Delta BHA\backsim\Delta AHC\backsim\Delta BAC$. Thật vậy, $\Delta AHC\backsim\Delta BAC\Leftrightarrow\frac{AH}{AB} = \frac{HC}{AC} = \frac{AC}{BC}\Leftrightarrow\frac{h}{c} = \frac{b'}{b} = \frac{b}{a}\Rightarrow bh = b'c$, $b^2 = ab'$, \& $ah = bc$. $\Delta BHA\backsim\Delta BAC\Leftrightarrow\frac{HB}{AB} = \frac{AH}{AC} = \frac{AB}{BC}\Leftrightarrow\frac{c'}{c} = \frac{h}{b} = \frac{c}{a}\Rightarrow bc' = hc$, $ah = bc$, \& $c^2 = ac'$. $\Delta AHC\backsim\Delta BHA\Leftrightarrow\frac{AH}{BH} = \frac{CH}{AH} = \frac{AC}{AB}\Leftrightarrow\frac{h}{c'} = \frac{b'}{h} = \frac{b}{c}\Rightarrow h^2 = b'c'$, $bh = b'c$, \& $ch = bc'$. Hơn nữa, $\widehat{BAH} = \widehat{C}$ \& $\widehat{CAH}= \widehat{B}$.
+	Các hệ thức trên có thể được suy ra trực tiếp từ các tỷ số đồng dạng của bộ 3 tam giác đồng dạng: $\Delta BHA\backsim\Delta AHC\backsim\Delta BAC$. Thật vậy, $\Delta AHC\backsim\Delta BAC\Leftrightarrow\frac{AH}{AB} = \frac{HC}{AC} = \frac{AC}{BC}\Leftrightarrow\frac{h}{c} = \frac{b'}{b} = \frac{b}{a}\Rightarrow bh = b'c$, $b^2 = ab'$, \& $ah = bc$. $\Delta BHA\backsim\Delta BAC\Leftrightarrow\frac{HB}{AB} = \frac{AH}{AC} = \frac{AB}{BC}\Leftrightarrow\frac{c'}{c} = \frac{h}{b} = \frac{c}{a}\Rightarrow hc = bc'$, $ah = bc$, \& $c^2 = ac'$. $\Delta AHC\backsim\Delta BHA\Leftrightarrow\frac{AH}{BH} = \frac{CH}{AH} = \frac{AC}{AB}\Leftrightarrow\frac{h}{c'} = \frac{b'}{h} = \frac{b}{c}\Rightarrow h^2 = b'c'$, $bh = b'c$, \& $ch = bc'$. Hơn nữa, $\widehat{BAH} = \widehat{C}$ \& $\widehat{CAH}= \widehat{B}$.
 \end{luuy}
 
 \begin{dinhly}[Hệ thức giữa cạnh góc vuông \& hình chiếu của nó trên cạnh huyền]
-	Trong 1 tam giác vuông, bình phương mỗi cạnh góc vuông bằng tích của cạnh huyền \& hình chiếu của cạnh góc vuông đó trên cạnh huyền. $b^2 = ab'$, $c^2 = ac'$
+	Trong 1 tam giác vuông, bình phương mỗi cạnh góc vuông bằng tích của cạnh huyền \& hình chiếu của cạnh góc vuông đó trên cạnh huyền. Nói cách khác, mỗi cạnh góc vuông là trung bình nhân của cạnh huyền \& hình chiếu của cạnh góc vuông đó trên cạnh huyền. $b^2 = ab'$, $c^2 = ac'$
 \end{dinhly}
 3 hệ thức về đường cao trong tam giác vuông:
 
-\begin{dinhly}3
-	Trong 1 tam giác vuông, bình phương đường cao ứng với cạnh huyền bằng tích 2 hình chiếu của 2 cạnh góc vuông trên cạnh huyền. $h^2 = b'c'$.
+\begin{dinhly}
+	Trong 1 tam giác vuông, bình phương đường cao ứng với cạnh huyền bằng tích 2 hình chiếu của 2 cạnh góc vuông trên cạnh huyền. Nói cách khác, đường cao ứng với cạnh huyền là trung bình nhân của 2 đoạn thẳng mà nó định ra trên cạnh huyền. $h^2 = b'c'$.
 \end{dinhly}
 
 \begin{dinhly}
@@ -90,6 +90,79 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 \begin{proof}[Giải]
 	Có $\frac{1}{h^2} = \frac{1}{b^2} + \frac{1}{c^2}\Rightarrow h^2 = \frac{b^2c^2}{b^2 + c^2}$.
 \end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 1., p. 68]
+	Tính $x,y$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_9_4_p68}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 2., p. 68]
+	Tính $x,y$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_9_5_p68}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 3., p. 69]
+	Tính $x,y$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_9_6_p69}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 4., p. 69]
+	Tính $x,y$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_9_7_p69}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 5., p. 69]
+	Trong tam giác vuông với các cạnh góc vuông có độ dài là $3$ \& $4$, kẻ đường cao ứng với cạnh huyền. Tính đường cao này \& độ dài các đoạn thẳng mà nó định ra trên cạnh huyền.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 6., p. 69]
+	Đường cao của 1 tam giác vuông chia cạnh huyền thành 2 đoạn thẳng có độ dài là $1$ \& $2$. Tính các cạnh góc vuông của tam giác này.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 7., p. 69--70]
+	Người ta đưa ra 2 cách vẽ đoạn trung bình nhân $x$ của 2 đoạn thẳng $a,b$ (i.e., $x^2 = ab$ hay $x = \sqrt{ab}$) như trong 2 hình:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_9_8_9_p69}
+	\end{figure}
+	\noindent Chứng minh các cách vẽ trên là đúng.
+\end{baitoan}
+\noindent{\sf Hint.} Nếu 1 tam giác có đường trung tuyến ứng với 1 cạnh bằng nửa cạnh đó thì tam giác đó là tam giác vuông.
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 8., p. 70]
+	Tính $x,y$:
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[H]{0.3\textwidth}
+			\centering
+			\includegraphics[scale=0.25]{SGK_Toan_9_10_p70}
+		\end{subfigure}
+		\begin{subfigure}[H]{0.3\textwidth}
+			\centering
+			\includegraphics[scale=0.25]{SGK_Toan_9_11_p70}
+		\end{subfigure}
+		\begin{subfigure}[H]{0.3\textwidth}
+			\centering
+			\includegraphics[scale=0.2]{SGK_Toan_9_12_p70}
+		\end{subfigure}
+	\end{figure}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 9., p. 70]
+	Cho hình vuông $ABCD$. Gọi $I$ là 1 điểm nằm giữa $A$ \& $B$. Tia $DI$ \& tia $CB$ cắt nhau ở $K$. Kẻ đường thẳng qua $D$, vuông góc với $DI$. Đường thẳng này cắt đường thẳng $BC$ tại $L$. Chứng minh: (a) $\Delta DIL$ là 1 tam giác cân. (b) Tổng $\frac{1}{DI^2} + \frac{1}{DK^2}$ không đổi khi $I$ thay đổi trên cạnh $AB$.	
+\end{baitoan}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 1, p. 103]
 	Cho hình thang $ABCD$ có $\widehat{B} = \widehat{C} = 90^\circ$, 2 đường chéo vuông góc với nhau tại $H$. Biết $AB = 3\sqrt{5}$ \emph{cm}, $HA = 3$ \emph{cm}. Chứng minh: (a) $HA:HB:HC:HD = 1:2:4:8$. (b) $\dfrac{1}{AB^2} - \dfrac{1}{CD^2} = \dfrac{1}{HB^2} - \dfrac{1}{HC^2}$.
