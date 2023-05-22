@@ -67,19 +67,23 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 \end{luuy}
 
 \begin{dinhly}[Hệ thức giữa cạnh góc vuông \& hình chiếu của nó trên cạnh huyền]
+	\label{thm: b^2 = ab' c^2 = ac'}
 	Trong 1 tam giác vuông, bình phương mỗi cạnh góc vuông bằng tích của cạnh huyền \& hình chiếu của cạnh góc vuông đó trên cạnh huyền. Nói cách khác, mỗi cạnh góc vuông là trung bình nhân của cạnh huyền \& hình chiếu của cạnh góc vuông đó trên cạnh huyền. $b^2 = ab'$, $c^2 = ac'$
 \end{dinhly}
 3 hệ thức về đường cao trong tam giác vuông:
 
 \begin{dinhly}
+	\label{thm: h^2 = b'c'}
 	Trong 1 tam giác vuông, bình phương đường cao ứng với cạnh huyền bằng tích 2 hình chiếu của 2 cạnh góc vuông trên cạnh huyền. Nói cách khác, đường cao ứng với cạnh huyền là trung bình nhân của 2 đoạn thẳng mà nó định ra trên cạnh huyền. $h^2 = b'c'$.
 \end{dinhly}
 
 \begin{dinhly}
+	\label{thm: bc = ah}
 	Trong 1 tam giác vuông, tích 2 cạnh góc vuông bằng tích của cạnh huyền \& đường cao tương ứng. $bc = ah$.
 \end{dinhly}
 
 \begin{dinhly}
+	\label{thm: 1/h^2 = 1/b^2 + 1/c^2}
 	Trong 1 tam giác vuông, nghịch đảo của bình phương đường cao ứng với cạnh huyền bằng tổng nghịch đảo của bình phương 2 cạnh góc vuông. $\frac{1}{h^2} = \frac{1}{b^2} + \frac{1}{c^2}$.
 \end{dinhly}
 
@@ -99,6 +103,10 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	\end{figure}
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Áp dụng định lý Pythagore, cạnh huyền dài $x + y = \sqrt{6^2 + 8^2} = 10$. Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'}, ta có: $6^2 = (x + y)x = 10x\Rightarrow x = \frac{6^2}{10} = 3.6$, $y = 10 - x = 10 - 3.6 = 6.4$ (hoặc $8^2 = (x + y)y = 10y\Rightarrow y = \frac{8^2}{10} = 6.4$). (b) Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'}, ta có: $12^2 = 20x\Rightarrow x = \frac{12^2}{20} = 7.2$, $y = 20 - x = 20 - 7.2 = 12.8$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 2., p. 68]
 	Tính $x,y$:
 	\begin{figure}[H]
@@ -106,6 +114,14 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 		\includegraphics[scale=.25]{SGK_Toan_9_5_p68}
 	\end{figure}
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'}, ta có: $x^2 = (1 + 4)\cdot1 = 5\Rightarrow x = \sqrt{5}$, $y = (1 + 4)4 = 20\Rightarrow y = \sqrt{20} = 2\sqrt{5}$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'}, ta có: $x^2 = (1 + 4)\cdot1 = 5\Rightarrow x = \sqrt{5}$. Áp dụng định lý Pythagore: $y = \sqrt{(1 + 4)^2 - x^2} = \sqrt{5^2 - 5} = \sqrt{20} = 2\sqrt{5}$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 3., p. 69]
 	Tính $x,y$:
@@ -115,6 +131,18 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	\end{figure}
 \end{baitoan}
 
+\begin{proof}[1st giải]
+	Áp dụng định lý Pythagore: $y = \sqrt{5^2 + 7^2} = \sqrt{74}$. Áp dụng định lý \ref{thm: bc = ah}, ta có $5\cdot7 = xy\Rightarrow x = \frac{5\cdot7}{y} = \frac{35}{\sqrt{74}} = \frac{35\sqrt{74}}{74}$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Áp dụng định lý Pythagore: $y = \sqrt{5^2 + 7^2} = \sqrt{74}$. Áp dụng định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2}, ta có: $\frac{1}{x^2} = \frac{1}{5^2} + \frac{1}{7^2}\Rightarrow x = \sqrt{\frac{5^2 + 7^2}{5^2\cdot7^2}} = \frac{35\sqrt{74}}{74}$.
+\end{proof}
+
+\begin{proof}[3rd giải]
+	Áp dụng định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2}, ta có: $\frac{1}{x^2} = \frac{1}{5^2} + \frac{1}{7^2}\Rightarrow x = \sqrt{\frac{5^2 + 7^2}{5^2\cdot7^2}} = \frac{35\sqrt{74}}{74}$. Áp dụng định lý \ref{thm: bc = ah}, ta có: $5\cdot7 = xy\Rightarrow y = \frac{5\cdot7}{x} = \frac{5\cdot7\sqrt{74}}{35} = \sqrt{74}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 4., p. 69]
 	Tính $x,y$:
 	\begin{figure}[H]
@@ -123,9 +151,21 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	\end{figure}
 \end{baitoan}
 
+\begin{proof}[1st giải]
+	Áp dụng định lý \ref{thm: h^2 = b'c'}, ta có: $2^2 = 1\cdot x\Leftrightarrow x = 4$. Áp dụng định lý Pythagore: $y = \sqrt{x^2 + 2^2} = \sqrt{4^2 + 2^2} = \sqrt{20} = 2\sqrt{5}$.
+\end{proof}
+
+\begin{proof}[1st giải]
+	Áp dụng định lý \ref{thm: h^2 = b'c'}, ta có: $2^2 = 1\cdot x\Leftrightarrow x = 4$. Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'}, ta có: $y^2 = (1 + x)x = (1 + 4)\cdot4 = 20\Rightarrow y = 2\sqrt{5}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 5., p. 69]
 	Trong tam giác vuông với các cạnh góc vuông có độ dài là $3$ \& $4$, kẻ đường cao ứng với cạnh huyền. Tính đường cao này \& độ dài các đoạn thẳng mà nó định ra trên cạnh huyền.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$b = 3$, $c = 4$. Áp dụng định lý Pythagore: $a = \sqrt{b^2 + c^2} = \sqrt{3^2 + 4^2} = 5$. Áp dụng định lý \ref{thm: bc = ah}, ta có: $h = \frac{bc}{a} = \frac{3\cdot4}{5} = 2.4$. Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'}, ta có: $b^2 = ab'\Rightarrow b' = \frac{b^2}{a} = \frac{3^2}{5} = 1.8$, $c' = a - b' = 5 - 1.8 = 3.2$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 6., p. 69]
 	Đường cao của 1 tam giác vuông chia cạnh huyền thành 2 đoạn thẳng có độ dài là $1$ \& $2$. Tính các cạnh góc vuông của tam giác này.
