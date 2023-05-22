@@ -254,6 +254,10 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	Cho hình vuông $ABCD$. Gọi $I$ là 1 điểm nằm giữa $A$ \& $B$. Tia $DI$ \& tia $CB$ cắt nhau ở $K$. Kẻ đường thẳng qua $D$, vuông góc với $DI$. Đường thẳng này cắt đường thẳng $BC$ tại $L$. Chứng minh: (a) $\Delta DIL$ là 1 tam giác cân. (b) Tổng $\dfrac{1}{DI^2} + \dfrac{1}{DK^2}$ không đổi khi $I$ thay đổi trên cạnh $AB$.	
 \end{baitoan}
 
+\begin{proof}[Chứng minh]
+	(a) Xét 2 tam giác vuông $\Delta DAI$ \& $\Delta DCL$: $AD = CD$ (2 cạnh hình vuông $ABCD$), $\widehat{ADI} = \widehat{CDL}$ (cùng phụ $\widehat{CDI}$). Suy ra $\Delta DAI = \Delta DCL$ (cgv--gn) $\Rightarrow DI = DL\Rightarrow\Delta DIL$ cân tại $D$. (b) Xét $\Delta DKL$ vuông tại $D$, áp dụng định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2} được: $\dfrac{1}{DK^2} + \dfrac{1}{DL^2} = \dfrac{1}{CD^2}$, mà $DI = DL$, suy ra $\dfrac{1}{DI^2} + \dfrac{1}{DK^2} = \dfrac{1}{CD^2}$ không đổi khi $I$ thay đổi trên cạnh $AB$. 
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 1., p. 102]
 	Tính $x,y$:
 	\begin{figure}[H]
@@ -261,10 +265,6 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 		\includegraphics[scale=.25]{SBT_Toan_9_1_p102}
 	\end{figure}
 \end{baitoan}
-
-\begin{proof}[Chứng minh]
-	(a) Xét 2 tam giác vuông $\Delta DAI$ \& $\Delta DCL$: $AD = CD$ (2 cạnh hình vuông $ABCD$), $\widehat{ADI} = \widehat{CDL}$ (cùng phụ $\widehat{CDI}$). Suy ra $\Delta DAI = \Delta DCL$ (cgv--gn) $\Rightarrow DI = DL\Rightarrow\Delta DIL$ cân tại $D$. (b) Xét $\Delta DKL$ vuông tại $D$, áp dụng định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2} được: $\dfrac{1}{DK^2} + \dfrac{1}{DL^2} = \dfrac{1}{CD^2}$, mà $DI = DL$, suy ra $\dfrac{1}{DI^2} + \dfrac{1}{DK^2} = \dfrac{1}{CD^2}$ không đổi khi $I$ thay đổi trên cạnh $AB$. 
-\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 2., p. 102]
 	Tính $x,y$:
@@ -484,7 +484,7 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.4., p. 8]
-	Cho $\Delta ABC$ có $AB = 3$  {\rm cm}, $BC = 4$ {\rm cm}, $AC = 5$ {\rm cm}. Đường cao, đường phân giác, đường trung tuyến của tam giác kẻ từ đỉnh $B$ chia tam giác thành $4$ gam giác không có điểm trong chung. Tính diện tích của mỗi tam giác đó.
+	Cho $\Delta ABC$ có $AB = 3$  {\rm cm}, $BC = 4$ {\rm cm}, $AC = 5$ {\rm cm}. Đường cao, đường phân giác, đường trung tuyến của tam giác kẻ từ đỉnh $B$ chia tam giác thành $4$ tam giác không có điểm trong chung. Tính diện tích của mỗi tam giác đó.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.5., p. 8]
@@ -496,43 +496,47 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.7., p. 8]
-	
+	Cho $\Delta ABC$ nhọn, 2 đường cao $BD,CE$ cắt nhau tại $H$. Gọi $M,N$ lần lượt là các điểm thuộc $CH,BH$ sao cho $\widehat{AMB} = \widehat{ANC} = 90^\circ$. $\Delta AMN$ là tam giác gì? Vì sao?
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.8., p. 8]
-	
+	Cho hình vuông $ABCD$ cạnh bằng $a$. (a) $M$ là 1 điểm trên cạnh $AD$ sao cho $\widehat{ABM} = 30^\circ$. Tính $AM,BM$ theo $a$. (b) Qua $A$ kẻ đường thẳng vuông góc với $BM$ tại $F$, đường thẳng này cắt $CD$ tại $N$. Tính độ dài các đoạn thẳng $AF,MF,BF$ theo $a$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.9., p. 8]
-	
+	Cho hình vuông $ABCD$ \& điểm $I$ thay đổi nằm giữa $A,B$. Tia $DI$ cắt $BC$ tại $E$. Đường thẳng kẻ qua $D$ vuông góc với $DE$ cắt $BC$ tại $F$. Chứng minh tổng $\dfrac{1}{DI^2} + \dfrac{1}{DE^2}$ không phụ thuộc vào vị trí của điểm $I$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.10., p. 8]
-	
+	Cho $\Delta ABC$, đường cao $BH$. Đặt $BC = a$, $CA = b$, $AB = c$, $AH = c'$. Chứng minh: (a) Nếu $\widehat{A} < 90^\circ$ thì $a^2 = b^2 + c^2 - 2bc'$. (b) Nếu $\widehat{A} > 90^\circ$ thì $a^2 = b^2 + c^2 + 2bc'$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.11., p. 8]
-	
+	Cho $\Delta ABC$, đường cao $AH$. Biết $AB = 8$ {\rm cm}, $BC - AC = 2$ {\rm cm}, $\widehat{BAH} = 30^\circ$. Tính diện tích $\Delta ABC$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.12., p. 8]
-	
+	Cho $\Delta ABC$, các đường cao ứng với các cạnh $a,b,c$ lần lượt là $h_a,h_b,h_c$. Chứng minh nếu $\frac{1}{h_a^2} = \frac{1}{h_b^2} + \frac{1}{h_c^2}$ thì $\Delta ABC$ vuông tại $A$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.13., p. 9]
-	
+	Cho $\Delta ABC$, 2 đường phân giác $BD,CE$ cắt nhau tại $I$ thỏa mãn $BD\cdot CE= 2BI\cdot CI$. $\Delta ABC$ là tam giác gì? Vì sao?
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.14., p. 9]
-	
+	Cho $\Delta ABC$, $\widehat{A} = 90^\circ$, $BC = 2a$, đường cao $AH$. Kẻ $HD\bot AC$, $HE\bot AB$. Tìm giá trị lớn nhất của: (a) Độ dài đoạn thẳng $DE$. (b) Diện tích tứ giác $ADHE$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.15., p. 9]
-	
+	Cho $\Delta ABC$ đều có cạnh bằng {\rm60 cm}. Trên đoạn $BC$ lấy điểm $D$ sao cho $BD = 20$ {\rm cm}. Đường trung trực của $AD$ cắt $AB$ tại $E$, cắt $AC$ tại $F$. Tính độ dài các cạnh của $\Delta DEF$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{TLCT_THCS_Toan_9_hinh_hoc}, 1.16., p. 9]
-	
+	Cho $\Delta ABC$. Đường trung tuyến $AD$, đường cao $BH$, đường phân giác $CE$ đồng quy. Chứng minh đẳng thức $(AB + CA)(BC^2 + CA^2 - AB^2) = 2BC\cdot CA^2$ hay $(b + c)(a^2 + b^2 - c^2) = 2ab^2$.
+\end{baitoan}
+
+\begin{baitoan}[Tổng quát ${}^\star$]
+	Cho $\Delta ABC$ vuông tại $A$. (a) Cho trước 2 trong 8 số $a,b,c,b',c',h,p,S$. Tính 6 số còn lại theo 2 số đã cho. (b) Cho trước 2 trong 14 số $a,b,c,b',c',h,m_a,m_b,m_c,d_a,d_b,d_c,p,S$ với $d_a,d_b,d_c$ lần lượt là 3 đường phân giác ứng với $BC,CA,AB$. Tính 12 số còn lại theo 2 số đã cho.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
