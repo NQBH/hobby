@@ -74,21 +74,75 @@
 	(a) Tìm các căn bậc 2 của $9,\frac{4}{9},0.25,2$. (b) Tìm căn bậc 2 số học của $49,64,81,1.21$. (c) Tìm căn bậc 2 của $49,64,81,1.21$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Căn bậc 2 của $9,\frac{4}{9},0.25,2$ lần lượt là $\pm3,\pm\frac{2}{3},\pm0.5,\pm\sqrt{2}$. (b) Căn bậc 2 số học của $49,64,81,1.21$ lần lượt là $7,8,9,1.1$. (c) Căn bậc 2 của $49,64,81,1.21$ lần lượt là $\pm7,\pm8,\pm9,\pm1.1$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, ?4, pp. 5--6]
 	So sánh: (a) $1$ \& $\sqrt{2}$. (b) $2$ \& $\sqrt{5}$. (c) $4$ \& $\sqrt{15}$. (d) $\sqrt{11}$ \& $3$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $1 < 2\Leftrightarrow\sqrt{1} = 1 < \sqrt{2}$. (b) $4 < 5\Leftrightarrow\sqrt{4} = 2 < \sqrt{5}$. (c) $16 > 15\Leftrightarrow\sqrt{16} = 4 > \sqrt{15}$. (d) $11 > 9\Leftrightarrow\sqrt{11} > \sqrt{9} = 3$.
+\end{proof}
+
+\begin{baitoan}
+	Biện luận theo $a,b\in\mathbb{R}$ để so sánh $a$ \& $\sqrt{b}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	ĐKXĐ: $b\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item \textit{Trường hợp $a < 0$}: vì $\sqrt{b}\ge0$, $\forall b\in\mathbb{R}$, $b\ge0$, suy ra $a < \sqrt{b}$.
+		\item \textit{Trường hợp $a\ge0$}: Xét các trường hợp con:
+		\begin{itemize}
+			\item Trường hợp $0\le a < \sqrt{b}\Leftrightarrow0\le a$ \& $a^2 < b$.
+			\item Trường hợp $0\le a = \sqrt{b}\Leftrightarrow0\le a$ \& $a^2 = b$.
+			\item Trường hợp $a > \sqrt{b}\Leftrightarrow a > 0$ \& $a^2 > b\ge0$.
+		\end{itemize}
+	\end{itemize}
+	Tổng hợp các trường hợp đã xét:
+	\begin{equation*}
+		\left\{\begin{split}
+			a &< \sqrt{b},&&\mbox{nếu } (a < 0\land b\ge0)\lor(a\ge0\land a^2 < b),\\
+			a &= \sqrt{b},&&\mbox{nếu } a\ge0\land a^2 = b,\\
+			a &> \sqrt{b},&&\mbox{nếu } a > 0\land a^2 > b.
+		\end{split}\right.
+	\end{equation*}
+	Biện luận hoàn tất.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, ?5, p. 6]
 	(a) Tìm $x\in\mathbb{R}$ thỏa: (a) $\sqrt{x} > 2$. (b) $\sqrt{x} < 1$. (c) $\sqrt{x} > 1$. (d) $\sqrt{x} < 3$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{x} > 2\Leftrightarrow x > 2^2 = 4$. Vậy $x > 4$, $S = (4,\infty)\coloneqq\{x\in\mathbb{R}|x > 4\}$. (b) ĐKXĐ: $x\ge0$, $\sqrt{x} < 1\Leftrightarrow0\le x < 1^2 = 1$. Vậy $0\le x < 1$, $S = [0,1)\coloneqq\{x\in\mathbb{R}|0\le x < 1\}$. (c) $\sqrt{x} > 1\Leftrightarrow x > 1^2 = 1$. Vậy $x > 1$, $S = (1,\infty)\coloneqq\{x\in\mathbb{R}|x > 1\}$. (d) ĐKXĐ: $x\ge0$, $\sqrt{x} < 3\Leftrightarrow0\le x < 3^2 = 9$. Vậy $0\le x < 9$, $S = [0,9)\coloneqq\{x\in\mathbb{R}|0\le x < 9\}$.
+\end{proof}
+
+\begin{luuy}
+	Ta quy ước $S$ ký hiệu {\rm tập nghiệm} của cả phương trình \& bất phương trình.
+\end{luuy}
+
+\begin{baitoan}
+	Biện luận theo tham số $a,b,c,d\in\mathbb{R}$ để giải bất phương trình: (a) $\sqrt{x} < a$. (b) $\sqrt{x} > a$. (c) $\sqrt{x}\le a$. (d) $\sqrt{x}\ge a$. (d) $\sqrt{ax + b} > c$. (e) $\sqrt{ax + b} < c$. (f) $\sqrt{ax + b}\le c$. (g) $\sqrt{ax + b}\ge c$. (h) $\sqrt{ax + b} < \sqrt{cx + d}$. (i) $\sqrt{ax + b} > \sqrt{cx + d}$. (j) $\sqrt{ax + b}\le\sqrt{cx + d}$. (k) $\sqrt{ax + b}\ge\sqrt{cx + d}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 1., p. 6]
 	Tìm căn bậc 2 số học của mỗi số sau rồi suy ra căn bậc 2 của chúng: \emph{121, 144, 169, 225, 256, 324, 361, 400}.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Căn bậc 2 số học của 121, 144, 169, 225, 256, 324, 361, 400 lần lượt là 11, 12, 13, 15, 16, 18, 19, 20. Căn bậc 2 của 121, 144, 169, 225, 256, 324, 361, 400 lần lượt là $\pm11,\pm12,\pm13,\pm15,\pm16,\pm18,\pm19,\pm20$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 2., p. 6]
 	So sánh: (a) $2$ \& $\sqrt{3}$. (b) $6$ \& $\sqrt{41}$. (c) $7$ \& $\sqrt{47}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $4 > 3\Leftrightarrow\sqrt{4} = 2 > \sqrt{3}$. (b) $36 < 41\Leftrightarrow\sqrt{36} = 6 < \sqrt{41}$. (c) $49 > 47\Leftrightarrow\sqrt{49} = 7 > \sqrt{47}$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 3., p. 6]
 	Tìm $x\in\mathbb{R}$ thỏa mãn các phương trình sau \& sau đó làm tròn đến chữ số thập phân thứ 3: (a) $x^2 = 2$. (b) $x^2 = 3$. (c) $x^2 = 3.5$. (d) $x^2 = 4.12$.
