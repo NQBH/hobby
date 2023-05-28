@@ -5,7 +5,9 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\usepackage{amsmath,amssymb,amsthm,color,float,graphicx,mathtools,multicol}
+\setlength{\columnseprule}{.5pt}
+\def\columnseprulecolor{\color{black}}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -108,14 +110,47 @@ Source: \href{https://cses.fi/problemset/task/1068}{CSES Problem Set\texttt{/}we
 	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/even_odd.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}even vs. odd}.
 \end{itemize}
 
+\begin{multicols}{2}
+    \begin{verbatim}
+try:
+    n = int(input('nhap n='))
+    if n%2 == 0 :
+        print('even')
+    else:
+        print('odd')
+except:
+    print('Day khong phai la 1 so nguyen')
+    \end{verbatim}
+    \columnbreak
+    \begin{verbatim}
+num = int(input("Enter a number: "))
+if (num % 2) == 0:
+    print("{0} is even".format(num))
+else:
+    print("{0} is odd".format(num))
+    \end{verbatim}
+\end{multicols}
+
 \begin{baitoan}[Divisible by]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để kiểm tra liệu $a\divby b$ hay không, với $a,b\in\mathbb{Z}$ được nhập từ bàn phím.
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để kiểm tra liệu $a\divby b$ hay không, với $a,b\in\mathbb{Z}$ được nhập từ bàn phím \& in ra số dư $r$ trong phép chia $a$ cho $b$.
 \end{baitoan}
 
 \begin{itemize}
 	\item Pascal script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/divisible_by.pas}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Pascal\texttt{/}divisible by}.
 	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/divisible_by.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}divisible by}.
 \end{itemize}
+
+\begin{verbatim}
+try:
+    a = int(input('nhap a='))
+    b = int(input('nhap b='))
+    if a%b == 0 :
+        print(str(a)+' chia het cho	'+str(b))
+    else:
+        print(str(a)+' khong chia het cho '+str(b))
+except:
+    print('Day khong phai la 1 so nguyen')
+\end{verbatim}
 
 \begin{baitoan}[Triangle]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của: (a) 1 tam giác. (b) 1 tam giác nhọn. (c) 1 tam giác vuông. (d) 1 tam giác tù.
@@ -124,6 +159,24 @@ Source: \href{https://cses.fi/problemset/task/1068}{CSES Problem Set\texttt{/}we
 \begin{itemize}
 	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}triangle}.
 \end{itemize}
+
+\begin{verbatim}
+try:
+    a,b,c = float(input('Nhap a = ')), float(input('Nhap b = ')), float(input('Nhap c = '))
+	if (a + b > c) and (a + c > b) and  (b + c > a):
+		loai_tg = ''
+		if (a*a + b*b == c*c) or (a*a + c*c == b*b) or (b*b + c*c == a*a):
+			loai_tg = 'vuong'
+		elif (a*a + b*b > c*c) and (a*a + c*c > b*b) and (b*b + c*c > a*a):
+			loai_tg = 'nhon'
+		else:
+			loai_tg = 'tu'
+		print('Day la do dai 3 canh cua 1 tam giac ' + loai_tg)
+	else: 
+		print('Day khong la do dai 3 canh cua 1 tam giac.')			
+except:
+	print('Day khong phai la 1 so.')
+\end{verbatim}
 
 \begin{baitoan}[Polynomial equation]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để giải phương trình bậc nhất, bậc 2, bậc 3, \& bậc 4 với các hệ số thực được nhập từ bàn phím.
@@ -154,7 +207,7 @@ Source: \href{https://cses.fi/problemset/task/1068}{CSES Problem Set\texttt{/}we
 \end{baitoan}
 
 \begin{baitoan}
-	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $m$ được nhập từ bàn phím có phải là lũy thừa bậc $n$ của 1 số tự nhiên hay không với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $m\in\mathbb{Z}$ được nhập từ bàn phím có phải là lũy thừa bậc $n\in\mathbb{N}$ của 1 số tự nhiên hay không với $m,n$ được nhập từ bàn phím.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
