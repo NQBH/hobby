@@ -124,10 +124,6 @@
 	Ta quy ước $S$ ký hiệu {\rm tập nghiệm} của cả phương trình \& bất phương trình.
 \end{luuy}
 
-\begin{baitoan}
-	Biện luận theo tham số $a,b,c,d\in\mathbb{R}$ để giải bất phương trình: (a) $\sqrt{x} < a$. (b) $\sqrt{x} > a$. (c) $\sqrt{x}\le a$. (d) $\sqrt{x}\ge a$. (d) $\sqrt{ax + b} > c$. (e) $\sqrt{ax + b} < c$. (f) $\sqrt{ax + b}\le c$. (g) $\sqrt{ax + b}\ge c$. (h) $\sqrt{ax + b} < \sqrt{cx + d}$. (i) $\sqrt{ax + b} > \sqrt{cx + d}$. (j) $\sqrt{ax + b}\le\sqrt{cx + d}$. (k) $\sqrt{ax + b}\ge\sqrt{cx + d}$.
-\end{baitoan}
-
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 1., p. 6]
 	Tìm căn bậc 2 số học của mỗi số sau rồi suy ra căn bậc 2 của chúng: \emph{121, 144, 169, 225, 256, 324, 361, 400}.
 \end{baitoan}
@@ -161,9 +157,77 @@
 	ĐKXĐ: $x\ge0$. (a) $\sqrt{x} = 15\Leftrightarrow x = 15^2 = 225 > 0$: nhận. Vậy $x = 225$, $S = \{225\}$. (b) $2\sqrt{x} = 14\Leftrightarrow\sqrt{x} = \frac{14}{2} = 7\Leftrightarrow x = 7^2 = 49 > 0$: nhận. Vậy $x = 49$, $S = \{49\}$. (c) $\sqrt{x} < \sqrt{2}\Leftrightarrow0\le x < 2$. Vậy $0\le x < 2$, $S = [0,2)\coloneqq\{x\in\mathbb{R}|0\le x < 2\}$. (d) $\sqrt{2x} < 4\Leftrightarrow0\le2x < 4^2 = 16\Leftrightarrow0\le x < \frac{16}{2} = 8$. Vậy $0\le x < 8$, $S = [0,8)\coloneqq\{x\in\mathbb{R}|0\le x < 8\}$.
 \end{proof}
 
+\begin{baitoan}
+	Biện luận theo tham số $a,b,c,d\in\mathbb{R}$ để giải bất phương trình: (a) $\sqrt{x} < a$. (b) $\sqrt{x} > a$. (c) $\sqrt{x}\le a$. (d) $\sqrt{x}\ge a$. (e) $\sqrt{ax + b} > c$, $a\ne0$. (f) $\sqrt{ax + b} < c$, $a\ne0$. (g) $\sqrt{ax + b}\le c$, $a\ne0$. (h) $\sqrt{ax + b}\ge c$, $a\ne0$. (i) $\sqrt{ax + b} < \sqrt{cx + d}$, $ac\ne0$. (j) $\sqrt{ax + b} > \sqrt{cx + d}$, $ac\ne0$. (k) $\sqrt{ax + b}\le\sqrt{cx + d}$, $ac\ne0$. (l) $\sqrt{ax + b}\ge\sqrt{cx + d}$, $ac\ne0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) ĐKXĐ: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a\le0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x} < a$ vô nghiệm.
+		\item Trường hợp $a > 0$: $\sqrt{x} < a\Leftrightarrow0\le x < a^2$.
+	\end{itemize}
+	Vậy 
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&\emptyset,&&\mbox{nếu } a\le0,\\
+			&[0,a^2)\coloneqq\{x\in\mathbb{R}|0\le x < a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(b) ĐKXĐ: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a < 0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x} > a$ luôn đúng $\forall x\ge0$.
+		\item Trường hợp $a = 0$: $\sqrt{x} > 0\Leftrightarrow x > 0$.
+		\item Trường hợp $a > 0$: $\sqrt{x} > a\Leftrightarrow x > a^2$.
+	\end{itemize}
+	Vậy
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&[0,\infty)\coloneqq\{x\in\mathbb{R}|x\ge0\},&&\mbox{nếu } a < 0,\\
+			&(0,\infty)\coloneqq\{x\in\mathbb{R}|x > 0\},&&\mbox{nếu } a = 0,\\
+			&(a^2,\infty)\coloneqq\{x\in\mathbb{R}|x > a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(c) ĐKXĐ: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a < 0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x}\le a$ vô nghiệm.
+		\item Trường hợp $a = 0$: $\sqrt{x}\le0\Leftrightarrow x = 0$.
+		\item Trường hợp $a > 0$: $\sqrt{x}\le a\Leftrightarrow0\le x\le a^2$.
+	\end{itemize}
+	Vậy
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&\emptyset,&&\mbox{nếu } a < 0,\\
+			&\{0\},&&\mbox{nếu } a = 0,\\
+			&[0,a^2]\coloneqq\{x\in\mathbb{R}|0\le x\le a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(d) ĐKXĐ: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a\le0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x}\ge a$ đúng $\forall x\ge0$.
+		\item Trường hợp $a > 0$: $\sqrt{x}\ge a\Leftrightarrow x\ge a^2$.
+	\end{itemize}
+	Vậy
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&[0,\infty),&&\mbox{nếu } a\le0,\\
+			&[a^2,\infty)\coloneqq\{x\in\mathbb{R}|x\ge a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(e) $\sqrt{ax + b} > c$. (f) $\sqrt{ax + b} < c$. (g) $\sqrt{ax + b}\le c$. (h) $\sqrt{ax + b}\ge c$. (i) $\sqrt{ax + b} < \sqrt{cx + d}$. (j) $\sqrt{ax + b} > \sqrt{cx + d}$. (k) $\sqrt{ax + b}\le\sqrt{cx + d}$. (l) $\sqrt{ax + b}\ge\sqrt{cx + d}$.
+\end{proof}
+
+\begin{baitoan}
+	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để giải \& biện luận theo tham số $a,b,c,d\in\mathbb{R}$ để giải bất phương trình: (a) $\sqrt{x} < a$. (b) $\sqrt{x} > a$. (c) $\sqrt{x}\le a$. (d) $\sqrt{x}\ge a$. (e) $\sqrt{ax + b} > c$, $a\ne0$. (f) $\sqrt{ax + b} < c$, $a\ne0$. (g) $\sqrt{ax + b}\le c$, $a\ne0$. (h) $\sqrt{ax + b}\ge c$, $a\ne0$. (i) $\sqrt{ax + b} < \sqrt{cx + d}$, $ac\ne0$. (j) $\sqrt{ax + b} > \sqrt{cx + d}$, $ac\ne0$. (k) $\sqrt{ax + b}\le\sqrt{cx + d}$, $ac\ne0$. (l) $\sqrt{ax + b}\ge\sqrt{cx + d}$, $ac\ne0$.
+\end{baitoan}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 5., p. 7]
 	Tính cạnh 1 hình vuông biết diện tích của nó bằng diện tích của hình chữ nhật có chiều rộng \emph{3.5 m} \& chiều dài \emph{14 m}.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	$S_{\rm hv} = S_{\rm hcn} = 3.5\cdot14 = 49\Rightarrow a = \sqrt{S_{\rm hv}} = \sqrt{49} = 7$ m.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 1., p. 5]
 	Tính căn bậc 2 số học của \emph{0.01, 0.04, 0.49, 0.64, 0.25, 0.81, 0.09, 0.16, 0, $-1$.}
