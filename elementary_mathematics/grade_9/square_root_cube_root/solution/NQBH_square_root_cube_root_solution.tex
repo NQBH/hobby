@@ -481,73 +481,153 @@ Pascal:
 \section{Căn Thức Bậc 2 \& Hằng Đẳng Thức $\sqrt{A^2} = |A|$}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1, p. 8]
-	Hình chữ nhật $ABCD$ có đường chéo dài \emph{5 cm} \& cạnh $BC =  x$ \emph{cm}. tính $AB$.
+	Hình chữ nhật $ABCD$ có đường chéo dài $a$ {\rm cm} \& cạnh $BC = x$ {\rm cm}. tính $AB$.
 \end{baitoan}
 
-\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?2, p. 8]
-	Với giá trị nào của $x\in\mathbb{R}$ thì $\sqrt{5 - 2x}$ xác định?
+\begin{proof}[Giải]
+	Áp dụng định lý Pythagore cho $\Delta ABC$ vuông tại $B$: $AB = \sqrt{AC^2 - BC^2} = \sqrt{a^2 - x^2}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 1, ?2, p. 8]
+	Với giá trị nào của $x\in\mathbb{R}$ thì: (a) $\sqrt{3x}$ xác định. (b) $\sqrt{5 - 2x}$ xác định?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{3x}$ xác định $\Leftrightarrow3x\ge0\Leftrightarrow x\ge0$. (b) $\sqrt{5 - 2x}$ xác định $\Leftrightarrow5 - 2x\ge0\Leftrightarrow2x\le5\Leftrightarrow x\le\frac{5}{2} = 2.5$.
+\end{proof}
+
+\begin{baitoan}
+	Với giá trị nào của $x\in\mathbb{R}$ thì $\sqrt{ax + b}$ xác định với $a,b\in\mathbb{R}$, $a\ne0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$\sqrt{ax + b}$ xác định $\Leftrightarrow ax + b\ge0\Leftrightarrow ax\ge-b\Leftrightarrow x\ge-\frac{b}{a}$ nếu $a > 0$ \& $x\le-\frac{b}{a}$ nếu $a < 0$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ĐL, p. 9]
 	Chứng minh: $\sqrt{a^2} = |a|$, $\forall a\in\mathbb{R}$.
 \end{baitoan}
 
+\begin{proof}[Chứng minh]
+	Theo định nghĩa giá trị tuyệt đối thì $|a|\ge0$. Nếu $a\ge0$ thì $|a| = a$, nên $(|a|)^2 = a^2$. Nếu $a < 0$ thì $|a| = -a$, nên $(|a|)^2 = (-a)^2 = a^2$. Do đó, $(|a|)^2 = a^2$, $\forall a\in\mathbb{R}$. Vậy $|a|$ chính là căn bậc 2 số học của $a^2$, i.e., $\sqrt{a^2} = |a|$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, p. 9]
 	Tính: (a) $\sqrt{12^2}$. (b) $\sqrt{(-7)^2}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{12^2} = |12| = 12$. (b) $\sqrt{(-7)^2} = |-7| = 7$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, p. 9]
 	Rút gọn: (a) $\sqrt{(\sqrt{2} - 1)^2}$. (b) $\sqrt{(2 - \sqrt{5})^2}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$\sqrt{(\sqrt{2} - 1)^2} = |\sqrt{2} - 1| = \sqrt{2} - 1$ (vì $2 > 1\Leftrightarrow\sqrt{2} > \sqrt{1} = 1$). Vậy $\sqrt{(\sqrt{2} - 1)^2} = \sqrt{2} - 1$. (b) $\sqrt{(2 - \sqrt{5})^2} = |2 - \sqrt{5}| = \sqrt{5} - 2$ (vì $5 > 4\Leftrightarrow\sqrt{5} > \sqrt{4} = 2$). Vậy $\sqrt{(2 - \sqrt{5})^2} = \sqrt{5} - 2$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 4, p. 10]
 	Rút gọn: (a) $\sqrt{(x - 2)^2}$ với $x\ge2$. (b) $\sqrt{a^6}$ với $a < 0$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{(x - 2)^2} = |x - 2| = x - 2$ (vì $x\ge2$). (b) $\sqrt{a^6} = \sqrt{(a^3)^2} = |a^3|$. Có: $a < 0\Leftrightarrow a^3 < 0\Rightarrow|a^3| = -a^3$. Vậy $\sqrt{a^6} = -a^3$ với $a < 0$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 6., p. 10]
 	Với giá trị nào của $a\in\mathbb{R}$ thì mỗi căn thức sau có nghĩa? (a) $\sqrt{\frac{a}{3}}$. (b) $\sqrt{-5a}$. (c) $\sqrt{4 - a}$. (d) $\sqrt{3a + 7}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $\sqrt{\frac{a}{3}}$ xác định $\Leftrightarrow\frac{a}{3}\ge0\Leftrightarrow a\ge0$. (b) $\sqrt{-5a}$ xác định $\Leftrightarrow-5a\ge0\Leftrightarrow a\le0$. (c) $\sqrt{4 - a}$ xác định $\Leftrightarrow4 - a\ge0\Leftrightarrow a\le4$. (d) $\sqrt{3a + 7}$ xác định $\Leftrightarrow3a + 7\ge0\Leftrightarrow3a\ge-7\Leftrightarrow a\ge-\frac{7}{3}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 7., p. 10]
 	Tính: (a) $\sqrt{(0.1)^2}$. (b) $\sqrt{(-0.3)^2}$. (c) $-\sqrt{(-1.3)^2}$. (d) $-0.4\sqrt{(-0.4)^2}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $\sqrt{(0.1)^2} = |0.1| = 0.1$. (b) $\sqrt{(-0.3)^2} = |-0.3| = 0.3$. (c) $-\sqrt{(-1.3)^2} = -|-1.3| = -1.3$. (d) $-0.4\sqrt{(-0.4)^2} = -0.4|-0.4| = -0.4\cdot0.4 = -0.16$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 8., p. 10]
-	Rút gọn các biểu thức: (a) $\sqrt{(2 - \sqrt{3})^2}$. (b) $\sqrt{(3 - \sqrt{11})^2}$. (c) $2\sqrt{a^2}$ với $a\ge0$ \& với $a\in\mathbb{R}$. (d) $3\sqrt{(a - 2)^2}$ với $a < 2$ \& với $a\in\mathbb{R}$.
+	Rút gọn các biểu thức: (a) $\sqrt{(2 - \sqrt{3})^2}$. (b) $\sqrt{(3 - \sqrt{11})^2}$. (c) $2\sqrt{a^2}$ với $a\ge0$. (d) $3\sqrt{(a - 2)^2}$ với $a < 2$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{(2 - \sqrt{3})^2} = |2 - \sqrt{3}| = 2 - \sqrt{3}$ (vì $4 > 3\Leftrightarrow\sqrt{4} = 2 > \sqrt{3}$). (b) $\sqrt{(3 - \sqrt{11})^2} = |3 - \sqrt{11}| = \sqrt{11} - 3$ (vì $9 < 11\Leftrightarrow\sqrt{9} = 3 < \sqrt{11}$). (c) $2\sqrt{a^2} = 2|a| = 2a$ với $a\ge0$. (d) $3\sqrt{(a - 2)^2} = 3|a - 2| = 3(2 - a)$ vì $a < 2\Leftrightarrow a - 2 < 0$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 9., p. 11]
 	Tìm $x$ thỏa: (a) $\sqrt{x^2} = 7$ . (b) $\sqrt{x^2} = |-8|$. (c) $\sqrt{4x^2} = 6$. (d) $\sqrt{9x^2} = |-12|$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{x^2} = 7\Leftrightarrow|x| = 7\Leftrightarrow x = \pm7$ . (b) $\sqrt{x^2} = |-8|\Leftrightarrow|x| = 8\Leftrightarrow x = \pm8$. (c) $\sqrt{4x^2} = 6\Leftrightarrow\sqrt{(2x)^2} = 6\Leftrightarrow|2x| = 6\Leftrightarrow2|x| = 6\Leftrightarrow|x| = \frac{6}{2} = 3\Leftrightarrow x = \pm3$. (d) $\sqrt{9x^2} = |-12|\Leftrightarrow\sqrt{(3x)^2} = 12\Leftrightarrow|3x| = 12\Leftrightarrow3|x| = 12\Leftrightarrow|x| = \frac{12}{3} = 4\Leftrightarrow x = \pm4$.
+\end{proof}
+
+\begin{baitoan}
+	Giải \& biện luận phương trình ẩn $x$ theo các tham số $a,b,c,d,e,f\in\mathbb{R}$: (a) $\sqrt{ax^2} = b$. (b) $\sqrt{(ax + b)^2} = c$. (c) $\sqrt{a(bx + c)^2} = d$. (d) $\sqrt{ax^2} = \sqrt{bx^2}$. (e) $\sqrt{(ax + b)^2} = \sqrt{cx^2}$. (f) $\sqrt{(ax + b)^2} = \sqrt{(cx + d)^2}$. (g) $\sqrt{a(bx + c)^2} = \sqrt{dx^2}$. (h) $\sqrt{a(bx + c)^2} = \sqrt{(dx + e)^2}$. (i) $\sqrt{a(bx + c)^2} = \sqrt{d(ex + f)^2}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 10., p. 11]
 	Chứng minh: (a) $(\sqrt{3} - 1)^2 = 4 - 2\sqrt{3}$. (b) $\sqrt{4 - 2\sqrt{3}} - \sqrt{3} = -1$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $(\sqrt{3} - 1)^2 = (\sqrt{3})^2 - 2\sqrt{3} + 1 = 3 - 2\sqrt{3} + 1 = 4 - 2\sqrt{3}$. (b) Từ (a): $4 - 2\sqrt{3} = (\sqrt{3} - 1)^2\Leftrightarrow\sqrt{4 - 2\sqrt{3}} = |\sqrt{3} - 1| = \sqrt{3} - 1\Leftrightarrow\sqrt{4 - 2\sqrt{3}} - \sqrt{3} = -1$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 11., p. 11]
 	Tính: (a) $\sqrt{16}\cdot\sqrt{25} + \sqrt{196}:\sqrt{49}$. (b) $36:\sqrt{2\cdot3^2\cdot18} - \sqrt{169}$. (c)  $\sqrt{\sqrt{81}}$. (d) $\sqrt{3^2 + 4^2}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{16}\cdot\sqrt{25} + \sqrt{196}:\sqrt{49} = \sqrt{4^2}\cdot\sqrt{5^2} + \sqrt{14^2}:\sqrt{7^2} = |4||5| + |14|:|7| = 4\cdot5 + 14:7 = 20 + 2 = 22$. (b) $36:\sqrt{2\cdot3^2\cdot18} - \sqrt{169} = 36:\sqrt{18\cdot18} - \sqrt{13^2} = 36:\sqrt{(18)^2} - \sqrt{13^2} = 36:|18| - |13| = 36:18 - 13 = 2 - 13 = -11$. (c) $\sqrt{\sqrt{81}} = \sqrt{\sqrt{9^2}} = \sqrt{|9|} = \sqrt{9} = \sqrt{3^2} = |3| = 3$. (d) $\sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = \sqrt{5^2} = |5| = 5$.
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 12., p. 11]
 	Tìm $x$ để mỗi căn thức sau có nghĩa: (a) $\sqrt{2x + 7}$. (b) $\sqrt{-3x + 4}$. (c) $\sqrt{\frac{1}{x - 1}}$. (d) $\sqrt{1 + x^2}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $\sqrt{2x + 7}$ xác định $\Leftrightarrow2x + 7\ge0\Leftrightarrow2x\ge-7\Leftrightarrow x\ge-\frac{7}{2} = -3.5$. (b) $\sqrt{-3x + 4}$ xác định $\Leftrightarrow-3x + 4\ge0\Leftrightarrow3x\le4\Leftrightarrow x\le\frac{4}{3}$. (c) $\sqrt{\frac{1}{x - 1}}$ xác định $\Leftrightarrow\frac{1}{x - 1} > 0\Leftrightarrow x - 1 > 0\Leftrightarrow x > 1$. (d) $\sqrt{1 + x^2}$ xác định $\Leftrightarrow1 + x^2 > 0$: luôn đúng $\forall x\in\mathbb{R}$ vì $x^2 + 1\ge0 + 1 = 1 > 0$, $\forall x\in\mathbb{R}$. Vậy $\sqrt{1 + x^2}$ xác định $\forall x\in\mathbb{R}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 13., p. 11]
-	Rút gọn các biểu thức: (a) $2\sqrt{a^2} - 5a$ với $a < 0$ \& $a\in\mathbb{R}$. (b) $\sqrt{25a^2} + 3a$ với $a\ge0$ \& $a\in\mathbb{R}$. (c) $\sqrt{9a^4} + 3a^2$. (d) $5\sqrt{4a^6} - 3a^3$ với $a < 0$ \& $a\in\mathbb{R}$.
+	Rút gọn các biểu thức: (a) $2\sqrt{a^2} - 5a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a$ với $a\ge0$ \& $a\in\mathbb{R}$. (c) $\sqrt{9a^4} + 3a^2$. (d) $5\sqrt{4a^6} - 3a^3$ với $a < 0$ \& $a\in\mathbb{R}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $2\sqrt{a^2} - 5a = 2|a| - 5a = -2a - 5a = -7a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a$ với $a\ge0$ \& $a\in\mathbb{R}$. (c) $\sqrt{9a^4} + 3a^2$. (d) $5\sqrt{4a^6} - 3a^3$ với $a < 0$ \& $a\in\mathbb{R}$. \texttt{inserting...}
+\end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 14., p. 11]
 	Phân tích thành nhân tử: (a) $x^2 - 3$. (b) $x^2 - 6$. (c) $x^2 + 2\sqrt{3}x + 3$. (d) $x^2 - 2\sqrt{5}x + 5$.
 \end{baitoan}
 \noindent{\sf Hint.} $a = (\sqrt{a})^2$, $\forall a\in\mathbb{R}$, $a\ge0$.
 
+\begin{proof}[Giải]
+	(a) $x^2 - 3 = x^2 - (\sqrt{3})^2 = (x - \sqrt{3})(x + \sqrt{3})$. (b) $x^2 - 6 = x^2 - (\sqrt{6})^2 = (x - \sqrt{6})(x + \sqrt{6})$. (c) $x^2 + 2\sqrt{3}x + 3 = x^2 + 2x\sqrt{3} + (\sqrt{3})^2  = (x + \sqrt{3})^2$. (d) $x^2 - 2\sqrt{5}x + 5 = x^2 - 2x\sqrt{5} + (\sqrt{5})^2 = (x - \sqrt{5})^2$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 15., p. 11]
 	 Giải phương trình: (a) $x^2 - 5 = 0$. (b) $x^2 - 2\sqrt{11}x + 11 = 0$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $x^2 - 5 = 0\Leftrightarrow x^2 = 5\Leftrightarrow|x| = \sqrt{5}\Leftrightarrow x = \pm\sqrt{5}$. Vậy $x = \pm\sqrt{5}$, $S = \{\pm\sqrt{5}\}$. (b) $x^2 - 2\sqrt{11}x + 11 = 0\Leftrightarrow x^2 - 2x\sqrt{11} + (\sqrt{11})^2 = 0\Leftrightarrow(x - \sqrt{11})^2 = 0\Leftrightarrow x - \sqrt{11} = 0\Leftrightarrow x = \sqrt{11}$. Vậy $x = \sqrt{11}$, $S = \{\sqrt{11}\}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 16., p. 12]
 	Tìm chỗ sai trong phép chứng minh ``Con muỗi nặng bằng con voi'' sau: Giả sử con muỗi nặng $m$ \emph{g}, còn con voi nặng $V$ \emph{g}. Ta có: $m^2 + V^2 = V^2 + m^2$. Cộng cả 2 vế với $-2mV$, ta có: $m^2 - 2mV + V^2 = V^2 - 2mV + m^2$, hay $(m - V)^2 = (V - m)^2$. Lấy căn bậc 2 mỗi vế của đẳng thức trên, ta được: $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}$. Do đó $m - V = V - m$. Từ đó ta có $2m = 2V$, suy ra $m = V$. Vậy con muỗi nặng bằng con voi!
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Chỗ sai ở bước khai căn: $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Leftrightarrow|m - V| = |V - m|$, chứ không phải $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Rightarrow m - V = V - m$ (thiếu dấu giá trị tuyệt đối nên sai dấu).
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 12., p. 7]
 	 Tìm $x\in\mathbb{R}$ để căn thức sau có nghĩa: (a) $\sqrt{-2x + 3}$. (b) $\sqrt{\dfrac{2}{x^2}}$. (c) $\sqrt{\dfrac{4}{x + 3}}$. (d) $\sqrt{\dfrac{-5}{x^2 + 6}}$.
