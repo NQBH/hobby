@@ -1173,6 +1173,46 @@ else:
     print(*A)
 \end{verbatim}
 
+\begin{problem}[Number Spiral]
+	A \emph{number spiral} is an infinite grid whose upper-left square has number $1$. Here are the 1st 5 layers of the spiral:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			1 & 2 & 9 & 10 & 25 \\
+			\hline
+			4 & 3 & 8 & 11 & 24 \\
+			\hline
+			5 & 6 & 7 & 12 & 23 \\
+			\hline
+			16 & 15 & 14 & 13 & 22 \\
+			\hline
+			17 & 18 & 19 & 20 & 21 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	Your task is to find out the number in row $y$ \& column $x$.
+	\begin{itemize}
+		\item {\sf Input.} The 1st input line contains an integer $t$: the number of tests. After this, there are $t$ lines, each containing integers $y,x$.
+		\item {\sf Output.} For each test, print the number in row $y$ and column $x$.
+		\item {\sf Constraints.} $1\le t\le10^5$, $1\le x,y\le10^9$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|number_spiral.inp| & \verb|number_spiral.out| \\
+				\hline
+				3 & 8 \\
+				2 3 & 1 \\
+				1 1 & 15 \\
+				4 2 & \\
+				\hline				
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{problem}
+
 %------------------------------------------------------------------------------%
 
 \section*{Resources}
