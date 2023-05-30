@@ -33,7 +33,23 @@
 	
 \end{proof}
 
+\begin{proof}[1st giải]
+
+\end{proof}
+
+\begin{proof}[2nd giải]
+	
+\end{proof}
+
 \begin{proof}[Chứng minh]
+	
+\end{proof}
+
+\begin{proof}[1st chứng minh]
+	
+\end{proof}
+
+\begin{proof}[2nd chứng minh]
 	
 \end{proof}
 
@@ -56,4 +72,3 @@
 \newtheorem{question}{Question}[section]
 \newtheorem{remark}{Remark}[section]
 \newtheorem{theorem}{Theorem}[section]
-
