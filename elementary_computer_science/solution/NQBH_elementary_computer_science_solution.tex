@@ -76,48 +76,6 @@
 
 \section{Problems in Elementary Mathematics  -- Bài Toán Tin Học Trong Toán Học Sơ Cấp}
 
-\begin{problem}[Weird Algorithm]
-	Consider an algorithm that takes as input a positive integer $n\in\mathbb{N}^\star$. If $n$ is even, the algorithm divides it by $2$, \& if $n$ is odd, the algorithm multiplies it by $3$ \& adds $1$. The algorithms repeats this, until $n$ is $1$. E.g., the sequence for $n = 3$ is as follows: $3\to10\to5\to16\to8\to4\to2\to1$. Your task is to simulate the execution of the algorithm for a given value of $n$.
-	\begin{itemize}
-		\item {\sf Input:} The only input line contains an integer $n\in\mathbb{Z}$.
-		\item {\sf Output:} Print a line that contains all values of $n$ during the algorithm.
-		\item {\sf Constraints:} $1\le n\le10^6$.
-		\item {\sf Sample:}
-		\begin{table}[H]
-			\centering
-			\begin{tabular}{|l|l|}
-				\hline
-				\verb|weird_algorithm.inp| & \verb|weird_algorithm.out| \\
-				\hline
-				3 & 3 10 5 16 8 4 2 1 \\
-				\hline
-			\end{tabular}
-		\end{table}
-	\end{itemize}
-\end{problem}
-Source: \href{https://cses.fi/problemset/task/1068}{CSES Problem Set\texttt{/}weird algorithm}, \& \cite[Sect. 1.3, pp. 5--7]{Laaksonen2020}.
-
-\begin{verbatim}
-#include <iostream>
-using namespace std;
-
-int main() {
-    long long n;
-    cin >> n;
-    while (1) {
-        cout << n << " ";
-        if (n == 1) break;
-        if (n%2 == 0) n /= 2;
-        else n = n*3 + 1;
-    }
-    cout << "\n";
-}
-\end{verbatim}
-
-\begin{remark}[Collatz conjecture]
-	The above algorithm terminates $\forall n\in\mathbb{N}^\star$.
-\end{remark}
-
 \begin{baitoan}[Even vs. odd]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
 \end{baitoan}
@@ -745,8 +703,8 @@ See, e.g., \cite[Chap. 5: Sorting]{Knuth1998}, \cite[Chap. II, Sect. Dạng bài
 \begin{baitoan}[\cite{VietSTEM2021}, p. 91, Giai thừa -- Factorial $n!$]
 	Tính $n! = \prod_{i=1}^n i = 1\cdot2\cdots(n - 1)n$.
 	\begin{itemize}
-		\item {\sf Input:} Dòng đầu là số lượng test. Mỗi dòng tiếp theo gồm 1 số $n\in\mathbb{N}$.
-		\item {\sf Output:} Với mỗi test, in ra $n!$ theo mẫu:
+		\item {\sf Input.} Dòng đầu là số lượng test. Mỗi dòng tiếp theo gồm 1 số $n\in\mathbb{N}$.
+		\item {\sf Output.} Với mỗi test, in ra $n!$ theo mẫu:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -772,8 +730,8 @@ See, e.g., \cite[Chap. 5: Sorting]{Knuth1998}, \cite[Chap. II, Sect. Dạng bài
 	\end{equation*}
 	Viết 1 chương trình tính toán hàm McCarthy's f91.
 	\begin{itemize}
-		\item {\sf Input:} File input chứa 1 dãy các số nguyên dương, mỗi số không quá $1000$. Mỗi số trên 1 dòng.
-		\item {\sf Output:} Hiện ra theo định dạng trong ví dụ sau:
+		\item {\sf Input.} File input chứa 1 dãy các số nguyên dương, mỗi số không quá $1000$. Mỗi số trên 1 dòng.
+		\item {\sf Output.} Hiện ra theo định dạng trong ví dụ sau:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -792,8 +750,8 @@ See, e.g., \href{https://en.wikipedia.org/wiki/McCarthy_91_function}{Wikipedia\t
 \begin{baitoan}[\cite{VietSTEM2021}, 2., p. 93, Chỉnh hợp -- Arrangement $A_n^k$]
 	Tìm tất cả các chỉnh hợp chập $k$ của $n$ phần tử từ $1$ đến $n$, $0 < k\le n < 10$.
 	\begin{itemize}
-		\item {\sf Input:} File input chứa 1 dòng gồm $n,k\in\mathbb{N}$.
-		\item {\sf Output:} In ra số chỉnh hợp tìm được \& liệt kê các chỉnh hợp, giữa các test là 1 dòng trắng, e.g.,
+		\item {\sf Input.} File input chứa 1 dòng gồm $n,k\in\mathbb{N}$.
+		\item {\sf Output.} In ra số chỉnh hợp tìm được \& liệt kê các chỉnh hợp, giữa các test là 1 dòng trắng, e.g.,
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|l|l|}
@@ -838,8 +796,8 @@ See, e.g., \href{https://en.wikipedia.org/wiki/McCarthy_91_function}{Wikipedia\t
 \begin{baitoan}[\cite{VietSTEM2021}, 5., p. 94, Tổ hợp -- Combinatoric $C_n^k$]
 	Tìm tất cả các tổ hợp chập $k$ của $n$ phần tử từ $1$ đến $n$, $0 < k\le n < 10$.
 	\begin{itemize}
-		\item {\sf Input:} File input có dòng đầu gồm 1 số tự nhiên \texttt{ntest} là số lượng test của file \verb|combinatoric.inp|. Mỗi test 1 dòng gồm $2$ số $n,k\in\mathbb{Z}$. 
-		\item {\sf Output:} Với mỗi test, in ra số tổ hợp tìm được \& liệt kê các tổ hợp, giữa các test là 1 dòng trắng. E.g.:
+		\item {\sf Input.} File input có dòng đầu gồm 1 số tự nhiên \texttt{ntest} là số lượng test của file \verb|combinatoric.inp|. Mỗi test 1 dòng gồm $2$ số $n,k\in\mathbb{Z}$. 
+		\item {\sf Output.} Với mỗi test, in ra số tổ hợp tìm được \& liệt kê các tổ hợp, giữa các test là 1 dòng trắng. E.g.:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -864,8 +822,8 @@ See, e.g., \href{https://en.wikipedia.org/wiki/McCarthy_91_function}{Wikipedia\t
 \begin{baitoan}[\cite{VietSTEM2021}, 4., pp. 93--94, Trò chơi số học -- Number theory game]
 	1 trò chơi phổ biến của trẻ em với bảng $n\times n$ ô $2\le n\le5$. Trong mỗi ô chứa 1 số có $1$ chữ số từ $1$ tới $9$. Với 1 số số cho trước, điền các số còn lại vào ô sao cho tổng các hàng ngang bằng nhau \& bằng tổng các hàng dọc.
 	\begin{itemize}
-		\item {\sf Input:} \verb|number_theory_game.inp|: Số đầu tiên là 1 số nguyên \texttt{ntest} là số lượng test của bài, mỗi test gồm có: Dòng đầu tiên là số $n$. Tiếp theo là ma trận $n\times n$ trong đó số $0$ là ô trắng cần điền.		
-		\item {\sf Output:} \verb|number_theory_game.out|: Với mỗi test, nếu có thể tìm ra đáp án thỏa mãn quy luật của bảng thì in ra ma trận $n\times n$ 1 cách điền bất kỳ. Nếu không có kết quả nào in ra 1 chuỗi: \texttt{"cannot find."}. Giữa các test cách nhau 1 dòng trắng. E.g.:
+		\item {\sf Input.} \verb|number_theory_game.inp|: Số đầu tiên là 1 số nguyên \texttt{ntest} là số lượng test của bài, mỗi test gồm có: Dòng đầu tiên là số $n$. Tiếp theo là ma trận $n\times n$ trong đó số $0$ là ô trắng cần điền.		
+		\item {\sf Output.} \verb|number_theory_game.out|: Với mỗi test, nếu có thể tìm ra đáp án thỏa mãn quy luật của bảng thì in ra ma trận $n\times n$ 1 cách điền bất kỳ. Nếu không có kết quả nào in ra 1 chuỗi: \texttt{"cannot find."}. Giữa các test cách nhau 1 dòng trắng. E.g.:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -933,10 +891,10 @@ Watch \href{https://www.youtube.com/watch?v=uGrBHohIgQY}{YouTube\texttt{/}Willia
 \begin{problem}[Google Kickstart Round A 2020, Allocation]
 	There are $n$ houses for sale. The $i$th house costs $a_i$ dollars to buy. You have a budget of $b$ dollars to spend. What is the maximum number of houses you can buy?
 	\begin{itemize}
-		\item {\sf Input:} The 1st line of the input gives the number of test cases, $t$. $t$ test cases follow. Each test case begins with a single line containing the 2 integers $n,b$. The 2nd line contains $n$ integers. The $i$th integer is $a_i$, the cost of the $i$th house.
-		\item {\sf Output:} For each test case, output 1 line containing \verb|Case #x: y|, where \texttt{x} is the test case number (starting from $1$) \& \texttt{y} is the maximum number of houses you can buy.
+		\item {\sf Input.} The 1st line of the input gives the number of test cases, $t$. $t$ test cases follow. Each test case begins with a single line containing the 2 integers $n,b$. The 2nd line contains $n$ integers. The $i$th integer is $a_i$, the cost of the $i$th house.
+		\item {\sf Output.} For each test case, output 1 line containing \verb|Case #x: y|, where \texttt{x} is the test case number (starting from $1$) \& \texttt{y} is the maximum number of houses you can buy.
 		\item {\sf Limits:} Time limit: \emph{15 s\texttt{/}test set}. Memory limit: \emph{1GB}. $1\le t\le100$, $1\le b\le10^5$, $1\le a_i\le1000$, $\forall i = 1,2,\ldots,n$. Test set 1: $1\le n\le100$. Test set 2: $1\le n\le10^5$.
-		\item {\sf Sample:}
+		\item {\sf Sample.}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -995,10 +953,10 @@ int main() {
 \begin{problem}[Google Kickstart Round A 2020, Plates]
 	Dr. Patel has $n$ stacks of plates. Each stack contains $k$ plates. Each plate has a positive beauty value, describing how beautiful it looks. Dr. Patel would like to take exactly $p$ plates to use for dinner tonight. If he would like to take a plate in a stack, he must also take all of the plates above it in that stack as well. Help Dr. Patel pick the $p$ plates that would maximize the total sum of beauty values.
 	\begin{itemize}
-		\item {\sf Input:} The 1st line of the input gives the number of test cases, $t$. $t$ test cases follow. Each test case begins with a line containing the 3 integers $n,k,p$. Then, $n$ lines follow. The $i$th line contains $k$ integers, describing the beauty values of each stack of plates from top to bottom.
-		\item {\sf Output:} For each test case, output 1 line containing \verb|Case #x: y|, where \texttt{x} is the test case number (starting from $1$) \& \texttt{y} is the maximum total sum of beauty values that Dr. Patel could pick.
+		\item {\sf Input.} The 1st line of the input gives the number of test cases, $t$. $t$ test cases follow. Each test case begins with a line containing the 3 integers $n,k,p$. Then, $n$ lines follow. The $i$th line contains $k$ integers, describing the beauty values of each stack of plates from top to bottom.
+		\item {\sf Output.} For each test case, output 1 line containing \verb|Case #x: y|, where \texttt{x} is the test case number (starting from $1$) \& \texttt{y} is the maximum total sum of beauty values that Dr. Patel could pick.
 		\item {\sf Limits:} Time limit: \emph{20 s\texttt{/}test set}. Memory limit: \emph{1GB}. $\le t\le100$, $1\le k\le30$, $1\le p\le nk$. The beauty values are between $1$ \& $100$, inclusive. Test set 1: $1\le n\le 3$. Test set 2: $1\le n\le50$.
-		\item {\sf Sample:}
+		\item {\sf Sample.}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -1018,6 +976,90 @@ int main() {
 		\end{table}
 	\end{itemize}
 \end{problem}
+
+%------------------------------------------------------------------------------%
+
+\section{CSES Problem Set}
+
+\begin{problem}[Weird Algorithm]
+	Consider an algorithm that takes as input a positive integer $n\in\mathbb{N}^\star$. If $n$ is even, the algorithm divides it by $2$, \& if $n$ is odd, the algorithm multiplies it by $3$ \& adds $1$. The algorithms repeats this, until $n$ is $1$. E.g., the sequence for $n = 3$ is as follows: $3\to10\to5\to16\to8\to4\to2\to1$. Your task is to simulate the execution of the algorithm for a given value of $n$.
+	\begin{itemize}
+		\item {\sf Input.} The only input line contains an integer $n\in\mathbb{Z}$.
+		\item {\sf Output.} Print a line that contains all values of $n$ during the algorithm.
+		\item {\sf Constraints.} $1\le n\le10^6$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|weird_algorithm.inp| & \verb|weird_algorithm.out| \\
+				\hline
+				3 & 3 10 5 16 8 4 2 1 \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{problem}
+Source: \href{https://cses.fi/problemset/task/1068}{CSES Problem Set\texttt{/}weird algorithm}, \& \cite[Sect. 1.3, pp. 5--7]{Laaksonen2020}.
+
+\begin{verbatim}
+	#include <iostream>
+	using namespace std;
+	
+	int main() {
+		long long n;
+		cin >> n;
+		while (1) {
+			cout << n << " ";
+			if (n == 1) break;
+			if (n%2 == 0) n /= 2;
+			else n = n*3 + 1;
+		}
+		cout << "\n";
+	}
+\end{verbatim}
+
+\begin{remark}[Collatz conjecture]
+	The above algorithm terminates $\forall n\in\mathbb{N}^\star$.
+\end{remark}
+
+\begin{problem}[Missing Number]
+	You are given all numbers between $1,2,\ldots,n$ except one. Your task is to find the missing number.
+	\begin{itemize}
+		\item {\sf Input.} The 1st input line contains a positive integer $n\in\mathbb{N}^\star$. The 2nd line contains $n - 1$ numbers. Each number is distinct \& between $1$ \& $n$ (inclusive).
+		\item {\sf Output.} Print the missing number.
+		\item {\sf Constraints.} $2\le n\le2\cdot10^5$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|missing_number.inp| & \verb|missing_number.out| \\
+				\hline
+				5 & 4 \\
+				2 3 1 5 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{problem}
+Source: \href{https://cses.fi/problemset/task/1083}{CSES Problem Set\texttt{/}missing number}.
+
+\begin{verbatim}
+file_in = open("missing_number.inp")
+file_out = open("missing_number.out", "w")
+n = int(file_in.readline())
+data = file_in.readline()
+A = data.split()
+A = [int(i) for i in A]
+A.sort()
+for i in range(n-1):
+    if i + 1 != A[i]:
+        file_out.write(str(i + 1))
+        break
+file_in.close()
+file_out.close()
+\end{verbatim}
 
 %------------------------------------------------------------------------------%
 
