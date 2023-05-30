@@ -97,6 +97,23 @@
 \end{problem}
 Source: \href{https://cses.fi/problemset/task/1068}{CSES Problem Set\texttt{/}weird algorithm}, \& \cite[Sect. 1.3, pp. 5--7]{Laaksonen2020}.
 
+\begin{verbatim}
+#include <iostream>
+using namespace std;
+
+int main() {
+    long long n;
+    cin >> n;
+    while (1) {
+        cout << n << " ";
+        if (n == 1) break;
+        if (n%2 == 0) n /= 2;
+        else n = n*3 + 1;
+    }
+    cout << "\n";
+}
+\end{verbatim}
+
 \begin{remark}[Collatz conjecture]
 	The above algorithm terminates $\forall n\in\mathbb{N}^\star$.
 \end{remark}
@@ -163,19 +180,19 @@ except:
 \begin{verbatim}
 try:
     a,b,c = float(input('Nhap a = ')), float(input('Nhap b = ')), float(input('Nhap c = '))
-	if (a + b > c) and (a + c > b) and  (b + c > a):
-		loai_tg = ''
-		if (a*a + b*b == c*c) or (a*a + c*c == b*b) or (b*b + c*c == a*a):
-			loai_tg = 'vuong'
-		elif (a*a + b*b > c*c) and (a*a + c*c > b*b) and (b*b + c*c > a*a):
-			loai_tg = 'nhon'
-		else:
-			loai_tg = 'tu'
-		print('Day la do dai 3 canh cua 1 tam giac ' + loai_tg)
-	else: 
-		print('Day khong la do dai 3 canh cua 1 tam giac.')			
+if (a + b > c) and (a + c > b) and  (b + c > a):
+loai_tg = ''
+if (a*a + b*b == c*c) or (a*a + c*c == b*b) or (b*b + c*c == a*a):
+loai_tg = 'vuong'
+elif (a*a + b*b > c*c) and (a*a + c*c > b*b) and (b*b + c*c > a*a):
+loai_tg = 'nhon'
+else:
+loai_tg = 'tu'
+print('Day la do dai 3 canh cua 1 tam giac ' + loai_tg)
+else: 
+print('Day khong la do dai 3 canh cua 1 tam giac.')			
 except:
-	print('Day khong phai la 1 so.')
+print('Day khong phai la 1 so.')
 \end{verbatim}
 
 \begin{baitoan}[Polynomial equation]
@@ -244,8 +261,8 @@ Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_comput
 	a = int(a)
 	b = int(b)
 	c = int(c)
-	S = (a**a + b**b + c**c)/(a*b*c) + sqrt(a*b*c)
-	S = str(round(S,2))
+	S = (a**2 + b**2 + c**2)/(a*b*c) + sqrt(a*b*c)
+	S = str(round(S, 2))
 	file_out.write(S)
 	file_in.close()
 	file_out.close()
@@ -938,6 +955,42 @@ Watch \href{https://www.youtube.com/watch?v=uGrBHohIgQY}{YouTube\texttt{/}Willia
 		\end{table}
 	\end{itemize}
 \end{problem}
+
+\begin{verbatim}
+#include <bits/stdc++.h>
+using namespace std;
+int n, b, a[100000];
+
+void solve() {
+    cout << "Enter n: ";
+    cin >>  n;
+    cout << "Enter b: ";
+    cin >>  b;
+    cout << "Enter array a: ";
+    for(int i = 0; i < n; ++i)
+    cin >> a[i];
+    sort(a, a + n);
+    int ans = 0;
+    for (int i = 0; i < n; ++i) {
+        if (b >= a[i]) {
+            b -= a[i];
+            ++ ans;
+        }
+    }
+    cout << ans << "\n";
+}
+
+int main() {
+    int t, i = 1;
+    cout << "Enter t: ";
+    cin >> t;
+    while (t--) {
+        cout << "Case #" << i << ": ";
+        solve();
+        ++i;
+    }
+}
+\end{verbatim}
 
 \begin{problem}[Google Kickstart Round A 2020, Plates]
 	Dr. Patel has $n$ stacks of plates. Each stack contains $k$ plates. Each plate has a positive beauty value, describing how beautiful it looks. Dr. Patel would like to take exactly $p$ plates to use for dinner tonight. If he would like to take a plate in a stack, he must also take all of the plates above it in that stack as well. Help Dr. Patel pick the $p$ plates that would maximize the total sum of beauty values.
