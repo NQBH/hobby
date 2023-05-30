@@ -533,7 +533,7 @@ Pascal:
 \end{baitoan}
 
 \begin{proof}[Giải]
-	(a) $\sqrt{(x - 2)^2} = |x - 2| = x - 2$ (vì $x\ge2$). (b) $\sqrt{a^6} = \sqrt{(a^3)^2} = |a^3|$. Có: $a < 0\Leftrightarrow a^3 < 0\Rightarrow|a^3| = -a^3$. Vậy $\sqrt{a^6} = -a^3$ với $a < 0$.
+	(a) $\sqrt{(x - 2)^2} = |x - 2| = x - 2$ (vì $x\ge2$). (b) $\sqrt{a^6} = \sqrt{(a^3)^2} = |a^3| = -a^3$ vì $a < 0\Leftrightarrow a^3 < 0$.
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 6., p. 10]
@@ -597,11 +597,11 @@ Pascal:
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 13., p. 11]
-	Rút gọn các biểu thức: (a) $2\sqrt{a^2} - 5a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a$ với $a\ge0$ \& $a\in\mathbb{R}$. (c) $\sqrt{9a^4} + 3a^2$. (d) $5\sqrt{4a^6} - 3a^3$ với $a < 0$ \& $a\in\mathbb{R}$.
+	Rút gọn các biểu thức: (a) $2\sqrt{a^2} - 5a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a$ với $a\ge0$. (c) $\sqrt{9a^4} + 3a^2 = \sqrt{(3a^2)^2} + 3a^2 = |3a^2| + 3a^2 = 3a^2 + 3a^2 = 6a^2$. (d) $5\sqrt{4a^6} - 3a^3$ với $a < 0$.
 \end{baitoan}
 
 \begin{proof}[Giải]
-	(a) $2\sqrt{a^2} - 5a = 2|a| - 5a = -2a - 5a = -7a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a$ với $a\ge0$ \& $a\in\mathbb{R}$. (c) $\sqrt{9a^4} + 3a^2$. (d) $5\sqrt{4a^6} - 3a^3$ với $a < 0$ \& $a\in\mathbb{R}$. \texttt{inserting...}
+	(a) $2\sqrt{a^2} - 5a = 2|a| - 5a = -2a - 5a = -7a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a = \sqrt{(5a)^2} + 3a = |5a| + 3a = 5a + 3a = 8a$ vì $a\ge0\Leftrightarrow5a\ge0$. (c) $\sqrt{9a^4} + 3a^2$. (d) $5\sqrt{4a^6} - 3a^3 = 5\sqrt{(2a^3)^2} - 3a^3 = 5|2a^3| - 3a^3 = -10a^3 - 3a^3 = -13a^3$ vì $a < 0\Leftrightarrow a^3 < 0\Leftrightarrow2a^3 < 0$.
 \end{proof}
 
 \begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 14., p. 11]
@@ -626,27 +626,55 @@ Pascal:
 \end{baitoan}
 
 \begin{proof}[Giải]
-	Chỗ sai ở bước khai căn: $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Leftrightarrow|m - V| = |V - m|$, chứ không phải $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Rightarrow m - V = V - m$ (thiếu dấu giá trị tuyệt đối nên sai dấu).
+	Chỗ sai ở bước khai căn: $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Leftrightarrow|m - V| = |V - m|$, chứ không phải $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Rightarrow m - V = V - m$, vì $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Leftrightarrow m - V = \pm(V - m)$. Lời giải trên thiếu dấu giá trị tuyệt đối sau khi khai phương nên sai.
 \end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 12., p. 7]
 	 Tìm $x\in\mathbb{R}$ để căn thức sau có nghĩa: (a) $\sqrt{-2x + 3}$. (b) $\sqrt{\dfrac{2}{x^2}}$. (c) $\sqrt{\dfrac{4}{x + 3}}$. (d) $\sqrt{\dfrac{-5}{x^2 + 6}}$.
 \end{baitoan}
 
+\begin{proof}[1st giải]
+	(a) $\sqrt{-2x + 3}$ xác định $\Leftrightarrow-2x + 3\ge0\Leftrightarrow-2x\ge-3\Leftrightarrow x\le\frac{3}{2} = 1.5$. (b) $\sqrt{\frac{2}{x^2}}$ xác định $\Leftrightarrow\frac{2}{x^2}\ge0$. Vì  $x^2\ge0$, $\forall x\in\mathbb{R}$ nên $\frac{2}{x^2}\ge0\Leftrightarrow x\ne0$ (để cho $\frac{2}{x^2}$ có nghĩa). (c) $\sqrt{\frac{4}{x + 3}}$ xác định $\Leftrightarrow\frac{4}{x + 3}\ge0$. Vì $4 > 0$ nên $\frac{4}{x + 3}\ge0\Leftrightarrow x + 3 > 0\Leftrightarrow x > -3$. (d) Vì $x^2\ge0$, $\forall x\in\mathbb{R}$ nên $x^2 + 6 > 0$. Suy ra $\frac{-5}{x^2 + 6} < 0$, $\forall x\in\mathbb{R}$. Vậy không tồn tại $x\in\mathbb{R}$ để $\sqrt{\frac{-5}{x^2 + 6}}$ có nghĩa.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) $\sqrt{-2x + 3}$ xác định $\Leftrightarrow-2x + 3\ge0\Leftrightarrow2x\le3\Leftrightarrow x\le\frac{3}{2} = 1.5$. (b) $\sqrt{\frac{2}{x^2}}$ xác định $\Leftrightarrow\frac{2}{x^2} > 0\Leftrightarrow x^2 > 0\Leftrightarrow x\ne0$. (c) $\sqrt{\frac{4}{x + 3}}$ xác định $\Leftrightarrow\frac{4}{x + 3} > 0\Leftrightarrow x + 3 > 0\Leftrightarrow x > -3$. (d) $\sqrt{\frac{-5}{x^2 + 6}}$ xác định $\Leftrightarrow \frac{-5}{x^2 + 6} > 0\Leftrightarrow x^2 + 6 < 0$ vô lý vì $x^2 + 6\ge0 + 6 = 6 > 0$, $\forall x\in\mathbb{R}$. Vậy $\sqrt{\frac{-5}{x^2 + 6}}$ luôn không có nghĩa\texttt{/}xác định.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 13., p. 7]
 	Rút gọn rồi tính: (a) $5\sqrt{(-2)^4}$. (b) $-4\sqrt{(-3)^6}$. (c) $\sqrt{\sqrt{(-5)^8}}$. (d) $2\sqrt{(-5)^6} + 3\sqrt{(-2)^8}$.
 \end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) $5\sqrt{(-2)^4} = 5\sqrt{((-2)^2)^2} = 5|(-2)^2| = 5|4| = 5\cdot4 = 20$. (b) $-4\sqrt{(-3)^6} = -4\sqrt{((-3)^3)^2} = -4|(-3)^3| = -4|-27| = -4\cdot27 = -108$. (c) $\sqrt{\sqrt{(-5)^8}} = \sqrt{\sqrt{((-5)^4})^2} = \sqrt{|(-5)^4|} = \sqrt{((-5)^2)^2} = |(-5)^2| = |25| = 25$. (d) $2\sqrt{(-5)^6} + 3\sqrt{(-2)^8} = 2\sqrt{((-5)^3)^2} + 3\sqrt{((-2)^4)^2} = 2|(-5)^3| + 3|(-2)^4| = 2|-125| + 3|16| = 2\cdot125 + 3\cdot16 = 250 + 48 = 298$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Sử dụng tính chất $a^{2n} = (-a)^{2n}$, $\forall a\in\mathbb{R}$, $n\in\mathbb{N}$, $a^2 + n^2\ne0$.\footnote{Điều kiện $a^2 + n^2\ne0$ nghĩa là $(a,n)\ne(0,0)$, i.e., $a$ \& $n$ không thể cùng bằng 0, nhưng có thể có nhiều nhất 1 trong 2 số bằng 0. Tổng quát hơn, điều kiện $\sum_{i=1}^n a_i^2\ne0\Leftrightarrow(a_1,a_2,\ldots,a_n)\ne(0,0,\ldots,0)$.} (a) $5\sqrt{(-2)^4} = 5\sqrt{2^4} = 5\sqrt{(2^2)^2} = 5|2^2| = 5|4|= 5\cdot4 = 20$. (b) $-4\sqrt{(-3)^6} = -4\sqrt{3^6} = -4\sqrt{(3^3)^2} = -4|3^3| = -4\cdot27 = -108$. (c) $\sqrt{\sqrt{(-5)^8}} = \sqrt{\sqrt{5^8}} = \sqrt{\sqrt{(5^4)^2}} = \sqrt{|5^4|} = \sqrt{5^4} = \sqrt{(5^2)^2} = |5^2| = |25| = 25$. (d) $2\sqrt{(-5)^6} + 3\sqrt{(-2)^8} = 2\sqrt{5^6} + 3\sqrt{2^8} = 2\sqrt{(5^3)^2} + 3\sqrt{(2^4)^2} = 2|5^3| + 3|2^4| = 2|125| + 3|16| = 2\cdot125 + 3\cdot16 = 250 + 48 = 298$.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 14., p. 7]
 	Rút gọn các biểu thức: (a) $\sqrt{(4 + \sqrt{2})^2}$. (b) $\sqrt{(3 - \sqrt{3})^2}$. (c) $\sqrt{(4 - \sqrt{17})^2}$. (d) $2\sqrt{3} + \sqrt{(2 - \sqrt{3})^2}$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $\sqrt{(4 + \sqrt{2})^2} = |4 + \sqrt{2}| = 4 + \sqrt{2}$ vì $4 + \sqrt{2} > 4 > 0$. (b) $\sqrt{(3 - \sqrt{3})^2} = |3 - \sqrt{3}| = 3 - \sqrt{3}$ vì $9 > 3\Leftrightarrow\sqrt{9} = 3 > \sqrt{3}$. (c) $\sqrt{(4 - \sqrt{17})^2} = |4 - \sqrt{17}| = \sqrt{17} - 4$ vì $16 < 17\Leftrightarrow\sqrt{16} = 4 < \sqrt{17}$. (d) $2\sqrt{3} + \sqrt{(2 - \sqrt{3})^2} = 2\sqrt{3} + |2 - \sqrt{3}| = 2\sqrt{3} + 2 - \sqrt{3} = 2 + \sqrt{3}$ vì $4 > 3\Leftrightarrow\sqrt{4} = 2 > \sqrt{3}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 15., p. 7]
 	Chứng minh: (a) $9 + 4\sqrt{5} = (\sqrt{5} + 2)^2$. (b) $\sqrt{9 - 4\sqrt{5}} - \sqrt{5} = -2$. (c) $(4 - \sqrt{7})^2 = 23 - 8\sqrt{7}$. (d) $\sqrt{23 + 8\sqrt{7}} - \sqrt{7} = 4$.
 \end{baitoan}
 
+\begin{proof}[1st giải (VT $\to$ VP)]
+	(a) $9 + 4\sqrt{5} = 5 + 2\cdot2\sqrt{5} + (\sqrt{5})^2 = (\sqrt{5} + 2)^2$. (b) $\sqrt{9 - 4\sqrt{5}} - \sqrt{5} = \sqrt{(\sqrt{5})^2 - 2\sqrt{5}\cdot2 + 2^2} - \sqrt{5} = \sqrt{(\sqrt{5} - 2)^2} - \sqrt{5} = |\sqrt{5} - 2| - \sqrt{5} = \sqrt{5} - 2 - \sqrt{5} = -2$ vì $5 > 4\Leftrightarrow\sqrt{5} > \sqrt{4} = 2$. (c) $(4 - \sqrt{7})^2  = 4^2 - 2\cdot4\cdot\sqrt{7} + (\sqrt{7})^2 = 16 - 8\sqrt{7} + 7 = 23 - 8\sqrt{7}$. (d) $\sqrt{23 + 8\sqrt{7}} - \sqrt{7} = \sqrt{4^2 + 2\cdot4\sqrt{7} + (\sqrt{7})^2} - \sqrt{7} = \sqrt{(4 + \sqrt{7})^2}  - \sqrt{7} = |4 + \sqrt{7}| - \sqrt{7} = 4 + \sqrt{7} - \sqrt{7} = 4$.
+\end{proof}
+
+\begin{proof}[2nd giải (VP $\to$ VT)]
+	(a) $(\sqrt{5} + 2)^2 = (\sqrt{5})^2 + 2\sqrt{5}\cdot2 + 2^2 = 5 + 4\sqrt{5} + 4 = 9 + 4\sqrt{5}$. (b) $(\sqrt{5} - 2)^2 = (\sqrt{5})^2 - 2\sqrt{5}\cdot2 + 2^2 = 5 - 4\sqrt{5} + 4 = 9 - 4\sqrt{5}\Leftrightarrow|\sqrt{5} - 2| = \sqrt{9 - 4\sqrt{5}}\Leftrightarrow\sqrt{5} - 2 = \sqrt{9 - 4\sqrt{5}}\Leftrightarrow\sqrt{9 - 4\sqrt{5}} - \sqrt{5} = -2$ vì $5 > 4\Leftrightarrow\sqrt{5} > \sqrt{4} = 2$. (c) $23 - 8\sqrt{7} = 4^2 - 2\cdot4\sqrt{7} + (\sqrt{7})^2 = (4 - \sqrt{7})^2$. (d) $(4 + \sqrt{7})^2 = 4^2 + 2\cdot4\sqrt{7} + (\sqrt{7})^2 = 16 + 8\sqrt{7} + 7 = 23 + 8\sqrt{7}\Leftrightarrow|4 + \sqrt{7}| = \sqrt{23 + 8\sqrt{7}}\Leftrightarrow4 + \sqrt{7} = \sqrt{23 + 8\sqrt{7}}\Leftrightarrow\sqrt{23 + 8\sqrt{7}} - \sqrt{7} = 4$.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 16., p. 7]
-	Biểu thức sau đây xác định với giá trị nào của $x$? (a) $\sqrt{(x - 1)(x - 3)}$. (b) $\sqrt{x^2 - 4}$. (c) $\sqrt{\frac{x - 2}{x + 3}}$. (d) $\sqrt{\frac{2 + x}{5 - x}}$.
+	Biểu thức sau đây xác định với giá trị nào của $x$? (a) $\sqrt{(x - 1)(x - 3)}$. (b) $\sqrt{x^2 - 4}$. (c) $\sqrt{\dfrac{x - 2}{x + 3}}$. (d) $\sqrt{\dfrac{2 + x}{5 - x}}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 17., p. 8]
@@ -657,9 +685,17 @@ Pascal:
 	Phân tích nhân tử: (a) $x^2 - 7$. (b) $x^2  - 2\sqrt{2}x + 2$. (c) $x^2 + 2\sqrt{13}x + 13$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $x^2 - 7 = x^2 - (\sqrt{7})^2 = (x - \sqrt{7})(x + \sqrt{7})$. (b) $x^2  - 2\sqrt{2}x + 2 = (x - \sqrt{2})^2$. (c) $x^2 + 2\sqrt{13}x + 13 = (x + \sqrt{13})^2$.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 19., p. 8]
 	Tìm ĐKXĐ rồi rút gọn các phân thức: (a) $\dfrac{x^2 - 5}{x + \sqrt{5}}$. (b) $\dfrac{x^2 + 2\sqrt{2}x + 2}{x^2 - 2}$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) ĐKXĐ: $x\ne-\sqrt{5}$, $\dfrac{x^2 - 5}{x + \sqrt{5}} = \dfrac{(x - \sqrt{5})(x + \sqrt{5})}{x + \sqrt{5}} = x - \sqrt{5}$. (b) ĐKXĐ: $x^2\ne2\Leftrightarrow x\ne\pm\sqrt{2}$, $\dfrac{x^2 + 2\sqrt{2}x + 2}{x^2 - 2} = \dfrac{(x + \sqrt{2})^2}{(x - \sqrt{2})(x + \sqrt{2})} = \dfrac{x + \sqrt{2}}{x - \sqrt{2}}$.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 20., p. 8]
 	Không dùng bảng số hay máy tính bỏ túi, so sánh: (a) $6 + 2\sqrt{2}$ \& $9$. (b) $\sqrt{2} + \sqrt{3}$ \& $3$. (c) $9 + 4\sqrt{5}$ \& $16$. (d) $\sqrt{11} - \sqrt{3}$ \& $2$.
@@ -672,6 +708,33 @@ Pascal:
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 22., p. 8]
 	(a) Chứng minh: $\sqrt{(n + 1)^2} + \sqrt{n^2} = (n + 1)^2 - n^2$, $\forall n\in\mathbb{N}$. Viết đẳng thức trên với $n = 1,2,\ldots,10$. (b) Tính $\sqrt{(x + 1)^2} + \sqrt{x^2}$ với $x\in\mathbb{R}$ rồi so sánh với $|(x + 1)^2 - x^2|$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{(n + 1)^2} + \sqrt{n^2} = |n + 1| + |n| = n + 1 + n = 2n + 1$ ($\star$) vì $n\in\mathbb{N}\Rightarrow n + 1 > n\ge0$. Mặt khác, $(n + 1)^2 - n^2 = n^2 + 2n + 1 - n^2 = 2n + 1$ ($\star\star$). Từ ($\star$) \& ($\star\star$), suy ra $\sqrt{(n + 1)^2} + \sqrt{n^2} = (n + 1)^2 - n^2$, $\forall n\in\mathbb{N}$. Với $n = 1,2,\ldots,10$:
+	\begin{align*}
+		\sqrt{2^2} + \sqrt{1^2} &= 2^2 - 1^2,\ \sqrt{3^2} + \sqrt{2^2} = 3^2 - 2^2,\ \sqrt{4^2} + \sqrt{3^2} = 4^2 - 3^2,\ \sqrt{5^2} + \sqrt{4^2} = 5^2 - 4^2,\ \sqrt{6^2} + \sqrt{5^2} = 6^2 - 5^2,\\
+		\sqrt{7^2} + \sqrt{6^2} &= 7^2 - 6^2,\ \sqrt{8^2} + \sqrt{7^2} = 8^2 - 7^2,\ \sqrt{9^2} + \sqrt{8^2} = 9^2 - 8^2,\ \sqrt{10^2} + \sqrt{9^2} = 10^2 - 9^2,\ \sqrt{11^2} + \sqrt{10^2} = 11^2 - 10^2.
+	\end{align*}
+	(b) Có:
+	\begin{equation*}
+		\sqrt{(x + 1)^2} + \sqrt{x^2} = |x + 1| + |x| = \left\{\begin{split}
+			&2x + 1,&&\mbox{nếu } x\ge0,\\
+			&1,&&\mbox{nếu } -1\le x < 0,\\
+			-&2x - 1,&&\mbox{nếu } x < -1.
+		\end{split}\right.\ \forall x\in\mathbb{R}.
+	\end{equation*}
+	\begin{equation*}
+		|(x + 1)^2 - x^2| = |x^2 + 2x + 1 - x^2| = |2x + 1| = \left\{\begin{split}
+			&2x + 1,&&\mbox{nếu } x\ge-\frac{1}{2},\\
+			-&2x - 1,&&\mbox{nếu } x < -\frac{1}{2}.
+		\end{split}\right.\ \forall x\in\mathbb{R}.
+	\end{equation*}
+	Suy ra $\sqrt{(x + 1)^2} + \sqrt{x^2} = |(x + 1)^2 - x^2|\Leftrightarrow x\ge0$ or $x\le-1\Leftrightarrow x\in\mathbb{R}\backslash(-1,0) = (-\infty,-1]\cup[0,\infty)$.
+\end{proof}
+
+\begin{luuy}
+	Để tính $(x + 1)^2 - x^2$, ta cũng có thể áp dụng hằng đẳng thức $A^2 - B^2 = (A - B)(A + B)$, thay vì áp dụng hằng đẳng thức $(A + B)^2 = A^2 + 2AB + B^2$ như trên, như sau: $(x + 1)^2 - x^2 = (x + 1 - x)(x + 1 + x) = 1\cdot(2x + 1) = 2x + 1$, $\forall x\in\mathbb{R}$.
+\end{luuy}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 2, p. 5]
 	\label{prob: Tuyen_Toan_9 VD 2 p. 5}
