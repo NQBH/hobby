@@ -1,6 +1,6 @@
-import sys
-n = int(sys.stdin.readline())
-A = list(map(int, sys.stdin.readline().split()))
+from sys import stdin
+n = int(stdin.readline())
+A = list(map(int, stdin.readline().split()))
 A = [int(i) for i in A]
 A.sort()
 if A[-1] == n - 1:
