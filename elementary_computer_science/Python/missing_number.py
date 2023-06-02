@@ -1,13 +1,12 @@
-file_in = open("missing_number.inp")
-file_out = open("missing_number.out", "w")
-n = int(file_in.readline())
-data = file_in.readline()
-A = data.split()
+n = int(input())
+A = input()
+A = A.split()
 A = [int(i) for i in A]
 A.sort()
-for i in range(n-1):
-	if i + 1 != A[i]:
-		file_out.write(str(i + 1))
-		break
-file_in.close()
-file_out.close()
+if A[-1] == n - 1:
+	print(n)
+else:
+	for i in range(n-1):
+		if A[i] != (i + 1):
+			print(i + 1)
+			break
