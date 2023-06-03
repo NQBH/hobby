@@ -883,6 +883,37 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 	\end{itemize}
 \end{baitoan}
 
+\begin{problem}[Frosting on the Cake]
+	Iskander the Baker is decorating a huge cake by covering the rectangular surface of the cake with frosting. For this purpose, he mixes frosting sugar with lemon juice \& beetle juice, in order to produce 3 kinds of frosting: yellow, pink, \& white. These colors are identified by the number $0$ for yellow, $1$ for pink, \& $2$ for white. To obtain a nice pattern, he partitions the cake surface into vertical stripes of width $A_1,A_2,\ldots,A_n$ centimeters, \& horizontal stripes of height $B_1,B_2,\ldots,B_n$ centimeters, for some positive integer $n\in\mathbb{N}^\star$. These stripes split the cake surface into  $n\times n$ rectangles. The intersection of vertical stripe $i$ \& horizontal stripe $j$ has color number $(i + j)\mod3$ for all $1\le i,j\le n$, e.g.:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{frosting_on_cake}
+		\caption{An instance of the problem \textit{Frosting on the Cake}.}
+	\end{figure}
+	\noindent To prepare the frosting, Iskander wants to know the total surface in square centimeters to be colored for each of the 3 colors, \& asks for your help.
+	\begin{itemize}
+		\item {\sf Input.} The input consists of the following integers: on the 1st line: the integer $n\in\mathbb{N}^\star$, on the 2nd line: the values of $A_1,A_2,\ldots,A_n,n$ integers separated by single spaces, on the 3rd line: the values of $B_1,B_2,\ldots,B_n,n$ integers separated by single spaces.
+		\item {\sf Limits.} The input satisfies $3\le n\le100000$ \& $1\le A_i,B_i\le10000$, $i = 1,2,\ldots,n$.
+		\item {\sf Output.} The output should consist of 3 integers separated by single spaces, representing the total area for each color $0,1,2$.
+	\end{itemize}
+\end{problem}
+
+\begin{proof}[Solution]
+	Followed \cite[Sect. 1.8, pp. 39--41]{Durr_Vie2021}, we want to find a solution that runs in time $O(n)$ or possibly $O(n\log n)$, which rules out the naive solution which loops over all $n^2$ grid cells \& accumulates their areas in variables corresponding to each color. Permuting columns or rows preserves the total area of each color. Hence, we can reduce to the $n = 3$ case, by simply summing the values of each color class $A_{3k},A_{3k+1},A_{3k+2}$. Then the answer per color class is just the sum of the areas of 3 rectangles. The tricky part relies in not mixing up the colors.
+\end{proof}
+
+\begin{verbatim}
+def read_ints(): return [int(x) for x in input().split()]
+def cat(l): return tuple(sum(l[n::3]) for n in [1, 2, 0])
+input() # n
+A = cat(read_ints())
+B = cat(read_ints())
+print("{} {} {}".format(B[2] * A[0] + B[0] * A[2] + B[1] * A[1],
+                        B[2] * A[1] + B[0] * A[0] + B[1] * A[2],
+                        B[2] * A[2] + B[0] * A[1] + B[1] * A[0]))
+\end{verbatim}
+
+
 %------------------------------------------------------------------------------%
 
 \subsection{Google Kickstart Round A 2020}
