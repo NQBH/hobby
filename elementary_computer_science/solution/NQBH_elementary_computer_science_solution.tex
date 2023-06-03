@@ -6,6 +6,8 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,color,float,graphicx,mathtools,multicol}
+\usepackage{enumitem}
+\setlist{leftmargin=5mm}
 \setlength{\columnseprule}{.5pt}
 \def\columnseprulecolor{\color{black}}
 \allowdisplaybreaks
@@ -56,6 +58,21 @@
 \section{Notes on Commands}
 
 \subsection{Notes on C\texttt{/}C++ commands}
+Template:
+\begin{verbatim}
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    // Input & Output
+    freopen("prob.inp", "r", stdin);
+    freopen("prob.out", "w", stdout);	
+}
+// Compile in Terminal:
+// g++ -std=c++11 -O2 -Wall test.cpp -o test
+\end{verbatim}
 
 \subsection{Notes on Pascal commands}
 
@@ -192,13 +209,13 @@ print('Day khong phai la 1 so.')
 \begin{baitoan}[\cite{VietSTEM2021}, 1., p. 15, Vũng Tàu 2020]
 	Cho $a,b,c\in\mathbb{N}^\star$. {\sf Yêu cầu:} Tính giá trị của biểu thức $S = \dfrac{a^2 + b^2 + c^2}{abc} + \sqrt{abc}$.
 	\begin{itemize}
-		\item {\sf Dữ liệu vào:} File \verb|root.inp| chứa 3 số nguyên dương $a,b,c$. Mỗi số trên 1 dòng.
-		\item {\sf Kết quả:} Ghi vào File \verb|root.out| kết quả $S$ tính được (làm tròn lấy 2 chữ số sau phần thập phân). E.g.:
+		\item {\sf Dữ liệu vào:} File \verb|algebraic_expression.inp| chứa 3 số nguyên dương $a,b,c$. Mỗi số trên 1 dòng.
+		\item {\sf Kết quả:} Ghi vào File \verb|algebraic_expression.out| kết quả $S$ tính được (làm tròn lấy 2 chữ số sau phần thập phân). E.g.:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
 				\hline
-				\texttt{root.inp} & \texttt{root.out} \\
+				\verb|algebraic_expression.inp| & \verb|algebraic_expression.out| \\
 				\hline
 				2 & 4.25 \\
 				1 &  \\
@@ -208,22 +225,28 @@ print('Day khong phai la 1 so.')
 		\end{table}
 	\end{itemize}
 \end{baitoan}
-Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}root.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.inp}{root.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/root.out}{root.out}.
+Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}algebraic expression.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.inp}{algebraic expression.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.out}{algebraic expression.out}.
+
+Python:
 \begin{verbatim}
-	from math import *
-	file_in = open("root.inp")
-	file_out = open("root.out", "w")
-	a = file_in.readline()
-	b = file_in.readline()
-	c = file_in.readline()
-	a = int(a)
-	b = int(b)
-	c = int(c)
-	S = (a**2 + b**2 + c**2)/(a*b*c) + sqrt(a*b*c)
-	S = str(round(S, 2))
-	file_out.write(S)
-	file_in.close()
-	file_out.close()
+from math import sqrt
+def algebraic_expression(a, b, c):
+    return (a**2 + b**2 + c**2)/(a*b*c) + sqrt(a*b*c) # function f(a,b,c) can be modified
+a = int(input()); b = int(input()); c = int(input())
+print(algebraic_expression(a,b,c))
+\end{verbatim}
+C++:
+\begin{verbatim}
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    float a, b, c;
+    cin >> a >> b >> c;
+    printf("%.2f\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
+}
+// Terminal: g++ -std=c++11 -O2 -Wall algebraic_expression.cpp -o algebraic_expression
 \end{verbatim}
 
 \begin{luuy}
@@ -614,6 +637,14 @@ The sum of the reciprocals of the perfect powers (including duplicates such as $
 		 1875
 	\end{verbatim}
 \end{baitoan}
+
+\begin{problem}[\cite{Durr_Vie2021}, pp. 42--43, Anagrams]
+	A word {\tt w} is an \emph{anagram} of a word {\tt v} if a permutation of the letters transforming {\tt w} into {\tt v} exists. Given a set of $n$ words of length at most $k$, we would like to detect all possible anagrams.
+	\begin{itemize}
+		\item {\sf Sample Input.} below the car is a rat drinking cider and bending its elbow while this thing is an arc that can act like a cat which cried during the night caused by pain in its bowel.
+		\item {\sf Sample Output.} \verb|{bowel below elbow}, {arc car}, {night thing}, {cried cider}, {act act}|
+	\end{itemize}
+\end{problem}
 
 %------------------------------------------------------------------------------%
 
