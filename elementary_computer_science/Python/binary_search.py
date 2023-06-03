@@ -17,3 +17,12 @@ def continuous_binary_search(f, lo, hi, gap = 1e-4):
 		else:
 			lo = mid
 	return lo
+
+def optimized_binary_search(tab, logsize):
+	hi = (1 << logsize) - 1
+	intervalsize = (1 << logsize) >> 1
+	while intervalsize > 0:
+		if tab[hi ^ intervalsize]:
+			hi ^= intervalsize
+		intervalsize >>= 1
+	return hi
