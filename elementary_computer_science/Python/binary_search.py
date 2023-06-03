@@ -7,7 +7,8 @@ def discrete_binary_search(tab, lo, hi):
 			lo = mid + 1
 	return lo
 
-bisect_left(tab, x, 0, n) # Standard module bisect
+# Standard module bisect
+bisect_left(tab, x, 0, n)
 
 def continuous_binary_search(f, lo, hi, gap = 1e-4):
 	while hi - lo > gap:
@@ -26,3 +27,6 @@ def optimized_binary_search(tab, logsize):
 			hi ^= intervalsize
 		intervalsize >>= 1
 	return hi
+
+# Filling Tanks
+level = continuous_binary_search(lambda level: volume(level) >= V, 0, hi)
