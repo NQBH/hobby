@@ -513,6 +513,26 @@ is_perfect_number(n)
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{verbatim}
+from math import floor
+def luck_number(n, k):
+    if k <= floor((n + 1)/2):
+        print(2*k - 1)
+    else:
+        print(2*(k - round((n + 1)/2) + 1))
+
+nk = input()
+nk = nk.split()
+n = int(nk[0])
+k = int(nk[1])
+luck_number(n, k)
+"""
+# Print all
+for i in range(1, k + 1):
+    luck_number(n, i)
+"""
+\end{verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 8., p. 27, Ninh Bình 2019, Ước chung lớn nhất ƯCLN -- greatest common divisor gcd]
 	Nhập vào $3$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} của $3$ số này. E.g., nhập vào $3$ số: $4,6,12$ thì kết quả \emph{ƯCLN} là $2$.
