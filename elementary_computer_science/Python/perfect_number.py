@@ -5,7 +5,6 @@ def is_perfect_number(n):
 		if n % i == 0:
 			list_proper_divisor.append(i)
 			sum_proper_divisor += i
-	print(sum_proper_divisor)
 	if sum_proper_divisor == n:
 		list_proper_divisor.append(n)
 		print(n, " is a perfect number.")
