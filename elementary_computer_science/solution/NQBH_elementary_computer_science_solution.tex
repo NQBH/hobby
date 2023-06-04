@@ -347,20 +347,41 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 \end{baitoan}
 Python:
 \begin{verbatim}
-from math import gcd
-frac = input()
-frac = frac.split("/")
-num = int(frac[0])
-den = int(frac[1])
-gcd = gcd(num, den)
-num = int(num/gcd)
-den = int(den/gcd)
-print(str(num) + "/" + str(den))
+max_iter = 1000
+def sum_digit_sqr(n):
+    sum = 0 
+    for i in str(n):
+        sum += int(i)**2
+    return sum
+n0 = n = int(input())
+count = 0
+while n > 1 and count <= max_iter:
+    n = sum_digit_sqr(n)
+    print(n)
+    count += 1
+if n == 1:
+    print(n0, " is a happy number.")
+elif n == 0:
+    print(n0, " is a sad number.")
+else:
+    print(n0, " is neither a happy nor a sad number.")
 \end{verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 2., p. 25, Gia Lai 2019, Phân số tối giản -- Irreducible fraction]
 	1 chuỗi được gọi là có dạng phân số nếu nó có dạng \verb|`tử_số/mẫu_số'|. Viết chương trình nhập vào chuỗi có dạng phân số, sau đó xuất ra dạng tối giản của phân số đó. E.g., Chuỗi \verb|`12/15'| biểu diễn cho phân số. Dạng tối giản của phân số đó là \verb|`3/5'|.
 \end{baitoan}
+Python:
+\begin{verbatim}
+	from math import gcd
+	frac = input()
+	frac = frac.split("/")
+	num = int(frac[0])
+	den = int(frac[1])
+	gcd = gcd(num, den)
+	num = int(num/gcd)
+	den = int(den/gcd)
+	print(str(num) + "/" + str(den))
+\end{verbatim}
 
 \begin{baitoan}[Tổng tất cả, tổng phần tử chẵn, lẻ, bình phương, lập phương, lũy thừa bậc $n$, căn bậc 2, 3, \& căn bậc $n$, nghịch đảo, nghịch đảo bình phương, nghịch đảo lập phương, nghịch đảo lũy thừa bậc $n$, nghịch đảo căn bậc 2, 3, \& nghịch đảo căn bậc $n$ -- Sums of all, odds, evens, squares, cubes, $n$th powers, square roots, cube roots, $n$th roots, reciprocals of square, of cubes, of $n$th powers, of square roots, of cube roots, of $n$th roots]
 	Cho 1 dãy gồm $n$ số nguyên: $(a_i)_{i=1}^m = a_1,a_2,\ldots,a_m$, $m\in\mathbb{N}^\star$, $a_i\in\mathbb{Z}$, $\forall i = 1,2,\ldots,m$, mỗi số có giá trị không vượt quá $10^9$.
@@ -408,9 +429,9 @@ print(str(num) + "/" + str(den))
 \end{nhanxet}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 5., p. 26, Nghệ An 2019, Giả thuyết Goldbach cho số nguyên tố -- Goldbach conjecture for primes]
-	Minh đố An: Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho.
+	Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho.
 	\begin{itemize}
-		\item {\sf Yêu cầu:} Viết chương trình \textsc{Pascal, Python, C\texttt{/}C++} giúp An trả lời câu hỏi của Minh.
+		\item {\sf Yêu cầu:} Viết chương trình \textsc{Pascal, Python, C\texttt{/}C++} để trả lời câu hỏi.
 		\item {\sf Dữ liệu vào:} Tệp văn bản \verb|prime.inp|: Dòng đầu tiên chứa $n\in\mathbb{N}^\star$ tương ứng số test. $n$ dòng tiếp theo, mỗi dòng chứa 1 số $k$, i.e., $k_i$, $i = 1,2,\ldots,n$.
 		\item {\sf Dữ liệu ra:} Tệp văn bản \verb|prime.out| gồm $n$ dòng tương ứng $n$ kết quả. Mỗi kết quả hiển thị tổng 2 số nguyên tố bằng số $k$ nhập vào. E.g.:
 		\begin{table}[H]
@@ -427,10 +448,52 @@ print(str(num) + "/" + str(den))
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{verbatim}
+from math import sqrt
+from math import floor
+def is_prime(x):
+    if x == 1:
+        return 0
+    for i in range (2, int(sqrt(x)) + 1):
+        if x % i == 0:
+            return 0
+    return 1
+
+t = int(input())
+for i in range(t):
+    n = int(input())
+    if n % 2 != 0 and is_prime(n - 2) == 1:
+        print(n, " = 2 + ", n - 2)
+    else:
+        for j in range(3, floor(n/2)):
+            if is_prime(j) == 1 and is_prime(n - j) == 1:
+                print(n, " = ", j, " + ", n - j)
+                # break # if want only 1 representation
+\end{verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 6., p. 27, Tây Ninh 2019, Số hoàn hảo -- Perfect number]
-	\emph{Số hoàn hảo} là 1 số tự nhiên mà tổng tất cả các ước tự nhiên thực sự của nó bằng chính nó. Trong đó ước thực sự của 1 số là các ước dương không bằng số đó. Lập trình nhập vào 1 số tự nhiên có $2$ chữ số bất kỳ. In ra màn hình thông báo số vừa nhập có phải là số hoàn hảo hay không? Nếu là số hoàn hảo thì in tất cả các ước của số đó.
+	\emph{Số hoàn hảo} là 1 số tự nhiên mà tổng tất cả các ước tự nhiên thực sự của nó bằng chính nó. Trong đó ước thực sự của 1 số là các ước dương không bằng số đó. Lập trình nhập vào 1 số tự nhiên có $2$ chữ số bất kỳ. In ra màn hình thông báo số vừa nhập có phải là số hoàn hảo hay không? Nếu là số hoàn hảo thì in tất cả các ước nguyên dương của số đó (i.e., bao gồm tất cả các ước tự nhiên thực sự \& chính số đó).
 \end{baitoan}
+Python:
+\begin{verbatim}
+def is_perfect_number(n):
+    sum_proper_divisor = 0
+    list_proper_divisor = []
+    for i in range(1, round(n/2 + 1)):
+        if n % i == 0:
+            list_proper_divisor.append(i)
+            sum_proper_divisor += i
+    if sum_proper_divisor == n:
+        list_proper_divisor.append(n)
+        print(n, " is a perfect number.")
+        print("List of of all divisor of ", n, ":", *list_proper_divisor)
+    else:
+        print(n, " is not a perfect number.")
+
+n = int(input())
+is_perfect_number(n)
+\end{verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 7., p. 27, Đồng Nai 2020, Số may mắn -- Lucky number]
 	Để động viên thành tích học tập xuất sắc của các em học sinh lớp 6-3 trong năm học 2019--2020, thầy giáo chủ nhiệm đã chuẩn bị các món quà được đánh số từ $1$ đến $n$. Sau đó thầy giáo sẽ cho các em lên bốc thăm để nhận món quà may mắn của mình. Đầu tiên thầy giáo sẽ ghi tất cả số nguyên lẻ từ $1$ đến $n$, sau đó sẽ ghi tất cả các số nguyên chẵn từ $2$ đến $n$ (theo thứ tự tăng dần) để tạo thành 1 dãy số phần thưởng. Mỗi bạn sẽ bốc thăm 1 số $k$ ứng với con số của món quà mình đạt được.
@@ -454,11 +517,32 @@ print(str(num) + "/" + str(den))
 \begin{baitoan}[\cite{VietSTEM2021}, 8., p. 27, Ninh Bình 2019, Ước chung lớn nhất ƯCLN -- greatest common divisor gcd]
 	Nhập vào $3$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} của $3$ số này. E.g., nhập vào $3$ số: $4,6,12$ thì kết quả \emph{ƯCLN} là $2$.
 \end{baitoan}
+Python:
+\begin{verbatim}
+from math import gcd
+def gcd3(a, b, c):
+    return gcd(a, b, c)
+
+a = int(input())
+b = int(input())
+c = int(input())
+print(gcd3(a, b, c))
+\end{verbatim}
 
 \begin{baitoan}[Bội chung nhỏ nhất BCNN -- least common multiplier lcd]
 	Nhập vào $n\in\mathbb{N}^\star$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} \& \emph{BCNN} của $n$ số này.
 \end{baitoan}
+Python:
+\begin{verbatim}
+from math import lcm
+def lcm3(a, b, c):
+   return lcm(a, b, c)
 
+a = int(input())
+b = int(input())
+c = int(input())
+print(lcm3(a, b, c))
+\end{verbatim}
 We are interested in various types of numbers whose beautiful properties are studied in number theory.
 
 \subsubsection{Square number}
