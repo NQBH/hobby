@@ -1,3 +1,4 @@
+max_iter = 1000
 def sum_digit_sqr(n):
 	sum = 0 
 	for i in str(n):
@@ -5,7 +6,7 @@ def sum_digit_sqr(n):
 	return sum
 n0 = n = int(input())
 count = 0
-while n > 1 and count <= 1000:
+while n > 1 and count <= max_iter:
 	n = sum_digit_sqr(n)
 	print(n)
 	count += 1
