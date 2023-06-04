@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 // bool is_open(file*);
 
 bool nonzero(int i) {
@@ -25,9 +27,14 @@ void pointer_bool_converter(int* p) {
 		// ...
 	}
 }
+// Integer value of any character input from keyboard
+void intval() {
+	for (char c; cin >> c;)
+		cout << "the value of '" << c << "' is " << int(c) << '\n';
+}
 
 int main(){
-
+	intval();
 	return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall collection.cpp -o collection
