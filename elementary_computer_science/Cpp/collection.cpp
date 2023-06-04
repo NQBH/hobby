@@ -17,3 +17,16 @@ bool greater(int a, int b) {
 bool greater(double a, double b) {
 	return a > b;
 }
+// A pointer can be implicitly converted to a bool. A non-null pointer converts to true; pointers with value nullptr convert to false
+void pointer_bool_converter(int* p) {
+	bool b = p; // narrows to true or false
+	bool b2 {p != nullptr}; // explicit test against nullptr
+	if (p) { // equivalent to p != nullptr
+		// ...
+	}
+}
+
+int main(){
+	
+	return 0;
+}
