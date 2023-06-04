@@ -1,4 +1,4 @@
-bool is_open(File*);
+// bool is_open(file*);
 
 bool nonzero(int i) {
 	bool b {i != 0};
@@ -27,6 +27,7 @@ void pointer_bool_converter(int* p) {
 }
 
 int main(){
-	
+
 	return 0;
 }
+// Terminal: g++ -std=c++11 -O2 -Wall collection.cpp -o collection
