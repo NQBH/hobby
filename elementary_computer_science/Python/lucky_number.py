@@ -1,6 +1,5 @@
-from math import floor
 def luck_number(n, k):
-	if k <= floor((n + 1)/2):
+	if k <= (n + 1) // 2:
 		print(2*k - 1)
 	else:
 		print(2*(k - round((n + 1)/2) + 1))
