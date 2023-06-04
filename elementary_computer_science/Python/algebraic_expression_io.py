@@ -1,4 +1,4 @@
-from math import *
+from math import sqrt
 file_in = open("root.inp")
 file_out = open("root.out", "w")
 a = file_in.readline()
