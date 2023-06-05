@@ -1,3 +1,3 @@
-x = input("Enter a positive integer a: ")
-y = x[::-1] # reverse x
+x = input()
+y = x[::-1]
 print(int(y) % 19)
