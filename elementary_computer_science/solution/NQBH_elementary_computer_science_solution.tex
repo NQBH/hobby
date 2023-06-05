@@ -208,6 +208,7 @@ int main() {
 \begin{baitoan}[Triangle]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của: (a) 1 tam giác. (b) 1 tam giác nhọn. (c) 1 tam giác vuông. (d) 1 tam giác tù.
 \end{baitoan}
+\noindent Pascal: 
 
 \begin{itemize}
 	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}triangle}.
@@ -788,6 +789,17 @@ The sum of the reciprocals of the perfect powers (including duplicates such as $
 		\end{tabular}
 	\end{table}
 \end{baitoan}
+\noindent Pascal:
+
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/reversed_number.py}.
+\begin{verbatim}
+x = input()
+y = x[::-1]
+print(int(y) % 19)
+\end{verbatim}
+C:
+
+C++:
 
 \begin{baitoan}[\cite{VietSTEM2021}, 2., pp. 28--29, Bắc Giang 2020, Nén xâu -- String compression]
 	Viết chương trình nhập vào 1 xâu ký tự chỉ gồm các chữ cái Tiếng Anh, chữ số, dấu cách, \& dấu gạch nối.
@@ -807,6 +819,31 @@ The sum of the reciprocals of the perfect powers (including duplicates such as $
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+\noindent Pascal:
+
+Python:
+\begin{itemize}
+    \item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/string_compression.py}.
+    \item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/string_compression_io.py}.
+\end{itemize}
+\begin{verbatim}
+s = input()
+i = 0
+ans = ""
+while i < len(s):
+    temp = s[i]
+    count = 0
+    while temp == s[i]:
+        i += 1
+        count += 1
+        if i == len(s):
+            break
+    ans += str(count) + temp
+print(ans)
+\end{verbatim}
+C:
+
+C++:
 
 \begin{baitoan}[\cite{VietSTEM2021}, 3., p. 30, Hậu Giang 2020, Tính nhân -- Multiplication]
 	Viết chương trình nhập vào 2 số nguyên dương $a,b\in\mathbb{N}^\star$. Sau đó thực hiện nhân $a\times b$ như cách nhân bằng tay thông thường ở tiểu học. E.g., nhập vào thừa số thứ 1: $125$, nhập vào thừa số thứ 2: $15$. {\sf Dữ liệu ra:}
