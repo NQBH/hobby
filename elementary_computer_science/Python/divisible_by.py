@@ -1,6 +1,6 @@
-a = int(input("Enter a number a = "))
-b = int(input("Enter a number b = "))
-if (a % b) == 0:
-   print("{} is divisible by {}".format(a,b))
+a = int(input())
+b = int(input())
+if a % b == 0:
+   print(a, ' is divisible by ', b)
 else:
-   print("{} is not divisible by {}".format(a,b))
+   print(a, ' is not divisible by ', b)
