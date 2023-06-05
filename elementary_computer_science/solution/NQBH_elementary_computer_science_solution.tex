@@ -96,13 +96,12 @@ int main() {
 \begin{baitoan}[Even vs. odd]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
 \end{baitoan}
-Pascal: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/even_odd.pas}.
+\noindent Pascal: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/even_odd.pas}.
 \begin{verbatim}
 program even_odd;
 var n : integer;
 begin
-    write('Enter n = ');
-    readln(n);
+    write('Enter n = '); readln(n);
     if n mod 2 = 0 then writeln(n,' is even') else writeln(n, ' is odd');
 end.
 \end{verbatim}
@@ -118,17 +117,17 @@ C: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/
 \begin{verbatim}
 #include <stdio.h>
 int main() {
-	int n;
-	scanf("%d", &n);
-	// 1st solution
-	if (n % 2 == 0) printf("%d is even.\n", n);
-	else printf("%d is odd.\n", n);
-	// 2nd solution
-	(n % 2 == 0) ? printf("%d is even.\n", n) : printf("%d is odd.\n", n);
-	// 3rd solution
-	if ((n & 1) == 0) printf("%d is even.\n", n);
-	else printf("%d is odd.\n", n);
-	return 0;
+    int n;
+    scanf("%d", &n);
+    // 1st solution
+    if (n % 2 == 0) printf("%d is even.\n", n);
+    else printf("%d is odd.\n", n);
+    // 2nd solution
+    (n % 2 == 0) ? printf("%d is even.\n", n) : printf("%d is odd.\n", n);
+    // 3rd solution
+    if ((n & 1) == 0) printf("%d is even.\n", n);
+    else printf("%d is odd.\n", n);
+    return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall even_odd.c -o even_odd
 \end{verbatim}
@@ -155,22 +154,55 @@ int main() {
 \begin{baitoan}[Divisible by]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để kiểm tra liệu $a\divby b$ hay không, với $a,b\in\mathbb{Z}$ được nhập từ bàn phím \& in ra số dư $r$ trong phép chia $a$ cho $b$.
 \end{baitoan}
-
-\begin{itemize}
-	\item Pascal script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/divisible_by.pas}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Pascal\texttt{/}divisible by}.
-	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/divisible_by.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}divisible by}.
-\end{itemize}
-
+\noindent Pascal: \url{{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/divisible_by.pas}}.
 \begin{verbatim}
-try:
-    a = int(input('nhap a='))
-    b = int(input('nhap b='))
-    if a%b == 0 :
-        print(str(a)+' chia het cho	'+str(b))
-    else:
-        print(str(a)+' khong chia het cho '+str(b))
-except:
-    print('Day khong phai la 1 so nguyen')
+program divisible_by;
+var a, b : integer;
+begin
+    write('Enter a = '); readln(a);
+    write('Enter b = '); readln(b);
+    if a mod b = 0 then writeln(a,' is divisible by ', b, '.')
+    else writeln(a,' is not divisible by ', b, '.');
+end.
+\end{verbatim}
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/divisible_by.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/divisible_by.py}.
+\end{itemize} 
+\begin{verbatim}
+a = int(input())
+b = int(input())
+if a % b == 0:
+    print(a, ' is divisible by ', b)
+else:
+    print(a, ' is not divisible by ', b)
+\end{verbatim}
+C: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/divisible_by.c}.
+\begin{verbatim}
+#include <stdio.h>
+int main() {
+    int a, b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+    if (a % b == 0) printf("%d is divisible by %d.\n", a, b);
+    else printf("%d is not divisible by %d.\n", a, b);
+    return 0;
+}
+// Terminal: g++ -std=c++11 -O2 -Wall divisible_by.c -o divisible_by
+\end{verbatim}
+C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/divisible_by.cpp}.
+\begin{verbatim}
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    cin >> a >> b;
+    if (a % b == 0) cout << a << " is divisible by " << b << ".\n";
+    else cout << a << " is not divisible by " << b << ".\n";
+    return 0;
+}
+// Terminal: g++ -std=c++11 -O2 -Wall divisible_by.cpp -o divisible_by
 \end{verbatim}
 
 \begin{baitoan}[Triangle]
