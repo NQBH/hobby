@@ -42,7 +42,7 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 
-\title{Problem \textit{\&} Solution: Elementary Computer Science\\Bài Tập \textit{\&} Lời Giải: Tin Học Sơ Cấp}
+\title{Problem \textit{\&} Solution: Elementary Computer Science\\Bài Tập Tin Học Sơ Cấp \textit{\&} Lời Giải}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
@@ -94,37 +94,66 @@ int main() {
 \section{Problems in Elementary Mathematics  -- Bài Toán Tin Học Trong Toán Học Sơ Cấp}
 
 \begin{baitoan}[Even vs. odd]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
 \end{baitoan}
-
-\begin{itemize}
-	\item Pascal script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/even_odd.pas}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Pascal\texttt{/}even vs. odd}.
-	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/even_odd.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}even vs. odd}.
-\end{itemize}
-
-\begin{multicols}{2}
-    \begin{verbatim}
-try:
-    n = int(input())
-    if n % 2 == 0 :
-        print('even')
-    else:
-        print('odd')
-except:
-    print('Not be an integer.')
-    \end{verbatim}
-    \columnbreak
-    \begin{verbatim}
+Pascal: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/even_odd.pas}.
+\begin{verbatim}
+program even_odd;
+var n : integer;
+begin
+    write('Enter n = ');
+    readln(n);
+    if n mod 2 = 0 then writeln(n,' is even') else writeln(n, ' is odd');
+end.
+\end{verbatim}
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/even_odd.py}
+\begin{verbatim}
 n = int(input())
 if n % 2 == 0:
     print(n, " is even")
 else:
     print(n, " is odd")
-    \end{verbatim}
-\end{multicols}
+\end{verbatim}
+C: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/even_odd.c}.
+\begin{verbatim}
+#include <stdio.h>
+int main() {
+	int n;
+	scanf("%d", &n);
+	// 1st solution
+	if (n % 2 == 0) printf("%d is even.\n", n);
+	else printf("%d is odd.\n", n);
+	// 2nd solution
+	(n % 2 == 0) ? printf("%d is even.\n", n) : printf("%d is odd.\n", n);
+	// 3rd solution
+	if ((n & 1) == 0) printf("%d is even.\n", n);
+	else printf("%d is odd.\n", n);
+	return 0;
+}
+// Terminal: g++ -std=c++11 -O2 -Wall even_odd.c -o even_odd
+\end{verbatim}
+C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/even_odd.cpp}.
+\begin{verbatim}
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cin >> n;
+    // 1st solution
+    if (n % 2 == 0) cout << n << " is even.\n";
+    else cout << n << " is odd.\n";
+    // 2nd solution
+    (n % 2 == 0) ? cout << n << " is even.\n" : cout << n << " is odd.\n";
+    // 3rd solution using bitwise AND
+    if ((n & 1) == 0) cout << n << " is even.\n";
+    else cout << n << " is odd.\n";
+    return 0;
+}
+// Terminal: g++ -std=c++11 -O2 -Wall even_odd.cpp -o even_odd
+\end{verbatim}
 
 \begin{baitoan}[Divisible by]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để kiểm tra liệu $a\divby b$ hay không, với $a,b\in\mathbb{Z}$ được nhập từ bàn phím \& in ra số dư $r$ trong phép chia $a$ cho $b$.
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để kiểm tra liệu $a\divby b$ hay không, với $a,b\in\mathbb{Z}$ được nhập từ bàn phím \& in ra số dư $r$ trong phép chia $a$ cho $b$.
 \end{baitoan}
 
 \begin{itemize}
@@ -145,7 +174,7 @@ except:
 \end{verbatim}
 
 \begin{baitoan}[Triangle]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của: (a) 1 tam giác. (b) 1 tam giác nhọn. (c) 1 tam giác vuông. (d) 1 tam giác tù.
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của: (a) 1 tam giác. (b) 1 tam giác nhọn. (c) 1 tam giác vuông. (d) 1 tam giác tù.
 \end{baitoan}
 
 \begin{itemize}
@@ -171,11 +200,11 @@ except:
 \end{verbatim}
 
 \begin{baitoan}[Polynomial equation]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để giải phương trình bậc nhất, bậc 2, bậc 3, \& bậc 4 với các hệ số thực được nhập từ bàn phím.
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để giải phương trình bậc nhất, bậc 2, bậc 3, \& bậc 4 với các hệ số thực được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}[Fibonacci sequence]
-	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình \textsc{Pascal, Python, C\texttt{/}C++} để xuất ra màn hình, với $n\in\mathbb{N}$ được nhập từ bàn phím: (a) Số Fibonacci thứ $n$. (b) $n$ số Fibonacci đầu tiên.
+	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để xuất ra màn hình, với $n\in\mathbb{N}$ được nhập từ bàn phím: (a) Số Fibonacci thứ $n$. (b) $n$ số Fibonacci đầu tiên.
 \end{baitoan}
 
 \begin{baitoan}[1st $n$ square roots]
@@ -323,7 +352,7 @@ Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_comput
 See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt{/}powerful number}, \href{https://mathworld.wolfram.com/PowerfulNumber.html}{MathWorld\texttt{/}powerful number}.
 
 \begin{baitoan}[\cite{VietSTEM2021}, 5., p. 23, Việt Nam 2020, Bội chính phương]
-	Cho 1 dãy số $A$ có $n$ phần tử. Tìm số nguyên dương $P$ nhỏ nhất thỏa mãn: $a$ là số chính phương \& $a$ chia hết cho tất cả các phần tử của dãy số $A$.
+	Cho 1 dãy số $A$ có $n$ phần tử. Tìm số nguyên dương $a$ nhỏ nhất thỏa mãn: $a$ là số chính phương \& $a$ chia hết cho tất cả các phần tử của dãy số $A$.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} In ra phần dư của phép chia khi chia $a$ cho $10^9 + 7$.
 		\item {\sf Dữ liệu vào:} Vào từ thiết bị theo khuôn dạng sau: Dòng đầu tiên chứa số nguyên dương $n$ là số lượng phần tử của dãy số. Dòng tiếp theo chứa $n$ số nguyên dương là các phần tử của dãy $A$. Các số trên 1 dòng được ghi cách nhau bởi dấu cách.
@@ -341,6 +370,10 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{verbatim}
+
+\end{verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 1., p. 25, Hải Dương 2020, Số hạnh phúc \& số buồn bã -- Happy- \& sad numbers]
 	Với 1 số nguyên dương bất kỳ, thay thế số đó bằng tổng bình phương các chữ số của nó \& cứ lặp lại quá trình đó sẽ có các trường hợp sau xảy ra: Kết thúc bằng $1$ -- ta gọi số đó là \emph{số hạnh phúc\texttt{/}happy number}. Kết thúc bằng $0$ -- ta gọi số đó là \emph{số buồn bã\texttt{/}sad number}. Lặp lại vô hạn lần -- số đó không hạnh phúc cũng không buồn bã. E.g., số $44$: lần 1: $4^2 + 4^2 = 32$, lần 2: $3^2 + 2^2 = 13$, lần 3: $1^2 + 3^2 = 10$, lần 4: $1^2 + 0^2 = 1$, nên $44$ là số hạnh phúc. Viết chương trình để kiểm tra xem ngày sinh của 1 người bất kỳ có phải là số hạnh phúc không?
@@ -431,9 +464,9 @@ Python:
 \begin{baitoan}[\cite{VietSTEM2021}, 5., p. 26, Nghệ An 2019, Giả thuyết Goldbach cho số nguyên tố -- Goldbach conjecture for primes]
 	Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho.
 	\begin{itemize}
-		\item {\sf Yêu cầu:} Viết chương trình \textsc{Pascal, Python, C\texttt{/}C++} để trả lời câu hỏi.
+		\item {\sf Yêu cầu:} Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để trả lời câu hỏi.
 		\item {\sf Dữ liệu vào:} Tệp văn bản \verb|prime.inp|: Dòng đầu tiên chứa $n\in\mathbb{N}^\star$ tương ứng số test. $n$ dòng tiếp theo, mỗi dòng chứa 1 số $k$, i.e., $k_i$, $i = 1,2,\ldots,n$.
-		\item {\sf Dữ liệu ra:} Tệp văn bản \verb|prime.out| gồm $n$ dòng tương ứng $n$ kết quả. Mỗi kết quả hiển thị tổng 2 số nguyên tố bằng số $k$ nhập vào. E.g.:
+		\item {\sf Dữ liệu ra:} (a) Tệp văn bản \verb|prime.out| gồm $n$ dòng tương ứng $n$ kết quả. Mỗi kết quả hiển thị tổng 2 số nguyên tố bằng số $k$ nhập vào. (b) Gồm tất cả các biểu diễn $x + y$ với $x\le y$. E.g.:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
