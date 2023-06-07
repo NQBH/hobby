@@ -323,8 +323,12 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	\noindent Giải bài toán trong mỗi trường hợp sau: (a) Cho $AH = 16$, $BH = 25$. Tính $AB,AC,BC,CH$. (b) Cho $AB = 12$, $BH = 6$. Tính $AH,AC,BC,CH$.
 \end{baitoan}
 
-\begin{proof}[Giải]
-	(a) Áp dụng định lý Pythagore cho $\Delta ABH$ vuông tại $H$: $AB = \sqrt{AH^2 + BH^2} = \sqrt{16^2 + 25^2} = \sqrt{881}$. \texttt{inserting ...}
+\begin{proof}[1st giải]
+	(a) Áp dụng định lý Pythagore cho $\Delta ABH$ vuông tại $H$: $AB = \sqrt{AH^2 + BH^2} = \sqrt{16^2 + 25^2} = \sqrt{881}$. Áp dụng định lý \ref{thm: h^2 = b'c'} được $AH^2 = BH\cdot CH\Leftrightarrow CH = \frac{AH^2}{BH} = \frac{16^2}{25} = 10.24$. $BC = BH + CH = 25 + 10.24 = 35.24$. Áp dụng định lý Pythagore cho $\Delta ACH$ vuông tại $H$: $AC = \sqrt{AH^2 + CH^2} = \sqrt{16^2 + \left(\frac{256}{25}\right)^2} = \frac{16\sqrt{881}}{25}$. (b) Áp dụng định lý Pythagore cho $\Delta ABH$ vuông tại $H$: $BH = \sqrt{AB^2 - BH^2} = \sqrt{12^2 - 6^2} = 6\sqrt{3}$. Áp dụng định lý \ref{thm: h^2 = b'c'} được $AH^2 = BH\cdot CH\Leftrightarrow CH = \frac{AH^2}{BH} = \frac{(6\sqrt{3})^2}{6} = 18$. $BC = BH + CH = 6 + 18 = 24$. Áp dụng định lý Pythagore cho $\Delta ACH$ vuông tại $H$: $AC = \sqrt{AH^2 + CH^2} = \sqrt{(6\sqrt{3})^2 + 18^2} = 12\sqrt{3}$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) Áp dụng định lý \ref{thm: h^2 = b'c'} được $AH^2 = BH\cdot CH\Leftrightarrow CH = \frac{AH^2}{BH} = \frac{16^2}{25} = 10.24$. $BC = BH + CH = 25 + 10.24 = 35.24$. Áp dụng đinh lý \ref{thm: b^2 = ab' c^2 = ac'} được $AB^2 = BC\cdot BH = 35.24\cdot25 = 881\Rightarrow AB = \sqrt{881}$, $AC^2 = BC\cdot CH = 35.24\cdot10.24 = \frac{225536}{625}\Rightarrow AC = \frac{16\sqrt{881}}{25}$. (b) 
 \end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 6., p. 103]
@@ -563,7 +567,7 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	Cho $\Delta ABC$. Đường trung tuyến $AD$, đường cao $BH$, đường phân giác $CE$ đồng quy. Chứng minh đẳng thức $(AB + CA)(BC^2 + CA^2 - AB^2) = 2BC\cdot CA^2$ hay $(b + c)(a^2 + b^2 - c^2) = 2ab^2$.
 \end{baitoan}
 
-\begin{baitoan}[Tổng quát ${}^\star$]
+\begin{baitoan}[Tổng quát $\star$]
 	Cho $\Delta ABC$ vuông tại $A$. (a) Cho trước 2 trong 6 số $a,b,c,b',c',h$. Tính 4 số còn lại theo 2 số đã cho. (c) Cho trước 2 trong 8 số $a,b,c,b',c',h,p,S$. Tính 6 số còn lại theo 2 số đã cho. (b) Cho trước 2 trong 14 số $a,b,c,b',c',h,m_a,m_b,m_c,d_a,d_b,d_c,p,S$ với $d_a,d_b,d_c$ lần lượt là 3 đường phân giác ứng với $BC,CA,AB$. Tính 12 số còn lại theo 2 số đã cho. Viết các chương trình {\sf Pascal, Python, C\texttt{/}C++} để mô phỏng.
 \end{baitoan}
 
