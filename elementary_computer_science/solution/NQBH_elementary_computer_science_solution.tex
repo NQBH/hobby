@@ -313,6 +313,138 @@ while t != 0:
     print(digit_replacement(n))
 \end{verbatim}
 
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 2., pp. 18--19, Dice -- Xúc xắc]
+	Bạn được tặng 1 con xúc xắc hình lập phương với $6$ mặt. Mỗi mặt của con xúc xắc có in 1 số chấm, số lượng chấm $\in\{1,2,3,4,5,6\}$. Bạn được biết số chấm trên 1 mặt của xúc xắc, nhiệm vụ là đoán số ở mặt đối diện của xúc xắc.
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên dương $t\in\mathbb{N}^\star$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa 1 số nguyên $n\in\mathbb{Z}$ cho biết số chấm trên 1 mặt của con xúc xắc.
+		\item {\sf Output.} Ứng với mỗi bộ dữ liệu đầu vào, in ra số ở mặt đối diện tương ứng.
+		\item {\sf Constraint.} $1\le t\le500$, $1\le n\le6$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{dice.inp} & \texttt{dice.out} \\
+				\hline
+				2 & 1 \\
+				6 & 5 \\
+				2 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+Tổng số chấm trên 2 mặt đối nhau của 1 con xúc xắc luôn bằng 7, nên đối diện với mặt có số chấm là $n\in\in\{1,2,3,4,5,6\}$ là mặt có số chấm $7 - n\in\in\{1,2,3,4,5,6\}$.
+
+Pascal:
+
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/dice.py}.
+\begin{verbatim}
+t = int(input())
+while t != 0:
+    t -= 1
+    n = int(input())
+    print(7 - n)
+\end{verbatim}
+
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 3., pp. 19--20, Doctor appointment -- Lịch khám bệnh]
+	Có $n\in\mathbb{N}^\star$ bệnh nhân đến khám bệnh tại phòng khám. Giả sử cứ sau $x$ phút thì lại có 1 bệnh nhân mới đến phòng khám. Ngoài ra, bác sĩ sẽ chỉ dành $10$ phút để khám cho mỗi bệnh nhân. Tính toán thời gian bằng phút mà bệnh nhân cuối cùng cần phải chờ đến lượt mình được bác sĩ khám bệnh.
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên dương $t\in\mathbb{N}^\star$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa 2 số nguyên $n,x\in\mathbb{Z}$.
+		\item {\sf Output.} Ứng với mỗi bộ dữ liệu đầu vào, in ra 1 dòng chứa số $m$ là số phút mà bệnh nhân cuối cùng cần chờ bác sĩ tại phòng khám.
+		\item {\sf Constraint.} $1\le t\le500$, $1\le n\le100$, $0\le x\le30$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|doctor_appointment.inp| & \verb|doctor_appointment.out| \\
+				\hline
+				5 & 15 \\
+				4 5 & 28 \\
+				5 3 & 25 \\
+				6 5 & 24 \\
+				7 6 & 56 \\
+				8 2 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/doctor_appointment.py}.
+\begin{verbatim}
+# 1st solution. Author: NQBH
+t = int(input())
+while t != 0:
+    t -= 1
+    n, x = map(int, input().split())
+    if x >= 10:
+        print(0)
+    else:
+        print((n - 1)*(10 - x))
+# 2nd solution. Author: Nguyen Tien Duc
+t = int(input())
+while t != 0:
+    t -= 1
+    n, x = map(int, input().split())
+    ans = x + 10*(n - 1) - x*n
+    if ans < 0:
+        ans = 0
+    print(ans)
+\end{verbatim}
+
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 3., p. 20, Bit even, bit odd -- Tính chẵn lẻ nhị phân]
+	Cho số nguyên không dấu $n\in\mathbb{N}$. Kiểm tra ``tính chẵn lẻ'' của $n$, với \emph{tính chẵn lẻ} của $n$ là số bit {\tt1} trong biểu diễn nhị phân của $n$, i.e., nếu trong biểu diễn nhị phân của $n$ có chứa 1 số chẵn các bit {\tt1} thì $n$ được coi là có tính chẵn, \& ngược lại $n$ có tính lẻ.
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên dương $t\in\mathbb{N}^\star$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa số nguyên $n\in\mathbb{N}$.
+		\item {\sf Output.} Ứng với mỗi bộ dữ liệu đầu vào, in ra 1 dòng chứa thông báo {\tt"odd"} nếu $n$ có tính lẻ \& {\tt"even"} nếu $n$ có tính chẵn.
+		\item {\sf Constraint.} $1\le t\le500$, $1\le n\le10^{12}$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|bit_even_odd.inp| & \verb|bit_even_odd.out| \\
+				\hline
+				2 & odd \\
+				13 & even \\
+				9 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+\noindent Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/bit_even_odd.py}.
+\begin{verbatim}
+# 1st solution. Author: Nguyen Duc Tai
+t = int(input())
+while t != 0:
+    t -= 1
+    s = 0
+    n = int(input())
+    while n != 0:
+        s += n % 2
+        n //= 2
+    if s % 2 != 0:
+        print("odd")
+    else:
+        print("even")
+# 2nd solution. Author: NQBH
+t = int(input())
+while t != 0:
+    t -= 1
+    s = 0
+    n = int(input())
+    n = bin(n)
+    for c in n:
+        if c == '1':
+            s += 1
+    if s % 2 != 0:
+        print("odd")
+    else:
+        print("even")
+\end{verbatim}
+
 %------------------------------------------------------------------------------%
 
 \subsection{Algebraic Expression -- Biểu Thức Đại Số}
