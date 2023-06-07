@@ -264,6 +264,55 @@ except:
 	Viết chương trình \textsc{Pascal, C\texttt{/}C++, Python} để kiểm tra 1 số $m\in\mathbb{Z}$ được nhập từ bàn phím có phải là lũy thừa bậc $n\in\mathbb{N}$ của 1 số tự nhiên hay không với $m,n$ được nhập từ bàn phím.
 \end{baitoan}
 
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 1., p. 18, Thay chữ số -- Digit replacement]
+    Lập trình vào số nguyên $n\in\mathbb{Z}$, thực hiện thay thế các chữ số $0$ trong biểu diễn thập phân của $n$ thành các chữ số $5$ \& in ra kết quả.
+    \begin{itemize}
+        \item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên $T$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa 1 số nguyên $n\in\mathbb{Z}$.
+        \item {\sf Output.} Ứng với mỗi bộ dữ liệu đầu vào, chương trình cần in ra số $n$ sau khi thay thế các chữ số của $n$ theo yêu cầu đề bài.
+        \item {\sf Constraint.} $1\le T\le10^5$, $0\le n\le10^{12}$.
+        \item {\sf Sample.}
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|l|l|}
+                \hline
+                \verb|digit_replacement.inp| & \verb|digit_replacement.out| \\
+                \hline
+                2 & 1555 \\
+                1005 & 1234 \\
+                1234 &  \\
+                \hline
+            \end{tabular}
+        \end{table}
+    \end{itemize}
+\end{baitoan}
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/digit_replacement.py}.
+\begin{verbatim}
+# 1st solution
+def convert5(n):
+    if n == 0:
+        return 5
+    y = [c for c in n]
+    for i in range(len(y)):
+        if y[i] == '0':
+            y[i] = '5'
+    return ''.join(y)
+# 2nd solution
+def digit_replacement(n):
+    ans = ''
+    for i in range(len(n)):
+        if n[i] == '0':
+            ans += '5'
+        else:
+            ans += n[i]
+    return ans
+t = int(input())
+while t != 0:
+    t -= 1
+    n = input()
+    print(convert5(n))
+    print(digit_replacement(n))
+\end{verbatim}
+
 %------------------------------------------------------------------------------%
 
 \subsection{Algebraic Expression -- Biểu Thức Đại Số}
@@ -294,7 +343,9 @@ Python:
 from math import sqrt
 def algebraic_expression(a, b, c):
     return (a**2 + b**2 + c**2)/(a*b*c) + sqrt(a*b*c) # function f(a,b,c) can be modified
-a = int(input()); b = int(input()); c = int(input())
+a = int(input())
+b = int(input())
+c = int(input())
 print(algebraic_expression(a,b,c))
 \end{verbatim}
 C++:
@@ -780,7 +831,7 @@ The sum of the reciprocals of the perfect powers (including duplicates such as $
 	Tìm số đảo ngược $y$ của 1 số $x\in\mathbb{Z}$ biết $y$ gồm các chữ số của $x$ \& viết theo thứ tự ngược lại. Xuất ra kết quả là số $y\mod19$. {\sf Dữ liệu:} $x\in\mathbb{N}^\star$. {\sf Kết quả:} $y\mod19$ với $y$ là số đảo ngược của $x$.
 	\begin{table}[H]
 		\centering
-		\begin{tabular}{|l|l|c|}
+		\begin{tabular}{|l|l|l|}
 			\hline
 			\verb|reversed_number.inp| & \verb|reversed_number.out| & Giải thích \\
 			\hline
@@ -858,6 +909,40 @@ C++:
 		 1875
 	\end{verbatim}
 \end{baitoan}
+\noindent Pascal:
+
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/multiplication.py}.
+\begin{verbatim}
+a = input()
+b = input()
+prod = int(a) * int(b)
+max_len = len(str(prod)) + 1
+s = a
+while len(s) < max_len:
+    s = ' ' + s
+print(s)
+print("x")
+s = b
+while len(s) < max_len:
+    s = ' ' + s
+print(s)
+sep = "-" * max_len # separator
+print(sep)
+space = 0
+for i in range (len(b), 0, -1):
+    s = int(b[i-1]) * int(a)
+    if space > 0:
+        tmp = ' ' * space
+        s = str(s) + tmp
+    s = str(s)
+    while len(s) < max_len:
+        s = ' ' + s
+    print(s)
+    space += 1
+if len(b) > 1:
+    print(sep)
+    print(' ' + str(prod))
+\end{verbatim}
 
 \begin{problem}[\cite{Durr_Vie2021}, pp. 42--43, Anagrams]
 	A word {\tt w} is an \emph{anagram} of a word {\tt v} if a permutation of the letters transforming {\tt w} into {\tt v} exists. Given a set of $n$ words of length at most $k$, we would like to detect all possible anagrams.
@@ -1165,6 +1250,125 @@ print("{} {} {}".format(B[2] * A[0] + B[0] * A[2] + B[1] * A[1],
                         B[2] * A[2] + B[0] * A[1] + B[1] * A[0]))
 \end{verbatim}
 
+\begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 1., p. 13, HSG Lớp 10 Vĩnh Phúc 2020--2021, Square -- Hình vuông]
+	Cho $n$ điểm có tọa độ là các số nguyên trên hệ trục tọa độ $Oxy$. Tìm diện tích hình vuông nhỏ nhất có các cạnh song song với các trục tọa độ sao cho tất cả các điểm đã cho đều thuộc hình vuông đó (điểm nằm trên cạnh hình vuông cũng được coi là thuộc hình vuông đó).
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: chứa số nguyên dương $n\in\mathbb{N}^\star$, $2\le n\le20$, là số lượng điểm có tọa độ là các số nguyên. $n$ dòng tiếp theo, mỗi dòng ghi 2 số nguyên $x,y\in\mathbb{Z}$, $1\le x,y\le100$, là tọa độ của mỗi điểm.
+		\item {\sf Output.} Ghi diện tích hình vuông nhỏ nhất tìm được.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{square.inp} & \texttt{square.out} \\
+				\hline
+				3 & 16 \\
+				3 4 &  \\
+				5 7 &  \\
+				4 3 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+\noindent Pascal:
+
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/square.py}.
+\begin{verbatim}
+# 1st solution. Author: NQBH
+def square():
+    n = int(input())
+    a = [0]*n
+    b = [0]*n
+    for i in range(n):
+        tmp = input()
+        tmp = tmp.split()
+        a[i] = int(tmp[0])
+        b[i] = int(tmp[1])
+    max_diff = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            if abs(a[i] - a[j]) > max_diff:
+                max_diff = abs(a[i] - a[j])
+            if abs(b[i] - b[j]) > max_diff:
+                max_diff = abs(b[i] - b[j])
+    print(max_diff**2)
+square()
+# 2nd solution. Author: Vuong Thanh Trung
+inf = 1000
+xmin = inf
+xmax = -inf
+ymin = inf
+ymax = -inf
+file = open("square.inp", "r")
+n = int(file.readline())
+for i in range(n):
+    x, y = map(int, file.readline().split())
+    xmin = min(xmin, x)
+    xmax = max(xmax, x)
+    ymin = min(ymin, y)
+    ymax = max(ymax, y)
+file.close()
+file = open("square.out", "w")
+c = max(xmax - xmin, ymax - ymin)
+file.write(str(c*c))
+file.close()
+\end{verbatim}
+C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/square.cpp}.
+\begin{verbatim}
+#include <bits/stdc++.h>
+#define inf 1000
+using namespace std;
+int xmin = inf, ymin = inf, xmax = -inf, ymax = -inf;
+int n;
+int main() {
+    freopen("square.inp", "r", stdin);
+    freopen("square.out", "w", stdout);
+    cin >> n;
+    for (int i = 1; i <= n; ++i) {
+        int x, y;
+        cin >> x >> y;
+        xmin = min(xmin, x);
+        xmax = max(xmax, x);
+        ymin = min(ymin, y);
+        ymax = max(ymax, y);
+    }
+    int c = max(xmax - xmin, ymax - ymin);
+    cout << c*c;
+    return 0;
+}
+// Terminal: g++ -std=c++11 -O2 -Wall square.cpp -o square
+\end{verbatim}
+
+\begin{luuy}
+	Nếu yêu cầu của bài toán trên đổi từ `hình vuông' sang `hình chữ nhật' thì:
+	\begin{verbatim}
+		cout << (xmax - xmin)*(ymax - ymin);
+	\end{verbatim}
+\end{luuy}
+Bài toán này có thể mở rộng từ 2D sang 3D:
+
+\begin{baitoan}[Mở rộng \cite{Trung_HSG_THPT_Tin}, 1., p. 13, HSG Lớp 10 Vĩnh Phúc 2020--2021, Square -- Hình vuông]
+	Cho $n$ điểm có tọa độ là các số nguyên trên hệ trục tọa độ $Oxyz$. Tìm diện tích hình chữ nhật \& lập phương nhỏ nhất có các cạnh song song với các trục tọa độ sao cho tất cả các điểm đã cho đều thuộc hình vuông đó (điểm nằm trên cạnh hình chữ nhật hoặc hình vuông cũng được coi là thuộc hình vuông đó).
+	\begin{itemize}
+		\item {\sf Input.} Dòng 1: chứa số nguyên dương $n\in\mathbb{N}^\star$, $2\le n\le20$, là số lượng điểm có tọa độ là các số nguyên. $n$ dòng tiếp theo, mỗi dòng ghi 3 số nguyên $x,y,z\in\mathbb{Z}$, $1\le x,y,z\le100$, là tọa độ của mỗi điểm.
+		\item {\sf Output.} Ghi diện tích hình vuông nhỏ nhất tìm được.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{square.inp} & \texttt{square.out} \\
+				\hline
+				3 &  \\
+				3 4 1 &  \\
+				5 7 -8 &  \\
+				4 3 9 &  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
