@@ -70,8 +70,7 @@ int main() {
     freopen("prob.inp", "r", stdin);
     freopen("prob.out", "w", stdout);	
 }
-// Compile in Terminal:
-// g++ -std=c++11 -O2 -Wall test.cpp -o test
+// Terminal: g++ -std=c++11 -O2 -Wall test.cpp -o test
 \end{Verbatim}
 
 \subsection{Notes on Pascal commands}
@@ -83,8 +82,8 @@ int main() {
 	\item Để mở file dữ liệu vào \texttt{prob.inp} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.out} để thay đổi dữ liệu trong file: \texttt{file = open("prob.inp")} \& \texttt{file2 = open("prob.out", "w")}.
 	\item Sắp xếp trong Python có thể thực hiện 1 cách đơn giản nhờ phương thức \texttt{sort()} hoặc \texttt{sorted()}. Cú pháp:
 	\begin{Verbatim}[numbers=left,xleftmargin=5mm]
-		list.sort(reverse = True|False, key = myFunc)
-		list.sorted(reverse = True|False, key = myFunc)
+list.sort(reverse = True|False, key = myFunc)
+list.sorted(reverse = True|False, key = myFunc)
 	\end{Verbatim}
 	\item Trong Python, để lấy giá trị ngẫu nhiên, sử dụng phương thức \texttt{ranint(a, b)} với \texttt{a, b} là giới hạn của giá trị cần lấy ngẫu nhiên.
 \end{enumerate}
@@ -428,6 +427,8 @@ while t != 0:
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+Đổi $n$ sang biểu diễn nhị phân, đếm các số 1.
+
 \noindent Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/bit_even_odd.py}.
 \begin{multicols}{2}
 	1st solution \cite[4., p. 204]{Duc_200_BT_Python}:
@@ -462,6 +463,119 @@ while t != 0:
         print("even")
 \end{Verbatim}
 \end{multicols}
+
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 5., pp. 20--21, Message -- Nhắn tin]
+	Có $n\in\mathbb{N}^\star$ học sinh trong 1 lớp học, mỗi người nghĩ ra 1 câu chuyện hài hước khác nhau. Trong 1 giờ vắng giáo viên, họ quyết định nghĩa ra 1 trò chơi để giết thời gian. Họ muốn chia sẻ những câu chuyện hài hước với nhau bằng cách gửi tin nhắn điện tử. Giả sử 1 người luôn gửi tất cả những câu chuyện hài hước mà người ấy biết tại thời điểm tin nhắn được gửi \& 1 tin nhắn chỉ có thể gửi đến 1 người nhận. Số lượng tin nhắn tối thiểu họ cần gửi là bao nhiêu để đảm bảo tất cả $n$ người đều nhận được tất cả các câu chuyện?
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên dương $t\in\mathbb{N}^\star$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa số nguyên $n\in\mathbb{N}$.
+		\item {\sf Output.} Ứng với mỗi bộ dữ liệu đầu vào, in ra 1 dòng chứa số lượng tin nhắn cần gửi để $n$ học sinh đều nhận được tất cả $n$ câu chuyện hài.
+		\item {\sf Constraint.} $1\le t\le100$, $1\le n\le10^5$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				{\tt message.inp} & {\tt message.out} \\
+				\hline
+				1 & 2 \\
+				2 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/message.py}.
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+t = int(input())
+while t != 0:
+    t -= 1
+    n = int(input())
+    print(2*n - 2)
+\end{Verbatim}
+
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 6., pp. 21--22, Triangle number -- Số tam giác]
+	1 số được gọi là \emph{số tam giác} nếu ta có thể biểu diễn nó dưới dạng lưới hình tam giác gồm các điểm sao cho các điểm tạo thành 1 tam giác đều, i.e., hàng đầu tiên có $1$ điểm, hàng thứ 2 có $2$ điểm, $\ldots$ hàng thứ $i$ có $i$ điểm. Các số tam giác đầu tiên là $1$, $3 = 1 + 2$, $6 = 1 + 2 + 3$, $10 = 1 + 2 + 3 + 4$. Cho số nguyên dương $n\in\mathbb{N}^\star$, kiểm tra xem $N$ có phải là số tam giác hay không. 
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên dương $t\in\mathbb{N}^\star$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa số nguyên $n\in\mathbb{N}$.
+		\item {\sf Output.} Ứng với mỗi bộ dữ liệu đầu vào, in ra 1 dòng chứa số $1$ nếu $n$ là số tam giác, ngược lại thì in ra số $0$.
+		\item {\sf Constraint.} $1\le t\le100$, $1\le n\le10^7$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|triangle_number.inp| & \verb|triangle_number.out| \\
+				\hline
+				5 & 1 \\
+				3 & 0 \\
+				4 & 1 \\
+				6 & 1 \\
+				55 & 0 \\
+				345 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikipedia\texttt{/}số tam giác} or \href{https://en.wikipedia.org/wiki/Triangular_number}{Wikipedia\texttt{/}triangular number}.
+\newpage
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle_number.py}.
+
+1st solution \cite[6., pp. 204--205]{Duc_200_BT_Python}:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+from math import sqrt, floor
+t = int(input())
+while t != 0:
+    t -= 1
+    n = int(input())
+    a = 1
+    b = 1
+    c = -2*n
+    d = b*b - 4*a*c
+    x1 = (-b + sqrt(d))/(2*a)
+    x2 = (-b - sqrt(d))/(2*a)
+    if x1 > 0 and floor(x1) == x1:
+        print(1)
+        continue
+    if x2 > 0 and floor(x2) == x2:
+        print(1)
+        continue
+    print(0)
+\end{Verbatim}
+\begin{multicols}{2}
+2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+t = int(input())
+while t != 0:
+    t -= 1
+    n = int(input())
+    i = 1
+    sum = 0
+    while sum < n:
+        sum += i
+        i += 1
+    if n == sum:
+        print(1)
+    else:
+        print(0)
+\end{Verbatim}
+\columnbreak
+3rd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+from math import sqrt, floor
+t = int(input())
+while t != 0:
+    t -= 1
+    n = int(input())
+    tmp = floor(sqrt(2*n))
+    if n == tmp*(tmp + 1)/2:
+        print(1)
+    else:
+        print(0)
+\end{Verbatim}
+\end{multicols}
+
 
 %------------------------------------------------------------------------------%
 
