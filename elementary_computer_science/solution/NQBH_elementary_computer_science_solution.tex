@@ -5,7 +5,7 @@
 \usepackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
-\usepackage{amsmath,amssymb,amsthm,color,float,graphicx,mathtools,multicol}
+\usepackage{amsmath,amssymb,amsthm,color,fancyvrb,float,graphicx,mathtools,multicol}
 \usepackage{enumitem}
 \setlist{leftmargin=5mm}
 \setlength{\columnseprule}{.5pt}
@@ -59,7 +59,7 @@
 
 \subsection{Notes on C\texttt{/}C++ commands}
 Template:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -72,7 +72,7 @@ int main() {
 }
 // Compile in Terminal:
 // g++ -std=c++11 -O2 -Wall test.cpp -o test
-\end{verbatim}
+\end{Verbatim}
 
 \subsection{Notes on Pascal commands}
 
@@ -82,10 +82,10 @@ int main() {
 	\item Để sử dụng các hàm toán học trong Python, cần import thư viện \texttt{math} vào chương trình: \texttt{from math import *}
 	\item Để mở file dữ liệu vào \texttt{prob.inp} chỉ để đọc dữ liệu \& mở file dữ liệu ra \texttt{prob.out} để thay đổi dữ liệu trong file: \texttt{file = open("prob.inp")} \& \texttt{file2 = open("prob.out", "w")}.
 	\item Sắp xếp trong Python có thể thực hiện 1 cách đơn giản nhờ phương thức \texttt{sort()} hoặc \texttt{sorted()}. Cú pháp:
-	\begin{verbatim}
+	\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 		list.sort(reverse = True|False, key = myFunc)
 		list.sorted(reverse = True|False, key = myFunc)
-	\end{verbatim}
+	\end{Verbatim}
 	\item Trong Python, để lấy giá trị ngẫu nhiên, sử dụng phương thức \texttt{ranint(a, b)} với \texttt{a, b} là giới hạn của giá trị cần lấy ngẫu nhiên.
 \end{enumerate}
 
@@ -97,24 +97,24 @@ int main() {
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để xét tính chẵn lẻ của $n\in\mathbb{Z}$ được nhập từ bàn phím.
 \end{baitoan}
 \noindent Pascal: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/even_odd.pas}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 program even_odd;
 var n : integer;
 begin
     write('Enter n = '); readln(n);
     if n mod 2 = 0 then writeln(n,' is even') else writeln(n, ' is odd');
 end.
-\end{verbatim}
+\end{Verbatim}
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/even_odd.py}
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 n = int(input())
 if n % 2 == 0:
     print(n, " is even")
 else:
     print(n, " is odd")
-\end{verbatim}
+\end{Verbatim}
 C: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/even_odd.c}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <stdio.h>
 int main() {
     int n;
@@ -130,9 +130,9 @@ int main() {
     return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall even_odd.c -o even_odd
-\end{verbatim}
+\end{Verbatim}
 C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/even_odd.cpp}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <iostream>
 using namespace std;
 int main() {
@@ -149,13 +149,13 @@ int main() {
     return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall even_odd.cpp -o even_odd
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[Divisible by]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để kiểm tra liệu $a\divby b$ hay không, với $a,b\in\mathbb{Z}$ được nhập từ bàn phím \& in ra số dư $r$ trong phép chia $a$ cho $b$.
 \end{baitoan}
 \noindent Pascal: \url{{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Pascal/divisible_by.pas}}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 program divisible_by;
 var a, b : integer;
 begin
@@ -164,22 +164,22 @@ begin
     if a mod b = 0 then writeln(a,' is divisible by ', b, '.')
     else writeln(a,' is not divisible by ', b, '.');
 end.
-\end{verbatim}
+\end{Verbatim}
 Python:
 \begin{itemize}
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/divisible_by.py}.
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/divisible_by.py}.
 \end{itemize} 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 a = int(input())
 b = int(input())
 if a % b == 0:
     print(a, ' is divisible by ', b)
 else:
     print(a, ' is not divisible by ', b)
-\end{verbatim}
+\end{Verbatim}
 C: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/divisible_by.c}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <stdio.h>
 int main() {
     int a, b;
@@ -190,9 +190,9 @@ int main() {
     return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall divisible_by.c -o divisible_by
-\end{verbatim}
+\end{Verbatim}
 C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/divisible_by.cpp}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <iostream>
 using namespace std;
 int main() {
@@ -203,7 +203,7 @@ int main() {
     return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall divisible_by.cpp -o divisible_by
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[Triangle]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để liệu $a,b,c$ có phải là độ dài của: (a) 1 tam giác. (b) 1 tam giác nhọn. (c) 1 tam giác vuông. (d) 1 tam giác tù.
@@ -214,7 +214,7 @@ int main() {
 	\item Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}triangle}.
 \end{itemize}
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 try:
     a,b,c = float(input('Nhap a = ')), float(input('Nhap b = ')), float(input('Nhap c = '))
 if (a + b > c) and (a + c > b) and  (b + c > a):
@@ -230,7 +230,7 @@ else:
     print('Day khong la do dai 3 canh cua 1 tam giac.')			
 except:
     print('Day khong phai la 1 so.')
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[Polynomial equation]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C\texttt{/}C++} để giải phương trình bậc nhất, bậc 2, bậc 3, \& bậc 4 với các hệ số thực được nhập từ bàn phím.
@@ -286,8 +286,9 @@ except:
     \end{itemize}
 \end{baitoan}
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/digit_replacement.py}.
-\begin{verbatim}
-# 1st solution
+\begin{multicols}{2}
+	1st solution \cite[1., p. 202]{Duc_200_BT_Python}:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def convert5(n):
     if n == 0:
         return 5
@@ -296,7 +297,15 @@ def convert5(n):
         if y[i] == '0':
             y[i] = '5'
     return ''.join(y)
-# 2nd solution
+t = int(input())
+while t != 0:
+   t -= 1
+   n = input()
+   print(convert5(n))
+\end{Verbatim}
+\columnbreak
+	2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def digit_replacement(n):
     ans = ''
     for i in range(len(n)):
@@ -309,9 +318,9 @@ t = int(input())
 while t != 0:
     t -= 1
     n = input()
-    print(convert5(n))
     print(digit_replacement(n))
-\end{verbatim}
+\end{Verbatim}
+\end{multicols}
 
 \begin{baitoan}[\cite{Duc_200_BT_Python}, 2., pp. 18--19, Dice -- Xúc xắc]
 	Bạn được tặng 1 con xúc xắc hình lập phương với $6$ mặt. Mỗi mặt của con xúc xắc có in 1 số chấm, số lượng chấm $\in\{1,2,3,4,5,6\}$. Bạn được biết số chấm trên 1 mặt của xúc xắc, nhiệm vụ là đoán số ở mặt đối diện của xúc xắc.
@@ -334,18 +343,18 @@ while t != 0:
 		\end{table}
 	\end{itemize}
 \end{baitoan}
-Tổng số chấm trên 2 mặt đối nhau của 1 con xúc xắc luôn bằng 7, nên đối diện với mặt có số chấm là $n\in\in\{1,2,3,4,5,6\}$ là mặt có số chấm $7 - n\in\in\{1,2,3,4,5,6\}$.
+Tổng số chấm trên 2 mặt đối nhau của 1 con xúc xắc luôn bằng 7, nên đối diện với mặt có số chấm là $n\in\{1,2,3,4,5,6\}$ là mặt có số chấm $7 - n\in\{1,2,3,4,5,6\}$.
 
 Pascal:
 
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/dice.py}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
 while t != 0:
     t -= 1
     n = int(input())
     print(7 - n)
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{Duc_200_BT_Python}, 3., pp. 19--20, Doctor appointment -- Lịch khám bệnh]
 	Có $n\in\mathbb{N}^\star$ bệnh nhân đến khám bệnh tại phòng khám. Giả sử cứ sau $x$ phút thì lại có 1 bệnh nhân mới đến phòng khám. Ngoài ra, bác sĩ sẽ chỉ dành $10$ phút để khám cho mỗi bệnh nhân. Tính toán thời gian bằng phút mà bệnh nhân cuối cùng cần phải chờ đến lượt mình được bác sĩ khám bệnh.
@@ -371,18 +380,10 @@ while t != 0:
 		\end{table}
 	\end{itemize}
 \end{baitoan}
-Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/doctor_appointment.py}.
-\begin{verbatim}
-# 1st solution. Author: NQBH
-t = int(input())
-while t != 0:
-    t -= 1
-    n, x = map(int, input().split())
-    if x >= 10:
-        print(0)
-    else:
-        print((n - 1)*(10 - x))
-# 2nd solution. Author: Nguyen Tien Duc
+\noindent Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/doctor_appointment.py}.
+\begin{multicols}{2}
+	1st solution \cite[3., p. 203]{Duc_200_BT_Python}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
 while t != 0:
     t -= 1
@@ -391,9 +392,22 @@ while t != 0:
     if ans < 0:
         ans = 0
     print(ans)
-\end{verbatim}
+\end{Verbatim}
+\columnbreak
+	2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+t = int(input())
+while t != 0:
+    t -= 1
+    n, x = map(int, input().split())
+    if x >= 10:
+        print(0)
+    else:
+        print((n - 1)*(10 - x))
+\end{Verbatim}
+\end{multicols}
 
-\begin{baitoan}[\cite{Duc_200_BT_Python}, 3., p. 20, Bit even, bit odd -- Tính chẵn lẻ nhị phân]
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 4., p. 20, Bit even, bit odd -- Tính chẵn lẻ nhị phân]
 	Cho số nguyên không dấu $n\in\mathbb{N}$. Kiểm tra ``tính chẵn lẻ'' của $n$, với \emph{tính chẵn lẻ} của $n$ là số bit {\tt1} trong biểu diễn nhị phân của $n$, i.e., nếu trong biểu diễn nhị phân của $n$ có chứa 1 số chẵn các bit {\tt1} thì $n$ được coi là có tính chẵn, \& ngược lại $n$ có tính lẻ.
 	\begin{itemize}
 		\item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên dương $t\in\mathbb{N}^\star$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa số nguyên $n\in\mathbb{N}$.
@@ -415,8 +429,9 @@ while t != 0:
 	\end{itemize}
 \end{baitoan}
 \noindent Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/bit_even_odd.py}.
-\begin{verbatim}
-# 1st solution. Author: Nguyen Duc Tai
+\begin{multicols}{2}
+	1st solution \cite[4., p. 204]{Duc_200_BT_Python}:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
 while t != 0:
     t -= 1
@@ -429,13 +444,15 @@ while t != 0:
         print("odd")
     else:
         print("even")
-# 2nd solution. Author: NQBH
+\end{Verbatim}
+\columnbreak
+2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
 while t != 0:
     t -= 1
     s = 0
-    n = int(input())
-    n = bin(n)
+    n = bin(int(input()))
     for c in n:
         if c == '1':
             s += 1
@@ -443,7 +460,8 @@ while t != 0:
         print("odd")
     else:
         print("even")
-\end{verbatim}
+\end{Verbatim}
+\end{multicols}
 
 %------------------------------------------------------------------------------%
 
@@ -471,7 +489,7 @@ while t != 0:
 Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}algebraic expression.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.inp}{algebraic expression.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.out}{algebraic expression.out}.
 
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import sqrt
 def algebraic_expression(a, b, c):
     return (a**2 + b**2 + c**2)/(a*b*c) + sqrt(a*b*c) # function f(a,b,c) can be modified
@@ -479,9 +497,9 @@ a = int(input())
 b = int(input())
 c = int(input())
 print(algebraic_expression(a,b,c))
-\end{verbatim}
+\end{Verbatim}
 C++:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
@@ -491,11 +509,11 @@ int main() {
     cin >> a >> b >> c;
     printf("%.2f\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
 }
-\end{verbatim}
+\end{Verbatim}
 Run in terminal:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 g++ -std=c++11 -O2 -Wall algebraic_expression.cpp -o algebraic_expression
-\end{verbatim}
+\end{Verbatim}
 
 \begin{luuy}
 	Tương tự, ta có thể tính hầu như bất kỳ hàm số $f(a,b,c)$ 3 biến $a,b,c$ với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python. Tổng quát hơn, ta có thể tính bất kỳ hàm số nhiều biến $f(x_1,x_2,\ldots,x_n)$ với $x_i$, $i = 1,2,\ldots,n$, $n\in\mathbb{N}^\star$ là các biến, với $f$ là 1 hàm số có thể viết được nhờ thư viện \texttt{math} của Python.
@@ -519,7 +537,7 @@ g++ -std=c++11 -O2 -Wall algebraic_expression.cpp -o algebraic_expression
 	\end{itemize}
 \end{baitoan}
 Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}toanco.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.inp}{toanco.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.out}{toanco.out}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 	file_in = open("toanco.inp")
 	file_out = open("toanco.out", "w")
 	s = file_in.readline()
@@ -531,7 +549,7 @@ Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_comput
 	file_out.write(str(a) + " " + str(b))
 	file_in.close()
 	file_out.close()
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 4., p. 26, Quãng Ngãi 2020, Lãi suất-- Interest rate]
 	1 người gửi tiền vào ngân hàng có kỳ hạn là $c$ tháng với lãi suất mỗi tháng là $k$\emph{\%}, số tiền gửi ban đầu là $A$ (đơn vị triệu đồng). 
@@ -587,15 +605,15 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia\texttt
 	\end{itemize}
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 1., p. 25, Hải Dương 2020, Số hạnh phúc \& số buồn bã -- Happy- \& sad numbers]
 	Với 1 số nguyên dương bất kỳ, thay thế số đó bằng tổng bình phương các chữ số của nó \& cứ lặp lại quá trình đó sẽ có các trường hợp sau xảy ra: Kết thúc bằng $1$ -- ta gọi số đó là \emph{số hạnh phúc\texttt{/}happy number}. Kết thúc bằng $0$ -- ta gọi số đó là \emph{số buồn bã\texttt{/}sad number}. Lặp lại vô hạn lần -- số đó không hạnh phúc cũng không buồn bã. E.g., số $44$: lần 1: $4^2 + 4^2 = 32$, lần 2: $3^2 + 2^2 = 13$, lần 3: $1^2 + 3^2 = 10$, lần 4: $1^2 + 0^2 = 1$, nên $44$ là số hạnh phúc. Viết chương trình để kiểm tra xem ngày sinh của 1 người bất kỳ có phải là số hạnh phúc không?
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 max_iter = 1000
 def sum_digit_sqr(n):
     sum = 0 
@@ -614,13 +632,13 @@ elif n == 0:
     print(n0, " is a sad number.")
 else:
     print(n0, " is neither a happy nor a sad number.")
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 2., p. 25, Gia Lai 2019, Phân số tối giản -- Irreducible fraction]
 	1 chuỗi được gọi là có dạng phân số nếu nó có dạng \verb|`tử_số/mẫu_số'|. Viết chương trình nhập vào chuỗi có dạng phân số, sau đó xuất ra dạng tối giản của phân số đó. E.g., Chuỗi \verb|`12/15'| biểu diễn cho phân số. Dạng tối giản của phân số đó là \verb|`3/5'|.
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 	from math import gcd
 	frac = input()
 	frac = frac.split("/")
@@ -630,7 +648,7 @@ Python:
 	num = int(num/gcd)
 	den = int(den/gcd)
 	print(str(num) + "/" + str(den))
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[Tổng tất cả, tổng phần tử chẵn, lẻ, bình phương, lập phương, lũy thừa bậc $n$, căn bậc 2, 3, \& căn bậc $n$, nghịch đảo, nghịch đảo bình phương, nghịch đảo lập phương, nghịch đảo lũy thừa bậc $n$, nghịch đảo căn bậc 2, 3, \& nghịch đảo căn bậc $n$ -- Sums of all, odds, evens, squares, cubes, $n$th powers, square roots, cube roots, $n$th roots, reciprocals of square, of cubes, of $n$th powers, of square roots, of cube roots, of $n$th roots]
 	Cho 1 dãy gồm $n$ số nguyên: $(a_i)_{i=1}^m = a_1,a_2,\ldots,a_m$, $m\in\mathbb{N}^\star$, $a_i\in\mathbb{Z}$, $\forall i = 1,2,\ldots,m$, mỗi số có giá trị không vượt quá $10^9$.
@@ -698,7 +716,7 @@ Python:
 	\end{itemize}
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import sqrt
 from math import floor
 def is_prime(x):
@@ -719,13 +737,13 @@ for i in range(t):
             if is_prime(j) == 1 and is_prime(n - j) == 1:
                 print(n, " = ", j, " + ", n - j)
                 # break # if want only 1 representation
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 6., p. 27, Tây Ninh 2019, Số hoàn hảo -- Perfect number]
 	\emph{Số hoàn hảo} là 1 số tự nhiên mà tổng tất cả các ước tự nhiên thực sự của nó bằng chính nó. Trong đó ước thực sự của 1 số là các ước dương không bằng số đó. Lập trình nhập vào 1 số tự nhiên có $2$ chữ số bất kỳ. In ra màn hình thông báo số vừa nhập có phải là số hoàn hảo hay không? Nếu là số hoàn hảo thì in tất cả các ước nguyên dương của số đó (i.e., bao gồm tất cả các ước tự nhiên thực sự \& chính số đó).
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def is_perfect_number(n):
     sum_proper_divisor = 0
     list_proper_divisor = []
@@ -742,7 +760,7 @@ def is_perfect_number(n):
 
 n = int(input())
 is_perfect_number(n)
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 7., p. 27, Đồng Nai 2020, Số may mắn -- Lucky number]
 	Để động viên thành tích học tập xuất sắc của các em học sinh lớp 6-3 trong năm học 2019--2020, thầy giáo chủ nhiệm đã chuẩn bị các món quà được đánh số từ $1$ đến $n$. Sau đó thầy giáo sẽ cho các em lên bốc thăm để nhận món quà may mắn của mình. Đầu tiên thầy giáo sẽ ghi tất cả số nguyên lẻ từ $1$ đến $n$, sau đó sẽ ghi tất cả các số nguyên chẵn từ $2$ đến $n$ (theo thứ tự tăng dần) để tạo thành 1 dãy số phần thưởng. Mỗi bạn sẽ bốc thăm 1 số $k$ ứng với con số của món quà mình đạt được.
@@ -763,7 +781,7 @@ is_perfect_number(n)
 	\end{itemize}
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import floor
 def luck_number(n, k):
     if k <= floor((n + 1)/2):
@@ -781,13 +799,13 @@ luck_number(n, k)
 for i in range(1, k + 1):
     luck_number(n, i)
 """
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 8., p. 27, Ninh Bình 2019, Ước chung lớn nhất ƯCLN -- greatest common divisor gcd]
 	Nhập vào $3$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} của $3$ số này. E.g., nhập vào $3$ số: $4,6,12$ thì kết quả \emph{ƯCLN} là $2$.
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import gcd
 def gcd3(a, b, c):
     return gcd(a, b, c)
@@ -796,13 +814,13 @@ a = int(input())
 b = int(input())
 c = int(input())
 print(gcd3(a, b, c))
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[Bội chung nhỏ nhất BCNN -- least common multiplier lcd]
 	Nhập vào $n\in\mathbb{N}^\star$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} \& \emph{BCNN} của $n$ số này.
 \end{baitoan}
 Python:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import lcm
 def lcm3(a, b, c):
    return lcm(a, b, c)
@@ -811,7 +829,7 @@ a = int(input())
 b = int(input())
 c = int(input())
 print(lcm3(a, b, c))
-\end{verbatim}
+\end{Verbatim}
 We are interested in various types of numbers whose beautiful properties are studied in number theory.
 
 \subsubsection{Square number}
@@ -975,11 +993,11 @@ The sum of the reciprocals of the perfect powers (including duplicates such as $
 \noindent Pascal:
 
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/reversed_number.py}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 x = input()
 y = x[::-1]
 print(int(y) % 19)
-\end{verbatim}
+\end{Verbatim}
 C:
 
 C++:
@@ -1009,7 +1027,7 @@ Python:
     \item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/string_compression.py}.
     \item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/string_compression_io.py}.
 \end{itemize}
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 s = input()
 i = 0
 ans = ""
@@ -1023,14 +1041,14 @@ while i < len(s):
             break
     ans += str(count) + temp
 print(ans)
-\end{verbatim}
+\end{Verbatim}
 C:
 
 C++:
 
 \begin{baitoan}[\cite{VietSTEM2021}, 3., p. 30, Hậu Giang 2020, Tính nhân -- Multiplication]
 	Viết chương trình nhập vào 2 số nguyên dương $a,b\in\mathbb{N}^\star$. Sau đó thực hiện nhân $a\times b$ như cách nhân bằng tay thông thường ở tiểu học. E.g., nhập vào thừa số thứ 1: $125$, nhập vào thừa số thứ 2: $15$. {\sf Dữ liệu ra:}
-	\begin{verbatim}
+	\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 		  125
 		x
 		   15
@@ -1039,12 +1057,12 @@ C++:
 		 125
 		-----
 		 1875
-	\end{verbatim}
+	\end{Verbatim}
 \end{baitoan}
 \noindent Pascal:
 
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/multiplication.py}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 a = input()
 b = input()
 prod = int(a) * int(b)
@@ -1074,7 +1092,7 @@ for i in range (len(b), 0, -1):
 if len(b) > 1:
     print(sep)
     print(' ' + str(prod))
-\end{verbatim}
+\end{Verbatim}
 
 \begin{problem}[\cite{Durr_Vie2021}, pp. 42--43, Anagrams]
 	A word {\tt w} is an \emph{anagram} of a word {\tt v} if a permutation of the letters transforming {\tt w} into {\tt v} exists. Given a set of $n$ words of length at most $k$, we would like to detect all possible anagrams.
@@ -1371,7 +1389,7 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 	Followed \cite[Sect. 1.8, pp. 39--41]{Durr_Vie2021}, we want to find a solution that runs in time $O(n)$ or possibly $O(n\log n)$, which rules out the naive solution which loops over all $n^2$ grid cells \& accumulates their areas in variables corresponding to each color. Permuting columns or rows preserves the total area of each color. Hence, we can reduce to the $n = 3$ case, by simply summing the values of each color class $A_{3k},A_{3k+1},A_{3k+2}$. Then the answer per color class is just the sum of the areas of 3 rectangles. The tricky part relies in not mixing up the colors.
 \end{proof}
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def read_ints(): return [int(x) for x in input().split()]
 def cat(l): return tuple(sum(l[n::3]) for n in [1, 2, 0])
 input() # n
@@ -1380,7 +1398,7 @@ B = cat(read_ints())
 print("{} {} {}".format(B[2] * A[0] + B[0] * A[2] + B[1] * A[1],
                         B[2] * A[1] + B[0] * A[0] + B[1] * A[2],
                         B[2] * A[2] + B[0] * A[1] + B[1] * A[0]))
-\end{verbatim}
+\end{Verbatim}
 
 \begin{baitoan}[\cite{Trung_HSG_THPT_Tin}, 1., p. 13, HSG Lớp 10 Vĩnh Phúc 2020--2021, Square -- Hình vuông]
 	Cho $n$ điểm có tọa độ là các số nguyên trên hệ trục tọa độ $Oxy$. Tìm diện tích hình vuông nhỏ nhất có các cạnh song song với các trục tọa độ sao cho tất cả các điểm đã cho đều thuộc hình vuông đó (điểm nằm trên cạnh hình vuông cũng được coi là thuộc hình vuông đó).
@@ -1406,7 +1424,7 @@ print("{} {} {}".format(B[2] * A[0] + B[0] * A[2] + B[1] * A[1],
 \noindent Pascal:
 
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/square.py}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 # 1st solution. Author: NQBH
 def square():
     n = int(input())
@@ -1445,9 +1463,9 @@ file = open("square.out", "w")
 c = max(xmax - xmin, ymax - ymin)
 file.write(str(c*c))
 file.close()
-\end{verbatim}
+\end{Verbatim}
 C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/square.cpp}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <bits/stdc++.h>
 #define inf 1000
 using namespace std;
@@ -1470,13 +1488,13 @@ int main() {
     return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall square.cpp -o square
-\end{verbatim}
+\end{Verbatim}
 
 \begin{luuy}
 	Nếu yêu cầu của bài toán trên đổi từ `hình vuông' sang `hình chữ nhật' thì:
-	\begin{verbatim}
+	\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 		cout << (xmax - xmin)*(ymax - ymin);
-	\end{verbatim}
+	\end{Verbatim}
 \end{luuy}
 Bài toán này có thể mở rộng từ 2D sang 3D:
 
@@ -1556,7 +1574,7 @@ Watch \href{https://www.youtube.com/watch?v=uGrBHohIgQY}{YouTube\texttt{/}Willia
 	\end{itemize}
 \end{problem}
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <bits/stdc++.h>
 using namespace std;
 int n, b, a[100000];
@@ -1590,7 +1608,7 @@ int main() {
         ++i;
     }
 }
-\end{verbatim}
+\end{Verbatim}
 
 \begin{problem}[Google Kickstart Round A 2020, Plates]
 	Dr. Patel has $n$ stacks of plates. Each stack contains $k$ plates. Each plate has a positive beauty value, describing how beautiful it looks. Dr. Patel would like to take exactly $p$ plates to use for dinner tonight. If he would like to take a plate in a stack, he must also take all of the plates above it in that stack as well. Help Dr. Patel pick the $p$ plates that would maximize the total sum of beauty values.
@@ -1644,7 +1662,7 @@ int main() {
 \end{problem}
 Source: \href{https://cses.fi/problemset/task/1068}{CSES Problem Set\texttt{/}weird algorithm}, \& \cite[Sect. 1.3, pp. 5--7]{Laaksonen2020}.
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <iostream>
 using namespace std;
 
@@ -1659,7 +1677,7 @@ int main() {
     }
     cout << "\n";
 }
-\end{verbatim}
+\end{Verbatim}
 
 \begin{remark}[Collatz conjecture]
 	The above algorithm terminates $\forall n\in\mathbb{N}^\star$.
@@ -1687,7 +1705,7 @@ int main() {
 \end{problem}
 Source: \href{https://cses.fi/problemset/task/1083}{CSES Problem Set\texttt{/}missing number}.
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 file_in = open("missing_number.inp")
 file_out = open("missing_number.out", "w")
 n = int(file_in.readline())
@@ -1701,7 +1719,7 @@ for i in range(n-1):
         break
 file_in.close()
 file_out.close()
-\end{verbatim}
+\end{Verbatim}
 
 \begin{problem}[Repetitions]
 	You are given a DNA sequence: a string consisting of characters A, C, G, \& T. Your task is to find the longest repetition in the sequence. This is a maximum-length substring containing only 1 type of character.
@@ -1724,7 +1742,7 @@ file_out.close()
 \end{problem}
 Source: \href{https://cses.fi/problemset/task/1069}{CSES problem Set\texttt{/}repetition}.
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 DNA = input()
 DNA_count = []
 count = 1
@@ -1737,7 +1755,7 @@ for i in range(1, len(DNA)):
         count = 1
 DNA_count.append(count)
 print(max(DNA_count))
-\end{verbatim}
+\end{Verbatim}
 
 \begin{problem}[Non-decreasing Array]
 	You are given an array of $n$ integers. You want to modify the array so that it is non-decreasing, i.e., every element is at least as large as the previous element. On each move, you may increase the value of any element by $1$. What is the minimum number of moves required?
@@ -1761,7 +1779,7 @@ print(max(DNA_count))
 \end{problem}
 Source: \href{https://cses.fi/problemset/task/1094}{CSES problem Set\texttt{/}increasing array}.
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 n = int(input())
 A = input()
 A = A.split()
@@ -1772,7 +1790,7 @@ for i in range(1, len(A)):
         ans = ans + A[i-1] - A[i]
         A[i] = A[i - 1]
 print(ans)
-\end{verbatim}
+\end{Verbatim}
 
 \begin{problem}[Permutations]
 	A permutation of integers $1,2,\ldots,n$ is called \emph{beautiful} if there are no adjacent elements whose difference is $1$. Given $n$, construct a beautiful permutation if such a permutation exists.
@@ -1796,7 +1814,7 @@ print(ans)
 	\end{itemize}
 \end{problem}
 
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 n = int(input())
 A = [1]
 if n == 1:
@@ -1813,7 +1831,7 @@ else:
         else:
             A.append(2)
     print(*A)
-\end{verbatim}
+\end{Verbatim}
 
 \begin{problem}[Number Spiral]
 	A \emph{number spiral} is an infinite grid whose upper-left square has number $1$. Here are the 1st 5 layers of the spiral:
