@@ -8,7 +8,7 @@ int main() {
 	cin >> n;
 	for (int i = 1; i <= n; ++i) {
 		cin >> x;
-		c[x % 3]++;
+		++c[x % 3];
 	}
 	res = (c[0]*(c[0] - 1))/2 + c[1]*c[2];
 	cout << res;
