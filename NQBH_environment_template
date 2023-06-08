@@ -57,6 +57,27 @@
 
 \end{Verbatim}
 
+\begin{baitoan}[\cite{Duc_200_BT_Python}, 5., pp. 20--21, Message -- Nhắn tin]
+	
+	\begin{itemize}
+		\item {\sf Input.} Dòng đầu tiên của đầu vào chứa số nguyên dương $t\in\mathbb{N}^\star$ cho biết số bộ dữ liệu cần kiểm tra. Mỗi bộ dữ liệu gồm 1 dòng chứa số nguyên $n\in\mathbb{N}$.
+		\item {\sf Output.} Ứng với mỗi bộ dữ liệu đầu vào, in ra 1 dòng chứa 
+		\item {\sf Constraint.} $1\le t\le100$, $1\le n\le10^5$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				{\tt message.inp} & {\tt message.out} \\
+				\hline
+				1 & 2 \\
+				2 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{baitoan}
+
 %-----------------------------------------------------------------------------%
 % English only
 %-----------------------------------------------------------------------------%
