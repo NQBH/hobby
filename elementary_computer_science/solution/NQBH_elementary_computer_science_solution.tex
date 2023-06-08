@@ -576,6 +576,10 @@ while t != 0:
 \end{Verbatim}
 \end{multicols}
 
+\begin{baitoan}
+	Cho $n\in\mathbb{N}^\star$ nhập từ bàn phím. (a) In số tam giác thứ $n$. (b) In $n$ số tam giác đầu tiên. (c) Cho $a,b\in\mathbb{R}$ nhập từ bàn phím, in tất cả các số tam giác thuộc đoạn $[a,b]$.
+\end{baitoan}
+
 
 %------------------------------------------------------------------------------%
 
@@ -652,17 +656,17 @@ g++ -std=c++11 -O2 -Wall algebraic_expression.cpp -o algebraic_expression
 \end{baitoan}
 Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary computer science\texttt{/}Python\texttt{/}toanco.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.inp}{toanco.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/toanco.out}{toanco.out}.
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
-	file_in = open("toanco.inp")
-	file_out = open("toanco.out", "w")
-	s = file_in.readline()
-	s = s.split()
-	x = int(s[0])
-	y = int(s[1])
-	a = int(2*x - y/2)
-	b = int(y/2 - x)
-	file_out.write(str(a) + " " + str(b))
-	file_in.close()
-	file_out.close()
+file_in = open("toanco.inp")
+file_out = open("toanco.out", "w")
+s = file_in.readline()
+s = s.split()
+x = int(s[0])
+y = int(s[1])
+a = int(2*x - y/2)
+b = int(y/2 - x)
+file_out.write(str(a) + " " + str(b))
+file_in.close()
+file_out.close()
 \end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 4., p. 26, Quãng Ngãi 2020, Lãi suất-- Interest rate]
@@ -753,15 +757,15 @@ else:
 \end{baitoan}
 Python:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
-	from math import gcd
-	frac = input()
-	frac = frac.split("/")
-	num = int(frac[0])
-	den = int(frac[1])
-	gcd = gcd(num, den)
-	num = int(num/gcd)
-	den = int(den/gcd)
-	print(str(num) + "/" + str(den))
+from math import gcd
+frac = input()
+frac = frac.split("/")
+num = int(frac[0])
+den = int(frac[1])
+gcd = gcd(num, den)
+num = int(num/gcd)
+den = int(den/gcd)
+print(str(num) + "/" + str(den))
 \end{Verbatim}
 
 \begin{baitoan}[Tổng tất cả, tổng phần tử chẵn, lẻ, bình phương, lập phương, lũy thừa bậc $n$, căn bậc 2, 3, \& căn bậc $n$, nghịch đảo, nghịch đảo bình phương, nghịch đảo lập phương, nghịch đảo lũy thừa bậc $n$, nghịch đảo căn bậc 2, 3, \& nghịch đảo căn bậc $n$ -- Sums of all, odds, evens, squares, cubes, $n$th powers, square roots, cube roots, $n$th roots, reciprocals of square, of cubes, of $n$th powers, of square roots, of cube roots, of $n$th roots]
@@ -923,7 +927,6 @@ Python:
 from math import gcd
 def gcd3(a, b, c):
     return gcd(a, b, c)
-
 a = int(input())
 b = int(input())
 c = int(input())
@@ -938,7 +941,6 @@ Python:
 from math import lcm
 def lcm3(a, b, c):
    return lcm(a, b, c)
-
 a = int(input())
 b = int(input())
 c = int(input())
@@ -1163,14 +1165,14 @@ C++:
 \begin{baitoan}[\cite{VietSTEM2021}, 3., p. 30, Hậu Giang 2020, Tính nhân -- Multiplication]
 	Viết chương trình nhập vào 2 số nguyên dương $a,b\in\mathbb{N}^\star$. Sau đó thực hiện nhân $a\times b$ như cách nhân bằng tay thông thường ở tiểu học. E.g., nhập vào thừa số thứ 1: $125$, nhập vào thừa số thứ 2: $15$. {\sf Dữ liệu ra:}
 	\begin{Verbatim}[numbers=left,xleftmargin=5mm]
-		  125
-		x
-		   15
-		-----
-		  625
-		 125
-		-----
-		 1875
+  125
+x
+   15
+-----
+  625
+ 125
+-----
+ 1875
 	\end{Verbatim}
 \end{baitoan}
 \noindent Pascal:
