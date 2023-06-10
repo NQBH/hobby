@@ -1,4 +1,4 @@
-m, n = map(int,input().split())
+m, n = map(int, input().split())
 count = 0
 while m != 0 and n != 0:
 	if m > n:
