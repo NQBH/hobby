@@ -1486,6 +1486,28 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/fences.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/fences.py}.
+\end{itemize}
+
+\begin{multicols}{2}
+1st solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+m, n = map(int, input().split())
+print((n + 1)*m + (m + 1)*n)
+\end{Verbatim}
+\columnbreak
+2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+t = list(map(int, input().split()))[:2]
+m = t[0]
+n = t[1]
+S = m*(n + 1) + n*(m + 1)
+print(S)
+\end{Verbatim}
+\end{multicols}
 
 \begin{baitoan}[TS THPT chuyên Tiền Giang 2023--2024, Odd even -- Lẻ chẵn]
 	Bé Bo đang học về tính chẵn lẻ. Hôm nay, cô giáo dạy Toán cho Bo bài toán như sau: Cho 2 số nguyên dương $x,y$. Dãy số $A$ được xây dựng theo quy tắc: $A_1 = x$, $A_2 = y$,
@@ -1515,6 +1537,40 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/oddeven.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/circle.py}.
+\end{itemize}
+
+\begin{multicols}{2}
+1st solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+k = 10**9 + 7
+x, y, n = map(int, input().split())
+mem = [x, y]
+for i in range(3, n + 1):
+    if i % 2 == 0:
+        mem[1] = (mem[0] + mem[1]) % k
+    else:
+        mem[0] = abs(mem[0] - mem[1]) % k
+print(mem[(n + 1) % 2])
+\end{Verbatim}
+\columnbreak
+2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+A = list(map(int, input().split()))
+n = A[2]
+A.pop(2)
+k = 10**9 + 7
+for i in range(3, n + 1):
+    if i % 2 == 0:
+        A += [(A[i-2] + A[i-3]) % k]
+    else:
+        A += [abs(A[i-2] - A[i-3]) % k]
+print(A[n-1])
+\end{Verbatim}
+\end{multicols}
 
 \begin{baitoan}[TS THPT chuyên Tiền Giang 2023--2024, Circle -- Vòng tròn]
 	Bo đang chơi 1 game. Ban đầu, Bo có 1 vòng tròn bán kính $k$. Trên màn hình game còn có $n$ vòng tròn khác, vòng thứ $i$ có bán kính là $A_i$. Bo có thể điều khiển vòng tròn của mình để chạm vào các vòng tròn khác. Mỗi khi vòng tròn của Bo chạm vào 1 vòng tròn khác thì 1 trong 2 khả năng có thể xảy ra:
@@ -1531,9 +1587,55 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 		\end{itemize}
 		\item {\sf Output.} Ghi ra file \verb|circle.out| 1 số nguyên dương là bán kính lớn nhất cần tìm.
 		\item {\sf Constraints.} $1\le n\le10^3$, $1\le k\le10^6$, $1\le A_i\le10^6$, $\forall i = 1,2,\ldots,n$.
-		\item {\sf Sample.} **
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				{\tt circle.inp} & {\tt circle.out} \\
+				\hline
+				5 4 & 16 \\
+				\hline
+				7 68 3 2 20 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+		\item {\sf Explanation.} Ban đầu, có $5$ vòng tròn ($n = 5$) với bán kính lần lượt là $7,68,3,2,20$ \& vòng tròn của Bo có bán kính là $k = 4$. Lần 1: Vòng tròn của Bo chạm vòng tròn có bán kính là $2$ $\to$ vòng tròn của Bo có bán kính mới là $4 + 2 = 6$. Lần 2: Vòn tròn của Bo chạm vòng tròn có bán kính là $3$ $\to$ vòng tròn của Bo có bán kính mới là $6 + 3 = 9$. Lần 3: Vòng tròn của Bo chạm vòng tròn có bán kính là $7$ $\to$ vòng tròn của Bo có bán kính mới là $9 + 7 = 16$. Đến đây, còn 2 vòng tròn có bán kính là $20$ \& $68$. 2 bán kính này đều lớn hơn bán kính vòng tròn của Bo nên kết thúc game. Vậy bán kính lớn nhất cần tìm là $16$.
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/circle.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/circle.py}.
+\end{itemize}
+
+\begin{multicols}{2}
+1st solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+n, k = map(int, input().split())
+A = list(map(int, input().split()))
+A.sort()
+for i in range(n):
+    if k >= A[i]:
+        k += A[i]
+    else:
+        break
+print(k)
+\end{Verbatim}
+\columnbreak
+2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+T = list(map(int, input().split()))[:2]
+n, k = T[0], T[1]
+A = list(map(int, input().split()))[:n]
+A.sort()
+i = 0
+while k >= A[i]:
+    k += A[i]
+    i += 1
+print(k)
+\end{Verbatim}
+\end{multicols}
 
 \begin{baitoan}[TS THPT chuyên Tiền Giang 2023--2024, Wifi password -- Mật khẩu wifi]
 	Hôm nay, thầy giáo Tin học của lớp Bo thấy các bạn học chăm chỉ nên sau giờ thực hành, thầy cho các em truy cập wifi để giải trí. Để vào wifi, các em cần có 1 mật khẩu. Thầy cho 1 xâu {\tt s} gồm các ký tự in thường trong bảng chữ cái tiếng Anh \& ký tự {\tt*}. Xâu mật khẩu có được bằng cách: đi theo thứ tự từ trái qua phải của xâu {\tt s}, các em thay mỗi ký tự {\tt*} trong xâu {\tt s} bằng 1 ký tự in thường (ưu tiên chọn ký tự đứng trước trong bảng chữ cái để thay), nhưng đảm bảo số lần xuất hiện của mỗi ký tự {\tt c} trong xâu {\tt s} đúng bằng $f_c$ (với {\tt c} là 1 ký tự trong bảng chữ cái từ `a' đến `z'). Tìm xâu mật khẩu đó.
@@ -1560,17 +1662,17 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 				\hline
 			\end{tabular}
 		\end{table}
-		Giải thích: Ở bộ test đầu: Có 3 dấu {\tt*} trong xâu {\tt s}. Dấu {\tt*} thứ nhất được thay bởi ký tự {\tt a} (vì $f_a = 1$). Dấu {\tt*}  thứ 2 \& thứ 3 được thay bởi ký tự {\tt d} (vì $f_d = 2$).
+		\item {\sf Explanation.} Ở bộ test đầu: Có 3 dấu {\tt*} trong xâu {\tt s}. Dấu {\tt*} thứ nhất được thay bởi ký tự {\tt a} (vì $f_a = 1$). Dấu {\tt*}  thứ 2 \& thứ 3 được thay bởi ký tự {\tt d} (vì $f_d = 2$).
 	\end{itemize}
 \end{baitoan}
 Python:
 \begin{itemize}
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/pass.py}.
-	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/PASS.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/pass.py}.
 \end{itemize} 
 \begin{multicols}{2}
 1st solution:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 s = input()
 f = list(map(int, input().split()))
 s = list(s)
@@ -1583,11 +1685,11 @@ for i in range(len(s)):
         f[j] -= 1
 s = "".join(s)
 print(s)
-\end{verbatim}
+\end{Verbatim}
 
 \columnbreak
 2nd solution:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 st = input()
 F = list(map(int, input().split()))
 password = ''
@@ -1602,7 +1704,7 @@ while i != len(st):
         F[j] -=1
     i += 1
 print(password)
-\end{verbatim}
+\end{Verbatim}
 \end{multicols}
 
 \begin{baitoan}[TS THPT chuyên Tiền Giang 2023--2024, Shape -- Cắt hình]
@@ -1631,9 +1733,10 @@ Python:
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/shape.py}.
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/SHAPE.py}.
 \end{itemize}
+\newpage
 \begin{multicols}{2}
 	1st solution:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 m, n = map(int, input().split())
 count = 0
 while m != 0 and n != 0:
@@ -1644,17 +1747,17 @@ while m != 0 and n != 0:
         count += n // m
         n %= m
 print(count)
-\end{verbatim}
+\end{Verbatim}
 \columnbreak
 	2nd solution:
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 m, n = map(int, input().split())
 ans = 0
 while m*n != 0:
     ans += m // n
     m, n = n, m % n
 print(ans)
-\end{verbatim}
+\end{Verbatim}
 \end{multicols}
 
 \begin{baitoan}[\cite{Olympic30-4_2010_Tin_Hoc}, 1., p. 5, Connect]
@@ -1857,7 +1960,7 @@ Python:
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/div3.py}.
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/div3_io.py}.
 \end{itemize}
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 file = open("div3.inp", "r")
 n = int(file.readline())
 a = list(map(int, file.readline().split()))
@@ -1869,9 +1972,9 @@ res = (c[0]*(c[0] - 1)) // 2 + c[1]*c[2]
 file = open("div3.out", "w")
 file.write(str(res))
 file.close()
-\end{verbatim}
+\end{Verbatim}
 C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/div3.cpp}.
-\begin{verbatim}
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 #include <bits/stdc++.h>
 using namespace std;
 int n, x, c[3];
@@ -1889,7 +1992,7 @@ int main() {
     return 0;
 }
 // Terminal: g++ -std=c++11 -O2 -Wall div3.cpp -o div3
-\end{verbatim}
+\end{Verbatim}
 
 %------------------------------------------------------------------------------%
 
