@@ -7,7 +7,7 @@
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,color,fancyvrb,float,graphicx,mathtools,multicol}
 \usepackage{enumitem}
-\setlist{leftmargin=5mm}
+\setlist{leftmargin=4mm}
 \setlength{\columnseprule}{.5pt}
 \def\columnseprulecolor{\color{black}}
 \allowdisplaybreaks
@@ -77,7 +77,7 @@ int main() {
 
 \subsection{Notes on Python commands}
 
-\begin{enumerate}
+\begin{itemize}
 	\item Để sử dụng các hàm toán học trong Python, cần import thư viện {\tt math} vào chương trình: {\tt from math import *}
 	\item Để mở file dữ liệu vào {\tt prob.inp} chỉ để đọc dữ liệu \& mở file dữ liệu ra {\tt prob.out} để thay đổi dữ liệu trong file: {\tt file = open("prob.inp")} \& {\tt file2 = open("prob.out", "w")}.
 	\item Sắp xếp trong Python có thể thực hiện 1 cách đơn giản nhờ phương thức {\tt sort()} hoặc {\tt sorted()}. Cú pháp:
@@ -86,7 +86,7 @@ list.sort(reverse = True|False, key = myFunc)
 list.sorted(reverse = True|False, key = myFunc)
 	\end{Verbatim}
 	\item Trong Python, để lấy giá trị ngẫu nhiên, sử dụng phương thức {\tt ranint(a, b)} với {\tt a, b} là giới hạn của giá trị cần lấy ngẫu nhiên.
-\end{enumerate}
+\end{itemize}
 
 %------------------------------------------------------------------------------%
 
@@ -1500,6 +1500,7 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 		\item {\sf Input.} Đọc từ file \verb|oddeven.inp| gồm 1 dòng chứa 1 số nguyên dương lần lượt là $x,y,n$ giữa các số cách nhau bởi 1 dấu cách.
 		\item {\sf Output.} Ghi ra file \verb|oddeven.out| 1 số nguyên là giá trị của $A_n$.
 		\item {\sf Constraint.} $1\le x,y\le10^9$, $3\le n\le10^6$.
+		\item {\sf Sample.}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|l|}
@@ -1517,10 +1518,10 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 
 \begin{baitoan}[TS THPT chuyên Tiền Giang 2023--2024, Circle -- Vòng tròn]
 	Bo đang chơi 1 game. Ban đầu, Bo có 1 vòng tròn bán kính $k$. Trên màn hình game còn có $n$ vòng tròn khác, vòng thứ $i$ có bán kính là $A_i$. Bo có thể điều khiển vòng tròn của mình để chạm vào các vòng tròn khác. Mỗi khi vòng tròn của Bo chạm vào 1 vòng tròn khác thì 1 trong 2 khả năng có thể xảy ra:
-	\begin{enumerate}
+	\begin{itemize}
 		\item Nếu bán kính vòng tròn do Bo điều khiển lớn hơn hay bằng bán kính vòng tròn bị chạm vào thì vòng tròn bị chạm sẽ tan vỡ, còn vòng tròn của Bo trở nên lớn hơn \& bán kính của nó sẽ bằng tổng bán kính vòng tròn hiện tại của Bo với bán kính vòng tròn bị chạm đó.
 		\item Nếu bán kính vòng tròn do Bo điều khiển nhỏ hơn bán kính vòng tròn bị chạm vào thì kết thúc game.
-	\end{enumerate}
+	\end{itemize}
 	Bo chơi game rất giỏi. Bo luôn tìm cách chơi sao cho khi kết thúc game thì bán kính vòng tròn của Bo là lớn nhất. Tính bán kính lớn nhất đó.
 	\begin{itemize}
 		\item {\sf Input.} Đọc từ file \verb|circle.inp| gồm 2 dòng:
@@ -1541,18 +1542,120 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 		\begin{itemize}
 			\item Dòng thứ nhất chứa xâu {\tt s} chỉ gồm các ký tự in thường \& ký tự {\tt*}.
 			\item Dòng thứ 2 gồm $26$ số nguyên không âm $f_a,f_b,\ldots,f_z$ tương ứng với số lần xuất hiện của các ký tự từ `a' đến `z' trong xâu {\tt s}, giữa các số được cách nhau bởi 1 dấu cách. Dữ liệu vào đảm bảo xâu {\tt s} khác rỗng, luôn có ký tự {\tt*} trong xâu {\tt s} \& tổng $\sum_{c='a'}^{'z'} = f_a + f_b + \cdots + f_z$ đúng bằng số lượng ký tự {\tt*} có trong xâu {\tt s}.
-			\item {\sf Output.} Ghi ra file {\tt pass.out} xâu mật khẩu tìm được.
-			\item {\sf Constraint.} Độ dài xâu {\tt s} không quá $10^5$, $0\le f_c\le10^5$, `a'$\le$c$\le$`z'.
 		\end{itemize}
+		\item {\sf Output.} Ghi ra file {\tt pass.out} xâu mật khẩu tìm được.
+		\item {\sf Constraint.} Độ dài xâu {\tt s} không quá $10^5$, $0\le f_c\le10^5$, `a'$\le$c$\le$`z'.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\texttt{pass.inp} & \texttt{pass.out} \\
+				\hline
+				\texttt{bc*m**a} & \texttt{bcamdda} \\
+				1 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 & \\
+				\hline
+				\texttt{y*e**z*} & \texttt{ydedfzz} \\
+				0 0 0 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 & \\
+				\hline
+			\end{tabular}
+		\end{table}
+		Giải thích: Ở bộ test đầu: Có 3 dấu {\tt*} trong xâu {\tt s}. Dấu {\tt*} thứ nhất được thay bởi ký tự {\tt a} (vì $f_a = 1$). Dấu {\tt*}  thứ 2 \& thứ 3 được thay bởi ký tự {\tt d} (vì $f_d = 2$).
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/pass.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/PASS.py}.
+\end{itemize} 
+\begin{multicols}{2}
+1st solution:
+\begin{verbatim}
+s = input()
+f = list(map(int, input().split()))
+s = list(s)
+j = 0
+for i in range(len(s)):
+    if s[i] == '*':
+        while f[j] == 0:
+            j += 1
+        s[i] = chr(j + 97)
+        f[j] -= 1
+s = "".join(s)
+print(s)
+\end{verbatim}
+
+\columnbreak
+2nd solution:
+\begin{verbatim}
+st = input()
+F = list(map(int, input().split()))
+password = ''
+i, j = 0, 0
+while i != len(st):
+    if st[i] != '*':
+        password += st[i]
+    else:
+        while F[j] == 0:
+            j +=1
+        password += chr(97 + j)
+        F[j] -=1
+    i += 1
+print(password)
+\end{verbatim}
+\end{multicols}
 
 \begin{baitoan}[TS THPT chuyên Tiền Giang 2023--2024, Shape -- Cắt hình]
 	Bé Bo có 1 mảnh giấy hình chữ nhật gồm $m\times n$ ô vuông bằng nhau, với $m$ là chiều dài \& $n$ là chiều rộng mảnh giấy. Bo tìm cách cắt từ mảnh giấy này để mỗi lần cắt được hình vuông có diện tích lớn nhất. Thao tác này được thực hiện nhiều lần như thế đối với phần giấy thừa còn lại cho đến khi hết giấy thừa. Đếm số hình vuông mà Bo có thể cắt được.
 	\begin{itemize}
-		\item {\sf Input.} 
+		\item {\sf Input.} Đọc từ file {\tt shape.inp} gồm 1 dòng chứa 2 số nguyên dương lần lượt là $m$ \& $n$, giữa $m$ \& $n$ được cách nhau bởi 1 dấu cách.
+		\item {\sf Output.} Ghi ra file {\tt shape.out} 1 số nguyên dương là số hình vuông Bo cắt được.
+		\item {\sf Constraint.} $1\le m,n\le10^9$, $m\ge n$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				{\tt shape.inp} & {\tt shape.out} \\
+				\hline
+				8 3 & 5 \\
+				\hline
+				21 4 & 9 \\
+				\hline
+			\end{tabular}
+		\end{table}
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/shape.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/SHAPE.py}.
+\end{itemize}
+\begin{multicols}{2}
+	1st solution:
+\begin{verbatim}
+m, n = map(int, input().split())
+count = 0
+while m != 0 and n != 0:
+    if m > n:
+        count += m // n
+        m %= n
+    else:
+        count += n // m
+        n %= m
+print(count)
+\end{verbatim}
+\columnbreak
+	2nd solution:
+\begin{verbatim}
+m, n = map(int, input().split())
+ans = 0
+while m*n != 0:
+    ans += m // n
+    m, n = n, m % n
+print(ans)
+\end{verbatim}
+\end{multicols}
 
 \begin{baitoan}[\cite{Olympic30-4_2010_Tin_Hoc}, 1., p. 5, Connect]
 	Cho $n$ số nguyên dương $a_1,a_2,\ldots,a_n$, $n\in\mathbb{N}$, $1 < n\le100$, $0 < a_i\le10^9$, $\forall i = 1,2,\ldots,n$. Từ các số nguyên này người ta tạo ra 1 số nguyên mới bằng cách kết nối tất cả các số đã cho viết liên tiếp nhau. E.g., với $n = 4$ \& các số $12,34,567,890$ ta có thể tạo ra các số mới như sau: $1234567890$, $3456789012$, $8905673412$, $\ldots$ Dễ thấy có $4! = 24$ cách tạo mới như vậy. Trong trường hợp này, số lớn nhất có thể tạo thành là $8905673412$.
@@ -1749,6 +1852,44 @@ Bài toán này có thể mở rộng từ 2D sang 3D:
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/div3.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/div3_io.py}.
+\end{itemize}
+\begin{verbatim}
+file = open("div3.inp", "r")
+n = int(file.readline())
+a = list(map(int, file.readline().split()))
+c = [0, 0, 0]
+for x in a:
+    c[x % 3] += 1
+file.close()
+res = (c[0]*(c[0] - 1)) // 2 + c[1]*c[2]
+file = open("div3.out", "w")
+file.write(str(res))
+file.close()
+\end{verbatim}
+C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/div3.cpp}.
+\begin{verbatim}
+#include <bits/stdc++.h>
+using namespace std;
+int n, x, c[3];
+long long res;
+int main() {
+    freopen("div3.inp", "r", stdin);
+    freopen("div3.out", "w", stdout);
+    cin >> n;
+    for (int i = 1; i <= n; ++i) {
+        cin >> x;
+        ++c[x % 3];
+    }
+    res = (c[0]*(c[0] - 1))/2 + c[1]*c[2];
+    cout << res;
+    return 0;
+}
+// Terminal: g++ -std=c++11 -O2 -Wall div3.cpp -o div3
+\end{verbatim}
 
 %------------------------------------------------------------------------------%
 
