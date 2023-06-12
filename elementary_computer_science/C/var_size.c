@@ -8,4 +8,3 @@ void main() {
 	printf("Size of double type = %d.\n", sizeof(double));
 	printf("Size of char type = %d.\n", sizeof(char));
 }
-// Terminal: gcc var_size.c -o var_size
