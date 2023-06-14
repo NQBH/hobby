@@ -1,11 +1,8 @@
-#include <bits/stdc++.h>
+#include <cmath>
+#include <iostream>
 using namespace std;
-
 int main() {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
 	double a, b, c;
 	cin >> a >> b >> c;
 	printf("%f\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
 }
-// Terminal: g++ -std=c++11 -O2 -Wall algebraic_expression.cpp -o algebraic_expression
