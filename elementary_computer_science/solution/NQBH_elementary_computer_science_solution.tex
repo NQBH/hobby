@@ -606,8 +606,10 @@ while t != 0:
 		\end{table}
 	\end{itemize}
 \end{baitoan}
-Python script: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.py}{GitHub{\tt /}NQBH{\tt /}hobby{\tt /}elementary computer science{\tt /}Python{\tt /}algebraic expression.py}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.py}.}. Input: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.inp}{algebraic expression.inp}. Output: \href{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.out}{algebraic expression.out}.
-
+Python script:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/algebraic_expression.py}.
+\end{itemize}
 Python:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import sqrt
@@ -618,21 +620,41 @@ b = int(input())
 c = int(input())
 print(algebraic_expression(a,b,c))
 \end{Verbatim}
-C++:
+C:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/algebraic_expression.c}.
+	
+	See also C-code for $f(x,y) = x + \sqrt{1 + y^2}$:
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/sqrt_algebraic_expression.c}.
+\end{itemize}
+
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
-#include <bits/stdc++.h>
-using namespace std;
+#include <math.h>
+#include <stdio.h>
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    float a, b, c;
-    cin >> a >> b >> c;
-    printf("%.2f\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
+    double a, b, c;
+    scanf("%lf %lf %lf", &a, &b, &c);
+    printf("%.2f.\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
+    return 1;
 }
 \end{Verbatim}
-Run in terminal:
+C++:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/algebraic_expression.cpp}.
+	
+	See also C-code for $f(x,y) = x + \sqrt{1 + y^2}$:
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/sqrt_algebraic_expression.cpp}.
+\end{itemize}
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
-g++ -std=c++11 -O2 -Wall algebraic_expression.cpp -o algebraic_expression
+#include <cmath>
+#include <iostream>
+using namespace std;
+int main() {
+    double a, b, c;
+    cin >> a >> b >> c;
+    printf("%.2f\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
+    return 1;
+}
 \end{Verbatim}
 
 \begin{luuy}
