@@ -1,15 +1,11 @@
 #include <math.h>
 #include <stdio.h>
 int main() {
-	double a, b, c, Fabc;
-	printf("a = ");
+	double a, b, c;
 	scanf("%lf", &a);
-	printf("b = ");
 	scanf("%lf", &b);
-	printf("c = ");
 	scanf("%lf", &c);
-	Fabc = (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c);
-	printf("%lf.\n", Fabc);
+	printf("%lf.\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
 	return 1;
 }
 /*
