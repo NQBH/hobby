@@ -2,9 +2,7 @@
 #include <stdio.h>
 int main() {
 	double a, b, c;
-	scanf("%lf", &a);
-	scanf("%lf", &b);
-	scanf("%lf", &c);
+	scanf("%lf %lf %lf", &a, &b, &c);
 	printf("%lf.\n", (a*a + b*b + c*c)/(a*b*c) + sqrt(a*b*c));
 	return 1;
 }
