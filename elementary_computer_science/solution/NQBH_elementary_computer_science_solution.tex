@@ -234,12 +234,49 @@ except:
 \end{Verbatim}
 
 \begin{baitoan}[A special cubic equation -- 1 dạng phương trình bậc 3 đặc biệt]
-	(a) Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C{\tt /}C++} để giải phương trình bậc 3 có dạng đặc biệt $x^3 + 3a^2x + 2b = 0$ (khuyết số hạng $x^2$), với $p,q\in\mathbb{R}$ được nhập từ bàn phím. Biết phương trình này có 1 nghiệm duy nhất là:
+	(a) Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C{\tt /}C++} để giải phương trình bậc 3 có dạng đặc biệt $x^3 + 3a^2x + 2b = 0$ (khuyết số hạng $x^2$), với $p,q\in\mathbb{R}$ được nhập từ bàn phím. Biết phương trình này có 1 nghiệm duy nhất là\footnote{See. e.g., \cite[pp. 68--69]{Thu_Phuong_Tien_Triet_NMLT}.}:
 	\begin{align*}
 		x = \sqrt[3]{\sqrt{a^6 + b^2} - b} - \sqrt[3]{\sqrt{a^6 + b^2} + b}.
 	\end{align*}
 	(b) Chứng minh chặt chẽ bằng toán học công thức nghiệm đã cho.
 \end{baitoan}
+C: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/C/special_cubic_eqn.c}.
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+#include <math.h>
+#include <stdio.h>
+int main() {
+    double a, b, x, delta, test;
+    printf("a = ");
+    scanf("%lf", &a);
+    printf("b = ");
+    scanf("%lf", &b);
+    delta = pow(a, 6.0) + pow(b, 2.0);
+    delta = sqrt(delta);
+    x = pow(delta - b, 1.0/3) - pow(delta + b, 1.0/3);
+    printf("Root x = %lf.\n", x);
+    test = x*x*x + 3*a*a*x + 2*b;
+    printf("x^3 + 3a^2x + 2b = %lf.\n", test);
+}
+\end{Verbatim}
+C++: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/special_cubic_eqn.cpp}.
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+#include <cmath>
+#include <iostream>
+using namespace std;
+int main() {
+    double a, b, x, delta;
+    cout << "a = ";
+    cin >> a;
+    cout << "b = ";
+    cin >> b;
+    delta = pow(a, 6.0) + pow(b, 2.0);
+    delta = sqrt(delta);
+    x = pow(delta - b, 1.0/3) - pow(delta + b, 1.0/3);
+    cout << "Root x = " << x << ".\n";
+    double test = x*x*x + 3*a*a*x + 2*b;
+    cout << "x^3 + 3a^2x + 2b = " << test << ".\n";
+}
+\end{Verbatim}
 
 \begin{baitoan}[Polynomial equation -- Phương trình đa thức]
 	Viết thuật toán \& các chương trình bằng các ngôn ngữ lập trình {\sf Pascal, Python, C{\tt /}C++} để giải phương trình bậc nhất, bậc 2, bậc 3, \& bậc 4 với các hệ số thực được nhập từ bàn phím.
@@ -250,27 +287,27 @@ except:
 \end{baitoan}
 
 \begin{baitoan}[1st $n$ square roots]
-	Viết chương trình \textsc{Pascal, C{\tt /}C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình {\sf Pascal, C{\tt /}C++, Python} xuất ra căn bậc 2 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}[Số chính phương -- Square number]
-	Viết chương trình \textsc{Pascal, C{\tt /}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
+	Viết chương trình {\sf Pascal, C{\tt /}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là số chính phương hay không.
 \end{baitoan}
 
 \begin{baitoan}[1st $n$ cube roots]
-	Viết chương trình \textsc{Pascal, C{\tt /}C++, Python} xuất ra căn bậc 3 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình {\sf Pascal, C{\tt /}C++, Python} xuất ra căn bậc 3 của $n$ số tự nhiên đầu tiên với $n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}
-	Viết chương trình \textsc{Pascal, C{\tt /}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là lập phương của 1 số tự nhiên hay không.
+	Viết chương trình {\sf Pascal, C{\tt /}C++, Python} để kiểm tra 1 số $n\in\mathbb{N}^\star$ được nhập từ bàn phím có phải là lập phương của 1 số tự nhiên hay không.
 \end{baitoan}
 
 \begin{baitoan}[1st $n$ $n$th roots]
-	Viết chương trình \textsc{Pascal, C{\tt /}C++, Python} xuất ra căn bậc $n$ của $m$ số tự nhiên đầu tiên với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
+	Viết chương trình {\sf Pascal, C{\tt /}C++, Python} xuất ra căn bậc $n$ của $m$ số tự nhiên đầu tiên với $m,n\in\mathbb{N}^\star$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}
-	Viết chương trình \textsc{Pascal, C{\tt /}C++, Python} để kiểm tra 1 số $m\in\mathbb{Z}$ được nhập từ bàn phím có phải là lũy thừa bậc $n\in\mathbb{N}$ của 1 số tự nhiên hay không với $m,n$ được nhập từ bàn phím.
+	Viết chương trình {\sf Pascal, C{\tt /}C++, Python} để kiểm tra 1 số $m\in\mathbb{Z}$ được nhập từ bàn phím có phải là lũy thừa bậc $n\in\mathbb{N}$ của 1 số tự nhiên hay không với $m,n$ được nhập từ bàn phím.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Duc_200_BT_Python}, 1., p. 18, Thay chữ số -- Digit replacement]
