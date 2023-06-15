@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #define Swap(x, y) {auto z = x; x = y; y = z;}
+#define Swap_decl(x, y) { decltype(x) z; z = x; x = y; y = z;}
 void swap(float *x, float *y) {
 	float u = *x;
 	*x = *y;
@@ -19,6 +20,8 @@ int main() {
 	ajust(&A, &B);
 	printf("New values of A & B now are A = %f, B = %f.\n", A, B);
 	Swap(x, y);
+	printf("New values of x & y now are x = %f, y = %f.\n", x, y);
+	Swap_decl(x, y);
 	printf("New values of x & y now are x = %f, y = %f.\n", x, y);
 }
 /*
