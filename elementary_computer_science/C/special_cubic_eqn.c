@@ -1,17 +1,17 @@
 #include <math.h>
 #include <stdio.h>
 int main() {
-	double p, q, y, delta, test;
-	printf("p = ");
-	scanf("%lf", &p);
-	printf("q = ");
-	scanf("%lf", &q);
-	delta = pow(p, 6.0) + pow(q, 2.0);
+	double a, b, x, delta, test;
+	printf("a = ");
+	scanf("%lf", &a);
+	printf("b = ");
+	scanf("%lf", &b);
+	delta = pow(a, 6.0) + pow(b, 2.0);
 	delta = sqrt(delta);
-	y = pow(delta - q, 1.0/3) - pow(delta + q, 1.0/3);
-	printf("Root y = %lf.\n", y);
-	test = y*y*y + 3*p*p*y + 2*q;
-	printf("y^3 + 3p^2y + 2q = %lf.\n", test);
+	x = pow(delta - b, 1.0/3) - pow(delta + b, 1.0/3);
+	printf("Root x = %lf.\n", x);
+	test = x*x*x + 3*a*a*x + 2*b;
+	printf("x^3 + 3a^2x + 2b = %lf.\n", test);
 	return 1;
 }
 /*
