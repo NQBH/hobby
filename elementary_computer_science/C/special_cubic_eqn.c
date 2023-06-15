@@ -12,7 +12,6 @@ int main() {
 	printf("Root x = %lf.\n", x);
 	test = x*x*x + 3*a*a*x + 2*b;
 	printf("x^3 + 3a^2x + 2b = %lf.\n", test);
-	return 1;
 }
 /*
 nqbh@nqbh-msi:~/hobby/elementary_computer_science/C$ gcc special_cubic_eqn.c -o special_cubic_eqn
