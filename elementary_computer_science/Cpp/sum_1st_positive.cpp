@@ -10,6 +10,16 @@ int main() {
 		++k;
 	}
 	--k;
+	/* // do while option
+	do {
+		sum += k;
+		++k;
+	} while (sum < n);
+	if (sum > n) {
+		sum -= k;
+		--k
+	}
+	*/	
 	cout << "k = " << k << ".\n";
 	cout << "Sum of 1st k positive integers = " << sum << ".\n";
 	if (sum == n)
