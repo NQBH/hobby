@@ -15,8 +15,10 @@ void quadratic_eqn(double a, double b, double c, double& x1, double& x2, int& nu
 		x2 = x1;
 		printf("This quadratic equation has a unique real root: %lf.\n", x1);
 	}
-	else
+	else {
+		num_roots = 0;
 		printf("This quadratic equation has no real roots.");
+	}
 }
 int main() {
 	double x1 = 0, x2 = 0;
