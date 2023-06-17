@@ -23,20 +23,23 @@ int is_prime(long n) {
 }
 
 void prime_list(long n) {
-	for (long i = 2; i <= n; ++i) {
-		if (is_prime(i))
-			cout << i << " ";
+	if (n >= 2) {
+		for (long i = 2; i <= n; ++i)
+			if (is_prime(i))
+				cout << i << " ";
+		cout << '\n';
 	}
-	cout << '\n';
 }
 
 void prime_list_odd(long n) {
-	printf("2 ");
-	for (long i = 3; i <= n; i += 2) {
-		if (is_prime(i))
-			cout << i << " ";
+	if (n >= 2) {
+		printf("2 ");
+		for (long i = 3; i <= n; i += 2) {
+			if (is_prime(i))
+				cout << i << " ";
+		}
+		cout << '\n';
 	}
-	cout << '\n';
 }
 
 int main() {
