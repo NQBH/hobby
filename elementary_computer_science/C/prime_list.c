@@ -40,6 +40,18 @@ void prime_list_odd(long n) {
 	}
 }
 
+long get_prime(long n) {
+	long p = 2, count_prime = 1, next_num = 3;
+	while (count_prime < n) {
+		if (is_prime(next_num)) {
+			p = next_num;
+			++count_prime;
+		}
+		next_num += 2;
+	}
+	return p;
+}
+
 int main() {
 	long n;
 	printf("Input n = ");
@@ -47,4 +59,5 @@ int main() {
 	printf("isprime(%ld) = %d.\n", n, is_prime(n));
 	prime_list(n);
 	prime_list_odd(n);
+	printf("The nth prime: %ld.\n", get_prime(n));
 }
