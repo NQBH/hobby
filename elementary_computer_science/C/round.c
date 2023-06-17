@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 double round(double x); // Declare function round()
+double round(double x, int n); // Declare function round() with n-digit precision
+
 double round(double x) {
 	double ans;
 	if (x >= 0)
@@ -9,12 +11,25 @@ double round(double x) {
 		ans = -floor(-x + 0.5);
 	return ans;
 }
+
+double round(double x, int n) {
+	double ans, scale = pow(10, n);
+	x *= scale;
+	if (x >= 0)
+		ans = floor(x + 0.5)/scale;
+	else
+		ans = -floor(-x + 0.5)/scale;
+	return ans;
+}
+
 int main() {
-	double a, y;
+	double a; int n;
 	printf("Input a = ");
 	scanf("%lf", &a);
-	y = round(a);
-	printf("round(%lf) = %lf.\n", a, y);
+	printf("Round to n = ");
+	scanf("%d", &n);
+	printf("round(%lf) = %lf.\n", a, round(a));
+	printf("round(%lf,%d) = %lf.\n", a, n, round(a, n));
 }
 /*
 nqbh@nqbh-msi:~/hobby/elementary_computer_science/C$ gcc round.c -o round
