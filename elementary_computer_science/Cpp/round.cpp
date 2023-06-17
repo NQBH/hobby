@@ -2,7 +2,7 @@
 #include <cmath>
 using namespace std;
 double round(double x); // Declare function round()
-double round(double x, int n); // Declare function round() with n-digit precision
+void round(double& x, int n); // Declare function round() with n-digit precision
 
 double round(double x) {
 	double ans;
@@ -13,14 +13,13 @@ double round(double x) {
 	return ans;
 }
 
-double round(double x, int n) {
-	double ans, scale = pow(10, n);
+void round(double& x, int n) {
+	double scale = pow(10, n);
 	x *= scale;
 	if (x >= 0)
-		ans = floor(x + 0.5)/scale;
+		x = floor(x + 0.5)/scale;
 	else
-		ans = -floor(-x + 0.5)/scale;
-	return ans;
+		x = -floor(-x + 0.5)/scale;
 }
 
 int main() {
@@ -30,5 +29,11 @@ int main() {
 	cout << "Round to n = ";
 	cin >> n;
 	cout << "round(" << a << ") = " << round(a) << ".\n";
-	cout << "round(" << a << "," << n << ") = " << round(a, n) << ".\n";
+	cout << "round(" << a << "," << n << ") = ";
+	round(a, n);
+	cout << a << ".\n";
+	a = -2.81828;
+	cout << "a (old) = " << a << ".\n";
+	round(a, 4);
+	cout << "a (rounded) = " << a << ".\n";
 }
