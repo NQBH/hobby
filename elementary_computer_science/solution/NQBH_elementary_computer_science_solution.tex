@@ -595,6 +595,7 @@ while t != 0:
         continue
     print(0)
 \end{Verbatim}
+\newpage
 \begin{multicols}{2}
 2nd solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
@@ -870,6 +871,38 @@ print(str(num) + "/" + str(den))
 	\end{align*}
 	Dựa vào các công thức này, sử dụng vòng lặp {\tt for} hoặc {\tt while} để tính các tổng này.
 \end{proof}
+Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/compute_sums.py}.
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+m = int(input())
+A = list(map(int, input().split()))[:m]
+n = int(input('n > 0: '))
+while  n <= 0:
+n = int(input(' n > 0: '))
+S_all = sum(A)
+print(S_all)
+S_odd, S_even, S_sqr, S_cb, S_nthp, S_sqrt, S_cbrt, S_nthrt = 0, 0, 0, 0, 0, 0, 0, 0
+S_r, S_r_sqr, S_r_cb, S_r_nthp, S_r_sqrt, S_r_cbrt, S_r_nthrt = 0, 0, 0, 0, 0, 0, 0 
+for i in A:
+    if i % 2 == 0:
+        S_even += i
+    else:
+        S_odd +=i
+    S_sqr += i**2
+    S_cb += i**3
+    S_nthp += i**n
+    S_sqrt += i**(1/2)
+    S_cbrt += i**(1/3)
+    S_nthrt += i**(1/n)
+    S_r += 1/i # S_sqrt += i**-1
+    S_r_sqr += 1/(i**2) # S_r_sqr += i**-2
+    S_r_cb += 1/(i**3) # S_r_cb += i**-3
+    S_r_nthp += 1/(i**n) # S_r_nthp += i**-n
+    S_r_sqrt += 1/(i**(1/2)) # S_r_sqrt += i**(-1/2)
+    S_r_cbrt += 1/(i**(1/3)) # S_r_cbrt += i**(-1/3)
+    S_r_nthrt += 1/(i**(1/n)) # S_r_nthrt += i**(-1/n)
+print(f'{S_odd}, {S_even}, {S_sqr}, {S_cb}, {S_nthp}, {S_sqrt}, {S_cbrt}, {S_nthrt}, {S_r}, {S_r_sqr}, 
+        {S_r_cb}, {S_r_nthp}, {S_r_sqrt}, {S_r_cbrt}, {S_r_nthrt}.')
+\end{Verbatim}
 
 \begin{nhanxet}
 	Nếu chỉ tính tổng $S_{\rm odd}$ các số lẻ của dãy $(a_i)_{i=1}^n\subset\mathbb{Z}$ thì ta có bài toán \emph{\cite[3., p. 25, Tây Ninh 2019]{VietSTEM2021}}.
@@ -912,6 +945,7 @@ print(str(num) + "/" + str(den))
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/Goldbach_conjecture.py}.
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/Goldbach_conjecture.py}.
 \end{itemize}
+1st solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import sqrt
 def is_prime(x):
@@ -933,7 +967,7 @@ for i in range(t):
                 # break # uncomment if want only 1 representation,
                         # comment if want all satisfied representations
 \end{Verbatim}
-
+2nd solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def prime(x):
     d = 0
@@ -958,7 +992,7 @@ Python:
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/perfect_number.py}.
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/perfect_num.py}.
 \end{itemize}
-
+1st solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def is_perfect_number(n):
     sum_proper_divisor = 0
@@ -969,14 +1003,14 @@ def is_perfect_number(n):
             sum_proper_divisor += i
     if sum_proper_divisor == n:
         list_divisor.append(n)
-        print(n, " is a perfect number.")
+        print(f'{n} is a perfect number.')
         print(f'List of of all divisor of {n}:', *list_divisor, '.')
     else:
         print(f'{n} is not a perfect number.')
 n = int(input())
 is_perfect_number(n)
 \end{Verbatim}
-
+2nd solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def perfect(x):
     S = 0
@@ -1041,7 +1075,7 @@ Python:
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/gcd3.py}.
 	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/UCLN.py}.
 \end{itemize}
-\newpage
+
 \begin{multicols}{2}
 	1st solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
@@ -1054,7 +1088,7 @@ while a != b:
     return a
 a, b, c = map(int,input().split())
 if (a <= 0 or b <= 0 or c <= 0):
-    print("Error: Non-positive.")
+    print('Error: Non-positive.')
 else:
     a = UCLN(a,b)
     a = UCLN(a,c)
