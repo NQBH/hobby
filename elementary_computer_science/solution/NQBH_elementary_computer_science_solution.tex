@@ -86,6 +86,11 @@ list.sort(reverse = True|False, key = myFunc)
 list.sorted(reverse = True|False, key = myFunc)
 	\end{Verbatim}
 	\item Trong Python, để lấy giá trị ngẫu nhiên, sử dụng phương thức {\tt ranint(a, b)} với {\tt a, b} là giới hạn của giá trị cần lấy ngẫu nhiên.
+	\item Cf.: \texttt{**0.5} or \texttt{**(1/2)} vs. \texttt{math.sqrt(), cmath.sqrt()}:
+	\begin{itemize}
+		\item \href{https://www.learndatasci.com/solutions/python-square-root/}{Python Square Root: Real \& Complex -- Calculating the Square Root in Python}.\footnote{\url{https://www.learndatasci.com/solutions/python-square-root/}.}
+		\item \href{https://stackoverflow.com/questions/327002/which-is-faster-in-python-x-5-or-math-sqrtx}{StackOverflow{\tt/}which is faster in Python: x**.5 or math.sqrt(x)?}.\footnote{\url{https://stackoverflow.com/questions/327002/which-is-faster-in-python-x-5-or-math-sqrtx}.}
+	\end{itemize}
 \end{itemize}
 
 %------------------------------------------------------------------------------%
@@ -566,7 +571,7 @@ while t != 0:
 	\end{itemize}
 \end{baitoan}
 See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikipedia{\tt /}số tam giác} or \href{https://en.wikipedia.org/wiki/Triangular_number}{Wikipedia{\tt /}triangular number}.
-\newpage
+
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle_number.py}.
 
 1st solution \cite[6., pp. 204--205]{Duc_200_BT_Python}:
@@ -635,7 +640,7 @@ while t != 0:
 \begin{baitoan}[\cite{VietSTEM2021}, 1., p. 15, Vũng Tàu 2020]
 	Cho $a,b,c\in\mathbb{N}^\star$. {\sf Yêu cầu:} Tính giá trị của biểu thức $S = \dfrac{a^2 + b^2 + c^2}{abc} + \sqrt{abc}$.
 	\begin{itemize}
-		\item {\sf Dữ liệu vào:} File \verb|algebraic_expression.inp| chứa 3 số nguyên dương $a,b,c$. Mỗi số trên 1 dòng.
+		\item {\sf Input.} File \verb|algebraic_expression.inp| chứa 3 số nguyên dương $a,b,c$. Mỗi số trên 1 dòng.
 		\item {\sf Kết quả:} Ghi vào File \verb|algebraic_expression.out| kết quả $S$ tính được (làm tròn lấy 2 chữ số sau phần thập phân). E.g.:
 		\begin{table}[H]
 			\centering
@@ -709,7 +714,7 @@ int main() {
 \begin{baitoan}[\cite{VietSTEM2021}, 2., p. 19, Bắc Giang 2020]
 	Nhà An có 1 trang trại rộng lớn. Do sở thích của An nên bố An chỉ nuôi gà \& chó. 1 hôm bố An đố con gái nhà mình nuôi bao nhiêu gà, bao nhiêu chó? Bố An cho biết nhà có tổng số gà \& chó là $x$ con. Do số lượng nhiều \& khó đếm từng loại nên An chỉ đếm được tổng số chân của gà \& chó là $y$ chân. Giúp An trả lời câu đố.
 	\begin{itemize}
-		\item {\sf Dữ liệu vào:} Đọc từ file văn bản \verb|toanco.inp| gồm 2 số nguyên dương $x,y$ trên 1 dòng. 2 số cách nhau 1 khoảng trống ($x\le10^5$, $y\le4\cdot10^5$).
+		\item {\sf Input.} Đọc từ file văn bản \verb|toanco.inp| gồm 2 số nguyên dương $x,y$ trên 1 dòng. 2 số cách nhau 1 khoảng trống ($x\le10^5$, $y\le4\cdot10^5$).
 		\item {\sf Kết quả:} Ghi ra file văn bản \verb|toanco.out| gồm 2 số tương ứng là số gà \& số chó tìm được. 2 số cách nhau 1 khoảng trống. Giả sử bài toán luôn có nghiệm.
 		\begin{table}[H]
 			\centering
@@ -742,8 +747,8 @@ file_out.close()
 	1 người gửi tiền vào ngân hàng có kỳ hạn là $c$ tháng với lãi suất mỗi tháng là $k$\emph{\%}, số tiền gửi ban đầu là $A$ (đơn vị triệu đồng). 
 	\begin{itemize}
 		\item {\sf Yêu cầu:} Tính số tiền người đó nhận được sau $t$ tháng. Biết tiền lãi mỗi tháng được cộng dồn vào tiền gốc, nếu nhận tiền trước kỳ hạn thì số tiền được tính với lãi suất không kỳ hạn là $h$\emph{\%} của số tiền ban đầu $A$ nhân với số tháng đã gửi. Trong trường hợp rút tiền sau kỳ hạn thì số tháng sau kỳ hạn sẽ được tính với lãi suất không kỳ hạn là $h$\emph{\%} so với số tiền thu được đã qua kỳ hạn.
-		\item {\sf Dữ liệu vào:} Tệp văn bản \verb|bl2.inp| ghi $5$ số kỳ hạn $c$ (nếu $c = 0$ là gửi không kỳ hạn), thời gian gửi $t$, số tiền ban đầu $A$, lãi suất có kỳ hạn $k$, lãi suất không kỳ hạn $h$, các số cách nhau 1 ký tự trắng.
-		\item {\sf Dữ liệu ra:} Tệp văn bản \verb|bl2.out| ghi $1$ số là số tiền nhận được (làm tròn đến $1$ số lẻ sau dấu chấm thập phân). E.g.:
+		\item {\sf Input.} Tệp văn bản \verb|bl2.inp| ghi $5$ số kỳ hạn $c$ (nếu $c = 0$ là gửi không kỳ hạn), thời gian gửi $t$, số tiền ban đầu $A$, lãi suất có kỳ hạn $k$, lãi suất không kỳ hạn $h$, các số cách nhau 1 ký tự trắng.
+		\item {\sf Output.} Tệp văn bản \verb|bl2.out| ghi $1$ số là số tiền nhận được (làm tròn đến $1$ số lẻ sau dấu chấm thập phân). E.g.:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -776,7 +781,7 @@ See, e.g., \href{https://en.wikipedia.org/wiki/Powerful_number}{Wikipedia{\tt /}
 	Cho 1 dãy số $A$ có $n$ phần tử. Tìm số nguyên dương $a$ nhỏ nhất thỏa mãn: $a$ là số chính phương \& $a$ chia hết cho tất cả các phần tử của dãy số $A$.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} In ra phần dư của phép chia khi chia $a$ cho $10^9 + 7$.
-		\item {\sf Dữ liệu vào:} Vào từ thiết bị theo khuôn dạng sau: Dòng đầu tiên chứa số nguyên dương $n$ là số lượng phần tử của dãy số. Dòng tiếp theo chứa $n$ số nguyên dương là các phần tử của dãy $A$. Các số trên 1 dòng được ghi cách nhau bởi dấu cách.
+		\item {\sf Input.} Vào từ thiết bị theo khuôn dạng sau: Dòng đầu tiên chứa số nguyên dương $n$ là số lượng phần tử của dãy số. Dòng tiếp theo chứa $n$ số nguyên dương là các phần tử của dãy $A$. Các số trên 1 dòng được ghi cách nhau bởi dấu cách.
 		\item {\sf Kết quả:} Ghi ra thiết bị ra gồm 1 số nguyên duy nhất là kết quả của bài toán. E.g.:
 		\begin{table}[H]
 			\centering
@@ -883,11 +888,11 @@ print(str(num) + "/" + str(den))
 \end{nhanxet}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 5., p. 26, Nghệ An 2019, Giả thuyết Goldbach cho số nguyên tố -- Goldbach conjecture for primes]
-	Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho.
+	Cho 1 số chẵn $k\in\mathbb{N}$, $2\le k\le1000$, tìm 2 số nguyên tố sao cho tổng của chúng bằng số chẵn $k$ đã cho. Viết chương trình {\sf Pascal, Python, C{\tt /}C++} để trả lời câu hỏi.
 	\begin{itemize}
-		\item {\sf Yêu cầu:} Viết chương trình {\sf Pascal, Python, C{\tt /}C++} để trả lời câu hỏi.
-		\item {\sf Dữ liệu vào:} Tệp văn bản \verb|prime.inp|: Dòng đầu tiên chứa $n\in\mathbb{N}^\star$ tương ứng số test. $n$ dòng tiếp theo, mỗi dòng chứa 1 số $k$, i.e., $k_i$, $i = 1,2,\ldots,n$.
-		\item {\sf Dữ liệu ra:} (a) Tệp văn bản \verb|prime.out| gồm $n$ dòng tương ứng $n$ kết quả. Mỗi kết quả hiển thị tổng 2 số nguyên tố bằng số $k$ nhập vào. (b) Gồm tất cả các biểu diễn $x + y$ với $x\le y$. E.g.:
+		\item {\sf Input.} Tệp văn bản \verb|prime.inp|: Dòng đầu tiên chứa $n\in\mathbb{N}^\star$ tương ứng số test. $n$ dòng tiếp theo, mỗi dòng chứa 1 số $k$, i.e., $k_i$, $i = 1,2,\ldots,n$.
+		\item {\sf Output.} (a) Tệp văn bản \verb|prime.out| gồm $n$ dòng tương ứng $n$ kết quả. Mỗi kết quả hiển thị tổng 2 số nguyên tố bằng số $k$ nhập vào. (b) Gồm tất cả các biểu diễn $x + y$ với $x\le y$.
+		\item {\sf Sample.}
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -902,10 +907,13 @@ print(str(num) + "/" + str(den))
 		\end{table}
 	\end{itemize}
 \end{baitoan}
-Python:
+\noindent Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/Goldbach_conjecture.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/Goldbach_conjecture.py}.
+\end{itemize}
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import sqrt
-from math import floor
 def is_prime(x):
     if x == 1:
         return 0
@@ -913,17 +921,33 @@ def is_prime(x):
         if x % i == 0:
             return 0
     return 1
-
 t = int(input())
 for i in range(t):
     n = int(input())
-    if n % 2 != 0 and is_prime(n - 2) == 1:
-        print(n, " = 2 + ", n - 2)
+    if n % 2 != 0:
+        print(f'{n} is odd. Must input an even natural number.')
     else:
-        for j in range(3, floor(n/2)):
+        for j in range(3, n//2):
             if is_prime(j) == 1 and is_prime(n - j) == 1:
                 print(n, " = ", j, " + ", n - j)
-                # break # if want only 1 representation
+                # break # uncomment if want only 1 representation,
+                        # comment if want all satisfied representations
+\end{Verbatim}
+
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+def prime(x):
+    d = 0
+    for i in range(1, (x//2) + 1):
+        if x % i == 0:
+            d += 1
+    return d == 1
+n = int(input())
+for i in range(n):
+    k = int(input())
+    for j in range(k - 2, 1, -1):
+        if prime(j) == True and prime(k - j) == True:
+            print(f'{k} = {j} + {k - j}')
+            break # uncomment if want only 1 representation, comment if want all satisfied representations
 \end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 6., p. 27, Tây Ninh 2019, Số hoàn hảo -- Perfect number]
@@ -953,8 +977,8 @@ is_perfect_number(n)
 	Để động viên thành tích học tập xuất sắc của các em học sinh lớp 6-3 trong năm học 2019--2020, thầy giáo chủ nhiệm đã chuẩn bị các món quà được đánh số từ $1$ đến $n$. Sau đó thầy giáo sẽ cho các em lên bốc thăm để nhận món quà may mắn của mình. Đầu tiên thầy giáo sẽ ghi tất cả số nguyên lẻ từ $1$ đến $n$, sau đó sẽ ghi tất cả các số nguyên chẵn từ $2$ đến $n$ (theo thứ tự tăng dần) để tạo thành 1 dãy số phần thưởng. Mỗi bạn sẽ bốc thăm 1 số $k$ ứng với con số của món quà mình đạt được.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} In số của món quà học sinh đạt được.
-		\item {\sf Dữ liệu vào:} Dòng duy nhất ghi số nguyên $n$ \& $k$, $1\le k\le n\le1000$.
-		\item {\sf Dữ liệu ra:} In số của món quà học sinh đạt được:
+		\item {\sf Input.} Dòng duy nhất ghi số nguyên $n$ \& $k$, $1\le k\le n\le1000$.
+		\item {\sf Output.} In số của món quà học sinh đạt được:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -1191,8 +1215,8 @@ C++:
 	Viết chương trình nhập vào 1 xâu ký tự chỉ gồm các chữ cái Tiếng Anh, chữ số, dấu cách, \& dấu gạch nối.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} Nén các ký tự liên tiếp giống nhau thành số lượng ký tự \& ký tự đó, rồi đưa ra xâu sau khi nén.
-		\item {\sf Dữ liệu vào:} Đọc từ file văn bản \verb|string_compression.inp| gồm 1 xâu S có số lượng ký tự không quá $255$ ký tự.
-		\item {\sf Dữ liệu ra:} Đưa ra file văn bản \verb|string_compression.out| gồm xâu S sau khi nén.
+		\item {\sf Input.} Đọc từ file văn bản \verb|string_compression.inp| gồm 1 xâu S có số lượng ký tự không quá $255$ ký tự.
+		\item {\sf Output.} Đưa ra file văn bản \verb|string_compression.out| gồm xâu S sau khi nén.
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -1232,7 +1256,7 @@ C:
 C++:
 
 \begin{baitoan}[\cite{VietSTEM2021}, 3., p. 30, Hậu Giang 2020, Tính nhân -- Multiplication]
-	Viết chương trình nhập vào 2 số nguyên dương $a,b\in\mathbb{N}^\star$. Sau đó thực hiện nhân $a\times b$ như cách nhân bằng tay thông thường ở tiểu học. E.g., nhập vào thừa số thứ 1: $125$, nhập vào thừa số thứ 2: $15$. {\sf Dữ liệu ra:}
+	Viết chương trình nhập vào 2 số nguyên dương $a,b\in\mathbb{N}^\star$. Sau đó thực hiện nhân $a\times b$ như cách nhân bằng tay thông thường ở tiểu học. E.g., nhập vào thừa số thứ 1: $125$, nhập vào thừa số thứ 2: $15$. {\sf Output.}
 	\begin{Verbatim}[numbers=left,xleftmargin=5mm]
   125
 x
@@ -1304,7 +1328,7 @@ See, e.g., \cite[Chap. 5: Sorting]{Knuth1998}, \cite[Chap. II, Sect. Dạng bài
 	Sử dụng hàm Randomize để khởi tạo dãy số ngẫu nhiên từ $0$ đến $9$ gồm $n\in\mathbb{N}^\star$ phần tử, $0 < n\le100$, kết quả ghi ra tệp \verb|random.out|, mỗi phần tử cách nhau $1$ dấu cách.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} Viết chương trình đọc dữ liệu từ tệp \verb|random.inp|, sau đó sắp xếp lại các phần tử theo chiều tăng dần, đồng thời cho biết số lần xuất hiện của mỗi phần tử trong dãy số đã được khởi tạo.
-		\item {\sf Dữ liệu ra:} Ghi ra tệp \verb|random.out| gồm $11$ dòng: Dòng thứ nhất là dãy các phần tử đã được sắp xếp. Dòng thứ $2$ đến dòng thứ $11$ tương ứng chữ số ghi tổng số lần xuất hiện của $0,1,\ldots,9$. E.g.:
+		\item {\sf Output.} Ghi ra tệp \verb|random.out| gồm $11$ dòng: Dòng thứ nhất là dãy các phần tử đã được sắp xếp. Dòng thứ $2$ đến dòng thứ $11$ tương ứng chữ số ghi tổng số lần xuất hiện của $0,1,\ldots,9$. E.g.:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -1348,8 +1372,8 @@ See, e.g., \cite[Chap. 5: Sorting]{Knuth1998}, \cite[Chap. II, Sect. Dạng bài
 	Cho vào $m$ dãy số nguyên $(a_{i,j})_{j=1}^{n_i}$, $n_i\in\mathbb{N}^\star$, $n_i\le100$, $\forall i = 1,2,\ldots,m$, $|a_{ij}| < 32000$, $\forall i = 1,2,\ldots,m$, $\forall j = 1,2,\ldots,\max\{n_i|i = 1,2,\ldots,m\}$.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} Sắp xếp từng dãy số trên theo thứ tự tăng dần.
-		\item {\sf Dữ liệu vào:} Trong $m$ dòng, mỗi dòng là dãy số, bắt đầu là 1 số nguyên $n$ là số lượng các phần tử của dãy số, $1\le n\le100$, $n$ số nguyên tiếp theo là giá trị các phần tử của dãy.
-		\item {\sf Dữ liệu ra:} Ghi ra $m$ dòng là $m$ dãy số đã được sắp xếp theo thứ tự tăng dần. E.g.:
+		\item {\sf Input.} Trong $m$ dòng, mỗi dòng là dãy số, bắt đầu là 1 số nguyên $n$ là số lượng các phần tử của dãy số, $1\le n\le100$, $n$ số nguyên tiếp theo là giá trị các phần tử của dãy.
+		\item {\sf Output.} Ghi ra $m$ dòng là $m$ dãy số đã được sắp xếp theo thứ tự tăng dần. E.g.:
 		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
@@ -1531,6 +1555,8 @@ See, e.g., \cite[Chap. 6: Searching]{Knuth1998}.
 %------------------------------------------------------------------------------%
 
 \section{Tuyển Sinh THPT Chuyên Tin}
+
+\subsection{Tuyển Sinh THPT Chuyên Bến Tre 2023--2024}
 
 \subsection{Tuyển Sinh THPT Chuyên Tiền Giang 2023--2024}
 
@@ -1870,7 +1896,7 @@ Python:
 	Cho $n$ số nguyên dương $a_1,a_2,\ldots,a_n$, $n\in\mathbb{N}$, $1 < n\le100$, $0 < a_i\le10^9$, $\forall i = 1,2,\ldots,n$. Từ các số nguyên này người ta tạo ra 1 số nguyên mới bằng cách kết nối tất cả các số đã cho viết liên tiếp nhau. E.g., với $n = 4$ \& các số $12,34,567,890$ ta có thể tạo ra các số mới như sau: $1234567890$, $3456789012$, $8905673412$, $\ldots$ Dễ thấy có $4! = 24$ cách tạo mới như vậy. Trong trường hợp này, số lớn nhất có thể tạo thành là $8905673412$.
 	\begin{itemize}
 		\item {\sf Yêu cầu:} Cho $n$ \& các số $a_1,a_2,\ldots,a_n$. Xác định số lớn nhất có thể kết nối được theo quy tắc trên.
-		\item {\sf Dữ liệu vào:} Cho trong file văn bản \verb|connect.inp| gồm $n + 1$ dòng. Dòng đầu tiên ghi số nguyên $n$. Trong các dòng còn lại, dòng thứ $i + 1$ ghi số $a_i$.
+		\item {\sf Input.} Cho trong file văn bản \verb|connect.inp| gồm $n + 1$ dòng. Dòng đầu tiên ghi số nguyên $n$. Trong các dòng còn lại, dòng thứ $i + 1$ ghi số $a_i$.
 		\item \emph{Dữ liệu ra:} Ghi vào file văn bản \verb|connect.out| số lớn nhất được kết nối thành từ các số ban đầu. E.g.:
 		\begin{table}[H]
 			\centering
