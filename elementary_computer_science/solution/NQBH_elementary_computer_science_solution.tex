@@ -929,7 +929,7 @@ for i in range(t):
     else:
         for j in range(3, n//2):
             if is_prime(j) == 1 and is_prime(n - j) == 1:
-                print(n, " = ", j, " + ", n - j)
+                print(f'{n} = {j} + {n - j}')
                 # break # uncomment if want only 1 representation,
                         # comment if want all satisfied representations
 \end{Verbatim}
@@ -1016,14 +1016,48 @@ for i in range(1, k + 1):
 	Nhập vào $3$ số từ bàn phím, kiểm soát dữ liệu nhập vào là số nguyên dương. Lập trình tìm \emph{ƯCLN} của $3$ số này. E.g., nhập vào $3$ số: $4,6,12$ thì kết quả \emph{ƯCLN} là $2$.
 \end{baitoan}
 Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/gcd3.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/UCLN.py}.
+\end{itemize}
+\newpage
+\begin{multicols}{2}
+	1st solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+def GCD(a, b):
+    a, b = abs(a), abs(b)
+    while a*b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    return max(a,b)
+a, b, c = map(int,input().split())
+print(GCD(GCD(a, b), c))
+\end{Verbatim}
+\columnbreak
+2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+def UCLN(a, b):
+while a != b:
+    if a > b:
+        a -= b
+    else:
+        b -= a
+    return a
+a, b, c = map(int,input().split())
+if (a <= 0 or b <= 0 or c <= 0):
+    print("Error: Non-positive.")
+else:
+    a = UCLN(a,b)
+    a = UCLN(a,c)
+    print(a)
+\end{Verbatim}
+\end{multicols}
+We can also use \texttt{math.gcd()} function to test the result (only for testing purpose).
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import gcd
-def gcd3(a, b, c):
-    return gcd(a, b, c)
-a = int(input())
-b = int(input())
-c = int(input())
-print(gcd3(a, b, c))
+print(gcd(a, b, c))
 \end{Verbatim}
 
 \begin{baitoan}[Bội chung nhỏ nhất BCNN -- least common multiplier lcd]
