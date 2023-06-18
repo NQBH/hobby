@@ -954,23 +954,44 @@ for i in range(n):
 	\emph{Số hoàn hảo} là 1 số tự nhiên mà tổng tất cả các ước tự nhiên thực sự của nó bằng chính nó. Trong đó ước thực sự của 1 số là các ước dương không bằng số đó. Lập trình nhập vào 1 số tự nhiên có $2$ chữ số bất kỳ. In ra màn hình thông báo số vừa nhập có phải là số hoàn hảo hay không? Nếu là số hoàn hảo thì in tất cả các ước nguyên dương của số đó (i.e., bao gồm tất cả các ước tự nhiên thực sự \& chính số đó).
 \end{baitoan}
 Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/perfect_number.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/perfect_num.py}.
+\end{itemize}
+
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def is_perfect_number(n):
     sum_proper_divisor = 0
-    list_proper_divisor = []
+    list_divisor = []
     for i in range(1, round(n/2 + 1)):
         if n % i == 0:
-            list_proper_divisor.append(i)
+            list_divisor.append(i)
             sum_proper_divisor += i
     if sum_proper_divisor == n:
-        list_proper_divisor.append(n)
+        list_divisor.append(n)
         print(n, " is a perfect number.")
-        print("List of of all divisor of ", n, ":", *list_proper_divisor)
+        print(f'List of of all divisor of {n}:', *list_divisor, '.')
     else:
-        print(n, " is not a perfect number.")
-
+        print(f'{n} is not a perfect number.')
 n = int(input())
 is_perfect_number(n)
+\end{Verbatim}
+
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+def perfect(x):
+    S = 0
+    for i in range(1, x):
+        if x % i == 0:
+            S += i
+    return S == x
+n = int(input())
+if perfect(n) == True:
+    print(f'{n} is a perfect number')
+    for i in range(n):
+        if n % (i + 1) == 0:
+            print(i + 1, end = ' ')
+else:
+    print(f'{n} is not a perfect number')
 \end{Verbatim}
 
 \begin{baitoan}[\cite{VietSTEM2021}, 7., p. 27, Đồng Nai 2020, Số may mắn -- Lucky number]
@@ -1024,20 +1045,6 @@ Python:
 \begin{multicols}{2}
 	1st solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
-def GCD(a, b):
-    a, b = abs(a), abs(b)
-    while a*b != 0:
-        if a > b:
-            a = a % b
-        else:
-            b = b % a
-    return max(a,b)
-a, b, c = map(int,input().split())
-print(GCD(GCD(a, b), c))
-\end{Verbatim}
-\columnbreak
-2nd solution:
-\begin{Verbatim}[numbers=left,xleftmargin=5mm]
 def UCLN(a, b):
 while a != b:
     if a > b:
@@ -1052,6 +1059,20 @@ else:
     a = UCLN(a,b)
     a = UCLN(a,c)
     print(a)
+\end{Verbatim}
+\columnbreak
+	2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+def GCD(a, b):
+    a, b = abs(a), abs(b)
+    while a*b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    return max(a,b)
+a, b, c = map(int,input().split())
+	print(GCD(GCD(a, b), c))
 \end{Verbatim}
 \end{multicols}
 We can also use \texttt{math.gcd()} function to test the result (only for testing purpose).
