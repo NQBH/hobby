@@ -14,5 +14,5 @@ for i in range(t):
 	else:
 		for j in range(3, n//2):
 			if is_prime(j) == 1 and is_prime(n - j) == 1:
-				print(n, " = ", j, " + ", n - j)
+				print(f'{n} = {j} + {n - j}')
 				# break # uncomment if want only 1 representation, comment if want all satisfied representations
