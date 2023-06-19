@@ -63,5 +63,5 @@ int main() {
 	else if (num_sol_quadratic == 1)
 		printf("The only/unique root of the quadratic equation %lfx^2 + %lfx + %lf = 0 is %lf.\n", a, b, c, x1);
 	else
-		printf("The only/unique root of the quadratic equation %lfx^2 + %lfx + %lf = 0 are %lf, %lf.\n", a, b, c, x1, x2);
+		printf("The 2 real roots of the quadratic equation %lfx^2 + %lfx + %lf = 0 are %lf, %lf.\n", a, b, c, x1, x2);
 }
