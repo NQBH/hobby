@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+
 double Func(double x) {
 	return pow(x, 9) + x + 1;
 }
