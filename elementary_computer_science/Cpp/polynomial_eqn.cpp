@@ -44,8 +44,7 @@ int quadratic_eqn(double a, double b, double c, double& x1, double& x2) {
 int quartic_eqn(double a, double b, double c, double& x1, double& x2, double& x3, double& x4) {
 	int num_sol, num_sol1, num_sol2;
 	double y1, y2;
-	x1 = x2 = 0;
-	x3 = x4 = 0;
+	x1 = x2 = x3 = x4 = 0;
 	num_sol1 = quadratic_eqn(a, b, c, y1, y2);
 	switch (num_sol1) {
 		case NoSolution: case Undetermined:
