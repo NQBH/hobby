@@ -39,15 +39,22 @@
 }
 
 \title{Programming Problem: $n$th Roots {\it\&} Trigonometry in Triangles\\Bài Tập Lập Trình: Căn Bậc $n$ \& Lượng Giác trong Tam Giác}
-\date{}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
 
 \begin{document}
 \maketitle
-\vspace{-2cm}
+\tableofcontents
 
 %------------------------------------------------------------------------------%
 
 \section{Root}
+
+\subsection{Square Root}
+
+\subsection{Cube Root}
+
+\subsection{$n$th Root}
 
 \begin{baitoan}[Root -- Căn]
 	
@@ -64,9 +71,61 @@ Given a right triangle $\Delta ABC$ with $\widehat A = 90^\circ$. Define $a\colo
 
 \subsection{Pythagorean Triple}
 
+\begin{definition}[Pythagorean triple]
+	If the lengths of all 3 sides of a right triangle are integers, the triangle is said to be a {\rm Pythagorean triangle} \& its side lengths are collectively known as a \href{https://en.wikipedia.org/wiki/Pythagorean_triple}{\rm Pythagorean triple}.
+\end{definition}
+``A \textit{Pythagorean triple} consists of 3 positive integers $a,b,c$, such that $a^2 = b^2 + c^2$. Such a triple is commonly written $(b,c,a)$, \& a well-known example is $(3,4,5)$. If $(b,c,a)$ is a Pythagorean triple, then so is $(kb,kc,ka)$ for any positive integer $k$. A \textit{primitive Pythagorean triple} is one in which $a,b,c$ are \href{https://en.wikipedia.org/wiki/Coprime}{coprime} (i.e., they have no common divisor larger than 1), e.g., $(3,4,5)$ is a primitive Pythagorean triple whereas $(6,8,10)$ is not. A triangle whose sides form a Pythagorean triple is called a \textit{Pythagorean triangle}, \& is necessarily a \href{https://en.wikipedia.org/wiki/Right_triangle}{right triangle}.
+
+The name is derived from the \href{https://en.wikipedia.org/wiki/Pythagorean_theorem}{Pythagorean theorem}, stating that every right triangle has side lengths satisfying the formula $a^2 = b^2 + c^2$; thus, Pythagorean triples describe the 3 integer side lengths of a right triangle. However, right triangles with non-integer sides do not form Pythagorean triples. E.g., the triangle with sides $(b,c,a) = (1,1,\sqrt{2})$ is a right triangle, but $(1,1,\sqrt{2})$ is not a Pythagorean triple because $\sqrt{2}$ is not an integer.\footnote{$\sqrt{2}\in\mathbb{R}\backslash\mathbb{Q}$, i.e., $\sqrt{2}$ is an irrational number (i.e., a real number which is not a rational number).} Moreover, $1$ \& $\sqrt{2}$ do not have an integer common multiple because $\sqrt{2}$ is \href{https://en.wikipedia.org/wiki/Irrational_number#History}{irrational}.''
+
+``When searching for integer solutions, the equation $b^2 + c^2 = a^2$ is a \href{https://en.wikipedia.org/wiki/Diophantine_equation}{Diophantine equation}. Thus Pythagorean triples are among the oldest known solutions of a \href{https://en.wikipedia.org/wiki/Linear_equation}{nonlinear} Diophantine equation.'' -- \href{https://en.wikipedia.org/wiki/Pythagorean_triple}{Wikipedia{\tt/}Pythagorean triple}
+
 \begin{problem}[Pythagorean triple]
-	If the lengths of all 3 sides of a right triangle are integers, the triangle is said to be a {\rm Pythagorean triangle} \& its side lengths are collectively known as a \href{https://en.wikipedia.org/wiki/Pythagorean_triple}{Pythagorean triple}. (a) Write {\sf Pascal, Python, C{\tt/}C++} programs to check if 3 integers $a,b,c$ input from the keyboard are Pythagorean triple or not.
+	 Write {\sf Pascal, Python, C{\tt/}C++} programs to check if 3 integers $a,b,c$ input from the keyboard: (a) form a Pythagorean triangle or not. (b) form a primitive Pythagorean triple or not. If not, find \& print out their primitive Pythagorean triple.
 \end{problem}
+
+\begin{problem}[List of primitive \& non-primitive Pythagorean triples]
+	 Let $N$ be an integer input from the keyboard. Write {\sf Pascal, Python, C{\tt/}C++} programs to print out all: (a) primitive Pythagorean triples of numbers up to $N$. (b) Pythagorean triples of numbers up to $N$.
+\end{problem}
+Sample: ``There are 16 primitive Pythagorean triples of numbers up to 100:\\$(3, 4, 5)$, $(5, 12, 13)$, $(8, 15, 17)$, $(7, 24, 25)$, $(20, 21, 29)$, $(12, 35, 37)$, $(9, 40, 41)$, $(28, 45, 53)$, $(11, 60, 61)$, $(16, 63, 65)$, $(33, 56, 65)$, $(48, 55, 73)$, $(13, 84, 85)$, $(36, 77, 85)$, $(39, 80, 89)$, $(65, 72, 97)$.
+
+Other small Pythagorean triples such as $(6, 8, 10)$ are not listed because they are not primitive; for instance $(6, 8, 10)$ is a multiple of $(3, 4, 5)$.'' [$\ldots$] ``Additionally, these are the remaining primitive Pythagorean triples of numbers up to 300:\\$(20, 99, 101)$, $(60, 91, 109)$, $(15, 112, 113)$, $(44, 117, 125)$, $(88, 105, 137)$, $(17, 144, 145)$, $(24, 143, 145)$, $(51, 140, 149)$, $(85, 132, 157)$, $(119, 120, 169)$, $(52, 165, 173)$, $(19, 180, 181)$, $(57, 176, 185)$, $(104, 153, 185)$, $(95, 168, 193)$, $(28, 195, 197)$, $(84, 187, 205)$, $(133, 156, 205)$, $(21, 220, 221)$, $(140, 171, 221)$, $(60, 221, 229)$, $(105, 208, 233)$, $(120, 209, 241) $, $(32, 255, 257)$, $(23, 264, 265)$, $(96, 247, 265)$, $(69, 260, 269)$, $(115, 252, 277)$, $(160, 231, 281)$, $(161, 240, 289)$, $(68, 285, 293)$.'' -- \href{https://en.wikipedia.org/wiki/Pythagorean_triple#Examples}{Wikipedia{\tt/}Pythagorean triple{\tt/}examples}
+
+``\textit{Euclid's formula} is a fundamental formula for generating Pythagorean triples given an arbitrary pair of integers $m,n$ with $m > n > 0$. The formula states that the integers
+\begin{align}
+	\label{Euclid formula}
+	\boxed{b = m^2 - n^2,\ c = 2mn,\ a = m^2 + n^2,\mbox{ where } m,n\in\mathbb{N}^\star,\,m > n,}
+\end{align}
+form a Pythagorean triple. The triple generated by Euclid's formula is primitive iff $m,n$ are \href{https://en.wikipedia.org/wiki/Coprime}{coprime} \& 1 of them is even. When both $m,n$ are odd, then $a,b,c$ will be even, \& the triple will not be primitive; however, dividing $a,b,c$ by 2 will yield a primitive triple when $m,n$ are coprime.
+
+\textit{Every} primitive triple arises (after the exchange of $b$ \& $c$, if $b$ is even) from a \textit{unique pair} of coprime numbers $m,n$, one of which is even. It follows that there are infinitely many primitive Pythagorean triples.'' [$\ldots$] ``Despite generating all primitive triples, Euclid's formula does not produce all triples, e.g., $(9,12,15)$ cannot be generated using integer $m,n$. This can be remedied by inserting an additional parameter $k$ to the formula. The following will generate all Pythagorean triples uniquely:
+\begin{align}
+	\label{Euclid formula 1}
+	\boxed{b = k(m^2 - n^2),\ c = 2kmn,\ a = k(m^2 + n^2),\mbox{ where } m,n,k\in\mathbb{N}^\star,\,m > n,\,{\rm gcd}(m,n) = 1,\,mn\divby2.}
+\end{align}
+These formulas generate Pythagorean triples can be verified by expanding $b^2 + c^2$ using \href{https://en.wikipedia.org/wiki/Elementary_algebra}{elementary algebra} \& verifying that the result equals $c^2$. Since every Pythagorean triple can be divided through by some integer $k$ to obtain a primitive triple, every triple can be generated uniquely by using the formula with $m,n$ to generate its primitive counterpart \& then multiplying through by $k$ as in the last equation \eqref{Euclid formula 1}.
+
+Choosing $m,n$ from certain integer sequences gives interesting results, e.g., if $m,n$ are consecutive \href{https://en.wikipedia.org/wiki/Pell_number}{Pell numbers}, $a,b$ will differ by 1. Many formulas for generating triples with particular properties have been developed since the time of Euclid.'' -- \href{https://en.wikipedia.org/wiki/Pythagorean_triple#Generating_a_triple}{Wikipedia{\tt/}Pythagorean triple{\tt/}generating a triple}
+
+\begin{problem}
+	(a) Prove that $(a,b,c)$ given by either formulas \eqref{Euclid formula} or \eqref{Euclid formula 1} is a Pythagorean triple. (b) Compute $\sin,\cos,\tan,\cot$ of angles $B,C$ in terms of $m,n,k$.
+\end{problem}
+See \href{https://en.wikipedia.org/wiki/Pythagorean_triple#Proof_of_Euclid's_formula}{Wikipedia{\tt/}formulas for generating Pythagorean triples{\tt/}proof of Euclid's formula} for a (mathematically rigorous) proof. \& \href{https://en.wikipedia.org/wiki/Pythagorean_triple#Interpretation_of_parameters_in_Euclid's_formula}{Wikipedia{\tt/}formulas for generating Pythagorean triples{\tt/}interpretation of parameters in Euclid's formula}.
+
+\begin{proof}[A variant of Euclid's formula for Pythagorean triples]
+	The following variant of Euclid's formula is sometimes more convenient, as being more symmetric in $m,n$ (same parity condition on $m,n$). Prove that
+	\begin{align}
+		\label{Euclid formula 2}
+		\boxed{b = mn,\ c = \frac{m^2 - n^2}{2},\ a = \frac{m^2 + n^2}{2},\mbox{ where } m,n,k\in\mathbb{N}^\star,\,m > n,\,{\rm gcd}(m,n) = 1,\,mn\not{\divby}\,2.}
+	\end{align}
+	are 3 integers that form a Pythagorean triple, which is primitive iff $m,n$ are coprime. Conversely, every primitively Pythagorean triple arises (after the exchange of $b,c$, if $b$ is even) from a unique pair $m > n > 0$ of coprime odd integers.
+\end{proof}
+
+\begin{problem}[List of primitive \& non-primitive Pythagorean triples]
+	Let $n$ be an integer input from the keyboard. Use Euclid's formulas \eqref{Euclid formula}, \eqref{Euclid formula 1}, \& \eqref{Euclid formula 2} for generating Pythagorean triples, write {\sf Pascal, Python, C{\tt/}C++} programs to print out all: (a) primitive Pythagorean triples of numbers up to $N$. (b) Pythagorean triples of numbers up to $N$.
+\end{problem}
+See also, \href{https://en.wikipedia.org/wiki/Formulas_for_generating_Pythagorean_triples}{Wikipedia{\tt/}formulas for generating Pythagorean triples}
+
 
 \subsection{Solve Right Triangle}
 
