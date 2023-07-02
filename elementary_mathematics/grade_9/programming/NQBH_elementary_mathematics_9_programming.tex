@@ -124,7 +124,23 @@ See \href{https://en.wikipedia.org/wiki/Pythagorean_triple#Proof_of_Euclid's_for
 \begin{problem}[List of primitive \& non-primitive Pythagorean triples]
 	Let $n$ be an integer input from the keyboard. Use Euclid's formulas \eqref{Euclid formula}, \eqref{Euclid formula 1}, \& \eqref{Euclid formula 2} for generating Pythagorean triples, write {\sf Pascal, Python, C{\tt/}C++} programs to print out all: (a) primitive Pythagorean triples of numbers up to $N$. (b) Pythagorean triples of numbers up to $N$.
 \end{problem}
-See also, \href{https://en.wikipedia.org/wiki/Formulas_for_generating_Pythagorean_triples}{Wikipedia{\tt/}formulas for generating Pythagorean triples}
+See also, \href{https://en.wikipedia.org/wiki/Formulas_for_generating_Pythagorean_triples}{Wikipedia{\tt/}formulas for generating Pythagorean triples}.
+
+\subsection{Principal Properties of Right Triangles}
+
+\subsubsection{Sides -- Cạnh}
+``The 3 sides of a right triangle are related by the \href{https://en.wikipedia.org/wiki/Pythagorean_theorem}{Pythagorean theorem}, which in modern algebraic notation can be written $b^2 + c^2 = a^2$, where $a$ is the length of the \textit{hypotenuse} (side opposite the right angle), \& $a,b$ are the lengths of the \textit{legs} (remaining 2 sides). \href{https://en.wikipedia.org/wiki/Pythagorean_triple}{Pythagorean triples} are integer values of $a,b,c$ satisfying this equation. This theorem was proven in antiquity, and is proposition I.47 in \href{https://en.wikipedia.org/wiki/Euclid%27s_Elements}{Euclid's \textit{Elements}}: ``In right-angled triangles the square on the side subtending the right angle is equal to the squares on the sides containing the right angle.''
+
+\subsubsection{Area -- Diện Tích}
+``As with any triangle, the area is equal to one half the base multiplied by the corresponding height. In a right triangle, if 1 leg is taken as the base then the other is height, so the area of a right triangle is one half the product of the 2 legs. As a formula, the area $S$ is $S = \frac{1}{2}bc$, where $b,c$ are the legs of the triangle.
+
+If the \href{https://en.wikipedia.org/wiki/Incircle_and_excircles_of_a_triangle}{incircle} is tangent to the hypotenuse $BC$ at point $P$, then denoting the \href{https://en.wikipedia.org/wiki/Semi-perimeter}{semi-perimeter} $\frac{a + b + c}{2}$ as $p$, we have $PB = p - b$, $PC = p - c$, \& the area is given by $S = PB\cdot PC = (p - b)(p - c)$. This formula only applies to right triangles.''
+
+\begin{problem}
+	Prove that the formula holds for any right triangle $\Delta ABC$ with the right angle $A$: $S = PB\cdot PC = (p - b)(p - c)$ where $p\coloneqq\frac{a + b + c}{2}$ is its semi-perimeter.
+\end{problem}
+
+\subsubsection{Altitudes -- Đường Cao}
 
 
 \subsection{Solve Right Triangle}
