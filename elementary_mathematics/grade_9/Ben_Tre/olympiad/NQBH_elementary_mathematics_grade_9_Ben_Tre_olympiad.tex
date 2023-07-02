@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,caption,float,graphicx,mathtools,subcaption}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Bến Tre Mathematical Olympiad}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	
+\end{abstract}
+\tableofcontents
+
+%------------------------------------------------------------------------------%
+
+\section{Thành Phố Bến Tre 2022--2023}
+
+\begin{baitoan}
+	Cho biểu thức:
+	\begin{align*}
+		A = \frac{a + 1}{\sqrt{a}} + \frac{a\sqrt{a}  -1}{a - \sqrt{a}} + \frac{a^2 - a\sqrt{a} + \sqrt{a} - 1}{\sqrt{a} - a\sqrt{a}}\mbox{ với } a > 0,\,a\ne1.
+	\end{align*}
+	(a) Chứng minh $A > 4$. (b) Tìm các giá trị của $a$ để biểu thức $\frac{6}{A}$ nhận giá trị nguyên.
+\end{baitoan}
+
+\begin{baitoan}
+	Phân tích đa thức thành nhân tử: $x^2(y - 2z) + y^2(z - x) + 2z^2(x - y) + xyz$.
+\end{baitoan}
+
+\begin{baitoan}
+	(a) Giải phương trình: $(x^2 - 4x + 11)(x^4 - 8x^2 + 21) = 35$. (b) Giải hệ phương trình:
+	\begin{equation*}
+		\left\{\begin{split}
+			x^2 + y^2 + 2x + 2y &= (x + 2)(y + 2),\\
+			\left(\frac{x}{y + 2}\right)^2 + \left(\frac{y}{x + 2}\right)^2 &= 1.
+		\end{split}\right.
+	\end{equation*}
+\end{baitoan}
+
+\begin{baitoan}
+	(a) Tìm tất cả các số tự nhiên $n$ để $B = \dfrac{n(n + 1)(n + 2)}{6} + 1$ là số nguyên tố. (b) Tìm giá trị nhỏ nhất của biểu thức
+	\begin{align*}
+		C = \frac{\sqrt{x + 6\sqrt{x - 9}} + \sqrt{x - 6\sqrt{x - 9}}}{\sqrt{\dfrac{81}{x^2} - \dfrac{18}{x} + 1}}\mbox{ với } x > 9.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $\Delta ABC$ nhọn, 3 đường cao $AK,BD,CE$ cắt nhau tại $H$. (a) Chứng minh $BH\cdot BD = BC\cdot BK$ \& $BH\cdot BD + CH\cdot CE = BC^2$. (b) Chứng minh: $BH = AC\cot\widehat{ABC}$. (c) Gọi $M$ là trung điểm của $BC$. Đường thẳng qua $A$ vuông góc với $AM$ cắt các đường thẳng $BD,CE$ lần lượt tại $Q,P$. Chứng minh $MP = MQ$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Bến Tre 2022--2023}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
