@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Programming Problem: $n$th Roots {\it\&} Trigonometry in Triangles\\Bài Tập Lập Trình: Căn Bậc $n$ \& Lượng Giác trong Tam Giác}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2cm}
+
+%------------------------------------------------------------------------------%
+
+\section{Root}
+
+\begin{baitoan}[Root -- Căn]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Trigonometry in Right Triangles}
+``A \textit{right triangle} (\href{https://en.wikipedia.org/wiki/American_English}{American English}) or \textit{right-angled triangle} (\href{https://en.wikipedia.org/wiki/British_English}{British English}), or more formally an \textit{orthogonal triangle}, formerly called a \textit{rectangled triangle} is a \href{https://en.wikipedia.org/wiki/Triangle}{triangle } in which 1 \href{https://en.wikipedia.org/wiki/Angle}{angle} is a \href{https://en.wikipedia.org/wiki/Right_angle}{right angle} (i.e., a $90^\circ$ angle), i.e., in which 2 \href{https://en.wikipedia.org/wiki/Polygon_side}{sides} are \href{https://en.wikipedia.org/wiki/Perpendicular}{perpendicular}. The relation between the sides \& other angles of the right triangle is the basis for \href{https://en.wikipedia.org/wiki/Trigonometry}{trigonometry}.''
+
+``The side opposite to the right angle is called the \href{https://en.wikipedia.org/wiki/Hypotenuse}{\textit{hypotenuse}}. The sides adjacent to the right angle are called \textit{legs} (or \textit{catheti}, singular: \href{https://en.wikipedia.org/wiki/Cathetus}{cathetus}).'' -- \href{https://en.wikipedia.org/wiki/Right_triangle}{Wikipedia{\tt/}right triangle}
+
+Given a right triangle $\Delta ABC$ with $\widehat A = 90^\circ$. Define $a\coloneqq BC$, $b\coloneqq CA$, $c\coloneqq AB$. Side $b$ is the side \textit{adjacent to angle $C$} \& \textit{opposed to angle $B$}, while side $c$ may be identified as the side \textit{adjacent to angle $B$} \& opposed to (or \textit{opposite}) angle $C$.
+
+\subsection{Pythagorean Triple}
+
+\begin{problem}[Pythagorean triple]
+	If the lengths of all 3 sides of a right triangle are integers, the triangle is said to be a {\rm Pythagorean triangle} \& its side lengths are collectively known as a \href{https://en.wikipedia.org/wiki/Pythagorean_triple}{Pythagorean triple}. (a) Write {\sf Pascal, Python, C{\tt/}C++} programs to check if 3 integers $a,b,c$ input from the keyboard are Pythagorean triple or not.
+\end{problem}
+
+\subsection{Solve Right Triangle}
+
+\begin{baitoan}[Solve right triangle -- Giải tam giác vuông]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Trigonometry in Triangles}
+Tổng quát hơn cho tam giác (không suy biến) bất kỳ (i.e., tam giác nhọn, vuông, tù).
+
+\subsection{Solve Triangle}
+
+\begin{baitoan}[Solve triangle -- Giải tam giác]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
