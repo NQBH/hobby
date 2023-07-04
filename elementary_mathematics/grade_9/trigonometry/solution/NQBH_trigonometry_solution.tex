@@ -38,15 +38,12 @@
 	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
 }
 
-\title{Problem \& Solution: Trigonometry -- Bài Tập Lượng Giác \& Lời Giải}
+\title{Problem {\it\&} Solution: Trigonometry -- Bài Tập  {\it\&} Lời Giải Lượng Giác}
 \author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
 \date{\today}
 
 \begin{document}
 \maketitle
-\begin{abstract}
-	
-\end{abstract}
 \tableofcontents
 
 %------------------------------------------------------------------------------%
@@ -419,9 +416,17 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	Biểu thị $b',c'$ qua $a,b,c$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Từ định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2}: $b^2 = ab'$, $c^2 = ac'$, suy ra $b' = \frac{b^2}{a}$, $c' = \frac{c^2}{a}$.
+\end{proof}
+
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 1.5., p. 105]
 	Chứng minh: (a) $h = \dfrac{bc}{a}$. (b) $\dfrac{b^2}{c^2} = \dfrac{b'}{c'}$.
 \end{baitoan}
+
+\begin{proof}[Chứng minh]
+	(a) Từ định lý \ref{thm: bc = ah}: $bc = ah\Rightarrow h = \frac{bc}{a}$. (b) Từ định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2}: $b^2 = ab'$, $c^2 = ac'$, suy ra $\frac{b^2}{c^2} = \frac{ab'}{ac'} = \frac{b'}{c'}$.
+\end{proof}
 
 \begin{baitoan}[\cite{SBT_Toan_9_tap_1}, 1.6., p. 106]
 	Đường cao của 1 tam giác vuông kẻ từ đỉnh góc vuông chia cạnh huyền thành 2 đoạn, trong đó đoạn lớn hơn bằng {\rm9 cm}. Tính cạnh huyền của tam giác vuông đó nếu 2 cạnh góc vuông có tỷ lệ $6:5$.
@@ -446,6 +451,20 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 \begin{baitoan}[\cite{Tuyen_Toan_9}, Thí dụ 1, p. 103]
 	Cho hình thang $ABCD$ có $\widehat{B} = \widehat{C} = 90^\circ$, 2 đường chéo vuông góc với nhau tại $H$. Biết $AB = 3\sqrt{5}$ {\rm cm}, $HA = 3$ {\rm cm}. Chứng minh: (a) $HA:HB:HC:HD = 1:2:4:8$. (b) $\dfrac{1}{AB^2} - \dfrac{1}{CD^2} = \dfrac{1}{HB^2} - \dfrac{1}{HC^2}$.
 \end{baitoan}
+Để chứng minh $HA,HB,HC,HD$ tỷ lệ với 1, 2, 4, 8, ta cần tính độ dài của 4 đoạn thẳng đó. Để tính chúng, có nhiều cách. Sau đây là 2 luồng tính: {\bf1.} $HB$ (Pythagore) $\to$ $HC$ (ĐL \ref{thm: h^2 = b'c'}) $\to$ $HD$ (ĐL \ref{thm: h^2 = b'c'}. {\bf2.} $AC$ (ĐL \ref{thm: b^2 = ab' c^2 = ac'}) $\to$ $HC$ $\to$ $HB$ (ĐL \ref{thm: h^2 = b'c'}) $\to$ $HD$ (ĐL \ref{thm: h^2 = b'c'}).
+
+\begin{proof}[1st chứng minh]
+	(a) Áp dụng định lý Pythagore cho $\Delta ABH$: $BH = \sqrt{AB^2 - AH^2} = \sqrt{(3\sqrt{5})^2 - 3^2} = 6$ cm. Áp dụng định lý \ref{thm: h^2 = b'c'} vào $\Delta ABC$ vuông \& $\Delta BCD$ vuông: $HB^2 = HA\cdot HC\Rightarrow HC = \dfrac{HB^2}{HC} = \dfrac{6^2}{3} = 12$ cm, \& $HC^2 = HB\cdot HD\Rightarrow HD = \dfrac{HC^2}{HB} = \dfrac{12^2}{6} = 24$ cm. Suy ra $HA:HB:HC:HD = 3:6:12:24 = 1:2:4:8$. (b) Ta tính biểu thức $\dfrac{1}{AB^2} + \dfrac{1}{BC^2} + \dfrac{1}{CD^2}$ theo 2 cách: Áp dụng định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2} cho $\Delta ABC$ vuông \& $\Delta BCD$ vuông: $\dfrac{1}{HB^2} = \dfrac{1}{AB^2} + \dfrac{1}{BC^2}$ \& $\dfrac{1}{HC^2} = \dfrac{1}{BC^2} + \dfrac{1}{CD^2}$. Suy ra $\dfrac{1}{AB^2} + \dfrac{1}{BC^2} + \dfrac{1}{CD^2} = \dfrac{1}{HB^2} + \dfrac{1}{CD^2} = \dfrac{1}{AB^2} + \dfrac{1}{HC^2}$ $\Rightarrow\dfrac{1}{HB^2} - \dfrac{1}{HC^2} = \dfrac{1}{AB^2} - \dfrac{1}{CD^2}$.
+\end{proof}
+
+\begin{proof}[2nd chứng minh]
+	(a) Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'} vào $\Delta ABC$: $AB^2 = AH\cdot AC\Rightarrow AC = \dfrac{AB^2}{AH} = \dfrac{(3\sqrt{5})^2}{3} = 15$ cm $\Rightarrow HC = AC - AH = 15 - 3 = 12$ cm. Áp dụng định lý \ref{thm: h^2 = b'c'} 
+	cho $\Delta ABC$ vuông \& $\Delta BCD$ vuông: $BH^2 = HA\cdot HC\Rightarrow BH = \sqrt{HA\cdot HC} = \sqrt{3\cdot12} = 6$ cm \& $HC^2 = HB\cdot HD\Rightarrow HD = \dfrac{HC^2}{HB} = \dfrac{12^2}{6} = 24$ cm. Suy ra $HA:HB:HC:HD = 3:6:12:24 = 1:2:4:8$. (b) Áp dụng định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2} cho $\Delta ABC$ vuông \& $\Delta BCD$ vuông: $\dfrac{1}{HB^2} = \dfrac{1}{AB^2} + \dfrac{1}{BC^2}$, $\dfrac{1}{HC^2} = \dfrac{1}{BC^2} + \dfrac{1}{CD^2}$. Trừ từng vế của 2 đẳng thức được: $\dfrac{1}{HB^2} - \dfrac{1}{HC^2} = \dfrac{1}{AB^2} - \dfrac{1}{CD^2}$.
+\end{proof}
+
+\begin{nhanxet}
+	Nếu đẳng thức hình học cần chứng minh có xuất hiện các dấu hiệu như tổng{\tt/}hiệu  nghịch đảo bình phương (hoặc cả 2) của các đoạn thẳng thì nghĩ ngay đến việc áp dụng hệ thức $\frac{1}{h^2} = \frac{1}{b^2} + \frac{1}{c^2}$ cho (các) tam giác vuông thích hợp để suy ra đẳng thức hình học cần chứng minh.
+\end{nhanxet}
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 1., p. 105]
 	Cho hình thang $ABCD$, $AB\parallel CD$, 2 đường chéo vuông góc với nhau. Biết $AC = 16$ {\rm cm}, $BD = 12$ {\rm cm}. Tính chiều cao của hình thang.
