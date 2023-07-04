@@ -470,9 +470,18 @@ Trong 1 tam giác vuông, nếu biết 2 cạnh, hoặc 1 cạnh \& 1 góc nhọ
 	Cho hình thang $ABCD$, $AB\parallel CD$, 2 đường chéo vuông góc với nhau. Biết $AC = 16$ {\rm cm}, $BD = 12$ {\rm cm}. Tính chiều cao của hình thang.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Vẽ $BH\bot DE$, $H\in DE$, $BE\parallel AC$, $E\in CD$, mà $AC\bot BD$, nên $BD\bot BE$. Tứ giác $ABEC$ là hình bình hành vì có 2 cặp cạnh đối song song với nhau, suy ra $BE = AC = 16$. Áp dụng định lý \ref{thm: 1/h^2 = 1/b^2 + 1/c^2} cho $\Delta BDE$ vuông tại $B$: $\dfrac{1}{BH^2} = \dfrac{1}{BD^2} + \dfrac{1}{BE^2}\Rightarrow BH = \sqrt{\dfrac{BD^2\cdot BE^2}{BD^2 + BE^2}} = \sqrt{\dfrac{12^2\cdot16^2}{12^2 + 16^2}} = \sqrt{\dfrac{12^2\cdot16^2}{20^2}} = \dfrac{12\cdot16}{20} = 9.6$ cm.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 2., p. 105]
 	Cho $\Delta ABC$ vuông tại $A$, đường cao $AH$, đường phân giác $AD$. Biết $BH = 63$ {\rm cm}, $CH = 112$ {\rm cm}, tính $HD$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Áp dụng định lý \ref{thm: b^2 = ab' c^2 = ac'} cho $\Delta ABC$: 	$\frac{b^2}{c^2} = \frac{ab'}{ac'} = \frac{b'}{c'} = \frac{CH}{BH} = \frac{112}{63} = \frac{16}{9}\Rightarrow\frac{b}{c} = \sqrt{\frac{16}{9}} = \frac{4}{3}$. Áp dụng tính chất đường phân giác: $\frac{DB}{DC} = \frac{AB}{AC} = \frac{c}{b} = \frac{3}{4}\Rightarrow\frac{DC}{4} = \frac{DB}{4} = \frac{DB + DC}{4 + 3} = \frac{BC}{7} = \frac{b' + c'}{7} = \frac{112 + 63}{7} = \frac{175}{7} = 25\Rightarrow DB = 25\cdot3 = 75\Rightarrow DH = DB - HB = 75 - 63 = 12$ cm (hoặc $DC = 25\cdot4 = 100\Rightarrow DH = HC - DC = 112 - 100 = 12$ cm).
+\end{proof}
+
 
 \begin{baitoan}[\cite{Tuyen_Toan_9}, 3., p. 105]
 	Cho $\Delta ABC$ vuông tại $A$. 2 đường trung tuyến $AD,BE$ vuông góc với nhau tại $G$. Biết $AB = \sqrt{6}$ {\rm cm}. Tính cạnh huyền $BC$.
