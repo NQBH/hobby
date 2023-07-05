@@ -55,8 +55,33 @@ int check_leap_year3(int year) {
 	else return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
+int num_day_of_month(int month, int year) {
+	int num_day;
+	int is_leap = check_leap_year3(year);
+	if (is_leap == -1 || month < 1 || month > 12)
+		num_day = -1;
+	else {
+		switch (month) {
+			case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+				num_day = 31;
+				break;
+			case 4: case 6: case 9: case 11:
+				num_day = 30;
+				break;
+			default:
+				if (is_leap)
+					num_day = 29;
+				else
+					num_day = 28;
+		}
+	}
+	return num_day;
+}
+
 int main() {
-	int n;
-	cin >> n;
-	cout << "Leap year: " << check_leap_year(n) << ", " << check_leap_year1(n) << ", " << check_leap_year2(n) << ", " << check_leap_year3(n) << ".\n";
+	int m, y;
+	cin >> y;
+	cin >> m;
+	cout << "Leap year: " << check_leap_year(y) << ", " << check_leap_year1(y) << ", " << check_leap_year2(y) << ", " << check_leap_year3(y) << ".\n";
+	cout << "The number of days in month " << m << " of year " << y << " is " << num_day_of_month(m, y) << ".\n";
 }
