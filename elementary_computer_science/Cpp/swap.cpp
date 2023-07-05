@@ -37,3 +37,4 @@ int main() {
 	cout << "After swapping: u = " << u << ", v = " << v << ".\n";
 }
 // g++ -std=c++20 -O2 -Wall swap.cpp -o swap
+// g++ -std=c++1y -O2 -Wall swap.cpp -o swap
