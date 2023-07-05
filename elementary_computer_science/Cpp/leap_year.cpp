@@ -78,10 +78,30 @@ int num_day_of_month(int month, int year) {
 	return num_day;
 }
 
+bool next_day(int& day, int& month, int& year) {
+	int anum_day_in_month = num_day_of_month(month, year);
+	if (anum_day_in_month == -1 || day < 1 || day > anum_day_in_month)
+		return false;
+	else {
+		if (day < anum_day_in_month)
+			++day;
+		else if (month < 12) { // day = anum_day_in_month
+			day = 1;
+			++month;
+		}
+		else { // day = anum_day_in_month & month = 12
+			day = month = 1;
+			++year;
+		}
+	}
+	return true;
+}
+
 int main() {
-	int m, y;
-	cin >> y;
-	cin >> m;
+	int d, m, y;
+	cin >> d >> m >> y;
 	cout << "Leap year: " << check_leap_year(y) << ", " << check_leap_year1(y) << ", " << check_leap_year2(y) << ", " << check_leap_year3(y) << ".\n";
 	cout << "The number of days in month " << m << " of year " << y << " is " << num_day_of_month(m, y) << ".\n";
+	next_day(d, m, y);
+	cout << "The next day: " << d << "/" << m << "/" << y << ".\n";
 }
