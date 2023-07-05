@@ -34,9 +34,9 @@ void eqn_display(double a, double b) {
 // ax^2 + bx + c = 0 or ax^4 + bx^2 + c = 0
 void eqn_display(double a, double b, double c, bool type4) {
 	if (type4)
-		cout << a << "x^4 + " << b << "x^2 + " << c << " = 0";
+		cout << a << "x^4 + " << b << "x^2 + " << c << " = 0.";
 	else
-		cout << a << "x^2 + " << b << "x + " << c << " = 0";
+		cout << a << "x^2 + " << b << "x + " << c << " = 0.";
 }
 
 void eqn_input(double& a, double& b) {
