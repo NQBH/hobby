@@ -14,8 +14,15 @@ int Fib1(int n) {
 	return c;
 }
 
+int Fib2(int n) {
+	if (n <= 1)
+		return n;
+	return Fib2(n - 1) + Fib2(n - 2);
+}
+
 int main() {
 	int n;
 	cin >> n;
 	cout << "F_n = " << Fib1(n) << ".\n";
+	cout << "F_n = " << Fib2(n) << ".\n";
 }
