@@ -36,19 +36,69 @@
 \newtheorem{vidu}{Ví dụ}
 \usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 
-\title{Problem: Oxide Acid $+$ Base Reaction -- Bài Tập: Oxide Acid Tác Dụng với Dung Dịch Kiềm}
+\title{Problem: Oxide Acid $+$ Base Reaction\\Bài Tập: Oxide Acid Tác Dụng với Dung Dịch Kiềm}
+\date{}
 
 \begin{document}
 \maketitle
+\vspace{-2cm}
 
 %------------------------------------------------------------------------------%
 
 \section{\ce{CO2,SO2} $+$ NaOH, KOH}
+\textit{Trường hợp \ce{CO2} tác dụng với dung dịch NaOH hoặc KOH.} Thứ tự phản ứng: \ce{CO2 + $2$NaOH -> Na2CO3 + H2O} (1). Nếu NaOH hết mà vẫn sục khí \ce{CO2} vào: \ce{CO2 + Na2CO3 + H2O -> $2$NaHCO3} (2). (1) $+$ (2): \ce{CO2 + NaOH -> NaHCO3} (3). Đặt $a = \frac{n_{\rm NaOH}}{n_{\ce{CO2}}}$ là tỷ số mol của NaOH \& \ce{CO2}.
+\begin{itemize}
+	\item Nếu $0 < a\le 1$: Chỉ tạo muối acid \ce{NaHCO3}, viết phản ứng (3).
+	\item Nếu $1 < a < 2$: Tạo cả muối acid \ce{NaHCO3} \& muối trung hòa \ce{Na2CO3}, viết 2 phản ứng (1) \& (3).
+	\item Nếu $a\ge 2$: Chỉ tạo muối trung hòa \ce{Na2CO3}, viết phản ứng (1).
+\end{itemize}
+Nếu bài toán cho \ce{CO2} phản ứng với dung dịch chứa $x$ mol NaOH \& $y$ mol KOH thì có thể thay 2 base này bởi 1 base tương đương (hay ``base trung bình''{\tt/}``averaged base'') MOH. Khi đó, xét tỷ số $a = \frac{n_{\rm MOH}}{n_{\ce{CO2}}}$ là tỷ số mol của MOH \& \ce{CO2}:
+\begin{equation}
+	\label{MOH}
+	\tag{MOH}
+	\left\{\begin{split}
+		n_{\rm MOH} &= n_{\rm NaOH} + n_{\rm KOH} = x + y,\\
+		m_{\rm MOH} &= m_{\rm NaOH} + m_{\rm KOH} = 23x + 39y,
+	\end{split}\right.\Rightarrow M = \frac{m_{\rm KOH}}{n_{\rm KOH}} = \frac{23x + 39y}{x + y}.
+\end{equation}
+Trường hợp \ce{SO2} phản ứng với NaOH, KOH, hoặc dung dịch chứa cả NaOH \& KOH hoàn toàn tương tự (chỉ cần thay nguyên tố C bởi nguyên tố S trong các phương trình \& công thức trên):
+
+\noindent\textit{Trường hợp \ce{SO2} tác dụng với dung dịch NaOH hoặc KOH.} Thứ tự phản ứng: \ce{SO2 + $2$NaOH -> Na2SO3 + H2O} (1). Nếu NaOH hết mà vẫn sục khí \ce{SO2} vào: \ce{SO2 + Na2SO3 + H2O -> $2$NaHSO3} (2). (1) $+$ (2): \ce{SO2 + NaOH -> NaHSO3} (3). Đặt $a = \frac{n_{\rm NaOH}}{n_{\ce{SO2}}}$ là tỷ số mol của NaOH \& \ce{SO2}.
+\begin{itemize}
+	\item Nếu $0 < a\le 1$: Chỉ tạo muối acid \ce{NaHSO3}, viết phản ứng (3).
+	\item Nếu $1 < a < 2$: Tạo cả muối acid \ce{NaHSO3} \& muối trung hòa \ce{Na2SO3}, viết 2 phản ứng (1) \& (3).
+	\item Nếu $a\ge 2$: Chỉ tạo muối trung hòa \ce{Na2SO3}, viết phản ứng (1).
+\end{itemize}
+Nếu bài toán cho \ce{SO2} phản ứng với dung dịch chứa $x$ mol NaOH \& $y$ mol KOH thì có thể thay 2 base này bởi 1 base tương đương (hay ``base trung bình''{\tt/}``averaged base'') MOH. Khi đó, xét tỷ số $a = \frac{n_{\rm MOH}}{n_{\ce{CO2}}}$ là tỷ số mol của MOH cho bởi \eqref{MOH} \& \ce{CO2}.
+
+\begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 1, p. 44]
+	Hấp thụ hoàn toàn {\rm7.84 L} (đktc) khí {\rm\ce{CO2}} vào {\rm200 mL} dung dịch {\rm KOH 1.5M} \& {\rm\ce{K2CO3} 1M}. Sau khi các phản ứng xảy ra hoàn toàn thu được dung dịch X. Tính khối lượng mỗi muối có trong dung dịch X.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 2, p. 44]
+	Hấp thụ hoàn toàn {\rm0.4 mol} khí {\rm\ce{CO2}} vào dung dịch chứa {\rm0.15 mol \ce{Ca(OH)2}} \& {\rm0.2 mol KOH}. Sau khi các phản ứng xảy ra hoàn toàn, thu được $m$ {\rm g} kết tủa. Tính $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 3, p. 45]
+	Hấp thụ hoàn toàn {\rm4.48 L \ce{CO2}} (đktc) vào {\rm200 mL} dung dịch X gồm {\rm\ce{Na2CO3} 0.3M \& NaOH $x$M}, sau khi các phản ứng xảy ra hoàn toàn thu được dung dịch Y. Cho toàn bộ Y tác dụng với dung dịch {\rm\ce{CaCl2}} (dư), thu được {\rm10 g} kết tủa. Tính $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 4, p. 45]
+	Hấp thụ hết {\rm6.72 L \ce{CO2}} (đktc) vào {\rm200 mL} dung dịch chứa {\rm KOH 1M} \& {\rm NaOH $x$M}. Sau khi các phản ứng xảy ra hoàn toàn, làm khô dung dịch thu được {\rm32.8 g} chất rắn khan. Giả sử trong quá trình làm khô dung dịch không xảy ra các {\rm PƯHH}. Tính $x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 5, p. 46]
+	Cho {\rm28.4 g \ce{P2O5}} vào {\rm750 mL} dung dịch {\rm NaOH 1.5M}. Sau khi các phản ứng xảy ra hoàn toàn, thu được dung dịch chứa $m$ {\rm g} muối. Tìm $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 6, p. 47, TS THPT Chuyên Phan Bội Châu, Nghệ An]
+	Cho $m$ {\rm g \ce{P2O5}} vào {\rm19.6 g} dung dịch {\rm\ce{H3PO4} 5\%} thu được dung dịch X. Cho dung dịch X phản ứng hết với {\rm100 mL} dung dịch {\rm KOH 1M} thu được dung dịch Y. Cô cạn dung dịch Y thu được {\rm6.48 g} chất rắn khan. (a) Viết {\rm PTHH}. (b) Tính khối lượng các chất có trong {\rm6.48 g} chất rắn \& giá trị $m$.
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
 \section{\ce{SO2,CO2} $+$ \ce{Ba(OH)2,Ca(OH)2}}
-
+\textit{Trường hợp \ce{CO2} tác dụng với dung dịch \ce{Ca(OH)2} hoặc \ce{Ba(OH)2}.}
 
 %------------------------------------------------------------------------------%
 
