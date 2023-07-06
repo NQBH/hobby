@@ -37,39 +37,127 @@
 \usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
 
 \title{Problem: Oxide Acid $+$ Base Reaction\\Bài Tập: Oxide Acid Tác Dụng với Dung Dịch Kiềm}
-\date{}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
 
 \begin{document}
 \maketitle
-\vspace{-2cm}
+\tableofcontents
 
 %------------------------------------------------------------------------------%
 
 \section{\ce{CO2,SO2} $+$ NaOH, KOH}
-\textit{Trường hợp \ce{CO2} tác dụng với dung dịch NaOH hoặc KOH.} Thứ tự phản ứng: \ce{CO2 + $2$NaOH -> Na2CO3 + H2O} (1). Nếu NaOH hết mà vẫn sục khí \ce{CO2} vào: \ce{CO2 + Na2CO3 + H2O -> $2$NaHCO3} (2). (1) $+$ (2): \ce{CO2 + NaOH -> NaHCO3} (3). Đặt $a = \frac{n_{\rm NaOH}}{n_{\ce{CO2}}}$ là tỷ số mol của NaOH \& \ce{CO2}.
+
+\begin{luuy}
+	Các từ ``hoặc'' hay ký hiệu ``{\tt/}'' sau đây có nghĩa là ``chỉ 1 trong 2'' không phải ``logical or'' (trường hợp sau có thể xảy ra cả 2).
+\end{luuy}
+
+\noindent\textbf{\textsf{Trường hợp \ce{CO2} tác dụng với dung dịch NaOH hoặc KOH.}} Thứ tự phản ứng: \ce{CO2 + $2$NaOH -> Na2CO3 + H2O} hoặc \ce{CO2 + $2$KOH -> K2CO3 + H2O} (1). Nếu NaOH{\tt/}KOH hết mà vẫn sục khí \ce{CO2} vào: \ce{CO2 + Na2CO3 + H2O -> $2$NaHCO3} hoặc \ce{CO2 + K2CO3 + H2O -> $2$KHCO3} (2). (1) $+$ (2): \ce{CO2 + NaOH -> NaHCO3} hoặc \ce{CO2 + KOH -> KHCO3} (3). Đặt $a = \frac{n_{\rm NaOH}}{n_{\ce{CO2}}}$ hoặc $a = \frac{n_{\rm KOH}}{n_{\ce{CO2}}}$ là tỷ số mol của NaOH{\tt/}KOH \& \ce{CO2}:
 \begin{itemize}
-	\item Nếu $0 < a\le 1$: Chỉ tạo muối acid \ce{NaHCO3}, viết phản ứng (3).
-	\item Nếu $1 < a < 2$: Tạo cả muối acid \ce{NaHCO3} \& muối trung hòa \ce{Na2CO3}, viết 2 phản ứng (1) \& (3).
-	\item Nếu $a\ge 2$: Chỉ tạo muối trung hòa \ce{Na2CO3}, viết phản ứng (1).
+	\item Nếu $0 < a\le 1$: Chỉ tạo muối acid \ce{NaHCO3}{\tt/}\ce{KHCO3}, viết phản ứng (3).
+	\item Nếu $1 < a < 2$: Tạo cả muối acid \ce{NaHCO3}{\tt/}\ce{KHCO3} \& muối trung hòa \ce{Na2CO3}{\tt/}\ce{K2CO3}, viết 2 phản ứng (1) \& (3).
+	\item Nếu $a\ge 2$: Chỉ tạo muối trung hòa \ce{Na2CO3}{\tt/}\ce{K2CO3}, viết phản ứng (1).
 \end{itemize}
-Nếu bài toán cho \ce{CO2} phản ứng với dung dịch chứa $x$ mol NaOH \& $y$ mol KOH thì có thể thay 2 base này bởi 1 base tương đương (hay ``base trung bình''{\tt/}``averaged base'') MOH. Khi đó, xét tỷ số $a = \frac{n_{\rm MOH}}{n_{\ce{CO2}}}$ là tỷ số mol của MOH \& \ce{CO2}:
+\textbf{\textsf{Trường hợp \ce{CO2} tác dụng với dung dịch NaOH \& KOH.}} Nếu bài toán cho \ce{CO2} phản ứng với dung dịch chứa $x$ mol NaOH \& $y$ mol KOH thì có thể thay 2 base này bởi 1 base tương đương (hay ``base trung bình''{\tt/}``averaged base'') MOH. Khi đó, xét tỷ số $a = \frac{n_{\rm MOH}}{n_{\ce{CO2}}}$ là tỷ số mol của MOH \& \ce{CO2}:
 \begin{equation}
 	\label{MOH}
 	\tag{MOH}
 	\left\{\begin{split}
 		n_{\rm MOH} &= n_{\rm NaOH} + n_{\rm KOH} = x + y,\\
 		m_{\rm MOH} &= m_{\rm NaOH} + m_{\rm KOH} = 23x + 39y,
-	\end{split}\right.\Rightarrow M = \frac{m_{\rm KOH}}{n_{\rm KOH}} = \frac{23x + 39y}{x + y}.
+	\end{split}\right.\Rightarrow M_{\rm MOH} = \frac{m_{\rm MOH}}{n_{\rm MOH}} = \frac{23x + 39y}{x + y}.
 \end{equation}
-Trường hợp \ce{SO2} phản ứng với NaOH, KOH, hoặc dung dịch chứa cả NaOH \& KOH hoàn toàn tương tự (chỉ cần thay nguyên tố C bởi nguyên tố S trong các phương trình \& công thức trên):
+Trường hợp \ce{SO2} phản ứng với NaOH, KOH, hoặc dung dịch chứa cả NaOH \& KOH hoàn toàn tương tự, chỉ cần thay nguyên tố C bởi nguyên tố S trong các phương trình \& công thức trên:
+\vspace{2mm}
 
-\noindent\textit{Trường hợp \ce{SO2} tác dụng với dung dịch NaOH hoặc KOH.} Thứ tự phản ứng: \ce{SO2 + $2$NaOH -> Na2SO3 + H2O} (1). Nếu NaOH hết mà vẫn sục khí \ce{SO2} vào: \ce{SO2 + Na2SO3 + H2O -> $2$NaHSO3} (2). (1) $+$ (2): \ce{SO2 + NaOH -> NaHSO3} (3). Đặt $a = \frac{n_{\rm NaOH}}{n_{\ce{SO2}}}$ là tỷ số mol của NaOH \& \ce{SO2}.
+\noindent\textbf{\textsf{Trường hợp \ce{SO2} tác dụng với dung dịch NaOH hoặc KOH.}} Thứ tự phản ứng: \ce{SO2 + $2$NaOH -> Na2SO3 + H2O} (1). Nếu NaOH hết mà vẫn sục khí \ce{SO2} vào: \ce{SO2 + Na2SO3 + H2O -> $2$NaHSO3} (2). (1) $+$ (2): \ce{SO2 + NaOH -> NaHSO3} (3). Đặt $a = \frac{n_{\rm NaOH}}{n_{\ce{SO2}}}$ là tỷ số mol của NaOH \& \ce{SO2}.
 \begin{itemize}
-	\item Nếu $0 < a\le 1$: Chỉ tạo muối acid \ce{NaHSO3}, viết phản ứng (3).
-	\item Nếu $1 < a < 2$: Tạo cả muối acid \ce{NaHSO3} \& muối trung hòa \ce{Na2SO3}, viết 2 phản ứng (1) \& (3).
-	\item Nếu $a\ge 2$: Chỉ tạo muối trung hòa \ce{Na2SO3}, viết phản ứng (1).
+	\item Nếu $0 < a\le 1$: Chỉ tạo muối acid \ce{NaHSO3}{\tt/}\ce{KHSO3}, viết phản ứng (3).
+	\item Nếu $1 < a < 2$: Tạo cả muối acid \ce{NaHSO3}{\tt/}\ce{KHSO3} \& muối trung hòa \ce{Na2SO3}{\tt/}\ce{K2SO3}, viết 2 phản ứng (1) \& (3).
+	\item Nếu $a\ge 2$: Chỉ tạo muối trung hòa \ce{Na2SO3}{\tt/}\ce{K2SO3}, viết phản ứng (1).
 \end{itemize}
 Nếu bài toán cho \ce{SO2} phản ứng với dung dịch chứa $x$ mol NaOH \& $y$ mol KOH thì có thể thay 2 base này bởi 1 base tương đương (hay ``base trung bình''{\tt/}``averaged base'') MOH. Khi đó, xét tỷ số $a = \frac{n_{\rm MOH}}{n_{\ce{CO2}}}$ là tỷ số mol của MOH cho bởi \eqref{MOH} \& \ce{CO2}.
+
+%------------------------------------------------------------------------------%
+
+\section{\ce{SO2,CO2} $+$ \ce{Ba(OH)2,Ca(OH)2}}
+\textbf{\textsf{Trường hợp \ce{CO2} tác dụng với dung dịch \ce{Ba(OH)2} hoặc \ce{Ca(OH)2}.}} Thứ tự phản ứng: \ce{CO2 + Ba(OH)2 -> BaCO3 v + H2O} hoặc \ce{CO2 + Ca(OH)2 -> CaCO3 v + H2O} (1). Nếu \ce{Ba(OH)2}{\tt/}\ce{Ca(OH)2} hết mà vẫn sục khí \ce{CO2} vào: \ce{CO2 + BaCO3 + H2O -> Ba(HCO3)2} hoặc \ce{CO2 + CaCO3 + H2O -> Ca(HCO3)2} (2). (1) $+$ (2): \ce{$2$CO2 + Ba(OH)2 -> Ba(HCO3)2} hoặc \ce{$2$CO2 + Ca(OH)2 -> Ca(HCO3)2} (3). Đặt $a = \frac{n_{\ce{Ba(OH)2}}}{n_{\ce{CO2}}}$ hoặc $a = \frac{n_{\ce{Ca(OH)2}}}{n_{\ce{CO2}}}$ là tỷ số mol của \ce{Ba(OH)2}{\tt/}\ce{Ca(OH)2} \& \ce{CO2}:
+\begin{itemize}
+	\item Nếu $0 < a\le\frac{1}{2}$: Chỉ tạo muối acid \ce{Ba(HCO3)2}{\tt/}\ce{Ca(HCO3)2}, viết phản ứng (3).
+	\item Nếu $\frac{1}{2} < a < 1$: Tạo cả 2 muối kết tủa \ce{BaCO3}{\tt/}\ce{CaCO3} \& muối acid \ce{Ba(HCO3)2}{\tt/}\ce{Ca(HCO3)2}, viết 2 phản ứng (1) \& (3).
+	\item Nếu $a\ge1$: Chỉ tạo muối kết tủa \ce{BaCO3}{\tt/}\ce{CaCO3}, viết phản ứng (1).
+\end{itemize}
+\textbf{\textsf{Trường hợp \ce{CO2} tác dụng với dung dịch \ce{Ba(OH)2} \& \ce{Ca(OH)2}.}} Nếu bài toán cho \ce{CO2} phản ứng với dung dịch chứa $x$ mol \ce{Ba(OH)2} \& $y$ mol \ce{Ca(OH)2} thì có thể thay 2 base này bởi 1 base tương đương (hay ``base trung bình''{\tt/}``averaged base'') \ce{M(OH)2}. Khi đó, xét tỷ số $a = \frac{n_{\rm M(OH)2}}{n_{\ce{CO2}}}$ là tỷ số mol của \ce{M(OH)2} \& \ce{CO2}:
+\begin{equation}
+	\label{M(OH)2}
+	\tag{MOH}
+	\left\{\begin{split}
+		n_{\ce{M(OH)2}} &= n_{\ce{Ba(OH)2}} + n_{\ce{Ca(OH)2}} = x + y,\\
+		m_{\ce{M(OH)2}} &= m_{\ce{Ba(OH)2}} + m_{\ce{Ca(OH)2}} = 171x + 74y,
+	\end{split}\right.\Rightarrow M_{\ce{M(OH)2}} = \frac{m_{\ce{M(OH)2}}}{n_{\ce{M(OH)2}}} = \frac{171x + 74y}{x + y}.
+\end{equation}
+\noindent\textbf{\textsf{Trường hợp \ce{CO2} tác dụng với dung dịch chứa $x$ mol {\rm NaOH}{\tt/}KOH \& $y$ mol \ce{Ba(OH)2}{\tt/}\ce{Ca(OH)2}.}} Có thể coi các phản ứng xảy ra theo thứ tự: \ce{CO2 + Ba(OH)2 -> BaCO3 v + H2O} hoặc \ce{CO2 + Ca(OH)2 -> CaCO3 v + H2O} (1). Nếu \ce{Ca(OH)2} mà vẫn sục khí \ce{CO2} vào thì \ce{CO2 + $2$NaOH -> Na2CO3 + H2O} hoặc \ce{CO2 + $2$KOH -> K2CO3 + H2O}K (2). Nếu NaOH{\tt/}KOH hết mà vẫn sục khí \ce{CO2} vào thì \ce{CO2 + Na2CO3 + H2O -> $2$NaHCO3} hoặc \ce{CO2 + K2CO3 + H2O -> $2$KHCO3} (3). (2) $+$ (3): \ce{CO2 + NaOH -> NaHCO3} hoặc \ce{CO2 + KOH -> KHCO3} (4). Nếu \ce{Na2CO3}{\tt/}\ce{K2CO3} hết mà \ce{CO2} còn thì kết tủa tan dần: \ce{CO2 + BaCO3 + H2O -> Ba(HCO3)2} hoặc \ce{CO2 + CaCO3 + H2O -> Ca(HCO3)2} (5). (1) $+$ (5): \ce{$2$CO2 + Ca(OH)2 -> Ca(HCO3)2} (6). Tổng hợp lại:
+\begin{itemize}
+	\item Nếu $n_{\ce{CO2}}\le y$: Chỉ tạo muối \ce{BaCO3}{\tt/}\ce{CaCO3}, viết phản ứng (1).
+	\item Nếu $y < n_{\ce{CO2}}\le\frac{1}{2}x + y$: Tạo muối \ce{BaCO3}{\tt/}\ce{CaCO3} \& \ce{Na2CO3}{\tt/}\ce{K2CO3}, viết 2 phản ứng (1) \& (2).
+	\item Nếu $\frac{1}{2}x + y < n_{\ce{CO2}} < x + y$: Tạo muối \ce{BaCO3}{\tt/}\ce{CaCO3}, \ce{Na2CO3}{\tt/}\ce{K2CO3}, \& \ce{NaHCO3}{\tt/}\ce{KHCO3}, viết 3 phản ứng (1), (2), \& (4).
+	\item Nếu $x + y = n_{\ce{CO2}}$: Tạo muối \ce{BaCO3}{\tt/}\ce{CaCO3} \& \ce{NaHCO3}{\tt/}\ce{KHCO3}, viết 2 phản ứng (1) \& (4).
+	\item Nếu $x + y < n_{\ce{CO2}} < x + 2y$: Tạo muối \ce{BaCO3}{\tt/}\ce{CaCO3}, \ce{Ba(HCO3)2}{\tt/}\ce{Ca(HCO3)2}, \& \ce{NaHCO3}{\tt/}\ce{KHCO3}, viết 3 phản ứng (1), (4), \& (6).
+	\item Nếu $x + 2y\le n_{\ce{CO2}}$: Tạo muối \ce{Ba(HCO3)2}{\tt/}\ce{Ca(HCO3)2} \& \ce{NaHCO3}{\tt/}\ce{KHCO3}, viết 2 phản ứng (4) \& (6).
+\end{itemize}
+
+
+
+
+Trường hợp \ce{SO2} phản ứng với \ce{Ba(OH)2,Ca(OH)2}, hoặc dung dịch chứa cả \ce{Ba(OH)} \& \ce{Ca(OH)2} hoàn toàn tương tự, chỉ cần thay nguyên tố C bởi nguyên tố S trong các phương trình \& công thức trên:
+\vspace{2mm}
+
+\textbf{\textsf{Trường hợp \ce{SO2} tác dụng với dung dịch \ce{Ba(OH)2} hoặc \ce{Ca(OH)2}.}} Thứ tự phản ứng: \ce{SO2 + Ba(OH)2 -> BaSO3 v + H2O} hoặc \ce{SO2 + Ca(OH)2 -> CaSO3 v + H2O} (1). Nếu \ce{Ba(OH)2}{\tt/}\ce{Ca(OH)2} hết mà vẫn sục khí \ce{SO2} vào: \ce{SO2 + BaSO3 + H2O -> Ba(HSO3)2} hoặc \ce{SO2 + CaSO3 + H2O -> Ca(HSO3)2} (2). (1) $+$ (2): \ce{$2$SO2 + Ba(OH)2 -> Ba(HSO3)2} hoặc \ce{$2$SO2 + Ca(OH)2 -> Ca(HSO3)2} (3). Đặt $a = \frac{n_{\ce{Ba(OH)2}}}{n_{\ce{SO2}}}$ hoặc $a = \frac{n_{\ce{Ca(OH)2}}}{n_{\ce{SO2}}}$ là tỷ số mol của \ce{Ba(OH)2}{\tt/}\ce{Ca(OH)2} \& \ce{SO2}:
+\begin{itemize}
+	\item Nếu $0 < a\le\frac{1}{2}$: Chỉ tạo muối acid \ce{Ba(HSO3)2}{\tt/}\ce{Ca(HSO3)2}, viết phản ứng (3).
+	\item Nếu $\frac{1}{2} < a < 1$: Tạo cả 2 muối kết tủa \ce{BaSO3}{\tt/}\ce{CaSO3} \& muối acid \ce{Ba(HSO3)2}{\tt/}\ce{Ca(HSO3)2}, viết 2 phản ứng (1) \& (3).
+	\item Nếu $a\ge1$: Chỉ tạo muối kết tủa \ce{BaSO3}{\tt/}\ce{CaSO3}, viết phản ứng (1).
+\end{itemize}
+\textbf{\textsf{Trường hợp \ce{SO2} tác dụng với dung dịch \ce{Ba(OH)2} \& \ce{Ca(OH)2}.}} Nếu bài toán cho \ce{SO2} phản ứng với dung dịch chứa $x$ mol \ce{Ba(OH)2} \& $y$ mol \ce{Ca(OH)2} thì có thể thay 2 base này bởi 1 base tương đương (hay ``base trung bình''{\tt/}``averaged base'') \ce{M(OH)2}. Khi đó, xét tỷ số $a = \frac{n_{\rm M(OH)2}}{n_{\ce{SO2}}}$ là tỷ số mol của \ce{M(OH)2} cho bởi \eqref{M(OH)2} \& \ce{SO2}.
+\vspace{2mm}
+
+\noindent\textbf{\textsf{Trường hợp \ce{SO2} tác dụng với dung dịch chứa $x$ mol {\rm NaOH}{\tt/}KOH \& $y$ mol \ce{Ba(OH)2}{\tt/}\ce{Ca(OH)2}.}} Có thể coi các phản ứng xảy ra theo thứ tự: \ce{SO2 + Ba(OH)2 -> BaSO3 v + H2O} hoặc \ce{SO2 + Ca(OH)2 -> CaSO3 v + H2O} (1). Nếu \ce{Ca(OH)2} mà vẫn sục khí \ce{SO2} vào thì \ce{SO2 + $2$NaOH -> Na2SO3 + H2O} hoặc \ce{SO2 + $2$KOH -> K2SO3 + H2O}K (2). Nếu NaOH{\tt/}KOH hết mà vẫn sục khí \ce{SO2} vào thì \ce{SO2 + Na2SO3 + H2O -> $2$NaHSO3} hoặc \ce{SO2 + K2SO3 + H2O -> $2$KHSO3} (3). (2) $+$ (3): \ce{SO2 + NaOH -> NaHSO3} hoặc \ce{SO2 + KOH -> KHSO3} (4). Nếu \ce{Na2SO3}{\tt/}\ce{K2SO3} hết mà \ce{SO2} còn thì kết tủa tan dần: \ce{SO2 + BaSO3 + H2O -> Ba(HSO3)2} hoặc \ce{SO2 + CaSO3 + H2O -> Ca(HSO3)2} (5). (1) $+$ (5): \ce{$2$SO2 + Ca(OH)2 -> Ca(HSO3)2} (6). Tổng hợp lại:
+\begin{itemize}
+	\item Nếu $n_{\ce{SO2}}\le y$: Chỉ tạo muối \ce{BaSO3}{\tt/}\ce{CaSO3}, viết phản ứng (1).
+	\item Nếu $y < n_{\ce{SO2}}\le\frac{1}{2}x + y$: Tạo muối \ce{BaSO3}{\tt/}\ce{CaSO3} \& \ce{Na2SO3}{\tt/}\ce{K2SO3}, viết 2 phản ứng (1) \& (2).
+	\item Nếu $\frac{1}{2}x + y < n_{\ce{SO2}} < x + y$: Tạo muối \ce{BaSO3}{\tt/}\ce{CaSO3}, \ce{Na2SO3}{\tt/}\ce{K2SO3}, \& \ce{NaHSO3}{\tt/}\ce{KHSO3}, viết 3 phản ứng (1), (2), \& (4).
+	\item Nếu $x + y = n_{\ce{SO2}}$: Tạo muối \ce{BaSO3}{\tt/}\ce{CaSO3} \& \ce{NaHSO3}{\tt/}\ce{KHSO3}, viết 2 phản ứng (1) \& (4).
+	\item Nếu $x + y < n_{\ce{SO2}} < x + 2y$: Tạo muối \ce{BaSO3}{\tt/}\ce{CaSO3}, \ce{Ba(HSO3)2}{\tt/}\ce{Ca(HSO3)2}, \& \ce{NaHSO3}{\tt/}\ce{KHSO3}, viết 3 phản ứng (1), (4), \& (6).
+	\item Nếu $x + 2y\le n_{\ce{SO2}}$: Tạo muối \ce{Ba(HSO3)2}{\tt/}\ce{Ca(HSO3)2} \& \ce{NaHSO3}{\tt/}\ce{KHSO3}, viết 2 phản ứng (4) \& (6).
+\end{itemize}
+
+
+
+
+
+%------------------------------------------------------------------------------%
+
+\section{\ce{SO2,CO2} $+$ \ce{NaOH,KOH,Ba(OH)2,Ca(OH)2}}
+
+%------------------------------------------------------------------------------%
+
+\section{\ce{P2O5} $+$ NaOH, KOH}
+
+%------------------------------------------------------------------------------%
+
+\section{Problem}
+
+\begin{baitoan}
+	Cho $V_1$ {\rm L} \ce{CO2} phản ứng với $V_2$ {\rm L} dung dịch chứa $a$ mol {\rm NaOH}, $b$ mol {\rm KOH}, $c$ mol {\rm\ce{Ba(OH)2}}, \& $d$ mol {\rm\ce{Ca(OH)2}}. Biện luận theo 4 tham số $a,b,c,d\in\mathbb{R}$, $a,b,c,d > 0$, để viết {\rm PTHH} \& tính khối lượng từng muối tạo thành. Tính nồng độ $\%$ \& nồng độ mol của từng dung dịch đó sau khi loại bỏ tất cả các kết tủa nếu có biết thể tích dung dịch thay đổi không đáng kể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $V_1$ {\rm L} \ce{SO2} phản ứng với $V_2$ {\rm L} dung dịch chứa $a$ mol {\rm NaOH}, $b$ mol {\rm KOH}, $c$ mol {\rm\ce{Ba(OH)2}}, \& $d$ mol {\rm\ce{Ca(OH)2}}. Biện luận theo 4 tham số $a,b,c,d\in\mathbb{R}$, $a,b,c,d > 0$, để viết {\rm PTHH} \& tính khối lượng từng muối tạo thành. Tính nồng độ $\%$ \& nồng độ mol của từng dung dịch đó sau khi loại bỏ tất cả các kết tủa nếu có biết thể tích dung dịch thay đổi không đáng kể.
+\end{baitoan}
+
+\begin{baitoan}
+	Cho $V_1$ {\rm L} \ce{P2O5} phản ứng với $V_2$ {\rm L} dung dịch chứa $a$ mol {\rm NaOH}, $b$ mol {\rm KOH}, $c$ mol {\rm\ce{Ba(OH)2}}, \& $d$ mol {\rm\ce{Ca(OH)2}}. Biện luận theo 4 tham số $a,b,c,d\in\mathbb{R}$, $a,b,c,d > 0$, để viết {\rm PTHH} \& tính khối lượng từng muối tạo thành. Tính nồng độ $\%$ \& nồng độ mol của từng dung dịch đó sau khi loại bỏ tất cả các kết tủa nếu có biết thể tích dung dịch thay đổi không đáng kể.
+\end{baitoan}
 
 \begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 1, p. 44]
 	Hấp thụ hoàn toàn {\rm7.84 L} (đktc) khí {\rm\ce{CO2}} vào {\rm200 mL} dung dịch {\rm KOH 1.5M} \& {\rm\ce{K2CO3} 1M}. Sau khi các phản ứng xảy ra hoàn toàn thu được dung dịch X. Tính khối lượng mỗi muối có trong dung dịch X.
@@ -94,19 +182,6 @@ Nếu bài toán cho \ce{SO2} phản ứng với dung dịch chứa $x$ mol NaOH
 \begin{baitoan}[\cite{Truong_Long_Huong_bdhsg_Hoa_Hoc_9}, Ví dụ 6, p. 47, TS THPT Chuyên Phan Bội Châu, Nghệ An]
 	Cho $m$ {\rm g \ce{P2O5}} vào {\rm19.6 g} dung dịch {\rm\ce{H3PO4} 5\%} thu được dung dịch X. Cho dung dịch X phản ứng hết với {\rm100 mL} dung dịch {\rm KOH 1M} thu được dung dịch Y. Cô cạn dung dịch Y thu được {\rm6.48 g} chất rắn khan. (a) Viết {\rm PTHH}. (b) Tính khối lượng các chất có trong {\rm6.48 g} chất rắn \& giá trị $m$.
 \end{baitoan}
-
-%------------------------------------------------------------------------------%
-
-\section{\ce{SO2,CO2} $+$ \ce{Ba(OH)2,Ca(OH)2}}
-\textit{Trường hợp \ce{CO2} tác dụng với dung dịch \ce{Ca(OH)2} hoặc \ce{Ba(OH)2}.}
-
-%------------------------------------------------------------------------------%
-
-\section{\ce{SO2,CO2} $+$ \ce{NaOH,KOH,Ba(OH)2,Ca(OH)2}}
-
-%------------------------------------------------------------------------------%
-
-\section{\ce{P2O5} $+$ NaOH, KOH}
 
 %------------------------------------------------------------------------------%
 
