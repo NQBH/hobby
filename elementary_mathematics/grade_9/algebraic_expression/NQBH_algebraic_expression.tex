@@ -63,22 +63,100 @@ Like polynomials or any other type of expression, the basic arithmetic operation
 	Ký hiệu $\mathbb{Q}_{\rm fn}\coloneqq\left\{\dfrac{a}{2^m\cdot5^n}|a\in\mathbb{Z},\,m,n\in\mathbb{N}\right\}$, $\mathbb{Q}_{\rm ifn}\coloneqq\mathbb{Q}\backslash\mathbb{Q}_{\rm fn}$, \& $\mathbb{R}\backslash\mathbb{Q}$ lần lượt là các tập hợp tất cả các số hữu tỷ hữu hạn, các số hữu tỷ vô hạn tuần hoàn, \& các số vô tỷ.
 \end{kyhieu}
 
+\subsection{Problem}
+
 \begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 1, p. 5, chuyên Toán Quảng Ngãi 2018--2019]
-	Cho biểu thức $A = \dfrac{5x + 1}{x^3 - 1} - \dfrac{1 - 2x}{x^2 + x + 1} - \dfrac{2}{1 - x}$. (a) Tìm {\rm ĐKXĐ}. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
+	Cho biểu thức $A = \dfrac{5x + 1}{x^3 - 1} - \dfrac{1 - 2x}{x^2 + x + 1} - \dfrac{2}{1 - x}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\in\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 2, p. 5]
-	Cho biểu thức $A = \dfrac{2x^3 - 7x^2 - 12x + 45}{3x^3 -19x^2 + 33x - 9}$. (a) Tìm {\rm ĐKXĐ}. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
+	Cho biểu thức $A = \dfrac{2x^3 - 7x^2 - 12x + 45}{3x^3 -19x^2 + 33x - 9}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\in\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
 \end{baitoan}
 
-\section{Generalization -- Tổng Quát Hóa}
+%------------------------------------------------------------------------------%
 
-\begin{baitoan}[Phân thức bậc 1{\tt/}bậc 1]
-	Cho biểu thức $A = \dfrac{ax + b}{cx + d}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc nhất ẩn $x$. Tìm điều kiện của $a,b,c,d\in\mathbb{R}$ để $A$ có thể rút gọn, \& biểu diễn biểu thức rút gọn theo $a,b,c,d$.
+\subsection{Generalization -- Tổng Quát Hóa}
+
+\begin{baitoan}[Rút gọn phân thức bậc 1{\tt/}bậc 1]
+	Cho biểu thức $A = \dfrac{ax + b}{cx + d}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc nhất ẩn $x$, trong đó $a,b,c,d\in\mathbb{R}$, $ac\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d$ để $A$ có thể rút gọn. (c) Tìm  biểu thức rút gọn của $A$.
 \end{baitoan}
 
-\begin{baitoan}[Phân thức bậc 2{\tt/}bậc 2]
-	(a) Cho biểu thức $A = \dfrac{x^2 + ax + b}{x^2 + cx + d}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 2 ẩn $x$, trong đó $a,b,c,d\in\mathbb{R}$. Tìm {\rm ĐKXĐ}. Tìm điều kiện của $a,b,c,d$ để $A$ có thể rút gọn (i.e., rút gọn thành phân thức với tử thức \& mẫu thức đều là đa thức bậc nhất ẩn $x$ hoặc rút gọn thành hằng số), \& biểu diễn biểu thức rút gọn theo $a,b,c,d,x$. (b) Cho biểu thức $A = \dfrac{ax^2 + bx + c}{dx^2 + ex + f}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 2 ẩn $x$. Tìm điều kiện của $a,b,c,d,e,f\in\mathbb{R}$, $ad\ne0$, để $A$ có thể rút gọn, \& biểu diễn biểu thức rút gọn theo $a,b,c,d,e,f,x$.
+\begin{baitoan}[Rút gọn phân thức bậc 1{\tt/}bậc 2 dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x + a}{x^2 + bx + c}$ là phân thức với tử thức là đa thức bậc nhất ẩn $x$ còn mẫu thức là đa thức bậc 2 ẩn $x$, trong đó $a,b,c\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 1{\tt/}bậc 2]
+	Cho biểu thức $A = \dfrac{ax + b}{cx^2 + dx + e}$ là phân thức với tử thức là đa thức bậc nhất ẩn $x$ còn mẫu thức là đa thức bậc 2 ẩn $x$, trong đó $a,b,c,d,e\in\mathbb{R}$, $ac\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 1{\tt/}bậc 3 dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x + a}{x^3 + bx^2 + cx + d}$ là phân thức với tử thức là đa thức bậc nhất ẩn $x$ còn mẫu thức là đa thức bậc 3 ẩn $x$, trong đó $a,b,c,d\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 1{\tt/}bậc 3]
+	Cho biểu thức $A = \dfrac{ax + b}{cx^3 + dx^2 + ex + f}$ là phân thức với tử thức là đa thức bậc nhất ẩn $x$ còn mẫu thức là đa thức bậc 3 ẩn $x$, trong đó $a,b,c,d,e,f\in\mathbb{R}$, $ac\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e,f$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 2{\tt/}bậc 1 dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x^2 + ax + b}{x + c}$ là phân thức với tử thức là đa thức bậc 2 ẩn $x$ còn mẫu thức là đa thức bậc nhất ẩn $x$, trong đó $a,b,c\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 2{\tt/}bậc 1]
+	Cho biểu thức $A = \dfrac{ax^2 + bx + c}{dx + e}$ là phân thức với tử thức là đa thức bậc 2 ẩn $x$ còn mẫu thức là đa thức bậc nhất ẩn $x$, trong đó $a,b,c,d,e\in\mathbb{R}$, $ad\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 2{\tt/}bậc 2 dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x^2 + ax + b}{x^2 + cx + d}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 2 ẩn $x$, trong đó $a,b,c,d\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 2{\tt/}bậc 2]
+	Cho biểu thức $A = \dfrac{ax^2 + bx + c}{dx^2 + ex + f}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 2 ẩn $x$, trong đó $a,b,c,d,e,f\in\mathbb{R}$, $ad\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e,f$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 3{\tt/}bậc 1 dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x^3 + ax^2 + bx + c}{x + d}$ là phân thức với tử thức là đa thức bậc 3 ẩn $x$ còn mẫu thức là đa thức bậc nhất ẩn $x$, trong đó $a,b,c,d\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 3{\tt/}bậc 1]
+	Cho biểu thức $A = \dfrac{ax^3 + bx^2 + cx + d}{ex + f}$ là phân thức với tử thức là đa thức bậc 3 ẩn $x$ còn mẫu thức là đa thức bậc nhất ẩn $x$, trong đó $a,b,c,d,e,f\in\mathbb{R}$, $ae\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e,f$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 3{\tt/}bậc 2 dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x^3 + ax^2 + bx + c}{x^2 + dx + e}$ là phân thức với tử thức là đa thức bậc 3 ẩn $x$ còn mẫu thức là đa thức bậc 2 ẩn $x$, trong đó $a,b,c,d,e\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 3{\tt/}bậc 2]
+	Cho biểu thức $A = \dfrac{ax^3 + bx^2 + cx + d}{ex^2 + fx + g}$ là phân thức với tử thức là đa thức bậc 3 ẩn $x$ còn mẫu thức là đa thức bậc 2 ẩn $x$, trong đó $a,b,c,d,e,f,g\in\mathbb{R}$, $ae\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e,f,g$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 3{\tt/}bậc 3 dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x^3 + ax^2 + bx + c}{x^3 + dx^2 + ex + f}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 3 ẩn $x$, trong đó $a,b,c,d,e,f\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e,f$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 3{\tt/}bậc 3]
+	Cho biểu thức $A = \dfrac{ax^3 + bx^2 + cx + d}{ex^3 + fx^2 + gx + h}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 3 ẩn $x$, trong đó $a,b,c,d,e,f,g,h\in\mathbb{R}$, $ae\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e,f,g,h$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+Also: Phương trình trùng phương, phương trình quy về phương trình bậc 2, 3.
+
+\begin{baitoan}
+	Cho các hàm phân thức $A(x) = \frac{P(x)}{Q(x)}$ với $P(x),Q(x)$ thuộc tập hợp đa thức có bậc từ 1 đến 3 \& các đa thức có thể quy về dạng đa thức bậc 2 hoặc bậc 3, e.g., hàm số bậc 4 trùng phương $ax^4 + bx^2 + c = a(x^2)^2 + b(x^2) + c$. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để: (a) Tìm {\rm ĐKXĐ} của $A$, tập xác định ({\rm TXĐ}) $D_A$ của $A$. (b) Kiểm tra thông qua giá trị của các hệ số của tử thức \& mẫu thức để biết $A$ có thể rút gọn được hay không nhờ các bài toán trên. (c) Nếu $A$ có thể rút gọn, xuất ra biểu thức rút gọn của $A$.
+	\begin{itemize}
+		\item {\sf Input.} Line 1: Số test $t\in\mathbb{N}^\star$. Line chẵn: $P(x)$. Line lẻ: $Q(x)$.
+		\item {\sf Output.} Xuất ra {\rm ĐKXĐ, TXĐ} $D_A$ của $A$. Thông báo $A$ có thể rút gọn được hay không, e.g., {\tt A can be simplified} or {\tt A cannot be simplified}. Nếu được, xuất ra biểu thức rút gọn của $A$.
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|simplify_rational_expression.inp| & \verb|simplify_rational_expression.out| \\
+				\hline
+				1 & \verb|x != 3, x != 1/3, D_A = R\{1,1/3}| \\
+				\verb|2x^3 - 7x^2 - 12x + 45| & {\tt A can be simplified} \\
+				\verb|3x^3 - 19x^2 + 33x - 9| & \verb|(2x + 5)/(3x - 1)| \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
