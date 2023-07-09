@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{kyhieu}{Ký hiệu}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem: Algebraic Expression Transformation\\Bài Tập: Biến Đổi Biểu Thức Đại Số}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2cm}
+
+%------------------------------------------------------------------------------%
+
+\section{Rational Expression Transformation -- Biến Đổi Biểu Thức Hữu Tỷ}
+
+\begin{definition}[Rational expression]
+	A {\rm rational expression} is the ratio of 2 polynomials. If $f$ is a rational expression then $f$ can be written in the form $\frac{p}{q}$ where $p,q$ are polynomials.
+\end{definition}
+Like polynomials or any other type of expression, the basic arithmetic operations, namely addition $+$, subtraction $-$, multiplication $\cdot$, \& division $:$ or {\tt/}, can be performed on rational expressions. A nice property of rational expressions is that when any of these operations are performed on 2 rational expressions, the result is always another rational expression. Contrary to polynomials, it is generally easy to multiply or divide but difficult to add or subtract 2 rational expressions.
+
+\begin{notation}[Rational vs. irrational]
+	Denote by $\mathbb{Q}_{\rm fn}\coloneqq\left\{\dfrac{a}{2^m\cdot5^n}|a\in\mathbb{Z},\,m,n\in\mathbb{N}\right\}$, $\mathbb{Q}_{\rm ifn}\coloneqq\mathbb{Q}\backslash\mathbb{Q}_{\rm fn}$, \& $\mathbb{R}\backslash\mathbb{Q}$ the set of all finite rationals, the set of all periodic infinite rationals, \& the set of irrationals, respectively.
+\end{notation}
+
+\begin{kyhieu}
+	Ký hiệu $\mathbb{Q}_{\rm fn}\coloneqq\left\{\dfrac{a}{2^m\cdot5^n}|a\in\mathbb{Z},\,m,n\in\mathbb{N}\right\}$, $\mathbb{Q}_{\rm ifn}\coloneqq\mathbb{Q}\backslash\mathbb{Q}_{\rm fn}$, \& $\mathbb{R}\backslash\mathbb{Q}$ lần lượt là các tập hợp tất cả các số hữu tỷ hữu hạn, các số hữu tỷ vô hạn tuần hoàn, \& các số vô tỷ.
+\end{kyhieu}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 1, p. 5, chuyên Toán Quảng Ngãi 2018--2019]
+	Cho biểu thức $A = \dfrac{5x + 1}{x^3 - 1} - \dfrac{1 - 2x}{x^2 + x + 1} - \dfrac{2}{1 - x}$. (a) Tìm {\rm ĐKXĐ}. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 2, p. 5]
+	Cho biểu thức $A = \dfrac{2x^3 - 7x^2 - 12x + 45}{3x^3 -19x^2 + 33x - 9}$. (a) Tìm {\rm ĐKXĐ}. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
+\end{baitoan}
+
+\section{Generalization -- Tổng Quát Hóa}
+
+\begin{baitoan}[Phân thức bậc 1{\tt/}bậc 1]
+	Cho biểu thức $A = \dfrac{ax + b}{cx + d}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc nhất ẩn $x$. Tìm điều kiện của $a,b,c,d\in\mathbb{R}$ để $A$ có thể rút gọn, \& biểu diễn biểu thức rút gọn theo $a,b,c,d$.
+\end{baitoan}
+
+\begin{baitoan}[Phân thức bậc 2{\tt/}bậc 2]
+	(a) Cho biểu thức $A = \dfrac{x^2 + ax + b}{x^2 + cx + d}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 2 ẩn $x$, trong đó $a,b,c,d\in\mathbb{R}$. Tìm {\rm ĐKXĐ}. Tìm điều kiện của $a,b,c,d$ để $A$ có thể rút gọn (i.e., rút gọn thành phân thức với tử thức \& mẫu thức đều là đa thức bậc nhất ẩn $x$ hoặc rút gọn thành hằng số), \& biểu diễn biểu thức rút gọn theo $a,b,c,d,x$. (b) Cho biểu thức $A = \dfrac{ax^2 + bx + c}{dx^2 + ex + f}$ là phân thức với tử thức \& mẫu thức đều là đa thức bậc 2 ẩn $x$. Tìm điều kiện của $a,b,c,d,e,f\in\mathbb{R}$, $ad\ne0$, để $A$ có thể rút gọn, \& biểu diễn biểu thức rút gọn theo $a,b,c,d,e,f,x$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
