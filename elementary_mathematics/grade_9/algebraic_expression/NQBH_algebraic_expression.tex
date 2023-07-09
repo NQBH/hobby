@@ -40,11 +40,12 @@
 }
 
 \title{Problem: Algebraic Expression Transformation\\Bài Tập: Biến Đổi Biểu Thức Đại Số}
-\date{}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
 
 \begin{document}
 \maketitle
-\vspace{-2cm}
+\tableofcontents
 
 %------------------------------------------------------------------------------%
 
@@ -217,6 +218,14 @@ Like polynomials or any other type of expression, the basic arithmetic operation
 	Cho biểu thức $A = \dfrac{ax + b}{cx^3 + dx^2 + ex + f}$ là phân thức với tử thức là đa thức bậc nhất ẩn $x$ còn mẫu thức là đa thức bậc 3 ẩn $x$, trong đó $a,b,c,d,e,f\in\mathbb{R}$, $ac\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e,f$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
 \end{baitoan}
 
+\begin{baitoan}[Rút gọn phân thức bậc 1{\tt/}bậc 4 trùng phương dạng rút gọn]
+	Cho biểu thức $A = \dfrac{x + a}{x^4 + bx^2 + c}$ là phân thức với tử thức là đa thức bậc nhất ẩn $x$ còn mẫu thức là đa thức bậc 4 ẩn $x$ dạng trùng phương, trong đó $a,b,c\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
+\begin{baitoan}[Rút gọn phân thức bậc 1{\tt/}bậc 4 trùng phương]
+	Cho biểu thức $A = \dfrac{ax + b}{cx^4 + dx^2 + e}$ là phân thức với tử thức là đa thức bậc nhất ẩn $x$ còn mẫu thức là đa thức bậc 4 ẩn $x$ dạng trùng phương, trong đó $a,b,c,d,e\in\mathbb{R}$, $ac\ne0$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c,d,e$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
+\end{baitoan}
+
 \begin{baitoan}[Rút gọn phân thức bậc 2{\tt/}bậc 1 dạng rút gọn]
 	Cho biểu thức $A = \dfrac{x^2 + ax + b}{x + c}$ là phân thức với tử thức là đa thức bậc 2 ẩn $x$ còn mẫu thức là đa thức bậc nhất ẩn $x$, trong đó $a,b,c\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Tìm điều kiện của $a,b,c$ để $A$ có thể rút gọn. (c) Tìm biểu thức rút gọn của $A$.
 \end{baitoan}
@@ -259,7 +268,7 @@ Like polynomials or any other type of expression, the basic arithmetic operation
 Also: Phương trình trùng phương, phương trình quy về phương trình bậc 2, 3.
 
 \begin{baitoan}
-	Cho các hàm phân thức $A(x) = \frac{P(x)}{Q(x)}$ với $P(x),Q(x)$ thuộc tập hợp đa thức có bậc từ 1 đến 3 \& các đa thức có thể quy về dạng đa thức bậc 2 hoặc bậc 3, e.g., hàm số bậc 4 trùng phương $ax^4 + bx^2 + c = a(x^2)^2 + b(x^2) + c$. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để: (a) Tìm {\rm ĐKXĐ} của $A$, tập xác định ({\rm TXĐ}) $D_A$ của $A$. (b) Kiểm tra thông qua giá trị của các hệ số của tử thức \& mẫu thức để biết $A$ có thể rút gọn được hay không nhờ các bài toán trên. (c) Nếu $A$ có thể rút gọn, xuất ra biểu thức rút gọn của $A$.
+	Cho các hàm phân thức $A(x) = \frac{P(x)}{Q(x)}$ với $P(x),Q(x)$ thuộc tập hợp đa thức có bậc từ 1 đến 3 \& các đa thức có thể quy về dạng đa thức bậc 2 hoặc bậc 3, e.g., hàm số bậc 4 trùng phương $ax^4 + bx^2 + c = a(x^2)^2 + b(x^2) + c$, phương trình $ax^{2n} + bx^n + c$ quy được về phương trình bậc 2, \& $ax^{3n} + bx^{2n} + cx^n + d$. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để: (a) Tìm {\rm ĐKXĐ} của $A$, tập xác định ({\rm TXĐ}) $D_A$ của $A$. (b) Kiểm tra thông qua giá trị của các hệ số của tử thức \& mẫu thức để biết $A$ có thể rút gọn được hay không nhờ các bài toán trên. (c) Nếu $A$ có thể rút gọn, xuất ra biểu thức rút gọn của $A$.
 	\begin{itemize}
 		\item {\sf Input.} Line 1: Số test $t\in\mathbb{N}^\star$. Line chẵn: $P(x)$. Line lẻ $\ge3$: $Q(x)$.
 		\item {\sf Output.} Xuất ra {\rm ĐKXĐ, TXĐ} $D_A$ của $A$. Thông báo $A$ có thể rút gọn được hay không, e.g., {\tt A can be simplified} or {\tt A cannot be simplified}. Nếu được, xuất ra biểu thức rút gọn của $A$.
