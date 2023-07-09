@@ -63,14 +63,134 @@ Like polynomials or any other type of expression, the basic arithmetic operation
 	Ký hiệu $\mathbb{Q}_{\rm fn}\coloneqq\left\{\dfrac{a}{2^m\cdot5^n}|a\in\mathbb{Z},\,m,n\in\mathbb{N}\right\}$, $\mathbb{Q}_{\rm ifn}\coloneqq\mathbb{Q}\backslash\mathbb{Q}_{\rm fn}$, \& $\mathbb{R}\backslash\mathbb{Q}$ lần lượt là các tập hợp tất cả các số hữu tỷ hữu hạn, các số hữu tỷ vô hạn tuần hoàn, \& các số vô tỷ.
 \end{kyhieu}
 
-\subsection{Problem}
+\subsection{Rational expression simplification -- Rút gọn biểu thức hữu tỷ}
 
 \begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 1, p. 5, chuyên Toán Quảng Ngãi 2018--2019]
-	Cho biểu thức $A = \dfrac{5x + 1}{x^3 - 1} - \dfrac{1 - 2x}{x^2 + x + 1} - \dfrac{2}{1 - x}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\in\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
+	Cho biểu thức $A = \dfrac{5x + 1}{x^3 - 1} - \dfrac{1 - 2x}{x^2 + x + 1} - \dfrac{2}{1 - x}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\in\mathbb{R}$ để giải phương trình $A = m$. (d) Chứng minh $x\in\mathbb{Q}\Leftrightarrow A\in\mathbb{Q}$. Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q},\mathbb{R}_{> 0},\mathbb{R}_{< 0},\mathbb{R}_{\ge0},\mathbb{R}_{\le0}$.
 \end{baitoan}
 
 \begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 2, p. 5]
-	Cho biểu thức $A = \dfrac{2x^3 - 7x^2 - 12x + 45}{3x^3 -19x^2 + 33x - 9}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\in\mathbb{R}$ để giải phương trình $A = m$. (d) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$.
+	Cho biểu thức $A = \dfrac{2x^3 - 7x^2 - 12x + 45}{3x^3 -19x^2 + 33x - 9}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Biện luận theo tham số $m\in\mathbb{R}$ để giải phương trình $A = m$. (d) Chứng minh $x\in\mathbb{Q}\Leftrightarrow A\in\mathbb{Q}$. Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$, $\mathbb{R}_{> 0},\mathbb{R}_{< 0},\mathbb{R}_{\ge0},\mathbb{R}_{\le0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 1., p. 6]
+	Cho biểu thức $A = \left(\dfrac{x}{x^2 - 4} + \dfrac{2}{2 - x} + \dfrac{1}{x + 2}\right):\left(x - 2 + \dfrac{10 - x^2}{x + 2}\right)$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$, $\mathbb{R}_{> 0},\mathbb{R}_{< 0},\mathbb{R}_{\ge0},\mathbb{R}_{\le0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 2., p. 6]
+	Cho biểu thức $A = \dfrac{a^3 - 4a^2 - a + 4}{a^3 - 7a^2 + 14a - 8}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{R}_{> 0},\mathbb{R}_{< 0},\mathbb{R}_{\ge0},\mathbb{R}_{\le0}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 3., p. 6]
+	Cho biểu thức $A = \left(\dfrac{1 - x^3}{1  - x} - x\right):\dfrac{1 - x^2}{1 - x - x^2 + x^3}$. (a) Tìm {\rm ĐKXĐ} của $A$. (b) Rút gọn $A$. (c) Tìm $x\in\mathbb{R}$ rồi $x\in\mathbb{Z}$ để lượt $A$ lần lượt thuộc các tập hợp:  $\mathbb{N},\mathbb{Z},\mathbb{Q},\mathbb{Q}_{\rm fn},\mathbb{Q}_{\rm ifn},\mathbb{R}\backslash\mathbb{Q}$, $\mathbb{R}_{> 0},\mathbb{R}_{< 0},\mathbb{R}_{\ge0},\mathbb{R}_{\le0}$.
+\end{baitoan}
+
+\subsection{Biểu thức có tính quy luật}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 1, p. 7, chuyên Toán Lam Sơn, Thanh Hóa 2018--2019]
+	Cho biểu thức
+	\begin{align*}
+		A(n) = \left(1 - \dfrac{1}{1 + 2}\right)\left(1 - \dfrac{1}{1 + 2 + 3}\right)\cdots\left(1 - \dfrac{1}{1 + 2 + \cdots + n}\right),\ \forall n\in\mathbb{N},\,n\ge 2.
+	\end{align*}
+	(a) Tính $A(2018)$. (b) Tính $A(n)$ với $n\in\mathbb{N}$, $n\ge2$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 2, p. 7, HSG Quãng Ngãi 2017--2018]
+	Cho biểu thức $A = \sum_{i=1}^n \dfrac{i}{1 + i^2 + i^4} = \dfrac{1}{1 + 1^2 + 1^4} + \dfrac{2}{1 + 2^2 + 2^4} + \dfrac{3}{1 + 3^2 + 3^4} + \cdots + \dfrac{n}{1 + n^2 + n^4}$. (a) Tính $A(n)$ với $n\in\mathbb{N}^\star$. (b) Tính $A(2019)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 3, p. 8, THTT 391]
+	Cho biểu thức $A = \prod_{i=2}^n \dfrac{i^3 - 1}{i^3 + 1} = \dfrac{2^3 - 1}{2^3 + 1}\cdot\dfrac{3^3 - 1}{3^3 + 1}\cdots\frac{n^3 - 1}{n^3 + 1}$. (a) Tính $A(n)$ với $n\in\mathbb{N}$, $n\ge2$. (b) Tính $A(2019)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 5, p. 8, THTT 435]
+	So sánh $A = \prod_{i=1}^n \left(1 + \dfrac{1}{2019^i}\right) = \left(1 + \dfrac{1}{2019}\right)\left(1 + \dfrac{1}{2019^2}\right)\cdots\left(1 + \dfrac{1}{2019^n}\right)$ với $n\in\mathbb{N}^\star$, \& $B = \dfrac{2019^2 - 1}{2018^2 - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 1., p. 9]
+	Cho $A = \sum_{i=1}^n \dfrac{1}{i(i + 1)(i + 2)} = \dfrac{1}{1\cdot2\cdot3} + \dfrac{1}{2\cdot3\cdot4} + \cdots + \dfrac{1}{n(n + 1)(n + 2)}$. (a) Tính $A(n)$ với $n\in\mathbb{N}^\star$. (b) Tính $A(2016)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 2., p. 9, THTT 496]
+	Tính tổng $A = \dfrac{1}{10} + \dfrac{1}{20} + \dfrac{1}{35} + \dfrac{1}{56} + \dfrac{1}{84} + \dfrac{1}{120} + \dfrac{1}{165} + \dfrac{1}{220}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 3., p. 9, THTT 446]
+	Cho $A = \sum_{i=1}^{2018} \dfrac{i}{19^i} = \dfrac{1}{19} + \dfrac{2}{19^2} + \dfrac{3}{19^3} + \cdots + \dfrac{2018}{19^{2018}}$. So sánh $A^{2017}$ \& $A^{2018}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 4., p. 10, THTT 404]
+	So sánh $A = 2018\cdot\dfrac{1}{4}\cdot\dfrac{3}{6}\cdot\dfrac{5}{8}\cdots\dfrac{995}{998}\cdot\dfrac{997}{1000}$ \& $B = 2019\cdot\dfrac{2}{5}\cdot\dfrac{4}{7}\cdot\dfrac{6}{9}\cdots\dfrac{996}{999}\cdot\dfrac{998}{1001}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 5., p. 10, THTT 463]
+	Cho $A = \sum_{i=1}^{49} = \frac{1}{i(i + 1)^2} = \dfrac{1}{1\cdot2^2} + \dfrac{1}{2\cdot3^2} + \cdots + \dfrac{1}{49\cdot50^2}$ \& $B = \sum_{i=2}^{50} \dfrac{1}{i^2} = \dfrac{1}{2^2} + \dfrac{1}{3^2} + \cdots + \dfrac{1}{50^2}$. So sánh $A$ \& $B$ với $\dfrac{1}{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 6., p. 11, THTT 329]
+	Chứng minh: (a) $A = \sum_{i=1}^{2019} \dfrac{2020}{2019^2 + i} = \dfrac{2020}{2019^2 + 1} + \dfrac{2020}{2019^2 + 2} + \cdots + \dfrac{2020}{2019^2 + n}\notin\mathbb{N}^\star$. (b) Tổng quát: $A(n) = \sum_{i=1}^n \dfrac{n + 1}{n^2 + i} = \dfrac{n + 1}{n^2 + 1} + \dfrac{n + 1}{n^2 + 2} + \cdots + \dfrac{n + 1}{n^2 + n}\notin\mathbb{N}^\star$, $\forall n\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 7., p. 11, THTT 492]
+	Chứng minh: (a) $\dfrac{1 + \dfrac{1}{3} + \dfrac{1}{5} + \cdots + \dfrac{1}{4035}}{1 + \dfrac{1}{2} + \dfrac{1}{3} + \cdots + \dfrac{1}{2018}} > \dfrac{2019}{4036}$. (b) $2n\left(1 + \dfrac{1}{3} + \dfrac{1}{5} + \cdots + \dfrac{1}{2n - 1}\right) > (n + 1)\left(1 + \dfrac{1}{2} + \dfrac{1}{3} + \cdots + \dfrac{1}{n}\right)$, $\forall n\in\mathbb{N}^\star$.
+\end{baitoan}
+
+\subsection{Tính giá trị của biểu thức có điều kiện}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 1, p. 12, THTT 377]
+	Cho 2 đa thức $f(x) = (x - 2)^{2018} + (2x - 3)^{2017} + 2016x$ \& $g(y) = y^{2019} - 2017y^{2018} + 2015y^{2017}$. Giả sử sau khi thu gọn \& khai triển ta tìm được tổng tất cả các hệ số của nó là $s$. Tính $s$, $g(s)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 2, p. 12, Pi 2{\tt/}5 2018]
+	Xét các số thực $x,y,z$ khác $0$, đôi một khác nhau \& thỏa mãn điều kiện $x^2 - xy = y^2 - yz = z^2 - zx$. Tìm tất cả các giá trị có thể của biểu thức $A = \dfrac{x}{y} + \dfrac{z}{y} + \dfrac{y}{x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 3, p. 12]
+	Cho $x + y = 3$. Tính giá trị của biểu thức $A = x^2 + y^2 + 2xy - 4x - 4y + 2018$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 4, p. 13]
+	Cho $a^3 + b^3 + c^3 = 3abc\ne0$. Tính giá trị của biểu thức $A = 2018\left(1 + \dfrac{a}{b}\right)\left(1 + \dfrac{b}{c}\right)\left(1 + \dfrac{c}{a}\right) + 2019$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 5, p. 13, chuyên Toán Phú Thọ 2016--2017]
+	Tính giá trị biểu thức $A = \dfrac{1}{2x + 2xz + 1} + \dfrac{2xy}{y + 2xy + 10} + \dfrac{10z}{10z + yz + 10}$ với $x,y,z\in\mathbb{R}$ thỏa mãn $xyz = 5$ \& $A$ có nghĩa.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 6, p. 13, chuyên Toán Hà Nội 2016--2017]
+	Cho $a,b,c\in\mathbb{R}$ đôi một khác nhau thỏa mãn $a^3 + b^3 + c^3 = 3abc$ \& $abc\ne0$. Tính $A = \dfrac{ab^2}{a^2 + b^2 - c^2} + \dfrac{bc^2}{b^2 + c^2 - a^2} + \dfrac{ca^2}{c^2 + a^2 - b^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 1., p. 14, chuyên ĐHSP Hà Nội 2018--2019]
+	Cho $x_1,x_2,\ldots,x_9\in\mathbb{Z}$ thỏa mãn $\prod_{i=1}^9 (1 + x_i) = \prod_{i=1}^9 (1 - x_i) = x$, i.e., $(1 + x_1)(1 + x_2)\cdots(1 + x_9) = (1 - x_1)(1 - x_2)\cdots(1 - x_9) = x$. Tính $A = x\prod_{i=1}^9 x_i = xx_1x_2\cdots x_9$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 2., p. 14, HSG Phú Thọ 2017--2018]
+	Cho $a^2(b + c) = b^2(c + a) = 2018$ với $a,b,c\in\mathbb{R}$ đôi một khác nhau \& khác $0$. Tính giá trị của biểu thức $c^2(a + b)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 3., p. 15, HSG Hải Dương 2018--2019]
+	Cho $x,y,z > 0$ thỏa mãn $x + y + z + \sqrt{xyz} = 4$. Chứng minh $\sqrt{x(4 - y)(4 - z)} + \sqrt{y(4 - z)(4 - x)} + \sqrt{z(4 - x)(4 - y)} = 8 + \sqrt{xyz}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 4., p. 15, HSG Bắc Giang 2017--2018]
+	Cho $x,y,z\in\mathbb{R}$ thỏa mãn $x + y + z = 7$, $x^2 + y^2 + z^2 = 23$, $xyz = 3$. Tính giá trị biểu thức $H = \dfrac{1}{xy + z - 6} + \dfrac{1}{yz + x - 6} + \dfrac{1}{zx + y - 6}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 5., p. 16, chuyên Toán Hải Dương 2017--2018]
+	Cho 3 số $x,y,z\in\mathbb{R}$ đôi một khác nhau \& thỏa mãn điều kiện $x + y + z = 0$. Tính giá trị của biểu thức $A = \dfrac{2018(x - y)(y - z)(z - x)}{2xy^2 + 2yz^2 + 2zx^2 + 3xyz}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, Ví dụ 1, p. 16]
+	Cho $a,b,c\in\mathbb{N}^\star$ thỏa mãn $2a^a + b^b = 3c^c$. Tính giá trị của biểu thức $A = 2015^{a - b} + 2016^{b - c} + 2017^{c - a} + 2018$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 1., p. 16]
+	Cho các số thực dương $a,b$ thỏa mãn: $a^{2018} + b^{2018} = a^{2019} + b^{2019} = a^{2020} + b^{2020}$. Tính giá trị biểu thức $A = 2018(a^{2021} + b^{2021})$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Lam_An_Tuan_Toan_9_dai_so}, 2., p. 16]
+	Cho các số thực $x,y,z$ khác $0$ thỏa mãn đồng thời $\dfrac{1}{x} + \dfrac{1}{y} + \dfrac{1}{z} = 2$ \& $\dfrac{2}{xy} - \dfrac{1}{z^2} = 4$. Tính giá trị biểu thức $A = (x + 2y + z)^{2018}$.
 \end{baitoan}
 
 %------------------------------------------------------------------------------%
@@ -141,7 +261,7 @@ Also: Phương trình trùng phương, phương trình quy về phương trình 
 \begin{baitoan}
 	Cho các hàm phân thức $A(x) = \frac{P(x)}{Q(x)}$ với $P(x),Q(x)$ thuộc tập hợp đa thức có bậc từ 1 đến 3 \& các đa thức có thể quy về dạng đa thức bậc 2 hoặc bậc 3, e.g., hàm số bậc 4 trùng phương $ax^4 + bx^2 + c = a(x^2)^2 + b(x^2) + c$. Viết chương trình {\sf Pascal, Python, C{\tt/}C++} để: (a) Tìm {\rm ĐKXĐ} của $A$, tập xác định ({\rm TXĐ}) $D_A$ của $A$. (b) Kiểm tra thông qua giá trị của các hệ số của tử thức \& mẫu thức để biết $A$ có thể rút gọn được hay không nhờ các bài toán trên. (c) Nếu $A$ có thể rút gọn, xuất ra biểu thức rút gọn của $A$.
 	\begin{itemize}
-		\item {\sf Input.} Line 1: Số test $t\in\mathbb{N}^\star$. Line chẵn: $P(x)$. Line lẻ: $Q(x)$.
+		\item {\sf Input.} Line 1: Số test $t\in\mathbb{N}^\star$. Line chẵn: $P(x)$. Line lẻ $\ge3$: $Q(x)$.
 		\item {\sf Output.} Xuất ra {\rm ĐKXĐ, TXĐ} $D_A$ của $A$. Thông báo $A$ có thể rút gọn được hay không, e.g., {\tt A can be simplified} or {\tt A cannot be simplified}. Nếu được, xuất ra biểu thức rút gọn của $A$.
 		\item {\sf Sample.}
 		\begin{table}[H]
@@ -150,7 +270,7 @@ Also: Phương trình trùng phương, phương trình quy về phương trình 
 				\hline
 				\verb|simplify_rational_expression.inp| & \verb|simplify_rational_expression.out| \\
 				\hline
-				1 & \verb|x != 3, x != 1/3, D_A = R\{1,1/3}| \\
+				1 & \verb|x != 3 & x != 1/3, D_A = R\{1,1/3}| \\
 				\verb|2x^3 - 7x^2 - 12x + 45| & {\tt A can be simplified} \\
 				\verb|3x^3 - 19x^2 + 33x - 9| & \verb|(2x + 5)/(3x - 1)| \\
 				\hline
