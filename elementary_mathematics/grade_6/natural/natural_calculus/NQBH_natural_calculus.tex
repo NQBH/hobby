@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\title{Problem: Calculus on $\mathbb{N}$\\Bài Tập: Các Phép Tính Trên Tập Hợp Các Số Tự Nhiên}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2.5cm}
+
+%------------------------------------------------------------------------------%
+
+\section{$\pm,\cdot,:$ on $\mathbb{N}$}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 3, p. 8]
+	1 học sinh khi nhân 1 số với $31$ đã đặt các tích riêng thẳng hàng như trong phép cộng nên tích đã giảm đi $540$ đơn vị so với tích đúng. Tìm tích đúng.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 4, p. 8]
+	Cho 2 số không chia hết cho $3$, khi chia cho $3$, khi chia cho $3$ được các số dư khác nhau. Chứng minh tổng của 2 số đó chia hết cho $3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 14., p. 9]
+	Tính hợp lý: (a) $38 + 41 + 117 + 159 + 62$. (b) $73 + 86 + 978 + 914 + 3022$. (c) $341\cdot67 + 341\cdot16 + 659\cdot83$. (d) $42\cdot53 + 47\cdot156 - 47\cdot114$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 15., p. 9]
+	Tính giá trị của biểu thức: (a) $A = (100 - 1)\cdot(100 - 2)\cdots(100 - n)$ với $n\in\mathbb{N}^\star$ \& tích trên có đúng $100$ thừa số. (b) $B = 13a + 19b + 4a - 2b$ với $a + b = 100$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 16., p. 9]
+	Không tính giá trị cụ thể, so sánh giá trị 2 biểu thức: (a) $A = 199\cdot201$ \& $B = 200\cdot200$. (b) $C = 35'\cdot53 - 18$ \& $D = 35 + 53\cdot34$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 17., p. 9]
+	Tính hợp lý: (a) $(44\cdot52\cdot60):(11\cdot13\cdot15)$. (b) $123\cdot456456 - 456\cdot123123$. (c) $(98\cdot7676 - 9898\cdot76):(2021\cdot2022\cdot2023\cdots2030)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 18., p. 9]
+	Tìm giá trị nhỏ nhất của biểu thức: $A = 2021 - 1021:(999 - x)$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 20., p. 9]
+	Tìm số hạng thứ 5, thứ $n$ của dãy số: (a) $2,3,7,25,\ldots$. (b) $8,30,72,140,\ldots$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 21., p. 9]
+	Tìm $x$: (a) $(x + 74) - 318 = 200$. (b) $3636:(12x - 91) = 36$. (c) $(x:23 + 45)\cdot67 = 8911$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 22., p. 9]
+	1 nong tằm là $5$ nong kén. 1 nong kén là $9$ nén tơ. Hỏi muốn được $540$ nén tơ thì phải chăn bao nhiêu nong tằm?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 23., p. 9]
+	2 số tự nhiên $a,b$ chia hết cho $m$ có cùng số dư, $a\ge b$. Chứng tỏ $a - b$ chia hết cho $m$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 24., p. 9]
+	Trong 1 phép chia có số bị chia là $155$, số dư là $12$. Tìm số chia \& thương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 25., p. 9]
+	Viết tập hợp $A$ các số tự nhiên $x$ biết lấy $x$ chia cho $12$ ta được thương bằng số dư.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 26., p. 10]
+	Chia $129$ cho 1 số ta được số dư là $10$. Chia $61$ cho số đó ta cũng được số dư là $10$. Tìm số chia.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 27., p. 10]
+	Cho 3 chữ số $a,b,c$ khác nhau \& khác $0$. Với cùng cả 3 chữ số này có thể lập được bao nhiêu số có 3 chữ số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 28., p. 10]
+	Cho 4 chữ số khác nhau \& khác $0$. (a) Với cùng cả 4 chữ số này có thể lập được bao nhiêu số có 4 chữ số? (b) Có thể lập được bao nhiêu số có 2 chữ số khác nhau trong 4 chữ số đã cho?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 29., p. 10]
+	Cho 4 chữ số khác nhau trong đó có 1 chữ số $0$. Với cùng cả 4 chữ số này có thể lập được bao nhiêu số có 4 chữ số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 30., p. 10]
+	Anh Bách đi mua bánh kẹo tại 1 siêu thị, thanh toán bằng 
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Exponentiation on $\mathbb{N}$ -- Lũy Thừa với Số Mũ Tự Nhiên}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
