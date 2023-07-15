@@ -32,10 +32,74 @@ void sort_array_int(int a[], int n) {
 			}
 }
 
+bool insert_array_int(int a[], int& n, int x, int k) {
+	if (k < 0 || k > n)
+		return false;
+	for (int i = n - 1; i >= k; --i)
+		a[i+1] = a[i];
+	a[k] = x;
+	++n;
+	return true;
+}
+
+void remove_array_int_nonordered(int a[], int& n, int k) {
+	if (k < 0 || k > n)
+		return;
+	a[k] = a[n-1];
+	--n;
+}
+
+void remove_array_int_ordered(int a[], int& n, int k) {
+	if (k < 0 || k > n)
+		return;
+	for (int i = k; i < n - 1; ++i)
+		a[i] = a[i+1];
+	--n;
+}
+
+void split_even_odd_reduced(int a[], int n, int even[], int& k, int odd[], int& h) {
+	k = h = 0;
+	for (int i = 0; i < n; ++i)
+		if (a[i] % 2 == 0)
+			even[k++] = a[i];
+		else
+			odd[h++] = a[i];
+}
+
+void split_even_odd(int a[], int n, int even[], int& k, int odd[], int& h) {
+	k = h = 0;
+	for (int i = 0; i < n; ++i)
+		if (a[i] % 2 == 0) {
+			even[k] = a[i];
+			++k;
+		}			
+		else {
+			odd[h] = a[i];
+			++h;
+		}
+}
+
+void split_half(int a[], int n, int b[], int& k, int c[], int& h) {
+	int i;
+	k = h = 0;
+	for (i = 0; i < n/2; ++i)
+		b[k++] = a[i];
+	for (i = n/2; i < n; ++i)
+		c[h++] = a[i];
+}
+
 int main() {
-	int a[N], n;
+	int a[N], n, x, k;
 	array_int_input(a, n);
 	array_int_output(a, n);
 	sort_array_int(a, n);
+	array_int_output(a, n);
+	scanf("%d", &x);
+	scanf("%d", &k);
+	insert_array_int(a, n, x, k);
+	array_int_output(a, n);
+	remove_array_int_nonordered(a, n, k);
+	array_int_output(a, n);
+	remove_array_int_ordered(a, n, k);
 	array_int_output(a, n);
 }
