@@ -4,9 +4,15 @@ using namespace std;
 
 typedef vector<double> doubles;
 typedef vector<doubles> double2D;
-
+// Initialized square matrix/nxn 2D array
 void init(double2D &a, int n) {
 	a.resize(n);
+	for (int i = 0; i < int(a.size()); ++i)
+		a[i].resize(n);
+}
+// Initialized nonsquare matrix/mxn 2D array
+void init(double2D &a, int m, int n) {
+	a.resize(m);
 	for (int i = 0; i < int(a.size()); ++i)
 		a[i].resize(n);
 }
