@@ -5,6 +5,8 @@
 #define num_col 7 // const int num_col = 7;
 #define max_row 20 // const int max_row = 5;
 #define max_col 20 // const int max_col = 7;
+#define M 20
+#define N 20
 
 int size_input(int max_val) {
 	int val;
@@ -38,6 +40,20 @@ void array_2D_output(int a[max_row][max_col], int m, int n) {
 		printf("\n");
 	}
 }
+// Copy row k -> row h
+void copy_row(int a[M][N], int m, int n, int k, int h) {
+	if (k < 1 || k >= m || h < 1 || h >= m)
+		return;
+	for (int i = 0; i < n; ++i)
+		a[h][i] = a[k][i];
+}
+// Copy column k -> column h
+void copy_column(int a[M][N], int m, int n, int k, int h) {
+	if (k < 1 || k >= m || h < 1 || h >= m)
+		return;
+	for (int i = 0; i < m; ++i)
+		a[i][h] = a[i][k];
+}
 
 int main() {
 	int a[num_row][num_col], i, j;
@@ -52,7 +68,7 @@ int main() {
 	scanf("%d", &nCol);
 	if (mRow < 1 || mRow > max_row || nCol < 1 || nCol > max_col) {
 		printf("Invalid size!\n");
-		return -1;
+		return 1;
 	}
 	// Input 2D array
 	for (i = 0; i < mRow; ++i)
