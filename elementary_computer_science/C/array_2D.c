@@ -1,9 +1,43 @@
 #include <stdio.h>
 #include <time.h>
+#include <cstdlib>
 #define num_row 5 // const int num_row = 5;
 #define num_col 7 // const int num_col = 7;
 #define max_row 20 // const int max_row = 5;
 #define max_col 20 // const int max_col = 7;
+
+int size_input(int max_val) {
+	int val;
+	while (1) {
+		scanf("%d", &val);
+		if (val < 1 || val > max_val)
+			printf("Invalid value!\n");
+		else
+			break;
+	}
+	return val;
+}
+
+void array_2D_input(int a[max_row][max_col], int& m, int& n) {
+	int i, j;
+	printf("Number of rows (<= %d): ", max_row);
+	m = size_input(max_row);
+	printf("Number of columns (<= %d): ", max_col);
+	n = size_input(max_col);
+	printf("Input elements: \n");
+	for (i = 0; i < m; ++i)
+		for (j = 0; j < n; ++j)
+			scanf("%d", &a[i][j]);
+}
+
+void array_2D_output(int a[max_row][max_col], int m, int n) {
+	int i, j;
+	for (i = 0; i < m; ++i) {
+		for (j = 0; j < n; ++j)
+			printf("%d ", a[i][j]);
+		printf("\n");
+	}
+}
 
 int main() {
 	int a[num_row][num_col], i, j;
@@ -11,14 +45,14 @@ int main() {
 	for (i = 0; i < num_row; ++i)
 		for (j = 0; j < num_col; ++j)
 			a[i][j] = rand() % 100;
-	int b[max_row][max_col], mRow, nCol;
+	int mRow, nCol;
 	printf("mRow = ");
 	scanf("%d", &mRow);
 	printf("nCol = ");
 	scanf("%d", &nCol);
 	if (mRow < 1 || mRow > max_row || nCol < 1 || nCol > max_col) {
 		printf("Invalid size!\n");
-		return;
+		return -1;
 	}
 	// Input 2D array
 	for (i = 0; i < mRow; ++i)
@@ -30,4 +64,10 @@ int main() {
 			printf("%d ", a[i][j]);
 		printf("\n");
 	}
+	// 2D array input & output functions
+	int b[max_row][max_col], m, n;
+	array_2D_input(b, m, n);
+	printf("Array elements:\n");
+	array_2D_output(b, m, n);
 }
+// g++ array_2D.c -o array_2D
