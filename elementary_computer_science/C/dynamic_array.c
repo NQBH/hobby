@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 int* array_input(int* n) {
-	int *a = NULL;
+	int *a = NULL; // a will keep address of beginning of array
 	int i, m = 0;
 	while (1) {
 		printf("Number of elements will be used: \n");
