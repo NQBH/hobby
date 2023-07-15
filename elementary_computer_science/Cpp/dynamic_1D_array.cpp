@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int* array_input(int& n) {
@@ -30,6 +31,30 @@ void array_output(int a[], int n) {
 	cout << ".\n";
 }
 
+void array_input_auto(vector<auto> &a) {
+	int n = 0;
+	while (1) {
+		cout << "n element(s), input n = ";
+		cin >> n;
+		if (n < 0)
+			cout << "Error, try again!\n";
+		else
+			break;
+	}
+	a.resize(n);
+	for (int i = 0; i < n; ++i) {
+		cout << "a[" << i << "] = ";
+		cin >> a[i];
+	}
+}
+
+void array_output_auto(vector<auto> &a) {
+	cout << "a[]: ";
+	for (int i = 0; i < a.size(); ++i)
+		cout << " " << a[i];
+	cout << ".\n";
+}
+
 int main() {
 	int n;
 	int* b = array_input(n);
@@ -37,4 +62,16 @@ int main() {
 		array_output(b, n);
 		delete[] b; // Free memory
 	}
+	vector<double> a;
+	array_input_auto(a);
+	array_output_auto(a);
 }
+/*
+nqbh@nqbh-msi:~/hobby/elementary_computer_science/Cpp$ g++ -std=c++20 -Wall -O2 dynamic_1D_array.cpp -o dynamic_1D_array
+dynamic_1D_array.cpp: In instantiation of ‘void array_output_auto(std::vector<auto:11>&) [with auto:12 = double]’:
+dynamic_1D_array.cpp:67:19:   required from here
+dynamic_1D_array.cpp:53:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<double>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+   53 |         for (int i = 0; i < a.size(); ++i)
+      |                         ~~^~~~~~~~~~
+nqbh@nqbh-msi:~/hobby/elementary_computer_science/Cpp$ ./dynamic_1D_array
+*/
