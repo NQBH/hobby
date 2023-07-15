@@ -103,6 +103,31 @@ void remove_row_ordered(int a[][N], int& m, int n, int k) {
 	--m;
 }
 
+void remove_row_ordered_direct(int a[][N], int& m, int n, int k) {
+	int i, j;
+	if (k < 0 || k >= m) return;
+	for (i = k; i < m - 1; ++i)
+		for (j = 0; i < n; ++j)
+			a[i][j] = a[i+1][j];
+	--m;
+}
+
+void remove_row_ordered_indirect(int a[][N], int& m, int n, int k) {
+	int i, j;
+	if (k < 0 || k >= m) return;
+	for (i = k; i < m - 1; ++i)
+		copy_row(a, m, n, i + 1, i);
+	--m;
+}
+
+void remove_row_ordered_swap(int a[][N], int& m, int n, int k) {
+	int i;
+	if (k < 0 || k >= m) return;
+	for (i = k; i < m - 1; ++i)
+		swap_row(a, m, n, i, i + 1);
+	--m;
+}
+
 int main() {
 	int a[num_row][num_col], i, j;
 	srand((unsigned)time(NULL));
