@@ -20,7 +20,14 @@ int main() {
 		printf("Invalid size!\n");
 		return;
 	}
+	// Input 2D array
 	for (i = 0; i < mRow; ++i)
 		for (j = 0; j < nCol; ++j)
 			scanf("%d", &a[i][j]);
+	// Output 2D array
+	for (i = 0; i < mRow; ++i) {
+		for (j = 0; j < nCol; ++j)
+			printf("%d ", a[i][j]);
+		printf("\n");
+	}
 }
