@@ -50,21 +50,36 @@ void array_input_auto(vector<auto> &a) {
 
 void array_output_auto(vector<auto> &a) {
 	cout << "a[]: ";
-	for (int i = 0; i < a.size(); ++i)
+	for (int i = 0; i < int(a.size()); ++i)
+		cout << " " << a[i];
+	cout << ".\n";
+}
+
+void array_double_input(vector<double> &a) {
+	double x;
+	while (cin >> x) // Press Crl X when user wants to stop
+		a.push_back(x);
+}
+
+void array_double_output(const vector<double> &a) {
+	cout << "a[]: ";
+	for (int i = 0; i < int(a.size()); ++i)
 		cout << " " << a[i];
 	cout << ".\n";
 }
 
 int main() {
 	int n;
-	int* b = array_input(n);
+	int* a = array_input(n);
 	if (n > 0) {
-		array_output(b, n);
-		delete[] b; // Free memory
+		array_output(a, n);
+		delete[] a; // Free memory
 	}
-	vector<double> a;
-	array_input_auto(a);
-	array_output_auto(a);
+	vector<double> b, c;
+	array_input_auto(b);
+	array_output_auto(b);
+	array_double_input(c);
+	array_double_output(c);
 }
 /*
 nqbh@nqbh-msi:~/hobby/elementary_computer_science/Cpp$ g++ -std=c++20 -Wall -O2 dynamic_1D_array.cpp -o dynamic_1D_array
