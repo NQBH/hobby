@@ -88,6 +88,30 @@ void split_half(int a[], int n, int b[], int& k, int c[], int& h) {
 		c[h++] = a[i];
 }
 
+void consecutive_merge_int_array(int a[], int& n, int b[], int k, int c[], int h) {
+	int i;
+	n = 0;
+	for (i = 0; i < k; ++i)
+		a[n++] = b[i];
+	for (i = 0; i < h; ++i)
+		a[n++] = c[i];
+}
+
+void alternating_merge_int_array(int a[], int& n, int b[], int k, int c[], int h) {
+	int i, j;
+	i = j = n = 0;
+	while (i < k && j < h) {
+		if (n % 2 == 0)
+			a[n++] = b[i++];
+		else
+			a[n++] = c[j++];
+	}
+	while (i < k)
+		a[n++] = b[i++];
+	while (j < h)
+		a[n++] = c[j++];
+}
+
 int main() {
 	int a[N], n, x, k;
 	array_int_input(a, n);
