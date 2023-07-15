@@ -54,6 +54,27 @@ void copy_column(int a[M][N], int m, int n, int k, int h) {
 	for (int i = 0; i < m; ++i)
 		a[i][h] = a[i][k];
 }
+// Swap row k & row h
+void swap_row(int a[M][N], int m, int n, int k, int h) {
+	int i, temp;
+	if (k == h) return;
+	for (i = 0; i < n; ++i) {
+		temp = a[k][i];
+		a[k][i] = a[h][i];
+		a[h][i] = temp;
+	}
+}
+
+// Swap column k & column h
+void swap_column(int a[M][N], int m, int n, int k, int h) {
+	int i, temp;
+	if (k == h) return;
+	for (i = 0; i < m; ++i) {
+		temp = a[i][k];
+		a[i][k] = a[i][h];
+		a[i][h] = temp;
+	}
+}
 
 int main() {
 	int a[num_row][num_col], i, j;
