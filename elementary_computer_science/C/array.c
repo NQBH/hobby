@@ -22,8 +22,20 @@ void array_int_output(int a[N], int n) {
 	printf(".\n");
 }
 
+void sort_array_int(int a[], int n) {
+	for (int i = 0; i < n - 1; ++i)
+		for (int j = i + 1; j < n; ++j)
+			if (a[i] > a[j]) {
+				int temp = a[i];
+				a[i] = a[j];
+				a[j] = temp;
+			}
+}
+
 int main() {
-	int n = 10, a[N];
+	int a[N], n;
 	array_int_input(a, n);
+	array_int_output(a, n);
+	sort_array_int(a, n);
 	array_int_output(a, n);
 }
