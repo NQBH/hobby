@@ -1,5 +1,6 @@
 #include <stdio.h>
 #define N 50 // const int N = 50;
+
 void array_int_input(int a[N], int& n) {
 	while (1) {
 		printf("Number of elements will be used (<= %d): ", N);
