@@ -55,7 +55,7 @@ void copy_column(int a[M][N], int m, int n, int k, int h) {
 		a[i][h] = a[i][k];
 }
 // Swap row k & row h
-void swap_row(int a[M][N], int m, int n, int k, int h) {
+void swap_row(int a[][N], int m, int n, int k, int h) {
 	int i, temp;
 	if (k == h) return;
 	for (i = 0; i < n; ++i) {
@@ -64,9 +64,8 @@ void swap_row(int a[M][N], int m, int n, int k, int h) {
 		a[h][i] = temp;
 	}
 }
-
 // Swap column k & column h
-void swap_column(int a[M][N], int m, int n, int k, int h) {
+void swap_column(int a[][N], int m, int n, int k, int h) {
 	int i, temp;
 	if (k == h) return;
 	for (i = 0; i < m; ++i) {
@@ -74,6 +73,34 @@ void swap_column(int a[M][N], int m, int n, int k, int h) {
 		a[i][k] = a[i][h];
 		a[i][h] = temp;
 	}
+}
+// Remove row without preserving ordering
+void remove_row_nonordered(int a[][N], int& m, int n, int k) {
+	if (k < 0 || k >= m) return;
+	if (k != m - 1) {
+		copy_row(a, m, n, m - 1, k);
+		--m;
+	}
+}
+// Remove row without preserving ordering
+void remove_row_ordered(int a[][N], int& m, int n, int k) {
+	int i, j, t, b[M][N];
+	if (k < 0 || k >= m) return;
+	if (k == m - 1) {
+		--m;
+		return;
+	}
+	t = 0;
+	for (i = 0; i < m; ++i) {
+		if (i == k) continue;
+		for (j = 0; j < n; ++j)
+			b[t][j] = a[i][j];
+		++t;
+	}
+	for (i = 0; i < t; ++i)
+		for (j = 0; j < n; ++j)
+			a[i][j] = b[i][j];
+	--m;
 }
 
 int main() {
