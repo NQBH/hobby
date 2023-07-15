@@ -78,7 +78,9 @@ int main() {
 	vector<double> b, c;
 	array_input_auto(b);
 	array_output_auto(b);
+	cout << "Input c[], press Ctrl X then Enter to stop:\n";
 	array_double_input(c);
+	cout << "Element(s) in the array: ";
 	array_double_output(c);
 }
 /*
