@@ -1,7 +1,13 @@
 program triangle;
-var a, b, c: real;
+uses crt, math;
+var a, b, c, xa, xb, xc, ya, yb, yc: real;
 begin
-	readln(a, b, c);
+	// Use 1 of 2 methods: input directly a, b, c or input coordinates of vertices
+	// readln(a, b, c);
+	readln(xa, ya, xb, yb, xc, yc);
+	a := sqrt((xb - xc)*(xb - xc) + (yb - yc)*(yb - yc));
+	b := sqrt((xc - xa)*(xc - xa) + (yc - ya)*(yc - ya));
+	c := sqrt((xa - xb)*(xa - xb) + (ya - yb)*(ya - yb));
 	if (a + b > c) and (b + c > a) and (c + a > b) and (a > 0) and (b > 0) and (c > 0) then
 		begin
 			writeln(a, b, c, ' are 3 sides of a triangle');
