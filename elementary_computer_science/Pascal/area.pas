@@ -3,6 +3,7 @@ var r, a, area_circle, area_square: real;
 begin
 	write('Radius R = ');
 	readln(R);
+	{pi := 4*arctan(1)}
 	area_circle := pi*r*r;
 	writeln('Area of circle = ', area_circle);
 
