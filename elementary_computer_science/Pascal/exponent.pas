@@ -1,5 +1,5 @@
 program exponent;
-var x, y, z: real;
+var a, x, y, z: real;
 begin
 	readln(x, y);
 	if x >= 0 then
@@ -9,4 +9,6 @@ begin
 		end
 	else
 		writeln(#7, 'Cannot compute since x is negative!');
+	readln(a);
+	writeln(exp(a + sin(2*x) - x));
 end.
