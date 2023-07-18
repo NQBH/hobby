@@ -12,7 +12,7 @@ begin
 			// Group into 4 digits
 			if (i + 1) mod 4 = 0 then write(' ');
 			n := n - m*digit;
-			m := m div 2;
+			m := m div 2; // m := m shr 1
 		end;
 	writeln;
 end.
