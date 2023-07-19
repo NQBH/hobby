@@ -49,11 +49,10 @@
 	A personal practice of drawing figures in \LaTeX\ by using TikZ package.
 \end{abstract}
 \tableofcontents
-\newpage
 
 %------------------------------------------------------------------------------%
 
-\section{Hệ Trục Tọa Độ}
+\section{Coordinate System -- Hệ Trục Tọa Độ}
 See \cite[p. 9]{Quy2022}.
 
 \begin{tikzpicture}[>=stealth,scale=.75]
@@ -75,6 +74,7 @@ See \cite[p. 9]{Quy2022}.
 \begin{tikzpicture}
 	\draw[step=1,gray,very thin](-2,-1) grid (3,2);
 \end{tikzpicture}
+
 \begin{tikzpicture}
 	\draw[step=.5,blue,thin](-2,-1) grid (3,2);
 \end{tikzpicture}
@@ -91,32 +91,68 @@ See \cite[p. 9]{Quy2022}.
 	\path
 	(1,2) coordinate[label=above:A] (A)
 	(2,5) coordinate[label=right:B] (B)
-	(4,2) coordinate[label=left:C] (C);
+	(4,2) coordinate[label=left:C] (C)
+	%\coordinate (H) at ($(A)+(B)$)
+	%\coordinate[label=above:D] (D) at ($(A)!.5!(B)$)
+	%\coordinate (E) at ($(A)!1!30:(B)$)
+	%\coordinate (F) at ($(A)!.5!30:(B)$)
+	%\coordinate (G) at (intersection of A--B and C--D)
+	;
 	\def\a{3}
 	\pgfmathsetmacro\b{2*sqrt(2)}
 	\draw (0:0) circle (\a);
 	\draw (0:0) circle (c);
-%	\path
-%	\coordinate (H) at ($(A)+(B)$);
-%	\coordinate[label=above:D] (D) at ($(A)!.5!(B)$);
-%	\coordinate (E) at ($(A)!1!30:(B)$);
-%	\coordinate (F) at ($(A)!.5!30:(B)$);
-%	\coordinate (G) at (intersection of A--B and C--D);
 \end{tikzpicture}
+
+\section{Triangle -- Tam Giác}
+
 \begin{tikzpicture}[scale=.75]
 	\path
 	(1,3) coordinate (A)
 	(0,0) coordinate (B)
 	(5,0) coordinate (C)
 	($(B)!(A)!(C)$) coordinate (H)
-	($(B)!.5!(C)$) coordinate (M);
-	\draw (A)--(B)--(C)--cycle (A)--(H) (A)--(M);
-	\foreach \x/\g in {A/90,B/180,C/0,H/-90,M/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+	($(A)!(B)!(C)$) coordinate (D)
+	(intersection of A--H and B--D) coordinate (I)
+	($(B)!.5!(C)$) coordinate (M) %barycentric cs:B=1.C=1
+	(barycentric cs:A=1,B=1,C=1) coordinate (G);
+	\draw (A)--(B)--(C)--cycle (A)--(H) (A)--(M) (B)--(D)
+	;
+	\foreach \x/\g in {A/90,B/180,C/0,H/-90,D/0,I/135,M/-90,G/0} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
 \end{tikzpicture}
-
-%------------------------------------------------------------------------------%
-
-\section{Vẽ Điểm}
+\begin{tikzpicture}
+	\path
+	(1,3) coordinate (A)
+	(0,0) coordinate (B)
+	(5,0) coordinate (C)
+	(barycentric cs:A=1,B=1,C=1) coordinate (G)
+	(barycentric cs:A=2,B=1) coordinate (M)
+	(barycentric cs:A=3,C=2) coordinate (N)
+	;
+	\draw (A)--(B)--(C)--cycle (A)--(G)--(B) (G)--(C);
+	\foreach \x/\g in {A/90,B/180,C/0,M/180,N/0,G/30} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\footnotesize]
+	\clip(-1,1) rectangle (2.5,-1);
+	\node[circle,fill=gray!20,draw] (A) at (0,0){A};
+	\node[rectangle,draw] (B) at (2,0){B};
+	\draw[->] (A)--(B);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0,0) node[circle,fill=gray!20,draw] (A) {A}
+	(4,0) node[rectangle,draw] (B) {B}
+	;
+	\draw[->] (A)--(B);
+\end{tikzpicture}
+\begin{tikzpicture}
+	%\path (0,0) node (tree) {\includegraphics[scale=.25]{a}};
+	%\draw (tree.north) -- (tree.south) --++ (4,0) -- cycle;
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw(3,-1) circle (1pt);
+	\draw(60:2) circle (1pt);
+\end{tikzpicture}
 
 \begin{tikzpicture}[>=stealth,scale=.75]
 	\draw[step=1,gray,very thin](-3,-3) grid (3,3);
@@ -131,6 +167,136 @@ See \cite[p. 9]{Quy2022}.
 	\draw[->](-60:4mm) arc(-60:0:4mm);
 	\path(-30:5mm) node[below right]{$-60^\circ$};
 \end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0:0) coordinate (A)
+	(2,1) coordinate (B)
+	(3,2) coordinate (C)
+	(4,1) coordinate (D)
+	;
+	\draw (A)--(B)--(C)--(D);
+	\draw (A)--(B)--++(1,2)--++(1,-1);
+	\foreach \x/\g in {A/180,B/120,C/90,D/0} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};	
+\end{tikzpicture}
+\begin{tikzpicture}
+	\def\a{2}
+	\draw (0:0)--++(0:\a)--++(45:\a)--++(135:\a)--++(180:\a);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw(0,0) coordinate (A) -- (2,0) coordinate (B) -- ([turn]120:2) coordinate (C)--cycle;
+	\foreach \x/\g in {A/180,B/0,C/90} \draw[fill=black] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\def\a{1}
+	\draw[thick](0:0) --++ (72:\a) -- ([turn]72:\a) -- ([turn]72:\a) -- ([turn]72:\a) -- cycle;
+	\draw(0:0) --++ (60:\a) -- ([turn]60:\a) -- ([turn]60:\a) -- ([turn]60:\a) -- ([turn]60:\a) -- cycle;
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw(0,0) rectangle (4,2);
+\end{tikzpicture}
+
+\section{Curve -- Đường Cong}
+
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	(30:\r) coordinate (A)
+	(120:\r) coordinate (B)
+	($(A)!.5!(B)$) coordinate (I)
+	($(O)!.25!(A)$) coordinate (M)
+	;
+	\draw[thick] (O) circle (\r);
+	\draw[dashed] let\p1=($(I)-(A)$), \p2=($(M)-(A)$) in (I) circle ({veclen(\x1,\y1)}) (M) circle({veclen(\x2,\y2)});
+	\draw(O)--(A)--(B);
+	\foreach \x/\g in {O/-90,A/30,B/120,I/90,M/-45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=.75]
+	\draw(0:0) ellipse ({3} and {1}) (0:0) ellipse ({1} and {3});
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw(0,0) arc (180:90:2);
+	\draw(0,0) arc (180:0:{2} and {1});
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0,0) coordinate (A)
+	(4,3) coordinate (B)
+	;
+	\draw (A)to[bend left=30] (B);
+	\draw[dashed] (A)to[bend right=30] (B);
+	\foreach \x/\g in {A/-150,B/60} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\path (0,0) coordinate (A) (4,3) coordinate (B);
+	\draw(A)to[out=90,in=30](B);
+	\draw[dashed](A)to[out=0,in=90](B);
+	\foreach \x/\g in {A/-150,B/60} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path (0,0) coordinate (A) (2,3) coordinate (B);
+	\draw(A) parabola (B);
+	\draw[dashed](A) parabola[bend at end] (B);
+	\foreach \x/\g in {A/-150,B/60} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path (0,0) coordinate (A) (3,2) coordinate (B) (4,1) coordinate (C);
+	\draw(A) parabola bend (B) (C);
+	\foreach \x/\g in {A/-150,B/60,C/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\draw[smooth] plot coordinates{(0,0) (1,0) (2,1) (3,2) (4,1) (5,3)};
+	\draw[dashed] plot coordinates{(0,0) (1,0) (2,1) (3,2) (4,1) (5,3)};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw[thick] (0,0) .. controls (0,2) and (4,2) .. (5,1);
+	\draw(0,0) .. controls (0,4) and (4,2) .. (5,1);
+	\draw[dashed](0,0) .. controls (0,-2) and (4,2) .. (5,1);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path(0,0) coordinate (A) (0:5) coordinate (B);
+	\draw[thick](A) .. controls +(90:2) and +(120:2) .. (B);
+	\draw[-stealth] (A)--++(90:2);
+	\draw[-stealth] (B)--++(120:2);
+\end{tikzpicture}
+
+%------------------------------------------------------------------------------%
+
+\section{Function Graph -- Đồ Thị Hàm Số}
+Graph of function $x^3 - 3x + 1$:
+
+\begin{tikzpicture}
+	\draw[smooth] plot[domain=-2:2] (\x,{(\x)^3-3*\x+1});
+\end{tikzpicture}
+
+%------------------------------------------------------------------------------%
+
+\section{Tangent of Curve -- Tiếp Tuyến của Đường Cong}
+
+\begin{tikzpicture}
+	\draw[thick] (0,0)..controls + (0:1) and +(60:2)..(1,2) coordinate[pos=.5](B);
+	\draw(0,0) to[out=90,in=180] coordinate[pos=.5](C) (3,4);
+	\foreach \x/\g in {B/0,C/135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0,0) arc (180:60:2) coordinate (A)
+	(0,0) arc (180:150:{3} and {1})  coordinate (B)
+	(0,0) arc (180:30:{3} and {1})  coordinate (C)
+	;
+	\draw
+	(0,0) arc (180:0:2)
+	(0,0) arc (180:0:{3} and {1})
+	;
+	\foreach \x/\g in {A/90,B/120,C/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
 
 %------------------------------------------------------------------------------%
 
