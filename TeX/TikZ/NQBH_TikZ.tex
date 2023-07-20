@@ -329,6 +329,59 @@ Graph of function $x^3 - 3x + 1$:
 	(intersection-2) coordinate (J);
 	\foreach \x/\g in {A/90,B/0,P/45,I/45,J/45,M/90,N/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
 \end{tikzpicture}
+\begin{tikzpicture}[scale=.75]
+	\draw (0,0) circle (1.5);
+	\draw[dashed] (2,0) circle (2);
+\end{tikzpicture}
+\begin{tikzpicture}[scale=.75]
+	\draw (0,0) circle (1.5);
+	\clip (0,0) circle (1.5);
+	\draw[dashed] (2,0) circle (2);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw (0,0) circle (1.5);
+	\begin{scope}
+		\clip (0,0) circle (1.5);
+		\draw[thick] (2,0) circle (2);
+	\end{scope}
+	\draw (1,0)--(4,0);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\draw (0,0) coordinate (B) --(4,0) coordinate (C) --(1,3) coordinate (A) --cycle;
+	\begin{scope}
+		\clip (B)--(A)--(C);
+		\draw[fill=gray] (A) circle (.25);
+	\end{scope}
+\end{tikzpicture}
+%\begin{tikzpicture}
+%	\draw (-3,0)--(3,0);
+%	\path (0,0) node[above] {\includegraphics[scale=.3]{imagefile}};
+%\end{tikzpicture}
+\begin{tikzpicture}
+	\draw (-3,0)--(3,0);
+	\path (0,1.5) node{
+	\begin{tikzpicture}
+		\draw[fill=gray] (0,0) circle (1);
+	\end{tikzpicture}};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\tikzset{dientro/.pic={\draw(-.4,-.1) rectangle (.4,.1);}}
+	\draw
+	(0,0) pic[local bounding box=R1] {dientro}
+	(3,0) pic[local bounding box=R2] {dientro}
+	(1.5,3) pic[local bounding box=R3] {dientro};
+	\draw (1.75,0)--(R2)--(4,0)--(4,3)--(R3)--(-1,3)--(-1,0)--(R1)--(1.25,0);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\tikzset{dientro/.pic={\draw(-.4,-.1) rectangle (.4,.1);}}
+	\draw
+	(0,0) pic[local bounding box=R1] {dientro}
+	(3,0) pic[local bounding box=R2] {dientro}
+	(1.5,3) pic[local bounding box=R3] {dientro};
+	\draw (1.75,0)--(R2)--(4,0) |-(R3) -|(-1,0) --(R1)--(1.25,0);
+\end{tikzpicture}
 
 %------------------------------------------------------------------------------%
 
