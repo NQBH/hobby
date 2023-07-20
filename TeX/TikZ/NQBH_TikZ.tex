@@ -6,7 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
-\usetikzlibrary{calc,angles}
+\usetikzlibrary{angles,calc,intersections}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -53,7 +53,7 @@
 %------------------------------------------------------------------------------%
 
 \section{Coordinate System -- Hệ Trục Tọa Độ}
-See \cite[p. 9]{Quy2022}.
+See \cite{Quy2022}.
 
 \begin{tikzpicture}[>=stealth,scale=.75]
 	\draw[->](-3,0)--(3,0) node[above]{$x$};
@@ -285,13 +285,49 @@ Graph of function $x^3 - 3x + 1$:
 	\path
 	(0,0) arc (180:60:2) coordinate (A)
 	(0,0) arc (180:150:{3} and {1})  coordinate (B)
-	(0,0) arc (180:30:{3} and {1})  coordinate (C)
-	;
+	(0,0) arc (180:30:{3} and {1})  coordinate (C)	;
 	\draw
 	(0,0) arc (180:0:2)
-	(0,0) arc (180:0:{3} and {1})
-	;
+	(0,0) arc (180:0:{3} and {1});
 	\foreach \x/\g in {A/90,B/120,C/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[line join = round,line cap=round,font=\scriptsize]
+	\def\a{3}
+	\def\b{1}
+	\def\h{4}
+	\pgfmathsetmacro\g{asin(\b/\h)}
+	\pgfmathsetmacro\xo{\a *cos(\g)}
+	\pgfmathsetmacro\yo{\b *sin(\g)}
+	\draw[dashed]
+	(\xo,\yo) arc (\g:180-\g:{\a} and {\b}) (180:\a) node[left]{$B$} --(0:\a) node[right]{$A$} (90:\h) node[above]{$S$} --(0:0) node[below left]{$O$} --(\xo,\yo) node[above right]{$M$};
+	\draw (90:\h)--(-\xo,\yo) arc (180-\g:360+\g:{\a} and {\b})--cycle;
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0:0) arc (180:60:{3} and {1}) coordinate (A)
+	--([turn]0:2) coordinate (B);
+	\draw (0:0) arc (180:0:{3} and {1})
+	($(B)!2!(A)$)--(A)--(B);
+\end{tikzpicture}
+
+%------------------------------------------------------------------------------%
+
+\section{Intersection of Lines -- Giao Điểm của Các Đường}
+
+\begin{tikzpicture}[scale=.6]
+	\draw[name path=ab] (-1.5,0) coordinate (A) --(5.75,0) coordinate (B);
+	\draw[name path=circ1] (0,0) circle (2);
+	\draw[name path=circ2] (2.5,0) circle (3);
+	\path[name intersections={of=circ1 and circ2}]
+	(intersection-1) coordinate (M)
+	(intersection-2) coordinate (N);
+	\path[name intersections={of=circ1 and ab}]
+	(intersection-1) coordinate (P);
+	\path[name intersections={of=circ2 and ab}]
+	(intersection-1) coordinate (I)
+	(intersection-2) coordinate (J);
+	\foreach \x/\g in {A/90,B/0,P/45,I/45,J/45,M/90,N/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
 \end{tikzpicture}
 
 %------------------------------------------------------------------------------%
