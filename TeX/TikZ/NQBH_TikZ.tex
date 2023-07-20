@@ -6,7 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
-\usetikzlibrary{angles,calc,intersections}
+\usetikzlibrary{angles,calc,intersections,quotes}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -381,6 +381,12 @@ Graph of function $x^3 - 3x + 1$:
 	(3,0) pic[local bounding box=R2] {dientro}
 	(1.5,3) pic[local bounding box=R3] {dientro};
 	\draw (1.75,0)--(R2)--(4,0) |-(R3) -|(-1,0) --(R1)--(1.25,0);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw (-1.2,0) coordinate (A) --(4.5,0) coordinate (B) --(1,3) coordinate (C) --cycle;
+	\draw pic[draw,double]{angle = C--B--A};
+	\draw pic[draw]{right angle = B--C--A};
+	\draw pic["$\alpha$",angle radius=1cm]{angle = B--A--C};
 \end{tikzpicture}
 
 %------------------------------------------------------------------------------%
