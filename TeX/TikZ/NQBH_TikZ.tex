@@ -6,7 +6,7 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
 \usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools,tikz}
-\usetikzlibrary{angles,calc,intersections,quotes}
+\usetikzlibrary{angles,calc,intersections,matrix,patterns,quotes,shadings}
 \allowdisplaybreaks
 \newtheorem{assumption}{Assumption}
 \newtheorem{baitoan}{Bài toán}
@@ -388,6 +388,104 @@ Graph of function $x^3 - 3x + 1$:
 	\draw pic[draw]{right angle = B--C--A};
 	\draw pic["$\alpha$",angle radius=1cm]{angle = B--A--C};
 \end{tikzpicture}
+\begin{tikzpicture}
+	\tikzset{bang/.style={matrix of math nodes, nodes={minimum height=.75cm,minimum width=1cm}}}
+	\path
+	(0,0) node[bang](A){
+	a_{11}&a_{12}&a_{13}\\
+	a_{21}&a_{22}&a_{23}\\
+	a_{31}&a_{32}&a_{33}\\
+	};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\tikzset{bang/.style={matrix of math nodes, nodes={minimum height=.75cm,minimum width=1cm}}}
+	\path
+	(0,0) node[bang](A){
+	x & -\infty & & -1 & & 2 & & +\infty\\
+	f'(x) & & -& 0 &+ &0 &- &\\
+	};
+	\draw
+	(A.north west) rectangle (A.south east)
+	(A-1-1.south west)--(A-1-8.south east)
+	(A-1-1.north east)--(A-2-1.south east)
+	;
+\end{tikzpicture}
+\begin{tikzpicture}
+	\draw[pattern=north east lines] (0:0)--(60:2)--(0:1)--cycle;
+	\draw[pattern=north west lines] (2,0) parabola (4,4);
+	\draw[pattern=dots] (5,0) to[bend left=60] (8,3);
+\end{tikzpicture}
+
+%------------------------------------------------------------------------------%
+
+\section{Shading}
+
+\begin{tikzpicture}
+	\fill[ball color=red] (0,0) circle (1);
+	\shade[top color=blue,bottom color=orange,middle color=white] (2,-1) rectangle (6,1);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\fill[lower left=red,upper right=pink] (0,0) circle (1);
+	\shade[shading=color wheel] (2,-1) rectangle (6,1);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\fill[outer color=blue] (0,0) circle (1);
+	\shade[inner color=yellow] (2,-1) rectangle (6,1);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\foreach \i in {1,...,20}\draw(0,.1*\i)--++(0:2);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\foreach \i in {1,...,3}{
+		\foreach \j in {1,...,4}
+			\path(\i,\j) node{$a_{\i \j}$};
+	}
+\end{tikzpicture}
+\begin{tikzpicture}
+	\foreach \i in {1,...,3}{
+		\foreach \j in {1,...,4}
+		\pgfmathsetmacro{\ht}{int(\i+\j)}
+			\path(\i,\j) node{\ht};
+	}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\foreach \x/\col in {1/red, 2/blue, 3/orange, 4/pink, 5/yellow, 6/gray}
+	\fill[\col] (\x,0) rectangle +(.5,2);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\foreach \col[count=\x from 1] in {red, blue, orange, pink, yellow, gray}
+	\fill[\col] (\x,0) rectangle +(.5,2);
+\end{tikzpicture}
+\begin{tikzpicture}
+	\def\chamtron(#1,#2)(#3){
+	\fill[gray](#1,#2) circle (#3);
+	}
+	\chamtron(0,0)(.2)
+	\chamtron(1,0)(.3)
+	\chamtron(0,2)(.5)
+\end{tikzpicture}
+%\begin{tikzpicture}[join=round,cap=round]
+%	\def\chanphangiac(#1,#2,#3)(#4){
+%	\path
+%	($(#2)!1mm!(#1)$) coordinate (#2#1)
+%	($(#2)!1mm!(#3)$) coordinate (#2#3)
+%	($(#2#1)!.5(#2#3)$) coordinate (#2t)
+%	(intersection of #2--#2t and #1--#3) coordinate (#4);
+%	}
+%	\path
+%	(1,3) coordinate (A)
+%	(0,0) coordinate (B)
+%	(5,0) coordinate (C)
+%	;
+%	\chanphangiac(B,A,C)(D)
+%	\chanphangiac(A,B,C)(E)
+%	\chanphangiac(B,C,A)(F)
+%	\draw (A)--(B)--(C)--cycle (A)--(D) (B)--(E) (C)--(F)
+%	\foreach \x/\g in {A/90,B/180,C/0,D/-90,E/0,F/180}
+%		\draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+%\end{tikzpicture}
 
 %------------------------------------------------------------------------------%
 
