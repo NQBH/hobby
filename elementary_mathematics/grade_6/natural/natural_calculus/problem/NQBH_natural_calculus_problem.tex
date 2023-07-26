@@ -45,7 +45,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	Last updated version: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/NQBH_natural_calculus_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural calculus{\tt/}problem: calculus on set $\mathbb{N}$ of naturals [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/NQBH_natural_calculus_problem.pdf}.} [\href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/NQBH_natural_calculus_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/NQBH_natural_calculus_problem.tex}.}. 
+	Last updated version: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural calculus{\tt/}problem: calculus on set $\mathbb{N}$ of naturals [pdf]}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.pdf}.} [\href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}{\TeX}]\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_calculus/problem/NQBH_natural_calculus_problem.tex}.}. 
 \end{abstract}
 \tableofcontents
 
@@ -651,6 +651,88 @@ Về phân bào, see, e.g., \href{https://vi.wikipedia.org/wiki/Ph%C3%A2n_b%C3%A
 %------------------------------------------------------------------------------%
 
 \subsection{Last Digit of Products \& Exponentiations -- Chữ Số Tận Cùng của Các Tích \& Lũy Thừa}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 11, p. 15]
+	Cho tổng $A = 9531^m + 246^n$ với $m,n\in\mathbb{N}^\star$. Hỏi tổng $A$ có phải là số chính phương không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 12, p. 15]
+	Cho $B = 559^{361} - 7^{202}$. Chứng minh $B\divby10$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 13, pp. 15--16]
+	Ngoài Dương lịch, Âm lịch, còn ghi lịch theo hệ đếm Can Chi, e.g., Nhâm Ngọ, Quý Mùi, Giáp Thân, $\ldots$ Chữ thứ nhất chỉ hàng Can, chữ thứ 2 chỉ hàng Chi. Có $10$ Can là: Giáp, Ất, Bính, Đinh, Mậu, Kỷ, Canh, Tân, Nhâm, Quý. Có $12$ Chi là: Tý, Sửu, Dần, Mão, Thìn, Tỵ, Ngọ, Mùi, Thân, Dậu, Tuất, Hợi. Muốn tìm hàng Can của 1 năm ta chỉ cần xét chữ số tận cùng của năm dương lịch rồi đối chiếu với bảng:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Hàng can & Giáp & Ất & Bính & Đinh & Mậu & Kỷ & Canh & Tân & Nhâm & Quý \\
+			\hline
+			Chữ số tận cùng của năm dương lịch & 4 & 5 & 6 & 7 & 8 & 9 & 0 & 1 & 2 & 3 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	Muốn tìm hàng Chi của 1 năm ta dùng công thức
+	\begin{align*}
+		\mbox{Hàng Chi} = \mbox{Số dư của }\frac{\mbox{năm} - 4}{12} + 1.
+	\end{align*}
+	Rồi đối chiếu kết quả với bảng:
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Hàng chi & Tý & Sửu & Dần & Mão & Thìn & Tỵ & Ngọ & Mùi & Thân & Dậu & Tuất & Hợi \\
+			\hline
+			Mã số & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	Năm 2010 kỷ niệm $1000$ năm Thăng Long--Hà Nội, tính xem năm đó là năm nào theo hệ đếm Can Chi? Chú ý: Vì năm dương lịch không trùng hoàn toàn với năm âm lịch nên đối với 2 tháng đầu của năm dương lịch thì còn phải chỉnh chút ít.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 59., p. 16]
+	Tìm chữ số tận cùng của tổng $A = 1\cdot3\cdot5\cdots99 + 2\cdot4\cdot6\cdots98$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 60., p. 16]
+	Có 5 số tự nhiên nào mà tích bằng $2021$ \& tổng có tận cùng bằng $8$ không?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 61., p. 16]
+	Tích các số lẻ liên tiếp có tận cùng là $7$. Hỏi tích đó có bao nhiêu thừa số?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 62., p. 16]
+	Tìm chữ số tận cùng của các lũy thừa: $87^{32},58^{33},23^{35},74^{30},49^{31}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 63., p. 16]
+	Chia mỗi số sau cho $100$ được số dư là bao nhiêu? (a) $7^{2025}$. (b) $6^{1202}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 64., p. 16]
+	Tìm chữ số tận cùng của các số sau: (a) $234^{5^{6^7}}$. (b) $6^{1202}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 65., p. 16]
+	Chứng minh các tổng hoặc hiệu sau không chia hết cho $10$: (a) $A = 98\cdot96\cdot94\cdot92 - 91\cdot93\cdot95\cdot97$. (b) $B(m,n) = 405^n + 2^{405} + m^2$, với $\forall m,n\in\mathbb{N}$, $n\ne0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 66., p. 17]
+	Cho $P = \left(\prod_{i=1}^{10} 2^i\right)\left(\prod_{i=1}^7 5^{2i}\right) = (2\cdot2^2\cdot2^3\cdots2^{10})(5^2\cdot5^4\cdot5^6\cdots5^{14})$ tận cùng bằng bao nhiêu chữ số $0$?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 67., p. 17]
+	Cho $S = \sum_{i=0}^{30} 3^i = 1 + 3 + 3^2 + 3^3 + \cdots + 3^{30}$. Tìm chữ số tận cùng của $S$, từ đó suy ra $S$ không phải là số chính phương.
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 68., p. 17]
+	Nước Việt Nam Dân chủ Cộng hòa ra đời ngay sau Cách mạng tháng 8 năm 1945. Trong hệ đếm Can Chi năm 1945 là năm nào?
+\end{baitoan}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 69., p. 17]
+	Chiến thắng Đống Đa giải phóng Thăng Long vào mùa xuân năm 1789. Năm đó là năm nào trong hệ đếm Can Chi?
+\end{baitoan}
 
 %------------------------------------------------------------------------------%
 
