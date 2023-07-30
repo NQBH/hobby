@@ -19,9 +19,18 @@ double sum_exp_minus(double x, int n) {
 	return En;
 }
 
+double Exp(double x, int n) {
+	double Expn = 1, y = 1;
+	for (int i = 1; i <= n; ++i) {
+		y *= x/i;
+		Expn += y;
+	}
+	return Expn;
+}
+
 void main()
 {
-	double x, Sn, En; int n;
+	double x, Sn, En, Expn; int n;
 	printf("Input x: ");
 	scanf("%lf", &x);
 	printf("Input n: ");
@@ -32,4 +41,6 @@ void main()
 	printf("E(%d) = %lf.\n", n, En);
 	En = -sum_exp(-x, n); // 2nd sol: use old func
 	printf("E(%d) = %lf.\n", n, En);
+	Expn = Exp(-x, n);
+	printf("Exp(%d) = %lf.\n", n, Expn);
 }
