@@ -10,13 +10,13 @@ double sum_exp(double x, int n) {
 }
 
 double sum_exp_minus(double x, int n) {
-	double Sn = 0, y = -1;
+	double En = 0, y = -1;
 	x = -x;
 	for (int i = 1; i <= n; ++i) {
 		y *= x;
-		Sn += y/i;
+		En += y/i;
 	}
-	return Sn;
+	return En;
 }
 
 void main()
