@@ -20,6 +20,7 @@
 \newtheorem{ghichu}{Ghi chú}
 \newtheorem{hequa}{Hệ quả}
 \newtheorem{hypothesis}{Hypothesis}
+\newtheorem{kyhieu}{Ký hiệu}
 \newtheorem{lemma}{Lemma}
 \newtheorem{luuy}{Lưu ý}
 \newtheorem{nhanxet}{Nhận xét}
@@ -45,32 +46,83 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-	Last updated version: 
+	Last updated version:
+	\begin{itemize}
+		\item Problem: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/problem/NQBH_natural_set_problem.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural set $\mathbb{N}${\tt/}problem: set $\mathbb{N}$ of naturals}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/problem/NQBH_natural_set_problem.pdf}.}
+		\item Solution: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/solution/NQBH_natural_set_solution.pdf}{GitHub{\tt/}NQBH{\tt/}hobby{\tt/}elementary mathematics{\tt/}grade 6{\tt/}natural{\tt/}natural set $\mathbb{N}${\tt/}problem \& solution: set $\mathbb{N}$ of naturals}.\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_6/natural/natural_set/solution/NQBH_natural_set_solution.pdf}.}
+	\end{itemize}
+	
+	
+	
+	
 \end{abstract}
 
 %------------------------------------------------------------------------------%
 
 \section{Set -- Tập Hợp}
 
+\subsection{Kiến thức cơ bản}
+\fbox{\bf1} Tập hợp là 1 khái niệm cơ bản của Toán học. Đặt tên cho các tập hợp bằng các chữ cái in hoa, e.g., $A,B,C,\ldots$. \fbox{\bf2} Để viết 1 tập hợp, thường có 2 cách: (a) Liệt kê các phần tử của tập hợp; (b) Chỉ ra tính chất đặc trưng cho các phần tử của tập hợp đó. \fbox{\bf3} Khi liệt kê các phần tử của 1 tập hợp, mỗi phần tử \textit{chỉ liệt kê đúng 1 lần, thứ tự liệt kê tùy ý}. \fbox{\bf4} 1 tập hợp có thể có 1 phần tử, có nhiều phần tử, có vô số phần tử, cũng có thể không có phần tử nào, gọi là tập rỗng, ký hiệu là $\emptyset\coloneqq\{\}$. \fbox{\bf5} Cách viết tập hợp bằng phương pháp liệt kê các phần tử thích hợp cho các tập hợp có kích thước nhỏ, hoặc các tập hợp lớn nhưng có quy luật của các phần tử có thể nhận thấy 1 cách rõ ràng \& dễ dàng (e.g., $A = \{0,1,2,\ldots,100\}$ có quy luật: các phần tử là các số tự nhiên liên tiếp, $B = \{1,3,5,\ldots,99\}$ có quy luật: các phần tử là các số tự nhiên lẻ liên tiếp) \& có thể sử dụng dấu $\ldots$ để ám chỉ quy luật đó; còn cách viết tập hợp bằng phương pháp đặt trưng của các phần tử thích hợp với các tập hợp có kích thước lớn, có 1 hay nhiều quy luật, đặc biệt là các quy luật không dễ dàng mô tả bằng phương thức $\ldots$ như cách liệt kê.
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, Ví dụ 1, p. 4]
 	Cho 2 tập hợp: $A = \{6;7;8;9;10\}$, $B = \{x;9;7;10;y\}$. (a) Viết tập hợp $A$ bằng cách chỉ ra tính chất đặc trưng cho các phần tử của nó. (b) Điền $\in,\notin$: $9\square A$, $x\square A$, $y\square B$. (c) Tìm $x,y$ để $A = B$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) 2 cách viết: $A = \{x\in\mathbb{N}|5 < x < 11\} = \{x\in\mathbb{N}|6\le x\le10\}$. (b) $9\in A$, $x\notin A$, $y\in B$. (c) $A = B\Leftrightarrow\{x,y\} = \{6,8\}\Leftrightarrow(x = 6\land y = 8)\lor(x = 8\land y = 6)$.
+\end{proof}
+
+\begin{kyhieu}[$\land,\lor$]
+	Ký hiệu logical and $\land$ nghĩa là ``và'', ``and'', còn ký hiệu logical or $\lor$ nghĩa là ``hoặc'', ``or''.
+\end{kyhieu}
+
+\begin{luuy}
+	Trong lời giải (c), có 2 đáp số vì thứ tự liệt kê của 1 tập hợp không quan trọng. Hơn nữa, nếu sử dụng bộ sắp thứ tự (pair of numbers) thì cũng có thể lý luận $\{x,y\} = \{6,8\}\Leftrightarrow(x,y) = (6,8)\lor(x,y) = (8,6)$. Tổng quát hơn, $\{x,y\} = \{a,b\}\Leftrightarrow(x,y) = (a,b)\lor(x,y) = (b,a)$, $\forall a,b\in\mathbb{N}$, $a\ne b$. Việc mở rộng lên $n$ số tự nhiên hoàn toàn tương tự: $\{x_1,x_2,\ldots,x_n\} = \{a_1,a_2,\ldots,a_n\}\Leftrightarrow(x_1,x_2,\ldots,x_n) = (a_1,a_2,\ldots,a_n)$ \& các hoán vị (i.e., đổi chỗ), $\forall a_i\in\mathbb{N}$, $i = 1,2,\ldots,n$ là $n$ số tự nhiên đôi một khác nhau (điều kiện khác nhau đảm bảo tập hợp $\{a_1,a_2,\ldots,a_n\}$ có đúng $n$ phần tử chứ không bị ``teo'' lại nếu có chứa các phần tử bằng nhau.
+\end{luuy}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 2., p. 5]
 	(a) Viết tập hợp $M$ các chữ cái của chữ ``NGANG''. (b) Với tất cả các phần tử của tập hợp $M$, viết thành 1 chữ thuộc loại danh từ (không sử dụng thêm dấu).
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $M = \{{\rm N,G,A}\}$. (b) NGA (nước Nga, Russia), GAN (lá gan -- 1 bộ phận trong tiêu hóa của cơ thể động vật), GANG (gang, cast iron, là 1 nhóm vật liệu hợp kim sắt-carbon có hàm lượng carbon $> 2.14\%$, xem, e.g., \href{https://vi.wikipedia.org/wiki/Gang}{Wikipedia{\tt/}gang}), NGAN (con ngan, 1 loại gia cầm, xem \href{https://vi.wikipedia.org/wiki/Ngan_nh%C3%A0}{Wikipedia{\tt/}ngan nhà}, \href{https://vi.wikipedia.org/wiki/Ngan_c%E1%BB%8F}{Wikipedia{\tt/}ngan cỏ}).
+\end{proof}
+
+\begin{baitoan}[\cite{Tuyen_Toan_6}, 3., p. 5]
+	Viết tập hợp $P$ tên các tỉnh tiếp giáp với Thủ đô Hà Nội.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$P = \{\mbox{Bắc Giang, Bắc Ninh, Hà Nam, Hòa Bình, Hưng Yên, Phú Thọ, Thái Nguyên, Vĩnh Phúc}\}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 4., p. 5]
 	Cho tập hợp $A = \{a;b\}$, $B = \{1;2;3\}$. Viết tất cả các tập hợp có $3$ phần tử trong đó $1$ phần tử thuộc tập hợp $A$, $2$ phần tử thuộc tập hợp $B$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	Có 6 tập hợp: $\{a,1,2\},\{a,1,3\},\{a,2,3\},\{b,1,2\},\{b,1,3\},\{b,2,3\}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 5., p. 5]
 	Cho các tập hợp: $P$ là tập hợp các số tự nhiên $x$ mà $x + 3\le10$, $Q$ là tập hợp các số tự nhiên $x$ mà $x\cdot3 = 5$, $R$ là tập hợp các số tự nhiên $x$ mà $x\cdot3 = 0$, $S$ là tập hợp các số tự nhiên $x$ mà $x\cdot3\le24$. (a) Tập hợp nào là tập hợp rỗng? (b) Tập hợp nào có đúng 1 phần tử? (c) 2 tập hợp nào bằng nhau?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	$P = \{x\in\mathbb{N}|x + 3\le10\} = \{0,1,2,3,4,5,6,7\}$, $Q = \{x\in\mathbb{N}|x\cdot3 = 5\} = \emptyset$ (vì nghiệm duy nhất của phương trình $x\cdot3 = 5$ là $x = \frac{5}{3}\notin\mathbb{N}$, nghiệm này là số hữu tỷ nhưng không phải là số nguyên hay số tự nhiên), $R = \{x\in\mathbb{N}|x\cdot3 = 0\} = \{0\}$, $S = \{x\in\mathbb{N}|x\cdot3\le24\} = \{0,1,2,3,4,5,6,7,8\}$. (a) Tập hợp $Q$ là tập hợp rỗng. (b) Tập hợp $R$ có 1 phần tử. (c) Không có 2 tập hợp nào bằng nhau.
+\end{proof}
+
 \begin{baitoan}
 	Viết tập hợp: (a) Tập các màu sắc của cầu vồng. (b) Tập hợp các huyện của tỉnh Bến Tre. (c) Tập hợp các châu lục trên Trái Đất. (d) Tập hợp các hành tinh trong Hệ Mặt Trời.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = \{\mbox{đỏ, cam, vàng, xanh lá, xanh lam, chàm, tím}\}$. (b) Bến Tre có 09 đơn vị hành chính cấp huyện trực thuộc, bao gồm các huyện: Ba Tri, Bình Đại, Châu Thành, Chợ Lách, Giồng Trôm, Mỏ Cày Bắc, Mỏ Cày Nam, Thạnh Phú \& thành phố Bến Tre (xem, e.g., \href{https://vi.wikipedia.org/wiki/B%E1%BA%BFn_Tre}{Wikipedia{\tt/}Bến Tre}), nên
+	\begin{align*}
+		B = \{\mbox{Ba Tri, Bình Đại, Châu Thành, Chợ Lách, Giồng Trôm, Mỏ Cày Bắc, Mỏ Cày Nam, Thạnh Phú, thành phố Bến Tre}\}.
+	\end{align*}
+	(c) $C = \{\mbox{Á, Phi, Nam Mỹ, Bắc Mỹ, Âu, Úc, Nam Cực}\}$. (d) Xem, e.g., \href{https://vi.wikipedia.org/wiki/H%E1%BB%87_M%E1%BA%B7t_Tr%E1%BB%9Di}{Wikipedia{\tt/}hệ Mặt Trời}:\\$D = \{\mbox{Sao Thủy, Sao Kim, Trái Đất, Sao Hỏa, Sao Mộc, Sao Thổ, Sao Thiên Vương, Sao Hải Vương}\}$.
+\end{proof}
 
 %------------------------------------------------------------------------------%
 
@@ -84,9 +136,17 @@
 	Viết tập hợp $4$ số tự nhiên liên tiếp lớn hơn $94$ nhưng không quá $100$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	Có 3 tập hợp thỏa mãn: $\{95,96,97,98\},\{96,97,98,99\},\{97,98,99,100\}$.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 7., p. 6]
 	(a) Có bao nhiêu số tự nhiên nhỏ hơn $20$? (b) Có bao nhiêu số tự nhiên nhỏ hơn $n\in\mathbb{N}$? (c) Có bao nhiêu số tự nhiên chẵn nhỏ hơn $n\in\mathbb{N}$? (d) Có bao nhiêu số tự nhiên lẻ nhỏ hơn $n\in\mathbb{N}$?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Có 20 số tự nhiên nhỏ hơn 20: $0,1,2,\ldots,19$. (b) Có $n$ số tự nhiên nhỏ hơn $n$: $0,1,2,\ldots,n - 1$. (c) Xét 2 trường hợp: Nếu $n$ chẵn thì có $\frac{n}{2}$ số tự nhiên chẵn nhỏ hơn $n$: $0,2,\ldots,n - 2$. Nếu $n$ lẻ thì có $\frac{n + 1}{2}$ số tự nhiên chẵn nhỏ hơn $n$: $0,2,\ldots,n - 1$. (d) Xét 2 trường hợp: Nếu $n$ chẵn thì có $\frac{n}{2}$ số tự nhiên lẻ nhỏ hơn $n$: $1,3,\ldots,n - 1$. Nếu $n$ lẻ thì có $\frac{n + 1}{2}$ số tự nhiên lẻ nhỏ hơn $n$: $1,3,\ldots,n - 2$.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 8., p. 7]
 	(a) Có bao nhiêu số có $4$ chữ số mà cả $4$ chữ số đều giống nhau? (b) Có bao nhiêu số có $4$ chữ số? (c) Có bao nhiêu số có $n$ chữ số, với $n\in\mathbb{N}$?
