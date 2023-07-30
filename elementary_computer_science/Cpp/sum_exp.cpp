@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// S_n(x) = sum_{i=0}^n x^i/i
 double sum_exp(double x, int n) {
 	double Sn = 0, y = 1;
 	for (int i = 1; i <= n; ++i) {
@@ -9,7 +9,7 @@ double sum_exp(double x, int n) {
 	}
 	return Sn;
 }
-
+// E_n(x) = sum_{i=0}^n (-1)^{i-1}*x^i/i
 double sum_exp_minus(double x, int n) {
 	double En = 0, y = -1;
 	x = -x;
@@ -18,6 +18,15 @@ double sum_exp_minus(double x, int n) {
 		En += y/i;
 	}
 	return En;
+}
+// Exp_n(x) = sum_{i=0}^n x^i/i!
+double Exp(double x, int n) {
+	double Expn = 1, y = 1;
+	for (int i = 1; i <= n; ++i) {
+		y *= x/i;
+		Expn += y;
+	}
+	return Expn;
 }
 
 int main() {
@@ -32,4 +41,6 @@ int main() {
 	cout << "E(" << n << ") = " << En << ".\n";
 	En = -sum_exp(-x, n);
 	cout << "E(" << n << ") = " << En << ".\n";
+	double Kn = Exp(-x, n); // K_n(x) = sum_{i=0}^n (-1)^i*x^i/i!
+	cout << "K(" << n << ") = " << Kn << ".\n";
 }
