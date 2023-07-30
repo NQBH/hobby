@@ -132,6 +132,10 @@
 	Phố Hàng Ngang là 1 trong các phố cổ của Hà Nội. Các nhà được đánh số liên tục, dãy lẻ $1,3,5,7,\ldots,61$; dãy chẵn $2,4,6,\ldots,64$. (a) Bên số nhà chẵn, trong 1 phòng gác nhỏ, chủ tịch Hồ Chí Minh đã khởi thảo bản Tuyên Ngôn Độc Lập khai sinh cho nước Việt Nam Dân Chủ Cộng Hòa. Ngôi nhà có căn phòng đó là nhà thứ $24$ kể từ đầu phố (số $2$). Hỏi ngôi nhà này có số nào? (b) Bên số nhà lẻ chữ số nào được dùng nhiều nhất? Chữ số nào chưa được dùng đến? (c) Phải dùng tất cả bao nhiêu chữ số để ghi số nhà của phố này?
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) Ngôi nhà thứ 24 bên dãy số nhà chẵn có số $2\cdot24 = 48$. (b) (c) 
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 6., p. 6]
 	Viết tập hợp $4$ số tự nhiên liên tiếp lớn hơn $94$ nhưng không quá $100$.
 \end{baitoan}
@@ -152,33 +156,73 @@
 	(a) Có bao nhiêu số có $4$ chữ số mà cả $4$ chữ số đều giống nhau? (b) Có bao nhiêu số có $4$ chữ số? (c) Có bao nhiêu số có $n$ chữ số, với $n\in\mathbb{N}$?
 \end{baitoan}
 
+\begin{proof}[1st giải]
+	(a) Có 9 số: $1111,2222,\ldots,9999$. (b) Có $9999 - 1000 + 1 = 9000$ số có 4 chữ số: $1000,1001,\ldots,9999$. (c) Có $\underbrace{99\ldots9}_n - 1\underbrace{00\ldots0}_{n-1} + 1 = 9\underbrace{00\ldots0}_{n-1}$ số có $n$ chữ số: $1\underbrace{00\ldots0}_{n-1},1\underbrace{00\ldots0}_{n-2}1,\ldots,\underbrace{99\ldots9}_n$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(c) Các số có $n$ chữ số: $10^{n-1},10^{n-1} + 1,\ldots,10^n - 1$. Suy ra có $10^n - 1 - 10^{n-1} + 1 = 10^n - 10^{n-1}$ số có $n$ chữ số.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 9., p. 7]
 	Đèn hướng dẫn giao thông liên tục sáng màu xanh hoặc đỏ kế tiếp nhau. Bảng hiện số của đèn có 2 chữ số liên tục thay đổi theo từng giây. Hỏi trong 1 phút xe bị dừng vì đèn đỏ thì đèn có: (a) Bao nhiêu lần thay đổi các số? (b) Bao nhiêu lần thay đổi các chữ số?
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Trong 1 phút $=$ 60 giây có 60 lần thay đổi số. (b) Hàng đơn vị thay đổi 60 lần, hàng chục thay đổi 6 lần ($6\to5\to4\to3\to2\to1\to0$) nên tổng cộng có $60 + 6 = 66$ lần thay đổi chữ số.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 10., p. 7]
 	Tìm $3$ số tự nhiên $a,b,c$ biết chúng thỏa mãn đồng thời 3 điều kiện: $a < b < c$, $101\le a\le103$, $101 < c < 104$.
 \end{baitoan}
 
+\begin{proof}[1st giải]
+	Từ điều kiện $101\le a\le103$ \& $a\in\mathbb{N}$, suy ra $a\in\{101,102,103\}$. Từ điều kiện $101 < c < 104$ \& $c\in\mathbb{N}$, suy ra $c\in\{102,103\}$. Mặt khác, kết hợp 2 điều vừa tập giá trị vừa thu được với điều kiện $a < b < c$, suy ra $a = 101$, $b = 102$, $c = 103$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Vì $a < b < c$ \& $a,b,c\in\mathbb{N}$ nên $c\ge b + 1\ge a + 2$ (1). Kết hợp (1) với điều kiện $101\le a$, suy ra $c\ge a + 2\ge101 + 2 = 103$ (2). Kết hợp (2) với điều kiện $c < 104$, suy ra $c = 103$. Dấu ``$=$'' xảy ra $\Leftrightarrow c = b + 1 = a + 2\Leftrightarrow(a,b,c) = (101,102,103)$.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 11., p. 7]
 	Cho số $4321$. Viết thêm chữ số $9$ xen giữa các chữ số của nó để được 1 số: (a) Lớn nhất có thể được. (b) Nhỏ nhất có thể được.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) 49321. (b) 43291.
+\end{proof}
 
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 12., p. 7]
 	Với $9$ que diêm, sắp xếp thành 1 số La Mã: (a) Có giá trị lớn nhất. (b) Có giá trị nhỏ nhất.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) MMI: 2001. (b) XXVIII: 28.
+\end{proof}
+
 \begin{baitoan}[\cite{Tuyen_Toan_6}, 13., p. 7]
 	Có $13$ que diêm sắp xếp như sau: $\rm XII - V = VII$. (a) Đẳng thức trên đúng hay sai? (b) Đổi chỗ chỉ 1 que diêm để được 1 đẳng thức đúng.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Đẳng thức XII $-$ V = VII đúng vì $12 - 5 = 7$. (b) XI $-$ IV = VII: $11 - 4 = 7$, hoặc XII $-$ VI = VI: $12 - 6 = 6$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 1, p. 4]
 	Viết các tập hợp sau rồi tìm số phần tử của mỗi tập hợp đó: (a) Tập hợp $A$ các số tự nhiên $x$ mà $8:x = 2$. (b) Tập hợp $B$ các số tự nhiên $x$ mà $x + 3 < 5$. (c) Tập hợp $C$ các số tự nhiên $x$ mà $x - 2 = x + 2$. (d) Tập hợp $D$ các số tự nhiên $x$ mà $x:2 = x:4$. (e) Tập hợp $E$ các số tự nhiên $x$ mà $x + 0 = x$.
 \end{baitoan}
 
+\begin{proof}[Giải]
+	(a) $A = \{4\}$ có 1 phần tử. (b) $B = \{0,1\}$ có 2 phần tử. (c) $C = \emptyset$ không có phần tử nào. (d) $D = \{0\}$ có 1 phần tử. (e) $E = \{0,1,2,\ldots\} = \mathbb{N}$ có vô hạn đếm được số phần tử.
+\end{proof}
+
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 2, p. 5]
 	Viết các tập hợp sau bằng cách liệt kê các phần tử của nó: (a) Tập hợp $A$ các số tự nhiên có 2 chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là $2$. (b) Tập hợp $B$ các số tự nhiên có 3 chữ số mà tổng các chữ số bằng $3$.
 \end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $A = \{20,31,42,53,64,75,86,97\}$. (b) $B = \{300,201,210,102,111,120\}$.
+\end{proof}
 
 \begin{baitoan}[\cite{Binh_Toan_6_tap_1}, Ví dụ 3, p. 5]
 	Tìm số tự nhiên có 5 chữ số, biết nếu viết thêm chữ số $2$ vào đằng sau số đó thì được số lớn gấp 3 lần số có được bằng cách viết thêm chữ số $2$ vào đằng trước số đó.
