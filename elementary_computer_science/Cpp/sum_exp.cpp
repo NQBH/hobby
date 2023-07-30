@@ -36,11 +36,11 @@ int main() {
 	cout << "Input n: ";
 	cin >> n;
 	double Sn = sum_exp(x, n);
-	cout << "S(" << n << ") = " << Sn << ".\n";
+	cout << "S(" << x << ", " << n << ") = " << Sn << ".\n";
 	double En = sum_exp_minus(x, n);
-	cout << "E(" << n << ") = " << En << ".\n";
+	cout << "E(" << x << ", " << n << ") = " << En << ".\n";
 	En = -sum_exp(-x, n);
-	cout << "E(" << n << ") = " << En << ".\n";
+	cout << "E(" << x << ", " << n << ") = " << En << ".\n";
 	double Kn = Exp(-x, n); // K_n(x) = sum_{i=0}^n (-1)^i*x^i/i!
-	cout << "K(" << n << ") = " << Kn << ".\n";
+	cout << "K(" << x << ", " << n << ") = " << Kn << ".\n";
 }
