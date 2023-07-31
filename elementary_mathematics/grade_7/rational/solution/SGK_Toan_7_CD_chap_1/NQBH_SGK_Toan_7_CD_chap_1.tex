@@ -1,0 +1,265 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+\title{Giải Bài Tập Sách Giáo Khoa Toán 7 Cánh Diều Chương I: Số Hữu Tỷ $\mathbb{Q}$}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+%------------------------------------------------------------------------------%
+
+\section{Set $\mathbb{Q}$ of Rationals -- Tập Hợp $\mathbb{Q}$ Các Số Hữu Tỷ}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	Viết các số $-3,0.5,2\frac{3}{7}$ dưới dạng phân số.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$-3 = -\frac{3}{1}$, $0.5 = \frac{1}{2}$, $2\frac{3}{7} = \frac{2\cdot7 + 3}{7} = \frac{17}{7}$.
+\end{proof}
+
+\begin{luuy}[Sign of fraction -- Dấu của phân số]
+	$-\frac{a}{b} = \frac{-a}{b} = \frac{a}{-b}$, $\forall a,b\in\mathbb{Z}$, $b\ne0$, i.e., dấu $-$ có thể đặt trước phân số, trước tử số hay mẫu số của phân số đó đều được cả.
+\end{luuy}
+
+\begin{luuy}[Công thức chuyển đổi giữa hỗn số dương \& phân số]
+	$a\frac{b}{c} = \frac{ac + b}{c}$, $\forall a,b,c\in\mathbb{N}^\star$.
+\end{luuy}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 6]
+	Các số $21,-12,\frac{-7}{-9},-4.7,-3.05$ có là số hữu tỷ không? Vì sao?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Các số $21,-12,\frac{-7}{-9},-4.7,-3.05$ là số hữu tỷ vì chúng có thể viết được dưới dạng phân số: $21 = \frac{21}{1}$, $-12 = \frac{-12}{1}$, $\frac{-7}{-9} = \frac{7}{9}$ (hoặc giữ nguyên cũng được vì $\frac{-7}{-9}$ đã là phân số), $-4.7 = -\frac{47}{10}$, $-3.05 = -\frac{305}{100} = -\frac{61}{20}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 3, p. 8]
+	Tìm số đối của mỗi số: $\frac{2}{9},-0.5$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Số đối của $\frac{2}{9},-0.5$ lần lượt là $-\frac{2}{9},0.5$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 4, p. 9]
+	So sánh: (a) $-\frac{1}{3}$ \& $\frac{-2}{5}$. (b) $0.125$ \& $0.13$. (c) $-0.6$ \& $\frac{-2}{3}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $-\frac{1}{3}$ \& $\frac{-2}{5}$. (b) $0.125$ \& $0.13$. (c) $-0.6 = -\frac{6}{10} = -\frac{3}{5} = -\frac{3\cdot3}{5\cdot3} = -\frac{9}{15}$. $\frac{-2}{3} = -\frac{2\cdot5}{3\cdot5} = -\frac{10}{15}$. $-9 > -10\Rightarrow-\frac{9}{15} > -\frac{10}{15}\Rightarrow-0.6 > \frac{-2}{3}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Calculus $\pm,\cdot,:$ on $\mathbb{Q}$ -- $\pm,\cdot,:$ Số Hữu Tỷ}
+
+%------------------------------------------------------------------------------%
+
+\section{Exponentiation on $\mathbb{Q}$ -- Phép Tính Lũy Thừa với Số Mũ Tự Nhiên của 1 Số Hữu Tỷ}
+
+%------------------------------------------------------------------------------%
+
+\section{Order of Calculus. Bracket Rule -- Thứ Tự Thực Hiện Các Phép Tính. Quy Tắc Dấu Ngoặc}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, p. 23]
+	Tính $0.5 + 4.5:3 - \frac{3}{16}\cdot\frac{4}{3}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$0.5 + 4.5:3 - \frac{3}{16}\cdot\frac{4}{3} = 0.5 + 1.5 - \frac{4}{16} = 2 - \frac{1}{4} = 2 - 0.25 = 1.75$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 23]
+	Tính giá trị biểu thức: (a) $0.2 + 2.5:\frac{7}{2}$. (b) $9\cdot\left(\frac{-1}{3}\right)^2 - (-0.1)^3:\frac{2}{15}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $0.2 + 2.5:\frac{7}{2} = \frac{2}{10} + \frac{5}{2}\cdot\frac{2}{7} = \frac{1}{5} + \frac{5}{7} = \frac{1\cdot7 + 5\cdot5}{5\cdot7} = \frac{32}{35}$. (b) $9\cdot\left(\frac{-1}{3}\right)^2 - (-0.1)^3:\frac{2}{15}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1, p. 5]
+	
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Decimal Representation of Rationals -- Biểu Diễn Thập Phân của Số Hữu Tỷ}
+
+%------------------------------------------------------------------------------%
+
+\section{Bài Tập Cuối Chương I}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 1., p. 30]
+	(a) Sắp xếp 3 số sau theo thứ tự tăng dần: $0.5,1,\dfrac{-2}{3}$. (b) Trong 3 điểm A, B, C trên trục số dưới đây có 1 điểm biểu diễn số hữu tỷ $0.5$. Xác định điểm đó.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_7_CD_tap_1_p30}
+	\end{figure}
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Có $\dfrac{-2}{3} < 0 < 0.5 < 1$ nên $\dfrac{-2}{3} < 0.5 < 1$. (b) Vì $0 < 0.5 < 1$ nên điểm biểu diễn số hữu tỷ $0.5$ nằm giữa 0 \& 1, mà trong hình vẽ chỉ có điểm B nằm giữa 2 số 0 \& 1 nên điểm B biểu diễn số hữu tỷ 0.5.
+\end{proof}
+
+\begin{nhanxet}
+	Trong đánh giá câu (a), ta đã sử dụng số âm $< 0 < $ số dương để được đánh giá $\dfrac{-2}{3} < 0$, còn đánh giá $0.5 < 1$ thu được từ việc so sánh 2 số thập phân đã học ở Toán 6, xem {\rm\cite[\S5, Sect. II: So sánh các số thập phân, pp. 45--47]{SGK_Toan_6_Canh_Dieu_tap_2}}.
+\end{nhanxet}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 2., p. 30]
+	Tính: (a) $5\dfrac{3}{4}\cdot\dfrac{-8}{9}$. (b) $3\dfrac{3}{4}:2\dfrac{1}{2}$. (c) $\dfrac{-9}{5}:1.2$. (d) $(1.7)^{2023}:(1.7)^{2021}$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) $5\dfrac{3}{4}\cdot\dfrac{-8}{9} = \dfrac{5\cdot4 + 3}{4}\cdot\dfrac{-8}{9} = \dfrac{23}{4}\cdot\dfrac{-8}{9} = \dfrac{23\cdot(-2)}{9} = -\dfrac{46}{9}$. (b) $3\dfrac{3}{4}:2\dfrac{1}{2} = \dfrac{3\cdot4 + 3}{4}:\dfrac{2\cdot2 + 1}{2} = \dfrac{15}{4}:\dfrac{5}{2} = \dfrac{15}{4}\cdot\dfrac{2}{5} = \dfrac{3\cdot5\cdot2}{2\cdot2\cdot5} = \dfrac{3}{2} = 1.5$. (c) $\dfrac{-9}{5}:1.2 = -\dfrac{9}{5}:\dfrac{6}{5} = -\dfrac{9}{5}\cdot\dfrac{5}{6} = -\dfrac{3\cdot3\cdot5}{5\cdot3\cdot2} = -\dfrac{3}{2} = -1.5$. (d) $(1.7)^{2023}:(1.7)^{2021} = (1.7)^{2023 - 2021} = (1.7)^2 = 2.89$.
+\end{proof}
+
+\begin{nhanxet}
+	Xét các mẫu của các phân số đã được tối giản ở bài toán trên, chỉ có 2 câu (b), (c) là có thể chuyển các phân số này thành số thập phân hữu hạn do các mẫu chỉ có ước của $2$ \& $5$ nên ta có thêm lời giải 2 cho 2 câu này:
+\end{nhanxet}
+
+\begin{proof}[2nd giải]
+	(a) Vì $-\frac{8}{9} = -0.(8)$ là số thập phân vô hạn tuần hoàn (với chu kỳ là 8), không nên sử dụng cách chuyển tất cả phân số về số thập phân trong trường hợp này. (b) $3\dfrac{3}{4}:2\dfrac{1}{2} = \dfrac{3\cdot4 + 3}{4}:\dfrac{2\cdot2 + 1}{2} = \dfrac{15}{4}:\dfrac{5}{2} = \dfrac{15}{4}\cdot\dfrac{2}{5} = 3.75\cdot0.4 = 1.5$. (c) $\dfrac{-9}{5}:1.2 = -\dfrac{9}{5}:\dfrac{6}{5} = -1.8:1.2 = -18:12 = -1.5$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 3., p. 30]
+	Tính 1 cách hợp lý: (a) $\dfrac{-5}{12} + (-3.7) - \dfrac{7}{12} - 6.3$. (b) $2.8\cdot\dfrac{-6}{13} - 7.2 - 2.8\cdot\dfrac{7}{13}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\dfrac{-5}{12} + (-3.7) - \dfrac{7}{12} - 6.3 = -\dfrac{5}{12} - \dfrac{7}{12} - 3.7 - 6.3 = -\left(\dfrac{5}{12} + \dfrac{7}{12}\right) - (3.7 + 6.3) = -\dfrac{12}{12} - 10 = -1 - 10 = -11$. (b) $2.8\cdot\dfrac{-6}{13} - 7.2 - 2.8\cdot\dfrac{7}{13} = -2.8\cdot\dfrac{6}{13} - 2.8\cdot\dfrac{7}{13} - 7.2 = -2.8\left(\dfrac{6}{13} +\dfrac{7}{13}\right) - 7.2 = -2.8\cdot\dfrac{13}{13} - 7.2 = -2.8 - 7.2 = -(2.8 + 7.2) = -10$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 4., p. 30]
+	Tính: (a) $0.3 - \dfrac{4}{9}:\dfrac{4}{3}\cdot\dfrac{6}{5} + 1$. (b) $\left(\dfrac{-1}{3}\right)^2 - \dfrac{3}{8}:(0.5)^3 - \dfrac{5}{2}\cdot(-0.4)$. (c) $1 + 2:\left(\dfrac{2}{3} - \dfrac{1}{6}\right)\cdot(-2.25)$. (d) $\left[\left(\dfrac{1}{4} - 0.5\right)\cdot2 + \dfrac{8}{3}\right]:2$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) $0.3 - \dfrac{4}{9}:\dfrac{4}{3}\cdot\dfrac{6}{5} + 1 = 0.3 - \dfrac{4}{9}\cdot\dfrac{3}{4}\cdot\dfrac{6}{5} + 1 = 0.3 - \dfrac{4\cdot3\cdot2\cdot3}{3\cdot3\cdot4\cdot5} + 1 = \dfrac{3}{10} - \dfrac{2}{5} + 1 = \dfrac{3}{10} - \dfrac{4}{10} + \dfrac{10}{10} = \dfrac{3 - 4 + 10}{10} = \dfrac{9}{10} = 0.9$. (b) $\left(\dfrac{-1}{3}\right)^2 - \dfrac{3}{8}:(0.5)^3 - \dfrac{5}{2}\cdot(-0.4)$. (c) $1 + 2:\left(\dfrac{2}{3} - \dfrac{1}{6}\right)\cdot(-2.25)$. (d) $\left[\left(\dfrac{1}{4} - 0.5\right)\cdot2 + \dfrac{8}{3}\right]:2$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) $0.3 - \dfrac{4}{9}:\dfrac{4}{3}\cdot\dfrac{6}{5} + 1 = 0.3 - \dfrac{4}{9}\cdot\dfrac{3}{4}\cdot\dfrac{6}{5} + 1 = 0.3 - \dfrac{4\cdot3\cdot2\cdot3}{3\cdot3\cdot4\cdot5} + 1 = 0.3 - \dfrac{2}{5} + 1 = 0.3 - 0.4 + 1 = 1 + 0.3 - 0.4 = 1.3 - 0.4 = 0.9$. (b) $\left(\dfrac{-1}{3}\right)^2 - \dfrac{3}{8}:(0.5)^3 - \dfrac{5}{2}\cdot(-0.4)$. (c) $1 + 2:\left(\dfrac{2}{3} - \dfrac{1}{6}\right)\cdot(-2.25)$. (d) $\left[\left(\dfrac{1}{4} - 0.5\right)\cdot2 + \dfrac{8}{3}\right]:2$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 5., p. 30]
+	Tìm $x$: (a) $x + \left(-\dfrac{2}{9}\right) = \dfrac{-7}{12}$. (b) $(-0.1) - x = \dfrac{-7}{6}$. (c) $(-0.12)\cdot\left(x - \dfrac{9}{10}\right) = -1.2$. (d) $\left(x - \dfrac{3}{5}\right):\dfrac{-1}{3} = 0.4$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 6., p. 30]
+	Sắpp xếp theo thứ tự tăng dần: (a) $(0.2)^0,(0.2)^3,(0.2)^1,(0.2)^2$. (b) $(-1.1)^2,(-1.1)^0,(-1.1)^1,(-1.1)^3$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 7., p. 30]
+	Trọng lượng của 1 vật thể trên Mặt Trăng bằng khoảng $\dfrac{1}{6}$ trọng lượng của nó trên Trái Đất. Biết trọng lượng của 1 vật trên Trái Đất được tính theo công thức: $P = 10m$ với $P$ là trọng lượng của vật tính theo đơn vị Newton (ký hiệu {\rm N}), $m$ là khối lượng (mass) của vật tính theo đơn vị kilogram {\rm kg} (xem {\rm\cite[\S29, pp. 149--150]{SGK_KHTN_6_Canh_Dieu}}). Nếu trên Trái Đất 1 nhà du hành vũ trụ có khối lượng là {\rm75.5 kg} thì trọng lượng của người đó trên Mặt Trăng sẽ là bao nhiêu Newton (làm tròn kết quả đến hàng phần trăm)?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 8., p. 31]
+	1 người đi quãng đường từ địa điểm A đến địa điểm B với vận tốc {\rm36 km{\tt/}h} hết $3.5$ giờ. Từ địa điểm B quay trở về địa điểm A, người đó đi với vận tốc {\rm30 km{\tt/}h}. Tính thời gian đi từ địa điểm B quay trở về địa điểm A của người đó.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 9., p. 31]
+	1 trường trung học cơ sở (THCS) có các lớp 7A, 7B, 7C, 7D, 7E; mỗi lớp đều có $40$ học sinh. Sau khi sơ kết Học kỳ I, số học sinh đạt kết quả học tập ở mức Tốt của mỗi lớp đó được thể hiện qua biểu đồ cột ở hình sau:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_7_CD_tap_1_hinh_9_p31}
+	\end{figure}
+	\noindent(a) Lớp nào có số học sinh đạt kết quả học tập ở mức Tốt ít hơn $\dfrac{1}{4}$ số học sinh của cả lớp? (b) Lớp nào có số học sinh đạt kết quả học tập ở mức Tốt nhiều hơn $\dfrac{1}{3}$ số học sinh của cả lớp? (c) Lớp nào có tỷ lệ học sinh đạt kết quả học tập ở mức Tốt cao nhất, thấp nhất?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_7_Canh_Dieu_tap_1}, 10., p. 31]
+	Sản lượng chè \& hạt tiêu xuất khẩu của Việt nam qua 1 số năm được biểu diễn trong biểu đồ cột kép ở hình sau:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.25]{SGK_Toan_7_CD_tap_1_hinh_10_p31}
+	\end{figure}
+	\noindent(a) Các năm nào Việt Nam có sản lượng chè xuất khẩu trên $1$ triệu tấn? Sản lượng hạt tiêu xuất khẩu trên $0.2$ triệu tấn? (b) Năm nào Việt Nam có sản lượng chè xuất khẩu lớn nhất? Sản lượng hạt tiêu xuất khẩu lớn nhất? (c) Tính tỷ số $\%$ của sản lượng chè xuất khẩu năm 2013 \& sản lượng chè xuất khẩu năm 2018 (làm tròn kết quả đến hàng đơn vị). 
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
