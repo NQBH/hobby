@@ -1,0 +1,846 @@
+\documentclass{article}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=10]{biblatex}
+\addbibresource{/home/nqbh/reference/bib.bib}
+\usepackage[utf8]{vietnam}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,citecolor=magenta]{hyperref}
+\usepackage{amsmath,amssymb,amsthm,float,graphicx,mathtools}
+\allowdisplaybreaks
+\newtheorem{assumption}{Assumption}
+\newtheorem{baitoan}{Bài toán}
+\newtheorem{cauhoi}{Câu hỏi}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{corollary}{Corollary}
+\newtheorem{dangtoan}{Dạng toán}
+\newtheorem{definition}{Definition}
+\newtheorem{dinhly}{Định lý}
+\newtheorem{dinhnghia}{Định nghĩa}
+\newtheorem{example}{Example}
+\newtheorem{ghichu}{Ghi chú}
+\newtheorem{hequa}{Hệ quả}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{lemma}{Lemma}
+\newtheorem{luuy}{Lưu ý}
+\newtheorem{nhanxet}{Nhận xét}
+\newtheorem{notation}{Notation}
+\newtheorem{note}{Note}
+\newtheorem{principle}{Principle}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{vidu}{Ví dụ}
+\usepackage[left=1cm,right=1cm,top=5mm,bottom=5mm,footskip=4mm]{geometry}
+\def\labelitemii{$\circ$}
+\DeclareRobustCommand{\divby}{%
+	\mathrel{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}%
+}
+
+\title{Problem {\it\&} Solution: Square-, Cube-, {\it\&} $n$th Roots\\Bài Tập Căn Bậc 2, Căn Bậc 3, {\it\&} Căn Bậc $n$ {\it\&} Lời Giải}
+\author{Nguyễn Quản Bá Hồng\footnote{Independent Researcher, Ben Tre City, Vietnam\\e-mail: \texttt{nguyenquanbahong@gmail.com}; website: \url{https://nqbh.github.io}.}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+	\textsf{[en]} This text is a collection of problems, from basic to advanced, on \textit{square-, cube-, \& $n$th roots}.
+	
+	\textsf{\textbf{Keyword.} Square root, cube root, $n$th root.}
+	\vspace{2mm}
+	
+	\textsf{[vi]} Tài liệu này là 1 bộ sưu tập các bài toán, từ cơ bản đến nâng cao, về \textit{căn bậc 2, căn bậc 3, \& căn bậc $n$}.
+	
+	\textsf{\textbf{Từ khóa.} Căn bậc 2, căn bậc 3, căn bậc $n$, số hữu tỷ, số vô tỷ, căn thức.}
+	
+	\begin{itemize}
+		\item Lecture note -- Bài giảng: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}square- \& cube roots}\footnote{\textsc{url}: \url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/NQBH_square_root_cube_root.pdf}.}.
+		\item Cheatsheet -- Công thức: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}cheatsheet: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/cheatsheet/NQBH_square_root_cube_root_cheatsheet.pdf}.}.
+		\item Problem -- Bài tập: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/problem/NQBH_square_root_cube_root_problem.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}problem: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/problem/NQBH_square_root_cube_root_problem.pdf}.}.
+		\item Solution -- Lời giải: \href{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/solution/NQBH_square_root_cube_root_solution.pdf}{GitHub\texttt{/}NQBH\texttt{/}hobby\texttt{/}elementary mathematics\texttt{/}grade 9\texttt{/}solution: square- \& cube roots}\footnote{\url{https://github.com/NQBH/hobby/blob/master/elementary_mathematics/grade_9/square_root_cube_root/solution/NQBH_square_root_cube_root_solution.pdf}.}.
+	\end{itemize}
+\end{abstract}
+\tableofcontents
+\newpage
+
+%------------------------------------------------------------------------------%
+
+\section{Square Root \& Irrationals -- Căn Bậc 2 \& Số Vô Tỷ}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1--?3, pp. 4--5]
+	(a) Tìm các căn bậc 2 của $9,\frac{4}{9},0.25,2$. (b) Tìm căn bậc 2 số học của $49,64,81,1.21$. (c) Tìm căn bậc 2 của $49,64,81,1.21$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Căn bậc 2 của $9,\frac{4}{9},0.25,2$ lần lượt là $\pm3,\pm\frac{2}{3},\pm0.5,\pm\sqrt{2}$. (b) Căn bậc 2 số học của $49,64,81,1.21$ lần lượt là $7,8,9,1.1$. (c) Căn bậc 2 của $49,64,81,1.21$ lần lượt là $\pm7,\pm8,\pm9,\pm1.1$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, ?4, pp. 5--6]
+	So sánh: (a) $1$ \& $\sqrt{2}$. (b) $2$ \& $\sqrt{5}$. (c) $4$ \& $\sqrt{15}$. (d) $\sqrt{11}$ \& $3$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $1 < 2\Leftrightarrow\sqrt{1} = 1 < \sqrt{2}$. (b) $4 < 5\Leftrightarrow\sqrt{4} = 2 < \sqrt{5}$. (c) $16 > 15\Leftrightarrow\sqrt{16} = 4 > \sqrt{15}$. (d) $11 > 9\Leftrightarrow\sqrt{11} > \sqrt{9} = 3$.
+\end{proof}
+
+\begin{baitoan}
+	Biện luận theo $a,b\in\mathbb{R}$ để so sánh $a$ \& $\sqrt{b}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	{\rm ĐKXĐ}: $b\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item \textit{Trường hợp $a < 0$}: vì $\sqrt{b}\ge0$, $\forall b\in\mathbb{R}$, $b\ge0$, suy ra $a < \sqrt{b}$.
+		\item \textit{Trường hợp $a\ge0$}: Xét các trường hợp con:
+		\begin{itemize}
+			\item Trường hợp $0\le a < \sqrt{b}\Leftrightarrow0\le a$ \& $a^2 < b$.
+			\item Trường hợp $0\le a = \sqrt{b}\Leftrightarrow0\le a$ \& $a^2 = b$.
+			\item Trường hợp $a > \sqrt{b}\Leftrightarrow a > 0$ \& $a^2 > b\ge0$.
+		\end{itemize}
+	\end{itemize}
+	Tổng hợp các trường hợp đã xét:
+	\begin{equation*}
+		\left\{\begin{split}
+			a &< \sqrt{b},&&\mbox{nếu } (a < 0\land b\ge0)\lor(a\ge0\land a^2 < b),\\
+			a &= \sqrt{b},&&\mbox{nếu } a\ge0\land a^2 = b,\\
+			a &> \sqrt{b},&&\mbox{nếu } a > 0\land a^2 > b.
+		\end{split}\right.
+	\end{equation*}
+	Biện luận hoàn tất.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, ?5, p. 6]
+	(a) Tìm $x\in\mathbb{R}$ thỏa: (a) $\sqrt{x} > 2$. (b) $\sqrt{x} < 1$. (c) $\sqrt{x} > 1$. (d) $\sqrt{x} < 3$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{x} > 2\Leftrightarrow x > 2^2 = 4$. Vậy $x > 4$, $S = (4,\infty)\coloneqq\{x\in\mathbb{R}|x > 4\}$. (b) {\rm ĐKXĐ}: $x\ge0$, $\sqrt{x} < 1\Leftrightarrow0\le x < 1^2 = 1$. Vậy $0\le x < 1$, $S = [0,1)\coloneqq\{x\in\mathbb{R}|0\le x < 1\}$. (c) $\sqrt{x} > 1\Leftrightarrow x > 1^2 = 1$. Vậy $x > 1$, $S = (1,\infty)\coloneqq\{x\in\mathbb{R}|x > 1\}$. (d) {\rm ĐKXĐ}: $x\ge0$, $\sqrt{x} < 3\Leftrightarrow0\le x < 3^2 = 9$. Vậy $0\le x < 9$, $S = [0,9)\coloneqq\{x\in\mathbb{R}|0\le x < 9\}$.
+\end{proof}
+
+\begin{luuy}
+	Ta quy ước $S$ ký hiệu {\rm tập nghiệm} của cả phương trình \& bất phương trình.
+\end{luuy}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 1., p. 6]
+	Tìm căn bậc 2 số học của mỗi số sau rồi suy ra căn bậc 2 của chúng: \emph{121, 144, 169, 225, 256, 324, 361, 400}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Căn bậc 2 số học của 121, 144, 169, 225, 256, 324, 361, 400 lần lượt là 11, 12, 13, 15, 16, 18, 19, 20. Căn bậc 2 của 121, 144, 169, 225, 256, 324, 361, 400 lần lượt là $\pm11,\pm12,\pm13,\pm15,\pm16,\pm18,\pm19,\pm20$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 2., p. 6]
+	So sánh: (a) $2$ \& $\sqrt{3}$. (b) $6$ \& $\sqrt{41}$. (c) $7$ \& $\sqrt{47}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $4 > 3\Leftrightarrow\sqrt{4} = 2 > \sqrt{3}$. (b) $36 < 41\Leftrightarrow\sqrt{36} = 6 < \sqrt{41}$. (c) $49 > 47\Leftrightarrow\sqrt{49} = 7 > \sqrt{47}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 3., p. 6]
+	Tìm $x\in\mathbb{R}$ thỏa mãn các phương trình sau \& sau đó làm tròn đến chữ số thập phân thứ 3: (a) $x^2 = 2$. (b) $x^2 = 3$. (c) $x^2 = 3.5$. (d) $x^2 = 4.12$.
+\end{baitoan}
+\noindent{\sf Hint.} Nghiệm của phương trình bậc 2 $x^2 = a$ với $a\ge0$ là các căn bậc 2 của $a$.
+
+\begin{proof}[Giải]
+	(a) $x^2 = 2\Leftrightarrow x = \pm\sqrt{2}\Rightarrow x\approx\pm1.414$. (b) $x^2 = 3\Leftrightarrow x = \pm\sqrt{3}\Rightarrow x\approx\pm1.732$. (c) $x^2 = 3.5\Leftrightarrow x = \pm\sqrt{3.5}\Rightarrow x\approx\pm1.871$. (d) $x^2 = 4.12\Leftrightarrow x = \pm\sqrt{4.12}\Rightarrow x\approx\pm2.030$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 4., p. 7]
+	Tìm $x\in\mathbb{R}$ thỏa: (a) $\sqrt{x} = 15$. (b) $2\sqrt{x} = 14$. (c) $\sqrt{x} < \sqrt{2}$. (d) $\sqrt{2x} < 4$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	{\rm ĐKXĐ}: $x\ge0$. (a) $\sqrt{x} = 15\Leftrightarrow x = 15^2 = 225 > 0$: nhận. Vậy $x = 225$, $S = \{225\}$. (b) $2\sqrt{x} = 14\Leftrightarrow\sqrt{x} = \frac{14}{2} = 7\Leftrightarrow x = 7^2 = 49 > 0$: nhận. Vậy $x = 49$, $S = \{49\}$. (c) $\sqrt{x} < \sqrt{2}\Leftrightarrow0\le x < 2$. Vậy $0\le x < 2$, $S = [0,2)\coloneqq\{x\in\mathbb{R}|0\le x < 2\}$. (d) $\sqrt{2x} < 4\Leftrightarrow0\le2x < 4^2 = 16\Leftrightarrow0\le x < \frac{16}{2} = 8$. Vậy $0\le x < 8$, $S = [0,8)\coloneqq\{x\in\mathbb{R}|0\le x < 8\}$.
+\end{proof}
+
+\begin{baitoan}
+	Biện luận theo tham số $a,b,c,d\in\mathbb{R}$ để giải bất phương trình: (a) $\sqrt{x} < a$. (b) $\sqrt{x} > a$. (c) $\sqrt{x}\le a$. (d) $\sqrt{x}\ge a$. (e) $\sqrt{ax + b} > c$, $a\ne0$. (f) $\sqrt{ax + b} < c$, $a\ne0$. (g) $\sqrt{ax + b}\le c$, $a\ne0$. (h) $\sqrt{ax + b}\ge c$, $a\ne0$. (i) $\sqrt{ax + b} < \sqrt{cx + d}$, $ac\ne0$. (j) $\sqrt{ax + b} > \sqrt{cx + d}$, $ac\ne0$. (k) $\sqrt{ax + b}\le\sqrt{cx + d}$, $ac\ne0$. (l) $\sqrt{ax + b}\ge\sqrt{cx + d}$, $ac\ne0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) {\rm ĐKXĐ}: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a\le0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x} < a$ vô nghiệm.
+		\item Trường hợp $a > 0$: $\sqrt{x} < a\Leftrightarrow0\le x < a^2$.
+	\end{itemize}
+	Vậy 
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&\emptyset,&&\mbox{nếu } a\le0,\\
+			&[0,a^2)\coloneqq\{x\in\mathbb{R}|0\le x < a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(b) {\rm ĐKXĐ}: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a < 0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x} > a$ luôn đúng $\forall x\ge0$.
+		\item Trường hợp $a = 0$: $\sqrt{x} > 0\Leftrightarrow x > 0$.
+		\item Trường hợp $a > 0$: $\sqrt{x} > a\Leftrightarrow x > a^2$.
+	\end{itemize}
+	Vậy
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&[0,\infty)\coloneqq\{x\in\mathbb{R}|x\ge0\},&&\mbox{nếu } a < 0,\\
+			&(0,\infty)\coloneqq\{x\in\mathbb{R}|x > 0\},&&\mbox{nếu } a = 0,\\
+			&(a^2,\infty)\coloneqq\{x\in\mathbb{R}|x > a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(c) {\rm ĐKXĐ}: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a < 0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x}\le a$ vô nghiệm.
+		\item Trường hợp $a = 0$: $\sqrt{x}\le0\Leftrightarrow x = 0$.
+		\item Trường hợp $a > 0$: $\sqrt{x}\le a\Leftrightarrow0\le x\le a^2$.
+	\end{itemize}
+	Vậy
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&\emptyset,&&\mbox{nếu } a < 0,\\
+			&\{0\},&&\mbox{nếu } a = 0,\\
+			&[0,a^2]\coloneqq\{x\in\mathbb{R}|0\le x\le a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(d) {\rm ĐKXĐ}: $x\ge0$. Xét các trường hợp:
+	\begin{itemize}
+		\item Trường hợp $a\le0$: Vì $\sqrt{x}\ge0$, $\forall x\in\mathbb{R}$, $x\ge 0$, nên bất phương trình $\sqrt{x}\ge a$ đúng $\forall x\ge0$.
+		\item Trường hợp $a > 0$: $\sqrt{x}\ge a\Leftrightarrow x\ge a^2$.
+	\end{itemize}
+	Vậy
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&[0,\infty),&&\mbox{nếu } a\le0,\\
+			&[a^2,\infty)\coloneqq\{x\in\mathbb{R}|x\ge a^2\},&&\mbox{nếu } a > 0.
+		\end{split}\right.
+	\end{equation*}
+	(e) $\sqrt{ax + b} > c$. (f) $\sqrt{ax + b} < c$. (g) $\sqrt{ax + b}\le c$. (h) $\sqrt{ax + b}\ge c$. (i) $\sqrt{ax + b} < \sqrt{cx + d}$. (j) $\sqrt{ax + b} > \sqrt{cx + d}$. (k) $\sqrt{ax + b}\le\sqrt{cx + d}$. (l) $\sqrt{ax + b}\ge\sqrt{cx + d}$.
+\end{proof}
+
+\begin{baitoan}
+	Viết chương trình {\sf Pascal, Python, C\texttt{/}C++} để giải \& biện luận theo tham số $a,b,c,d\in\mathbb{R}$ để giải bất phương trình: (a) $\sqrt{x} < a$. (b) $\sqrt{x} > a$. (c) $\sqrt{x}\le a$. (d) $\sqrt{x}\ge a$. (e) $\sqrt{ax + b} > c$, $a\ne0$. (f) $\sqrt{ax + b} < c$, $a\ne0$. (g) $\sqrt{ax + b}\le c$, $a\ne0$. (h) $\sqrt{ax + b}\ge c$, $a\ne0$. (i) $\sqrt{ax + b} < \sqrt{cx + d}$, $ac\ne0$. (j) $\sqrt{ax + b} > \sqrt{cx + d}$, $ac\ne0$. (k) $\sqrt{ax + b}\le\sqrt{cx + d}$, $ac\ne0$. (l) $\sqrt{ax + b}\ge\sqrt{cx + d}$, $ac\ne0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 5., p. 7]
+	Tính cạnh 1 hình vuông biết diện tích của nó bằng diện tích của hình chữ nhật có chiều rộng \emph{3.5 m} \& chiều dài \emph{14 m}.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$S_{\rm hv} = S_{\rm hcn} = 3.5\cdot14 = 49\Rightarrow a = \sqrt{S_{\rm hv}} = \sqrt{49} = 7$ m.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\section{Căn Thức Bậc 2 \& Hằng Đẳng Thức $\sqrt{A^2} = |A|$}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1, p. 8]
+	Hình chữ nhật $ABCD$ có đường chéo dài $a$ {\rm cm} \& cạnh $BC = x$ {\rm cm}. tính $AB$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Áp dụng định lý Pythagore cho $\Delta ABC$ vuông tại $B$: $AB = \sqrt{AC^2 - BC^2} = \sqrt{a^2 - x^2}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 1, ?2, p. 8]
+	Với giá trị nào của $x\in\mathbb{R}$ thì: (a) $\sqrt{3x}$ xác định. (b) $\sqrt{5 - 2x}$ xác định?
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{3x}$ xác định $\Leftrightarrow3x\ge0\Leftrightarrow x\ge0$. (b) $\sqrt{5 - 2x}$ xác định $\Leftrightarrow5 - 2x\ge0\Leftrightarrow2x\le5\Leftrightarrow x\le\frac{5}{2} = 2.5$.
+\end{proof}
+
+\begin{baitoan}
+	Với giá trị nào của $x\in\mathbb{R}$ thì $\sqrt{ax + b}$ xác định với $a,b\in\mathbb{R}$, $a\ne0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$\sqrt{ax + b}$ xác định $\Leftrightarrow ax + b\ge0\Leftrightarrow ax\ge-b\Leftrightarrow x\ge-\frac{b}{a}$ nếu $a > 0$ \& $x\le-\frac{b}{a}$ nếu $a < 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ĐL, p. 9]
+	Chứng minh: $\sqrt{a^2} = |a|$, $\forall a\in\mathbb{R}$.
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Theo định nghĩa giá trị tuyệt đối thì $|a|\ge0$. Nếu $a\ge0$ thì $|a| = a$, nên $(|a|)^2 = a^2$. Nếu $a < 0$ thì $|a| = -a$, nên $(|a|)^2 = (-a)^2 = a^2$. Do đó, $(|a|)^2 = a^2$, $\forall a\in\mathbb{R}$. Vậy $|a|$ chính là căn bậc 2 số học của $a^2$, i.e., $\sqrt{a^2} = |a|$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, p. 9]
+	Tính: (a) $\sqrt{12^2}$. (b) $\sqrt{(-7)^2}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{12^2} = |12| = 12$. (b) $\sqrt{(-7)^2} = |-7| = 7$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, p. 9]
+	Rút gọn: (a) $\sqrt{(\sqrt{2} - 1)^2}$. (b) $\sqrt{(2 - \sqrt{5})^2}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$\sqrt{(\sqrt{2} - 1)^2} = |\sqrt{2} - 1| = \sqrt{2} - 1$ (vì $2 > 1\Leftrightarrow\sqrt{2} > \sqrt{1} = 1$). Vậy $\sqrt{(\sqrt{2} - 1)^2} = \sqrt{2} - 1$. (b) $\sqrt{(2 - \sqrt{5})^2} = |2 - \sqrt{5}| = \sqrt{5} - 2$ (vì $5 > 4\Leftrightarrow\sqrt{5} > \sqrt{4} = 2$). Vậy $\sqrt{(2 - \sqrt{5})^2} = \sqrt{5} - 2$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 4, p. 10]
+	Rút gọn: (a) $\sqrt{(x - 2)^2}$ với $x\ge2$. (b) $\sqrt{a^6}$ với $a < 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{(x - 2)^2} = |x - 2| = x - 2$ (vì $x\ge2$). (b) $\sqrt{a^6} = \sqrt{(a^3)^2} = |a^3| = -a^3$ vì $a < 0\Leftrightarrow a^3 < 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 6., p. 10]
+	Với giá trị nào của $a\in\mathbb{R}$ thì mỗi căn thức sau có nghĩa? (a) $\sqrt{\frac{a}{3}}$. (b) $\sqrt{-5a}$. (c) $\sqrt{4 - a}$. (d) $\sqrt{3a + 7}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{\frac{a}{3}}$ xác định $\Leftrightarrow\frac{a}{3}\ge0\Leftrightarrow a\ge0$. (b) $\sqrt{-5a}$ xác định $\Leftrightarrow-5a\ge0\Leftrightarrow a\le0$. (c) $\sqrt{4 - a}$ xác định $\Leftrightarrow4 - a\ge0\Leftrightarrow a\le4$. (d) $\sqrt{3a + 7}$ xác định $\Leftrightarrow3a + 7\ge0\Leftrightarrow3a\ge-7\Leftrightarrow a\ge-\frac{7}{3}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 7., p. 10]
+	Tính: (a) $\sqrt{(0.1)^2}$. (b) $\sqrt{(-0.3)^2}$. (c) $-\sqrt{(-1.3)^2}$. (d) $-0.4\sqrt{(-0.4)^2}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{(0.1)^2} = |0.1| = 0.1$. (b) $\sqrt{(-0.3)^2} = |-0.3| = 0.3$. (c) $-\sqrt{(-1.3)^2} = -|-1.3| = -1.3$. (d) $-0.4\sqrt{(-0.4)^2} = -0.4|-0.4| = -0.4\cdot0.4 = -0.16$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 8., p. 10]
+	Rút gọn các biểu thức: (a) $\sqrt{(2 - \sqrt{3})^2}$. (b) $\sqrt{(3 - \sqrt{11})^2}$. (c) $2\sqrt{a^2}$ với $a\ge0$. (d) $3\sqrt{(a - 2)^2}$ với $a < 2$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{(2 - \sqrt{3})^2} = |2 - \sqrt{3}| = 2 - \sqrt{3}$ (vì $4 > 3\Leftrightarrow\sqrt{4} = 2 > \sqrt{3}$). (b) $\sqrt{(3 - \sqrt{11})^2} = |3 - \sqrt{11}| = \sqrt{11} - 3$ (vì $9 < 11\Leftrightarrow\sqrt{9} = 3 < \sqrt{11}$). (c) $2\sqrt{a^2} = 2|a| = 2a$ với $a\ge0$. (d) $3\sqrt{(a - 2)^2} = 3|a - 2| = 3(2 - a)$ vì $a < 2\Leftrightarrow a - 2 < 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 9., p. 11]
+	Tìm $x$ thỏa: (a) $\sqrt{x^2} = 7$ . (b) $\sqrt{x^2} = |-8|$. (c) $\sqrt{4x^2} = 6$. (d) $\sqrt{9x^2} = |-12|$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{x^2} = 7\Leftrightarrow|x| = 7\Leftrightarrow x = \pm7$ . (b) $\sqrt{x^2} = |-8|\Leftrightarrow|x| = 8\Leftrightarrow x = \pm8$. (c) $\sqrt{4x^2} = 6\Leftrightarrow\sqrt{(2x)^2} = 6\Leftrightarrow|2x| = 6\Leftrightarrow2|x| = 6\Leftrightarrow|x| = \frac{6}{2} = 3\Leftrightarrow x = \pm3$. (d) $\sqrt{9x^2} = |-12|\Leftrightarrow\sqrt{(3x)^2} = 12\Leftrightarrow|3x| = 12\Leftrightarrow3|x| = 12\Leftrightarrow|x| = \frac{12}{3} = 4\Leftrightarrow x = \pm4$.
+\end{proof}
+
+\begin{baitoan}
+	Giải \& biện luận phương trình ẩn $x$ theo các tham số $a,b,c,d,e,f\in\mathbb{R}$: (a) $\sqrt{ax^2} = b$. (b) $\sqrt{(ax + b)^2} = c$. (c) $\sqrt{a(bx + c)^2} = d$. (d) $\sqrt{ax^2} = \sqrt{bx^2}$. (e) $\sqrt{(ax + b)^2} = \sqrt{cx^2}$. (f) $\sqrt{(ax + b)^2} = \sqrt{(cx + d)^2}$. (g) $\sqrt{a(bx + c)^2} = \sqrt{dx^2}$. (h) $\sqrt{a(bx + c)^2} = \sqrt{(dx + e)^2}$. (i) $\sqrt{a(bx + c)^2} = \sqrt{d(ex + f)^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 10., p. 11]
+	Chứng minh: (a) $(\sqrt{3} - 1)^2 = 4 - 2\sqrt{3}$. (b) $\sqrt{4 - 2\sqrt{3}} - \sqrt{3} = -1$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $(\sqrt{3} - 1)^2 = (\sqrt{3})^2 - 2\sqrt{3} + 1 = 3 - 2\sqrt{3} + 1 = 4 - 2\sqrt{3}$. (b) Từ (a): $4 - 2\sqrt{3} = (\sqrt{3} - 1)^2\Leftrightarrow\sqrt{4 - 2\sqrt{3}} = |\sqrt{3} - 1| = \sqrt{3} - 1\Leftrightarrow\sqrt{4 - 2\sqrt{3}} - \sqrt{3} = -1$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 11., p. 11]
+	Tính: (a) $\sqrt{16}\cdot\sqrt{25} + \sqrt{196}:\sqrt{49}$. (b) $36:\sqrt{2\cdot3^2\cdot18} - \sqrt{169}$. (c)  $\sqrt{\sqrt{81}}$. (d) $\sqrt{3^2 + 4^2}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{16}\cdot\sqrt{25} + \sqrt{196}:\sqrt{49} = \sqrt{4^2}\cdot\sqrt{5^2} + \sqrt{14^2}:\sqrt{7^2} = |4||5| + |14|:|7| = 4\cdot5 + 14:7 = 20 + 2 = 22$. (b) $36:\sqrt{2\cdot3^2\cdot18} - \sqrt{169} = 36:\sqrt{18\cdot18} - \sqrt{13^2} = 36:\sqrt{(18)^2} - \sqrt{13^2} = 36:|18| - |13| = 36:18 - 13 = 2 - 13 = -11$. (c) $\sqrt{\sqrt{81}} = \sqrt{\sqrt{9^2}} = \sqrt{|9|} = \sqrt{9} = \sqrt{3^2} = |3| = 3$. (d) $\sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = \sqrt{5^2} = |5| = 5$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 12., p. 11]
+	Tìm $x$ để mỗi căn thức sau có nghĩa: (a) $\sqrt{2x + 7}$. (b) $\sqrt{-3x + 4}$. (c) $\sqrt{\frac{1}{x - 1}}$. (d) $\sqrt{1 + x^2}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{2x + 7}$ xác định $\Leftrightarrow2x + 7\ge0\Leftrightarrow2x\ge-7\Leftrightarrow x\ge-\frac{7}{2} = -3.5$. (b) $\sqrt{-3x + 4}$ xác định $\Leftrightarrow-3x + 4\ge0\Leftrightarrow3x\le4\Leftrightarrow x\le\frac{4}{3}$. (c) $\sqrt{\frac{1}{x - 1}}$ xác định $\Leftrightarrow\frac{1}{x - 1} > 0\Leftrightarrow x - 1 > 0\Leftrightarrow x > 1$. (d) $\sqrt{1 + x^2}$ xác định $\Leftrightarrow1 + x^2 > 0$: luôn đúng $\forall x\in\mathbb{R}$ vì $x^2 + 1\ge0 + 1 = 1 > 0$, $\forall x\in\mathbb{R}$. Vậy $\sqrt{1 + x^2}$ xác định $\forall x\in\mathbb{R}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 13., p. 11]
+	Rút gọn các biểu thức: (a) $2\sqrt{a^2} - 5a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a$ với $a\ge0$. (c) $\sqrt{9a^4} + 3a^2 = \sqrt{(3a^2)^2} + 3a^2 = |3a^2| + 3a^2 = 3a^2 + 3a^2 = 6a^2$. (d) $5\sqrt{4a^6} - 3a^3$ với $a < 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $2\sqrt{a^2} - 5a = 2|a| - 5a = -2a - 5a = -7a$ với $a < 0$. (b) $\sqrt{25a^2} + 3a = \sqrt{(5a)^2} + 3a = |5a| + 3a = 5a + 3a = 8a$ vì $a\ge0\Leftrightarrow5a\ge0$. (c) $\sqrt{9a^4} + 3a^2$. (d) $5\sqrt{4a^6} - 3a^3 = 5\sqrt{(2a^3)^2} - 3a^3 = 5|2a^3| - 3a^3 = -10a^3 - 3a^3 = -13a^3$ vì $a < 0\Leftrightarrow a^3 < 0\Leftrightarrow2a^3 < 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 14., p. 11]
+	Phân tích thành nhân tử: (a) $x^2 - 3$. (b) $x^2 - 6$. (c) $x^2 + 2\sqrt{3}x + 3$. (d) $x^2 - 2\sqrt{5}x + 5$.
+\end{baitoan}
+\noindent{\sf Hint.} $a = (\sqrt{a})^2$, $\forall a\in\mathbb{R}$, $a\ge0$.
+
+\begin{proof}[Giải]
+	(a) $x^2 - 3 = x^2 - (\sqrt{3})^2 = (x - \sqrt{3})(x + \sqrt{3})$. (b) $x^2 - 6 = x^2 - (\sqrt{6})^2 = (x - \sqrt{6})(x + \sqrt{6})$. (c) $x^2 + 2\sqrt{3}x + 3 = x^2 + 2x\sqrt{3} + (\sqrt{3})^2  = (x + \sqrt{3})^2$. (d) $x^2 - 2\sqrt{5}x + 5 = x^2 - 2x\sqrt{5} + (\sqrt{5})^2 = (x - \sqrt{5})^2$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 15., p. 11]
+	Giải phương trình: (a) $x^2 - 5 = 0$. (b) $x^2 - 2\sqrt{11}x + 11 = 0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $x^2 - 5 = 0\Leftrightarrow x^2 = 5\Leftrightarrow|x| = \sqrt{5}\Leftrightarrow x = \pm\sqrt{5}$. Vậy $x = \pm\sqrt{5}$, $S = \{\pm\sqrt{5}\}$. (b) $x^2 - 2\sqrt{11}x + 11 = 0\Leftrightarrow x^2 - 2x\sqrt{11} + (\sqrt{11})^2 = 0\Leftrightarrow(x - \sqrt{11})^2 = 0\Leftrightarrow x - \sqrt{11} = 0\Leftrightarrow x = \sqrt{11}$. Vậy $x = \sqrt{11}$, $S = \{\sqrt{11}\}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 16., p. 12]
+	Tìm chỗ sai trong phép chứng minh ``Con muỗi nặng bằng con voi'' sau: Giả sử con muỗi nặng $m$ \emph{g}, còn con voi nặng $V$ \emph{g}. Ta có: $m^2 + V^2 = V^2 + m^2$. Cộng cả 2 vế với $-2mV$, ta có: $m^2 - 2mV + V^2 = V^2 - 2mV + m^2$, hay $(m - V)^2 = (V - m)^2$. Lấy căn bậc 2 mỗi vế của đẳng thức trên, ta được: $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}$. Do đó $m - V = V - m$. Từ đó ta có $2m = 2V$, suy ra $m = V$. Vậy con muỗi nặng bằng con voi!
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Chỗ sai ở bước khai căn: $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Leftrightarrow|m - V| = |V - m|$, chứ không phải $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Rightarrow m - V = V - m$, vì $\sqrt{(m - V)^2} = \sqrt{(V - m)^2}\Leftrightarrow m - V = \pm(V - m)$. Lời giải trên thiếu dấu giá trị tuyệt đối sau khi khai phương nên sai.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\section{Liên Hệ Giữa Phép Nhân, Phép Chia \& Phép Khai Phương}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1, p. 12]
+	Tính \& so sánh: $\sqrt{16\cdot25}$ \& $\sqrt{16}\cdot\sqrt{25}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ĐL, p. 12]
+	Chứng minh: (a) $\sqrt{ab} = \sqrt{a}\sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b\ge0$. (b)
+	\begin{align*}
+		\sqrt{\prod_{i=1}^n a_i} = \prod_{i=1}^n \sqrt{a_i},\mbox{ i.e., }\sqrt{a_1a_2\cdots a_n} = \sqrt{a_1}\sqrt{a_2}\cdots\sqrt{a_n},\ \forall n\in\mathbb{N}^\star,\ \forall a_i\in\mathbb{R},\,a_i\ge0,\,\forall i = 1,2,\ldots,n.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 1, ?2, p. 13]
+	Áp dụng quy tắc khai phương 1 tích, tính: (a) $\sqrt{49\cdot1.44\cdot25}$. (b) $\sqrt{810\cdot40}$. (c) $\sqrt{0.16\cdot0.64\cdot225}$. (d) $\sqrt{250\cdot360}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, ?3, pp. 13--14]
+	Tính: (a) $\sqrt{5}\sqrt{20}$. (b) $\sqrt{1.3}\sqrt{52}\sqrt{10}$. (c) $\sqrt{3}\sqrt{75}$. (d) $\sqrt{20}\sqrt{72}\sqrt{4.9}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, ?4, p. 14]
+	Tìm {\rm ĐKXĐ} rồi rút gọn biểu thức: (a) $\sqrt{3a}\sqrt{27a}$ với $a\ge0$. (b) $\sqrt{9a^2b^4}$. (c) $\sqrt{3a^3}\sqrt{12a}$. (d) $\sqrt{2a\cdot32ab^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 17., p. 14]
+	Áp dụng quy tắc khai phương 1 tích, tính: (a) $\sqrt{0.09\cdot64}$. (b) $\sqrt{2^4\dot(-7)^2}$. (c) $\sqrt{12.1\cdot360}$. (d) $\sqrt{2^2\cdot3^4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 18., p. 14]
+	Áp dụng quy tắc nhân các căn bậc 2, tính: (a) $\sqrt{7}\sqrt{63}$. (b) $\sqrt{2.5}\sqrt{30}\sqrt{48}$. (c) $\sqrt{0.4}\cdot\sqrt{6.4}$. (d) $\sqrt{2.7}\sqrt{5}\sqrt{1.5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 19., p. 15]
+	Rút gọn biểu thức: (a) $\sqrt{0.36a^2}$ với $a < 0$ \& $a\in\mathbb{R}$. (b) $\sqrt{a^4(3 - a)^2}$ với $a\ge3$ \& $a\in\mathbb{R}$. (c) $\sqrt{27\cdot48(1 - a)^2}$ với $a > 1$ \& $a\in\mathbb{R}$. (d) $\frac{1}{a - b}\sqrt{a^4(a - b)^2}$ với $a > b$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 20., p. 15]
+	Rút gọn biểu thức: (a) $\sqrt{\frac{2a}{3}}\sqrt{\frac{3a}{8}}$ với $a\ge0$. (b) $\sqrt{13a}\sqrt{\frac{52}{a}}$ với $a > 0$. (c) $\sqrt{5a}\sqrt{45a} - 3a$ với $a\ge0$. (d) $(3 - a)^2 - \sqrt{0.2}\sqrt{180a^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 21., p. 15]
+	Khai phương tích $12\cdot30\cdot40$ được bao nhiêu?
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 22., p. 15]
+	Tính hợp lý: (a) $\sqrt{13^2 - 12^2}$. (b) $\sqrt{17^2 - 8^2}$. (c) $\sqrt{117^2 - 108^2}$. (d) $\sqrt{313^2 - 312^2}$.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_9_tap_1}, 22., p. 15]
+	Rút gọn biểu thức:
+	\begin{align*}
+		\sqrt{\left(\frac{m^2 + n^2}{2}\right)^2 - \left(\frac{m^2 - n^2}{2}\right)^2},\ \forall m,n\in\mathbb{R}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 23., p. 15]
+	Chứng minh: (a) $(2 - \sqrt{3})(2 + \sqrt{3}) = 1$. (b) $\sqrt{2006}\pm\sqrt{2005})$ là 2 số nghịch đảo của nhau.
+\end{baitoan}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_9_tap_1}, 23., p. 15]
+	Chứng minh: (a) $(n - \sqrt{n^2 - 1})(n + \sqrt{n^2 - 1}) = 1$, $\forall n\in\mathbb{R}$, $|n|\ge1$. (b) $\sqrt{n + 1}\pm\sqrt{n})$ là 2 số nghịch đảo của nhau, $\forall n\in\mathbb{R}$, $n\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 24., p. 15]
+	Rút gọn \& tìm giá trị (làm tròn đến chữ số thập phân thứ 3) của các căn thức: (a) $\sqrt{4(1 + 6x + 9x^2)^2}$ tại $x = -\sqrt{2}$. (b) $\sqrt{9a^2(b^2 + 4 - 4b)}$ tại $a = -2$, $b = -\sqrt{3}$. 
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 25., p. 16]
+	Tìm $x\in\mathbb{R}$ thỏa: (a) $\sqrt{16x} = 8$. (b) $\sqrt{4x} = \sqrt{5}$. (c) $\sqrt{9(x - 1)} = 21$. (d) $\sqrt{4(1 - x)^2} - 6 = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 26., p. 16]
+	(a) So sánh $\sqrt{25 + 9}$ \& $\sqrt{25} + \sqrt{9}$. (b) Chứng minh $\sqrt{a + b} < \sqrt{a} + \sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b > 0$. (c) Chứng minh $\sqrt{a + b}\le\sqrt{a} + \sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 27., p. 16]
+	So sánh: (a) $4$ \& $2\sqrt{3}$. (b) $-\sqrt{5}$ \& $-2$.
+\end{baitoan}
+
+\section{Phép Chia \& Phép Khai Phương}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1, p. 16]
+	Tính \& so sánh: (a) $\sqrt{\dfrac{16}{25}}$ \& $\dfrac{\sqrt{16}}{\sqrt{25}}$. (b) $\sqrt{\dfrac{a^2}{b^2}}$ \& $\dfrac{\sqrt{a^2}}{\sqrt{b^2}}$, $\forall a,b\in\mathbb{R}$, $b\ne0$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt{\dfrac{16}{25}} = \sqrt{\dfrac{4^2}{5^2}} = \sqrt{\left(\dfrac{4}{5}\right)^2} = \left|\dfrac{4}{5}\right| = \dfrac{4}{5}$ \& $\dfrac{\sqrt{16}}{\sqrt{25}} = \dfrac{\sqrt{4^2}}{\sqrt{5^2}} = \dfrac{|4|}{|5|} = \dfrac{4}{5}$, suy ra $\sqrt{\dfrac{16}{25}} = \dfrac{\sqrt{16}}{\sqrt{25}} = \dfrac{4}{5}$. (b) Tương tự, $\forall a,b\in\mathbb{R}$, $b\ne0$, có $\sqrt{\dfrac{a^2}{b^2}} = \sqrt{\left(\dfrac{a}{b}\right)^2} = \left|\dfrac{a}{b}\right|$ \& $\dfrac{\sqrt{a^2}}{\sqrt{b^2}} = \dfrac{|a|}{|b|}$, mà $\left|\dfrac{a}{b}\right| = \dfrac{|a|}{|b|}$, suy ra $\sqrt{\dfrac{a^2}{b^2}} = \dfrac{\sqrt{a^2}}{\sqrt{b^2}} = \left|\dfrac{a}{b}\right|$, $\forall a,b\in\mathbb{R}$, $b\ne0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ĐL, p. 16]
+	Chứng minh: $\sqrt{\dfrac{a}{b}} = \dfrac{\sqrt{a}}{\sqrt{b}}$, $\forall a,b\in\mathbb{R}$, $a\ge0$, $b > 0$.
+\end{baitoan}
+
+\begin{proof}[Chứng minh]
+	Vì $a\ge0$, $b > 0$ nên $\dfrac{\sqrt{a}}{\sqrt{b}}$ xác định \& không âm. Có $\left(\dfrac{\sqrt{a}}{\sqrt{b}}\right)^2 = \dfrac{(\sqrt{a})^2}{(\sqrt{b})^2} = \dfrac{a}{b}$, suy ra $\dfrac{\sqrt{a}}{\sqrt{b}}$ là căn bậc 2 số học của $\dfrac{a}{b}$, i.e., $\sqrt{\dfrac{a}{b}} = \dfrac{\sqrt{a}}{\sqrt{b}}$, $\forall a,b\in\mathbb{R}$, $a\ge0$, $b > 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 1, ?2, p. 17]
+	Áp dụng quy tắc khai phương 1 thương, tính: (a) $\sqrt{\dfrac{25}{121}}$. (b) $\sqrt{\dfrac{9}{16}:\dfrac{25}{36}}$. (a) $\sqrt{\dfrac{225}{256}}$. (d) $\sqrt{0.0196}$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	(a) $\sqrt{\dfrac{25}{121}} = \dfrac{\sqrt{25}}{\sqrt{121}} = \dfrac{\sqrt{5^2}}{\sqrt{11^2}} = \dfrac{|5|}{|11|} = \dfrac{5}{11}$. (b) $\sqrt{\dfrac{9}{16}:\dfrac{25}{36}}$. (c) $\sqrt{\dfrac{225}{256}}$. (d) $\sqrt{0.0196}$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	(a) $\sqrt{\dfrac{25}{121}} = \sqrt{\dfrac{5^2}{11^2}} = \sqrt{\left(\dfrac{5}{11}\right)^2} = \left|\dfrac{5}{11}\right| = \frac{5}{11}$. (b) $\sqrt{\dfrac{9}{16}:\dfrac{25}{36}} = \sqrt{\dfrac{9}{16}\cdot\dfrac{36}{25}} = \dfrac{\sqrt{9\cdot36}}{\sqrt{16\cdot25}} = \dfrac{\sqrt{9}\cdot\sqrt{36}}{\sqrt{16}\cdot\sqrt{25}} = \dfrac{\sqrt{3^2}\cdot\sqrt{6^2}}{\sqrt{4^2}\cdot\sqrt{5^2}} = \dfrac{3\cdot6}{4\cdot5} = \frac{9}{10}$. (c) $\sqrt{\dfrac{225}{256}} = \dfrac{\sqrt{225}}{\sqrt{256}} = \dfrac{\sqrt{15^2}}{\sqrt{16^2}} = \dfrac{15}{16}$. (d) $\sqrt{0.0196} = \sqrt{\dfrac{196}{10000}} = \dfrac{\sqrt{196}}{\sqrt{10000}} = \dfrac{14}{100} = 0.14$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, ?3, pp. 17--18]
+	Tính: (a) $\dfrac{\sqrt{80}}{\sqrt{5}}$. (b) $\sqrt{\dfrac{49}{8}}:\sqrt{3\dfrac{1}{8}}$. (c) $\dfrac{\sqrt{999}}{\sqrt{111}}$. (d) $\dfrac{\sqrt{52}}{\sqrt{117}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, ?4, p. 18]
+	Rút gọn biểu thức: (a) $\sqrt{\dfrac{4a^2}{25}}$. (b) $\dfrac{\sqrt{27a}}{\sqrt{3a}}$ với $a > 0$. (c) $\sqrt{\dfrac{2a^2b^4}{50}}$. (d) $\dfrac{\sqrt{2ab^2}}{\sqrt{162}}$ với $a\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 28., p. 18]
+	Tính: (a) $\sqrt{\dfrac{289}{225}}$. (b) $\sqrt{2\dfrac{14}{25}}$. (c) $\sqrt{\dfrac{0.25}{9}}$. (d) $\sqrt{\dfrac{8.1}{1.6}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 29., p. 19]
+	Tính: (a) $\dfrac{\sqrt{2}}{\sqrt{18}}$. (b) $\dfrac{\sqrt{15}}{\sqrt{735}}$. (c) $\dfrac{\sqrt{12500}}{\sqrt{500}}$. (d) $\dfrac{\sqrt{6^5}}{\sqrt{2^3\cdot3^5}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 30., p. 19]
+	Rút gọn biểu thức: (a) $\dfrac{y}{x}\sqrt{\dfrac{x^2}{y^4}}$ với $x > 0$ \& $y\ne0$. (b) $2y^2\sqrt{\dfrac{x^4}{4y^2}}$ với $y < 0$. (c) $5xy\sqrt{\dfrac{25x^2}{y^6}}$ với $x < 0$, $y > 0$. (d) $0.2x^3y^3\sqrt{\dfrac{16}{x^4y^8}}$ với $xy\ne0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 31., p. 19]
+	(a) So sánh $\sqrt{25 - 16}$ \& $\sqrt{25} - \sqrt{16}$. (b) Chứng minh: $\sqrt{a} - \sqrt{b} < \sqrt{a - b}$, $\forall a,b\in\mathbb{R}$, $a > b > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 32., p. 19]
+	Tính: (a) $\sqrt{1\dfrac{9}{16}\cdot5\dfrac{4}{9}\cdot0.01}$. (b) $\sqrt{1.44\cdot1.21 - 1.44\cdot0.4}$. (c) $\sqrt{\dfrac{165^2 - 124^2}{164}}$. (d) $\sqrt{\dfrac{149^2 - 76^2}{457^2 - 384^2}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 33., p. 19]
+	Giải phương trình: (a)  $\sqrt{2}x - \sqrt{50} = 0$. (b) $\sqrt{3}x + \sqrt{3} = \sqrt{12} + \sqrt{27}$. (c) $\sqrt{3}x^2 - \sqrt{12} = 0$. (d) $\dfrac{x^2}{\sqrt{5}} - \sqrt{20} = 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 34., pp. 19--20]
+	Rút gọn biểu thức: (a) $ab^2\sqrt{\dfrac{3}{a^2b^4}}$ với $a < b$, $b\ne0$. (b) $\sqrt{\dfrac{27(a - 3)^2}{48}}$ với $a > 3$. (c) $\sqrt{\dfrac{9 + 12a + 4a^2}{b^2}}$ với $a\ge-1.5$ \& $b < 0$. (d) $(a - b)\sqrt{\dfrac{ab}{(a - b)^2}}$ với $a < b < 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 35., p. 20]
+	Tìm $x\in\mathbb{R}$ thỏa: (a) $\sqrt{(x - 3)^2} = 9$. (b) $\sqrt{4x^2 + 4x + 1} = 6$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) {\rm ĐKXĐ}: $\forall x\in\mathbb{R}$. $\sqrt{(x - 3)^2} = 9\Leftrightarrow|x - 3| = 9\Leftrightarrow x - 3 = \pm9\Leftrightarrow x = 12$ or $x = -6$. Vậy $S = \{-6,12\}$. (b) {\rm ĐKXĐ}: $\forall x\in\mathbb{R}$. $\sqrt{4x^2 + 4x + 1} = 6\Leftrightarrow\sqrt{(2x + 1)^2} = 6\Leftrightarrow|2x + 1| = 6\Leftrightarrow 2x + 1 = \pm6\Leftrightarrow x = \frac{5}{2}$ or $x = -\frac{7}{2}$. Vậy $S = \left\{-\frac{7}{2},\frac{5}{2}\right\}$.
+\end{proof}
+
+\begin{baitoan}[Mở rộng \cite{SGK_Toan_9_tap_1}, 35., p. 20]
+	Biện luận theo 3 tham số $a,b,c\in\mathbb{R}$, $a\ne0$ để giải phương trình $\sqrt{(ax + b)^2} = \sqrt{a^2x^2 + 2abx + b^2} = c$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	{\rm ĐKXĐ}: $\forall x\in\mathbb{R}$. Xét các trường hợp tương ứng với giá trị của $c$:
+	\begin{itemize}
+		\item \textit{Trường hợp $c < 0$}: VT$\ge0 >$ VP, nên phương trình vô nghiệm trong trường hợp này.
+		\item \textit{Trường hợp $c = 0$}: $\sqrt{(ax + b)^2} = 0\Leftrightarrow|ax + b| = 0\Leftrightarrow ax + b = 0\Leftrightarrow x = -\frac{b}{a}$ (xác định vì $a\ne0$), nên phương trình có duy nhất 1 nghiệm $x = -\frac{b}{a}$ trong trường hợp này.
+		\item \textit{Trường hợp $c > 0$}:$\sqrt{(ax + b)^2} = c\Leftrightarrow|ax + b| = c\Leftrightarrow ax + b = \pm c\Leftrightarrow x = \frac{c - b}{a}$ or $x = \frac{-c - b}{a}$ (cả 2 đều xác định vì $a\ne0$), nên phương trình có 2 nghiệm $x = \frac{\pm c - b}{a}$.
+	\end{itemize}
+	Vậy tập nghiệm
+	\begin{equation*}
+		S = \left\{\begin{split}
+			&\emptyset,&&\mbox{ nếu } c < 0,\\
+			&\left\{-\frac{b}{a}\right\},&&\mbox{ nếu } c = 0,\\
+			&\left\{\frac{\pm c - b}{a}\right\},&&\mbox{ nếu } c > 0,\\
+		\end{split}\right.
+	\end{equation*}
+	Biện luận hoàn tất.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 36., p. 20]
+	\emph{Đ\texttt{/}S?} (a) $0.01 = \sqrt{0.0001}$. (b) $-0.5 = \sqrt{-0.25}$. (c) $6 < \sqrt{39} < 7$. (d) $(4 - \sqrt{13})2x < \sqrt{3}(4 - \sqrt{13})\Leftrightarrow2x < \sqrt{3}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) Đ vì $\sqrt{0.0001} = \sqrt{0.01^2} = 0.01$. (b) S: $\sqrt{-0.25}$ không xác định vì $-0.25 < 0$. (c) Đ: $36 < 39 < 49\Leftrightarrow\sqrt{36} = 6 < \sqrt{39} < \sqrt{49} = 7$. (d) Đ vì $16 > 13\Leftrightarrow\sqrt{16} = 4 > \sqrt{13}\Leftrightarrow 4 - \sqrt{3} > 0$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 37., p. 20]
+	Trên lưới ô vuông, mỗi hình vuông cạnh \emph{1 cm}, cho 4 điểm $M,N,P,Q$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{SGK_3_p20}
+	\end{figure}
+	\noindent Xác định số đo cạnh, đường chéo \& diện tích tứ giác $MNPQ$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Áp dụng định lý Pythagore: cạnh hình vuông $= \sqrt{1^2 + 2^2} = \sqrt{5}$, đường chéo hình vuông $= \sqrt{1^2 + 3^2} = \sqrt{10}$ (hoặc áp dụng công thức tính đường chéo hình vuông: $d = a\sqrt{2}$ với $a$ là độ dài cạnh hình vuông). Diện tích hình vuông $MNPQ$: $S_{MNPQ} = (\sqrt{5})^2 = 5$.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+
+\section{Biến Đổi Đơn Giản Biểu Thức Chứa Căn Thức Bậc 2}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1, p. 24]
+	Chứng minh: $\sqrt{a^2b} = a\sqrt{b}$, $\forall a,b\in\mathbb{R}$, $a,b\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 1--2, ?2, pp. 24--25]
+	Rút gọn: (a) $\sqrt{2\cdot3^2}$. (b) $\sqrt{20}$. (c) $3\sqrt{5} + \sqrt{20} + \sqrt{5}$. (d) $\sqrt{2} + \sqrt{8} + \sqrt{50}$. (e) $4\sqrt{3} + \sqrt{27} - \sqrt{45} + \sqrt{5}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, ?3, p. 25]
+	Đưa thừa số ra ngoài dấu căn: (a) $\sqrt{4x^2y}$ với $x,y\ge0$. (b) $\sqrt{18xy^2}$ với $x\ge0$, $y < 0$. (c) $\sqrt{28a^4b^2}$ với $b\ge0$. (d) $\sqrt{72a^2b^4}$ với $a < 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 4, ?4, p. 26]
+	Đưa thừa số vào trong dấu căn: (a) $3\sqrt{7}$. (b) $-2\sqrt{3}$. (c) $5a^2\sqrt{2a}$ với $a\ge0$. (d) $-3a^2\sqrt{2ab}$ với $ab\ge0$. (e) $3\sqrt{5}$. (f) $1.2\sqrt{5}$. (g) $ab^4\sqrt{a}$ với $a\ge0$. (h) $-2ab^2\sqrt{5a}$ với $a\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 5, p. 26]
+	So sánh $3\sqrt{7}$ \& $\sqrt{28}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 43., p. 27]
+	Viết các số hoặc biểu thức dưới dấu căn thành dạng tích rồi đưa thừa số ra ngoài dấu căn: (a) $\sqrt{54}$. (b) $\sqrt{108}$. (c) $0.1\sqrt{20000}$. (d) $-0.05\sqrt{28800}$. (e) $\sqrt{7\cdot63a^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 44., p. 27]
+	Đưa thừa số vào trong dấu căn: $3\sqrt{5},-5\sqrt{2},-\frac{2}{3}\sqrt{xy}$ với $xy\ge0$, $x\sqrt{\frac{2}{x}}$ với $x > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 45., p. 27]
+	So sánh: (a) $3\sqrt{3}$ \& $\sqrt{12}$. (b) $7$ \& $3\sqrt{5}$. (c) $\frac{1}{3}\sqrt{51}$ \& $\frac{1}{5}\sqrt{150}$. (d) $\frac{1}{2}\sqrt{6}$ \& $6\sqrt{\frac{1}{2}}$.	
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 46., p. 27]
+	Rút gọn các biểu thức sau với $x\ge0$: (a) $2\sqrt{3x} - 4\sqrt{3x} + 27 - 3\sqrt{3x}$. (b) $3\sqrt{2x} - 5\sqrt{8x} + 7\sqrt{18x} + 28$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 47., p. 27]
+	Rút gọn: (a) $\dfrac{2}{x^2 - y^2}\sqrt{\dfrac{3(x + y)^2}{2}}$ với $x\ge0$, $y\ge0$, \& $x\ne y$. (b) $\frac{2}{2a - 1}\sqrt{5a^2(1 - 4a + 4a^2)}$ với $a > 0.5$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 1, ?1, p. 28]
+	Khử mẫu của biểu thức lấy căn: (a) $\sqrt{\dfrac{2}{3}}$. (b) $\sqrt{\dfrac{5a}{7b}}$ với $ab > 0$. (c) $\sqrt{\dfrac{4}{5}}$. (d) $\sqrt{\dfrac{3}{125}}$. (e) $\sqrt{\dfrac{3}{2a^3}}$ với $a > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, ?2, pp. 28--29]
+	Trục căn thức ở mẫu: (a) $\dfrac{5}{2\sqrt{3}}$. (b) $\dfrac{10}{\sqrt{3} + 1}$. (c) $\dfrac{6}{\sqrt{5} - \sqrt{3}}$. (d) $\dfrac{5}{3\sqrt{8}},\dfrac{2}{\sqrt{b}}$ với $b > 0$. (e) $\dfrac{5}{5 - 2\sqrt{3}},\dfrac{2a}{1 - \sqrt{a}}$ với $a\ge0$, $a\ne1$. (f) $\dfrac{4}{\sqrt{7} + \sqrt{5}},\dfrac{6a}{2\sqrt{a} - \sqrt{b}}$ với $a > b > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 48., p. 29]
+	Khử mẫu của biểu thức lấy căn: $\sqrt{\dfrac{1}{600}},\sqrt{\dfrac{11}{540}},\sqrt{\dfrac{3}{50}},\sqrt{\dfrac{5}{98}},\sqrt{\dfrac{(1 - \sqrt{3})^2}{27}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 49., p. 29]
+	Tìm {\rm ĐKXĐ} rồi khử mẫu của biểu thức lấy căn: $ab\sqrt{\dfrac{a}{b}},\dfrac{a}{b}\sqrt{\dfrac{b}{a}},\sqrt{\dfrac{1}{b} + \dfrac{1}{b^2}},\sqrt{\dfrac{9a^3}{36b}},3xy\sqrt{\dfrac{2}{xy}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 50., p. 30]
+	Tìm {\rm ĐKXĐ} rồi trục căn thức: $\dfrac{5}{\sqrt{10}},\dfrac{5}{2\sqrt{5}},\dfrac{1}{3\sqrt{20}},\dfrac{2\sqrt{2} + 2}{5\sqrt{2}},\dfrac{y + b\sqrt{y}}{b\sqrt{y}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 51., p. 30]
+	Tìm {\rm ĐKXĐ} rồi trục căn thức: $\dfrac{3}{\sqrt{3} + 1},\dfrac{2}{\sqrt{3} - 1},\dfrac{2 + \sqrt{3}}{2 - \sqrt{3}},\dfrac{b}{3 + \sqrt{b}},\dfrac{p}{2\sqrt{p} - 1}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 52., p. 30]
+	Tìm {\rm ĐKXĐ} rồi trục căn thức: $\dfrac{2}{\sqrt{6} - \sqrt{5}},\dfrac{3}{\sqrt{10} + \sqrt{7}},\dfrac{1}{\sqrt{x} - \sqrt{y}},\dfrac{2ab}{\sqrt{a} - \sqrt{b}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 53., p. 30]
+	Tìm {\rm ĐKXĐ} rồi rút gọn biểu thức: (a) $\sqrt{18(\sqrt{2} - \sqrt{3})^2}$. (b) $ab\sqrt{1 + \dfrac{1}{a^2b^2}}$. (c) $\sqrt{\dfrac{a}{b^3} + \dfrac{a}{b^4}}$. (d) $\dfrac{a + \sqrt{ab}}{\sqrt{a} + \sqrt{b}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 54., p. 30]
+	Tìm {\rm ĐKXĐ} rồi rút gọn biểu thức: $\dfrac{2 + \sqrt{2}}{1 + \sqrt{2}},\dfrac{\sqrt{15} - \sqrt{5}}{1 - \sqrt{3}},\dfrac{2\sqrt{3} - \sqrt{6}}{\sqrt{8} - 2},\dfrac{a - \sqrt{a}}{1 - \sqrt{a}},\dfrac{p - 2\sqrt{p}}{\sqrt{p} - 2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 55., p. 30]
+	Phân tích thành nhân tử với $a,b,x,y\in\mathbb{R}$, $a,b,x,y\ge0$: (a) $ab + b\sqrt{a} + \sqrt{a} + 1$. (b) $\sqrt{x^3} - \sqrt{y^3} + \sqrt{x^2y} - \sqrt{xy^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 56., p. 30]
+	Sắp xếp theo thứ tự tăng dần: (a) $3\sqrt{5},2\sqrt{6},\sqrt{29},4\sqrt{2}$. (b) $6\sqrt{2},\sqrt{38},3\sqrt{7},2\sqrt{14}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 57., p. 30]
+	Giải phương trình $\sqrt{25x} - \sqrt{16x} = 9$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Rút Gọn Biểu Thức Có Chứa Căn Thức Bậc 2}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 1, ?1, p. 31]
+	Rút gọn: (a) $5\sqrt{a} + 6\sqrt{\dfrac{a}{4}} - a\sqrt{\dfrac{4}{a}} + \sqrt{5}$ với $a > 0$. (b) $3\sqrt{5a} - \sqrt{20a} + 4\sqrt{45a} + \sqrt{a}$ với $a\ge0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, p. 31]
+	Chứng minh: $(1 + \sqrt{2} + \sqrt{3})(1 + \sqrt{2} - \sqrt{3}) = 2\sqrt{2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?2, p. 31]
+	Chứng minh: $\dfrac{a\sqrt{a} + b\sqrt{b}}{\sqrt{a} + \sqrt{b}} - \sqrt{ab} = (\sqrt{a} - \sqrt{b})^2$, $\forall a,b\in\mathbb{R}$, $a,b > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?2, p. 31]
+	Cho biểu thức $P = \left(\frac{\sqrt{a}}{2} - \frac{1}{2\sqrt{a}}\right)^2\left(\dfrac{\sqrt{a} - 1}{\sqrt{a} + 1} - \dfrac{\sqrt{a} + 1}{\sqrt{a} - 1}\right)$ với $a\in\mathbb{R}$. (a) Tìm {\rm ĐKXĐ}. (b) Rút gọn biểu thức $P$. (c) Tìm giá trị của $a\in\mathbb{R}$ để $P < 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?3, p. 32]
+	Tìm {\rm ĐKXĐ} \& rút gọn biểu thức: (a) $\dfrac{x^2 - 3}{x + \sqrt{3}}$. (b) $\dfrac{1 - a\sqrt{a}}{1 - \sqrt{a}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 58., p. 32]
+	Rút gọn biểu thức: (a) $5\sqrt{\frac{1}{5}} + \frac{1}{2}\sqrt{20} + \sqrt{5}$. (b) $\sqrt{\frac{1}{2}} + \sqrt{4.5} + \sqrt{12.5}$. (c) $\sqrt{20} - \sqrt{45} + 3\sqrt{18} + \sqrt{72}$. (d) $0.1\sqrt{200} + 2\sqrt{0.08} + 0.4\sqrt{50}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 59., p. 32]
+	Tìm {\rm ĐKXĐ} \& rút gọn biểu thức: (a) $5\sqrt{a} - 4b\sqrt{25a^3} + 5a\sqrt{16ab^2} - 2\sqrt{9a}$. (b) $5a\sqrt{64ab^3} - \sqrt{3}\sqrt{12a^3b^3} + 2ab\sqrt{9ab} - 5b\sqrt{81a^3b}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 60., p. 33]
+	Cho biểu thức $A = \sqrt{16x + 16} - \sqrt{9x + 9} + \sqrt{4x + 4} + \sqrt{x + 1}$. (a) Tìm {\rm ĐKXĐ}. (b) Rút gọn biểu thức $A$. (c) Tìm $x\in\mathbb{R}$ sao cho $A = 16$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 61., p. 33]
+	Chứng minh đẳng thức: $\frac{3}{2}\sqrt{6} + 2\sqrt{\frac{2}{3}} - 4\sqrt{\frac{3}{2}} = \frac{\sqrt{6}}{6}$. (b) $\left(x\sqrt{\frac{6}{x}} + \sqrt{\frac{2x}{3}} + \sqrt{6x}\right):\sqrt{6x} = 2\frac{1}{3}$ với $x > 0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 62., p. 33]
+	Rút gọn biểu thức: (a) $\frac{1}{2}\sqrt{48} - 2\sqrt{75} - \frac{\sqrt{33}}{\sqrt{11}} + 5\sqrt{1\frac{1}{3}}$. (b) $\sqrt{150} + \sqrt{1.6}\sqrt{60} + 4.5\sqrt{2\frac{2}{3}} - \sqrt{6}$. (c) $(\sqrt{28} - 2\sqrt{3} + \sqrt{7})\sqrt{7} + \sqrt{84}$. (d) $(\sqrt{6} + \sqrt{5})^2 - \sqrt{120}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 63., p. 33]
+	Tìm {\rm ĐKXĐ} \& rút gọn biểu thức: (a) $\sqrt{\dfrac{a}{b}} + \sqrt{ab} + \dfrac{a}{b}\sqrt{\dfrac{b}{a}}$. (b) $\sqrt{\dfrac{m}{1 - 2x + x^2}}\sqrt{\dfrac{4m - 8mx + 4mx^2}{81}}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 64., p. 33]
+	Chứng minh đẳng thức: (a) $\left(\dfrac{1 - a\sqrt{a}}{1 - \sqrt{a}} + \sqrt{a}\right)\left(\dfrac{1 - \sqrt{a}}{1 - a}\right)^2 = 1$, $\forall a\in\mathbb{R}$, $a\ge0$, $a\ne1$. (b) $\dfrac{a + b}{b^2}\sqrt{\dfrac{a^2b^4}{a^2 + 2ab + b^2}} = |a|$, $\forall a,b\in\mathbb{R}$, $a + b > 0$, $b\ne0$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 65., p. 34]
+	Tìm {\rm ĐKXĐ} \& rút gọn rồi so sánh giá trị của $A$ với $1$ biết:
+	\begin{align*}
+		A = \left(\frac{1}{a - \sqrt{a}} + \frac{1}{\sqrt{a} - 1}\right):\dfrac{\sqrt{a} + 1}{a - 2\sqrt{a} + 1}.
+	\end{align*}
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 66., p. 34]
+	Tính $\dfrac{1}{2 + \sqrt{3}} + \dfrac{1}{2 - \sqrt{3}}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Cube Root, $n$th Root -- Căn Bậc 3, Căn Bậc $n$}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?1, p. 35]
+	Tìm căn bậc 3 của: $27,-64,0,\dfrac{1}{125}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Căn bậc 3 của $27,-64,0,\dfrac{1}{125}$ lần lượt là $3,-4,0,\frac{1}{5}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 2, p. 35]
+	So sánh $2$ \& $\sqrt[3]{7}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$8 > 7\Leftrightarrow\sqrt[3]{8} = 2 > \sqrt[3]{7}$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, Ví dụ 3, p. 36]
+	Rút gọn $\sqrt[3]{8a^3} - 5a$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	$\sqrt[3]{8a^3} - 5a = \sqrt[3
+	]{(2a)^3} - 5a = 2a - 5a = -3a$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, ?2, p. 36]
+	Tính $\sqrt[3]{1728}:\sqrt[3]{64}$ theo 2 cách.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	Cách 1: $\sqrt[3]{1728}:\sqrt[3]{64} = 12:4 = 3$. Cách 2: $\sqrt[3]{1728}:\sqrt[3]{64} = \sqrt[3]{\frac{1728}{64}} = \sqrt[3]{27} = 3$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 67., p. 36]
+	Tính: $\sqrt[3]{512},\sqrt[3]{-729},\sqrt[3]{0.064},\sqrt[3]{-0.216},\sqrt[3]{-0.008}$.
+\end{baitoan}
+
+\begin{proof}[1st giải]
+	Sử dụng máy tính bỏ túi: $\sqrt[3]{512} = 8$, $\sqrt[3]{-729} = -9$, $\sqrt[3]{0.064} = 0.4$, $\sqrt[3]{-0.216} = -0.6$, $\sqrt[3]{-0.008} = -0.2$.
+\end{proof}
+
+\begin{proof}[2nd giải]
+	Không sử dụng máy tính bỏ túi: $\sqrt[3]{0.064} = \sqrt[3]{\frac{64}{1000}} = \frac{\sqrt[3]{64}}{\sqrt[3]{1000}} = \frac{4}{10} = 0.4$, $\sqrt[3]{-0.216} = \sqrt[3]{-\frac{216}{1000}} = -\frac{\sqrt[3]{216}}{\sqrt[3]{1000}} = -\frac{6}{10} = -0.6$, $\sqrt[3]{-0.008} = \sqrt[3]{-\frac{8}{1000}} = -\frac{\sqrt[3]{8}}{\sqrt[3]{1000}} = -\frac{2}{10} = -0.2$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 68., p. 36]
+	Tính: (a) $\sqrt[3]{27} - \sqrt[3]{-8} - \sqrt[3]{125}$. (b) $\dfrac{\sqrt[3]{135}}{\sqrt[3]{5}} - \sqrt[3]{54}\sqrt[3]{4}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $\sqrt[3]{27} - \sqrt[3]{-8} - \sqrt[3]{125} = 3 - (-2) - 5 = 3 + 2 - 5 = 5 - 5 = 0$. (b) $\dfrac{\sqrt[3]{135}}{\sqrt[3]{5}} - \sqrt[3]{54}\sqrt[3]{4} = \sqrt[3]{\frac{135}{5}} - \sqrt[3]{54\cdot4} = \sqrt[3]{27} - \sqrt[3]{216} = 3 - 6 = -3$.
+\end{proof}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 69., p. 36]
+	So sánh: (a) $5$ \& $\sqrt[3]{123}$. (b) $5\sqrt[3]{6}$ \& $6\sqrt[3]{5}$.
+\end{baitoan}
+
+\begin{proof}[Giải]
+	(a) $125 > 123\Leftrightarrow\sqrt[3]{125} = 5 > \sqrt[3]{123}$. (b) $5\sqrt[3]{6} = \sqrt[3]{5^3\cdot6} = \sqrt[3]{750}$, $6\sqrt[3]{5} = \sqrt[3]{6^3\cdot5} = \sqrt[3]{1080}$. Vì $750 < 1080\Leftrightarrow\sqrt[3]{750} < \sqrt[3]{1080}\Leftrightarrow5\sqrt[3]{6} < 6\sqrt[3]{5}$.
+\end{proof}
+
+\begin{baitoan}
+	Biện luận theo tham số $a,b\in\mathbb{R}$ để so sánh: (a) $a$ \& $\sqrt[3]{b}$. (b) $a\sqrt[3]{b}$ \& $b\sqrt[3]{a}$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\section{Miscellaneous}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 1--5, p. 39]
+	(a) Nêu điều kiện để $x\in\mathbb{R}$ là căn bậc 2 số học của số $a\in\mathbb{R}$ không âm. Cho ví dụ. (b) Chứng minh $\sqrt{a^2} = |a|$, $\forall a\in\mathbb{R}$. (c) Biểu thức $A$ phải thỏa điều kiện gì để $\sqrt{A}$ xác định? (d) Phát biểu \& chứng minh định lý về mối liên hệ giữa phép nhân \& phép khai phương. Cho ví dụ. (e) Phát biểu \& chứng minh định lý về mối liên hệ giữa phép chia \& phép khai phương. Cho ví dụ.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 70., p. 40]
+	Tính: (a) $\sqrt{\dfrac{25}{81}\cdot\dfrac{16}{49}\cdot\dfrac{196}{9}}$. (b) $\sqrt{3\dfrac{1}{16}\cdot2\dfrac{14}{25}\cdot2\dfrac{34}{81}}$. (c) $\dfrac{\sqrt{640}\sqrt{34.3}}{\sqrt{567}}$. (d) $\sqrt{21.6}\sqrt{810}\sqrt{11^2 - 5^2}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 71., p. 40]
+	Rút gọn biểu thức: (a) $(\sqrt{8} - 3\sqrt{2} + \sqrt{10})\sqrt{2} - \sqrt{5}$. (b) $0.2\sqrt{(-10)^2\cdot3} + 2\sqrt{(\sqrt{3} - \sqrt{5})^2}$. (c) $\left(\dfrac{1}{2}\sqrt{\dfrac{1}{2}} - \dfrac{3}{2}\sqrt{2} + \dfrac{4}{5}\sqrt{200}\right):\dfrac{1}{8}$. (d) $2\sqrt{(\sqrt{2} - 3)^2} + \sqrt{2(-3)^2} - 5\sqrt{(-1)^4}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 72., p. 40]
+	Phân tích thành nhân tử với $a,b,x,y\in\mathbb{R}$, $a,b,x,y\ge0$, $a\ge b$: (a) $xy - y\sqrt{x} + \sqrt{x} - 1$. (b) $\sqrt{ax} - \sqrt{by} + \sqrt{bx} - \sqrt{ay}$. (c) $\sqrt{a + b} + \sqrt{a^2 - b^2}$. (d) $12 - \sqrt{x} - x$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 73., p. 40]
+	Tìm {\rm ĐKXĐ}, rút gọn rồi tính giá trị của biểu thức: (a) $\sqrt{-9a} - \sqrt{9 + 12a + 4a^2}$ tại $a = -9$. (b) $1 + \dfrac{3m}{m - 2}\sqrt{m^2 - 4m + 4}$ tại $m = 1.5$. (c) $\sqrt{1 - 10a + 25a^2} - 4a$ tại $a = \sqrt{2}$. (d) $4x - \sqrt{9x^2 + 6x + 1}$ tại $x = -\sqrt{3}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 74., p. 40]
+	Tìm $x\in\mathbb{R}$ thỏa: (a) $\sqrt{(2x - 1)^2} = 3$. (b) $\dfrac{5}{3}\sqrt{15x} - \sqrt{15x} - 2 = \dfrac{1}{3}\sqrt{15x}$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 75., pp. 40--41]
+	Chứng minh: (a) $\left(\dfrac{2\sqrt{3} - \sqrt{6}}{\sqrt{8} - 2} - \dfrac{\sqrt{216}}{3}\right)\cdot\dfrac{1}{\sqrt{6}} = -1.5$. (b) $\left(\dfrac{\sqrt{14} - \sqrt{7}}{1 - \sqrt{2}} + \dfrac{\sqrt{15} - \sqrt{5}}{1 - \sqrt{3}}\right):\dfrac{1}{\sqrt{7} - \sqrt{5}} = -2$. (c) $\dfrac{a\sqrt{b} + b\sqrt{a}}{\sqrt{ab}}:\dfrac{1}{\sqrt{a} - \sqrt{b}} = a - b$, $\forall a,b\in\mathbb{R}$, $a,b > 0$, $a\ne b$. (d) $\left(1 + \dfrac{a + \sqrt{a}}{\sqrt{a} + 1}\right)\left(1 - \dfrac{a - \sqrt{a}}{\sqrt{a} - 1}\right) = 1 - a$, $\forall a\in\mathbb{R}$, $a\ge0$, $a\ne1$.
+\end{baitoan}
+
+\begin{baitoan}[\cite{SGK_Toan_9_tap_1}, 76., p. 41]
+	Cho biểu thức $A = \dfrac{a}{\sqrt{a^2 - b^2}} - \left(1 + \dfrac{a}{\sqrt{a^2 - b^2}}\right):\dfrac{b}{a - \sqrt{a^2 - b^2}}$. (a) Tìm {\rm ĐKXĐ}. (b) Rút gọn $A$. (c) Tính $Q$ khi $a = 3b$.
+\end{baitoan}
+
+%------------------------------------------------------------------------------%
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
