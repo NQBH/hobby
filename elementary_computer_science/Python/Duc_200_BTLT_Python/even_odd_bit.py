@@ -1,12 +1,11 @@
 t = int(input())
-while t != 0:
-	t -= 1
+for _ in range(t):
 	s = 0
 	n = int(input())
-	while n != 0:
+	while n:
 		s += n % 2
 		n //= 2
 	if s % 2 != 0:
-		print('bit odd')
+		print('odd')
 	else:
-		print('bit even')
+		print('even')
