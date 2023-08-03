@@ -336,7 +336,14 @@ int main() {
         \end{table}
     \end{itemize}
 \end{baitoan}
-Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/digit_replacement.py}.
+Python:
+\begin{itemize}
+	\item {\small\url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/Duc_200_BTLT_Python/digit_replacement.py}}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/digit_replacement.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/digit_replacement.py}.
+	\item Input: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/digit_replacement.inp}.
+	\item Output: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/digit_replacement.out}.
+\end{itemize}
 \begin{multicols}{2}
 	1st solution \cite[1., p. 202]{Duc_200_BT_Python}:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
@@ -366,12 +373,36 @@ def digit_replacement(n):
             ans += n[i]
     return ans
 t = int(input())
-while t != 0:
-    t -= 1
+for _ in range(t):
     n = input()
     print(digit_replacement(n))
 \end{Verbatim}
 \end{multicols}
+3rd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+t = int(input())
+A = []
+for _ in range(t):
+    s = input()
+    A += [s.replace('0', '5')]
+    print('\n'.join(A))
+\end{Verbatim}
+
+\begin{nhanxet}
+	Bài toán trên có thể mở rộng cho việc thay chữ số $0$ thành $5$ thành việc thay chữ số $a$ thành chữ số $b$ với $a,b\in\{0,1,2,\ldots,9\}$ là các chữ số bất kỳ, chỉ cần đổi các dòng lệnh tương ứng thành:
+	\begin{multicols}{3}
+	\begin{verbatim}
+		if n[i] == '<a>':
+		    ans += '<b>'
+	\end{verbatim}
+	\begin{verbatim}
+		if n[i] == '<a>':
+		    ans += '<b>'
+	\end{verbatim}
+	\verb|A += [s.replace('<a>', '<b>')]|
+	\end{multicols}
+	\noindent trong đó \verb|<a>, <b>| lần lượt là 2 giá trị của cặp chữ số cần đổi thành: $a\to b$. Tương tự, có thể thay 1 bộ nhiều chữ số thành 1 bộ chữ số khác, i.e., $(a_1,a_2,\ldots,a_n)\to(b_1,b_2,\ldots,b_n)$, với $n\in\mathbb{N}$, $a_i,b_i\in\{0,1,2,\ldots,9\}$, $\forall i = 1,2,\ldots,n$ thay vì chỉ 1 chữ số.
+\end{nhanxet}
 
 \begin{baitoan}[\cite{Duc_200_BT_Python}, 2., pp. 18--19, Dice -- Xúc xắc]
 	Bạn được tặng 1 con xúc xắc hình lập phương với $6$ mặt. Mỗi mặt của con xúc xắc có in 1 số chấm, số lượng chấm $\in\{1,2,3,4,5,6\}$. Bạn được biết số chấm trên 1 mặt của xúc xắc, nhiệm vụ là đoán số ở mặt đối diện của xúc xắc.
@@ -398,7 +429,16 @@ Tổng số chấm trên 2 mặt đối nhau của 1 con xúc xắc luôn bằng
 
 Pascal:
 
-Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/dice.py}.
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/dice.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/Duc_200_BTLT_Python/dice.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/dice.py}.
+	\item Input: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/dice.inp}.
+	\item Output: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/dice.out}.
+\end{itemize}
+\begin{multicols}{2}
+	1st solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
 while t != 0:
@@ -406,6 +446,15 @@ while t != 0:
     n = int(input())
     print(7 - n)
 \end{Verbatim}
+	\columnbreak
+	2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+t = int(input())
+for _ in range(t):
+    n = int(input())
+    print(7 - n)
+\end{Verbatim}
+\end{multicols}
 
 \begin{baitoan}[\cite{Duc_200_BT_Python}, 3., pp. 19--20, Doctor appointment -- Lịch khám bệnh]
 	Có $n\in\mathbb{N}^\star$ bệnh nhân đến khám bệnh tại phòng khám. Giả sử cứ sau $x$ phút thì lại có 1 bệnh nhân mới đến phòng khám. Ngoài ra, bác sĩ sẽ chỉ dành $10$ phút để khám cho mỗi bệnh nhân. Tính toán thời gian bằng phút mà bệnh nhân cuối cùng cần phải chờ đến lượt mình được bác sĩ khám bệnh.
