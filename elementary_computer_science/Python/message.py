@@ -1,5 +1,4 @@
 t = int(input())
-while t != 0:
-	t -= 1
+for _ in range(t):
 	n = int(input())
 	print(2*n - 2)
