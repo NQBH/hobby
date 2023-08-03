@@ -438,7 +438,7 @@ Python:
 	\item Output: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/dice.out}.
 \end{itemize}
 \begin{multicols}{2}
-	1st solution:
+	1st solution \cite[p. 202--203]{Duc_200_BT_Python}:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
 while t != 0:
@@ -589,8 +589,7 @@ while t != 0:
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/message.py}.
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
-while t != 0:
-    t -= 1
+for _ in range(t):
     n = int(input())
     print(2*n - 2)
 \end{Verbatim}
@@ -621,36 +620,40 @@ while t != 0:
 \end{baitoan}
 See, e.g., \href{https://vi.wikipedia.org/wiki/S%E1%BB%91_tam_gi%C3%A1c}{Wikipedia{\tt /}số tam giác} or \href{https://en.wikipedia.org/wiki/Triangular_number}{Wikipedia{\tt /}triangular number}.
 
-Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle_number.py}.
+Python:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/Duc_200_BTLT_Python/triangle_number.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle_number.py}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/HTP/triangle_number.py}.
+	\item Input: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle_number.inp}.
+	\item Output: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/triangle_number.out}.
+\end{itemize}
 
+\begin{multicols}{2}
 1st solution \cite[6., pp. 204--205]{Duc_200_BT_Python}:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import sqrt, floor
 t = int(input())
-while t != 0:
-    t -= 1
+for _ in range(t):
     n = int(input())
-    a = 1
-    b = 1
+    a, b = 1, 1
     c = -2*n
     d = b*b - 4*a*c
     x1 = (-b + sqrt(d))/(2*a)
     x2 = (-b - sqrt(d))/(2*a)
     if x1 > 0 and floor(x1) == x1:
-        print(1)
+        print('1')
         continue
     if x2 > 0 and floor(x2) == x2:
-        print(1)
+        print('1')
         continue
-    print(0)
+    print('0')
 \end{Verbatim}
-\newpage
-\begin{multicols}{2}
+\columnbreak
 2nd solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 t = int(input())
-while t != 0:
-    t -= 1
+for _ in range(t):
     n = int(input())
     i = 1
     sum = 0
@@ -662,16 +665,33 @@ while t != 0:
     else:
         print(0)
 \end{Verbatim}
-\columnbreak
+\end{multicols}
+
+\begin{multicols}{2}
 3rd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+from math import sqrt
+def is_triangle_number(x):
+    x = x*8 + 1
+    if int(sqrt(x))**2 != x:
+        return 0
+    return int(sqrt(x)) % 2
+t = int(input())
+A = []
+for _ in range(t):
+    n = int(input())
+    A += [str(is_triangle_number(n))]
+print('\n'.join(A))
+\end{Verbatim}
+\columnbreak
+4th solution:
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
 from math import sqrt, floor
 t = int(input())
-while t != 0:
-    t -= 1
+for _ in range(t):
     n = int(input())
-    tmp = floor(sqrt(2*n))
-    if n == tmp*(tmp + 1)/2:
+    k = floor(sqrt(2*n))
+    if n == k*(k + 1)/2:
         print(1)
     else:
         print(0)
