@@ -11,3 +11,10 @@ data = file_in.readline()
 
 file_in.close()
 file_out.close()
+# read input with multiple test cases
+t = int(input())
+for _ in range(t)
+
+t = int(input())
+while t != 0:
+	t -= 1
