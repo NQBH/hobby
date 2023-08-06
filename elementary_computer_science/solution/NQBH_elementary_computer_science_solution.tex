@@ -585,6 +585,7 @@ while t != 0:
 		\end{table}
 	\end{itemize}
 \end{baitoan}
+\noindent Pascal:
 
 Python: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Python/message.py}.
 \begin{Verbatim}[numbers=left,xleftmargin=5mm]
@@ -593,6 +594,47 @@ for _ in range(t):
     n = int(input())
     print(2*n - 2)
 \end{Verbatim}
+C++:
+\begin{itemize}
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/message.cpp}.
+	\item \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/HTP/message.cpp}.
+	\item Input: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/message.inp}.
+	\item Output: \url{https://github.com/NQBH/hobby/blob/master/elementary_computer_science/Cpp/message.out}.
+\end{itemize}
+
+\begin{multicols}{2}
+1st solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t, n;
+    cin >> t;
+    int A[t];
+    for (int i = 0; i < t; ++i) {
+        cin >> n;
+        A[i] = n*(n - 1);
+        cout << A[i] << '\n';
+	}
+}	
+\end{Verbatim}
+\columnbreak
+2nd solution:
+\begin{Verbatim}[numbers=left,xleftmargin=5mm]
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t, n;
+    cin >> t;
+    while (t--) {
+        cin >> n;
+        cout << 2*n - 2 << '\n';
+    }
+}
+\end{Verbatim}
+\end{multicols}
 
 \begin{baitoan}[\cite{Duc_200_BT_Python}, 6., pp. 21--22, Triangle number -- Số tam giác]
 	1 số được gọi là \emph{số tam giác} nếu ta có thể biểu diễn nó dưới dạng lưới hình tam giác gồm các điểm sao cho các điểm tạo thành 1 tam giác đều, i.e., hàng đầu tiên có $1$ điểm, hàng thứ 2 có $2$ điểm, $\ldots$ hàng thứ $i$ có $i$ điểm. Các số tam giác đầu tiên là $1$, $3 = 1 + 2$, $6 = 1 + 2 + 3$, $10 = 1 + 2 + 3 + 4$. Cho số nguyên dương $n\in\mathbb{N}^\star$, kiểm tra xem $N$ có phải là số tam giác hay không. 
@@ -2619,7 +2661,7 @@ else:
 \section{Miscellaneous}
 
 \section*{Resources}
-\cite{TLGK_chuyen_Tin_quyen_1, TLGK_chuyen_Tin_quyen_2, TLGK_chuyen_Tin_quyen_3, Knuth1997, VietSTEM2021, VietSTEM2022}.
+\cite{TL_chuyen_Tin_quyen_1, TL_chuyen_Tin_quyen_2, TL_chuyen_Tin_quyen_3, TL_chuyen_Tin_BT_quyen_1, TL_chuyen_Tin_BT_quyen_2, TL_chuyen_Tin_BT_quyen_3, Knuth1997, VietSTEM2021, VietSTEM2022}.
 
 %------------------------------------------------------------------------------%
 
