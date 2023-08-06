@@ -7,7 +7,7 @@ int main() {
 	int A[t];
 	for (int i = 0; i < t; ++i) {
 		cin >> n;
-		A[i] = n*(n - 1);
+		A[i] = 2*n - 2;
 		cout << A[i] << '\n';
 	}
 }
