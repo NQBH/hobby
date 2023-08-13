@@ -13,20 +13,18 @@ int kt_tam_giac(int x)
 	if (sqr(static_cast<int>(sqrt(x))) != x)
 		return 0;
 	else 
-		return (sqr(x)%2);	
+		return (sqr(x) % 2);	
 }
 
 int main()
 {
-	int T,n;
-	cin >> T;
-	int A[T];
-	for (int i=0; i<T; i++)
+	int t, n;
+	cin >> t;
+	int A[t];
+	for (int i = 0; i < t; ++i)
 	{
 		cin >> n;
 		A[i] = kt_tam_giac(n);
+		cout << A[i] << '\n';
 	}
-	for (int i=0; i<T; i++)
-		cout << A[i] << endl;
-	return 0;
 }
