@@ -61,22 +61,26 @@
 
 \end{Verbatim}
 
-\begin{itemize}
-	\item {\sf Input.} 
-	\item {\sf Output.} 
-	\item {\sf Sample.}
-	\begin{table}[H]
-		\centering
-		\begin{tabular}{|l|l|}
-			\hline
-			\verb|max_gift.inp| & \verb|max_gift.out| \\
-			\hline
-			 &  \\
-			 &  \\
-			\hline
-		\end{tabular}
-	\end{table}
-\end{itemize}
+\begin{problem}[]
+	
+	\begin{itemize}
+		\item {\sf Input.} 
+		\item {\sf Output.} 
+		\item {\sf Constraints.} 
+		\item {\sf Sample.}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\verb|.inp| & \verb|.out| \\
+				\hline
+				&  \\
+				&  \\
+				\hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+\end{problem}
 
 \begin{baitoan}[\cite{Duc_200_BT_Python}, 5., pp. 20--21, Message -- Nhắn tin]
 	
