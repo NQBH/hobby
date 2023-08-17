@@ -536,6 +536,32 @@ Graph of function $x^3 - 3x + 1$:
 
 \section{Triangle}
 
+\begin{tikzpicture}
+	\def\r{1.5}
+	\path
+	(130:\r) coordinate (A)
+	(180:\r) coordinate (B)
+	(0:\r) coordinate (C)
+	;
+	\draw
+	(A)--(B)--(C)--cycle
+	pic[draw, angle radius=2mm]{right angle=B--A--C}
+	;
+	\foreach \x/\g in {A/90,B/180,C/0} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0:0) coordinate (A)
+	(0:3) coordinate (B)
+	($(A)!2cm!90:(B)$) coordinate (C)
+	;
+	\draw
+	(A)--(B)--(C)--cycle
+	pic[draw, angle radius=2mm]{right angle=B--A--C}
+	;
+	\foreach \x/\g in {A/-135,B/0,C/90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
 %------------------------------------------------------------------------------%
 
 \section{Miscellaneous}
