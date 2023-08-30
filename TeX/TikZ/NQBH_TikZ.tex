@@ -907,6 +907,56 @@ Graph of function $x^3 - 3x + 1$:
 
 \section{Vẽ Tiếp Tuyến với Đường Tròn}
 
+\subsection{Vẽ tiếp tuyến khi đã biết tiếp điểm}
+
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	--(35:\r) coordinate (M)
+	--([turn]90:2cm) coordinate (Mt);
+	\draw (O) circle (\r) (O)--(M) (Mt)--($(Mt)!2!(M)$);
+	\foreach \x/\g in {O/-90,M/60} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Vẽ tiếp tuyến đi qua 1 điểm nằm ngoài đường tròn}
+
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	(180:3*\r) coordinate (M)
+	($(O)!.5!(M)$) coordinate (I);
+	\path[name path=ciro] (O) circle (\r);
+	\path[name path=cirom] (I) let\p1=($(I)-(O)$) in circle ({veclen(\x1,\y1)});
+	\path[name intersections={of=ciro and cirom,by={A,B}}];
+	\draw (O) circle (\r) (A)--(O)--(B) (O)--(M) (M)--(A)--([turn]0:1cm) (M)--(B)--([turn]0:1cm);
+	\foreach \x/\g in {O/0,M/180,A/135,B/-135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Dựng tiếp tuyến chung của 2 đường tròn}
+
+\begin{tikzpicture}
+	\def\ra{1.5}
+	\def\rb{1}
+	\path
+	(0:0) coordinate (O_1)
+	(0:3.5) coordinate (O_2)
+	(O_1)++(150:\ra) coordinate (C_1)
+	(O_2)++(150:\rb) coordinate (C_2)
+	(intersection of O_1--O_2 and C_1--C_2) coordinate (M)
+	($(M)!.5!(O_1)$) coordinate (I);
+	\path[name path=ciro1] (O_1) circle (\ra);
+	\path[name path=cirim] (I) let\p1=($(I)-(M)$) in circle ({veclen(\x1,\y1)});
+	\path[name intersections={of=ciro1 and cirim,by={A,B}}]
+	($(A)!(O_2)!(M)$) coordinate (C)
+	($(B)!(O_2)!(M)$) coordinate (D);
+	\pgfresetboundingbox
+	\draw[dashed] (O_1)--(C_1) (O_2)--(C_2) (C_1)--(M) (O_1)--(M);
+	\draw (O_1) circle (\ra) (O_2) circle (\rb)  (M)--(A)--([turn]0:1cm) (M)--(B)--([turn]0:1cm) (A)--(O_1)--(B) (C)--(O_2)--(D);
+	\foreach \x/\g in {O_1/-135,O_2/-135,C_1/135,C_2/135,A/90,B/-90,C/90,D/-90,M/0} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
 %------------------------------------------------------------------------------%
 
 \section{Miscellaneous}
