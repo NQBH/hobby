@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage[backend=biber,natbib=true,style=authoryear,maxbibnames=10]{biblatex}
+\usepackage[backend=biber,natbib=true,style=alphabetic,maxbibnames=50]{biblatex}
 \addbibresource{/home/nqbh/reference/bib.bib}
 \usepackage[utf8]{vietnam}
 \usepackage{tocloft}
@@ -145,10 +145,10 @@ See \cite{Quy2022}.
 	;
 	\draw[->] (A)--(B);
 \end{tikzpicture}
-\begin{tikzpicture}
-	%\path (0,0) node (tree) {\includegraphics[scale=.25]{a}};
-	%\draw (tree.north) -- (tree.south) --++ (4,0) -- cycle;
-\end{tikzpicture}
+%\begin{tikzpicture}
+%	\path (0,0) node (tree) {\includegraphics[scale=.25]{a}};
+%	\draw (tree.north) -- (tree.south) --++ (4,0) -- cycle;
+%\end{tikzpicture}
 \begin{tikzpicture}
 	\draw(3,-1) circle (1pt);
 	\draw(60:2) circle (1pt);
@@ -467,28 +467,27 @@ Graph of function $x^3 - 3x + 1$:
 	\chamtron(0,2)(.5)
 \end{tikzpicture}
 
-%\begin{tikzpicture}[join=round,cap=round]
-%	\def\chanphangiac(#1,#2,#3)(#4){
-%	\path
-%	($(#2)!1mm!(#1)$) coordinate (#2#1)
-%	($(#2)!1mm!(#3)$) coordinate (#2#3)
-%	($(#2#1)!.5(#2#3)$) coordinate (#2t)
-%	(intersection of #2--#2t and #1--#3) coordinate (#4)
-%	;
-%	}
-%	\path
-%	(1,3) coordinate (A)
-%	(0,0) coordinate (B)
-%	(5,0) coordinate (C)
-%	;
-%	\chanphangiac(B,A,C)(D)
-%	\chanphangiac(A,B,C)(E)
-%	\chanphangiac(B,C,A)(F)
-%	\draw (A)--(B)--(C)--cycle (A)--(D) (B)--(E) (C)--(F);
-%	\foreach \x/\g in {A/90,B/180,C/0,D/-90,E/0,F/180}
-%	\draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
-%\end{tikzpicture}
-
+\begin{tikzpicture}
+	\def\chanphangiac(#1,#2,#3)(#4) {
+	\path
+	($(#2)!1mm!(#1)$) coordinate (#2#1)
+	($(#2)!1mm!(#3)$) coordinate (#2#3)
+	($(#2#1)!.5!(#2#3)$) coordinate (#2t)
+	(intersection of #2--#2t and #1--#3) coordinate (#4);
+	}
+	\path
+	(1,3) coordinate (A)
+	(0,0) coordinate (B)
+	(5,0) coordinate (C)	;
+	\chanphangiac(B,A,C)(D)
+	\chanphangiac(A,B,C)(E)
+	\chanphangiac(B,C,A)(F)
+	\path (intersection of A--D and B--E) coordinate (I);
+	\draw
+	(A)--(B)--(C)--cycle (A)--(D) (B)--(E) (C)--(F);
+	\foreach \x/\g in {A/90,B/180,C/0,D/-90,E/0,F/180}
+	\draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
 \begin{tikzpicture}
 	\def\r{2}
 	\path
@@ -502,6 +501,7 @@ Graph of function $x^3 - 3x + 1$:
 	(A)--(B)--(C)--cycle;
 	\foreach \x/\g in{A/90,B/180,C/0,I/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
 \end{tikzpicture}
+
 \begin{tikzpicture}
 	\def\r{3}\def\d{9}\def\gM{-150}
 	\path
@@ -561,6 +561,351 @@ Graph of function $x^3 - 3x + 1$:
 	;
 	\foreach \x/\g in {A/-135,B/0,C/90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
 \end{tikzpicture}
+
+\begin{tikzpicture}
+	\def\a{3}
+	\path
+	(0:0) coordinate (A)
+	--++(0:\a) coordinate (B)
+	--([turn]120:\a) coordinate (C)
+	;
+	\draw (A)--(B)--(C)--cycle;
+	\foreach \x/\g in {A/-135,B/0,C/90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0:0) coordinate (A)
+	(0:4) coordinate (B)
+	($(A)!1!60:(B)$) coordinate (C)
+	;
+	\draw (A)--(B)--(C)--cycle;
+	\foreach \x/\g in {A/-135,B/0,C/90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(0:0) coordinate (H)
+	(90:2) coordinate (A)
+	($(H)!1cm!90:(A)$) coordinate (B)
+	($(B)!2!(H)$) coordinate (C)
+	;
+	\draw (A)--(B)--(C)--cycle;
+	\foreach \x/\g in {A/90,B/180,C/0} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Vẽ tam giác khi biết 3 cạnh}
+
+\begin{tikzpicture}
+	\def\a{4}
+	\def\b{2}
+	\def\c{3}
+	\path
+	(0:0) coordinate (A)
+	(0:\c) coordinate (B)
+	;
+	\path[name path=c1] (A) circle (\b);
+	\path[name path=c2] (B) circle (\a);
+	\path[name intersections={of=c1 and c2,by={C,D}}];
+	\pgfresetboundingbox
+	\draw (A)--(B)--(C)--cycle;
+	\foreach \x/\g in {A/180,B/0,C/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Vẽ tam giác khi biết 1 cạnh \& 2 góc}
+
+\begin{tikzpicture}
+	\def\a{3}
+	\def\gB{40}
+	\def\gC{70}
+	\path
+	(0:0) coordinate (B)
+	(0:\a) coordinate (C)
+	(B)++(\gB:1mm) coordinate (Bt)
+	(C)++(180-\gC:1mm) coordinate (Ct)
+	(intersection of B--Bt and C--Ct) coordinate (A)
+	;
+	\pgfresetboundingbox
+	\draw (A)--(B)--(C)--cycle;
+	\foreach \x/\g in {A/90,B/180,C/0} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Đường cao}
+
+\begin{tikzpicture}
+	\path
+	(1,3) coordinate (A)
+	(0,0) coordinate (B)
+	(5,0) coordinate (C)
+	($(B)!(A)!(C)$)  coordinate (I)
+	($(C)!(B)!(A)$)  coordinate (K)
+	(intersection of A--I and B--K) coordinate (H)
+	;
+	\draw (A)--(B)--(C)--cycle (A)--(I) (B)--(K);
+	\foreach \x/\g in {A/90,B/180,C/0,I/-90,K/45,H/135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Trung tuyến, đường trung bình}
+
+\begin{tikzpicture}
+	\path
+	(1,3) coordinate (A)
+	(0,0) coordinate (B)
+	(5,0) coordinate (C)
+	($(B)!(A)!(C)$)  coordinate (I)
+	($(C)!(B)!(A)$)  coordinate (J)
+	($(A)!(C)!(B)$)  coordinate (K)
+	(intersection of A--I and B--J) coordinate (H)
+	;
+	\draw (A)--(B)--(C)--cycle (A)--(I) (B)--(J) (C)--(K);
+	\foreach \x/\g in {A/90,B/180,C/0,I/-90,J/45,K/180,H/20} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+	\path
+	(1,3) coordinate (A)
+	(0,0) coordinate (B)
+	(5,0) coordinate (C)
+	($(B)!.5!(C)$)  coordinate (M)
+	($(C)!.5!(A)$)  coordinate (N)
+	($(A)!.5!(B)$)  coordinate (P)
+	(intersection of A--M and B--N) coordinate (G)
+	;
+	\draw (A)--(B)--(C)--cycle (A)--(M) (B)--(N) (C)--(P) (M)--(N)--(P)--cycle;
+	\foreach \x/\g in {A/90,B/180,C/0,M/-90,N/45,P/135} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Đường trung trực \& đường tròn ngoại tiếp}
+
+\begin{tikzpicture}
+	\path
+	(1,4) coordinate (A)
+	(0,0) coordinate (B)
+	(5,0) coordinate (C)
+	($(B)!.5!(C)$)  coordinate (M)
+	($(C)!.5!(A)$)  coordinate (N)
+	($(M)!1mm!90:(C)$) coordinate (Mt)
+	($(N)!1mm!90:(C)$) coordinate (Nt)
+	(intersection of M--Mt and N--Nt) coordinate (O)
+	;
+	\draw
+	(A)--(B)--(C)--cycle (M)--(O)--(N)
+	let\p1=($(O)-(A)$) in (O) circle ({veclen(\x1,\y1)});
+	\foreach \x/\g in {A/90,B/180,C/0,M/-90,N/45,O/-30} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Đường phân giác, đường tròn nội tiếp, bàng tiếp}
+
+\begin{tikzpicture}
+	\def\chanphangiac(#1,#2,#3)(#4) {
+	\path
+	($(#2)!1mm!(#1)$) coordinate (#2#1)
+	($(#2)!1mm!(#3)$) coordinate (#2#3)
+	($(#2#1)!.5!(#2#3)$) coordinate (#2t)
+	(intersection of #2--#2t and #1--#3) coordinate (#4);
+	}
+	\path
+	(1,2) coordinate (A)
+	(0,0) coordinate (B)
+	(3,0) coordinate (C);
+	\chanphangiac(B,A,C)(D)
+	\chanphangiac(A,B,C)(E)
+	\path (intersection of A--D and B--E) coordinate (O_1)
+	($(B)!(O_1)!(C)$) coordinate (O_11);
+	\draw (A)--(B)--(C)--cycle (A)--(D) (B)--(E)
+	(O_1) let\p1=($(O_1)-(O_11)$) in circle ({veclen(\x1,\y1)});
+	\foreach \x/\g in {A/90,B/180,C/0,D/-90,E/45,O_1/-30} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\def\chanphangiac(#1,#2,#3)(#4) {
+		\path
+		($(#2)!1mm!(#1)$) coordinate (#2#1)
+		($(#2)!1mm!(#3)$) coordinate (#2#3)
+		($(#2#1)!.5!(#2#3)$) coordinate (#2t)
+		(intersection of #2--#2t and #1--#3) coordinate (#4);
+	}
+	\path
+	(.5,2) coordinate (A)
+	(0,0) coordinate (B)
+	(3,0) coordinate (C);
+	\chanphangiac(B,A,C)(D)
+	\chanphangiac(A,B,C)(E)
+	\path
+	($(A)!1mm!90:(D)$) coordinate (At)
+	($(B)!1mm!90:(E)$) coordinate (Bt)
+	(intersection of A--At and B--Bt) coordinate (O_1)
+	($(A)!(O_1)!(C)$) coordinate (H_1)
+	($(B)!(O_1)!(C)$) coordinate (H_2);
+	\draw (A)--(B)--(C)--cycle (A)--(O_1)--(B) (A)--(D) (B)--(E) (A)--(H_1) (B)--(H_2)
+	(O_1) let\p1=($(O_1)-(H_1)$) in circle ({veclen(\x1,\y1)});
+	\foreach \x/\g in {A/90,B/240,C/0,D/-90,E/45,O_1/120} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Đường tròn Appoplonius của tam giác}
+
+\begin{tikzpicture}
+	\def\chanphangiac(#1,#2,#3)(#4) {
+		\path
+		($(#2)!1mm!(#1)$) coordinate (#2#1)
+		($(#2)!1mm!(#3)$) coordinate (#2#3)
+		($(#2#1)!.5!(#2#3)$) coordinate (#2t)
+		(intersection of #2--#2t and #1--#3) coordinate (#4);
+	}
+	\path
+	(.5,1) coordinate (A)
+	(0,0) coordinate (B)
+	(2,0) coordinate (C);
+	\chanphangiac(B,A,C)(D)
+	\path
+	($(A)!1mm!90:(D)$) coordinate (At)
+	(intersection of A--At and B--C) coordinate (P)
+	($(D)!.5!(P)$) coordinate (O);
+	\draw
+	(A)--(B)--(C)--cycle
+	(D)--(A)--(O) (B)--(P)
+	(O) let\p1=($(O)-(A)$) in circle ({veclen(\x1,\y1)});
+	\foreach \x/\g in {A/90,B/240,C/0,D/-45,P/45,O/90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\section{Biểu Diễn Các Yếu Tố Hình Học}
+
+\subsection{Biểu diễn góc}
+
+\begin{tikzpicture}
+	\path
+	(0:0) coordinate (A)
+	(0:4) coordinate (B)
+	(60:6) coordinate (C)
+	(120:3) coordinate (D)
+	(intersection of A--C and B--D) coordinate (I)
+	($(A)!(I)!(B)$) coordinate (H);
+	\draw (A)--(B)--(C)--(D)--cycle (A)--(C) (B)--(D) (I)--(H)
+	pic[draw,angle radius=6mm]{angle=I--D--A}
+	pic[draw,double,angle radius=6mm]{angle=B--A--I}
+	pic[draw,-stealth,angle radius=6mm]{angle=A--C--B}
+	pic[draw,fill=gray!30,angle radius=6mm]{angle=C--B--I}
+	pic["$\alpha$",angle radius=8mm]{angle=B--I--C}
+	pic[draw,angle radius=3mm]{right angle=I--H--B};
+	\foreach \x/\g in {A/180,B/0,C/90,D/135,I/90,H/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Biểu diễn tên các đoạn thẳng, khoảng cách giữa 2 điểm}
+
+\begin{tikzpicture}
+	\path
+	(0:0) coordinate (B)
+	(0:5) coordinate (C)
+	(70:3) coordinate (A)
+	($(B)!.5!(C)$) coordinate (M)
+	($(B)!(A)!(C)$) coordinate (H);
+	\draw
+	(A)--(B)node[pos=.5,sloped,above] {$c$}
+	(B)--(C)node[pos=.75,sloped,below] {$a$}
+	(A)--(C)node[pos=.5,sloped,above] {$b$}
+	(M)--(A)node[pos=.5,sloped,above] {$m_{a}$};
+	\draw[stealth-stealth] (A)--(H)node[pos=.5,right]{$h_{a}$};
+	\foreach \x/\g in {A/90,B/180,C/0,M/-92,H/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\section{Vẽ Các Đường Song Song}
+
+\begin{tikzpicture}
+	\path
+	(0,0) coordinate (A)
+	(4,0) coordinate (B)
+	(5,2) coordinate (C)
+	($(A)+(C)-(B)$) coordinate (D);
+	\draw (A)--(B)--(C)--(D)--cycle ;
+	\foreach \x/\g in {A/180,B/0,C/0,D/180} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\path
+	(-1,2) coordinate (A)
+	(0,0) coordinate (B)
+	(3,0) coordinate (C)
+	($(B)!5cm!(C)$) coordinate (Bt)
+	($(A)+(Bt)-(B)$) coordinate (At);
+	\draw (B)--(C) (A)--(At) node[above]{$d$};
+	\foreach \x/\g in {A/90,B/-90,C/-90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\section{Vẽ Cát Tuyến với Đường Tròn}
+
+\subsection{Đoạn thẳng không cắt \& ở cùng 1 phía đối với đường tròn}
+
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	(180:4) coordinate (A)
+	++(10:1.5) coordinate (B)
+	($(A)!(O)!(B)$) coordinate (I);
+	\path[name path=duongtron] (O) circle (\r);
+	\path[name path=ai] (A)--(I);
+	\path[name intersections={of=duongtron and ai,by={C}}]
+	($(C)!2!(I)$) coordinate (D);
+	\draw (O) circle (\r) (A)--(D);
+	\foreach \x/\g in {O/0,A/180,B/120,C/120,D/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Đoạn thẳng có 1 điểm nằm trong \& 1 điểm nằm ngoài đường tròn}
+
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	(180:4) coordinate (A)
+	(O)++(30:.75*\r) coordinate (B)
+	($(A)!(O)!(B)$) coordinate (I);
+	\path[name path=duongtron] (O) circle (\r);
+	\path[name path=ab] (A)--(B);
+	\path[name intersections={of=duongtron and ab,by={C}}]
+	($(C)!2!(I)$) coordinate (D);
+	\draw (O) circle (\r) (A)--(D);
+	\foreach \x/\g in {O/0,A/180,B/120,C/120,D/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Đoạn thẳng có cả 2 đầu mút nằm trong đường tròn}
+
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	(O)++(170:.5*\r) coordinate (A)
+	(O)++(30:.75*\r) coordinate (B);
+	\draw (O) circle (\r) (A)--(B);
+	\foreach \x/\g in {O/0,A/180,B/120} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	(O)++(170:.5*\r) coordinate (A)
+	(O)++(30:.75*\r) coordinate (B)
+	($(A)!(O)!(B)$) coordinate (I)
+	($(I)!\r cm!(A)$) coordinate (It);
+	\path[name path=duongtron] (O) circle (\r);
+	\path[name path=dt] (I)--(It);
+	\path[name intersections={of=duongtron and dt,by={C}}]
+	($(C)!2!(I)$) coordinate (D);
+	\draw (O) circle (\r) (C)--(D);
+	\foreach \x/\g in {O/0,A/90,B/90,C/135,D/45} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\subsection{Đoạn thẳng có 2 giao điểm thực với đường tròn}
+
+\begin{tikzpicture}
+	\def\r{2}
+	\path
+	(0:0) coordinate (O)
+	(O)++(170:1.5*\r) coordinate (A)
+	(O)++(30:1.25*\r) coordinate (B);
+	\path[name path=duongtron] (O) circle (\r);
+	\path[name path=ab] (A)--(B);
+	\path[name intersections={of=duongtron and ab,by={D,C}}];
+	\draw (O) circle (\r) (A)--(B);
+	\foreach \x/\g in {O/0,A/90,B/90,C/135,D/90} \draw[fill=white] (\x) circle (.05) + (\g:.3) node{$\x$};
+\end{tikzpicture}
+
+\section{Vẽ Tiếp Tuyến với Đường Tròn}
 
 %------------------------------------------------------------------------------%
 
