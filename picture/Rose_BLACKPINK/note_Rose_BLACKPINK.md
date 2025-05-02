@@ -1,1 +1,0 @@
-[Is Rose from Blackpink a lesbian?](https://www.quora.com/Is-Rose-from-Blackpink-a-lesbian)
